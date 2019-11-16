@@ -2,8 +2,8 @@
 
 class DirectoryPackSource : PackSource {
 
-    virtual void DirectoryPackSource::~DirectoryPackSource();
-    virtual void DirectoryPackSource::~DirectoryPackSource();
+    virtual ~DirectoryPackSource();
+    virtual ~DirectoryPackSource();
     virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
     virtual void forEachPack(std::function<void ()(Pack &)>);
     virtual void getPackOrigin(void)const;

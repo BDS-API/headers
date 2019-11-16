@@ -2,8 +2,8 @@
 
 class StompAttackGoal : MeleeAttackGoal {
 
-    virtual void StompAttackGoal::~StompAttackGoal();
-    virtual void StompAttackGoal::~StompAttackGoal();
+    virtual ~StompAttackGoal();
+    virtual ~StompAttackGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

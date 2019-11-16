@@ -2,8 +2,8 @@
 
 class MinecraftEventing : IMinecraftEventing {
 
-    virtual void MinecraftEventing::~MinecraftEventing();
-    virtual void MinecraftEventing::~MinecraftEventing();
+    virtual ~MinecraftEventing();
+    virtual ~MinecraftEventing();
     virtual void fireEventPackUpgradeAttempt(PackManifest const&, PackReport const&);
     virtual void init(Social::IUserManager &);
     virtual void _ZN17MinecraftEventing18getPlayerSessionIdB5cxx11Ev;

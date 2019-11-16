@@ -2,8 +2,8 @@
 
 class OcelotAttackGoal : Goal {
 
-    virtual void OcelotAttackGoal::~OcelotAttackGoal();
-    virtual void OcelotAttackGoal::~OcelotAttackGoal();
+    virtual ~OcelotAttackGoal();
+    virtual ~OcelotAttackGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,8 +2,8 @@
 
 class DropItemForGoal : MoveToBlockGoal {
 
-    virtual void DropItemForGoal::~DropItemForGoal();
-    virtual void DropItemForGoal::~DropItemForGoal();
+    virtual ~DropItemForGoal();
+    virtual ~DropItemForGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

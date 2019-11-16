@@ -2,8 +2,8 @@
 
 class ResourcePackChunkDataPacket : Packet {
 
-    virtual void ResourcePackChunkDataPacket::~ResourcePackChunkDataPacket();
-    virtual void ResourcePackChunkDataPacket::~ResourcePackChunkDataPacket();
+    virtual ~ResourcePackChunkDataPacket();
+    virtual ~ResourcePackChunkDataPacket();
     virtual void getId(void)const;
     virtual void _ZNK27ResourcePackChunkDataPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

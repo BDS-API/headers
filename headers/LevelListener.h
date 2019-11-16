@@ -2,8 +2,8 @@
 
 class LevelListener : BlockSourceListener {
 
-    virtual void LevelListener::~LevelListener();
-    virtual void LevelListener::~LevelListener();
+    virtual ~LevelListener();
+    virtual ~LevelListener();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

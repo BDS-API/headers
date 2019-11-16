@@ -2,8 +2,8 @@
 
 class FilterTestTemperatureValue : SimpleFloatFilterTest {
 
-    virtual void FilterTestTemperatureValue::~FilterTestTemperatureValue();
-    virtual void FilterTestTemperatureValue::~FilterTestTemperatureValue();
+    virtual ~FilterTestTemperatureValue();
+    virtual ~FilterTestTemperatureValue();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

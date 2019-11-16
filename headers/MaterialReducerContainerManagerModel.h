@@ -2,8 +2,8 @@
 
 class MaterialReducerContainerManagerModel : ContainerManagerModel {
 
-    virtual void MaterialReducerContainerManagerModel::~MaterialReducerContainerManagerModel();
-    virtual void MaterialReducerContainerManagerModel::~MaterialReducerContainerManagerModel();
+    virtual ~MaterialReducerContainerManagerModel();
+    virtual ~MaterialReducerContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

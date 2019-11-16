@@ -2,8 +2,8 @@
 
 class ContainerOpenPacket : Packet {
 
-    virtual void ContainerOpenPacket::~ContainerOpenPacket();
-    virtual void ContainerOpenPacket::~ContainerOpenPacket();
+    virtual ~ContainerOpenPacket();
+    virtual ~ContainerOpenPacket();
     virtual void getId(void)const;
     virtual void _ZNK19ContainerOpenPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

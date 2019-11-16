@@ -2,7 +2,7 @@
 
 class IDefinitionSerializer {
 
-    virtual void IDefinitionSerializer::~IDefinitionSerializer();
-    virtual void IDefinitionSerializer::~IDefinitionSerializer();
+    virtual ~IDefinitionSerializer();
+    virtual ~IDefinitionSerializer();
     virtual void __cxa_pure_virtual;
 }

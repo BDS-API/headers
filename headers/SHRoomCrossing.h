@@ -2,8 +2,8 @@
 
 class SHRoomCrossing : StrongholdPiece {
 
-    virtual void SHRoomCrossing::~SHRoomCrossing();
-    virtual void SHRoomCrossing::~SHRoomCrossing();
+    virtual ~SHRoomCrossing();
+    virtual ~SHRoomCrossing();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

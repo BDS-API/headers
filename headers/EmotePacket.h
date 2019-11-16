@@ -2,8 +2,8 @@
 
 class EmotePacket : Packet {
 
-    virtual void EmotePacket::~EmotePacket();
-    virtual void EmotePacket::~EmotePacket();
+    virtual ~EmotePacket();
+    virtual ~EmotePacket();
     virtual void getId(void)const;
     virtual void _ZNK11EmotePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

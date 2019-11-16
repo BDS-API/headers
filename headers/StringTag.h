@@ -2,8 +2,8 @@
 
 class StringTag : Tag {
 
-    virtual void StringTag::~StringTag();
-    virtual void StringTag::~StringTag();
+    virtual ~StringTag();
+    virtual ~StringTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

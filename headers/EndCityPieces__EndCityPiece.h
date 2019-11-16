@@ -2,8 +2,8 @@
 
 class EndCityPieces::EndCityPiece : TemplateStructurePiece {
 
-    virtual void EndCityPieces::EndCityPiece::~EndCityPiece();
-    virtual void EndCityPieces::EndCityPiece::~EndCityPiece();
+    virtual ~EndCityPiece();
+    virtual ~EndCityPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

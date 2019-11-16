@@ -7,8 +7,8 @@ class Pig : Animal {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Pig::~Pig();
-    virtual void Pig::~Pig();
+    virtual ~Pig();
+    virtual ~Pig();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

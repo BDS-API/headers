@@ -2,6 +2,6 @@
 
 class ContextMessageLogger {
 
-    virtual void ContextMessageLogger::~ContextMessageLogger();
-    virtual void ContextMessageLogger::~ContextMessageLogger();
+    virtual ~ContextMessageLogger();
+    virtual ~ContextMessageLogger();
 }

@@ -2,8 +2,8 @@
 
 class DoubleTag : Tag {
 
-    virtual void DoubleTag::~DoubleTag();
-    virtual void DoubleTag::~DoubleTag();
+    virtual ~DoubleTag();
+    virtual ~DoubleTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

@@ -2,8 +2,8 @@
 
 class GoHomeGoal : Goal {
 
-    virtual void GoHomeGoal::~GoHomeGoal();
-    virtual void GoHomeGoal::~GoHomeGoal();
+    virtual ~GoHomeGoal();
+    virtual ~GoHomeGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

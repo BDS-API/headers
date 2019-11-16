@@ -2,8 +2,8 @@
 
 class BrewingStandInputContainerController : ContainerController {
 
-    virtual void BrewingStandInputContainerController::~BrewingStandInputContainerController();
-    virtual void BrewingStandInputContainerController::~BrewingStandInputContainerController();
+    virtual ~BrewingStandInputContainerController();
+    virtual ~BrewingStandInputContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

@@ -2,8 +2,8 @@
 
 class ActorInWaterTest : SimpleBoolFilterTest {
 
-    virtual void ActorInWaterTest::~ActorInWaterTest();
-    virtual void ActorInWaterTest::~ActorInWaterTest();
+    virtual ~ActorInWaterTest();
+    virtual ~ActorInWaterTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

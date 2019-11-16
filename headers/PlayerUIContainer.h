@@ -2,8 +2,8 @@
 
 class PlayerUIContainer : SimpleContainer {
 
-    virtual void PlayerUIContainer::~PlayerUIContainer();
-    virtual void PlayerUIContainer::~PlayerUIContainer();
+    virtual ~PlayerUIContainer();
+    virtual ~PlayerUIContainer();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);

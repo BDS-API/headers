@@ -2,8 +2,8 @@
 
 class NBBridgeEndFiller : NetherFortressPiece {
 
-    virtual void NBBridgeEndFiller::~NBBridgeEndFiller();
-    virtual void NBBridgeEndFiller::~NBBridgeEndFiller();
+    virtual ~NBBridgeEndFiller();
+    virtual ~NBBridgeEndFiller();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

@@ -2,7 +2,7 @@
 
 class HopperSystem : ITickingSystem {
 
-    virtual void HopperSystem::~HopperSystem();
-    virtual void HopperSystem::~HopperSystem();
+    virtual ~HopperSystem();
+    virtual ~HopperSystem();
     virtual void tick(EntityRegistry &);
 }

@@ -2,8 +2,8 @@
 
 class BaseMoveToGoal : Goal {
 
-    virtual void BaseMoveToGoal::~BaseMoveToGoal();
-    virtual void BaseMoveToGoal::~BaseMoveToGoal();
+    virtual ~BaseMoveToGoal();
+    virtual ~BaseMoveToGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

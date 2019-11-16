@@ -2,8 +2,8 @@
 
 class com::mojang::clacks::protocol::LevelFileAndSize : google::protobuf::Message {
 
-    virtual void com::mojang::clacks::protocol::LevelFileAndSize::~LevelFileAndSize();
-    virtual void com::mojang::clacks::protocol::LevelFileAndSize::~LevelFileAndSize();
+    virtual ~LevelFileAndSize();
+    virtual ~LevelFileAndSize();
     virtual void _ZNK6google8protobuf7Message11GetTypeNameB5cxx11Ev;
     virtual void New(void)const;
     virtual void New(google::protobuf::Arena *)const;

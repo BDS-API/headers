@@ -2,8 +2,8 @@
 
 class ScriptBlockStateComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
 
-    virtual void ScriptBlockStateComponent::~ScriptBlockStateComponent();
-    virtual void ScriptBlockStateComponent::~ScriptBlockStateComponent();
+    virtual ~ScriptBlockStateComponent();
+    virtual ~ScriptBlockStateComponent();
     virtual void ScriptTemplateFactory<ScriptServerContext>::Component::applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext&, Actor &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void ScriptTemplateFactory<ScriptServerContext>::Component::retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext&, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual void hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

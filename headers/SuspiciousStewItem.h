@@ -2,8 +2,8 @@
 
 class SuspiciousStewItem : Item {
 
-    virtual void SuspiciousStewItem::~SuspiciousStewItem();
-    virtual void SuspiciousStewItem::~SuspiciousStewItem();
+    virtual ~SuspiciousStewItem();
+    virtual ~SuspiciousStewItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

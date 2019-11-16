@@ -2,8 +2,8 @@
 
 class ObserverBlock : FaceDirectionalBlock {
 
-    virtual void ObserverBlock::~ObserverBlock();
-    virtual void ObserverBlock::~ObserverBlock();
+    virtual ~ObserverBlock();
+    virtual ~ObserverBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

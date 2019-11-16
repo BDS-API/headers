@@ -2,7 +2,7 @@
 
 class WorldTemplatePackManifest : PackManifest {
 
-    virtual void WorldTemplatePackManifest::~WorldTemplatePackManifest();
-    virtual void WorldTemplatePackManifest::~WorldTemplatePackManifest();
+    virtual ~WorldTemplatePackManifest();
+    virtual ~WorldTemplatePackManifest();
     virtual void clone(void)const;
 }

@@ -2,8 +2,8 @@
 
 class TradeIngredientContainerController : ContainerController {
 
-    virtual void TradeIngredientContainerController::~TradeIngredientContainerController();
-    virtual void TradeIngredientContainerController::~TradeIngredientContainerController();
+    virtual ~TradeIngredientContainerController();
+    virtual ~TradeIngredientContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

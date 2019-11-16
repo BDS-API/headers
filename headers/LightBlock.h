@@ -2,8 +2,8 @@
 
 class LightBlock : AirBlock {
 
-    virtual void LightBlock::~LightBlock();
-    virtual void LightBlock::~LightBlock();
+    virtual ~LightBlock();
+    virtual ~LightBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

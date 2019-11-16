@@ -2,8 +2,8 @@
 
 class UnderwaterTorchBlock : TorchBlock {
 
-    virtual void UnderwaterTorchBlock::~UnderwaterTorchBlock();
-    virtual void UnderwaterTorchBlock::~UnderwaterTorchBlock();
+    virtual ~UnderwaterTorchBlock();
+    virtual ~UnderwaterTorchBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

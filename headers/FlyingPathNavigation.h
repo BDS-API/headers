@@ -2,8 +2,8 @@
 
 class FlyingPathNavigation : PathNavigation {
 
-    virtual void FlyingPathNavigation::~FlyingPathNavigation();
-    virtual void FlyingPathNavigation::~FlyingPathNavigation();
+    virtual ~FlyingPathNavigation();
+    virtual ~FlyingPathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

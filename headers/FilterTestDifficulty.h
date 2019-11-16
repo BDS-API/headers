@@ -2,8 +2,8 @@
 
 class FilterTestDifficulty : SimpleIntFilterTest {
 
-    virtual void FilterTestDifficulty::~FilterTestDifficulty();
-    virtual void FilterTestDifficulty::~FilterTestDifficulty();
+    virtual ~FilterTestDifficulty();
+    virtual ~FilterTestDifficulty();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

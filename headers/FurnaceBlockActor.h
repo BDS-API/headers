@@ -2,8 +2,8 @@
 
 class FurnaceBlockActor : BlockActor, Container {
 
-    virtual void FurnaceBlockActor::~FurnaceBlockActor();
-    virtual void FurnaceBlockActor::~FurnaceBlockActor();
+    virtual ~FurnaceBlockActor();
+    virtual ~FurnaceBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

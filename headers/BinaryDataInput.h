@@ -2,8 +2,8 @@
 
 class BinaryDataInput : BytesDataInput {
 
-    virtual void BinaryDataInput::~BinaryDataInput();
-    virtual void BinaryDataInput::~BinaryDataInput();
+    virtual ~BinaryDataInput();
+    virtual ~BinaryDataInput();
     virtual void _ZN15BinaryDataInput10readStringB5cxx11Ev;
     virtual void _ZN15BinaryDataInput14readLongStringB5cxx11Ev;
     virtual void readFloat(void);

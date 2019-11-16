@@ -2,8 +2,8 @@
 
 class Container {
 
-    virtual void Container::~Container();
-    virtual void Container::~Container();
+    virtual ~Container();
+    virtual ~Container();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);

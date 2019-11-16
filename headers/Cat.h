@@ -7,8 +7,8 @@ class Cat : Animal {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Cat::~Cat();
-    virtual void Cat::~Cat();
+    virtual ~Cat();
+    virtual ~Cat();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

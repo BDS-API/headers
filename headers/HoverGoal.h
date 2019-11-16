@@ -2,8 +2,8 @@
 
 class HoverGoal : Goal {
 
-    virtual void HoverGoal::~HoverGoal();
-    virtual void HoverGoal::~HoverGoal();
+    virtual ~HoverGoal();
+    virtual ~HoverGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

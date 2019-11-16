@@ -2,8 +2,8 @@
 
 class ConcretePowderBlock : HeavyBlock {
 
-    virtual void ConcretePowderBlock::~ConcretePowderBlock();
-    virtual void ConcretePowderBlock::~ConcretePowderBlock();
+    virtual ~ConcretePowderBlock();
+    virtual ~ConcretePowderBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

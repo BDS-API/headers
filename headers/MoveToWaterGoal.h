@@ -2,8 +2,8 @@
 
 class MoveToWaterGoal : MoveToBlockGoal {
 
-    virtual void MoveToWaterGoal::~MoveToWaterGoal();
-    virtual void MoveToWaterGoal::~MoveToWaterGoal();
+    virtual ~MoveToWaterGoal();
+    virtual ~MoveToWaterGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

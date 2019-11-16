@@ -2,8 +2,8 @@
 
 class BaseCircuitComponent {
 
-    virtual void BaseCircuitComponent::~BaseCircuitComponent();
-    virtual void BaseCircuitComponent::~BaseCircuitComponent();
+    virtual ~BaseCircuitComponent();
+    virtual ~BaseCircuitComponent();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

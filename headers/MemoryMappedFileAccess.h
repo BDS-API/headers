@@ -2,8 +2,8 @@
 
 class MemoryMappedFileAccess : IFileAccess {
 
-    virtual void MemoryMappedFileAccess::~MemoryMappedFileAccess();
-    virtual void MemoryMappedFileAccess::~MemoryMappedFileAccess();
+    virtual ~MemoryMappedFileAccess();
+    virtual ~MemoryMappedFileAccess();
     virtual void fopen(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void fclose(void *);
     virtual void fseek(void *, long, int);

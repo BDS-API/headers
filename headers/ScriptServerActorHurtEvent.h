@@ -2,7 +2,7 @@
 
 class ScriptServerActorHurtEvent : ScriptEventData {
 
-    virtual void ScriptServerActorHurtEvent::~ScriptServerActorHurtEvent();
-    virtual void ScriptServerActorHurtEvent::~ScriptServerActorHurtEvent();
+    virtual ~ScriptServerActorHurtEvent();
+    virtual ~ScriptServerActorHurtEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 }

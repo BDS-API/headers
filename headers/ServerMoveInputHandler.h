@@ -2,8 +2,8 @@
 
 class ServerMoveInputHandler : MoveInputHandler {
 
-    virtual void ServerMoveInputHandler::~ServerMoveInputHandler();
-    virtual void ServerMoveInputHandler::~ServerMoveInputHandler();
+    virtual ~ServerMoveInputHandler();
+    virtual ~ServerMoveInputHandler();
     virtual void tick(Player &);
     virtual void render(float);
     virtual void setKey(int, bool);

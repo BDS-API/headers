@@ -2,8 +2,8 @@
 
 class LocalConnector : Connector {
 
-    virtual void LocalConnector::~LocalConnector();
-    virtual void LocalConnector::~LocalConnector();
+    virtual ~LocalConnector();
+    virtual ~LocalConnector();
     virtual void onAppResumed(void);
     virtual void onAppSuspended(void);
     virtual void _ZNK14LocalConnector11getLocalIpsB5cxx11Ev;

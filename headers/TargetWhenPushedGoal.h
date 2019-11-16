@@ -2,8 +2,8 @@
 
 class TargetWhenPushedGoal : Goal {
 
-    virtual void TargetWhenPushedGoal::~TargetWhenPushedGoal();
-    virtual void TargetWhenPushedGoal::~TargetWhenPushedGoal();
+    virtual ~TargetWhenPushedGoal();
+    virtual ~TargetWhenPushedGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,8 +2,8 @@
 
 class ArrowItem : Item {
 
-    virtual void ArrowItem::~ArrowItem();
-    virtual void ArrowItem::~ArrowItem();
+    virtual ~ArrowItem();
+    virtual ~ArrowItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

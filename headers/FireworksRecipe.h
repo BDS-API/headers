@@ -2,8 +2,8 @@
 
 class FireworksRecipe : MultiRecipe {
 
-    virtual void FireworksRecipe::~FireworksRecipe();
-    virtual void FireworksRecipe::~FireworksRecipe();
+    virtual ~FireworksRecipe();
+    virtual ~FireworksRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

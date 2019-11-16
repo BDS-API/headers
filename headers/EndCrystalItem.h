@@ -2,8 +2,8 @@
 
 class EndCrystalItem : Item {
 
-    virtual void EndCrystalItem::~EndCrystalItem();
-    virtual void EndCrystalItem::~EndCrystalItem();
+    virtual ~EndCrystalItem();
+    virtual ~EndCrystalItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

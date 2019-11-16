@@ -2,8 +2,8 @@
 
 class EnderChestContainer : FillingContainer {
 
-    virtual void EnderChestContainer::~EnderChestContainer();
-    virtual void EnderChestContainer::~EnderChestContainer();
+    virtual ~EnderChestContainer();
+    virtual ~EnderChestContainer();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);

@@ -2,8 +2,8 @@
 
 class FollowMobGoal : Goal {
 
-    virtual void FollowMobGoal::~FollowMobGoal();
-    virtual void FollowMobGoal::~FollowMobGoal();
+    virtual ~FollowMobGoal();
+    virtual ~FollowMobGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

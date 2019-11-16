@@ -2,8 +2,8 @@
 
 class PackAccessStrategy {
 
-    virtual void PackAccessStrategy::~PackAccessStrategy();
-    virtual void PackAccessStrategy::~PackAccessStrategy();
+    virtual ~PackAccessStrategy();
+    virtual ~PackAccessStrategy();
     virtual void getPackSize(void)const;
     virtual void getPackLocation(void)const;
     virtual void _ZNK21PackAccessStrategy11getPackNameB5cxx11Ev;

@@ -2,8 +2,8 @@
 
 class FloatTag : Tag {
 
-    virtual void FloatTag::~FloatTag();
-    virtual void FloatTag::~FloatTag();
+    virtual ~FloatTag();
+    virtual ~FloatTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

@@ -3,8 +3,8 @@
 class PlayerInventoryProxy : ContainerSizeChangeListener, ContainerContentChangeListener {
 
     virtual void containerSizeChanged(int);
-    virtual void PlayerInventoryProxy::~PlayerInventoryProxy();
-    virtual void PlayerInventoryProxy::~PlayerInventoryProxy();
+    virtual ~PlayerInventoryProxy();
+    virtual ~PlayerInventoryProxy();
     virtual void containerContentChanged(int);
     virtual void createTransactionContext(std::function<void ()(Container &, int, ItemStack const&, ItemStack const&)>, std::function<void ()(void)>);
     virtual void ;

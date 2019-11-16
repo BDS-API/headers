@@ -2,8 +2,8 @@
 
 class OceanRuinStart : StructureStart {
 
-    virtual void OceanRuinStart::~OceanRuinStart();
-    virtual void OceanRuinStart::~OceanRuinStart();
+    virtual ~OceanRuinStart();
+    virtual ~OceanRuinStart();
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void isValid(void)const;
     virtual void getType(void)const;

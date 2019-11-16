@@ -2,8 +2,8 @@
 
 class SeaPickleBlockItem : BlockItem {
 
-    virtual void SeaPickleBlockItem::~SeaPickleBlockItem();
-    virtual void SeaPickleBlockItem::~SeaPickleBlockItem();
+    virtual ~SeaPickleBlockItem();
+    virtual ~SeaPickleBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

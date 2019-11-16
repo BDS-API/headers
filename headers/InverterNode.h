@@ -2,8 +2,8 @@
 
 class InverterNode : BehaviorNode {
 
-    virtual void InverterNode::~InverterNode();
-    virtual void InverterNode::~InverterNode();
+    virtual ~InverterNode();
+    virtual ~InverterNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 }

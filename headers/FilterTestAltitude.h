@@ -2,8 +2,8 @@
 
 class FilterTestAltitude : SimpleIntFilterTest {
 
-    virtual void FilterTestAltitude::~FilterTestAltitude();
-    virtual void FilterTestAltitude::~FilterTestAltitude();
+    virtual ~FilterTestAltitude();
+    virtual ~FilterTestAltitude();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

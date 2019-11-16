@@ -2,8 +2,8 @@
 
 class SwimWanderGoal : Goal {
 
-    virtual void SwimWanderGoal::~SwimWanderGoal();
-    virtual void SwimWanderGoal::~SwimWanderGoal();
+    virtual ~SwimWanderGoal();
+    virtual ~SwimWanderGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

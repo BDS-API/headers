@@ -2,8 +2,8 @@
 
 class DataLoadHelper {
 
-    virtual void DataLoadHelper::~DataLoadHelper();
-    virtual void DataLoadHelper::~DataLoadHelper();
+    virtual ~DataLoadHelper();
+    virtual ~DataLoadHelper();
     virtual void loadPosition(Vec3 const&);
     virtual void loadBlockPosition(BlockPos const&);
     virtual void loadBlockPositionOffset(BlockPos const&);

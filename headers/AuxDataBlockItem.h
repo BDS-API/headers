@@ -2,8 +2,8 @@
 
 class AuxDataBlockItem : BlockItem {
 
-    virtual void AuxDataBlockItem::~AuxDataBlockItem();
-    virtual void AuxDataBlockItem::~AuxDataBlockItem();
+    virtual ~AuxDataBlockItem();
+    virtual ~AuxDataBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

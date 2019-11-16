@@ -2,8 +2,8 @@
 
 class WallClimberPathNavigation : PathNavigation {
 
-    virtual void WallClimberPathNavigation::~WallClimberPathNavigation();
-    virtual void WallClimberPathNavigation::~WallClimberPathNavigation();
+    virtual ~WallClimberPathNavigation();
+    virtual ~WallClimberPathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

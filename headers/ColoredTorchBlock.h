@@ -2,8 +2,8 @@
 
 class ColoredTorchBlock : TorchBlock {
 
-    virtual void ColoredTorchBlock::~ColoredTorchBlock();
-    virtual void ColoredTorchBlock::~ColoredTorchBlock();
+    virtual ~ColoredTorchBlock();
+    virtual ~ColoredTorchBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

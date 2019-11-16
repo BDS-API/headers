@@ -2,8 +2,8 @@
 
 class BoatItem : Item {
 
-    virtual void BoatItem::~BoatItem();
-    virtual void BoatItem::~BoatItem();
+    virtual ~BoatItem();
+    virtual ~BoatItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

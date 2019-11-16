@@ -2,8 +2,8 @@
 
 class BellBlockItem : BlockItem {
 
-    virtual void BellBlockItem::~BellBlockItem();
-    virtual void BellBlockItem::~BellBlockItem();
+    virtual ~BellBlockItem();
+    virtual ~BellBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

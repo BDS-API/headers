@@ -2,8 +2,8 @@
 
 class SquidIdleGoal : Goal {
 
-    virtual void SquidIdleGoal::~SquidIdleGoal();
-    virtual void SquidIdleGoal::~SquidIdleGoal();
+    virtual ~SquidIdleGoal();
+    virtual ~SquidIdleGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

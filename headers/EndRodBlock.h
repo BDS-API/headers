@@ -2,8 +2,8 @@
 
 class EndRodBlock : BlockLegacy {
 
-    virtual void EndRodBlock::~EndRodBlock();
-    virtual void EndRodBlock::~EndRodBlock();
+    virtual ~EndRodBlock();
+    virtual ~EndRodBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

@@ -2,8 +2,8 @@
 
 class AutomationPlayerCommandOrigin : PlayerCommandOrigin {
 
-    virtual void AutomationPlayerCommandOrigin::~AutomationPlayerCommandOrigin();
-    virtual void AutomationPlayerCommandOrigin::~AutomationPlayerCommandOrigin();
+    virtual ~AutomationPlayerCommandOrigin();
+    virtual ~AutomationPlayerCommandOrigin();
     virtual void _ZNK29AutomationPlayerCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK29AutomationPlayerCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

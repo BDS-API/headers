@@ -2,8 +2,8 @@
 
 class EntityServerPacket : Packet {
 
-    virtual void EntityServerPacket::~EntityServerPacket();
-    virtual void EntityServerPacket::~EntityServerPacket();
+    virtual ~EntityServerPacket();
+    virtual ~EntityServerPacket();
     virtual void getId(void)const;
     virtual void _ZNK18EntityServerPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

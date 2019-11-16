@@ -2,8 +2,8 @@
 
 class ActorIsColorTest : SimpleIntFilterTest {
 
-    virtual void ActorIsColorTest::~ActorIsColorTest();
-    virtual void ActorIsColorTest::~ActorIsColorTest();
+    virtual ~ActorIsColorTest();
+    virtual ~ActorIsColorTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

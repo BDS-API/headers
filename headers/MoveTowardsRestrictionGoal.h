@@ -2,8 +2,8 @@
 
 class MoveTowardsRestrictionGoal : Goal {
 
-    virtual void MoveTowardsRestrictionGoal::~MoveTowardsRestrictionGoal();
-    virtual void MoveTowardsRestrictionGoal::~MoveTowardsRestrictionGoal();
+    virtual ~MoveTowardsRestrictionGoal();
+    virtual ~MoveTowardsRestrictionGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

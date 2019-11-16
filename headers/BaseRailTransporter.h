@@ -2,8 +2,8 @@
 
 class BaseRailTransporter : BaseCircuitComponent {
 
-    virtual void BaseRailTransporter::~BaseRailTransporter();
-    virtual void BaseRailTransporter::~BaseRailTransporter();
+    virtual ~BaseRailTransporter();
+    virtual ~BaseRailTransporter();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

@@ -2,8 +2,8 @@
 
 class HideGoal : MoveToPOIGoal {
 
-    virtual void HideGoal::~HideGoal();
-    virtual void HideGoal::~HideGoal();
+    virtual ~HideGoal();
+    virtual ~HideGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,8 +2,8 @@
 
 class FollowOwnerGoal : Goal {
 
-    virtual void FollowOwnerGoal::~FollowOwnerGoal();
-    virtual void FollowOwnerGoal::~FollowOwnerGoal();
+    virtual ~FollowOwnerGoal();
+    virtual ~FollowOwnerGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

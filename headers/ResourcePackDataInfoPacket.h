@@ -2,8 +2,8 @@
 
 class ResourcePackDataInfoPacket : Packet {
 
-    virtual void ResourcePackDataInfoPacket::~ResourcePackDataInfoPacket();
-    virtual void ResourcePackDataInfoPacket::~ResourcePackDataInfoPacket();
+    virtual ~ResourcePackDataInfoPacket();
+    virtual ~ResourcePackDataInfoPacket();
     virtual void getId(void)const;
     virtual void _ZNK26ResourcePackDataInfoPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

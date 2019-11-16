@@ -2,8 +2,8 @@
 
 class ClientAutomationCommandOrigin : CommandOrigin {
 
-    virtual void ClientAutomationCommandOrigin::~ClientAutomationCommandOrigin();
-    virtual void ClientAutomationCommandOrigin::~ClientAutomationCommandOrigin();
+    virtual ~ClientAutomationCommandOrigin();
+    virtual ~ClientAutomationCommandOrigin();
     virtual void _ZNK29ClientAutomationCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK29ClientAutomationCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

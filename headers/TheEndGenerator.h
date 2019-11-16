@@ -2,8 +2,8 @@
 
 class TheEndGenerator : ChunkSource, WorldGenerator {
 
-    virtual void TheEndGenerator::~TheEndGenerator();
-    virtual void TheEndGenerator::~TheEndGenerator();
+    virtual ~TheEndGenerator();
+    virtual ~TheEndGenerator();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

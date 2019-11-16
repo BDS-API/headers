@@ -2,7 +2,7 @@
 
 class SummonCommand : Command {
 
-    virtual void SummonCommand::~SummonCommand();
-    virtual void SummonCommand::~SummonCommand();
+    virtual ~SummonCommand();
+    virtual ~SummonCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

@@ -2,8 +2,8 @@
 
 class WritableBookItem : Item {
 
-    virtual void WritableBookItem::~WritableBookItem();
-    virtual void WritableBookItem::~WritableBookItem();
+    virtual ~WritableBookItem();
+    virtual ~WritableBookItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

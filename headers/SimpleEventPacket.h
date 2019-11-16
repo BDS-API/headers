@@ -2,8 +2,8 @@
 
 class SimpleEventPacket : Packet {
 
-    virtual void SimpleEventPacket::~SimpleEventPacket();
-    virtual void SimpleEventPacket::~SimpleEventPacket();
+    virtual ~SimpleEventPacket();
+    virtual ~SimpleEventPacket();
     virtual void getId(void)const;
     virtual void _ZNK17SimpleEventPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

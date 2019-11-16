@@ -2,8 +2,8 @@
 
 class ServerLocator {
 
-    virtual void ServerLocator::~ServerLocator();
-    virtual void ServerLocator::~ServerLocator();
+    virtual ~ServerLocator();
+    virtual ~ServerLocator();
     virtual void announceServer(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, GameType, int, int, bool);
     virtual void stopAnnouncingServer(void);
     virtual void findServers(int, int);

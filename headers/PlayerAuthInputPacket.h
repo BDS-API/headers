@@ -2,8 +2,8 @@
 
 class PlayerAuthInputPacket : Packet {
 
-    virtual void PlayerAuthInputPacket::~PlayerAuthInputPacket();
-    virtual void PlayerAuthInputPacket::~PlayerAuthInputPacket();
+    virtual ~PlayerAuthInputPacket();
+    virtual ~PlayerAuthInputPacket();
     virtual void getId(void)const;
     virtual void _ZNK21PlayerAuthInputPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

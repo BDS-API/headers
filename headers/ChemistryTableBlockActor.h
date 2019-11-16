@@ -2,8 +2,8 @@
 
 class ChemistryTableBlockActor : BlockActor, Container {
 
-    virtual void ChemistryTableBlockActor::~ChemistryTableBlockActor();
-    virtual void ChemistryTableBlockActor::~ChemistryTableBlockActor();
+    virtual ~ChemistryTableBlockActor();
+    virtual ~ChemistryTableBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

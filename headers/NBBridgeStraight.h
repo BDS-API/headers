@@ -2,8 +2,8 @@
 
 class NBBridgeStraight : NetherFortressPiece {
 
-    virtual void NBBridgeStraight::~NBBridgeStraight();
-    virtual void NBBridgeStraight::~NBBridgeStraight();
+    virtual ~NBBridgeStraight();
+    virtual ~NBBridgeStraight();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

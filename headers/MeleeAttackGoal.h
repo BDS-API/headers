@@ -2,8 +2,8 @@
 
 class MeleeAttackGoal : Goal {
 
-    virtual void MeleeAttackGoal::~MeleeAttackGoal();
-    virtual void MeleeAttackGoal::~MeleeAttackGoal();
+    virtual ~MeleeAttackGoal();
+    virtual ~MeleeAttackGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

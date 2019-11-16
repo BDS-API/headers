@@ -2,8 +2,8 @@
 
 class LoginPacket : Packet {
 
-    virtual void LoginPacket::~LoginPacket();
-    virtual void LoginPacket::~LoginPacket();
+    virtual ~LoginPacket();
+    virtual ~LoginPacket();
     virtual void getId(void)const;
     virtual void _ZNK11LoginPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

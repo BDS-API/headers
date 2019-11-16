@@ -2,8 +2,8 @@
 
 class LevelContainerManagerModel : ContainerManagerModel {
 
-    virtual void LevelContainerManagerModel::~LevelContainerManagerModel();
-    virtual void LevelContainerManagerModel::~LevelContainerManagerModel();
+    virtual ~LevelContainerManagerModel();
+    virtual ~LevelContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

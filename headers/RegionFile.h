@@ -2,7 +2,7 @@
 
 class RegionFile {
 
-    virtual void RegionFile::~RegionFile();
-    virtual void RegionFile::~RegionFile();
+    virtual ~RegionFile();
+    virtual ~RegionFile();
     virtual void ;
 }

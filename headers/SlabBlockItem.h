@@ -2,8 +2,8 @@
 
 class SlabBlockItem : BlockItem {
 
-    virtual void SlabBlockItem::~SlabBlockItem();
-    virtual void SlabBlockItem::~SlabBlockItem();
+    virtual ~SlabBlockItem();
+    virtual ~SlabBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

@@ -2,8 +2,8 @@
 
 class com::mojang::clacks::protocol::MetricReport_BandwithMetric : google::protobuf::Message {
 
-    virtual void com::mojang::clacks::protocol::MetricReport_BandwithMetric::~MetricReport_BandwithMetric();
-    virtual void com::mojang::clacks::protocol::MetricReport_BandwithMetric::~MetricReport_BandwithMetric();
+    virtual ~MetricReport_BandwithMetric();
+    virtual ~MetricReport_BandwithMetric();
     virtual void _ZNK6google8protobuf7Message11GetTypeNameB5cxx11Ev;
     virtual void New(void)const;
     virtual void New(google::protobuf::Arena *)const;

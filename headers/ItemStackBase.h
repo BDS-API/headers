@@ -2,8 +2,8 @@
 
 class ItemStackBase {
 
-    virtual void ItemStackBase::~ItemStackBase();
-    virtual void ItemStackBase::~ItemStackBase();
+    virtual ~ItemStackBase();
+    virtual ~ItemStackBase();
     virtual void reinit(Item const&, int, int);
     virtual void reinit(BlockLegacy const&, int);
 }

@@ -2,8 +2,8 @@
 
 class ShapelessChemistryRecipe : ShapelessRecipe {
 
-    virtual void ShapelessChemistryRecipe::~ShapelessChemistryRecipe();
-    virtual void ShapelessChemistryRecipe::~ShapelessChemistryRecipe();
+    virtual ~ShapelessChemistryRecipe();
+    virtual ~ShapelessChemistryRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

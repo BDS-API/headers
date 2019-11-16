@@ -2,8 +2,8 @@
 
 class ConduitBlockActor : BlockActor {
 
-    virtual void ConduitBlockActor::~ConduitBlockActor();
-    virtual void ConduitBlockActor::~ConduitBlockActor();
+    virtual ~ConduitBlockActor();
+    virtual ~ConduitBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

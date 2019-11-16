@@ -2,8 +2,8 @@
 
 class ActorIsSleepingTest : SimpleBoolFilterTest {
 
-    virtual void ActorIsSleepingTest::~ActorIsSleepingTest();
-    virtual void ActorIsSleepingTest::~ActorIsSleepingTest();
+    virtual ~ActorIsSleepingTest();
+    virtual ~ActorIsSleepingTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

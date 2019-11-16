@@ -2,7 +2,7 @@
 
 class DebugAssertException {
 
-    virtual void DebugAssertException::~DebugAssertException();
-    virtual void DebugAssertException::~DebugAssertException();
+    virtual ~DebugAssertException();
+    virtual ~DebugAssertException();
     virtual void what(void)const;
 }

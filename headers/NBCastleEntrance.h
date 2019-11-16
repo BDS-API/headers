@@ -2,8 +2,8 @@
 
 class NBCastleEntrance : NetherFortressPiece {
 
-    virtual void NBCastleEntrance::~NBCastleEntrance();
-    virtual void NBCastleEntrance::~NBCastleEntrance();
+    virtual ~NBCastleEntrance();
+    virtual ~NBCastleEntrance();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

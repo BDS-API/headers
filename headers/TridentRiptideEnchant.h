@@ -2,8 +2,8 @@
 
 class TridentRiptideEnchant : Enchant {
 
-    virtual void TridentRiptideEnchant::~TridentRiptideEnchant();
-    virtual void TridentRiptideEnchant::~TridentRiptideEnchant();
+    virtual ~TridentRiptideEnchant();
+    virtual ~TridentRiptideEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

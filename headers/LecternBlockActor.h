@@ -2,8 +2,8 @@
 
 class LecternBlockActor : BlockActor, Container {
 
-    virtual void LecternBlockActor::~LecternBlockActor();
-    virtual void LecternBlockActor::~LecternBlockActor();
+    virtual ~LecternBlockActor();
+    virtual ~LecternBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

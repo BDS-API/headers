@@ -2,8 +2,8 @@
 
 class SHChestCorridor : StrongholdPiece {
 
-    virtual void SHChestCorridor::~SHChestCorridor();
-    virtual void SHChestCorridor::~SHChestCorridor();
+    virtual ~SHChestCorridor();
+    virtual ~SHChestCorridor();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

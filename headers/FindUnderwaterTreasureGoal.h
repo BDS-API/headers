@@ -2,8 +2,8 @@
 
 class FindUnderwaterTreasureGoal : Goal {
 
-    virtual void FindUnderwaterTreasureGoal::~FindUnderwaterTreasureGoal();
-    virtual void FindUnderwaterTreasureGoal::~FindUnderwaterTreasureGoal();
+    virtual ~FindUnderwaterTreasureGoal();
+    virtual ~FindUnderwaterTreasureGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

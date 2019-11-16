@@ -2,7 +2,7 @@
 
 class WeatherCommand : Command {
 
-    virtual void WeatherCommand::~WeatherCommand();
-    virtual void WeatherCommand::~WeatherCommand();
+    virtual ~WeatherCommand();
+    virtual ~WeatherCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

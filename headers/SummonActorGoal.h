@@ -2,8 +2,8 @@
 
 class SummonActorGoal : Goal {
 
-    virtual void SummonActorGoal::~SummonActorGoal();
-    virtual void SummonActorGoal::~SummonActorGoal();
+    virtual ~SummonActorGoal();
+    virtual ~SummonActorGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

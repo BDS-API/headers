@@ -2,8 +2,8 @@
 
 class DiggingEnchant : Enchant {
 
-    virtual void DiggingEnchant::~DiggingEnchant();
-    virtual void DiggingEnchant::~DiggingEnchant();
+    virtual ~DiggingEnchant();
+    virtual ~DiggingEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

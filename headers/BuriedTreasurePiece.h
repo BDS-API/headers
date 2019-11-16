@@ -2,8 +2,8 @@
 
 class BuriedTreasurePiece : StructurePiece {
 
-    virtual void BuriedTreasurePiece::~BuriedTreasurePiece();
-    virtual void BuriedTreasurePiece::~BuriedTreasurePiece();
+    virtual ~BuriedTreasurePiece();
+    virtual ~BuriedTreasurePiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

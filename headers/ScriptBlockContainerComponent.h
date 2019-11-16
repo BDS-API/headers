@@ -2,8 +2,8 @@
 
 class ScriptBlockContainerComponent : ScriptContainerComponentBase {
 
-    virtual void ScriptBlockContainerComponent::~ScriptBlockContainerComponent();
-    virtual void ScriptBlockContainerComponent::~ScriptBlockContainerComponent();
+    virtual ~ScriptBlockContainerComponent();
+    virtual ~ScriptBlockContainerComponent();
     virtual void ScriptTemplateFactory<ScriptServerContext>::Component::applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext&, Actor &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void ScriptTemplateFactory<ScriptServerContext>::Component::retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext&, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual void hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

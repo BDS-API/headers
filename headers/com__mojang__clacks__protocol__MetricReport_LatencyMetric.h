@@ -2,8 +2,8 @@
 
 class com::mojang::clacks::protocol::MetricReport_LatencyMetric : google::protobuf::Message {
 
-    virtual void com::mojang::clacks::protocol::MetricReport_LatencyMetric::~MetricReport_LatencyMetric();
-    virtual void com::mojang::clacks::protocol::MetricReport_LatencyMetric::~MetricReport_LatencyMetric();
+    virtual ~MetricReport_LatencyMetric();
+    virtual ~MetricReport_LatencyMetric();
     virtual void _ZNK6google8protobuf7Message11GetTypeNameB5cxx11Ev;
     virtual void New(void)const;
     virtual void New(google::protobuf::Arena *)const;

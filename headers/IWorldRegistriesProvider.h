@@ -2,8 +2,8 @@
 
 class IWorldRegistriesProvider {
 
-    virtual void IWorldRegistriesProvider::~IWorldRegistriesProvider();
-    virtual void IWorldRegistriesProvider::~IWorldRegistriesProvider();
+    virtual ~IWorldRegistriesProvider();
+    virtual ~IWorldRegistriesProvider();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

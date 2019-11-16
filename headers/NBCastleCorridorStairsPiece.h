@@ -2,8 +2,8 @@
 
 class NBCastleCorridorStairsPiece : NetherFortressPiece {
 
-    virtual void NBCastleCorridorStairsPiece::~NBCastleCorridorStairsPiece();
-    virtual void NBCastleCorridorStairsPiece::~NBCastleCorridorStairsPiece();
+    virtual ~NBCastleCorridorStairsPiece();
+    virtual ~NBCastleCorridorStairsPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

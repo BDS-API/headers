@@ -2,8 +2,8 @@
 
 class ScriptCommandOrigin : CommandOrigin {
 
-    virtual void ScriptCommandOrigin::~ScriptCommandOrigin();
-    virtual void ScriptCommandOrigin::~ScriptCommandOrigin();
+    virtual ~ScriptCommandOrigin();
+    virtual ~ScriptCommandOrigin();
     virtual void _ZNK19ScriptCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK19ScriptCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

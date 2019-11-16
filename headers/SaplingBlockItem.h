@@ -2,8 +2,8 @@
 
 class SaplingBlockItem : BlockItem {
 
-    virtual void SaplingBlockItem::~SaplingBlockItem();
-    virtual void SaplingBlockItem::~SaplingBlockItem();
+    virtual ~SaplingBlockItem();
+    virtual ~SaplingBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

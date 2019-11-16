@@ -2,8 +2,8 @@
 
 class TakeFlowerGoal : Goal {
 
-    virtual void TakeFlowerGoal::~TakeFlowerGoal();
-    virtual void TakeFlowerGoal::~TakeFlowerGoal();
+    virtual ~TakeFlowerGoal();
+    virtual ~TakeFlowerGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

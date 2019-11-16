@@ -2,8 +2,8 @@
 
 class DiggerItem : Item {
 
-    virtual void DiggerItem::~DiggerItem();
-    virtual void DiggerItem::~DiggerItem();
+    virtual ~DiggerItem();
+    virtual ~DiggerItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

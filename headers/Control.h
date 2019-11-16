@@ -2,6 +2,6 @@
 
 class Control {
 
-    virtual void Control::~Control();
-    virtual void Control::~Control();
+    virtual ~Control();
+    virtual ~Control();
 }

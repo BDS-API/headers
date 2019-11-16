@@ -2,8 +2,8 @@
 
 class EnchantedBookItem : Item {
 
-    virtual void EnchantedBookItem::~EnchantedBookItem();
-    virtual void EnchantedBookItem::~EnchantedBookItem();
+    virtual ~EnchantedBookItem();
+    virtual ~EnchantedBookItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

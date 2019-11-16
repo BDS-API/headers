@@ -2,8 +2,8 @@
 
 class ExperiencePotionItem : Item {
 
-    virtual void ExperiencePotionItem::~ExperiencePotionItem();
-    virtual void ExperiencePotionItem::~ExperiencePotionItem();
+    virtual ~ExperiencePotionItem();
+    virtual ~ExperiencePotionItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

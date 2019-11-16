@@ -2,8 +2,8 @@
 
 class ShortTag : Tag {
 
-    virtual void ShortTag::~ShortTag();
-    virtual void ShortTag::~ShortTag();
+    virtual ~ShortTag();
+    virtual ~ShortTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

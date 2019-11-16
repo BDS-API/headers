@@ -2,8 +2,8 @@
 
 class MoveToPOIGoal : BaseMoveToGoal {
 
-    virtual void MoveToPOIGoal::~MoveToPOIGoal();
-    virtual void MoveToPOIGoal::~MoveToPOIGoal();
+    virtual ~MoveToPOIGoal();
+    virtual ~MoveToPOIGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,7 +2,7 @@
 
 class Command {
 
-    virtual void Command::~Command();
-    virtual void Command::~Command();
+    virtual ~Command();
+    virtual ~Command();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

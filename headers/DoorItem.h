@@ -2,8 +2,8 @@
 
 class DoorItem : Item {
 
-    virtual void DoorItem::~DoorItem();
-    virtual void DoorItem::~DoorItem();
+    virtual ~DoorItem();
+    virtual ~DoorItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

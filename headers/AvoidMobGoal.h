@@ -2,8 +2,8 @@
 
 class AvoidMobGoal : Goal {
 
-    virtual void AvoidMobGoal::~AvoidMobGoal();
-    virtual void AvoidMobGoal::~AvoidMobGoal();
+    virtual ~AvoidMobGoal();
+    virtual ~AvoidMobGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

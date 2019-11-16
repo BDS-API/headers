@@ -2,8 +2,8 @@
 
 class OcelotSitOnBlockGoal : MoveToBlockGoal {
 
-    virtual void OcelotSitOnBlockGoal::~OcelotSitOnBlockGoal();
-    virtual void OcelotSitOnBlockGoal::~OcelotSitOnBlockGoal();
+    virtual ~OcelotSitOnBlockGoal();
+    virtual ~OcelotSitOnBlockGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

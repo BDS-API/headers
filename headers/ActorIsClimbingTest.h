@@ -2,8 +2,8 @@
 
 class ActorIsClimbingTest : SimpleBoolFilterTest {
 
-    virtual void ActorIsClimbingTest::~ActorIsClimbingTest();
-    virtual void ActorIsClimbingTest::~ActorIsClimbingTest();
+    virtual ~ActorIsClimbingTest();
+    virtual ~ActorIsClimbingTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

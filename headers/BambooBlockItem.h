@@ -2,8 +2,8 @@
 
 class BambooBlockItem : BlockItem {
 
-    virtual void BambooBlockItem::~BambooBlockItem();
-    virtual void BambooBlockItem::~BambooBlockItem();
+    virtual ~BambooBlockItem();
+    virtual ~BambooBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

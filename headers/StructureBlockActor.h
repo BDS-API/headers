@@ -2,8 +2,8 @@
 
 class StructureBlockActor : BlockActor {
 
-    virtual void StructureBlockActor::~StructureBlockActor();
-    virtual void StructureBlockActor::~StructureBlockActor();
+    virtual ~StructureBlockActor();
+    virtual ~StructureBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

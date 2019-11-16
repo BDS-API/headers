@@ -2,8 +2,8 @@
 
 class FilterTestHourlyClock : SimpleIntFilterTest {
 
-    virtual void FilterTestHourlyClock::~FilterTestHourlyClock();
-    virtual void FilterTestHourlyClock::~FilterTestHourlyClock();
+    virtual ~FilterTestHourlyClock();
+    virtual ~FilterTestHourlyClock();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

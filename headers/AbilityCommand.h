@@ -2,7 +2,7 @@
 
 class AbilityCommand : Command {
 
-    virtual void AbilityCommand::~AbilityCommand();
-    virtual void AbilityCommand::~AbilityCommand();
+    virtual ~AbilityCommand();
+    virtual ~AbilityCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

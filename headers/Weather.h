@@ -2,8 +2,8 @@
 
 class Weather : LevelListener {
 
-    virtual void Weather::~Weather();
-    virtual void Weather::~Weather();
+    virtual ~Weather();
+    virtual ~Weather();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

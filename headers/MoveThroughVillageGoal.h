@@ -2,8 +2,8 @@
 
 class MoveThroughVillageGoal : Goal {
 
-    virtual void MoveThroughVillageGoal::~MoveThroughVillageGoal();
-    virtual void MoveThroughVillageGoal::~MoveThroughVillageGoal();
+    virtual ~MoveThroughVillageGoal();
+    virtual ~MoveThroughVillageGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

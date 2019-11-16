@@ -2,8 +2,8 @@
 
 class DefendTrustedTargetGoal : NearestAttackableTargetGoal {
 
-    virtual void DefendTrustedTargetGoal::~DefendTrustedTargetGoal();
-    virtual void DefendTrustedTargetGoal::~DefendTrustedTargetGoal();
+    virtual ~DefendTrustedTargetGoal();
+    virtual ~DefendTrustedTargetGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

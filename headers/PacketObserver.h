@@ -2,8 +2,8 @@
 
 class PacketObserver {
 
-    virtual void PacketObserver::~PacketObserver();
-    virtual void PacketObserver::~PacketObserver();
+    virtual ~PacketObserver();
+    virtual ~PacketObserver();
     virtual void packetSentTo(NetworkIdentifier const&, Packet const&, unsigned int);
     virtual void packetReceivedFrom(NetworkIdentifier const&, Packet const&, unsigned int);
     virtual void dataSentTo(NetworkIdentifier const&, gsl::basic_string_span<char const, -1l>);

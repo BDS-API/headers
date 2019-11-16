@@ -2,8 +2,8 @@
 
 class EnchantingInputContainerController : ContainerController {
 
-    virtual void EnchantingInputContainerController::~EnchantingInputContainerController();
-    virtual void EnchantingInputContainerController::~EnchantingInputContainerController();
+    virtual ~EnchantingInputContainerController();
+    virtual ~EnchantingInputContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

@@ -2,8 +2,8 @@
 
 class EatBlockGoal : Goal {
 
-    virtual void EatBlockGoal::~EatBlockGoal();
-    virtual void EatBlockGoal::~EatBlockGoal();
+    virtual ~EatBlockGoal();
+    virtual ~EatBlockGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

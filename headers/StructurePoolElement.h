@@ -12,6 +12,6 @@ class StructurePoolElement {
     virtual void handleJigsawBlock(BlockSource *, JigsawBlockInfo &, LegacyStructureSettings &)const;
     virtual void handleDataMarker(BlockSource *, BlockPos, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::unordered_map<BlockPos, ActorDefinitionIdentifier, std::hash<BlockPos>, std::equal_to<BlockPos>, std::allocator<std::pair<BlockPos const, ActorDefinitionIdentifier>>> &)const;
     virtual void isValid(void)const;
-    virtual void StructurePoolElement::~StructurePoolElement();
-    virtual void StructurePoolElement::~StructurePoolElement();
+    virtual ~StructurePoolElement();
+    virtual ~StructurePoolElement();
 }

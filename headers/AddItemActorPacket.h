@@ -2,8 +2,8 @@
 
 class AddItemActorPacket : Packet {
 
-    virtual void AddItemActorPacket::~AddItemActorPacket();
-    virtual void AddItemActorPacket::~AddItemActorPacket();
+    virtual ~AddItemActorPacket();
+    virtual ~AddItemActorPacket();
     virtual void getId(void)const;
     virtual void _ZNK18AddItemActorPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

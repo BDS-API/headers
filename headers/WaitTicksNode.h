@@ -2,8 +2,8 @@
 
 class WaitTicksNode : BehaviorNode {
 
-    virtual void WaitTicksNode::~WaitTicksNode();
-    virtual void WaitTicksNode::~WaitTicksNode();
+    virtual ~WaitTicksNode();
+    virtual ~WaitTicksNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 }

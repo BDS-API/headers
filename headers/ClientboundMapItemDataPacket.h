@@ -2,8 +2,8 @@
 
 class ClientboundMapItemDataPacket : Packet {
 
-    virtual void ClientboundMapItemDataPacket::~ClientboundMapItemDataPacket();
-    virtual void ClientboundMapItemDataPacket::~ClientboundMapItemDataPacket();
+    virtual ~ClientboundMapItemDataPacket();
+    virtual ~ClientboundMapItemDataPacket();
     virtual void getId(void)const;
     virtual void _ZNK28ClientboundMapItemDataPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

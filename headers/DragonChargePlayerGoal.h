@@ -2,8 +2,8 @@
 
 class DragonChargePlayerGoal : Goal {
 
-    virtual void DragonChargePlayerGoal::~DragonChargePlayerGoal();
-    virtual void DragonChargePlayerGoal::~DragonChargePlayerGoal();
+    virtual ~DragonChargePlayerGoal();
+    virtual ~DragonChargePlayerGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

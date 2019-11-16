@@ -2,8 +2,8 @@
 
 class EnderEyeItem : Item {
 
-    virtual void EnderEyeItem::~EnderEyeItem();
-    virtual void EnderEyeItem::~EnderEyeItem();
+    virtual ~EnderEyeItem();
+    virtual ~EnderEyeItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

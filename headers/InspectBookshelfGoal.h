@@ -2,8 +2,8 @@
 
 class InspectBookshelfGoal : MoveToBlockGoal {
 
-    virtual void InspectBookshelfGoal::~InspectBookshelfGoal();
-    virtual void InspectBookshelfGoal::~InspectBookshelfGoal();
+    virtual ~InspectBookshelfGoal();
+    virtual ~InspectBookshelfGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

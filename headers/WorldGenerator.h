@@ -2,8 +2,8 @@
 
 class WorldGenerator {
 
-    virtual void WorldGenerator::~WorldGenerator();
-    virtual void WorldGenerator::~WorldGenerator();
+    virtual ~WorldGenerator();
+    virtual ~WorldGenerator();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

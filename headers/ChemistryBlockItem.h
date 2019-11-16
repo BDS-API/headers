@@ -2,8 +2,8 @@
 
 class ChemistryBlockItem : BlockItem {
 
-    virtual void ChemistryBlockItem::~ChemistryBlockItem();
-    virtual void ChemistryBlockItem::~ChemistryBlockItem();
+    virtual ~ChemistryBlockItem();
+    virtual ~ChemistryBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

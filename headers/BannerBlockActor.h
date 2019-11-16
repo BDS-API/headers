@@ -2,8 +2,8 @@
 
 class BannerBlockActor : BlockActor {
 
-    virtual void BannerBlockActor::~BannerBlockActor();
-    virtual void BannerBlockActor::~BannerBlockActor();
+    virtual ~BannerBlockActor();
+    virtual ~BannerBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

@@ -2,8 +2,8 @@
 
 class NBCastleSmallCorridorCrossingPiece : NetherFortressPiece {
 
-    virtual void NBCastleSmallCorridorCrossingPiece::~NBCastleSmallCorridorCrossingPiece();
-    virtual void NBCastleSmallCorridorCrossingPiece::~NBCastleSmallCorridorCrossingPiece();
+    virtual ~NBCastleSmallCorridorCrossingPiece();
+    virtual ~NBCastleSmallCorridorCrossingPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

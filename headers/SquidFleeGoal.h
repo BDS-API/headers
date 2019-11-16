@@ -2,8 +2,8 @@
 
 class SquidFleeGoal : Goal {
 
-    virtual void SquidFleeGoal::~SquidFleeGoal();
-    virtual void SquidFleeGoal::~SquidFleeGoal();
+    virtual ~SquidFleeGoal();
+    virtual ~SquidFleeGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

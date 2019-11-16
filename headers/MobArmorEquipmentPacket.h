@@ -2,8 +2,8 @@
 
 class MobArmorEquipmentPacket : Packet {
 
-    virtual void MobArmorEquipmentPacket::~MobArmorEquipmentPacket();
-    virtual void MobArmorEquipmentPacket::~MobArmorEquipmentPacket();
+    virtual ~MobArmorEquipmentPacket();
+    virtual ~MobArmorEquipmentPacket();
     virtual void getId(void)const;
     virtual void _ZNK23MobArmorEquipmentPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -2,8 +2,8 @@
 
 class IDataInput {
 
-    virtual void IDataInput::~IDataInput();
-    virtual void IDataInput::~IDataInput();
+    virtual ~IDataInput();
+    virtual ~IDataInput();
     virtual void _ZN14IDataInput10readStringB5cxx11Ev;
     virtual void _ZN14IDataInput14readLongStringB5cxx11Ev;
     virtual void readFloat(void);

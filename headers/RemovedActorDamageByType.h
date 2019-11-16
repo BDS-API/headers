@@ -2,8 +2,8 @@
 
 class RemovedActorDamageByType : ActorDamageSource {
 
-    virtual void RemovedActorDamageByType::~RemovedActorDamageByType();
-    virtual void RemovedActorDamageByType::~RemovedActorDamageByType();
+    virtual ~RemovedActorDamageByType();
+    virtual ~RemovedActorDamageByType();
     virtual void isEntitySource(void)const;
     virtual void isChildEntitySource(void)const;
     virtual void isBlockSource(void)const;

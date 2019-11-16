@@ -2,8 +2,8 @@
 
 class BedBlockActor : BlockActor {
 
-    virtual void BedBlockActor::~BedBlockActor();
-    virtual void BedBlockActor::~BedBlockActor();
+    virtual ~BedBlockActor();
+    virtual ~BedBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

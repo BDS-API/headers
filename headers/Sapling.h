@@ -2,8 +2,8 @@
 
 class Sapling : BushBlock {
 
-    virtual void Sapling::~Sapling();
-    virtual void Sapling::~Sapling();
+    virtual ~Sapling();
+    virtual ~Sapling();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

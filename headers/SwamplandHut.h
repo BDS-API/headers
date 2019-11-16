@@ -2,8 +2,8 @@
 
 class SwamplandHut : ScatteredFeaturePiece {
 
-    virtual void SwamplandHut::~SwamplandHut();
-    virtual void SwamplandHut::~SwamplandHut();
+    virtual ~SwamplandHut();
+    virtual ~SwamplandHut();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

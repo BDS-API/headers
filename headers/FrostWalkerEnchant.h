@@ -2,8 +2,8 @@
 
 class FrostWalkerEnchant : Enchant {
 
-    virtual void FrostWalkerEnchant::~FrostWalkerEnchant();
-    virtual void FrostWalkerEnchant::~FrostWalkerEnchant();
+    virtual ~FrostWalkerEnchant();
+    virtual ~FrostWalkerEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

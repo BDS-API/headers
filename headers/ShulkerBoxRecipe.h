@@ -2,8 +2,8 @@
 
 class ShulkerBoxRecipe : ShapelessRecipe {
 
-    virtual void ShulkerBoxRecipe::~ShulkerBoxRecipe();
-    virtual void ShulkerBoxRecipe::~ShulkerBoxRecipe();
+    virtual ~ShulkerBoxRecipe();
+    virtual ~ShulkerBoxRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

@@ -2,8 +2,8 @@
 
 class SwimEnchant : Enchant {
 
-    virtual void SwimEnchant::~SwimEnchant();
-    virtual void SwimEnchant::~SwimEnchant();
+    virtual ~SwimEnchant();
+    virtual ~SwimEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

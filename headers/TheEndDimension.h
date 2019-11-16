@@ -2,8 +2,8 @@
 
 class TheEndDimension : Dimension {
 
-    virtual void TheEndDimension::~TheEndDimension();
-    virtual void TheEndDimension::~TheEndDimension();
+    virtual ~TheEndDimension();
+    virtual ~TheEndDimension();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

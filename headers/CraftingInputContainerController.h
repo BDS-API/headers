@@ -2,8 +2,8 @@
 
 class CraftingInputContainerController : CraftingContainerController {
 
-    virtual void CraftingInputContainerController::~CraftingInputContainerController();
-    virtual void CraftingInputContainerController::~CraftingInputContainerController();
+    virtual ~CraftingInputContainerController();
+    virtual ~CraftingInputContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

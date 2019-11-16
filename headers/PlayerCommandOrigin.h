@@ -2,8 +2,8 @@
 
 class PlayerCommandOrigin : CommandOrigin {
 
-    virtual void PlayerCommandOrigin::~PlayerCommandOrigin();
-    virtual void PlayerCommandOrigin::~PlayerCommandOrigin();
+    virtual ~PlayerCommandOrigin();
+    virtual ~PlayerCommandOrigin();
     virtual void _ZNK19PlayerCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK19PlayerCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

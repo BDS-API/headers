@@ -2,8 +2,8 @@
 
 class com::mojang::clacks::protocol::Commands::StubInterface {
 
-    virtual void com::mojang::clacks::protocol::Commands::StubInterface::~StubInterface();
-    virtual void com::mojang::clacks::protocol::Commands::StubInterface::~StubInterface();
+    virtual ~StubInterface();
+    virtual ~StubInterface();
     virtual void listPlayer(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, com::mojang::clacks::protocol::PlayerList *);
     virtual void kick(grpc::ClientContext *, com::mojang::clacks::protocol::PlayerAndMessage const&, com::mojang::clacks::protocol::Empty *);
     virtual void say(grpc::ClientContext *, com::mojang::clacks::protocol::Message const&, com::mojang::clacks::protocol::Empty *);

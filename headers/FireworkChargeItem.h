@@ -2,8 +2,8 @@
 
 class FireworkChargeItem : Item {
 
-    virtual void FireworkChargeItem::~FireworkChargeItem();
-    virtual void FireworkChargeItem::~FireworkChargeItem();
+    virtual ~FireworkChargeItem();
+    virtual ~FireworkChargeItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

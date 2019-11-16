@@ -2,8 +2,8 @@
 
 class SignItem : Item {
 
-    virtual void SignItem::~SignItem();
-    virtual void SignItem::~SignItem();
+    virtual ~SignItem();
+    virtual ~SignItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

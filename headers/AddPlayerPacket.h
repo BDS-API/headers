@@ -2,8 +2,8 @@
 
 class AddPlayerPacket : Packet {
 
-    virtual void AddPlayerPacket::~AddPlayerPacket();
-    virtual void AddPlayerPacket::~AddPlayerPacket();
+    virtual ~AddPlayerPacket();
+    virtual ~AddPlayerPacket();
     virtual void getId(void)const;
     virtual void _ZNK15AddPlayerPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

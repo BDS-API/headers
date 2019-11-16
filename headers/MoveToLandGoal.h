@@ -2,8 +2,8 @@
 
 class MoveToLandGoal : MoveToBlockGoal {
 
-    virtual void MoveToLandGoal::~MoveToLandGoal();
-    virtual void MoveToLandGoal::~MoveToLandGoal();
+    virtual ~MoveToLandGoal();
+    virtual ~MoveToLandGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

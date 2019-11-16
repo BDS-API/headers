@@ -7,8 +7,8 @@ class ThrownEgg : Throwable {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void ThrownEgg::~ThrownEgg();
-    virtual void ThrownEgg::~ThrownEgg();
+    virtual ~ThrownEgg();
+    virtual ~ThrownEgg();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

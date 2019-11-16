@@ -2,8 +2,8 @@
 
 class IMinecraftEventing : IPackTelemetry, IWebviewTelemetry {
 
-    virtual void IMinecraftEventing::~IMinecraftEventing();
-    virtual void IMinecraftEventing::~IMinecraftEventing();
+    virtual ~IMinecraftEventing();
+    virtual ~IMinecraftEventing();
     virtual void fireEventPackUpgradeAttempt(PackManifest const&, PackReport const&);
     virtual void init(Social::IUserManager &);
     virtual void _ZN17IMinecraftEventing18getPlayerSessionIdB5cxx11Ev;

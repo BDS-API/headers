@@ -7,8 +7,8 @@ class ArmorStand : Mob {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void ArmorStand::~ArmorStand();
-    virtual void ArmorStand::~ArmorStand();
+    virtual ~ArmorStand();
+    virtual ~ArmorStand();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

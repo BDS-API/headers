@@ -2,7 +2,7 @@
 
 class AttributeModifier {
 
-    virtual void AttributeModifier::~AttributeModifier();
-    virtual void AttributeModifier::~AttributeModifier();
+    virtual ~AttributeModifier();
+    virtual ~AttributeModifier();
     virtual void isInstantaneous(void)const;
 }

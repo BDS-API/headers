@@ -2,8 +2,8 @@
 
 class TemptGoal : Goal {
 
-    virtual void TemptGoal::~TemptGoal();
-    virtual void TemptGoal::~TemptGoal();
+    virtual ~TemptGoal();
+    virtual ~TemptGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

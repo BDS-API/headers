@@ -2,8 +2,8 @@
 
 class LevelEventListener {
 
-    virtual void LevelEventListener::~LevelEventListener();
-    virtual void LevelEventListener::~LevelEventListener();
+    virtual ~LevelEventListener();
+    virtual ~LevelEventListener();
     virtual void onLevelInitialized(Level &);
     virtual void onLevelSaveData(Level &, CompoundTag &);
     virtual void onLevelAddedPlayer(Level &, Player &);

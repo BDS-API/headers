@@ -2,8 +2,8 @@
 
 class IJsonSerializable {
 
-    virtual void IJsonSerializable::~IJsonSerializable();
-    virtual void IJsonSerializable::~IJsonSerializable();
+    virtual ~IJsonSerializable();
+    virtual ~IJsonSerializable();
     virtual void serialize(Json::Value &);
     virtual void deserialize(Json::Value &);
 }

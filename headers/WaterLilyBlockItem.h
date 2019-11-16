@@ -2,8 +2,8 @@
 
 class WaterLilyBlockItem : BlockItem {
 
-    virtual void WaterLilyBlockItem::~WaterLilyBlockItem();
-    virtual void WaterLilyBlockItem::~WaterLilyBlockItem();
+    virtual ~WaterLilyBlockItem();
+    virtual ~WaterLilyBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

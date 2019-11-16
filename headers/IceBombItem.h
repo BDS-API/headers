@@ -2,8 +2,8 @@
 
 class IceBombItem : ChemistryItem {
 
-    virtual void IceBombItem::~IceBombItem();
-    virtual void IceBombItem::~IceBombItem();
+    virtual ~IceBombItem();
+    virtual ~IceBombItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

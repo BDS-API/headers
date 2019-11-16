@@ -2,8 +2,8 @@
 
 class BannerDuplicateRecipe : MultiRecipe {
 
-    virtual void BannerDuplicateRecipe::~BannerDuplicateRecipe();
-    virtual void BannerDuplicateRecipe::~BannerDuplicateRecipe();
+    virtual ~BannerDuplicateRecipe();
+    virtual ~BannerDuplicateRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

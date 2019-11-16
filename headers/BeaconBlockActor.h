@@ -2,8 +2,8 @@
 
 class BeaconBlockActor : BlockActor, Container {
 
-    virtual void BeaconBlockActor::~BeaconBlockActor();
-    virtual void BeaconBlockActor::~BeaconBlockActor();
+    virtual ~BeaconBlockActor();
+    virtual ~BeaconBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

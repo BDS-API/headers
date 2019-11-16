@@ -2,8 +2,8 @@
 
 class NBMonsterThrone : NetherFortressPiece {
 
-    virtual void NBMonsterThrone::~NBMonsterThrone();
-    virtual void NBMonsterThrone::~NBMonsterThrone();
+    virtual ~NBMonsterThrone();
+    virtual ~NBMonsterThrone();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

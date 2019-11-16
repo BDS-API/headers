@@ -2,8 +2,8 @@
 
 class EndPortalBlockActor : BlockActor {
 
-    virtual void EndPortalBlockActor::~EndPortalBlockActor();
-    virtual void EndPortalBlockActor::~EndPortalBlockActor();
+    virtual ~EndPortalBlockActor();
+    virtual ~EndPortalBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

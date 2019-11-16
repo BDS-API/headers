@@ -2,8 +2,8 @@
 
 class HarvestFarmBlockGoal : MoveToBlockGoal {
 
-    virtual void HarvestFarmBlockGoal::~HarvestFarmBlockGoal();
-    virtual void HarvestFarmBlockGoal::~HarvestFarmBlockGoal();
+    virtual ~HarvestFarmBlockGoal();
+    virtual ~HarvestFarmBlockGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

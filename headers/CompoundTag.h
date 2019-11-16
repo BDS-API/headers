@@ -2,8 +2,8 @@
 
 class CompoundTag : Tag {
 
-    virtual void CompoundTag::~CompoundTag();
-    virtual void CompoundTag::~CompoundTag();
+    virtual ~CompoundTag();
+    virtual ~CompoundTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

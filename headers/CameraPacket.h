@@ -2,8 +2,8 @@
 
 class CameraPacket : Packet {
 
-    virtual void CameraPacket::~CameraPacket();
-    virtual void CameraPacket::~CameraPacket();
+    virtual ~CameraPacket();
+    virtual ~CameraPacket();
     virtual void getId(void)const;
     virtual void _ZNK12CameraPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

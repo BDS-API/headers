@@ -2,8 +2,8 @@
 
 class BookCloningRecipe : MultiRecipe {
 
-    virtual void BookCloningRecipe::~BookCloningRecipe();
-    virtual void BookCloningRecipe::~BookCloningRecipe();
+    virtual ~BookCloningRecipe();
+    virtual ~BookCloningRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

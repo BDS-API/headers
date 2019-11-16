@@ -2,8 +2,8 @@
 
 class BossEventPacket : Packet {
 
-    virtual void BossEventPacket::~BossEventPacket();
-    virtual void BossEventPacket::~BossEventPacket();
+    virtual ~BossEventPacket();
+    virtual ~BossEventPacket();
     virtual void getId(void)const;
     virtual void _ZNK15BossEventPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

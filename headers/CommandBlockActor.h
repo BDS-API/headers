@@ -2,8 +2,8 @@
 
 class CommandBlockActor : BlockActor {
 
-    virtual void CommandBlockActor::~CommandBlockActor();
-    virtual void CommandBlockActor::~CommandBlockActor();
+    virtual ~CommandBlockActor();
+    virtual ~CommandBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

@@ -2,8 +2,8 @@
 
 class LookControl : Control {
 
-    virtual void LookControl::~LookControl();
-    virtual void LookControl::~LookControl();
+    virtual ~LookControl();
+    virtual ~LookControl();
     virtual void initializeInternal(Mob &);
     virtual void tick(Mob &);
 }

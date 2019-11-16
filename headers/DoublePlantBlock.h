@@ -2,8 +2,8 @@
 
 class DoublePlantBlock : BushBlock {
 
-    virtual void DoublePlantBlock::~DoublePlantBlock();
-    virtual void DoublePlantBlock::~DoublePlantBlock();
+    virtual ~DoublePlantBlock();
+    virtual ~DoublePlantBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

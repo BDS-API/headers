@@ -2,8 +2,8 @@
 
 class MobEffect {
 
-    virtual void MobEffect::~MobEffect();
-    virtual void MobEffect::~MobEffect();
+    virtual ~MobEffect();
+    virtual ~MobEffect();
     virtual void applyEffects(Actor *, int, int)const;
     virtual void removeEffects(Actor *);
     virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const;

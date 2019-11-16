@@ -7,8 +7,8 @@ class Salmon : Fish {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Salmon::~Salmon();
-    virtual void Salmon::~Salmon();
+    virtual ~Salmon();
+    virtual ~Salmon();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

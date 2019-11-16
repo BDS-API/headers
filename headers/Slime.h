@@ -7,8 +7,8 @@ class Slime : Monster {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Slime::~Slime();
-    virtual void Slime::~Slime();
+    virtual ~Slime();
+    virtual ~Slime();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

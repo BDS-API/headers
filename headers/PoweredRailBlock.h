@@ -2,8 +2,8 @@
 
 class PoweredRailBlock : BaseRailBlock {
 
-    virtual void PoweredRailBlock::~PoweredRailBlock();
-    virtual void PoweredRailBlock::~PoweredRailBlock();
+    virtual ~PoweredRailBlock();
+    virtual ~PoweredRailBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

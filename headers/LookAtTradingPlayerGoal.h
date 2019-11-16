@@ -2,8 +2,8 @@
 
 class LookAtTradingPlayerGoal : LookAtActorGoal {
 
-    virtual void LookAtTradingPlayerGoal::~LookAtTradingPlayerGoal();
-    virtual void LookAtTradingPlayerGoal::~LookAtTradingPlayerGoal();
+    virtual ~LookAtTradingPlayerGoal();
+    virtual ~LookAtTradingPlayerGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

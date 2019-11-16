@@ -2,8 +2,8 @@
 
 class SlimeRandomDirectionGoal : Goal {
 
-    virtual void SlimeRandomDirectionGoal::~SlimeRandomDirectionGoal();
-    virtual void SlimeRandomDirectionGoal::~SlimeRandomDirectionGoal();
+    virtual ~SlimeRandomDirectionGoal();
+    virtual ~SlimeRandomDirectionGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

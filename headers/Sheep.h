@@ -7,8 +7,8 @@ class Sheep : Animal {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Sheep::~Sheep();
-    virtual void Sheep::~Sheep();
+    virtual ~Sheep();
+    virtual ~Sheep();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

@@ -2,8 +2,8 @@
 
 class OverworldDimension : Dimension {
 
-    virtual void OverworldDimension::~OverworldDimension();
-    virtual void OverworldDimension::~OverworldDimension();
+    virtual ~OverworldDimension();
+    virtual ~OverworldDimension();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

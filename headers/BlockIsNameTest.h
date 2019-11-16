@@ -2,8 +2,8 @@
 
 class BlockIsNameTest : SimpleHashStringFilterTest {
 
-    virtual void BlockIsNameTest::~BlockIsNameTest();
-    virtual void BlockIsNameTest::~BlockIsNameTest();
+    virtual ~BlockIsNameTest();
+    virtual ~BlockIsNameTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

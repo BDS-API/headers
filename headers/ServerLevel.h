@@ -2,8 +2,8 @@
 
 class ServerLevel : Level {
 
-    virtual void ServerLevel::~ServerLevel();
-    virtual void ServerLevel::~ServerLevel();
+    virtual ~ServerLevel();
+    virtual ~ServerLevel();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

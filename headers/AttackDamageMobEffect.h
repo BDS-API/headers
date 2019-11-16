@@ -2,8 +2,8 @@
 
 class AttackDamageMobEffect : MobEffect {
 
-    virtual void AttackDamageMobEffect::~AttackDamageMobEffect();
-    virtual void AttackDamageMobEffect::~AttackDamageMobEffect();
+    virtual ~AttackDamageMobEffect();
+    virtual ~AttackDamageMobEffect();
     virtual void applyEffects(Actor *, int, int)const;
     virtual void removeEffects(Actor *);
     virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const;

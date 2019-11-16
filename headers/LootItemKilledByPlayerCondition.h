@@ -2,7 +2,7 @@
 
 class LootItemKilledByPlayerCondition : LootItemCondition {
 
-    virtual void LootItemKilledByPlayerCondition::~LootItemKilledByPlayerCondition();
-    virtual void LootItemKilledByPlayerCondition::~LootItemKilledByPlayerCondition();
+    virtual ~LootItemKilledByPlayerCondition();
+    virtual ~LootItemKilledByPlayerCondition();
     virtual void applies(Random &, LootTableContext &);
 }

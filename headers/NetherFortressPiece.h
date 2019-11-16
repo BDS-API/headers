@@ -2,8 +2,8 @@
 
 class NetherFortressPiece : StructurePiece {
 
-    virtual void NetherFortressPiece::~NetherFortressPiece();
-    virtual void NetherFortressPiece::~NetherFortressPiece();
+    virtual ~NetherFortressPiece();
+    virtual ~NetherFortressPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

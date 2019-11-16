@@ -2,8 +2,8 @@
 
 class BreatheAirGoal : Goal {
 
-    virtual void BreatheAirGoal::~BreatheAirGoal();
-    virtual void BreatheAirGoal::~BreatheAirGoal();
+    virtual ~BreatheAirGoal();
+    virtual ~BreatheAirGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

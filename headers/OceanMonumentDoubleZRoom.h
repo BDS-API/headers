@@ -2,8 +2,8 @@
 
 class OceanMonumentDoubleZRoom : OceanMonumentPiece {
 
-    virtual void OceanMonumentDoubleZRoom::~OceanMonumentDoubleZRoom();
-    virtual void OceanMonumentDoubleZRoom::~OceanMonumentDoubleZRoom();
+    virtual ~OceanMonumentDoubleZRoom();
+    virtual ~OceanMonumentDoubleZRoom();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

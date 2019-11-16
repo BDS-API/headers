@@ -2,8 +2,8 @@
 
 class SetActorDataPacket : Packet {
 
-    virtual void SetActorDataPacket::~SetActorDataPacket();
-    virtual void SetActorDataPacket::~SetActorDataPacket();
+    virtual ~SetActorDataPacket();
+    virtual ~SetActorDataPacket();
     virtual void getId(void)const;
     virtual void _ZNK18SetActorDataPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

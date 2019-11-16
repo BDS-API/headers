@@ -2,8 +2,8 @@
 
 class SwellGoal : Goal {
 
-    virtual void SwellGoal::~SwellGoal();
-    virtual void SwellGoal::~SwellGoal();
+    virtual ~SwellGoal();
+    virtual ~SwellGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

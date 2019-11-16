@@ -2,8 +2,8 @@
 
 class FilterTestBrightness : SimpleFloatFilterTest {
 
-    virtual void FilterTestBrightness::~FilterTestBrightness();
-    virtual void FilterTestBrightness::~FilterTestBrightness();
+    virtual ~FilterTestBrightness();
+    virtual ~FilterTestBrightness();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

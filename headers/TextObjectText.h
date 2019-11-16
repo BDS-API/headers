@@ -2,8 +2,8 @@
 
 class TextObjectText : ITextObject {
 
-    virtual void TextObjectText::~TextObjectText();
-    virtual void TextObjectText::~TextObjectText();
+    virtual ~TextObjectText();
+    virtual ~TextObjectText();
     virtual void _ZNK14TextObjectText8asStringB5cxx11Ev;
     virtual void asJsonValue(void)const;
 }

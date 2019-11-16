@@ -2,8 +2,8 @@
 
 class IMinecraftApp {
 
-    virtual void IMinecraftApp::~IMinecraftApp();
-    virtual void IMinecraftApp::~IMinecraftApp();
+    virtual ~IMinecraftApp();
+    virtual ~IMinecraftApp();
     virtual void getPrimaryMinecraft(void);
     virtual void getAutomationClient(void)const;
     virtual void isEduMode(void)const;

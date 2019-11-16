@@ -2,8 +2,8 @@
 
 class RecordItem : Item {
 
-    virtual void RecordItem::~RecordItem();
-    virtual void RecordItem::~RecordItem();
+    virtual ~RecordItem();
+    virtual ~RecordItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

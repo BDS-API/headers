@@ -2,8 +2,8 @@
 
 class ActorCommandOrigin : CommandOrigin {
 
-    virtual void ActorCommandOrigin::~ActorCommandOrigin();
-    virtual void ActorCommandOrigin::~ActorCommandOrigin();
+    virtual ~ActorCommandOrigin();
+    virtual ~ActorCommandOrigin();
     virtual void _ZNK18ActorCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK18ActorCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

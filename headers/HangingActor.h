@@ -7,8 +7,8 @@ class HangingActor : Actor {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void HangingActor::~HangingActor();
-    virtual void HangingActor::~HangingActor();
+    virtual ~HangingActor();
+    virtual ~HangingActor();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

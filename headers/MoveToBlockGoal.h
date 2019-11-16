@@ -2,8 +2,8 @@
 
 class MoveToBlockGoal : BaseMoveToGoal {
 
-    virtual void MoveToBlockGoal::~MoveToBlockGoal();
-    virtual void MoveToBlockGoal::~MoveToBlockGoal();
+    virtual ~MoveToBlockGoal();
+    virtual ~MoveToBlockGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

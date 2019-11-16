@@ -2,7 +2,7 @@
 
 class NavigationSystem : ITickingSystem {
 
-    virtual void NavigationSystem::~NavigationSystem();
-    virtual void NavigationSystem::~NavigationSystem();
+    virtual ~NavigationSystem();
+    virtual ~NavigationSystem();
     virtual void tick(EntityRegistry &);
 }

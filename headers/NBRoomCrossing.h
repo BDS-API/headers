@@ -2,8 +2,8 @@
 
 class NBRoomCrossing : NetherFortressPiece {
 
-    virtual void NBRoomCrossing::~NBRoomCrossing();
-    virtual void NBRoomCrossing::~NBRoomCrossing();
+    virtual ~NBRoomCrossing();
+    virtual ~NBRoomCrossing();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

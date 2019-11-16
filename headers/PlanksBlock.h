@@ -2,8 +2,8 @@
 
 class PlanksBlock : BlockLegacy {
 
-    virtual void PlanksBlock::~PlanksBlock();
-    virtual void PlanksBlock::~PlanksBlock();
+    virtual ~PlanksBlock();
+    virtual ~PlanksBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

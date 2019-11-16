@@ -2,8 +2,8 @@
 
 class FindCoverGoal : Goal {
 
-    virtual void FindCoverGoal::~FindCoverGoal();
-    virtual void FindCoverGoal::~FindCoverGoal();
+    virtual ~FindCoverGoal();
+    virtual ~FindCoverGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

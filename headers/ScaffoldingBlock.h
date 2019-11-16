@@ -2,8 +2,8 @@
 
 class ScaffoldingBlock : HeavyBlock {
 
-    virtual void ScaffoldingBlock::~ScaffoldingBlock();
-    virtual void ScaffoldingBlock::~ScaffoldingBlock();
+    virtual ~ScaffoldingBlock();
+    virtual ~ScaffoldingBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

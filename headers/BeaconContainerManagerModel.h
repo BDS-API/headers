@@ -2,8 +2,8 @@
 
 class BeaconContainerManagerModel : LevelContainerManagerModel {
 
-    virtual void BeaconContainerManagerModel::~BeaconContainerManagerModel();
-    virtual void BeaconContainerManagerModel::~BeaconContainerManagerModel();
+    virtual ~BeaconContainerManagerModel();
+    virtual ~BeaconContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

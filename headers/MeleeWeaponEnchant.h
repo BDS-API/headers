@@ -2,8 +2,8 @@
 
 class MeleeWeaponEnchant : Enchant {
 
-    virtual void MeleeWeaponEnchant::~MeleeWeaponEnchant();
-    virtual void MeleeWeaponEnchant::~MeleeWeaponEnchant();
+    virtual ~MeleeWeaponEnchant();
+    virtual ~MeleeWeaponEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

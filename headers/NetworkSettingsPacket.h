@@ -2,8 +2,8 @@
 
 class NetworkSettingsPacket : Packet {
 
-    virtual void NetworkSettingsPacket::~NetworkSettingsPacket();
-    virtual void NetworkSettingsPacket::~NetworkSettingsPacket();
+    virtual ~NetworkSettingsPacket();
+    virtual ~NetworkSettingsPacket();
     virtual void getId(void)const;
     virtual void _ZNK21NetworkSettingsPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

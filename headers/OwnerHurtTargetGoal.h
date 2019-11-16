@@ -2,8 +2,8 @@
 
 class OwnerHurtTargetGoal : TargetGoal {
 
-    virtual void OwnerHurtTargetGoal::~OwnerHurtTargetGoal();
-    virtual void OwnerHurtTargetGoal::~OwnerHurtTargetGoal();
+    virtual ~OwnerHurtTargetGoal();
+    virtual ~OwnerHurtTargetGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

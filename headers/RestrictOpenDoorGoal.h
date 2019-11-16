@@ -2,8 +2,8 @@
 
 class RestrictOpenDoorGoal : Goal {
 
-    virtual void RestrictOpenDoorGoal::~RestrictOpenDoorGoal();
-    virtual void RestrictOpenDoorGoal::~RestrictOpenDoorGoal();
+    virtual ~RestrictOpenDoorGoal();
+    virtual ~RestrictOpenDoorGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

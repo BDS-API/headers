@@ -2,8 +2,8 @@
 
 class VexRandomMoveGoal : Goal {
 
-    virtual void VexRandomMoveGoal::~VexRandomMoveGoal();
-    virtual void VexRandomMoveGoal::~VexRandomMoveGoal();
+    virtual ~VexRandomMoveGoal();
+    virtual ~VexRandomMoveGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

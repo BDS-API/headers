@@ -2,8 +2,8 @@
 
 class ShulkerBoxContainerController : ContainerController {
 
-    virtual void ShulkerBoxContainerController::~ShulkerBoxContainerController();
-    virtual void ShulkerBoxContainerController::~ShulkerBoxContainerController();
+    virtual ~ShulkerBoxContainerController();
+    virtual ~ShulkerBoxContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

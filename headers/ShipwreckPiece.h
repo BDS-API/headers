@@ -2,8 +2,8 @@
 
 class ShipwreckPiece : StructurePiece {
 
-    virtual void ShipwreckPiece::~ShipwreckPiece();
-    virtual void ShipwreckPiece::~ShipwreckPiece();
+    virtual ~ShipwreckPiece();
+    virtual ~ShipwreckPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

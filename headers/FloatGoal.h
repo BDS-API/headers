@@ -2,8 +2,8 @@
 
 class FloatGoal : Goal {
 
-    virtual void FloatGoal::~FloatGoal();
-    virtual void FloatGoal::~FloatGoal();
+    virtual ~FloatGoal();
+    virtual ~FloatGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

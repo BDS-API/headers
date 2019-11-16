@@ -2,8 +2,8 @@
 
 class SetLastHurtByPacket : Packet {
 
-    virtual void SetLastHurtByPacket::~SetLastHurtByPacket();
-    virtual void SetLastHurtByPacket::~SetLastHurtByPacket();
+    virtual ~SetLastHurtByPacket();
+    virtual ~SetLastHurtByPacket();
     virtual void getId(void)const;
     virtual void _ZNK19SetLastHurtByPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

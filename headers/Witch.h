@@ -7,8 +7,8 @@ class Witch : HumanoidMonster {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Witch::~Witch();
-    virtual void Witch::~Witch();
+    virtual ~Witch();
+    virtual ~Witch();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

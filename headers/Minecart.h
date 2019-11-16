@@ -7,8 +7,8 @@ class Minecart : Actor {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Minecart::~Minecart();
-    virtual void Minecart::~Minecart();
+    virtual ~Minecart();
+    virtual ~Minecart();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

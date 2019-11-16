@@ -2,8 +2,8 @@
 
 class BucketItem : Item {
 
-    virtual void BucketItem::~BucketItem();
-    virtual void BucketItem::~BucketItem();
+    virtual ~BucketItem();
+    virtual ~BucketItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

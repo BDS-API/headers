@@ -2,8 +2,8 @@
 
 class SwimIdleGoal : Goal {
 
-    virtual void SwimIdleGoal::~SwimIdleGoal();
-    virtual void SwimIdleGoal::~SwimIdleGoal();
+    virtual ~SwimIdleGoal();
+    virtual ~SwimIdleGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

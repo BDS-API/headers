@@ -2,8 +2,8 @@
 
 class TridentLoyaltyEnchant : Enchant {
 
-    virtual void TridentLoyaltyEnchant::~TridentLoyaltyEnchant();
-    virtual void TridentLoyaltyEnchant::~TridentLoyaltyEnchant();
+    virtual ~TridentLoyaltyEnchant();
+    virtual ~TridentLoyaltyEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

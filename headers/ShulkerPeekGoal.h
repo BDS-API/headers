@@ -2,8 +2,8 @@
 
 class ShulkerPeekGoal : Goal {
 
-    virtual void ShulkerPeekGoal::~ShulkerPeekGoal();
-    virtual void ShulkerPeekGoal::~ShulkerPeekGoal();
+    virtual ~ShulkerPeekGoal();
+    virtual ~ShulkerPeekGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

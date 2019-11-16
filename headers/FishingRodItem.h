@@ -2,8 +2,8 @@
 
 class FishingRodItem : Item {
 
-    virtual void FishingRodItem::~FishingRodItem();
-    virtual void FishingRodItem::~FishingRodItem();
+    virtual ~FishingRodItem();
+    virtual ~FishingRodItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

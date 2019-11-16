@@ -2,8 +2,8 @@
 
 class EnchantingTableBlockActor : BlockActor {
 
-    virtual void EnchantingTableBlockActor::~EnchantingTableBlockActor();
-    virtual void EnchantingTableBlockActor::~EnchantingTableBlockActor();
+    virtual ~EnchantingTableBlockActor();
+    virtual ~EnchantingTableBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

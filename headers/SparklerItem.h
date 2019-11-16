@@ -2,8 +2,8 @@
 
 class SparklerItem : ChemistryStickItem {
 
-    virtual void SparklerItem::~SparklerItem();
-    virtual void SparklerItem::~SparklerItem();
+    virtual ~SparklerItem();
+    virtual ~SparklerItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

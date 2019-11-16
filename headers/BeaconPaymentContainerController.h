@@ -2,8 +2,8 @@
 
 class BeaconPaymentContainerController : ContainerController {
 
-    virtual void BeaconPaymentContainerController::~BeaconPaymentContainerController();
-    virtual void BeaconPaymentContainerController::~BeaconPaymentContainerController();
+    virtual ~BeaconPaymentContainerController();
+    virtual ~BeaconPaymentContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

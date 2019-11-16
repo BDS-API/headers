@@ -2,7 +2,7 @@
 
 class ScriptServerPacketEventListener : NetworkPacketEventListener {
 
-    virtual void ScriptServerPacketEventListener::~ScriptServerPacketEventListener();
-    virtual void ScriptServerPacketEventListener::~ScriptServerPacketEventListener();
+    virtual ~ScriptServerPacketEventListener();
+    virtual ~ScriptServerPacketEventListener();
     virtual void onPacketReceivedFrom(PacketHeader const&, Packet const&);
 }

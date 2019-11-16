@@ -2,8 +2,8 @@
 
 class PotionItem : Item {
 
-    virtual void PotionItem::~PotionItem();
-    virtual void PotionItem::~PotionItem();
+    virtual ~PotionItem();
+    virtual ~PotionItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

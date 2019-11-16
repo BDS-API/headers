@@ -2,8 +2,8 @@
 
 class SquidOutOfWaterGoal : Goal {
 
-    virtual void SquidOutOfWaterGoal::~SquidOutOfWaterGoal();
-    virtual void SquidOutOfWaterGoal::~SquidOutOfWaterGoal();
+    virtual ~SquidOutOfWaterGoal();
+    virtual ~SquidOutOfWaterGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

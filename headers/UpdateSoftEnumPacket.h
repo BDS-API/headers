@@ -2,8 +2,8 @@
 
 class UpdateSoftEnumPacket : Packet {
 
-    virtual void UpdateSoftEnumPacket::~UpdateSoftEnumPacket();
-    virtual void UpdateSoftEnumPacket::~UpdateSoftEnumPacket();
+    virtual ~UpdateSoftEnumPacket();
+    virtual ~UpdateSoftEnumPacket();
     virtual void getId(void)const;
     virtual void _ZNK20UpdateSoftEnumPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

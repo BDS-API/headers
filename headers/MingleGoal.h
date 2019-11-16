@@ -2,8 +2,8 @@
 
 class MingleGoal : MoveToPOIGoal {
 
-    virtual void MingleGoal::~MingleGoal();
-    virtual void MingleGoal::~MingleGoal();
+    virtual ~MingleGoal();
+    virtual ~MingleGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,8 +2,8 @@
 
 class StoneSlabBlock2 : SlabBlock {
 
-    virtual void StoneSlabBlock2::~StoneSlabBlock2();
-    virtual void StoneSlabBlock2::~StoneSlabBlock2();
+    virtual ~StoneSlabBlock2();
+    virtual ~StoneSlabBlock2();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

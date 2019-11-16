@@ -2,8 +2,8 @@
 
 class ActorUndergroundTest : SimpleBoolFilterTest {
 
-    virtual void ActorUndergroundTest::~ActorUndergroundTest();
-    virtual void ActorUndergroundTest::~ActorUndergroundTest();
+    virtual ~ActorUndergroundTest();
+    virtual ~ActorUndergroundTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

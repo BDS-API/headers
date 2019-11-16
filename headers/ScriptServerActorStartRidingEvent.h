@@ -2,7 +2,7 @@
 
 class ScriptServerActorStartRidingEvent : ScriptEventData {
 
-    virtual void ScriptServerActorStartRidingEvent::~ScriptServerActorStartRidingEvent();
-    virtual void ScriptServerActorStartRidingEvent::~ScriptServerActorStartRidingEvent();
+    virtual ~ScriptServerActorStartRidingEvent();
+    virtual ~ScriptServerActorStartRidingEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 }

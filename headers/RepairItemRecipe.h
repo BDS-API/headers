@@ -2,8 +2,8 @@
 
 class RepairItemRecipe : MultiRecipe {
 
-    virtual void RepairItemRecipe::~RepairItemRecipe();
-    virtual void RepairItemRecipe::~RepairItemRecipe();
+    virtual ~RepairItemRecipe();
+    virtual ~RepairItemRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

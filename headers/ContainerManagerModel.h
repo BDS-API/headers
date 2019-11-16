@@ -2,8 +2,8 @@
 
 class ContainerManagerModel : IContainerManager {
 
-    virtual void ContainerManagerModel::~ContainerManagerModel();
-    virtual void ContainerManagerModel::~ContainerManagerModel();
+    virtual ~ContainerManagerModel();
+    virtual ~ContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

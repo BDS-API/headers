@@ -2,7 +2,7 @@
 
 class GroundedConstraint : IStructureConstraint {
 
-    virtual void GroundedConstraint::~GroundedConstraint();
-    virtual void GroundedConstraint::~GroundedConstraint();
+    virtual ~GroundedConstraint();
+    virtual ~GroundedConstraint();
     virtual void isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const;
 }

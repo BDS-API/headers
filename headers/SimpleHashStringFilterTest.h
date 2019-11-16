@@ -2,8 +2,8 @@
 
 class SimpleHashStringFilterTest : FilterTest {
 
-    virtual void SimpleHashStringFilterTest::~SimpleHashStringFilterTest();
-    virtual void SimpleHashStringFilterTest::~SimpleHashStringFilterTest();
+    virtual ~SimpleHashStringFilterTest();
+    virtual ~SimpleHashStringFilterTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

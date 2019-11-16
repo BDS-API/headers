@@ -2,7 +2,7 @@
 
 class KillCommand : Command {
 
-    virtual void KillCommand::~KillCommand();
-    virtual void KillCommand::~KillCommand();
+    virtual ~KillCommand();
+    virtual ~KillCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

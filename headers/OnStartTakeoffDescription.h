@@ -3,8 +3,8 @@
 class OnStartTakeoffDescription : TriggerDescription {
 
     virtual void getJsonName(void)const;
-    virtual void OnStartTakeoffDescription::~OnStartTakeoffDescription();
-    virtual void OnStartTakeoffDescription::~OnStartTakeoffDescription();
+    virtual ~OnStartTakeoffDescription();
+    virtual ~OnStartTakeoffDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 }

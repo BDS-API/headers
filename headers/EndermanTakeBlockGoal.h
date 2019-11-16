@@ -2,8 +2,8 @@
 
 class EndermanTakeBlockGoal : Goal {
 
-    virtual void EndermanTakeBlockGoal::~EndermanTakeBlockGoal();
-    virtual void EndermanTakeBlockGoal::~EndermanTakeBlockGoal();
+    virtual ~EndermanTakeBlockGoal();
+    virtual ~EndermanTakeBlockGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

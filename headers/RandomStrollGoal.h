@@ -2,8 +2,8 @@
 
 class RandomStrollGoal : Goal {
 
-    virtual void RandomStrollGoal::~RandomStrollGoal();
-    virtual void RandomStrollGoal::~RandomStrollGoal();
+    virtual ~RandomStrollGoal();
+    virtual ~RandomStrollGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

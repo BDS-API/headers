@@ -2,8 +2,8 @@
 
 class CircleAroundAnchorGoal : Goal {
 
-    virtual void CircleAroundAnchorGoal::~CircleAroundAnchorGoal();
-    virtual void CircleAroundAnchorGoal::~CircleAroundAnchorGoal();
+    virtual ~CircleAroundAnchorGoal();
+    virtual ~CircleAroundAnchorGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

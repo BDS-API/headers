@@ -2,8 +2,8 @@
 
 class WaterBoundPathNavigation : PathNavigation {
 
-    virtual void WaterBoundPathNavigation::~WaterBoundPathNavigation();
-    virtual void WaterBoundPathNavigation::~WaterBoundPathNavigation();
+    virtual ~WaterBoundPathNavigation();
+    virtual ~WaterBoundPathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

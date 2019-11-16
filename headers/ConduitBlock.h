@@ -2,8 +2,8 @@
 
 class ConduitBlock : ActorBlock {
 
-    virtual void ConduitBlock::~ConduitBlock();
-    virtual void ConduitBlock::~ConduitBlock();
+    virtual ~ConduitBlock();
+    virtual ~ConduitBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

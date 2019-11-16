@@ -2,7 +2,7 @@
 
 class ServerCommand : Command {
 
-    virtual void ServerCommand::~ServerCommand();
-    virtual void ServerCommand::~ServerCommand();
+    virtual ~ServerCommand();
+    virtual ~ServerCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

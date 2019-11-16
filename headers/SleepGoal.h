@@ -2,8 +2,8 @@
 
 class SleepGoal : MoveToPOIGoal {
 
-    virtual void SleepGoal::~SleepGoal();
-    virtual void SleepGoal::~SleepGoal();
+    virtual ~SleepGoal();
+    virtual ~SleepGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

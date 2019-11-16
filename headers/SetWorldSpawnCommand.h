@@ -2,7 +2,7 @@
 
 class SetWorldSpawnCommand : Command {
 
-    virtual void SetWorldSpawnCommand::~SetWorldSpawnCommand();
-    virtual void SetWorldSpawnCommand::~SetWorldSpawnCommand();
+    virtual ~SetWorldSpawnCommand();
+    virtual ~SetWorldSpawnCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

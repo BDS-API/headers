@@ -2,7 +2,7 @@
 
 class MeCommand : MessagingCommand {
 
-    virtual void MeCommand::~MeCommand();
-    virtual void MeCommand::~MeCommand();
+    virtual ~MeCommand();
+    virtual ~MeCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

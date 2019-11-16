@@ -2,8 +2,8 @@
 
 class HudContainerManagerModel : ContainerManagerModel {
 
-    virtual void HudContainerManagerModel::~HudContainerManagerModel();
-    virtual void HudContainerManagerModel::~HudContainerManagerModel();
+    virtual ~HudContainerManagerModel();
+    virtual ~HudContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

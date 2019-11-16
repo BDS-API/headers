@@ -2,8 +2,8 @@
 
 class LoomMaterialContainerController : ContainerController {
 
-    virtual void LoomMaterialContainerController::~LoomMaterialContainerController();
-    virtual void LoomMaterialContainerController::~LoomMaterialContainerController();
+    virtual ~LoomMaterialContainerController();
+    virtual ~LoomMaterialContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

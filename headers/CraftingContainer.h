@@ -2,8 +2,8 @@
 
 class CraftingContainer : Container {
 
-    virtual void CraftingContainer::~CraftingContainer();
-    virtual void CraftingContainer::~CraftingContainer();
+    virtual ~CraftingContainer();
+    virtual ~CraftingContainer();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);

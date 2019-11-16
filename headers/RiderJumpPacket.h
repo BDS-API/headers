@@ -2,8 +2,8 @@
 
 class RiderJumpPacket : Packet {
 
-    virtual void RiderJumpPacket::~RiderJumpPacket();
-    virtual void RiderJumpPacket::~RiderJumpPacket();
+    virtual ~RiderJumpPacket();
+    virtual ~RiderJumpPacket();
     virtual void getId(void)const;
     virtual void _ZNK15RiderJumpPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

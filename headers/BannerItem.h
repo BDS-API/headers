@@ -2,8 +2,8 @@
 
 class BannerItem : Item {
 
-    virtual void BannerItem::~BannerItem();
-    virtual void BannerItem::~BannerItem();
+    virtual ~BannerItem();
+    virtual ~BannerItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

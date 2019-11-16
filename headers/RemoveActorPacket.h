@@ -2,8 +2,8 @@
 
 class RemoveActorPacket : Packet {
 
-    virtual void RemoveActorPacket::~RemoveActorPacket();
-    virtual void RemoveActorPacket::~RemoveActorPacket();
+    virtual ~RemoveActorPacket();
+    virtual ~RemoveActorPacket();
     virtual void getId(void)const;
     virtual void _ZNK17RemoveActorPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

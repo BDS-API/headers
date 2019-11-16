@@ -2,8 +2,8 @@
 
 class SquidMoveAwayFromGroundGoal : Goal {
 
-    virtual void SquidMoveAwayFromGroundGoal::~SquidMoveAwayFromGroundGoal();
-    virtual void SquidMoveAwayFromGroundGoal::~SquidMoveAwayFromGroundGoal();
+    virtual ~SquidMoveAwayFromGroundGoal();
+    virtual ~SquidMoveAwayFromGroundGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

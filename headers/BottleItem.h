@@ -2,8 +2,8 @@
 
 class BottleItem : Item {
 
-    virtual void BottleItem::~BottleItem();
-    virtual void BottleItem::~BottleItem();
+    virtual ~BottleItem();
+    virtual ~BottleItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

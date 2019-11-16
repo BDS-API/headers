@@ -2,8 +2,8 @@
 
 class CameraBlock : BlockLegacy {
 
-    virtual void CameraBlock::~CameraBlock();
-    virtual void CameraBlock::~CameraBlock();
+    virtual ~CameraBlock();
+    virtual ~CameraBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

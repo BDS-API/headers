@@ -2,8 +2,8 @@
 
 class StartGamePacket : Packet {
 
-    virtual void StartGamePacket::~StartGamePacket();
-    virtual void StartGamePacket::~StartGamePacket();
+    virtual ~StartGamePacket();
+    virtual ~StartGamePacket();
     virtual void getId(void)const;
     virtual void _ZNK15StartGamePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

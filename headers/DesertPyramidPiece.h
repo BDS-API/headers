@@ -2,8 +2,8 @@
 
 class DesertPyramidPiece : ScatteredFeaturePiece {
 
-    virtual void DesertPyramidPiece::~DesertPyramidPiece();
-    virtual void DesertPyramidPiece::~DesertPyramidPiece();
+    virtual ~DesertPyramidPiece();
+    virtual ~DesertPyramidPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

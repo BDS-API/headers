@@ -2,8 +2,8 @@
 
 class BackgroundTask : Bedrock::Threading::IAsyncResult_ltvoid_ge {
 
-    virtual void BackgroundTask::~BackgroundTask();
-    virtual void BackgroundTask::~BackgroundTask();
+    virtual ~BackgroundTask();
+    virtual ~BackgroundTask();
     virtual void getStatus(void)const;
     virtual void getError(void)const;
     virtual void getException(void)const;

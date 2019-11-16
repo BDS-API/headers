@@ -2,8 +2,8 @@
 
 class ChunkViewSource : ChunkSource {
 
-    virtual void ChunkViewSource::~ChunkViewSource();
-    virtual void ChunkViewSource::~ChunkViewSource();
+    virtual ~ChunkViewSource();
+    virtual ~ChunkViewSource();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

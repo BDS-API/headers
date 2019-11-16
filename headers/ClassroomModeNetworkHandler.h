@@ -3,8 +3,8 @@
 class ClassroomModeNetworkHandler : NetEventCallback {
 
     virtual void onPlayerReady(Player &);
-    virtual void ClassroomModeNetworkHandler::~ClassroomModeNetworkHandler();
-    virtual void ClassroomModeNetworkHandler::~ClassroomModeNetworkHandler();
+    virtual ~ClassroomModeNetworkHandler();
+    virtual ~ClassroomModeNetworkHandler();
     virtual void onConnect(NetworkIdentifier const&);
     virtual void onUnableToConnect(void);
     virtual void onTick(void);

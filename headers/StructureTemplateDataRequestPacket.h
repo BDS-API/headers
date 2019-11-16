@@ -2,8 +2,8 @@
 
 class StructureTemplateDataRequestPacket : Packet {
 
-    virtual void StructureTemplateDataRequestPacket::~StructureTemplateDataRequestPacket();
-    virtual void StructureTemplateDataRequestPacket::~StructureTemplateDataRequestPacket();
+    virtual ~StructureTemplateDataRequestPacket();
+    virtual ~StructureTemplateDataRequestPacket();
     virtual void getId(void)const;
     virtual void _ZNK34StructureTemplateDataRequestPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

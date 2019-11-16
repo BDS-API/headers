@@ -2,7 +2,7 @@
 
 class DedicatedWSServerCommand : Command {
 
-    virtual void DedicatedWSServerCommand::~DedicatedWSServerCommand();
-    virtual void DedicatedWSServerCommand::~DedicatedWSServerCommand();
+    virtual ~DedicatedWSServerCommand();
+    virtual ~DedicatedWSServerCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

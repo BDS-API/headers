@@ -2,8 +2,8 @@
 
 class FollowParentGoal : Goal {
 
-    virtual void FollowParentGoal::~FollowParentGoal();
-    virtual void FollowParentGoal::~FollowParentGoal();
+    virtual ~FollowParentGoal();
+    virtual ~FollowParentGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

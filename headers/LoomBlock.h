@@ -2,8 +2,8 @@
 
 class LoomBlock : FaceDirectionalBlock {
 
-    virtual void LoomBlock::~LoomBlock();
-    virtual void LoomBlock::~LoomBlock();
+    virtual ~LoomBlock();
+    virtual ~LoomBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

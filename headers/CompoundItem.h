@@ -2,8 +2,8 @@
 
 class CompoundItem : ChemistryItem {
 
-    virtual void CompoundItem::~CompoundItem();
-    virtual void CompoundItem::~CompoundItem();
+    virtual ~CompoundItem();
+    virtual ~CompoundItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

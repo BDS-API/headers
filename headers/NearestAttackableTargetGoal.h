@@ -2,8 +2,8 @@
 
 class NearestAttackableTargetGoal : TargetGoal {
 
-    virtual void NearestAttackableTargetGoal::~NearestAttackableTargetGoal();
-    virtual void NearestAttackableTargetGoal::~NearestAttackableTargetGoal();
+    virtual ~NearestAttackableTargetGoal();
+    virtual ~NearestAttackableTargetGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

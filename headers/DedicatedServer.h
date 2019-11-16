@@ -2,8 +2,8 @@
 
 class DedicatedServer : IMinecraftApp, BedrockEngine::AppIsland {
 
-    virtual void DedicatedServer::~DedicatedServer();
-    virtual void DedicatedServer::~DedicatedServer();
+    virtual ~DedicatedServer();
+    virtual ~DedicatedServer();
     virtual void getPrimaryMinecraft(void);
     virtual void getAutomationClient(void)const;
     virtual void isEduMode(void)const;

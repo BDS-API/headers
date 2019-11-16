@@ -2,8 +2,8 @@
 
 class BytesDataOutput : IDataOutput {
 
-    virtual void BytesDataOutput::~BytesDataOutput();
-    virtual void BytesDataOutput::~BytesDataOutput();
+    virtual ~BytesDataOutput();
+    virtual ~BytesDataOutput();
     virtual void writeString(gsl::basic_string_span<char const, -1l>);
     virtual void writeLongString(gsl::basic_string_span<char const, -1l>);
     virtual void writeFloat(float);

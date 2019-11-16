@@ -2,8 +2,8 @@
 
 class TradeInterestGoal : Goal {
 
-    virtual void TradeInterestGoal::~TradeInterestGoal();
-    virtual void TradeInterestGoal::~TradeInterestGoal();
+    virtual ~TradeInterestGoal();
+    virtual ~TradeInterestGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

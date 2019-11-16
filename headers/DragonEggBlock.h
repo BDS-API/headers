@@ -2,8 +2,8 @@
 
 class DragonEggBlock : HeavyBlock {
 
-    virtual void DragonEggBlock::~DragonEggBlock();
-    virtual void DragonEggBlock::~DragonEggBlock();
+    virtual ~DragonEggBlock();
+    virtual ~DragonEggBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

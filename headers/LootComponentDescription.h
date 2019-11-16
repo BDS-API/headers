@@ -2,8 +2,8 @@
 
 class LootComponentDescription : BlockComponentDescription {
 
-    virtual void LootComponentDescription::~LootComponentDescription();
-    virtual void LootComponentDescription::~LootComponentDescription();
+    virtual ~LootComponentDescription();
+    virtual ~LootComponentDescription();
     virtual void _ZNK24LootComponentDescription7getNameB5cxx11Ev;
     virtual void initializeComponent(BlockLegacy &)const;
     virtual void buildSchema(JsonUtil::JsonSchemaObjectNode<JsonUtil::JsonParseState<JsonUtil::EmptyClass, BlockDefinition>, BlockDefinition> &)const;

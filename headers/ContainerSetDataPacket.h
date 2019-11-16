@@ -2,8 +2,8 @@
 
 class ContainerSetDataPacket : Packet {
 
-    virtual void ContainerSetDataPacket::~ContainerSetDataPacket();
-    virtual void ContainerSetDataPacket::~ContainerSetDataPacket();
+    virtual ~ContainerSetDataPacket();
+    virtual ~ContainerSetDataPacket();
     virtual void getId(void)const;
     virtual void _ZNK22ContainerSetDataPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

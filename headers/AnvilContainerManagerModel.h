@@ -2,8 +2,8 @@
 
 class AnvilContainerManagerModel : ContainerManagerModel {
 
-    virtual void AnvilContainerManagerModel::~AnvilContainerManagerModel();
-    virtual void AnvilContainerManagerModel::~AnvilContainerManagerModel();
+    virtual ~AnvilContainerManagerModel();
+    virtual ~AnvilContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

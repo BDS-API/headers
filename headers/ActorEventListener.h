@@ -2,8 +2,8 @@
 
 class ActorEventListener {
 
-    virtual void ActorEventListener::~ActorEventListener();
-    virtual void ActorEventListener::~ActorEventListener();
+    virtual ~ActorEventListener();
+    virtual ~ActorEventListener();
     virtual void onActorAttack(Actor &, Actor &);
     virtual void onActorHurt(Actor &, ActorDamageSource const&, int, int);
     virtual void onActorMove(Actor &, Vec3 const&);

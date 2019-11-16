@@ -2,8 +2,8 @@
 
 class MainChunkSource : ChunkSource {
 
-    virtual void MainChunkSource::~MainChunkSource();
-    virtual void MainChunkSource::~MainChunkSource();
+    virtual ~MainChunkSource();
+    virtual ~MainChunkSource();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

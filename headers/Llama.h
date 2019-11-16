@@ -7,8 +7,8 @@ class Llama : Animal {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Llama::~Llama();
-    virtual void Llama::~Llama();
+    virtual ~Llama();
+    virtual ~Llama();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

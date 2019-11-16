@@ -2,8 +2,8 @@
 
 class RepeatUntilFailureNode : BehaviorNode {
 
-    virtual void RepeatUntilFailureNode::~RepeatUntilFailureNode();
-    virtual void RepeatUntilFailureNode::~RepeatUntilFailureNode();
+    virtual ~RepeatUntilFailureNode();
+    virtual ~RepeatUntilFailureNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 }

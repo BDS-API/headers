@@ -2,7 +2,7 @@
 
 class LocateCommand : Command {
 
-    virtual void LocateCommand::~LocateCommand();
-    virtual void LocateCommand::~LocateCommand();
+    virtual ~LocateCommand();
+    virtual ~LocateCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

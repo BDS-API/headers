@@ -2,7 +2,7 @@
 
 class PrivateKeyManager : KeyManager {
 
-    virtual void PrivateKeyManager::~PrivateKeyManager();
-    virtual void PrivateKeyManager::~PrivateKeyManager();
+    virtual ~PrivateKeyManager();
+    virtual ~PrivateKeyManager();
     virtual void isValid(void)const;
 }

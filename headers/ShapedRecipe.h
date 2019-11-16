@@ -2,8 +2,8 @@
 
 class ShapedRecipe : Recipe {
 
-    virtual void ShapedRecipe::~ShapedRecipe();
-    virtual void ShapedRecipe::~ShapedRecipe();
+    virtual ~ShapedRecipe();
+    virtual ~ShapedRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

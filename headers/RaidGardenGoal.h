@@ -2,8 +2,8 @@
 
 class RaidGardenGoal : MoveToBlockGoal {
 
-    virtual void RaidGardenGoal::~RaidGardenGoal();
-    virtual void RaidGardenGoal::~RaidGardenGoal();
+    virtual ~RaidGardenGoal();
+    virtual ~RaidGardenGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

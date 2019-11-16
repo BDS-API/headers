@@ -2,8 +2,8 @@
 
 class ServerInstance : AppPlatformListener, GameCallbacks {
 
-    virtual void ServerInstance::~ServerInstance();
-    virtual void ServerInstance::~ServerInstance();
+    virtual ~ServerInstance();
+    virtual ~ServerInstance();
     virtual void onLowMemory(void);
     virtual void onAppPaused(void);
     virtual void onAppUnpaused(void);

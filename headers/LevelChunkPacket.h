@@ -2,8 +2,8 @@
 
 class LevelChunkPacket : Packet {
 
-    virtual void LevelChunkPacket::~LevelChunkPacket();
-    virtual void LevelChunkPacket::~LevelChunkPacket();
+    virtual ~LevelChunkPacket();
+    virtual ~LevelChunkPacket();
     virtual void getId(void)const;
     virtual void _ZNK16LevelChunkPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

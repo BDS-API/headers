@@ -2,8 +2,8 @@
 
 class TridentItem : Item {
 
-    virtual void TridentItem::~TridentItem();
-    virtual void TridentItem::~TridentItem();
+    virtual ~TridentItem();
+    virtual ~TridentItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

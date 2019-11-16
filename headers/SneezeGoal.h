@@ -2,8 +2,8 @@
 
 class SneezeGoal : Goal {
 
-    virtual void SneezeGoal::~SneezeGoal();
-    virtual void SneezeGoal::~SneezeGoal();
+    virtual ~SneezeGoal();
+    virtual ~SneezeGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

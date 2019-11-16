@@ -2,8 +2,8 @@
 
 class LeverBlock : BlockLegacy {
 
-    virtual void LeverBlock::~LeverBlock();
-    virtual void LeverBlock::~LeverBlock();
+    virtual ~LeverBlock();
+    virtual ~LeverBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

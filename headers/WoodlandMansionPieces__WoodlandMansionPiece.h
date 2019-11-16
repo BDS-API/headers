@@ -2,8 +2,8 @@
 
 class WoodlandMansionPieces::WoodlandMansionPiece : TemplateStructurePiece {
 
-    virtual void WoodlandMansionPieces::WoodlandMansionPiece::~WoodlandMansionPiece();
-    virtual void WoodlandMansionPieces::WoodlandMansionPiece::~WoodlandMansionPiece();
+    virtual ~WoodlandMansionPiece();
+    virtual ~WoodlandMansionPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

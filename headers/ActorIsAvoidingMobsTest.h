@@ -2,8 +2,8 @@
 
 class ActorIsAvoidingMobsTest : SimpleBoolFilterTest {
 
-    virtual void ActorIsAvoidingMobsTest::~ActorIsAvoidingMobsTest();
-    virtual void ActorIsAvoidingMobsTest::~ActorIsAvoidingMobsTest();
+    virtual ~ActorIsAvoidingMobsTest();
+    virtual ~ActorIsAvoidingMobsTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

@@ -2,8 +2,8 @@
 
 class SlimeFloatGoal : Goal {
 
-    virtual void SlimeFloatGoal::~SlimeFloatGoal();
-    virtual void SlimeFloatGoal::~SlimeFloatGoal();
+    virtual ~SlimeFloatGoal();
+    virtual ~SlimeFloatGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

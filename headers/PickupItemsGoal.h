@@ -2,8 +2,8 @@
 
 class PickupItemsGoal : Goal {
 
-    virtual void PickupItemsGoal::~PickupItemsGoal();
-    virtual void PickupItemsGoal::~PickupItemsGoal();
+    virtual ~PickupItemsGoal();
+    virtual ~PickupItemsGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

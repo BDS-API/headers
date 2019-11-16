@@ -2,8 +2,8 @@
 
 class MoveActorDeltaPacket : Packet {
 
-    virtual void MoveActorDeltaPacket::~MoveActorDeltaPacket();
-    virtual void MoveActorDeltaPacket::~MoveActorDeltaPacket();
+    virtual ~MoveActorDeltaPacket();
+    virtual ~MoveActorDeltaPacket();
     virtual void getId(void)const;
     virtual void _ZNK20MoveActorDeltaPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -2,8 +2,8 @@
 
 class RapidFertilizerItem : FertilizerItem {
 
-    virtual void RapidFertilizerItem::~RapidFertilizerItem();
-    virtual void RapidFertilizerItem::~RapidFertilizerItem();
+    virtual ~RapidFertilizerItem();
+    virtual ~RapidFertilizerItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

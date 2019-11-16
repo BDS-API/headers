@@ -2,8 +2,8 @@
 
 class EncryptedFileAccessStrategy : DirectoryPackAccessStrategy {
 
-    virtual void EncryptedFileAccessStrategy::~EncryptedFileAccessStrategy();
-    virtual void EncryptedFileAccessStrategy::~EncryptedFileAccessStrategy();
+    virtual ~EncryptedFileAccessStrategy();
+    virtual ~EncryptedFileAccessStrategy();
     virtual void getPackSize(void)const;
     virtual void getPackLocation(void)const;
     virtual void _ZNK27DirectoryPackAccessStrategy11getPackNameB5cxx11Ev;

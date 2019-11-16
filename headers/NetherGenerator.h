@@ -2,8 +2,8 @@
 
 class NetherGenerator : ChunkSource, WorldGenerator {
 
-    virtual void NetherGenerator::~NetherGenerator();
-    virtual void NetherGenerator::~NetherGenerator();
+    virtual ~NetherGenerator();
+    virtual ~NetherGenerator();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

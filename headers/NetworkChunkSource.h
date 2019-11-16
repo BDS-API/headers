@@ -2,8 +2,8 @@
 
 class NetworkChunkSource : ChunkSource {
 
-    virtual void NetworkChunkSource::~NetworkChunkSource();
-    virtual void NetworkChunkSource::~NetworkChunkSource();
+    virtual ~NetworkChunkSource();
+    virtual ~NetworkChunkSource();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

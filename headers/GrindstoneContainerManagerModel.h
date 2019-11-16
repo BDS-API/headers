@@ -2,8 +2,8 @@
 
 class GrindstoneContainerManagerModel : ContainerManagerModel {
 
-    virtual void GrindstoneContainerManagerModel::~GrindstoneContainerManagerModel();
-    virtual void GrindstoneContainerManagerModel::~GrindstoneContainerManagerModel();
+    virtual ~GrindstoneContainerManagerModel();
+    virtual ~GrindstoneContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

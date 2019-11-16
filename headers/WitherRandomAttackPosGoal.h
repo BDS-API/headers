@@ -2,8 +2,8 @@
 
 class WitherRandomAttackPosGoal : RandomStrollGoal {
 
-    virtual void WitherRandomAttackPosGoal::~WitherRandomAttackPosGoal();
-    virtual void WitherRandomAttackPosGoal::~WitherRandomAttackPosGoal();
+    virtual ~WitherRandomAttackPosGoal();
+    virtual ~WitherRandomAttackPosGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

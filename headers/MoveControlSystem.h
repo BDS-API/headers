@@ -2,7 +2,7 @@
 
 class MoveControlSystem : ITickingSystem {
 
-    virtual void MoveControlSystem::~MoveControlSystem();
-    virtual void MoveControlSystem::~MoveControlSystem();
+    virtual ~MoveControlSystem();
+    virtual ~MoveControlSystem();
     virtual void tick(EntityRegistry &);
 }

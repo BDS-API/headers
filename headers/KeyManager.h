@@ -2,7 +2,7 @@
 
 class KeyManager {
 
-    virtual void KeyManager::~KeyManager();
-    virtual void KeyManager::~KeyManager();
+    virtual ~KeyManager();
+    virtual ~KeyManager();
     virtual void isValid(void)const;
 }

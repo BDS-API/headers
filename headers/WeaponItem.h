@@ -2,8 +2,8 @@
 
 class WeaponItem : Item {
 
-    virtual void WeaponItem::~WeaponItem();
-    virtual void WeaponItem::~WeaponItem();
+    virtual ~WeaponItem();
+    virtual ~WeaponItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

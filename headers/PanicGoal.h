@@ -2,8 +2,8 @@
 
 class PanicGoal : Goal {
 
-    virtual void PanicGoal::~PanicGoal();
-    virtual void PanicGoal::~PanicGoal();
+    virtual ~PanicGoal();
+    virtual ~PanicGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

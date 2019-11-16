@@ -2,8 +2,8 @@
 
 class MakeLoveGoal : Goal {
 
-    virtual void MakeLoveGoal::~MakeLoveGoal();
-    virtual void MakeLoveGoal::~MakeLoveGoal();
+    virtual ~MakeLoveGoal();
+    virtual ~MakeLoveGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

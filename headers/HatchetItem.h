@@ -2,8 +2,8 @@
 
 class HatchetItem : DiggerItem {
 
-    virtual void HatchetItem::~HatchetItem();
-    virtual void HatchetItem::~HatchetItem();
+    virtual ~HatchetItem();
+    virtual ~HatchetItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

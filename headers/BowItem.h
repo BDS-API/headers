@@ -2,8 +2,8 @@
 
 class BowItem : RangedWeaponItem {
 
-    virtual void BowItem::~BowItem();
-    virtual void BowItem::~BowItem();
+    virtual ~BowItem();
+    virtual ~BowItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

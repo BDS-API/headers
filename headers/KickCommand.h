@@ -2,7 +2,7 @@
 
 class KickCommand : ServerCommand {
 
-    virtual void KickCommand::~KickCommand();
-    virtual void KickCommand::~KickCommand();
+    virtual ~KickCommand();
+    virtual ~KickCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

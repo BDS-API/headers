@@ -3,8 +3,8 @@
 class PlayerUIContainerModel : PlayerUIContainerModelBase {
 
     virtual void containerContentChanged(int);
-    virtual void PlayerUIContainerModel::~PlayerUIContainerModel();
-    virtual void PlayerUIContainerModel::~PlayerUIContainerModel();
+    virtual ~PlayerUIContainerModel();
+    virtual ~PlayerUIContainerModel();
     virtual void postInit(void);
     virtual void releaseResources(void);
     virtual void getContainerSize(void)const;

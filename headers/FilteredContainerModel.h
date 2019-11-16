@@ -3,8 +3,8 @@
 class FilteredContainerModel : ExpandoContainerModel {
 
     virtual void containerContentChanged(int);
-    virtual void FilteredContainerModel::~FilteredContainerModel();
-    virtual void FilteredContainerModel::~FilteredContainerModel();
+    virtual ~FilteredContainerModel();
+    virtual ~FilteredContainerModel();
     virtual void postInit(void);
     virtual void releaseResources(void);
     virtual void getContainerSize(void)const;

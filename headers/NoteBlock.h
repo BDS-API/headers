@@ -2,8 +2,8 @@
 
 class NoteBlock : ActorBlock {
 
-    virtual void NoteBlock::~NoteBlock();
-    virtual void NoteBlock::~NoteBlock();
+    virtual ~NoteBlock();
+    virtual ~NoteBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

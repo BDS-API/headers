@@ -2,8 +2,8 @@
 
 class NullSoundPlayer : SoundPlayer {
 
-    virtual void NullSoundPlayer::~NullSoundPlayer();
-    virtual void NullSoundPlayer::~NullSoundPlayer();
+    virtual ~NullSoundPlayer();
+    virtual ~NullSoundPlayer();
     virtual void play(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Vec3 const&, float, float);
     virtual void playUI(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, float, float);
     virtual void playMusic(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, float, unsigned int &);

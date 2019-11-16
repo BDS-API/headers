@@ -2,8 +2,8 @@
 
 class JumpControl : Control {
 
-    virtual void JumpControl::~JumpControl();
-    virtual void JumpControl::~JumpControl();
+    virtual ~JumpControl();
+    virtual ~JumpControl();
     virtual void initializeInternal(Mob &, JumpControlDescription *);
     virtual void tick(JumpControlComponent &, Mob &);
     virtual void getJumpDelay(JumpControlComponent const&, Mob const&)const;

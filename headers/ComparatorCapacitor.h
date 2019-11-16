@@ -2,8 +2,8 @@
 
 class ComparatorCapacitor : CapacitorComponent {
 
-    virtual void ComparatorCapacitor::~ComparatorCapacitor();
-    virtual void ComparatorCapacitor::~ComparatorCapacitor();
+    virtual ~ComparatorCapacitor();
+    virtual ~ComparatorCapacitor();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

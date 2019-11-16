@@ -2,8 +2,8 @@
 
 class IntArrayTag : Tag {
 
-    virtual void IntArrayTag::~IntArrayTag();
-    virtual void IntArrayTag::~IntArrayTag();
+    virtual ~IntArrayTag();
+    virtual ~IntArrayTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

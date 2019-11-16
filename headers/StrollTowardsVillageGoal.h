@@ -2,8 +2,8 @@
 
 class StrollTowardsVillageGoal : MoveToVillageGoal {
 
-    virtual void StrollTowardsVillageGoal::~StrollTowardsVillageGoal();
-    virtual void StrollTowardsVillageGoal::~StrollTowardsVillageGoal();
+    virtual ~StrollTowardsVillageGoal();
+    virtual ~StrollTowardsVillageGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

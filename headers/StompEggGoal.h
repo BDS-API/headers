@@ -2,8 +2,8 @@
 
 class StompEggGoal : StompBlockGoal {
 
-    virtual void StompEggGoal::~StompEggGoal();
-    virtual void StompEggGoal::~StompEggGoal();
+    virtual ~StompEggGoal();
+    virtual ~StompEggGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

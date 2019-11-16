@@ -2,8 +2,8 @@
 
 class EndGatewayBlock : ActorBlock {
 
-    virtual void EndGatewayBlock::~EndGatewayBlock();
-    virtual void EndGatewayBlock::~EndGatewayBlock();
+    virtual ~EndGatewayBlock();
+    virtual ~EndGatewayBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

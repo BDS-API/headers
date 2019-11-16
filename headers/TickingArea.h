@@ -2,8 +2,8 @@
 
 class TickingArea : ITickingArea {
 
-    virtual void TickingArea::~TickingArea();
-    virtual void TickingArea::~TickingArea();
+    virtual ~TickingArea();
+    virtual ~TickingArea();
     virtual void getId(void)const;
     virtual void _ZNK11TickingArea7getNameB5cxx11Ev;
     virtual void getEntityId(void)const;

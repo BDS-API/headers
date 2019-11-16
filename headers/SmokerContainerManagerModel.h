@@ -2,8 +2,8 @@
 
 class SmokerContainerManagerModel : FurnaceContainerManagerModel {
 
-    virtual void SmokerContainerManagerModel::~SmokerContainerManagerModel();
-    virtual void SmokerContainerManagerModel::~SmokerContainerManagerModel();
+    virtual ~SmokerContainerManagerModel();
+    virtual ~SmokerContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

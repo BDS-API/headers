@@ -2,8 +2,8 @@
 
 class PodzolBlock : BlockLegacy {
 
-    virtual void PodzolBlock::~PodzolBlock();
-    virtual void PodzolBlock::~PodzolBlock();
+    virtual ~PodzolBlock();
+    virtual ~PodzolBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

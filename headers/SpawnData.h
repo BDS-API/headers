@@ -2,6 +2,6 @@
 
 class SpawnData {
 
-    virtual void SpawnData::~SpawnData();
-    virtual void SpawnData::~SpawnData();
+    virtual ~SpawnData();
+    virtual ~SpawnData();
 }

@@ -2,8 +2,8 @@
 
 class BeetrootBlock : CropBlock {
 
-    virtual void BeetrootBlock::~BeetrootBlock();
-    virtual void BeetrootBlock::~BeetrootBlock();
+    virtual ~BeetrootBlock();
+    virtual ~BeetrootBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

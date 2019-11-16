@@ -2,7 +2,7 @@
 
 class UnburiedConstraint : IStructureConstraint {
 
-    virtual void UnburiedConstraint::~UnburiedConstraint();
-    virtual void UnburiedConstraint::~UnburiedConstraint();
+    virtual ~UnburiedConstraint();
+    virtual ~UnburiedConstraint();
     virtual void isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const;
 }

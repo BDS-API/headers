@@ -2,8 +2,8 @@
 
 class ExploreOutskirtsGoal : Goal {
 
-    virtual void ExploreOutskirtsGoal::~ExploreOutskirtsGoal();
-    virtual void ExploreOutskirtsGoal::~ExploreOutskirtsGoal();
+    virtual ~ExploreOutskirtsGoal();
+    virtual ~ExploreOutskirtsGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

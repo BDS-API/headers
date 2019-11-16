@@ -2,8 +2,8 @@
 
 class RestrictSunGoal : Goal {
 
-    virtual void RestrictSunGoal::~RestrictSunGoal();
-    virtual void RestrictSunGoal::~RestrictSunGoal();
+    virtual ~RestrictSunGoal();
+    virtual ~RestrictSunGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

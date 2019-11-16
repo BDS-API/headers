@@ -2,8 +2,8 @@
 
 class DyePowderItem : FertilizerItem {
 
-    virtual void DyePowderItem::~DyePowderItem();
-    virtual void DyePowderItem::~DyePowderItem();
+    virtual ~DyePowderItem();
+    virtual ~DyePowderItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

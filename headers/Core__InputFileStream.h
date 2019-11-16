@@ -3,8 +3,8 @@
 class Core::InputFileStream : Core::FileStream {
 
     virtual void qword_98;
-    virtual void Core::InputFileStream::~InputFileStream();
-    virtual void Core::InputFileStream::~InputFileStream();
+    virtual ~InputFileStream();
+    virtual ~InputFileStream();
     virtual void off_88;
     virtual void ;
     virtual void `non-virtual thunk to'Core::InputFileStream::~InputFileStream();

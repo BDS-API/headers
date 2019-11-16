@@ -2,8 +2,8 @@
 
 class GameMasterEntityServerCommandOrigin : ActorServerCommandOrigin {
 
-    virtual void GameMasterEntityServerCommandOrigin::~GameMasterEntityServerCommandOrigin();
-    virtual void GameMasterEntityServerCommandOrigin::~GameMasterEntityServerCommandOrigin();
+    virtual ~GameMasterEntityServerCommandOrigin();
+    virtual ~GameMasterEntityServerCommandOrigin();
     virtual void _ZNK18ActorCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK18ActorCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

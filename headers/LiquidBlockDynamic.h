@@ -2,8 +2,8 @@
 
 class LiquidBlockDynamic : LiquidBlock {
 
-    virtual void LiquidBlockDynamic::~LiquidBlockDynamic();
-    virtual void LiquidBlockDynamic::~LiquidBlockDynamic();
+    virtual ~LiquidBlockDynamic();
+    virtual ~LiquidBlockDynamic();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

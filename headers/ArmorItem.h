@@ -2,8 +2,8 @@
 
 class ArmorItem : Item {
 
-    virtual void ArmorItem::~ArmorItem();
-    virtual void ArmorItem::~ArmorItem();
+    virtual ~ArmorItem();
+    virtual ~ArmorItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

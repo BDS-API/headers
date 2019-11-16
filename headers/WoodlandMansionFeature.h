@@ -2,8 +2,8 @@
 
 class WoodlandMansionFeature : StructureFeature {
 
-    virtual void WoodlandMansionFeature::~WoodlandMansionFeature();
-    virtual void WoodlandMansionFeature::~WoodlandMansionFeature();
+    virtual ~WoodlandMansionFeature();
+    virtual ~WoodlandMansionFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

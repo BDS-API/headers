@@ -2,8 +2,8 @@
 
 class EmptyMapItem : ComplexItem {
 
-    virtual void EmptyMapItem::~EmptyMapItem();
-    virtual void EmptyMapItem::~EmptyMapItem();
+    virtual ~EmptyMapItem();
+    virtual ~EmptyMapItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

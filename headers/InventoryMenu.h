@@ -3,8 +3,8 @@
 class InventoryMenu : BaseContainerMenu {
 
     virtual void containerContentChanged(int);
-    virtual void InventoryMenu::~InventoryMenu();
-    virtual void InventoryMenu::~InventoryMenu();
+    virtual ~InventoryMenu();
+    virtual ~InventoryMenu();
     virtual void removeSlot(int, int);
     virtual void isSlotDirty(int);
     virtual void isResultSlot(int);

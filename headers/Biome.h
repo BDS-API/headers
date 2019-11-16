@@ -2,6 +2,6 @@
 
 class Biome {
 
-    virtual void Biome::~Biome();
-    virtual void Biome::~Biome();
+    virtual ~Biome();
+    virtual ~Biome();
 }

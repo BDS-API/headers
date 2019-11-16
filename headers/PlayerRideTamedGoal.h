@@ -2,8 +2,8 @@
 
 class PlayerRideTamedGoal : Goal {
 
-    virtual void PlayerRideTamedGoal::~PlayerRideTamedGoal();
-    virtual void PlayerRideTamedGoal::~PlayerRideTamedGoal();
+    virtual ~PlayerRideTamedGoal();
+    virtual ~PlayerRideTamedGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

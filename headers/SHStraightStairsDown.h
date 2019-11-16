@@ -2,8 +2,8 @@
 
 class SHStraightStairsDown : StrongholdPiece {
 
-    virtual void SHStraightStairsDown::~SHStraightStairsDown();
-    virtual void SHStraightStairsDown::~SHStraightStairsDown();
+    virtual ~SHStraightStairsDown();
+    virtual ~SHStraightStairsDown();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

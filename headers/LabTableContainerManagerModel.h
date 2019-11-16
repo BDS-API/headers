@@ -2,8 +2,8 @@
 
 class LabTableContainerManagerModel : LevelContainerManagerModel {
 
-    virtual void LabTableContainerManagerModel::~LabTableContainerManagerModel();
-    virtual void LabTableContainerManagerModel::~LabTableContainerManagerModel();
+    virtual ~LabTableContainerManagerModel();
+    virtual ~LabTableContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

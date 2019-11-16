@@ -7,8 +7,8 @@ class Pillager : HumanoidMonster {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Pillager::~Pillager();
-    virtual void Pillager::~Pillager();
+    virtual ~Pillager();
+    virtual ~Pillager();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

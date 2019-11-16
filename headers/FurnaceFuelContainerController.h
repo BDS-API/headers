@@ -2,8 +2,8 @@
 
 class FurnaceFuelContainerController : ContainerController {
 
-    virtual void FurnaceFuelContainerController::~FurnaceFuelContainerController();
-    virtual void FurnaceFuelContainerController::~FurnaceFuelContainerController();
+    virtual ~FurnaceFuelContainerController();
+    virtual ~FurnaceFuelContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

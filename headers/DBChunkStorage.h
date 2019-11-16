@@ -2,8 +2,8 @@
 
 class DBChunkStorage : ChunkSource {
 
-    virtual void DBChunkStorage::~DBChunkStorage();
-    virtual void DBChunkStorage::~DBChunkStorage();
+    virtual ~DBChunkStorage();
+    virtual ~DBChunkStorage();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

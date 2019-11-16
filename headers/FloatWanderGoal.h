@@ -2,8 +2,8 @@
 
 class FloatWanderGoal : Goal {
 
-    virtual void FloatWanderGoal::~FloatWanderGoal();
-    virtual void FloatWanderGoal::~FloatWanderGoal();
+    virtual ~FloatWanderGoal();
+    virtual ~FloatWanderGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

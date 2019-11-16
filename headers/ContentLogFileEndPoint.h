@@ -2,8 +2,8 @@
 
 class ContentLogFileEndPoint : ContentLogEndPoint {
 
-    virtual void ContentLogFileEndPoint::~ContentLogFileEndPoint();
-    virtual void ContentLogFileEndPoint::~ContentLogFileEndPoint();
+    virtual ~ContentLogFileEndPoint();
+    virtual ~ContentLogFileEndPoint();
     virtual void log(char const*);
     virtual void flush(void);
     virtual void setEnabled(bool);

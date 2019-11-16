@@ -2,8 +2,8 @@
 
 class PickaxeItem : DiggerItem {
 
-    virtual void PickaxeItem::~PickaxeItem();
-    virtual void PickaxeItem::~PickaxeItem();
+    virtual ~PickaxeItem();
+    virtual ~PickaxeItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

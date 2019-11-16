@@ -2,8 +2,8 @@
 
 class FilterTestHasTradeSupply : SimpleBoolFilterTest {
 
-    virtual void FilterTestHasTradeSupply::~FilterTestHasTradeSupply();
-    virtual void FilterTestHasTradeSupply::~FilterTestHasTradeSupply();
+    virtual ~FilterTestHasTradeSupply();
+    virtual ~FilterTestHasTradeSupply();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

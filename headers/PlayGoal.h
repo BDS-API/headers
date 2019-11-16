@@ -2,8 +2,8 @@
 
 class PlayGoal : Goal {
 
-    virtual void PlayGoal::~PlayGoal();
-    virtual void PlayGoal::~PlayGoal();
+    virtual ~PlayGoal();
+    virtual ~PlayGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,8 +2,8 @@
 
 class StructureVoid : BlockLegacy {
 
-    virtual void StructureVoid::~StructureVoid();
-    virtual void StructureVoid::~StructureVoid();
+    virtual ~StructureVoid();
+    virtual ~StructureVoid();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

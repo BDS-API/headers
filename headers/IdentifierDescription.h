@@ -2,7 +2,7 @@
 
 class IdentifierDescription : DefintionDescription {
 
-    virtual void IdentifierDescription::~IdentifierDescription();
-    virtual void IdentifierDescription::~IdentifierDescription();
+    virtual ~IdentifierDescription();
+    virtual ~IdentifierDescription();
     virtual void getJsonName(void)const;
 }

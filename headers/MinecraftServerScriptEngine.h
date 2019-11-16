@@ -2,8 +2,8 @@
 
 class MinecraftServerScriptEngine : ScriptEngineWithContext_ltScriptServerContext_ge, ServerInstanceEventListener {
 
-    virtual void MinecraftServerScriptEngine::~MinecraftServerScriptEngine();
-    virtual void MinecraftServerScriptEngine::~MinecraftServerScriptEngine();
+    virtual ~MinecraftServerScriptEngine();
+    virtual ~MinecraftServerScriptEngine();
     virtual void initialize(void);
     virtual void ScriptEngineWithContext<ScriptServerContext>::shutdown(void);
     virtual void onLogReceived(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);

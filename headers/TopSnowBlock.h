@@ -2,8 +2,8 @@
 
 class TopSnowBlock : HeavyBlock {
 
-    virtual void TopSnowBlock::~TopSnowBlock();
-    virtual void TopSnowBlock::~TopSnowBlock();
+    virtual ~TopSnowBlock();
+    virtual ~TopSnowBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

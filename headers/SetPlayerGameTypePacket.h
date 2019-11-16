@@ -2,8 +2,8 @@
 
 class SetPlayerGameTypePacket : Packet {
 
-    virtual void SetPlayerGameTypePacket::~SetPlayerGameTypePacket();
-    virtual void SetPlayerGameTypePacket::~SetPlayerGameTypePacket();
+    virtual ~SetPlayerGameTypePacket();
+    virtual ~SetPlayerGameTypePacket();
     virtual void getId(void)const;
     virtual void _ZNK23SetPlayerGameTypePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

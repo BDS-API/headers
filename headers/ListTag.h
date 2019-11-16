@@ -2,8 +2,8 @@
 
 class ListTag : Tag {
 
-    virtual void ListTag::~ListTag();
-    virtual void ListTag::~ListTag();
+    virtual ~ListTag();
+    virtual ~ListTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

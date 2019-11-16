@@ -2,8 +2,8 @@
 
 class ActorFallPacket : Packet {
 
-    virtual void ActorFallPacket::~ActorFallPacket();
-    virtual void ActorFallPacket::~ActorFallPacket();
+    virtual ~ActorFallPacket();
+    virtual ~ActorFallPacket();
     virtual void getId(void)const;
     virtual void _ZNK15ActorFallPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

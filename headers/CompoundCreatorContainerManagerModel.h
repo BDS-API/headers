@@ -2,8 +2,8 @@
 
 class CompoundCreatorContainerManagerModel : ContainerManagerModel {
 
-    virtual void CompoundCreatorContainerManagerModel::~CompoundCreatorContainerManagerModel();
-    virtual void CompoundCreatorContainerManagerModel::~CompoundCreatorContainerManagerModel();
+    virtual ~CompoundCreatorContainerManagerModel();
+    virtual ~CompoundCreatorContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

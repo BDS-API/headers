@@ -2,8 +2,8 @@
 
 class RemoveEntityPacket : EntityServerPacket {
 
-    virtual void RemoveEntityPacket::~RemoveEntityPacket();
-    virtual void RemoveEntityPacket::~RemoveEntityPacket();
+    virtual ~RemoveEntityPacket();
+    virtual ~RemoveEntityPacket();
     virtual void getId(void)const;
     virtual void _ZNK18RemoveEntityPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -2,7 +2,7 @@
 
 class MobEffectSystem : ITickingSystem {
 
-    virtual void MobEffectSystem::~MobEffectSystem();
-    virtual void MobEffectSystem::~MobEffectSystem();
+    virtual ~MobEffectSystem();
+    virtual ~MobEffectSystem();
     virtual void tick(EntityRegistry &);
 }

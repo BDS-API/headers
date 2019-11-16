@@ -2,8 +2,8 @@
 
 class PulseCapacitor : CapacitorComponent {
 
-    virtual void PulseCapacitor::~PulseCapacitor();
-    virtual void PulseCapacitor::~PulseCapacitor();
+    virtual ~PulseCapacitor();
+    virtual ~PulseCapacitor();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

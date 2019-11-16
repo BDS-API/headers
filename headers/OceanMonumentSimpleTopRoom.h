@@ -2,8 +2,8 @@
 
 class OceanMonumentSimpleTopRoom : OceanMonumentPiece {
 
-    virtual void OceanMonumentSimpleTopRoom::~OceanMonumentSimpleTopRoom();
-    virtual void OceanMonumentSimpleTopRoom::~OceanMonumentSimpleTopRoom();
+    virtual ~OceanMonumentSimpleTopRoom();
+    virtual ~OceanMonumentSimpleTopRoom();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

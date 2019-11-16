@@ -2,8 +2,8 @@
 
 class ControlledByPlayerGoal : Goal {
 
-    virtual void ControlledByPlayerGoal::~ControlledByPlayerGoal();
-    virtual void ControlledByPlayerGoal::~ControlledByPlayerGoal();
+    virtual ~ControlledByPlayerGoal();
+    virtual ~ControlledByPlayerGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

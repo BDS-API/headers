@@ -2,8 +2,8 @@
 
 class NBStartPiece : NBBridgeCrossing {
 
-    virtual void NBStartPiece::~NBStartPiece();
-    virtual void NBStartPiece::~NBStartPiece();
+    virtual ~NBStartPiece();
+    virtual ~NBStartPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

@@ -2,8 +2,8 @@
 
 class ProtectionEnchant : Enchant {
 
-    virtual void ProtectionEnchant::~ProtectionEnchant();
-    virtual void ProtectionEnchant::~ProtectionEnchant();
+    virtual ~ProtectionEnchant();
+    virtual ~ProtectionEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

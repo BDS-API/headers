@@ -2,8 +2,8 @@
 
 class FitSimpleTopRoom : MonumentRoomFitter {
 
-    virtual void FitSimpleTopRoom::~FitSimpleTopRoom();
-    virtual void FitSimpleTopRoom::~FitSimpleTopRoom();
+    virtual ~FitSimpleTopRoom();
+    virtual ~FitSimpleTopRoom();
     virtual void fits(std::shared_ptr<RoomDefinition> &);
     virtual void create(int &, std::shared_ptr<RoomDefinition> &, Random &);
 }

@@ -2,8 +2,8 @@
 
 class GuardianAttackGoal : Goal {
 
-    virtual void GuardianAttackGoal::~GuardianAttackGoal();
-    virtual void GuardianAttackGoal::~GuardianAttackGoal();
+    virtual ~GuardianAttackGoal();
+    virtual ~GuardianAttackGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

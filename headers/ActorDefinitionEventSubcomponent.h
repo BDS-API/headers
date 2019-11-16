@@ -2,8 +2,8 @@
 
 class ActorDefinitionEventSubcomponent : OnHitSubcomponent {
 
-    virtual void ActorDefinitionEventSubcomponent::~ActorDefinitionEventSubcomponent();
-    virtual void ActorDefinitionEventSubcomponent::~ActorDefinitionEventSubcomponent();
+    virtual ~ActorDefinitionEventSubcomponent();
+    virtual ~ActorDefinitionEventSubcomponent();
     virtual void readfromJSON(Json::Value &);
     virtual void writetoJSON(Json::Value &)const;
     virtual void doOnHitEffect(Actor &, ProjectileComponent &);

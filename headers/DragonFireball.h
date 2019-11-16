@@ -7,8 +7,8 @@ class DragonFireball : Fireball {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void DragonFireball::~DragonFireball();
-    virtual void DragonFireball::~DragonFireball();
+    virtual ~DragonFireball();
+    virtual ~DragonFireball();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

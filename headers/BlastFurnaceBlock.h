@@ -2,8 +2,8 @@
 
 class BlastFurnaceBlock : FurnaceBlock {
 
-    virtual void BlastFurnaceBlock::~BlastFurnaceBlock();
-    virtual void BlastFurnaceBlock::~BlastFurnaceBlock();
+    virtual ~BlastFurnaceBlock();
+    virtual ~BlastFurnaceBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

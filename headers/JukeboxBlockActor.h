@@ -2,8 +2,8 @@
 
 class JukeboxBlockActor : RandomizableBlockActorContainer {
 
-    virtual void JukeboxBlockActor::~JukeboxBlockActor();
-    virtual void JukeboxBlockActor::~JukeboxBlockActor();
+    virtual ~JukeboxBlockActor();
+    virtual ~JukeboxBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

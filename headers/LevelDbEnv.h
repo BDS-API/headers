@@ -2,8 +2,8 @@
 
 class LevelDbEnv : leveldb::Env {
 
-    virtual void LevelDbEnv::~LevelDbEnv();
-    virtual void LevelDbEnv::~LevelDbEnv();
+    virtual ~LevelDbEnv();
+    virtual ~LevelDbEnv();
     virtual void NewSequentialFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::SequentialFile **);
     virtual void NewRandomAccessFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::RandomAccessFile **);
     virtual void NewWritableFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::WritableFile **);

@@ -2,8 +2,8 @@
 
 class GenericPathNavigation : PathNavigation {
 
-    virtual void GenericPathNavigation::~GenericPathNavigation();
-    virtual void GenericPathNavigation::~GenericPathNavigation();
+    virtual ~GenericPathNavigation();
+    virtual ~GenericPathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

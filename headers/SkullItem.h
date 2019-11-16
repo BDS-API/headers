@@ -2,8 +2,8 @@
 
 class SkullItem : Item {
 
-    virtual void SkullItem::~SkullItem();
-    virtual void SkullItem::~SkullItem();
+    virtual ~SkullItem();
+    virtual ~SkullItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

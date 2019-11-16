@@ -2,8 +2,8 @@
 
 class AvailableCommandsPacket : Packet {
 
-    virtual void AvailableCommandsPacket::~AvailableCommandsPacket();
-    virtual void AvailableCommandsPacket::~AvailableCommandsPacket();
+    virtual ~AvailableCommandsPacket();
+    virtual ~AvailableCommandsPacket();
     virtual void getId(void)const;
     virtual void _ZNK23AvailableCommandsPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

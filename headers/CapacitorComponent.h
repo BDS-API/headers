@@ -2,8 +2,8 @@
 
 class CapacitorComponent : ProducerComponent {
 
-    virtual void CapacitorComponent::~CapacitorComponent();
-    virtual void CapacitorComponent::~CapacitorComponent();
+    virtual ~CapacitorComponent();
+    virtual ~CapacitorComponent();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

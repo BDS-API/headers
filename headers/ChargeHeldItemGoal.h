@@ -2,8 +2,8 @@
 
 class ChargeHeldItemGoal : Goal {
 
-    virtual void ChargeHeldItemGoal::~ChargeHeldItemGoal();
-    virtual void ChargeHeldItemGoal::~ChargeHeldItemGoal();
+    virtual ~ChargeHeldItemGoal();
+    virtual ~ChargeHeldItemGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

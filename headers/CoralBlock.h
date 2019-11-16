@@ -2,8 +2,8 @@
 
 class CoralBlock : BlockLegacy {
 
-    virtual void CoralBlock::~CoralBlock();
-    virtual void CoralBlock::~CoralBlock();
+    virtual ~CoralBlock();
+    virtual ~CoralBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

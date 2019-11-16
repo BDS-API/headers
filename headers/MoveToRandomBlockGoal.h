@@ -2,8 +2,8 @@
 
 class MoveToRandomBlockGoal : Goal {
 
-    virtual void MoveToRandomBlockGoal::~MoveToRandomBlockGoal();
-    virtual void MoveToRandomBlockGoal::~MoveToRandomBlockGoal();
+    virtual ~MoveToRandomBlockGoal();
+    virtual ~MoveToRandomBlockGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

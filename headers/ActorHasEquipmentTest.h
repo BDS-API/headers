@@ -2,8 +2,8 @@
 
 class ActorHasEquipmentTest : FilterTest {
 
-    virtual void ActorHasEquipmentTest::~ActorHasEquipmentTest();
-    virtual void ActorHasEquipmentTest::~ActorHasEquipmentTest();
+    virtual ~ActorHasEquipmentTest();
+    virtual ~ActorHasEquipmentTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

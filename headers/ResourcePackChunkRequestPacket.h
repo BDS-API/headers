@@ -2,8 +2,8 @@
 
 class ResourcePackChunkRequestPacket : Packet {
 
-    virtual void ResourcePackChunkRequestPacket::~ResourcePackChunkRequestPacket();
-    virtual void ResourcePackChunkRequestPacket::~ResourcePackChunkRequestPacket();
+    virtual ~ResourcePackChunkRequestPacket();
+    virtual ~ResourcePackChunkRequestPacket();
     virtual void getId(void)const;
     virtual void _ZNK30ResourcePackChunkRequestPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

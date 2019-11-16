@@ -2,8 +2,8 @@
 
 class LevelEventGenericPacket : Packet {
 
-    virtual void LevelEventGenericPacket::~LevelEventGenericPacket();
-    virtual void LevelEventGenericPacket::~LevelEventGenericPacket();
+    virtual ~LevelEventGenericPacket();
+    virtual ~LevelEventGenericPacket();
     virtual void getId(void)const;
     virtual void _ZNK23LevelEventGenericPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

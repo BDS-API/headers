@@ -2,8 +2,8 @@
 
 class ClothBlockItem : BlockItem {
 
-    virtual void ClothBlockItem::~ClothBlockItem();
-    virtual void ClothBlockItem::~ClothBlockItem();
+    virtual ~ClothBlockItem();
+    virtual ~ClothBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

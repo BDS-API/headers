@@ -2,7 +2,7 @@
 
 class ScriptServerActorEquippedArmorEvent : ScriptEventData {
 
-    virtual void ScriptServerActorEquippedArmorEvent::~ScriptServerActorEquippedArmorEvent();
-    virtual void ScriptServerActorEquippedArmorEvent::~ScriptServerActorEquippedArmorEvent();
+    virtual ~ScriptServerActorEquippedArmorEvent();
+    virtual ~ScriptServerActorEquippedArmorEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 }

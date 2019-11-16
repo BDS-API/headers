@@ -2,8 +2,8 @@
 
 class NetherReactorBlockActor : BlockActor {
 
-    virtual void NetherReactorBlockActor::~NetherReactorBlockActor();
-    virtual void NetherReactorBlockActor::~NetherReactorBlockActor();
+    virtual ~NetherReactorBlockActor();
+    virtual ~NetherReactorBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

@@ -2,8 +2,8 @@
 
 class MultiRecipe : Recipe {
 
-    virtual void MultiRecipe::~MultiRecipe();
-    virtual void MultiRecipe::~MultiRecipe();
+    virtual ~MultiRecipe();
+    virtual ~MultiRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

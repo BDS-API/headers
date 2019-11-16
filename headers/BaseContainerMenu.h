@@ -3,8 +3,8 @@
 class BaseContainerMenu : ContainerContentChangeListener, IContainerManager {
 
     virtual void containerContentChanged(int);
-    virtual void BaseContainerMenu::~BaseContainerMenu();
-    virtual void BaseContainerMenu::~BaseContainerMenu();
+    virtual ~BaseContainerMenu();
+    virtual ~BaseContainerMenu();
     virtual void removeSlot(int, int);
     virtual void isSlotDirty(int);
     virtual void isResultSlot(int);

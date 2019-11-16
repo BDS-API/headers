@@ -2,8 +2,8 @@
 
 class MobPlacerItem : Item {
 
-    virtual void MobPlacerItem::~MobPlacerItem();
-    virtual void MobPlacerItem::~MobPlacerItem();
+    virtual ~MobPlacerItem();
+    virtual ~MobPlacerItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

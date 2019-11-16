@@ -2,8 +2,8 @@
 
 class RaiderCelebrationGoal : Goal {
 
-    virtual void RaiderCelebrationGoal::~RaiderCelebrationGoal();
-    virtual void RaiderCelebrationGoal::~RaiderCelebrationGoal();
+    virtual ~RaiderCelebrationGoal();
+    virtual ~RaiderCelebrationGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

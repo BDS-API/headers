@@ -2,8 +2,8 @@
 
 class SpongeBlock : BlockLegacy {
 
-    virtual void SpongeBlock::~SpongeBlock();
-    virtual void SpongeBlock::~SpongeBlock();
+    virtual ~SpongeBlock();
+    virtual ~SpongeBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

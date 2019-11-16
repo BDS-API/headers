@@ -2,8 +2,8 @@
 
 class SHPortalRoom : StrongholdPiece {
 
-    virtual void SHPortalRoom::~SHPortalRoom();
-    virtual void SHPortalRoom::~SHPortalRoom();
+    virtual ~SHPortalRoom();
+    virtual ~SHPortalRoom();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

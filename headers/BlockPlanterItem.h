@@ -2,8 +2,8 @@
 
 class BlockPlanterItem : Item {
 
-    virtual void BlockPlanterItem::~BlockPlanterItem();
-    virtual void BlockPlanterItem::~BlockPlanterItem();
+    virtual ~BlockPlanterItem();
+    virtual ~BlockPlanterItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

@@ -2,8 +2,8 @@
 
 class SlimeKeepOnJumpingGoal : Goal {
 
-    virtual void SlimeKeepOnJumpingGoal::~SlimeKeepOnJumpingGoal();
-    virtual void SlimeKeepOnJumpingGoal::~SlimeKeepOnJumpingGoal();
+    virtual ~SlimeKeepOnJumpingGoal();
+    virtual ~SlimeKeepOnJumpingGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

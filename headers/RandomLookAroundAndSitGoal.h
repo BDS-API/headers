@@ -2,8 +2,8 @@
 
 class RandomLookAroundAndSitGoal : RandomLookAroundGoal {
 
-    virtual void RandomLookAroundAndSitGoal::~RandomLookAroundAndSitGoal();
-    virtual void RandomLookAroundAndSitGoal::~RandomLookAroundAndSitGoal();
+    virtual ~RandomLookAroundAndSitGoal();
+    virtual ~RandomLookAroundAndSitGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

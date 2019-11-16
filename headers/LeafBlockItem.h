@@ -2,8 +2,8 @@
 
 class LeafBlockItem : BlockItem {
 
-    virtual void LeafBlockItem::~LeafBlockItem();
-    virtual void LeafBlockItem::~LeafBlockItem();
+    virtual ~LeafBlockItem();
+    virtual ~LeafBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

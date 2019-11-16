@@ -2,8 +2,8 @@
 
 class ComparatorBlock : ActorBlock {
 
-    virtual void ComparatorBlock::~ComparatorBlock();
-    virtual void ComparatorBlock::~ComparatorBlock();
+    virtual ~ComparatorBlock();
+    virtual ~ComparatorBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

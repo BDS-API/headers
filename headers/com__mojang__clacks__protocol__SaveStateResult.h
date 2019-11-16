@@ -2,8 +2,8 @@
 
 class com::mojang::clacks::protocol::SaveStateResult : google::protobuf::Message {
 
-    virtual void com::mojang::clacks::protocol::SaveStateResult::~SaveStateResult();
-    virtual void com::mojang::clacks::protocol::SaveStateResult::~SaveStateResult();
+    virtual ~SaveStateResult();
+    virtual ~SaveStateResult();
     virtual void _ZNK6google8protobuf7Message11GetTypeNameB5cxx11Ev;
     virtual void New(void)const;
     virtual void New(google::protobuf::Arena *)const;

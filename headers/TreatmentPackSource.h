@@ -2,8 +2,8 @@
 
 class TreatmentPackSource : PackSource {
 
-    virtual void TreatmentPackSource::~TreatmentPackSource();
-    virtual void TreatmentPackSource::~TreatmentPackSource();
+    virtual ~TreatmentPackSource();
+    virtual ~TreatmentPackSource();
     virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
     virtual void forEachPack(std::function<void ()(Pack &)>);
     virtual void getPackOrigin(void)const;

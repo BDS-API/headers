@@ -2,8 +2,8 @@
 
 class SimpleBoolFilterTest : FilterTest {
 
-    virtual void SimpleBoolFilterTest::~SimpleBoolFilterTest();
-    virtual void SimpleBoolFilterTest::~SimpleBoolFilterTest();
+    virtual ~SimpleBoolFilterTest();
+    virtual ~SimpleBoolFilterTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

@@ -2,8 +2,8 @@
 
 class StalkAndPounceOnTargetGoal : Goal {
 
-    virtual void StalkAndPounceOnTargetGoal::~StalkAndPounceOnTargetGoal();
-    virtual void StalkAndPounceOnTargetGoal::~StalkAndPounceOnTargetGoal();
+    virtual ~StalkAndPounceOnTargetGoal();
+    virtual ~StalkAndPounceOnTargetGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

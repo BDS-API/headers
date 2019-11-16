@@ -2,8 +2,8 @@
 
 class DispenserContainerManagerModel : LevelContainerManagerModel {
 
-    virtual void DispenserContainerManagerModel::~DispenserContainerManagerModel();
-    virtual void DispenserContainerManagerModel::~DispenserContainerManagerModel();
+    virtual ~DispenserContainerManagerModel();
+    virtual ~DispenserContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

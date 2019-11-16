@@ -2,8 +2,8 @@
 
 class MovePlayerPacket : Packet {
 
-    virtual void MovePlayerPacket::~MovePlayerPacket();
-    virtual void MovePlayerPacket::~MovePlayerPacket();
+    virtual ~MovePlayerPacket();
+    virtual ~MovePlayerPacket();
     virtual void getId(void)const;
     virtual void _ZNK16MovePlayerPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

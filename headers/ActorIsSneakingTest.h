@@ -2,8 +2,8 @@
 
 class ActorIsSneakingTest : SimpleBoolFilterTest {
 
-    virtual void ActorIsSneakingTest::~ActorIsSneakingTest();
-    virtual void ActorIsSneakingTest::~ActorIsSneakingTest();
+    virtual ~ActorIsSneakingTest();
+    virtual ~ActorIsSneakingTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

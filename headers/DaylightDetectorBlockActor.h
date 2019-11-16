@@ -2,8 +2,8 @@
 
 class DaylightDetectorBlockActor : BlockActor {
 
-    virtual void DaylightDetectorBlockActor::~DaylightDetectorBlockActor();
-    virtual void DaylightDetectorBlockActor::~DaylightDetectorBlockActor();
+    virtual ~DaylightDetectorBlockActor();
+    virtual ~DaylightDetectorBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

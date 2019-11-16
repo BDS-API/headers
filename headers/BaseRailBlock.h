@@ -2,8 +2,8 @@
 
 class BaseRailBlock : BlockLegacy {
 
-    virtual void BaseRailBlock::~BaseRailBlock();
-    virtual void BaseRailBlock::~BaseRailBlock();
+    virtual ~BaseRailBlock();
+    virtual ~BaseRailBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

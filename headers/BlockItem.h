@@ -2,8 +2,8 @@
 
 class BlockItem : Item {
 
-    virtual void BlockItem::~BlockItem();
-    virtual void BlockItem::~BlockItem();
+    virtual ~BlockItem();
+    virtual ~BlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

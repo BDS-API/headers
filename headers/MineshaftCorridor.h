@@ -2,8 +2,8 @@
 
 class MineshaftCorridor : MineshaftPiece {
 
-    virtual void MineshaftCorridor::~MineshaftCorridor();
-    virtual void MineshaftCorridor::~MineshaftCorridor();
+    virtual ~MineshaftCorridor();
+    virtual ~MineshaftCorridor();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

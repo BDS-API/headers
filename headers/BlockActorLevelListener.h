@@ -2,8 +2,8 @@
 
 class BlockActorLevelListener : LevelListener {
 
-    virtual void BlockActorLevelListener::~BlockActorLevelListener();
-    virtual void BlockActorLevelListener::~BlockActorLevelListener();
+    virtual ~BlockActorLevelListener();
+    virtual ~BlockActorLevelListener();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

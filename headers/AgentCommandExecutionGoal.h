@@ -2,8 +2,8 @@
 
 class AgentCommandExecutionGoal : Goal {
 
-    virtual void AgentCommandExecutionGoal::~AgentCommandExecutionGoal();
-    virtual void AgentCommandExecutionGoal::~AgentCommandExecutionGoal();
+    virtual ~AgentCommandExecutionGoal();
+    virtual ~AgentCommandExecutionGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

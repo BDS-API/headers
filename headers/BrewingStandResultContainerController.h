@@ -2,8 +2,8 @@
 
 class BrewingStandResultContainerController : ContainerController {
 
-    virtual void BrewingStandResultContainerController::~BrewingStandResultContainerController();
-    virtual void BrewingStandResultContainerController::~BrewingStandResultContainerController();
+    virtual ~BrewingStandResultContainerController();
+    virtual ~BrewingStandResultContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

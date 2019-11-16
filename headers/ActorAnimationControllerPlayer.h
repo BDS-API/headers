@@ -2,8 +2,8 @@
 
 class ActorAnimationControllerPlayer : ActorAnimationPlayer {
 
-    virtual void ActorAnimationControllerPlayer::~ActorAnimationControllerPlayer();
-    virtual void ActorAnimationControllerPlayer::~ActorAnimationControllerPlayer();
+    virtual ~ActorAnimationControllerPlayer();
+    virtual ~ActorAnimationControllerPlayer();
     virtual void applyToPose(RenderParams &, std::unordered_map<SkeletalHierarchyIndex, std::vector<BoneOrientation, std::allocator<BoneOrientation>>, std::hash<SkeletalHierarchyIndex>, std::equal_to<SkeletalHierarchyIndex>, std::allocator<std::pair<SkeletalHierarchyIndex const, std::vector<BoneOrientation, std::allocator<BoneOrientation>>>>> &, float);
     virtual void resetAnimation(void);
     virtual void buildBoneToPartMapping(AnimationComponent &);

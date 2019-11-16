@@ -2,8 +2,8 @@
 
 class SetLocalPlayerAsInitializedPacket : Packet {
 
-    virtual void SetLocalPlayerAsInitializedPacket::~SetLocalPlayerAsInitializedPacket();
-    virtual void SetLocalPlayerAsInitializedPacket::~SetLocalPlayerAsInitializedPacket();
+    virtual ~SetLocalPlayerAsInitializedPacket();
+    virtual ~SetLocalPlayerAsInitializedPacket();
     virtual void getId(void)const;
     virtual void _ZNK33SetLocalPlayerAsInitializedPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

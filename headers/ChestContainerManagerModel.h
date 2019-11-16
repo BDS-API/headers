@@ -2,8 +2,8 @@
 
 class ChestContainerManagerModel : LevelContainerManagerModel {
 
-    virtual void ChestContainerManagerModel::~ChestContainerManagerModel();
-    virtual void ChestContainerManagerModel::~ChestContainerManagerModel();
+    virtual ~ChestContainerManagerModel();
+    virtual ~ChestContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

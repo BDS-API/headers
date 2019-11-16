@@ -2,8 +2,8 @@
 
 class CompletedUsingItemPacket : Packet {
 
-    virtual void CompletedUsingItemPacket::~CompletedUsingItemPacket();
-    virtual void CompletedUsingItemPacket::~CompletedUsingItemPacket();
+    virtual ~CompletedUsingItemPacket();
+    virtual ~CompletedUsingItemPacket();
     virtual void getId(void)const;
     virtual void _ZNK24CompletedUsingItemPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

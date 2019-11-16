@@ -2,8 +2,8 @@
 
 class ActorEventPacket : Packet {
 
-    virtual void ActorEventPacket::~ActorEventPacket();
-    virtual void ActorEventPacket::~ActorEventPacket();
+    virtual ~ActorEventPacket();
+    virtual ~ActorEventPacket();
     virtual void getId(void)const;
     virtual void _ZNK16ActorEventPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

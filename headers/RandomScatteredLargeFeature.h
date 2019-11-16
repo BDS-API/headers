@@ -2,8 +2,8 @@
 
 class RandomScatteredLargeFeature : StructureFeature {
 
-    virtual void RandomScatteredLargeFeature::~RandomScatteredLargeFeature();
-    virtual void RandomScatteredLargeFeature::~RandomScatteredLargeFeature();
+    virtual ~RandomScatteredLargeFeature();
+    virtual ~RandomScatteredLargeFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

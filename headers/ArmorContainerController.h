@@ -2,8 +2,8 @@
 
 class ArmorContainerController : ContainerController {
 
-    virtual void ArmorContainerController::~ArmorContainerController();
-    virtual void ArmorContainerController::~ArmorContainerController();
+    virtual ~ArmorContainerController();
+    virtual ~ArmorContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

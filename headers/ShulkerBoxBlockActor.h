@@ -2,8 +2,8 @@
 
 class ShulkerBoxBlockActor : ChestBlockActor {
 
-    virtual void ShulkerBoxBlockActor::~ShulkerBoxBlockActor();
-    virtual void ShulkerBoxBlockActor::~ShulkerBoxBlockActor();
+    virtual ~ShulkerBoxBlockActor();
+    virtual ~ShulkerBoxBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

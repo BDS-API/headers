@@ -2,7 +2,7 @@
 
 class QueryTargetCommand : Command {
 
-    virtual void QueryTargetCommand::~QueryTargetCommand();
-    virtual void QueryTargetCommand::~QueryTargetCommand();
+    virtual ~QueryTargetCommand();
+    virtual ~QueryTargetCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

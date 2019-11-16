@@ -2,8 +2,8 @@
 
 class LadderBlock : BlockLegacy {
 
-    virtual void LadderBlock::~LadderBlock();
-    virtual void LadderBlock::~LadderBlock();
+    virtual ~LadderBlock();
+    virtual ~LadderBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

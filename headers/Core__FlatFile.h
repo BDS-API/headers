@@ -2,8 +2,8 @@
 
 class Core::FlatFile : Core::FileImpl {
 
-    virtual void Core::FlatFile::~FlatFile();
-    virtual void Core::FlatFile::~FlatFile();
+    virtual ~FlatFile();
+    virtual ~FlatFile();
     virtual void _ZNK4Core8FlatFile8_getPathB5cxx11Ev;
     virtual void _getBlockSize(void)const;
     virtual void _isOpen(void);

@@ -2,8 +2,8 @@
 
 class FleeSunGoal : FindCoverGoal {
 
-    virtual void FleeSunGoal::~FleeSunGoal();
-    virtual void FleeSunGoal::~FleeSunGoal();
+    virtual ~FleeSunGoal();
+    virtual ~FleeSunGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

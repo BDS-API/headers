@@ -2,8 +2,8 @@
 
 class CommandBlock : ActorBlock {
 
-    virtual void CommandBlock::~CommandBlock();
-    virtual void CommandBlock::~CommandBlock();
+    virtual ~CommandBlock();
+    virtual ~CommandBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

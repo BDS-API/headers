@@ -2,7 +2,7 @@
 
 class JumpControlSystem : ITickingSystem {
 
-    virtual void JumpControlSystem::~JumpControlSystem();
-    virtual void JumpControlSystem::~JumpControlSystem();
+    virtual ~JumpControlSystem();
+    virtual ~JumpControlSystem();
     virtual void tick(EntityRegistry &);
 }

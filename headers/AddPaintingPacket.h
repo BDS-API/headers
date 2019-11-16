@@ -2,8 +2,8 @@
 
 class AddPaintingPacket : Packet {
 
-    virtual void AddPaintingPacket::~AddPaintingPacket();
-    virtual void AddPaintingPacket::~AddPaintingPacket();
+    virtual ~AddPaintingPacket();
+    virtual ~AddPaintingPacket();
     virtual void getId(void)const;
     virtual void _ZNK17AddPaintingPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

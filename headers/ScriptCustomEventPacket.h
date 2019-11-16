@@ -2,8 +2,8 @@
 
 class ScriptCustomEventPacket : Packet {
 
-    virtual void ScriptCustomEventPacket::~ScriptCustomEventPacket();
-    virtual void ScriptCustomEventPacket::~ScriptCustomEventPacket();
+    virtual ~ScriptCustomEventPacket();
+    virtual ~ScriptCustomEventPacket();
     virtual void getId(void)const;
     virtual void _ZNK23ScriptCustomEventPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

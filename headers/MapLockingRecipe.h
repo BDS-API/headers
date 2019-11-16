@@ -2,8 +2,8 @@
 
 class MapLockingRecipe : MultiRecipe {
 
-    virtual void MapLockingRecipe::~MapLockingRecipe();
-    virtual void MapLockingRecipe::~MapLockingRecipe();
+    virtual ~MapLockingRecipe();
+    virtual ~MapLockingRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

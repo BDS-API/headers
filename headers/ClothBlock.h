@@ -2,8 +2,8 @@
 
 class ClothBlock : BlockLegacy {
 
-    virtual void ClothBlock::~ClothBlock();
-    virtual void ClothBlock::~ClothBlock();
+    virtual ~ClothBlock();
+    virtual ~ClothBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

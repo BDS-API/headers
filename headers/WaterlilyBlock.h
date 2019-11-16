@@ -2,8 +2,8 @@
 
 class WaterlilyBlock : BushBlock {
 
-    virtual void WaterlilyBlock::~WaterlilyBlock();
-    virtual void WaterlilyBlock::~WaterlilyBlock();
+    virtual ~WaterlilyBlock();
+    virtual ~WaterlilyBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

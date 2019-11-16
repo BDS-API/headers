@@ -2,7 +2,7 @@
 
 class GameModeCommand : Command {
 
-    virtual void GameModeCommand::~GameModeCommand();
-    virtual void GameModeCommand::~GameModeCommand();
+    virtual ~GameModeCommand();
+    virtual ~GameModeCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

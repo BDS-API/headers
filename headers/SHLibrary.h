@@ -2,8 +2,8 @@
 
 class SHLibrary : StrongholdPiece {
 
-    virtual void SHLibrary::~SHLibrary();
-    virtual void SHLibrary::~SHLibrary();
+    virtual ~SHLibrary();
+    virtual ~SHLibrary();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

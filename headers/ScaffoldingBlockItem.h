@@ -2,8 +2,8 @@
 
 class ScaffoldingBlockItem : BlockItem {
 
-    virtual void ScaffoldingBlockItem::~ScaffoldingBlockItem();
-    virtual void ScaffoldingBlockItem::~ScaffoldingBlockItem();
+    virtual ~ScaffoldingBlockItem();
+    virtual ~ScaffoldingBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

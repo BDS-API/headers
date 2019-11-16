@@ -2,8 +2,8 @@
 
 class FollowTargetCaptainGoal : MoveTowardsTargetGoal {
 
-    virtual void FollowTargetCaptainGoal::~FollowTargetCaptainGoal();
-    virtual void FollowTargetCaptainGoal::~FollowTargetCaptainGoal();
+    virtual ~FollowTargetCaptainGoal();
+    virtual ~FollowTargetCaptainGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

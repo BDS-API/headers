@@ -2,7 +2,7 @@
 
 class OreFeature : IFeature {
 
-    virtual void OreFeature::~OreFeature();
-    virtual void OreFeature::~OreFeature();
+    virtual ~OreFeature();
+    virtual ~OreFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
 }

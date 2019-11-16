@@ -2,7 +2,7 @@
 
 class ScriptServerActorDroppedItemEvent : ScriptEventData {
 
-    virtual void ScriptServerActorDroppedItemEvent::~ScriptServerActorDroppedItemEvent();
-    virtual void ScriptServerActorDroppedItemEvent::~ScriptServerActorDroppedItemEvent();
+    virtual ~ScriptServerActorDroppedItemEvent();
+    virtual ~ScriptServerActorDroppedItemEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 }

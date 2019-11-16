@@ -2,7 +2,7 @@
 
 class BinaryStream : ReadOnlyBinaryStream {
 
-    virtual void BinaryStream::~BinaryStream();
-    virtual void BinaryStream::~BinaryStream();
+    virtual ~BinaryStream();
+    virtual ~BinaryStream();
     virtual void read(void *, unsigned long);
 }

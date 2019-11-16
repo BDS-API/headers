@@ -2,8 +2,8 @@
 
 class DriedKelpBlock : BlockLegacy {
 
-    virtual void DriedKelpBlock::~DriedKelpBlock();
-    virtual void DriedKelpBlock::~DriedKelpBlock();
+    virtual ~DriedKelpBlock();
+    virtual ~DriedKelpBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

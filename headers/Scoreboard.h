@@ -2,8 +2,8 @@
 
 class Scoreboard {
 
-    virtual void Scoreboard::~Scoreboard();
-    virtual void Scoreboard::~Scoreboard();
+    virtual ~Scoreboard();
+    virtual ~Scoreboard();
     virtual void setDisplayObjective(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Objective const&, ObjectiveSortOrder);
     virtual void clearDisplayObjective(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void createScoreboardId(Player const&);

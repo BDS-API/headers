@@ -2,8 +2,8 @@
 
 class FilterTestBiome : SimpleIntFilterTest {
 
-    virtual void FilterTestBiome::~FilterTestBiome();
-    virtual void FilterTestBiome::~FilterTestBiome();
+    virtual ~FilterTestBiome();
+    virtual ~FilterTestBiome();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

@@ -2,8 +2,8 @@
 
 class BedrockBlock : BlockLegacy {
 
-    virtual void BedrockBlock::~BedrockBlock();
-    virtual void BedrockBlock::~BedrockBlock();
+    virtual ~BedrockBlock();
+    virtual ~BedrockBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

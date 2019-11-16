@@ -2,8 +2,8 @@
 
 class ActorPickRequestPacket : Packet {
 
-    virtual void ActorPickRequestPacket::~ActorPickRequestPacket();
-    virtual void ActorPickRequestPacket::~ActorPickRequestPacket();
+    virtual ~ActorPickRequestPacket();
+    virtual ~ActorPickRequestPacket();
     virtual void getId(void)const;
     virtual void _ZNK22ActorPickRequestPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

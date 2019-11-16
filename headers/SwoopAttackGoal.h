@@ -2,8 +2,8 @@
 
 class SwoopAttackGoal : Goal {
 
-    virtual void SwoopAttackGoal::~SwoopAttackGoal();
-    virtual void SwoopAttackGoal::~SwoopAttackGoal();
+    virtual ~SwoopAttackGoal();
+    virtual ~SwoopAttackGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

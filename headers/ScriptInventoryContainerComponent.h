@@ -2,8 +2,8 @@
 
 class ScriptInventoryContainerComponent : ScriptContainerComponentBase {
 
-    virtual void ScriptInventoryContainerComponent::~ScriptInventoryContainerComponent();
-    virtual void ScriptInventoryContainerComponent::~ScriptInventoryContainerComponent();
+    virtual ~ScriptInventoryContainerComponent();
+    virtual ~ScriptInventoryContainerComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual void hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

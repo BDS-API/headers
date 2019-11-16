@@ -2,7 +2,7 @@
 
 class GoalSelectorSystem : ITickingSystem {
 
-    virtual void GoalSelectorSystem::~GoalSelectorSystem();
-    virtual void GoalSelectorSystem::~GoalSelectorSystem();
+    virtual ~GoalSelectorSystem();
+    virtual ~GoalSelectorSystem();
     virtual void tick(EntityRegistry &);
 }

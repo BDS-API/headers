@@ -2,7 +2,7 @@
 
 class TickingAreaCommand : Command {
 
-    virtual void TickingAreaCommand::~TickingAreaCommand();
-    virtual void TickingAreaCommand::~TickingAreaCommand();
+    virtual ~TickingAreaCommand();
+    virtual ~TickingAreaCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

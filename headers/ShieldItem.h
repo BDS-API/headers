@@ -2,8 +2,8 @@
 
 class ShieldItem : Item {
 
-    virtual void ShieldItem::~ShieldItem();
-    virtual void ShieldItem::~ShieldItem();
+    virtual ~ShieldItem();
+    virtual ~ShieldItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

@@ -2,6 +2,6 @@
 
 class SavedDataStorage {
 
-    virtual void SavedDataStorage::~SavedDataStorage();
-    virtual void SavedDataStorage::~SavedDataStorage();
+    virtual ~SavedDataStorage();
+    virtual ~SavedDataStorage();
 }

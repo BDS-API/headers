@@ -2,8 +2,8 @@
 
 class MonumentBuilding : OceanMonumentPiece {
 
-    virtual void MonumentBuilding::~MonumentBuilding();
-    virtual void MonumentBuilding::~MonumentBuilding();
+    virtual ~MonumentBuilding();
+    virtual ~MonumentBuilding();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

@@ -2,8 +2,8 @@
 
 class FlatWorldGenerator : ChunkSource, WorldGenerator {
 
-    virtual void FlatWorldGenerator::~FlatWorldGenerator();
-    virtual void FlatWorldGenerator::~FlatWorldGenerator();
+    virtual ~FlatWorldGenerator();
+    virtual ~FlatWorldGenerator();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

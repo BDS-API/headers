@@ -2,8 +2,8 @@
 
 class WeightedPressurePlateBlock : BasePressurePlateBlock {
 
-    virtual void WeightedPressurePlateBlock::~WeightedPressurePlateBlock();
-    virtual void WeightedPressurePlateBlock::~WeightedPressurePlateBlock();
+    virtual ~WeightedPressurePlateBlock();
+    virtual ~WeightedPressurePlateBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

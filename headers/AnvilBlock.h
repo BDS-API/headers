@@ -2,8 +2,8 @@
 
 class AnvilBlock : HeavyBlock {
 
-    virtual void AnvilBlock::~AnvilBlock();
-    virtual void AnvilBlock::~AnvilBlock();
+    virtual ~AnvilBlock();
+    virtual ~AnvilBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

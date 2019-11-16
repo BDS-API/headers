@@ -2,8 +2,8 @@
 
 class BreakDoorGoal : DoorInteractGoal {
 
-    virtual void BreakDoorGoal::~BreakDoorGoal();
-    virtual void BreakDoorGoal::~BreakDoorGoal();
+    virtual ~BreakDoorGoal();
+    virtual ~BreakDoorGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

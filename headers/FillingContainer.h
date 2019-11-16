@@ -2,8 +2,8 @@
 
 class FillingContainer : Container {
 
-    virtual void FillingContainer::~FillingContainer();
-    virtual void FillingContainer::~FillingContainer();
+    virtual ~FillingContainer();
+    virtual ~FillingContainer();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);

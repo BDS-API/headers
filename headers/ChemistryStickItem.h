@@ -2,8 +2,8 @@
 
 class ChemistryStickItem : ChemistryItem {
 
-    virtual void ChemistryStickItem::~ChemistryStickItem();
-    virtual void ChemistryStickItem::~ChemistryStickItem();
+    virtual ~ChemistryStickItem();
+    virtual ~ChemistryStickItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

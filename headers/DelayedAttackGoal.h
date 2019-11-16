@@ -2,8 +2,8 @@
 
 class DelayedAttackGoal : MeleeAttackGoal {
 
-    virtual void DelayedAttackGoal::~DelayedAttackGoal();
-    virtual void DelayedAttackGoal::~DelayedAttackGoal();
+    virtual ~DelayedAttackGoal();
+    virtual ~DelayedAttackGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

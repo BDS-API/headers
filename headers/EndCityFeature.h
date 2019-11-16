@@ -2,8 +2,8 @@
 
 class EndCityFeature : StructureFeature {
 
-    virtual void EndCityFeature::~EndCityFeature();
-    virtual void EndCityFeature::~EndCityFeature();
+    virtual ~EndCityFeature();
+    virtual ~EndCityFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

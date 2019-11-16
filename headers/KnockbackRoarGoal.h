@@ -2,8 +2,8 @@
 
 class KnockbackRoarGoal : Goal {
 
-    virtual void KnockbackRoarGoal::~KnockbackRoarGoal();
-    virtual void KnockbackRoarGoal::~KnockbackRoarGoal();
+    virtual ~KnockbackRoarGoal();
+    virtual ~KnockbackRoarGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

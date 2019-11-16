@@ -2,8 +2,8 @@
 
 class SplashPotionItem : PotionItem {
 
-    virtual void SplashPotionItem::~SplashPotionItem();
-    virtual void SplashPotionItem::~SplashPotionItem();
+    virtual ~SplashPotionItem();
+    virtual ~SplashPotionItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

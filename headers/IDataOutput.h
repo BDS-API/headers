@@ -2,8 +2,8 @@
 
 class IDataOutput {
 
-    virtual void IDataOutput::~IDataOutput();
-    virtual void IDataOutput::~IDataOutput();
+    virtual ~IDataOutput();
+    virtual ~IDataOutput();
     virtual void writeString(gsl::basic_string_span<char const, -1l>);
     virtual void writeLongString(gsl::basic_string_span<char const, -1l>);
     virtual void writeFloat(float);

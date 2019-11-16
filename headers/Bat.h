@@ -7,8 +7,8 @@ class Bat : Mob {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Bat::~Bat();
-    virtual void Bat::~Bat();
+    virtual ~Bat();
+    virtual ~Bat();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

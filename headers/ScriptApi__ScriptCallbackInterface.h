@@ -2,8 +2,8 @@
 
 class ScriptApi::ScriptCallbackInterface {
 
-    virtual void ScriptApi::ScriptCallbackInterface::~ScriptCallbackInterface();
-    virtual void ScriptApi::ScriptCallbackInterface::~ScriptCallbackInterface();
+    virtual ~ScriptCallbackInterface();
+    virtual ~ScriptCallbackInterface();
     virtual void initialize(void);
     virtual void shutdown(void);
     virtual void onLogReceived(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);

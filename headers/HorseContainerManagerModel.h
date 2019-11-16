@@ -2,8 +2,8 @@
 
 class HorseContainerManagerModel : LevelContainerManagerModel {
 
-    virtual void HorseContainerManagerModel::~HorseContainerManagerModel();
-    virtual void HorseContainerManagerModel::~HorseContainerManagerModel();
+    virtual ~HorseContainerManagerModel();
+    virtual ~HorseContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

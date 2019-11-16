@@ -2,8 +2,8 @@
 
 class SavedData {
 
-    virtual void SavedData::~SavedData();
-    virtual void SavedData::~SavedData();
+    virtual ~SavedData();
+    virtual ~SavedData();
     virtual void deserialize(CompoundTag const&);
     virtual void serialize(CompoundTag &)const;
 }

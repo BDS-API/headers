@@ -7,8 +7,8 @@ class TripodCamera : Mob {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void TripodCamera::~TripodCamera();
-    virtual void TripodCamera::~TripodCamera();
+    virtual ~TripodCamera();
+    virtual ~TripodCamera();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

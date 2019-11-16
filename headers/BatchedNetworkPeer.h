@@ -2,8 +2,8 @@
 
 class BatchedNetworkPeer : NetworkPeer {
 
-    virtual void BatchedNetworkPeer::~BatchedNetworkPeer();
-    virtual void BatchedNetworkPeer::~BatchedNetworkPeer();
+    virtual ~BatchedNetworkPeer();
+    virtual ~BatchedNetworkPeer();
     virtual void sendPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, NetworkPeer::Reliability, int, unsigned short, Compressibility);
     virtual void receivePacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
     virtual void getNetworkStatus(void);

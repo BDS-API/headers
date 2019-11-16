@@ -2,8 +2,8 @@
 
 class DispenserBlockActor : RandomizableBlockActorContainer {
 
-    virtual void DispenserBlockActor::~DispenserBlockActor();
-    virtual void DispenserBlockActor::~DispenserBlockActor();
+    virtual ~DispenserBlockActor();
+    virtual ~DispenserBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

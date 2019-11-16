@@ -2,8 +2,8 @@
 
 class IntTag : Tag {
 
-    virtual void IntTag::~IntTag();
-    virtual void IntTag::~IntTag();
+    virtual ~IntTag();
+    virtual ~IntTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

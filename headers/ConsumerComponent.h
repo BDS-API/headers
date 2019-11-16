@@ -2,8 +2,8 @@
 
 class ConsumerComponent : BaseCircuitComponent {
 
-    virtual void ConsumerComponent::~ConsumerComponent();
-    virtual void ConsumerComponent::~ConsumerComponent();
+    virtual ~ConsumerComponent();
+    virtual ~ConsumerComponent();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

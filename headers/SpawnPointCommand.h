@@ -2,7 +2,7 @@
 
 class SpawnPointCommand : Command {
 
-    virtual void SpawnPointCommand::~SpawnPointCommand();
-    virtual void SpawnPointCommand::~SpawnPointCommand();
+    virtual ~SpawnPointCommand();
+    virtual ~SpawnPointCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

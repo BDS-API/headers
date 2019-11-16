@@ -2,8 +2,8 @@
 
 class CampfireBlock : ActorBlock {
 
-    virtual void CampfireBlock::~CampfireBlock();
-    virtual void CampfireBlock::~CampfireBlock();
+    virtual ~CampfireBlock();
+    virtual ~CampfireBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

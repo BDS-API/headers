@@ -2,8 +2,8 @@
 
 class ShovelItem : DiggerItem {
 
-    virtual void ShovelItem::~ShovelItem();
-    virtual void ShovelItem::~ShovelItem();
+    virtual ~ShovelItem();
+    virtual ~ShovelItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

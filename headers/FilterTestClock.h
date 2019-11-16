@@ -2,8 +2,8 @@
 
 class FilterTestClock : SimpleFloatFilterTest {
 
-    virtual void FilterTestClock::~FilterTestClock();
-    virtual void FilterTestClock::~FilterTestClock();
+    virtual ~FilterTestClock();
+    virtual ~FilterTestClock();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

@@ -2,8 +2,8 @@
 
 class ClockItem : Item {
 
-    virtual void ClockItem::~ClockItem();
-    virtual void ClockItem::~ClockItem();
+    virtual ~ClockItem();
+    virtual ~ClockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

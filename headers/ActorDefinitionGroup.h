@@ -2,6 +2,6 @@
 
 class ActorDefinitionGroup {
 
-    virtual void ActorDefinitionGroup::~ActorDefinitionGroup();
-    virtual void ActorDefinitionGroup::~ActorDefinitionGroup();
+    virtual ~ActorDefinitionGroup();
+    virtual ~ActorDefinitionGroup();
 }

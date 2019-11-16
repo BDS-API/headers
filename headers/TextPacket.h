@@ -2,8 +2,8 @@
 
 class TextPacket : Packet {
 
-    virtual void TextPacket::~TextPacket();
-    virtual void TextPacket::~TextPacket();
+    virtual ~TextPacket();
+    virtual ~TextPacket();
     virtual void getId(void)const;
     virtual void _ZNK10TextPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

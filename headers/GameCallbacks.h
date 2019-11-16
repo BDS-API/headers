@@ -2,8 +2,8 @@
 
 class GameCallbacks {
 
-    virtual void GameCallbacks::~GameCallbacks();
-    virtual void GameCallbacks::~GameCallbacks();
+    virtual ~GameCallbacks();
+    virtual ~GameCallbacks();
     virtual void onLowMemory(void);
     virtual void onAppPaused(void);
     virtual void onAppUnpaused(void);

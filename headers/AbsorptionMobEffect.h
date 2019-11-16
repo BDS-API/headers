@@ -2,8 +2,8 @@
 
 class AbsorptionMobEffect : MobEffect {
 
-    virtual void AbsorptionMobEffect::~AbsorptionMobEffect();
-    virtual void AbsorptionMobEffect::~AbsorptionMobEffect();
+    virtual ~AbsorptionMobEffect();
+    virtual ~AbsorptionMobEffect();
     virtual void applyEffects(Actor *, int, int)const;
     virtual void removeEffects(Actor *);
     virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const;

@@ -2,8 +2,8 @@
 
 class PrecompiledCommandOrigin : CommandOrigin {
 
-    virtual void PrecompiledCommandOrigin::~PrecompiledCommandOrigin();
-    virtual void PrecompiledCommandOrigin::~PrecompiledCommandOrigin();
+    virtual ~PrecompiledCommandOrigin();
+    virtual ~PrecompiledCommandOrigin();
     virtual void _ZNK24PrecompiledCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK24PrecompiledCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

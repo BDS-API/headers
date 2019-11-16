@@ -2,8 +2,8 @@
 
 class BarrelBlockActor : ChestBlockActor {
 
-    virtual void BarrelBlockActor::~BarrelBlockActor();
-    virtual void BarrelBlockActor::~BarrelBlockActor();
+    virtual ~BarrelBlockActor();
+    virtual ~BarrelBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

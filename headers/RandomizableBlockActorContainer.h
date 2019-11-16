@@ -2,8 +2,8 @@
 
 class RandomizableBlockActorContainer : RandomizableBlockActorContainerBase, Container {
 
-    virtual void RandomizableBlockActorContainer::~RandomizableBlockActorContainer();
-    virtual void RandomizableBlockActorContainer::~RandomizableBlockActorContainer();
+    virtual ~RandomizableBlockActorContainer();
+    virtual ~RandomizableBlockActorContainer();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

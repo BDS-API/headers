@@ -2,8 +2,8 @@
 
 class UpdateEquipPacket : Packet {
 
-    virtual void UpdateEquipPacket::~UpdateEquipPacket();
-    virtual void UpdateEquipPacket::~UpdateEquipPacket();
+    virtual ~UpdateEquipPacket();
+    virtual ~UpdateEquipPacket();
     virtual void getId(void)const;
     virtual void _ZNK17UpdateEquipPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -2,8 +2,8 @@
 
 class BedItem : Item {
 
-    virtual void BedItem::~BedItem();
-    virtual void BedItem::~BedItem();
+    virtual ~BedItem();
+    virtual ~BedItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

@@ -2,7 +2,7 @@
 
 class PackManifest {
 
-    virtual void PackManifest::~PackManifest();
-    virtual void PackManifest::~PackManifest();
+    virtual ~PackManifest();
+    virtual ~PackManifest();
     virtual void clone(void)const;
 }

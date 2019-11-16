@@ -2,8 +2,8 @@
 
 class BannerAddPatternRecipe : MultiRecipe {
 
-    virtual void BannerAddPatternRecipe::~BannerAddPatternRecipe();
-    virtual void BannerAddPatternRecipe::~BannerAddPatternRecipe();
+    virtual ~BannerAddPatternRecipe();
+    virtual ~BannerAddPatternRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

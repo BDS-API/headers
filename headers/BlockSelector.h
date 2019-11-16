@@ -2,7 +2,7 @@
 
 class BlockSelector {
 
-    virtual void BlockSelector::~BlockSelector();
-    virtual void BlockSelector::~BlockSelector();
+    virtual ~BlockSelector();
+    virtual ~BlockSelector();
     virtual void next(Random &, int, int, int, bool)const;
 }

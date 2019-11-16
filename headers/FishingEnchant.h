@@ -2,8 +2,8 @@
 
 class FishingEnchant : Enchant {
 
-    virtual void FishingEnchant::~FishingEnchant();
-    virtual void FishingEnchant::~FishingEnchant();
+    virtual ~FishingEnchant();
+    virtual ~FishingEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

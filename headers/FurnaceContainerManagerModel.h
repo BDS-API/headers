@@ -2,8 +2,8 @@
 
 class FurnaceContainerManagerModel : ContainerManagerModel {
 
-    virtual void FurnaceContainerManagerModel::~FurnaceContainerManagerModel();
-    virtual void FurnaceContainerManagerModel::~FurnaceContainerManagerModel();
+    virtual ~FurnaceContainerManagerModel();
+    virtual ~FurnaceContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

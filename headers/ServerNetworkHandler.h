@@ -3,8 +3,8 @@
 class ServerNetworkHandler : NetEventCallback, LevelListener, Social::MultiplayerServiceObserver, Social::XboxLiveUserObserver {
 
     virtual void onPlayerReady(Player &);
-    virtual void ServerNetworkHandler::~ServerNetworkHandler();
-    virtual void ServerNetworkHandler::~ServerNetworkHandler();
+    virtual ~ServerNetworkHandler();
+    virtual ~ServerNetworkHandler();
     virtual void onConnect(NetworkIdentifier const&);
     virtual void onUnableToConnect(void);
     virtual void onTick(void);

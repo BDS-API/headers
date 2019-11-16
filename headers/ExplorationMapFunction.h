@@ -2,8 +2,8 @@
 
 class ExplorationMapFunction : LootItemFunction {
 
-    virtual void ExplorationMapFunction::~ExplorationMapFunction();
-    virtual void ExplorationMapFunction::~ExplorationMapFunction();
+    virtual ~ExplorationMapFunction();
+    virtual ~ExplorationMapFunction();
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);

@@ -2,8 +2,8 @@
 
 class BalloonItem : ChemistryItem {
 
-    virtual void BalloonItem::~BalloonItem();
-    virtual void BalloonItem::~BalloonItem();
+    virtual ~BalloonItem();
+    virtual ~BalloonItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

@@ -2,8 +2,8 @@
 
 class CartographyInputContainerController : ContainerController {
 
-    virtual void CartographyInputContainerController::~CartographyInputContainerController();
-    virtual void CartographyInputContainerController::~CartographyInputContainerController();
+    virtual ~CartographyInputContainerController();
+    virtual ~CartographyInputContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

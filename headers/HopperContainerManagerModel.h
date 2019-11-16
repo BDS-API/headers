@@ -2,8 +2,8 @@
 
 class HopperContainerManagerModel : LevelContainerManagerModel {
 
-    virtual void HopperContainerManagerModel::~HopperContainerManagerModel();
-    virtual void HopperContainerManagerModel::~HopperContainerManagerModel();
+    virtual ~HopperContainerManagerModel();
+    virtual ~HopperContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

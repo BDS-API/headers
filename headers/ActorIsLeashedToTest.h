@@ -2,8 +2,8 @@
 
 class ActorIsLeashedToTest : SimpleBoolFilterTest {
 
-    virtual void ActorIsLeashedToTest::~ActorIsLeashedToTest();
-    virtual void ActorIsLeashedToTest::~ActorIsLeashedToTest();
+    virtual ~ActorIsLeashedToTest();
+    virtual ~ActorIsLeashedToTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

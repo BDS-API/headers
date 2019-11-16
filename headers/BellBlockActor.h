@@ -2,8 +2,8 @@
 
 class BellBlockActor : BlockActor {
 
-    virtual void BellBlockActor::~BellBlockActor();
-    virtual void BellBlockActor::~BellBlockActor();
+    virtual ~BellBlockActor();
+    virtual ~BellBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

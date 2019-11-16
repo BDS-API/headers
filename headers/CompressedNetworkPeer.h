@@ -2,8 +2,8 @@
 
 class CompressedNetworkPeer : NetworkPeer {
 
-    virtual void CompressedNetworkPeer::~CompressedNetworkPeer();
-    virtual void CompressedNetworkPeer::~CompressedNetworkPeer();
+    virtual ~CompressedNetworkPeer();
+    virtual ~CompressedNetworkPeer();
     virtual void sendPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, NetworkPeer::Reliability, int, unsigned short, Compressibility);
     virtual void receivePacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
     virtual void getNetworkStatus(void);

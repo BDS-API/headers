@@ -2,8 +2,8 @@
 
 class MaterialReducerInputContainerController : ContainerController {
 
-    virtual void MaterialReducerInputContainerController::~MaterialReducerInputContainerController();
-    virtual void MaterialReducerInputContainerController::~MaterialReducerInputContainerController();
+    virtual ~MaterialReducerInputContainerController();
+    virtual ~MaterialReducerInputContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

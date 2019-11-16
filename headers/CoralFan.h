@@ -2,8 +2,8 @@
 
 class CoralFan : BushBlock {
 
-    virtual void CoralFan::~CoralFan();
-    virtual void CoralFan::~CoralFan();
+    virtual ~CoralFan();
+    virtual ~CoralFan();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

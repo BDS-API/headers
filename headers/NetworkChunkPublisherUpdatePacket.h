@@ -2,8 +2,8 @@
 
 class NetworkChunkPublisherUpdatePacket : Packet {
 
-    virtual void NetworkChunkPublisherUpdatePacket::~NetworkChunkPublisherUpdatePacket();
-    virtual void NetworkChunkPublisherUpdatePacket::~NetworkChunkPublisherUpdatePacket();
+    virtual ~NetworkChunkPublisherUpdatePacket();
+    virtual ~NetworkChunkPublisherUpdatePacket();
     virtual void getId(void)const;
     virtual void _ZNK33NetworkChunkPublisherUpdatePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

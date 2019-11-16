@@ -2,8 +2,8 @@
 
 class Int64Tag : Tag {
 
-    virtual void Int64Tag::~Int64Tag();
-    virtual void Int64Tag::~Int64Tag();
+    virtual ~Int64Tag();
+    virtual ~Int64Tag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

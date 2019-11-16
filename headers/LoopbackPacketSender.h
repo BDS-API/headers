@@ -2,8 +2,8 @@
 
 class LoopbackPacketSender : PacketSender {
 
-    virtual void LoopbackPacketSender::~LoopbackPacketSender();
-    virtual void LoopbackPacketSender::~LoopbackPacketSender();
+    virtual ~LoopbackPacketSender();
+    virtual ~LoopbackPacketSender();
     virtual void send(Packet &);
     virtual void sendToServer(Packet &);
     virtual void sendToClient(NetworkIdentifier const&, Packet const&, unsigned char);

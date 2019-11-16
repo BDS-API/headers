@@ -3,8 +3,8 @@
 class LevelContainerModel : ContainerModel {
 
     virtual void containerContentChanged(int);
-    virtual void LevelContainerModel::~LevelContainerModel();
-    virtual void LevelContainerModel::~LevelContainerModel();
+    virtual ~LevelContainerModel();
+    virtual ~LevelContainerModel();
     virtual void postInit(void);
     virtual void releaseResources(void);
     virtual void getContainerSize(void)const;

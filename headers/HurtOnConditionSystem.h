@@ -2,7 +2,7 @@
 
 class HurtOnConditionSystem : ITickingSystem {
 
-    virtual void HurtOnConditionSystem::~HurtOnConditionSystem();
-    virtual void HurtOnConditionSystem::~HurtOnConditionSystem();
+    virtual ~HurtOnConditionSystem();
+    virtual ~HurtOnConditionSystem();
     virtual void tick(EntityRegistry &);
 }

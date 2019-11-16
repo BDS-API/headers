@@ -2,8 +2,8 @@
 
 class GlowStickItem : ChemistryStickItem {
 
-    virtual void GlowStickItem::~GlowStickItem();
-    virtual void GlowStickItem::~GlowStickItem();
+    virtual ~GlowStickItem();
+    virtual ~GlowStickItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

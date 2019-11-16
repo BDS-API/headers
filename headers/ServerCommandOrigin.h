@@ -2,8 +2,8 @@
 
 class ServerCommandOrigin : CommandOrigin {
 
-    virtual void ServerCommandOrigin::~ServerCommandOrigin();
-    virtual void ServerCommandOrigin::~ServerCommandOrigin();
+    virtual ~ServerCommandOrigin();
+    virtual ~ServerCommandOrigin();
     virtual void _ZNK19ServerCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK19ServerCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

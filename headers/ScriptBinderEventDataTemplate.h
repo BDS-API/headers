@@ -2,8 +2,8 @@
 
 class ScriptBinderEventDataTemplate : ScriptBinderTemplate {
 
-    virtual void ScriptBinderEventDataTemplate::~ScriptBinderEventDataTemplate();
-    virtual void ScriptBinderEventDataTemplate::~ScriptBinderEventDataTemplate();
+    virtual ~ScriptBinderEventDataTemplate();
+    virtual ~ScriptBinderEventDataTemplate();
     virtual void _ZNK29ScriptBinderEventDataTemplate21getTemplateIdentifierB5cxx11Ev;
     virtual void applyTemplate(ScriptObjectBinder &)const;
 }

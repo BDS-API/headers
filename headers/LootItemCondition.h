@@ -2,7 +2,7 @@
 
 class LootItemCondition {
 
-    virtual void LootItemCondition::~LootItemCondition();
-    virtual void LootItemCondition::~LootItemCondition();
+    virtual ~LootItemCondition();
+    virtual ~LootItemCondition();
     virtual void applies(Random &, LootTableContext &);
 }

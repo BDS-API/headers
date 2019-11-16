@@ -2,8 +2,8 @@
 
 class VideoStreamConnectPacket : Packet {
 
-    virtual void VideoStreamConnectPacket::~VideoStreamConnectPacket();
-    virtual void VideoStreamConnectPacket::~VideoStreamConnectPacket();
+    virtual ~VideoStreamConnectPacket();
+    virtual ~VideoStreamConnectPacket();
     virtual void getId(void)const;
     virtual void _ZNK24VideoStreamConnectPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

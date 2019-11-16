@@ -2,8 +2,8 @@
 
 class EnchantingContainerManagerModel : ContainerManagerModel {
 
-    virtual void EnchantingContainerManagerModel::~EnchantingContainerManagerModel();
-    virtual void EnchantingContainerManagerModel::~EnchantingContainerManagerModel();
+    virtual ~EnchantingContainerManagerModel();
+    virtual ~EnchantingContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

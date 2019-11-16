@@ -2,8 +2,8 @@
 
 class RepeaterCapacitor : CapacitorComponent {
 
-    virtual void RepeaterCapacitor::~RepeaterCapacitor();
-    virtual void RepeaterCapacitor::~RepeaterCapacitor();
+    virtual ~RepeaterCapacitor();
+    virtual ~RepeaterCapacitor();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

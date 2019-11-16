@@ -2,8 +2,8 @@
 
 class RollGoal : Goal {
 
-    virtual void RollGoal::~RollGoal();
-    virtual void RollGoal::~RollGoal();
+    virtual ~RollGoal();
+    virtual ~RollGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

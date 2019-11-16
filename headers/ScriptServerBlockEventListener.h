@@ -2,8 +2,8 @@
 
 class ScriptServerBlockEventListener : BlockEventListener {
 
-    virtual void ScriptServerBlockEventListener::~ScriptServerBlockEventListener();
-    virtual void ScriptServerBlockEventListener::~ScriptServerBlockEventListener();
+    virtual ~ScriptServerBlockEventListener();
+    virtual ~ScriptServerBlockEventListener();
     virtual void onBlockPlacedByPlayer(Player &, Block const&, BlockPos const&, bool);
     virtual void onBlockDestroyedByPlayer(Player &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, BlockPos const&);
     virtual void onBlockMovedByPiston(BlockPos const&, BlockPos const&, PistonBlockActor::PistonState);

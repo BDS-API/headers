@@ -2,8 +2,8 @@
 
 class SHStartPiece : SHStairsDown {
 
-    virtual void SHStartPiece::~SHStartPiece();
-    virtual void SHStartPiece::~SHStartPiece();
+    virtual ~SHStartPiece();
+    virtual ~SHStartPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

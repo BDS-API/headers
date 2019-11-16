@@ -2,8 +2,8 @@
 
 class ScaredGoal : Goal {
 
-    virtual void ScaredGoal::~ScaredGoal();
-    virtual void ScaredGoal::~ScaredGoal();
+    virtual ~ScaredGoal();
+    virtual ~ScaredGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

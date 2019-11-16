@@ -2,8 +2,8 @@
 
 class NpcRequestPacket : Packet {
 
-    virtual void NpcRequestPacket::~NpcRequestPacket();
-    virtual void NpcRequestPacket::~NpcRequestPacket();
+    virtual ~NpcRequestPacket();
+    virtual ~NpcRequestPacket();
     virtual void getId(void)const;
     virtual void _ZNK16NpcRequestPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

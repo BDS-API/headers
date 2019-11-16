@@ -2,8 +2,8 @@
 
 class BehaviorNode {
 
-    virtual void BehaviorNode::~BehaviorNode();
-    virtual void BehaviorNode::~BehaviorNode();
+    virtual ~BehaviorNode();
+    virtual ~BehaviorNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 }

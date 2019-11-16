@@ -2,8 +2,8 @@
 
 class OceanRuinPieces::OceanRuinPiece : TemplateStructurePiece {
 
-    virtual void OceanRuinPieces::OceanRuinPiece::~OceanRuinPiece();
-    virtual void OceanRuinPieces::OceanRuinPiece::~OceanRuinPiece();
+    virtual ~OceanRuinPiece();
+    virtual ~OceanRuinPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

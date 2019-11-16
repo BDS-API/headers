@@ -2,8 +2,8 @@
 
 class AnvilDamagePacket : Packet {
 
-    virtual void AnvilDamagePacket::~AnvilDamagePacket();
-    virtual void AnvilDamagePacket::~AnvilDamagePacket();
+    virtual ~AnvilDamagePacket();
+    virtual ~AnvilDamagePacket();
     virtual void getId(void)const;
     virtual void _ZNK17AnvilDamagePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -2,8 +2,8 @@
 
 class BegGoal : Goal {
 
-    virtual void BegGoal::~BegGoal();
-    virtual void BegGoal::~BegGoal();
+    virtual ~BegGoal();
+    virtual ~BegGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

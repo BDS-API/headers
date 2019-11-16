@@ -2,8 +2,8 @@
 
 class ComplexItem : Item {
 
-    virtual void ComplexItem::~ComplexItem();
-    virtual void ComplexItem::~ComplexItem();
+    virtual ~ComplexItem();
+    virtual ~ComplexItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

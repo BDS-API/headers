@@ -2,8 +2,8 @@
 
 class LayEggGoal : MoveToBlockGoal {
 
-    virtual void LayEggGoal::~LayEggGoal();
-    virtual void LayEggGoal::~LayEggGoal();
+    virtual ~LayEggGoal();
+    virtual ~LayEggGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

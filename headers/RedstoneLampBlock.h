@@ -2,8 +2,8 @@
 
 class RedstoneLampBlock : BlockLegacy {
 
-    virtual void RedstoneLampBlock::~RedstoneLampBlock();
-    virtual void RedstoneLampBlock::~RedstoneLampBlock();
+    virtual ~RedstoneLampBlock();
+    virtual ~RedstoneLampBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

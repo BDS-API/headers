@@ -2,8 +2,8 @@
 
 class CameraItem : Item {
 
-    virtual void CameraItem::~CameraItem();
-    virtual void CameraItem::~CameraItem();
+    virtual ~CameraItem();
+    virtual ~CameraItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

@@ -2,8 +2,8 @@
 
 class PillagerOutpostFeature : StructureFeature {
 
-    virtual void PillagerOutpostFeature::~PillagerOutpostFeature();
-    virtual void PillagerOutpostFeature::~PillagerOutpostFeature();
+    virtual ~PillagerOutpostFeature();
+    virtual ~PillagerOutpostFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

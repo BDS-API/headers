@@ -2,8 +2,8 @@
 
 class ActorInCloudsTest : SimpleBoolFilterTest {
 
-    virtual void ActorInCloudsTest::~ActorInCloudsTest();
-    virtual void ActorInCloudsTest::~ActorInCloudsTest();
+    virtual ~ActorInCloudsTest();
+    virtual ~ActorInCloudsTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

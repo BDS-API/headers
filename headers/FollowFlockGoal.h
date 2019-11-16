@@ -2,8 +2,8 @@
 
 class FollowFlockGoal : Goal {
 
-    virtual void FollowFlockGoal::~FollowFlockGoal();
-    virtual void FollowFlockGoal::~FollowFlockGoal();
+    virtual ~FollowFlockGoal();
+    virtual ~FollowFlockGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

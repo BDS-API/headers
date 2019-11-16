@@ -2,8 +2,8 @@
 
 class FilterTestDistanceToNearestPlayer : SimpleFloatFilterTest {
 
-    virtual void FilterTestDistanceToNearestPlayer::~FilterTestDistanceToNearestPlayer();
-    virtual void FilterTestDistanceToNearestPlayer::~FilterTestDistanceToNearestPlayer();
+    virtual ~FilterTestDistanceToNearestPlayer();
+    virtual ~FilterTestDistanceToNearestPlayer();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

@@ -2,8 +2,8 @@
 
 class ScriptServerActorEventListener : ActorEventListener {
 
-    virtual void ScriptServerActorEventListener::~ScriptServerActorEventListener();
-    virtual void ScriptServerActorEventListener::~ScriptServerActorEventListener();
+    virtual ~ScriptServerActorEventListener();
+    virtual ~ScriptServerActorEventListener();
     virtual void onActorAttack(Actor &, Actor &);
     virtual void onActorHurt(Actor &, ActorDamageSource const&, int, int);
     virtual void onActorMove(Actor &, Vec3 const&);

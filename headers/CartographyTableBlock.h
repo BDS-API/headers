@@ -2,8 +2,8 @@
 
 class CartographyTableBlock : BlockLegacy {
 
-    virtual void CartographyTableBlock::~CartographyTableBlock();
-    virtual void CartographyTableBlock::~CartographyTableBlock();
+    virtual ~CartographyTableBlock();
+    virtual ~CartographyTableBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

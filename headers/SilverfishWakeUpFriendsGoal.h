@@ -2,8 +2,8 @@
 
 class SilverfishWakeUpFriendsGoal : Goal {
 
-    virtual void SilverfishWakeUpFriendsGoal::~SilverfishWakeUpFriendsGoal();
-    virtual void SilverfishWakeUpFriendsGoal::~SilverfishWakeUpFriendsGoal();
+    virtual ~SilverfishWakeUpFriendsGoal();
+    virtual ~SilverfishWakeUpFriendsGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

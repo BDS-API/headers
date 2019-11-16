@@ -2,8 +2,8 @@
 
 class SHLeftTurn : StrongholdPiece {
 
-    virtual void SHLeftTurn::~SHLeftTurn();
-    virtual void SHLeftTurn::~SHLeftTurn();
+    virtual ~SHLeftTurn();
+    virtual ~SHLeftTurn();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

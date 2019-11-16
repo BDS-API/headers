@@ -2,8 +2,8 @@
 
 class ScriptTeleportComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
 
-    virtual void ScriptTeleportComponent::~ScriptTeleportComponent();
-    virtual void ScriptTeleportComponent::~ScriptTeleportComponent();
+    virtual ~ScriptTeleportComponent();
+    virtual ~ScriptTeleportComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual void hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

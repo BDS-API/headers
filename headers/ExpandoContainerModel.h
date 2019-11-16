@@ -3,8 +3,8 @@
 class ExpandoContainerModel : ContainerModel {
 
     virtual void containerContentChanged(int);
-    virtual void ExpandoContainerModel::~ExpandoContainerModel();
-    virtual void ExpandoContainerModel::~ExpandoContainerModel();
+    virtual ~ExpandoContainerModel();
+    virtual ~ExpandoContainerModel();
     virtual void postInit(void);
     virtual void releaseResources(void);
     virtual void getContainerSize(void)const;

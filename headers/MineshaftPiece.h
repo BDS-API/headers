@@ -2,8 +2,8 @@
 
 class MineshaftPiece : StructurePiece {
 
-    virtual void MineshaftPiece::~MineshaftPiece();
-    virtual void MineshaftPiece::~MineshaftPiece();
+    virtual ~MineshaftPiece();
+    virtual ~MineshaftPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

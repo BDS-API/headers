@@ -2,8 +2,8 @@
 
 class OverworldGenerator : ChunkSource, WorldGenerator {
 
-    virtual void OverworldGenerator::~OverworldGenerator();
-    virtual void OverworldGenerator::~OverworldGenerator();
+    virtual ~OverworldGenerator();
+    virtual ~OverworldGenerator();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

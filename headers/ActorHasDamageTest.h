@@ -2,8 +2,8 @@
 
 class ActorHasDamageTest : SimpleIntFilterTest {
 
-    virtual void ActorHasDamageTest::~ActorHasDamageTest();
-    virtual void ActorHasDamageTest::~ActorHasDamageTest();
+    virtual ~ActorHasDamageTest();
+    virtual ~ActorHasDamageTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

@@ -2,8 +2,8 @@
 
 class AppPlatform : IAppPlatform {
 
-    virtual void AppPlatform::~AppPlatform();
-    virtual void AppPlatform::~AppPlatform();
+    virtual ~AppPlatform();
+    virtual ~AppPlatform();
     virtual void restartRequested(void);
     virtual void _ZNK11AppPlatform14getLoggingPathB5cxx11Ev;
     virtual void isLowMemoryDevice(void)const;

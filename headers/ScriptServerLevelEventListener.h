@@ -2,8 +2,8 @@
 
 class ScriptServerLevelEventListener : LevelEventListener {
 
-    virtual void ScriptServerLevelEventListener::~ScriptServerLevelEventListener();
-    virtual void ScriptServerLevelEventListener::~ScriptServerLevelEventListener();
+    virtual ~ScriptServerLevelEventListener();
+    virtual ~ScriptServerLevelEventListener();
     virtual void onLevelInitialized(Level &);
     virtual void onLevelSaveData(Level &, CompoundTag &);
     virtual void onLevelAddedPlayer(Level &, Player &);

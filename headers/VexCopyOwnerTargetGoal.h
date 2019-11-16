@@ -2,8 +2,8 @@
 
 class VexCopyOwnerTargetGoal : TargetGoal {
 
-    virtual void VexCopyOwnerTargetGoal::~VexCopyOwnerTargetGoal();
-    virtual void VexCopyOwnerTargetGoal::~VexCopyOwnerTargetGoal();
+    virtual ~VexCopyOwnerTargetGoal();
+    virtual ~VexCopyOwnerTargetGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

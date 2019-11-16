@@ -2,7 +2,7 @@
 
 class ScriptServerActorDeathEvent : ScriptEventData {
 
-    virtual void ScriptServerActorDeathEvent::~ScriptServerActorDeathEvent();
-    virtual void ScriptServerActorDeathEvent::~ScriptServerActorDeathEvent();
+    virtual ~ScriptServerActorDeathEvent();
+    virtual ~ScriptServerActorDeathEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 }

@@ -2,8 +2,8 @@
 
 class AddEntityPacket : EntityServerPacket {
 
-    virtual void AddEntityPacket::~AddEntityPacket();
-    virtual void AddEntityPacket::~AddEntityPacket();
+    virtual ~AddEntityPacket();
+    virtual ~AddEntityPacket();
     virtual void getId(void)const;
     virtual void _ZNK15AddEntityPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

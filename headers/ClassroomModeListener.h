@@ -2,8 +2,8 @@
 
 class ClassroomModeListener : LevelListener {
 
-    virtual void ClassroomModeListener::~ClassroomModeListener();
-    virtual void ClassroomModeListener::~ClassroomModeListener();
+    virtual ~ClassroomModeListener();
+    virtual ~ClassroomModeListener();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

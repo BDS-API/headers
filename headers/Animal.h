@@ -7,8 +7,8 @@ class Animal : Mob {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Animal::~Animal();
-    virtual void Animal::~Animal();
+    virtual ~Animal();
+    virtual ~Animal();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

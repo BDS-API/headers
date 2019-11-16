@@ -7,8 +7,8 @@ class FireworksRocketActor : Actor {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void FireworksRocketActor::~FireworksRocketActor();
-    virtual void FireworksRocketActor::~FireworksRocketActor();
+    virtual ~FireworksRocketActor();
+    virtual ~FireworksRocketActor();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

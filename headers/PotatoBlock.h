@@ -2,8 +2,8 @@
 
 class PotatoBlock : CropBlock {
 
-    virtual void PotatoBlock::~PotatoBlock();
-    virtual void PotatoBlock::~PotatoBlock();
+    virtual ~PotatoBlock();
+    virtual ~PotatoBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

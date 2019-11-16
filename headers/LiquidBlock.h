@@ -2,8 +2,8 @@
 
 class LiquidBlock : BlockLegacy {
 
-    virtual void LiquidBlock::~LiquidBlock();
-    virtual void LiquidBlock::~LiquidBlock();
+    virtual ~LiquidBlock();
+    virtual ~LiquidBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

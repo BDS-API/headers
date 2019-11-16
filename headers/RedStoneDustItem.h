@@ -2,8 +2,8 @@
 
 class RedStoneDustItem : Item {
 
-    virtual void RedStoneDustItem::~RedStoneDustItem();
-    virtual void RedStoneDustItem::~RedStoneDustItem();
+    virtual ~RedStoneDustItem();
+    virtual ~RedStoneDustItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

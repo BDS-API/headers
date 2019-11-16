@@ -2,8 +2,8 @@
 
 class BowEnchant : Enchant {
 
-    virtual void BowEnchant::~BowEnchant();
-    virtual void BowEnchant::~BowEnchant();
+    virtual ~BowEnchant();
+    virtual ~BowEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

@@ -2,7 +2,7 @@
 
 class DanceSystem : ITickingSystem {
 
-    virtual void DanceSystem::~DanceSystem();
-    virtual void DanceSystem::~DanceSystem();
+    virtual ~DanceSystem();
+    virtual ~DanceSystem();
     virtual void tick(EntityRegistry &);
 }

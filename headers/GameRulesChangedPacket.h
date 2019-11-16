@@ -2,8 +2,8 @@
 
 class GameRulesChangedPacket : Packet {
 
-    virtual void GameRulesChangedPacket::~GameRulesChangedPacket();
-    virtual void GameRulesChangedPacket::~GameRulesChangedPacket();
+    virtual ~GameRulesChangedPacket();
+    virtual ~GameRulesChangedPacket();
     virtual void getId(void)const;
     virtual void _ZNK22GameRulesChangedPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

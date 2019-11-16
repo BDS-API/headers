@@ -2,8 +2,8 @@
 
 class VanillaGameModuleServer : GameModuleServer {
 
-    virtual void VanillaGameModuleServer::~VanillaGameModuleServer();
-    virtual void VanillaGameModuleServer::~VanillaGameModuleServer();
+    virtual ~VanillaGameModuleServer();
+    virtual ~VanillaGameModuleServer();
     virtual void init(ServerInstance &, Level &);
     virtual void shutdown(void);
     virtual void initializeBehaviorStack(GameRules const&, ResourcePackRepository &, ResourcePackStack &, BaseGameVersion const&);

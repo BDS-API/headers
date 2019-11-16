@@ -2,7 +2,7 @@
 
 class BoostableSystem : ITickingSystem {
 
-    virtual void BoostableSystem::~BoostableSystem();
-    virtual void BoostableSystem::~BoostableSystem();
+    virtual ~BoostableSystem();
+    virtual ~BoostableSystem();
     virtual void tick(EntityRegistry &);
 }

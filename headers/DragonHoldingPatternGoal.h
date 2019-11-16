@@ -2,8 +2,8 @@
 
 class DragonHoldingPatternGoal : Goal {
 
-    virtual void DragonHoldingPatternGoal::~DragonHoldingPatternGoal();
-    virtual void DragonHoldingPatternGoal::~DragonHoldingPatternGoal();
+    virtual ~DragonHoldingPatternGoal();
+    virtual ~DragonHoldingPatternGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

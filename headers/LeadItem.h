@@ -2,8 +2,8 @@
 
 class LeadItem : Item {
 
-    virtual void LeadItem::~LeadItem();
-    virtual void LeadItem::~LeadItem();
+    virtual ~LeadItem();
+    virtual ~LeadItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

@@ -2,7 +2,7 @@
 
 class ITickingSystem {
 
-    virtual void ITickingSystem::~ITickingSystem();
-    virtual void ITickingSystem::~ITickingSystem();
+    virtual ~ITickingSystem();
+    virtual ~ITickingSystem();
     virtual void tick(EntityRegistry &);
 }

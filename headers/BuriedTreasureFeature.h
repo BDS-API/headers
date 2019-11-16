@@ -2,8 +2,8 @@
 
 class BuriedTreasureFeature : StructureFeature {
 
-    virtual void BuriedTreasureFeature::~BuriedTreasureFeature();
-    virtual void BuriedTreasureFeature::~BuriedTreasureFeature();
+    virtual ~BuriedTreasureFeature();
+    virtual ~BuriedTreasureFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

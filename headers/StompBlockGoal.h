@@ -2,8 +2,8 @@
 
 class StompBlockGoal : MoveToBlockGoal {
 
-    virtual void StompBlockGoal::~StompBlockGoal();
-    virtual void StompBlockGoal::~StompBlockGoal();
+    virtual ~StompBlockGoal();
+    virtual ~StompBlockGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

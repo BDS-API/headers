@@ -2,8 +2,8 @@
 
 class ItemFrameBlockActor : BlockActor {
 
-    virtual void ItemFrameBlockActor::~ItemFrameBlockActor();
-    virtual void ItemFrameBlockActor::~ItemFrameBlockActor();
+    virtual ~ItemFrameBlockActor();
+    virtual ~ItemFrameBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

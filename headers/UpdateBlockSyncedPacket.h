@@ -2,8 +2,8 @@
 
 class UpdateBlockSyncedPacket : UpdateBlockPacket {
 
-    virtual void UpdateBlockSyncedPacket::~UpdateBlockSyncedPacket();
-    virtual void UpdateBlockSyncedPacket::~UpdateBlockSyncedPacket();
+    virtual ~UpdateBlockSyncedPacket();
+    virtual ~UpdateBlockSyncedPacket();
     virtual void getId(void)const;
     virtual void _ZNK23UpdateBlockSyncedPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

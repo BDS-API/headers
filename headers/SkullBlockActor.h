@@ -2,8 +2,8 @@
 
 class SkullBlockActor : BlockActor {
 
-    virtual void SkullBlockActor::~SkullBlockActor();
-    virtual void SkullBlockActor::~SkullBlockActor();
+    virtual ~SkullBlockActor();
+    virtual ~SkullBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

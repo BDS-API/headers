@@ -2,8 +2,8 @@
 
 class LogBlock : RotatedPillarBlock {
 
-    virtual void LogBlock::~LogBlock();
-    virtual void LogBlock::~LogBlock();
+    virtual ~LogBlock();
+    virtual ~LogBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

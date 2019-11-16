@@ -2,8 +2,8 @@
 
 class DoorInteractGoal : Goal {
 
-    virtual void DoorInteractGoal::~DoorInteractGoal();
-    virtual void DoorInteractGoal::~DoorInteractGoal();
+    virtual ~DoorInteractGoal();
+    virtual ~DoorInteractGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

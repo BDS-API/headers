@@ -2,8 +2,8 @@
 
 class HorseArmorItem : Item {
 
-    virtual void HorseArmorItem::~HorseArmorItem();
-    virtual void HorseArmorItem::~HorseArmorItem();
+    virtual ~HorseArmorItem();
+    virtual ~HorseArmorItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

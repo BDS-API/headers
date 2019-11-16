@@ -2,8 +2,8 @@
 
 class HoldGroundGoal : Goal {
 
-    virtual void HoldGroundGoal::~HoldGroundGoal();
-    virtual void HoldGroundGoal::~HoldGroundGoal();
+    virtual ~HoldGroundGoal();
+    virtual ~HoldGroundGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

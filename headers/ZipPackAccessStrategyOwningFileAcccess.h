@@ -2,8 +2,8 @@
 
 class ZipPackAccessStrategyOwningFileAcccess : ZipPackAccessStrategy {
 
-    virtual void ZipPackAccessStrategyOwningFileAcccess::~ZipPackAccessStrategyOwningFileAcccess();
-    virtual void ZipPackAccessStrategyOwningFileAcccess::~ZipPackAccessStrategyOwningFileAcccess();
+    virtual ~ZipPackAccessStrategyOwningFileAcccess();
+    virtual ~ZipPackAccessStrategyOwningFileAcccess();
     virtual void getPackSize(void)const;
     virtual void getPackLocation(void)const;
     virtual void _ZNK21ZipPackAccessStrategy11getPackNameB5cxx11Ev;

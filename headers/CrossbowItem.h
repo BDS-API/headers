@@ -2,8 +2,8 @@
 
 class CrossbowItem : RangedWeaponItem {
 
-    virtual void CrossbowItem::~CrossbowItem();
-    virtual void CrossbowItem::~CrossbowItem();
+    virtual ~CrossbowItem();
+    virtual ~CrossbowItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

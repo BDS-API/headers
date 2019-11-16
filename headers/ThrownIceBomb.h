@@ -7,8 +7,8 @@ class ThrownIceBomb : Throwable {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void ThrownIceBomb::~ThrownIceBomb();
-    virtual void ThrownIceBomb::~ThrownIceBomb();
+    virtual ~ThrownIceBomb();
+    virtual ~ThrownIceBomb();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

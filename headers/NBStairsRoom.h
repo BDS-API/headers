@@ -2,8 +2,8 @@
 
 class NBStairsRoom : NetherFortressPiece {
 
-    virtual void NBStairsRoom::~NBStairsRoom();
-    virtual void NBStairsRoom::~NBStairsRoom();
+    virtual ~NBStairsRoom();
+    virtual ~NBStairsRoom();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

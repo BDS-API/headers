@@ -2,8 +2,8 @@
 
 class Igloo : ScatteredFeaturePiece {
 
-    virtual void Igloo::~Igloo();
-    virtual void Igloo::~Igloo();
+    virtual ~Igloo();
+    virtual ~Igloo();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

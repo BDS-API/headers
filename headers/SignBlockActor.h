@@ -2,8 +2,8 @@
 
 class SignBlockActor : BlockActor {
 
-    virtual void SignBlockActor::~SignBlockActor();
-    virtual void SignBlockActor::~SignBlockActor();
+    virtual ~SignBlockActor();
+    virtual ~SignBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

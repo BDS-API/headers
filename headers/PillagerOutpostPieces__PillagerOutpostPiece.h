@@ -2,8 +2,8 @@
 
 class PillagerOutpostPieces::PillagerOutpostPiece : TemplateStructurePiece {
 
-    virtual void PillagerOutpostPieces::PillagerOutpostPiece::~PillagerOutpostPiece();
-    virtual void PillagerOutpostPieces::PillagerOutpostPiece::~PillagerOutpostPiece();
+    virtual ~PillagerOutpostPiece();
+    virtual ~PillagerOutpostPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

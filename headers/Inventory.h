@@ -2,8 +2,8 @@
 
 class Inventory : FillingContainer {
 
-    virtual void Inventory::~Inventory();
-    virtual void Inventory::~Inventory();
+    virtual ~Inventory();
+    virtual ~Inventory();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);

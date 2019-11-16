@@ -2,7 +2,7 @@
 
 class StructurePoolBlockTagPredicateBlockTagMatch : IStructurePoolBlockTagPredicate {
 
-    virtual void StructurePoolBlockTagPredicateBlockTagMatch::~StructurePoolBlockTagPredicateBlockTagMatch();
-    virtual void StructurePoolBlockTagPredicateBlockTagMatch::~StructurePoolBlockTagPredicateBlockTagMatch();
+    virtual ~StructurePoolBlockTagPredicateBlockTagMatch();
+    virtual ~StructurePoolBlockTagPredicateBlockTagMatch();
     virtual void test(Block const&, CompoundTag const&)const;
 }

@@ -2,7 +2,7 @@
 
 class ScriptServerActorSneakChangedEvent : ScriptEventData {
 
-    virtual void ScriptServerActorSneakChangedEvent::~ScriptServerActorSneakChangedEvent();
-    virtual void ScriptServerActorSneakChangedEvent::~ScriptServerActorSneakChangedEvent();
+    virtual ~ScriptServerActorSneakChangedEvent();
+    virtual ~ScriptServerActorSneakChangedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 }

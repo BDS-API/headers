@@ -2,8 +2,8 @@
 
 class TridentImpalerEnchant : Enchant {
 
-    virtual void TridentImpalerEnchant::~TridentImpalerEnchant();
-    virtual void TridentImpalerEnchant::~TridentImpalerEnchant();
+    virtual ~TridentImpalerEnchant();
+    virtual ~TridentImpalerEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

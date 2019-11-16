@@ -2,8 +2,8 @@
 
 class LevelSoundEventPacket : Packet {
 
-    virtual void LevelSoundEventPacket::~LevelSoundEventPacket();
-    virtual void LevelSoundEventPacket::~LevelSoundEventPacket();
+    virtual ~LevelSoundEventPacket();
+    virtual ~LevelSoundEventPacket();
     virtual void getId(void)const;
     virtual void _ZNK21LevelSoundEventPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

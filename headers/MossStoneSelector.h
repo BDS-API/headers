@@ -2,7 +2,7 @@
 
 class MossStoneSelector : BlockSelector {
 
-    virtual void MossStoneSelector::~MossStoneSelector();
-    virtual void MossStoneSelector::~MossStoneSelector();
+    virtual ~MossStoneSelector();
+    virtual ~MossStoneSelector();
     virtual void next(Random &, int, int, int, bool)const;
 }

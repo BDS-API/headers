@@ -2,8 +2,8 @@
 
 class BookEditPacket : Packet {
 
-    virtual void BookEditPacket::~BookEditPacket();
-    virtual void BookEditPacket::~BookEditPacket();
+    virtual ~BookEditPacket();
+    virtual ~BookEditPacket();
     virtual void getId(void)const;
     virtual void _ZNK14BookEditPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

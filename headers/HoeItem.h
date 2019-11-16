@@ -2,8 +2,8 @@
 
 class HoeItem : Item {
 
-    virtual void HoeItem::~HoeItem();
-    virtual void HoeItem::~HoeItem();
+    virtual ~HoeItem();
+    virtual ~HoeItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

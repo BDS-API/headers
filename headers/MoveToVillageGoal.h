@@ -2,8 +2,8 @@
 
 class MoveToVillageGoal : BaseMoveToGoal {
 
-    virtual void MoveToVillageGoal::~MoveToVillageGoal();
-    virtual void MoveToVillageGoal::~MoveToVillageGoal();
+    virtual ~MoveToVillageGoal();
+    virtual ~MoveToVillageGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

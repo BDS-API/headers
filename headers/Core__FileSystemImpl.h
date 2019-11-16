@@ -2,8 +2,8 @@
 
 class Core::FileSystemImpl {
 
-    virtual void Core::FileSystemImpl::~FileSystemImpl();
-    virtual void Core::FileSystemImpl::~FileSystemImpl();
+    virtual ~FileSystemImpl();
+    virtual ~FileSystemImpl();
     virtual void isValidPath(Core::Path const&);
     virtual void isRelativePath(Core::Path const&);
     virtual void getLastModificationTime(Core::Path const&, long *);

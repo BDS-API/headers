@@ -2,8 +2,8 @@
 
 class WorldLimitChunkSource : ChunkSource {
 
-    virtual void WorldLimitChunkSource::~WorldLimitChunkSource();
-    virtual void WorldLimitChunkSource::~WorldLimitChunkSource();
+    virtual ~WorldLimitChunkSource();
+    virtual ~WorldLimitChunkSource();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

@@ -2,8 +2,8 @@
 
 class HangingActorItem : Item {
 
-    virtual void HangingActorItem::~HangingActorItem();
-    virtual void HangingActorItem::~HangingActorItem();
+    virtual ~HangingActorItem();
+    virtual ~HangingActorItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

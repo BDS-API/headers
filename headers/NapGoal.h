@@ -2,8 +2,8 @@
 
 class NapGoal : Goal {
 
-    virtual void NapGoal::~NapGoal();
-    virtual void NapGoal::~NapGoal();
+    virtual ~NapGoal();
+    virtual ~NapGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

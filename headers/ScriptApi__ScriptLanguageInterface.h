@@ -2,8 +2,8 @@
 
 class ScriptApi::ScriptLanguageInterface {
 
-    virtual void ScriptApi::ScriptLanguageInterface::~ScriptLanguageInterface();
-    virtual void ScriptApi::ScriptLanguageInterface::~ScriptLanguageInterface();
+    virtual ~ScriptLanguageInterface();
+    virtual ~ScriptLanguageInterface();
     virtual void initialize(void);
     virtual void shutdown(void);
     virtual void initialized(void)const;

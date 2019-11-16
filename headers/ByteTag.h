@@ -2,8 +2,8 @@
 
 class ByteTag : Tag {
 
-    virtual void ByteTag::~ByteTag();
-    virtual void ByteTag::~ByteTag();
+    virtual ~ByteTag();
+    virtual ~ByteTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

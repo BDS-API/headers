@@ -2,8 +2,8 @@
 
 class RedstoneTorchCapacitor : CapacitorComponent {
 
-    virtual void RedstoneTorchCapacitor::~RedstoneTorchCapacitor();
-    virtual void RedstoneTorchCapacitor::~RedstoneTorchCapacitor();
+    virtual ~RedstoneTorchCapacitor();
+    virtual ~RedstoneTorchCapacitor();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

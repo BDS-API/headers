@@ -2,8 +2,8 @@
 
 class PetSleepWithOwnerGoal : MoveToBlockGoal {
 
-    virtual void PetSleepWithOwnerGoal::~PetSleepWithOwnerGoal();
-    virtual void PetSleepWithOwnerGoal::~PetSleepWithOwnerGoal();
+    virtual ~PetSleepWithOwnerGoal();
+    virtual ~PetSleepWithOwnerGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

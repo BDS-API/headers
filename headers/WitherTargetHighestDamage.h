@@ -2,8 +2,8 @@
 
 class WitherTargetHighestDamage : TargetGoal {
 
-    virtual void WitherTargetHighestDamage::~WitherTargetHighestDamage();
-    virtual void WitherTargetHighestDamage::~WitherTargetHighestDamage();
+    virtual ~WitherTargetHighestDamage();
+    virtual ~WitherTargetHighestDamage();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

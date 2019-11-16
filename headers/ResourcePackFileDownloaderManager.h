@@ -2,6 +2,6 @@
 
 class ResourcePackFileDownloaderManager {
 
-    virtual void ResourcePackFileDownloaderManager::~ResourcePackFileDownloaderManager();
-    virtual void ResourcePackFileDownloaderManager::~ResourcePackFileDownloaderManager();
+    virtual ~ResourcePackFileDownloaderManager();
+    virtual ~ResourcePackFileDownloaderManager();
 }

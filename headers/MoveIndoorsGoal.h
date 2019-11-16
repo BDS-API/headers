@@ -2,8 +2,8 @@
 
 class MoveIndoorsGoal : Goal {
 
-    virtual void MoveIndoorsGoal::~MoveIndoorsGoal();
-    virtual void MoveIndoorsGoal::~MoveIndoorsGoal();
+    virtual ~MoveIndoorsGoal();
+    virtual ~MoveIndoorsGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

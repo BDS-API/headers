@@ -2,8 +2,8 @@
 
 class ActorIsSkinIDTest : SimpleIntFilterTest {
 
-    virtual void ActorIsSkinIDTest::~ActorIsSkinIDTest();
-    virtual void ActorIsSkinIDTest::~ActorIsSkinIDTest();
+    virtual ~ActorIsSkinIDTest();
+    virtual ~ActorIsSkinIDTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

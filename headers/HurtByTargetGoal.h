@@ -2,8 +2,8 @@
 
 class HurtByTargetGoal : TargetGoal {
 
-    virtual void HurtByTargetGoal::~HurtByTargetGoal();
-    virtual void HurtByTargetGoal::~HurtByTargetGoal();
+    virtual ~HurtByTargetGoal();
+    virtual ~HurtByTargetGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

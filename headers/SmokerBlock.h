@@ -2,8 +2,8 @@
 
 class SmokerBlock : FurnaceBlock {
 
-    virtual void SmokerBlock::~SmokerBlock();
-    virtual void SmokerBlock::~SmokerBlock();
+    virtual ~SmokerBlock();
+    virtual ~SmokerBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

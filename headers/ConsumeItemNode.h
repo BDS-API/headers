@@ -2,8 +2,8 @@
 
 class ConsumeItemNode : BehaviorNode {
 
-    virtual void ConsumeItemNode::~ConsumeItemNode();
-    virtual void ConsumeItemNode::~ConsumeItemNode();
+    virtual ~ConsumeItemNode();
+    virtual ~ConsumeItemNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 }

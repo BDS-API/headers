@@ -2,8 +2,8 @@
 
 class FilterTestGameRule : FilterTest {
 
-    virtual void FilterTestGameRule::~FilterTestGameRule();
-    virtual void FilterTestGameRule::~FilterTestGameRule();
+    virtual ~FilterTestGameRule();
+    virtual ~FilterTestGameRule();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

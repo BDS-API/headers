@@ -2,8 +2,8 @@
 
 class LabTableInputContainerController : ContainerController {
 
-    virtual void LabTableInputContainerController::~LabTableInputContainerController();
-    virtual void LabTableInputContainerController::~LabTableInputContainerController();
+    virtual ~LabTableInputContainerController();
+    virtual ~LabTableInputContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

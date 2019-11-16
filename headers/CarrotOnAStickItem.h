@@ -2,8 +2,8 @@
 
 class CarrotOnAStickItem : Item {
 
-    virtual void CarrotOnAStickItem::~CarrotOnAStickItem();
-    virtual void CarrotOnAStickItem::~CarrotOnAStickItem();
+    virtual ~CarrotOnAStickItem();
+    virtual ~CarrotOnAStickItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

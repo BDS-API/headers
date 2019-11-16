@@ -7,8 +7,8 @@ class IllagerBeast : Monster {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void IllagerBeast::~IllagerBeast();
-    virtual void IllagerBeast::~IllagerBeast();
+    virtual ~IllagerBeast();
+    virtual ~IllagerBeast();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

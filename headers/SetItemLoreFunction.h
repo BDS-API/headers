@@ -2,8 +2,8 @@
 
 class SetItemLoreFunction : LootItemFunction {
 
-    virtual void SetItemLoreFunction::~SetItemLoreFunction();
-    virtual void SetItemLoreFunction::~SetItemLoreFunction();
+    virtual ~SetItemLoreFunction();
+    virtual ~SetItemLoreFunction();
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);

@@ -2,8 +2,8 @@
 
 class DropperContainerManagerModel : LevelContainerManagerModel {
 
-    virtual void DropperContainerManagerModel::~DropperContainerManagerModel();
-    virtual void DropperContainerManagerModel::~DropperContainerManagerModel();
+    virtual ~DropperContainerManagerModel();
+    virtual ~DropperContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

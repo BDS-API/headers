@@ -2,8 +2,8 @@
 
 class Level : BlockSourceListener, IWorldRegistriesProvider {
 
-    virtual void Level::~Level();
-    virtual void Level::~Level();
+    virtual ~Level();
+    virtual ~Level();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

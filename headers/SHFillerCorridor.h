@@ -2,8 +2,8 @@
 
 class SHFillerCorridor : StrongholdPiece {
 
-    virtual void SHFillerCorridor::~SHFillerCorridor();
-    virtual void SHFillerCorridor::~SHFillerCorridor();
+    virtual ~SHFillerCorridor();
+    virtual ~SHFillerCorridor();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

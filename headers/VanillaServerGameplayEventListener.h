@@ -2,8 +2,8 @@
 
 class VanillaServerGameplayEventListener : ActorEventListener, BlockEventListener, PlayerEventListener, LevelEventListener {
 
-    virtual void VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
-    virtual void VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
+    virtual ~VanillaServerGameplayEventListener();
+    virtual ~VanillaServerGameplayEventListener();
     virtual void onActorAttack(Actor &, Actor &);
     virtual void onActorHurt(Actor &, ActorDamageSource const&, int, int);
     virtual void onActorMove(Actor &, Vec3 const&);

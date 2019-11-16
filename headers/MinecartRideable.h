@@ -7,8 +7,8 @@ class MinecartRideable : Minecart {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void MinecartRideable::~MinecartRideable();
-    virtual void MinecartRideable::~MinecartRideable();
+    virtual ~MinecartRideable();
+    virtual ~MinecartRideable();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

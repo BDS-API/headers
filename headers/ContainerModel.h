@@ -3,8 +3,8 @@
 class ContainerModel : ContainerContentChangeListener {
 
     virtual void containerContentChanged(int);
-    virtual void ContainerModel::~ContainerModel();
-    virtual void ContainerModel::~ContainerModel();
+    virtual ~ContainerModel();
+    virtual ~ContainerModel();
     virtual void postInit(void);
     virtual void releaseResources(void);
     virtual void getContainerSize(void)const;

@@ -2,8 +2,8 @@
 
 class EatCarriedItemGoal : Goal {
 
-    virtual void EatCarriedItemGoal::~EatCarriedItemGoal();
-    virtual void EatCarriedItemGoal::~EatCarriedItemGoal();
+    virtual ~EatCarriedItemGoal();
+    virtual ~EatCarriedItemGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

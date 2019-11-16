@@ -2,8 +2,8 @@
 
 class ActorHasTargetTest : SimpleBoolFilterTest {
 
-    virtual void ActorHasTargetTest::~ActorHasTargetTest();
-    virtual void ActorHasTargetTest::~ActorHasTargetTest();
+    virtual ~ActorHasTargetTest();
+    virtual ~ActorHasTargetTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

@@ -2,8 +2,8 @@
 
 class LecternUpdatePacket : Packet {
 
-    virtual void LecternUpdatePacket::~LecternUpdatePacket();
-    virtual void LecternUpdatePacket::~LecternUpdatePacket();
+    virtual ~LecternUpdatePacket();
+    virtual ~LecternUpdatePacket();
     virtual void getId(void)const;
     virtual void _ZNK19LecternUpdatePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -2,8 +2,8 @@
 
 class ActorHasTagTest : SimpleHashStringFilterTest {
 
-    virtual void ActorHasTagTest::~ActorHasTagTest();
-    virtual void ActorHasTagTest::~ActorHasTagTest();
+    virtual ~ActorHasTagTest();
+    virtual ~ActorHasTagTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

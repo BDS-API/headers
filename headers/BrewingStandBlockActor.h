@@ -2,8 +2,8 @@
 
 class BrewingStandBlockActor : BlockActor, Container {
 
-    virtual void BrewingStandBlockActor::~BrewingStandBlockActor();
-    virtual void BrewingStandBlockActor::~BrewingStandBlockActor();
+    virtual ~BrewingStandBlockActor();
+    virtual ~BrewingStandBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

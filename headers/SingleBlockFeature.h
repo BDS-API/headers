@@ -2,7 +2,7 @@
 
 class SingleBlockFeature : IFeature {
 
-    virtual void SingleBlockFeature::~SingleBlockFeature();
-    virtual void SingleBlockFeature::~SingleBlockFeature();
+    virtual ~SingleBlockFeature();
+    virtual ~SingleBlockFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
 }

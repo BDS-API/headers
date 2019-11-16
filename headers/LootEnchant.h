@@ -2,8 +2,8 @@
 
 class LootEnchant : Enchant {
 
-    virtual void LootEnchant::~LootEnchant();
-    virtual void LootEnchant::~LootEnchant();
+    virtual ~LootEnchant();
+    virtual ~LootEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

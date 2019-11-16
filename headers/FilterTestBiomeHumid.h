@@ -2,8 +2,8 @@
 
 class FilterTestBiomeHumid : SimpleBoolFilterTest {
 
-    virtual void FilterTestBiomeHumid::~FilterTestBiomeHumid();
-    virtual void FilterTestBiomeHumid::~FilterTestBiomeHumid();
+    virtual ~FilterTestBiomeHumid();
+    virtual ~FilterTestBiomeHumid();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

@@ -2,7 +2,7 @@
 
 class TargetNearbySystem : ITickingSystem {
 
-    virtual void TargetNearbySystem::~TargetNearbySystem();
-    virtual void TargetNearbySystem::~TargetNearbySystem();
+    virtual ~TargetNearbySystem();
+    virtual ~TargetNearbySystem();
     virtual void tick(EntityRegistry &);
 }

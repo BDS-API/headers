@@ -2,8 +2,8 @@
 
 class LoomDyeContainerController : ContainerController {
 
-    virtual void LoomDyeContainerController::~LoomDyeContainerController();
-    virtual void LoomDyeContainerController::~LoomDyeContainerController();
+    virtual ~LoomDyeContainerController();
+    virtual ~LoomDyeContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

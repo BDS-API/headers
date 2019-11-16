@@ -2,8 +2,8 @@
 
 class LoomBannerContainerController : ContainerController {
 
-    virtual void LoomBannerContainerController::~LoomBannerContainerController();
-    virtual void LoomBannerContainerController::~LoomBannerContainerController();
+    virtual ~LoomBannerContainerController();
+    virtual ~LoomBannerContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

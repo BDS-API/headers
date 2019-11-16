@@ -2,8 +2,8 @@
 
 class EndGatewayBlockActor : BlockActor {
 
-    virtual void EndGatewayBlockActor::~EndGatewayBlockActor();
-    virtual void EndGatewayBlockActor::~EndGatewayBlockActor();
+    virtual ~EndGatewayBlockActor();
+    virtual ~EndGatewayBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

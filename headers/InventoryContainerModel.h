@@ -3,8 +3,8 @@
 class InventoryContainerModel : ContainerModel {
 
     virtual void containerContentChanged(int);
-    virtual void InventoryContainerModel::~InventoryContainerModel();
-    virtual void InventoryContainerModel::~InventoryContainerModel();
+    virtual ~InventoryContainerModel();
+    virtual ~InventoryContainerModel();
     virtual void postInit(void);
     virtual void releaseResources(void);
     virtual void getContainerSize(void)const;

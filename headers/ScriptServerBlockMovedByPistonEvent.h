@@ -2,7 +2,7 @@
 
 class ScriptServerBlockMovedByPistonEvent : ScriptEventData {
 
-    virtual void ScriptServerBlockMovedByPistonEvent::~ScriptServerBlockMovedByPistonEvent();
-    virtual void ScriptServerBlockMovedByPistonEvent::~ScriptServerBlockMovedByPistonEvent();
+    virtual ~ScriptServerBlockMovedByPistonEvent();
+    virtual ~ScriptServerBlockMovedByPistonEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 }

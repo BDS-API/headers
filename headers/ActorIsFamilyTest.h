@@ -2,8 +2,8 @@
 
 class ActorIsFamilyTest : SimpleHashStringFilterTest {
 
-    virtual void ActorIsFamilyTest::~ActorIsFamilyTest();
-    virtual void ActorIsFamilyTest::~ActorIsFamilyTest();
+    virtual ~ActorIsFamilyTest();
+    virtual ~ActorIsFamilyTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

@@ -2,8 +2,8 @@
 
 class DevConsoleCommandOrigin : CommandOrigin {
 
-    virtual void DevConsoleCommandOrigin::~DevConsoleCommandOrigin();
-    virtual void DevConsoleCommandOrigin::~DevConsoleCommandOrigin();
+    virtual ~DevConsoleCommandOrigin();
+    virtual ~DevConsoleCommandOrigin();
     virtual void _ZNK23DevConsoleCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK23DevConsoleCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

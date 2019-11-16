@@ -2,8 +2,8 @@
 
 class GameArgumentCommandOrigin : CommandOrigin {
 
-    virtual void GameArgumentCommandOrigin::~GameArgumentCommandOrigin();
-    virtual void GameArgumentCommandOrigin::~GameArgumentCommandOrigin();
+    virtual ~GameArgumentCommandOrigin();
+    virtual ~GameArgumentCommandOrigin();
     virtual void _ZNK25GameArgumentCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK25GameArgumentCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

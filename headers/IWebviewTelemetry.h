@@ -2,8 +2,8 @@
 
 class IWebviewTelemetry : WebviewObserver {
 
-    virtual void IWebviewTelemetry::~IWebviewTelemetry();
-    virtual void IWebviewTelemetry::~IWebviewTelemetry();
+    virtual ~IWebviewTelemetry();
+    virtual ~IWebviewTelemetry();
     virtual void Core::Observer<WebviewObserver, Core::SingleThreadedLock>::_onSubjectDestroyed(void);
     virtual void onLoadingBegin(void);
     virtual void onLoadingEnd(void);

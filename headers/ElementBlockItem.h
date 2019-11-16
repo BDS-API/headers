@@ -2,8 +2,8 @@
 
 class ElementBlockItem : ChemistryAuxDataBlockItem {
 
-    virtual void ElementBlockItem::~ElementBlockItem();
-    virtual void ElementBlockItem::~ElementBlockItem();
+    virtual ~ElementBlockItem();
+    virtual ~ElementBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

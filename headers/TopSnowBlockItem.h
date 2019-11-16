@@ -2,8 +2,8 @@
 
 class TopSnowBlockItem : BlockItem {
 
-    virtual void TopSnowBlockItem::~TopSnowBlockItem();
-    virtual void TopSnowBlockItem::~TopSnowBlockItem();
+    virtual ~TopSnowBlockItem();
+    virtual ~TopSnowBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

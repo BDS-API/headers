@@ -2,8 +2,8 @@
 
 class EducationSettingsPacket : Packet {
 
-    virtual void EducationSettingsPacket::~EducationSettingsPacket();
-    virtual void EducationSettingsPacket::~EducationSettingsPacket();
+    virtual ~EducationSettingsPacket();
+    virtual ~EducationSettingsPacket();
     virtual void getId(void)const;
     virtual void _ZNK23EducationSettingsPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

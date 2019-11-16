@@ -2,8 +2,8 @@
 
 class RespawnPacket : Packet {
 
-    virtual void RespawnPacket::~RespawnPacket();
-    virtual void RespawnPacket::~RespawnPacket();
+    virtual ~RespawnPacket();
+    virtual ~RespawnPacket();
     virtual void getId(void)const;
     virtual void _ZNK13RespawnPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -2,8 +2,8 @@
 
 class ChestBlockActor : RandomizableBlockActorFillingContainer {
 
-    virtual void ChestBlockActor::~ChestBlockActor();
-    virtual void ChestBlockActor::~ChestBlockActor();
+    virtual ~ChestBlockActor();
+    virtual ~ChestBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

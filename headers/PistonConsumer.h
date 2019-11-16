@@ -2,8 +2,8 @@
 
 class PistonConsumer : ConsumerComponent {
 
-    virtual void PistonConsumer::~PistonConsumer();
-    virtual void PistonConsumer::~PistonConsumer();
+    virtual ~PistonConsumer();
+    virtual ~PistonConsumer();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

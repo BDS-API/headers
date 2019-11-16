@@ -2,8 +2,8 @@
 
 class DirectoryPackAccessStrategy : PackAccessStrategy {
 
-    virtual void DirectoryPackAccessStrategy::~DirectoryPackAccessStrategy();
-    virtual void DirectoryPackAccessStrategy::~DirectoryPackAccessStrategy();
+    virtual ~DirectoryPackAccessStrategy();
+    virtual ~DirectoryPackAccessStrategy();
     virtual void getPackSize(void)const;
     virtual void getPackLocation(void)const;
     virtual void _ZNK27DirectoryPackAccessStrategy11getPackNameB5cxx11Ev;

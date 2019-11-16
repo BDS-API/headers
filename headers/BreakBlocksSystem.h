@@ -2,7 +2,7 @@
 
 class BreakBlocksSystem : ITickingSystem {
 
-    virtual void BreakBlocksSystem::~BreakBlocksSystem();
-    virtual void BreakBlocksSystem::~BreakBlocksSystem();
+    virtual ~BreakBlocksSystem();
+    virtual ~BreakBlocksSystem();
     virtual void tick(EntityRegistry &);
 }

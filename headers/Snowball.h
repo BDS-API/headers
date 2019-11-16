@@ -7,8 +7,8 @@ class Snowball : Throwable {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Snowball::~Snowball();
-    virtual void Snowball::~Snowball();
+    virtual ~Snowball();
+    virtual ~Snowball();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

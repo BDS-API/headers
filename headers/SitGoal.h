@@ -2,8 +2,8 @@
 
 class SitGoal : Goal {
 
-    virtual void SitGoal::~SitGoal();
-    virtual void SitGoal::~SitGoal();
+    virtual ~SitGoal();
+    virtual ~SitGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

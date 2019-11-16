@@ -2,8 +2,8 @@
 
 class ItemFrameDropItemPacket : Packet {
 
-    virtual void ItemFrameDropItemPacket::~ItemFrameDropItemPacket();
-    virtual void ItemFrameDropItemPacket::~ItemFrameDropItemPacket();
+    virtual ~ItemFrameDropItemPacket();
+    virtual ~ItemFrameDropItemPacket();
     virtual void getId(void)const;
     virtual void _ZNK23ItemFrameDropItemPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -7,8 +7,8 @@ class EnderMan : Monster {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void EnderMan::~EnderMan();
-    virtual void EnderMan::~EnderMan();
+    virtual ~EnderMan();
+    virtual ~EnderMan();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

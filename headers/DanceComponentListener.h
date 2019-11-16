@@ -2,8 +2,8 @@
 
 class DanceComponentListener : LevelListener {
 
-    virtual void DanceComponentListener::~DanceComponentListener();
-    virtual void DanceComponentListener::~DanceComponentListener();
+    virtual ~DanceComponentListener();
+    virtual ~DanceComponentListener();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

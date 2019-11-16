@@ -2,8 +2,8 @@
 
 class ActorIsMarkVariantTest : SimpleIntFilterTest {
 
-    virtual void ActorIsMarkVariantTest::~ActorIsMarkVariantTest();
-    virtual void ActorIsMarkVariantTest::~ActorIsMarkVariantTest();
+    virtual ~ActorIsMarkVariantTest();
+    virtual ~ActorIsMarkVariantTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

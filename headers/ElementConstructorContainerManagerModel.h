@@ -2,8 +2,8 @@
 
 class ElementConstructorContainerManagerModel : ContainerManagerModel {
 
-    virtual void ElementConstructorContainerManagerModel::~ElementConstructorContainerManagerModel();
-    virtual void ElementConstructorContainerManagerModel::~ElementConstructorContainerManagerModel();
+    virtual ~ElementConstructorContainerManagerModel();
+    virtual ~ElementConstructorContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

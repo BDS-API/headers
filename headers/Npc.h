@@ -7,8 +7,8 @@ class Npc : Mob {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Npc::~Npc();
-    virtual void Npc::~Npc();
+    virtual ~Npc();
+    virtual ~Npc();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

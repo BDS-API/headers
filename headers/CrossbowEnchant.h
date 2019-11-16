@@ -2,8 +2,8 @@
 
 class CrossbowEnchant : Enchant {
 
-    virtual void CrossbowEnchant::~CrossbowEnchant();
-    virtual void CrossbowEnchant::~CrossbowEnchant();
+    virtual ~CrossbowEnchant();
+    virtual ~CrossbowEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

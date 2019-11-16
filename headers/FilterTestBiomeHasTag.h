@@ -2,8 +2,8 @@
 
 class FilterTestBiomeHasTag : SimpleTagIDFilterTest {
 
-    virtual void FilterTestBiomeHasTag::~FilterTestBiomeHasTag();
-    virtual void FilterTestBiomeHasTag::~FilterTestBiomeHasTag();
+    virtual ~FilterTestBiomeHasTag();
+    virtual ~FilterTestBiomeHasTag();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

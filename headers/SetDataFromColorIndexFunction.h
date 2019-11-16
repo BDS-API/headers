@@ -2,8 +2,8 @@
 
 class SetDataFromColorIndexFunction : LootItemFunction {
 
-    virtual void SetDataFromColorIndexFunction::~SetDataFromColorIndexFunction();
-    virtual void SetDataFromColorIndexFunction::~SetDataFromColorIndexFunction();
+    virtual ~SetDataFromColorIndexFunction();
+    virtual ~SetDataFromColorIndexFunction();
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);

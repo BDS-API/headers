@@ -2,8 +2,8 @@
 
 class BlockCommandOrigin : CommandOrigin {
 
-    virtual void BlockCommandOrigin::~BlockCommandOrigin();
-    virtual void BlockCommandOrigin::~BlockCommandOrigin();
+    virtual ~BlockCommandOrigin();
+    virtual ~BlockCommandOrigin();
     virtual void _ZNK18BlockCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK18BlockCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

@@ -2,8 +2,8 @@
 
 class DefendVillageTargetGoal : TargetGoal {
 
-    virtual void DefendVillageTargetGoal::~DefendVillageTargetGoal();
-    virtual void DefendVillageTargetGoal::~DefendVillageTargetGoal();
+    virtual ~DefendVillageTargetGoal();
+    virtual ~DefendVillageTargetGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

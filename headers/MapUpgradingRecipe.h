@@ -2,8 +2,8 @@
 
 class MapUpgradingRecipe : MultiRecipe {
 
-    virtual void MapUpgradingRecipe::~MapUpgradingRecipe();
-    virtual void MapUpgradingRecipe::~MapUpgradingRecipe();
+    virtual ~MapUpgradingRecipe();
+    virtual ~MapUpgradingRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

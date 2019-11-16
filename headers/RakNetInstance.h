@@ -2,8 +2,8 @@
 
 class RakNetInstance : Connector {
 
-    virtual void RakNetInstance::~RakNetInstance();
-    virtual void RakNetInstance::~RakNetInstance();
+    virtual ~RakNetInstance();
+    virtual ~RakNetInstance();
     virtual void onAppResumed(void);
     virtual void onAppSuspended(void);
     virtual void _ZNK14RakNetInstance11getLocalIpsB5cxx11Ev;

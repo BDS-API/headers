@@ -2,8 +2,8 @@
 
 class LayDownGoal : Goal {
 
-    virtual void LayDownGoal::~LayDownGoal();
-    virtual void LayDownGoal::~LayDownGoal();
+    virtual ~LayDownGoal();
+    virtual ~LayDownGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

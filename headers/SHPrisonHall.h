@@ -2,8 +2,8 @@
 
 class SHPrisonHall : StrongholdPiece {
 
-    virtual void SHPrisonHall::~SHPrisonHall();
-    virtual void SHPrisonHall::~SHPrisonHall();
+    virtual ~SHPrisonHall();
+    virtual ~SHPrisonHall();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

@@ -2,8 +2,8 @@
 
 class MapCloningRecipe : MultiRecipe {
 
-    virtual void MapCloningRecipe::~MapCloningRecipe();
-    virtual void MapCloningRecipe::~MapCloningRecipe();
+    virtual ~MapCloningRecipe();
+    virtual ~MapCloningRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;

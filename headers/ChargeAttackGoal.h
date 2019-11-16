@@ -2,8 +2,8 @@
 
 class ChargeAttackGoal : Goal {
 
-    virtual void ChargeAttackGoal::~ChargeAttackGoal();
-    virtual void ChargeAttackGoal::~ChargeAttackGoal();
+    virtual ~ChargeAttackGoal();
+    virtual ~ChargeAttackGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,8 +2,8 @@
 
 class VillageFeature : StructureFeature {
 
-    virtual void VillageFeature::~VillageFeature();
-    virtual void VillageFeature::~VillageFeature();
+    virtual ~VillageFeature();
+    virtual ~VillageFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

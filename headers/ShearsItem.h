@@ -2,8 +2,8 @@
 
 class ShearsItem : Item {
 
-    virtual void ShearsItem::~ShearsItem();
-    virtual void ShearsItem::~ShearsItem();
+    virtual ~ShearsItem();
+    virtual ~ShearsItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

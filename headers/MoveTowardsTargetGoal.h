@@ -2,8 +2,8 @@
 
 class MoveTowardsTargetGoal : Goal {
 
-    virtual void MoveTowardsTargetGoal::~MoveTowardsTargetGoal();
-    virtual void MoveTowardsTargetGoal::~MoveTowardsTargetGoal();
+    virtual ~MoveTowardsTargetGoal();
+    virtual ~MoveTowardsTargetGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

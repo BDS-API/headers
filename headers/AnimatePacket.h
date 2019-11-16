@@ -2,8 +2,8 @@
 
 class AnimatePacket : Packet {
 
-    virtual void AnimatePacket::~AnimatePacket();
-    virtual void AnimatePacket::~AnimatePacket();
+    virtual ~AnimatePacket();
+    virtual ~AnimatePacket();
     virtual void getId(void)const;
     virtual void _ZNK13AnimatePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

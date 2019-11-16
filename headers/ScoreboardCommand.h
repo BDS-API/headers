@@ -2,7 +2,7 @@
 
 class ScoreboardCommand : Command {
 
-    virtual void ScoreboardCommand::~ScoreboardCommand();
-    virtual void ScoreboardCommand::~ScoreboardCommand();
+    virtual ~ScoreboardCommand();
+    virtual ~ScoreboardCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

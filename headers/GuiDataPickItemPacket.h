@@ -2,8 +2,8 @@
 
 class GuiDataPickItemPacket : Packet {
 
-    virtual void GuiDataPickItemPacket::~GuiDataPickItemPacket();
-    virtual void GuiDataPickItemPacket::~GuiDataPickItemPacket();
+    virtual ~GuiDataPickItemPacket();
+    virtual ~GuiDataPickItemPacket();
     virtual void getId(void)const;
     virtual void _ZNK21GuiDataPickItemPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

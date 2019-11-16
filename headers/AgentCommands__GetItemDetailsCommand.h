@@ -2,8 +2,8 @@
 
 class AgentCommands::GetItemDetailsCommand : AgentCommands::Command {
 
-    virtual void AgentCommands::GetItemDetailsCommand::~GetItemDetailsCommand();
-    virtual void AgentCommands::GetItemDetailsCommand::~GetItemDetailsCommand();
+    virtual ~GetItemDetailsCommand();
+    virtual ~GetItemDetailsCommand();
     virtual void execute(void);
     virtual void isDone(void);
     virtual void tick(void);

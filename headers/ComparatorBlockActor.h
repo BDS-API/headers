@@ -2,8 +2,8 @@
 
 class ComparatorBlockActor : BlockActor {
 
-    virtual void ComparatorBlockActor::~ComparatorBlockActor();
-    virtual void ComparatorBlockActor::~ComparatorBlockActor();
+    virtual ~ComparatorBlockActor();
+    virtual ~ComparatorBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

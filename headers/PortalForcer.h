@@ -2,8 +2,8 @@
 
 class PortalForcer : SavedData {
 
-    virtual void PortalForcer::~PortalForcer();
-    virtual void PortalForcer::~PortalForcer();
+    virtual ~PortalForcer();
+    virtual ~PortalForcer();
     virtual void deserialize(CompoundTag const&);
     virtual void serialize(CompoundTag &)const;
 }

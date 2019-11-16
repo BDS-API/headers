@@ -2,8 +2,8 @@
 
 class ReceiveLoveGoal : Goal {
 
-    virtual void ReceiveLoveGoal::~ReceiveLoveGoal();
-    virtual void ReceiveLoveGoal::~ReceiveLoveGoal();
+    virtual ~ReceiveLoveGoal();
+    virtual ~ReceiveLoveGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

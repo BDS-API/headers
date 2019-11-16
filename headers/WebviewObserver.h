@@ -2,8 +2,8 @@
 
 class WebviewObserver : Core::Observer_ltWebviewObserver_Core::SingleThreadedLock_ge {
 
-    virtual void WebviewObserver::~WebviewObserver();
-    virtual void WebviewObserver::~WebviewObserver();
+    virtual ~WebviewObserver();
+    virtual ~WebviewObserver();
     virtual void Core::Observer<WebviewObserver, Core::SingleThreadedLock>::_onSubjectDestroyed(void);
     virtual void onLoadingBegin(void);
     virtual void onLoadingEnd(void);

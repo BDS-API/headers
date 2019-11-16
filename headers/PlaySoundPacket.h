@@ -2,8 +2,8 @@
 
 class PlaySoundPacket : Packet {
 
-    virtual void PlaySoundPacket::~PlaySoundPacket();
-    virtual void PlaySoundPacket::~PlaySoundPacket();
+    virtual ~PlaySoundPacket();
+    virtual ~PlaySoundPacket();
     virtual void getId(void)const;
     virtual void _ZNK15PlaySoundPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

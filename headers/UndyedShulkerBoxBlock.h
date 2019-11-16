@@ -2,8 +2,8 @@
 
 class UndyedShulkerBoxBlock : ShulkerBoxBlock {
 
-    virtual void UndyedShulkerBoxBlock::~UndyedShulkerBoxBlock();
-    virtual void UndyedShulkerBoxBlock::~UndyedShulkerBoxBlock();
+    virtual ~UndyedShulkerBoxBlock();
+    virtual ~UndyedShulkerBoxBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

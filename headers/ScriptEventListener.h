@@ -2,8 +2,8 @@
 
 class ScriptEventListener {
 
-    virtual void ScriptEventListener::~ScriptEventListener();
-    virtual void ScriptEventListener::~ScriptEventListener();
+    virtual ~ScriptEventListener();
+    virtual ~ScriptEventListener();
     virtual void onScriptGetComponent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, RegistrationType, bool);
     virtual void onScriptListenForEvent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void onScriptBroadcastEvent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, RegistrationType, bool);

@@ -2,8 +2,8 @@
 
 class CoralFanBlockItem : BlockItem {
 
-    virtual void CoralFanBlockItem::~CoralFanBlockItem();
-    virtual void CoralFanBlockItem::~CoralFanBlockItem();
+    virtual ~CoralFanBlockItem();
+    virtual ~CoralFanBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

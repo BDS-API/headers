@@ -2,8 +2,8 @@
 
 class FertilizerItem : Item {
 
-    virtual void FertilizerItem::~FertilizerItem();
-    virtual void FertilizerItem::~FertilizerItem();
+    virtual ~FertilizerItem();
+    virtual ~FertilizerItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

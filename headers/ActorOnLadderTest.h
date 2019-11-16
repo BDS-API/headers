@@ -2,8 +2,8 @@
 
 class ActorOnLadderTest : SimpleBoolFilterTest {
 
-    virtual void ActorOnLadderTest::~ActorOnLadderTest();
-    virtual void ActorOnLadderTest::~ActorOnLadderTest();
+    virtual ~ActorOnLadderTest();
+    virtual ~ActorOnLadderTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

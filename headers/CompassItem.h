@@ -2,8 +2,8 @@
 
 class CompassItem : Item {
 
-    virtual void CompassItem::~CompassItem();
-    virtual void CompassItem::~CompassItem();
+    virtual ~CompassItem();
+    virtual ~CompassItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

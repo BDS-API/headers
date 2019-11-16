@@ -2,8 +2,8 @@
 
 class FilterTestMoonPhase : SimpleFloatFilterTest {
 
-    virtual void FilterTestMoonPhase::~FilterTestMoonPhase();
-    virtual void FilterTestMoonPhase::~FilterTestMoonPhase();
+    virtual ~FilterTestMoonPhase();
+    virtual ~FilterTestMoonPhase();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

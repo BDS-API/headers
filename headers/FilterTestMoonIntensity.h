@@ -2,8 +2,8 @@
 
 class FilterTestMoonIntensity : SimpleFloatFilterTest {
 
-    virtual void FilterTestMoonIntensity::~FilterTestMoonIntensity();
-    virtual void FilterTestMoonIntensity::~FilterTestMoonIntensity();
+    virtual ~FilterTestMoonIntensity();
+    virtual ~FilterTestMoonIntensity();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

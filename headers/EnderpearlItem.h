@@ -2,8 +2,8 @@
 
 class EnderpearlItem : Item {
 
-    virtual void EnderpearlItem::~EnderpearlItem();
-    virtual void EnderpearlItem::~EnderpearlItem();
+    virtual ~EnderpearlItem();
+    virtual ~EnderpearlItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

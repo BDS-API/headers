@@ -2,8 +2,8 @@
 
 class MagmaBlock : BlockLegacy {
 
-    virtual void MagmaBlock::~MagmaBlock();
-    virtual void MagmaBlock::~MagmaBlock();
+    virtual ~MagmaBlock();
+    virtual ~MagmaBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

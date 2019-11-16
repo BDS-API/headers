@@ -2,8 +2,8 @@
 
 class TradeContainerManagerModel : LevelContainerManagerModel {
 
-    virtual void TradeContainerManagerModel::~TradeContainerManagerModel();
-    virtual void TradeContainerManagerModel::~TradeContainerManagerModel();
+    virtual ~TradeContainerManagerModel();
+    virtual ~TradeContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

@@ -2,8 +2,8 @@
 
 class Dimension : LevelListener, SavedData {
 
-    virtual void Dimension::~Dimension();
-    virtual void Dimension::~Dimension();
+    virtual ~Dimension();
+    virtual ~Dimension();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

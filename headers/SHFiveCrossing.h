@@ -2,8 +2,8 @@
 
 class SHFiveCrossing : StrongholdPiece {
 
-    virtual void SHFiveCrossing::~SHFiveCrossing();
-    virtual void SHFiveCrossing::~SHFiveCrossing();
+    virtual ~SHFiveCrossing();
+    virtual ~SHFiveCrossing();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

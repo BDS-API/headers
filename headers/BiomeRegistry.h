@@ -3,6 +3,6 @@
 class BiomeRegistry : IEntityRegistryOwner {
 
     virtual void getEntityRegistry(void);
-    virtual void BiomeRegistry::~BiomeRegistry();
-    virtual void BiomeRegistry::~BiomeRegistry();
+    virtual ~BiomeRegistry();
+    virtual ~BiomeRegistry();
 }

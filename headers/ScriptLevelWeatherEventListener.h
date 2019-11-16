@@ -2,8 +2,8 @@
 
 class ScriptLevelWeatherEventListener : LevelEventListener {
 
-    virtual void ScriptLevelWeatherEventListener::~ScriptLevelWeatherEventListener();
-    virtual void ScriptLevelWeatherEventListener::~ScriptLevelWeatherEventListener();
+    virtual ~ScriptLevelWeatherEventListener();
+    virtual ~ScriptLevelWeatherEventListener();
     virtual void onLevelInitialized(Level &);
     virtual void onLevelSaveData(Level &, CompoundTag &);
     virtual void onLevelAddedPlayer(Level &, Player &);

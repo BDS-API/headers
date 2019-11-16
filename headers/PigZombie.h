@@ -7,8 +7,8 @@ class PigZombie : Zombie {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void PigZombie::~PigZombie();
-    virtual void PigZombie::~PigZombie();
+    virtual ~PigZombie();
+    virtual ~PigZombie();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

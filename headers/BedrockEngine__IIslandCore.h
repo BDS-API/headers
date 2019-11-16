@@ -2,8 +2,8 @@
 
 class BedrockEngine::IIslandCore {
 
-    virtual void BedrockEngine::IIslandCore::~IIslandCore();
-    virtual void BedrockEngine::IIslandCore::~IIslandCore();
+    virtual ~IIslandCore();
+    virtual ~IIslandCore();
     virtual void getId(void);
     virtual void start(void);
     virtual void suspend(void);

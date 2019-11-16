@@ -2,8 +2,8 @@
 
 class CocoaBlock : BlockLegacy {
 
-    virtual void CocoaBlock::~CocoaBlock();
-    virtual void CocoaBlock::~CocoaBlock();
+    virtual ~CocoaBlock();
+    virtual ~CocoaBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

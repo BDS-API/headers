@@ -2,8 +2,8 @@
 
 class MovingBlockActor : BlockActor {
 
-    virtual void MovingBlockActor::~MovingBlockActor();
-    virtual void MovingBlockActor::~MovingBlockActor();
+    virtual ~MovingBlockActor();
+    virtual ~MovingBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

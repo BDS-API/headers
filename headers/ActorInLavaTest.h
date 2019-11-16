@@ -2,8 +2,8 @@
 
 class ActorInLavaTest : SimpleBoolFilterTest {
 
-    virtual void ActorInLavaTest::~ActorInLavaTest();
-    virtual void ActorInLavaTest::~ActorInLavaTest();
+    virtual ~ActorInLavaTest();
+    virtual ~ActorInLavaTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

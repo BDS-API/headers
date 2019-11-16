@@ -2,8 +2,8 @@
 
 class DragonScanningGoal : Goal {
 
-    virtual void DragonScanningGoal::~DragonScanningGoal();
-    virtual void DragonScanningGoal::~DragonScanningGoal();
+    virtual ~DragonScanningGoal();
+    virtual ~DragonScanningGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

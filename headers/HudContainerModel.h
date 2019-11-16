@@ -3,8 +3,8 @@
 class HudContainerModel : ContainerModel {
 
     virtual void containerContentChanged(int);
-    virtual void HudContainerModel::~HudContainerModel();
-    virtual void HudContainerModel::~HudContainerModel();
+    virtual ~HudContainerModel();
+    virtual ~HudContainerModel();
     virtual void postInit(void);
     virtual void releaseResources(void);
     virtual void getContainerSize(void)const;

@@ -2,8 +2,8 @@
 
 class FlintAndSteelItem : Item {
 
-    virtual void FlintAndSteelItem::~FlintAndSteelItem();
-    virtual void FlintAndSteelItem::~FlintAndSteelItem();
+    virtual ~FlintAndSteelItem();
+    virtual ~FlintAndSteelItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

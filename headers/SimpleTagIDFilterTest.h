@@ -2,8 +2,8 @@
 
 class SimpleTagIDFilterTest : FilterTest {
 
-    virtual void SimpleTagIDFilterTest::~SimpleTagIDFilterTest();
-    virtual void SimpleTagIDFilterTest::~SimpleTagIDFilterTest();
+    virtual ~SimpleTagIDFilterTest();
+    virtual ~SimpleTagIDFilterTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

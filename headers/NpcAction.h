@@ -2,8 +2,8 @@
 
 class NpcAction {
 
-    virtual void NpcAction::~NpcAction();
-    virtual void NpcAction::~NpcAction();
+    virtual ~NpcAction();
+    virtual ~NpcAction();
     virtual void toJson(void);
     virtual void fromJson(Json::Value const&);
 }

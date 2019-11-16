@@ -2,8 +2,8 @@
 
 class ModalFormRequestPacket : Packet {
 
-    virtual void ModalFormRequestPacket::~ModalFormRequestPacket();
-    virtual void ModalFormRequestPacket::~ModalFormRequestPacket();
+    virtual ~ModalFormRequestPacket();
+    virtual ~ModalFormRequestPacket();
     virtual void getId(void)const;
     virtual void _ZNK22ModalFormRequestPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

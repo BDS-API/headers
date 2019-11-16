@@ -2,8 +2,8 @@
 
 class EnderChestBlockActor : ChestBlockActor {
 
-    virtual void EnderChestBlockActor::~EnderChestBlockActor();
-    virtual void EnderChestBlockActor::~EnderChestBlockActor();
+    virtual ~EnderChestBlockActor();
+    virtual ~EnderChestBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

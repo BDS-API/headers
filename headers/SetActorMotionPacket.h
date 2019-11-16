@@ -2,8 +2,8 @@
 
 class SetActorMotionPacket : Packet {
 
-    virtual void SetActorMotionPacket::~SetActorMotionPacket();
-    virtual void SetActorMotionPacket::~SetActorMotionPacket();
+    virtual ~SetActorMotionPacket();
+    virtual ~SetActorMotionPacket();
     virtual void getId(void)const;
     virtual void _ZNK20SetActorMotionPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

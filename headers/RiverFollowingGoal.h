@@ -2,8 +2,8 @@
 
 class RiverFollowingGoal : Goal {
 
-    virtual void RiverFollowingGoal::~RiverFollowingGoal();
-    virtual void RiverFollowingGoal::~RiverFollowingGoal();
+    virtual ~RiverFollowingGoal();
+    virtual ~RiverFollowingGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

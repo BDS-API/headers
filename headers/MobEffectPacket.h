@@ -2,8 +2,8 @@
 
 class MobEffectPacket : Packet {
 
-    virtual void MobEffectPacket::~MobEffectPacket();
-    virtual void MobEffectPacket::~MobEffectPacket();
+    virtual ~MobEffectPacket();
+    virtual ~MobEffectPacket();
     virtual void getId(void)const;
     virtual void _ZNK15MobEffectPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

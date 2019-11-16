@@ -2,8 +2,8 @@
 
 class DrinkPotionGoal : Goal {
 
-    virtual void DrinkPotionGoal::~DrinkPotionGoal();
-    virtual void DrinkPotionGoal::~DrinkPotionGoal();
+    virtual ~DrinkPotionGoal();
+    virtual ~DrinkPotionGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

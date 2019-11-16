@@ -2,8 +2,8 @@
 
 class OutputContainerController : ContainerController {
 
-    virtual void OutputContainerController::~OutputContainerController();
-    virtual void OutputContainerController::~OutputContainerController();
+    virtual ~OutputContainerController();
+    virtual ~OutputContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

@@ -2,8 +2,8 @@
 
 class AgentCommands::GetItemCountCommand : AgentCommands::Command {
 
-    virtual void AgentCommands::GetItemCountCommand::~GetItemCountCommand();
-    virtual void AgentCommands::GetItemCountCommand::~GetItemCountCommand();
+    virtual ~GetItemCountCommand();
+    virtual ~GetItemCountCommand();
     virtual void execute(void);
     virtual void isDone(void);
     virtual void tick(void);

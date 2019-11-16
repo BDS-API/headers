@@ -2,8 +2,8 @@
 
 class CampfireBlockActor : BlockActor {
 
-    virtual void CampfireBlockActor::~CampfireBlockActor();
-    virtual void CampfireBlockActor::~CampfireBlockActor();
+    virtual ~CampfireBlockActor();
+    virtual ~CampfireBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

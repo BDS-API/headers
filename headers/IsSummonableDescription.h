@@ -2,7 +2,7 @@
 
 class IsSummonableDescription : DefintionDescription {
 
-    virtual void IsSummonableDescription::~IsSummonableDescription();
-    virtual void IsSummonableDescription::~IsSummonableDescription();
+    virtual ~IsSummonableDescription();
+    virtual ~IsSummonableDescription();
     virtual void getJsonName(void)const;
 }

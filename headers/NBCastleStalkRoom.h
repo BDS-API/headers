@@ -2,8 +2,8 @@
 
 class NBCastleStalkRoom : NetherFortressPiece {
 
-    virtual void NBCastleStalkRoom::~NBCastleStalkRoom();
-    virtual void NBCastleStalkRoom::~NBCastleStalkRoom();
+    virtual ~NBCastleStalkRoom();
+    virtual ~NBCastleStalkRoom();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

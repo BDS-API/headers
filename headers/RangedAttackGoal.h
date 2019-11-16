@@ -2,8 +2,8 @@
 
 class RangedAttackGoal : Goal {
 
-    virtual void RangedAttackGoal::~RangedAttackGoal();
-    virtual void RangedAttackGoal::~RangedAttackGoal();
+    virtual ~RangedAttackGoal();
+    virtual ~RangedAttackGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

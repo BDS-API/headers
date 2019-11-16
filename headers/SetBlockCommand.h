@@ -2,7 +2,7 @@
 
 class SetBlockCommand : Command {
 
-    virtual void SetBlockCommand::~SetBlockCommand();
-    virtual void SetBlockCommand::~SetBlockCommand();
+    virtual ~SetBlockCommand();
+    virtual ~SetBlockCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

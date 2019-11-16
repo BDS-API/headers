@@ -7,8 +7,8 @@ class Monster : Mob {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Monster::~Monster();
-    virtual void Monster::~Monster();
+    virtual ~Monster();
+    virtual ~Monster();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

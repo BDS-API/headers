@@ -2,7 +2,7 @@
 
 class NullLogger : leveldb::Logger {
 
-    virtual void NullLogger::~NullLogger();
-    virtual void NullLogger::~NullLogger();
+    virtual ~NullLogger();
+    virtual ~NullLogger();
     virtual void Logv(char const*, __va_list_tag *);
 }

@@ -2,8 +2,8 @@
 
 class SpawnGroupRegistry : ActorSpawnRuleBase {
 
-    virtual void SpawnGroupRegistry::~SpawnGroupRegistry();
-    virtual void SpawnGroupRegistry::~SpawnGroupRegistry();
+    virtual ~SpawnGroupRegistry();
+    virtual ~SpawnGroupRegistry();
     virtual void _ZN18SpawnGroupRegistry10getRootKeyB5cxx11Ev;
     virtual void _ZN18SpawnGroupRegistry11getFileTypeB5cxx11Ev;
     virtual void processPopulationControl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Json::Value &);

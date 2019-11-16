@@ -2,8 +2,8 @@
 
 class BlockActor {
 
-    virtual void BlockActor::~BlockActor();
-    virtual void BlockActor::~BlockActor();
+    virtual ~BlockActor();
+    virtual ~BlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

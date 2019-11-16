@@ -2,8 +2,8 @@
 
 class OceanMonumentPenthouse : OceanMonumentPiece {
 
-    virtual void OceanMonumentPenthouse::~OceanMonumentPenthouse();
-    virtual void OceanMonumentPenthouse::~OceanMonumentPenthouse();
+    virtual ~OceanMonumentPenthouse();
+    virtual ~OceanMonumentPenthouse();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

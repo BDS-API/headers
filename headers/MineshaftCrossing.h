@@ -2,8 +2,8 @@
 
 class MineshaftCrossing : MineshaftPiece {
 
-    virtual void MineshaftCrossing::~MineshaftCrossing();
-    virtual void MineshaftCrossing::~MineshaftCrossing();
+    virtual ~MineshaftCrossing();
+    virtual ~MineshaftCrossing();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

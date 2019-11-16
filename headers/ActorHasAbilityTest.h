@@ -2,8 +2,8 @@
 
 class ActorHasAbilityTest : SimpleIntFilterTest {
 
-    virtual void ActorHasAbilityTest::~ActorHasAbilityTest();
-    virtual void ActorHasAbilityTest::~ActorHasAbilityTest();
+    virtual ~ActorHasAbilityTest();
+    virtual ~ActorHasAbilityTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

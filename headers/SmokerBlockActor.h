@@ -2,8 +2,8 @@
 
 class SmokerBlockActor : FurnaceBlockActor {
 
-    virtual void SmokerBlockActor::~SmokerBlockActor();
-    virtual void SmokerBlockActor::~SmokerBlockActor();
+    virtual ~SmokerBlockActor();
+    virtual ~SmokerBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

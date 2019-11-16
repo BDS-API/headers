@@ -2,8 +2,8 @@
 
 class RunAroundLikeCrazyGoal : Goal {
 
-    virtual void RunAroundLikeCrazyGoal::~RunAroundLikeCrazyGoal();
-    virtual void RunAroundLikeCrazyGoal::~RunAroundLikeCrazyGoal();
+    virtual ~RunAroundLikeCrazyGoal();
+    virtual ~RunAroundLikeCrazyGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,8 +2,8 @@
 
 class ChalkboardBlockActor : BlockActor {
 
-    virtual void ChalkboardBlockActor::~ChalkboardBlockActor();
-    virtual void ChalkboardBlockActor::~ChalkboardBlockActor();
+    virtual ~ChalkboardBlockActor();
+    virtual ~ChalkboardBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

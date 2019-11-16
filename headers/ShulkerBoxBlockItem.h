@@ -2,8 +2,8 @@
 
 class ShulkerBoxBlockItem : AuxDataBlockItem {
 
-    virtual void ShulkerBoxBlockItem::~ShulkerBoxBlockItem();
-    virtual void ShulkerBoxBlockItem::~ShulkerBoxBlockItem();
+    virtual ~ShulkerBoxBlockItem();
+    virtual ~ShulkerBoxBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

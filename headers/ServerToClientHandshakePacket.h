@@ -2,8 +2,8 @@
 
 class ServerToClientHandshakePacket : Packet {
 
-    virtual void ServerToClientHandshakePacket::~ServerToClientHandshakePacket();
-    virtual void ServerToClientHandshakePacket::~ServerToClientHandshakePacket();
+    virtual ~ServerToClientHandshakePacket();
+    virtual ~ServerToClientHandshakePacket();
     virtual void getId(void)const;
     virtual void _ZNK29ServerToClientHandshakePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

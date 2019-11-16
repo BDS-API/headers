@@ -2,8 +2,8 @@
 
 class SwimWithMobGoal : Goal {
 
-    virtual void SwimWithMobGoal::~SwimWithMobGoal();
-    virtual void SwimWithMobGoal::~SwimWithMobGoal();
+    virtual ~SwimWithMobGoal();
+    virtual ~SwimWithMobGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

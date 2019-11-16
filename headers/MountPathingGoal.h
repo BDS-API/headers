@@ -2,8 +2,8 @@
 
 class MountPathingGoal : Goal {
 
-    virtual void MountPathingGoal::~MountPathingGoal();
-    virtual void MountPathingGoal::~MountPathingGoal();
+    virtual ~MountPathingGoal();
+    virtual ~MountPathingGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

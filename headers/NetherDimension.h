@@ -2,8 +2,8 @@
 
 class NetherDimension : Dimension {
 
-    virtual void NetherDimension::~NetherDimension();
-    virtual void NetherDimension::~NetherDimension();
+    virtual ~NetherDimension();
+    virtual ~NetherDimension();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

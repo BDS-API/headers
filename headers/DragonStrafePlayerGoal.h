@@ -2,8 +2,8 @@
 
 class DragonStrafePlayerGoal : Goal {
 
-    virtual void DragonStrafePlayerGoal::~DragonStrafePlayerGoal();
-    virtual void DragonStrafePlayerGoal::~DragonStrafePlayerGoal();
+    virtual ~DragonStrafePlayerGoal();
+    virtual ~DragonStrafePlayerGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,8 +2,8 @@
 
 class FollowCaravanGoal : Goal {
 
-    virtual void FollowCaravanGoal::~FollowCaravanGoal();
-    virtual void FollowCaravanGoal::~FollowCaravanGoal();
+    virtual ~FollowCaravanGoal();
+    virtual ~FollowCaravanGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

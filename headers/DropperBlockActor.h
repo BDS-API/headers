@@ -2,8 +2,8 @@
 
 class DropperBlockActor : DispenserBlockActor {
 
-    virtual void DropperBlockActor::~DropperBlockActor();
-    virtual void DropperBlockActor::~DropperBlockActor();
+    virtual ~DropperBlockActor();
+    virtual ~DropperBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

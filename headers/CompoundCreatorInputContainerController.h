@@ -2,8 +2,8 @@
 
 class CompoundCreatorInputContainerController : ContainerController {
 
-    virtual void CompoundCreatorInputContainerController::~CompoundCreatorInputContainerController();
-    virtual void CompoundCreatorInputContainerController::~CompoundCreatorInputContainerController();
+    virtual ~CompoundCreatorInputContainerController();
+    virtual ~CompoundCreatorInputContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

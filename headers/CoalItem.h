@@ -2,8 +2,8 @@
 
 class CoalItem : Item {
 
-    virtual void CoalItem::~CoalItem();
-    virtual void CoalItem::~CoalItem();
+    virtual ~CoalItem();
+    virtual ~CoalItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

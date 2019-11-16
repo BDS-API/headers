@@ -2,8 +2,8 @@
 
 class SetScorePacket : Packet {
 
-    virtual void SetScorePacket::~SetScorePacket();
-    virtual void SetScorePacket::~SetScorePacket();
+    virtual ~SetScorePacket();
+    virtual ~SetScorePacket();
     virtual void getId(void)const;
     virtual void _ZNK14SetScorePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

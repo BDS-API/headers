@@ -2,7 +2,7 @@
 
 class BalloonSystem : ITickingSystem {
 
-    virtual void BalloonSystem::~BalloonSystem();
-    virtual void BalloonSystem::~BalloonSystem();
+    virtual ~BalloonSystem();
+    virtual ~BalloonSystem();
     virtual void tick(EntityRegistry &);
 }

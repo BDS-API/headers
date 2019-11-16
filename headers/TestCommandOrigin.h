@@ -2,8 +2,8 @@
 
 class TestCommandOrigin : CommandOrigin {
 
-    virtual void TestCommandOrigin::~TestCommandOrigin();
-    virtual void TestCommandOrigin::~TestCommandOrigin();
+    virtual ~TestCommandOrigin();
+    virtual ~TestCommandOrigin();
     virtual void _ZNK17TestCommandOrigin12getRequestIdB5cxx11Ev;
     virtual void _ZNK17TestCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;

@@ -2,8 +2,8 @@
 
 class EntityClientPacket : Packet {
 
-    virtual void EntityClientPacket::~EntityClientPacket();
-    virtual void EntityClientPacket::~EntityClientPacket();
+    virtual ~EntityClientPacket();
+    virtual ~EntityClientPacket();
     virtual void __cxa_pure_virtual;
     virtual void __cxa_pure_virtual;
     virtual void write(BinaryStream &)const;

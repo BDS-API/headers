@@ -2,8 +2,8 @@
 
 class MapItem : ComplexItem {
 
-    virtual void MapItem::~MapItem();
-    virtual void MapItem::~MapItem();
+    virtual ~MapItem();
+    virtual ~MapItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

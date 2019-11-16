@@ -2,8 +2,8 @@
 
 class VillagePiece : PoolElementStructurePiece {
 
-    virtual void VillagePiece::~VillagePiece();
-    virtual void VillagePiece::~VillagePiece();
+    virtual ~VillagePiece();
+    virtual ~VillagePiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

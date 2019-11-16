@@ -2,6 +2,6 @@
 
 class BedrockEngine::PlatformRuntimeInfo {
 
-    virtual void BedrockEngine::PlatformRuntimeInfo::~PlatformRuntimeInfo();
-    virtual void BedrockEngine::PlatformRuntimeInfo::~PlatformRuntimeInfo();
+    virtual ~PlatformRuntimeInfo();
+    virtual ~PlatformRuntimeInfo();
 }

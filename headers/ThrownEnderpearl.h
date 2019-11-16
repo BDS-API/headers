@@ -7,8 +7,8 @@ class ThrownEnderpearl : Throwable {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void ThrownEnderpearl::~ThrownEnderpearl();
-    virtual void ThrownEnderpearl::~ThrownEnderpearl();
+    virtual ~ThrownEnderpearl();
+    virtual ~ThrownEnderpearl();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

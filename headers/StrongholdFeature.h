@@ -2,8 +2,8 @@
 
 class StrongholdFeature : StructureFeature {
 
-    virtual void StrongholdFeature::~StrongholdFeature();
-    virtual void StrongholdFeature::~StrongholdFeature();
+    virtual ~StrongholdFeature();
+    virtual ~StrongholdFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

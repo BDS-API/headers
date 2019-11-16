@@ -2,8 +2,8 @@
 
 class PlayerActionPacket : Packet {
 
-    virtual void PlayerActionPacket::~PlayerActionPacket();
-    virtual void PlayerActionPacket::~PlayerActionPacket();
+    virtual ~PlayerActionPacket();
+    virtual ~PlayerActionPacket();
     virtual void getId(void)const;
     virtual void _ZNK18PlayerActionPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

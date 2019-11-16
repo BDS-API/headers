@@ -2,8 +2,8 @@
 
 class MinecartItem : Item {
 
-    virtual void MinecartItem::~MinecartItem();
-    virtual void MinecartItem::~MinecartItem();
+    virtual ~MinecartItem();
+    virtual ~MinecartItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

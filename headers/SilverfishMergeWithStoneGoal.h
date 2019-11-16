@@ -2,8 +2,8 @@
 
 class SilverfishMergeWithStoneGoal : RandomStrollGoal {
 
-    virtual void SilverfishMergeWithStoneGoal::~SilverfishMergeWithStoneGoal();
-    virtual void SilverfishMergeWithStoneGoal::~SilverfishMergeWithStoneGoal();
+    virtual ~SilverfishMergeWithStoneGoal();
+    virtual ~SilverfishMergeWithStoneGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

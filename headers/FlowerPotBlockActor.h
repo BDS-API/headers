@@ -2,8 +2,8 @@
 
 class FlowerPotBlockActor : BlockActor {
 
-    virtual void FlowerPotBlockActor::~FlowerPotBlockActor();
-    virtual void FlowerPotBlockActor::~FlowerPotBlockActor();
+    virtual ~FlowerPotBlockActor();
+    virtual ~FlowerPotBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

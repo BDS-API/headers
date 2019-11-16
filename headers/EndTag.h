@@ -2,8 +2,8 @@
 
 class EndTag : Tag {
 
-    virtual void EndTag::~EndTag();
-    virtual void EndTag::~EndTag();
+    virtual ~EndTag();
+    virtual ~EndTag();
     virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

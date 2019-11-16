@@ -2,8 +2,8 @@
 
 class SetItemNameFunction : LootItemFunction {
 
-    virtual void SetItemNameFunction::~SetItemNameFunction();
-    virtual void SetItemNameFunction::~SetItemNameFunction();
+    virtual ~SetItemNameFunction();
+    virtual ~SetItemNameFunction();
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);

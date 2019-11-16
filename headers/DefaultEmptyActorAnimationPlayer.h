@@ -2,8 +2,8 @@
 
 class DefaultEmptyActorAnimationPlayer : ActorAnimationPlayer {
 
-    virtual void DefaultEmptyActorAnimationPlayer::~DefaultEmptyActorAnimationPlayer();
-    virtual void DefaultEmptyActorAnimationPlayer::~DefaultEmptyActorAnimationPlayer();
+    virtual ~DefaultEmptyActorAnimationPlayer();
+    virtual ~DefaultEmptyActorAnimationPlayer();
     virtual void applyToPose(RenderParams &, std::unordered_map<SkeletalHierarchyIndex, std::vector<BoneOrientation, std::allocator<BoneOrientation>>, std::hash<SkeletalHierarchyIndex>, std::equal_to<SkeletalHierarchyIndex>, std::allocator<std::pair<SkeletalHierarchyIndex const, std::vector<BoneOrientation, std::allocator<BoneOrientation>>>>> &, float);
     virtual void resetAnimation(void);
     virtual void buildBoneToPartMapping(AnimationComponent &);

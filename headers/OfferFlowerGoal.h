@@ -2,8 +2,8 @@
 
 class OfferFlowerGoal : Goal {
 
-    virtual void OfferFlowerGoal::~OfferFlowerGoal();
-    virtual void OfferFlowerGoal::~OfferFlowerGoal();
+    virtual ~OfferFlowerGoal();
+    virtual ~OfferFlowerGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

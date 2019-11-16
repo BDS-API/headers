@@ -2,8 +2,8 @@
 
 class BrewingStandContainerManagerModel : ContainerManagerModel {
 
-    virtual void BrewingStandContainerManagerModel::~BrewingStandContainerManagerModel();
-    virtual void BrewingStandContainerManagerModel::~BrewingStandContainerManagerModel();
+    virtual ~BrewingStandContainerManagerModel();
+    virtual ~BrewingStandContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

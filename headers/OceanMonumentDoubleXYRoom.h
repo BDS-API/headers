@@ -2,8 +2,8 @@
 
 class OceanMonumentDoubleXYRoom : OceanMonumentPiece {
 
-    virtual void OceanMonumentDoubleXYRoom::~OceanMonumentDoubleXYRoom();
-    virtual void OceanMonumentDoubleXYRoom::~OceanMonumentDoubleXYRoom();
+    virtual ~OceanMonumentDoubleXYRoom();
+    virtual ~OceanMonumentDoubleXYRoom();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

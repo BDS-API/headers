@@ -2,8 +2,8 @@
 
 class DoorBlock : BlockLegacy {
 
-    virtual void DoorBlock::~DoorBlock();
-    virtual void DoorBlock::~DoorBlock();
+    virtual ~DoorBlock();
+    virtual ~DoorBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

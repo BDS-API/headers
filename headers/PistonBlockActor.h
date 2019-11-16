@@ -2,8 +2,8 @@
 
 class PistonBlockActor : BlockActor {
 
-    virtual void PistonBlockActor::~PistonBlockActor();
-    virtual void PistonBlockActor::~PistonBlockActor();
+    virtual ~PistonBlockActor();
+    virtual ~PistonBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

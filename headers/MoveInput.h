@@ -2,8 +2,8 @@
 
 class MoveInput {
 
-    virtual void MoveInput::~MoveInput();
-    virtual void MoveInput::~MoveInput();
+    virtual ~MoveInput();
+    virtual ~MoveInput();
     virtual void tick(Player &);
     virtual void render(float);
     virtual void setKey(int, bool);

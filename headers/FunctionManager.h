@@ -2,6 +2,6 @@
 
 class FunctionManager {
 
-    virtual void FunctionManager::~FunctionManager();
-    virtual void FunctionManager::~FunctionManager();
+    virtual ~FunctionManager();
+    virtual ~FunctionManager();
 }

@@ -2,8 +2,8 @@
 
 class SnowballItem : Item {
 
-    virtual void SnowballItem::~SnowballItem();
-    virtual void SnowballItem::~SnowballItem();
+    virtual ~SnowballItem();
+    virtual ~SnowballItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

@@ -2,8 +2,8 @@
 
 class ShowCreditsPacket : Packet {
 
-    virtual void ShowCreditsPacket::~ShowCreditsPacket();
-    virtual void ShowCreditsPacket::~ShowCreditsPacket();
+    virtual ~ShowCreditsPacket();
+    virtual ~ShowCreditsPacket();
     virtual void getId(void)const;
     virtual void _ZNK17ShowCreditsPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -2,8 +2,8 @@
 
 class WorkGoal : MoveToPOIGoal {
 
-    virtual void WorkGoal::~WorkGoal();
-    virtual void WorkGoal::~WorkGoal();
+    virtual ~WorkGoal();
+    virtual ~WorkGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

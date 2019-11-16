@@ -2,8 +2,8 @@
 
 class ExternalFileLevelStorageSource : LevelStorageSource {
 
-    virtual void ExternalFileLevelStorageSource::~ExternalFileLevelStorageSource();
-    virtual void ExternalFileLevelStorageSource::~ExternalFileLevelStorageSource();
+    virtual ~ExternalFileLevelStorageSource();
+    virtual ~ExternalFileLevelStorageSource();
     virtual void _ZNK30ExternalFileLevelStorageSource7getNameB5cxx11Ev;
     virtual void getLevelData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
     virtual void getLevelData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, LevelData &)const;

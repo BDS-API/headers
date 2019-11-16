@@ -2,8 +2,8 @@
 
 class ShareItemsGoal : Goal {
 
-    virtual void ShareItemsGoal::~ShareItemsGoal();
-    virtual void ShareItemsGoal::~ShareItemsGoal();
+    virtual ~ShareItemsGoal();
+    virtual ~ShareItemsGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

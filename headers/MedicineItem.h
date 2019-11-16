@@ -2,8 +2,8 @@
 
 class MedicineItem : ChemistryItem {
 
-    virtual void MedicineItem::~MedicineItem();
-    virtual void MedicineItem::~MedicineItem();
+    virtual ~MedicineItem();
+    virtual ~MedicineItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

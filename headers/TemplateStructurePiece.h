@@ -2,8 +2,8 @@
 
 class TemplateStructurePiece : StructurePiece {
 
-    virtual void TemplateStructurePiece::~TemplateStructurePiece();
-    virtual void TemplateStructurePiece::~TemplateStructurePiece();
+    virtual ~TemplateStructurePiece();
+    virtual ~TemplateStructurePiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

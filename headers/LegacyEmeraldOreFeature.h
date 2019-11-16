@@ -2,8 +2,8 @@
 
 class LegacyEmeraldOreFeature : Feature {
 
-    virtual void LegacyEmeraldOreFeature::~LegacyEmeraldOreFeature();
-    virtual void LegacyEmeraldOreFeature::~LegacyEmeraldOreFeature();
+    virtual ~LegacyEmeraldOreFeature();
+    virtual ~LegacyEmeraldOreFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

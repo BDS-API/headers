@@ -2,8 +2,8 @@
 
 class CropBlock : BushBlock {
 
-    virtual void CropBlock::~CropBlock();
-    virtual void CropBlock::~CropBlock();
+    virtual ~CropBlock();
+    virtual ~CropBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

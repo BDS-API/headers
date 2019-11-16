@@ -2,8 +2,8 @@
 
 class BlockExplodeableDescription : BlockComponentDescription {
 
-    virtual void BlockExplodeableDescription::~BlockExplodeableDescription();
-    virtual void BlockExplodeableDescription::~BlockExplodeableDescription();
+    virtual ~BlockExplodeableDescription();
+    virtual ~BlockExplodeableDescription();
     virtual void _ZNK27BlockExplodeableDescription7getNameB5cxx11Ev;
     virtual void initializeComponent(BlockLegacy &)const;
     virtual void buildSchema(JsonUtil::JsonSchemaObjectNode<JsonUtil::JsonParseState<JsonUtil::EmptyClass, BlockDefinition>, BlockDefinition> &)const;

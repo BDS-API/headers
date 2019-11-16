@@ -2,8 +2,8 @@
 
 class TripWireHookBlock : BlockLegacy {
 
-    virtual void TripWireHookBlock::~TripWireHookBlock();
-    virtual void TripWireHookBlock::~TripWireHookBlock();
+    virtual ~TripWireHookBlock();
+    virtual ~TripWireHookBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

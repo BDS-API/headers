@@ -2,8 +2,8 @@
 
 class PurchaseReceiptPacket : Packet {
 
-    virtual void PurchaseReceiptPacket::~PurchaseReceiptPacket();
-    virtual void PurchaseReceiptPacket::~PurchaseReceiptPacket();
+    virtual ~PurchaseReceiptPacket();
+    virtual ~PurchaseReceiptPacket();
     virtual void getId(void)const;
     virtual void _ZNK21PurchaseReceiptPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

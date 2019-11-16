@@ -2,8 +2,8 @@
 
 class UpdateAttributesPacket : Packet {
 
-    virtual void UpdateAttributesPacket::~UpdateAttributesPacket();
-    virtual void UpdateAttributesPacket::~UpdateAttributesPacket();
+    virtual ~UpdateAttributesPacket();
+    virtual ~UpdateAttributesPacket();
     virtual void getId(void)const;
     virtual void _ZNK22UpdateAttributesPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

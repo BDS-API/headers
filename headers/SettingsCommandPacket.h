@@ -2,8 +2,8 @@
 
 class SettingsCommandPacket : Packet {
 
-    virtual void SettingsCommandPacket::~SettingsCommandPacket();
-    virtual void SettingsCommandPacket::~SettingsCommandPacket();
+    virtual ~SettingsCommandPacket();
+    virtual ~SettingsCommandPacket();
     virtual void getId(void)const;
     virtual void _ZNK21SettingsCommandPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

@@ -2,8 +2,8 @@
 
 class EnchantingTableBlock : ActorBlock {
 
-    virtual void EnchantingTableBlock::~EnchantingTableBlock();
-    virtual void EnchantingTableBlock::~EnchantingTableBlock();
+    virtual ~EnchantingTableBlock();
+    virtual ~EnchantingTableBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

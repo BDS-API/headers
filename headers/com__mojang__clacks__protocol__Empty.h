@@ -2,8 +2,8 @@
 
 class com::mojang::clacks::protocol::Empty : google::protobuf::Message {
 
-    virtual void com::mojang::clacks::protocol::Empty::~Empty();
-    virtual void com::mojang::clacks::protocol::Empty::~Empty();
+    virtual ~Empty();
+    virtual ~Empty();
     virtual void _ZNK6google8protobuf7Message11GetTypeNameB5cxx11Ev;
     virtual void New(void)const;
     virtual void New(google::protobuf::Arena *)const;

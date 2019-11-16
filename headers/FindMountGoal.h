@@ -2,8 +2,8 @@
 
 class FindMountGoal : Goal {
 
-    virtual void FindMountGoal::~FindMountGoal();
-    virtual void FindMountGoal::~FindMountGoal();
+    virtual ~FindMountGoal();
+    virtual ~FindMountGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

@@ -2,8 +2,8 @@
 
 class LevelStorage {
 
-    virtual void LevelStorage::~LevelStorage();
-    virtual void LevelStorage::~LevelStorage();
+    virtual ~LevelStorage();
+    virtual ~LevelStorage();
     virtual void addStorageObserver(std::unique_ptr<LevelStorageObserver, std::default_delete<LevelStorageObserver>>);
     virtual void tick(void);
     virtual void getCompoundTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);

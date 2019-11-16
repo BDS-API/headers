@@ -2,8 +2,8 @@
 
 class BreedGoal : Goal {
 
-    virtual void BreedGoal::~BreedGoal();
-    virtual void BreedGoal::~BreedGoal();
+    virtual ~BreedGoal();
+    virtual ~BreedGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

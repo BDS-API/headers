@@ -2,8 +2,8 @@
 
 class OffhandContainerController : ContainerController {
 
-    virtual void OffhandContainerController::~OffhandContainerController();
-    virtual void OffhandContainerController::~OffhandContainerController();
+    virtual ~OffhandContainerController();
+    virtual ~OffhandContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

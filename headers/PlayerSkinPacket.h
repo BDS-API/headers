@@ -2,8 +2,8 @@
 
 class PlayerSkinPacket : Packet {
 
-    virtual void PlayerSkinPacket::~PlayerSkinPacket();
-    virtual void PlayerSkinPacket::~PlayerSkinPacket();
+    virtual ~PlayerSkinPacket();
+    virtual ~PlayerSkinPacket();
     virtual void getId(void)const;
     virtual void _ZNK16PlayerSkinPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

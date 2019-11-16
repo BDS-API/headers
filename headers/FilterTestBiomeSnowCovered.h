@@ -2,8 +2,8 @@
 
 class FilterTestBiomeSnowCovered : SimpleBoolFilterTest {
 
-    virtual void FilterTestBiomeSnowCovered::~FilterTestBiomeSnowCovered();
-    virtual void FilterTestBiomeSnowCovered::~FilterTestBiomeSnowCovered();
+    virtual ~FilterTestBiomeSnowCovered();
+    virtual ~FilterTestBiomeSnowCovered();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

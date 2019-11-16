@@ -2,8 +2,8 @@
 
 class SnackGoal : Goal {
 
-    virtual void SnackGoal::~SnackGoal();
-    virtual void SnackGoal::~SnackGoal();
+    virtual ~SnackGoal();
+    virtual ~SnackGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);
