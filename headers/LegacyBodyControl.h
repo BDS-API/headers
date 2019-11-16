@@ -2,7 +2,7 @@
 
 class LegacyBodyControl : BodyControl {
 
-    virtual void Legacy~LegacyBodyControl();
-    virtual void Legacy~LegacyBodyControl();
-    virtual void LegacyclientTick(Mob &);
+    virtual void LegacyBodyControl::~LegacyBodyControl();
+    virtual void LegacyBodyControl::~LegacyBodyControl();
+    virtual void clientTick(Mob &);
 }

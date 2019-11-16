@@ -2,11 +2,11 @@
 
 class MapCreateLockedCopyPacket : Packet {
 
-    virtual void MapCreateLockedCopy~MapCreateLockedCopyPacket();
-    virtual void MapCreateLockedCopy~MapCreateLockedCopyPacket();
-    virtual void MapCreateLockedCopygetId(void)const;
+    virtual void MapCreateLockedCopyPacket::~MapCreateLockedCopyPacket();
+    virtual void MapCreateLockedCopyPacket::~MapCreateLockedCopyPacket();
+    virtual void getId(void)const;
     virtual void _ZNK25MapCreateLockedCopyPacket7getNameB5cxx11Ev;
-    virtual void MapCreateLockedCopywrite(BinaryStream &)const;
-    virtual void MapCreateLockedCopyread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

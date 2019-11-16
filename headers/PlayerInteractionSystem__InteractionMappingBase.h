@@ -2,7 +2,7 @@
 
 class PlayerInteractionSystem::InteractionMappingBase {
 
-    virtual void ~InteractionMappingBase();
-    virtual void ~InteractionMappingBase();
+    virtual void PlayerInteractionSystem::InteractionMappingBase::~InteractionMappingBase();
+    virtual void PlayerInteractionSystem::InteractionMappingBase::~InteractionMappingBase();
     virtual void getInteraction(Actor &, Player &, ActorInteraction &);
 }

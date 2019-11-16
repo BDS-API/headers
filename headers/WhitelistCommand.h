@@ -2,7 +2,7 @@
 
 class WhitelistCommand : Command {
 
-    virtual void Whitelist~WhitelistCommand();
-    virtual void Whitelist~WhitelistCommand();
-    virtual void Whitelistexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void WhitelistCommand::~WhitelistCommand();
+    virtual void WhitelistCommand::~WhitelistCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

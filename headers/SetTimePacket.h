@@ -2,11 +2,11 @@
 
 class SetTimePacket : Packet {
 
-    virtual void SetTime~SetTimePacket();
-    virtual void SetTime~SetTimePacket();
-    virtual void SetTimegetId(void)const;
+    virtual void SetTimePacket::~SetTimePacket();
+    virtual void SetTimePacket::~SetTimePacket();
+    virtual void getId(void)const;
     virtual void _ZNK13SetTimePacket7getNameB5cxx11Ev;
-    virtual void SetTimewrite(BinaryStream &)const;
-    virtual void SetTimeread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

@@ -2,8 +2,8 @@
 
 class IMinecraftEventing : IPackTelemetry, IWebviewTelemetry {
 
-    virtual void ~IMinecraftEventing();
-    virtual void ~IMinecraftEventing();
+    virtual void IMinecraftEventing::~IMinecraftEventing();
+    virtual void IMinecraftEventing::~IMinecraftEventing();
     virtual void fireEventPackUpgradeAttempt(PackManifest const&, PackReport const&);
     virtual void init(Social::IUserManager &);
     virtual void _ZN17IMinecraftEventing18getPlayerSessionIdB5cxx11Ev;
@@ -215,15 +215,15 @@ class IMinecraftEventing : IPackTelemetry, IWebviewTelemetry {
     virtual void fireStructureBlockRedstoneActivated(IIMinecraftEventing::StructureBlockActionType, StructureEditorData const&, StructureTelemetryClientData const*);
     virtual void fireStructureBlockLoadedInUnloadedChunks(unsigned int, BlockPos const&, BlockPos const&);
     virtual void ;
-    virtual void `non-virtual thunk to'~IMinecraftEventing();
-    virtual void `non-virtual thunk to'~IMinecraftEventing();
+    virtual void `non-virtual thunk to'IMinecraftEventing::~IMinecraftEventing();
+    virtual void `non-virtual thunk to'IMinecraftEventing::~IMinecraftEventing();
     virtual void Core::Observer<WebviewObserver, Core::SingleThreadedLock>::_onSubjectDestroyed(void);
-    virtual void WebviewObserver::onLoadingBegin(void);
-    virtual void WebviewObserver::onLoadingEnd(void);
-    virtual void WebviewObserver::onError(WebviewError const&);
+    virtual void onLoadingBegin(void);
+    virtual void onLoadingEnd(void);
+    virtual void onError(WebviewError const&);
     virtual void onDownloadBegin(WebviewDownloadInfo const&);
-    virtual void WebviewObserver::onDownloadUpdate(WebviewDownloadInfo const&);
+    virtual void onDownloadUpdate(WebviewDownloadInfo const&);
     virtual void onDownloadComplete(WebviewDownloadInfo const&);
     virtual void onDownloadCanceled(WebviewDownloadInfo const&);
-    virtual void WebviewObserver::onMessageRecieved(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void onMessageRecieved(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
 }

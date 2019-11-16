@@ -2,8 +2,8 @@
 
 class PotionItem : Item {
 
-    virtual void Potion~PotionItem();
-    virtual void Potion~PotionItem();
+    virtual void PotionItem::~PotionItem();
+    virtual void PotionItem::~PotionItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -30,7 +30,7 @@ class PotionItem : Item {
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
-    virtual void PotionisGlint(ItemStackBase const&)const;
+    virtual void isGlint(ItemStackBase const&)const;
     virtual void isThrowable(void)const;
     virtual void isPattern(void)const;
     virtual void showsDurabilityInCreative(void)const;
@@ -39,15 +39,15 @@ class PotionItem : Item {
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
-    virtual void PotionappendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
-    virtual void PotionisValidAuxValue(int)const;
+    virtual void isValidAuxValue(int)const;
     virtual void getDamageChance(int)const;
-    virtual void PotionuniqueAuxValues(void)const;
+    virtual void uniqueAuxValues(void)const;
     virtual void isMultiColorTinted(ItemStack const&)const;
     virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
     virtual void getBaseColor(ItemStack const&)const;
@@ -55,10 +55,10 @@ class PotionItem : Item {
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
-    virtual void Potionuse(ItemStack &, Player &)const;
+    virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
-    virtual void PotionuseTimeDepleted(ItemStack &, Level *, Player *)const;
+    virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
     virtual void releaseUsing(ItemStack &, Player *, int)const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
@@ -86,9 +86,9 @@ class PotionItem : Item {
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void isEmissive(int)const;
-    virtual void PotiongetIcon(ItemStackBase const&, int, bool)const;
+    virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset(void)const;
-    virtual void PotionsetIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void setIcon(TextureUVCoordinateSet const&);
     virtual void setIconAtlas(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void canBeCharged(void)const;
@@ -101,5 +101,5 @@ class PotionItem : Item {
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void PotiongetPotionType(void)const;
+    virtual void getPotionType(void)const;
 }

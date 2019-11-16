@@ -2,13 +2,13 @@
 
 class DynamicJumpControl : JumpControl {
 
-    virtual void Dynamic~DynamicJumpControl();
-    virtual void Dynamic~DynamicJumpControl();
-    virtual void DynamicinitializeInternal(Mob &, JumpControlDescription *);
-    virtual void Dynamictick(JumpControlComponent &, Mob &);
-    virtual void DynamicgetJumpDelay(JumpControlComponent const&, Mob const&)const;
-    virtual void DynamicgetJumpPower(JumpControlComponent const&, Mob const&)const;
-    virtual void DynamicgetJumpType(JumpControlComponent const&, Mob const&)const;
-    virtual void DynamicsetJumpType(JumpControlComponent &, Mob &, JumpType);
-    virtual void DynamicresetSpeedModifier(JumpControlComponent const&, Mob &);
+    virtual void DynamicJumpControl::~DynamicJumpControl();
+    virtual void DynamicJumpControl::~DynamicJumpControl();
+    virtual void initializeInternal(Mob &, JumpControlDescription *);
+    virtual void tick(JumpControlComponent &, Mob &);
+    virtual void getJumpDelay(JumpControlComponent const&, Mob const&)const;
+    virtual void getJumpPower(JumpControlComponent const&, Mob const&)const;
+    virtual void getJumpType(JumpControlComponent const&, Mob const&)const;
+    virtual void setJumpType(JumpControlComponent &, Mob &, JumpType);
+    virtual void resetSpeedModifier(JumpControlComponent const&, Mob &);
 }

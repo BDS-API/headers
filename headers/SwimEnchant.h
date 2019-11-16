@@ -2,13 +2,13 @@
 
 class SwimEnchant : Enchant {
 
-    virtual void Swim~SwimEnchant();
-    virtual void Swim~SwimEnchant();
+    virtual void SwimEnchant::~SwimEnchant();
+    virtual void SwimEnchant::~SwimEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
-    virtual void SwimgetMinCost(int)const;
-    virtual void SwimgetMaxCost(int)const;
+    virtual void getMinCost(int)const;
+    virtual void getMaxCost(int)const;
     virtual void getMinLevel(void)const;
-    virtual void SwimgetMaxLevel(void)const;
+    virtual void getMaxLevel(void)const;
     virtual void getDamageProtection(int, ActorDamageSource const&)const;
     virtual void getDamageBonus(int, Actor const&)const;
     virtual void doPostAttack(Actor &, Actor &, int)const;

@@ -2,6 +2,6 @@
 
 class CommandPropertyBag {
 
-    virtual void ~CommandPropertyBag();
-    virtual void ~CommandPropertyBag();
+    virtual void CommandPropertyBag::~CommandPropertyBag();
+    virtual void CommandPropertyBag::~CommandPropertyBag();
 }

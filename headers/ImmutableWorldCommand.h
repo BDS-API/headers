@@ -2,7 +2,7 @@
 
 class ImmutableWorldCommand : Command {
 
-    virtual void ImmutableWorld~ImmutableWorldCommand();
-    virtual void ImmutableWorld~ImmutableWorldCommand();
-    virtual void ImmutableWorldexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void ImmutableWorldCommand::~ImmutableWorldCommand();
+    virtual void ImmutableWorldCommand::~ImmutableWorldCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

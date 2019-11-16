@@ -2,8 +2,8 @@
 
 class WritableBookItem : Item {
 
-    virtual void WritableBook~WritableBookItem();
-    virtual void WritableBook~WritableBookItem();
+    virtual void WritableBookItem::~WritableBookItem();
+    virtual void WritableBookItem::~WritableBookItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -38,7 +38,7 @@ class WritableBookItem : Item {
     virtual void canDestroyInCreative(void)const;
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
-    virtual void WritableBookrequiresInteract(void)const;
+    virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
@@ -55,7 +55,7 @@ class WritableBookItem : Item {
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
-    virtual void WritableBookuse(ItemStack &, Player &)const;
+    virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;

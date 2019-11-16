@@ -2,8 +2,8 @@
 
 class ClacksServer : com::mojang::clacks::protocol::Commands::Service {
 
-    virtual void ~ClacksServer();
-    virtual void ~ClacksServer();
+    virtual void ClacksServer::~ClacksServer();
+    virtual void ClacksServer::~ClacksServer();
     virtual void listPlayer(grpc::ServerContext *, com::mojang::clacks::protocol::Empty const*, com::mojang::clacks::protocol::PlayerList *);
     virtual void kick(grpc::ServerContext *, com::mojang::clacks::protocol::PlayerAndMessage const*, com::mojang::clacks::protocol::Empty *);
     virtual void say(grpc::ServerContext *, com::mojang::clacks::protocol::Message const*, com::mojang::clacks::protocol::Empty *);

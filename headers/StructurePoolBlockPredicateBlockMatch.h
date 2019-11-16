@@ -2,7 +2,7 @@
 
 class StructurePoolBlockPredicateBlockMatch : IStructurePoolBlockPredicate {
 
-    virtual void ~StructurePoolBlockPredicateBlockMatch();
-    virtual void ~StructurePoolBlockPredicateBlockMatch();
+    virtual void StructurePoolBlockPredicateBlockMatch::~StructurePoolBlockPredicateBlockMatch();
+    virtual void StructurePoolBlockPredicateBlockMatch::~StructurePoolBlockPredicateBlockMatch();
     virtual void test(Block const&, Random &)const;
 }

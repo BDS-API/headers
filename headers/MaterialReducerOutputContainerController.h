@@ -2,9 +2,9 @@
 
 class MaterialReducerOutputContainerController : ContainerController {
 
-    virtual void MaterialReducerOutput~MaterialReducerOutputContainerController();
-    virtual void MaterialReducerOutput~MaterialReducerOutputContainerController();
-    virtual void MaterialReducerOutputisItemAllowed(ItemInstance const&)const;
+    virtual void MaterialReducerOutputContainerController::~MaterialReducerOutputContainerController();
+    virtual void MaterialReducerOutputContainerController::~MaterialReducerOutputContainerController();
+    virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;
     virtual void getBackgroundStyle(int)const;

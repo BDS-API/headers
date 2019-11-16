@@ -2,8 +2,8 @@
 
 class EducationOptions : ResourcePackListener {
 
-    virtual void ~EducationOptions();
-    virtual void ~EducationOptions();
+    virtual void EducationOptions::~EducationOptions();
+    virtual void EducationOptions::~EducationOptions();
     virtual void onActiveResourcePacksChanged(ResourcePackManager &);
     virtual void onFullPackStackInvalid(void);
     virtual void onBaseGamePackDownloadComplete(void);

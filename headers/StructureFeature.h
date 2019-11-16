@@ -2,8 +2,8 @@
 
 class StructureFeature {
 
-    virtual void ~StructureFeature();
-    virtual void ~StructureFeature();
+    virtual void StructureFeature::~StructureFeature();
+    virtual void StructureFeature::~StructureFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

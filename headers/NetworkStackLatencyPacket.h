@@ -2,11 +2,11 @@
 
 class NetworkStackLatencyPacket : Packet {
 
-    virtual void NetworkStackLatency~NetworkStackLatencyPacket();
-    virtual void NetworkStackLatency~NetworkStackLatencyPacket();
-    virtual void NetworkStackLatencygetId(void)const;
+    virtual void NetworkStackLatencyPacket::~NetworkStackLatencyPacket();
+    virtual void NetworkStackLatencyPacket::~NetworkStackLatencyPacket();
+    virtual void getId(void)const;
     virtual void _ZNK25NetworkStackLatencyPacket7getNameB5cxx11Ev;
-    virtual void NetworkStackLatencywrite(BinaryStream &)const;
-    virtual void NetworkStackLatencyread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

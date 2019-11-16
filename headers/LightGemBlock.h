@@ -2,8 +2,8 @@
 
 class LightGemBlock : BlockLegacy {
 
-    virtual void ~LightGemBlock();
-    virtual void ~LightGemBlock();
+    virtual void LightGemBlock::~LightGemBlock();
+    virtual void LightGemBlock::~LightGemBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

@@ -2,13 +2,13 @@
 
 class FishingEnchant : Enchant {
 
-    virtual void Fishing~FishingEnchant();
-    virtual void Fishing~FishingEnchant();
+    virtual void FishingEnchant::~FishingEnchant();
+    virtual void FishingEnchant::~FishingEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
-    virtual void FishinggetMinCost(int)const;
-    virtual void FishinggetMaxCost(int)const;
+    virtual void getMinCost(int)const;
+    virtual void getMaxCost(int)const;
     virtual void getMinLevel(void)const;
-    virtual void FishinggetMaxLevel(void)const;
+    virtual void getMaxLevel(void)const;
     virtual void getDamageProtection(int, ActorDamageSource const&)const;
     virtual void getDamageBonus(int, Actor const&)const;
     virtual void doPostAttack(Actor &, Actor &, int)const;

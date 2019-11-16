@@ -2,7 +2,7 @@
 
 class Automation::AutomationClient : UriListener {
 
-    virtual void ~AutomationClient();
-    virtual void ~AutomationClient();
+    virtual void Automation::AutomationClient::~AutomationClient();
+    virtual void Automation::AutomationClient::~AutomationClient();
     virtual void onUri(ActivationUri const&);
 }

@@ -2,22 +2,22 @@
 
 class MovingBlockActor : BlockActor {
 
-    virtual void Moving~MovingBlockActor();
-    virtual void Moving~MovingBlockActor();
-    virtual void Movingload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void Movingsave(CompoundTag &)const;
+    virtual void MovingBlockActor::~MovingBlockActor();
+    virtual void MovingBlockActor::~MovingBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void Movingtick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
     virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void MovinggetUpdatePacket(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void MovingonUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);
@@ -32,9 +32,9 @@ class MovingBlockActor : BlockActor {
     virtual void _ZNK10BlockActor7getNameB5cxx11Ev;
     virtual void _ZN10BlockActor22getImmersiveReaderTextB5cxx11ER11BlockSource;
     virtual void getRepairCost(void)const;
-    virtual void MovinggetOwningPiston(BlockSource &);
+    virtual void getOwningPiston(BlockSource &);
     virtual void getContainer(void);
-    virtual void MovinggetDeletionDelayTimeSeconds(void)const;
+    virtual void getDeletionDelayTimeSeconds(void)const;
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onChunkUnloaded(LevelChunk &);
 }

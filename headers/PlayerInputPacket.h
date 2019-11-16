@@ -2,11 +2,11 @@
 
 class PlayerInputPacket : Packet {
 
-    virtual void PlayerInput~PlayerInputPacket();
-    virtual void PlayerInput~PlayerInputPacket();
-    virtual void PlayerInputgetId(void)const;
+    virtual void PlayerInputPacket::~PlayerInputPacket();
+    virtual void PlayerInputPacket::~PlayerInputPacket();
+    virtual void getId(void)const;
     virtual void _ZNK17PlayerInputPacket7getNameB5cxx11Ev;
-    virtual void PlayerInputwrite(BinaryStream &)const;
-    virtual void PlayerInputread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

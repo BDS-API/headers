@@ -2,8 +2,8 @@
 
 class BucketItem : Item {
 
-    virtual void Bucket~BucketItem();
-    virtual void Bucket~BucketItem();
+    virtual void BucketItem::~BucketItem();
+    virtual void BucketItem::~BucketItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -36,8 +36,8 @@ class BucketItem : Item {
     virtual void showsDurabilityInCreative(void)const;
     virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void canDestroyInCreative(void)const;
-    virtual void BucketisDestructive(int)const;
-    virtual void BucketisLiquidClipItem(int)const;
+    virtual void isDestructive(int)const;
+    virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
@@ -45,9 +45,9 @@ class BucketItem : Item {
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
-    virtual void BucketisValidAuxValue(int)const;
+    virtual void isValidAuxValue(int)const;
     virtual void getDamageChance(int)const;
-    virtual void BucketuniqueAuxValues(void)const;
+    virtual void uniqueAuxValues(void)const;
     virtual void isMultiColorTinted(ItemStack const&)const;
     virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
     virtual void getBaseColor(ItemStack const&)const;
@@ -55,12 +55,12 @@ class BucketItem : Item {
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
-    virtual void Bucketuse(ItemStack &, Player &)const;
-    virtual void Bucketdispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void use(ItemStack &, Player &)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
-    virtual void BucketuseTimeDepleted(ItemStack &, Level *, Player *)const;
+    virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
-    virtual void BucketreleaseUsing(ItemStack &, Player *, int)const;
+    virtual void releaseUsing(ItemStack &, Player *, int)const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
     virtual void hurtEnemy(ItemInstance &, Mob *, Mob *)const;
     virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
@@ -71,7 +71,7 @@ class BucketItem : Item {
     virtual void _ZNK4Item28buildCategoryDescriptionNameB5cxx11Ev;
     virtual void readUserData(ItemStackBase &, IDataInput &, ReadOnlyBinaryStream &)const;
     virtual void writeUserData(ItemStackBase const&, IDataOutput &)const;
-    virtual void BucketgetMaxStackSize(ItemDescriptor const&)const;
+    virtual void getMaxStackSize(ItemDescriptor const&)const;
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
     virtual void refreshedInContainer(ItemStackBase &, Level &)const;
     virtual void getCooldownType(void)const;
@@ -85,10 +85,10 @@ class BucketItem : Item {
     virtual void isSameItem(ItemStackBase const&, ItemStackBase const&)const;
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
-    virtual void BucketisEmissive(int)const;
-    virtual void BucketgetIcon(ItemStackBase const&, int, bool)const;
+    virtual void isEmissive(int)const;
+    virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset(void)const;
-    virtual void BucketsetIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void setIcon(TextureUVCoordinateSet const&);
     virtual void setIconAtlas(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void canBeCharged(void)const;
@@ -100,5 +100,5 @@ class BucketItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Bucket_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

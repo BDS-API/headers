@@ -2,8 +2,8 @@
 
 class ExperiencePotionItem : Item {
 
-    virtual void ExperiencePotion~ExperiencePotionItem();
-    virtual void ExperiencePotion~ExperiencePotionItem();
+    virtual void ExperiencePotionItem::~ExperiencePotionItem();
+    virtual void ExperiencePotionItem::~ExperiencePotionItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -30,8 +30,8 @@ class ExperiencePotionItem : Item {
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
-    virtual void ExperiencePotionisGlint(ItemStackBase const&)const;
-    virtual void ExperiencePotionisThrowable(void)const;
+    virtual void isGlint(ItemStackBase const&)const;
+    virtual void isThrowable(void)const;
     virtual void isPattern(void)const;
     virtual void showsDurabilityInCreative(void)const;
     virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
@@ -55,8 +55,8 @@ class ExperiencePotionItem : Item {
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
-    virtual void ExperiencePotionuse(ItemStack &, Player &)const;
-    virtual void ExperiencePotiondispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void use(ItemStack &, Player &)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;

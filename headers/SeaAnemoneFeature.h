@@ -2,8 +2,8 @@
 
 class SeaAnemoneFeature : Feature {
 
-    virtual void SeaAnemone~SeaAnemoneFeature();
-    virtual void SeaAnemone~SeaAnemoneFeature();
+    virtual void SeaAnemoneFeature::~SeaAnemoneFeature();
+    virtual void SeaAnemoneFeature::~SeaAnemoneFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void SeaAnemoneplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

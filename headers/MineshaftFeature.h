@@ -2,8 +2,8 @@
 
 class MineshaftFeature : StructureFeature {
 
-    virtual void ~MineshaftFeature();
-    virtual void ~MineshaftFeature();
+    virtual void MineshaftFeature::~MineshaftFeature();
+    virtual void MineshaftFeature::~MineshaftFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

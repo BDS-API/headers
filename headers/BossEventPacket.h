@@ -2,11 +2,11 @@
 
 class BossEventPacket : Packet {
 
-    virtual void BossEvent~BossEventPacket();
-    virtual void BossEvent~BossEventPacket();
-    virtual void BossEventgetId(void)const;
+    virtual void BossEventPacket::~BossEventPacket();
+    virtual void BossEventPacket::~BossEventPacket();
+    virtual void getId(void)const;
     virtual void _ZNK15BossEventPacket7getNameB5cxx11Ev;
-    virtual void BossEventwrite(BinaryStream &)const;
-    virtual void BossEventread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

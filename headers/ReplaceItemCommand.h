@@ -2,7 +2,7 @@
 
 class ReplaceItemCommand : Command {
 
-    virtual void ReplaceItem~ReplaceItemCommand();
-    virtual void ReplaceItem~ReplaceItemCommand();
-    virtual void ReplaceItemexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void ReplaceItemCommand::~ReplaceItemCommand();
+    virtual void ReplaceItemCommand::~ReplaceItemCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

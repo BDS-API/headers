@@ -2,8 +2,8 @@
 
 class ComplexItem : Item {
 
-    virtual void Complex~ComplexItem();
-    virtual void Complex~ComplexItem();
+    virtual void ComplexItem::~ComplexItem();
+    virtual void ComplexItem::~ComplexItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -44,7 +44,7 @@ class ComplexItem : Item {
     virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
-    virtual void ComplexisComplex(void)const;
+    virtual void isComplex(void)const;
     virtual void isValidAuxValue(int)const;
     virtual void getDamageChance(int)const;
     virtual void uniqueAuxValues(void)const;
@@ -101,5 +101,5 @@ class ComplexItem : Item {
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void ComplexgetUpdatePacket(ItemStack const&, Level &, Actor &)const;
+    virtual void getUpdatePacket(ItemStack const&, Level &, Actor &)const;
 }

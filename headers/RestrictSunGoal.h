@@ -2,15 +2,15 @@
 
 class RestrictSunGoal : Goal {
 
-    virtual void RestrictSun~RestrictSunGoal();
-    virtual void RestrictSun~RestrictSunGoal();
-    virtual void RestrictSuncanUse(void);
+    virtual void RestrictSunGoal::~RestrictSunGoal();
+    virtual void RestrictSunGoal::~RestrictSunGoal();
+    virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);
-    virtual void RestrictSunstart(void);
-    virtual void RestrictSunstop(void);
+    virtual void start(void);
+    virtual void stop(void);
     virtual void tick(void);
-    virtual void RestrictSunappendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
     virtual void isTargetGoal(void)const;
     virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
 }

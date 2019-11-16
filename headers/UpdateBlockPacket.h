@@ -2,11 +2,11 @@
 
 class UpdateBlockPacket : Packet {
 
-    virtual void UpdateBlock~UpdateBlockPacket();
-    virtual void UpdateBlock~UpdateBlockPacket();
-    virtual void UpdateBlockgetId(void)const;
+    virtual void UpdateBlockPacket::~UpdateBlockPacket();
+    virtual void UpdateBlockPacket::~UpdateBlockPacket();
+    virtual void getId(void)const;
     virtual void _ZNK17UpdateBlockPacket7getNameB5cxx11Ev;
-    virtual void UpdateBlockwrite(BinaryStream &)const;
-    virtual void UpdateBlockread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

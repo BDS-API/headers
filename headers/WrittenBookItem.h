@@ -2,8 +2,8 @@
 
 class WrittenBookItem : Item {
 
-    virtual void WrittenBook~WrittenBookItem();
-    virtual void WrittenBook~WrittenBookItem();
+    virtual void WrittenBookItem::~WrittenBookItem();
+    virtual void WrittenBookItem::~WrittenBookItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -30,7 +30,7 @@ class WrittenBookItem : Item {
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
-    virtual void WrittenBookisGlint(ItemStackBase const&)const;
+    virtual void isGlint(ItemStackBase const&)const;
     virtual void isThrowable(void)const;
     virtual void isPattern(void)const;
     virtual void showsDurabilityInCreative(void)const;
@@ -38,8 +38,8 @@ class WrittenBookItem : Item {
     virtual void canDestroyInCreative(void)const;
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
-    virtual void WrittenBookrequiresInteract(void)const;
-    virtual void WrittenBookappendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void requiresInteract(void)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
@@ -55,7 +55,7 @@ class WrittenBookItem : Item {
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
-    virtual void WrittenBookuse(ItemStack &, Player &)const;
+    virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;

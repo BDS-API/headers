@@ -2,11 +2,11 @@
 
 class CompositePackSource : PackSource {
 
-    virtual void Composite~CompositePackSource();
-    virtual void Composite~CompositePackSource();
-    virtual void CompositeforEachPackConst(std::function<void ()(Pack const&)>)const;
-    virtual void CompositeforEachPack(std::function<void ()(Pack &)>);
+    virtual void CompositePackSource::~CompositePackSource();
+    virtual void CompositePackSource::~CompositePackSource();
+    virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
+    virtual void forEachPack(std::function<void ()(Pack &)>);
     virtual void getPackOrigin(void)const;
     virtual void getPackType(void)const;
-    virtual void Compositeload(PackManifestFactory &, IContentKeyProvider const&);
+    virtual void load(PackManifestFactory &, IContentKeyProvider const&);
 }

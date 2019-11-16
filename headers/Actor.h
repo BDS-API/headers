@@ -7,8 +7,8 @@ class Actor {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void ~Actor();
-    virtual void ~Actor();
+    virtual void Actor::~Actor();
+    virtual void Actor::~Actor();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

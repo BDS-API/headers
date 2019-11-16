@@ -2,8 +2,8 @@
 
 class IContainerManager {
 
-    virtual void ~IContainerManager();
-    virtual void ~IContainerManager();
+    virtual void IContainerManager::~IContainerManager();
+    virtual void IContainerManager::~IContainerManager();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;

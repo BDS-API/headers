@@ -3,16 +3,16 @@
 class Core::InputFileStream : Core::FileStream {
 
     virtual void qword_98;
-    virtual void ~InputFileStream();
-    virtual void ~InputFileStream();
+    virtual void Core::InputFileStream::~InputFileStream();
+    virtual void Core::InputFileStream::~InputFileStream();
     virtual void off_88;
     virtual void ;
-    virtual void `non-virtual thunk to'~InputFileStream();
-    virtual void `non-virtual thunk to'~InputFileStream();
+    virtual void `non-virtual thunk to'Core::InputFileStream::~InputFileStream();
+    virtual void `non-virtual thunk to'Core::InputFileStream::~InputFileStream();
     virtual void ;
     virtual void ;
-    virtual void `virtual thunk to'~InputFileStream();
-    virtual void `virtual thunk to'~InputFileStream();
+    virtual void `virtual thunk to'Core::InputFileStream::~InputFileStream();
+    virtual void `virtual thunk to'Core::InputFileStream::~InputFileStream();
     virtual void off_ABBCDF0;
     virtual void off_ABBCED8;
     virtual void off_ABBCF78;

@@ -2,13 +2,13 @@
 
 class TridentLoyaltyEnchant : Enchant {
 
-    virtual void TridentLoyalty~TridentLoyaltyEnchant();
-    virtual void TridentLoyalty~TridentLoyaltyEnchant();
+    virtual void TridentLoyaltyEnchant::~TridentLoyaltyEnchant();
+    virtual void TridentLoyaltyEnchant::~TridentLoyaltyEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
-    virtual void TridentLoyaltygetMinCost(int)const;
-    virtual void TridentLoyaltygetMaxCost(int)const;
+    virtual void getMinCost(int)const;
+    virtual void getMaxCost(int)const;
     virtual void getMinLevel(void)const;
-    virtual void TridentLoyaltygetMaxLevel(void)const;
+    virtual void getMaxLevel(void)const;
     virtual void getDamageProtection(int, ActorDamageSource const&)const;
     virtual void getDamageBonus(int, Actor const&)const;
     virtual void doPostAttack(Actor &, Actor &, int)const;

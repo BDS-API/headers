@@ -2,8 +2,8 @@
 
 class OceanMonumentFeature : StructureFeature {
 
-    virtual void ~OceanMonumentFeature();
-    virtual void ~OceanMonumentFeature();
+    virtual void OceanMonumentFeature::~OceanMonumentFeature();
+    virtual void OceanMonumentFeature::~OceanMonumentFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

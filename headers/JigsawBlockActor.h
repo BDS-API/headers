@@ -2,8 +2,8 @@
 
 class JigsawBlockActor : BlockActor {
 
-    virtual void Jigsaw~JigsawBlockActor();
-    virtual void Jigsaw~JigsawBlockActor();
+    virtual void JigsawBlockActor::~JigsawBlockActor();
+    virtual void JigsawBlockActor::~JigsawBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

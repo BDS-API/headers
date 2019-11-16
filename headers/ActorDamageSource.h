@@ -2,8 +2,8 @@
 
 class ActorDamageSource {
 
-    virtual void ~ActorDamageSource();
-    virtual void ~ActorDamageSource();
+    virtual void ActorDamageSource::~ActorDamageSource();
+    virtual void ActorDamageSource::~ActorDamageSource();
     virtual void isEntitySource(void)const;
     virtual void isChildEntitySource(void)const;
     virtual void isBlockSource(void)const;

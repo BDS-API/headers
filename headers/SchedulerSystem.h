@@ -2,7 +2,7 @@
 
 class SchedulerSystem : ITickingSystem {
 
-    virtual void ~SchedulerSystem();
-    virtual void ~SchedulerSystem();
+    virtual void SchedulerSystem::~SchedulerSystem();
+    virtual void SchedulerSystem::~SchedulerSystem();
     virtual void tick(EntityRegistry &);
 }

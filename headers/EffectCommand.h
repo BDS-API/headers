@@ -2,7 +2,7 @@
 
 class EffectCommand : Command {
 
-    virtual void Effect~EffectCommand();
-    virtual void Effect~EffectCommand();
-    virtual void Effectexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void EffectCommand::~EffectCommand();
+    virtual void EffectCommand::~EffectCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

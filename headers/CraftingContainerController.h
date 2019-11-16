@@ -2,8 +2,8 @@
 
 class CraftingContainerController : ContainerController {
 
-    virtual void Crafting~CraftingContainerController();
-    virtual void Crafting~CraftingContainerController();
+    virtual void CraftingContainerController::~CraftingContainerController();
+    virtual void CraftingContainerController::~CraftingContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;
@@ -13,10 +13,10 @@ class CraftingContainerController : ContainerController {
     virtual void _getAvailableAddCount(int)const;
     virtual void _canRemove(int, int)const;
     virtual void _onItemChanged(int);
-    virtual void CraftingonRecipeSelected(Recipe const*, bool, bool);
-    virtual void CraftinggetRecipeItem(int)const;
-    virtual void CraftingclearSelectedRecipe(void);
-    virtual void CraftinggetSelectedRecipe(void)const;
-    virtual void CraftingsetGhostItem(ContainerItemStack const&, int, bool);
-    virtual void CraftinggetGhostItem(int)const;
+    virtual void onRecipeSelected(Recipe const*, bool, bool);
+    virtual void getRecipeItem(int)const;
+    virtual void clearSelectedRecipe(void);
+    virtual void getSelectedRecipe(void)const;
+    virtual void setGhostItem(ContainerItemStack const&, int, bool);
+    virtual void getGhostItem(int)const;
 }

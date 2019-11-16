@@ -2,15 +2,15 @@
 
 class SendEventGoal : Goal {
 
-    virtual void SendEvent~SendEventGoal();
-    virtual void SendEvent~SendEventGoal();
-    virtual void SendEventcanUse(void);
-    virtual void SendEventcanContinueToUse(void);
+    virtual void SendEventGoal::~SendEventGoal();
+    virtual void SendEventGoal::~SendEventGoal();
+    virtual void canUse(void);
+    virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);
-    virtual void SendEventstart(void);
-    virtual void SendEventstop(void);
-    virtual void SendEventtick(void);
-    virtual void SendEventappendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void start(void);
+    virtual void stop(void);
+    virtual void tick(void);
+    virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
     virtual void isTargetGoal(void)const;
     virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
 }

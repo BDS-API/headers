@@ -2,8 +2,8 @@
 
 class RangedWeaponItem : Item {
 
-    virtual void RangedWeapon~RangedWeaponItem();
-    virtual void RangedWeapon~RangedWeaponItem();
+    virtual void RangedWeaponItem::~RangedWeaponItem();
+    virtual void RangedWeaponItem::~RangedWeaponItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -42,7 +42,7 @@ class RangedWeaponItem : Item {
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
-    virtual void RangedWeapongetEnchantValue(void)const;
+    virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
     virtual void isValidAuxValue(int)const;
@@ -55,17 +55,17 @@ class RangedWeaponItem : Item {
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
-    virtual void RangedWeaponuse(ItemStack &, Player &)const;
+    virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
-    virtual void RangedWeaponreleaseUsing(ItemStack &, Player *, int)const;
+    virtual void releaseUsing(ItemStack &, Player *, int)const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
     virtual void hurtEnemy(ItemInstance &, Mob *, Mob *)const;
-    virtual void RangedWeaponhurtEnemy(ItemStack &, Mob *, Mob *)const;
+    virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemInstance &, Block const&, int, int, int, Actor *)const;
-    virtual void RangedWeaponmineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
+    virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
     virtual void _ZNK4Item18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE;
     virtual void _ZNK4Item26buildEffectDescriptionNameB5cxx11ERK13ItemStackBase;
     virtual void _ZNK4Item28buildCategoryDescriptionNameB5cxx11Ev;
@@ -84,7 +84,7 @@ class RangedWeaponItem : Item {
     virtual void getInHandUpdateType(Player const&, ItemStack const&, ItemStack const&, bool, bool)const;
     virtual void isSameItem(ItemStackBase const&, ItemStackBase const&)const;
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
-    virtual void RangedWeapongetAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
+    virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset(void)const;

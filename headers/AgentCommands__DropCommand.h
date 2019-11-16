@@ -2,8 +2,8 @@
 
 class AgentCommands::DropCommand : AgentCommands::Command {
 
-    virtual void ~DropCommand();
-    virtual void ~DropCommand();
+    virtual void AgentCommands::DropCommand::~DropCommand();
+    virtual void AgentCommands::DropCommand::~DropCommand();
     virtual void execute(void);
     virtual void isDone(void);
     virtual void tick(void);

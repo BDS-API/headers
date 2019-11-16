@@ -2,8 +2,8 @@
 
 class Core::FileStorageArea {
 
-    virtual void ~FileStorageArea();
-    virtual void ~FileStorageArea();
+    virtual void Core::FileStorageArea::~FileStorageArea();
+    virtual void Core::FileStorageArea::~FileStorageArea();
     virtual void __cxa_pure_virtual;
     virtual void __cxa_pure_virtual;
     virtual void __cxa_pure_virtual;

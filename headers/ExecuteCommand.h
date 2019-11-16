@@ -2,7 +2,7 @@
 
 class ExecuteCommand : Command {
 
-    virtual void Execute~ExecuteCommand();
-    virtual void Execute~ExecuteCommand();
-    virtual void Executeexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void ExecuteCommand::~ExecuteCommand();
+    virtual void ExecuteCommand::~ExecuteCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

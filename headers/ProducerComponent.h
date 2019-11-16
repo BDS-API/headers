@@ -2,8 +2,8 @@
 
 class ProducerComponent : BaseCircuitComponent {
 
-    virtual void ~ProducerComponent();
-    virtual void ~ProducerComponent();
+    virtual void ProducerComponent::~ProducerComponent();
+    virtual void ProducerComponent::~ProducerComponent();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

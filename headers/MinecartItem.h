@@ -2,8 +2,8 @@
 
 class MinecartItem : Item {
 
-    virtual void Minecart~MinecartItem();
-    virtual void Minecart~MinecartItem();
+    virtual void MinecartItem::~MinecartItem();
+    virtual void MinecartItem::~MinecartItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -36,7 +36,7 @@ class MinecartItem : Item {
     virtual void showsDurabilityInCreative(void)const;
     virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void canDestroyInCreative(void)const;
-    virtual void MinecartisDestructive(int)const;
+    virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
@@ -56,7 +56,7 @@ class MinecartItem : Item {
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void Minecartdispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
@@ -100,5 +100,5 @@ class MinecartItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Minecart_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

@@ -2,23 +2,23 @@
 
 class CraftingContainer : Container {
 
-    virtual void Crafting~CraftingContainer();
-    virtual void Crafting~CraftingContainer();
+    virtual void CraftingContainer::~CraftingContainer();
+    virtual void CraftingContainer::~CraftingContainer();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);
-    virtual void CraftinggetItem(int)const;
+    virtual void getItem(int)const;
     virtual void hasRoomForItem(ItemStack const&);
     virtual void addItem(ItemStack &);
     virtual void addItemToFirstEmptySlot(ItemStack &);
-    virtual void CraftingsetItem(int, ItemStack const&);
+    virtual void setItem(int, ItemStack const&);
     virtual void removeItem(int, int);
     virtual void removeAllItems(void);
     virtual void dropContents(BlockSource &, Vec3 const&, bool);
-    virtual void CraftinggetContainerSize(void)const;
-    virtual void CraftinggetMaxStackSize(void)const;
-    virtual void CraftingstartOpen(Player &);
-    virtual void CraftingstopOpen(Player &);
+    virtual void getContainerSize(void)const;
+    virtual void getMaxStackSize(void)const;
+    virtual void startOpen(Player &);
+    virtual void stopOpen(Player &);
     virtual void getSlotCopies(void)const;
     virtual void getSlots(void)const;
     virtual void getItemCount(ItemDescriptor const&);
@@ -26,7 +26,7 @@ class CraftingContainer : Container {
     virtual void findFirstSlotForItem(ItemStack const&)const;
     virtual void canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
     virtual void canPullOutItem(BlockSource &, int, int, ItemInstance const&)const;
-    virtual void CraftingsetContainerChanged(int);
+    virtual void setContainerChanged(int);
     virtual void setContainerMoved(void);
     virtual void setCustomName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void hasCustomName(void)const;

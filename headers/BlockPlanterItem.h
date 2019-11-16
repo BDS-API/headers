@@ -2,8 +2,8 @@
 
 class BlockPlanterItem : Item {
 
-    virtual void BlockPlanter~BlockPlanterItem();
-    virtual void BlockPlanter~BlockPlanterItem();
+    virtual void BlockPlanterItem::~BlockPlanterItem();
+    virtual void BlockPlanterItem::~BlockPlanterItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -98,7 +98,7 @@ class BlockPlanterItem : Item {
     virtual void _checkUseOnPermissions(Actor &, ItemInstance &, unsigned char const&, BlockPos const&)const;
     virtual void _checkUseOnPermissions(Actor &, ItemStack &, unsigned char const&, BlockPos const&)const;
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
-    virtual void BlockPlanter_calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
+    virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void BlockPlanter_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

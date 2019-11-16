@@ -2,7 +2,7 @@
 
 class StopSoundCommand : Command {
 
-    virtual void StopSound~StopSoundCommand();
-    virtual void StopSound~StopSoundCommand();
-    virtual void StopSoundexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void StopSoundCommand::~StopSoundCommand();
+    virtual void StopSoundCommand::~StopSoundCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

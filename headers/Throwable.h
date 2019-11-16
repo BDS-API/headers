@@ -4,11 +4,11 @@ class Throwable : Actor {
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void initializeComponents(InitializationMethod, VariantParameterList const&);
+    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void ~Throwable();
-    virtual void ~Throwable();
+    virtual void Throwable::~Throwable();
+    virtual void Throwable::~Throwable();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

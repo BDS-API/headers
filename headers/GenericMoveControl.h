@@ -2,9 +2,9 @@
 
 class GenericMoveControl : MoveControl {
 
-    virtual void Generic~GenericMoveControl();
-    virtual void Generic~GenericMoveControl();
-    virtual void GenericinitializeInternal(Mob &, MoveControlDescription *);
-    virtual void Generictick(MoveControlComponent &, Mob &);
+    virtual void GenericMoveControl::~GenericMoveControl();
+    virtual void GenericMoveControl::~GenericMoveControl();
+    virtual void initializeInternal(Mob &, MoveControlDescription *);
+    virtual void tick(MoveControlComponent &, Mob &);
     virtual void setWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
 }

@@ -2,11 +2,11 @@
 
 class ResourcePackStackPacket : Packet {
 
-    virtual void ResourcePackStack~ResourcePackStackPacket();
-    virtual void ResourcePackStack~ResourcePackStackPacket();
-    virtual void ResourcePackStackgetId(void)const;
+    virtual void ResourcePackStackPacket::~ResourcePackStackPacket();
+    virtual void ResourcePackStackPacket::~ResourcePackStackPacket();
+    virtual void getId(void)const;
     virtual void _ZNK23ResourcePackStackPacket7getNameB5cxx11Ev;
-    virtual void ResourcePackStackwrite(BinaryStream &)const;
-    virtual void ResourcePackStackread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

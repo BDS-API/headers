@@ -2,11 +2,11 @@
 
 class ClientCacheMissResponsePacket : Packet {
 
-    virtual void ClientCacheMissResponse~ClientCacheMissResponsePacket();
-    virtual void ClientCacheMissResponse~ClientCacheMissResponsePacket();
-    virtual void ClientCacheMissResponsegetId(void)const;
+    virtual void ClientCacheMissResponsePacket::~ClientCacheMissResponsePacket();
+    virtual void ClientCacheMissResponsePacket::~ClientCacheMissResponsePacket();
+    virtual void getId(void)const;
     virtual void _ZNK29ClientCacheMissResponsePacket7getNameB5cxx11Ev;
-    virtual void ClientCacheMissResponsewrite(BinaryStream &)const;
-    virtual void ClientCacheMissResponseread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

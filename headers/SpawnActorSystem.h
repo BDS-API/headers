@@ -2,7 +2,7 @@
 
 class SpawnActorSystem : ITickingSystem {
 
-    virtual void ~SpawnActorSystem();
-    virtual void ~SpawnActorSystem();
+    virtual void SpawnActorSystem::~SpawnActorSystem();
+    virtual void SpawnActorSystem::~SpawnActorSystem();
     virtual void tick(EntityRegistry &);
 }

@@ -2,8 +2,8 @@
 
 class ArmorItem : Item {
 
-    virtual void Armor~ArmorItem();
-    virtual void Armor~ArmorItem();
+    virtual void ArmorItem::~ArmorItem();
+    virtual void ArmorItem::~ArmorItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -27,7 +27,7 @@ class ArmorItem : Item {
     virtual void getMaxDamage(void)const;
     virtual void getAttackDamage(void)const;
     virtual void isHandEquipped(void)const;
-    virtual void ArmorisArmor(void)const;
+    virtual void isArmor(void)const;
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
     virtual void isGlint(ItemStackBase const&)const;
@@ -39,33 +39,33 @@ class ArmorItem : Item {
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
-    virtual void ArmorappendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
-    virtual void ArmorisValidRepairItem(ItemInstance const&, ItemInstance const&)const;
-    virtual void ArmorgetEnchantSlot(void)const;
-    virtual void ArmorgetEnchantValue(void)const;
-    virtual void ArmorgetArmorValue(void)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
+    virtual void getEnchantSlot(void)const;
+    virtual void getEnchantValue(void)const;
+    virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
     virtual void isValidAuxValue(int)const;
-    virtual void ArmorgetDamageChance(int)const;
+    virtual void getDamageChance(int)const;
     virtual void uniqueAuxValues(void)const;
     virtual void isMultiColorTinted(ItemStack const&)const;
-    virtual void ArmorgetColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
+    virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
     virtual void getBaseColor(ItemStack const&)const;
     virtual void getSecondaryColor(ItemStack const&)const;
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
-    virtual void ArmorisTintable(void)const;
-    virtual void Armoruse(ItemStack &, Player &)const;
-    virtual void Armordispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void isTintable(void)const;
+    virtual void use(ItemStack &, Player &)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
     virtual void releaseUsing(ItemStack &, Player *, int)const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
     virtual void hurtEnemy(ItemInstance &, Mob *, Mob *)const;
-    virtual void ArmorhurtEnemy(ItemStack &, Mob *, Mob *)const;
+    virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemInstance &, Block const&, int, int, int, Actor *)const;
-    virtual void ArmormineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
+    virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
     virtual void _ZNK4Item18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE;
     virtual void _ZNK4Item26buildEffectDescriptionNameB5cxx11ERK13ItemStackBase;
     virtual void _ZNK4Item28buildCategoryDescriptionNameB5cxx11Ev;
@@ -86,9 +86,9 @@ class ArmorItem : Item {
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void isEmissive(int)const;
-    virtual void ArmorgetIcon(ItemStackBase const&, int, bool)const;
+    virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset(void)const;
-    virtual void ArmorsetIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void setIcon(TextureUVCoordinateSet const&);
     virtual void setIconAtlas(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void canBeCharged(void)const;

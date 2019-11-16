@@ -2,11 +2,11 @@
 
 class SetDefaultGameTypePacket : Packet {
 
-    virtual void SetDefaultGameType~SetDefaultGameTypePacket();
-    virtual void SetDefaultGameType~SetDefaultGameTypePacket();
-    virtual void SetDefaultGameTypegetId(void)const;
+    virtual void SetDefaultGameTypePacket::~SetDefaultGameTypePacket();
+    virtual void SetDefaultGameTypePacket::~SetDefaultGameTypePacket();
+    virtual void getId(void)const;
     virtual void _ZNK24SetDefaultGameTypePacket7getNameB5cxx11Ev;
-    virtual void SetDefaultGameTypewrite(BinaryStream &)const;
-    virtual void SetDefaultGameTyperead(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

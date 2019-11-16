@@ -2,8 +2,8 @@
 
 class RedStoneDustItem : Item {
 
-    virtual void RedStoneDust~RedStoneDustItem();
-    virtual void RedStoneDust~RedStoneDustItem();
+    virtual void RedStoneDustItem::~RedStoneDustItem();
+    virtual void RedStoneDustItem::~RedStoneDustItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -98,7 +98,7 @@ class RedStoneDustItem : Item {
     virtual void _checkUseOnPermissions(Actor &, ItemInstance &, unsigned char const&, BlockPos const&)const;
     virtual void _checkUseOnPermissions(Actor &, ItemStack &, unsigned char const&, BlockPos const&)const;
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
-    virtual void RedStoneDust_calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
+    virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void RedStoneDust_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

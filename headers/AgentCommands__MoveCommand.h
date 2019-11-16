@@ -2,8 +2,8 @@
 
 class AgentCommands::MoveCommand : AgentCommands::Command {
 
-    virtual void ~MoveCommand();
-    virtual void ~MoveCommand();
+    virtual void AgentCommands::MoveCommand::~MoveCommand();
+    virtual void AgentCommands::MoveCommand::~MoveCommand();
     virtual void execute(void);
     virtual void isDone(void);
     virtual void tick(void);

@@ -2,13 +2,13 @@
 
 class HangingActor : Actor {
 
-    virtual void HangingreloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void HangingreloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
+    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
+    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Hanging~HangingActor();
-    virtual void Hanging~HangingActor();
+    virtual void HangingActor::~HangingActor();
+    virtual void HangingActor::~HangingActor();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);
@@ -20,7 +20,7 @@ class HangingActor : Actor {
     virtual void getAttachPos(ActorLocation, float)const;
     virtual void getFiringPos(void)const;
     virtual void setRot(Vec2 const&);
-    virtual void Hangingmove(Vec3 const&);
+    virtual void move(Vec3 const&);
     virtual void getInterpolatedRidingPosition(float)const;
     virtual void getInterpolatedBodyRot(float)const;
     virtual void getInterpolatedHeadRot(float)const;
@@ -39,7 +39,7 @@ class HangingActor : Actor {
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void lerpMotion(Vec3 const&);
     virtual void getAddPacket(void);
-    virtual void HangingnormalTick(void);
+    virtual void normalTick(void);
     virtual void baseTick(void);
     virtual void rideTick(void);
     virtual void positionRider(Actor&, float);
@@ -80,14 +80,14 @@ class HangingActor : Actor {
     virtual void canSee(Actor const&)const;
     virtual void canSee(Vec3 const&)const;
     virtual void isSkyLit(float);
-    virtual void HanginggetBrightness(float)const;
+    virtual void getBrightness(float)const;
     virtual void interactPreventDefault(void);
     virtual void playerTouch(Player &);
     virtual void onAboveBubbleColumn(bool);
     virtual void onInsideBubbleColumn(bool);
     virtual void isImmobile(void)const;
     virtual void isSilent(void);
-    virtual void HangingisPickable(void);
+    virtual void isPickable(void);
     virtual void isFishable(void)const;
     virtual void isSleeping(void)const;
     virtual void isShootable(void);
@@ -124,7 +124,7 @@ class HangingActor : Actor {
     virtual void rideJumped(void);
     virtual void rideLanded(Vec3 const&, Vec3 const&);
     virtual void shouldRender(void)const;
-    virtual void HangingisInvulnerableTo(ActorDamageSource const&)const;
+    virtual void isInvulnerableTo(ActorDamageSource const&)const;
     virtual void actuallyHurt(int, ActorDamageSource const*, bool);
     virtual void animateHurt(void);
     virtual void doFireHurt(int);
@@ -217,7 +217,7 @@ class HangingActor : Actor {
     virtual void getInteraction(Player &, ActorInteraction &, Vec3 const&);
     virtual void canDestroyBlock(Block const&)const;
     virtual void setAuxValue(int);
-    virtual void HangingsetSize(float, float);
+    virtual void setSize(float, float);
     virtual void getLifeSpan(void)const;
     virtual void onOrphan(void);
     virtual void wobble(void);
@@ -235,10 +235,10 @@ class HangingActor : Actor {
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void canMakeStepSound(void)const;
     virtual void outOfWorld(void);
-    virtual void Hanging_hurt(ActorDamageSource const&, int, bool, bool);
+    virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void markHurt(void);
-    virtual void HangingreadAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void HangingaddAdditionalSaveData(CompoundTag &);
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+    virtual void addAdditionalSaveData(CompoundTag &);
     virtual void _playStepSound(BlockPos const&, Block const&);
     virtual void _playFlySound(BlockPos const&, Block const&);
     virtual void _makeFlySound(void)const;
@@ -253,10 +253,10 @@ class HangingActor : Actor {
     virtual void _removeRider(ActorUniqueID const&, bool, bool);
     virtual void _onSizeUpdated(void);
     virtual void _doAutoAttackOnTouch(Actor&);
-    virtual void HangingsetDir(int);
-    virtual void HanginggetWidth(void)const;
-    virtual void HanginggetHeight(void)const;
-    virtual void HangingdropItem(void);
-    virtual void HangingplaceHangingEntity(BlockSource &, int);
-    virtual void HangingwouldSurvive(BlockSource &);
+    virtual void setDir(int);
+    virtual void getWidth(void)const;
+    virtual void getHeight(void)const;
+    virtual void dropItem(void);
+    virtual void placeHangingEntity(BlockSource &, int);
+    virtual void wouldSurvive(BlockSource &);
 }

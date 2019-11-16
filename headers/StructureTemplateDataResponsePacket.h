@@ -2,11 +2,11 @@
 
 class StructureTemplateDataResponsePacket : Packet {
 
-    virtual void StructureTemplateDataResponse~StructureTemplateDataResponsePacket();
-    virtual void StructureTemplateDataResponse~StructureTemplateDataResponsePacket();
-    virtual void StructureTemplateDataResponsegetId(void)const;
+    virtual void StructureTemplateDataResponsePacket::~StructureTemplateDataResponsePacket();
+    virtual void StructureTemplateDataResponsePacket::~StructureTemplateDataResponsePacket();
+    virtual void getId(void)const;
     virtual void _ZNK35StructureTemplateDataResponsePacket7getNameB5cxx11Ev;
-    virtual void StructureTemplateDataResponsewrite(BinaryStream &)const;
-    virtual void StructureTemplateDataResponseread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

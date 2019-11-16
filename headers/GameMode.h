@@ -2,8 +2,8 @@
 
 class GameMode {
 
-    virtual void ~GameMode();
-    virtual void ~GameMode();
+    virtual void GameMode::~GameMode();
+    virtual void GameMode::~GameMode();
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &);
     virtual void destroyBlock(BlockPos const&, unsigned char);
     virtual void continueDestroyBlock(BlockPos const&, unsigned char, bool &);

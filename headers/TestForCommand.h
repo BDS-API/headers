@@ -2,7 +2,7 @@
 
 class TestForCommand : Command {
 
-    virtual void TestFor~TestForCommand();
-    virtual void TestFor~TestForCommand();
-    virtual void TestForexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void TestForCommand::~TestForCommand();
+    virtual void TestForCommand::~TestForCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

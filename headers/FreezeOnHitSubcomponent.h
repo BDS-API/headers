@@ -2,9 +2,9 @@
 
 class FreezeOnHitSubcomponent : OnHitSubcomponent {
 
-    virtual void Freeze~FreezeOnHitSubcomponent();
-    virtual void Freeze~FreezeOnHitSubcomponent();
-    virtual void FreezereadfromJSON(Json::Value &);
-    virtual void FreezewritetoJSON(Json::Value &)const;
-    virtual void FreezedoOnHitEffect(Actor &, ProjectileComponent &);
+    virtual void FreezeOnHitSubcomponent::~FreezeOnHitSubcomponent();
+    virtual void FreezeOnHitSubcomponent::~FreezeOnHitSubcomponent();
+    virtual void readfromJSON(Json::Value &);
+    virtual void writetoJSON(Json::Value &)const;
+    virtual void doOnHitEffect(Actor &, ProjectileComponent &);
 }

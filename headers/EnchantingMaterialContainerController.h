@@ -2,9 +2,9 @@
 
 class EnchantingMaterialContainerController : ContainerController {
 
-    virtual void EnchantingMaterial~EnchantingMaterialContainerController();
-    virtual void EnchantingMaterial~EnchantingMaterialContainerController();
-    virtual void EnchantingMaterialisItemAllowed(ItemInstance const&)const;
+    virtual void EnchantingMaterialContainerController::~EnchantingMaterialContainerController();
+    virtual void EnchantingMaterialContainerController::~EnchantingMaterialContainerController();
+    virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;
     virtual void getBackgroundStyle(int)const;

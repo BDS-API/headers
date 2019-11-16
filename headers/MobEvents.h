@@ -2,6 +2,6 @@
 
 class MobEvents {
 
-    virtual void ~MobEvents();
-    virtual void ~MobEvents();
+    virtual void MobEvents::~MobEvents();
+    virtual void MobEvents::~MobEvents();
 }

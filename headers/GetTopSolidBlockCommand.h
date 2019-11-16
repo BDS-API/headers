@@ -2,7 +2,7 @@
 
 class GetTopSolidBlockCommand : Command {
 
-    virtual void GetTopSolidBlock~GetTopSolidBlockCommand();
-    virtual void GetTopSolidBlock~GetTopSolidBlockCommand();
-    virtual void GetTopSolidBlockexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void GetTopSolidBlockCommand::~GetTopSolidBlockCommand();
+    virtual void GetTopSolidBlockCommand::~GetTopSolidBlockCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

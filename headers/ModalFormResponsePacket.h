@@ -2,11 +2,11 @@
 
 class ModalFormResponsePacket : Packet {
 
-    virtual void ModalFormResponse~ModalFormResponsePacket();
-    virtual void ModalFormResponse~ModalFormResponsePacket();
-    virtual void ModalFormResponsegetId(void)const;
+    virtual void ModalFormResponsePacket::~ModalFormResponsePacket();
+    virtual void ModalFormResponsePacket::~ModalFormResponsePacket();
+    virtual void getId(void)const;
     virtual void _ZNK23ModalFormResponsePacket7getNameB5cxx11Ev;
-    virtual void ModalFormResponsewrite(BinaryStream &)const;
-    virtual void ModalFormResponseread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

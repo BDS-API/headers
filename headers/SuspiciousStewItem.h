@@ -2,8 +2,8 @@
 
 class SuspiciousStewItem : Item {
 
-    virtual void SuspiciousStew~SuspiciousStewItem();
-    virtual void SuspiciousStew~SuspiciousStewItem();
+    virtual void SuspiciousStewItem::~SuspiciousStewItem();
+    virtual void SuspiciousStewItem::~SuspiciousStewItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -47,7 +47,7 @@ class SuspiciousStewItem : Item {
     virtual void isComplex(void)const;
     virtual void isValidAuxValue(int)const;
     virtual void getDamageChance(int)const;
-    virtual void SuspiciousStewuniqueAuxValues(void)const;
+    virtual void uniqueAuxValues(void)const;
     virtual void isMultiColorTinted(ItemStack const&)const;
     virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
     virtual void getBaseColor(ItemStack const&)const;
@@ -58,7 +58,7 @@ class SuspiciousStewItem : Item {
     virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
-    virtual void SuspiciousStewuseTimeDepleted(ItemStack &, Level *, Player *)const;
+    virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
     virtual void releaseUsing(ItemStack &, Player *, int)const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;

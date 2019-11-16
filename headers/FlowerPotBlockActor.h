@@ -2,22 +2,22 @@
 
 class FlowerPotBlockActor : BlockActor {
 
-    virtual void FlowerPot~FlowerPotBlockActor();
-    virtual void FlowerPot~FlowerPotBlockActor();
-    virtual void FlowerPotload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void FlowerPotsave(CompoundTag &)const;
+    virtual void FlowerPotBlockActor::~FlowerPotBlockActor();
+    virtual void FlowerPotBlockActor::~FlowerPotBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
     virtual void tick(BlockSource &);
     virtual void isFinished(void);
-    virtual void FlowerPotonChanged(BlockSource &);
+    virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void FlowerPotgetUpdatePacket(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void FlowerPotonUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);

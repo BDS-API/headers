@@ -2,13 +2,13 @@
 
 class CrossbowEnchant : Enchant {
 
-    virtual void Crossbow~CrossbowEnchant();
-    virtual void Crossbow~CrossbowEnchant();
-    virtual void CrossbowisCompatibleWith(Enchant::Type)const;
-    virtual void CrossbowgetMinCost(int)const;
-    virtual void CrossbowgetMaxCost(int)const;
+    virtual void CrossbowEnchant::~CrossbowEnchant();
+    virtual void CrossbowEnchant::~CrossbowEnchant();
+    virtual void isCompatibleWith(Enchant::Type)const;
+    virtual void getMinCost(int)const;
+    virtual void getMaxCost(int)const;
     virtual void getMinLevel(void)const;
-    virtual void CrossbowgetMaxLevel(void)const;
+    virtual void getMaxLevel(void)const;
     virtual void getDamageProtection(int, ActorDamageSource const&)const;
     virtual void getDamageBonus(int, Actor const&)const;
     virtual void doPostAttack(Actor &, Actor &, int)const;

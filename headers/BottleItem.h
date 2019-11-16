@@ -2,8 +2,8 @@
 
 class BottleItem : Item {
 
-    virtual void Bottle~BottleItem();
-    virtual void Bottle~BottleItem();
+    virtual void BottleItem::~BottleItem();
+    virtual void BottleItem::~BottleItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -37,7 +37,7 @@ class BottleItem : Item {
     virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void canDestroyInCreative(void)const;
     virtual void isDestructive(int)const;
-    virtual void BottleisLiquidClipItem(int)const;
+    virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
@@ -100,5 +100,5 @@ class BottleItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Bottle_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

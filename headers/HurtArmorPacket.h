@@ -2,11 +2,11 @@
 
 class HurtArmorPacket : Packet {
 
-    virtual void HurtArmor~HurtArmorPacket();
-    virtual void HurtArmor~HurtArmorPacket();
-    virtual void HurtArmorgetId(void)const;
+    virtual void HurtArmorPacket::~HurtArmorPacket();
+    virtual void HurtArmorPacket::~HurtArmorPacket();
+    virtual void getId(void)const;
     virtual void _ZNK15HurtArmorPacket7getNameB5cxx11Ev;
-    virtual void HurtArmorwrite(BinaryStream &)const;
-    virtual void HurtArmorread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

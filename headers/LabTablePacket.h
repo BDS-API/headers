@@ -2,11 +2,11 @@
 
 class LabTablePacket : Packet {
 
-    virtual void LabTable~LabTablePacket();
-    virtual void LabTable~LabTablePacket();
-    virtual void LabTablegetId(void)const;
+    virtual void LabTablePacket::~LabTablePacket();
+    virtual void LabTablePacket::~LabTablePacket();
+    virtual void getId(void)const;
     virtual void _ZNK14LabTablePacket7getNameB5cxx11Ev;
-    virtual void LabTablewrite(BinaryStream &)const;
-    virtual void LabTableread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

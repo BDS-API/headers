@@ -2,8 +2,8 @@
 
 class PathNavigation {
 
-    virtual void ~PathNavigation();
-    virtual void ~PathNavigation();
+    virtual void PathNavigation::~PathNavigation();
+    virtual void PathNavigation::~PathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

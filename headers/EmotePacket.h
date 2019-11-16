@@ -2,11 +2,11 @@
 
 class EmotePacket : Packet {
 
-    virtual void Emote~EmotePacket();
-    virtual void Emote~EmotePacket();
-    virtual void EmotegetId(void)const;
+    virtual void EmotePacket::~EmotePacket();
+    virtual void EmotePacket::~EmotePacket();
+    virtual void getId(void)const;
     virtual void _ZNK11EmotePacket7getNameB5cxx11Ev;
-    virtual void Emotewrite(BinaryStream &)const;
-    virtual void Emoteread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

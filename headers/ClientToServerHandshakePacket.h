@@ -2,11 +2,11 @@
 
 class ClientToServerHandshakePacket : Packet {
 
-    virtual void ClientToServerHandshake~ClientToServerHandshakePacket();
-    virtual void ClientToServerHandshake~ClientToServerHandshakePacket();
-    virtual void ClientToServerHandshakegetId(void)const;
+    virtual void ClientToServerHandshakePacket::~ClientToServerHandshakePacket();
+    virtual void ClientToServerHandshakePacket::~ClientToServerHandshakePacket();
+    virtual void getId(void)const;
     virtual void _ZNK29ClientToServerHandshakePacket7getNameB5cxx11Ev;
-    virtual void ClientToServerHandshakewrite(BinaryStream &)const;
-    virtual void ClientToServerHandshakeread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

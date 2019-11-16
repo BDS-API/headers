@@ -2,17 +2,17 @@
 
 class ElementConstructorContainerManagerModel : ContainerManagerModel {
 
-    virtual void ElementConstructor~ElementConstructorContainerManagerModel();
-    virtual void ElementConstructor~ElementConstructorContainerManagerModel();
+    virtual void ElementConstructorContainerManagerModel::~ElementConstructorContainerManagerModel();
+    virtual void ElementConstructorContainerManagerModel::~ElementConstructorContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;
     virtual void setContainerType(ContainerType);
-    virtual void ElementConstructorgetItems(void);
-    virtual void ElementConstructorsetSlot(int, ContainerItemStack const&, bool);
-    virtual void ElementConstructorgetSlot(int);
-    virtual void ElementConstructorsetData(int, int);
-    virtual void ElementConstructorbroadcastChanges(void);
-    virtual void ElementConstructorinit(void);
-    virtual void ElementConstructorisValid(float);
+    virtual void getItems(void);
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    virtual void getSlot(int);
+    virtual void setData(int, int);
+    virtual void broadcastChanges(void);
+    virtual void init(void);
+    virtual void isValid(float);
 }

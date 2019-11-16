@@ -2,22 +2,22 @@
 
 class BedBlockActor : BlockActor {
 
-    virtual void Bed~BedBlockActor();
-    virtual void Bed~BedBlockActor();
-    virtual void Bedload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void Bedsave(CompoundTag &)const;
-    virtual void BedsaveItemInstanceData(CompoundTag &);
+    virtual void BedBlockActor::~BedBlockActor();
+    virtual void BedBlockActor::~BedBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
+    virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void Bedtick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
-    virtual void BedonChanged(BlockSource &);
+    virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void BedgetUpdatePacket(BlockSource &);
-    virtual void BedonPlace(BlockSource &);
-    virtual void BedonUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
+    virtual void onPlace(BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);
@@ -25,7 +25,7 @@ class BedBlockActor : BlockActor {
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
     virtual void getShadowRadius(BlockSource &)const;
     virtual void hasAlphaLayer(void)const;
-    virtual void BedgetCrackEntity(BlockSource &, BlockPos const&);
+    virtual void getCrackEntity(BlockSource &, BlockPos const&);
     virtual void getDebugText(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, BlockPos const&);
     virtual void _ZNK10BlockActor13getCustomNameB5cxx11Ev;
     virtual void _ZN10BlockActor21getFilteredCustomNameB5cxx11ERK18UIProfanityContext;

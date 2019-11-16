@@ -2,11 +2,11 @@
 
 class ContainerOpenPacket : Packet {
 
-    virtual void ContainerOpen~ContainerOpenPacket();
-    virtual void ContainerOpen~ContainerOpenPacket();
-    virtual void ContainerOpengetId(void)const;
+    virtual void ContainerOpenPacket::~ContainerOpenPacket();
+    virtual void ContainerOpenPacket::~ContainerOpenPacket();
+    virtual void getId(void)const;
     virtual void _ZNK19ContainerOpenPacket7getNameB5cxx11Ev;
-    virtual void ContainerOpenwrite(BinaryStream &)const;
-    virtual void ContainerOpenread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

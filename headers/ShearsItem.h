@@ -2,8 +2,8 @@
 
 class ShearsItem : Item {
 
-    virtual void Shears~ShearsItem();
-    virtual void Shears~ShearsItem();
+    virtual void ShearsItem::~ShearsItem();
+    virtual void ShearsItem::~ShearsItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -21,7 +21,7 @@ class ShearsItem : Item {
     virtual void setShouldDespawn(bool);
     virtual void getBlockShape(void)const;
     virtual void canBeDepleted(void)const;
-    virtual void ShearscanDestroySpecial(Block const&)const;
+    virtual void canDestroySpecial(Block const&)const;
     virtual void getLevelDataForAuxValue(int)const;
     virtual void isStackedByData(void)const;
     virtual void getMaxDamage(void)const;
@@ -41,7 +41,7 @@ class ShearsItem : Item {
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
-    virtual void ShearsgetEnchantSlot(void)const;
+    virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
@@ -56,16 +56,16 @@ class ShearsItem : Item {
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void Shearsdispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
     virtual void releaseUsing(ItemStack &, Player *, int)const;
-    virtual void ShearsgetDestroySpeed(ItemInstance const&, Block const&)const;
+    virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
     virtual void hurtEnemy(ItemInstance &, Mob *, Mob *)const;
-    virtual void ShearshurtEnemy(ItemStack &, Mob *, Mob *)const;
+    virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemInstance &, Block const&, int, int, int, Actor *)const;
-    virtual void ShearsmineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
+    virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
     virtual void _ZNK4Item18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE;
     virtual void _ZNK4Item26buildEffectDescriptionNameB5cxx11ERK13ItemStackBase;
     virtual void _ZNK4Item28buildCategoryDescriptionNameB5cxx11Ev;
@@ -100,5 +100,5 @@ class ShearsItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Shears_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

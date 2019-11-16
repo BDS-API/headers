@@ -2,9 +2,9 @@
 
 class RotationDescription : Description {
 
-    virtual void RotationgetJsonName(void)const;
-    virtual void Rotation~RotationDescription();
-    virtual void Rotation~RotationDescription();
-    virtual void RotationdeserializeData(Json::Value &);
-    virtual void RotationserializeData(Json::Value &)const;
+    virtual void getJsonName(void)const;
+    virtual void RotationDescription::~RotationDescription();
+    virtual void RotationDescription::~RotationDescription();
+    virtual void deserializeData(Json::Value &);
+    virtual void serializeData(Json::Value &)const;
 }

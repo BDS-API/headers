@@ -2,8 +2,8 @@
 
 class LegacyChunkStorage : ChunkSource {
 
-    virtual void ~LegacyChunkStorage();
-    virtual void ~LegacyChunkStorage();
+    virtual void LegacyChunkStorage::~LegacyChunkStorage();
+    virtual void LegacyChunkStorage::~LegacyChunkStorage();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);

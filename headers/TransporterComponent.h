@@ -2,8 +2,8 @@
 
 class TransporterComponent : BaseCircuitComponent {
 
-    virtual void ~TransporterComponent();
-    virtual void ~TransporterComponent();
+    virtual void TransporterComponent::~TransporterComponent();
+    virtual void TransporterComponent::~TransporterComponent();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

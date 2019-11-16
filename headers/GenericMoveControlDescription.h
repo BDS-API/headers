@@ -2,9 +2,9 @@
 
 class GenericMoveControlDescription : MoveControlDescription {
 
-    virtual void GenericgetJsonName(void)const;
-    virtual void Generic~GenericMoveControlDescription();
-    virtual void Generic~GenericMoveControlDescription();
+    virtual void getJsonName(void)const;
+    virtual void GenericMoveControlDescription::~GenericMoveControlDescription();
+    virtual void GenericMoveControlDescription::~GenericMoveControlDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 }

@@ -2,8 +2,8 @@
 
 class PoweredBlockComponent : BaseCircuitComponent {
 
-    virtual void ~PoweredBlockComponent();
-    virtual void ~PoweredBlockComponent();
+    virtual void PoweredBlockComponent::~PoweredBlockComponent();
+    virtual void PoweredBlockComponent::~PoweredBlockComponent();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);

@@ -2,11 +2,11 @@
 
 class NetworkSettingsPacket : Packet {
 
-    virtual void NetworkSettings~NetworkSettingsPacket();
-    virtual void NetworkSettings~NetworkSettingsPacket();
-    virtual void NetworkSettingsgetId(void)const;
+    virtual void NetworkSettingsPacket::~NetworkSettingsPacket();
+    virtual void NetworkSettingsPacket::~NetworkSettingsPacket();
+    virtual void getId(void)const;
     virtual void _ZNK21NetworkSettingsPacket7getNameB5cxx11Ev;
-    virtual void NetworkSettingswrite(BinaryStream &)const;
-    virtual void NetworkSettingsread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

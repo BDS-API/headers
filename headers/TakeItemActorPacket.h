@@ -2,11 +2,11 @@
 
 class TakeItemActorPacket : Packet {
 
-    virtual void TakeItemActor~TakeItemActorPacket();
-    virtual void TakeItemActor~TakeItemActorPacket();
-    virtual void TakeItemActorgetId(void)const;
+    virtual void TakeItemActorPacket::~TakeItemActorPacket();
+    virtual void TakeItemActorPacket::~TakeItemActorPacket();
+    virtual void getId(void)const;
     virtual void _ZNK19TakeItemActorPacket7getNameB5cxx11Ev;
-    virtual void TakeItemActorwrite(BinaryStream &)const;
-    virtual void TakeItemActorread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

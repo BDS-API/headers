@@ -2,8 +2,8 @@
 
 class ShipwreckFeature : StructureFeature {
 
-    virtual void ~ShipwreckFeature();
-    virtual void ~ShipwreckFeature();
+    virtual void ShipwreckFeature::~ShipwreckFeature();
+    virtual void ShipwreckFeature::~ShipwreckFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

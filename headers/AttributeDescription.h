@@ -2,9 +2,9 @@
 
 class AttributeDescription : Description {
 
-    virtual void AttributegetJsonName(void)const;
-    virtual void Attribute~AttributeDescription();
-    virtual void Attribute~AttributeDescription();
+    virtual void getJsonName(void)const;
+    virtual void AttributeDescription::~AttributeDescription();
+    virtual void AttributeDescription::~AttributeDescription();
     virtual void deserializeData(Json::Value &);
-    virtual void AttributeserializeData(Json::Value &)const;
+    virtual void serializeData(Json::Value &)const;
 }

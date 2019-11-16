@@ -2,16 +2,16 @@
 
 class ShapedRecipe : Recipe {
 
-    virtual void Shaped~ShapedRecipe();
-    virtual void Shaped~ShapedRecipe();
-    virtual void Shapedassemble(CraftingContainer &)const;
-    virtual void ShapedgetCraftingSize(void)const;
-    virtual void ShapedgetIngredient(int, int)const;
-    virtual void ShapedgetResultItem(void)const;
-    virtual void ShapedisShapeless(void)const;
-    virtual void Shapedmatches(CraftingContainer &, Level &)const;
-    virtual void Shapedsize(void)const;
-    virtual void ShapedisExperimental(void)const;
+    virtual void ShapedRecipe::~ShapedRecipe();
+    virtual void ShapedRecipe::~ShapedRecipe();
+    virtual void assemble(CraftingContainer &)const;
+    virtual void getCraftingSize(void)const;
+    virtual void getIngredient(int, int)const;
+    virtual void getResultItem(void)const;
+    virtual void isShapeless(void)const;
+    virtual void matches(CraftingContainer &, Level &)const;
+    virtual void size(void)const;
+    virtual void isExperimental(void)const;
     virtual void getId(void)const;
     virtual void getItemPack(void)const;
     virtual void isMultiRecipe(void)const;

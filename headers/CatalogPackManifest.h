@@ -2,7 +2,7 @@
 
 class CatalogPackManifest : PackManifest {
 
-    virtual void Catalog~CatalogPackManifest();
-    virtual void Catalog~CatalogPackManifest();
-    virtual void Catalogclone(void)const;
+    virtual void CatalogPackManifest::~CatalogPackManifest();
+    virtual void CatalogPackManifest::~CatalogPackManifest();
+    virtual void clone(void)const;
 }

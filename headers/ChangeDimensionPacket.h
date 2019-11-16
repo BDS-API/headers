@@ -2,11 +2,11 @@
 
 class ChangeDimensionPacket : Packet {
 
-    virtual void ChangeDimension~ChangeDimensionPacket();
-    virtual void ChangeDimension~ChangeDimensionPacket();
-    virtual void ChangeDimensiongetId(void)const;
+    virtual void ChangeDimensionPacket::~ChangeDimensionPacket();
+    virtual void ChangeDimensionPacket::~ChangeDimensionPacket();
+    virtual void getId(void)const;
     virtual void _ZNK21ChangeDimensionPacket7getNameB5cxx11Ev;
-    virtual void ChangeDimensionwrite(BinaryStream &)const;
-    virtual void ChangeDimensionread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

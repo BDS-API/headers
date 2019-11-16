@@ -2,11 +2,11 @@
 
 class RealmsUnknownPackSource : PackSource {
 
-    virtual void RealmsUnknown~RealmsUnknownPackSource();
-    virtual void RealmsUnknown~RealmsUnknownPackSource();
-    virtual void RealmsUnknownforEachPackConst(std::function<void ()(Pack const&)>)const;
-    virtual void RealmsUnknownforEachPack(std::function<void ()(Pack &)>);
-    virtual void RealmsUnknowngetPackOrigin(void)const;
-    virtual void RealmsUnknowngetPackType(void)const;
-    virtual void RealmsUnknownload(PackManifestFactory &, IContentKeyProvider const&);
+    virtual void RealmsUnknownPackSource::~RealmsUnknownPackSource();
+    virtual void RealmsUnknownPackSource::~RealmsUnknownPackSource();
+    virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
+    virtual void forEachPack(std::function<void ()(Pack &)>);
+    virtual void getPackOrigin(void)const;
+    virtual void getPackType(void)const;
+    virtual void load(PackManifestFactory &, IContentKeyProvider const&);
 }

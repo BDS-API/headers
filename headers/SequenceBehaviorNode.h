@@ -2,8 +2,8 @@
 
 class SequenceBehaviorNode : BehaviorNode {
 
-    virtual void Sequence~SequenceBehaviorNode();
-    virtual void Sequence~SequenceBehaviorNode();
-    virtual void Sequencetick(Actor &);
-    virtual void SequenceinitializeFromDefinition(Actor &);
+    virtual void SequenceBehaviorNode::~SequenceBehaviorNode();
+    virtual void SequenceBehaviorNode::~SequenceBehaviorNode();
+    virtual void tick(Actor &);
+    virtual void initializeFromDefinition(Actor &);
 }

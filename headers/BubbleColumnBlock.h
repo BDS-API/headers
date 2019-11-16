@@ -2,8 +2,8 @@
 
 class BubbleColumnBlock : BlockLegacy {
 
-    virtual void ~BubbleColumnBlock();
-    virtual void ~BubbleColumnBlock();
+    virtual void BubbleColumnBlock::~BubbleColumnBlock();
+    virtual void BubbleColumnBlock::~BubbleColumnBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

@@ -2,8 +2,8 @@
 
 class NetherGenerator : ChunkSource, WorldGenerator {
 
-    virtual void ~NetherGenerator();
-    virtual void ~NetherGenerator();
+    virtual void NetherGenerator::~NetherGenerator();
+    virtual void NetherGenerator::~NetherGenerator();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);
@@ -32,14 +32,14 @@ class NetherGenerator : ChunkSource, WorldGenerator {
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
     virtual void findSpawnPosition(void)const;
     virtual void ;
-    virtual void `non-virtual thunk to'~NetherGenerator();
-    virtual void `non-virtual thunk to'~NetherGenerator();
-    virtual void `non-virtual thunk to'getFeatureTypeAt(BlockPos const&);
-    virtual void `non-virtual thunk to'findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos&);
-    virtual void `non-virtual thunk to'prepareHeights(BlockVolume &, ChunkPos const&, bool);
-    virtual void `non-virtual thunk to'getBiomeArea(BoundingBox const&, unsigned int)const;
-    virtual void `non-virtual thunk to'findSpawnPosition(void)const;
-    virtual void `non-virtual thunk to'garbageCollectBlueprints(buffer_span<ChunkPos>);
+    virtual void `non-virtual thunk to'NetherGenerator::~NetherGenerator();
+    virtual void `non-virtual thunk to'NetherGenerator::~NetherGenerator();
+    virtual void `non-virtual thunk to'NetherGenerator::getFeatureTypeAt(BlockPos const&);
+    virtual void `non-virtual thunk to'NetherGenerator::findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos&);
+    virtual void `non-virtual thunk to'NetherGenerator::prepareHeights(BlockVolume &, ChunkPos const&, bool);
+    virtual void `non-virtual thunk to'NetherGenerator::getBiomeArea(BoundingBox const&, unsigned int)const;
+    virtual void `non-virtual thunk to'NetherGenerator::findSpawnPosition(void)const;
+    virtual void `non-virtual thunk to'NetherGenerator::garbageCollectBlueprints(buffer_span<ChunkPos>);
     virtual void debugRender(void);
-    virtual void `non-virtual thunk to'addHardcodedSpawnAreas(LevelChunk &);
+    virtual void `non-virtual thunk to'NetherGenerator::addHardcodedSpawnAreas(LevelChunk &);
 }

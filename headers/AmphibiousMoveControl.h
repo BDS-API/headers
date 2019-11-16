@@ -2,9 +2,9 @@
 
 class AmphibiousMoveControl : GenericMoveControl {
 
-    virtual void ~AmphibiousMoveControl();
-    virtual void ~AmphibiousMoveControl();
+    virtual void AmphibiousMoveControl::~AmphibiousMoveControl();
+    virtual void AmphibiousMoveControl::~AmphibiousMoveControl();
     virtual void initializeInternal(Mob &, MoveControlDescription *);
     virtual void tick(MoveControlComponent &, Mob &);
-    virtual void MoveControl::setWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
+    virtual void setWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
 }

@@ -2,8 +2,8 @@
 
 class VanillaServerGameplayEventListener : ActorEventListener, BlockEventListener, PlayerEventListener, LevelEventListener {
 
-    virtual void ~VanillaServerGameplayEventListener();
-    virtual void ~VanillaServerGameplayEventListener();
+    virtual void VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
+    virtual void VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
     virtual void onActorAttack(Actor &, Actor &);
     virtual void onActorHurt(Actor &, ActorDamageSource const&, int, int);
     virtual void onActorMove(Actor &, Vec3 const&);
@@ -31,9 +31,9 @@ class VanillaServerGameplayEventListener : ActorEventListener, BlockEventListene
     virtual void onPlayerMovementCorrected(Player &, Vec3 const&, float, float);
     virtual void onPlayerMovementAnomaly(Player &, Vec3 const&, float, float);
     virtual void ;
-    virtual void `non-virtual thunk to'~VanillaServerGameplayEventListener();
-    virtual void `non-virtual thunk to'~VanillaServerGameplayEventListener();
-    virtual void `non-virtual thunk to'onBlockPlacedByPlayer(Player &, Block const&, BlockPos const&, bool);
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::onBlockPlacedByPlayer(Player &, Block const&, BlockPos const&, bool);
     virtual void onBlockDestroyedByPlayer(Player &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, BlockPos const&);
     virtual void onBlockMovedByPiston(BlockPos const&, BlockPos const&, PistonBlockActor::PistonState);
     virtual void onBlockDestructionStopped(Player &, BlockPos const&, int);
@@ -43,8 +43,8 @@ class VanillaServerGameplayEventListener : ActorEventListener, BlockEventListene
     virtual void onBlockModified(BlockPos const&, Block const&, Block const&);
     virtual void onUnknownBlockReceived(Level &, NewBlockID const&, unsigned short);
     virtual void ;
-    virtual void `non-virtual thunk to'~VanillaServerGameplayEventListener();
-    virtual void `non-virtual thunk to'~VanillaServerGameplayEventListener();
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
     virtual void onPlayerAwardAchievement(Player &, MinecraftEventing::AchievementIds);
     virtual void onPlayerPortalBuilt(Player &, AutomaticID<Dimension, int>);
     virtual void onPlayerPortalUsed(Player &, AutomaticID<Dimension, int>, AutomaticID<Dimension, int>);
@@ -54,7 +54,7 @@ class VanillaServerGameplayEventListener : ActorEventListener, BlockEventListene
     virtual void onPlayerTurn(Player &, Vec2 &);
     virtual void onStartDestroyBlock(Player &, BlockPos const&, unsigned char &);
     virtual void onPlayerAction(Player &, PlayerActionType, BlockPos const&, int);
-    virtual void `non-virtual thunk to'onPlayerHurt(Player &, ActorDamageSource &);
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::onPlayerHurt(Player &, ActorDamageSource &);
     virtual void onLocalPlayerDeath(IClientInstance &, LocalPlayer &);
     virtual void onLocalPlayerRespawn(IClientInstance &, LocalPlayer &);
     virtual void onPlayerMove(Player &);
@@ -64,8 +64,8 @@ class VanillaServerGameplayEventListener : ActorEventListener, BlockEventListene
     virtual void onPlayerCreated(LocalPlayer &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
     virtual void onPlayerTeleported(Player &);
     virtual void onPlayerAttackedActor(Player &, Actor &);
-    virtual void `non-virtual thunk to'onPlayerMovementCorrected(Player &, Vec3 const&, float, float);
-    virtual void `non-virtual thunk to'onPlayerMovementAnomaly(Player &, Vec3 const&, float, float);
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::onPlayerMovementCorrected(Player &, Vec3 const&, float, float);
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::onPlayerMovementAnomaly(Player &, Vec3 const&, float, float);
     virtual void onPlayerDestroyedBlock(Player &, int, int, int);
     virtual void onPlayerDestroyedBlock(Player &, BlockLegacy const&);
     virtual void onPlayerOnGround(Player &);
@@ -77,8 +77,8 @@ class VanillaServerGameplayEventListener : ActorEventListener, BlockEventListene
     virtual void onPlayerCraftedItem(Player &, ItemInstance const&, bool, bool, bool, int, int, int, bool, bool, std::vector<short, std::allocator<short>> const&);
     virtual void onPlayerItemEquipped(Player &, ItemInstance const&, int);
     virtual void ;
-    virtual void `non-virtual thunk to'~VanillaServerGameplayEventListener();
-    virtual void `non-virtual thunk to'~VanillaServerGameplayEventListener();
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
+    virtual void `non-virtual thunk to'VanillaServerGameplayEventListener::~VanillaServerGameplayEventListener();
     virtual void onLevelInitialized(Level &);
     virtual void onLevelSaveData(Level &, CompoundTag &);
     virtual void onLevelAddedPlayer(Level &, Player &);

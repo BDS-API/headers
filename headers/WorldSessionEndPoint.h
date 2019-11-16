@@ -2,8 +2,8 @@
 
 class WorldSessionEndPoint : ContentLogEndPoint {
 
-    virtual void ~WorldSessionEndPoint();
-    virtual void ~WorldSessionEndPoint();
+    virtual void WorldSessionEndPoint::~WorldSessionEndPoint();
+    virtual void WorldSessionEndPoint::~WorldSessionEndPoint();
     virtual void log(char const*);
     virtual void flush(void);
     virtual void setEnabled(bool);

@@ -2,11 +2,11 @@
 
 class RemoveObjectivePacket : Packet {
 
-    virtual void RemoveObjective~RemoveObjectivePacket();
-    virtual void RemoveObjective~RemoveObjectivePacket();
-    virtual void RemoveObjectivegetId(void)const;
+    virtual void RemoveObjectivePacket::~RemoveObjectivePacket();
+    virtual void RemoveObjectivePacket::~RemoveObjectivePacket();
+    virtual void getId(void)const;
     virtual void _ZNK21RemoveObjectivePacket7getNameB5cxx11Ev;
-    virtual void RemoveObjectivewrite(BinaryStream &)const;
-    virtual void RemoveObjectiveread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

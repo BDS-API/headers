@@ -2,7 +2,7 @@
 
 class FillCommand : Command {
 
-    virtual void Fill~FillCommand();
-    virtual void Fill~FillCommand();
-    virtual void Fillexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void FillCommand::~FillCommand();
+    virtual void FillCommand::~FillCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

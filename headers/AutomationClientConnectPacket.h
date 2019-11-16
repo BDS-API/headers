@@ -2,11 +2,11 @@
 
 class AutomationClientConnectPacket : Packet {
 
-    virtual void AutomationClientConnect~AutomationClientConnectPacket();
-    virtual void AutomationClientConnect~AutomationClientConnectPacket();
-    virtual void AutomationClientConnectgetId(void)const;
+    virtual void AutomationClientConnectPacket::~AutomationClientConnectPacket();
+    virtual void AutomationClientConnectPacket::~AutomationClientConnectPacket();
+    virtual void getId(void)const;
     virtual void _ZNK29AutomationClientConnectPacket7getNameB5cxx11Ev;
-    virtual void AutomationClientConnectwrite(BinaryStream &)const;
-    virtual void AutomationClientConnectread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

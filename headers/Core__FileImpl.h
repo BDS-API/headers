@@ -2,8 +2,8 @@
 
 class Core::FileImpl {
 
-    virtual void ~FileImpl();
-    virtual void ~FileImpl();
+    virtual void Core::FileImpl::~FileImpl();
+    virtual void Core::FileImpl::~FileImpl();
     virtual void _ZNK4Core6File_c8_getPathB5cxx11Ev;
     virtual void _getBlockSize(void)const;
     virtual void _isOpen(void);

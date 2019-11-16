@@ -2,8 +2,8 @@
 
 class ClockItem : Item {
 
-    virtual void Clock~ClockItem();
-    virtual void Clock~ClockItem();
+    virtual void ClockItem::~ClockItem();
+    virtual void ClockItem::~ClockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -84,9 +84,9 @@ class ClockItem : Item {
     virtual void getInHandUpdateType(Player const&, ItemStack const&, ItemStack const&, bool, bool)const;
     virtual void isSameItem(ItemStackBase const&, ItemStackBase const&)const;
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
-    virtual void ClockgetAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
+    virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void isEmissive(int)const;
-    virtual void ClockgetIcon(ItemStackBase const&, int, bool)const;
+    virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset(void)const;
     virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void setIcon(TextureUVCoordinateSet const&);

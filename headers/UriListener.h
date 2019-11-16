@@ -2,7 +2,7 @@
 
 class UriListener {
 
-    virtual void ~UriListener();
-    virtual void ~UriListener();
+    virtual void UriListener::~UriListener();
+    virtual void UriListener::~UriListener();
     virtual void onUri(ActivationUri const&);
 }

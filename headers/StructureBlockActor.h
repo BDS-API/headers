@@ -2,22 +2,22 @@
 
 class StructureBlockActor : BlockActor {
 
-    virtual void Structure~StructureBlockActor();
-    virtual void Structure~StructureBlockActor();
-    virtual void Structureload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void Structuresave(CompoundTag &)const;
+    virtual void StructureBlockActor::~StructureBlockActor();
+    virtual void StructureBlockActor::~StructureBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
     virtual void tick(BlockSource &);
     virtual void isFinished(void);
-    virtual void StructureonChanged(BlockSource &);
+    virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void StructuregetUpdatePacket(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void StructureonUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);

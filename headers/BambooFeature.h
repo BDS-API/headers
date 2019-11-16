@@ -2,8 +2,8 @@
 
 class BambooFeature : Feature {
 
-    virtual void Bamboo~BambooFeature();
-    virtual void Bamboo~BambooFeature();
+    virtual void BambooFeature::~BambooFeature();
+    virtual void BambooFeature::~BambooFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void Bambooplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

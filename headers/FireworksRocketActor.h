@@ -7,8 +7,8 @@ class FireworksRocketActor : Actor {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void FireworksRocket~FireworksRocketActor();
-    virtual void FireworksRocket~FireworksRocketActor();
+    virtual void FireworksRocketActor::~FireworksRocketActor();
+    virtual void FireworksRocketActor::~FireworksRocketActor();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);
@@ -37,9 +37,9 @@ class FireworksRocketActor : Actor {
     virtual void tryTeleportTo(Vec3 const&, bool, bool, int, int);
     virtual void chorusFruitTeleport(Vec3 &);
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
-    virtual void FireworksRocketlerpMotion(Vec3 const&);
+    virtual void lerpMotion(Vec3 const&);
     virtual void getAddPacket(void);
-    virtual void FireworksRocketnormalTick(void);
+    virtual void normalTick(void);
     virtual void baseTick(void);
     virtual void rideTick(void);
     virtual void positionRider(Actor&, float);
@@ -74,7 +74,7 @@ class FireworksRocketActor : Actor {
     virtual void makeStuckInBlock(float);
     virtual void getCameraOffset(void)const;
     virtual void getShadowHeightOffs(void);
-    virtual void FireworksRocketgetShadowRadius(void)const;
+    virtual void getShadowRadius(void)const;
     virtual void getHeadLookVector(float);
     virtual void canSeeInvisible(void)const;
     virtual void canSee(Actor const&)const;
@@ -131,7 +131,7 @@ class FireworksRocketActor : Actor {
     virtual void onLightningHit(void);
     virtual void onBounceStarted(BlockPos const&, Block const&);
     virtual void feed(int);
-    virtual void FireworksRockethandleEntityEvent(ActorEvent, int);
+    virtual void handleEntityEvent(ActorEvent, int);
     virtual void getPickRadius(void);
     virtual void spawnAtLocation(int, int);
     virtual void spawnAtLocation(int, int, float);
@@ -175,7 +175,7 @@ class FireworksRocketActor : Actor {
     virtual void handleFallDistanceOnServer(float, bool);
     virtual void playSynchronizedSound(LevelSoundEvent, Vec3 const&, Block const&, bool);
     virtual void playSynchronizedSound(LevelSoundEvent, Vec3 const&, int, bool);
-    virtual void FireworksRocketonSynchedDataUpdate(int);
+    virtual void onSynchedDataUpdate(int);
     virtual void canAddRider(Actor&)const;
     virtual void canBePulledIntoVehicle(void)const;
     virtual void inCaravan(void)const;
@@ -237,8 +237,8 @@ class FireworksRocketActor : Actor {
     virtual void outOfWorld(void);
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void markHurt(void);
-    virtual void FireworksRocketreadAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void FireworksRocketaddAdditionalSaveData(CompoundTag &);
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+    virtual void addAdditionalSaveData(CompoundTag &);
     virtual void _playStepSound(BlockPos const&, Block const&);
     virtual void _playFlySound(BlockPos const&, Block const&);
     virtual void _makeFlySound(void)const;

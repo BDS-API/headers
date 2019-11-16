@@ -2,11 +2,11 @@
 
 class ShowProfilePacket : Packet {
 
-    virtual void ShowProfile~ShowProfilePacket();
-    virtual void ShowProfile~ShowProfilePacket();
-    virtual void ShowProfilegetId(void)const;
+    virtual void ShowProfilePacket::~ShowProfilePacket();
+    virtual void ShowProfilePacket::~ShowProfilePacket();
+    virtual void getId(void)const;
     virtual void _ZNK17ShowProfilePacket7getNameB5cxx11Ev;
-    virtual void ShowProfilewrite(BinaryStream &)const;
-    virtual void ShowProfileread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

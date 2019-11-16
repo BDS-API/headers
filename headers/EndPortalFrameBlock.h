@@ -2,8 +2,8 @@
 
 class EndPortalFrameBlock : BlockLegacy {
 
-    virtual void ~EndPortalFrameBlock();
-    virtual void ~EndPortalFrameBlock();
+    virtual void EndPortalFrameBlock::~EndPortalFrameBlock();
+    virtual void EndPortalFrameBlock::~EndPortalFrameBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

@@ -2,8 +2,8 @@
 
 class PacketSender {
 
-    virtual void ~PacketSender();
-    virtual void ~PacketSender();
+    virtual void PacketSender::~PacketSender();
+    virtual void PacketSender::~PacketSender();
     virtual void send(Packet &);
     virtual void sendToServer(Packet &);
     virtual void sendToClient(NetworkIdentifier const&, Packet const&, unsigned char);

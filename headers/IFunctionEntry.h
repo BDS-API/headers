@@ -2,7 +2,7 @@
 
 class IFunctionEntry {
 
-    virtual void ~IFunctionEntry();
-    virtual void ~IFunctionEntry();
+    virtual void IFunctionEntry::~IFunctionEntry();
+    virtual void IFunctionEntry::~IFunctionEntry();
     virtual void execute(FunctionManager &, CommandOrigin const&);
 }

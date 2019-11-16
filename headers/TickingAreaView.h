@@ -2,8 +2,8 @@
 
 class TickingAreaView : ITickingAreaView {
 
-    virtual void ~TickingAreaView();
-    virtual void ~TickingAreaView();
+    virtual void TickingAreaView::~TickingAreaView();
+    virtual void TickingAreaView::~TickingAreaView();
     virtual void init(Bounds const&, bool);
     virtual void tick(Tick const&, BlockSource &, bool);
     virtual void tickSeasons(BlockSource &, Random &);

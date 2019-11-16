@@ -2,8 +2,8 @@
 
 class ITaskGroup {
 
-    virtual void ~ITaskGroup();
-    virtual void ~ITaskGroup();
+    virtual void ITaskGroup::~ITaskGroup();
+    virtual void ITaskGroup::~ITaskGroup();
     virtual void taskRegister(std::shared_ptr<BackgroundTask>);
     virtual void requeueTask(std::shared_ptr<BackgroundTask>, bool);
     virtual void getState(void)const;

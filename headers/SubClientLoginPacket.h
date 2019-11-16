@@ -2,11 +2,11 @@
 
 class SubClientLoginPacket : Packet {
 
-    virtual void SubClientLogin~SubClientLoginPacket();
-    virtual void SubClientLogin~SubClientLoginPacket();
-    virtual void SubClientLogingetId(void)const;
+    virtual void SubClientLoginPacket::~SubClientLoginPacket();
+    virtual void SubClientLoginPacket::~SubClientLoginPacket();
+    virtual void getId(void)const;
     virtual void _ZNK20SubClientLoginPacket7getNameB5cxx11Ev;
-    virtual void SubClientLoginwrite(BinaryStream &)const;
-    virtual void SubClientLoginread(ReadOnlyBinaryStream &);
-    virtual void SubClientLogindisallowBatching(void)const;
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
+    virtual void disallowBatching(void)const;
 }

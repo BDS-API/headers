@@ -2,8 +2,8 @@
 
 class ActorSpawnRuleBase {
 
-    virtual void ~ActorSpawnRuleBase();
-    virtual void ~ActorSpawnRuleBase();
+    virtual void ActorSpawnRuleBase::~ActorSpawnRuleBase();
+    virtual void ActorSpawnRuleBase::~ActorSpawnRuleBase();
     virtual void _ZN19ActorSpawnRuleBase10getRootKeyB5cxx11Ev;
     virtual void _ZN19ActorSpawnRuleBase11getFileTypeB5cxx11Ev;
     virtual void processPopulationControl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Json::Value &);

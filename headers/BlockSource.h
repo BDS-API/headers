@@ -2,6 +2,6 @@
 
 class BlockSource {
 
-    virtual void ~BlockSource();
-    virtual void ~BlockSource();
+    virtual void BlockSource::~BlockSource();
+    virtual void BlockSource::~BlockSource();
 }

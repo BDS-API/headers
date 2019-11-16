@@ -2,8 +2,8 @@
 
 class StructurePiece {
 
-    virtual void ~StructurePiece();
-    virtual void ~StructurePiece();
+    virtual void StructurePiece::~StructurePiece();
+    virtual void StructurePiece::~StructurePiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

@@ -2,7 +2,7 @@
 
 class FunctionCommand : Command {
 
-    virtual void Function~FunctionCommand();
-    virtual void Function~FunctionCommand();
-    virtual void Functionexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void FunctionCommand::~FunctionCommand();
+    virtual void FunctionCommand::~FunctionCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

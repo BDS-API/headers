@@ -2,9 +2,9 @@
 
 class HopMoveControl : MoveControl {
 
-    virtual void Hop~HopMoveControl();
-    virtual void Hop~HopMoveControl();
+    virtual void HopMoveControl::~HopMoveControl();
+    virtual void HopMoveControl::~HopMoveControl();
     virtual void initializeInternal(Mob &, MoveControlDescription *);
-    virtual void Hoptick(MoveControlComponent &, Mob &);
-    virtual void HopsetWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
+    virtual void tick(MoveControlComponent &, Mob &);
+    virtual void setWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
 }

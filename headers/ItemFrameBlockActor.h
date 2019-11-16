@@ -2,28 +2,28 @@
 
 class ItemFrameBlockActor : BlockActor {
 
-    virtual void ItemFrame~ItemFrameBlockActor();
-    virtual void ItemFrame~ItemFrameBlockActor();
-    virtual void ItemFrameload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void ItemFramesave(CompoundTag &)const;
+    virtual void ItemFrameBlockActor::~ItemFrameBlockActor();
+    virtual void ItemFrameBlockActor::~ItemFrameBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void ItemFrametick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
-    virtual void ItemFrameonChanged(BlockSource &);
+    virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void ItemFramegetUpdatePacket(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void ItemFrameonUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);
     virtual void clearCache(void);
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
-    virtual void ItemFramegetShadowRadius(BlockSource &)const;
+    virtual void getShadowRadius(BlockSource &)const;
     virtual void hasAlphaLayer(void)const;
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
     virtual void getDebugText(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, BlockPos const&);

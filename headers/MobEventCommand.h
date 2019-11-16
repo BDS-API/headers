@@ -2,7 +2,7 @@
 
 class MobEventCommand : Command {
 
-    virtual void MobEvent~MobEventCommand();
-    virtual void MobEvent~MobEventCommand();
-    virtual void MobEventexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void MobEventCommand::~MobEventCommand();
+    virtual void MobEventCommand::~MobEventCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

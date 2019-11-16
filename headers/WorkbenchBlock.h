@@ -2,8 +2,8 @@
 
 class WorkbenchBlock : BlockLegacy {
 
-    virtual void ~WorkbenchBlock();
-    virtual void ~WorkbenchBlock();
+    virtual void WorkbenchBlock::~WorkbenchBlock();
+    virtual void WorkbenchBlock::~WorkbenchBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

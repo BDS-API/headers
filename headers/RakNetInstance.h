@@ -2,8 +2,8 @@
 
 class RakNetInstance : Connector {
 
-    virtual void ~RakNetInstance();
-    virtual void ~RakNetInstance();
+    virtual void RakNetInstance::~RakNetInstance();
+    virtual void RakNetInstance::~RakNetInstance();
     virtual void onAppResumed(void);
     virtual void onAppSuspended(void);
     virtual void _ZNK14RakNetInstance11getLocalIpsB5cxx11Ev;
@@ -14,8 +14,8 @@ class RakNetInstance : Connector {
     virtual void setupNatPunch(bool);
     virtual void getNatPunchInfo(void)const;
     virtual void startNatPunchingClient(Social::GameConnectionInfo);
-    virtual void addConnectionStateListener(ConnectionStateListener *);
-    virtual void removeConnectionStateListener(ConnectionStateListener *);
+    virtual void addConnectionStateListener(Connector::ConnectionStateListener *);
+    virtual void removeConnectionStateListener(Connector::ConnectionStateListener *);
     virtual void isIPv4Supported(void)const;
     virtual void isIPv6Supported(void)const;
     virtual void getIPv4Port(void)const;

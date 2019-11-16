@@ -2,10 +2,10 @@
 
 class FixedBiomeSource : BiomeSource {
 
-    virtual void Fixed~FixedBiomeSource();
-    virtual void Fixed~FixedBiomeSource();
-    virtual void FixedfillBiomes(LevelChunk &)const;
-    virtual void FixedgetBiomeArea(BoundingBox const&, unsigned int)const;
-    virtual void FixedcontainsOnly(int, int, int, gsl::span<int const, -1l>)const;
-    virtual void FixedgetBiome(int, int)const;
+    virtual void FixedBiomeSource::~FixedBiomeSource();
+    virtual void FixedBiomeSource::~FixedBiomeSource();
+    virtual void fillBiomes(LevelChunk &)const;
+    virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
+    virtual void containsOnly(int, int, int, gsl::span<int const, -1l>)const;
+    virtual void getBiome(int, int)const;
 }

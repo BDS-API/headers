@@ -2,7 +2,7 @@
 
 class EnchantCommand : Command {
 
-    virtual void Enchant~EnchantCommand();
-    virtual void Enchant~EnchantCommand();
-    virtual void Enchantexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void EnchantCommand::~EnchantCommand();
+    virtual void EnchantCommand::~EnchantCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

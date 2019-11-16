@@ -2,13 +2,13 @@
 
 class ItemActor : Actor {
 
-    virtual void ItemreloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
+    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void Item~ItemActor();
-    virtual void Item~ItemActor();
+    virtual void ItemActor::~ItemActor();
+    virtual void ItemActor::~ItemActor();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);
@@ -38,8 +38,8 @@ class ItemActor : Actor {
     virtual void chorusFruitTeleport(Vec3 &);
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void lerpMotion(Vec3 const&);
-    virtual void ItemgetAddPacket(void);
-    virtual void ItemnormalTick(void);
+    virtual void getAddPacket(void);
+    virtual void normalTick(void);
     virtual void baseTick(void);
     virtual void rideTick(void);
     virtual void positionRider(Actor&, float);
@@ -82,7 +82,7 @@ class ItemActor : Actor {
     virtual void isSkyLit(float);
     virtual void getBrightness(float)const;
     virtual void interactPreventDefault(void);
-    virtual void ItemplayerTouch(Player &);
+    virtual void playerTouch(Player &);
     virtual void onAboveBubbleColumn(bool);
     virtual void onInsideBubbleColumn(bool);
     virtual void isImmobile(void)const;
@@ -124,14 +124,14 @@ class ItemActor : Actor {
     virtual void rideJumped(void);
     virtual void rideLanded(Vec3 const&, Vec3 const&);
     virtual void shouldRender(void)const;
-    virtual void ItemisInvulnerableTo(ActorDamageSource const&)const;
+    virtual void isInvulnerableTo(ActorDamageSource const&)const;
     virtual void actuallyHurt(int, ActorDamageSource const*, bool);
     virtual void animateHurt(void);
     virtual void doFireHurt(int);
     virtual void onLightningHit(void);
     virtual void onBounceStarted(BlockPos const&, Block const&);
     virtual void feed(int);
-    virtual void ItemhandleEntityEvent(ActorEvent, int);
+    virtual void handleEntityEvent(ActorEvent, int);
     virtual void getPickRadius(void);
     virtual void spawnAtLocation(int, int);
     virtual void spawnAtLocation(int, int, float);
@@ -159,9 +159,9 @@ class ItemActor : Actor {
     virtual void loadLinks(CompoundTag const&, std::vector<ActorLink, std::allocator<ActorLink>> &, DataLoadHelper &);
     virtual void getEntityTypeId(void)const;
     virtual void queryEntityRenderer(void)const;
-    virtual void ItemgetSourceUniqueID(void)const;
+    virtual void getSourceUniqueID(void)const;
     virtual void setOnFire(int);
-    virtual void ItemgetHandleWaterAABB(void)const;
+    virtual void getHandleWaterAABB(void)const;
     virtual void handleInsidePortal(BlockPos const&);
     virtual void getPortalCooldown(void)const;
     virtual void getPortalWaitTime(void)const;
@@ -182,7 +182,7 @@ class ItemActor : Actor {
     virtual void isLeashableType(void);
     virtual void tickLeash(void);
     virtual void sendMotionPacketIfNeeded(void);
-    virtual void ItemcanSynchronizeNewEntity(void)const;
+    virtual void canSynchronizeNewEntity(void)const;
     virtual void stopRiding(bool, bool, bool);
     virtual void startSwimming(void);
     virtual void stopSwimming(void);
@@ -233,12 +233,12 @@ class ItemActor : Actor {
     virtual void die(ActorDamageSource const&);
     virtual void shouldTick(void)const;
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
-    virtual void ItemcanMakeStepSound(void)const;
+    virtual void canMakeStepSound(void)const;
     virtual void outOfWorld(void);
-    virtual void Item_hurt(ActorDamageSource const&, int, bool, bool);
+    virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void markHurt(void);
-    virtual void ItemreadAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void ItemaddAdditionalSaveData(CompoundTag &);
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+    virtual void addAdditionalSaveData(CompoundTag &);
     virtual void _playStepSound(BlockPos const&, Block const&);
     virtual void _playFlySound(BlockPos const&, Block const&);
     virtual void _makeFlySound(void)const;

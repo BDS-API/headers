@@ -2,8 +2,8 @@
 
 class FilterTest {
 
-    virtual void ~FilterTest();
-    virtual void ~FilterTest();
+    virtual void FilterTest::~FilterTest();
+    virtual void FilterTest::~FilterTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);

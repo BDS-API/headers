@@ -2,8 +2,8 @@
 
 class RakNet::RakPeer : RakNet::RakPeerInterface, RakNet::RNS2EventHandler {
 
-    virtual void ~RakPeer();
-    virtual void ~RakPeer();
+    virtual void RakNet::RakPeer::~RakPeer();
+    virtual void RakNet::RakPeer::~RakPeer();
     virtual void Startup(unsigned int, RakNet::SocketDescriptor *, unsigned int, int);
     virtual void InitializeSecurity(char const*, char const*, bool);
     virtual void DisableSecurity(void);
@@ -98,9 +98,9 @@ class RakNet::RakPeer : RakNet::RakPeerInterface, RakNet::RNS2EventHandler {
     virtual void AllocRNS2RecvStruct(char const*, unsigned int);
     virtual void OnRNS2Recv(RakNet::RNS2RecvStruct *);
     virtual void ;
-    virtual void `non-virtual thunk to'~RakPeer();
-    virtual void `non-virtual thunk to'~RakPeer();
-    virtual void `non-virtual thunk to'OnRNS2Recv(RakNet::RNS2RecvStruct *);
-    virtual void `non-virtual thunk to'DeallocRNS2RecvStruct(RakNet::RNS2RecvStruct *, char const*, unsigned int);
-    virtual void `non-virtual thunk to'AllocRNS2RecvStruct(char const*, unsigned int);
+    virtual void `non-virtual thunk to'RakNet::RakPeer::~RakPeer();
+    virtual void `non-virtual thunk to'RakNet::RakPeer::~RakPeer();
+    virtual void `non-virtual thunk to'RakNet::RakPeer::OnRNS2Recv(RakNet::RNS2RecvStruct *);
+    virtual void `non-virtual thunk to'RakNet::RakPeer::DeallocRNS2RecvStruct(RakNet::RNS2RecvStruct *, char const*, unsigned int);
+    virtual void `non-virtual thunk to'RakNet::RakPeer::AllocRNS2RecvStruct(char const*, unsigned int);
 }

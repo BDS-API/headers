@@ -2,8 +2,8 @@
 
 class NetherFortressFeature : StructureFeature {
 
-    virtual void ~NetherFortressFeature();
-    virtual void ~NetherFortressFeature();
+    virtual void NetherFortressFeature::~NetherFortressFeature();
+    virtual void NetherFortressFeature::~NetherFortressFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

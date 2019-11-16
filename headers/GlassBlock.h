@@ -2,8 +2,8 @@
 
 class GlassBlock : BlockLegacy {
 
-    virtual void ~GlassBlock();
-    virtual void ~GlassBlock();
+    virtual void GlassBlock::~GlassBlock();
+    virtual void GlassBlock::~GlassBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

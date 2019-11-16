@@ -2,7 +2,7 @@
 
 class PlaySoundCommand : Command {
 
-    virtual void PlaySound~PlaySoundCommand();
-    virtual void PlaySound~PlaySoundCommand();
-    virtual void PlaySoundexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void PlaySoundCommand::~PlaySoundCommand();
+    virtual void PlaySoundCommand::~PlaySoundCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

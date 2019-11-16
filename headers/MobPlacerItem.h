@@ -2,12 +2,12 @@
 
 class MobPlacerItem : Item {
 
-    virtual void MobPlacer~MobPlacerItem();
-    virtual void MobPlacer~MobPlacerItem();
-    virtual void MobPlacertearDown(void);
+    virtual void MobPlacerItem::~MobPlacerItem();
+    virtual void MobPlacerItem::~MobPlacerItem();
+    virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
-    virtual void MobPlacerisExperimental(ItemDescriptor const*)const;
+    virtual void isExperimental(ItemDescriptor const*)const;
     virtual void setMaxStackSize(unsigned char);
     virtual void setCategory(CreativeItemCategory);
     virtual void setStackedByData(bool);
@@ -37,7 +37,7 @@ class MobPlacerItem : Item {
     virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void canDestroyInCreative(void)const;
     virtual void isDestructive(int)const;
-    virtual void MobPlacerisLiquidClipItem(int)const;
+    virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
@@ -45,18 +45,18 @@ class MobPlacerItem : Item {
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
-    virtual void MobPlacerisValidAuxValue(int)const;
+    virtual void isValidAuxValue(int)const;
     virtual void getDamageChance(int)const;
     virtual void uniqueAuxValues(void)const;
-    virtual void MobPlacerisMultiColorTinted(ItemStack const&)const;
+    virtual void isMultiColorTinted(ItemStack const&)const;
     virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
-    virtual void MobPlacergetBaseColor(ItemStack const&)const;
-    virtual void MobPlacergetSecondaryColor(ItemStack const&)const;
-    virtual void MobPlacersaveAdditionalData(ItemStackBase const&, CompoundTag &)const;
-    virtual void MobPlacerreadAdditionalData(ItemStackBase &, CompoundTag const&)const;
+    virtual void getBaseColor(ItemStack const&)const;
+    virtual void getSecondaryColor(ItemStack const&)const;
+    virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
+    virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void MobPlacerdispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
@@ -86,9 +86,9 @@ class MobPlacerItem : Item {
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void isEmissive(int)const;
-    virtual void MobPlacergetIcon(ItemStackBase const&, int, bool)const;
+    virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset(void)const;
-    virtual void MobPlacersetIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void setIcon(TextureUVCoordinateSet const&);
     virtual void setIconAtlas(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void canBeCharged(void)const;
@@ -100,5 +100,5 @@ class MobPlacerItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void MobPlacer_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

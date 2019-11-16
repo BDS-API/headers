@@ -2,11 +2,11 @@
 
 class StructureBlockUpdatePacket : Packet {
 
-    virtual void StructureBlockUpdate~StructureBlockUpdatePacket();
-    virtual void StructureBlockUpdate~StructureBlockUpdatePacket();
-    virtual void StructureBlockUpdategetId(void)const;
+    virtual void StructureBlockUpdatePacket::~StructureBlockUpdatePacket();
+    virtual void StructureBlockUpdatePacket::~StructureBlockUpdatePacket();
+    virtual void getId(void)const;
     virtual void _ZNK26StructureBlockUpdatePacket7getNameB5cxx11Ev;
-    virtual void StructureBlockUpdatewrite(BinaryStream &)const;
-    virtual void StructureBlockUpdateread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

@@ -2,8 +2,8 @@
 
 class BannerItem : Item {
 
-    virtual void Banner~BannerItem();
-    virtual void Banner~BannerItem();
+    virtual void BannerItem::~BannerItem();
+    virtual void BannerItem::~BannerItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -34,18 +34,18 @@ class BannerItem : Item {
     virtual void isThrowable(void)const;
     virtual void isPattern(void)const;
     virtual void showsDurabilityInCreative(void)const;
-    virtual void BannerisWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
+    virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void canDestroyInCreative(void)const;
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
-    virtual void BannerappendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
-    virtual void BannerisValidAuxValue(int)const;
+    virtual void isValidAuxValue(int)const;
     virtual void getDamageChance(int)const;
     virtual void uniqueAuxValues(void)const;
     virtual void isMultiColorTinted(ItemStack const&)const;
@@ -100,5 +100,5 @@ class BannerItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Banner_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

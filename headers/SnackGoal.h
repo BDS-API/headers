@@ -2,15 +2,15 @@
 
 class SnackGoal : Goal {
 
-    virtual void Snack~SnackGoal();
-    virtual void Snack~SnackGoal();
-    virtual void SnackcanUse(void);
-    virtual void SnackcanContinueToUse(void);
+    virtual void SnackGoal::~SnackGoal();
+    virtual void SnackGoal::~SnackGoal();
+    virtual void canUse(void);
+    virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);
-    virtual void Snackstart(void);
-    virtual void Snackstop(void);
-    virtual void Snacktick(void);
-    virtual void SnackappendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void start(void);
+    virtual void stop(void);
+    virtual void tick(void);
+    virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
     virtual void isTargetGoal(void)const;
     virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
 }

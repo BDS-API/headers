@@ -2,7 +2,7 @@
 
 class GiveCommand : Command {
 
-    virtual void Give~GiveCommand();
-    virtual void Give~GiveCommand();
-    virtual void Giveexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void GiveCommand::~GiveCommand();
+    virtual void GiveCommand::~GiveCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

@@ -2,7 +2,7 @@
 
 class TimeCommand : Command {
 
-    virtual void Time~TimeCommand();
-    virtual void Time~TimeCommand();
-    virtual void Timeexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void TimeCommand::~TimeCommand();
+    virtual void TimeCommand::~TimeCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

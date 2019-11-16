@@ -2,8 +2,8 @@
 
 class RakDataOutput : BytesDataOutput {
 
-    virtual void ~RakDataOutput();
-    virtual void ~RakDataOutput();
+    virtual void RakDataOutput::~RakDataOutput();
+    virtual void RakDataOutput::~RakDataOutput();
     virtual void writeString(gsl::basic_string_span<char const, -1l>);
     virtual void writeLongString(gsl::basic_string_span<char const, -1l>);
     virtual void writeFloat(float);

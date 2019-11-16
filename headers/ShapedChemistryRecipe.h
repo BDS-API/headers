@@ -2,8 +2,8 @@
 
 class ShapedChemistryRecipe : ShapedRecipe {
 
-    virtual void ~ShapedChemistryRecipe();
-    virtual void ~ShapedChemistryRecipe();
+    virtual void ShapedChemistryRecipe::~ShapedChemistryRecipe();
+    virtual void ShapedChemistryRecipe::~ShapedChemistryRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize(void)const;
     virtual void getIngredient(int, int)const;
@@ -13,9 +13,9 @@ class ShapedChemistryRecipe : ShapedRecipe {
     virtual void size(void)const;
     virtual void isExperimental(void)const;
     virtual void getId(void)const;
-    virtual void Recipe::getItemPack(void)const;
-    virtual void Recipe::isMultiRecipe(void)const;
-    virtual void Recipe::itemsMatch(ItemDescriptor const&, ItemDescriptor const&)const;
-    virtual void Recipe::itemsMatch(ItemDescriptor const&, ItemDescriptor const&, CompoundTag const*)const;
-    virtual void Recipe::itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;
+    virtual void getItemPack(void)const;
+    virtual void isMultiRecipe(void)const;
+    virtual void itemsMatch(ItemDescriptor const&, ItemDescriptor const&)const;
+    virtual void itemsMatch(ItemDescriptor const&, ItemDescriptor const&, CompoundTag const*)const;
+    virtual void itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;
 }

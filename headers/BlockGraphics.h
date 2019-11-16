@@ -2,8 +2,8 @@
 
 class BlockGraphics {
 
-    virtual void ~BlockGraphics();
-    virtual void ~BlockGraphics();
+    virtual void BlockGraphics::~BlockGraphics();
+    virtual void BlockGraphics::~BlockGraphics();
     virtual void getIconYOffset(void)const;
     virtual void getColor(int)const;
     virtual void getColor(BlockSource &, BlockPos const&)const;

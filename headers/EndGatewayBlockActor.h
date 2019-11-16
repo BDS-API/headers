@@ -2,29 +2,29 @@
 
 class EndGatewayBlockActor : BlockActor {
 
-    virtual void EndGateway~EndGatewayBlockActor();
-    virtual void EndGateway~EndGatewayBlockActor();
-    virtual void EndGatewayload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void EndGatewaysave(CompoundTag &)const;
+    virtual void EndGatewayBlockActor::~EndGatewayBlockActor();
+    virtual void EndGatewayBlockActor::~EndGatewayBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void EndGatewaytick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
-    virtual void EndGatewayonChanged(BlockSource &);
+    virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void EndGatewaygetUpdatePacket(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
-    virtual void EndGatewaytriggerEvent(int, int);
+    virtual void triggerEvent(int, int);
     virtual void clearCache(void);
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
     virtual void getShadowRadius(BlockSource &)const;
-    virtual void EndGatewayhasAlphaLayer(void)const;
+    virtual void hasAlphaLayer(void)const;
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
     virtual void getDebugText(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, BlockPos const&);
     virtual void _ZNK10BlockActor13getCustomNameB5cxx11Ev;

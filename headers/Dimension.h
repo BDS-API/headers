@@ -2,16 +2,16 @@
 
 class Dimension : LevelListener, SavedData {
 
-    virtual void ~Dimension();
-    virtual void ~Dimension();
-    virtual void BlockSourceListener::onSourceCreated(BlockSource &);
-    virtual void BlockSourceListener::onSourceDestroyed(BlockSource &);
-    virtual void BlockSourceListener::onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);
+    virtual void Dimension::~Dimension();
+    virtual void Dimension::~Dimension();
+    virtual void onSourceCreated(BlockSource &);
+    virtual void onSourceDestroyed(BlockSource &);
+    virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);
     virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);
-    virtual void BlockSourceListener::onBrightnessChanged(BlockSource &, BlockPos const&);
-    virtual void BlockSourceListener::onBlockEntityChanged(BlockSource &, BlockActor &);
-    virtual void BlockSourceListener::onBlockEntityAboutToBeRemoved(BlockSource &, std::shared_ptr<BlockActor>);
-    virtual void BlockSourceListener::onEntityChanged(BlockSource &, Actor &);
+    virtual void onBrightnessChanged(BlockSource &, BlockPos const&);
+    virtual void onBlockEntityChanged(BlockSource &, BlockActor &);
+    virtual void onBlockEntityAboutToBeRemoved(BlockSource &, std::shared_ptr<BlockActor>);
+    virtual void onEntityChanged(BlockSource &, Actor &);
     virtual void onBlockEvent(BlockSource &, int, int, int, int, int);
     virtual void allChanged(void);
     virtual void addParticle(ParticleType, Vec3 const&, Vec3 const&, int, CompoundTag const*, bool);
@@ -66,8 +66,8 @@ class Dimension : LevelListener, SavedData {
     virtual void startLeaveGame(void);
     virtual void getTimeOfDay(int, float)const;
     virtual void ;
-    virtual void `non-virtual thunk to'~Dimension();
-    virtual void `non-virtual thunk to'~Dimension();
-    virtual void `non-virtual thunk to'deserialize(CompoundTag const&);
-    virtual void `non-virtual thunk to'serialize(CompoundTag &)const;
+    virtual void `non-virtual thunk to'Dimension::~Dimension();
+    virtual void `non-virtual thunk to'Dimension::~Dimension();
+    virtual void `non-virtual thunk to'Dimension::deserialize(CompoundTag const&);
+    virtual void `non-virtual thunk to'Dimension::serialize(CompoundTag &)const;
 }

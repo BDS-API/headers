@@ -2,8 +2,8 @@
 
 class AgentLookControl : LookControl {
 
-    virtual void Agent~AgentLookControl();
-    virtual void Agent~AgentLookControl();
-    virtual void AgentinitializeInternal(Mob &);
-    virtual void Agenttick(Mob &);
+    virtual void AgentLookControl::~AgentLookControl();
+    virtual void AgentLookControl::~AgentLookControl();
+    virtual void initializeInternal(Mob &);
+    virtual void tick(Mob &);
 }

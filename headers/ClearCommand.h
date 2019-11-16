@@ -2,7 +2,7 @@
 
 class ClearCommand : Command {
 
-    virtual void Clear~ClearCommand();
-    virtual void Clear~ClearCommand();
-    virtual void Clearexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void ClearCommand::~ClearCommand();
+    virtual void ClearCommand::~ClearCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

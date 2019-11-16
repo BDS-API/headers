@@ -2,21 +2,21 @@
 
 class Container {
 
-    virtual void ~Container();
-    virtual void ~Container();
+    virtual void Container::~Container();
+    virtual void Container::~Container();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);
-    virtual void BlockActor::saveBlockData(CompoundTag &, BlockSource &)const;
+    virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void hasRoomForItem(ItemStack const&);
     virtual void addItem(ItemStack &);
     virtual void addItemToFirstEmptySlot(ItemStack &);
-    virtual void BlockActor::isFinished(void);
+    virtual void isFinished(void);
     virtual void removeItem(int, int);
     virtual void removeAllItems(void);
     virtual void dropContents(BlockSource &, Vec3 const&, bool);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void BlockActor::onPlace(BlockSource &);
+    virtual void onPlace(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void getSlotCopies(void)const;

@@ -2,7 +2,7 @@
 
 class GameRuleCommand : Command {
 
-    virtual void GameRule~GameRuleCommand();
-    virtual void GameRule~GameRuleCommand();
-    virtual void GameRuleexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void GameRuleCommand::~GameRuleCommand();
+    virtual void GameRuleCommand::~GameRuleCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

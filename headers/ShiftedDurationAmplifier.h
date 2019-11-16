@@ -2,9 +2,9 @@
 
 class ShiftedDurationAmplifier : Amplifier {
 
-    virtual void ShiftedDuration~ShiftedDurationAmplifier();
-    virtual void ShiftedDuration~ShiftedDurationAmplifier();
+    virtual void ShiftedDurationAmplifier::~ShiftedDurationAmplifier();
+    virtual void ShiftedDurationAmplifier::~ShiftedDurationAmplifier();
     virtual void getAmount(int, float)const;
-    virtual void ShiftedDurationshouldBuff(int, int)const;
-    virtual void ShiftedDurationgetTickInterval(int)const;
+    virtual void shouldBuff(int, int)const;
+    virtual void getTickInterval(int)const;
 }

@@ -2,7 +2,7 @@
 
 class VideoStreamServerCommand : Command {
 
-    virtual void VideoStreamServer~VideoStreamServerCommand();
-    virtual void VideoStreamServer~VideoStreamServerCommand();
-    virtual void VideoStreamServerexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void VideoStreamServerCommand::~VideoStreamServerCommand();
+    virtual void VideoStreamServerCommand::~VideoStreamServerCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

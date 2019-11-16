@@ -2,8 +2,8 @@
 
 class RakNet::RakPeerInterface {
 
-    virtual void ~RakPeerInterface();
-    virtual void ~RakPeerInterface();
+    virtual void RakNet::RakPeerInterface::~RakPeerInterface();
+    virtual void RakNet::RakPeerInterface::~RakPeerInterface();
     virtual void Startup(unsigned int, RakNet::SocketDescriptor *, unsigned int, int);
     virtual void InitializeSecurity(char const*, char const*, bool);
     virtual void DisableSecurity(void);

@@ -2,7 +2,7 @@
 
 class SpreadPlayersCommand : Command {
 
-    virtual void SpreadPlayers~SpreadPlayersCommand();
-    virtual void SpreadPlayers~SpreadPlayersCommand();
-    virtual void SpreadPlayersexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void SpreadPlayersCommand::~SpreadPlayersCommand();
+    virtual void SpreadPlayersCommand::~SpreadPlayersCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

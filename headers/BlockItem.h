@@ -2,12 +2,12 @@
 
 class BlockItem : Item {
 
-    virtual void Block~BlockItem();
-    virtual void Block~BlockItem();
+    virtual void BlockItem::~BlockItem();
+    virtual void BlockItem::~BlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
-    virtual void BlockisExperimental(ItemDescriptor const*)const;
+    virtual void isExperimental(ItemDescriptor const*)const;
     virtual void setMaxStackSize(unsigned char);
     virtual void setCategory(CreativeItemCategory);
     virtual void setStackedByData(bool);
@@ -36,7 +36,7 @@ class BlockItem : Item {
     virtual void showsDurabilityInCreative(void)const;
     virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void canDestroyInCreative(void)const;
-    virtual void BlockisDestructive(int)const;
+    virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
@@ -45,7 +45,7 @@ class BlockItem : Item {
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
-    virtual void BlockisValidAuxValue(int)const;
+    virtual void isValidAuxValue(int)const;
     virtual void getDamageChance(int)const;
     virtual void uniqueAuxValues(void)const;
     virtual void isMultiColorTinted(ItemStack const&)const;
@@ -85,9 +85,9 @@ class BlockItem : Item {
     virtual void isSameItem(ItemStackBase const&, ItemStackBase const&)const;
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
-    virtual void BlockisEmissive(int)const;
-    virtual void BlockgetIcon(ItemStackBase const&, int, bool)const;
-    virtual void BlockgetIconYOffset(void)const;
+    virtual void isEmissive(int)const;
+    virtual void getIcon(ItemStackBase const&, int, bool)const;
+    virtual void getIconYOffset(void)const;
     virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void setIcon(TextureUVCoordinateSet const&);
     virtual void setIconAtlas(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
@@ -98,7 +98,7 @@ class BlockItem : Item {
     virtual void _checkUseOnPermissions(Actor &, ItemInstance &, unsigned char const&, BlockPos const&)const;
     virtual void _checkUseOnPermissions(Actor &, ItemStack &, unsigned char const&, BlockPos const&)const;
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
-    virtual void Block_calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
+    virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Block_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

@@ -2,17 +2,17 @@
 
 class EnchantingContainerManagerModel : ContainerManagerModel {
 
-    virtual void Enchanting~EnchantingContainerManagerModel();
-    virtual void Enchanting~EnchantingContainerManagerModel();
+    virtual void EnchantingContainerManagerModel::~EnchantingContainerManagerModel();
+    virtual void EnchantingContainerManagerModel::~EnchantingContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;
     virtual void setContainerType(ContainerType);
-    virtual void EnchantinggetItems(void);
-    virtual void EnchantingsetSlot(int, ContainerItemStack const&, bool);
-    virtual void EnchantinggetSlot(int);
-    virtual void EnchantingsetData(int, int);
-    virtual void EnchantingbroadcastChanges(void);
-    virtual void Enchantinginit(void);
+    virtual void getItems(void);
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    virtual void getSlot(int);
+    virtual void setData(int, int);
+    virtual void broadcastChanges(void);
+    virtual void init(void);
     virtual void isValid(float);
 }

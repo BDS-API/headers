@@ -2,9 +2,9 @@
 
 class MoveControl : Control {
 
-    virtual void Move~MoveControl();
-    virtual void Move~MoveControl();
-    virtual void MoveinitializeInternal(Mob &, MoveControlDescription *);
-    virtual void Movetick(MoveControlComponent &, Mob &);
-    virtual void MovesetWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
+    virtual void MoveControl::~MoveControl();
+    virtual void MoveControl::~MoveControl();
+    virtual void initializeInternal(Mob &, MoveControlDescription *);
+    virtual void tick(MoveControlComponent &, Mob &);
+    virtual void setWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
 }

@@ -2,8 +2,8 @@
 
 class LevelStorageSource {
 
-    virtual void ~LevelStorageSource();
-    virtual void ~LevelStorageSource();
+    virtual void LevelStorageSource::~LevelStorageSource();
+    virtual void LevelStorageSource::~LevelStorageSource();
     virtual void _ZNK30LevelStorageSource7getNameB5cxx11Ev;
     virtual void getLevelData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
     virtual void getLevelData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, LevelData &)const;

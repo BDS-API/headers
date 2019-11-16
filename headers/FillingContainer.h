@@ -2,26 +2,26 @@
 
 class FillingContainer : Container {
 
-    virtual void Filling~FillingContainer();
-    virtual void Filling~FillingContainer();
+    virtual void FillingContainer::~FillingContainer();
+    virtual void FillingContainer::~FillingContainer();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);
-    virtual void FillinggetItem(int)const;
+    virtual void getItem(int)const;
     virtual void hasRoomForItem(ItemStack const&);
     virtual void addItem(ItemStack &);
     virtual void addItemToFirstEmptySlot(ItemStack &);
-    virtual void FillingsetItem(int, ItemStack const&);
-    virtual void FillingremoveItem(int, int);
+    virtual void setItem(int, ItemStack const&);
+    virtual void removeItem(int, int);
     virtual void removeAllItems(void);
     virtual void dropContents(BlockSource &, Vec3 const&, bool);
-    virtual void FillinggetContainerSize(void)const;
-    virtual void FillinggetMaxStackSize(void)const;
-    virtual void FillingstartOpen(Player &);
-    virtual void FillingstopOpen(Player &);
+    virtual void getContainerSize(void)const;
+    virtual void getMaxStackSize(void)const;
+    virtual void startOpen(Player &);
+    virtual void stopOpen(Player &);
     virtual void getSlotCopies(void)const;
     virtual void getSlots(void)const;
-    virtual void FillinggetItemCount(ItemDescriptor const&);
+    virtual void getItemCount(ItemDescriptor const&);
     virtual void getItemCount(ItemStack const&);
     virtual void findFirstSlotForItem(ItemStack const&)const;
     virtual void canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
@@ -34,12 +34,12 @@ class FillingContainer : Container {
     virtual void addAdditionalSaveData(CompoundTag &);
     virtual void createTransactionContext(std::function<void ()(Container&, int, ItemStack const&, ItemStack const&)>, std::function<void ()(void)>);
     virtual void triggerTransactionChange(int, ItemStack const&, ItemStack const&);
-    virtual void Fillingadd(ItemStack &);
-    virtual void FillingcanAdd(ItemStack const&)const;
-    virtual void FillingdropAll(bool);
-    virtual void FillingclearSlot(int);
-    virtual void FillingclearInventory(int);
-    virtual void Fillingload(ListTag const&, SemVersion const&, Level &);
-    virtual void FillingdoDrop(ItemStack &, bool);
-    virtual void FillinggetEmptySlotsCount(void)const;
+    virtual void add(ItemStack &);
+    virtual void canAdd(ItemStack const&)const;
+    virtual void dropAll(bool);
+    virtual void clearSlot(int);
+    virtual void clearInventory(int);
+    virtual void load(ListTag const&, SemVersion const&, Level &);
+    virtual void doDrop(ItemStack &, bool);
+    virtual void getEmptySlotsCount(void)const;
 }

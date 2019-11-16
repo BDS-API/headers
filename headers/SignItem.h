@@ -2,8 +2,8 @@
 
 class SignItem : Item {
 
-    virtual void Sign~SignItem();
-    virtual void Sign~SignItem();
+    virtual void SignItem::~SignItem();
+    virtual void SignItem::~SignItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -98,7 +98,7 @@ class SignItem : Item {
     virtual void _checkUseOnPermissions(Actor &, ItemInstance &, unsigned char const&, BlockPos const&)const;
     virtual void _checkUseOnPermissions(Actor &, ItemStack &, unsigned char const&, BlockPos const&)const;
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
-    virtual void Sign_calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
+    virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Sign_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

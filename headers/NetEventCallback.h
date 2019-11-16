@@ -3,8 +3,8 @@
 class NetEventCallback {
 
     virtual void onPlayerReady(Player &);
-    virtual void ~NetEventCallback();
-    virtual void ~NetEventCallback();
+    virtual void NetEventCallback::~NetEventCallback();
+    virtual void NetEventCallback::~NetEventCallback();
     virtual void onConnect(NetworkIdentifier const&);
     virtual void onUnableToConnect(void);
     virtual void onTick(void);

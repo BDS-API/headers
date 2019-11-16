@@ -2,13 +2,13 @@
 
 class TridentRiptideEnchant : Enchant {
 
-    virtual void TridentRiptide~TridentRiptideEnchant();
-    virtual void TridentRiptide~TridentRiptideEnchant();
-    virtual void TridentRiptideisCompatibleWith(Enchant::Type)const;
-    virtual void TridentRiptidegetMinCost(int)const;
-    virtual void TridentRiptidegetMaxCost(int)const;
+    virtual void TridentRiptideEnchant::~TridentRiptideEnchant();
+    virtual void TridentRiptideEnchant::~TridentRiptideEnchant();
+    virtual void isCompatibleWith(Enchant::Type)const;
+    virtual void getMinCost(int)const;
+    virtual void getMaxCost(int)const;
     virtual void getMinLevel(void)const;
-    virtual void TridentRiptidegetMaxLevel(void)const;
+    virtual void getMaxLevel(void)const;
     virtual void getDamageProtection(int, ActorDamageSource const&)const;
     virtual void getDamageBonus(int, Actor const&)const;
     virtual void doPostAttack(Actor &, Actor &, int)const;

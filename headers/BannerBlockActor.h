@@ -2,22 +2,22 @@
 
 class BannerBlockActor : BlockActor {
 
-    virtual void Banner~BannerBlockActor();
-    virtual void Banner~BannerBlockActor();
-    virtual void Bannerload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void Bannersave(CompoundTag &)const;
+    virtual void BannerBlockActor::~BannerBlockActor();
+    virtual void BannerBlockActor::~BannerBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void Bannertick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
     virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void BannergetUpdatePacket(BlockSource &);
-    virtual void BanneronPlace(BlockSource &);
-    virtual void BanneronUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
+    virtual void onPlace(BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);

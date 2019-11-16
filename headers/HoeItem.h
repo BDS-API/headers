@@ -2,8 +2,8 @@
 
 class HoeItem : Item {
 
-    virtual void Hoe~HoeItem();
-    virtual void Hoe~HoeItem();
+    virtual void HoeItem::~HoeItem();
+    virtual void HoeItem::~HoeItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -26,7 +26,7 @@ class HoeItem : Item {
     virtual void isStackedByData(void)const;
     virtual void getMaxDamage(void)const;
     virtual void getAttackDamage(void)const;
-    virtual void HoeisHandEquipped(void)const;
+    virtual void isHandEquipped(void)const;
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
@@ -41,7 +41,7 @@ class HoeItem : Item {
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
-    virtual void HoegetEnchantSlot(void)const;
+    virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
@@ -63,9 +63,9 @@ class HoeItem : Item {
     virtual void releaseUsing(ItemStack &, Player *, int)const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
     virtual void hurtEnemy(ItemInstance &, Mob *, Mob *)const;
-    virtual void HoehurtEnemy(ItemStack &, Mob *, Mob *)const;
+    virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemInstance &, Block const&, int, int, int, Actor *)const;
-    virtual void HoemineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
+    virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
     virtual void _ZNK4Item18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE;
     virtual void _ZNK4Item26buildEffectDescriptionNameB5cxx11ERK13ItemStackBase;
     virtual void _ZNK4Item28buildCategoryDescriptionNameB5cxx11Ev;
@@ -100,5 +100,5 @@ class HoeItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Hoe_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

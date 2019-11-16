@@ -2,8 +2,8 @@
 
 class Goal {
 
-    virtual void ~Goal();
-    virtual void ~Goal();
+    virtual void Goal::~Goal();
+    virtual void Goal::~Goal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);

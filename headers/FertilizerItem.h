@@ -2,8 +2,8 @@
 
 class FertilizerItem : Item {
 
-    virtual void Fertilizer~FertilizerItem();
-    virtual void Fertilizer~FertilizerItem();
+    virtual void FertilizerItem::~FertilizerItem();
+    virtual void FertilizerItem::~FertilizerItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -29,7 +29,7 @@ class FertilizerItem : Item {
     virtual void isHandEquipped(void)const;
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
-    virtual void FertilizerisFertilizer(int)const;
+    virtual void isFertilizer(int)const;
     virtual void isGlint(ItemStackBase const&)const;
     virtual void isThrowable(void)const;
     virtual void isPattern(void)const;
@@ -56,7 +56,7 @@ class FertilizerItem : Item {
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void Fertilizerdispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
@@ -100,5 +100,5 @@ class FertilizerItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Fertilizer_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

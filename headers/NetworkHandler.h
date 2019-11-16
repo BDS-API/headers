@@ -2,8 +2,8 @@
 
 class NetworkHandler : RakNetInstance::ConnectionCallbacks, RakPeerHelper::IPSupportInterface, LocalConnector::ConnectionCallbacks {
 
-    virtual void ~NetworkHandler();
-    virtual void ~NetworkHandler();
+    virtual void NetworkHandler::~NetworkHandler();
+    virtual void NetworkHandler::~NetworkHandler();
     virtual void onNewIncomingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onNewOutgoingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onConnectionClosed(NetworkIdentifier const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
@@ -17,17 +17,17 @@ class NetworkHandler : RakNetInstance::ConnectionCallbacks, RakPeerHelper::IPSup
     virtual void onNewIncomingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onNewOutgoingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void ;
-    virtual void `non-virtual thunk to'~NetworkHandler();
-    virtual void `non-virtual thunk to'~NetworkHandler();
-    virtual void `non-virtual thunk to'useIPv4Only(void)const;
-    virtual void `non-virtual thunk to'useIPv6Only(void)const;
-    virtual void `non-virtual thunk to'getDefaultGamePort(void)const;
-    virtual void `non-virtual thunk to'getDefaultGamePortv6(void)const;
+    virtual void `non-virtual thunk to'NetworkHandler::~NetworkHandler();
+    virtual void `non-virtual thunk to'NetworkHandler::~NetworkHandler();
+    virtual void `non-virtual thunk to'NetworkHandler::useIPv4Only(void)const;
+    virtual void `non-virtual thunk to'NetworkHandler::useIPv6Only(void)const;
+    virtual void `non-virtual thunk to'NetworkHandler::getDefaultGamePort(void)const;
+    virtual void `non-virtual thunk to'NetworkHandler::getDefaultGamePortv6(void)const;
     virtual void ;
-    virtual void `non-virtual thunk to'~NetworkHandler();
-    virtual void `non-virtual thunk to'~NetworkHandler();
-    virtual void `non-virtual thunk to'onNewIncomingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
-    virtual void `non-virtual thunk to'onNewOutgoingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
-    virtual void `non-virtual thunk to'onConnectionClosed(NetworkIdentifier const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
-    virtual void `non-virtual thunk to'onOutgoingConnectionFailed(void);
+    virtual void `non-virtual thunk to'NetworkHandler::~NetworkHandler();
+    virtual void `non-virtual thunk to'NetworkHandler::~NetworkHandler();
+    virtual void `non-virtual thunk to'NetworkHandler::onNewIncomingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
+    virtual void `non-virtual thunk to'NetworkHandler::onNewOutgoingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
+    virtual void `non-virtual thunk to'NetworkHandler::onConnectionClosed(NetworkIdentifier const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    virtual void `non-virtual thunk to'NetworkHandler::onOutgoingConnectionFailed(void);
 }

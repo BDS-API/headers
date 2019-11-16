@@ -2,7 +2,7 @@
 
 class AttributeInstance {
 
-    virtual void ~AttributeInstance();
-    virtual void ~AttributeInstance();
+    virtual void AttributeInstance::~AttributeInstance();
+    virtual void AttributeInstance::~AttributeInstance();
     virtual void tick(void);
 }

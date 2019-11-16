@@ -2,8 +2,8 @@
 
 class EncryptedFileAccessStrategy : DirectoryPackAccessStrategy {
 
-    virtual void ~EncryptedFileAccessStrategy();
-    virtual void ~EncryptedFileAccessStrategy();
+    virtual void EncryptedFileAccessStrategy::~EncryptedFileAccessStrategy();
+    virtual void EncryptedFileAccessStrategy::~EncryptedFileAccessStrategy();
     virtual void getPackSize(void)const;
     virtual void getPackLocation(void)const;
     virtual void _ZNK27DirectoryPackAccessStrategy11getPackNameB5cxx11Ev;
@@ -23,6 +23,6 @@ class EncryptedFileAccessStrategy : DirectoryPackAccessStrategy {
     virtual void generateAssetSet(void);
     virtual void canRecurse(void)const;
     virtual void unload(void);
-    virtual void PackAccessStrategy::hasUpgradeFiles(void)const;
+    virtual void hasUpgradeFiles(void)const;
     virtual void readContentIdentity(void)const;
 }

@@ -2,22 +2,22 @@
 
 class MobSpawnerBlockActor : BlockActor {
 
-    virtual void MobSpawner~MobSpawnerBlockActor();
-    virtual void MobSpawner~MobSpawnerBlockActor();
-    virtual void MobSpawnerload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void MobSpawnersave(CompoundTag &)const;
+    virtual void MobSpawnerBlockActor::~MobSpawnerBlockActor();
+    virtual void MobSpawnerBlockActor::~MobSpawnerBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void MobSpawnertick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
     virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void MobSpawnergetUpdatePacket(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void MobSpawneronUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);

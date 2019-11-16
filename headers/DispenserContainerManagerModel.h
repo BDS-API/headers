@@ -2,12 +2,12 @@
 
 class DispenserContainerManagerModel : LevelContainerManagerModel {
 
-    virtual void ~DispenserContainerManagerModel();
-    virtual void ~DispenserContainerManagerModel();
-    virtual void ContainerManagerModel::getContainerId(void)const;
-    virtual void ContainerManagerModel::setContainerId(ContainerID);
-    virtual void ContainerManagerModel::getContainerType(void)const;
-    virtual void ContainerManagerModel::setContainerType(ContainerType);
+    virtual void DispenserContainerManagerModel::~DispenserContainerManagerModel();
+    virtual void DispenserContainerManagerModel::~DispenserContainerManagerModel();
+    virtual void getContainerId(void)const;
+    virtual void setContainerId(ContainerID);
+    virtual void getContainerType(void)const;
+    virtual void setContainerType(ContainerType);
     virtual void getItems(void);
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

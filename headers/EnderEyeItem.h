@@ -2,8 +2,8 @@
 
 class EnderEyeItem : Item {
 
-    virtual void EnderEye~EnderEyeItem();
-    virtual void EnderEye~EnderEyeItem();
+    virtual void EnderEyeItem::~EnderEyeItem();
+    virtual void EnderEyeItem::~EnderEyeItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -31,7 +31,7 @@ class EnderEyeItem : Item {
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
     virtual void isGlint(ItemStackBase const&)const;
-    virtual void EnderEyeisThrowable(void)const;
+    virtual void isThrowable(void)const;
     virtual void isPattern(void)const;
     virtual void showsDurabilityInCreative(void)const;
     virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
@@ -55,7 +55,7 @@ class EnderEyeItem : Item {
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
-    virtual void EnderEyeuse(ItemStack &, Player &)const;
+    virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;

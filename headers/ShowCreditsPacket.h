@@ -2,11 +2,11 @@
 
 class ShowCreditsPacket : Packet {
 
-    virtual void ShowCredits~ShowCreditsPacket();
-    virtual void ShowCredits~ShowCreditsPacket();
-    virtual void ShowCreditsgetId(void)const;
+    virtual void ShowCreditsPacket::~ShowCreditsPacket();
+    virtual void ShowCreditsPacket::~ShowCreditsPacket();
+    virtual void getId(void)const;
     virtual void _ZNK17ShowCreditsPacket7getNameB5cxx11Ev;
-    virtual void ShowCreditswrite(BinaryStream &)const;
-    virtual void ShowCreditsread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

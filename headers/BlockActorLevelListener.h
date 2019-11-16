@@ -2,17 +2,17 @@
 
 class BlockActorLevelListener : LevelListener {
 
-    virtual void BlockActor~BlockActorLevelListener();
-    virtual void BlockActor~BlockActorLevelListener();
-    virtual void BlockSourceListener::onSourceCreated(BlockSource &);
-    virtual void BlockSourceListener::onSourceDestroyed(BlockSource &);
-    virtual void BlockSourceListener::onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);
-    virtual void BlockSourceListener::onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);
-    virtual void BlockSourceListener::onBrightnessChanged(BlockSource &, BlockPos const&);
-    virtual void BlockSourceListener::onBlockEntityChanged(BlockSource &, BlockActor &);
-    virtual void BlockSourceListener::onBlockEntityAboutToBeRemoved(BlockSource &, std::shared_ptr<BlockActor>);
-    virtual void BlockSourceListener::onEntityChanged(BlockSource &, Actor &);
-    virtual void BlockSourceListener::onBlockEvent(BlockSource &, int, int, int, int, int);
+    virtual void BlockActorLevelListener::~BlockActorLevelListener();
+    virtual void BlockActorLevelListener::~BlockActorLevelListener();
+    virtual void onSourceCreated(BlockSource &);
+    virtual void onSourceDestroyed(BlockSource &);
+    virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);
+    virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);
+    virtual void onBrightnessChanged(BlockSource &, BlockPos const&);
+    virtual void onBlockEntityChanged(BlockSource &, BlockActor &);
+    virtual void onBlockEntityAboutToBeRemoved(BlockSource &, std::shared_ptr<BlockActor>);
+    virtual void onEntityChanged(BlockSource &, Actor &);
+    virtual void onBlockEvent(BlockSource &, int, int, int, int, int);
     virtual void allChanged(void);
     virtual void addParticle(ParticleType, Vec3 const&, Vec3 const&, int, CompoundTag const*, bool);
     virtual void sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int);
@@ -26,8 +26,8 @@ class BlockActorLevelListener : LevelListener {
     virtual void onEntityRemoved(Actor &);
     virtual void onNewChunk(BlockSource &, LevelChunk &);
     virtual void onNewChunkFor(Player &, LevelChunk &);
-    virtual void BlockActoronChunkLoaded(LevelChunk &);
-    virtual void BlockActoronChunkUnloaded(LevelChunk &);
+    virtual void onChunkLoaded(LevelChunk &);
+    virtual void onChunkUnloaded(LevelChunk &);
     virtual void onLevelDestruction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void levelEvent(LevelEvent, Vec3 const&, int);
     virtual void levelEvent(LevelEvent, CompoundTag const&);

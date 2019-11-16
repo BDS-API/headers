@@ -2,7 +2,7 @@
 
 class XPCommand : Command {
 
-    virtual void XP~XPCommand();
-    virtual void XP~XPCommand();
-    virtual void XPexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void XPCommand::~XPCommand();
+    virtual void XPCommand::~XPCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

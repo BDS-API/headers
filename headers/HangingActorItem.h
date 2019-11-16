@@ -2,8 +2,8 @@
 
 class HangingActorItem : Item {
 
-    virtual void HangingActor~HangingActorItem();
-    virtual void HangingActor~HangingActorItem();
+    virtual void HangingActorItem::~HangingActorItem();
+    virtual void HangingActorItem::~HangingActorItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -100,5 +100,5 @@ class HangingActorItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void HangingActor_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

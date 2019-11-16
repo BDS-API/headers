@@ -2,11 +2,11 @@
 
 class FurnaceInputContainerController : ContainerController {
 
-    virtual void FurnaceInput~FurnaceInputContainerController();
-    virtual void FurnaceInput~FurnaceInputContainerController();
-    virtual void FurnaceInputisItemAllowed(ItemInstance const&)const;
+    virtual void FurnaceInputContainerController::~FurnaceInputContainerController();
+    virtual void FurnaceInputContainerController::~FurnaceInputContainerController();
+    virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
-    virtual void FurnaceInputisItemFiltered(Recipes const&, ContainerItemStack const&)const;
+    virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;
     virtual void getBackgroundStyle(int)const;
     virtual void _canSet(int, ContainerItemStack const&, ItemTransferAmount)const;
     virtual void _getAvailableSetCount(int, ContainerItemStack const&)const;

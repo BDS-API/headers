@@ -2,9 +2,9 @@
 
 class ActorInWeatherTest : FilterTest {
 
-    virtual void ~ActorInWeatherTest();
-    virtual void ~ActorInWeatherTest();
-    virtual void setup(Definition const&, FilterInputs const&);
+    virtual void ActorInWeatherTest::~ActorInWeatherTest();
+    virtual void ActorInWeatherTest::~ActorInWeatherTest();
+    virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);
     virtual void getName(void)const;

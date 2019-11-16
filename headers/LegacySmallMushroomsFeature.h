@@ -2,8 +2,8 @@
 
 class LegacySmallMushroomsFeature : Feature {
 
-    virtual void LegacySmallMushrooms~LegacySmallMushroomsFeature();
-    virtual void LegacySmallMushrooms~LegacySmallMushroomsFeature();
+    virtual void LegacySmallMushroomsFeature::~LegacySmallMushroomsFeature();
+    virtual void LegacySmallMushroomsFeature::~LegacySmallMushroomsFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void LegacySmallMushroomsplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

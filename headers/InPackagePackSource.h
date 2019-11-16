@@ -2,11 +2,11 @@
 
 class InPackagePackSource : PackSource {
 
-    virtual void InPackage~InPackagePackSource();
-    virtual void InPackage~InPackagePackSource();
-    virtual void InPackageforEachPackConst(std::function<void ()(Pack const&)>)const;
-    virtual void InPackageforEachPack(std::function<void ()(Pack &)>);
-    virtual void InPackagegetPackOrigin(void)const;
-    virtual void InPackagegetPackType(void)const;
-    virtual void InPackageload(PackManifestFactory &, IContentKeyProvider const&);
+    virtual void InPackagePackSource::~InPackagePackSource();
+    virtual void InPackagePackSource::~InPackagePackSource();
+    virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
+    virtual void forEachPack(std::function<void ()(Pack &)>);
+    virtual void getPackOrigin(void)const;
+    virtual void getPackType(void)const;
+    virtual void load(PackManifestFactory &, IContentKeyProvider const&);
 }

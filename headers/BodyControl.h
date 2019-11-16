@@ -2,7 +2,7 @@
 
 class BodyControl : Control {
 
-    virtual void Body~BodyControl();
-    virtual void Body~BodyControl();
-    virtual void BodyclientTick(Mob &);
+    virtual void BodyControl::~BodyControl();
+    virtual void BodyControl::~BodyControl();
+    virtual void clientTick(Mob &);
 }

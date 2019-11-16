@@ -2,10 +2,10 @@
 
 class MusicBlockActor : BlockActor {
 
-    virtual void Music~MusicBlockActor();
-    virtual void Music~MusicBlockActor();
-    virtual void Musicload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void Musicsave(CompoundTag &)const;
+    virtual void MusicBlockActor::~MusicBlockActor();
+    virtual void MusicBlockActor::~MusicBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);

@@ -2,7 +2,7 @@
 
 class ReloadCommand : Command {
 
-    virtual void Reload~ReloadCommand();
-    virtual void Reload~ReloadCommand();
-    virtual void Reloadexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void ReloadCommand::~ReloadCommand();
+    virtual void ReloadCommand::~ReloadCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

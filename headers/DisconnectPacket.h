@@ -2,11 +2,11 @@
 
 class DisconnectPacket : Packet {
 
-    virtual void Disconnect~DisconnectPacket();
-    virtual void Disconnect~DisconnectPacket();
-    virtual void DisconnectgetId(void)const;
+    virtual void DisconnectPacket::~DisconnectPacket();
+    virtual void DisconnectPacket::~DisconnectPacket();
+    virtual void getId(void)const;
     virtual void _ZNK16DisconnectPacket7getNameB5cxx11Ev;
-    virtual void Disconnectwrite(BinaryStream &)const;
-    virtual void Disconnectread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

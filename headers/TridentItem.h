@@ -2,8 +2,8 @@
 
 class TridentItem : Item {
 
-    virtual void Trident~TridentItem();
-    virtual void Trident~TridentItem();
+    virtual void TridentItem::~TridentItem();
+    virtual void TridentItem::~TridentItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -24,8 +24,8 @@ class TridentItem : Item {
     virtual void canDestroySpecial(Block const&)const;
     virtual void getLevelDataForAuxValue(int)const;
     virtual void isStackedByData(void)const;
-    virtual void TridentgetMaxDamage(void)const;
-    virtual void TridentgetAttackDamage(void)const;
+    virtual void getMaxDamage(void)const;
+    virtual void getAttackDamage(void)const;
     virtual void isHandEquipped(void)const;
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
@@ -35,14 +35,14 @@ class TridentItem : Item {
     virtual void isPattern(void)const;
     virtual void showsDurabilityInCreative(void)const;
     virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
-    virtual void TridentcanDestroyInCreative(void)const;
+    virtual void canDestroyInCreative(void)const;
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
-    virtual void TridentappendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
-    virtual void TridentgetEnchantSlot(void)const;
-    virtual void TridentgetEnchantValue(void)const;
+    virtual void getEnchantSlot(void)const;
+    virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
     virtual void isValidAuxValue(int)const;
@@ -55,15 +55,15 @@ class TridentItem : Item {
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
-    virtual void Tridentuse(ItemStack &, Player &)const;
-    virtual void Tridentdispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void use(ItemStack &, Player &)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
-    virtual void TridentreleaseUsing(ItemStack &, Player *, int)const;
+    virtual void releaseUsing(ItemStack &, Player *, int)const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
     virtual void hurtEnemy(ItemInstance &, Mob *, Mob *)const;
-    virtual void TridenthurtEnemy(ItemStack &, Mob *, Mob *)const;
+    virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemInstance &, Block const&, int, int, int, Actor *)const;
     virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
     virtual void _ZNK4Item18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE;

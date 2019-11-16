@@ -2,8 +2,8 @@
 
 class AgentCommands::TillCommand : AgentCommands::Command {
 
-    virtual void ~TillCommand();
-    virtual void ~TillCommand();
+    virtual void AgentCommands::TillCommand::~TillCommand();
+    virtual void AgentCommands::TillCommand::~TillCommand();
     virtual void execute(void);
     virtual void isDone(void);
     virtual void tick(void);

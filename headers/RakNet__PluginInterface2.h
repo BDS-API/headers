@@ -2,8 +2,8 @@
 
 class RakNet::PluginInterface2 {
 
-    virtual void ~PluginInterface2();
-    virtual void ~PluginInterface2();
+    virtual void RakNet::PluginInterface2::~PluginInterface2();
+    virtual void RakNet::PluginInterface2::~PluginInterface2();
     virtual void OnAttach(void);
     virtual void OnDetach(void);
     virtual void Update(void);

@@ -2,9 +2,9 @@
 
 class BrewingStandFuelContainerController : ContainerController {
 
-    virtual void BrewingStandFuel~BrewingStandFuelContainerController();
-    virtual void BrewingStandFuel~BrewingStandFuelContainerController();
-    virtual void BrewingStandFuelisItemAllowed(ItemInstance const&)const;
+    virtual void BrewingStandFuelContainerController::~BrewingStandFuelContainerController();
+    virtual void BrewingStandFuelContainerController::~BrewingStandFuelContainerController();
+    virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;
     virtual void getBackgroundStyle(int)const;

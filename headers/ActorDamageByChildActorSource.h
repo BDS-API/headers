@@ -2,11 +2,11 @@
 
 class ActorDamageByChildActorSource : ActorDamageByActorSource {
 
-    virtual void ~ActorDamageByChildActorSource();
-    virtual void ~ActorDamageByChildActorSource();
+    virtual void ActorDamageByChildActorSource::~ActorDamageByChildActorSource();
+    virtual void ActorDamageByChildActorSource::~ActorDamageByChildActorSource();
     virtual void isEntitySource(void)const;
     virtual void isChildEntitySource(void)const;
-    virtual void ActorDamageSource::isBlockSource(void)const;
+    virtual void isBlockSource(void)const;
     virtual void getDeathMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Actor *)const;
     virtual void getIsCreative(void)const;
     virtual void getIsWorldBuilder(void)const;

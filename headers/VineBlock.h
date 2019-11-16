@@ -2,8 +2,8 @@
 
 class VineBlock : BlockLegacy {
 
-    virtual void ~VineBlock();
-    virtual void ~VineBlock();
+    virtual void VineBlock::~VineBlock();
+    virtual void VineBlock::~VineBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

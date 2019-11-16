@@ -2,7 +2,7 @@
 
 class StopCommand : Command {
 
-    virtual void Stop~StopCommand();
-    virtual void Stop~StopCommand();
-    virtual void Stopexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void StopCommand::~StopCommand();
+    virtual void StopCommand::~StopCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

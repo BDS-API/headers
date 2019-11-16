@@ -2,7 +2,7 @@
 
 class AgentBodyControl : BodyControl {
 
-    virtual void Agent~AgentBodyControl();
-    virtual void Agent~AgentBodyControl();
-    virtual void AgentclientTick(Mob &);
+    virtual void AgentBodyControl::~AgentBodyControl();
+    virtual void AgentBodyControl::~AgentBodyControl();
+    virtual void clientTick(Mob &);
 }

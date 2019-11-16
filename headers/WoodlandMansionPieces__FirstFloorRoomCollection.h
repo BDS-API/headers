@@ -2,8 +2,8 @@
 
 class WoodlandMansionPieces::FirstFloorRoomCollection : WoodlandMansionPieces::FloorRoomCollection {
 
-    virtual void ~FirstFloorRoomCollection();
-    virtual void ~FirstFloorRoomCollection();
+    virtual void WoodlandMansionPieces::FirstFloorRoomCollection::~FirstFloorRoomCollection();
+    virtual void WoodlandMansionPieces::FirstFloorRoomCollection::~FirstFloorRoomCollection();
     virtual void _ZN21WoodlandMansionPieces24FirstFloorRoomCollection6get1x1B5cxx11ER6Random;
     virtual void _ZN21WoodlandMansionPieces24FirstFloorRoomCollection12get1x1SecretB5cxx11ER6Random;
     virtual void _ZN21WoodlandMansionPieces24FirstFloorRoomCollection18get1x2SideEntranceB5cxx11ER6Randomb;

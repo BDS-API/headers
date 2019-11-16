@@ -2,11 +2,11 @@
 
 class MobEffectPacket : Packet {
 
-    virtual void MobEffect~MobEffectPacket();
-    virtual void MobEffect~MobEffectPacket();
-    virtual void MobEffectgetId(void)const;
+    virtual void MobEffectPacket::~MobEffectPacket();
+    virtual void MobEffectPacket::~MobEffectPacket();
+    virtual void getId(void)const;
     virtual void _ZNK15MobEffectPacket7getNameB5cxx11Ev;
-    virtual void MobEffectwrite(BinaryStream &)const;
-    virtual void MobEffectread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

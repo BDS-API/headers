@@ -2,7 +2,7 @@
 
 class TagCommand : Command {
 
-    virtual void Tag~TagCommand();
-    virtual void Tag~TagCommand();
-    virtual void Tagexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void TagCommand::~TagCommand();
+    virtual void TagCommand::~TagCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

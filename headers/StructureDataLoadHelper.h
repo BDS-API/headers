@@ -2,23 +2,23 @@
 
 class StructureDataLoadHelper : DataLoadHelper {
 
-    virtual void Structure~StructureDataLoadHelper();
-    virtual void Structure~StructureDataLoadHelper();
-    virtual void StructureloadPosition(Vec3 const&);
-    virtual void StructureloadBlockPosition(BlockPos const&);
-    virtual void StructureloadBlockPositionOffset(BlockPos const&);
-    virtual void StructureloadRotationDegreesX(float);
-    virtual void StructureloadRotationDegreesY(float);
-    virtual void StructureloadRotationRadiansX(float);
-    virtual void StructureloadRotationRadiansY(float);
-    virtual void StructureloadFacingID(unsigned char);
-    virtual void StructureloadDirection(Vec3 const&);
-    virtual void StructureloadDirection(Direction::Type);
-    virtual void StructureloadRotation(Rotation);
-    virtual void StructureloadMirror(Mirror);
-    virtual void StructureloadActorUniqueID(ActorUniqueID);
-    virtual void StructureloadOwnerID(ActorUniqueID);
-    virtual void StructuregetType(void)const;
-    virtual void StructureshouldResetTime(void);
-    virtual void Structure_generateNewID(void);
+    virtual void StructureDataLoadHelper::~StructureDataLoadHelper();
+    virtual void StructureDataLoadHelper::~StructureDataLoadHelper();
+    virtual void loadPosition(Vec3 const&);
+    virtual void loadBlockPosition(BlockPos const&);
+    virtual void loadBlockPositionOffset(BlockPos const&);
+    virtual void loadRotationDegreesX(float);
+    virtual void loadRotationDegreesY(float);
+    virtual void loadRotationRadiansX(float);
+    virtual void loadRotationRadiansY(float);
+    virtual void loadFacingID(unsigned char);
+    virtual void loadDirection(Vec3 const&);
+    virtual void loadDirection(Direction::Type);
+    virtual void loadRotation(Rotation);
+    virtual void loadMirror(Mirror);
+    virtual void loadActorUniqueID(ActorUniqueID);
+    virtual void loadOwnerID(ActorUniqueID);
+    virtual void getType(void)const;
+    virtual void shouldResetTime(void);
+    virtual void _generateNewID(void);
 }

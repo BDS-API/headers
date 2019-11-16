@@ -2,8 +2,8 @@
 
 class LegacyTreeFeature : Feature {
 
-    virtual void LegacyTree~LegacyTreeFeature();
-    virtual void LegacyTree~LegacyTreeFeature();
+    virtual void LegacyTreeFeature::~LegacyTreeFeature();
+    virtual void LegacyTreeFeature::~LegacyTreeFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void LegacyTreeplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

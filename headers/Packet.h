@@ -2,8 +2,8 @@
 
 class Packet {
 
-    virtual void ~Packet();
-    virtual void ~Packet();
+    virtual void Packet::~Packet();
+    virtual void Packet::~Packet();
     virtual void getId(void)const;
     virtual void _ZNK23Packet7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;

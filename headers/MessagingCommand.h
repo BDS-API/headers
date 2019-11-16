@@ -2,7 +2,7 @@
 
 class MessagingCommand : Command {
 
-    virtual void Messaging~MessagingCommand();
-    virtual void Messaging~MessagingCommand();
-    virtual void Messagingexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void MessagingCommand::~MessagingCommand();
+    virtual void MessagingCommand::~MessagingCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

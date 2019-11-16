@@ -2,8 +2,8 @@
 
 class BambooBlock : BlockLegacy {
 
-    virtual void ~BambooBlock();
-    virtual void ~BambooBlock();
+    virtual void BambooBlock::~BambooBlock();
+    virtual void BambooBlock::~BambooBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

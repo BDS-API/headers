@@ -2,8 +2,8 @@
 
 class RandomThreadCheckManager : AppPlatformListener {
 
-    virtual void ~RandomThreadCheckManager();
-    virtual void ~RandomThreadCheckManager();
+    virtual void RandomThreadCheckManager::~RandomThreadCheckManager();
+    virtual void RandomThreadCheckManager::~RandomThreadCheckManager();
     virtual void onLowMemory(void);
     virtual void onAppPaused(void);
     virtual void onAppUnpaused(void);

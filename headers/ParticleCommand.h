@@ -2,7 +2,7 @@
 
 class ParticleCommand : Command {
 
-    virtual void Particle~ParticleCommand();
-    virtual void Particle~ParticleCommand();
-    virtual void Particleexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void ParticleCommand::~ParticleCommand();
+    virtual void ParticleCommand::~ParticleCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

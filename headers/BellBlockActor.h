@@ -2,22 +2,22 @@
 
 class BellBlockActor : BlockActor {
 
-    virtual void Bell~BellBlockActor();
-    virtual void Bell~BellBlockActor();
-    virtual void Bellload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void Bellsave(CompoundTag &)const;
+    virtual void BellBlockActor::~BellBlockActor();
+    virtual void BellBlockActor::~BellBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void Belltick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
     virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void BellgetUpdatePacket(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void BellonUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);

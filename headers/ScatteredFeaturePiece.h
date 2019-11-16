@@ -2,8 +2,8 @@
 
 class ScatteredFeaturePiece : StructurePiece {
 
-    virtual void ~ScatteredFeaturePiece();
-    virtual void ~ScatteredFeaturePiece();
+    virtual void ScatteredFeaturePiece::~ScatteredFeaturePiece();
+    virtual void ScatteredFeaturePiece::~ScatteredFeaturePiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

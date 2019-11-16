@@ -2,9 +2,9 @@
 
 class DolphinMoveControl : MoveControl {
 
-    virtual void Dolphin~DolphinMoveControl();
-    virtual void Dolphin~DolphinMoveControl();
+    virtual void DolphinMoveControl::~DolphinMoveControl();
+    virtual void DolphinMoveControl::~DolphinMoveControl();
     virtual void initializeInternal(Mob &, MoveControlDescription *);
-    virtual void Dolphintick(MoveControlComponent &, Mob &);
+    virtual void tick(MoveControlComponent &, Mob &);
     virtual void setWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
 }

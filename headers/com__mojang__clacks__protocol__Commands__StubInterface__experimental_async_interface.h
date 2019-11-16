@@ -2,8 +2,8 @@
 
 class com::mojang::clacks::protocol::Commands::StubInterface::experimental_async_interface {
 
-    virtual void ~experimental_async_interface();
-    virtual void ~experimental_async_interface();
+    virtual void com::mojang::clacks::protocol::Commands::StubInterface::experimental_async_interface::~experimental_async_interface();
+    virtual void com::mojang::clacks::protocol::Commands::StubInterface::experimental_async_interface::~experimental_async_interface();
     virtual void listPlayer(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const*, com::mojang::clacks::protocol::PlayerList *, std::function<void ()(grpc::Status)>);
     virtual void kick(grpc::ClientContext *, com::mojang::clacks::protocol::PlayerAndMessage const*, com::mojang::clacks::protocol::Empty *, std::function<void ()(grpc::Status)>);
     virtual void say(grpc::ClientContext *, com::mojang::clacks::protocol::Message const*, com::mojang::clacks::protocol::Empty *, std::function<void ()(grpc::Status)>);

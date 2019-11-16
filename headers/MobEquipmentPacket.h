@@ -2,11 +2,11 @@
 
 class MobEquipmentPacket : Packet {
 
-    virtual void MobEquipment~MobEquipmentPacket();
-    virtual void MobEquipment~MobEquipmentPacket();
-    virtual void MobEquipmentgetId(void)const;
+    virtual void MobEquipmentPacket::~MobEquipmentPacket();
+    virtual void MobEquipmentPacket::~MobEquipmentPacket();
+    virtual void getId(void)const;
     virtual void _ZNK18MobEquipmentPacket7getNameB5cxx11Ev;
-    virtual void MobEquipmentwrite(BinaryStream &)const;
-    virtual void MobEquipmentread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

@@ -2,8 +2,8 @@
 
 class BlockSourceListener {
 
-    virtual void ~BlockSourceListener();
-    virtual void ~BlockSourceListener();
+    virtual void BlockSourceListener::~BlockSourceListener();
+    virtual void BlockSourceListener::~BlockSourceListener();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);

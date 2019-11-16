@@ -2,7 +2,7 @@
 
 class AreaAttackSystem : ITickingSystem {
 
-    virtual void ~AreaAttackSystem();
-    virtual void ~AreaAttackSystem();
+    virtual void AreaAttackSystem::~AreaAttackSystem();
+    virtual void AreaAttackSystem::~AreaAttackSystem();
     virtual void tick(EntityRegistry &);
 }

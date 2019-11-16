@@ -2,13 +2,13 @@
 
 class GameCallbacks {
 
-    virtual void ~GameCallbacks();
-    virtual void ~GameCallbacks();
+    virtual void GameCallbacks::~GameCallbacks();
+    virtual void GameCallbacks::~GameCallbacks();
     virtual void onLowMemory(void);
-    virtual void AppPlatformListener::onAppPaused(void);
-    virtual void AppPlatformListener::onAppUnpaused(void);
-    virtual void AppPlatformListener::onAppPreSuspended(void);
-    virtual void AppPlatformListener::onAppSuspended(void);
-    virtual void AppPlatformListener::onAppResumed(void);
-    virtual void AppPlatformListener::onAppFocusLost(void);
+    virtual void onAppPaused(void);
+    virtual void onAppUnpaused(void);
+    virtual void onAppPreSuspended(void);
+    virtual void onAppSuspended(void);
+    virtual void onAppResumed(void);
+    virtual void onAppFocusLost(void);
 }

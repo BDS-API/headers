@@ -2,8 +2,8 @@
 
 class FenceBlock : BlockLegacy {
 
-    virtual void ~FenceBlock();
-    virtual void ~FenceBlock();
+    virtual void FenceBlock::~FenceBlock();
+    virtual void FenceBlock::~FenceBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

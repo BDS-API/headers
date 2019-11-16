@@ -2,8 +2,8 @@
 
 class SubChunkBlockStorage {
 
-    virtual void ~SubChunkBlockStorage();
-    virtual void ~SubChunkBlockStorage();
+    virtual void SubChunkBlockStorage::~SubChunkBlockStorage();
+    virtual void SubChunkBlockStorage::~SubChunkBlockStorage();
     virtual void __cxa_pure_virtual;
     virtual void __cxa_pure_virtual;
     virtual void __cxa_pure_virtual;

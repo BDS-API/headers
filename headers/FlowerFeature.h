@@ -2,8 +2,8 @@
 
 class FlowerFeature : Feature {
 
-    virtual void Flower~FlowerFeature();
-    virtual void Flower~FlowerFeature();
+    virtual void FlowerFeature::~FlowerFeature();
+    virtual void FlowerFeature::~FlowerFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void Flowerplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

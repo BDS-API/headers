@@ -2,8 +2,8 @@
 
 class FireChargeItem : Item {
 
-    virtual void FireCharge~FireChargeItem();
-    virtual void FireCharge~FireChargeItem();
+    virtual void FireChargeItem::~FireChargeItem();
+    virtual void FireChargeItem::~FireChargeItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -56,7 +56,7 @@ class FireChargeItem : Item {
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void FireChargedispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
@@ -98,7 +98,7 @@ class FireChargeItem : Item {
     virtual void _checkUseOnPermissions(Actor &, ItemInstance &, unsigned char const&, BlockPos const&)const;
     virtual void _checkUseOnPermissions(Actor &, ItemStack &, unsigned char const&, BlockPos const&)const;
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
-    virtual void FireCharge_calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
+    virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void FireCharge_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

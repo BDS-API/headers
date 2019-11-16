@@ -2,8 +2,8 @@
 
 class OceanRuinFeature : StructureFeature {
 
-    virtual void ~OceanRuinFeature();
-    virtual void ~OceanRuinFeature();
+    virtual void OceanRuinFeature::~OceanRuinFeature();
+    virtual void OceanRuinFeature::~OceanRuinFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

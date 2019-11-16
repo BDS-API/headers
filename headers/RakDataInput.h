@@ -2,8 +2,8 @@
 
 class RakDataInput : BytesDataInput {
 
-    virtual void ~RakDataInput();
-    virtual void ~RakDataInput();
+    virtual void RakDataInput::~RakDataInput();
+    virtual void RakDataInput::~RakDataInput();
     virtual void _ZN14BytesDataInput10readStringB5cxx11Ev;
     virtual void _ZN14BytesDataInput14readLongStringB5cxx11Ev;
     virtual void readFloat(void);

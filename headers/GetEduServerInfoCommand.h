@@ -2,7 +2,7 @@
 
 class GetEduServerInfoCommand : Command {
 
-    virtual void GetEduServerInfo~GetEduServerInfoCommand();
-    virtual void GetEduServerInfo~GetEduServerInfoCommand();
-    virtual void GetEduServerInfoexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void GetEduServerInfoCommand::~GetEduServerInfoCommand();
+    virtual void GetEduServerInfoCommand::~GetEduServerInfoCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

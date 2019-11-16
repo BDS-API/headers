@@ -2,17 +2,17 @@
 
 class CompoundCreatorContainerManagerModel : ContainerManagerModel {
 
-    virtual void CompoundCreator~CompoundCreatorContainerManagerModel();
-    virtual void CompoundCreator~CompoundCreatorContainerManagerModel();
+    virtual void CompoundCreatorContainerManagerModel::~CompoundCreatorContainerManagerModel();
+    virtual void CompoundCreatorContainerManagerModel::~CompoundCreatorContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;
     virtual void setContainerType(ContainerType);
-    virtual void CompoundCreatorgetItems(void);
-    virtual void CompoundCreatorsetSlot(int, ContainerItemStack const&, bool);
-    virtual void CompoundCreatorgetSlot(int);
-    virtual void CompoundCreatorsetData(int, int);
-    virtual void CompoundCreatorbroadcastChanges(void);
-    virtual void CompoundCreatorinit(void);
-    virtual void CompoundCreatorisValid(float);
+    virtual void getItems(void);
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    virtual void getSlot(int);
+    virtual void setData(int, int);
+    virtual void broadcastChanges(void);
+    virtual void init(void);
+    virtual void isValid(float);
 }

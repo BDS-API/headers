@@ -2,7 +2,7 @@
 
 class TestForBlockCommand : Command {
 
-    virtual void TestForBlock~TestForBlockCommand();
-    virtual void TestForBlock~TestForBlockCommand();
-    virtual void TestForBlockexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void TestForBlockCommand::~TestForBlockCommand();
+    virtual void TestForBlockCommand::~TestForBlockCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

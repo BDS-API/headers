@@ -2,8 +2,8 @@
 
 class BannerPatternItem : Item {
 
-    virtual void BannerPattern~BannerPatternItem();
-    virtual void BannerPattern~BannerPatternItem();
+    virtual void BannerPatternItem::~BannerPatternItem();
+    virtual void BannerPatternItem::~BannerPatternItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -32,14 +32,14 @@ class BannerPatternItem : Item {
     virtual void isFertilizer(int)const;
     virtual void isGlint(ItemStackBase const&)const;
     virtual void isThrowable(void)const;
-    virtual void BannerPatternisPattern(void)const;
+    virtual void isPattern(void)const;
     virtual void showsDurabilityInCreative(void)const;
     virtual void isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void canDestroyInCreative(void)const;
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
-    virtual void BannerPatternappendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;

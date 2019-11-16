@@ -2,7 +2,7 @@
 
 class ToggleDownfallCommand : Command {
 
-    virtual void ToggleDownfall~ToggleDownfallCommand();
-    virtual void ToggleDownfall~ToggleDownfallCommand();
-    virtual void ToggleDownfallexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void ToggleDownfallCommand::~ToggleDownfallCommand();
+    virtual void ToggleDownfallCommand::~ToggleDownfallCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

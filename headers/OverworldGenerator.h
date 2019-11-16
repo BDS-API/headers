@@ -2,8 +2,8 @@
 
 class OverworldGenerator : ChunkSource, WorldGenerator {
 
-    virtual void ~OverworldGenerator();
-    virtual void ~OverworldGenerator();
+    virtual void OverworldGenerator::~OverworldGenerator();
+    virtual void OverworldGenerator::~OverworldGenerator();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);
@@ -33,14 +33,14 @@ class OverworldGenerator : ChunkSource, WorldGenerator {
     virtual void garbageCollectBlueprints(buffer_span<ChunkPos>);
     virtual void addHardcodedSpawnAreas(LevelChunk &);
     virtual void ;
-    virtual void `non-virtual thunk to'~OverworldGenerator();
-    virtual void `non-virtual thunk to'~OverworldGenerator();
-    virtual void `non-virtual thunk to'getFeatureTypeAt(BlockPos const&);
-    virtual void `non-virtual thunk to'findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos&);
-    virtual void `non-virtual thunk to'prepareHeights(BlockVolume &, ChunkPos const&, bool);
-    virtual void `non-virtual thunk to'getBiomeArea(BoundingBox const&, unsigned int)const;
-    virtual void `non-virtual thunk to'findSpawnPosition(void)const;
-    virtual void `non-virtual thunk to'garbageCollectBlueprints(buffer_span<ChunkPos>);
-    virtual void `non-virtual thunk to'debugRender(void);
-    virtual void `non-virtual thunk to'addHardcodedSpawnAreas(LevelChunk &);
+    virtual void `non-virtual thunk to'OverworldGenerator::~OverworldGenerator();
+    virtual void `non-virtual thunk to'OverworldGenerator::~OverworldGenerator();
+    virtual void `non-virtual thunk to'OverworldGenerator::getFeatureTypeAt(BlockPos const&);
+    virtual void `non-virtual thunk to'OverworldGenerator::findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos&);
+    virtual void `non-virtual thunk to'OverworldGenerator::prepareHeights(BlockVolume &, ChunkPos const&, bool);
+    virtual void `non-virtual thunk to'OverworldGenerator::getBiomeArea(BoundingBox const&, unsigned int)const;
+    virtual void `non-virtual thunk to'OverworldGenerator::findSpawnPosition(void)const;
+    virtual void `non-virtual thunk to'OverworldGenerator::garbageCollectBlueprints(buffer_span<ChunkPos>);
+    virtual void `non-virtual thunk to'OverworldGenerator::debugRender(void);
+    virtual void `non-virtual thunk to'OverworldGenerator::addHardcodedSpawnAreas(LevelChunk &);
 }

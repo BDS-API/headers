@@ -2,8 +2,8 @@
 
 class TheEndGenerator : ChunkSource, WorldGenerator {
 
-    virtual void ~TheEndGenerator();
-    virtual void ~TheEndGenerator();
+    virtual void TheEndGenerator::~TheEndGenerator();
+    virtual void TheEndGenerator::~TheEndGenerator();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);
@@ -31,14 +31,14 @@ class TheEndGenerator : ChunkSource, WorldGenerator {
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
     virtual void findSpawnPosition(void)const;
     virtual void ;
-    virtual void `non-virtual thunk to'~TheEndGenerator();
-    virtual void `non-virtual thunk to'~TheEndGenerator();
-    virtual void `non-virtual thunk to'getFeatureTypeAt(BlockPos const&);
-    virtual void `non-virtual thunk to'findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos&);
-    virtual void `non-virtual thunk to'prepareHeights(BlockVolume &, ChunkPos const&, bool);
-    virtual void `non-virtual thunk to'getBiomeArea(BoundingBox const&, unsigned int)const;
-    virtual void `non-virtual thunk to'findSpawnPosition(void)const;
-    virtual void `non-virtual thunk to'garbageCollectBlueprints(buffer_span<ChunkPos>);
+    virtual void `non-virtual thunk to'TheEndGenerator::~TheEndGenerator();
+    virtual void `non-virtual thunk to'TheEndGenerator::~TheEndGenerator();
+    virtual void `non-virtual thunk to'TheEndGenerator::getFeatureTypeAt(BlockPos const&);
+    virtual void `non-virtual thunk to'TheEndGenerator::findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos&);
+    virtual void `non-virtual thunk to'TheEndGenerator::prepareHeights(BlockVolume &, ChunkPos const&, bool);
+    virtual void `non-virtual thunk to'TheEndGenerator::getBiomeArea(BoundingBox const&, unsigned int)const;
+    virtual void `non-virtual thunk to'TheEndGenerator::findSpawnPosition(void)const;
+    virtual void `non-virtual thunk to'TheEndGenerator::garbageCollectBlueprints(buffer_span<ChunkPos>);
     virtual void debugRender(void);
     virtual void addHardcodedSpawnAreas(LevelChunk &);
 }

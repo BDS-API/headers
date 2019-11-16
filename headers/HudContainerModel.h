@@ -2,9 +2,9 @@
 
 class HudContainerModel : ContainerModel {
 
-    virtual void HudcontainerContentChanged(int);
-    virtual void Hud~HudContainerModel();
-    virtual void Hud~HudContainerModel();
+    virtual void containerContentChanged(int);
+    virtual void HudContainerModel::~HudContainerModel();
+    virtual void HudContainerModel::~HudContainerModel();
     virtual void postInit(void);
     virtual void releaseResources(void);
     virtual void getContainerSize(void)const;
@@ -14,7 +14,7 @@ class HudContainerModel : ContainerModel {
     virtual void getItems(void)const;
     virtual void getItemInstances(void);
     virtual void setItem(int, ContainerItemStack const&);
-    virtual void HudisValid(void);
+    virtual void isValid(void);
     virtual void isItemFiltered(ContainerItemStack const&)const;
     virtual void isExpanableItemFiltered(int)const;
     virtual void getItemExpandStatus(int)const;

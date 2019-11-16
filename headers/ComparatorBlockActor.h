@@ -2,15 +2,15 @@
 
 class ComparatorBlockActor : BlockActor {
 
-    virtual void Comparator~ComparatorBlockActor();
-    virtual void Comparator~ComparatorBlockActor();
-    virtual void Comparatorload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void Comparatorsave(CompoundTag &)const;
+    virtual void ComparatorBlockActor::~ComparatorBlockActor();
+    virtual void ComparatorBlockActor::~ComparatorBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void Comparatortick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
     virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
@@ -37,6 +37,6 @@ class ComparatorBlockActor : BlockActor {
     virtual void getDeletionDelayTimeSeconds(void)const;
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onChunkUnloaded(LevelChunk &);
-    virtual void ComparatorgetOutputSignal(void);
-    virtual void ComparatorsetOutputSignal(int);
+    virtual void getOutputSignal(void);
+    virtual void setOutputSignal(int);
 }

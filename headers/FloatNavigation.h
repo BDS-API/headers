@@ -2,8 +2,8 @@
 
 class FloatNavigation : PathNavigation {
 
-    virtual void ~FloatNavigation();
-    virtual void ~FloatNavigation();
+    virtual void FloatNavigation::~FloatNavigation();
+    virtual void FloatNavigation::~FloatNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

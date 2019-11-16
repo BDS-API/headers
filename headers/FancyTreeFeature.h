@@ -2,8 +2,8 @@
 
 class FancyTreeFeature : TreeFeature {
 
-    virtual void Fancy~FancyTreeFeature();
-    virtual void Fancy~FancyTreeFeature();
-    virtual void Feature::place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void Fancyplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void FancyTreeFeature::~FancyTreeFeature();
+    virtual void FancyTreeFeature::~FancyTreeFeature();
+    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

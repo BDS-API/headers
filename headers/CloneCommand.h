@@ -2,7 +2,7 @@
 
 class CloneCommand : Command {
 
-    virtual void Clone~CloneCommand();
-    virtual void Clone~CloneCommand();
-    virtual void Cloneexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void CloneCommand::~CloneCommand();
+    virtual void CloneCommand::~CloneCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

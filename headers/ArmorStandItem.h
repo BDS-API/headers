@@ -2,8 +2,8 @@
 
 class ArmorStandItem : Item {
 
-    virtual void ArmorStand~ArmorStandItem();
-    virtual void ArmorStand~ArmorStandItem();
+    virtual void ArmorStandItem::~ArmorStandItem();
+    virtual void ArmorStandItem::~ArmorStandItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -100,5 +100,5 @@ class ArmorStandItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void ArmorStand_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

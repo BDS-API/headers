@@ -2,11 +2,11 @@
 
 class SetSpawnPositionPacket : Packet {
 
-    virtual void SetSpawnPosition~SetSpawnPositionPacket();
-    virtual void SetSpawnPosition~SetSpawnPositionPacket();
-    virtual void SetSpawnPositiongetId(void)const;
+    virtual void SetSpawnPositionPacket::~SetSpawnPositionPacket();
+    virtual void SetSpawnPositionPacket::~SetSpawnPositionPacket();
+    virtual void getId(void)const;
     virtual void _ZNK22SetSpawnPositionPacket7getNameB5cxx11Ev;
-    virtual void SetSpawnPositionwrite(BinaryStream &)const;
-    virtual void SetSpawnPositionread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

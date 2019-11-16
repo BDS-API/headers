@@ -2,8 +2,8 @@
 
 class EndPodiumFeature : Feature {
 
-    virtual void EndPodium~EndPodiumFeature();
-    virtual void EndPodium~EndPodiumFeature();
+    virtual void EndPodiumFeature::~EndPodiumFeature();
+    virtual void EndPodiumFeature::~EndPodiumFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void EndPodiumplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

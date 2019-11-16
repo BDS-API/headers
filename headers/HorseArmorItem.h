@@ -2,8 +2,8 @@
 
 class HorseArmorItem : Item {
 
-    virtual void HorseArmor~HorseArmorItem();
-    virtual void HorseArmor~HorseArmorItem();
+    virtual void HorseArmorItem::~HorseArmorItem();
+    virtual void HorseArmorItem::~HorseArmorItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -39,24 +39,24 @@ class HorseArmorItem : Item {
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
-    virtual void HorseArmorappendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
-    virtual void HorseArmorgetArmorValue(void)const;
+    virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
     virtual void isValidAuxValue(int)const;
     virtual void getDamageChance(int)const;
     virtual void uniqueAuxValues(void)const;
     virtual void isMultiColorTinted(ItemStack const&)const;
-    virtual void HorseArmorgetColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
+    virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
     virtual void getBaseColor(ItemStack const&)const;
     virtual void getSecondaryColor(ItemStack const&)const;
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
-    virtual void HorseArmorisTintable(void)const;
+    virtual void isTintable(void)const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void HorseArmordispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
@@ -101,5 +101,5 @@ class HorseArmorItem : Item {
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void HorseArmorgetTier(void)const;
+    virtual void getTier(void)const;
 }

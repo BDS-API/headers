@@ -2,7 +2,7 @@
 
 class LootItemRandomDifficultyChanceCondition : LootItemCondition {
 
-    virtual void ~LootItemRandomDifficultyChanceCondition();
-    virtual void ~LootItemRandomDifficultyChanceCondition();
+    virtual void LootItemRandomDifficultyChanceCondition::~LootItemRandomDifficultyChanceCondition();
+    virtual void LootItemRandomDifficultyChanceCondition::~LootItemRandomDifficultyChanceCondition();
     virtual void applies(Random &, LootTableContext &);
 }

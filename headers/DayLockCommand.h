@@ -2,7 +2,7 @@
 
 class DayLockCommand : Command {
 
-    virtual void DayLock~DayLockCommand();
-    virtual void DayLock~DayLockCommand();
-    virtual void DayLockexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void DayLockCommand::~DayLockCommand();
+    virtual void DayLockCommand::~DayLockCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

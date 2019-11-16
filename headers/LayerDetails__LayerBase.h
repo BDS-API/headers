@@ -2,7 +2,7 @@
 
 class LayerDetails::LayerBase {
 
-    virtual void ~LayerBase();
-    virtual void ~LayerBase();
+    virtual void LayerDetails::LayerBase::~LayerBase();
+    virtual void LayerDetails::LayerBase::~LayerBase();
     virtual void init(long);
 }

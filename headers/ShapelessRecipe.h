@@ -2,16 +2,16 @@
 
 class ShapelessRecipe : Recipe {
 
-    virtual void Shapeless~ShapelessRecipe();
-    virtual void Shapeless~ShapelessRecipe();
-    virtual void Shapelessassemble(CraftingContainer &)const;
-    virtual void ShapelessgetCraftingSize(void)const;
-    virtual void ShapelessgetIngredient(int, int)const;
-    virtual void ShapelessgetResultItem(void)const;
-    virtual void ShapelessisShapeless(void)const;
-    virtual void Shapelessmatches(CraftingContainer &, Level &)const;
-    virtual void Shapelesssize(void)const;
-    virtual void ShapelessisExperimental(void)const;
+    virtual void ShapelessRecipe::~ShapelessRecipe();
+    virtual void ShapelessRecipe::~ShapelessRecipe();
+    virtual void assemble(CraftingContainer &)const;
+    virtual void getCraftingSize(void)const;
+    virtual void getIngredient(int, int)const;
+    virtual void getResultItem(void)const;
+    virtual void isShapeless(void)const;
+    virtual void matches(CraftingContainer &, Level &)const;
+    virtual void size(void)const;
+    virtual void isExperimental(void)const;
     virtual void getId(void)const;
     virtual void getItemPack(void)const;
     virtual void isMultiRecipe(void)const;

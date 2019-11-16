@@ -2,8 +2,8 @@
 
 class ChemistryItem : Item {
 
-    virtual void Chemistry~ChemistryItem();
-    virtual void Chemistry~ChemistryItem();
+    virtual void ChemistryItem::~ChemistryItem();
+    virtual void ChemistryItem::~ChemistryItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -76,7 +76,7 @@ class ChemistryItem : Item {
     virtual void refreshedInContainer(ItemStackBase &, Level &)const;
     virtual void getCooldownType(void)const;
     virtual void getCooldownTime(void)const;
-    virtual void ChemistryfixupOnLoad(ItemStackBase &)const;
+    virtual void fixupOnLoad(ItemStackBase &)const;
     virtual void fixupOnLoad(ItemStackBase &, Level &)const;
     virtual void getDamageValue(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void setDamageValue(ItemStackBase &, short)const;

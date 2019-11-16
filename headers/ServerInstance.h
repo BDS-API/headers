@@ -2,8 +2,8 @@
 
 class ServerInstance : AppPlatformListener, GameCallbacks {
 
-    virtual void ~ServerInstance();
-    virtual void ~ServerInstance();
+    virtual void ServerInstance::~ServerInstance();
+    virtual void ServerInstance::~ServerInstance();
     virtual void onLowMemory(void);
     virtual void onAppPaused(void);
     virtual void onAppUnpaused(void);
@@ -26,13 +26,13 @@ class ServerInstance : AppPlatformListener, GameCallbacks {
     virtual void onLevelExit(void);
     virtual void updateScreens(void);
     virtual void ;
-    virtual void `non-virtual thunk to'~ServerInstance();
-    virtual void `non-virtual thunk to'~ServerInstance();
-    virtual void `non-virtual thunk to'onLevelCorrupt(void);
-    virtual void `non-virtual thunk to'onGameModeChanged(void);
-    virtual void `non-virtual thunk to'onTick(int, int);
-    virtual void `non-virtual thunk to'onInternetUpdate(void);
-    virtual void `non-virtual thunk to'onGameSessionReset(void);
-    virtual void `non-virtual thunk to'onLevelExit(void);
-    virtual void `non-virtual thunk to'updateScreens(void);
+    virtual void `non-virtual thunk to'ServerInstance::~ServerInstance();
+    virtual void `non-virtual thunk to'ServerInstance::~ServerInstance();
+    virtual void `non-virtual thunk to'ServerInstance::onLevelCorrupt(void);
+    virtual void `non-virtual thunk to'ServerInstance::onGameModeChanged(void);
+    virtual void `non-virtual thunk to'ServerInstance::onTick(int, int);
+    virtual void `non-virtual thunk to'ServerInstance::onInternetUpdate(void);
+    virtual void `non-virtual thunk to'ServerInstance::onGameSessionReset(void);
+    virtual void `non-virtual thunk to'ServerInstance::onLevelExit(void);
+    virtual void `non-virtual thunk to'ServerInstance::updateScreens(void);
 }

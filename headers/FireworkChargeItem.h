@@ -2,8 +2,8 @@
 
 class FireworkChargeItem : Item {
 
-    virtual void FireworkCharge~FireworkChargeItem();
-    virtual void FireworkCharge~FireworkChargeItem();
+    virtual void FireworkChargeItem::~FireworkChargeItem();
+    virtual void FireworkChargeItem::~FireworkChargeItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -39,7 +39,7 @@ class FireworkChargeItem : Item {
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
-    virtual void FireworkChargeappendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
@@ -49,12 +49,12 @@ class FireworkChargeItem : Item {
     virtual void getDamageChance(int)const;
     virtual void uniqueAuxValues(void)const;
     virtual void isMultiColorTinted(ItemStack const&)const;
-    virtual void FireworkChargegetColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
+    virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
     virtual void getBaseColor(ItemStack const&)const;
     virtual void getSecondaryColor(ItemStack const&)const;
     virtual void saveAdditionalData(ItemStackBase const&, CompoundTag &)const;
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
-    virtual void FireworkChargeisTintable(void)const;
+    virtual void isTintable(void)const;
     virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
@@ -82,7 +82,7 @@ class FireworkChargeItem : Item {
     virtual void setDamageValue(ItemStackBase &, short)const;
     virtual void getInHandUpdateType(Player const&, ItemInstance const&, ItemInstance const&, bool, bool)const;
     virtual void getInHandUpdateType(Player const&, ItemStack const&, ItemStack const&, bool, bool)const;
-    virtual void FireworkChargeisSameItem(ItemStackBase const&, ItemStackBase const&)const;
+    virtual void isSameItem(ItemStackBase const&, ItemStackBase const&)const;
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void isEmissive(int)const;

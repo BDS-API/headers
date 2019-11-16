@@ -2,8 +2,8 @@
 
 class StringByteInput : BytesDataInput {
 
-    virtual void ~StringByteInput();
-    virtual void ~StringByteInput();
+    virtual void StringByteInput::~StringByteInput();
+    virtual void StringByteInput::~StringByteInput();
     virtual void _ZN14BytesDataInput10readStringB5cxx11Ev;
     virtual void _ZN14BytesDataInput14readLongStringB5cxx11Ev;
     virtual void readFloat(void);

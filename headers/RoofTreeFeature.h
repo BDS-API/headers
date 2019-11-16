@@ -2,8 +2,8 @@
 
 class RoofTreeFeature : TreeFeature {
 
-    virtual void Roof~RoofTreeFeature();
-    virtual void Roof~RoofTreeFeature();
-    virtual void Feature::place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void Roofplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void RoofTreeFeature::~RoofTreeFeature();
+    virtual void RoofTreeFeature::~RoofTreeFeature();
+    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

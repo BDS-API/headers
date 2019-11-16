@@ -2,8 +2,8 @@
 
 class Enchant {
 
-    virtual void ~Enchant();
-    virtual void ~Enchant();
+    virtual void Enchant::~Enchant();
+    virtual void Enchant::~Enchant();
     virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

@@ -2,22 +2,22 @@
 
 class EnchantingTableBlockActor : BlockActor {
 
-    virtual void EnchantingTable~EnchantingTableBlockActor();
-    virtual void EnchantingTable~EnchantingTableBlockActor();
-    virtual void EnchantingTableload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void EnchantingTablesave(CompoundTag &)const;
+    virtual void EnchantingTableBlockActor::~EnchantingTableBlockActor();
+    virtual void EnchantingTableBlockActor::~EnchantingTableBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void EnchantingTabletick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
     virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void EnchantingTablegetUpdatePacket(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void EnchantingTableonUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);

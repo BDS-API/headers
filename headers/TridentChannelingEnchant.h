@@ -2,13 +2,13 @@
 
 class TridentChannelingEnchant : Enchant {
 
-    virtual void TridentChanneling~TridentChannelingEnchant();
-    virtual void TridentChanneling~TridentChannelingEnchant();
-    virtual void TridentChannelingisCompatibleWith(Enchant::Type)const;
-    virtual void TridentChannelinggetMinCost(int)const;
-    virtual void TridentChannelinggetMaxCost(int)const;
+    virtual void TridentChannelingEnchant::~TridentChannelingEnchant();
+    virtual void TridentChannelingEnchant::~TridentChannelingEnchant();
+    virtual void isCompatibleWith(Enchant::Type)const;
+    virtual void getMinCost(int)const;
+    virtual void getMaxCost(int)const;
     virtual void getMinLevel(void)const;
-    virtual void TridentChannelinggetMaxLevel(void)const;
+    virtual void getMaxLevel(void)const;
     virtual void getDamageProtection(int, ActorDamageSource const&)const;
     virtual void getDamageBonus(int, Actor const&)const;
     virtual void doPostAttack(Actor &, Actor &, int)const;

@@ -7,8 +7,8 @@ class Fireball : Actor {
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void ~Fireball();
-    virtual void ~Fireball();
+    virtual void Fireball::~Fireball();
+    virtual void Fireball::~Fireball();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

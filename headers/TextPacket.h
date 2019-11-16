@@ -2,11 +2,11 @@
 
 class TextPacket : Packet {
 
-    virtual void Text~TextPacket();
-    virtual void Text~TextPacket();
-    virtual void TextgetId(void)const;
+    virtual void TextPacket::~TextPacket();
+    virtual void TextPacket::~TextPacket();
+    virtual void getId(void)const;
     virtual void _ZNK10TextPacket7getNameB5cxx11Ev;
-    virtual void Textwrite(BinaryStream &)const;
-    virtual void Textread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

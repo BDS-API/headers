@@ -2,6 +2,6 @@
 
 class Social::XboxLiveSignInHandler {
 
-    virtual void ~XboxLiveSignInHandler();
-    virtual void ~XboxLiveSignInHandler();
+    virtual void Social::XboxLiveSignInHandler::~XboxLiveSignInHandler();
+    virtual void Social::XboxLiveSignInHandler::~XboxLiveSignInHandler();
 }

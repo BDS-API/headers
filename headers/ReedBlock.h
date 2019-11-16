@@ -2,8 +2,8 @@
 
 class ReedBlock : BlockLegacy {
 
-    virtual void ~ReedBlock();
-    virtual void ~ReedBlock();
+    virtual void ReedBlock::~ReedBlock();
+    virtual void ReedBlock::~ReedBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

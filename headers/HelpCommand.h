@@ -2,7 +2,7 @@
 
 class HelpCommand : Command {
 
-    virtual void Help~HelpCommand();
-    virtual void Help~HelpCommand();
-    virtual void Helpexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void HelpCommand::~HelpCommand();
+    virtual void HelpCommand::~HelpCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

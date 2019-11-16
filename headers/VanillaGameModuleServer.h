@@ -2,14 +2,14 @@
 
 class VanillaGameModuleServer : GameModuleServer {
 
-    virtual void Vanilla~VanillaGameModuleServer();
-    virtual void Vanilla~VanillaGameModuleServer();
-    virtual void Vanillainit(ServerInstance &, Level &);
-    virtual void Vanillashutdown(void);
-    virtual void VanillainitializeBehaviorStack(GameRules const&, ResourcePackRepository &, ResourcePackStack &, BaseGameVersion const&);
-    virtual void VanillaconfigureLevel(Level &, ResourcePackManager &);
-    virtual void VanillaconfigureNewPlayer(Player &);
-    virtual void VanillaconfigureDocumentation(IGameModuleDocumentation &);
-    virtual void Vanillatick(void);
-    virtual void VanillasetupCommands(CommandRegistry &);
+    virtual void VanillaGameModuleServer::~VanillaGameModuleServer();
+    virtual void VanillaGameModuleServer::~VanillaGameModuleServer();
+    virtual void init(ServerInstance &, Level &);
+    virtual void shutdown(void);
+    virtual void initializeBehaviorStack(GameRules const&, ResourcePackRepository &, ResourcePackStack &, BaseGameVersion const&);
+    virtual void configureLevel(Level &, ResourcePackManager &);
+    virtual void configureNewPlayer(Player &);
+    virtual void configureDocumentation(IGameModuleDocumentation &);
+    virtual void tick(void);
+    virtual void setupCommands(CommandRegistry &);
 }

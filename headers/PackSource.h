@@ -2,8 +2,8 @@
 
 class PackSource {
 
-    virtual void ~PackSource();
-    virtual void ~PackSource();
+    virtual void PackSource::~PackSource();
+    virtual void PackSource::~PackSource();
     virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
     virtual void forEachPack(std::function<void ()(Pack &)>);
     virtual void getPackOrigin(void)const;

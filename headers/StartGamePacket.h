@@ -2,11 +2,11 @@
 
 class StartGamePacket : Packet {
 
-    virtual void StartGame~StartGamePacket();
-    virtual void StartGame~StartGamePacket();
-    virtual void StartGamegetId(void)const;
+    virtual void StartGamePacket::~StartGamePacket();
+    virtual void StartGamePacket::~StartGamePacket();
+    virtual void getId(void)const;
     virtual void _ZNK15StartGamePacket7getNameB5cxx11Ev;
-    virtual void StartGamewrite(BinaryStream &)const;
-    virtual void StartGameread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

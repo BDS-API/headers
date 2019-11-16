@@ -2,15 +2,15 @@
 
 class FindCoverGoal : Goal {
 
-    virtual void FindCover~FindCoverGoal();
-    virtual void FindCover~FindCoverGoal();
-    virtual void FindCovercanUse(void);
-    virtual void FindCovercanContinueToUse(void);
+    virtual void FindCoverGoal::~FindCoverGoal();
+    virtual void FindCoverGoal::~FindCoverGoal();
+    virtual void canUse(void);
+    virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);
-    virtual void FindCoverstart(void);
-    virtual void FindCoverstop(void);
+    virtual void start(void);
+    virtual void stop(void);
     virtual void tick(void);
-    virtual void FindCoverappendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
     virtual void isTargetGoal(void)const;
     virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
 }

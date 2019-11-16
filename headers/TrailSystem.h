@@ -2,7 +2,7 @@
 
 class TrailSystem : ITickingSystem {
 
-    virtual void ~TrailSystem();
-    virtual void ~TrailSystem();
+    virtual void TrailSystem::~TrailSystem();
+    virtual void TrailSystem::~TrailSystem();
     virtual void tick(EntityRegistry &);
 }

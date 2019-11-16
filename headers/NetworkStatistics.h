@@ -2,8 +2,8 @@
 
 class NetworkStatistics : PacketObserver {
 
-    virtual void ~NetworkStatistics();
-    virtual void ~NetworkStatistics();
+    virtual void NetworkStatistics::~NetworkStatistics();
+    virtual void NetworkStatistics::~NetworkStatistics();
     virtual void packetSentTo(NetworkIdentifier const&, Packet const&, unsigned int);
     virtual void packetReceivedFrom(NetworkIdentifier const&, Packet const&, unsigned int);
     virtual void dataSentTo(NetworkIdentifier const&, gsl::basic_string_span<char const, -1l>);

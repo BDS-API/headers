@@ -2,8 +2,8 @@
 
 class SelectorBehaviorNode : BehaviorNode {
 
-    virtual void Selector~SelectorBehaviorNode();
-    virtual void Selector~SelectorBehaviorNode();
-    virtual void Selectortick(Actor &);
-    virtual void SelectorinitializeFromDefinition(Actor &);
+    virtual void SelectorBehaviorNode::~SelectorBehaviorNode();
+    virtual void SelectorBehaviorNode::~SelectorBehaviorNode();
+    virtual void tick(Actor &);
+    virtual void initializeFromDefinition(Actor &);
 }

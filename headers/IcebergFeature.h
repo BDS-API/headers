@@ -2,8 +2,8 @@
 
 class IcebergFeature : Feature {
 
-    virtual void Iceberg~IcebergFeature();
-    virtual void Iceberg~IcebergFeature();
+    virtual void IcebergFeature::~IcebergFeature();
+    virtual void IcebergFeature::~IcebergFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void Icebergplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

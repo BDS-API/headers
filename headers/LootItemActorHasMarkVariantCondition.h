@@ -2,7 +2,7 @@
 
 class LootItemActorHasMarkVariantCondition : LootItemCondition {
 
-    virtual void ~LootItemActorHasMarkVariantCondition();
-    virtual void ~LootItemActorHasMarkVariantCondition();
+    virtual void LootItemActorHasMarkVariantCondition::~LootItemActorHasMarkVariantCondition();
+    virtual void LootItemActorHasMarkVariantCondition::~LootItemActorHasMarkVariantCondition();
     virtual void applies(Random &, LootTableContext &);
 }

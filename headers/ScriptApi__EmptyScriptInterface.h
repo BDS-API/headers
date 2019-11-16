@@ -2,8 +2,8 @@
 
 class ScriptApi::EmptyScriptInterface : ScriptApi::ScriptLanguageInterface {
 
-    virtual void ~EmptyScriptInterface();
-    virtual void ~EmptyScriptInterface();
+    virtual void ScriptApi::EmptyScriptInterface::~EmptyScriptInterface();
+    virtual void ScriptApi::EmptyScriptInterface::~EmptyScriptInterface();
     virtual void initialize(void);
     virtual void shutdown(void);
     virtual void initialized(void)const;

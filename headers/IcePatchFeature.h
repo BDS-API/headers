@@ -2,8 +2,8 @@
 
 class IcePatchFeature : Feature {
 
-    virtual void IcePatch~IcePatchFeature();
-    virtual void IcePatch~IcePatchFeature();
+    virtual void IcePatchFeature::~IcePatchFeature();
+    virtual void IcePatchFeature::~IcePatchFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void IcePatchplace(BlockSource &, BlockPos const&, Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
 }

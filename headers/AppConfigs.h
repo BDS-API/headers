@@ -2,8 +2,8 @@
 
 class AppConfigs {
 
-    virtual void ~AppConfigs();
-    virtual void ~AppConfigs();
+    virtual void AppConfigs::~AppConfigs();
+    virtual void AppConfigs::~AppConfigs();
     virtual void areResourcePacksAllowed(void)const;
     virtual void isPlayScreenAllowed(void)const;
     virtual void isGameTabShownInSettings(void)const;

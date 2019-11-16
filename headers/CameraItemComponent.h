@@ -2,6 +2,6 @@
 
 class CameraItemComponent {
 
-    virtual void ~CameraItemComponent();
-    virtual void ~CameraItemComponent();
+    virtual void CameraItemComponent::~CameraItemComponent();
+    virtual void CameraItemComponent::~CameraItemComponent();
 }

@@ -2,9 +2,9 @@
 
 class ActorHasMobEffect : FilterTest {
 
-    virtual void ~ActorHasMobEffect();
-    virtual void ~ActorHasMobEffect();
-    virtual void setup(Definition const&, FilterInputs const&);
+    virtual void ActorHasMobEffect::~ActorHasMobEffect();
+    virtual void ActorHasMobEffect::~ActorHasMobEffect();
+    virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);
     virtual void getName(void)const;

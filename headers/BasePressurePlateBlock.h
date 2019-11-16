@@ -2,8 +2,8 @@
 
 class BasePressurePlateBlock : BlockLegacy {
 
-    virtual void ~BasePressurePlateBlock();
-    virtual void ~BasePressurePlateBlock();
+    virtual void BasePressurePlateBlock::~BasePressurePlateBlock();
+    virtual void BasePressurePlateBlock::~BasePressurePlateBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

@@ -3,8 +3,8 @@
 class ServerNetworkHandler : NetEventCallback, LevelListener, Social::MultiplayerServiceObserver, Social::XboxLiveUserObserver {
 
     virtual void onPlayerReady(Player &);
-    virtual void ~ServerNetworkHandler();
-    virtual void ~ServerNetworkHandler();
+    virtual void ServerNetworkHandler::~ServerNetworkHandler();
+    virtual void ServerNetworkHandler::~ServerNetworkHandler();
     virtual void onConnect(NetworkIdentifier const&);
     virtual void onUnableToConnect(void);
     virtual void onTick(void);
@@ -166,20 +166,20 @@ class ServerNetworkHandler : NetEventCallback, LevelListener, Social::Multiplaye
     virtual void onXboxUserUnblocked(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int);
     virtual void ;
-    virtual void `non-virtual thunk to'~ServerNetworkHandler();
-    virtual void `non-virtual thunk to'~ServerNetworkHandler();
-    virtual void BlockSourceListener::onSourceCreated(BlockSource &);
-    virtual void BlockSourceListener::onSourceDestroyed(BlockSource &);
-    virtual void BlockSourceListener::onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);
-    virtual void BlockSourceListener::onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);
-    virtual void BlockSourceListener::onBrightnessChanged(BlockSource &, BlockPos const&);
-    virtual void BlockSourceListener::onBlockEntityChanged(BlockSource &, BlockActor &);
-    virtual void BlockSourceListener::onBlockEntityAboutToBeRemoved(BlockSource &, std::shared_ptr<BlockActor>);
-    virtual void BlockSourceListener::onEntityChanged(BlockSource &, Actor &);
-    virtual void BlockSourceListener::onBlockEvent(BlockSource &, int, int, int, int, int);
+    virtual void `non-virtual thunk to'ServerNetworkHandler::~ServerNetworkHandler();
+    virtual void `non-virtual thunk to'ServerNetworkHandler::~ServerNetworkHandler();
+    virtual void onSourceCreated(BlockSource &);
+    virtual void onSourceDestroyed(BlockSource &);
+    virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);
+    virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);
+    virtual void onBrightnessChanged(BlockSource &, BlockPos const&);
+    virtual void onBlockEntityChanged(BlockSource &, BlockActor &);
+    virtual void onBlockEntityAboutToBeRemoved(BlockSource &, std::shared_ptr<BlockActor>);
+    virtual void onEntityChanged(BlockSource &, Actor &);
+    virtual void onBlockEvent(BlockSource &, int, int, int, int, int);
     virtual void allChanged(void);
     virtual void addParticle(ParticleType, Vec3 const&, Vec3 const&, int, CompoundTag const*, bool);
-    virtual void `non-virtual thunk to'sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int);
+    virtual void `non-virtual thunk to'ServerNetworkHandler::sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int);
     virtual void addParticleEffect(HashedString const&, Vec3 const&, MolangVariableMap const&);
     virtual void addParticleEffect(HashedString const&, Actor const&, HashedString const&, Vec3 const&, MolangVariableMap const&);
     virtual void addTerrainParticleEffect(BlockPos const&, Block const&, Vec3 const&, float, float, float);
@@ -202,15 +202,15 @@ class ServerNetworkHandler : NetEventCallback, LevelListener, Social::Multiplaye
     virtual void takePicture(cg::ImageBuffer &, Actor *, Actor *, ScreenshotOptions &);
     virtual void playerListChanged(void);
     virtual void ;
-    virtual void `non-virtual thunk to'~ServerNetworkHandler();
-    virtual void `non-virtual thunk to'~ServerNetworkHandler();
+    virtual void `non-virtual thunk to'ServerNetworkHandler::~ServerNetworkHandler();
+    virtual void `non-virtual thunk to'ServerNetworkHandler::~ServerNetworkHandler();
     virtual void Core::Observer<Social::MultiplayerServiceObserver, Core::SingleThreadedLock>::_onSubjectDestroyed(void);
-    virtual void `non-virtual thunk to'onInvalidPlayerJoinedLobby(mce::UUID const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void `non-virtual thunk to'ServerNetworkHandler::onInvalidPlayerJoinedLobby(mce::UUID const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void onUserDisconnectedBecauseConcurrentLogin(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void ;
-    virtual void `non-virtual thunk to'~ServerNetworkHandler();
-    virtual void `non-virtual thunk to'~ServerNetworkHandler();
+    virtual void `non-virtual thunk to'ServerNetworkHandler::~ServerNetworkHandler();
+    virtual void `non-virtual thunk to'ServerNetworkHandler::~ServerNetworkHandler();
     virtual void Core::Observer<Social::XboxLiveUserObserver, Core::SingleThreadedLock>::_onSubjectDestroyed(void);
-    virtual void `non-virtual thunk to'onXboxUserBlocked(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void `non-virtual thunk to'onXboxUserUnblocked(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void `non-virtual thunk to'ServerNetworkHandler::onXboxUserBlocked(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void `non-virtual thunk to'ServerNetworkHandler::onXboxUserUnblocked(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
 }

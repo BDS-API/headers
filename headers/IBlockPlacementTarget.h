@@ -2,8 +2,8 @@
 
 class IBlockPlacementTarget {
 
-    virtual void ~IBlockPlacementTarget();
-    virtual void ~IBlockPlacementTarget();
+    virtual void IBlockPlacementTarget::~IBlockPlacementTarget();
+    virtual void IBlockPlacementTarget::~IBlockPlacementTarget();
     virtual void getBlock(BlockPos const&)const;
     virtual void setBlock(BlockPos const&, Block const&, int);
     virtual void apply(void)const;

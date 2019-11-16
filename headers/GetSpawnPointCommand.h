@@ -2,7 +2,7 @@
 
 class GetSpawnPointCommand : Command {
 
-    virtual void GetSpawnPoint~GetSpawnPointCommand();
-    virtual void GetSpawnPoint~GetSpawnPointCommand();
-    virtual void GetSpawnPointexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void GetSpawnPointCommand::~GetSpawnPointCommand();
+    virtual void GetSpawnPointCommand::~GetSpawnPointCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

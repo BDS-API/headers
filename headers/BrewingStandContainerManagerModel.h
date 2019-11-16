@@ -2,17 +2,17 @@
 
 class BrewingStandContainerManagerModel : ContainerManagerModel {
 
-    virtual void BrewingStand~BrewingStandContainerManagerModel();
-    virtual void BrewingStand~BrewingStandContainerManagerModel();
+    virtual void BrewingStandContainerManagerModel::~BrewingStandContainerManagerModel();
+    virtual void BrewingStandContainerManagerModel::~BrewingStandContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;
     virtual void setContainerType(ContainerType);
-    virtual void BrewingStandgetItems(void);
-    virtual void BrewingStandsetSlot(int, ContainerItemStack const&, bool);
-    virtual void BrewingStandgetSlot(int);
-    virtual void BrewingStandsetData(int, int);
-    virtual void BrewingStandbroadcastChanges(void);
-    virtual void BrewingStandinit(void);
+    virtual void getItems(void);
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    virtual void getSlot(int);
+    virtual void setData(int, int);
+    virtual void broadcastChanges(void);
+    virtual void init(void);
     virtual void isValid(float);
 }

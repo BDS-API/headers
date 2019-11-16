@@ -2,8 +2,8 @@
 
 class SkullItem : Item {
 
-    virtual void Skull~SkullItem();
-    virtual void Skull~SkullItem();
+    virtual void SkullItem::~SkullItem();
+    virtual void SkullItem::~SkullItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -19,10 +19,10 @@ class SkullItem : Item {
     virtual void setExplodable(bool);
     virtual void setIsGlint(bool);
     virtual void setShouldDespawn(bool);
-    virtual void SkullgetBlockShape(void)const;
+    virtual void getBlockShape(void)const;
     virtual void canBeDepleted(void)const;
     virtual void canDestroySpecial(Block const&)const;
-    virtual void SkullgetLevelDataForAuxValue(int)const;
+    virtual void getLevelDataForAuxValue(int)const;
     virtual void isStackedByData(void)const;
     virtual void getMaxDamage(void)const;
     virtual void getAttackDamage(void)const;
@@ -45,7 +45,7 @@ class SkullItem : Item {
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
-    virtual void SkullisValidAuxValue(int)const;
+    virtual void isValidAuxValue(int)const;
     virtual void getDamageChance(int)const;
     virtual void uniqueAuxValues(void)const;
     virtual void isMultiColorTinted(ItemStack const&)const;
@@ -56,7 +56,7 @@ class SkullItem : Item {
     virtual void readAdditionalData(ItemStackBase &, CompoundTag const&)const;
     virtual void isTintable(void)const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void Skulldispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
+    virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemInstance &, Level *, Player *)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
@@ -86,7 +86,7 @@ class SkullItem : Item {
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void isEmissive(int)const;
-    virtual void SkullgetIcon(ItemStackBase const&, int, bool)const;
+    virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset(void)const;
     virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void setIcon(TextureUVCoordinateSet const&);
@@ -98,7 +98,7 @@ class SkullItem : Item {
     virtual void _checkUseOnPermissions(Actor &, ItemInstance &, unsigned char const&, BlockPos const&)const;
     virtual void _checkUseOnPermissions(Actor &, ItemStack &, unsigned char const&, BlockPos const&)const;
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
-    virtual void Skull_calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
+    virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void Skull_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

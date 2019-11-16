@@ -2,24 +2,24 @@
 
 class PistonBlockActor : BlockActor {
 
-    virtual void Piston~PistonBlockActor();
-    virtual void Piston~PistonBlockActor();
-    virtual void Pistonload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void Pistonsave(CompoundTag &)const;
+    virtual void PistonBlockActor::~PistonBlockActor();
+    virtual void PistonBlockActor::~PistonBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;
     virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void Pistontick(BlockSource &);
+    virtual void tick(BlockSource &);
     virtual void isFinished(void);
     virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void PistongetUpdatePacket(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void PistononUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
-    virtual void PistononRemoved(BlockSource &);
+    virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);
     virtual void clearCache(void);
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
@@ -32,9 +32,9 @@ class PistonBlockActor : BlockActor {
     virtual void _ZNK10BlockActor7getNameB5cxx11Ev;
     virtual void _ZN10BlockActor22getImmersiveReaderTextB5cxx11ER11BlockSource;
     virtual void getRepairCost(void)const;
-    virtual void PistongetOwningPiston(BlockSource &);
+    virtual void getOwningPiston(BlockSource &);
     virtual void getContainer(void);
-    virtual void PistongetDeletionDelayTimeSeconds(void)const;
+    virtual void getDeletionDelayTimeSeconds(void)const;
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onChunkUnloaded(LevelChunk &);
 }

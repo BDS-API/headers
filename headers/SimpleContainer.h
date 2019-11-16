@@ -2,23 +2,23 @@
 
 class SimpleContainer : Container {
 
-    virtual void Simple~SimpleContainer();
-    virtual void Simple~SimpleContainer();
+    virtual void SimpleContainer::~SimpleContainer();
+    virtual void SimpleContainer::~SimpleContainer();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);
-    virtual void SimplegetItem(int)const;
+    virtual void getItem(int)const;
     virtual void hasRoomForItem(ItemStack const&);
     virtual void addItem(ItemStack &);
     virtual void addItemToFirstEmptySlot(ItemStack &);
-    virtual void SimplesetItem(int, ItemStack const&);
+    virtual void setItem(int, ItemStack const&);
     virtual void removeItem(int, int);
     virtual void removeAllItems(void);
     virtual void dropContents(BlockSource &, Vec3 const&, bool);
-    virtual void SimplegetContainerSize(void)const;
-    virtual void SimplegetMaxStackSize(void)const;
-    virtual void SimplestartOpen(Player &);
-    virtual void SimplestopOpen(Player &);
+    virtual void getContainerSize(void)const;
+    virtual void getMaxStackSize(void)const;
+    virtual void startOpen(Player &);
+    virtual void stopOpen(Player &);
     virtual void getSlotCopies(void)const;
     virtual void getSlots(void)const;
     virtual void getItemCount(ItemDescriptor const&);

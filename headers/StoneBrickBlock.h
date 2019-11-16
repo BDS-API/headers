@@ -2,8 +2,8 @@
 
 class StoneBrickBlock : BlockLegacy {
 
-    virtual void ~StoneBrickBlock();
-    virtual void ~StoneBrickBlock();
+    virtual void StoneBrickBlock::~StoneBrickBlock();
+    virtual void StoneBrickBlock::~StoneBrickBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

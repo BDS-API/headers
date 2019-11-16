@@ -2,7 +2,7 @@
 
 class DeOpCommand : ServerCommand {
 
-    virtual void ~DeOpCommand();
-    virtual void ~DeOpCommand();
+    virtual void DeOpCommand::~DeOpCommand();
+    virtual void DeOpCommand::~DeOpCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

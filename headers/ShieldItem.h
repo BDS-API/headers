@@ -2,8 +2,8 @@
 
 class ShieldItem : Item {
 
-    virtual void Shield~ShieldItem();
-    virtual void Shield~ShieldItem();
+    virtual void ShieldItem::~ShieldItem();
+    virtual void ShieldItem::~ShieldItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -26,7 +26,7 @@ class ShieldItem : Item {
     virtual void isStackedByData(void)const;
     virtual void getMaxDamage(void)const;
     virtual void getAttackDamage(void)const;
-    virtual void ShieldisHandEquipped(void)const;
+    virtual void isHandEquipped(void)const;
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
@@ -40,8 +40,8 @@ class ShieldItem : Item {
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
-    virtual void ShieldisValidRepairItem(ItemInstance const&, ItemInstance const&)const;
-    virtual void ShieldgetEnchantSlot(void)const;
+    virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
+    virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
@@ -69,10 +69,10 @@ class ShieldItem : Item {
     virtual void _ZNK4Item18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE;
     virtual void _ZNK4Item26buildEffectDescriptionNameB5cxx11ERK13ItemStackBase;
     virtual void _ZNK4Item28buildCategoryDescriptionNameB5cxx11Ev;
-    virtual void ShieldreadUserData(ItemStackBase &, IDataInput &, ReadOnlyBinaryStream &)const;
-    virtual void ShieldwriteUserData(ItemStackBase const&, IDataOutput &)const;
+    virtual void readUserData(ItemStackBase &, IDataInput &, ReadOnlyBinaryStream &)const;
+    virtual void writeUserData(ItemStackBase const&, IDataOutput &)const;
     virtual void getMaxStackSize(ItemDescriptor const&)const;
-    virtual void ShieldinventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
+    virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
     virtual void refreshedInContainer(ItemStackBase &, Level &)const;
     virtual void getCooldownType(void)const;
     virtual void getCooldownTime(void)const;
@@ -80,8 +80,8 @@ class ShieldItem : Item {
     virtual void fixupOnLoad(ItemStackBase &, Level &)const;
     virtual void getDamageValue(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void setDamageValue(ItemStackBase &, short)const;
-    virtual void ShieldgetInHandUpdateType(Player const&, ItemInstance const&, ItemInstance const&, bool, bool)const;
-    virtual void ShieldgetInHandUpdateType(Player const&, ItemStack const&, ItemStack const&, bool, bool)const;
+    virtual void getInHandUpdateType(Player const&, ItemInstance const&, ItemInstance const&, bool, bool)const;
+    virtual void getInHandUpdateType(Player const&, ItemStack const&, ItemStack const&, bool, bool)const;
     virtual void isSameItem(ItemStackBase const&, ItemStackBase const&)const;
     virtual void _ZNK4Item15getInteractTextB5cxx11ERK6Player;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;

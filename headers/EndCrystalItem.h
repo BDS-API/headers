@@ -2,8 +2,8 @@
 
 class EndCrystalItem : Item {
 
-    virtual void EndCrystal~EndCrystalItem();
-    virtual void EndCrystal~EndCrystalItem();
+    virtual void EndCrystalItem::~EndCrystalItem();
+    virtual void EndCrystalItem::~EndCrystalItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -30,7 +30,7 @@ class EndCrystalItem : Item {
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
-    virtual void EndCrystalisGlint(ItemStackBase const&)const;
+    virtual void isGlint(ItemStackBase const&)const;
     virtual void isThrowable(void)const;
     virtual void isPattern(void)const;
     virtual void showsDurabilityInCreative(void)const;
@@ -100,5 +100,5 @@ class EndCrystalItem : Item {
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemInstance &, Actor &, BlockPos, unsigned char, float, float, float)const;
-    virtual void EndCrystal_useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 }

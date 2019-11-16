@@ -2,12 +2,12 @@
 
 class CreativeContainerController : ContainerController {
 
-    virtual void Creative~CreativeContainerController();
-    virtual void Creative~CreativeContainerController();
+    virtual void CreativeContainerController::~CreativeContainerController();
+    virtual void CreativeContainerController::~CreativeContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
-    virtual void CreativeisItemFiltered(Recipes const&, ContainerItemStack const&)const;
-    virtual void CreativegetBackgroundStyle(int)const;
+    virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;
+    virtual void getBackgroundStyle(int)const;
     virtual void _canSet(int, ContainerItemStack const&, ItemTransferAmount)const;
     virtual void _getAvailableSetCount(int, ContainerItemStack const&)const;
     virtual void _getAvailableAddCount(int)const;

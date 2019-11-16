@@ -2,8 +2,8 @@
 
 class ResourcePackListener {
 
-    virtual void ~ResourcePackListener();
-    virtual void ~ResourcePackListener();
+    virtual void ResourcePackListener::~ResourcePackListener();
+    virtual void ResourcePackListener::~ResourcePackListener();
     virtual void onActiveResourcePacksChanged(ResourcePackManager &);
     virtual void onFullPackStackInvalid(void);
     virtual void onBaseGamePackDownloadComplete(void);

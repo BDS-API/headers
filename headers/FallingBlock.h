@@ -2,13 +2,13 @@
 
 class FallingBlock : Actor {
 
-    virtual void reloadHardcoded(InitializationMethod, VariantParameterList const&);
-    virtual void reloadHardcodedClient(InitializationMethod, VariantParameterList const&);
+    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
+    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void hasComponent(Util::HashString const&)const;
-    virtual void ~FallingBlock();
-    virtual void ~FallingBlock();
+    virtual void FallingBlock::~FallingBlock();
+    virtual void FallingBlock::~FallingBlock();
     virtual void reset(void);
     virtual void getOnDeathExperience(void);
     virtual void getOwnerEntityType(void);

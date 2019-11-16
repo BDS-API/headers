@@ -2,11 +2,11 @@
 
 class RiderJumpPacket : Packet {
 
-    virtual void RiderJump~RiderJumpPacket();
-    virtual void RiderJump~RiderJumpPacket();
-    virtual void RiderJumpgetId(void)const;
+    virtual void RiderJumpPacket::~RiderJumpPacket();
+    virtual void RiderJumpPacket::~RiderJumpPacket();
+    virtual void getId(void)const;
     virtual void _ZNK15RiderJumpPacket7getNameB5cxx11Ev;
-    virtual void RiderJumpwrite(BinaryStream &)const;
-    virtual void RiderJumpread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

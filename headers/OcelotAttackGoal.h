@@ -2,15 +2,15 @@
 
 class OcelotAttackGoal : Goal {
 
-    virtual void OcelotAttack~OcelotAttackGoal();
-    virtual void OcelotAttack~OcelotAttackGoal();
-    virtual void OcelotAttackcanUse(void);
-    virtual void OcelotAttackcanContinueToUse(void);
+    virtual void OcelotAttackGoal::~OcelotAttackGoal();
+    virtual void OcelotAttackGoal::~OcelotAttackGoal();
+    virtual void canUse(void);
+    virtual void canContinueToUse(void);
     virtual void canBeInterrupted(void);
     virtual void start(void);
-    virtual void OcelotAttackstop(void);
-    virtual void OcelotAttacktick(void);
-    virtual void OcelotAttackappendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void stop(void);
+    virtual void tick(void);
+    virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
     virtual void isTargetGoal(void)const;
     virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
 }

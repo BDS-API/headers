@@ -2,8 +2,8 @@
 
 class SoulSandBlock : BlockLegacy {
 
-    virtual void ~SoulSandBlock();
-    virtual void ~SoulSandBlock();
+    virtual void SoulSandBlock::~SoulSandBlock();
+    virtual void SoulSandBlock::~SoulSandBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

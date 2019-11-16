@@ -2,8 +2,8 @@
 
 class ResourceLoader {
 
-    virtual void ~ResourceLoader();
-    virtual void ~ResourceLoader();
+    virtual void ResourceLoader::~ResourceLoader();
+    virtual void ResourceLoader::~ResourceLoader();
     virtual void load(ResourceLocation const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
     virtual void load(ResourceLocation const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&)const;
     virtual void loadAllVersionsOf(ResourceLocation const&)const;

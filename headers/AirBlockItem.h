@@ -2,8 +2,8 @@
 
 class AirBlockItem : Item {
 
-    virtual void AirBlock~AirBlockItem();
-    virtual void AirBlock~AirBlockItem();
+    virtual void AirBlockItem::~AirBlockItem();
+    virtual void AirBlockItem::~AirBlockItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

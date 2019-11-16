@@ -2,7 +2,7 @@
 
 class FlockingSystem : ITickingSystem {
 
-    virtual void ~FlockingSystem();
-    virtual void ~FlockingSystem();
+    virtual void FlockingSystem::~FlockingSystem();
+    virtual void FlockingSystem::~FlockingSystem();
     virtual void tick(EntityRegistry &);
 }

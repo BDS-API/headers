@@ -2,12 +2,12 @@
 
 class SimpleBoolFilterTest : FilterTest {
 
-    virtual void SimpleBool~SimpleBoolFilterTest();
-    virtual void SimpleBool~SimpleBoolFilterTest();
-    virtual void SimpleBoolsetup(FilterTest::Definition const&, FilterInputs const&);
-    virtual void SimpleBoolevaluate(FilterContext const&)const;
+    virtual void SimpleBoolFilterTest::~SimpleBoolFilterTest();
+    virtual void SimpleBoolFilterTest::~SimpleBoolFilterTest();
+    virtual void setup(FilterTest::Definition const&, FilterInputs const&);
+    virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);
-    virtual void SimpleBoolgetName(void)const;
+    virtual void getName(void)const;
     virtual void _serializeDomain(void)const;
-    virtual void SimpleBool_serializeValue(void)const;
+    virtual void _serializeValue(void)const;
 }

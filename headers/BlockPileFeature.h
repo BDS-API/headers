@@ -2,9 +2,9 @@
 
 class BlockPileFeature : Feature {
 
-    virtual void BlockPile~BlockPileFeature();
-    virtual void BlockPile~BlockPileFeature();
+    virtual void BlockPileFeature::~BlockPileFeature();
+    virtual void BlockPileFeature::~BlockPileFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-    virtual void BlockPileplace(BlockSource &, BlockPos const&, Random &)const;
-    virtual void BlockPilegetBlockToPlace(Random &)const;
+    virtual void place(BlockSource &, BlockPos const&, Random &)const;
+    virtual void getBlockToPlace(Random &)const;
 }

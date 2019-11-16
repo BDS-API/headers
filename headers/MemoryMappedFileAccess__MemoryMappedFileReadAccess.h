@@ -2,7 +2,7 @@
 
 class MemoryMappedFileAccess::MemoryMappedFileReadAccess : IFileReadAccess {
 
-    virtual void ~MemoryMappedFileReadAccess();
-    virtual void ~MemoryMappedFileReadAccess();
+    virtual void MemoryMappedFileAccess::MemoryMappedFileReadAccess::~MemoryMappedFileReadAccess();
+    virtual void MemoryMappedFileAccess::MemoryMappedFileReadAccess::~MemoryMappedFileReadAccess();
     virtual void fread(void *, unsigned long, unsigned long, void *)const;
 }

@@ -2,8 +2,8 @@
 
 class StrongholdPiece : StructurePiece {
 
-    virtual void ~StrongholdPiece();
-    virtual void ~StrongholdPiece();
+    virtual void StrongholdPiece::~StrongholdPiece();
+    virtual void StrongholdPiece::~StrongholdPiece();
     virtual void moveBoundingBox(int, int, int);
     virtual void asPoolElement(void);
     virtual void getType(void)const;

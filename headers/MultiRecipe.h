@@ -2,19 +2,19 @@
 
 class MultiRecipe : Recipe {
 
-    virtual void Multi~MultiRecipe();
-    virtual void Multi~MultiRecipe();
-    virtual void Multiassemble(CraftingContainer &)const;
-    virtual void MultigetCraftingSize(void)const;
-    virtual void MultigetIngredient(int, int)const;
-    virtual void MultigetResultItem(void)const;
-    virtual void MultiisShapeless(void)const;
-    virtual void Multimatches(CraftingContainer &, Level &)const;
-    virtual void Multisize(void)const;
-    virtual void MultiisExperimental(void)const;
+    virtual void MultiRecipe::~MultiRecipe();
+    virtual void MultiRecipe::~MultiRecipe();
+    virtual void assemble(CraftingContainer &)const;
+    virtual void getCraftingSize(void)const;
+    virtual void getIngredient(int, int)const;
+    virtual void getResultItem(void)const;
+    virtual void isShapeless(void)const;
+    virtual void matches(CraftingContainer &, Level &)const;
+    virtual void size(void)const;
+    virtual void isExperimental(void)const;
     virtual void getId(void)const;
     virtual void getItemPack(void)const;
-    virtual void MultiisMultiRecipe(void)const;
+    virtual void isMultiRecipe(void)const;
     virtual void itemsMatch(ItemDescriptor const&, ItemDescriptor const&)const;
     virtual void itemsMatch(ItemDescriptor const&, ItemDescriptor const&, CompoundTag const*)const;
     virtual void itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;

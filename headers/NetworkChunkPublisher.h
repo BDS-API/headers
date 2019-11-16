@@ -2,6 +2,6 @@
 
 class NetworkChunkPublisher {
 
-    virtual void ~NetworkChunkPublisher();
-    virtual void ~NetworkChunkPublisher();
+    virtual void NetworkChunkPublisher::~NetworkChunkPublisher();
+    virtual void NetworkChunkPublisher::~NetworkChunkPublisher();
 }

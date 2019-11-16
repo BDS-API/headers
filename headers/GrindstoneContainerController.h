@@ -2,9 +2,9 @@
 
 class GrindstoneContainerController : ContainerController {
 
-    virtual void Grindstone~GrindstoneContainerController();
-    virtual void Grindstone~GrindstoneContainerController();
-    virtual void GrindstoneisItemAllowed(ItemInstance const&)const;
+    virtual void GrindstoneContainerController::~GrindstoneContainerController();
+    virtual void GrindstoneContainerController::~GrindstoneContainerController();
+    virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;
     virtual void getBackgroundStyle(int)const;

@@ -2,8 +2,8 @@
 
 class DiggerItem : Item {
 
-    virtual void Digger~DiggerItem();
-    virtual void Digger~DiggerItem();
+    virtual void DiggerItem::~DiggerItem();
+    virtual void DiggerItem::~DiggerItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -25,8 +25,8 @@ class DiggerItem : Item {
     virtual void getLevelDataForAuxValue(int)const;
     virtual void isStackedByData(void)const;
     virtual void getMaxDamage(void)const;
-    virtual void DiggergetAttackDamage(void)const;
-    virtual void DiggerisHandEquipped(void)const;
+    virtual void getAttackDamage(void)const;
+    virtual void isHandEquipped(void)const;
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
@@ -39,10 +39,10 @@ class DiggerItem : Item {
     virtual void isDestructive(int)const;
     virtual void isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
-    virtual void DiggerappendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
-    virtual void DiggerisValidRepairItem(ItemInstance const&, ItemInstance const&)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
-    virtual void DiggergetEnchantValue(void)const;
+    virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
     virtual void isValidAuxValue(int)const;
@@ -61,11 +61,11 @@ class DiggerItem : Item {
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemInstance &, Player *, int)const;
     virtual void releaseUsing(ItemStack &, Player *, int)const;
-    virtual void DiggergetDestroySpeed(ItemInstance const&, Block const&)const;
+    virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
     virtual void hurtEnemy(ItemInstance &, Mob *, Mob *)const;
     virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemInstance &, Block const&, int, int, int, Actor *)const;
-    virtual void DiggermineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
+    virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
     virtual void _ZNK4Item18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE;
     virtual void _ZNK4Item26buildEffectDescriptionNameB5cxx11ERK13ItemStackBase;
     virtual void _ZNK4Item28buildCategoryDescriptionNameB5cxx11Ev;

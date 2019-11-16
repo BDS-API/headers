@@ -2,11 +2,11 @@
 
 class BlockActorDataPacket : Packet {
 
-    virtual void BlockActorData~BlockActorDataPacket();
-    virtual void BlockActorData~BlockActorDataPacket();
-    virtual void BlockActorDatagetId(void)const;
+    virtual void BlockActorDataPacket::~BlockActorDataPacket();
+    virtual void BlockActorDataPacket::~BlockActorDataPacket();
+    virtual void getId(void)const;
     virtual void _ZNK20BlockActorDataPacket7getNameB5cxx11Ev;
-    virtual void BlockActorDatawrite(BinaryStream &)const;
-    virtual void BlockActorDataread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

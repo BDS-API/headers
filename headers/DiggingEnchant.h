@@ -2,13 +2,13 @@
 
 class DiggingEnchant : Enchant {
 
-    virtual void Digging~DiggingEnchant();
-    virtual void Digging~DiggingEnchant();
+    virtual void DiggingEnchant::~DiggingEnchant();
+    virtual void DiggingEnchant::~DiggingEnchant();
     virtual void isCompatibleWith(Enchant::Type)const;
-    virtual void DigginggetMinCost(int)const;
-    virtual void DigginggetMaxCost(int)const;
+    virtual void getMinCost(int)const;
+    virtual void getMaxCost(int)const;
     virtual void getMinLevel(void)const;
-    virtual void DigginggetMaxLevel(void)const;
+    virtual void getMaxLevel(void)const;
     virtual void getDamageProtection(int, ActorDamageSource const&)const;
     virtual void getDamageBonus(int, Actor const&)const;
     virtual void doPostAttack(Actor &, Actor &, int)const;

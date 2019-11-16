@@ -2,8 +2,8 @@
 
 class WorldBlockTarget : IBlockPlacementTarget {
 
-    virtual void ~WorldBlockTarget();
-    virtual void ~WorldBlockTarget();
+    virtual void WorldBlockTarget::~WorldBlockTarget();
+    virtual void WorldBlockTarget::~WorldBlockTarget();
     virtual void getBlock(BlockPos const&)const;
     virtual void setBlock(BlockPos const&, Block const&, int);
     virtual void apply(void)const;

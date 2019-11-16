@@ -2,11 +2,11 @@
 
 class ShowStoreOfferPacket : Packet {
 
-    virtual void ShowStoreOffer~ShowStoreOfferPacket();
-    virtual void ShowStoreOffer~ShowStoreOfferPacket();
-    virtual void ShowStoreOffergetId(void)const;
+    virtual void ShowStoreOfferPacket::~ShowStoreOfferPacket();
+    virtual void ShowStoreOfferPacket::~ShowStoreOfferPacket();
+    virtual void getId(void)const;
     virtual void _ZNK20ShowStoreOfferPacket7getNameB5cxx11Ev;
-    virtual void ShowStoreOfferwrite(BinaryStream &)const;
-    virtual void ShowStoreOfferread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

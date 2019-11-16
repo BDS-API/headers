@@ -2,8 +2,8 @@
 
 class PlayerEventListener {
 
-    virtual void ~PlayerEventListener();
-    virtual void ~PlayerEventListener();
+    virtual void PlayerEventListener::~PlayerEventListener();
+    virtual void PlayerEventListener::~PlayerEventListener();
     virtual void onPlayerAwardAchievement(Player &, MinecraftEventing::AchievementIds);
     virtual void onPlayerPortalBuilt(Player &, AutomaticID<Dimension, int>);
     virtual void onPlayerPortalUsed(Player &, AutomaticID<Dimension, int>, AutomaticID<Dimension, int>);

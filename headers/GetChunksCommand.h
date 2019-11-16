@@ -2,7 +2,7 @@
 
 class GetChunksCommand : Command {
 
-    virtual void GetChunks~GetChunksCommand();
-    virtual void GetChunks~GetChunksCommand();
-    virtual void GetChunksexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void GetChunksCommand::~GetChunksCommand();
+    virtual void GetChunksCommand::~GetChunksCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

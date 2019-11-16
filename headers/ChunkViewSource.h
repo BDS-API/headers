@@ -2,13 +2,13 @@
 
 class ChunkViewSource : ChunkSource {
 
-    virtual void ~ChunkViewSource();
-    virtual void ~ChunkViewSource();
+    virtual void ChunkViewSource::~ChunkViewSource();
+    virtual void ChunkViewSource::~ChunkViewSource();
     virtual void shutdown(void);
     virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);
     virtual void getRandomChunk(Random &);
-    virtual void createNewChunk(ChunkPos const&, LoadMode);
+    virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
     virtual void getOrLoadChunk(ChunkPos const&, ChunkSource::LoadMode);
     virtual void postProcess(ChunkViewSource &);
     virtual void checkAndReplaceChunk(ChunkViewSource &, LevelChunk &);

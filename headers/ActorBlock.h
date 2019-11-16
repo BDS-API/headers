@@ -2,8 +2,8 @@
 
 class ActorBlock : BlockLegacy {
 
-    virtual void ~ActorBlock();
-    virtual void ~ActorBlock();
+    virtual void ActorBlock::~ActorBlock();
+    virtual void ActorBlock::~ActorBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

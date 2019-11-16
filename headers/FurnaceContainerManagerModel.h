@@ -2,17 +2,17 @@
 
 class FurnaceContainerManagerModel : ContainerManagerModel {
 
-    virtual void Furnace~FurnaceContainerManagerModel();
-    virtual void Furnace~FurnaceContainerManagerModel();
+    virtual void FurnaceContainerManagerModel::~FurnaceContainerManagerModel();
+    virtual void FurnaceContainerManagerModel::~FurnaceContainerManagerModel();
     virtual void getContainerId(void)const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType(void)const;
     virtual void setContainerType(ContainerType);
-    virtual void FurnacegetItems(void);
-    virtual void FurnacesetSlot(int, ContainerItemStack const&, bool);
-    virtual void FurnacegetSlot(int);
-    virtual void FurnacesetData(int, int);
-    virtual void FurnacebroadcastChanges(void);
-    virtual void Furnaceinit(void);
+    virtual void getItems(void);
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    virtual void getSlot(int);
+    virtual void setData(int, int);
+    virtual void broadcastChanges(void);
+    virtual void init(void);
     virtual void isValid(float);
 }

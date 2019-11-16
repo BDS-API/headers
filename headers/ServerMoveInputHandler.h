@@ -2,19 +2,19 @@
 
 class ServerMoveInputHandler : MoveInputHandler {
 
-    virtual void Server~ServerMoveInputHandler();
-    virtual void Server~ServerMoveInputHandler();
-    virtual void Servertick(Player &);
-    virtual void MoveInput::render(float);
-    virtual void MoveInput::setKey(int, bool);
+    virtual void ServerMoveInputHandler::~ServerMoveInputHandler();
+    virtual void ServerMoveInputHandler::~ServerMoveInputHandler();
+    virtual void tick(Player &);
+    virtual void render(float);
+    virtual void setKey(int, bool);
     virtual void clearInputState(void);
-    virtual void MoveInput::clearMovementState(void);
-    virtual void MoveInput::allowPicking(float, float);
-    virtual void MoveInput::setJumping(bool);
-    virtual void MoveInput::setAutoJumpingInWater(bool);
+    virtual void clearMovementState(void);
+    virtual void allowPicking(float, float);
+    virtual void setJumping(bool);
+    virtual void setAutoJumpingInWater(bool);
     virtual void isChangeHeight(void)const;
-    virtual void MoveInput::setSneakDown(bool);
+    virtual void setSneakDown(bool);
     virtual void isPlayerMoving(void)const;
     virtual void fillInputPacket(PlayerAuthInputPacket &);
-    virtual void ServerregisterInputHandlers(InputHandler &);
+    virtual void registerInputHandlers(InputHandler &);
 }

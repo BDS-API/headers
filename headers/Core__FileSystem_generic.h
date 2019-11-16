@@ -2,8 +2,8 @@
 
 class Core::FileSystem_generic : Core::FileSystemImpl {
 
-    virtual void ~FileSystem_generic();
-    virtual void ~FileSystem_generic();
+    virtual void Core::FileSystem_generic::~FileSystem_generic();
+    virtual void Core::FileSystem_generic::~FileSystem_generic();
     virtual void isValidPath(Core::Path const&);
     virtual void isRelativePath(Core::Path const&);
     virtual void getLastModificationTime(Core::Path const&, long *);

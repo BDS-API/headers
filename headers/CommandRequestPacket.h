@@ -2,11 +2,11 @@
 
 class CommandRequestPacket : Packet {
 
-    virtual void CommandRequest~CommandRequestPacket();
-    virtual void CommandRequest~CommandRequestPacket();
-    virtual void CommandRequestgetId(void)const;
+    virtual void CommandRequestPacket::~CommandRequestPacket();
+    virtual void CommandRequestPacket::~CommandRequestPacket();
+    virtual void getId(void)const;
     virtual void _ZNK20CommandRequestPacket7getNameB5cxx11Ev;
-    virtual void CommandRequestwrite(BinaryStream &)const;
-    virtual void CommandRequestread(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching(void)const;
 }

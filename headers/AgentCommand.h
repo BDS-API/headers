@@ -2,7 +2,7 @@
 
 class AgentCommand : Command {
 
-    virtual void Agent~AgentCommand();
-    virtual void Agent~AgentCommand();
-    virtual void Agentexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void AgentCommand::~AgentCommand();
+    virtual void AgentCommand::~AgentCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

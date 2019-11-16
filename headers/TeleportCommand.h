@@ -2,7 +2,7 @@
 
 class TeleportCommand : Command {
 
-    virtual void Teleport~TeleportCommand();
-    virtual void Teleport~TeleportCommand();
-    virtual void Teleportexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void TeleportCommand::~TeleportCommand();
+    virtual void TeleportCommand::~TeleportCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

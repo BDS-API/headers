@@ -2,7 +2,7 @@
 
 class LeashableSystem : ITickingSystem {
 
-    virtual void ~LeashableSystem();
-    virtual void ~LeashableSystem();
+    virtual void LeashableSystem::~LeashableSystem();
+    virtual void LeashableSystem::~LeashableSystem();
     virtual void tick(EntityRegistry &);
 }

@@ -2,7 +2,7 @@
 
 class TimerSystem : ITickingSystem {
 
-    virtual void ~TimerSystem();
-    virtual void ~TimerSystem();
+    virtual void TimerSystem::~TimerSystem();
+    virtual void TimerSystem::~TimerSystem();
     virtual void tick(EntityRegistry &);
 }

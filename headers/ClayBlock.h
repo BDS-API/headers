@@ -2,8 +2,8 @@
 
 class ClayBlock : BlockLegacy {
 
-    virtual void ~ClayBlock();
-    virtual void ~ClayBlock();
+    virtual void ClayBlock::~ClayBlock();
+    virtual void ClayBlock::~ClayBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;

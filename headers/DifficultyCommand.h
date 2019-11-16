@@ -2,7 +2,7 @@
 
 class DifficultyCommand : Command {
 
-    virtual void Difficulty~DifficultyCommand();
-    virtual void Difficulty~DifficultyCommand();
-    virtual void Difficultyexecute(CommandOrigin const&, CommandOutput &)const;
+    virtual void DifficultyCommand::~DifficultyCommand();
+    virtual void DifficultyCommand::~DifficultyCommand();
+    virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

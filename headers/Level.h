@@ -2,8 +2,8 @@
 
 class Level : BlockSourceListener, IWorldRegistriesProvider {
 
-    virtual void ~Level();
-    virtual void ~Level();
+    virtual void Level::~Level();
+    virtual void Level::~Level();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);
@@ -67,23 +67,23 @@ class Level : BlockSourceListener, IWorldRegistriesProvider {
     virtual void getTagRegistry(void);
     virtual void setFinishedInitializing(void);
     virtual void ;
-    virtual void `non-virtual thunk to'~Level();
-    virtual void `non-virtual thunk to'~Level();
-    virtual void `non-virtual thunk to'getBiomeRegistry(void)const;
-    virtual void `non-virtual thunk to'getBiomeRegistry(void);
-    virtual void `non-virtual thunk to'getBlockPalette(void)const;
-    virtual void `non-virtual thunk to'getBlockPalette(void);
-    virtual void `non-virtual thunk to'getFeatureRegistry(void)const;
-    virtual void `non-virtual thunk to'getFeatureRegistry(void);
-    virtual void `non-virtual thunk to'getFeatureTypeFactory(void)const;
-    virtual void `non-virtual thunk to'getFeatureTypeFactory(void);
-    virtual void `non-virtual thunk to'getJigsawStructureRegistry(void)const;
-    virtual void `non-virtual thunk to'getJigsawStructureRegistry(void);
-    virtual void `non-virtual thunk to'getStructureManager(void);
-    virtual void `non-virtual thunk to'getBiomeComponentFactory(void)const;
-    virtual void `non-virtual thunk to'getBiomeComponentFactory(void);
-    virtual void `non-virtual thunk to'getSurfaceBuilderRegistry(void)const;
-    virtual void `non-virtual thunk to'getSurfaceBuilderRegistry(void);
-    virtual void `non-virtual thunk to'getDimensionFactory(void)const;
-    virtual void `non-virtual thunk to'getDimensionFactory(void);
+    virtual void `non-virtual thunk to'Level::~Level();
+    virtual void `non-virtual thunk to'Level::~Level();
+    virtual void `non-virtual thunk to'Level::getBiomeRegistry(void)const;
+    virtual void `non-virtual thunk to'Level::getBiomeRegistry(void);
+    virtual void `non-virtual thunk to'Level::getBlockPalette(void)const;
+    virtual void `non-virtual thunk to'Level::getBlockPalette(void);
+    virtual void `non-virtual thunk to'Level::getFeatureRegistry(void)const;
+    virtual void `non-virtual thunk to'Level::getFeatureRegistry(void);
+    virtual void `non-virtual thunk to'Level::getFeatureTypeFactory(void)const;
+    virtual void `non-virtual thunk to'Level::getFeatureTypeFactory(void);
+    virtual void `non-virtual thunk to'Level::getJigsawStructureRegistry(void)const;
+    virtual void `non-virtual thunk to'Level::getJigsawStructureRegistry(void);
+    virtual void `non-virtual thunk to'Level::getStructureManager(void);
+    virtual void `non-virtual thunk to'Level::getBiomeComponentFactory(void)const;
+    virtual void `non-virtual thunk to'Level::getBiomeComponentFactory(void);
+    virtual void `non-virtual thunk to'Level::getSurfaceBuilderRegistry(void)const;
+    virtual void `non-virtual thunk to'Level::getSurfaceBuilderRegistry(void);
+    virtual void `non-virtual thunk to'Level::getDimensionFactory(void)const;
+    virtual void `non-virtual thunk to'Level::getDimensionFactory(void);
 }

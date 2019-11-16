@@ -2,8 +2,8 @@
 
 class EnchantedBookItem : Item {
 
-    virtual void EnchantedBook~EnchantedBookItem();
-    virtual void EnchantedBook~EnchantedBookItem();
+    virtual void EnchantedBookItem::~EnchantedBookItem();
+    virtual void EnchantedBookItem::~EnchantedBookItem();
     virtual void tearDown(void);
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
@@ -30,7 +30,7 @@ class EnchantedBookItem : Item {
     virtual void isArmor(void)const;
     virtual void isDye(void)const;
     virtual void isFertilizer(int)const;
-    virtual void EnchantedBookisGlint(ItemStackBase const&)const;
+    virtual void isGlint(ItemStackBase const&)const;
     virtual void isThrowable(void)const;
     virtual void isPattern(void)const;
     virtual void showsDurabilityInCreative(void)const;
@@ -41,8 +41,8 @@ class EnchantedBookItem : Item {
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
     virtual void isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
-    virtual void EnchantedBookgetEnchantSlot(void)const;
-    virtual void EnchantedBookgetEnchantValue(void)const;
+    virtual void getEnchantSlot(void)const;
+    virtual void getEnchantValue(void)const;
     virtual void getArmorValue(void)const;
     virtual void isComplex(void)const;
     virtual void isValidAuxValue(int)const;

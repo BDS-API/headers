@@ -2,7 +2,7 @@
 
 class CustomScriptEventData : ScriptEventData {
 
-    virtual void Custom~CustomScriptEventData();
-    virtual void Custom~CustomScriptEventData();
-    virtual void Custom_serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
+    virtual void CustomScriptEventData::~CustomScriptEventData();
+    virtual void CustomScriptEventData::~CustomScriptEventData();
+    virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 }

@@ -2,9 +2,9 @@
 
 class ParticleOnHitSubcomponent : OnHitSubcomponent {
 
-    virtual void Particle~ParticleOnHitSubcomponent();
-    virtual void Particle~ParticleOnHitSubcomponent();
-    virtual void ParticlereadfromJSON(Json::Value &);
-    virtual void ParticlewritetoJSON(Json::Value &)const;
-    virtual void ParticledoOnHitEffect(Actor &, ProjectileComponent &);
+    virtual void ParticleOnHitSubcomponent::~ParticleOnHitSubcomponent();
+    virtual void ParticleOnHitSubcomponent::~ParticleOnHitSubcomponent();
+    virtual void readfromJSON(Json::Value &);
+    virtual void writetoJSON(Json::Value &)const;
+    virtual void doOnHitEffect(Actor &, ProjectileComponent &);
 }

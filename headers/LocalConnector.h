@@ -2,23 +2,23 @@
 
 class LocalConnector : Connector {
 
-    virtual void Local~LocalConnector();
-    virtual void Local~LocalConnector();
-    virtual void LocalonAppResumed(void);
-    virtual void LocalonAppSuspended(void);
+    virtual void LocalConnector::~LocalConnector();
+    virtual void LocalConnector::~LocalConnector();
+    virtual void onAppResumed(void);
+    virtual void onAppSuspended(void);
     virtual void _ZNK14LocalConnector11getLocalIpsB5cxx11Ev;
     virtual void _ZN14LocalConnector10getLocalIpB5cxx11Ev;
-    virtual void LocalgetPort(void)const;
-    virtual void LocalgetRefinedLocalIps(void)const;
-    virtual void LocalgetConnectedGameInfo(void)const;
-    virtual void LocalsetupNatPunch(bool);
-    virtual void LocalgetNatPunchInfo(void)const;
-    virtual void LocalstartNatPunchingClient(Social::GameConnectionInfo);
-    virtual void LocaladdConnectionStateListener(Connector::ConnectionStateListener *);
-    virtual void LocalremoveConnectionStateListener(Connector::ConnectionStateListener *);
-    virtual void LocalisIPv4Supported(void)const;
-    virtual void LocalisIPv6Supported(void)const;
-    virtual void LocalgetIPv4Port(void)const;
-    virtual void LocalgetIPv6Port(void)const;
-    virtual void LocalgetGUID(void)const;
+    virtual void getPort(void)const;
+    virtual void getRefinedLocalIps(void)const;
+    virtual void getConnectedGameInfo(void)const;
+    virtual void setupNatPunch(bool);
+    virtual void getNatPunchInfo(void)const;
+    virtual void startNatPunchingClient(Social::GameConnectionInfo);
+    virtual void addConnectionStateListener(Connector::ConnectionStateListener *);
+    virtual void removeConnectionStateListener(Connector::ConnectionStateListener *);
+    virtual void isIPv4Supported(void)const;
+    virtual void isIPv6Supported(void)const;
+    virtual void getIPv4Port(void)const;
+    virtual void getIPv6Port(void)const;
+    virtual void getGUID(void)const;
 }

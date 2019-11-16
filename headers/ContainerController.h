@@ -2,8 +2,8 @@
 
 class ContainerController {
 
-    virtual void ~ContainerController();
-    virtual void ~ContainerController();
+    virtual void ContainerController::~ContainerController();
+    virtual void ContainerController::~ContainerController();
     virtual void isItemAllowed(ItemInstance const&)const;
     virtual void isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual void isItemFiltered(Recipes const&, ContainerItemStack const&)const;

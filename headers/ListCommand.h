@@ -2,7 +2,7 @@
 
 class ListCommand : ServerCommand {
 
-    virtual void ~ListCommand();
-    virtual void ~ListCommand();
+    virtual void ListCommand::~ListCommand();
+    virtual void ListCommand::~ListCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 }

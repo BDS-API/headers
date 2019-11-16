@@ -2,22 +2,22 @@
 
 class CommandBlockActor : BlockActor {
 
-    virtual void Command~CommandBlockActor();
-    virtual void Command~CommandBlockActor();
-    virtual void Commandload(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void Commandsave(CompoundTag &)const;
+    virtual void CommandBlockActor::~CommandBlockActor();
+    virtual void CommandBlockActor::~CommandBlockActor();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
-    virtual void CommandsaveBlockData(CompoundTag &, BlockSource &)const;
-    virtual void CommandloadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
-    virtual void CommandonCustomTagLoadDone(BlockSource &);
+    virtual void saveBlockData(CompoundTag &, BlockSource &)const;
+    virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
+    virtual void onCustomTagLoadDone(BlockSource &);
     virtual void tick(BlockSource &);
     virtual void isFinished(void);
-    virtual void CommandonChanged(BlockSource &);
+    virtual void onChanged(BlockSource &);
     virtual void isMovable(BlockSource &);
     virtual void isCustomNameSaved(void);
-    virtual void CommandgetUpdatePacket(BlockSource &);
-    virtual void CommandonPlace(BlockSource &);
-    virtual void CommandonUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
+    virtual void onPlace(BlockSource &);
+    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);

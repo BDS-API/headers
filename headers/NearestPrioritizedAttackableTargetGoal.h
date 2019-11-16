@@ -2,17 +2,17 @@
 
 class NearestPrioritizedAttackableTargetGoal : NearestAttackableTargetGoal {
 
-    virtual void ~NearestPrioritizedAttackableTargetGoal();
-    virtual void ~NearestPrioritizedAttackableTargetGoal();
+    virtual void NearestPrioritizedAttackableTargetGoal::~NearestPrioritizedAttackableTargetGoal();
+    virtual void NearestPrioritizedAttackableTargetGoal::~NearestPrioritizedAttackableTargetGoal();
     virtual void canUse(void);
     virtual void canContinueToUse(void);
-    virtual void Goal::canBeInterrupted(void);
+    virtual void canBeInterrupted(void);
     virtual void start(void);
-    virtual void TargetGoal::stop(void);
-    virtual void TargetGoal::tick(void);
+    virtual void stop(void);
+    virtual void tick(void);
     virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
-    virtual void TargetGoal::isTargetGoal(void)const;
-    virtual void Goal::onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
-    virtual void TargetGoal::_canAttack(Mob *, Actor *, bool, bool, MobDescriptor const**);
+    virtual void isTargetGoal(void)const;
+    virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
+    virtual void _canAttack(Mob *, Actor *, bool, bool, MobDescriptor const**);
     virtual void _findTarget(MobDescriptor const**);
 }

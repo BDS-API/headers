@@ -2,8 +2,8 @@
 
 class AgentCommands::InspectCommand : AgentCommands::Command {
 
-    virtual void ~InspectCommand();
-    virtual void ~InspectCommand();
+    virtual void AgentCommands::InspectCommand::~InspectCommand();
+    virtual void AgentCommands::InspectCommand::~InspectCommand();
     virtual void execute(void);
     virtual void isDone(void);
     virtual void tick(void);

@@ -2,8 +2,8 @@
 
 class ConcreteBlock : BlockLegacy {
 
-    virtual void ~ConcreteBlock();
-    virtual void ~ConcreteBlock();
+    virtual void ConcreteBlock::~ConcreteBlock();
+    virtual void ConcreteBlock::~ConcreteBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
