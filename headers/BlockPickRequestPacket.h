@@ -2,11 +2,12 @@
 
 class BlockPickRequestPacket : Packet {
 
-    virtual ~BlockPickRequestPacket();
+public:
     virtual ~BlockPickRequestPacket();
     virtual void getId(void)const;
-    virtual void _ZNK22BlockPickRequestPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void BlockPickRequestPacket(void);
+    void BlockPickRequestPacket(BlockPos const&, bool const&, unsigned char const&);
+};

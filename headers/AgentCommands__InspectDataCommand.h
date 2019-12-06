@@ -2,10 +2,11 @@
 
 class AgentCommands::InspectDataCommand : AgentCommands::Command {
 
-    virtual ~InspectDataCommand();
+public:
     virtual ~InspectDataCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
+    virtual bool isDone(void);
     virtual void fireCommandDoneEvent(void);
-}
+
+    void InspectDataCommand(Player &, AgentCommands::Direction);
+};

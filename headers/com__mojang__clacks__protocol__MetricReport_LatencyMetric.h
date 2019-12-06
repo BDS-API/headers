@@ -2,29 +2,42 @@
 
 class com::mojang::clacks::protocol::MetricReport_LatencyMetric : google::protobuf::Message {
 
+public:
     virtual ~MetricReport_LatencyMetric();
-    virtual ~MetricReport_LatencyMetric();
-    virtual void _ZNK6google8protobuf7Message11GetTypeNameB5cxx11Ev;
     virtual void New(void)const;
     virtual void New(google::protobuf::Arena *)const;
-    virtual void GetArena(void)const;
-    virtual void GetMaybeArenaPointer(void)const;
     virtual void Clear(void);
     virtual void IsInitialized(void)const;
-    virtual void _ZNK6google8protobuf7Message25InitializationErrorStringB5cxx11Ev;
-    virtual void CheckTypeAndMergeFrom(google::protobuf::MessageLite const&);
     virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *);
     virtual void ByteSizeLong(void)const;
     virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const;
-    virtual void SerializeWithCachedSizesToArray(unsigned char *)const;
     virtual void GetCachedSize(void)const;
     virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
-    virtual void InternalGetTable(void)const;
     virtual void CopyFrom(google::protobuf::Message const&);
     virtual void MergeFrom(google::protobuf::Message const&);
-    virtual void DiscardUnknownFields(void);
-    virtual void SpaceUsedLong(void)const;
     virtual void SetCachedSize(int)const;
-    virtual void GetReflection(void)const;
     virtual void GetMetadata(void)const;
-}
+
+    void set_latencyinns(long);
+    void set_pinginns(long);
+    void set_allocated_xuid(com::mojang::clacks::protocol::Xuid *);
+    void GetArenaNoVirtual(void)const;
+    void InitAsDefaultInstance(void);
+    void MetricReport_LatencyMetric(void);
+    void SharedCtor(void);
+    void MetricReport_LatencyMetric(com::mojang::clacks::protocol::MetricReport_LatencyMetric const&);
+    void SharedDtor(void);
+    void descriptor(void);
+    void default_instance(void);
+    void MergeFrom(com::mojang::clacks::protocol::MetricReport_LatencyMetric const&);
+    void CopyFrom(com::mojang::clacks::protocol::MetricReport_LatencyMetric const&);
+    void Swap(com::mojang::clacks::protocol::MetricReport_LatencyMetric*);
+    void InternalSwap(com::mojang::clacks::protocol::MetricReport_LatencyMetric*);
+    void has_xuid(void)const;
+    void internal_default_instance(void);
+    void mutable_xuid(void);
+    void _internal_xuid(void)const;
+    void latencyinns(void)const;
+    void pinginns(void)const;
+    void xuid(void)const;
+};

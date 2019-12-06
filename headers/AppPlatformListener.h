@@ -2,7 +2,7 @@
 
 class AppPlatformListener {
 
-    virtual ~AppPlatformListener();
+public:
     virtual ~AppPlatformListener();
     virtual void onLowMemory(void);
     virtual void onAppPaused(void);
@@ -18,4 +18,9 @@ class AppPlatformListener {
     virtual void onPushNotificationReceived(PushNotificationMessage const&);
     virtual void onResizeBegin(void);
     virtual void onResizeEnd(void);
-}
+
+    void AppPlatformListener(void);
+    void initListener(float);
+    void AppPlatformListener(bool);
+    void terminate(void);
+};

@@ -2,12 +2,12 @@
 
 class SimpleTagIDFilterTest : FilterTest {
 
-    virtual ~SimpleTagIDFilterTest();
+public:
     virtual ~SimpleTagIDFilterTest();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
-    virtual void evaluate(FilterContext const&)const;
-    virtual void finalizeParsedValue(IWorldRegistriesProvider &);
-    virtual void getName(void)const;
-    virtual void _serializeDomain(void)const;
     virtual void _serializeValue(void)const;
-}
+
+    void SimpleTagIDFilterTest(void);
+    void updateCachedIDValue(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, TagRegistry const&)const;
+    void getTagValue(void);
+};

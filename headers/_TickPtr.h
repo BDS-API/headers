@@ -2,7 +2,8 @@
 
 class _TickPtr {
 
-    virtual void __cxa_pure_virtual;
+public:
     virtual ~_TickPtr();
-    virtual ~_TickPtr();
-}
+
+    void _TickPtr(void);
+};

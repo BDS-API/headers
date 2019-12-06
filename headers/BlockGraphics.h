@@ -2,13 +2,21 @@
 
 class BlockGraphics {
 
-    virtual ~BlockGraphics();
+public:
+    static long BlockGraphics::SIZE_OFFSET;
+    static long BlockGraphics::mInitialized;
+    static long BlockGraphics::mBlocks;
+    static long BlockGraphics::mTerrainTextureAtlas;
+    static long BlockGraphics::mOwnedBlocks;
+    static long BlockGraphics::mDummyBlock;
+    static long BlockGraphics::mBlockModelAccess;
+
     virtual ~BlockGraphics();
     virtual void getIconYOffset(void)const;
     virtual void getColor(int)const;
     virtual void getColor(BlockSource &, BlockPos const&)const;
     virtual void getColorForParticle(BlockSource &, BlockPos const&, int)const;
-    virtual void isSeasonTinted(BlockSource &, BlockPos const&)const;
+    virtual bool isSeasonTinted(BlockSource &, BlockPos const&)const;
     virtual void onGraphicsModeChanged(bool, bool);
     virtual void getRenderLayer(BlockSource &, BlockPos const&)const;
     virtual void getExtraRenderLayers(void);
@@ -20,4 +28,72 @@ class BlockGraphics {
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual void setVisualShape(AABB const&);
     virtual void setVisualShape(Vec3 const&, Vec3 const&);
-}
+
+    void getForBlock(Block const&);
+    void getForBlock(BlockLegacy const&);
+    void getBlocks(void);
+    void setAtlasItemManager(std::shared_ptr<AtlasItemManager>);
+    void setTextures(BlockGraphics&, Json::Value const&);
+    void setTextureItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setTextureItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setTextureItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setCarriedTextures(BlockGraphics&, Json::Value const&);
+    void setCarriedTextureItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setCarriedTextureItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setCarriedTextureItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setBlockShape(BlockGraphics&, Json::Value const&);
+    void getBlockShape(void)const;
+    void setBlockShape(BlockShape);
+    void setBrightnessGamma(BlockGraphics&, Json::Value const&);
+    void setSoundType(BlockGraphics&, Json::Value const&);
+    void setSoundType(BlockSoundType);
+    bool isInitialized(void);
+    void useBlockModel(void)const;
+    void useTessellatedModel(void)const;
+    void getTessellatedModel(int, BlockPos const&)const;
+    void getTessellatedModel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, BlockPos const&)const;
+    void getTessellatedPartIndex(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void loadCustomIconTexture(Json::Value const&);
+    void _findOrAppendTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getTextureItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void _loadCustomBlockShapeModel(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&, Json::Value const&);
+    void findBlockModel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void findOrTessellateModel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, BlockGeometry::Model const*);
+    void loadCustomBlockShapeModels(Json::Value const&);
+    void registerBlockGraphics(std::vector<Json::Value, std::allocator<Json::Value>> &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, BlockShape);
+    void getBlock(void)const;
+    void texturePaletteSize(void)const;
+    void setDefaultCarriedTextures(void);
+    void registerLooseBlockGraphics(std::vector<Json::Value, std::allocator<Json::Value>> &, BlockPalette const&);
+    void initBlocks(ResourcePackManager &, BlockPalette const&);
+    void _initBlockModels(ResourcePackManager &);
+    void setMapColor(Color const&);
+    void enableAllowSame(void);
+    void teardownBlocks(void);
+    void BlockGraphics(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void BlockGraphics(Block const&, BlockGraphics::ConstructorToken);
+    void getMapColor(void)const;
+    void getIconTexture(int)const;
+    void getTextureCarriedVariations(unsigned long, int)const;
+    void getTexture(unsigned long, int)const;
+    void getTextureDefaultVariations(unsigned long, int)const;
+    void getTexture(unsigned long, Block const&)const;
+    void getTexture(BlockPos const&, unsigned long, int)const;
+    void chooseRandomTexture(float, std::vector<TextureUVCoordinateSet, std::allocator<TextureUVCoordinateSet>> const&);
+    void getTexture(BlockPos const&, unsigned long, Block const&)const;
+    void _chooseRandomTexture(float, std::vector<TextureUVCoordinateSet, std::allocator<TextureUVCoordinateSet>> const&);
+    bool isValid(void)const;
+    void getAtlasItem(unsigned long)const;
+    void getTextureUVCoordinateSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, int);
+    bool isAlphaTested(void);
+    void getRenderLayer(void)const;
+    bool isFull(void)const;
+    bool isFullAndOpaque(void)const;
+    bool isFullAndOpaque(Block const&);
+    void getSoundType(void)const;
+    void lookupByName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void getTessellatedModelTextures(unsigned long, BlockPos const&, int, bool, std::vector<TextureUVCoordinateSet, std::allocator<TextureUVCoordinateSet>> &)const;
+    void getPositionVariantIndex(int, BlockPos const&)const;
+    void setBrightnessGamma(float);
+    void BlockGraphics(BlockGraphics const&);
+};

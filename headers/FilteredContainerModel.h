@@ -2,25 +2,22 @@
 
 class FilteredContainerModel : ExpandoContainerModel {
 
+public:
     virtual void containerContentChanged(int);
     virtual ~FilteredContainerModel();
-    virtual ~FilteredContainerModel();
-    virtual void postInit(void);
-    virtual void releaseResources(void);
     virtual void getContainerSize(void)const;
     virtual void getFilteredContainerSize(void)const;
-    virtual void tick(int);
     virtual void getItem(int)const;
-    virtual void getItems(void)const;
-    virtual void getItemInstances(void);
     virtual void setItem(int, ContainerItemStack const&);
-    virtual void isValid(void);
-    virtual void isItemFiltered(ContainerItemStack const&)const;
-    virtual void isExpanableItemFiltered(int)const;
-    virtual void getItemExpandStatus(int)const;
-    virtual void _ZNK21ExpandoContainerModel16getItemGroupNameB5cxx11Ei;
-    virtual void switchItemExpando(int);
-    virtual void _getContainerOffset(void)const;
-    virtual void _onItemChanged(int, ItemStack const&, ItemStack const&);
+    virtual bool isExpanableItemFiltered(int)const;
     virtual void refreshContainer(bool);
-}
+
+    void FilteredContainerModel(ContainerEnumName, int, ContainerCategory, bool, bool, std::function<FilterResult ()(ContainerItemStack const&)>);
+    void _refreshContainer(bool);
+    void _init(void);
+    void _getContainerSize(void)const;
+    void setFilteringRule(std::function<FilterResult ()(ContainerItemStack const&)>);
+    bool isFiltering(void)const;
+    void setFiltering(bool);
+    void getIndexForCreativeItem(ContainerItemStack const&)const;
+};

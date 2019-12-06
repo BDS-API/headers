@@ -2,7 +2,9 @@
 
 class DespawnSystem : ITickingSystem {
 
-    virtual ~DespawnSystem();
+public:
     virtual ~DespawnSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void DespawnSystem(void);
+};

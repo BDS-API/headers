@@ -2,7 +2,9 @@
 
 class BossSystem : ITickingSystem {
 
-    virtual ~BossSystem();
+public:
     virtual ~BossSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void BossSystem(void);
+};

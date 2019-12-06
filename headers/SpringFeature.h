@@ -2,8 +2,9 @@
 
 class SpringFeature : Feature {
 
+public:
     virtual ~SpringFeature();
-    virtual ~SpringFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void SpringFeature(Block const&);
+};

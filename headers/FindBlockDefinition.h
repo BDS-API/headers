@@ -2,8 +2,9 @@
 
 class FindBlockDefinition : BehaviorDefinition {
 
-    virtual ~FindBlockDefinition();
+public:
     virtual ~FindBlockDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
-    virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void FindBlockDefinition(void);
+};

@@ -2,7 +2,7 @@
 
 class StructureDataLoadHelper : DataLoadHelper {
 
-    virtual ~StructureDataLoadHelper();
+public:
     virtual ~StructureDataLoadHelper();
     virtual void loadPosition(Vec3 const&);
     virtual void loadBlockPosition(BlockPos const&);
@@ -21,4 +21,12 @@ class StructureDataLoadHelper : DataLoadHelper {
     virtual void getType(void)const;
     virtual void shouldResetTime(void);
     virtual void _generateNewID(void);
-}
+
+    void StructureDataLoadHelper(BlockPos const&, BlockPos const&, Vec3 const&, ActorUniqueID, Rotation, Mirror, Level &);
+    void StructureDataLoadHelper(BlockPos const&, BlockPos const&, Vec3 const&, ActorUniqueID, Rotation, Mirror, Level *);
+    void _transformPosition(Vec3)const;
+    void _transformBlockPos(BlockPos)const;
+    void _rotationToDegrees(void);
+    void _rotationToRadians(void);
+    void _transformDirection(Vec3)const;
+};

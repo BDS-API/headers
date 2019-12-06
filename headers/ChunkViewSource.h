@@ -2,26 +2,21 @@
 
 class ChunkViewSource : ChunkSource {
 
+public:
     virtual ~ChunkViewSource();
-    virtual ~ChunkViewSource();
-    virtual void shutdown(void);
-    virtual void isShutdownDone(void);
     virtual void getExistingChunk(ChunkPos const&);
     virtual void getRandomChunk(Random &);
     virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
-    virtual void getOrLoadChunk(ChunkPos const&, ChunkSource::LoadMode);
-    virtual void postProcess(ChunkViewSource &);
-    virtual void checkAndReplaceChunk(ChunkViewSource &, LevelChunk &);
-    virtual void loadChunk(LevelChunk &, bool);
-    virtual void postProcessMobsAt(BlockSource *, int, int, Random &);
-    virtual void saveLiveChunk(LevelChunk &);
-    virtual void hintDiscardBatchBegin(void);
-    virtual void hintDiscardBatchEnd(void);
     virtual void acquireDiscarded(std::unique_ptr<LevelChunk, std::default_delete<LevelChunk>>);
-    virtual void compact(void);
-    virtual void flushPendingWrites(void);
-    virtual void isWithinWorldLimit(ChunkPos const&)const;
-    virtual void getChunkMap(void);
-    virtual void getStorage(void)const;
-    virtual void clearDeletedEntities(void);
-}
+    virtual bool isWithinWorldLimit(ChunkPos const&)const;
+
+    void ChunkViewSource(ChunkSource &, ChunkSource::LoadMode);
+    void ChunkViewSource(ChunkSource &, LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>> &, Bounds const&);
+    void move(Bounds const&, bool, std::function<void ()(buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>);
+    void move(BlockPos const&, BlockPos const&, bool, std::function<void ()(buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>);
+    void move(BlockPos const&, int, bool, std::function<void ()(buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>);
+    void clear(void);
+    void getArea(void)const;
+    void getArea(void);
+    void enableBlockEntityAccess(void);
+};

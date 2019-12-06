@@ -2,11 +2,12 @@
 
 class SetDisplayObjectivePacket : Packet {
 
-    virtual ~SetDisplayObjectivePacket();
+public:
     virtual ~SetDisplayObjectivePacket();
     virtual void getId(void)const;
-    virtual void _ZNK25SetDisplayObjectivePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void SetDisplayObjectivePacket(void);
+    void SetDisplayObjectivePacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ObjectiveSortOrder);
+};

@@ -2,8 +2,9 @@
 
 class CactusFeature : Feature {
 
+public:
     virtual ~CactusFeature();
-    virtual ~CactusFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void CactusFeature(void);
+};

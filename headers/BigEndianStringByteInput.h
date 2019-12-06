@@ -2,17 +2,15 @@
 
 class BigEndianStringByteInput : StringByteInput {
 
+public:
     virtual ~BigEndianStringByteInput();
-    virtual ~BigEndianStringByteInput();
-    virtual void _ZN14BytesDataInput10readStringB5cxx11Ev;
-    virtual void _ZN14BytesDataInput14readLongStringB5cxx11Ev;
     virtual void readFloat(void);
     virtual void readDouble(void);
-    virtual void readByte(void);
     virtual void readShort(void);
     virtual void readInt(void);
     virtual void readLongLong(void);
     virtual void readBytes(void *, unsigned long);
-    virtual void numBytesLeft(void)const;
     virtual void readBigEndianBytes(void *, unsigned long);
-}
+
+    void BigEndianStringByteInput(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+};

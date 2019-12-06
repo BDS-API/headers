@@ -2,9 +2,10 @@
 
 class PackDiscoveryError : PackError {
 
+public:
     virtual ~PackDiscoveryError();
-    virtual ~PackDiscoveryError();
-    virtual void _ZNK9PackError18getLocErrorMessageB5cxx11Ev;
-    virtual void _ZNK18PackDiscoveryError21getLocErrorMessageMapB5cxx11Ev;
-    virtual void _ZNK18PackDiscoveryError23getEventErrorMessageMapB5cxx11Ev;
-}
+
+    void PackDiscoveryError(PackDiscoveryError const&);
+    void PackDiscoveryError(void);
+    void PackDiscoveryError(PackParseErrorType, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
+};

@@ -2,11 +2,11 @@
 
 class PackSource {
 
-    virtual ~PackSource();
-    virtual ~PackSource();
-    virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
-    virtual void forEachPack(std::function<void ()(Pack &)>);
+public:
     virtual void getPackOrigin(void)const;
     virtual void getPackType(void)const;
-    virtual void load(PackManifestFactory &, IContentKeyProvider const&);
-}
+
+    void resolveUpgradeDependencies(Pack &, IContentKeyProvider const&);
+    void fetchPack(PackIdVersion const&);
+    void PackSource(void);
+};

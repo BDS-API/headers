@@ -2,7 +2,10 @@
 
 class LootItemRandomChanceWithSpecialModifierCondition : LootItemCondition {
 
-    virtual ~LootItemRandomChanceWithSpecialModifierCondition();
+public:
     virtual ~LootItemRandomChanceWithSpecialModifierCondition();
     virtual void applies(Random &, LootTableContext &);
-}
+
+    void LootItemRandomChanceWithSpecialModifierCondition(float);
+    void deserialize(Json::Value);
+};

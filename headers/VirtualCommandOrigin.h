@@ -2,10 +2,8 @@
 
 class VirtualCommandOrigin : CommandOrigin {
 
+public:
     virtual ~VirtualCommandOrigin();
-    virtual ~VirtualCommandOrigin();
-    virtual void _ZNK20VirtualCommandOrigin12getRequestIdB5cxx11Ev;
-    virtual void _ZNK20VirtualCommandOrigin7getNameB5cxx11Ev;
     virtual void getBlockPosition(void)const;
     virtual void getWorldPosition(void)const;
     virtual void getLevel(void)const;
@@ -13,20 +11,17 @@ class VirtualCommandOrigin : CommandOrigin {
     virtual void getEntity(void)const;
     virtual void getPermissionsLevel(void)const;
     virtual void clone(void)const;
-    virtual void getCursorHitBlockPos(void)const;
-    virtual void getCursorHitPos(void)const;
-    virtual void hasChatPerms(void)const;
-    virtual void hasTellPerms(void)const;
-    virtual void canUseAbility(AbilitiesIndex)const;
-    virtual void isWorldBuilder(void)const;
-    virtual void canUseCommandsWithoutCheatsEnabled(void)const;
-    virtual void isSelectorExpansionAllowed(void)const;
+    virtual bool hasChatPerms(void)const;
+    virtual bool hasTellPerms(void)const;
+    virtual bool canUseAbility(AbilitiesIndex)const;
+    virtual bool canUseCommandsWithoutCheatsEnabled(void)const;
+    virtual bool isSelectorExpansionAllowed(void)const;
     virtual void getSourceId(void)const;
-    virtual void getSourceSubId(void)const;
     virtual void getOutputReceiver(void)const;
     virtual void getOriginType(void)const;
-    virtual void toCommandOriginData(void)const;
-    virtual void getUUID(void)const;
-    virtual void handleCommandOutputCallback(Json::Value &&)const;
-    virtual void _setUUID(mce::UUID const&);
-}
+
+    void VirtualCommandOrigin(CommandOrigin const&, CommandOrigin const&, Vec3 const&);
+    void _getEncapsulatedOrigin(void)const;
+    void VirtualCommandOrigin(CommandOrigin const&, Actor &, Vec3 const&);
+    void VirtualCommandOrigin(std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, Vec3 const&);
+};

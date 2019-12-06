@@ -2,9 +2,9 @@
 
 class RakNet::IRNS2_Berkley : RakNet::RakNetSocket2 {
 
+public:
     virtual ~IRNS2_Berkley();
-    virtual ~IRNS2_Berkley();
-    virtual void __cxa_pure_virtual;
-    virtual void SetMulticastInterface(int);
-    virtual void __cxa_pure_virtual;
-}
+
+    void IsPortInUse(unsigned short, char const*, unsigned short, int);
+    void IRNS2_Berkley(void);
+};

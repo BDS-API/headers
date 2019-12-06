@@ -2,7 +2,10 @@
 
 class TestForBlocksCommand : Command {
 
-    virtual ~TestForBlocksCommand();
+public:
     virtual ~TestForBlocksCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void TestForBlocksCommand(void);
+};

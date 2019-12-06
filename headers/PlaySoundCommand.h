@@ -2,7 +2,10 @@
 
 class PlaySoundCommand : Command {
 
-    virtual ~PlaySoundCommand();
+public:
     virtual ~PlaySoundCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void PlaySoundCommand(void);
+};

@@ -2,8 +2,12 @@
 
 class MegaJungleTreeFeature : MegaTreeFeature {
 
+public:
     virtual ~MegaJungleTreeFeature();
-    virtual ~MegaJungleTreeFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void MegaJungleTreeFeature(Actor *, int, int, int, int);
+    void _createCrown(BlockSource &, BlockPos const&, int)const;
+    void _placeVines(BlockSource &, BlockPos const&, Random &, int, int, int)const;
+    void _placeVine(BlockSource &, BlockPos const&, Random &, int)const;
+};

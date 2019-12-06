@@ -2,8 +2,8 @@
 
 class ScriptBinderComponent {
 
+public:
     virtual ~ScriptBinderComponent();
-    virtual ~ScriptBinderComponent();
-    virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
-    virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
-}
+
+    void ScriptBinderComponent(void);
+};

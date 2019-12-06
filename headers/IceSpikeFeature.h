@@ -2,8 +2,10 @@
 
 class IceSpikeFeature : Feature {
 
+public:
     virtual ~IceSpikeFeature();
-    virtual ~IceSpikeFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void IceSpikeFeature(void);
+    void _isValidPlaceBlock(Block const&)const;
+};

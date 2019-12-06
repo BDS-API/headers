@@ -2,9 +2,10 @@
 
 class EducationMetadataError : PackError {
 
+public:
     virtual ~EducationMetadataError();
-    virtual ~EducationMetadataError();
-    virtual void _ZNK9PackError18getLocErrorMessageB5cxx11Ev;
-    virtual void _ZNK22EducationMetadataError21getLocErrorMessageMapB5cxx11Ev;
-    virtual void _ZNK22EducationMetadataError23getEventErrorMessageMapB5cxx11Ev;
-}
+
+    void EducationMetadataError(EducationMetadataError const&);
+    void EducationMetadataError(void);
+    void EducationMetadataError(PackParseErrorType, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
+};

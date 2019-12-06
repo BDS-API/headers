@@ -2,7 +2,7 @@
 
 class BlockSourceListener {
 
-    virtual ~BlockSourceListener();
+public:
     virtual ~BlockSourceListener();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
@@ -13,4 +13,6 @@ class BlockSourceListener {
     virtual void onBlockEntityAboutToBeRemoved(BlockSource &, std::shared_ptr<BlockActor>);
     virtual void onEntityChanged(BlockSource &, Actor &);
     virtual void onBlockEvent(BlockSource &, int, int, int, int, int);
-}
+
+    void BlockSourceListener(void);
+};

@@ -2,8 +2,8 @@
 
 class ITaskExecutionContext {
 
+public:
     virtual ~ITaskExecutionContext();
-    virtual ~ITaskExecutionContext();
-    virtual void isAsync(void)const;
-    virtual void canTaskRunAgain(void)const;
-}
+
+    void ITaskExecutionContext(void);
+};

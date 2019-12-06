@@ -2,10 +2,10 @@
 
 class AgentCommands::CollectCommand : AgentCommands::Command {
 
-    virtual ~CollectCommand();
+public:
     virtual ~CollectCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
-    virtual void fireCommandDoneEvent(void);
-}
+    virtual bool isDone(void);
+
+    void CollectCommand(Player &, int, AgentCommands::CollectCommand::CollectionSpecification);
+};

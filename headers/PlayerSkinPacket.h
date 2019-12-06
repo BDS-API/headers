@@ -2,11 +2,12 @@
 
 class PlayerSkinPacket : Packet {
 
-    virtual ~PlayerSkinPacket();
+public:
     virtual ~PlayerSkinPacket();
     virtual void getId(void)const;
-    virtual void _ZNK16PlayerSkinPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void PlayerSkinPacket(void);
+    void PlayerSkinPacket(mce::UUID, SerializedSkin const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+};

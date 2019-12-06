@@ -2,17 +2,15 @@
 
 class ChestContainerManagerModel : LevelContainerManagerModel {
 
+public:
     virtual ~ChestContainerManagerModel();
-    virtual ~ChestContainerManagerModel();
-    virtual void getContainerId(void)const;
-    virtual void setContainerId(ContainerID);
-    virtual void getContainerType(void)const;
-    virtual void setContainerType(ContainerType);
-    virtual void getItems(void);
-    virtual void setSlot(int, ContainerItemStack const&, bool);
-    virtual void getSlot(int);
-    virtual void setData(int, int);
-    virtual void broadcastChanges(void);
     virtual void init(void);
-    virtual void isValid(float);
-}
+    virtual bool isValid(float);
+
+    void ChestContainerManagerModel(ContainerID, Player &, BlockPos const&, BlockActorType);
+    void ChestContainerManagerModel(ContainerID, Player &, ActorUniqueID);
+    void closeContainer(void);
+    void fireFullCobbleStoneEvent(void);
+    void fireItemAcquiredEvent(ItemInstance const&, int);
+    void getBlockActorType(void)const;
+};

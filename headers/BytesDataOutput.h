@@ -2,7 +2,7 @@
 
 class BytesDataOutput : IDataOutput {
 
-    virtual ~BytesDataOutput();
+public:
     virtual ~BytesDataOutput();
     virtual void writeString(gsl::basic_string_span<char const, -1l>);
     virtual void writeLongString(gsl::basic_string_span<char const, -1l>);
@@ -12,5 +12,6 @@ class BytesDataOutput : IDataOutput {
     virtual void writeShort(short);
     virtual void writeInt(int);
     virtual void writeLongLong(long);
-    virtual void writeBytes(void const*, unsigned long);
-}
+
+    void BytesDataOutput(void);
+};

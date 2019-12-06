@@ -2,7 +2,10 @@
 
 class AreaAttackSystem : ITickingSystem {
 
-    virtual ~AreaAttackSystem();
+public:
     virtual ~AreaAttackSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void AreaAttackSystem(void);
+    void _tickComponent(ViewedEntityContextT<EntityContext, FlagComponent<ActorTickedFlag>, ActorComponent, AreaAttackComponent> &);
+};

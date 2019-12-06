@@ -2,11 +2,13 @@
 
 class CommandBlockUpdatePacket : Packet {
 
-    virtual ~CommandBlockUpdatePacket();
+public:
     virtual ~CommandBlockUpdatePacket();
     virtual void getId(void)const;
-    virtual void _ZNK24CommandBlockUpdatePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void CommandBlockUpdatePacket(BlockSource &, CommandBlockActor const&);
+    void CommandBlockUpdatePacket(ActorRuntimeID, BaseCommandBlock const&);
+    void CommandBlockUpdatePacket(void);
+};

@@ -2,8 +2,11 @@
 
 class FindBlockNode : BehaviorNode {
 
-    virtual ~FindBlockNode();
+public:
     virtual ~FindBlockNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
-}
+
+    void FindBlockNode(void);
+    void lookAt(Mob &, Vec3 const&, float, float);
+};

@@ -2,8 +2,10 @@
 
 class ScriptBinderItemActorTemplate : ScriptBinderTemplate {
 
+public:
     virtual ~ScriptBinderItemActorTemplate();
-    virtual ~ScriptBinderItemActorTemplate();
-    virtual void _ZNK29ScriptBinderItemActorTemplate21getTemplateIdentifierB5cxx11Ev;
     virtual void applyTemplate(ScriptObjectBinder &)const;
-}
+
+    void build(entt::Registry<unsigned int> &, ItemActor const&);
+    void ScriptBinderItemActorTemplate(void);
+};

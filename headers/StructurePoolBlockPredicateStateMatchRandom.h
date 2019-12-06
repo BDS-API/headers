@@ -2,7 +2,9 @@
 
 class StructurePoolBlockPredicateStateMatchRandom : IStructurePoolBlockPredicate {
 
-    virtual ~StructurePoolBlockPredicateStateMatchRandom();
+public:
     virtual ~StructurePoolBlockPredicateStateMatchRandom();
     virtual void test(Block const&, Random &)const;
-}
+
+    void StructurePoolBlockPredicateStateMatchRandom(Block const&, float);
+};

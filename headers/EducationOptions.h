@@ -2,11 +2,19 @@
 
 class EducationOptions : ResourcePackListener {
 
-    virtual ~EducationOptions();
+public:
+    static long EducationOptions::DEFAULT_OPTION;
+    static long EducationOptions::CHEMISTRY_ENABLED;
+
     virtual ~EducationOptions();
     virtual void onActiveResourcePacksChanged(ResourcePackManager &);
-    virtual void onFullPackStackInvalid(void);
-    virtual void onBaseGamePackDownloadComplete(void);
-    virtual void onLanguageSubpacksChanged(void);
-    virtual void onResourceManagerDestroyed(ResourcePackManager &);
-}
+
+    void EducationOptions(ResourcePackManager *);
+    void init(LevelData const&);
+    void _setFeature(EducationFeature, bool);
+    void _isFeatureEnabled(EducationFeature)const;
+    bool isChemistryEnabled(void);
+    bool isEducationEnabled(void);
+    bool isCodeBuilderEnabled(void);
+    bool isBaseCodeBuilderEnabled(void);
+};

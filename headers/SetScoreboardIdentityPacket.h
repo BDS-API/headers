@@ -2,11 +2,15 @@
 
 class SetScoreboardIdentityPacket : Packet {
 
-    virtual ~SetScoreboardIdentityPacket();
+public:
     virtual ~SetScoreboardIdentityPacket();
     virtual void getId(void)const;
-    virtual void _ZNK27SetScoreboardIdentityPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void SetScoreboardIdentityPacket(void);
+    void SetScoreboardIdentityPacket(ScoreboardId const&);
+    void SetScoreboardIdentityPacket(ScoreboardId const&, PlayerScoreboardId const&);
+    void remove(ScoreboardId const&);
+    void change(ScoreboardId const&, PlayerScoreboardId const&);
+};

@@ -2,8 +2,8 @@
 
 class IGameModuleShared {
 
+public:
     virtual ~IGameModuleShared();
-    virtual ~IGameModuleShared();
-    virtual void createGameModuleServer(void);
-    virtual void createInPackagePacks(void);
-}
+
+    void IGameModuleShared(void);
+};

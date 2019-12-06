@@ -2,6 +2,8 @@
 
 class LevelDbFileLock : leveldb::FileLock {
 
+public:
     virtual ~LevelDbFileLock();
-    virtual ~LevelDbFileLock();
-}
+
+    void LevelDbFileLock(void);
+};

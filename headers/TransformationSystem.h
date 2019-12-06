@@ -2,7 +2,9 @@
 
 class TransformationSystem : ITickingSystem {
 
-    virtual ~TransformationSystem();
+public:
     virtual ~TransformationSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void TransformationSystem(void);
+};

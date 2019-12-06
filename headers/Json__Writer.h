@@ -2,7 +2,8 @@
 
 class Json::Writer {
 
+public:
     virtual ~Writer();
-    virtual ~Writer();
-    virtual void _ZN4Json12StyledWriter5writeB5cxx11ERKNS_5ValueE;
-}
+
+    void Writer(void);
+};

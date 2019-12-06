@@ -2,8 +2,11 @@
 
 class MonsterRoomFeature : Feature {
 
+public:
     virtual ~MonsterRoomFeature();
-    virtual ~MonsterRoomFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void MonsterRoomFeature(void);
+    void _getFacingDataId(BlockSource &, BlockPos const&, int, int)const;
+    void _getRandomEntityId(Random &)const;
+};

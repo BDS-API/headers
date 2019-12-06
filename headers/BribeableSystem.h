@@ -2,7 +2,9 @@
 
 class BribeableSystem : ITickingSystem {
 
-    virtual ~BribeableSystem();
+public:
     virtual ~BribeableSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void BribeableSystem(void);
+};

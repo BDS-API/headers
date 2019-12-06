@@ -2,7 +2,9 @@
 
 class ProjectileSystem : ITickingSystem {
 
-    virtual ~ProjectileSystem();
+public:
     virtual ~ProjectileSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void ProjectileSystem(void);
+};

@@ -2,7 +2,9 @@
 
 class InMemoryRandomAccessFile : leveldb::RandomAccessFile {
 
-    virtual ~InMemoryRandomAccessFile();
+public:
     virtual ~InMemoryRandomAccessFile();
     virtual void Read(unsigned long, unsigned long, leveldb::Slice *, char *)const;
-}
+
+    void InMemoryRandomAccessFile(std::shared_ptr<InMemoryFile>);
+};

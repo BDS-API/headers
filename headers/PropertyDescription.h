@@ -2,9 +2,8 @@
 
 class PropertyDescription : Description {
 
-    virtual void getJsonName(void)const;
+public:
     virtual ~PropertyDescription();
-    virtual ~PropertyDescription();
-    virtual void deserializeData(Json::Value &);
-    virtual void serializeData(Json::Value &)const;
-}
+
+    void PropertyDescription(void);
+};

@@ -2,11 +2,16 @@
 
 class MobArmorEquipmentPacket : Packet {
 
-    virtual ~MobArmorEquipmentPacket();
+public:
     virtual ~MobArmorEquipmentPacket();
     virtual void getId(void)const;
-    virtual void _ZNK23MobArmorEquipmentPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void MobArmorEquipmentPacket(MobArmorEquipmentPacket const&);
+    void MobArmorEquipmentPacket(void);
+    void MobArmorEquipmentPacket(Mob const&);
+    void get(ItemStack &, ItemStack const&);
+    void fillIn(Mob &)const;
+    void set(Mob &, ItemStack const&, ArmorSlot)const;
+};

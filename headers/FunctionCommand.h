@@ -2,7 +2,10 @@
 
 class FunctionCommand : Command {
 
-    virtual ~FunctionCommand();
+public:
     virtual ~FunctionCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void FunctionCommand(void);
+    void setup(CommandRegistry &);
+};

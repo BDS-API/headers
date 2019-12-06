@@ -2,11 +2,12 @@
 
 class LevelEventGenericPacket : Packet {
 
-    virtual ~LevelEventGenericPacket();
+public:
     virtual ~LevelEventGenericPacket();
     virtual void getId(void)const;
-    virtual void _ZNK23LevelEventGenericPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void LevelEventGenericPacket(LevelEvent, CompoundTag const&);
+    void LevelEventGenericPacket(void);
+};

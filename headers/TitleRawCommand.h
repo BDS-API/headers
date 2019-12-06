@@ -2,7 +2,10 @@
 
 class TitleRawCommand : MessagingCommand {
 
-    virtual ~TitleRawCommand();
+public:
     virtual ~TitleRawCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void TitleRawCommand(void);
+};

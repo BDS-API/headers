@@ -2,7 +2,9 @@
 
 class ScriptServerPacketEventListener : NetworkPacketEventListener {
 
-    virtual ~ScriptServerPacketEventListener();
+public:
     virtual ~ScriptServerPacketEventListener();
     virtual void onPacketReceivedFrom(PacketHeader const&, Packet const&);
-}
+
+    void ScriptServerPacketEventListener(MinecraftServerScriptEngine &);
+};

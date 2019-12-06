@@ -2,7 +2,7 @@
 
 class DefaultDataLoadHelper : DataLoadHelper {
 
-    virtual ~DefaultDataLoadHelper();
+public:
     virtual ~DefaultDataLoadHelper();
     virtual void loadPosition(Vec3 const&);
     virtual void loadBlockPosition(BlockPos const&);
@@ -20,4 +20,6 @@ class DefaultDataLoadHelper : DataLoadHelper {
     virtual void loadOwnerID(ActorUniqueID);
     virtual void getType(void)const;
     virtual void shouldResetTime(void);
-}
+
+    void DefaultDataLoadHelper(void);
+};

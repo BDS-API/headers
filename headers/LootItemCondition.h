@@ -2,7 +2,9 @@
 
 class LootItemCondition {
 
+public:
     virtual ~LootItemCondition();
-    virtual ~LootItemCondition();
-    virtual void applies(Random &, LootTableContext &);
-}
+
+    void deserialize(Json::Value);
+    void LootItemCondition(void);
+};

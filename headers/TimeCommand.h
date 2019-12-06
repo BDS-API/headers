@@ -2,7 +2,10 @@
 
 class TimeCommand : Command {
 
-    virtual ~TimeCommand();
+public:
     virtual ~TimeCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void TimeCommand(void);
+};

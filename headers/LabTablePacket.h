@@ -2,11 +2,13 @@
 
 class LabTablePacket : Packet {
 
-    virtual ~LabTablePacket();
+public:
     virtual ~LabTablePacket();
     virtual void getId(void)const;
-    virtual void _ZNK14LabTablePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void LabTablePacket(void);
+    void LabTablePacket(BlockPos const&, LabTableReactionType);
+    void LabTablePacket(LabTablePacket::Type, BlockPos const&);
+};

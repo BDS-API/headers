@@ -2,8 +2,9 @@
 
 class PlaceBlockNode : BehaviorNode {
 
-    virtual ~PlaceBlockNode();
+public:
     virtual ~PlaceBlockNode();
     virtual void tick(Actor &);
-    virtual void initializeFromDefinition(Actor &);
-}
+
+    void PlaceBlockNode(void);
+};

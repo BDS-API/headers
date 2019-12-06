@@ -2,7 +2,10 @@
 
 class ListDCommand : ServerCommand {
 
-    virtual ~ListDCommand();
+public:
     virtual ~ListDCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void ListDCommand(void);
+};

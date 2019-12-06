@@ -2,7 +2,8 @@
 
 class IFeature {
 
+public:
     virtual ~IFeature();
-    virtual ~IFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-}
+
+    void IFeature(void);
+};

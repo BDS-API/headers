@@ -2,7 +2,10 @@
 
 class SetMaxPlayersCommand : ServerCommand {
 
-    virtual ~SetMaxPlayersCommand();
+public:
     virtual ~SetMaxPlayersCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void SetMaxPlayersCommand(void);
+};

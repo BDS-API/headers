@@ -2,10 +2,12 @@
 
 class LayerBiomeSource : BiomeSource {
 
-    virtual ~LayerBiomeSource();
+public:
     virtual ~LayerBiomeSource();
     virtual void fillBiomes(LevelChunk &)const;
-    virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
-    virtual void containsOnly(int, int, int, gsl::span<int const, -1l>)const;
     virtual void getBiome(int, int)const;
-}
+
+    void LayerBiomeSource(std::shared_ptr<Layer<Biome *> const>);
+    void _getBiomeArea(Layer<Biome *> const&, BoundingBox const&, unsigned int, BiomeArea &)const;
+    void _getBlockResolutionLayer(void)const;
+};

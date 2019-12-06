@@ -2,7 +2,7 @@
 
 class LevelEventListener {
 
-    virtual ~LevelEventListener();
+public:
     virtual ~LevelEventListener();
     virtual void onLevelInitialized(Level &);
     virtual void onLevelSaveData(Level &, CompoundTag &);
@@ -12,4 +12,6 @@ class LevelEventListener {
     virtual void onLevelAddedActor(Level &, Actor &);
     virtual void onLevelTick(void);
     virtual void onLevelWeatherChange(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, bool);
-}
+
+    void LevelEventListener(void);
+};

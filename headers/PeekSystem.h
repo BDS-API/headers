@@ -2,7 +2,9 @@
 
 class PeekSystem : ITickingSystem {
 
-    virtual ~PeekSystem();
+public:
     virtual ~PeekSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void PeekSystem(void);
+};

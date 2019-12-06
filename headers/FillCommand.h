@@ -2,7 +2,10 @@
 
 class FillCommand : Command {
 
-    virtual ~FillCommand();
+public:
     virtual ~FillCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void FillCommand(void);
+};

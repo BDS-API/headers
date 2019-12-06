@@ -2,7 +2,10 @@
 
 class WorldBuilderCommand : Command {
 
-    virtual ~WorldBuilderCommand();
+public:
     virtual ~WorldBuilderCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void WorldBuilderCommand(void);
+};

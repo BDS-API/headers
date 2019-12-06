@@ -2,8 +2,11 @@
 
 class BehaviorDefinition {
 
-    virtual ~BehaviorDefinition();
+public:
     virtual ~BehaviorDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
     virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void BehaviorDefinition(void);
+    void getTreeDefinition(void)const;
+};

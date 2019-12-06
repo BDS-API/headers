@@ -2,10 +2,11 @@
 
 class AgentCommands::GetItemCountCommand : AgentCommands::Command {
 
-    virtual ~GetItemCountCommand();
+public:
     virtual ~GetItemCountCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
+    virtual bool isDone(void);
     virtual void fireCommandDoneEvent(void);
-}
+
+    void GetItemCountCommand(Player &, int);
+};

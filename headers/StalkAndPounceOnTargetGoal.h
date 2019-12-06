@@ -2,15 +2,23 @@
 
 class StalkAndPounceOnTargetGoal : Goal {
 
+public:
     virtual ~StalkAndPounceOnTargetGoal();
-    virtual ~StalkAndPounceOnTargetGoal();
-    virtual void canUse(void);
-    virtual void canContinueToUse(void);
-    virtual void canBeInterrupted(void);
+    virtual bool canUse(void);
+    virtual bool canContinueToUse(void);
+    virtual bool canBeInterrupted(void);
     virtual void start(void);
     virtual void stop(void);
     virtual void tick(void);
     virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
-    virtual void isTargetGoal(void)const;
-    virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
-}
+
+    void StalkAndPounceOnTargetGoal(Mob &, ActorFilterGroup const&, float, float, float, float, float, float, float, float);
+    void _stalkPrey(Vec3 const&, Vec3 const&);
+    void _preparePounce(Vec3 const&, Vec3 const&);
+    void _attemptToStrike(Vec3 const&, Vec3 const&);
+    void _hasPreyDiedMidAir(void)const;
+    void _isStuckBlock(BlockPos)const;
+    void _stuck(void);
+    void _pounce(Vec3 const&, Vec3 const&)const;
+    void _isPouncePathClear(Vec3 const&, Vec3 const&)const;
+};

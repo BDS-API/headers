@@ -2,11 +2,12 @@
 
 class EntityClientPacket : Packet {
 
+public:
     virtual ~EntityClientPacket();
-    virtual ~EntityClientPacket();
-    virtual void __cxa_pure_virtual;
-    virtual void __cxa_pure_virtual;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void EntityClientPacket(void);
+    void EntityClientPacket(NetworkComponent &);
+    void getEntityNetId(void)const;
+};

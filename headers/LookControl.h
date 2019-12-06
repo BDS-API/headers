@@ -2,8 +2,10 @@
 
 class LookControl : Control {
 
-    virtual ~LookControl();
+public:
     virtual ~LookControl();
     virtual void initializeInternal(Mob &);
     virtual void tick(Mob &);
-}
+
+    void LookControl(void);
+};

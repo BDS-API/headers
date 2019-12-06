@@ -2,39 +2,43 @@
 
 class ChalkboardBlockActor : BlockActor {
 
-    virtual ~ChalkboardBlockActor();
+public:
     virtual ~ChalkboardBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
-    virtual void saveItemInstanceData(CompoundTag &);
-    virtual void saveBlockData(CompoundTag &, BlockSource &)const;
-    virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
-    virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void tick(BlockSource &);
-    virtual void isFinished(void);
     virtual void onChanged(BlockSource &);
-    virtual void isMovable(BlockSource &);
-    virtual void isCustomNameSaved(void);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onPlace(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
-    virtual void onMove(void);
-    virtual void onRemoved(BlockSource &);
-    virtual void triggerEvent(int, int);
-    virtual void clearCache(void);
-    virtual void onNeighborChanged(BlockSource &, BlockPos const&);
     virtual void getShadowRadius(BlockSource &)const;
-    virtual void hasAlphaLayer(void)const;
-    virtual void getCrackEntity(BlockSource &, BlockPos const&);
-    virtual void getDebugText(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, BlockPos const&);
-    virtual void _ZNK10BlockActor13getCustomNameB5cxx11Ev;
-    virtual void _ZN10BlockActor21getFilteredCustomNameB5cxx11ERK18UIProfanityContext;
-    virtual void _ZNK10BlockActor7getNameB5cxx11Ev;
-    virtual void _ZN20ChalkboardBlockActor22getImmersiveReaderTextB5cxx11ER11BlockSource;
-    virtual void getRepairCost(void)const;
-    virtual void getOwningPiston(BlockSource &);
-    virtual void getContainer(void);
-    virtual void getDeletionDelayTimeSeconds(void)const;
-    virtual void onChunkLoaded(LevelChunk &);
-    virtual void onChunkUnloaded(LevelChunk &);
-}
+
+    void ChalkboardBlockActor(BlockPos const&);
+    bool isBaseChalkboard(void)const;
+    void setText(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, TextObjectRoot &&);
+    void setText(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void _flagCachedMessageAsDirty(void);
+    void getRotation(BlockSource &)const;
+    void setOnGround(bool);
+    bool isOnGround(void)const;
+    void setChalkboardSize(ChalkboardSize);
+    void getChalkboardSize(void)const;
+    void getBaseChalkboard(BlockSource &)const;
+    void setBasePos(BlockPos const&);
+    void setOwnerId(ActorUniqueID);
+    void getOwnerId(void)const;
+    void calculateAllBlocks(BlockPos const&, ChalkboardSize, int);
+    void setLocked(bool);
+    void getLocked(void)const;
+    void getTextCharCount(void)const;
+    void _isBaseEntity(void)const;
+    void getWidth(void)const;
+    void getHeight(void)const;
+    void convertFromEntity(BlockSource &, CompoundTag const&);
+    void createChalkboard(Actor *, BlockSource &, BlockPos const&, ChalkboardSize, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    bool canCreateChalkboard(Actor *, BlockSource &, BlockPos const&, ChalkboardSize, int, std::vector<BlockPos, std::allocator<BlockPos>> &);
+    void playerMayEdit(Player &)const;
+    void _isOwner(Player &)const;
+    void playerMayToggleLock(Player &)const;
+    void playerMayDestroy(Player &)const;
+    void getCachedMessage(void)const;
+    void setCachedMessage(ChalkboardBlockActor::CachedMessageData);
+};

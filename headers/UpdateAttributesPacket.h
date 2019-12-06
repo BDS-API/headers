@@ -2,11 +2,14 @@
 
 class UpdateAttributesPacket : Packet {
 
-    virtual ~UpdateAttributesPacket();
+public:
     virtual ~UpdateAttributesPacket();
     virtual void getId(void)const;
-    virtual void _ZNK22UpdateAttributesPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void UpdateAttributesPacket(void);
+    void UpdateAttributesPacket(Actor const&, std::vector<AttributeInstanceHandle, std::allocator<AttributeInstanceHandle>> const&);
+    void getRuntimeId(void)const;
+    void getAttributeData(void)const;
+};

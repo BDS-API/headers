@@ -2,12 +2,12 @@
 
 class LocalConnector : Connector {
 
-    virtual ~LocalConnector();
+public:
+    static long LocalConnector::sLocalConnectivitySystem;
+
     virtual ~LocalConnector();
     virtual void onAppResumed(void);
     virtual void onAppSuspended(void);
-    virtual void _ZNK14LocalConnector11getLocalIpsB5cxx11Ev;
-    virtual void _ZN14LocalConnector10getLocalIpB5cxx11Ev;
     virtual void getPort(void)const;
     virtual void getRefinedLocalIps(void)const;
     virtual void getConnectedGameInfo(void)const;
@@ -16,9 +16,17 @@ class LocalConnector : Connector {
     virtual void startNatPunchingClient(Social::GameConnectionInfo);
     virtual void addConnectionStateListener(Connector::ConnectionStateListener *);
     virtual void removeConnectionStateListener(Connector::ConnectionStateListener *);
-    virtual void isIPv4Supported(void)const;
-    virtual void isIPv6Supported(void)const;
+    virtual bool isIPv4Supported(void)const;
+    virtual bool isIPv6Supported(void)const;
     virtual void getIPv4Port(void)const;
     virtual void getIPv6Port(void)const;
     virtual void getGUID(void)const;
-}
+
+    void LocalConnector(LocalConnector::ConnectionCallbacks &, NetworkIdentifier const&);
+    void disconnect(void);
+    void host(NetworkIdentifier const&);
+    void connect(NetworkIdentifier const&);
+    void createPeer(LocalConnector&);
+    void onRemoteDisconnected(LocalConnector const&);
+    void runEvents(void);
+};

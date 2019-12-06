@@ -2,8 +2,9 @@
 
 class WaitDefinition : BehaviorDefinition {
 
-    virtual ~WaitDefinition();
+public:
     virtual ~WaitDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
-    virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void WaitDefinition(void);
+};

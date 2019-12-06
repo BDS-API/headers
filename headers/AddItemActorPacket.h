@@ -2,11 +2,12 @@
 
 class AddItemActorPacket : Packet {
 
-    virtual ~AddItemActorPacket();
+public:
     virtual ~AddItemActorPacket();
     virtual void getId(void)const;
-    virtual void _ZNK18AddItemActorPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void AddItemActorPacket(void);
+    void AddItemActorPacket(ItemActor &);
+};

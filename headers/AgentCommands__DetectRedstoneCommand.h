@@ -2,10 +2,10 @@
 
 class AgentCommands::DetectRedstoneCommand : AgentCommands::Command {
 
-    virtual ~DetectRedstoneCommand();
+public:
     virtual ~DetectRedstoneCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
-    virtual void fireCommandDoneEvent(void);
-}
+    virtual bool isDone(void);
+
+    void DetectRedstoneCommand(Player &, AgentCommands::Direction);
+};

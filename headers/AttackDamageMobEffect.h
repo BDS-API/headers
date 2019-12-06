@@ -2,11 +2,9 @@
 
 class AttackDamageMobEffect : MobEffect {
 
+public:
     virtual ~AttackDamageMobEffect();
-    virtual ~AttackDamageMobEffect();
-    virtual void applyEffects(Actor *, int, int)const;
-    virtual void removeEffects(Actor *);
-    virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const;
-    virtual void isInstantaneous(void)const;
     virtual void getAttributeModifierValue(int, AttributeModifier const&)const;
-}
+
+    void AttackDamageMobEffect(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, int, int);
+};

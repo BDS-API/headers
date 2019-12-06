@@ -2,7 +2,10 @@
 
 class AbilityCommand : Command {
 
-    virtual ~AbilityCommand();
+public:
     virtual ~AbilityCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void AbilityCommand(void);
+};

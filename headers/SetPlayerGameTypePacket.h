@@ -2,11 +2,12 @@
 
 class SetPlayerGameTypePacket : Packet {
 
-    virtual ~SetPlayerGameTypePacket();
+public:
     virtual ~SetPlayerGameTypePacket();
     virtual void getId(void)const;
-    virtual void _ZNK23SetPlayerGameTypePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void SetPlayerGameTypePacket(void);
+    void SetPlayerGameTypePacket(GameType);
+};

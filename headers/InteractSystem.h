@@ -2,7 +2,9 @@
 
 class InteractSystem : ITickingSystem {
 
-    virtual ~InteractSystem();
+public:
     virtual ~InteractSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void InteractSystem(void);
+};

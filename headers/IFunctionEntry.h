@@ -2,7 +2,8 @@
 
 class IFunctionEntry {
 
+public:
     virtual ~IFunctionEntry();
-    virtual ~IFunctionEntry();
-    virtual void execute(FunctionManager &, CommandOrigin const&);
-}
+
+    void IFunctionEntry(void);
+};

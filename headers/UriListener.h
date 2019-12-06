@@ -2,7 +2,8 @@
 
 class UriListener {
 
+public:
     virtual ~UriListener();
-    virtual ~UriListener();
-    virtual void onUri(ActivationUri const&);
-}
+
+    void UriListener(void);
+};

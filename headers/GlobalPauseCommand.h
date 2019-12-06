@@ -2,7 +2,10 @@
 
 class GlobalPauseCommand : ServerCommand {
 
-    virtual ~GlobalPauseCommand();
+public:
     virtual ~GlobalPauseCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void GlobalPauseCommand(void);
+};

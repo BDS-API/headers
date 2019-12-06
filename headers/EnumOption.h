@@ -2,10 +2,8 @@
 
 class EnumOption : IntOption {
 
+public:
     virtual ~EnumOption();
-    virtual ~EnumOption();
-    virtual void save(std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &);
-    virtual void load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void load(std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &);
-    virtual void load(Json::Value const&);
-}
+
+    void EnumOption(OptionID, OptionOwnerType, OptionResetFlags, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, std::vector<int, std::allocator<int>> const&, std::unordered_map<int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> const&);
+};

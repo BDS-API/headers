@@ -2,7 +2,10 @@
 
 class XPCommand : Command {
 
-    virtual ~XPCommand();
+public:
     virtual ~XPCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void XPCommand(void);
+};

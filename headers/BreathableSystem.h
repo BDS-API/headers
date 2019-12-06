@@ -2,7 +2,9 @@
 
 class BreathableSystem : ITickingSystem {
 
-    virtual ~BreathableSystem();
+public:
     virtual ~BreathableSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void BreathableSystem(void);
+};

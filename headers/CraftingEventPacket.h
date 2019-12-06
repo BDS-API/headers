@@ -2,11 +2,13 @@
 
 class CraftingEventPacket : Packet {
 
-    virtual ~CraftingEventPacket();
+public:
     virtual ~CraftingEventPacket();
     virtual void getId(void)const;
-    virtual void _ZNK19CraftingEventPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void CraftingEventPacket(void);
+    void CraftingEventPacket(ContainerID, int, mce::UUID const&, std::vector<ItemStack, std::allocator<ItemStack>> &&, std::vector<ItemStack, std::allocator<ItemStack>> &);
+    void CraftingEventPacket(ContainerID, int, mce::UUID const&);
+};

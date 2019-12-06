@@ -2,15 +2,9 @@
 
 class StringByteOutput : BytesDataOutput {
 
+public:
     virtual ~StringByteOutput();
-    virtual ~StringByteOutput();
-    virtual void writeString(gsl::basic_string_span<char const, -1l>);
-    virtual void writeLongString(gsl::basic_string_span<char const, -1l>);
-    virtual void writeFloat(float);
-    virtual void writeDouble(double);
-    virtual void writeByte(char);
-    virtual void writeShort(short);
-    virtual void writeInt(int);
-    virtual void writeLongLong(long);
     virtual void writeBytes(void const*, unsigned long);
-}
+
+    void StringByteOutput(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
+};

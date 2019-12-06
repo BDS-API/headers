@@ -2,7 +2,7 @@
 
 class BinaryDataOutput : BytesDataOutput {
 
-    virtual ~BinaryDataOutput();
+public:
     virtual ~BinaryDataOutput();
     virtual void writeString(gsl::basic_string_span<char const, -1l>);
     virtual void writeLongString(gsl::basic_string_span<char const, -1l>);
@@ -13,4 +13,6 @@ class BinaryDataOutput : BytesDataOutput {
     virtual void writeInt(int);
     virtual void writeLongLong(long);
     virtual void writeBytes(void const*, unsigned long);
-}
+
+    void BinaryDataOutput(BinaryStream &);
+};

@@ -2,11 +2,14 @@
 
 class BossEventPacket : Packet {
 
-    virtual ~BossEventPacket();
+public:
     virtual ~BossEventPacket();
     virtual void getId(void)const;
-    virtual void _ZNK15BossEventPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void BossEventPacket(void);
+    void BossEventPacket(BossEventUpdateType, RaidBossComponent &);
+    void BossEventPacket(BossEventUpdateType, ActorUniqueID, BossComponent &);
+    void BossEventPacket(BossEventUpdateType, ActorUniqueID, ActorUniqueID);
+};

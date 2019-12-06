@@ -2,10 +2,10 @@
 
 class AgentCommands::DropCommand : AgentCommands::Command {
 
-    virtual ~DropCommand();
+public:
     virtual ~DropCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
-    virtual void fireCommandDoneEvent(void);
-}
+    virtual bool isDone(void);
+
+    void DropCommand(Player &, int, int, AgentCommands::Direction);
+};

@@ -2,8 +2,10 @@
 
 class FitDoubleZRoom : MonumentRoomFitter {
 
-    virtual ~FitDoubleZRoom();
+public:
     virtual ~FitDoubleZRoom();
     virtual void fits(std::shared_ptr<RoomDefinition> &);
     virtual void create(int &, std::shared_ptr<RoomDefinition> &, Random &);
-}
+
+    void FitDoubleZRoom(void);
+};

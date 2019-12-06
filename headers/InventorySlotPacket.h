@@ -2,11 +2,12 @@
 
 class InventorySlotPacket : Packet {
 
-    virtual ~InventorySlotPacket();
+public:
     virtual ~InventorySlotPacket();
     virtual void getId(void)const;
-    virtual void _ZNK19InventorySlotPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void InventorySlotPacket(void);
+    void InventorySlotPacket(ContainerID, unsigned int, ItemStack const&);
+};

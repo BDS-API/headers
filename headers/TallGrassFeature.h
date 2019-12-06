@@ -2,8 +2,10 @@
 
 class TallGrassFeature : Feature {
 
+public:
     virtual ~TallGrassFeature();
-    virtual ~TallGrassFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void TallGrassFeature(Block const&);
+    void place(BlockSource &, BlockPos const&, Random &, int, int)const;
+};

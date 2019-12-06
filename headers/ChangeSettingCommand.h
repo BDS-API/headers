@@ -2,7 +2,10 @@
 
 class ChangeSettingCommand : ServerCommand {
 
-    virtual ~ChangeSettingCommand();
+public:
     virtual ~ChangeSettingCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void ChangeSettingCommand(void);
+};

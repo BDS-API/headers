@@ -2,8 +2,9 @@
 
 class UseActorNode : BehaviorNode {
 
-    virtual ~UseActorNode();
+public:
     virtual ~UseActorNode();
     virtual void tick(Actor &);
-    virtual void initializeFromDefinition(Actor &);
-}
+
+    void UseActorNode(void);
+};

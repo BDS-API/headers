@@ -2,10 +2,11 @@
 
 class AgentCommands::TurnCommand : AgentCommands::Command {
 
-    virtual ~TurnCommand();
+public:
     virtual ~TurnCommand();
     virtual void execute(void);
-    virtual void isDone(void);
+    virtual bool isDone(void);
     virtual void tick(void);
-    virtual void fireCommandDoneEvent(void);
-}
+
+    void TurnCommand(Player &, AgentCommands::Direction);
+};

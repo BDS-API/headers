@@ -2,7 +2,7 @@
 
 class ActorEventListener {
 
-    virtual ~ActorEventListener();
+public:
     virtual ~ActorEventListener();
     virtual void onActorAttack(Actor &, Actor &);
     virtual void onActorHurt(Actor &, ActorDamageSource const&, int, int);
@@ -26,4 +26,6 @@ class ActorEventListener {
     virtual void onActorEquippedArmor(Actor &, ItemInstance const&, ArmorSlot);
     virtual void onActorRemoved(Actor &);
     virtual void onActorMobInteraction(Actor &, MinecraftEventing::InteractionType, ActorType);
-}
+
+    void ActorEventListener(void);
+};

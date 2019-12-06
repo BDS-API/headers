@@ -2,9 +2,10 @@
 
 class PackSettingsError : PackError {
 
+public:
     virtual ~PackSettingsError();
-    virtual ~PackSettingsError();
-    virtual void _ZNK17PackSettingsError18getLocErrorMessageB5cxx11Ev;
-    virtual void _ZNK17PackSettingsError21getLocErrorMessageMapB5cxx11Ev;
-    virtual void _ZNK17PackSettingsError23getEventErrorMessageMapB5cxx11Ev;
-}
+
+    void PackSettingsError(PackSettingsError const&);
+    void PackSettingsError(void);
+    void PackSettingsError(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
+};

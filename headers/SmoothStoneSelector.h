@@ -2,7 +2,9 @@
 
 class SmoothStoneSelector : BlockSelector {
 
-    virtual ~SmoothStoneSelector();
+public:
     virtual ~SmoothStoneSelector();
     virtual void next(Random &, int, int, int, bool)const;
-}
+
+    void SmoothStoneSelector(void);
+};

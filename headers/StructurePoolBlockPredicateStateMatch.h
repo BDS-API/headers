@@ -2,7 +2,9 @@
 
 class StructurePoolBlockPredicateStateMatch : IStructurePoolBlockPredicate {
 
-    virtual ~StructurePoolBlockPredicateStateMatch();
+public:
     virtual ~StructurePoolBlockPredicateStateMatch();
     virtual void test(Block const&, Random &)const;
-}
+
+    void StructurePoolBlockPredicateStateMatch(Block const&);
+};

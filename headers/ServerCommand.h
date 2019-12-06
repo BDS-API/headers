@@ -2,7 +2,11 @@
 
 class ServerCommand : Command {
 
+public:
+    static long ServerCommand::mGame;
+
     virtual ~ServerCommand();
-    virtual ~ServerCommand();
-    virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void ServerCommand(void);
+    void setup(Minecraft &);
+};

@@ -2,19 +2,27 @@
 
 class MoveInputHandler : MoveInput {
 
-    virtual ~MoveInputHandler();
+public:
     virtual ~MoveInputHandler();
     virtual void tick(Player &);
-    virtual void render(float);
-    virtual void setKey(int, bool);
     virtual void clearInputState(void);
-    virtual void clearMovementState(void);
-    virtual void allowPicking(float, float);
-    virtual void setJumping(bool);
-    virtual void setAutoJumpingInWater(bool);
-    virtual void isChangeHeight(void)const;
-    virtual void setSneakDown(bool);
-    virtual void isPlayerMoving(void)const;
+    virtual bool isChangeHeight(void)const;
+    virtual bool isPlayerMoving(void)const;
     virtual void fillInputPacket(PlayerAuthInputPacket &);
-    virtual void registerInputHandlers(InputHandler &);
-}
+
+    void MoveInputHandler(void);
+    void _updateXY(bool);
+    bool isMovingForward(void)const;
+    bool isMovingLeft(void)const;
+    bool isMovingRight(void)const;
+    void wantsMoveForward(void)const;
+    bool isJumpDown(void)const;
+    void setSneakPersistence(bool);
+    void setGazeDirection(Vec3 const&);
+    void getGazeDirection(void)const;
+    void _toggleSneak(void);
+    void _getLookBitmask(MoveInputHandler::LookDirection);
+    void _getLookBitmask(MoveInputHandler::LookDirection, MoveInputHandler::LookDirection);
+    void _updateGGVector(short, float, float, float);
+    void _updateMoveVector(float, float);
+};

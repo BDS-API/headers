@@ -2,8 +2,10 @@
 
 class EndGatewayFeature : Feature {
 
+public:
     virtual ~EndGatewayFeature();
-    virtual ~EndGatewayFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void EndGatewayFeature(void);
+    void testEnd(BlockSource &, BlockPos const&, Random &)const;
+};

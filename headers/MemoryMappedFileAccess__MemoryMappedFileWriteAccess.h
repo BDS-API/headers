@@ -2,7 +2,9 @@
 
 class MemoryMappedFileAccess::MemoryMappedFileWriteAccess : IFileWriteAccess {
 
-    virtual ~MemoryMappedFileWriteAccess();
+public:
     virtual ~MemoryMappedFileWriteAccess();
     virtual void fwrite(void const*, unsigned long, unsigned long, void *);
-}
+
+    void MemoryMappedFileWriteAccess(void);
+};

@@ -2,9 +2,15 @@
 
 class DolphinMoveControl : MoveControl {
 
+public:
     virtual ~DolphinMoveControl();
-    virtual ~DolphinMoveControl();
-    virtual void initializeInternal(Mob &, MoveControlDescription *);
     virtual void tick(MoveControlComponent &, Mob &);
-    virtual void setWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
-}
+
+    void DolphinMoveControl(void);
+    void _handleBreaching(Mob &);
+    void _setupBreach(Mob &);
+    void _calcRotY(float, float);
+    void _isInWater(Mob const&)const;
+    void _calcRotX(float, float, float);
+    void _clearOfObstacles(Mob const&, float, float, int)const;
+};

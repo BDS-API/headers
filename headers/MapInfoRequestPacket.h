@@ -2,11 +2,13 @@
 
 class MapInfoRequestPacket : Packet {
 
-    virtual ~MapInfoRequestPacket();
+public:
     virtual ~MapInfoRequestPacket();
     virtual void getId(void)const;
-    virtual void _ZNK20MapInfoRequestPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void MapInfoRequestPacket(void);
+    void MapInfoRequestPacket(ActorUniqueID);
+    void getMapId(void)const;
+};

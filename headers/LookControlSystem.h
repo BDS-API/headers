@@ -2,7 +2,9 @@
 
 class LookControlSystem : ITickingSystem {
 
-    virtual ~LookControlSystem();
+public:
     virtual ~LookControlSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void LookControlSystem(void);
+};

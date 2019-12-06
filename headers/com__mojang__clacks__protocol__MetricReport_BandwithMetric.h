@@ -2,29 +2,46 @@
 
 class com::mojang::clacks::protocol::MetricReport_BandwithMetric : google::protobuf::Message {
 
+public:
     virtual ~MetricReport_BandwithMetric();
-    virtual ~MetricReport_BandwithMetric();
-    virtual void _ZNK6google8protobuf7Message11GetTypeNameB5cxx11Ev;
     virtual void New(void)const;
     virtual void New(google::protobuf::Arena *)const;
-    virtual void GetArena(void)const;
-    virtual void GetMaybeArenaPointer(void)const;
     virtual void Clear(void);
     virtual void IsInitialized(void)const;
-    virtual void _ZNK6google8protobuf7Message25InitializationErrorStringB5cxx11Ev;
-    virtual void CheckTypeAndMergeFrom(google::protobuf::MessageLite const&);
     virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *);
     virtual void ByteSizeLong(void)const;
     virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const;
-    virtual void SerializeWithCachedSizesToArray(unsigned char *)const;
     virtual void GetCachedSize(void)const;
     virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
-    virtual void InternalGetTable(void)const;
     virtual void CopyFrom(google::protobuf::Message const&);
     virtual void MergeFrom(google::protobuf::Message const&);
-    virtual void DiscardUnknownFields(void);
-    virtual void SpaceUsedLong(void)const;
     virtual void SetCachedSize(int)const;
-    virtual void GetReflection(void)const;
     virtual void GetMetadata(void)const;
-}
+
+    void set_allocated_xuid(com::mojang::clacks::protocol::Xuid *);
+    void set_playerdeltabytessent(long);
+    void set_playerdeltabytesreceived(long);
+    void set_connectiontotalbytesreceived(long);
+    void set_connectiontotalbytessent(long);
+    void GetArenaNoVirtual(void)const;
+    void InitAsDefaultInstance(void);
+    void MetricReport_BandwithMetric(void);
+    void SharedCtor(void);
+    void MetricReport_BandwithMetric(com::mojang::clacks::protocol::MetricReport_BandwithMetric const&);
+    void SharedDtor(void);
+    void descriptor(void);
+    void default_instance(void);
+    void MergeFrom(com::mojang::clacks::protocol::MetricReport_BandwithMetric const&);
+    void CopyFrom(com::mojang::clacks::protocol::MetricReport_BandwithMetric const&);
+    void Swap(com::mojang::clacks::protocol::MetricReport_BandwithMetric*);
+    void InternalSwap(com::mojang::clacks::protocol::MetricReport_BandwithMetric*);
+    void has_xuid(void)const;
+    void internal_default_instance(void);
+    void mutable_xuid(void);
+    void _internal_xuid(void)const;
+    void playerdeltabytessent(void)const;
+    void playerdeltabytesreceived(void)const;
+    void connectiontotalbytesreceived(void)const;
+    void connectiontotalbytessent(void)const;
+    void xuid(void)const;
+};

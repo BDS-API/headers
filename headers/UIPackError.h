@@ -2,9 +2,9 @@
 
 class UIPackError : PackError {
 
+public:
     virtual ~UIPackError();
-    virtual ~UIPackError();
-    virtual void _ZNK9PackError18getLocErrorMessageB5cxx11Ev;
-    virtual void _ZNK11UIPackError21getLocErrorMessageMapB5cxx11Ev;
-    virtual void _ZNK11UIPackError23getEventErrorMessageMapB5cxx11Ev;
-}
+
+    void UIPackError(void);
+    void UIPackError(UIPackErrorType, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
+};

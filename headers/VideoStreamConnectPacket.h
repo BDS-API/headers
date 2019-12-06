@@ -2,11 +2,14 @@
 
 class VideoStreamConnectPacket : Packet {
 
-    virtual ~VideoStreamConnectPacket();
+public:
     virtual ~VideoStreamConnectPacket();
     virtual void getId(void)const;
-    virtual void _ZNK24VideoStreamConnectPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void VideoStreamConnectPacket(void);
+    void VideoStreamConnectPacket(WebSocketPacketData, float, VideoStreamConnectPacket::Action, int, int);
+    void VideoStreamConnectPacket(VideoStreamConnectPacket::Action);
+    void VideoStreamConnectPacket(WebSocketPacketData, float, int, int);
+};

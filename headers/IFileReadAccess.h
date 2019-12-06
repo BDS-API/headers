@@ -2,7 +2,8 @@
 
 class IFileReadAccess {
 
+public:
     virtual ~IFileReadAccess();
-    virtual ~IFileReadAccess();
-    virtual void fread(void *, unsigned long, unsigned long, void *)const;
-}
+
+    void IFileReadAccess(void);
+};

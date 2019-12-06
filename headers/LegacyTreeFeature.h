@@ -2,8 +2,9 @@
 
 class LegacyTreeFeature : Feature {
 
+public:
     virtual ~LegacyTreeFeature();
-    virtual ~LegacyTreeFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void LegacyTreeFeature(LegacyTreeFeature::Type, FeatureRegistry const&);
+};

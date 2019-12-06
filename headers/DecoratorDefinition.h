@@ -2,8 +2,10 @@
 
 class DecoratorDefinition : BehaviorDefinition {
 
+public:
     virtual ~DecoratorDefinition();
-    virtual ~DecoratorDefinition();
-    virtual void load(Json::Value, BehaviorFactory const&);
-    virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void DecoratorDefinition(void);
+    void get(void)const;
+    void _decoratorLoadChildBehavior(Json::Value, BehaviorFactory const&, BehaviorTreeDefinitionPtr);
+};

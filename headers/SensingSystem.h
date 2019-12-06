@@ -2,7 +2,9 @@
 
 class SensingSystem : ITickingSystem {
 
-    virtual ~SensingSystem();
+public:
     virtual ~SensingSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void SensingSystem(void);
+};

@@ -2,8 +2,9 @@
 
 class TextObjectLocalizedText : ITextObject {
 
+public:
     virtual ~TextObjectLocalizedText();
-    virtual ~TextObjectLocalizedText();
-    virtual void _ZNK23TextObjectLocalizedText8asStringB5cxx11Ev;
     virtual void asJsonValue(void)const;
-}
+
+    void TextObjectLocalizedText(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+};

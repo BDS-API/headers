@@ -2,7 +2,9 @@
 
 class VanillaInPackagePacks : IInPackagePacks {
 
-    virtual ~VanillaInPackagePacks();
+public:
     virtual ~VanillaInPackagePacks();
     virtual void getPacks(PackType)const;
-}
+
+    void VanillaInPackagePacks(void);
+};

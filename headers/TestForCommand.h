@@ -2,7 +2,10 @@
 
 class TestForCommand : Command {
 
-    virtual ~TestForCommand();
+public:
     virtual ~TestForCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void TestForCommand(void);
+};

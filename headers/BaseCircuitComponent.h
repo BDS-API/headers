@@ -2,15 +2,15 @@
 
 class BaseCircuitComponent {
 
-    virtual ~BaseCircuitComponent();
+public:
     virtual ~BaseCircuitComponent();
     virtual void getStrength(void)const;
     virtual void getDirection(void)const;
     virtual void setStrength(int);
     virtual void setDirection(unsigned char);
     virtual void consumePowerAnyDirection(void);
-    virtual void canConsumerPower(void);
-    virtual void canStopPower(void);
+    virtual bool canConsumerPower(void);
+    virtual bool canStopPower(void);
     virtual void setStopPower(bool);
     virtual void getBaseType(void)const;
     virtual void getInstanceType(void)const;
@@ -22,8 +22,21 @@ class BaseCircuitComponent {
     virtual void cacheValues(CircuitSystem &, BlockPos const&);
     virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
     virtual void allowIndirect(void);
-    virtual void isHalfPulse(void);
-    virtual void hasSource(BaseCircuitComponent&);
-    virtual void hasChildrenSource(void);
-    virtual void isSecondaryPowered(void);
-}
+    virtual bool isHalfPulse(void);
+    virtual bool hasSource(BaseCircuitComponent&);
+    virtual bool hasChildrenSource(void);
+    virtual bool isSecondaryPowered(void);
+
+    void clearFirstTimeFlag(void);
+    bool canAllowPowerUp(void);
+    void setAllowPowerUp(bool);
+    void BaseCircuitComponent(void);
+    bool hasDirectPower(void);
+    void trackPowerSource(CircuitTrackingInfo const&, int, bool, int);
+    void trackPowerSourceDuplicates(CircuitTrackingInfo const&, int, bool);
+    void calculateValue(CircuitSystem &);
+    void setRemoved(void);
+    bool isRemoved(void)const;
+    void setAllowPowerDown(bool);
+    bool canAllowPowerDown(void);
+};

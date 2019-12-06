@@ -2,7 +2,9 @@
 
 class ScatterFeature : IFeature {
 
-    virtual ~ScatterFeature();
+public:
     virtual ~ScatterFeature();
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
-}
+
+    void ScatterFeature(void);
+};

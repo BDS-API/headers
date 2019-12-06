@@ -2,36 +2,39 @@
 
 class Container {
 
-    virtual ~Container();
+public:
     virtual ~Container();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);
-    virtual void saveBlockData(CompoundTag &, BlockSource &)const;
-    virtual void hasRoomForItem(ItemStack const&);
+    virtual bool hasRoomForItem(ItemStack const&);
     virtual void addItem(ItemStack &);
     virtual void addItemToFirstEmptySlot(ItemStack &);
-    virtual void isFinished(void);
     virtual void removeItem(int, int);
     virtual void removeAllItems(void);
     virtual void dropContents(BlockSource &, Vec3 const&, bool);
-    virtual void getUpdatePacket(BlockSource &);
-    virtual void onPlace(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
-    virtual void onMove(void);
     virtual void getSlotCopies(void)const;
     virtual void getSlots(void)const;
     virtual void getItemCount(ItemDescriptor const&);
     virtual void getItemCount(ItemStack const&);
     virtual void findFirstSlotForItem(ItemStack const&)const;
-    virtual void canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
-    virtual void canPullOutItem(BlockSource &, int, int, ItemInstance const&)const;
+    virtual bool canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
+    virtual bool canPullOutItem(BlockSource &, int, int, ItemInstance const&)const;
     virtual void setContainerChanged(int);
     virtual void setContainerMoved(void);
     virtual void setCustomName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void hasCustomName(void)const;
+    virtual bool hasCustomName(void)const;
     virtual void readAdditionalSaveData(CompoundTag const&);
     virtual void addAdditionalSaveData(CompoundTag &);
     virtual void createTransactionContext(std::function<void ()(Container&, int, ItemStack const&, ItemStack const&)>, std::function<void ()(void)>);
     virtual void triggerTransactionChange(int, ItemStack const&, ItemStack const&);
-}
+
+    void Container(ContainerType);
+    void Container(ContainerType, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void addSizeChangeListener(ContainerSizeChangeListener *);
+    void removeSizeChangeListener(ContainerSizeChangeListener *);
+    void getContainerType(void);
+    void getRedstoneSignalFromContainer(void);
+    void setSizeChanged(int);
+    void getContainerTypeId(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+};

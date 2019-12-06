@@ -2,9 +2,11 @@
 
 class VillageStart : StructureStart {
 
-    virtual ~VillageStart();
+public:
     virtual ~VillageStart();
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual void isValid(void)const;
+    virtual bool isValid(void)const;
     virtual void getType(void)const;
-}
+
+    void VillageStart(Dimension &, BiomeSource &, Random &, int, int);
+};

@@ -2,11 +2,13 @@
 
 class LevelEventPacket : Packet {
 
-    virtual ~LevelEventPacket();
+public:
     virtual ~LevelEventPacket();
     virtual void getId(void)const;
-    virtual void _ZNK16LevelEventPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void LevelEventPacket(LevelEvent, Vec3 const&, int);
+    void LevelEventPacket(LevelEvent, float, float, float, int);
+    void LevelEventPacket(void);
+};

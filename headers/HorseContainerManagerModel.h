@@ -2,17 +2,15 @@
 
 class HorseContainerManagerModel : LevelContainerManagerModel {
 
+public:
     virtual ~HorseContainerManagerModel();
-    virtual ~HorseContainerManagerModel();
-    virtual void getContainerId(void)const;
-    virtual void setContainerId(ContainerID);
-    virtual void getContainerType(void)const;
-    virtual void setContainerType(ContainerType);
     virtual void getItems(void);
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
-    virtual void setData(int, int);
-    virtual void broadcastChanges(void);
     virtual void init(void);
-    virtual void isValid(float);
-}
+
+    void HorseContainerManagerModel(ContainerID, Player &, ActorUniqueID const&);
+    void getEntity(void)const;
+    void _onEquipSlotChanged(int, ItemStack const&, ItemStack const&);
+    void _onChestSlotChanged(int, ItemStack const&, ItemStack const&);
+};

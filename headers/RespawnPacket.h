@@ -2,11 +2,13 @@
 
 class RespawnPacket : Packet {
 
-    virtual ~RespawnPacket();
+public:
     virtual ~RespawnPacket();
     virtual void getId(void)const;
-    virtual void _ZNK13RespawnPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void RespawnPacket(void);
+    void RespawnPacket(Vec3 const&, PlayerRespawnState const&);
+    void RespawnPacket(Vec3 const&, PlayerRespawnState const&, ActorRuntimeID);
+};

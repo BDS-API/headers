@@ -2,8 +2,8 @@
 
 class UseActorDefinition : BehaviorDefinition {
 
+public:
     virtual ~UseActorDefinition();
-    virtual ~UseActorDefinition();
-    virtual void load(Json::Value, BehaviorFactory const&);
-    virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void UseActorDefinition(void);
+};

@@ -2,7 +2,13 @@
 
 class ScriptServerActorCreatedEvent : ScriptEventData {
 
-    virtual ~ScriptServerActorCreatedEvent();
+public:
+    static long ScriptServerActorCreatedEvent::mHash;
+
     virtual ~ScriptServerActorCreatedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
-}
+
+    void getHash(void);
+    void ScriptServerActorCreatedEvent(void);
+    void setActorId(ActorUniqueID const&);
+};

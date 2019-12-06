@@ -2,11 +2,12 @@
 
 class InteractPacket : Packet {
 
-    virtual ~InteractPacket();
+public:
     virtual ~InteractPacket();
     virtual void getId(void)const;
-    virtual void _ZNK14InteractPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void InteractPacket(void);
+    void InteractPacket(InteractPacket::Action, ActorRuntimeID, Vec3 const&);
+};

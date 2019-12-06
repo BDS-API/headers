@@ -2,7 +2,8 @@
 
 class IPackTelemetry {
 
+public:
     virtual ~IPackTelemetry();
-    virtual ~IPackTelemetry();
-    virtual void __cxa_pure_virtual;
-}
+
+    void IPackTelemetry(void);
+};

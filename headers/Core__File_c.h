@@ -2,9 +2,8 @@
 
 class Core::File_c : Core::FileImpl {
 
+public:
     virtual ~File_c();
-    virtual ~File_c();
-    virtual void _ZNK4Core6File_c8_getPathB5cxx11Ev;
     virtual void _getBlockSize(void)const;
     virtual void _isOpen(void);
     virtual void _close(void);
@@ -18,4 +17,7 @@ class Core::File_c : Core::FileImpl {
     virtual void _flush(void);
     virtual void _getSize(unsigned long *);
     virtual void _getRemainingSize(unsigned long *);
-}
+
+    void File_c(_IO_FILE *, Core::FileSystemImpl *, Core::Path const&, Core::FileOpenMode);
+    void _open(std::unique_ptr<Core::File_c, std::default_delete<Core::File_c>> &, Core::FileSystemImpl *, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode);
+};

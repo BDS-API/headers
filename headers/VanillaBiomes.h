@@ -1,0 +1,87 @@
+#pragma once
+
+class VanillaBiomes {
+
+public:
+    static long VanillaBiomes::SWAMP_WATER_COLOR;
+    static long VanillaBiomes::WATER_FOG_COLOR_SWAMP;
+    static long VanillaBiomes::HEIGHTS_RIVER;
+    static long VanillaBiomes::HEIGHTS_OCEAN;
+    static long VanillaBiomes::HEIGHTS_DEEP_OCEAN;
+    static long VanillaBiomes::HEIGHTS_LOWLANDS;
+    static long VanillaBiomes::HEIGHTS_TAIGA;
+    static long VanillaBiomes::HEIGHTS_MOUNTAINS;
+    static long VanillaBiomes::HEIGHTS_HIGHLANDS;
+    static long VanillaBiomes::HEIGHTS_EXTREME;
+    static long VanillaBiomes::HEIGHTS_BEACH;
+    static long VanillaBiomes::HEIGHTS_STONE_BEACH;
+    static long VanillaBiomes::HEIGHTS_MUSHROOM;
+    static long VanillaBiomes::HEIGHTS_SWAMPLAND;
+    static long VanillaBiomes::mPlayerValidSpawns;
+    static long VanillaBiomes::mPlains;
+    static long VanillaBiomes::mDesert;
+    static long VanillaBiomes::mExtremeHills;
+    static long VanillaBiomes::mForest;
+    static long VanillaBiomes::mTaiga;
+    static long VanillaBiomes::mSwampland;
+    static long VanillaBiomes::mRiver;
+    static long VanillaBiomes::mNether;
+    static long VanillaBiomes::mSky;
+    static long VanillaBiomes::mFrozenRiver;
+    static long VanillaBiomes::mIceFlats;
+    static long VanillaBiomes::mIceMountains;
+    static long VanillaBiomes::mMushroomIsland;
+    static long VanillaBiomes::mMushroomIslandShore;
+    static long VanillaBiomes::mBeaches;
+    static long VanillaBiomes::mDesertHills;
+    static long VanillaBiomes::mForestHills;
+    static long VanillaBiomes::mTaigaHills;
+    static long VanillaBiomes::mSmallerExtremeHills;
+    static long VanillaBiomes::mJungle;
+    static long VanillaBiomes::mJungleHills;
+    static long VanillaBiomes::mJungleEdge;
+    static long VanillaBiomes::mBambooJungle;
+    static long VanillaBiomes::mBambooJungleHills;
+    static long VanillaBiomes::mStoneBeach;
+    static long VanillaBiomes::mColdBeach;
+    static long VanillaBiomes::mBirchForest;
+    static long VanillaBiomes::mBirchForestHills;
+    static long VanillaBiomes::mRoofedForest;
+    static long VanillaBiomes::mTaigaCold;
+    static long VanillaBiomes::mTaigaColdHills;
+    static long VanillaBiomes::mRedwoodTaiga;
+    static long VanillaBiomes::mRedwoodTaigaHills;
+    static long VanillaBiomes::mExtremeHillsWithTrees;
+    static long VanillaBiomes::mSavanna;
+    static long VanillaBiomes::mSavannaRock;
+    static long VanillaBiomes::mMesa;
+    static long VanillaBiomes::mMesaRock;
+    static long VanillaBiomes::mMesaClearRock;
+    static long VanillaBiomes::mOcean;
+    static long VanillaBiomes::mOceanDeep;
+    static long VanillaBiomes::mOceanCold;
+    static long VanillaBiomes::mOceanColdDeep;
+    static long VanillaBiomes::mOceanFrozen;
+    static long VanillaBiomes::mOceanFrozenDeep;
+    static long VanillaBiomes::mOceanLukewarm;
+    static long VanillaBiomes::mOceanLukewarmDeep;
+    static long VanillaBiomes::mOceanWarm;
+    static long VanillaBiomes::mOceanWarmDeep;
+    static long VanillaBiomes::mPlainsMutated;
+    static long VanillaBiomes::mSwamplandMutated;
+    static long VanillaBiomes::mIceFlatsMutated;
+    static long VanillaBiomes::mTaigaColdMutated;
+    static long VanillaBiomes::mSavannaMutated;
+    static long VanillaBiomes::mSavannaRockMutated;
+    static long VanillaBiomes::mRoofedForestMutated;
+
+
+    void initBiomes(BiomeRegistry &);
+    void initBiomeComponents(BiomeComponentFactory &);
+    void initSurfaceBuilders(SurfaceBuilderRegistry &);
+    void initDefaultWorldGenComponents(IWorldRegistriesProvider &);
+    void initClientOnlyComponents(BiomeRegistry &);
+    void initVanillaBiomeTypeComponent(BiomeRegistry &);
+    void shutdownBiomes(void);
+    bool isValidSpawn(int);
+};

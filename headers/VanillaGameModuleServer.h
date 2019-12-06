@@ -2,7 +2,7 @@
 
 class VanillaGameModuleServer : GameModuleServer {
 
-    virtual ~VanillaGameModuleServer();
+public:
     virtual ~VanillaGameModuleServer();
     virtual void init(ServerInstance &, Level &);
     virtual void shutdown(void);
@@ -12,4 +12,10 @@ class VanillaGameModuleServer : GameModuleServer {
     virtual void configureDocumentation(IGameModuleDocumentation &);
     virtual void tick(void);
     virtual void setupCommands(CommandRegistry &);
-}
+
+    void VanillaGameModuleServer(void);
+    void _configureEntitySystems(EntitySystems &, ResourcePackManager &);
+    void _configureEntityInitializer(ActorFactory &);
+    void _configureActorData(ResourcePackManager &);
+    void _configureWorldGen(IWorldRegistriesProvider &, ResourcePackManager &);
+};

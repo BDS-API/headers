@@ -2,11 +2,14 @@
 
 class MapCreateLockedCopyPacket : Packet {
 
-    virtual ~MapCreateLockedCopyPacket();
+public:
     virtual ~MapCreateLockedCopyPacket();
     virtual void getId(void)const;
-    virtual void _ZNK25MapCreateLockedCopyPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void MapCreateLockedCopyPacket(void);
+    void MapCreateLockedCopyPacket(ActorUniqueID, ActorUniqueID);
+    void getOriginalMapId(void)const;
+    void getNewMapId(void)const;
+};

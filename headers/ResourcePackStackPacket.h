@@ -2,11 +2,17 @@
 
 class ResourcePackStackPacket : Packet {
 
-    virtual ~ResourcePackStackPacket();
+public:
     virtual ~ResourcePackStackPacket();
     virtual void getId(void)const;
-    virtual void _ZNK23ResourcePackStackPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void ResourcePackStackPacket(void);
+    void ResourcePackStackPacket(std::vector<PackInstanceId, std::allocator<PackInstanceId>>, std::vector<PackInstanceId, std::allocator<PackInstanceId>>, BaseGameVersion const&, bool, bool);
+    void getAddOnIdsAndVersions(void)const;
+    void getTexturePackIdsAndVersions(void)const;
+    bool isTexturePackRequired(void)const;
+    bool isExperimental(void)const;
+    void getBaseGameVersion(void)const;
+};

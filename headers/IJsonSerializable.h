@@ -2,8 +2,9 @@
 
 class IJsonSerializable {
 
+public:
     virtual ~IJsonSerializable();
-    virtual ~IJsonSerializable();
-    virtual void serialize(Json::Value &);
-    virtual void deserialize(Json::Value &);
-}
+
+    void IJsonSerializable(void);
+    void IJsonSerializable(IJsonSerializable const&);
+};

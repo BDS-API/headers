@@ -2,9 +2,10 @@
 
 class BuriedTreasureStart : StructureStart {
 
+public:
     virtual ~BuriedTreasureStart();
-    virtual ~BuriedTreasureStart();
-    virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual void isValid(void)const;
     virtual void getType(void)const;
-}
+
+    void BuriedTreasureStart(void);
+    void BuriedTreasureStart(Dimension &, Random &, int, int);
+};

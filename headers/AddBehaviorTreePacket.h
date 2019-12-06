@@ -2,11 +2,12 @@
 
 class AddBehaviorTreePacket : Packet {
 
-    virtual ~AddBehaviorTreePacket();
+public:
     virtual ~AddBehaviorTreePacket();
     virtual void getId(void)const;
-    virtual void _ZNK21AddBehaviorTreePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void AddBehaviorTreePacket(void);
+    void AddBehaviorTreePacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+};

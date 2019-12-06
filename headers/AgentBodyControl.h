@@ -2,7 +2,9 @@
 
 class AgentBodyControl : BodyControl {
 
-    virtual ~AgentBodyControl();
+public:
     virtual ~AgentBodyControl();
     virtual void clientTick(Mob &);
-}
+
+    void AgentBodyControl(void);
+};

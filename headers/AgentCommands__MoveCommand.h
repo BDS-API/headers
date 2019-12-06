@@ -2,10 +2,12 @@
 
 class AgentCommands::MoveCommand : AgentCommands::Command {
 
-    virtual ~MoveCommand();
+public:
     virtual ~MoveCommand();
     virtual void execute(void);
-    virtual void isDone(void);
+    virtual bool isDone(void);
     virtual void tick(void);
-    virtual void fireCommandDoneEvent(void);
-}
+
+    void MoveCommand(Player &, AgentCommands::Direction);
+    void _reachedPosition(void);
+};

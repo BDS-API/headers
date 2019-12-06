@@ -2,8 +2,9 @@
 
 class GetInteractionPositionForBlockDefinition : BehaviorDefinition {
 
-    virtual ~GetInteractionPositionForBlockDefinition();
+public:
     virtual ~GetInteractionPositionForBlockDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
-    virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void GetInteractionPositionForBlockDefinition(void);
+};

@@ -2,10 +2,10 @@
 
 class AgentCommands::DestroyCommand : AgentCommands::Command {
 
-    virtual ~DestroyCommand();
+public:
     virtual ~DestroyCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
-    virtual void fireCommandDoneEvent(void);
-}
+    virtual bool isDone(void);
+
+    void DestroyCommand(Player &, AgentCommands::Direction);
+};

@@ -2,7 +2,8 @@
 
 class IStructureConstraint {
 
+public:
     virtual ~IStructureConstraint();
-    virtual ~IStructureConstraint();
-    virtual void isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const;
-}
+
+    void IStructureConstraint(void);
+};

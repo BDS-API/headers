@@ -2,14 +2,13 @@
 
 class TickingArea : ITickingArea {
 
-    virtual ~TickingArea();
+public:
     virtual ~TickingArea();
     virtual void getId(void)const;
-    virtual void _ZNK11TickingArea7getNameB5cxx11Ev;
     virtual void getEntityId(void)const;
-    virtual void isEntityOwned(void)const;
+    virtual bool isEntityOwned(void)const;
     virtual void getBlockSource(void);
-    virtual void isAlwaysActive(void)const;
+    virtual bool isAlwaysActive(void)const;
     virtual void getMaxDistToPlayers(void)const;
     virtual void getView(void)const;
     virtual void getView(void);
@@ -22,9 +21,15 @@ class TickingArea : ITickingArea {
     virtual void entityHasBeenFound(void)const;
     virtual void setEntityFound(void);
     virtual void setRegionForEntity(Actor &);
-    virtual void isRemoved(void);
+    virtual bool isRemoved(void);
     virtual void remove(void);
     virtual void onComponentChanged(unsigned int, float, bool);
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onChunkDiscarded(LevelChunk &);
-}
+
+    void TickingArea(Dimension &, mce::UUID, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Bounds const&, bool);
+    void TickingArea(Dimension &, mce::UUID, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ActorUniqueID, Bounds const&, bool, float, bool);
+    void TickingArea(Dimension &, mce::UUID, Bounds const&, ActorUniqueID);
+    void TickingArea(Dimension &, mce::UUID, Bounds const&, ActorUniqueID, float);
+    void _save(void);
+};

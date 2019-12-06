@@ -2,7 +2,8 @@
 
 class IStructurePoolBlockTagPredicate {
 
+public:
     virtual ~IStructurePoolBlockTagPredicate();
-    virtual ~IStructurePoolBlockTagPredicate();
-    virtual void test(Block const&, CompoundTag const&)const;
-}
+
+    void IStructurePoolBlockTagPredicate(void);
+};

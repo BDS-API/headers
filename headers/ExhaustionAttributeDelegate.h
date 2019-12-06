@@ -2,10 +2,9 @@
 
 class ExhaustionAttributeDelegate : AttributeInstanceDelegate {
 
-    virtual ~ExhaustionAttributeDelegate();
+public:
     virtual ~ExhaustionAttributeDelegate();
     virtual void tick(void);
-    virtual void notify(long);
-    virtual void change(float, float, AttributeBuffInfo);
-    virtual void getBuffValue(AttributeBuff const&)const;
-}
+
+    void ExhaustionAttributeDelegate(AttributeInstance const&);
+};

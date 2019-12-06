@@ -2,10 +2,10 @@
 
 class AgentCommands::PlaceCommand : AgentCommands::Command {
 
-    virtual ~PlaceCommand();
+public:
     virtual ~PlaceCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
-    virtual void fireCommandDoneEvent(void);
-}
+    virtual bool isDone(void);
+
+    void PlaceCommand(Player &, ItemStack const&, int, AgentCommands::Direction);
+};

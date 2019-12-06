@@ -2,7 +2,9 @@
 
 class ExecCtxNext : grpc_core::ExecCtx {
 
-    virtual ~ExecCtxNext();
+public:
     virtual ~ExecCtxNext();
     virtual void CheckReadyToFinish(void);
-}
+
+    void ExecCtxNext(void *);
+};

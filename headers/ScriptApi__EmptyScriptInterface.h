@@ -2,7 +2,7 @@
 
 class ScriptApi::EmptyScriptInterface : ScriptApi::ScriptLanguageInterface {
 
-    virtual ~EmptyScriptInterface();
+public:
     virtual ~EmptyScriptInterface();
     virtual void initialize(void);
     virtual void shutdown(void);
@@ -11,8 +11,8 @@ class ScriptApi::EmptyScriptInterface : ScriptApi::ScriptLanguageInterface {
     virtual void createObject(ScriptApi::ScriptObjectHandle &, ScriptApi::ScriptReport &);
     virtual void createArray(ScriptApi::ScriptObjectHandle &, int const&, ScriptApi::ScriptReport &);
     virtual void cloneObject(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptObjectHandle&, ScriptApi::ScriptReport &);
-    virtual void hasMember(ScriptApi::ScriptObjectHandle const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool &, ScriptApi::ScriptReport &);
-    virtual void hasMember(ScriptApi::ScriptObjectHandle const&, int const&, bool &, ScriptApi::ScriptReport &);
+    virtual bool hasMember(ScriptApi::ScriptObjectHandle const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool &, ScriptApi::ScriptReport &);
+    virtual bool hasMember(ScriptApi::ScriptObjectHandle const&, int const&, bool &, ScriptApi::ScriptReport &);
     virtual void setMember(ScriptApi::ScriptObjectHandle const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptReport &);
     virtual void setMember(ScriptApi::ScriptObjectHandle const&, int const&, ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptReport &);
     virtual void getMember(ScriptApi::ScriptObjectHandle const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ScriptApi::ScriptObjectHandle&, ScriptApi::ScriptReport &);
@@ -38,4 +38,6 @@ class ScriptApi::EmptyScriptInterface : ScriptApi::ScriptLanguageInterface {
     virtual void defineSystemSharedCallbacks(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptCallbackInterface &, ScriptApi::ScriptReport &);
     virtual void defineSystemServerCallbacks(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptCallbackInterface &, ScriptApi::ScriptReport &);
     virtual void defineSystemClientCallbacks(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptCallbackInterface &, ScriptApi::ScriptReport &);
-}
+
+    void EmptyScriptInterface(void);
+};

@@ -2,7 +2,17 @@
 
 class ScriptServerActorAcquiredItemEvent : ScriptEventData {
 
-    virtual ~ScriptServerActorAcquiredItemEvent();
+public:
+    static long ScriptServerActorAcquiredItemEvent::mHash;
+
     virtual ~ScriptServerActorAcquiredItemEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
-}
+
+    void getHash(void);
+    void ScriptServerActorAcquiredItemEvent(void);
+    void setActorId(ActorUniqueID const&);
+    void setItemStack(ItemInstance const&);
+    void setAcquiredAmount(unsigned int);
+    void setAcquisitionMethod(ItemAcquisitionMethod);
+    void setSecondaryActorId(ActorUniqueID const&);
+};

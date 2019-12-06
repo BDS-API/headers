@@ -2,7 +2,9 @@
 
 class DefintionDescription {
 
+public:
     virtual ~DefintionDescription();
-    virtual ~DefintionDescription();
-    virtual void getJsonName(void)const;
-}
+
+    void DefintionDescription(void);
+    void DefintionDescription(DefintionDescription const&);
+};

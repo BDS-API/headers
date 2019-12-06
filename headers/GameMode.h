@@ -2,7 +2,18 @@
 
 class GameMode {
 
-    virtual ~GameMode();
+public:
+    static long GameMode::PICKRANGE_VR_SURVIVAL;
+    static long GameMode::PICKRANGE_VR_CREATIVE;
+    static long GameMode::PICKRANGE_MOUSE;
+    static long GameMode::PICKRANGE_GAMEPAD;
+    static long GameMode::PICKRANGE_TOUCH_CREATIVE;
+    static long GameMode::PICKRANGE_TOUCH_SURVIVAL;
+    static long GameMode::PICKRANGE_SURVIVAL_MAXIMUM;
+    static long GameMode::PICKRANGE_CREATIVE_MAXIMUM;
+    static long GameMode::PICKRANGE_SURVIVAL_MAXIMUM_SQR;
+    static long GameMode::PICKRANGE_CREATIVE_MAXIMUM_SQR;
+
     virtual ~GameMode();
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &);
     virtual void destroyBlock(BlockPos const&, unsigned char);
@@ -20,6 +31,29 @@ class GameMode {
     virtual void attack(Actor &);
     virtual void releaseUsingItem(void);
     virtual void setTrialMode(bool);
-    virtual void isInTrialMode(void);
+    virtual bool isInTrialMode(void);
     virtual void registerUpsellScreenCallback(std::function<void ()(bool)>);
-}
+
+    void GameMode(Player &);
+    void _canDestroy(BlockPos const&, unsigned char);
+    void _creativeDestroyBlock(BlockPos const&, unsigned char);
+    void _destroyBlockInternal(BlockPos const&, unsigned char);
+    void getDestroyRate(Block const&);
+    void _calculatePlacePos(BlockPos const&, unsigned char &)const;
+    bool isLastBuildBlockSnappable(void)const;
+    bool hasStartedBuilding(void)const;
+    bool hasContinueDirection(void)const;
+    void getContinueFacing(void)const;
+    void getContinueDirection(void)const;
+    void getNextContinuePos(void)const;
+    void getLastBuiltBlockPos(void)const;
+    void _canUseBlock(Block const&);
+    void baseUseItem(ItemStack &);
+    void getMaxPickRange(void);
+    void getMaxPickRangeSqr(void);
+    void getDestroyBlockPos(void);
+    void getOldDestroyProgress(void);
+    void getDestroyProgress(void);
+    void _releaseUsingItemInternal(void);
+    void getHitProgress(float);
+};

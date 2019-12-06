@@ -2,8 +2,9 @@
 
 class MoveDefinition : BehaviorDefinition {
 
-    virtual ~MoveDefinition();
+public:
     virtual ~MoveDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
-    virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void MoveDefinition(void);
+};

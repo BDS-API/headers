@@ -2,9 +2,9 @@
 
 class OnDeathDescription : TriggerDescription {
 
+public:
     virtual void getJsonName(void)const;
     virtual ~OnDeathDescription();
-    virtual ~OnDeathDescription();
-    virtual void deserializeData(Json::Value &);
-    virtual void serializeData(Json::Value &)const;
-}
+
+    void OnDeathDescription(void);
+};

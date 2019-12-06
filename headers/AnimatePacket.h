@@ -2,11 +2,14 @@
 
 class AnimatePacket : Packet {
 
-    virtual ~AnimatePacket();
+public:
     virtual ~AnimatePacket();
     virtual void getId(void)const;
-    virtual void _ZNK13AnimatePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void AnimatePacket(void);
+    void AnimatePacket(AnimatePacket::Action, ActorRuntimeID);
+    void AnimatePacket(AnimatePacket::Action, ActorRuntimeID, float);
+    void AnimatePacket(AnimatePacket::Action, Actor &);
+};

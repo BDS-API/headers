@@ -2,13 +2,24 @@
 
 class StrongholdFeature : StructureFeature {
 
+public:
     virtual ~StrongholdFeature();
-    virtual ~StrongholdFeature();
-    virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
-    virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);
-    virtual void isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);
+    virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);
     virtual void createStructureStart(Dimension &, BiomeSource &, Random &, ChunkPos const&);
-    virtual void getStructureAt(int, int, int);
     virtual void getGuesstimatedFeaturePositions(void);
-}
+
+    void StrongholdFeature(VillageFeature *, unsigned int);
+    void generatePositions(Random &, BiomeSource const&, unsigned int);
+    void _hasAdditionalStronghold(unsigned int, Random &, ChunkPos const&);
+    void _getNearestStronghold(unsigned int, BlockPos const&, BlockPos&);
+    void _isBeyondMinimumDistance(ChunkPos const&);
+    void _generateStronghold(unsigned int, ChunkPos const&);
+    void _getCenterOfGrid(ChunkPos const&);
+    void _getGridCoordinates(ChunkPos const&);
+    void _isPregeneratedStrongholdHere(GridPos const&, ChunkPos &);
+    void _hasStrongholds(std::vector<StrongholdFeature::StrongholdResult, std::allocator<StrongholdFeature::StrongholdResult>> const&);
+    void _closestChunkPos(ChunkPos const&, std::vector<StrongholdFeature::StrongholdResult, std::allocator<StrongholdFeature::StrongholdResult>> &);
+    void _sameGrid(GridPos const&, GridPos const&);
+    void _logStrongholdData(std::vector<StrongholdFeature::StrongholdResult, std::allocator<StrongholdFeature::StrongholdResult>> const&);
+};

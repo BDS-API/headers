@@ -2,8 +2,9 @@
 
 class SandFeature : Feature {
 
+public:
     virtual ~SandFeature();
-    virtual ~SandFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void SandFeature(Block const&, int);
+};

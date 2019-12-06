@@ -2,7 +2,8 @@
 
 class IStructurePoolBlockPredicate {
 
+public:
     virtual ~IStructurePoolBlockPredicate();
-    virtual ~IStructurePoolBlockPredicate();
-    virtual void test(Block const&, Random &)const;
-}
+
+    void IStructurePoolBlockPredicate(void);
+};

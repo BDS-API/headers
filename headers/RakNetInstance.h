@@ -2,12 +2,10 @@
 
 class RakNetInstance : Connector {
 
-    virtual ~RakNetInstance();
+public:
     virtual ~RakNetInstance();
     virtual void onAppResumed(void);
     virtual void onAppSuspended(void);
-    virtual void _ZNK14RakNetInstance11getLocalIpsB5cxx11Ev;
-    virtual void _ZN14RakNetInstance10getLocalIpB5cxx11Ev;
     virtual void getPort(void)const;
     virtual void getRefinedLocalIps(void)const;
     virtual void getConnectedGameInfo(void)const;
@@ -16,9 +14,30 @@ class RakNetInstance : Connector {
     virtual void startNatPunchingClient(Social::GameConnectionInfo);
     virtual void addConnectionStateListener(Connector::ConnectionStateListener *);
     virtual void removeConnectionStateListener(Connector::ConnectionStateListener *);
-    virtual void isIPv4Supported(void)const;
-    virtual void isIPv6Supported(void)const;
+    virtual bool isIPv4Supported(void)const;
+    virtual bool isIPv6Supported(void)const;
     virtual void getIPv4Port(void)const;
     virtual void getIPv6Port(void)const;
     virtual void getGUID(void)const;
-}
+
+    bool isServer(void)const;
+    void RakNetInstance(RakNetInstance::ConnectionCallbacks &, RakPeerHelper::IPSupportInterface &);
+    void _storeLocalIP(void);
+    void _startupIfNeeded(ConnectionDefinition);
+    void host(ConnectionDefinition const&);
+    void connect(Social::GameConnectionInfo, Social::GameConnectionInfo);
+    void _openNatConnection(RakNet::SystemAddress const&);
+    void disconnect(void);
+    void _changeNatState(RakNetInstance::NATState, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getPeer(void);
+    void getPeer(void)const;
+    bool isMyLocalId(NetworkIdentifier const&);
+    void _createPeer(NetworkIdentifier const&);
+    void runEvents(void);
+    void natPongReceived(RakNet::SystemAddress const&);
+    void tick(void);
+    void _pingNatService(bool);
+    void getPingTimeForConnection(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, std::function<void ()(unsigned int)>);
+    void getStatistics(RakNet::RakNetStatistics &);
+    void _stateToString(RakNetInstance::NATState)const;
+};

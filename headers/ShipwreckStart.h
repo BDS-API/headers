@@ -2,9 +2,10 @@
 
 class ShipwreckStart : StructureStart {
 
+public:
     virtual ~ShipwreckStart();
-    virtual ~ShipwreckStart();
-    virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual void isValid(void)const;
     virtual void getType(void)const;
-}
+
+    void ShipwreckStart(void);
+    void ShipwreckStart(BiomeSource &, Random &, int, int);
+};

@@ -2,9 +2,10 @@
 
 class SlimeMoveControl : MoveControl {
 
+public:
     virtual ~SlimeMoveControl();
-    virtual ~SlimeMoveControl();
-    virtual void initializeInternal(Mob &, MoveControlDescription *);
     virtual void tick(MoveControlComponent &, Mob &);
-    virtual void setWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
-}
+
+    void SlimeMoveControl(void);
+    void _getJumpDelay(Mob &)const;
+};

@@ -2,11 +2,11 @@
 
 class ActorDamageSource {
 
+public:
     virtual ~ActorDamageSource();
-    virtual ~ActorDamageSource();
-    virtual void isEntitySource(void)const;
-    virtual void isChildEntitySource(void)const;
-    virtual void isBlockSource(void)const;
+    virtual bool isEntitySource(void)const;
+    virtual bool isChildEntitySource(void)const;
+    virtual bool isBlockSource(void)const;
     virtual void getDeathMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Actor *)const;
     virtual void getIsCreative(void)const;
     virtual void getIsWorldBuilder(void)const;
@@ -19,4 +19,10 @@ class ActorDamageSource {
     virtual void getDamagingEntityType(void)const;
     virtual void getDamagingEntityCategories(void)const;
     virtual void clone(void)const;
-}
+
+    void lookupCause(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void ActorDamageSource(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void ActorDamageSource(ActorDamageCause);
+    void getCause(void)const;
+    void setCause(ActorDamageCause);
+};

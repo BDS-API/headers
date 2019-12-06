@@ -2,14 +2,13 @@
 
 class WorldGenerator {
 
+public:
     virtual ~WorldGenerator();
-    virtual ~WorldGenerator();
-    virtual void shutdown(void);
-    virtual void isShutdownDone(void);
-    virtual void getExistingChunk(ChunkPos const&);
-    virtual void getRandomChunk(Random &);
-    virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
-    virtual void getOrLoadChunk(ChunkPos const&, ChunkSource::LoadMode);
     virtual void debugRender(void);
     virtual void addHardcodedSpawnAreas(LevelChunk &);
-}
+
+    void getHardcodedSpawns(void)const;
+    void WorldGenerator(void);
+    void getFeatureName(StructureFeatureType);
+    void getFeatureId(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+};

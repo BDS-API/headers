@@ -2,7 +2,9 @@
 
 class RailActivatorSystem : ITickingSystem {
 
-    virtual ~RailActivatorSystem();
+public:
     virtual ~RailActivatorSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void RailActivatorSystem(void);
+};

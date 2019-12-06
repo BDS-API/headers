@@ -2,7 +2,9 @@
 
 class MemoryMappedFileAccess : IFileAccess {
 
-    virtual ~MemoryMappedFileAccess();
+public:
+    static long MemoryMappedFileAccess::EMPTY_TRANSFORMS;
+
     virtual ~MemoryMappedFileAccess();
     virtual void fopen(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void fclose(void *);
@@ -11,4 +13,8 @@ class MemoryMappedFileAccess : IFileAccess {
     virtual void getReadInterface(void)const;
     virtual void getWriteInterface(void);
     virtual void unload(void);
-}
+
+    void MemoryMappedFileAccess(IFileAccess &, std::unique_ptr<FileAccessTransforms, std::default_delete<FileAccessTransforms>>);
+    void _requestedOpenIsCompatibleWithOpenStream(MemoryMappedFileAccess::StreamDetails &, bool, bool)const;
+    void _getTransforms(void)const;
+};

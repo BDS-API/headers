@@ -2,9 +2,11 @@
 
 class ScatteredFeatureStart : StructureStart {
 
+public:
     virtual ~ScatteredFeatureStart();
-    virtual ~ScatteredFeatureStart();
-    virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual void isValid(void)const;
     virtual void getType(void)const;
-}
+
+    void ScatteredFeatureStart(void);
+    void ScatteredFeatureStart(int, int);
+    void ScatteredFeatureStart(BiomeSource &, int, int);
+};

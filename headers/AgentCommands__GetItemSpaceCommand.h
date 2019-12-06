@@ -2,10 +2,11 @@
 
 class AgentCommands::GetItemSpaceCommand : AgentCommands::Command {
 
-    virtual ~GetItemSpaceCommand();
+public:
     virtual ~GetItemSpaceCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
+    virtual bool isDone(void);
     virtual void fireCommandDoneEvent(void);
-}
+
+    void GetItemSpaceCommand(Player &, int, int);
+};

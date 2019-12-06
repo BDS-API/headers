@@ -2,7 +2,10 @@
 
 class OpCommand : ServerCommand {
 
-    virtual ~OpCommand();
+public:
     virtual ~OpCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void OpCommand(void);
+};

@@ -2,9 +2,9 @@
 
 class SetBlockReactionComponent : LabTableReactionComponent {
 
+public:
     virtual ~SetBlockReactionComponent();
-    virtual ~SetBlockReactionComponent();
-    virtual void _onStart(LabTableReaction &, BlockSource &);
-    virtual void _onTick(LabTableReaction &, BlockSource &);
     virtual void _onEnd(LabTableReaction &, BlockSource &);
-}
+
+    void SetBlockReactionComponent(BlockPos const&, Block const&);
+};

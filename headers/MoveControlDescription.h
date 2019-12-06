@@ -2,9 +2,10 @@
 
 class MoveControlDescription : ComponentDescription {
 
-    virtual void getJsonName(void)const;
-    virtual ~MoveControlDescription();
+public:
     virtual ~MoveControlDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
-}
+
+    void MoveControlDescription(void);
+};

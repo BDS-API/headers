@@ -2,17 +2,12 @@
 
 class RepeaterCapacitor : CapacitorComponent {
 
-    virtual ~RepeaterCapacitor();
+public:
     virtual ~RepeaterCapacitor();
     virtual void getStrength(void)const;
-    virtual void getDirection(void)const;
     virtual void setStrength(int);
-    virtual void setDirection(unsigned char);
     virtual void consumePowerAnyDirection(void);
-    virtual void canConsumerPower(void);
-    virtual void canStopPower(void);
-    virtual void setStopPower(bool);
-    virtual void getBaseType(void)const;
+    virtual bool canConsumerPower(void);
     virtual void getInstanceType(void)const;
     virtual void removeSource(BlockPos const&, BaseCircuitComponent const*);
     virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
@@ -21,10 +16,11 @@ class RepeaterCapacitor : CapacitorComponent {
     virtual void evaluate(CircuitSystem &, BlockPos const&);
     virtual void cacheValues(CircuitSystem &, BlockPos const&);
     virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
-    virtual void allowIndirect(void);
-    virtual void isHalfPulse(void);
-    virtual void hasSource(BaseCircuitComponent&);
-    virtual void hasChildrenSource(void);
-    virtual void isSecondaryPowered(void);
     virtual void getPoweroutDirection(void)const;
-}
+
+    void RepeaterCapacitor(void);
+    void setDelay(int);
+    void delayPulse(RepeaterCapacitor::States);
+    void alternatePulse(void);
+    void extendPulse(void);
+};

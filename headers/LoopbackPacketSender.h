@@ -2,7 +2,7 @@
 
 class LoopbackPacketSender : PacketSender {
 
-    virtual ~LoopbackPacketSender();
+public:
     virtual ~LoopbackPacketSender();
     virtual void send(Packet &);
     virtual void sendToServer(Packet &);
@@ -11,4 +11,9 @@ class LoopbackPacketSender : PacketSender {
     virtual void sendBroadcast(Packet const&);
     virtual void sendBroadcast(NetworkIdentifier const&, unsigned char, Packet const&);
     virtual void flush(NetworkIdentifier const&, std::function<void ()(void)> &&);
-}
+
+    void LoopbackPacketSender(unsigned char, NetworkHandler &);
+    void addLoopbackCallback(NetEventCallback &);
+    void removeLoopbackCallback(NetEventCallback &);
+    void setUserList(std::vector<std::unique_ptr<Player, std::default_delete<Player>>, std::allocator<std::unique_ptr<Player, std::default_delete<Player>>>> const*);
+};

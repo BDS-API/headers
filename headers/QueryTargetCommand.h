@@ -2,7 +2,10 @@
 
 class QueryTargetCommand : Command {
 
-    virtual ~QueryTargetCommand();
+public:
     virtual ~QueryTargetCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void QueryTargetCommand(void);
+};

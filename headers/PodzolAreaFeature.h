@@ -2,8 +2,9 @@
 
 class PodzolAreaFeature : Feature {
 
+public:
     virtual ~PodzolAreaFeature();
-    virtual ~PodzolAreaFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void PodzolAreaFeature(void);
+};

@@ -2,7 +2,9 @@
 
 class GroundedConstraint : IStructureConstraint {
 
+public:
     virtual ~GroundedConstraint();
-    virtual ~GroundedConstraint();
-    virtual void isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const;
-}
+    virtual bool isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const;
+
+    void GroundedConstraint(LegacyStructureTemplate &);
+};

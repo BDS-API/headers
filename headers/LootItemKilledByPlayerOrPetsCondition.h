@@ -2,7 +2,10 @@
 
 class LootItemKilledByPlayerOrPetsCondition : LootItemCondition {
 
-    virtual ~LootItemKilledByPlayerOrPetsCondition();
+public:
     virtual ~LootItemKilledByPlayerOrPetsCondition();
     virtual void applies(Random &, LootTableContext &);
-}
+
+    void deserialize(Json::Value);
+    void LootItemKilledByPlayerOrPetsCondition(void);
+};

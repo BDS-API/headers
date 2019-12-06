@@ -2,10 +2,10 @@
 
 class AgentCommands::TransferToCommand : AgentCommands::Command {
 
-    virtual ~TransferToCommand();
+public:
     virtual ~TransferToCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
-    virtual void fireCommandDoneEvent(void);
-}
+    virtual bool isDone(void);
+
+    void TransferToCommand(Player &, int, int, int);
+};

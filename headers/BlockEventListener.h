@@ -2,7 +2,7 @@
 
 class BlockEventListener {
 
-    virtual ~BlockEventListener();
+public:
     virtual ~BlockEventListener();
     virtual void onBlockPlacedByPlayer(Player &, Block const&, BlockPos const&, bool);
     virtual void onBlockDestroyedByPlayer(Player &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, BlockPos const&);
@@ -13,4 +13,6 @@ class BlockEventListener {
     virtual void onBlockExploded(BlockPos const&, Block const&, Actor *);
     virtual void onBlockModified(BlockPos const&, Block const&, Block const&);
     virtual void onUnknownBlockReceived(Level &, NewBlockID const&, unsigned short);
-}
+
+    void BlockEventListener(void);
+};

@@ -2,7 +2,9 @@
 
 class CommandDispatcher : ICommandDispatcher {
 
-    virtual ~CommandDispatcher();
+public:
     virtual ~CommandDispatcher();
     virtual void performCommand(CommandOrigin const&, Command &);
-}
+
+    void CommandDispatcher(void);
+};

@@ -2,15 +2,11 @@
 
 class SilverfishWakeUpFriendsGoal : Goal {
 
+public:
     virtual ~SilverfishWakeUpFriendsGoal();
-    virtual ~SilverfishWakeUpFriendsGoal();
-    virtual void canUse(void);
-    virtual void canContinueToUse(void);
-    virtual void canBeInterrupted(void);
-    virtual void start(void);
-    virtual void stop(void);
+    virtual bool canUse(void);
     virtual void tick(void);
     virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
-    virtual void isTargetGoal(void)const;
-    virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
-}
+
+    void SilverfishWakeUpFriendsGoal(Silverfish &);
+};

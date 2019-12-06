@@ -2,11 +2,12 @@
 
 class UpdateTradePacket : Packet {
 
-    virtual ~UpdateTradePacket();
+public:
     virtual ~UpdateTradePacket();
     virtual void getId(void)const;
-    virtual void _ZNK17UpdateTradePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void UpdateTradePacket(void);
+    void UpdateTradePacket(ContainerID, ContainerType, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, CompoundTag &&, ActorUniqueID const&, ActorUniqueID const, int, bool, bool);
+};

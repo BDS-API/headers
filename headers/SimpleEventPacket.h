@@ -2,11 +2,14 @@
 
 class SimpleEventPacket : Packet {
 
-    virtual ~SimpleEventPacket();
+public:
     virtual ~SimpleEventPacket();
     virtual void getId(void)const;
-    virtual void _ZNK17SimpleEventPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void SimpleEventPacket(void);
+    void SimpleEventPacket(SimpleEventPacket::Subtype const&);
+    void setSubtype(SimpleEventPacket::Subtype);
+    void getSubtype(void)const;
+};

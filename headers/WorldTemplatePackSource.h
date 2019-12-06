@@ -2,11 +2,10 @@
 
 class WorldTemplatePackSource : DirectoryPackSource {
 
+public:
     virtual ~WorldTemplatePackSource();
-    virtual ~WorldTemplatePackSource();
-    virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
-    virtual void forEachPack(std::function<void ()(Pack &)>);
-    virtual void getPackOrigin(void)const;
-    virtual void getPackType(void)const;
     virtual void load(PackManifestFactory &, IContentKeyProvider const&);
-}
+
+    void WorldTemplatePackSource(WorldTemplateManager const&, mce::UUID const&, PackType, PackOrigin);
+    void getWorldTemplateId(void)const;
+};

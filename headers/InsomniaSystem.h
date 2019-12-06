@@ -2,7 +2,9 @@
 
 class InsomniaSystem : ITickingSystem {
 
-    virtual ~InsomniaSystem();
+public:
     virtual ~InsomniaSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void InsomniaSystem(void);
+};

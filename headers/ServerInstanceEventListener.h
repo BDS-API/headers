@@ -2,7 +2,7 @@
 
 class ServerInstanceEventListener {
 
-    virtual ~ServerInstanceEventListener();
+public:
     virtual ~ServerInstanceEventListener();
     virtual void onServerInitializeStart(ServerInstance &);
     virtual void onServerInitializeEnd(ServerInstance &);
@@ -16,4 +16,6 @@ class ServerInstanceEventListener {
     virtual void onServerThreadStopped(ServerInstance &);
     virtual void onStartLeaveGame(ServerInstance &);
     virtual void onLeaveGameDone(ServerInstance &);
-}
+
+    void ServerInstanceEventListener(void);
+};

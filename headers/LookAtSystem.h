@@ -2,7 +2,9 @@
 
 class LookAtSystem : ITickingSystem {
 
-    virtual ~LookAtSystem();
+public:
     virtual ~LookAtSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void LookAtSystem(void);
+};

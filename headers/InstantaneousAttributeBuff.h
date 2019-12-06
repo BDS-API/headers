@@ -2,9 +2,10 @@
 
 class InstantaneousAttributeBuff : AttributeBuff {
 
+public:
     virtual ~InstantaneousAttributeBuff();
-    virtual ~InstantaneousAttributeBuff();
-    virtual void isInstantaneous(void)const;
-    virtual void isSerializable(void)const;
-    virtual void setDurationAmplifier(std::shared_ptr<Amplifier>);
-}
+    virtual bool isInstantaneous(void)const;
+    virtual bool isSerializable(void)const;
+
+    void InstantaneousAttributeBuff(float, AttributeBuffType);
+};

@@ -2,8 +2,10 @@
 
 class EncryptedZipTransforms : FileAccessTransforms {
 
-    virtual ~EncryptedZipTransforms();
+public:
     virtual ~EncryptedZipTransforms();
     virtual void readTransform(std::vector<unsigned char, std::allocator<unsigned char>> &)const;
     virtual void writeTransform(std::vector<unsigned char, std::allocator<unsigned char>> &)const;
-}
+
+    void EncryptedZipTransforms(IContentKeyProvider const&);
+};

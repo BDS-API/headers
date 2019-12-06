@@ -2,7 +2,7 @@
 
 class com::mojang::clacks::protocol::Commands::Stub : com::mojang::clacks::protocol::Commands::StubInterface {
 
-    virtual ~Stub();
+public:
     virtual ~Stub();
     virtual void listPlayer(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, com::mojang::clacks::protocol::PlayerList *);
     virtual void kick(grpc::ClientContext *, com::mojang::clacks::protocol::PlayerAndMessage const&, com::mojang::clacks::protocol::Empty *);
@@ -47,4 +47,6 @@ class com::mojang::clacks::protocol::Commands::Stub : com::mojang::clacks::proto
     virtual void subscribeToMetricsRaw(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&);
     virtual void AsyncsubscribeToMetricsRaw(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, grpc::CompletionQueue *, void *);
     virtual void PrepareAsyncsubscribeToMetricsRaw(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, grpc::CompletionQueue *);
-}
+
+    void Stub(std::shared_ptr<grpc::ChannelInterface> const&);
+};

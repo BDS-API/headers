@@ -2,7 +2,8 @@
 
 class IFileWriteAccess {
 
+public:
     virtual ~IFileWriteAccess();
-    virtual ~IFileWriteAccess();
-    virtual void fwrite(void const*, unsigned long, unsigned long, void *);
-}
+
+    void IFileWriteAccess(void);
+};

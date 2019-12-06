@@ -2,7 +2,10 @@
 
 class GetChunksCommand : Command {
 
-    virtual ~GetChunksCommand();
+public:
     virtual ~GetChunksCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void GetChunksCommand(void);
+};

@@ -2,7 +2,9 @@
 
 class BehaviorSystem : ITickingSystem {
 
-    virtual ~BehaviorSystem();
+public:
     virtual ~BehaviorSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void BehaviorSystem(void);
+};

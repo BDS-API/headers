@@ -2,7 +2,34 @@
 
 class BinaryStream : ReadOnlyBinaryStream {
 
+public:
     virtual ~BinaryStream();
-    virtual ~BinaryStream();
-    virtual void read(void *, unsigned long);
-}
+
+    void BinaryStream(void);
+    void BinaryStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &&);
+    void BinaryStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool);
+    void BinaryStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void reserve(unsigned long);
+    void reset(void);
+    void write(void const*, unsigned long);
+    void writeBool(bool);
+    void writeByte(unsigned char);
+    void writeSignedShort(short);
+    void writeUnsignedShort(unsigned short);
+    void writeSignedBigEndianInt(int);
+    void writeSignedInt(int);
+    void writeUnsignedInt(unsigned int);
+    void writeSignedInt64(long);
+    void writeUnsignedInt64(unsigned long);
+    void writeDouble(double);
+    void writeFloat(float);
+    void writeFixedFloat(float, double);
+    void writeVarInt64(long);
+    void writeNormalizedFloat(float);
+    void writeVarInt(int);
+    void writeUnsignedVarInt(unsigned int);
+    void writeUnsignedVarInt64(unsigned long);
+    void writeString(gsl::basic_string_span<char const, -1l>);
+    void writeStream(BinaryStream&);
+    void writeUnsignedChar(unsigned char);
+};

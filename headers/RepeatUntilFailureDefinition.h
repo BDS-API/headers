@@ -2,8 +2,9 @@
 
 class RepeatUntilFailureDefinition : DecoratorDefinition {
 
-    virtual ~RepeatUntilFailureDefinition();
+public:
     virtual ~RepeatUntilFailureDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
-    virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void RepeatUntilFailureDefinition(void);
+};

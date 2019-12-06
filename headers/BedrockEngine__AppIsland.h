@@ -2,7 +2,7 @@
 
 class BedrockEngine::AppIsland : BedrockEngine::IIslandCore {
 
-    virtual ~AppIsland();
+public:
     virtual ~AppIsland();
     virtual void getId(void);
     virtual void start(void);
@@ -11,4 +11,6 @@ class BedrockEngine::AppIsland : BedrockEngine::IIslandCore {
     virtual void stop(void);
     virtual void mainUpdate(void);
     virtual void processActivationArguments(ActivationArguments const&);
-}
+
+    void AppIsland(void);
+};

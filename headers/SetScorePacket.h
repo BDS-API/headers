@@ -2,11 +2,18 @@
 
 class SetScorePacket : Packet {
 
-    virtual ~SetScorePacket();
+public:
     virtual ~SetScorePacket();
     virtual void getId(void)const;
-    virtual void _ZNK14SetScorePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void SetScorePacket(void);
+    void SetScorePacket(ScoreboardId const&);
+    void SetScorePacket(ScorePacketType, ScoreboardId const&, Objective const&);
+    void SetScorePacket(std::vector<ScorePacketInfo, std::allocator<ScorePacketInfo>>);
+    void remove(ScoreboardId const&);
+    void remove(ScoreboardId const&, Objective const&);
+    void change(ScoreboardId const&, Objective const&);
+    void change(std::vector<ScorePacketInfo, std::allocator<ScorePacketInfo>>);
+};

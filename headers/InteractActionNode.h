@@ -2,8 +2,10 @@
 
 class InteractActionNode : BehaviorNode {
 
-    virtual ~InteractActionNode();
+public:
     virtual ~InteractActionNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
-}
+
+    void InteractActionNode(void);
+};

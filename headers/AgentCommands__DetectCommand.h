@@ -2,10 +2,10 @@
 
 class AgentCommands::DetectCommand : AgentCommands::Command {
 
-    virtual ~DetectCommand();
+public:
     virtual ~DetectCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
-    virtual void fireCommandDoneEvent(void);
-}
+    virtual bool isDone(void);
+
+    void DetectCommand(Player &, AgentCommands::Direction);
+};

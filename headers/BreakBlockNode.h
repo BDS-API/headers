@@ -2,8 +2,10 @@
 
 class BreakBlockNode : BehaviorNode {
 
-    virtual ~BreakBlockNode();
+public:
     virtual ~BreakBlockNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
-}
+
+    void BreakBlockNode(void);
+};

@@ -2,7 +2,7 @@
 
 class DynamicJumpControl : JumpControl {
 
-    virtual ~DynamicJumpControl();
+public:
     virtual ~DynamicJumpControl();
     virtual void initializeInternal(Mob &, JumpControlDescription *);
     virtual void tick(JumpControlComponent &, Mob &);
@@ -11,4 +11,6 @@ class DynamicJumpControl : JumpControl {
     virtual void getJumpType(JumpControlComponent const&, Mob const&)const;
     virtual void setJumpType(JumpControlComponent &, Mob &, JumpType);
     virtual void resetSpeedModifier(JumpControlComponent const&, Mob &);
-}
+
+    void DynamicJumpControl(void);
+};

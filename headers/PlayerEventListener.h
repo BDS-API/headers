@@ -2,7 +2,7 @@
 
 class PlayerEventListener {
 
-    virtual ~PlayerEventListener();
+public:
     virtual ~PlayerEventListener();
     virtual void onPlayerAwardAchievement(Player &, MinecraftEventing::AchievementIds);
     virtual void onPlayerPortalBuilt(Player &, AutomaticID<Dimension, int>);
@@ -35,4 +35,6 @@ class PlayerEventListener {
     virtual void onPlayerItemPlaceInteraction(Player &, ItemInstance const&);
     virtual void onPlayerCraftedItem(Player &, ItemInstance const&, bool, bool, bool, int, int, int, bool, bool, std::vector<short, std::allocator<short>> const&);
     virtual void onPlayerItemEquipped(Player &, ItemInstance const&, int);
-}
+
+    void PlayerEventListener(void);
+};

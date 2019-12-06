@@ -2,11 +2,13 @@
 
 class LocalNetworkPeer : NetworkPeer {
 
-    virtual ~LocalNetworkPeer();
+public:
     virtual ~LocalNetworkPeer();
     virtual void sendPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, NetworkPeer::Reliability, int, unsigned short, Compressibility);
     virtual void receivePacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
     virtual void getNetworkStatus(void);
-    virtual void update(void);
-    virtual void flush(std::function<void ()(void)> &&);
-}
+
+    void LocalNetworkPeer(void);
+    void setOtherPeer(std::weak_ptr<LocalNetworkPeer>);
+    void addIncomingData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+};

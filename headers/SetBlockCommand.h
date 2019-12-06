@@ -2,7 +2,10 @@
 
 class SetBlockCommand : Command {
 
-    virtual ~SetBlockCommand();
+public:
     virtual ~SetBlockCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void SetBlockCommand(void);
+};

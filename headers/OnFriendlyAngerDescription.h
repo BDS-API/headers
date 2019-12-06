@@ -2,9 +2,9 @@
 
 class OnFriendlyAngerDescription : TriggerDescription {
 
+public:
     virtual void getJsonName(void)const;
     virtual ~OnFriendlyAngerDescription();
-    virtual ~OnFriendlyAngerDescription();
-    virtual void deserializeData(Json::Value &);
-    virtual void serializeData(Json::Value &)const;
-}
+
+    void OnFriendlyAngerDescription(void);
+};

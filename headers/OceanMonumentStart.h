@@ -2,9 +2,12 @@
 
 class OceanMonumentStart : StructureStart {
 
-    virtual ~OceanMonumentStart();
+public:
     virtual ~OceanMonumentStart();
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual void isValid(void)const;
     virtual void getType(void)const;
-}
+
+    void OceanMonumentStart(void);
+    void createMonument(Dimension &, Random &, int, int);
+    void OceanMonumentStart(Dimension &, Random &, int, int);
+};

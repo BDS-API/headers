@@ -2,7 +2,8 @@
 
 class IInPackagePacks {
 
+public:
     virtual ~IInPackagePacks();
-    virtual ~IInPackagePacks();
-    virtual void getPacks(PackType)const;
-}
+
+    void IInPackagePacks(void);
+};

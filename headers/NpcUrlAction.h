@@ -2,8 +2,9 @@
 
 class NpcUrlAction : NpcAction {
 
-    virtual ~NpcUrlAction();
+public:
     virtual ~NpcUrlAction();
     virtual void toJson(void);
-    virtual void fromJson(Json::Value const&);
-}
+
+    void NpcUrlAction(void);
+};

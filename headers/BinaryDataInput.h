@@ -2,10 +2,8 @@
 
 class BinaryDataInput : BytesDataInput {
 
+public:
     virtual ~BinaryDataInput();
-    virtual ~BinaryDataInput();
-    virtual void _ZN15BinaryDataInput10readStringB5cxx11Ev;
-    virtual void _ZN15BinaryDataInput14readLongStringB5cxx11Ev;
     virtual void readFloat(void);
     virtual void readDouble(void);
     virtual void readByte(void);
@@ -14,4 +12,6 @@ class BinaryDataInput : BytesDataInput {
     virtual void readLongLong(void);
     virtual void readBytes(void *, unsigned long);
     virtual void numBytesLeft(void)const;
-}
+
+    void BinaryDataInput(ReadOnlyBinaryStream &);
+};

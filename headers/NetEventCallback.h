@@ -2,15 +2,14 @@
 
 class NetEventCallback {
 
+public:
     virtual void onPlayerReady(Player &);
-    virtual ~NetEventCallback();
     virtual ~NetEventCallback();
     virtual void onConnect(NetworkIdentifier const&);
     virtual void onUnableToConnect(void);
     virtual void onTick(void);
     virtual void onStoreOfferReceive(bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void onDisconnect(NetworkIdentifier const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void allowIncomingPacketId(NetworkIdentifier const&, MinecraftPacketIds);
     virtual void onWebsocketRequest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::function<void ()(void)>);
     virtual void onTransferRequest(NetworkIdentifier const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     virtual void handle(NetworkIdentifier const&, DisconnectPacket const&);
@@ -161,4 +160,6 @@ class NetEventCallback {
     virtual void handle(NetworkIdentifier const&, MultiplayerSettingsPacket const&);
     virtual void handle(NetworkIdentifier const&, SettingsCommandPacket const&);
     virtual void handle(NetworkIdentifier const&, AnvilDamagePacket const&);
-}
+
+    void NetEventCallback(void);
+};

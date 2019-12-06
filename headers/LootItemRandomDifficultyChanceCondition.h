@@ -2,7 +2,10 @@
 
 class LootItemRandomDifficultyChanceCondition : LootItemCondition {
 
-    virtual ~LootItemRandomDifficultyChanceCondition();
+public:
     virtual ~LootItemRandomDifficultyChanceCondition();
     virtual void applies(Random &, LootTableContext &);
-}
+
+    void LootItemRandomDifficultyChanceCondition(Json::Value);
+    void deserialize(Json::Value);
+};

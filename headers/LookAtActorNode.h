@@ -2,8 +2,10 @@
 
 class LookAtActorNode : BehaviorNode {
 
-    virtual ~LookAtActorNode();
+public:
     virtual ~LookAtActorNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
-}
+
+    void LookAtActorNode(void);
+};

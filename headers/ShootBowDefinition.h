@@ -2,8 +2,9 @@
 
 class ShootBowDefinition : BehaviorDefinition {
 
-    virtual ~ShootBowDefinition();
+public:
     virtual ~ShootBowDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
-    virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void ShootBowDefinition(void);
+};

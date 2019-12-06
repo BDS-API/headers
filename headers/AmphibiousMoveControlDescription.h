@@ -2,9 +2,9 @@
 
 class AmphibiousMoveControlDescription : MoveControlDescription {
 
+public:
     virtual void getJsonName(void)const;
     virtual ~AmphibiousMoveControlDescription();
-    virtual ~AmphibiousMoveControlDescription();
-    virtual void deserializeData(Json::Value &);
-    virtual void serializeData(Json::Value &)const;
-}
+
+    void AmphibiousMoveControlDescription(void);
+};

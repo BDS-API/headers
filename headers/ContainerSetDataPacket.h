@@ -2,11 +2,12 @@
 
 class ContainerSetDataPacket : Packet {
 
-    virtual ~ContainerSetDataPacket();
+public:
     virtual ~ContainerSetDataPacket();
     virtual void getId(void)const;
-    virtual void _ZNK22ContainerSetDataPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void ContainerSetDataPacket(ContainerID, int, int);
+    void ContainerSetDataPacket(void);
+};

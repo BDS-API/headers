@@ -2,7 +2,8 @@
 
 class IDefinitionSerializer {
 
+public:
     virtual ~IDefinitionSerializer();
-    virtual ~IDefinitionSerializer();
-    virtual void __cxa_pure_virtual;
-}
+
+    void IDefinitionSerializer(void);
+};

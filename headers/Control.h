@@ -2,6 +2,8 @@
 
 class Control {
 
+public:
     virtual ~Control();
-    virtual ~Control();
-}
+
+    void Control(void);
+};

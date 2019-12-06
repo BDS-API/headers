@@ -2,7 +2,10 @@
 
 class EnchantCommand : Command {
 
-    virtual ~EnchantCommand();
+public:
     virtual ~EnchantCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void EnchantCommand(void);
+};

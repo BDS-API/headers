@@ -2,5 +2,7 @@
 
 class IEntityRegistryOwner {
 
-    virtual void getEntityRegistry(void);
-}
+public:
+
+    void IEntityRegistryOwner(void);
+};

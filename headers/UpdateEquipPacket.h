@@ -2,11 +2,12 @@
 
 class UpdateEquipPacket : Packet {
 
-    virtual ~UpdateEquipPacket();
+public:
     virtual ~UpdateEquipPacket();
     virtual void getId(void)const;
-    virtual void _ZNK17UpdateEquipPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void UpdateEquipPacket(void);
+    void UpdateEquipPacket(ContainerID, ContainerType, int, CompoundTag &&, ActorUniqueID const&);
+};

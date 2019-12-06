@@ -2,7 +2,9 @@
 
 class CommandBlockSystem : ITickingSystem {
 
-    virtual ~CommandBlockSystem();
+public:
     virtual ~CommandBlockSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void CommandBlockSystem(void);
+};

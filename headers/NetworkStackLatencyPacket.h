@@ -2,11 +2,13 @@
 
 class NetworkStackLatencyPacket : Packet {
 
-    virtual ~NetworkStackLatencyPacket();
+public:
+    static long NetworkStackLatencyPacket::DEFAULT_SEND_INTERVAL;
+
     virtual ~NetworkStackLatencyPacket();
     virtual void getId(void)const;
-    virtual void _ZNK25NetworkStackLatencyPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void NetworkStackLatencyPacket(void);
+};

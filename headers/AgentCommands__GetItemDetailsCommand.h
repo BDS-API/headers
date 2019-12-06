@@ -2,10 +2,11 @@
 
 class AgentCommands::GetItemDetailsCommand : AgentCommands::Command {
 
-    virtual ~GetItemDetailsCommand();
+public:
     virtual ~GetItemDetailsCommand();
     virtual void execute(void);
-    virtual void isDone(void);
-    virtual void tick(void);
+    virtual bool isDone(void);
     virtual void fireCommandDoneEvent(void);
-}
+
+    void GetItemDetailsCommand(Player &, ItemStack const&);
+};

@@ -2,6 +2,8 @@
 
 class Social::XboxLiveSignInHandler {
 
+public:
     virtual ~XboxLiveSignInHandler();
-    virtual ~XboxLiveSignInHandler();
-}
+
+    void XboxLiveSignInHandler(void);
+};

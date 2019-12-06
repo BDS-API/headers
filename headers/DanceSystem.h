@@ -2,7 +2,9 @@
 
 class DanceSystem : ITickingSystem {
 
-    virtual ~DanceSystem();
+public:
     virtual ~DanceSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void DanceSystem(void);
+};

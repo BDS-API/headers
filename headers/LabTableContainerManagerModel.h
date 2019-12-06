@@ -2,17 +2,17 @@
 
 class LabTableContainerManagerModel : LevelContainerManagerModel {
 
+public:
+    static long LabTableContainerManagerModel::INPUT_SLOTS;
+
     virtual ~LabTableContainerManagerModel();
-    virtual ~LabTableContainerManagerModel();
-    virtual void getContainerId(void)const;
-    virtual void setContainerId(ContainerID);
-    virtual void getContainerType(void)const;
-    virtual void setContainerType(ContainerType);
     virtual void getItems(void);
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
     virtual void setData(int, int);
     virtual void broadcastChanges(void);
     virtual void init(void);
-    virtual void isValid(float);
-}
+    virtual bool isValid(float);
+
+    void LabTableContainerManagerModel(ContainerID, Player &, BlockPos const&);
+};

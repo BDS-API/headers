@@ -2,7 +2,12 @@
 
 class StopCommand : Command {
 
-    virtual ~StopCommand();
+public:
+    static long StopCommand::mServer;
+
     virtual ~StopCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &, DedicatedServer &);
+    void StopCommand(void);
+};

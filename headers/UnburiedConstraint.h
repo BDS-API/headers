@@ -2,7 +2,9 @@
 
 class UnburiedConstraint : IStructureConstraint {
 
+public:
     virtual ~UnburiedConstraint();
-    virtual ~UnburiedConstraint();
-    virtual void isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const;
-}
+    virtual bool isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const;
+
+    void UnburiedConstraint(LegacyStructureTemplate &);
+};

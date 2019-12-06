@@ -2,7 +2,9 @@
 
 class EnvironmentSensorSystem : ITickingSystem {
 
-    virtual ~EnvironmentSensorSystem();
+public:
     virtual ~EnvironmentSensorSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void EnvironmentSensorSystem(void);
+};

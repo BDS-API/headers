@@ -2,16 +2,73 @@
 
 class CompoundTag : Tag {
 
+public:
     virtual ~CompoundTag();
-    virtual ~CompoundTag();
-    virtual void deleteChildren(void);
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
-    virtual void _ZNK11CompoundTag8toStringB5cxx11Ev;
     virtual void getId(void)const;
     virtual void equals(Tag const&)const;
-    virtual void print(PrintStream &)const;
     virtual void print(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, PrintStream &)const;
     virtual void copy(void)const;
     virtual void hash(void)const;
-}
+
+    void CompoundTag(void);
+    void CompoundTag(CompoundTag&&);
+    void put(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::unique_ptr<Tag, std::default_delete<Tag>>);
+    void getAllTags(std::vector<Tag *, std::allocator<Tag *>> &);
+    void put(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Tag &&);
+    void putByte(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, unsigned char);
+    void putShort(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, short);
+    void putInt(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, int);
+    void putInt64(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, long);
+    void putFloat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, float);
+    void putDouble(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, double);
+    void putString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void putByteArray(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, TagMemoryChunk);
+    void putCompound(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, CompoundTag);
+    void putCompound(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>);
+    void putBoolean(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, bool);
+    void append(CompoundTag const&);
+    void contains(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void contains(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Tag::Type)const;
+    void get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getByteTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getByteTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getByte(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getShortTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getShortTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getShort(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getIntTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getIntTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getInt(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getInt64Tag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getInt64Tag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getInt64(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getFloatTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getFloatTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getFloat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getDoubleTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getDoubleTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getDouble(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getStringTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getStringTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getByteArrayTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getByteArrayTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getByteArray(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getIntArrayTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getIntArrayTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getIntArray(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getCompound(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getCompound(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getList(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getList(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getBoolean(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    bool isEmpty(void)const;
+    void clear(void);
+    void clone(void)const;
+    void deepCopy(CompoundTag const&);
+    void rename(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+};

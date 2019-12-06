@@ -2,7 +2,9 @@
 
 class AngrySystem : ITickingSystem {
 
-    virtual ~AngrySystem();
+public:
     virtual ~AngrySystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void AngrySystem(void);
+};

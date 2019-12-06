@@ -2,8 +2,10 @@
 
 class AttackNode : BehaviorNode {
 
-    virtual ~AttackNode();
+public:
     virtual ~AttackNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
-}
+
+    void AttackNode(void);
+};

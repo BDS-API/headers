@@ -2,9 +2,12 @@
 
 class OnHitSubcomponent {
 
+public:
     virtual ~OnHitSubcomponent();
-    virtual ~OnHitSubcomponent();
-    virtual void readfromJSON(Json::Value &);
-    virtual void writetoJSON(Json::Value &)const;
-    virtual void doOnHitEffect(Actor &, ProjectileComponent &);
-}
+
+    void OnHitSubcomponent(void);
+    void _canAttack(Actor *, Actor *)const;
+    void readfromJSON(Json::Value &);
+    void writetoJSON(Json::Value &)const;
+    void getSubcomponentName(void);
+};

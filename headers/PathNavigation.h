@@ -2,7 +2,7 @@
 
 class PathNavigation {
 
-    virtual ~PathNavigation();
+public:
     virtual ~PathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
@@ -14,6 +14,8 @@ class PathNavigation {
     virtual void moveTo(NavigationComponent &, Mob &, std::unique_ptr<Path, std::default_delete<Path>>, float);
     virtual void stop(NavigationComponent &, Mob &);
     virtual void travel(NavigationComponent &, Mob &, float &, float &, float &);
-    virtual void canUpdatePath(Mob const&)const;
+    virtual bool canUpdatePath(Mob const&)const;
     virtual void updatePath(NavigationComponent &, Mob &);
-}
+
+    void PathNavigation(void);
+};

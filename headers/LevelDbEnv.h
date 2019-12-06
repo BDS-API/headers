@@ -2,7 +2,9 @@
 
 class LevelDbEnv : leveldb::Env {
 
-    virtual ~LevelDbEnv();
+public:
+    static long LevelDbEnv::sSingleton;
+
     virtual ~LevelDbEnv();
     virtual void NewSequentialFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::SequentialFile **);
     virtual void NewRandomAccessFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::RandomAccessFile **);
@@ -23,4 +25,10 @@ class LevelDbEnv : leveldb::Env {
     virtual void NewLogger(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::Logger **);
     virtual void NowMicros(void);
     virtual void SleepForMicroseconds(int);
-}
+
+    void createInstance(void);
+    void getSingleton(void);
+    void destroyInstance(void);
+    void LevelDbEnv(void);
+    void IsComplete(void)const;
+};

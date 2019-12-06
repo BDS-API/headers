@@ -2,11 +2,12 @@
 
 class PlaySoundPacket : Packet {
 
-    virtual ~PlaySoundPacket();
+public:
     virtual ~PlaySoundPacket();
     virtual void getId(void)const;
-    virtual void _ZNK15PlaySoundPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void PlaySoundPacket(void);
+    void PlaySoundPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Vec3 const&, float, float);
+};

@@ -2,8 +2,10 @@
 
 class ScriptBinderQueryTemplate : ScriptBinderTemplate {
 
+public:
     virtual ~ScriptBinderQueryTemplate();
-    virtual ~ScriptBinderQueryTemplate();
-    virtual void _ZNK25ScriptBinderQueryTemplate21getTemplateIdentifierB5cxx11Ev;
     virtual void applyTemplate(ScriptObjectBinder &)const;
-}
+
+    void build(unsigned int);
+    void ScriptBinderQueryTemplate(void);
+};

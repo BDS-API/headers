@@ -2,7 +2,8 @@
 
 class ITickingSystem {
 
+public:
     virtual ~ITickingSystem();
-    virtual ~ITickingSystem();
-    virtual void tick(EntityRegistry &);
-}
+
+    void ITickingSystem(void);
+};

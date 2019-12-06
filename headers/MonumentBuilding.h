@@ -2,17 +2,21 @@
 
 class MonumentBuilding : OceanMonumentPiece {
 
+public:
     virtual ~MonumentBuilding();
-    virtual ~MonumentBuilding();
-    virtual void moveBoundingBox(int, int, int);
-    virtual void asPoolElement(void);
     virtual void getType(void)const;
-    virtual void addChildren(StructurePiece*, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
-    virtual void getWorldX(int, int);
-    virtual void getWorldZ(int, int);
-    virtual void placeBlock(BlockSource *, Block const&, int, int, int, BoundingBox const&);
-    virtual void generateBox(BlockSource *, BoundingBox const&, int, int, int, int, int, int, Block const&, Block const&, bool);
-    virtual void addHardcodedSpawnAreas(LevelChunk &)const;
-}
+
+    void getBiomeRange(void);
+    void MonumentBuilding(Random &, int, int, int &);
+    void generateRoomGraph(Random &);
+    void MonumentBuilding(void);
+    void generateWing(bool, int, BlockSource *, Random &, BoundingBox const&);
+    void generateEntranceArchs(BlockSource *, Random &, BoundingBox const&);
+    void generateEntranceWall(BlockSource *, Random &, BoundingBox const&);
+    void generateRoofPiece(BlockSource *, Random &, BoundingBox const&);
+    void generateLowerWall(BlockSource *, Random &, BoundingBox const&);
+    void generateMiddleWall(BlockSource *, Random &, BoundingBox const&);
+    void generateUpperWall(BlockSource *, Random &, BoundingBox const&);
+};

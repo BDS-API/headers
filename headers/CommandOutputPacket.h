@@ -2,11 +2,14 @@
 
 class CommandOutputPacket : Packet {
 
-    virtual ~CommandOutputPacket();
+public:
     virtual ~CommandOutputPacket();
     virtual void getId(void)const;
-    virtual void _ZNK19CommandOutputPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void CommandOutputPacket(void);
+    void CommandOutputPacket(CommandOrigin const&, CommandOutput const&);
+    void getOriginData(void)const;
+    void getOutput(void)const;
+};

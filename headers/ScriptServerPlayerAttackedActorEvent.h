@@ -2,7 +2,14 @@
 
 class ScriptServerPlayerAttackedActorEvent : ScriptEventData {
 
-    virtual ~ScriptServerPlayerAttackedActorEvent();
+public:
+    static long ScriptServerPlayerAttackedActorEvent::mHash;
+
     virtual ~ScriptServerPlayerAttackedActorEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
-}
+
+    void getHash(void);
+    void ScriptServerPlayerAttackedActorEvent(void);
+    void setPlayerId(ActorUniqueID const&);
+    void setAttackedActorId(ActorUniqueID const&);
+};

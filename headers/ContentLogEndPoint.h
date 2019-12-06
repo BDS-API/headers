@@ -2,11 +2,9 @@
 
 class ContentLogEndPoint : Bedrock::LogEndPoint {
 
-    virtual ~ContentLogEndPoint();
+public:
     virtual ~ContentLogEndPoint();
     virtual void log(char const*);
-    virtual void flush(void);
-    virtual void setEnabled(bool);
-    virtual void isEnabled(void)const;
-    virtual void log(LogArea, LogLevel, char const*);
-}
+
+    void ContentLogEndPoint(void);
+};

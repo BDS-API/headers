@@ -2,8 +2,10 @@
 
 class ScriptBinderLevelTemplate : ScriptBinderTemplate {
 
+public:
     virtual ~ScriptBinderLevelTemplate();
-    virtual ~ScriptBinderLevelTemplate();
-    virtual void _ZNK25ScriptBinderLevelTemplate21getTemplateIdentifierB5cxx11Ev;
     virtual void applyTemplate(ScriptObjectBinder &)const;
-}
+
+    void build(entt::Registry<unsigned int> &, unsigned int);
+    void ScriptBinderLevelTemplate(void);
+};

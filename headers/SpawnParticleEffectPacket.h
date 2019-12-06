@@ -2,11 +2,13 @@
 
 class SpawnParticleEffectPacket : Packet {
 
-    virtual ~SpawnParticleEffectPacket();
+public:
     virtual ~SpawnParticleEffectPacket();
     virtual void getId(void)const;
-    virtual void _ZNK25SpawnParticleEffectPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void SpawnParticleEffectPacket(void);
+    void SpawnParticleEffectPacket(ActorUniqueID, Vec3 const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned char);
+    void SpawnParticleEffectPacket(Vec3 const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned char);
+};

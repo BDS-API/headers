@@ -2,18 +2,11 @@
 
 class DiggingEnchant : Enchant {
 
+public:
     virtual ~DiggingEnchant();
-    virtual ~DiggingEnchant();
-    virtual void isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
-    virtual void getMinLevel(void)const;
     virtual void getMaxLevel(void)const;
-    virtual void getDamageProtection(int, ActorDamageSource const&)const;
-    virtual void getDamageBonus(int, Actor const&)const;
-    virtual void doPostAttack(Actor &, Actor &, int)const;
-    virtual void doPostHurt(ItemInstance &, Actor &, Actor &, int)const;
-    virtual void isMeleeDamageEnchant(void)const;
-    virtual void isProtectionEnchant(void)const;
-    virtual void isTreasureOnly(void)const;
-}
+
+    void DiggingEnchant(Enchant::Type, Enchant::Frequency, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, int);
+};

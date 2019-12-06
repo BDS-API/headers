@@ -2,7 +2,7 @@
 
 class com::mojang::clacks::protocol::Commands::Stub::experimental_async : com::mojang::clacks::protocol::Commands::StubInterface::experimental_async_interface {
 
-    virtual ~experimental_async();
+public:
     virtual ~experimental_async();
     virtual void listPlayer(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const*, com::mojang::clacks::protocol::PlayerList *, std::function<void ()(grpc::Status)>);
     virtual void kick(grpc::ClientContext *, com::mojang::clacks::protocol::PlayerAndMessage const*, com::mojang::clacks::protocol::Empty *, std::function<void ()(grpc::Status)>);
@@ -18,4 +18,6 @@ class com::mojang::clacks::protocol::Commands::Stub::experimental_async : com::m
     virtual void stop(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const*, com::mojang::clacks::protocol::Empty*, std::function<void ()(grpc::Status)>);
     virtual void serverStarted(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const*, com::mojang::clacks::protocol::Empty*, std::function<void ()(grpc::Status)>);
     virtual void subscribeToMetrics(grpc::ClientContext *, com::mojang::clacks::protocol::Empty *, grpc::experimental::ClientReadReactor<com::mojang::clacks::protocol::MetricReport> *);
-}
+
+    void experimental_async(com::mojang::clacks::protocol::Commands::Stub*);
+};

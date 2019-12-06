@@ -2,7 +2,8 @@
 
 class BehaviorData::DataProxy {
 
+public:
     virtual ~DataProxy();
-    virtual ~DataProxy();
-    virtual void __cxa_pure_virtual;
-}
+
+    void DataProxy(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, BehaviorData::DataType);
+};

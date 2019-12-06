@@ -2,7 +2,9 @@
 
 class MessagingCommand : Command {
 
+public:
     virtual ~MessagingCommand();
-    virtual ~MessagingCommand();
-    virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void MessagingCommand(bool, bool);
+    void checkChatPermissions(CommandOrigin const&, CommandOutput &)const;
+};

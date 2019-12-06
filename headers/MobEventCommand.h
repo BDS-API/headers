@@ -2,7 +2,10 @@
 
 class MobEventCommand : Command {
 
-    virtual ~MobEventCommand();
+public:
     virtual ~MobEventCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void MobEventCommand(void);
+    void setup(CommandRegistry &, MobEventCommand::InitProxy &&);
+};

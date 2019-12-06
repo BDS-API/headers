@@ -2,9 +2,10 @@
 
 class MineshaftStart : StructureStart {
 
+public:
     virtual ~MineshaftStart();
-    virtual ~MineshaftStart();
-    virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual void isValid(void)const;
     virtual void getType(void)const;
-}
+
+    void MineshaftStart(BiomeSource &, Random &, ChunkPos const&, short);
+    void _moveToSurface(short);
+};

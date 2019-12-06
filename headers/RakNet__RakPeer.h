@@ -2,7 +2,7 @@
 
 class RakNet::RakPeer : RakNet::RakPeerInterface, RakNet::RNS2EventHandler {
 
-    virtual ~RakPeer();
+public:
     virtual ~RakPeer();
     virtual void Startup(unsigned int, RakNet::SocketDescriptor *, unsigned int, int);
     virtual void InitializeSecurity(char const*, char const*, bool);
@@ -97,10 +97,58 @@ class RakNet::RakPeer : RakNet::RakPeerInterface, RakNet::RNS2EventHandler {
     virtual void DeallocRNS2RecvStruct(RakNet::RNS2RecvStruct *, char const*, unsigned int);
     virtual void AllocRNS2RecvStruct(char const*, unsigned int);
     virtual void OnRNS2Recv(RakNet::RNS2RecvStruct *);
-    virtual void ;
-    virtual void `non-virtual thunk to'RakNet::RakPeer::~RakPeer();
-    virtual void `non-virtual thunk to'RakNet::RakPeer::~RakPeer();
-    virtual void `non-virtual thunk to'RakNet::RakPeer::OnRNS2Recv(RakNet::RNS2RecvStruct *);
-    virtual void `non-virtual thunk to'RakNet::RakPeer::DeallocRNS2RecvStruct(RakNet::RNS2RecvStruct *, char const*, unsigned int);
-    virtual void `non-virtual thunk to'RakNet::RakPeer::AllocRNS2RecvStruct(char const*, unsigned int);
-}
+
+    void AllocPacket(unsigned int, char const*, unsigned int);
+    void AllocPacket(unsigned int, unsigned char *, char const*, unsigned int);
+    void RakPeer(void);
+    void GenerateGUID(void);
+    void ResetSendReceipt(void);
+    void FillIPList(void);
+    void FillAdapterList(void);
+    void GenerateSeedFromGuid(void);
+    void DerefAllSockets(void);
+    void ClearBufferedCommands(void);
+    void ClearBufferedPackets(void);
+    void ClearSocketQueryOutput(void);
+    void GetRakNetSocketFromUserConnectionSocketIndex(unsigned int)const;
+    void SendConnectionRequest(char const*, unsigned short, char const*, int, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+    void SendConnectionRequest(char const*, unsigned short, char const*, int, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, RakNet::RakNetSocket2 *);
+    void NotifyAndFlagForShutdown(RakNet::SystemAddress, bool, unsigned char, PacketPriority);
+    void ClearRequestedConnectionList(void);
+    void ClearRemoteSystemLookup(void);
+    void IsLoopbackAddress(RakNet::AddressOrGUID const&, bool)const;
+    void SendBuffered(char const*, unsigned int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, RakNet::RakPeer::RemoteSystemStruct::ConnectMode, unsigned int);
+    void GetLoopbackAddress(void)const;
+    void SendBufferedList(char const**, int const*, int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, RakNet::RakPeer::RemoteSystemStruct::ConnectMode, unsigned int);
+    void ShiftIncomingTimestamp(unsigned char *, RakNet::SystemAddress const&)const;
+    void CallPluginCallbacks(DataStructures::List<RakNet::PluginInterface2 *> &, RakNet::Packet *);
+    void CloseConnectionInternal(RakNet::AddressOrGUID const&, bool, bool, unsigned char, PacketPriority);
+    void GetIndexFromSystemAddress(RakNet::SystemAddress, bool)const;
+    void GetIndexFromGuid(RakNet::RakNetGUID);
+    void PingInternal(RakNet::SystemAddress, bool, PacketReliability);
+    void GetRemoteSystem(RakNet::AddressOrGUID, bool, bool)const;
+    void GetClockDifferentialInt(RakNet::RakPeer::RemoteSystemStruct *)const;
+    void GetRemoteSystemFromSystemAddress(RakNet::SystemAddress, bool, bool)const;
+    void GetSystemIndexFromGuid(RakNet::RakNetGUID)const;
+    void GetRemoteSystemIndex(RakNet::SystemAddress const&)const;
+    void ValidateRemoteSystemLookup(void)const;
+    void GetRemoteSystemFromGUID(RakNet::RakNetGUID, bool)const;
+    void ParseConnectionRequestPacket(RakNet::RakPeer::RemoteSystemStruct *, RakNet::SystemAddress const&, char const*, int);
+    void SendImmediate(char *, unsigned int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, bool, unsigned long, unsigned int);
+    void OnConnectionRequest(RakNet::RakPeer::RemoteSystemStruct *, unsigned long);
+    void GetNumberOfRemoteInitiatedConnections(void)const;
+    void AssignSystemAddressToRemoteSystemList(RakNet::SystemAddress, RakNet::RakPeer::RemoteSystemStruct::ConnectMode, RakNet::RakNetSocket2 *, bool *, RakNet::SystemAddress, int, RakNet::RakNetGUID, bool);
+    void ReferenceRemoteSystem(RakNet::SystemAddress const&, unsigned int);
+    void AddToActiveSystemList(unsigned int);
+    void GetBestClockDifferential(RakNet::SystemAddress)const;
+    void RemoteSystemLookupHashIndex(RakNet::SystemAddress const&)const;
+    void GetRemoteSystem(RakNet::SystemAddress const&)const;
+    void DereferenceRemoteSystem(RakNet::SystemAddress const&);
+    void RemoveFromActiveSystemList(RakNet::SystemAddress const&);
+    void AllowIncomingConnections(void)const;
+    void SetupBufferedPackets(void);
+    void PushBufferedPacket(RakNet::RNS2RecvStruct *);
+    void PopBufferedPacket(void);
+    void OnConnectedPong(unsigned long, unsigned long, RakNet::RakPeer::RemoteSystemStruct *);
+    void AddPacketToProducer(RakNet::Packet *);
+};

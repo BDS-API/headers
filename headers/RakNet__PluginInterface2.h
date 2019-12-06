@@ -2,7 +2,7 @@
 
 class RakNet::PluginInterface2 {
 
-    virtual ~PluginInterface2();
+public:
     virtual ~PluginInterface2();
     virtual void OnAttach(void);
     virtual void OnDetach(void);
@@ -20,4 +20,15 @@ class RakNet::PluginInterface2 {
     virtual void OnInternalPacket(RakNet::InternalPacket *, unsigned int, RakNet::SystemAddress, unsigned int, int);
     virtual void OnAck(unsigned int, RakNet::SystemAddress, unsigned int);
     virtual void OnPushBackPacket(char const*, unsigned int, RakNet::SystemAddress);
-}
+
+    void PluginInterface2(void);
+    void SendUnified(RakNet::BitStream const*, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool);
+    void GetMyGUIDUnified(void)const;
+    void SendUnified(char const*, int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool);
+    void AllocatePacketUnified(unsigned int);
+    void PushBackPacketUnified(RakNet::Packet *, bool);
+    void DeallocPacketUnified(RakNet::Packet *);
+    void SendListUnified(char const**, int const*, int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool);
+    void SetRakPeerInterface(RakNet::RakPeerInterface *);
+    void SetTCPInterface(RakNet::TCPInterface *);
+};

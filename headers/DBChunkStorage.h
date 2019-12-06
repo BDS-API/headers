@@ -2,26 +2,30 @@
 
 class DBChunkStorage : ChunkSource {
 
-    virtual ~DBChunkStorage();
+public:
+    static long DBChunkStorage::threadBatch;
+
     virtual ~DBChunkStorage();
     virtual void shutdown(void);
-    virtual void isShutdownDone(void);
-    virtual void getExistingChunk(ChunkPos const&);
-    virtual void getRandomChunk(Random &);
-    virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
-    virtual void getOrLoadChunk(ChunkPos const&, ChunkSource::LoadMode);
+    virtual bool isShutdownDone(void);
     virtual void postProcess(ChunkViewSource &);
     virtual void checkAndReplaceChunk(ChunkViewSource &, LevelChunk &);
     virtual void loadChunk(LevelChunk &, bool);
-    virtual void postProcessMobsAt(BlockSource *, int, int, Random &);
     virtual void saveLiveChunk(LevelChunk &);
     virtual void hintDiscardBatchBegin(void);
     virtual void hintDiscardBatchEnd(void);
     virtual void acquireDiscarded(std::unique_ptr<LevelChunk, std::default_delete<LevelChunk>>);
-    virtual void compact(void);
     virtual void flushPendingWrites(void);
-    virtual void isWithinWorldLimit(ChunkPos const&)const;
-    virtual void getChunkMap(void);
-    virtual void getStorage(void)const;
-    virtual void clearDeletedEntities(void);
-}
+
+    void DBChunkStorage(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>, DBStorage &, Scheduler &);
+    void _writeBatch(void);
+    void _hasChunk(DBChunkStorageKey const&);
+    void _loadChunkFromDB(LevelChunk &);
+    void _applyChunkFixup(LevelChunk *, BlockSource &);
+    void _upgradeFix(LevelChunk &, BlockSource &);
+    void _loadAndBlendFromDB(LevelChunk &);
+    void _serializeChunk(LevelChunk const&, DBStorageWriteBatch &);
+    void _getBuffer(void);
+    void freeCaches(void);
+    void registerUpgradeFixHandler(std::function<void ()(LevelChunk &, BlockSource &)>);
+};

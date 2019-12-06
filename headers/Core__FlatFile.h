@@ -2,9 +2,8 @@
 
 class Core::FlatFile : Core::FileImpl {
 
+public:
     virtual ~FlatFile();
-    virtual ~FlatFile();
-    virtual void _ZNK4Core8FlatFile8_getPathB5cxx11Ev;
     virtual void _getBlockSize(void)const;
     virtual void _isOpen(void);
     virtual void _close(void);
@@ -18,4 +17,6 @@ class Core::FlatFile : Core::FileImpl {
     virtual void _flush(void);
     virtual void _getSize(unsigned long *);
     virtual void _getRemainingSize(unsigned long *);
-}
+
+    void FlatFile(Core::FileSystemImpl *, Core::FileOpenMode, std::unique_ptr<Core::FileImpl, std::default_delete<Core::FileImpl>>, Core::Path const&, unsigned long, unsigned long);
+};

@@ -2,8 +2,9 @@
 
 class BlockBlobFeature : Feature {
 
+public:
     virtual ~BlockBlobFeature();
-    virtual ~BlockBlobFeature();
-    virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-}
+
+    void BlockBlobFeature(Block const&, int);
+};

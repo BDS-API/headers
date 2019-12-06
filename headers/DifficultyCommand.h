@@ -2,7 +2,10 @@
 
 class DifficultyCommand : Command {
 
-    virtual ~DifficultyCommand();
+public:
     virtual ~DifficultyCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-}
+
+    void setup(CommandRegistry &);
+    void DifficultyCommand(void);
+};

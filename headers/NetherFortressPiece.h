@@ -2,17 +2,24 @@
 
 class NetherFortressPiece : StructurePiece {
 
+public:
     virtual ~NetherFortressPiece();
-    virtual ~NetherFortressPiece();
-    virtual void moveBoundingBox(int, int, int);
-    virtual void asPoolElement(void);
-    virtual void getType(void)const;
-    virtual void addChildren(StructurePiece*, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
-    virtual void getWorldX(int, int);
-    virtual void getWorldZ(int, int);
-    virtual void placeBlock(BlockSource *, Block const&, int, int, int, BoundingBox const&);
-    virtual void generateBox(BlockSource *, BoundingBox const&, int, int, int, int, int, int, Block const&, Block const&, bool);
     virtual void addHardcodedSpawnAreas(LevelChunk &)const;
-}
+
+    void NetherFortressPiece(void);
+    void NetherFortressPiece(int);
+    void updatePieceWeight(std::vector<PieceWeight, std::allocator<PieceWeight>> &);
+    void findAndCreateBridgePieceFactory(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
+    void generatePiece(NBStartPiece *, std::vector<PieceWeight, std::allocator<PieceWeight>> &, std::vector&<std::unique_ptr<StructurePiece, std::default_delete<std::unique_ptr>>, std::allocator<std::default_delete<std::unique_ptr>>>, Random &, int, int, int, int, int);
+    void generateAndAddPiece(NBStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int, bool);
+    void generateChildForward(NBStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, bool);
+    void generateChildLeft(NBStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, bool);
+    void generateChildRight(NBStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, bool);
+    void generateLightPost(BlockSource *, Random &, BoundingBox const&, int, int, int, int, int);
+    void generateLightPostFacingRight(BlockSource *, Random &, BoundingBox const&, int, int, int);
+    void generateLightPostFacingLeft(BlockSource *, Random &, BoundingBox const&, int, int, int);
+    void generateLightPostFacingUp(BlockSource *, Random &, BoundingBox const&, int, int, int);
+    void generateLightPostFacingDown(BlockSource *, Random &, BoundingBox const&, int, int, int);
+    bool isOkBox(BoundingBox);
+};

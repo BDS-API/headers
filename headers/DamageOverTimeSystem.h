@@ -2,7 +2,9 @@
 
 class DamageOverTimeSystem : ITickingSystem {
 
-    virtual ~DamageOverTimeSystem();
+public:
     virtual ~DamageOverTimeSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void DamageOverTimeSystem(void);
+};

@@ -2,7 +2,11 @@
 
 class TrailSystem : ITickingSystem {
 
-    virtual ~TrailSystem();
+public:
     virtual ~TrailSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void TrailSystem(void);
+    void _tickComponent(EntityContext &, FlagComponent<ActorTickedFlag> &, ActorComponent &, TrailComponent &);
+    void _calculateBlockSpawnPositions(Actor &, Vec3 &);
+};

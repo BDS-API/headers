@@ -2,7 +2,9 @@
 
 class FileSystemFileAccess::FileSystemFileReadAccess : IFileReadAccess {
 
-    virtual ~FileSystemFileReadAccess();
+public:
     virtual ~FileSystemFileReadAccess();
     virtual void fread(void *, unsigned long, unsigned long, void *)const;
-}
+
+    void FileSystemFileReadAccess(void);
+};

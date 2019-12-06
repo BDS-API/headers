@@ -2,8 +2,13 @@
 
 class DataItem {
 
+public:
     virtual ~DataItem();
-    virtual ~DataItem();
-    virtual void isDataEqual(DataItem const&)const;
-    virtual void __cxa_pure_virtual;
-}
+    virtual bool isDataEqual(DataItem const&)const;
+
+    void DataItem(DataItemType, unsigned short);
+    void getType(void)const;
+    void setDirty(bool);
+    void getId(void)const;
+    bool isDirty(void)const;
+};

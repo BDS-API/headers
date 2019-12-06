@@ -2,23 +2,21 @@
 
 class DelayedAttackGoal : MeleeAttackGoal {
 
+public:
     virtual ~DelayedAttackGoal();
-    virtual ~DelayedAttackGoal();
-    virtual void canUse(void);
-    virtual void canContinueToUse(void);
-    virtual void canBeInterrupted(void);
+    virtual bool canUse(void);
+    virtual bool canContinueToUse(void);
     virtual void start(void);
     virtual void stop(void);
     virtual void tick(void);
     virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
-    virtual void isTargetGoal(void)const;
-    virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
-    virtual void _getAttackReachSqr(void);
-    virtual void _lookAtTarget(Actor *)const;
-    virtual void _mobCanPathToTarget(Actor const*)const;
-    virtual void _shouldRecalculatePath(Actor const*);
-    virtual void _recalculateTargetPosition(Actor const*);
-    virtual void _adjustTimeToRecalculatePath(float);
     virtual void _attemptPathToTarget(Actor *);
     virtual void _attemptAttackTarget(Actor *);
-}
+
+    void DelayedAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, int, int, LevelSoundEvent);
+    void _isAttackAnimationStillRunning(void)const;
+    void _attemptMoveToTargetPosition(Actor *);
+    void _manageAttackTime(void);
+    void _attemptStartAttacking(Actor const*);
+    void _isAttackObstructed(Actor const*, int)const;
+};

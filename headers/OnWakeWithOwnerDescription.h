@@ -2,9 +2,9 @@
 
 class OnWakeWithOwnerDescription : TriggerDescription {
 
+public:
     virtual void getJsonName(void)const;
     virtual ~OnWakeWithOwnerDescription();
-    virtual ~OnWakeWithOwnerDescription();
-    virtual void deserializeData(Json::Value &);
-    virtual void serializeData(Json::Value &)const;
-}
+
+    void OnWakeWithOwnerDescription(void);
+};

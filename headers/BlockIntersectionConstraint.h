@@ -2,7 +2,9 @@
 
 class BlockIntersectionConstraint : IStructureConstraint {
 
+public:
     virtual ~BlockIntersectionConstraint();
-    virtual ~BlockIntersectionConstraint();
-    virtual void isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const;
-}
+    virtual bool isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const;
+
+    void BlockIntersectionConstraint(LegacyStructureTemplate &);
+};

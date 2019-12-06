@@ -2,9 +2,9 @@
 
 class NavigationGenericDescription : NavigationDescription {
 
+public:
     virtual void getJsonName(void)const;
     virtual ~NavigationGenericDescription();
-    virtual ~NavigationGenericDescription();
-    virtual void deserializeData(Json::Value &);
-    virtual void serializeData(Json::Value &)const;
-}
+
+    void NavigationGenericDescription(void);
+};

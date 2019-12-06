@@ -2,11 +2,12 @@
 
 class ServerToClientHandshakePacket : Packet {
 
-    virtual ~ServerToClientHandshakePacket();
+public:
     virtual ~ServerToClientHandshakePacket();
     virtual void getId(void)const;
-    virtual void _ZNK29ServerToClientHandshakePacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void ServerToClientHandshakePacket(void);
+    void ServerToClientHandshakePacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+};

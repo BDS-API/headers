@@ -2,8 +2,11 @@
 
 class ScriptBinderActorTickingAreaTemplate : ScriptBinderTemplate {
 
+public:
     virtual ~ScriptBinderActorTickingAreaTemplate();
-    virtual ~ScriptBinderActorTickingAreaTemplate();
-    virtual void _ZNK36ScriptBinderActorTickingAreaTemplate21getTemplateIdentifierB5cxx11Ev;
     virtual void applyTemplate(ScriptObjectBinder &)const;
-}
+
+    void build(ITickingArea const&);
+    void build(ActorUniqueID const&);
+    void ScriptBinderActorTickingAreaTemplate(void);
+};

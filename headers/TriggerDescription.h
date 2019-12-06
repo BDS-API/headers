@@ -2,9 +2,11 @@
 
 class TriggerDescription : Description {
 
-    virtual void getJsonName(void)const;
-    virtual ~TriggerDescription();
+public:
     virtual ~TriggerDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
-}
+
+    void TriggerDescription(void);
+    void parseTrigger(Json::Value &);
+};

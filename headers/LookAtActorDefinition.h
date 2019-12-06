@@ -2,8 +2,9 @@
 
 class LookAtActorDefinition : BehaviorDefinition {
 
-    virtual ~LookAtActorDefinition();
+public:
     virtual ~LookAtActorDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
-    virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-}
+
+    void LookAtActorDefinition(void);
+};

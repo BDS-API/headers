@@ -2,7 +2,9 @@
 
 class TradeableSystem : ITickingSystem {
 
-    virtual ~TradeableSystem();
+public:
     virtual ~TradeableSystem();
     virtual void tick(EntityRegistry &);
-}
+
+    void TradeableSystem(void);
+};

@@ -2,17 +2,23 @@
 
 class GrindstoneContainerManagerModel : ContainerManagerModel {
 
+public:
+    static long GrindstoneContainerManagerModel::INPUT_SLOT;
+    static long GrindstoneContainerManagerModel::ADDITIONAL_SLOT;
+    static long GrindstoneContainerManagerModel::RESULT_SLOT;
+
     virtual ~GrindstoneContainerManagerModel();
-    virtual ~GrindstoneContainerManagerModel();
-    virtual void getContainerId(void)const;
-    virtual void setContainerId(ContainerID);
-    virtual void getContainerType(void)const;
-    virtual void setContainerType(ContainerType);
     virtual void getItems(void);
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
     virtual void setData(int, int);
     virtual void broadcastChanges(void);
     virtual void init(void);
-    virtual void isValid(float);
-}
+
+    void GrindstoneContainerManagerModel(ContainerID, Player &, BlockPos const&);
+    bool isGrindstoneValid(float);
+    void sendCraftedPacket(CraftingEventPacket &);
+    void getBlockPos(void)const;
+    void fireDisenchantedAchievementEvent(void);
+    void fireItemAcquiredEvent(ItemInstance const&, int);
+};

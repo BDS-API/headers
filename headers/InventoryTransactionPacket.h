@@ -2,11 +2,12 @@
 
 class InventoryTransactionPacket : Packet {
 
-    virtual ~InventoryTransactionPacket();
+public:
     virtual ~InventoryTransactionPacket();
     virtual void getId(void)const;
-    virtual void _ZNK26InventoryTransactionPacket7getNameB5cxx11Ev;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    virtual void disallowBatching(void)const;
-}
+
+    void InventoryTransactionPacket(void);
+    void InventoryTransactionPacket(std::unique_ptr<ComplexInventoryTransaction, std::default_delete<ComplexInventoryTransaction>>);
+};
