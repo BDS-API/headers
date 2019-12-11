@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptDamageSensorComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptDamageSensorComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptDamageSensorComponent::mHash;

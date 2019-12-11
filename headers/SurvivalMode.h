@@ -3,6 +3,8 @@
 class SurvivalMode : GameMode {
 
 public:
+    static long SurvivalMode::mTrialHasEnded;
+
     virtual ~SurvivalMode();
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &);
     virtual void destroyBlock(BlockPos const&, unsigned char);

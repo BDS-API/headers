@@ -1,6 +1,6 @@
 #pragma once
 
-class DebugAssertException {
+class DebugAssertException : std::exception {
 
 public:
     static long DebugAssertException::WHAT;

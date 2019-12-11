@@ -5,6 +5,7 @@ class DoublePlantBlock : BushBlock {
 public:
     virtual ~DoublePlantBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
+    virtual void getNextBlockPermutation(Block const&)const;
     virtual void randomlyModifyPosition(BlockPos const&, int &)const;
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;

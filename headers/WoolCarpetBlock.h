@@ -4,6 +4,7 @@ class WoolCarpetBlock : BlockLegacy {
 
 public:
     virtual ~WoolCarpetBlock();
+    virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void waterSpreadCausesSpawn(void)const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;

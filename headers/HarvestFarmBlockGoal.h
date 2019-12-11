@@ -1,6 +1,6 @@
 #pragma once
 
-class HarvestFarmBlockGoal : MoveToBlockGoal {
+class HarvestFarmBlockGoal : BaseMoveToBlockGoal {
 
 public:
     virtual ~HarvestFarmBlockGoal();

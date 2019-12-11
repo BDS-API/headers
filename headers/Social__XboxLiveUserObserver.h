@@ -1,6 +1,6 @@
 #pragma once
 
-class Social::XboxLiveUserObserver : Core::Observer_ltSocial::XboxLiveUserObserver_Core::SingleThreadedLock_ge {
+class Social::XboxLiveUserObserver : Core::Observer<Social::XboxLiveUserObserver, Core::SingleThreadedLock> {
 
 public:
     virtual ~XboxLiveUserObserver();

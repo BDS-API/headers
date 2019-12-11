@@ -303,7 +303,6 @@ public:
     void addTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     void removeTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     void deregisterTagsFromLevelCache(void);
-    bool isSpawnableInCreative(ActorType);
     bool hasUniqueID(void)const;
     bool hasRuntimeID(void)const;
     void getRuntimeID(void)const;
@@ -429,7 +428,7 @@ public:
     bool isScared(void)const;
     void setSeatDescription(Vec3 const&, SeatDescription const&);
     void buildDebugGroupInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
-    void spawnDustParticles(void);
+    void spawnDustParticles(int);
     bool hasTeleported(void)const;
     void _isValidBlockToTeleportOnto(Block const&, bool)const;
     void teleportRidersTo(Vec3 const&, int, int);

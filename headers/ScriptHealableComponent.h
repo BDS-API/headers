@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptHealableComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptHealableComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptHealableComponent::mHash;

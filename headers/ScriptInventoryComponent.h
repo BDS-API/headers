@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptInventoryComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptInventoryComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptInventoryComponent::mHash;

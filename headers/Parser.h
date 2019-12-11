@@ -33,12 +33,17 @@ public:
     void parse(Json::Value const&, std::vector<LevelSoundEvent, std::allocator<LevelSoundEvent>> &, char const*, char const*);
     void parse(Json::Value const&, Item const*&, char const*, char const*);
     void parse(Json::Value const&, ItemDefinition &, char const*, char const*);
+    void parse(Json::Value const&, ItemDescriptor &);
+    void parse(Json::Value const&, std::vector<ItemDescriptor, std::allocator<ItemDescriptor>> &);
     void parse(Json::Value const&, DefinitionTrigger &, char const*);
+    void parse(Json::Value const&, DefinitionTrigger &);
     void parse(Json::Value const&, FilterGroup &, char const*, char const*);
     void parse(Json::Value const&, GameVersion &, char const*, GameVersion const&);
     void parse(Json::Value const&, std::vector<SlotDropChance, std::allocator<SlotDropChance>> &, char const*);
+    void parse(Json::Value const&, std::vector<ItemDescriptor, std::allocator<ItemDescriptor>> &, char const*);
     void parse(Json::Value const&, Block const*&, char const*);
     void parse(Json::Value &, WeightedChoices<DefinitionTrigger> &, char const*);
+    void parse(Json::Value const&, std::vector<DefinitionTrigger, std::allocator<DefinitionTrigger>> &);
     void serialize(Item const*, Json::Value &, char const*);
     void serialize(ItemDefinition const&, Json::Value &, char const*);
     void serialize(DefinitionTrigger const&, Json::Value &, char const*);
@@ -66,6 +71,7 @@ public:
     void serialize(std::vector<ItemInstance, std::allocator<ItemInstance>> const&, Json::Value &, char const*);
     void serialize(std::vector<ItemStack, std::allocator<ItemStack>> const&, Json::Value &, char const*);
     void serialize(std::vector<Item const*, std::allocator<Item const*>> const&, Json::Value &, char const*);
+    void serialize(std::vector<ItemDescriptor, std::allocator<ItemDescriptor>> const&, Json::Value &, char const*);
     void serialize(std::vector<MobEffectInstance, std::allocator<MobEffectInstance>> const&, Json::Value &, char const*);
     void serialize(FilterGroup const&, Json::Value &, char const*);
     void serialize(GameVersion const&, Json::Value &, char const*);

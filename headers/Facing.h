@@ -32,4 +32,5 @@ public:
     void rotateFace(unsigned char, Facing::Rotation);
     void fromVec3(Vec3 const&);
     void convertWeirdoDirectionToFacingDirection(WeirdoDirection);
+    void convertYRotationToFacingDirection(float);
 };

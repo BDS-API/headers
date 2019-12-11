@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptServerBroadcastReceived : ScriptTemplateFactory_ltScriptServerContext_ge::ReceivedEvent {
+class ScriptServerBroadcastReceived : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
 
 public:
     virtual ~ScriptServerBroadcastReceived();

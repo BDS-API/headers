@@ -9,5 +9,6 @@ public:
     virtual void flush(LevelStorage &);
 
     void DBStorageWriteBatch(void);
+    void addFlushCallback(std::function<void ()(void)>);
     void clear(void);
 };

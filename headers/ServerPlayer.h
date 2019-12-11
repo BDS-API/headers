@@ -85,6 +85,7 @@ public:
     void ServerPlayer(Level &, PacketSender &, NetworkHandler &, ClientBlobCache::Server::ActiveTransfersManager &, GameType, NetworkIdentifier const&, unsigned char, std::function<void ()(ServerPlayer&)>, mce::UUID, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::unique_ptr<Certificate, std::default_delete<Certificate>>, int);
     void updateChunkPublisherView(Vec3 const&, float);
     void _updateNearbyActors(void);
+    void _getReadOnlyChunkCount(void);
     void recoverR5LostInventoryAndXP(void);
     void _getServerPlayerEventCoordinator(void);
     void getInventoryMenu(void);

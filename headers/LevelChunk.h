@@ -14,7 +14,7 @@ public:
     void createNew(Dimension &, ChunkPos, bool);
     void createNewNoCustomDeleter(Dimension &, ChunkPos, bool);
     void LevelChunk(Dimension &, ChunkPos const&, bool);
-    void _reassignSubChunks(static_vector<SubChunk, 16ul> &&);
+    void _reassignSubChunks(buffer_span_mut<SubChunk>);
     void _createSubChunk(unsigned long, bool, SubChunkInitMode);
     void _assertBlockEntityAccess(void)const;
     void _placeBlockEntity(std::shared_ptr<BlockActor>);
@@ -49,9 +49,9 @@ public:
     void getTickQueue(void)const;
     void getRandomTickQueue(void);
     void getRandomTickQueue(void)const;
-    void getBrightness(ChunkBlockPos const&);
-    void getBrightness(ChunkBlockPos const&, Brightness);
-    void getRawBrightness(ChunkBlockPos const&, Brightness);
+    void getBrightness(ChunkBlockPos const&)const;
+    void getBrightness(ChunkBlockPos const&, Brightness)const;
+    void getRawBrightness(ChunkBlockPos const&, Brightness)const;
     bool hasEntity(Actor &);
     void addEntity(std::unique_ptr<Actor, std::default_delete<Actor>>);
     void removeEntity(Actor &);

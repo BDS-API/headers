@@ -1,6 +1,6 @@
 #pragma once
 
-class RaidGardenGoal : MoveToBlockGoal {
+class RaidGardenGoal : BaseMoveToBlockGoal {
 
 public:
     virtual ~RaidGardenGoal();

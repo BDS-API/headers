@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptPositionComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptPositionComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptPositionComponent::mHash;

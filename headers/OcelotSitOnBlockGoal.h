@@ -1,6 +1,6 @@
 #pragma once
 
-class OcelotSitOnBlockGoal : MoveToBlockGoal {
+class OcelotSitOnBlockGoal : BaseMoveToBlockGoal {
 
 public:
     virtual ~OcelotSitOnBlockGoal();

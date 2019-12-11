@@ -24,6 +24,7 @@ public:
     void _checkAttachedBlocks(BlockSource &);
     void _spawnMovingBlocks(BlockSource &);
     void getCorrectArmBlock(void)const;
+    void _getReplacementBlock(BlockSource const&, BlockPos)const;
     bool isSticky(void)const;
     void _spawnBlocks(BlockSource &);
     void _tryExpand(void);
@@ -38,6 +39,7 @@ public:
     void _attachedBlockWalker(BlockSource &, BlockPos const&, unsigned char, unsigned char);
     void _hasBlockAttached(BlockPos const&);
     void _handleSlimeConnections(BlockSource &, BlockPos const&, unsigned char, unsigned char);
+    void _canStickToEachOther(Block const&, Block const&);
     void _sortAttachedBlocks(BlockSource &);
     void _clearBlockInfront(BlockSource &, BlockPos const&, BlockPos const&);
     void _checkInceptionAchievement(BlockActor &, BlockSource &, BlockPos const&);

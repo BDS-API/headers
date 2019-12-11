@@ -1,6 +1,6 @@
 #pragma once
 
-class OceanMixerLayer : MixerLayer_ltBiome::_Biome::_BiomeTemperatureCategory_ge {
+class OceanMixerLayer : MixerLayer<Biome *, Biome *, BiomeTemperatureCategory> {
 
 public:
     virtual ~OceanMixerLayer();

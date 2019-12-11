@@ -4,7 +4,7 @@ class ColoredTorchBlock : TorchBlock {
 
 public:
     virtual ~ColoredTorchBlock();
-    virtual bool canBeUsedInCommands(bool)const;
+    virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;

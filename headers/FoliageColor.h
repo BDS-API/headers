@@ -32,7 +32,7 @@ public:
     void calculateMapGrassColorHelper(BlockSource &, BlockPos const&, BlockPos const&, int &, int &, int &);
     void getGrassColor(BlockSource &, BlockPos const&);
     void getMapGrassColor(BlockSource &, BlockPos const&);
-    void _setPalette(mce::Image &, std::array<int, 65536ul> &);
+    void _setPalette(mce::Image const&, std::array<int, 65536ul> &);
     void setGrassColorPalette(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, mce::Image &);
     void setFoliageColorPalette(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, mce::Image &);
     void buildGrassColor(BlockPos const&, BlockPos const&, BlockSource &, Random &);

@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptTickWorldComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptTickWorldComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptTickWorldComponent::mHash;

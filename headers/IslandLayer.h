@@ -1,6 +1,6 @@
 #pragma once
 
-class IslandLayer : RootLayer_ltLayerValues::Terrain_ge {
+class IslandLayer : RootLayer<LayerValues::Terrain> {
 
 public:
     virtual ~IslandLayer();

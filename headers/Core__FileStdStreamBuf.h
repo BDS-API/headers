@@ -1,6 +1,6 @@
 #pragma once
 
-class Core::FileStdStreamBuf {
+class Core::FileStdStreamBuf : std::basic_streambuf<char, std::char_traits<char>> {
 
 public:
     virtual ~FileStdStreamBuf();

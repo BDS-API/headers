@@ -4,6 +4,7 @@ class DoorBlock : BlockLegacy {
 
 public:
     virtual ~DoorBlock();
+    virtual void getNextBlockPermutation(Block const&)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const;
     virtual bool isInteractiveBlock(void)const;

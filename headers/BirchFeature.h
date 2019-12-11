@@ -6,5 +6,5 @@ public:
     virtual ~BirchFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
-    void BirchFeature(Actor *, bool);
+    void BirchFeature(Actor *, bool, bool);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-class BackgroundTask : Bedrock::Threading::IAsyncResult_ltvoid_ge {
+class BackgroundTask : Bedrock::Threading::IAsyncResult<void> {
 
 public:
     virtual ~BackgroundTask();

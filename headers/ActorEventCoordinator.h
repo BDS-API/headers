@@ -16,7 +16,7 @@ public:
     void sendActorRemoved(Actor &);
     void sendActorCreated(Actor &);
     void sendActorUseItem(Actor &, ItemInstance const&, ItemUseMethod);
-    void sendActorUseItemOn(Actor &, ItemDescriptor const&, BlockPos const&, unsigned char);
+    void sendActorUseItemOn(Actor &, ItemStack const&, BlockPos const&, unsigned char);
     void sendActorAcquiredItem(Actor &, ItemInstance const&, unsigned int, ItemAcquisitionMethod, Actor*);
     void sendActorPlacedItem(Actor &, ItemInstance const&);
     void sendActorDroppedItem(Actor &, ItemInstance const&);

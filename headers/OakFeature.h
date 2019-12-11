@@ -6,5 +6,5 @@ public:
     virtual ~OakFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
-    void OakFeature(Actor *);
+    void OakFeature(Actor *, bool);
 };

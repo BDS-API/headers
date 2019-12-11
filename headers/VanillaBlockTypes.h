@@ -471,6 +471,10 @@ public:
     static long VanillaBlockTypes::mLightBlock;
     static long VanillaBlockTypes::mWitherRose;
     static long VanillaBlockTypes::mStickyPistonArm;
+    static long VanillaBlockTypes::mBeeNest;
+    static long VanillaBlockTypes::mBeehive;
+    static long VanillaBlockTypes::mHoneyBlock;
+    static long VanillaBlockTypes::mHoneycombBlock;
 
 
     void unregisterBlocks(void);

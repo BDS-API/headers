@@ -14,7 +14,7 @@ public:
     virtual void onActorDeath(Actor &, ActorDamageSource const&);
     virtual void onActorDefinitionEventTriggered(Actor &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void onActorUseItem(Actor &, ItemInstance const&, ItemUseMethod);
-    virtual void onActorUseItemOn(Actor &, ItemDescriptor const&, BlockPos const&, unsigned char);
+    virtual void onActorUseItemOn(Actor &, ItemStack const&, BlockPos const&, unsigned char);
     virtual void onActorCreated(Actor &);
     virtual void onProjectileHit(Actor &, HitResult const&);
     virtual void onActorTeleported(Actor &);

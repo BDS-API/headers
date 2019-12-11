@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptServerPlaySoundEvent : ScriptTemplateFactory_ltScriptServerContext_ge::ReceivedEvent {
+class ScriptServerPlaySoundEvent : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
 
 public:
     static long ScriptServerPlaySoundEvent::mHash;

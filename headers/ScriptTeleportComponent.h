@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptTeleportComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptTeleportComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptTeleportComponent::mHash;

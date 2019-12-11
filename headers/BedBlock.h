@@ -8,6 +8,7 @@ public:
     static long BedBlock::OCCUPIED_DATA;
 
     virtual ~BedBlock();
+    virtual void getNextBlockPermutation(Block const&)const;
     virtual bool isInteractiveBlock(void)const;
     virtual bool canFillAtPos(BlockSource &, BlockPos const&, Block const&)const;
     virtual void sanitizeFillBlock(BlockSource &, BlockPos const&, Block const&)const;

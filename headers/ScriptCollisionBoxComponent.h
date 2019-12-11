@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptCollisionBoxComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptCollisionBoxComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptCollisionBoxComponent::mHash;

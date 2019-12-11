@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptLevelWeatherComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptLevelWeatherComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptLevelWeatherComponent::mHash;

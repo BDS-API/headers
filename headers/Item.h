@@ -13,6 +13,7 @@ public:
     static long Item::mCreativeGroupInfo;
     static long Item::mInvalidTextureUVCoordinateSet;
     static long Item::mAllowExperimental;
+    static long Item::mWorldBaseGameVersion;
 
     virtual ~Item();
     virtual void tearDown(void);
@@ -129,13 +130,14 @@ public:
     void addCreativeItem(Item*, short);
     void addCreativeItem(ItemStack const&);
     void findCreativeItem(ItemInstance const&);
-    void initCreativeItems(bool, ActorInfoRegistry *, BlockDefinitionGroup *, bool, std::function<void ()(ActorInfoRegistry *, BlockDefinitionGroup *, bool)>);
+    void initCreativeItems(bool, ActorInfoRegistry *, BlockDefinitionGroup *, bool, BaseGameVersion const&, std::function<void ()(ActorInfoRegistry *, BlockDefinitionGroup *, bool)>);
     void destroySpeedBonus(ItemInstance const&)const;
     void _helpChangeInventoryItemInPlace(Actor &, ItemStack &, ItemStack &, ItemAcquisitionMethod)const;
     void Item(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, short);
     void getFood(void)const;
     void getSeed(void)const;
     void getCamera(void)const;
+    void setMinRequiredBaseGameVersion(BaseGameVersion const&);
     bool isMirroredArt(void)const;
     void setIsMirroredArt(bool);
     void updateCustomBlockEntityTag(BlockSource &, ItemStack &, BlockPos &)const;
@@ -148,6 +150,7 @@ public:
     void getTextureItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     void _textMatch(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
     void getRendererId(void)const;
+    void getRequiredBaseGameVersion(void)const;
     void executeOnResetBAIcallbacks(void)const;
     void addOnResetBAIcallback(std::function<void ()(void)> const&);
     void setExperimental(void);

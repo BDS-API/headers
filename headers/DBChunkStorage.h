@@ -19,6 +19,7 @@ public:
 
     void DBChunkStorage(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>, DBStorage &, Scheduler &);
     void _writeBatch(void);
+    void _hasChunkUncached(DBChunkStorageKey const&);
     void _hasChunk(DBChunkStorageKey const&);
     void _loadChunkFromDB(LevelChunk &);
     void _applyChunkFixup(LevelChunk *, BlockSource &);

@@ -122,4 +122,6 @@ public:
     bool hasSkylight(void)const;
     void setSkylight(bool);
     void sendPacketForEntity(Actor const&, Packet const&, Player const*);
+    void getBlockEventDispatcher(void);
+    void getBlockEventDispatcherConst(void)const;
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-class ServerFileChunkUploader : IFileChunkUploader, std::enable_shared_from_this_ltServerFileChunkUploader_ge {
+class ServerFileChunkUploader : IFileChunkUploader, std::enable_shared_from_this<ServerFileChunkUploader> {
 
 public:
     virtual ~ServerFileChunkUploader();

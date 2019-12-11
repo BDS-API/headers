@@ -31,6 +31,7 @@ public:
     static long VanillaStates::LiquidDepth;
     static long VanillaStates::MoisturizedAmount;
     static long VanillaStates::NoDropBit;
+    static long VanillaStates::KelpAge;
     static long VanillaStates::OccupiedBit;
     static long VanillaStates::OpenBit;
     static long VanillaStates::OutputSubtractBit;
@@ -106,6 +107,7 @@ public:
     static long VanillaStates::LeverDirection;
     static long VanillaStates::PillarAxis;
     static long VanillaStates::BlockLightLevel;
+    static long VanillaStates::BeehiveHoneyLevel;
 
 
     void registerStates(void);

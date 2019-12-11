@@ -35,9 +35,10 @@ public:
     void composeFullStack(ResourcePackStack &, ResourcePackStack const&, ResourcePackStack const&, ResourcePackStack const&)const;
     void _composeFullStack(void);
     void _notifyFullStackInvalid(void);
+    void _calculateMinEngineVersionFromFullStack(void);
     void notifyActiveResourcePackChanged(void);
     void _updateLanguageSubpacks(void);
-    void getGlobalStackFromFullStack(ResourcePackStack &)const;
+    void getFullStackMinEngineVersion(void)const;
     void registerResourcePackListener(ResourcePackListener &);
     void unRegisterResourcePackListener(ResourcePackListener &);
     void unRegisterAllResourcePackListener(void);
@@ -45,6 +46,7 @@ public:
     void getResourcesOfGroup(PackInstance const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
     void _getResourcesOfGroup(PackInstance const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &)const;
     void getResourcesOfGroup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    bool isOnlyBaseGamePacks(void)const;
     void checkHasExtraLocaleResources(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
     void onLanguageChanged(void);
     void onBaseGamePackDownloadComplete(void);
@@ -64,7 +66,6 @@ public:
     void setExperimentalGameplay(bool);
     bool isExperimentalGameplay(void)const;
     void getFullStackAccess(void)const;
-    bool isOnlyVanilla(void)const;
     void removePack(ResourcePack *);
     void getFullStack(void)const;
     void getFullStack(void);

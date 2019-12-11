@@ -20,7 +20,7 @@ public:
     virtual void attack(Player *, BlockPos const&)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
-    virtual void executeEvent(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    virtual void executeEvent(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Actor &)const;
     virtual bool hasTag(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
     virtual void getRenderLayer(void)const;
     virtual void getRenderLayer(Block const&, BlockSource &, BlockPos const&)const;

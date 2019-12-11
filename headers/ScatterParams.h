@@ -6,7 +6,6 @@ public:
 
     void ScatterParams(void);
     void ScatterParams(ScatterParams const&);
-    void ScatterParams(ScatterParams&&);
     void _getPos(unsigned int, BlockPos const&, Random &, RenderParams &)const;
     void initMolangParams(RenderParams &, BlockPos const&, Random &);
     void scatter(RenderParams &, BlockPos const&, Random &)const;

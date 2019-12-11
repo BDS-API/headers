@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptServerBroadcastActorDefinitionEvent : ScriptTemplateFactory_ltScriptServerContext_ge::ReceivedEvent {
+class ScriptServerBroadcastActorDefinitionEvent : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
 
 public:
     static long ScriptServerBroadcastActorDefinitionEvent::mHash;

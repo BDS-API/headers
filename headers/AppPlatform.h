@@ -21,6 +21,7 @@ public:
     virtual void supportsScripting(void)const;
     virtual void supportsInPackageRecursion(void)const;
     virtual void supportsXboxLiveAchievements(void)const;
+    virtual void hideSplashScreen(void);
     virtual void updateLocalization(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void setSleepEnabled(bool);
     virtual bool hasSeparatedStorageAreasForContentAcquisition(void)const;
@@ -50,6 +51,7 @@ public:
     virtual void startBroadcast(void);
     virtual bool isContentAutoUpdateAllowed(void)const;
     virtual void getMaxSimultaneousDownloads(void)const;
+    virtual void getMaxSimultaneousServiceRequests(void)const;
     virtual bool isDownloadAndImportBlocking(void)const;
     virtual bool isDownloadBuffered(void)const;
     virtual void supportsAutoSaveOnDBCompaction(void)const;
@@ -94,6 +96,7 @@ public:
     virtual void setFullscreenMode(FullscreenMode);
     virtual bool isNetworkThrottled(void);
     virtual bool isLANAllowed(void)const;
+    virtual void doesLANRequireMultiplayerRestrictions(void)const;
     virtual void trackPurchaseEvent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void sendBrazeEvent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     virtual void sendBrazeEventWithProperty(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
@@ -162,6 +165,7 @@ public:
     virtual void onPrimaryUserNetworkReady(void);
     virtual void requiresNetworkOutageMessaging(void)const;
     virtual void usesAsyncOptionSaving(void)const;
+    virtual void showPlatformStoreIcon(bool);
     virtual void getPlatformDpi(void)const;
     virtual void getPlatformUIScalingRules(void)const;
     virtual void _onInitialize(void);

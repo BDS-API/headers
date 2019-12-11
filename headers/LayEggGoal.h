@@ -1,6 +1,6 @@
 #pragma once
 
-class LayEggGoal : MoveToBlockGoal {
+class LayEggGoal : BaseMoveToBlockGoal {
 
 public:
     virtual ~LayEggGoal();

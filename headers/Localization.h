@@ -4,7 +4,6 @@ class Localization {
 
 public:
 
-    void Localization(Localization const&);
     void getLanguageCode(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     void getRegionCode(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     void getStringIdExists(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;

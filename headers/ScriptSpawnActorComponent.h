@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptSpawnActorComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptSpawnActorComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptSpawnActorComponent::mHash;

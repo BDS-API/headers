@@ -197,6 +197,9 @@ public:
     void getXxa(void)const;
     void getYya(void)const;
     void getZza(void)const;
+    void getJumpMultiplier(void);
+    void getJumpPrevention(void);
+    void emitJumpPreventedEvent(BlockPos const&);
     void shouldApplyWaterGravity(void);
     void saveMainhand(void)const;
     void _saveArmor(void);
@@ -211,6 +214,7 @@ public:
     void _updateMobTravel(void);
     void updateAttackAnim(void);
     void setJumping(bool);
+    bool isJumpOnBlockPrevented(BlockPos const&);
     bool canPickUpLoot(ItemStack const&)const;
     void snapToYHeadRot(float);
     void snapToYBodyRot(float);

@@ -28,6 +28,8 @@ public:
     virtual void _attemptPathToTarget(Actor *);
     virtual void _attemptAttackTarget(Actor *);
 
-    void MeleeAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, bool);
+    void MeleeAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, bool, DefinitionTrigger);
+    void _targetPositionPutsMobInSun(void);
     void _getAttackReach(void);
+    void _inSunlight(Actor const&)const;
 };

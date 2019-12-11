@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptServerLoggerConfigReceivedEvent : ScriptTemplateFactory_ltScriptServerContext_ge::ReceivedEvent {
+class ScriptServerLoggerConfigReceivedEvent : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
 
 public:
     static long ScriptServerLoggerConfigReceivedEvent::mHash;

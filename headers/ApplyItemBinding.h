@@ -1,6 +1,6 @@
 #pragma once
 
-class ApplyItemBinding : ScriptTemplateFactory_ltScriptServerContext_ge::Entity {
+class ApplyItemBinding : ScriptTemplateFactory<ScriptServerContext>::Entity {
 
 public:
     virtual ~ApplyItemBinding();

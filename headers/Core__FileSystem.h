@@ -48,6 +48,7 @@ public:
     void createUniquePathFromSeed(Core::Path const&, std::function<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> ()(int)>);
     void readFileData(Core::Path const&, unsigned long, unsigned long, std::vector<unsigned char, std::allocator<unsigned char>> &, unsigned long &);
     void cleanPathSeparators_deprecated(Core::PathBuffer<Core::StackString<char, 1024ul>> &, Core::Path const&);
+    void checkStorageCorrupt(Core::Path const&);
     void _copyDirectoryStructure(Core::Path const&, Core::Path const&, std::vector<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> const&, Core::FileSystemImpl *);
     void _copyFilesWithLimit(Core::Path const&, Core::Path const&, std::vector<Core::FileSystem::BasicFileData, std::allocator<Core::FileSystem::BasicFileData>> &, unsigned long &, unsigned long, std::function<Core::Result ()(Core::Path const&, Core::Path const&, Core::FileSystem::FileTransferProgress &)> const&);
 };

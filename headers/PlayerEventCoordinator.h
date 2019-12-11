@@ -6,6 +6,7 @@ public:
 
     void sendPlayerHurt(Player &, ActorDamageSource &);
     void sendPlayerMove(Player &);
+    void sendPlayerSlide(Player &);
     void sendPlayerTick(Player &);
     void sendPlayerTeleported(Player &);
     void sendPlayerDestroyedBlock(Player &, int, int, int);

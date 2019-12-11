@@ -31,6 +31,7 @@ public:
     void tryLightFire(BlockSource &, BlockPos const&);
     void _canBeLit(BlockSource &, BlockPos const&);
     void tryDouseFire(BlockSource &, BlockPos const&, bool);
+    bool isLit(Block const&);
     void _getBlockActor(BlockSource &, BlockPos const&)const;
     void _dropCookingFood(BlockSource &, BlockPos const&)const;
     void _getShape(Block const&, AABB &)const;

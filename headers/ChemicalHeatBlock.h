@@ -5,7 +5,7 @@ class ChemicalHeatBlock : BlockLegacy {
 public:
     virtual ~ChemicalHeatBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
-    virtual bool canBeUsedInCommands(bool)const;
+    virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void getExtraRenderLayers(void)const;
 

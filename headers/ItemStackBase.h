@@ -16,10 +16,10 @@ public:
     void setStackSize(unsigned char);
     void _write(BinaryStream &)const;
     void _read(ReadOnlyBinaryStream &);
+    bool isInstance(Item const&)const;
     void sameItem(int, int)const;
     bool hasFeedingAnimation(void)const;
     void forceSetCount(unsigned char);
-    bool isInstance(Item const&)const;
     void ItemStackBase(void);
     void init(int, int, int);
     void ItemStackBase(BlockLegacy const&, int);
@@ -150,4 +150,5 @@ public:
     void serializeComponents(IDataOutput &)const;
     void deserializeComponents(IDataInput &);
     bool isExperimental(void)const;
+    void getRequiredBaseGameVersion(void)const;
 };

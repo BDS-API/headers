@@ -20,7 +20,7 @@ public:
     virtual bool isLevelMarkedForSync(Core::Path const&)const;
     virtual bool isLevelPartiallyCopied(Core::Path const&)const;
     virtual void getPathToLevel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
-    virtual void getPathToLevelInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    virtual void getPathToLevelInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool)const;
 
     void ExternalFileLevelStorageSource(Core::FilePathManager *, std::shared_ptr<SaveTransactionManager>);
 };

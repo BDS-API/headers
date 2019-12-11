@@ -9,9 +9,11 @@ public:
     static long MinecraftWorkerPool::RENDERING;
     static long MinecraftWorkerPool::LEVELDB;
     static long MinecraftWorkerPool::CONNECTEDSTORAGE;
+    static long MinecraftWorkerPool::WATCHDOG;
 
 
     void loadWorkerConfigurations(unsigned int, unsigned int);
+    void initializeDefaults(void);
     void configureMainThread(void);
     void configureServerThread(void);
     void createSingletons(void);

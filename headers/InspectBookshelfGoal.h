@@ -1,6 +1,6 @@
 #pragma once
 
-class InspectBookshelfGoal : MoveToBlockGoal {
+class InspectBookshelfGoal : BaseMoveToBlockGoal {
 
 public:
     virtual ~InspectBookshelfGoal();
@@ -9,7 +9,7 @@ public:
     virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
     virtual bool isValidTarget(BlockSource &, BlockPos const&);
     virtual void _canReach(BlockPos const&);
-    virtual void findNearestBlock(void);
+    virtual void findTargetBlock(void);
 
     void InspectBookshelfGoal(Mob &, float, int, int, int, float);
 };

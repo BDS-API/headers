@@ -1,6 +1,6 @@
 #pragma once
 
-class Social::MultiplayerServiceObserver : Core::Observer_ltSocial::MultiplayerServiceObserver_Core::SingleThreadedLock_ge {
+class Social::MultiplayerServiceObserver : Core::Observer<Social::MultiplayerServiceObserver, Core::SingleThreadedLock> {
 
 public:
     virtual ~MultiplayerServiceObserver();

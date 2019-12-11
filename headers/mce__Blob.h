@@ -8,7 +8,6 @@ public:
     void cbegin(void)const;
     void cend(void)const;
     void begin(void);
-    void end(void);
     void get(void);
     void getSpan(void);
     void getSpan(void)const;
@@ -16,6 +15,7 @@ public:
     void Blob(unsigned long);
     void Blob(unsigned char const*, unsigned long);
     void Blob(mce::Blob&&);
+    void end(void);
     void swap(mce::Blob&);
     void empty(void)const;
     void data(void);

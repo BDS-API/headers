@@ -54,9 +54,12 @@ public:
     bool isStuck(int)const;
     void incrementTick(void);
     void updateLastStuckCheck(Mob const&);
+    void getTargetOffset(void)const;
+    void setTargetOffset(Vec3 const&);
     bool canUpdatePath(Mob const&)const;
     void createPath(Mob &, Vec3 const&);
     void moveTo(Mob &, Vec3 const&, float);
+    void moveTo(Mob &, Vec3 const&, float, Vec3 const&);
     void createPath(Mob &, Actor &);
     void moveTo(Mob &, Actor &, float);
     void moveTo(Mob &, std::unique_ptr<Path, std::default_delete<Path>>, float);

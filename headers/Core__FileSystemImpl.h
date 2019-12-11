@@ -44,6 +44,7 @@ public:
     void getFileStats(void);
     void getGlobalStats(void);
     void FileSystemImpl(Core::FileAccessType, std::shared_ptr<Core::FileStorageArea>, std::shared_ptr<Core::FlatFileManifestTracker>);
+    void _isTransactionEnded(void)const;
     void getAccessType(void)const;
     void getStorageArea(void);
     void setLoggingEnabled(bool);

@@ -10,6 +10,7 @@ public:
     virtual void addParticleEffect(HashedString const&, Vec3 const&, MolangVariableMap const&);
     virtual void addParticleEffect(HashedString const&, Actor const&, HashedString const&, Vec3 const&, MolangVariableMap const&);
     virtual void addTerrainParticleEffect(BlockPos const&, Block const&, Vec3 const&, float, float, float);
+    virtual void addTerrainSlideEffect(BlockPos const&, Block const&, Vec3 const&, float, float, float);
     virtual void addBreakingItemParticleEffect(Vec3 const&, ParticleType, TextureUVCoordinateSet const&, bool);
     virtual void playMusic(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Vec3 const&, float, float);
     virtual void playStreamingMusic(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, int, int);

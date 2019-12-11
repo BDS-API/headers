@@ -1,6 +1,6 @@
 #pragma once
 
-class ApplyLegacyEntityBinding : ScriptTemplateFactory_ltScriptServerContext_ge::Entity {
+class ApplyLegacyEntityBinding : ScriptTemplateFactory<ScriptServerContext>::Entity {
 
 public:
     virtual ~ApplyLegacyEntityBinding();

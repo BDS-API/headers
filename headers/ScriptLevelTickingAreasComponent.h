@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptLevelTickingAreasComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptLevelTickingAreasComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptLevelTickingAreasComponent::mHash;

@@ -1,6 +1,6 @@
 #pragma once
 
-class MoveToLandGoal : MoveToBlockGoal {
+class MoveToLandGoal : BaseMoveToBlockGoal {
 
 public:
     virtual ~MoveToLandGoal();

@@ -27,6 +27,7 @@ public:
     void getChunk(ChunkPos const&)const;
     void addToTickingQueue(BlockPos const&, Block const&, int, int);
     void _addToTickingQueue(BlockPos const&, Block const&, int, int, TickingQueueType);
+    void addToRandomTickingQueuePercentChance(BlockPos const&, Block const&, float, int);
     void addToRandomTickingQueue(BlockPos const&, Block const&, int, int);
     void removeFromTickingQueue(BlockPos const&, Block const&);
     void _removeFromTickingQueue(BlockPos const&, Block const&, TickingQueueType);
@@ -158,7 +159,7 @@ public:
     void getHardcodedEntitySpawn(BlockPos const&, ActorType)const;
     void findNextTopSolidBlockUnder(BlockPos &);
     void findNextTopSolidBlockAbove(BlockPos &);
-    void findNextSpawnBlockUnder(BlockPos &, MaterialType);
+    void findNextSpawnBlockUnder(BlockPos &, MaterialType, SpawnBlockRequirements);
     bool canSeeSkyFromBelowWater(BlockPos const&);
     void getRawBrightness(int, int, int, bool);
     void getAboveTopSolidBlock(int, int, bool, bool);

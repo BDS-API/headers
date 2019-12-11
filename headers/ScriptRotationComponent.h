@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptRotationComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptRotationComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptRotationComponent::mHash;

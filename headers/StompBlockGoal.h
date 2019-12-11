@@ -1,6 +1,6 @@
 #pragma once
 
-class StompBlockGoal : MoveToBlockGoal {
+class StompBlockGoal : BaseMoveToBlockGoal {
 
 public:
     virtual ~StompBlockGoal();

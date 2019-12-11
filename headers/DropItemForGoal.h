@@ -1,6 +1,6 @@
 #pragma once
 
-class DropItemForGoal : MoveToBlockGoal {
+class DropItemForGoal : BaseMoveToBlockGoal {
 
 public:
     static long DropItemForGoal::COOLDOWN_TICKS;
@@ -13,7 +13,7 @@ public:
     virtual void tick(void);
     virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
     virtual bool isValidTarget(BlockSource &, BlockPos const&);
-    virtual void findNearestBlock(void);
+    virtual void findTargetBlock(void);
 
     void DropItemForGoal(Mob &, float, int, int, float, DefinitionTrigger const&, float, float, float, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, FloatRange);
     void _getLootTable(void);

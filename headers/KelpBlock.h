@@ -22,6 +22,7 @@ public:
 
     void KelpBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
     void checkAlive(BlockSource &, BlockPos const&)const;
-    void getAge(Block const&)const;
     void shouldGrow(BlockSource &, BlockPos const&)const;
+    void getAge(Block const&)const;
+    void _tryGrow(BlockSource &, BlockPos const&, int)const;
 };

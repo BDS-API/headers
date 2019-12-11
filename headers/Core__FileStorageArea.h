@@ -6,7 +6,8 @@ public:
     virtual ~FileStorageArea();
     virtual void notifyChangeInFileSize(long, long);
     virtual void handlesPendingWrites(void)const;
-    virtual void informPendingWriteSize(unsigned long);
+    virtual void informPendingWriteSize(unsigned long const&, bool);
+    virtual void informStorageAreaCopy(unsigned long const&);
     virtual void supportsExtendSize(void)const;
     virtual bool canExtendSize(void)const;
     virtual void resetCanAttemptExtendSize(void);
@@ -19,12 +20,13 @@ public:
     virtual void tick(void);
     virtual void flushImmediately(void);
     virtual void enableFlushToDisk(bool);
+    virtual void checkCorrupt(bool);
     virtual void getFlushableLevelDbEnvType(void)const;
     virtual void getTransactionWriteSizeLimit(void)const;
     virtual void setSaveDataIcon(Core::Path const&);
-    virtual void onFlushTransactionComplete(void);
     virtual void _commit(void);
     virtual void _onTransactionsEmpty(bool);
+    virtual void _onTeardown(void);
 
     bool isOutOfDiskSpaceError(void)const;
     void notifyCriticalDiskError(Core::LevelStorageState const&);
@@ -32,7 +34,8 @@ public:
     void getStorageAreaForPath(std::shared_ptr<Core::FileStorageArea> &, Core::Path const&);
     void _getStorageAreaForPathImpl(std::shared_ptr<Core::FileStorageArea> &, Core::Path const&);
     void unloadAllStorageAreaFlatFileManifests(bool);
-    void FileStorageArea(Core::FileAccessType, Core::Path const&, bool, bool);
+    void teardown(void);
+    void FileStorageArea(Core::FileAccessType, Core::Path const&, bool, bool, std::shared_ptr<Core::FileStorageArea>);
     void setLoggingEnabled(bool);
     void getAccessType(void)const;
     void _notifyBeginWrite(void);

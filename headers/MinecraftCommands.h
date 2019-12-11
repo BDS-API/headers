@@ -7,7 +7,7 @@ public:
     void setOpPermissionLevel(CommandPermissionLevel);
     void getOpPermissionLevel(void)const;
     void MinecraftCommands(Minecraft &, Automation::AutomationClient &);
-    void initCoreEnums(bool);
+    void initCoreEnums(bool, BaseGameVersion const&);
     void getRegistry(void);
     void getRegistry(void)const;
     void requestCommandExecution(std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool)const;

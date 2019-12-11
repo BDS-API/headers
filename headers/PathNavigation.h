@@ -18,4 +18,6 @@ public:
     virtual void updatePath(NavigationComponent &, Mob &);
 
     void PathNavigation(void);
+    void _isPositionOnlyInAir(BlockSource const&, Vec3 const&, Vec2 const&)const;
+    void _getHighestBlockHeight(BlockSource &, Mob &, Vec3 const&, Vec2 const&)const;
 };

@@ -24,5 +24,6 @@ public:
     bool isComplete(void)const;
     void sync(ResourceLoadType);
     void setAppSuspended(bool);
+    bool isSuspended(void);
     void queueChild(std::function<TaskResult ()(void)>, std::function<void ()(void)>, unsigned int);
 };

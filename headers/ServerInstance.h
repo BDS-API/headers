@@ -31,11 +31,12 @@ public:
     void _running(void)const;
     void setWakeupFrequency(int);
     void startServerThread(void);
+    void queueForServerThread(std::function<void ()(void)>);
     void suspend(void);
     void resume(void);
-    void queueForServerThread(std::function<void ()(void)>);
     void getEventCoordinator(void);
     void getScriptEngine(void);
+    void disconnectRemoteClientsWithMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
     void disconnectAllClientsWithMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
     void getScheduler(void);
     bool isServerThreadRunning(void)const;

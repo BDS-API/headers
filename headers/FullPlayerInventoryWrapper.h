@@ -13,4 +13,5 @@ public:
     void removeResource(ItemStack const&, bool, int);
     void _removeCursorItem(ItemStack const&, bool, int);
     void _removeSimpleContainerItem(SimpleContainer &, ContainerID, int, ItemStack const&, bool, int);
+    void _sendCursorSlotPacket(void)const;
 };

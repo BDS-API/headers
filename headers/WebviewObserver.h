@@ -1,6 +1,6 @@
 #pragma once
 
-class WebviewObserver : Core::Observer_ltWebviewObserver_Core::SingleThreadedLock_ge {
+class WebviewObserver : Core::Observer<WebviewObserver, Core::SingleThreadedLock> {
 
 public:
     virtual ~WebviewObserver();

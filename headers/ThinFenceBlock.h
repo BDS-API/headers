@@ -11,7 +11,7 @@ public:
     virtual bool canConnect(Block const&, unsigned char, Block const&)const;
     virtual bool isThinFenceBlock(void)const;
     virtual bool canContainLiquid(void)const;
-    virtual bool canBeUsedInCommands(bool)const;
+    virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
 

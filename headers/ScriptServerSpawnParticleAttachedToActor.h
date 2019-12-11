@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptServerSpawnParticleAttachedToActor : ScriptTemplateFactory_ltScriptServerContext_ge::ReceivedEvent {
+class ScriptServerSpawnParticleAttachedToActor : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
 
 public:
     static long ScriptServerSpawnParticleAttachedToActor::mHash;

@@ -12,9 +12,8 @@ public:
     virtual void addAdditionalSaveData(CompoundTag &);
 
     void AreaEffectCloud(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void getSpawnTick(void)const;
-    void setSpawnTick(Tick);
-    void setSpawnTick(long);
+    void _getSpawnTick(void)const;
+    void _setSpawnTick(long);
     void notifyPickup(void);
     void setPickupCount(int);
     void getPickupCount(void)const;
@@ -39,8 +38,7 @@ public:
     void getDurationOnUse(void)const;
     void setReapplicationDelay(int);
     void getReapplicationDelay(void)const;
-    void spawnParticles(Random &, unsigned int, float);
+    void _spawnParticles(Random &, unsigned int, float);
     void setParticleColor(Color &);
     void setAffectOwner(bool);
-    void applyParticleColor(Particle *);
 };

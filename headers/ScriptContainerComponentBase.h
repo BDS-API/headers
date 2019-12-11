@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptContainerComponentBase : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptContainerComponentBase : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     virtual ~ScriptContainerComponentBase();

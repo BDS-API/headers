@@ -6,7 +6,7 @@ public:
     static long ElementBlock::mElements;
 
     virtual ~ElementBlock();
-    virtual bool canBeUsedInCommands(bool)const;
+    virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void tryLegacyUpgrade(unsigned short)const;
 

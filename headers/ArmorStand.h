@@ -21,6 +21,7 @@ public:
     virtual ~ArmorStand();
     virtual void normalTick(void);
     virtual void getShadowRadius(void)const;
+    virtual void interactPreventDefault(void);
     virtual bool isPickable(void);
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
     virtual void getInteraction(Player &, ActorInteraction &, Vec3 const&);

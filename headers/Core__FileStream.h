@@ -1,6 +1,6 @@
 #pragma once
 
-class Core::FileStream {
+class Core::FileStream : std::iostream {
 
 public:
     virtual ~FileStream();

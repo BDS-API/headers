@@ -1,6 +1,6 @@
 #pragma once
 
-class AddOceanTemperatureLayer : RootLayer_ltBiomeTemperatureCategory_ge {
+class AddOceanTemperatureLayer : RootLayer<BiomeTemperatureCategory> {
 
 public:
     virtual ~AddOceanTemperatureLayer();

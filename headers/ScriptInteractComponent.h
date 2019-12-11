@@ -1,6 +1,6 @@
 #pragma once
 
-class ScriptInteractComponent : ScriptTemplateFactory_ltScriptServerContext_ge::Component {
+class ScriptInteractComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
     static long ScriptInteractComponent::mHash;

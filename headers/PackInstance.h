@@ -21,6 +21,7 @@ public:
     bool hasIcon(PackIconType)const;
     void getIconFileSytem(void)const;
     bool isBaseGamePack(void)const;
+    bool isSlicePack(void)const;
     bool isType(PackType)const;
     bool isTrusted(void)const;
     void getResourceLocation(void)const;

@@ -23,6 +23,7 @@ public:
     void getRemovedDefinitionGroup(void)const;
     bool hasChanged(void)const;
     void size(void)const;
+    void definitionListToString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
     void forEachComponentGroup(std::function<bool ()(bool, ActorDefinitionPtr)>);
     void buildDescriptionFrom(unsigned long, unsigned long);
 };

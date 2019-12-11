@@ -4,6 +4,7 @@ class Path {
 
 public:
 
+    void Path(Path const&);
     void Path(void);
     void buildFromNodes(std::vector<Path::Node, std::allocator<Path::Node>> &&, PathCompletionType);
     void next(void);
@@ -15,6 +16,7 @@ public:
     void getIndex(void)const;
     void setIndex(unsigned long);
     void getPos(Actor const*, unsigned long)const;
+    void getBlockPos(Actor const*, unsigned long)const;
     void currentPos(Actor const*)const;
     void getCompletionType(void)const;
     void currentPos(void)const;

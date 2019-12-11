@@ -1,6 +1,6 @@
 #pragma once
 
-class MinecraftServerScriptEngine : ScriptEngineWithContext_ltScriptServerContext_ge, ServerInstanceEventListener {
+class MinecraftServerScriptEngine : ScriptEngineWithContext<ScriptServerContext>, ServerInstanceEventListener {
 
 public:
     virtual ~MinecraftServerScriptEngine();

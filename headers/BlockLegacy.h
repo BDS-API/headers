@@ -4,11 +4,11 @@ class BlockLegacy {
 
 public:
     static long BlockLegacy::SIZE_OFFSET;
-    static long BlockLegacy::mLevelIsExperimental;
 
     virtual ~BlockLegacy();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
+    virtual void getNextBlockPermutation(Block const&)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual bool isObstructingChests(BlockSource &, BlockPos const&)const;
     virtual void randomlyModifyPosition(BlockPos const&, int &)const;
@@ -56,7 +56,7 @@ public:
     virtual bool canContainLiquid(void)const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void handleRain(BlockSource &, BlockPos const&, float)const;
-    virtual bool canBeUsedInCommands(bool)const;
+    virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void getThickness(void)const;
     virtual void getFlexibility(BlockSource &, BlockPos const&)const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
@@ -110,7 +110,7 @@ public:
     virtual void getExperienceDrop(Random &)const;
     virtual bool canBeBuiltOver(BlockSource &, BlockPos const&)const;
     virtual void triggerEvent(BlockSource &, BlockPos const&, int, int)const;
-    virtual void executeEvent(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    virtual void executeEvent(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Actor &)const;
     virtual bool hasTag(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
     virtual void getMobToSpawn(SpawnConditions const&, BlockSource &)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
@@ -169,7 +169,6 @@ public:
     bool isMobPiece(void)const;
     bool canBeExtraBlock(void)const;
     bool canPropagateBrightness(void)const;
-    void setLevelExperimental(bool);
     void shouldRandomTickExtraLayer(void)const;
     bool canBeBrokenFromFalling(void)const;
     void createBlockPermutations(unsigned int);
@@ -183,8 +182,9 @@ public:
     void getMaterial(void)const;
     void getFriction(void)const;
     void getDestroySpeed(void)const;
-    void tryGetStateFromLegacyData(unsigned short)const;
+    void _tryGetStateFromLegacyDataUncached(unsigned short)const;
     void getDefaultState(void)const;
+    void tryGetStateFromLegacyData(unsigned short)const;
     void clip(BlockSource &, BlockPos const&, Vec3 const&, Vec3 const&, bool, AABB const&)const;
     void spawnResources(BlockSource &, BlockPos const&, float, int)const;
     void popResource(BlockSource &, BlockPos const&, ItemInstance const&)const;
@@ -206,8 +206,10 @@ public:
     void setRandomTicking(bool)const;
     void setRandomTickingExtraLayer(bool)const;
     void setExperimental(void);
+    void setMinRequiredBaseGameVersion(BaseGameVersion const&);
     void setCanBeExtraBlock(bool);
     void setCanPropagateBrightness(bool);
+    void getRequiredBaseGameVersion(void)const;
     void getExperimental(void)const;
     void getAllowsRunes(void)const;
     void setCategory(CreativeItemCategory);

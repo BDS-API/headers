@@ -10,8 +10,8 @@ public:
     virtual void createPath(NavigationComponent &, Mob &, Vec3 const&);
     virtual void createPath(NavigationComponent &, Mob &, Actor &);
     virtual void stop(NavigationComponent &, Mob &);
+    virtual bool canUpdatePath(Mob const&)const;
     virtual void updatePath(NavigationComponent &, Mob &);
 
     void FlyingPathNavigation(void);
-    bool canUpdatePathNonPolymorphic(Mob const&)const;
 };

@@ -28,6 +28,8 @@ public:
     void awakenAllPlayers(void);
     void stopWeather(void);
     void allPlayersSleeping(void)const;
+    void setShouldSendSleepMessage(bool);
+    void shouldSendSleepMessage(void)const;
     void getCommands(void);
     void getFunctionManager(void);
     void getMobEvents(void);

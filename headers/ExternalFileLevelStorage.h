@@ -6,7 +6,9 @@ public:
 
     void _writeLevelDat(Core::Path const&, LevelData const&);
     void validateLevelDat(Core::Path);
-    void saveLevelData(Core::Path const&, LevelData const&);
+    void saveLevelData(Core::Path const&, LevelData const&, bool);
+    void saveLevelDataToPath(Core::Path const&, LevelData const&);
+    void saveLevelDisplayDataToCache(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, LevelData const&, TaskGroup *);
     void makeReadableLevelnameFile(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
     void readLevelDataFromData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, LevelData &);
     void _readLevelDataFromFile(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, LevelData &);
@@ -18,6 +20,6 @@ public:
     bool isLevelMarkedForSync(Core::Path const&);
     void markLevelAsCloudSave(Core::Path const&);
     bool isLevelCloudSave(Core::Path const&);
-    void copyLevelInfoToDiskCache(Core::Path const&);
+    void copyLevelInfoToDiskCache(Core::Path const&, bool);
     void getLevelModifiedTimestamp(Core::Path const&);
 };

@@ -17,6 +17,7 @@ public:
     virtual void onLocalPlayerDeath(IClientInstance &, LocalPlayer &);
     virtual void onLocalPlayerRespawn(IClientInstance &, LocalPlayer &);
     virtual void onPlayerMove(Player &);
+    virtual void onPlayerSlide(Player &);
     virtual void onPlayerTick(Player &);
     virtual void onPlayerStartRiding(Player &, Actor &);
     virtual void onPlayerStopRiding(Player &, bool, bool, bool);

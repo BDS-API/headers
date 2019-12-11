@@ -16,6 +16,8 @@ public:
     void Stop(void);
     void CreateListenSocket(unsigned short, unsigned short, unsigned short, char const*);
     void _removeFromBlockingSocketList(int const&);
+    void DestroyListenSocket(void);
+    void RecreateListenSocket(void);
     void Start(unsigned short, unsigned short, unsigned short, int, unsigned short, char const*);
     void DeallocatePacket(RakNet::Packet *);
     void Connect(char const*, unsigned short, bool, unsigned short, char const*);

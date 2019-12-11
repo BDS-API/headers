@@ -13,6 +13,8 @@ public:
     void getCachedHitResult(void)const;
     void setReflect(bool);
     void setWaitingForServer(bool);
+    void getWaitingToHitGround(void)const;
+    void setWaitingToHitGround(bool);
     void getWasOnGround(void)const;
     void setWasOnGround(bool);
     void getFoundApex(void)const;
@@ -104,7 +106,6 @@ public:
     void setHitActor(bool);
     void decrementActorHitCount(void);
     void getActorHitCount(void)const;
-    void getWaitingToHitGround(void)const;
     void setHitFace(unsigned char const&);
     void getSplashRange(void);
     void setDamage(float);

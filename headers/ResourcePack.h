@@ -10,6 +10,7 @@ public:
     void getPackId(void)const;
     void getVersion(void)const;
     bool isBaseGamePack(void)const;
+    bool isSlicePack(void)const;
     void getPack(void)const;
     bool isType(PackType)const;
     bool isTrusted(void)const;
@@ -49,4 +50,5 @@ public:
     void getLoadTime(void)const;
     void onLoadingFinished(void);
     void setAsBaseGamePack(void);
+    void setAsSlicePack(void);
 };

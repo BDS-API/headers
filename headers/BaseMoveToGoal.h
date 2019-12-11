@@ -16,6 +16,10 @@ public:
     virtual void _getRepathTime(void)const;
 
     void BaseMoveToGoal(Mob &, float, float, float, int, int);
-    void _blockAboveTarget(void)const;
+    void setTargetPositionOffset(Vec3 const&);
+    void _isCooldownActive(void)const;
+    void _tickCooldown(void);
+    void _checkIfStuck(void);
     void setInterval(int);
+    void _blockAboveTarget(void)const;
 };

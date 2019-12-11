@@ -3,6 +3,7 @@
 class PlayerUIContainerModelBase : ContainerModel {
 
 public:
+    virtual void containerContentChanged(int);
     virtual ~PlayerUIContainerModelBase();
     virtual void postInit(void);
     virtual void releaseResources(void);

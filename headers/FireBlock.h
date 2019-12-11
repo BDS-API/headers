@@ -24,6 +24,5 @@ public:
     void checkBurn(BlockSource &, BlockPos const&, int, Random &, int)const;
     void getFireOdds(BlockSource &, BlockPos const&)const;
     void getFlammability(BlockSource &, BlockPos const&, int)const;
-    void ignite(BlockSource &, BlockPos const&);
-    void tryIgnite(BlockSource &, BlockPos const&);
+    void _tryEvictBeehive(BlockSource &, BlockPos const&)const;
 };

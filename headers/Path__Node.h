@@ -4,7 +4,8 @@ class Path::Node {
 
 public:
 
+    void Node(Path::Node const&);
     void set(PathfinderNode const&);
     void Node(void);
-    void Node(Path::Node const&);
+    void getType(void)const;
 };

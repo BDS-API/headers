@@ -471,6 +471,10 @@ public:
     static long VanillaBlocks::mComposterBlock;
     static long VanillaBlocks::mLightBlock;
     static long VanillaBlocks::mWitherRose;
+    static long VanillaBlocks::mBeehive;
+    static long VanillaBlocks::mBeeNest;
+    static long VanillaBlocks::mHoneyBlock;
+    static long VanillaBlocks::mHoneycombBlock;
 
 
     void assignBlocks(void);

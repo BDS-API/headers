@@ -1,6 +1,6 @@
 #pragma once
 
-class PetSleepWithOwnerGoal : MoveToBlockGoal {
+class PetSleepWithOwnerGoal : BaseMoveToBlockGoal {
 
 public:
     static long PetSleepWithOwnerGoal::SETTLE_TICKS;
@@ -16,7 +16,7 @@ public:
     virtual bool isValidTarget(BlockSource &, BlockPos const&);
     virtual void _nextStartTick(void);
     virtual void _moveToBlock(void);
-    virtual void findNearestBlock(void);
+    virtual void findTargetBlock(void);
 
     void PetSleepWithOwnerGoal(Mob &, float, int, int, float);
 };

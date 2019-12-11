@@ -237,6 +237,8 @@ public:
     static long VanillaItems::mCampfire;
     static long VanillaItems::mBannerPattern;
     static long VanillaItems::mSuspiciousStew;
+    static long VanillaItems::mHoneycomb;
+    static long VanillaItems::mHoneyBottle;
 
 
     void registerItems(bool);

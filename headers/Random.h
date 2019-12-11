@@ -29,7 +29,7 @@ public:
     void getThreadLocal(void);
     void nextUnsignedInt(unsigned int);
     void nextIntInclusive(int, int);
-    void nextDouble(void);
     void operator()(int);
+    void nextDouble(void);
     void nextUnsignedChar(void);
 };

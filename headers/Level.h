@@ -301,6 +301,7 @@ public:
     void addParticleEffect(HashedString const&, Vec3 const&, MolangVariableMap const&);
     void addParticleEffect(HashedString const&, Actor const&, HashedString const&, Vec3 const&, MolangVariableMap const&);
     void addTerrainParticleEffect(BlockPos const&, Block const&, Vec3 const&, float, float, float);
+    void addTerrainSlideEffect(BlockPos const&, Block const&, Vec3 const&, float, float, float);
     void addBreakingItemParticleEffect(Vec3 const&, ParticleType, TextureUVCoordinateSet const&, bool);
     bool hasCommandsEnabled(void)const;
     bool hasExperimentalGameplayEnabled(void)const;

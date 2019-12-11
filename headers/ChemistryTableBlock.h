@@ -8,7 +8,7 @@ public:
     virtual bool isWaterBlocking(void)const;
     virtual bool isValidAuxValue(int)const;
     virtual void onFillBlock(BlockSource &, BlockPos const&, Block const&)const;
-    virtual bool canBeUsedInCommands(bool)const;
+    virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void onRemove(BlockSource &, BlockPos const&)const;
     virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
