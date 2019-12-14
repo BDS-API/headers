@@ -5,8 +5,8 @@ class Objective {
 public:
 
     void getPlayerScore(ScoreboardId const&)const;
-    void Objective(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ObjectiveCriteria const&);
-    void setDisplayName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void Objective(std::string const&, ObjectiveCriteria const&);
+    void setDisplayName(std::string const&);
     void getRenderType(void)const;
     void getCriteria(void)const;
     void getPlayers(void)const;

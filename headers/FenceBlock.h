@@ -18,6 +18,6 @@ public:
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void FenceBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&);
+    void FenceBlock(std::string const&, int, Material const&);
     void fetchPathableNeighbors(std::vector<BlockPos, std::allocator<BlockPos>> &, BlockSource &, BlockPos const&, Vec3 const&)const;
 };

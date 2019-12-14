@@ -16,6 +16,6 @@ public:
     virtual void getVariant(Block const&)const;
     virtual void getFaceFlip(unsigned char, Block const&)const;
 
-    void BarrelBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&);
+    void BarrelBlock(std::string const&, int, Material const&);
     void setOpen(bool, BlockSource &, BlockPos const&);
 };

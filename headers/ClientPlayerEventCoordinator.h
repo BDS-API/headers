@@ -13,5 +13,5 @@ public:
     void sendLocalPlayerRespawn(IClientInstance &, LocalPlayer &);
     void sendPlayerStartRiding(Player &, Actor &);
     void sendPlayerStopRiding(Player &, bool, bool, bool);
-    void sendPlayerCreated(LocalPlayer &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void sendPlayerCreated(LocalPlayer &, std::string const&, std::string const&, bool);
 };

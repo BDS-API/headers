@@ -8,7 +8,7 @@ public:
     virtual bool isTintable(void)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
-    void BalloonItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void BalloonItem(std::string const&, int);
     void _getColorIndex(ItemDescriptor const&)const;
     bool canAttachToBlock(BlockPos const&, BlockSource const&);
     void _createKnot(BlockSource &, BlockPos, ItemInstance const&)const;

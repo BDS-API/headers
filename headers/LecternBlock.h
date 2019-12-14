@@ -20,7 +20,7 @@ public:
     virtual void getComparatorSignal(BlockSource &, BlockPos const&, Block const&, unsigned char)const;
     virtual bool isAuxValueRelevantForPicking(void)const;
 
-    void LecternBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void LecternBlock(std::string const&, int);
     void _dropBook(Player &, BlockPos const&)const;
     void _getBlockActor(BlockSource &, BlockPos const&)const;
     void emitRedstonePulse(BlockSource &, BlockPos const&)const;

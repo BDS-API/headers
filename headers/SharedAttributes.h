@@ -19,9 +19,9 @@ public:
     void _saveAttributeModifier(AttributeModifier const&);
     void _saveAttributeBuff(TemporalAttributeBuff const&);
     void loadAttributes(BaseAttributeMap *, ListTag const*);
-    void checkIsDeprecated(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
-    void _legacyGetName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void _legacyGetInstance(BaseAttributeMap *, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void checkIsDeprecated(std::string &);
+    void _legacyGetName(std::string const&);
+    void _legacyGetInstance(BaseAttributeMap *, std::string const&);
     void _loadAttribute(AttributeInstance &, CompoundTag const*);
     void loadAttributeModifier(CompoundTag const*);
     void loadAttributeBuff(CompoundTag const*);

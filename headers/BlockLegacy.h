@@ -110,8 +110,8 @@ public:
     virtual void getExperienceDrop(Random &)const;
     virtual bool canBeBuiltOver(BlockSource &, BlockPos const&)const;
     virtual void triggerEvent(BlockSource &, BlockPos const&, int, int)const;
-    virtual void executeEvent(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Actor &)const;
-    virtual bool hasTag(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    virtual void executeEvent(BlockSource &, BlockPos const&, Block const&, std::string const&, Actor &)const;
+    virtual bool hasTag(BlockSource &, BlockPos const&, Block const&, std::string const&)const;
     virtual void getMobToSpawn(SpawnConditions const&, BlockSource &)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void getMapColor(void)const;
@@ -174,7 +174,7 @@ public:
     void createBlockPermutations(unsigned int);
     void createWeakPtr(void);
     void setDefaultState(Block const&);
-    void BlockLegacy(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&);
+    void BlockLegacy(std::string const&, int, Material const&);
     void setSolid(bool);
     bool canInstatick(void)const;
     void getCreativeCategory(void)const;
@@ -199,7 +199,7 @@ public:
     bool hasProperty(BlockProperty)const;
     bool isInteraction(void)const;
     void setIsInteraction(bool);
-    void setNameId(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setNameId(std::string const&);
     void addBlockProperty(BlockProperty);
     void setBlockProperty(BlockProperty);
     void setFlammable(int, int)const;
@@ -226,7 +226,7 @@ public:
     void getProperties(void)const;
     void forEachBlockPermutation(std::function<bool ()(Block const&)>)const;
     void forEachItemStateInstance(std::function<bool ()(ItemStateInstance const&)>)const;
-    void getDebugText(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, BlockPos const&)const;
+    void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&)const;
     void getParticleQuantityScalar(void)const;
     void getPlacementFacingAll(Actor &, BlockPos const&, float);
     void getPlacementFacingAllExceptAxisY(Actor &, BlockPos const&, float);

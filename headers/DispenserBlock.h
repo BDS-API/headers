@@ -23,7 +23,7 @@ public:
     virtual void getTickDelay(void)const;
     virtual void dispenseFrom(BlockSource &, BlockPos const&)const;
 
-    void DispenserBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void DispenserBlock(std::string const&, int);
     void getDispensePosition(BlockSource &, Vec3 const&)const;
     void getFacing(Block const&)const;
     void ejectItem(BlockSource &, Vec3 const&, unsigned char, ItemStack const&, Container &, int)const;

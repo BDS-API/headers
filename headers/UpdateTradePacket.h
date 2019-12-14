@@ -9,5 +9,5 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void UpdateTradePacket(void);
-    void UpdateTradePacket(ContainerID, ContainerType, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, CompoundTag &&, ActorUniqueID const&, ActorUniqueID const, int, bool, bool);
+    void UpdateTradePacket(ContainerID, ContainerType, int, std::string const&, CompoundTag &&, ActorUniqueID const&, ActorUniqueID const, int, bool, bool);
 };

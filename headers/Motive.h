@@ -37,8 +37,8 @@ public:
 
 
     void getAllMotivesAsList(void);
-    void getMotiveByName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void Motive(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, int, int, int, int, bool);
+    void getMotiveByName(std::string const&);
+    void Motive(std::string, int, int, int, int, bool);
     void getDefaultImage(void);
     void getWidth(void)const;
     void getHeight(void)const;

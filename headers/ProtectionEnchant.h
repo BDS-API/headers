@@ -13,7 +13,7 @@ public:
     virtual void doPostHurt(ItemInstance &, Actor &, Actor &, int)const;
     virtual bool isProtectionEnchant(void)const;
 
-    void ProtectionEnchant(Enchant::Type, Enchant::Frequency, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, int);
+    void ProtectionEnchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, int);
     void getLevelCostSpanByType(void)const;
     void getThornsDamage(int)const;
 };

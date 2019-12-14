@@ -6,7 +6,7 @@ public:
     static long Scheduler::AVERAGE_TASK_TOLERANCE;
 
 
-    void Scheduler(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, unsigned int);
+    void Scheduler(std::string, unsigned int);
     void setTargetFPS(unsigned int);
     void _assignToThread(std::thread::id);
     void _removeSchedulerAssignment(void);

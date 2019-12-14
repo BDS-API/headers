@@ -18,7 +18,7 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void StemBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, BlockLegacy const&);
+    void StemBlock(std::string const&, int, BlockLegacy const&);
     void getGrowthSpeed(BlockSource &, BlockPos const&)const;
     void getConnectDir(BlockSource &, BlockPos const&, Block const&)const;
 };

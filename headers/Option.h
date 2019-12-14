@@ -4,12 +4,12 @@ class Option {
 
 public:
     virtual ~Option();
-    virtual void load(std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &);
+    virtual void load(std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>> &);
     virtual void load(Json::Value const&);
 
-    void Option(OptionID, OptionOwnerType, OptionResetFlags, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, OptionType);
+    void Option(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, OptionType);
     void unregisterObserver(void *);
-    void registerTelemetryProperty(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void registerTelemetryProperty(std::string const&);
     void getType(void)const;
     void getID(void)const;
     void getOptionOwnerType(void)const;
@@ -33,7 +33,7 @@ public:
     void set(InputMode, float);
     void set(InputMode, bool);
     void setDefault(bool);
-    void setCoerceValueCallback(std::function<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> ()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)>);
+    void setCoerceValueCallback(std::function<std::string ()(std::string const&)>);
     void setCoerceValueCallback(std::function<bool ()(bool)>);
     void setCoerceSaveValueCallback(std::function<int ()(int)>);
     void setRequestSaveCallback(std::function<void ()(bool)>);
@@ -50,10 +50,10 @@ public:
     bool canModify(void)const;
     void registerLock(void *, std::function<bool ()(void)>);
     void unregisterLock(void *);
-    void read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, float &);
-    void read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool &);
-    void read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int &);
-    void read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, glm::tvec3<float, (glm::precision)0> &);
-    void _updatePropertyVector(std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void read(std::string const&, float &);
+    void read(std::string const&, bool &);
+    void read(std::string const&, int &);
+    void read(std::string const&, glm::tvec3<float, (glm::precision)0> &);
+    void _updatePropertyVector(std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> &, std::string const&);
     void _setOptionType(OptionType);
 };

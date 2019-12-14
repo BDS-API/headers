@@ -174,11 +174,11 @@ public:
     void keepState(ItemState const&)const;
     void copyState(Block const&, ItemState const&)const;
     void getShadeBrightness(void)const;
-    void getDebugText(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, BlockPos const&)const;
+    void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&)const;
     void getParticleQuantityScalar(void)const;
     bool isStandingSign(void)const;
     void dealsContactDamage(Actor const&, bool)const;
-    bool hasTag(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    bool hasTag(BlockSource &, BlockPos const&, Block const&, std::string const&)const;
     void getPlacementFacingAll(Actor &, BlockPos const&, float);
     void getPlacementFacingAllExceptAxisY(Actor &, BlockPos const&, float);
     bool isTrapdoor(void)const;

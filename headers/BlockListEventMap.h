@@ -4,7 +4,7 @@ class BlockListEventMap {
 
 public:
 
-    void BlockListEventMap(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void BlockListEventMap(std::string);
     void addBlock(BlockLegacy const&);
     void BlockListEventMap(BlockListEventMap const&);
     void BlockListEventMap(BlockListEventMap&&);

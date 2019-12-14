@@ -8,5 +8,5 @@ public:
     virtual void initializeFromDefinition(Actor &);
 
     void MoveNode(void);
-    void convertDirectionStringToKeyPress(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void convertDirectionStringToKeyPress(std::string);
 };

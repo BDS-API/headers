@@ -12,5 +12,5 @@ public:
     virtual bool canHaveExtraData(void)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void StructureVoid(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void StructureVoid(std::string const&, int);
 };

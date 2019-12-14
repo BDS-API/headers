@@ -8,6 +8,6 @@ public:
     void protobuf_AssignDescriptors(void);
     void AddDescriptors(void);
     void protobuf_AssignDescriptorsOnce(void);
-    void protobuf_RegisterTypes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void protobuf_RegisterTypes(std::string const&);
     void AddDescriptorsImpl(void);
 };

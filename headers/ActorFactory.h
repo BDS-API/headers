@@ -11,7 +11,7 @@ public:
     void _constructActor(ActorDefinitionIdentifier const&, Vec3 const&, Vec2 const&);
     void loadEntity(CompoundTag const*, DataLoadHelper &);
     void fixLegacyEntity(BlockSource &, CompoundTag const*);
-    void createEntity(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ActorDefinitionIdentifier const&, Actor *, Vec3 const&, Vec2 const&);
+    void createEntity(std::string const&, ActorDefinitionIdentifier const&, Actor *, Vec3 const&, Vec2 const&);
     void createSpawnedEntity(ActorDefinitionIdentifier const&, Actor *, Vec3 const&, Vec2 const&);
     void createSummonedEntity(ActorDefinitionIdentifier const&, Actor *, Vec3 const&);
     void createBornEntity(ActorDefinitionIdentifier const&, Actor *);

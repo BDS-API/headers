@@ -15,5 +15,5 @@ public:
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
 
-    void ThinFenceBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&, bool, bool, bool);
+    void ThinFenceBlock(std::string const&, int, Material const&, bool, bool, bool);
 };

@@ -10,7 +10,7 @@ public:
     void assignBlockRuntimeIds(void);
     void clear(void);
     void appendBlock(Block const&);
-    void getBlockLegacy(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getBlockLegacy(std::string const&)const;
     void getBlockLegacy(CompoundTag const&)const;
     void getBlock(CompoundTag const&)const;
     void getBlock(unsigned int const&)const;

@@ -11,7 +11,7 @@ public:
     virtual void getVariant(Block const&)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
 
-    void MagmaBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void MagmaBlock(std::string const&, int);
     void getTickDelay(void)const;
     void addToTickQueue(BlockSource &, BlockPos const&, Random &)const;
 };

@@ -22,7 +22,7 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void TorchBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, MaterialType);
+    void TorchBlock(std::string const&, int, MaterialType);
     bool canBePlacedOn(BlockSource &, BlockPos const&, unsigned char)const;
     void _checkDoPop(BlockSource &, BlockPos const&)const;
     void _flameParticlePos(BlockPos const&, TorchFacing)const;

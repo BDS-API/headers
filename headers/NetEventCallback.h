@@ -8,10 +8,10 @@ public:
     virtual void onConnect(NetworkIdentifier const&);
     virtual void onUnableToConnect(void);
     virtual void onTick(void);
-    virtual void onStoreOfferReceive(bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void onDisconnect(NetworkIdentifier const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void onWebsocketRequest(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::function<void ()(void)>);
-    virtual void onTransferRequest(NetworkIdentifier const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void onStoreOfferReceive(bool, std::string const&);
+    virtual void onDisconnect(NetworkIdentifier const&, std::string const&, bool, std::string const&);
+    virtual void onWebsocketRequest(std::string const&, std::string const&, std::function<void ()(void)>);
+    virtual void onTransferRequest(NetworkIdentifier const&, std::string const&, int);
     virtual void handle(NetworkIdentifier const&, DisconnectPacket const&);
     virtual void handle(NetworkIdentifier const&, EmotePacket const&);
     virtual void handle(NetworkIdentifier const&, LoginPacket const&);

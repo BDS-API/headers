@@ -19,7 +19,7 @@ public:
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
 
-    void PortalBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void PortalBlock(std::string const&, int);
     void _canSpawnBasedOnDifficulty(Difficulty, unsigned long)const;
     void _locateFloorYValue(BlockSource &, BlockPos const&)const;
     void _offsetSpawnPosition(Vec3 &, PortalAxis)const;

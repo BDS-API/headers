@@ -4,12 +4,12 @@ class RakNetInstance::RakNetNetworkPeer : NetworkPeer {
 
 public:
     virtual ~RakNetNetworkPeer();
-    virtual void sendPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, NetworkPeer::Reliability, int, unsigned short, Compressibility);
-    virtual void receivePacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
+    virtual void sendPacket(std::string const&, NetworkPeer::Reliability, int, unsigned short, Compressibility);
+    virtual void receivePacket(std::string &);
     virtual void getNetworkStatus(void);
     virtual void update(void);
 
-    void newData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void newData(std::string);
     void RakNetNetworkPeer(RakNet::RakPeerInterface &, NetworkIdentifier const&);
     void getReliability(NetworkPeer::Reliability);
 };

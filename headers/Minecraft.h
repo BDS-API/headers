@@ -21,7 +21,7 @@ public:
     void setGameModeReal(GameType);
     void update(void);
     void getServerNetworkHandler(void);
-    void disconnectClient(NetworkIdentifier const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void disconnectClient(NetworkIdentifier const&, std::string const&);
     void tickSimtime(int, int);
     void tickRealtime(int, int);
     void getLevel(void)const;
@@ -31,9 +31,9 @@ public:
     bool isModded(void);
     bool isOnlineClient(void);
     void getNetworkStatistics(void)const;
-    void hostMultiplayer(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::unique_ptr<Level, std::default_delete<Level>>, Player *, mce::UUID const&, std::unique_ptr<NetEventCallback, std::default_delete<NetEventCallback>>, int, bool, bool, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, ConnectionDefinition const&, std::unordered_map<PackIdVersion, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::hash<PackIdVersion>, std::equal_to<PackIdVersion>, std::allocator<std::pair<PackIdVersion const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> const&, Scheduler &, TextFilteringProcessor *);
+    void hostMultiplayer(std::string const&, std::unique_ptr<Level, std::default_delete<Level>>, Player *, mce::UUID const&, std::unique_ptr<NetEventCallback, std::default_delete<NetEventCallback>>, int, bool, bool, std::vector<std::string, std::allocator<std::string>> const&, std::string, ConnectionDefinition const&, std::unordered_map<PackIdVersion, std::string, std::hash<PackIdVersion>, std::equal_to<PackIdVersion>, std::allocator<std::pair<PackIdVersion const, std::string>>> const&, Scheduler &, TextFilteringProcessor *);
     void getClientSubId(void)const;
-    void setupServerCommands(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setupServerCommands(std::string const&, std::string const&);
     void usesNonLocalConnection(NetworkIdentifier const&);
     void getNetworkHandler(void);
     void startClientGame(std::unique_ptr<NetEventCallback, std::default_delete<NetEventCallback>>);

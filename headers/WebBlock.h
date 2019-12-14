@@ -10,5 +10,5 @@ public:
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
 
-    void WebBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void WebBlock(std::string const&, int);
 };

@@ -9,5 +9,5 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void StructureTemplateDataRequestPacket(void);
-    void StructureTemplateDataRequestPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, NetworkBlockPosition const&, StructureSettings const&, StructureTemplateRequestOperation);
+    void StructureTemplateDataRequestPacket(std::string const&, NetworkBlockPosition const&, StructureSettings const&, StructureTemplateRequestOperation);
 };

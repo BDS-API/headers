@@ -12,8 +12,8 @@ public:
     void getType(void)const;
     void getMode(void)const;
     void setMode(NpcActionMode);
-    void setButtonName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void setText(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setButtonName(std::string const&);
+    void setText(std::string const&);
     void toJsonBase(Json::Value &);
     void read(Json::Value const&);
 };

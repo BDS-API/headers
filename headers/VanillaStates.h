@@ -112,5 +112,5 @@ public:
 
     void registerStates(void);
     void unregisterStates(void);
-    void getState(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getState(std::string const&);
 };

@@ -4,7 +4,7 @@ class GameTypeConv {
 
 public:
 
-    void stringToGameType(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void stringToIndividualGameType(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void stringToGameType(std::string const&);
+    void stringToIndividualGameType(std::string const&);
     void intToGameType(int);
 };

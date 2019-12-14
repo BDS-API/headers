@@ -66,5 +66,5 @@ public:
     void setEducationLevelSettings(EducationLevelSettings);
     void getEducationLevelSettings(void)const;
     void validateGameDifficulty(Difficulty);
-    void parseSeedString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned int);
+    void parseSeedString(std::string const&, unsigned int);
 };

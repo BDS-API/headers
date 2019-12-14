@@ -14,7 +14,7 @@ public:
     virtual void size(void)const;
     virtual bool isExperimental(void)const;
 
-    void MapLockingRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
-    void MapLockingRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, mce::UUID const&);
+    void MapLockingRecipe(std::string);
+    void MapLockingRecipe(std::string, mce::UUID const&);
     void _setLevel(Level &)const;
 };

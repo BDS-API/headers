@@ -14,6 +14,6 @@ public:
     virtual void size(void)const;
     virtual bool isExperimental(void)const;
 
-    void BannerDuplicateRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
-    void BannerDuplicateRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, mce::UUID const&);
+    void BannerDuplicateRecipe(std::string);
+    void BannerDuplicateRecipe(std::string, mce::UUID const&);
 };

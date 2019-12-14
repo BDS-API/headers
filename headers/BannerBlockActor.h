@@ -26,5 +26,5 @@ public:
     bool isDefaultBanner(ItemInstance const&);
     void getType(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&);
     void removeLastPattern(ItemStack &, Player &);
-    void setBannerDetails(ItemStack &, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, BannerBlockType);
+    void setBannerDetails(ItemStack &, int, std::string const&, std::string const&, BannerBlockType);
 };

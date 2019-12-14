@@ -51,7 +51,7 @@ public:
     virtual bool isDestructive(int)const;
     virtual bool isLiquidClipItem(int)const;
     virtual void requiresInteract(void)const;
-    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
@@ -96,9 +96,9 @@ public:
     virtual bool isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset(void)const;
-    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::string const&, int);
     virtual void setIcon(TextureUVCoordinateSet const&);
-    virtual void setIconAtlas(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIconAtlas(std::string const&, int);
     virtual bool canBeCharged(void)const;
     virtual void playSoundIncrementally(ItemInstance const&, Mob &)const;
     virtual void playSoundIncrementally(ItemStack const&, Mob &)const;
@@ -119,10 +119,10 @@ public:
     void initServer(Json::Value &);
     void initClient(Json::Value &, Json::Value &);
     void alterAvailableCreativeItems(ActorInfoRegistry *, LevelData &);
-    void beginCreativeGroup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ItemInstance const&);
-    void beginCreativeGroup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, short, short, CompoundTag const*);
-    void beginCreativeGroup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Block const*, CompoundTag const*);
-    void beginCreativeGroup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Item*, short, CompoundTag const*);
+    void beginCreativeGroup(std::string const&, ItemInstance const&);
+    void beginCreativeGroup(std::string const&, short, short, CompoundTag const*);
+    void beginCreativeGroup(std::string const&, Block const*, CompoundTag const*);
+    void beginCreativeGroup(std::string const&, Item*, short, CompoundTag const*);
     void endCreativeGroup(void);
     void addCreativeItem(short, short);
     void addCreativeItem(ItemInstance const&);
@@ -133,7 +133,7 @@ public:
     void initCreativeItems(bool, ActorInfoRegistry *, BlockDefinitionGroup *, bool, BaseGameVersion const&, std::function<void ()(ActorInfoRegistry *, BlockDefinitionGroup *, bool)>);
     void destroySpeedBonus(ItemInstance const&)const;
     void _helpChangeInventoryItemInPlace(Actor &, ItemStack &, ItemStack &, ItemAcquisitionMethod)const;
-    void Item(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, short);
+    void Item(std::string const&, short);
     void getFood(void)const;
     void getSeed(void)const;
     void getCamera(void)const;
@@ -145,10 +145,10 @@ public:
     bool canUseSeed(Actor &, BlockPos, unsigned char)const;
     void allowOffhand(void)const;
     void setAllowOffhand(bool);
-    void getTextureUVCoordinateSet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void getTextureUVCoordinateSet(std::string const&, int);
     void getIconTextureUVSet(TextureAtlasItem const&, int, int);
-    void getTextureItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void _textMatch(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void getTextureItem(std::string const&);
+    void _textMatch(std::string const&, std::string const&, bool);
     void getRendererId(void)const;
     void getRequiredBaseGameVersion(void)const;
     void executeOnResetBAIcallbacks(void)const;

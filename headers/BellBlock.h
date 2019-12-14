@@ -21,7 +21,7 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void BellBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void BellBlock(std::string const&, int);
     void _getShape(Block const&, AABB &)const;
     void _determineAttachment(Actor &, BlockSource &, BlockPos const&, unsigned char)const;
     void _checkAlive(BlockSource &, BlockPos const&)const;

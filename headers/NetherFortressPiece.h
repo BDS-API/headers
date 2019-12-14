@@ -10,7 +10,7 @@ public:
     void NetherFortressPiece(void);
     void NetherFortressPiece(int);
     void updatePieceWeight(std::vector<PieceWeight, std::allocator<PieceWeight>> &);
-    void findAndCreateBridgePieceFactory(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
+    void findAndCreateBridgePieceFactory(std::string const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
     void generatePiece(NBStartPiece *, std::vector<PieceWeight, std::allocator<PieceWeight>> &, std::vector&<std::unique_ptr<StructurePiece, std::default_delete<std::unique_ptr>>, std::allocator<std::default_delete<std::unique_ptr>>>, Random &, int, int, int, int, int);
     void generateAndAddPiece(NBStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int, bool);
     void generateChildForward(NBStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, bool);

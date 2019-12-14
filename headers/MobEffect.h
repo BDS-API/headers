@@ -49,11 +49,11 @@ public:
     void setValueAmplifier(std::shared_ptr<Amplifier>);
     void setDurationAmplifier(std::shared_ptr<Amplifier>);
     void shutdownEffects(void);
-    void getByName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getByName(std::string const&);
     void getById(int);
     void getId(void)const;
     void getComponentName(void)const;
-    void MobEffect(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void MobEffect(int, std::string const&, std::string const&, bool, int, int, std::string const&, bool);
     void _createInstantBuff(std::shared_ptr<AttributeBuff> const&, int, float)const;
     void _createTemporalBuff(std::shared_ptr<AttributeBuff> const&, int, int)const;
     void _createAttributeModifer(std::shared_ptr<AttributeModifier> const&, int)const;

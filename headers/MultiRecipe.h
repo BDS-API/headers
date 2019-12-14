@@ -7,5 +7,5 @@ public:
     virtual bool isShapeless(void)const;
     virtual bool isMultiRecipe(void)const;
 
-    void MultiRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Util::HashString);
+    void MultiRecipe(std::string, Util::HashString);
 };

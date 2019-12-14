@@ -26,5 +26,5 @@ public:
     virtual bool canBeSilkTouched(void)const;
     virtual void checkAlive(BlockSource &, BlockPos const&)const;
 
-    void SeaPickle(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void SeaPickle(std::string const&, int);
 };

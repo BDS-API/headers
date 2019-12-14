@@ -18,7 +18,7 @@ public:
     virtual bool canBeSilkTouched(void)const;
     virtual void getEntityResourceItem(Random &, BlockActor const&, int)const;
 
-    void SkullBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void SkullBlock(std::string const&, int);
     void _witherSkullTester(BlockSource &, BlockPos const&, Block const&)const;
     void _updatedDragonCircuit(BlockSource &, BlockPos const&)const;
     void checkMobSpawn(Level &, BlockSource &, BlockPos const&, SkullBlockActor &)const;

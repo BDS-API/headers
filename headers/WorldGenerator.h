@@ -10,5 +10,5 @@ public:
     void getHardcodedSpawns(void)const;
     void WorldGenerator(void);
     void getFeatureName(StructureFeatureType);
-    void getFeatureId(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getFeatureId(std::string const&);
 };

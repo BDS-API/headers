@@ -21,5 +21,5 @@ public:
 
     void SurvivalMode(Player &);
     void _showTrialReminder(bool);
-    void _messagePlayers(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void _messagePlayers(std::string);
 };

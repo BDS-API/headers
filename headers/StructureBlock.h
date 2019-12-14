@@ -12,5 +12,5 @@ public:
     virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
 
-    void StructureBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void StructureBlock(std::string const&, int);
 };

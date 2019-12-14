@@ -9,5 +9,5 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void DisconnectPacket(void);
-    void DisconnectPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void DisconnectPacket(std::string const&, bool);
 };

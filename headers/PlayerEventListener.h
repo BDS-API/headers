@@ -21,7 +21,7 @@ public:
     virtual void onPlayerTick(Player &);
     virtual void onPlayerStartRiding(Player &, Actor &);
     virtual void onPlayerStopRiding(Player &, bool, bool, bool);
-    virtual void onPlayerCreated(LocalPlayer &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    virtual void onPlayerCreated(LocalPlayer &, std::string const&, std::string const&, bool);
     virtual void onPlayerTeleported(Player &);
     virtual void onPlayerAttackedActor(Player &, Actor &);
     virtual void onPlayerMovementCorrected(Player &, Vec3 const&, float, float);

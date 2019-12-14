@@ -7,7 +7,7 @@ public:
     bool hasSpawnPos(void)const;
     void getLastLoadedWithVersion(void)const;
     void LevelData(void);
-    void LevelData(LevelSettings const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, GeneratorType, BlockPos const&, bool, EducationEditionOffer, float, float);
+    void LevelData(LevelSettings const&, std::string const&, GeneratorType, BlockPos const&, bool, EducationEditionOffer, float, float);
     void setSpawnPos(BlockPos const&);
     void LevelData(CompoundTag const&);
     void getTagData(CompoundTag const&);
@@ -33,7 +33,7 @@ public:
     void _updateLimitedWorldOrigin(BlockPos const&);
     void setTime(int);
     void clearLoadedPlayerTag(void);
-    void setLevelName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setLevelName(std::string const&);
     void getGenerator(void)const;
     void setGenerator(GeneratorType);
     void touchLastLoadedWithVersion(void);
@@ -120,8 +120,8 @@ public:
     void setFromWorldTemplate(bool);
     bool isWorldTemplateOptionLocked(void)const;
     void setWorldTemplateOptionLocked(bool);
-    void setEducationOid(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void setEducationProductId(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setEducationOid(std::string const&);
+    void setEducationProductId(std::string const&);
     bool hasBonusChestEnabled(void)const;
     void getBonusChestSpawned(void)const;
     void setBonusChestEnabled(bool);

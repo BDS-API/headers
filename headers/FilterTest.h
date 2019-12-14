@@ -13,6 +13,6 @@ public:
     void _testValuesWithOperator(bool, bool)const;
     void _testValuesWithOperator(int, int)const;
     void _testValuesWithOperator(float, float)const;
-    void _testValuesWithOperator(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void _testValuesWithOperator(std::string const&, std::string const&)const;
     void getSubject(void)const;
 };

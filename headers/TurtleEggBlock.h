@@ -21,7 +21,7 @@ public:
     virtual bool canBeSilkTouched(void)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void TurtleEggBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void TurtleEggBlock(std::string const&, int);
     void _destroyEgg(BlockSource &, BlockPos const&, Actor &, int, bool)const;
     void _shouldUpdateHatchLevel(BlockSource &)const;
     void _decreaseEggs(BlockSource &, BlockPos const&, unsigned int, bool)const;

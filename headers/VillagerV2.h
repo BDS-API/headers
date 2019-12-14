@@ -6,7 +6,7 @@ public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~VillagerV2();
     virtual void remove(void);
-    virtual void buildDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void buildDebugInfo(std::string &)const;
     virtual void getInteraction(Player &, ActorInteraction &, Vec3 const&);
     virtual void die(ActorDamageSource const&);
     virtual void updateEntitySpecificMolangVariables(RenderParams &);

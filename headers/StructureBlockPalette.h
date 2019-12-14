@@ -19,6 +19,6 @@ public:
     void addBlockPositionData(unsigned long, StructureBlockPalette::BlockPositionData);
     void clear(void);
     void getSize(void)const;
-    void _contentErrorMissingField(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void _contentErrorMissingField(std::string const&)const;
     void _parseBlockPositionData(CompoundTag const&, int);
 };

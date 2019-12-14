@@ -17,7 +17,7 @@ public:
     virtual void clip(BlockSource &, BlockPos const&, Vec3 const&, Vec3 const&, bool)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void PistonArmBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, PistonBlock::Type);
+    void PistonArmBlock(std::string const&, int, PistonBlock::Type);
     void _getCollisions(AABB &, AABB &, AABB &, unsigned char)const;
     bool isSticky(void)const;
 };

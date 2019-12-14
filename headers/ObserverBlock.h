@@ -18,7 +18,7 @@ public:
     virtual void getMappedFace(unsigned char, Block const&)const;
     virtual void getFaceFlip(unsigned char, Block const&)const;
 
-    void ObserverBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ObserverBlock(std::string const&, int);
     void _getPoweredDirection(BlockSource &, BlockPos const&)const;
     void _startSignal(BlockSource &, BlockPos const&)const;
     void _updateState(BlockSource &, BlockPos const&, PulseCapacitor *, bool)const;

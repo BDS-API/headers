@@ -22,6 +22,6 @@ public:
     virtual void getTickDelay(void)const;
     virtual void getSensitiveAABB(BlockPos const&)const;
 
-    void BasePressurePlateBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&);
+    void BasePressurePlateBlock(std::string const&, int, Material const&);
     void checkPressed(BlockSource &, BlockPos const&, int, int)const;
 };

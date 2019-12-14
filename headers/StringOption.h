@@ -4,11 +4,11 @@ class StringOption : Option {
 
 public:
     virtual ~StringOption();
-    virtual void save(std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &);
-    virtual void load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void save(std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> &);
+    virtual void load(std::string const&);
 
-    void StringOption(OptionID, OptionOwnerType, OptionResetFlags, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void set(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
-    void setCoerceValueCallback(std::function<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> ()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)>);
+    void StringOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, std::string const&);
+    void set(std::string const&, bool);
+    void setCoerceValueCallback(std::function<std::string ()(std::string const&)>);
     void reset(void);
 };

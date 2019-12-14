@@ -8,7 +8,7 @@ public:
     void addConnectionStateListener(UPNPInterface::ConnectionStateListener *);
     void removeConnectionStateListener(UPNPInterface::ConnectionStateListener *);
     void createIPv4PortMapping(unsigned short);
-    void _changeUpnpState(UpnpState &, UpnpState, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void _changeUpnpState(UpnpState &, UpnpState, int, int, std::string const&);
     void _createPortMapping(unsigned short, char const*, bool, std::function<void ()(UPNPResult)>);
     void createIPv6PortMapping(unsigned short);
     void retrieveExternalIPv4(void);

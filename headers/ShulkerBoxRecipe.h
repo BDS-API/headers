@@ -11,5 +11,5 @@ public:
     virtual void itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;
 
     void ShulkerBoxRecipe(ShulkerBoxRecipe&&);
-    void ShulkerBoxRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::vector<RecipeIngredient, std::allocator<RecipeIngredient>> const&, std::vector const&<ItemInstance, std::allocator<std::vector const>>, Util::HashString, int, mce::UUID const*);
+    void ShulkerBoxRecipe(std::string, std::vector<RecipeIngredient, std::allocator<RecipeIngredient>> const&, std::vector const&<ItemInstance, std::allocator<std::vector const>>, Util::HashString, int, mce::UUID const*);
 };

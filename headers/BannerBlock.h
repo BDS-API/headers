@@ -22,7 +22,7 @@ public:
     virtual void getVariant(Block const&)const;
     virtual void getEntityResourceItem(Random &, BlockActor const&, int)const;
 
-    void BannerBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool);
+    void BannerBlock(std::string const&, int, bool);
     void getShape(int, AABB &)const;
     void _itemInstanceFromBlockEntity(BannerBlockActor const*)const;
 };

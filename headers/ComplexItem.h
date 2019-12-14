@@ -7,5 +7,5 @@ public:
     virtual bool isComplex(void)const;
     virtual void getUpdatePacket(ItemStack const&, Level &, Actor &)const;
 
-    void ComplexItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ComplexItem(std::string const&, int);
 };

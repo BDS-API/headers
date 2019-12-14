@@ -27,8 +27,8 @@ public:
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onChunkDiscarded(LevelChunk &);
 
-    void TickingArea(Dimension &, mce::UUID, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Bounds const&, bool);
-    void TickingArea(Dimension &, mce::UUID, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ActorUniqueID, Bounds const&, bool, float, bool);
+    void TickingArea(Dimension &, mce::UUID, std::string const&, Bounds const&, bool);
+    void TickingArea(Dimension &, mce::UUID, std::string const&, ActorUniqueID, Bounds const&, bool, float, bool);
     void TickingArea(Dimension &, mce::UUID, Bounds const&, ActorUniqueID);
     void TickingArea(Dimension &, mce::UUID, Bounds const&, ActorUniqueID, float);
     void _save(void);

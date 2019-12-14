@@ -29,12 +29,12 @@ public:
     void setSpawnDistances(int, int);
     void setExperimentalGameplay(void);
     void setWorldAgeRange(unsigned long, unsigned long);
-    void setDelayRange(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void setDelayRange(int, int, std::string);
     void setDelaySpawnChance(int);
     void getDelaySpawnChance(void)const;
-    void addHerd(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void addHerd(int, int, std::string const&);
     void addPermutation(int, int, ActorDefinitionIdentifier const&);
-    void setMobEventType(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setMobEventType(std::string const&);
     void setPersistence(bool);
     void getPersistence(void)const;
     bool isUnderwaterSpawner(void)const;

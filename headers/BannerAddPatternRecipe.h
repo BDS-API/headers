@@ -14,7 +14,7 @@ public:
     virtual void size(void)const;
     virtual bool isExperimental(void)const;
 
-    void BannerAddPatternRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
-    void BannerAddPatternRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, mce::UUID const&);
+    void BannerAddPatternRecipe(std::string);
+    void BannerAddPatternRecipe(std::string, mce::UUID const&);
     void matchPatterns(CraftingContainer &)const;
 };

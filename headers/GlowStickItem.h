@@ -12,5 +12,5 @@ public:
     virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset(void)const;
 
-    void GlowStickItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void GlowStickItem(std::string const&, int);
 };

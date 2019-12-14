@@ -18,7 +18,7 @@ public:
     void _updateResultSlotInfo(void);
     void getBurnProgress(int);
     void getLitProgress(int);
-    bool isFinished(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int &, int &);
+    bool isFinished(std::string &, int &, int &);
     bool isFurnaceValid(float);
     void grantExperienceForSmelting(ItemInstance const&, int);
     void fireItemSmeltedEvent(ItemDescriptor const&);

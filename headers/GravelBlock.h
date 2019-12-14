@@ -10,5 +10,5 @@ public:
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getDustColor(Block const&)const;
 
-    void GravelBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void GravelBlock(std::string const&, int);
 };

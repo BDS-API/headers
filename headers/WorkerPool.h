@@ -13,8 +13,8 @@ public:
     void getAllPools(void);
     void _registerPool(WorkerPool&);
     void _unregisterPool(WorkerPool&);
-    void WorkerPool(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, unsigned long, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, bool);
-    void WorkerPool(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Scheduler &);
+    void WorkerPool(std::string, unsigned long, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, bool);
+    void WorkerPool(std::string, Scheduler &);
     void kick(unsigned long);
     void getBacklogSizeBusyLimit(void)const;
     void queue(std::shared_ptr<BackgroundTask>, bool);

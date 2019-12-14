@@ -98,7 +98,7 @@ public:
     void sameItemAndAux(ItemStackBase const&)const;
     bool hasCustomHoverName(void)const;
     void getRendererId(void)const;
-    bool hasComponent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    bool hasComponent(std::string const&)const;
     void getBlock(void)const;
     void setBlock(Block const*);
     void getIdAux(void)const;
@@ -124,8 +124,8 @@ public:
     bool isMusicDiscItem(void)const;
     bool isPotionItem(void)const;
     bool isLiquidClipItem(void)const;
-    void setCustomName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void setCustomLore(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
+    void setCustomName(std::string const&);
+    void setCustomLore(std::vector<std::string, std::allocator<std::string>> const&);
     void resetHoverName(void);
     void getBaseRepairCost(void)const;
     void setRepairCost(int);
@@ -143,9 +143,9 @@ public:
     void _setChargedItem(ItemInstance const&);
     bool canBeCharged(void)const;
     void _loadComponents(CompoundTag const&);
-    void addComponents(Json::Value const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
-    bool isValidComponent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void updateComponent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Json::Value const&);
+    void addComponents(Json::Value const&, std::string &);
+    bool isValidComponent(std::string const&);
+    void updateComponent(std::string const&, Json::Value const&);
     void _updateCompareHashes(void);
     void serializeComponents(IDataOutput &)const;
     void deserializeComponents(IDataInput &);

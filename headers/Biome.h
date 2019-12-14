@@ -21,7 +21,7 @@ public:
     void initBiome(Json::Value &);
     void Biome(int);
     void setDepthAndScale(BiomeHeight const&);
-    void setName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setName(std::string const&);
     void setColor(int);
     void setColor(int, bool);
     void setMapWaterColor(int);

@@ -34,7 +34,7 @@ public:
     void getResourcePackForPackIdOwned(PackIdVersion const&)const;
     void getResourcePackSatisfiesPackId(PackIdVersion const&, bool)const;
     void getResourcePackContainingModule(PackIdVersion const&)const;
-    void addCachedResourcePacks(std::unordered_map<ContentIdentity, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::hash<ContentIdentity>, std::equal_to<ContentIdentity>, std::allocator<std::pair<ContentIdentity const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> const*);
+    void addCachedResourcePacks(std::unordered_map<ContentIdentity, std::string, std::hash<ContentIdentity>, std::equal_to<ContentIdentity>, std::allocator<std::pair<ContentIdentity const, std::string>>> const*);
     void refreshPacks(void);
     void addWorldResourcePacks(Core::Path const&);
     void addPremiumWorldTemplateResourcePacks(Core::Path const&, ContentIdentity const&);

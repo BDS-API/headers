@@ -24,7 +24,7 @@ public:
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
 
     void _getFacingData(int);
-    void VineBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void VineBlock(std::string const&, int);
     void _isAcceptableNeighbor(Block const&)const;
     void updateSurvival(BlockSource &, BlockPos const&)const;
 };

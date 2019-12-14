@@ -25,7 +25,7 @@ public:
     virtual bool canBeSilkTouched(void)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void DoorBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&, DoorBlock::DoorType);
+    void DoorBlock(std::string const&, int, Material const&, DoorBlock::DoorType);
     bool hasRightHinge(BlockSource &, BlockPos const&)const;
     void getDoorBlocks(BlockSource &, BlockPos const&, Block const**, Block const**)const;
     void getDoorThickness(void)const;

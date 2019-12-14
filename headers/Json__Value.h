@@ -12,7 +12,7 @@ public:
     void Value(double);
     void Value(char const*);
     void Value(char const*, char const*);
-    void Value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void Value(std::string const&);
     void Value(Json::StaticString const&);
     void Value(bool);
     void Value(Json::Value const&);
@@ -20,7 +20,7 @@ public:
     void type(void)const;
     void compare(Json::Value const&)const;
     void asCString(void)const;
-    void asString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void asString(std::string const&)const;
     void asInt(int)const;
     void asUInt(unsigned int)const;
     void asInt64(long long)const;
@@ -43,11 +43,11 @@ public:
     bool isValidIndex(unsigned int)const;
     void append(Json::Value const&);
     void get(char const*, Json::Value const&)const;
-    void get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Json::Value const&)const;
+    void get(std::string const&, Json::Value const&)const;
     void removeMember(char const*);
-    void removeMember(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void removeMember(std::string const&);
     bool isMember(char const*)const;
-    bool isMember(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    bool isMember(std::string const&)const;
     bool isBool(void)const;
     bool isInt(void)const;
     bool isUInt(void)const;
@@ -56,7 +56,7 @@ public:
     bool isNumeric(void)const;
     bool isString(void)const;
     void setComment(char const*, Json::CommentPlacement);
-    void setComment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Json::CommentPlacement);
+    void setComment(std::string const&, Json::CommentPlacement);
     bool hasComment(Json::CommentPlacement)const;
     void begin(void)const;
     void end(void)const;

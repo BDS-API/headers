@@ -8,11 +8,11 @@ public:
     void tick(Tick const&);
     void tickSeasons(Random &);
     void getAreas(void)const;
-    bool hasTickingAreaNamed(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    bool hasTickingAreaNamed(std::string const&)const;
     void add(std::unique_ptr<ITickingArea, std::default_delete<ITickingArea>>);
     void empty(void)const;
     void findAreasContaining(BlockPos const&);
-    void findAreasNamed(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void findAreasNamed(std::string const&);
     void removeAreas(std::vector<std::shared_ptr<ITickingArea>, std::allocator<std::shared_ptr<ITickingArea>>> const&);
     void removeAllAreas(void);
     void getTickingAreasDescription(void)const;

@@ -13,7 +13,7 @@ public:
     virtual void getVariant(Block const&)const;
     virtual void getMappedFace(unsigned char, Block const&)const;
 
-    void PumpkinBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool, bool);
+    void PumpkinBlock(std::string const&, int, bool, bool);
     void _canDispense(BlockSource &, Vec3 const&, unsigned char)const;
     void _golemPumpkinTester(BlockSource &, BlockPos const&, Block const&)const;
     void _canSpawnGolem(BlockSource &, BlockPos const&)const;

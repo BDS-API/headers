@@ -7,6 +7,6 @@ public:
     static long ScriptCommandFactory::mCurrentId;
 
 
-    void createScriptCommand(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void createScriptCommand(std::string const&);
     void _getNextId(void);
 };

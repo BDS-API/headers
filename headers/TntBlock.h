@@ -17,7 +17,7 @@ public:
     virtual bool isAuxValueRelevantForPicking(void)const;
     virtual void getVariant(Block const&)const;
 
-    void TntBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void TntBlock(std::string const&, int);
     void _shouldAllowUnderwater(Block const&)const;
     void _setAllowUnderwater(Actor *)const;
 };

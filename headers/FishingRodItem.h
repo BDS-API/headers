@@ -13,7 +13,7 @@ public:
     virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
-    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::string const&, int);
 
-    void FishingRodItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void FishingRodItem(std::string const&, int);
 };

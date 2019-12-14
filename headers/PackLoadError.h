@@ -6,6 +6,6 @@ public:
     virtual ~PackLoadError();
 
     void PackLoadError(void);
-    void PackLoadError(PackParseErrorType, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
+    void PackLoadError(PackParseErrorType, std::vector<std::string, std::allocator<std::string>> const&);
     void PackLoadError(PackLoadError const&);
 };

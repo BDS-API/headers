@@ -12,7 +12,7 @@ public:
     virtual bool isFishable(void)const;
     virtual bool isTargetable(void)const;
     virtual bool canBePulledIntoVehicle(void)const;
-    virtual void buildDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void buildDebugInfo(std::string &)const;
     virtual bool canBeAffected(MobEffectInstance const&)const;
     virtual void die(ActorDamageSource const&);
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);

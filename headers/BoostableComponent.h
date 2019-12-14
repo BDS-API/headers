@@ -14,7 +14,7 @@ public:
     void _canUseItem(Actor &, ItemStack &);
     void boost(Actor &, Player &);
     void _useItem(Actor &, ItemStack &, Player &);
-    void itemUseText(Player const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
+    void itemUseText(Player const&, std::string &);
     void setIsBoosting(bool);
     void removeRider(Player &);
     void getBoostTime(void)const;

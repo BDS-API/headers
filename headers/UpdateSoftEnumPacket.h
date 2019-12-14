@@ -9,6 +9,6 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void UpdateSoftEnumPacket(void);
-    void UpdateSoftEnumPacket(SoftEnumUpdateType, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
+    void UpdateSoftEnumPacket(SoftEnumUpdateType, std::string const&, std::vector<std::string, std::allocator<std::string>> const&);
     void getType(void)const;
 };

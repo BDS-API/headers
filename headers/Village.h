@@ -92,7 +92,7 @@ public:
     void _spawnAndReadyRaidGroup(unsigned long, Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &);
     void _spawnRaidGroup(Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &)const;
     void _readyRaidGroup(std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &);
-    void loadDataByKey(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, CompoundTag const&);
+    void loadDataByKey(std::string const&, CompoundTag const&);
     void _loadVillageData(CompoundTag const&);
     void _loadVillagePlayerStanding(CompoundTag const&);
     void _loadVillageDwellers(CompoundTag const&);

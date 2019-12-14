@@ -12,7 +12,7 @@ public:
     virtual void onActorStartRiding(Actor &, Actor &);
     virtual void onActorStopRiding(Actor &, bool, bool, bool);
     virtual void onActorDeath(Actor &, ActorDamageSource const&);
-    virtual void onActorDefinitionEventTriggered(Actor &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void onActorDefinitionEventTriggered(Actor &, std::string const&);
     virtual void onActorUseItem(Actor &, ItemInstance const&, ItemUseMethod);
     virtual void onActorCreated(Actor &);
     virtual void onProjectileHit(Actor &, HitResult const&);

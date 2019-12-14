@@ -29,7 +29,7 @@ public:
     void _isFacingWestEast(BlockSource &, BlockPos const&);
     void _canSurvive(BlockSource const&, BlockPos const&)const;
     bool isRail(Block const&);
-    void BaseRailBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool);
+    void BaseRailBlock(std::string const&, int, bool);
     bool isUsesDataBit(void)const;
     void _updatePlacement(BlockSource &, BlockPos const&)const;
     void _blockStillExists(BlockSource const&, BlockPos const&)const;

@@ -7,10 +7,10 @@ public:
     void GameRule(GameRule const&);
     void GameRule(GameRule&&);
     void GameRule(void);
-    void GameRule(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, bool, bool, bool);
-    void GameRule(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool, bool, bool);
-    void GameRule(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, float, bool, bool, bool);
-    void GameRule(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void GameRule(std::string const&, bool, bool, bool, bool);
+    void GameRule(std::string const&, int, bool, bool, bool);
+    void GameRule(std::string const&, float, bool, bool, bool);
+    void GameRule(std::string const&);
     void getType(void)const;
     void resetType(GameRule::Type);
     void _set(GameRule::Value const&, bool *, GameRule::ValidationError *);
@@ -26,7 +26,7 @@ public:
     void allowUseInCommand(void)const;
     bool hasDefaultSet(void)const;
     void requiresCheats(void)const;
-    void setName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setName(std::string const&);
     void _setDefaultValue(bool);
     void _setDefaultValue(int);
     void _setDefaultValue(float);

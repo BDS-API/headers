@@ -4,8 +4,8 @@ class ActorSkeletalAnimation {
 
 public:
 
-    void ActorSkeletalAnimation(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void addBoneAnimation(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void ActorSkeletalAnimation(std::string const&, bool, std::string const&);
+    void addBoneAnimation(std::string const&);
     void getBoneAnimations(void)const;
     void getBoneAnimations(void);
     void getParticleEffectEvents(void)const;
@@ -15,7 +15,7 @@ public:
     void getEvents(void)const;
     void addParticleEffectEvent(float);
     void addSoundEffectEvent(float);
-    void addActorEvent(float, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, CurrentCmdVersion);
+    void addActorEvent(float, std::string const&, CurrentCmdVersion);
     void setAnimationLength(float);
     void getAnimationLength(void)const;
     void getMaxKeyFrameTime(void)const;

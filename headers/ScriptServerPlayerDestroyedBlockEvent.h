@@ -12,5 +12,5 @@ public:
     void ScriptServerPlayerDestroyedBlockEvent(void);
     void setActorId(ActorUniqueID const&);
     void setBlockPos(BlockPos const&);
-    void setBlockIdentifier(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void setBlockIdentifier(std::string);
 };

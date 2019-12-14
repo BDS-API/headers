@@ -11,7 +11,7 @@ public:
     virtual void itemsMatch(ItemDescriptor const&, ItemDescriptor const&, CompoundTag const*)const;
     virtual void itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;
 
-    void Recipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Util::HashString);
+    void Recipe(std::string, Util::HashString);
     void Recipe(Recipe&&);
     void getIngredients(void)const;
     bool isAnyAuxValue(ItemDescriptor const&);

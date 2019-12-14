@@ -10,9 +10,9 @@ public:
     void getDoorRotation(int, unsigned short);
     void getRailRotation(int, unsigned short);
     void getTorchRotation(int, unsigned short);
-    void createChest(StructurePiece &, BlockSource &, BoundingBox const&, Random &, int, int, int, unsigned char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void createMinecartChest(StructurePiece &, BlockSource &, BoundingBox const&, Random &, int, int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void createDispenser(StructurePiece &, BlockSource &, BoundingBox const&, Random &, int, int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void createChest(StructurePiece &, BlockSource &, BoundingBox const&, Random &, int, int, int, unsigned char, std::string const&);
+    void createMinecartChest(StructurePiece &, BlockSource &, BoundingBox const&, Random &, int, int, int, int, std::string const&);
+    void createDispenser(StructurePiece &, BlockSource &, BoundingBox const&, Random &, int, int, int, int, std::string const&);
     void createDoor(StructurePiece &, BlockSource &, BoundingBox const&, Random &, int, int, int, int);
     void fillColumnDown(StructurePiece &, BlockSource &, Block const&, int, int, int, BoundingBox const&);
 };

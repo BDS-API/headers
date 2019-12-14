@@ -8,5 +8,5 @@ public:
     void initFactory(void);
     void shutdown(void);
     void shootProjectileFromDefinition(ActorDefinitionIdentifier const&, Mob *, Vec3);
-    void createSubcomponent(Json::Value &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void createSubcomponent(Json::Value &, std::string const&);
 };

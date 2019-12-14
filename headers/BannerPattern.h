@@ -45,12 +45,12 @@ public:
     static long BannerPattern::mTrianglesTop;
 
 
-    void getPatternIndexFromNameID(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void BannerPattern(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void BannerPattern(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
-    void BannerPattern(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void BannerPattern(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ItemStack, short);
-    void BannerPattern(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ItemStack, short, bool);
+    void getPatternIndexFromNameID(std::string const&);
+    void BannerPattern(std::string const&, std::string const&);
+    void BannerPattern(std::string const&, std::string const&, std::vector<std::string, std::allocator<std::string>> const&);
+    void BannerPattern(std::string const&, std::string const&, std::string const&, std::string const&, std::string const&);
+    void BannerPattern(std::string const&, std::string const&, ItemStack, short);
+    void BannerPattern(std::string const&, std::string const&, ItemStack, short, bool);
     void initPatterns(void);
     bool hasPattern(void)const;
     void requiresIngredientItem(void)const;

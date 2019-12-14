@@ -9,12 +9,12 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void NpcRequestPacket(void);
-    void NpcRequestPacket(ActorRuntimeID, NpcRequestPacket::RequestType, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, unsigned char);
+    void NpcRequestPacket(ActorRuntimeID, NpcRequestPacket::RequestType, std::string, unsigned char);
     void NpcRequestPacket(ActorRuntimeID);
     void NpcRequestPacket(ActorRuntimeID, int);
-    void NpcRequestPacket(ActorRuntimeID, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void requestSetName(ActorRuntimeID, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void NpcRequestPacket(ActorRuntimeID, std::string const&);
+    void requestSetName(ActorRuntimeID, std::string);
     void requestSetSkin(ActorRuntimeID, int);
-    void requestSetInteractText(ActorRuntimeID, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void requestSetInteractText(ActorRuntimeID, std::string);
     void getSkin(void)const;
 };

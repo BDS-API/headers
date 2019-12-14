@@ -10,7 +10,7 @@ public:
     void onPeerDisconnected(NetworkIdentifier const&);
     void tryStartTransfer(NetworkIdentifier const&)const;
     void getTrackerFor(NetworkIdentifier const&)const;
-    void rememberBlob(unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
+    void rememberBlob(unsigned long, std::string &);
     void dropBlobFor(NetworkIdentifier const&, unsigned long);
     void updateNetworkConditions(NetworkHandler &);
 };

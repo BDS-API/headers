@@ -20,7 +20,7 @@ public:
     virtual bool canBeSilkTouched(void)const;
     virtual void getEntityResourceItem(Random &, BlockActor const&, int)const;
 
-    void ChemistryTableBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ChemistryTableBlock(std::string const&, int);
     void getItemForType(ChemistryTableType, int);
     void _getBlockEntity(BlockSource &, BlockPos const&);
     bool isUIValidForPlayer(BlockPos const&, Player &, float, ChemistryTableType);

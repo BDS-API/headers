@@ -10,5 +10,5 @@ public:
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
     virtual bool canSpawnOn(void)const;
 
-    void RedstoneBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void RedstoneBlock(std::string const&, int);
 };

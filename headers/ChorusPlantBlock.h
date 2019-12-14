@@ -22,7 +22,7 @@ public:
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void ChorusPlantBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ChorusPlantBlock(std::string const&, int);
     bool canGrowChorus(Block const&);
     void connectsTo(BlockSource &, BlockPos const&, BlockPos const&)const;
 };

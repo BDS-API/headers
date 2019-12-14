@@ -28,7 +28,7 @@ public:
     void connect(Social::GameConnectionInfo, Social::GameConnectionInfo);
     void _openNatConnection(RakNet::SystemAddress const&);
     void disconnect(void);
-    void _changeNatState(RakNetInstance::NATState, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void _changeNatState(RakNetInstance::NATState, int, std::string const&);
     void getPeer(void);
     void getPeer(void)const;
     bool isMyLocalId(NetworkIdentifier const&);
@@ -37,7 +37,7 @@ public:
     void natPongReceived(RakNet::SystemAddress const&);
     void tick(void);
     void _pingNatService(bool);
-    void getPingTimeForConnection(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, std::function<void ()(unsigned int)>);
+    void getPingTimeForConnection(std::string const&, int, std::function<void ()(unsigned int)>);
     void getStatistics(RakNet::RakNetStatistics &);
     void _stateToString(RakNetInstance::NATState)const;
 };

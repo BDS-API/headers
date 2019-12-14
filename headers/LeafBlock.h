@@ -21,7 +21,7 @@ public:
 
     bool isDeepLeafBlock(BlockSource &, BlockPos const&);
     void shouldStopSnowfall(Block const&);
-    void LeafBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, WeakPtr<BlockLegacy>);
+    void LeafBlock(std::string const&, int, WeakPtr<BlockLegacy>);
     void runDecay(BlockSource &, BlockPos const&, int);
     void getSeasonsColor(BlockSource &, BlockPos const&, int, int)const;
     void die(BlockSource &, BlockPos const&)const;

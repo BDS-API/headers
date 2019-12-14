@@ -13,7 +13,7 @@ public:
     virtual void size(void)const;
     virtual bool isExperimental(void)const;
 
-    void ShapelessRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::vector<RecipeIngredient, std::allocator<RecipeIngredient>> const&, std::vector const&<ItemInstance, std::allocator<std::vector const>>, Util::HashString, int, mce::UUID const*);
+    void ShapelessRecipe(std::string, std::vector<RecipeIngredient, std::allocator<RecipeIngredient>> const&, std::vector const&<ItemInstance, std::allocator<std::vector const>>, Util::HashString, int, mce::UUID const*);
     void generateUUID(void);
     void setId(mce::UUID const&);
     void ShapelessRecipe(ShapelessRecipe&&);

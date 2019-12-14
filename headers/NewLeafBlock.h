@@ -11,5 +11,5 @@ public:
     virtual void getSilkTouchItemInstance(Block const&)const;
     virtual void getExtraResourceItem(Block const&)const;
 
-    void NewLeafBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, WeakPtr<BlockLegacy>);
+    void NewLeafBlock(std::string const&, int, WeakPtr<BlockLegacy>);
 };

@@ -22,7 +22,7 @@ public:
     virtual bool canPullOutItem(BlockSource &, int, int, ItemInstance const&)const;
     virtual void setContainerChanged(int);
     virtual void setContainerMoved(void);
-    virtual void setCustomName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void setCustomName(std::string const&);
     virtual bool hasCustomName(void)const;
     virtual void readAdditionalSaveData(CompoundTag const&);
     virtual void addAdditionalSaveData(CompoundTag &);
@@ -30,11 +30,11 @@ public:
     virtual void triggerTransactionChange(int, ItemStack const&, ItemStack const&);
 
     void Container(ContainerType);
-    void Container(ContainerType, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void Container(ContainerType, std::string const&, bool);
     void addSizeChangeListener(ContainerSizeChangeListener *);
     void removeSizeChangeListener(ContainerSizeChangeListener *);
     void getContainerType(void);
     void getRedstoneSignalFromContainer(void);
     void setSizeChanged(int);
-    void getContainerTypeId(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getContainerTypeId(std::string const&);
 };

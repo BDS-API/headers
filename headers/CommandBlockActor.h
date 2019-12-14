@@ -30,9 +30,9 @@ public:
     void getTrackOutput(void)const;
     void getConditionalMode(BlockSource &)const;
     bool isRedstoneMode(void)const;
-    void updateBlock(BlockSource &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, CommandBlockMode, bool, bool, bool, int, bool);
+    void updateBlock(BlockSource &, std::string const&, std::string const&, CommandBlockMode, bool, bool, bool, int, bool);
     void setAutomatic(BlockSource &, bool, CommandBlockMode);
-    void setCustomName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setCustomName(std::string const&);
     void setPowered(bool);
     void getPowered(void)const;
     void getTickDelay(void)const;

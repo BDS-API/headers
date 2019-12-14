@@ -9,8 +9,8 @@ public:
     void PackManifest(ManifestType);
     void getLocation(void)const;
     void setLocation(ResourceLocation const&);
-    void setDescription(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void setName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setDescription(std::string const&);
+    void setName(std::string const&);
     bool isUsingPackNameKeyword(void)const;
     bool isUsingPackDescriptionKeyword(void)const;
     void getMetaData(void)const;
@@ -30,7 +30,7 @@ public:
     void addPackCapability(gsl::basic_string_span<char const, -1l>);
     bool hasPackCapability(gsl::basic_string_span<char const, -1l>)const;
     void setPackCapabilitiesTrusted(void);
-    void StringToPackScope(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void StringToPackScope(std::string const&);
     void getPackOrigin(void)const;
     void setPackOrigin(PackOrigin);
     void getPackSettings(void)const;
@@ -85,15 +85,15 @@ public:
     void _serailizeLegacyModuleDependencies(Json::Value &)const;
     void _serializeVersion(Json::Value &, SemVersion const&)const;
     void setLastModifiedDate(long);
-    void setLastModifiedDate(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setLastModifiedDate(std::string const&);
     void setFormatVersion(PackManifestFormat);
     void getOriginalFormatVersion(void)const;
     void setOriginalFormatVersion(PackManifestFormat);
     void getFileSystemFromOrigin(void)const;
     void getContentIdentity(void)const;
     void setContentIdentity(ContentIdentity const&);
-    void setLanguageCodesForPackKeywords(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>);
-    void setLocalizedNameKeywords(std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> const&);
+    void setLanguageCodesForPackKeywords(std::vector<std::string, std::allocator<std::string>>);
+    void setLocalizedNameKeywords(std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&);
     void setCanBeRedownloaded(bool);
     bool canBeRedownloaded(void)const;
     void getSourceIdentity(void)const;

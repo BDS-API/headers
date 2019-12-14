@@ -15,6 +15,6 @@ public:
     void DedicatedServer(void);
     void initalizeAppConfigs(void);
     void initializeLogging(void);
-    void start(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void start(std::string const&);
     void _forceContentLogEnabled(void);
 };

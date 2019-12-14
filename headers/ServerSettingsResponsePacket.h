@@ -9,5 +9,5 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void ServerSettingsResponsePacket(void);
-    void ServerSettingsResponsePacket(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void ServerSettingsResponsePacket(unsigned int, std::string const&);
 };

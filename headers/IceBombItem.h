@@ -10,5 +10,5 @@ public:
     virtual void getCooldownType(void)const;
     virtual void getCooldownTime(void)const;
 
-    void IceBombItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void IceBombItem(std::string const&, int);
 };

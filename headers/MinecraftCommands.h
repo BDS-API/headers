@@ -10,7 +10,7 @@ public:
     void initCoreEnums(bool, BaseGameVersion const&);
     void getRegistry(void);
     void getRegistry(void)const;
-    void requestCommandExecution(std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool)const;
+    void requestCommandExecution(std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, std::string const&, int, bool)const;
     void getOutputType(CommandOrigin const&);
     void handleOutput(CommandOrigin const&, CommandOutput const&)const;
     void executeCommand(std::shared_ptr<CommandContext>, bool)const;

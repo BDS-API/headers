@@ -11,8 +11,8 @@ public:
     void setReadPointer(unsigned long);
     void getLength(void)const;
     void readVectorList(std::vector<unsigned int, std::allocator<unsigned int>> &);
-    void ReadOnlyBinaryStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &&);
-    void ReadOnlyBinaryStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void ReadOnlyBinaryStream(std::string &&);
+    void ReadOnlyBinaryStream(std::string const&, bool);
     void getBool(void);
     void getByte(void);
     void getSignedShort(void);
@@ -30,6 +30,6 @@ public:
     void getVarInt(void);
     void getUnsignedVarInt(void);
     void getUnsignedVarInt64(void);
-    void getString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
+    void getString(std::string &);
     void getUnsignedChar(void);
 };

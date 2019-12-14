@@ -13,6 +13,6 @@ public:
     virtual void getBaseCrop(void)const;
     virtual void getCropNum(Random &, int, int)const;
 
-    void CarrotBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void CarrotBlock(std::string const&, int);
     void _getRenderLayerImpl(void)const;
 };

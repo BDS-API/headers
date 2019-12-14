@@ -11,7 +11,7 @@ public:
     virtual bool isComplete(void)const;
 
     void TemporalAttributeBuff(TemporalAttributeBuff const&);
-    void TemporalAttributeBuff(float, int, AttributeBuffType, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void TemporalAttributeBuff(float, int, AttributeBuffType, bool, std::string const&);
     void getDuration(void)const;
     void getLifeTimer(void)const;
     void getBaseAmount(void)const;

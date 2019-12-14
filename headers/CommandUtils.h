@@ -5,16 +5,16 @@ class CommandUtils {
 public:
 
     void createItemInstance(Item const*, int, int);
-    void createItemInstance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, int);
-    void createItemStack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, int);
+    void createItemInstance(std::string const&, int, int);
+    void createItemStack(std::string const&, int, int);
     void createItemStacks(ItemInstance const&, int, int &);
-    void addItemInstanceComponents(ItemInstance &, Json::Value const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
-    void addtoCSVList(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void displayLocalizableMessage(bool, Player &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
+    void addItemInstanceComponents(ItemInstance &, Json::Value const&, std::string &);
+    void addtoCSVList(std::string &, std::string const&);
+    void displayLocalizableMessage(bool, Player &, std::string const&, std::vector<std::string, std::allocator<std::string>> const&);
     void spawnEntityAt(BlockSource &, Vec3 const&, ActorDefinitionIdentifier const&, ActorUniqueID &, Actor *);
     void alterSpawnableEntities(LevelData &, ActorDefinitionIdentifier const&, ActorDefinitionIdentifier&);
     bool isPlayerSpawnedMob(Actor *, Actor *);
-    void toJsonResult(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Json::Value const&);
+    void toJsonResult(std::string const&, Json::Value const&);
     void getFeetPos(Actor const*);
     void getFeetBlockPos(Actor const*);
     void createMapData(Actor &, ItemInstance &, CommandOutput &);

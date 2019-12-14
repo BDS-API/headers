@@ -12,7 +12,7 @@ public:
     void getScoreboardId(void)const;
     void getPlayerId(void)const;
     void getEntityId(void)const;
-    void getName(std::function<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const& ()(ActorUniqueID)> const&)const;
+    void getName(std::function<std::string const& ()(ActorUniqueID)> const&)const;
     void getNumReferences(void)const;
     bool isCurrentlyReferenced(void)const;
     void getIdentityType(void)const;

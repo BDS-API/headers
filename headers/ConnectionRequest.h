@@ -4,12 +4,12 @@ class ConnectionRequest {
 
 public:
 
-    void create(PrivateKeyManager &, Certificate const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, mce::Image const&, mce::Image const&, std::vector<AnimatedImageData, std::allocator<AnimatedImageData>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, InputMode, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ADRole, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
-    void ConnectionRequest(std::unique_ptr<WebToken, std::default_delete<WebToken>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void create(PrivateKeyManager &, Certificate const&, std::string const&, std::string const&, unsigned long, std::string const&, mce::Image const&, mce::Image const&, std::vector<AnimatedImageData, std::allocator<AnimatedImageData>> const&, std::string const&, std::string const&, std::string const&, bool, bool, std::string const&, InputMode, int, int, std::string const&, bool, std::string const&, ADRole, std::string const&, std::string const&, bool, std::string const&, std::string const&, bool, std::string);
+    void ConnectionRequest(std::unique_ptr<WebToken, std::default_delete<WebToken>>, std::string const&);
     void ConnectionRequest(ConnectionRequest const&);
-    void fromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void fromString(std::string const&);
     void getCertificate(void)const;
-    void getData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getData(std::string const&)const;
     void getClientRandomId(void)const;
     bool isClientThirdPartyNameOnly(void)const;
     void getSkinData(void)const;
@@ -30,9 +30,9 @@ public:
     bool isPremiumSkin(void)const;
     bool isPersonaSkin(void)const;
     bool isCapeOnClassicSkin(void)const;
-    void verify(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&, long);
+    void verify(std::vector<std::string, std::allocator<std::string>> const&, long);
     void validate(std::unique_ptr<Certificate, std::default_delete<Certificate>>, long)const;
     void verifySelfSigned(void);
-    void getBinaryData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getBinaryData(std::string const&)const;
     bool isVerified(void)const;
 };

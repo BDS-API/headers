@@ -12,5 +12,5 @@ public:
     void setCommandPermissions(CommandPermissionLevel);
     void getPlayerPermissions(void)const;
     void setPlayerPermissions(PlayerPermissionLevel);
-    void playerPermissionLevelFromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void playerPermissionLevelFromString(std::string const&);
 };

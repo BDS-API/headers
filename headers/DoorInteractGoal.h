@@ -8,7 +8,7 @@ public:
     virtual bool canContinueToUse(void);
     virtual void start(void);
     virtual void tick(void);
-    virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void appendDebugInfo(std::string &)const;
 
     void DoorInteractGoal(Mob &);
     void _findBlockingDoorAtPos(BlockPos const&, Mob const&, Path *, Direction::Type &, Direction::Type &);

@@ -7,5 +7,5 @@ public:
     virtual bool isInstantaneous(void)const;
     virtual bool isDurationEffectTick(int, int)const;
 
-    void InstantaneousMobEffect(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, int, int);
+    void InstantaneousMobEffect(int, std::string const&, std::string const&, bool, int, int);
 };

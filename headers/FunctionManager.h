@@ -16,11 +16,11 @@ public:
     void _addOriginReference(CommandOrigin const&, unsigned int);
     void tick(void);
     void getCommandDispatcher(void);
-    void getFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getFunction(std::string const&);
     void getEarliestSupportedCommandVersion(void);
-    void _createFunction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<std::unique_ptr<IFunctionEntry, std::default_delete<IFunctionEntry>>, std::allocator<std::unique_ptr<IFunctionEntry, std::default_delete<IFunctionEntry>>>> &&);
-    void _createFunctionWithError(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, FunctionState);
-    void _processFunctionEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>&, CurrentCmdVersion, CommandRegistry const&);
+    void _createFunction(std::string const&, std::vector<std::unique_ptr<IFunctionEntry, std::default_delete<IFunctionEntry>>, std::allocator<std::unique_ptr<IFunctionEntry, std::default_delete<IFunctionEntry>>>> &&);
+    void _createFunctionWithError(std::string const&, FunctionState);
+    void _processFunctionEntry(std::string const&, std::vector<std::string, std::allocator<std::string>> const&, std::vector<std::string, std::allocator<std::string>>&, CurrentCmdVersion, CommandRegistry const&);
     void _getCommandList(void)const;
     void _getTickList(void)const;
     void _removeOriginReference(CommandOrigin const&, unsigned int);

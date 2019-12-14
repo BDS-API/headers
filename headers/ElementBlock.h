@@ -10,7 +10,7 @@ public:
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void tryLegacyUpgrade(unsigned short)const;
 
-    void ElementBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, ElementType);
+    void ElementBlock(std::string const&, int, ElementType);
     void getElementCategory(ElementType);
     void getElement(BlockSource &, BlockPos const&);
     void getElement(Block const&);

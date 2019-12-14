@@ -18,7 +18,7 @@ public:
     void load(CompoundTag &);
     void fillFromWorld(BlockSource &, BlockPos const&, BlockPos const&, bool);
     void fillEntityList(BlockSource &, BlockPos const&, BlockPos&);
-    void setAuthor(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void setAuthor(std::string);
     void getBlockAtPos(BlockPos const&)const;
     void getSize(Rotation);
     void getZeroPositionWithTransform(BlockPos const&, Mirror, Rotation);
@@ -29,8 +29,8 @@ public:
     void _transform(BlockPos, Mirror, Rotation)const;
     void _transform(Vec3, Mirror, Rotation)const;
     void _mapToData(Block const&, LegacyStructureSettings const&);
-    void _mapPropertyToExtraBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void _mapToProperty(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Block const&);
-    void _mapToBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void _mapTag(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void _mapPropertyToExtraBlock(std::string const&, std::string const&);
+    void _mapToProperty(std::string const&, std::string const&, Block const&);
+    void _mapToBlock(std::string const&);
+    void _mapTag(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>, std::string const&);
 };

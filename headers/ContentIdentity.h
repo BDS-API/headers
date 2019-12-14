@@ -14,5 +14,5 @@ public:
     void getAsUUID(void)const;
     void setUUID(mce::UUID const&);
     bool isValid(void)const;
-    void fromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void fromString(std::string const&);
 };

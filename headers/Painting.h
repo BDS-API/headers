@@ -17,6 +17,6 @@ public:
     virtual void placeHangingEntity(BlockSource &, int);
 
     void Painting(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void clientInitialize(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void clientInitialize(int, std::string const&);
     void getCurrentMotive(void)const;
 };

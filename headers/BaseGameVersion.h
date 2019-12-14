@@ -19,5 +19,5 @@ public:
     void getMajor(void)const;
     void getMinor(void)const;
     bool isCompatibleWith(BaseGameVersion const&)const;
-    void fromString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, BaseGameVersion&);
+    void fromString(std::string const&, BaseGameVersion&);
 };

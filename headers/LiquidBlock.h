@@ -18,7 +18,7 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void LiquidBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&);
+    void LiquidBlock(std::string const&, int, Material const&);
     void trySpreadFire(BlockSource &, BlockPos const&, Random &)const;
     void getHeightFromDepth(int);
     void getHeightFromData(int);

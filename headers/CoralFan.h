@@ -31,5 +31,5 @@ public:
     virtual void getSilkTouchItemInstance(Block const&)const;
     virtual void checkAlive(BlockSource &, BlockPos const&)const;
 
-    void CoralFan(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void CoralFan(std::string const&, int);
 };

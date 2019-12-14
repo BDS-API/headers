@@ -14,7 +14,7 @@ public:
 
     virtual ~ArmorItem();
     virtual bool isArmor(void)const;
-    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
     virtual void getEnchantValue(void)const;
@@ -27,13 +27,13 @@ public:
     virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
-    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::string const&, int);
 
     void getTierItem(void)const;
     bool hasCustomColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     void clearColor(ItemStack &)const;
     void setColor(ItemStack &, Color const&)const;
-    void ArmorItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, ArmorItem::ArmorMaterial const&, int, ArmorSlot);
+    void ArmorItem(std::string const&, int, ArmorItem::ArmorMaterial const&, int, ArmorSlot);
     bool isElytra(void)const;
     void getArmorForSlot(ArmorSlot, int);
     void dispenseArmor(BlockSource &, Container &, int, Vec3 const&, unsigned char, ArmorSlot);

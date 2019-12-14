@@ -17,6 +17,6 @@ public:
     virtual void getSilkTouchItemInstance(Block const&)const;
     virtual void getTickDelay(void);
 
-    void RedstoneTorchBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool);
+    void RedstoneTorchBlock(std::string const&, int, bool);
     void _installCircuit(BlockSource &, BlockPos const&)const;
 };

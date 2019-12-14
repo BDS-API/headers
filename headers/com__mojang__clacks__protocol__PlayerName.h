@@ -18,7 +18,7 @@ public:
     virtual void SetCachedSize(int)const;
     virtual void GetMetadata(void)const;
 
-    void set_value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void set_value(std::string const&);
     void InitAsDefaultInstance(void);
     void PlayerName(void);
     void SharedCtor(void);

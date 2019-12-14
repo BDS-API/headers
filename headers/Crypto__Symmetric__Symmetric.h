@@ -6,12 +6,12 @@ public:
 
     void Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode);
     void getBlockSize(void)const;
-    void init(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void decrypt(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&);
+    void init(std::string const&, std::string const&);
+    void decrypt(std::string const&, std::string&);
     void getKeySize(void)const;
     void Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode);
     void getBlockSize(void)const;
-    void init(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void decrypt(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&);
+    void init(std::string const&, std::string const&);
+    void decrypt(std::string const&, std::string&);
     void getKeySize(void)const;
 };

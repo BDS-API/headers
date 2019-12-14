@@ -20,7 +20,7 @@ public:
     virtual void onGraphicsModeChanged(bool, bool, bool);
     virtual bool canBeSilkTouched(void)const;
 
-    void KelpBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void KelpBlock(std::string const&, int);
     void checkAlive(BlockSource &, BlockPos const&)const;
     void shouldGrow(BlockSource &, BlockPos const&)const;
     void getAge(Block const&)const;

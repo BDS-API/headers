@@ -56,9 +56,9 @@ public:
     virtual void openElementConstructor(BlockPos const&);
     virtual void openCompoundCreator(BlockPos const&);
     virtual void openMaterialReducer(BlockPos const&);
-    virtual void displayLocalizableMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
-    virtual void displayTextObjectMessage(TextObjectRoot const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void displayWhisperMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void displayLocalizableMessage(std::string const&, std::vector<std::string, std::allocator<std::string>> const&);
+    virtual void displayTextObjectMessage(TextObjectRoot const&, std::string const&, std::string const&);
+    virtual void displayWhisperMessage(std::string const&, std::string const&, std::string const&, std::string const&);
     virtual void stopSleepInBed(bool, bool);
     virtual bool isHostingPlayer(void)const;
     virtual bool isLoading(void)const;
@@ -82,7 +82,7 @@ public:
     virtual void getPlayMode(void)const;
     virtual void reportMovementTelemetry(MovementEventType);
 
-    void ServerPlayer(Level &, PacketSender &, NetworkHandler &, ClientBlobCache::Server::ActiveTransfersManager &, GameType, NetworkIdentifier const&, unsigned char, std::function<void ()(ServerPlayer&)>, mce::UUID, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::unique_ptr<Certificate, std::default_delete<Certificate>>, int);
+    void ServerPlayer(Level &, PacketSender &, NetworkHandler &, ClientBlobCache::Server::ActiveTransfersManager &, GameType, NetworkIdentifier const&, unsigned char, std::function<void ()(ServerPlayer&)>, mce::UUID, std::string const&, std::unique_ptr<Certificate, std::default_delete<Certificate>>, int);
     void updateChunkPublisherView(Vec3 const&, float);
     void _updateNearbyActors(void);
     void _getReadOnlyChunkCount(void);

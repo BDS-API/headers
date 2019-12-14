@@ -5,7 +5,7 @@ class PackError {
 public:
     virtual ~PackError();
 
-    void PackError(PackErrorType, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&);
+    void PackError(PackErrorType, std::vector<std::string, std::allocator<std::string>> const&);
     void getErrorValue(void)const;
     void serialize(Json::Value &);
     void deserialize(Json::Value const&);

@@ -20,7 +20,7 @@ public:
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getVariant(Block const&)const;
 
-    void ChorusFlowerBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ChorusFlowerBlock(std::string const&, int);
     void _allNeighborsEmpty(BlockSource &, BlockPos const&, unsigned char);
     void _placeGrownFlower(BlockSource &, BlockPos const&, int)const;
     void _placeDeadFlower(BlockSource &, BlockPos const&)const;

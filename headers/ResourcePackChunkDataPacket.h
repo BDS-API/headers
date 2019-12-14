@@ -9,5 +9,5 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void ResourcePackChunkDataPacket(void);
-    void ResourcePackChunkDataPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, unsigned long, std::vector<unsigned char, std::allocator<unsigned char>> const&);
+    void ResourcePackChunkDataPacket(std::string const&, int, unsigned long, std::vector<unsigned char, std::allocator<unsigned char>> const&);
 };

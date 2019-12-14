@@ -23,7 +23,7 @@ public:
     void getBossBarFilledFraction(void)const;
     void _calcBossBarFilledFraction(float, float, float)const;
     void getRemainingRaiders(void)const;
-    void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    void appendDebugInfo(std::string &)const;
     void tick(void);
     void _tickPreparingGroup(void);
     void _tickPickingSpawnPoint(void);

@@ -4,10 +4,10 @@ class BoolOption : Option {
 
 public:
     virtual ~BoolOption();
-    virtual void save(std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &);
-    virtual void load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void save(std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> &);
+    virtual void load(std::string const&);
 
-    void BoolOption(OptionID, OptionOwnerType, OptionResetFlags, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void BoolOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, bool);
     void _set(bool, bool);
     void set(bool, bool);
     void setDefault(bool);

@@ -12,7 +12,7 @@ public:
     void cancel(void);
     void _completionCallback(bool, Core::Path const&);
     void update(void);
-    void downloadFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned int, int, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, PackType);
+    void downloadFile(std::string const&, unsigned int, int, unsigned long, std::string const&, bool, PackType);
     void _isInitialized(void)const;
     void requestFirstBatch(void);
     void chunkReceived(FileChunkInfo const&, std::vector<unsigned char, std::allocator<unsigned char>> const&);

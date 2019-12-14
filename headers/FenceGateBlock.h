@@ -19,7 +19,7 @@ public:
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
 
-    void FenceGateBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, WoodType);
+    void FenceGateBlock(std::string const&, int, WoodType);
     void _checkIsInWall(BlockSource &, BlockPos const&)const;
     void _onOpenChanged(BlockSource &, BlockPos const&)const;
 };

@@ -23,6 +23,6 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void RedStoneWireBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void RedStoneWireBlock(std::string const&, int);
     void shouldConnectTo(BlockSource &, BlockPos const&, int);
 };

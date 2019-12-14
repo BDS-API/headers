@@ -17,6 +17,6 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void SlabBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool, Material const&, WeakPtr<BlockLegacy>);
+    void SlabBlock(std::string const&, int, bool, Material const&, WeakPtr<BlockLegacy>);
     void getBaseSlab(void)const;
 };

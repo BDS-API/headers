@@ -6,23 +6,23 @@ public:
     static long LevelDbEnv::sSingleton;
 
     virtual ~LevelDbEnv();
-    virtual void NewSequentialFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::SequentialFile **);
-    virtual void NewRandomAccessFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::RandomAccessFile **);
-    virtual void NewWritableFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::WritableFile **);
-    virtual void NewAppendableFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::WritableFile **);
-    virtual void FileExists(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void GetChildren(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> *);
-    virtual void DeleteFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void CreateDir(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void DeleteDir(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void GetFileSize(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long *);
-    virtual void RenameFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    virtual void LockFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::FileLock **);
+    virtual void NewSequentialFile(std::string const&, leveldb::SequentialFile **);
+    virtual void NewRandomAccessFile(std::string const&, leveldb::RandomAccessFile **);
+    virtual void NewWritableFile(std::string const&, leveldb::WritableFile **);
+    virtual void NewAppendableFile(std::string const&, leveldb::WritableFile **);
+    virtual void FileExists(std::string const&);
+    virtual void GetChildren(std::string const&, std::vector<std::string, std::allocator<std::string>> *);
+    virtual void DeleteFile(std::string const&);
+    virtual void CreateDir(std::string const&);
+    virtual void DeleteDir(std::string const&);
+    virtual void GetFileSize(std::string const&, unsigned long *);
+    virtual void RenameFile(std::string const&, std::string const&);
+    virtual void LockFile(std::string const&, leveldb::FileLock **);
     virtual void UnlockFile(leveldb::FileLock *);
     virtual void Schedule(void (*)(void *), void *);
     virtual void StartThread(void (*)(void *), void *);
-    virtual void GetTestDirectory(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> *);
-    virtual void NewLogger(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, leveldb::Logger **);
+    virtual void GetTestDirectory(std::string *);
+    virtual void NewLogger(std::string const&, leveldb::Logger **);
     virtual void NowMicros(void);
     virtual void SleepForMicroseconds(int);
 

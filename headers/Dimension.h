@@ -12,7 +12,7 @@ public:
     virtual void onBlockEvent(BlockSource &, int, int, int, int, int);
     virtual void onNewChunk(BlockSource &, LevelChunk &);
     virtual void onChunkLoaded(LevelChunk &);
-    virtual void onLevelDestruction(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void onLevelDestruction(std::string const&);
     virtual void init(void);
     virtual void tick(void);
     virtual void tickRedstone(void);
@@ -50,7 +50,7 @@ public:
     bool hasWeather(void)const;
     void getLevelChunkBuilderData(void);
     void getLevelChunkGarbageCollector(void);
-    void Dimension(Level &, AutomaticID<Dimension, int>, short, Scheduler &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void Dimension(Level &, AutomaticID<Dimension, int>, short, Scheduler &, std::string);
     bool isRedstoneTick(void);
     void addWither(ActorUniqueID const&);
     void removeWither(ActorUniqueID const&);

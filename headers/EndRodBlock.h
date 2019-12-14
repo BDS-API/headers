@@ -14,7 +14,7 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
 
-    void EndRodBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void EndRodBlock(std::string const&, int);
     void _shouldMirror(unsigned char, unsigned char)const;
     void _mirror(unsigned char)const;
     void _shapeFromDirection(Vec3 &, Vec3 &, int)const;

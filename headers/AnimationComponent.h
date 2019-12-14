@@ -31,11 +31,11 @@ public:
     void findAnimation(HashedString const&);
     void getAnimationControllerPlayer(HashedString const&, bool);
     void getAnimationControllerStatePlayer(HashedString const&, HashedString const&, bool);
-    void getRegisteredAnimationLength(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
-    void addAnimationToController(HashedString const&, HashedString const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getRegisteredAnimationLength(std::string const&)const;
+    void addAnimationToController(HashedString const&, HashedString const&, std::string const&);
     bool isAnimationRegistered(HashedString const&)const;
     void tryRegisterAnimation(HashedString const&, ActorSkeletalAnimationPtr);
-    void playAnimation(HashedString const&, float, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void playAnimation(HashedString const&, float, std::string const&, std::string const&, std::string const&);
     void setSingleAnimationPlayer(ActorAnimationPlayer *);
     void haveInitializedScriptsRun(void)const;
     void setInitializedScriptsRun(bool);

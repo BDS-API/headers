@@ -12,7 +12,7 @@ public:
     void sendActorStartRiding(Actor &, Actor &);
     void sendActorStopRiding(Actor &, bool, bool, bool);
     void sendActorDeath(Actor &, ActorDamageSource const&);
-    void sendActorDefinitionEventTriggered(Actor &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void sendActorDefinitionEventTriggered(Actor &, std::string const&);
     void sendActorRemoved(Actor &);
     void sendActorCreated(Actor &);
     void sendActorUseItem(Actor &, ItemInstance const&, ItemUseMethod);

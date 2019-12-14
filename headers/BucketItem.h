@@ -18,10 +18,10 @@ public:
     virtual void getMaxStackSize(ItemDescriptor const&)const;
     virtual bool isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
-    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::string const&, int);
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
-    void BucketItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void BucketItem(std::string const&, int);
     void addBucketEntitySaveData(Actor &, ItemStack &)const;
     void getFishData(Actor const&);
     void getEntityIdFromBucket(ItemInstance const&)const;

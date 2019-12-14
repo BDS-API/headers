@@ -13,5 +13,5 @@ public:
     virtual void getVariant(Block const&)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void DirtBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void DirtBlock(std::string const&, int);
 };

@@ -17,8 +17,8 @@ public:
     void getBaseCommandBlock(void)const;
     void getBaseCommandBlock(void);
     void setTrackOutput(Actor &, bool);
-    void setName(Actor &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void onCommandBlockUpdate(Actor &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, int, bool);
-    void setLastOutput(Actor &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setName(Actor &, std::string const&);
+    void onCommandBlockUpdate(Actor &, std::string const&, bool, std::string, int, bool);
+    void setLastOutput(Actor &, std::string const&);
     void resetCurrentTick(void);
 };

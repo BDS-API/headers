@@ -14,12 +14,12 @@ public:
     void getPack(void)const;
     bool isType(PackType)const;
     bool isTrusted(void)const;
-    void getResource(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, int)const;
+    void getResource(Core::Path const&, std::string &, int)const;
     void _isValidSubpackIndex(int)const;
     bool hasResource(Core::Path const&, int)const;
     bool hasCapability(gsl::basic_string_span<char const, -1l>)const;
-    void setLocale(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    bool hasExtraResourcesForLocale(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int)const;
+    void setLocale(std::string const&);
+    bool hasExtraResourcesForLocale(std::string const&, int)const;
     bool isZipped(void)const;
     void getPackCategory(void)const;
     void getPackOrigin(void)const;
@@ -43,7 +43,7 @@ public:
     void _gatherBehaviorPackTelemetry(BehaviorPackContents &)const;
     void generateTextureList(void);
     void getTexturesList(int)const;
-    void getSubpackIndex(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getSubpackIndex(std::string const&)const;
     void getSubpackCount(void)const;
     void getSubpackInfoStack(void)const;
     void setLoadTime(double);

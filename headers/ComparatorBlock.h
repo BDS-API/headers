@@ -23,7 +23,7 @@ public:
     virtual void getVariant(Block const&)const;
     virtual bool canSpawnOn(void)const;
 
-    void ComparatorBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool);
+    void ComparatorBlock(std::string const&, int, bool);
     void _refreshOutputState(BlockSource &, BlockPos const&, int)const;
     void _installCircuit(BlockSource &, BlockPos const&, bool)const;
     void getSignal(BlockSource &, BlockPos const&, int)const;

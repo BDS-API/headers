@@ -9,7 +9,7 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void PhotoTransferPacket(void);
-    void PhotoTransferPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void PhotoTransferPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&);
+    void PhotoTransferPacket(std::string const&);
+    void PhotoTransferPacket(std::string const&, std::string&);
     void fromDisk(Core::Path, PhotoTransferPacket&);
 };

@@ -19,7 +19,7 @@ public:
     virtual void getObstructionAABB(void)const;
     virtual void _detectEntityObstruction(BlockSource &)const;
 
-    void ShulkerBoxBlockActor(BlockActorType, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, BlockActorRendererId, BlockPos const&);
+    void ShulkerBoxBlockActor(BlockActorType, std::string const&, BlockActorRendererId, BlockPos const&);
     void createShulkerBoxBlockEntity(BlockPos const&);
     void getFacingDir(void);
     void setFacingDir(unsigned char);

@@ -6,7 +6,7 @@ public:
     static long MemoryMappedFileAccess::EMPTY_TRANSFORMS;
 
     virtual ~MemoryMappedFileAccess();
-    virtual void fopen(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void fopen(Core::Path const&, std::string const&);
     virtual void fclose(void *);
     virtual void fseek(void *, long, int);
     virtual void ftell(void *);

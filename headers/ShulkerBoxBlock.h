@@ -16,6 +16,6 @@ public:
     virtual void getColor(Block const&)const;
     virtual void getColorForParticle(BlockSource &, BlockPos const&, Block const&)const;
 
-    void ShulkerBoxBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
-    void spawnBoxInstance(BlockSource &, Level &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>, int)const;
+    void ShulkerBoxBlock(std::string const&, int);
+    void spawnBoxInstance(BlockSource &, Level &, BlockPos const&, Block const&, std::string const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>, int)const;
 };

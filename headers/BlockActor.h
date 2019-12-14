@@ -26,7 +26,7 @@ public:
     virtual void getShadowRadius(BlockSource &)const;
     virtual bool hasAlphaLayer(void)const;
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
-    virtual void getDebugText(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, BlockPos const&);
+    virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&);
     virtual void getRepairCost(void)const;
     virtual void getOwningPiston(BlockSource &);
     virtual void getContainer(void);
@@ -34,12 +34,12 @@ public:
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onChunkUnloaded(LevelChunk &);
 
-    void setId(BlockActorType, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setId(BlockActorType, std::string const&);
     void initBlockEntities(void);
     void shutdown(void);
-    void BlockActor(BlockActorType, BlockPos const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void BlockActor(BlockActorType, BlockPos const&, std::string const&);
     void _resetAABB(void);
-    void setCustomName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setCustomName(std::string const&);
     void assignBlockIfNotAssigned(BlockSource &);
     void loadStatic(Level &, CompoundTag const&, DataLoadHelper &);
     void setChanged(void);

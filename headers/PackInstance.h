@@ -8,13 +8,13 @@ public:
     void PackInstance(PackInstance&&);
     void PackInstance(ResourcePack *, int, bool, PackSettings *);
     void PackInstance(PackInstance const&, bool, PackSettings *);
-    void PackInstance(ResourcePack *, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, PackSettings *);
+    void PackInstance(ResourcePack *, std::string const&, bool, PackSettings *);
     void getPackId(void)const;
     void getVersion(void)const;
-    void getResource(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    void getResource(Core::Path const&, std::string &)const;
     bool hasResource(Core::Path const&)const;
-    bool hasExtraResourcesForLocale(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
-    void setLocale(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    bool hasExtraResourcesForLocale(std::string const&)const;
+    void setLocale(std::string const&);
     void getManifest(void)const;
     void getPackSettings(void);
     void getPackSettings(void)const;

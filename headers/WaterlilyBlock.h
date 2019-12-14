@@ -12,5 +12,5 @@ public:
     virtual void getColor(Block const&)const;
     virtual void getColorAtPos(BlockSource &, BlockPos const&)const;
 
-    void WaterlilyBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void WaterlilyBlock(std::string const&, int);
 };

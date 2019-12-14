@@ -18,6 +18,6 @@ public:
     void getIndexForCreativeItem(ContainerItemStack const&)const;
     void _init(void);
     void _refreshContainer(bool);
-    void setOnItemExpandedCallback(std::function<void ()(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, int)>);
+    void setOnItemExpandedCallback(std::function<void ()(std::string const&, int, int)>);
     void _generateCurrentItems(void);
 };

@@ -9,6 +9,6 @@ public:
     virtual void Flush(void);
     virtual void Sync(void);
 
-    void LevelDbWritableFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Core::File &&);
+    void LevelDbWritableFile(std::string, Core::File &&);
     void SyncDirIfManifest(void);
 };

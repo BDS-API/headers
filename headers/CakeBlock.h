@@ -16,6 +16,6 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void CakeBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void CakeBlock(std::string const&, int);
     void _removeCakeSlice(Player &, BlockSource &, BlockPos const&)const;
 };

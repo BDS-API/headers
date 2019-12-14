@@ -22,7 +22,7 @@ public:
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
     virtual void fixupOnLoad(ItemStackBase &)const;
 
-    void ChemistryStickItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ChemistryStickItem(std::string const&, int);
     bool isActive(int);
     void getColorType(int);
     bool isChemistryStick(ItemInstance const&);

@@ -13,8 +13,8 @@ public:
 
     void ChalkboardBlockActor(BlockPos const&);
     bool isBaseChalkboard(void)const;
-    void setText(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, TextObjectRoot &&);
-    void setText(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setText(std::string const&, TextObjectRoot &&);
+    void setText(std::string const&);
     void _flagCachedMessageAsDirty(void);
     void getRotation(BlockSource &)const;
     void setOnGround(bool);
@@ -33,7 +33,7 @@ public:
     void getWidth(void)const;
     void getHeight(void)const;
     void convertFromEntity(BlockSource &, CompoundTag const&);
-    void createChalkboard(Actor *, BlockSource &, BlockPos const&, ChalkboardSize, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void createChalkboard(Actor *, BlockSource &, BlockPos const&, ChalkboardSize, int, bool, std::string);
     bool canCreateChalkboard(Actor *, BlockSource &, BlockPos const&, ChalkboardSize, int, std::vector<BlockPos, std::allocator<BlockPos>> &);
     void playerMayEdit(Player &)const;
     void _isOwner(Player &)const;

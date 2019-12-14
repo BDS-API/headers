@@ -9,5 +9,5 @@ public:
     virtual void getMaxLevel(void)const;
     virtual void getDamageBonus(int, Actor const&)const;
 
-    void TridentImpalerEnchant(Enchant::Type, Enchant::Frequency, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool, int);
+    void TridentImpalerEnchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, bool, int);
 };

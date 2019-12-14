@@ -134,7 +134,7 @@ public:
     void recomputeHeightMap(bool);
     void getTopRainBlockPos(ChunkBlockPos const&);
     void clearDeletedEntities(void);
-    void setPendingEntities(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
+    void setPendingEntities(std::string &);
     bool hasEntitiesToSerialize(void)const;
     bool hasEntitiesPendingToLoad(void)const;
     void getState(void)const;

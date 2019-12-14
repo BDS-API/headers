@@ -13,5 +13,5 @@ public:
     virtual void getSignalForData(int)const;
     virtual void getRedstoneSignal(int)const;
 
-    void WeightedPressurePlateBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&, int);
+    void WeightedPressurePlateBlock(std::string const&, int, Material const&, int);
 };

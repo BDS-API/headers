@@ -6,9 +6,9 @@ public:
     virtual ~BinaryStream();
 
     void BinaryStream(void);
-    void BinaryStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &&);
-    void BinaryStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool);
-    void BinaryStream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void BinaryStream(std::string &&);
+    void BinaryStream(std::string &, bool);
+    void BinaryStream(std::string const&);
     void reserve(unsigned long);
     void reset(void);
     void write(void const*, unsigned long);

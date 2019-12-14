@@ -20,8 +20,8 @@ public:
     virtual bool isProtectionEnchant(void)const;
     virtual bool isTreasureOnly(void)const;
 
-    void Enchant(Enchant::Type, Enchant::Frequency, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, int, bool);
-    void Enchant(Enchant::Type, Enchant::Frequency, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, int);
+    void Enchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, int, bool);
+    void Enchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, int);
     void getFrequency(void)const;
     bool isLootable(void)const;
     bool isExperimental(void)const;

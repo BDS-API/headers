@@ -16,7 +16,7 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void FireBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void FireBlock(std::string const&, int);
     void registerFlammableBlocks(void);
     void getTickDelay(void)const;
     bool isValidFireLocation(BlockSource &, BlockPos const&)const;

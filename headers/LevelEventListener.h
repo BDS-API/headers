@@ -11,7 +11,7 @@ public:
     virtual void onLevelRemovedActor(Level &, Actor &);
     virtual void onLevelAddedActor(Level &, Actor &);
     virtual void onLevelTick(void);
-    virtual void onLevelWeatherChange(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, bool);
+    virtual void onLevelWeatherChange(std::string const&, bool, bool);
 
     void LevelEventListener(void);
 };

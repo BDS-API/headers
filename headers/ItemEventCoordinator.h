@@ -6,9 +6,9 @@ public:
 
     void onInventoryItemOpened(bool);
     void onInventoryItemClosed(void);
-    void onItemTransferredFromContainer(ItemInstance const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void onItemTransferredToContainer(ItemInstance const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void onPreviewItemPopulatedInContainer(ItemInstance const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void onItemTransferredFromContainer(ItemInstance const&, std::string const&);
+    void onItemTransferredToContainer(ItemInstance const&, std::string const&);
+    void onPreviewItemPopulatedInContainer(ItemInstance const&, std::string const&);
     void onInventoryLayoutSelected(int, int);
     void onInventoryItemCraftedAutomaticallyByRecipe(ItemStack const&);
     void onRecipeSelected(ItemStack const&);

@@ -9,7 +9,7 @@ public:
     virtual void remove(void);
     virtual void normalTick(void);
     virtual void addRider(Actor &);
-    virtual void getExitTip(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, InputMode)const;
+    virtual void getExitTip(std::string const&, InputMode)const;
     virtual void getShadowHeightOffs(void);
     virtual void getShadowRadius(void)const;
     virtual void onAboveBubbleColumn(bool);

@@ -17,7 +17,7 @@ public:
     virtual void getColor(Block const&)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;
 
-    void GrassBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void GrassBlock(std::string const&, int);
     void _getGrassSide(int)const;
     void _canBeGrass(BlockSource const&, BlockPos const&)const;
     void _randomWalk(BlockSource &, BlockPos &, int)const;

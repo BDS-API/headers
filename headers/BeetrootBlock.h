@@ -10,5 +10,5 @@ public:
     virtual void getBaseCrop(void)const;
     virtual void getCropNum(Random &, int, int)const;
 
-    void BeetrootBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void BeetrootBlock(std::string const&, int);
 };

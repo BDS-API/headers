@@ -22,7 +22,7 @@ public:
     virtual void falling(void)const;
     virtual void onLand(BlockSource &, BlockPos const&)const;
 
-    void AnvilBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void AnvilBlock(std::string const&, int);
     bool isCubeShaped(void);
     bool isSolidRender(void)const;
 };

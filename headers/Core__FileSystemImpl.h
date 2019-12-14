@@ -8,7 +8,7 @@ public:
     virtual bool isRelativePath(Core::Path const&);
     virtual void getLastModificationTime(Core::Path const&, long *);
     virtual void copyTimeAndAccessRights(Core::Path const&, Core::Path const&);
-    virtual void requestFlush(std::vector<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> const&);
+    virtual void requestFlush(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> const&);
     virtual void shouldCommit(void);
     virtual void getCrossStorageCopyMode(void);
     virtual void getTransactionWriteSizeLimit(void)const;
@@ -21,8 +21,8 @@ public:
     virtual void _deleteDirectoryAndContentsRecursively(Core::Path const&);
     virtual void _deleteDirectoryContentsRecursively(Core::Path const&);
     virtual void _deleteRecursively(Core::Path const&, Core::FileType);
-    virtual void _getDirectoryFiles(std::vector<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &, Core::Path const&);
-    virtual void _getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &, Core::Path const&);
+    virtual void _getDirectoryFiles(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&);
+    virtual void _getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&);
     virtual void _getDirectoryFilesSizeRecursively(unsigned long &, Core::Path const&);
     virtual void _getDirectoryFilesAllocatedSizeRecursively(unsigned long &, unsigned long &, Core::Path const&);
     virtual void _copyDirectoryAndContentsRecursively(Core::Path const&, Core::Path const&);
@@ -72,8 +72,8 @@ public:
     void deleteDirectoryContentsRecursively(Core::Path const&);
     void renameDirectory(Core::Path const&, Core::Path const&);
     void iterateOverDirectory(Core::Path const&, Core::DirectoryIterationFlags, std::function<Core::Result ()(Core::DirectoryIterationItem const&)>);
-    void getDirectoryFiles(std::vector<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &, Core::Path const&);
-    void getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &, Core::Path const&);
+    void getDirectoryFiles(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&);
+    void getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&);
     void getDirectoryFilesSizeRecursively(unsigned long &, Core::Path const&);
     void getDirectoryFilesAllocatedSizeRecursively(unsigned long &, unsigned long &, Core::Path const&);
     void copyDirectoryAndContentsRecursively(Core::Path const&, Core::Path const&);

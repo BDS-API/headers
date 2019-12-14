@@ -8,18 +8,18 @@ public:
 
 
     void StructureManager(void);
-    void getOrCreateLegacy(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void _getLegacy(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void _createAndLoadStructure(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getOrCreateLegacy(std::string const&);
+    void _getLegacy(std::string const&);
+    void _createAndLoadStructure(std::string const&);
     void load(StructureTemplate &);
-    void _readLegacyStructure(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void loadLegacy(LegacyStructureTemplate &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
-    void getOrCreate(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void getStructure(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void _readLegacyStructure(std::string const&);
+    void loadLegacy(LegacyStructureTemplate &, std::string &);
+    void getOrCreate(std::string const&);
+    void getStructure(std::string const&)const;
     void saveToLevel(StructureTemplate const&);
     void exportStructure(StructureTemplate const&, Core::Path const&);
     void setLevelStorage(LevelStorage *);
     void setPackManager(ResourcePackManager &);
-    void createStructureDataExportPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, StructureTemplateResponseType);
+    void createStructureDataExportPacket(std::string const&, StructureTemplateResponseType);
     void clearLoadedStructures(void);
 };

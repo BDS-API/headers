@@ -30,7 +30,7 @@ public:
     void clamp(void);
     void brighter(float)const;
     bool isNil(void)const;
-    void fromHexString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void fromHexString(std::string const&);
     void lerp(Color const&, Color const&, float);
     void redFromARGB(int);
     void greenFromARGB(int);

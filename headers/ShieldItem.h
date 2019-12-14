@@ -16,7 +16,7 @@ public:
     virtual void getInHandUpdateType(Player const&, ItemInstance const&, ItemInstance const&, bool, bool)const;
     virtual void getInHandUpdateType(Player const&, ItemStack const&, ItemStack const&, bool, bool)const;
 
-    void ShieldItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ShieldItem(std::string const&, int);
     void playBlockSound(Player *)const;
     void playBreakSound(Player *)const;
 };

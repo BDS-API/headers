@@ -4,7 +4,7 @@ class POIInstance {
 
 public:
 
-    void POIInstance(BlockPos const&, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, POIType, float, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void POIInstance(BlockPos const&, bool, std::string, POIType, float, unsigned long, unsigned long, std::string, std::string, std::string);
     bool isPathable(void)const;
     void getPosition(void)const;
     void setPosition(BlockPos const&);
@@ -24,9 +24,9 @@ public:
     void decreaseOwnerCount(unsigned long);
     bool isFull(void)const;
     void getInitEvent(void)const;
-    void setInitEvent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setInitEvent(std::string const&);
     void getEndEvent(void)const;
-    void setEndEvent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setEndEvent(std::string const&);
     void getName(void)const;
     void getSoundEvent(void)const;
     void incrementArrivalFailureCount(void);

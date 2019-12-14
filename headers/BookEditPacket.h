@@ -18,6 +18,6 @@ public:
     void setToAddPage(int, int, PageContent const&);
     void setToDeletePage(int, int);
     void setToSwapPages(int, int, int);
-    void setToFinalize(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void setToFinalize(int, std::string, std::string, std::string);
     void getPage(void)const;
 };

@@ -15,7 +15,7 @@ public:
     virtual void getVariant(Block const&)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void Sapling(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void Sapling(std::string const&, int);
     void growTree(BlockSource &, BlockPos const&, Random &, Actor *)const;
     void advanceTree(BlockSource &, BlockPos const&, Random &, Actor *)const;
     bool isSapling(BlockSource &, BlockPos const&, SaplingType)const;

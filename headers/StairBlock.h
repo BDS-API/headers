@@ -34,7 +34,7 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void StairBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, BlockLegacy const&, int);
+    void StairBlock(std::string const&, int, BlockLegacy const&, int);
     void setBaseShape(Block const&, AABB &, bool)const;
     void shapeZFightShrink(AABB &)const;
     void setStepShape(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;

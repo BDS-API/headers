@@ -11,9 +11,9 @@ public:
     virtual bool isTrusted(void)const;
     virtual bool hasAsset(Core::Path const&, bool)const;
     virtual bool hasFolder(Core::Path const&)const;
-    virtual void getAsset(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, bool)const;
-    virtual void deleteAsset(Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> const&);
-    virtual void writeAsset(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void getAsset(Core::Path const&, std::string &, bool)const;
+    virtual void deleteAsset(Core::PathBuffer<std::string> const&);
+    virtual void writeAsset(Core::Path const&, std::string const&);
     virtual void forEachIn(Core::Path const&, std::function<void ()(Core::Path const&)>, bool)const;
     virtual void getStrategyType(void)const;
     virtual void createSubPack(Core::Path const&)const;
@@ -22,5 +22,5 @@ public:
 
     void ZipPackAccessStrategy(IFileAccess &, ResourceLocation const&, Core::Path const&);
     void ZipPackAccessStrategy(ZipPackAccessStrategy const&);
-    void _tryReadFromPendingQueue(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    void _tryReadFromPendingQueue(Core::Path const&, std::string &)const;
 };

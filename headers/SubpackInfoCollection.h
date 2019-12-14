@@ -12,8 +12,8 @@ public:
     void getDefaultSubpackIndex(ContentTierInfo const&)const;
     void _isValidSubpackIndex(int)const;
     bool isCompatibleSubpack(int, ContentTierInfo const&)const;
-    bool isCompatibleSubpack(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, ContentTierInfo const&)const;
-    void getSubpackIndex(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    bool isCompatibleSubpack(std::string const&, ContentTierInfo const&)const;
+    void getSubpackIndex(std::string const&)const;
     bool isCompatible(ContentTierInfo const&)const;
     void getSubpackContentTier(int)const;
 };

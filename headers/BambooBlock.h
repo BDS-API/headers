@@ -23,7 +23,7 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void BambooBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void BambooBlock(std::string const&, int);
     void _getPositionalValue(BlockPos const&);
     void _checkAlive(BlockSource &, BlockPos const&)const;
     void getMaxHeight(BlockPos const&);

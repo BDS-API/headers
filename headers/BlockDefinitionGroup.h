@@ -8,7 +8,7 @@ public:
     void registerBlocks(void);
     void clearDefinitions(void);
     void getBlockDefinitions(void)const;
-    void tryGetBlockDefinition(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void tryGetBlockDefinition(std::string const&)const;
     void digestServerBlockProperties(UpdateBlockPropertiesPacket const&, BlockComponentFactory const&);
     void buildBlockSchema(BlockComponentFactory const&);
     void _buildBlockDescriptionSchema(JsonUtil::JsonSchemaObjectNode<JsonUtil::JsonParseState<JsonUtil::EmptyClass, BlockDefinition>, BlockDefinition> &);

@@ -4,7 +4,7 @@ class BoneAnimation {
 
 public:
 
-    void setName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setName(std::string const&);
     void getBoneName(void)const;
     void animate(RenderParams &, BoneOrientation &, float)const;
     void addAnimationChannel(BoneTransformType);
@@ -13,6 +13,6 @@ public:
     void getAnimationChannels(void);
     void toJson(Json::Value &)const;
     void getMaxKeyFrameTime(void)const;
-    void BoneAnimation(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void BoneAnimation(std::string const&);
     void BoneAnimation(BoneAnimation const&);
 };

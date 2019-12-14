@@ -23,7 +23,7 @@ public:
     virtual bool canSpawnOn(void)const;
     virtual void updateShape(BlockSource *, BlockPos const&);
 
-    void LeverBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void LeverBlock(std::string const&, int);
     void _getShape(Block const&, AABB &)const;
     void getLeverFacing(int);
     void _getFacing(Block const&)const;

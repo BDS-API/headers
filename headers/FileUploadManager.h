@@ -11,8 +11,8 @@ public:
     void FileUploadManager(TaskGroup &, std::shared_ptr<IFileChunkUploader>);
     void FileUploadManager(TaskGroup &, std::shared_ptr<IFileChunkUploader>, std::weak_ptr<FileArchiver>);
     void update(void);
-    void uploadArchivedFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Core::Path const&);
-    void uploadFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Core::Path const&, bool, Json::Value const&);
+    void uploadArchivedFile(std::string const&, Core::Path const&);
+    void uploadFile(std::string const&, Core::Path const&, bool, Json::Value const&);
     void uploadChunk(int);
     void _uploadChunk(FileChunkInfo const&);
     void uploadChunk(FileChunkInfo);

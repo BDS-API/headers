@@ -23,6 +23,6 @@ public:
 
     void getAttachedOffset(unsigned char);
     void getHopperBlockEntity(BlockSource &, BlockPos const&);
-    void HopperBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void HopperBlock(std::string const&, int);
     void _installCircuit(BlockSource &, BlockPos const&)const;
 };

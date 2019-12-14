@@ -39,7 +39,7 @@ public:
     void setRotation(Rotation);
     void getMirror(void)const;
     void setMirror(Mirror);
-    void setStructureDataField(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setStructureDataField(std::string const&);
     void getIntegrityValue(void)const;
     void setIntegrityValue(float);
     void getIntegritySeed(void)const;
@@ -47,9 +47,9 @@ public:
     void getStructureSettings(void)const;
     void validateSize(BlockPos const&);
     void validateOffset(BlockPos const&);
-    void structureNameIsValid(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void getNamespaceFromName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void getNameWithoutNamespace(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void structureNameIsValid(std::string const&);
+    void getNamespaceFromName(std::string const&);
+    void getNameWithoutNamespace(std::string const&);
     void load(CompoundTag const&, DataLoadHelper &);
     void getOrientedBounds(BlockPos const&, Rotation);
     void save(CompoundTag &)const;

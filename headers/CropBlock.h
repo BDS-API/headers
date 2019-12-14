@@ -14,8 +14,8 @@ public:
     virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
-    virtual void executeEvent(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Actor &)const;
-    virtual bool hasTag(BlockSource &, BlockPos const&, Block const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    virtual void executeEvent(BlockSource &, BlockPos const&, Block const&, std::string const&, Actor &)const;
+    virtual bool hasTag(BlockSource &, BlockPos const&, Block const&, std::string const&)const;
     virtual void getVariant(Block const&)const;
     virtual bool canBeSilkTouched(void)const;
     virtual void getBaseSeed(void)const;
@@ -23,6 +23,6 @@ public:
     virtual void getSeedNum(Random &, int, int)const;
     virtual void getCropNum(Random &, int, int)const;
 
-    void CropBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void CropBlock(std::string const&, int);
     void getGrowthSpeed(BlockSource &, BlockPos const&)const;
 };

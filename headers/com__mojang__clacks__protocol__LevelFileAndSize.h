@@ -18,7 +18,7 @@ public:
     virtual void SetCachedSize(int)const;
     virtual void GetMetadata(void)const;
 
-    void set_value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &&);
+    void set_value(std::string &&);
     void InitAsDefaultInstance(void);
     void LevelFileAndSize(void);
     void SharedCtor(void);

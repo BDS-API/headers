@@ -7,7 +7,7 @@ public:
     virtual void tick(void);
     virtual void fireCommandDoneEvent(void);
 
-    void Command(Player &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void Command(Player &, std::string);
     void _setMobCarriedItem(ItemStack const&);
     void _getNextPosFromDirection(AgentCommands::Direction);
     void _getFacingFromDirection(Vec3 const&);

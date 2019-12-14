@@ -16,9 +16,9 @@ public:
     void _index(float, float);
     void _getX(float, float);
     void _getY(float, float);
-    void getGrassColor(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, float, float);
-    void getGrassColor(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, float);
-    void getFoliageColor(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, float, float);
+    void getGrassColor(std::string const&, float, float);
+    void getGrassColor(std::string const&, float);
+    void getFoliageColor(std::string const&, float, float);
     void getMapGrassColor(float, float);
     void getMapFoliageColor(float, float);
     void getGrassColor(float, float);
@@ -33,8 +33,8 @@ public:
     void getGrassColor(BlockSource &, BlockPos const&);
     void getMapGrassColor(BlockSource &, BlockPos const&);
     void _setPalette(mce::Image const&, std::array<int, 65536ul> &);
-    void setGrassColorPalette(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, mce::Image &);
-    void setFoliageColorPalette(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, mce::Image &);
+    void setGrassColorPalette(std::string const&, mce::Image &);
+    void setFoliageColorPalette(std::string const&, mce::Image &);
     void buildGrassColor(BlockPos const&, BlockPos const&, BlockSource &, Random &);
     void getGrassNoise(void);
 };

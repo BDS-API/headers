@@ -23,7 +23,7 @@ public:
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void SeaGrass(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void SeaGrass(std::string const&, int);
     void checkAlive(BlockSource &, BlockPos const&)const;
     void trySpawnSeaGrass(BlockSource &, BlockPos const&);
 };

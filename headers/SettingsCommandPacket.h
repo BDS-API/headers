@@ -9,6 +9,6 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void SettingsCommandPacket(void);
-    void SettingsCommandPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void SettingsCommandPacket(std::string const&, bool);
     void getSupressOutput(void)const;
 };

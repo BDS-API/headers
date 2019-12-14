@@ -22,11 +22,11 @@ public:
     void _validateMarketplaceGameRuleTypes(void);
     void createAllGameRulesPacket(void)const;
     void deserializeRules(GameRulesChangedPacketData const&);
-    void nameToGameRuleIndex(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void nameToGameRuleIndex(std::string const&)const;
     void setRule(GameRuleId, bool, bool, bool *, bool *, GameRule::ValidationError *);
     void setRule(GameRuleId, int, bool, bool *, bool *, GameRule::ValidationError *);
     void setRule(GameRuleId, float, bool, bool *, bool *, GameRule::ValidationError *);
-    void _registerRule(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, GameRuleId);
+    void _registerRule(std::string const&, GameRuleId);
     void _setRule(GameRuleId, GameRule::Value, GameRule::Type, bool, bool *, bool *, GameRule::ValidationError *);
     void _getRule(GameRuleId);
     void _createPacket(GameRule const&);

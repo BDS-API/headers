@@ -20,6 +20,6 @@ public:
     virtual void onGraphicsModeChanged(bool, bool, bool);
     virtual bool canBeSilkTouched(void)const;
 
-    void ReedBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ReedBlock(std::string const&, int);
     void checkAlive(BlockSource &, BlockPos const&)const;
 };

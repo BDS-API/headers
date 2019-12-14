@@ -25,7 +25,7 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void CauldronBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void CauldronBlock(std::string const&, int);
     void updateShape(BlockSource &, BlockPos const&);
     void setLiquidLevel(BlockSource &, BlockPos const&, int, CauldronLiquidType)const;
     void _spawnCauldronEvent(BlockSource &, BlockPos const&, LevelEvent)const;

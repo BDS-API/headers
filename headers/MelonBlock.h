@@ -8,5 +8,5 @@ public:
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
 
-    void MelonBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void MelonBlock(std::string const&, int);
 };

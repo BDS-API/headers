@@ -17,7 +17,7 @@ public:
     void _getMobEvents(void)const;
     void areEventsEnabled(void)const;
     void setEventsEnabled(bool);
-    void getIndexFromName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getIndexFromName(std::string const&)const;
     void deserialize(CompoundTag const&);
     void serialize(void)const;
 };

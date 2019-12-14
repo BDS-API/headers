@@ -19,5 +19,5 @@ public:
     virtual void updateShape(BlockSource &, BlockPos const&);
     virtual void updateSignalStrength(BlockSource &, BlockPos const&)const;
 
-    void DaylightDetectorBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool);
+    void DaylightDetectorBlock(std::string const&, int, bool);
 };

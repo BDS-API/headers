@@ -13,11 +13,11 @@ public:
     virtual void releaseUsing(ItemStack &, Player *, int)const;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
-    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::string const&, int);
     virtual bool canBeCharged(void)const;
     virtual void playSoundIncrementally(ItemStack const&, Mob &)const;
 
-    void CrossbowItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void CrossbowItem(std::string const&, int);
     void _getMaxUseDuration(ItemStack const&)const;
     void _shootArrow(ItemInstance const&, ItemInstance const&, Player &)const;
     void _shootFirework(ItemInstance const&, Player &)const;

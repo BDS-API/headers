@@ -12,6 +12,6 @@ public:
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
 
-    void SoulSandBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void SoulSandBlock(std::string const&, int);
     void _tryAddBubbleColumnSegment(BlockSource &, BlockPos const&)const;
 };

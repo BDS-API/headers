@@ -18,7 +18,7 @@ public:
     virtual void clearCache(void);
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
-    virtual void getDebugText(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, BlockPos const&);
+    virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&);
     virtual void getContainer(void);
     virtual void startOpen(Player &);
     virtual void getContainerSize(void)const;
@@ -40,7 +40,7 @@ public:
     virtual void getObstructionAABB(void)const;
     virtual void _detectEntityObstruction(BlockSource &)const;
 
-    void ChestBlockActor(BlockActorType, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, BlockActorRendererId, BlockPos const&, bool);
+    void ChestBlockActor(BlockActorType, std::string const&, BlockActorRendererId, BlockPos const&, bool);
     void createChestBlockEntity(BlockPos const&);
     void createTrappedChestBlockEntity(BlockPos const&);
     bool isLargeChest(void)const;

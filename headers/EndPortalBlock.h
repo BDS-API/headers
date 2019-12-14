@@ -18,5 +18,5 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getEntityResourceItem(Random &, BlockActor const&, int)const;
 
-    void EndPortalBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void EndPortalBlock(std::string const&, int);
 };

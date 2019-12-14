@@ -26,7 +26,7 @@ public:
     virtual void getTurnOffDelay(Block const&)const;
 
     bool isDiode(Block const&);
-    void DiodeBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool);
+    void DiodeBlock(std::string const&, int, bool);
     void checkTickOnNeighbor(BlockSource &, BlockPos const&, Block const&)const;
     void getAlternateSignalAt(BlockSource &, BlockPos const&, int)const;
 };

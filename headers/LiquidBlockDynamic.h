@@ -7,7 +7,7 @@ public:
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
 
-    void LiquidBlockDynamic(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&);
+    void LiquidBlockDynamic(std::string const&, int, Material const&);
     void _spread(BlockSource &, BlockPos const&, int, bool)const;
     void _trySpreadTo(BlockSource &, BlockPos const&, int, BlockPos const&, unsigned char)const;
     void _canSpreadTo(BlockSource &, BlockPos const&, BlockPos const&, unsigned char)const;

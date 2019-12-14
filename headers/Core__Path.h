@@ -11,6 +11,6 @@ public:
     void Path(void);
     void Path(char const*, std::optional<unsigned long>);
     void empty(void)const;
-    void Path(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void Path(std::string const&);
     bool isDotOrDotDot(void)const;
 };

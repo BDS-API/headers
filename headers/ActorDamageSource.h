@@ -7,7 +7,7 @@ public:
     virtual bool isEntitySource(void)const;
     virtual bool isChildEntitySource(void)const;
     virtual bool isBlockSource(void)const;
-    virtual void getDeathMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Actor *)const;
+    virtual void getDeathMessage(std::string, Actor *)const;
     virtual void getIsCreative(void)const;
     virtual void getIsWorldBuilder(void)const;
     virtual void getEntityUniqueID(void)const;
@@ -20,8 +20,8 @@ public:
     virtual void getDamagingEntityCategories(void)const;
     virtual void clone(void)const;
 
-    void lookupCause(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void ActorDamageSource(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void lookupCause(std::string const&);
+    void ActorDamageSource(std::string const&);
     void ActorDamageSource(ActorDamageCause);
     void getCause(void)const;
     void setCause(ActorDamageCause);

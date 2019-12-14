@@ -5,7 +5,7 @@ class JournaledFile {
 public:
 
     void fileOrBackupExists(Core::Path);
-    void populateImportantFiles(Core::Path, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &);
+    void populateImportantFiles(Core::Path, std::vector<std::string, std::allocator<std::string>> &);
     bool isOldFile(Core::Path);
     bool isNewFile(Core::Path);
     void JournaledFile(std::function<Core::Result ()(Core::Path)> &&);

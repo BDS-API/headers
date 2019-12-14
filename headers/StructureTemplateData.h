@@ -30,11 +30,11 @@ public:
     void setBlockIndices(std::vector<int, std::allocator<int>>);
     void getExtraBlockIndices(void)const;
     void setExtraBlockIndices(std::vector<int, std::allocator<int>>);
-    void addPalette(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, StructureBlockPalette);
-    void getPalette(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void addPalette(std::string const&, StructureBlockPalette);
+    void getPalette(std::string const&)const;
     void getEntityData(void)const;
     void addEntityData(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>);
-    void _contentErrorMissingField(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void _contentErrorMissingField(std::string const&)const;
     void _saveBlockIndices(CompoundTag &)const;
     void _savePalettes(CompoundTag &)const;
     void _saveEntities(CompoundTag &)const;

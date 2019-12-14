@@ -16,6 +16,6 @@ public:
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void NetherWartBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void NetherWartBlock(std::string const&, int);
     void growCropsToMax(BlockSource &, BlockPos const&);
 };

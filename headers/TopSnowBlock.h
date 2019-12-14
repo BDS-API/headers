@@ -35,7 +35,7 @@ public:
 
     void getCoveredBlock(BlockSource &, BlockPos const&);
     void buildSnowBlock(BlockSource &, BlockPos const&, int, bool);
-    void TopSnowBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void TopSnowBlock(std::string const&, int);
     void melt(BlockSource &, BlockPos const&, int)const;
     void calcSnowThickness(Mob *, BlockPos const&)const;
 };

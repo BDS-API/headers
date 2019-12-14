@@ -11,9 +11,9 @@ public:
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
     virtual bool isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
-    virtual void setIcon(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    virtual void setIcon(std::string const&, int);
 
-    void SparklerItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void SparklerItem(std::string const&, int);
     void _getColorFromData(int);
     void getColor(int);
 };

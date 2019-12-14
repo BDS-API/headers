@@ -4,24 +4,24 @@ class ResourcePackManager : ResourceLoader {
 
 public:
     virtual ~ResourcePackManager();
-    virtual void load(ResourceLocation const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
-    virtual void load(ResourceLocation const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&)const;
+    virtual void load(ResourceLocation const&, std::string &)const;
+    virtual void load(ResourceLocation const&, std::string &, std::vector<std::string, std::allocator<std::string>> const&)const;
     virtual void loadAllVersionsOf(ResourceLocation const&)const;
     virtual bool isInStreamableLocation(ResourceLocation const&)const;
-    virtual bool isInStreamableLocation(ResourceLocation const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&)const;
-    virtual void getPath(ResourceLocation const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&)const;
-    virtual void getPathContainingResource(ResourceLocation const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>)const;
+    virtual bool isInStreamableLocation(ResourceLocation const&, std::vector<std::string, std::allocator<std::string>> const&)const;
+    virtual void getPath(ResourceLocation const&, std::vector<std::string, std::allocator<std::string>> const&)const;
+    virtual void getPathContainingResource(ResourceLocation const&, std::vector<std::string, std::allocator<std::string>>)const;
     virtual bool hasCapability(gsl::basic_string_span<char const, -1l>)const;
 
-    void ResourcePackManager(std::function<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> ()(void)>, ContentTierManager const&, bool);
-    void _getResource(Core::Path const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
-    void loadText(ResourceLocation const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    void ResourcePackManager(std::function<Core::PathBuffer<std::string> ()(void)>, ContentTierManager const&, bool);
+    void _getResource(Core::Path const&, std::string &)const;
+    void loadText(ResourceLocation const&, std::string &)const;
     void loadAllVersionsOf(ResourceLocation const&, ResourcePackMergeStrategy &)const;
     bool hasTexture(ResourceLocation const&)const;
-    bool hasResource(ResourceLocation const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&)const;
+    bool hasResource(ResourceLocation const&, std::vector<std::string, std::allocator<std::string>> const&)const;
     bool hasResource(ResourceLocation const&)const;
     void _getPackForResource(Core::Path const&)const;
-    void getPackIndexForResource(ResourceLocation const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&)const;
+    void getPackIndexForResource(ResourceLocation const&, std::vector<std::string, std::allocator<std::string>> const&)const;
     void getStackSize(void)const;
     void findAllTexturesInUse(void)const;
     void findInPacks(ResourceLocation const&);
@@ -43,11 +43,11 @@ public:
     void unRegisterResourcePackListener(ResourcePackListener &);
     void unRegisterAllResourcePackListener(void);
     void notifyLanguageSubpacksChanged(void);
-    void getResourcesOfGroup(PackInstance const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
-    void _getResourcesOfGroup(PackInstance const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::vector<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>> &)const;
-    void getResourcesOfGroup(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getResourcesOfGroup(PackInstance const&, std::string const&)const;
+    void _getResourcesOfGroup(PackInstance const&, std::string const&, std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &)const;
+    void getResourcesOfGroup(std::string const&)const;
     bool isOnlyBaseGamePacks(void)const;
-    void checkHasExtraLocaleResources(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void checkHasExtraLocaleResources(std::string const&)const;
     void onLanguageChanged(void);
     void onBaseGamePackDownloadComplete(void);
     void handlePendingStackChanges(void);

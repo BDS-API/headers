@@ -18,7 +18,7 @@ public:
     virtual void use(Player &, BlockPos const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
 
-    void FlowerPotBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void FlowerPotBlock(std::string const&, int);
     bool isCubeShaped(void);
     bool isSolidRender(void)const;
     void getFlowerPotEntity(BlockSource &, BlockPos const&)const;

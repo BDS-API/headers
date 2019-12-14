@@ -59,7 +59,7 @@ public:
     virtual bool canBePulledIntoVehicle(void)const;
     virtual void inCaravan(void)const;
     virtual void stopRiding(bool, bool, bool);
-    virtual void buildDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void buildDebugInfo(std::string &)const;
     virtual void getDeathTime(void)const;
     virtual void swing(void);
     virtual void getYHeadRot(void)const;
@@ -255,7 +255,7 @@ public:
     void setNaturallySpawned(bool);
     bool isNaturallySpawned(void)const;
     void setSurfaceMob(bool);
-    void _addSpeedBonus(mce::UUID const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, float);
+    void _addSpeedBonus(mce::UUID const&, std::string const&, float);
     void _removeSpeedBonus(mce::UUID const&);
     void getFlightSpeed(void);
     void setFlightSpeed(float);

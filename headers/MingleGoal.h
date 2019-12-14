@@ -13,7 +13,7 @@ public:
     virtual void start(void);
     virtual void stop(void);
     virtual void tick(void);
-    virtual void appendDebugInfo(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    virtual void appendDebugInfo(std::string &)const;
 
     void MingleGoal(Mob &, float, float, float, ActorDefinitionIdentifier, float);
     void _getMingleComponent(void)const;

@@ -7,8 +7,8 @@ public:
     void DwellerComponent(DwellerComponent&&);
     void DwellerComponent(void);
     void initFromDefinition(Actor &);
-    void _getType(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
-    void _getRole(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void _getType(std::string const&)const;
+    void _getRole(std::string const&)const;
     void onDeath(Actor &, ActorDamageSource const&);
     void getVillage(Actor const&)const;
     void onRemove(Actor &);
@@ -17,7 +17,7 @@ public:
     void addAdditionalSaveData(CompoundTag &);
     void getDwellerRole(void)const;
     void getCanFindPOI(void)const;
-    void buildDebugInfo(Actor const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &)const;
+    void buildDebugInfo(Actor const&, std::string &)const;
     bool hasDwelling(void)const;
     void getDwellingUniqueID(void)const;
     void setDwellingUniqueID(Actor &, mce::UUID);

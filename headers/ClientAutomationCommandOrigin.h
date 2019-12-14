@@ -16,5 +16,5 @@ public:
     virtual void getOriginType(void)const;
     virtual void toCommandOriginData(void)const;
 
-    void ClientAutomationCommandOrigin(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void ClientAutomationCommandOrigin(std::string const&);
 };

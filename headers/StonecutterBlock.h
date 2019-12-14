@@ -14,5 +14,5 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void StonecutterBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void StonecutterBlock(std::string const&, int);
 };

@@ -13,5 +13,5 @@ public:
 
     void StringTag(StringTag&&);
     void StringTag(void);
-    void StringTag(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void StringTag(std::string);
 };

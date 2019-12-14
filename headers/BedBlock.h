@@ -29,7 +29,7 @@ public:
     virtual void getMappedFace(unsigned char, Block const&)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void BedBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void BedBlock(std::string const&, int);
     void setOccupied(BlockSource &, BlockPos const&, bool);
     void findStandUpPosition(BlockSource &, BlockPos const&, int, BlockPos&);
 };

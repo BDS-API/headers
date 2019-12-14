@@ -7,5 +7,5 @@ public:
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
 
-    void PodzolBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void PodzolBlock(std::string const&, int);
 };

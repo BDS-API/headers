@@ -14,6 +14,6 @@ public:
     virtual void size(void)const;
     virtual bool isExperimental(void)const;
 
-    void BookCloningRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
-    void BookCloningRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, mce::UUID const&);
+    void BookCloningRecipe(std::string);
+    void BookCloningRecipe(std::string, mce::UUID const&);
 };

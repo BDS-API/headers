@@ -11,6 +11,6 @@ public:
     virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
 
-    void SimpleContainer(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool, int, ContainerType);
+    void SimpleContainer(std::string const&, bool, int, ContainerType);
     void clearContent(void);
 };

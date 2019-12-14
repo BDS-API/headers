@@ -11,7 +11,7 @@ public:
     virtual void getRidingHeight(void);
     virtual void setTarget(Actor *);
     virtual bool canBeAffected(MobEffectInstance const&)const;
-    virtual void getDebugText(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &);
+    virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &);
     virtual void die(ActorDamageSource const&);
     virtual void doHurtTarget(Actor *);
     virtual void useNewAi(void)const;

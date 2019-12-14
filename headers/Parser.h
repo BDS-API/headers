@@ -4,7 +4,7 @@ class Parser {
 
 public:
 
-    void reportParseError(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void reportParseError(std::string const&);
     void parse(Json::Value const&, MobEffectInstance &, char const*);
     void parse(Json::Value const&, int &, char const*, int);
     void parse(Json::Value const&, unsigned int &, char const*, unsigned int);
@@ -17,7 +17,7 @@ public:
     void parse(Json::Value const&, Color &, char const*, Color const&);
     void parse(Json::Value const&, ParticleType &, char const*, char const*);
     void parse(Json::Value const&, Difficulty &, char const*, char const*);
-    void parse(Json::Value const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, char const*, char const*);
+    void parse(Json::Value const&, std::string &, char const*, char const*);
     void parse(Json::Value const&, Util::HashString &, char const*, char const*);
     void parse(Json::Value const&, ActorDamageCause &, char const*, char const*);
     void parse(Json::Value const&, ActorDefinitionIdentifier &, char const*, char const*);
@@ -25,9 +25,9 @@ public:
     void parse(Json::Value const&, Json::Value&, char const*);
     void parse(Json::Value const&, std::set<Item const*, std::less<Item const*>, std::allocator<Item const*>> &, char const*);
     void parse(Json::Value const&, std::set<Block const*, std::less<Block const*>, std::allocator<Block const*>> &, char const*);
-    void parse(Json::Value const&, std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, char const*);
+    void parse(Json::Value const&, std::set<std::string, std::less<std::string>, std::allocator<std::string>> &, char const*);
     void parse(Json::Value const&, std::set<Util::HashString, Util::HashString::HashFunc, std::allocator<Util::HashString>> &, char const*);
-    void parse(Json::Value const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &, char const*);
+    void parse(Json::Value const&, std::vector<std::string, std::allocator<std::string>> &, char const*);
     void parse(Json::Value const&, std::vector<Util::HashString, std::allocator<Util::HashString>> &, char const*);
     void parse(Json::Value const&, std::vector<ActorDefinitionIdentifier, std::allocator<ActorDefinitionIdentifier>> &, char const*, char const*);
     void parse(Json::Value const&, std::vector<LevelSoundEvent, std::allocator<LevelSoundEvent>> &, char const*, char const*);
@@ -61,9 +61,9 @@ public:
     void serialize(ActorType const&, Json::Value &, char const*);
     void serialize(std::set<Item const*, std::less<Item const*>, std::allocator<Item const*>> const&, Json::Value &, char const*);
     void serialize(std::set<Block const*, std::less<Block const*>, std::allocator<Block const*>> const&, Json::Value &, char const*);
-    void serialize(std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&, Json::Value &, char const*);
+    void serialize(std::set<std::string, std::less<std::string>, std::allocator<std::string>> const&, Json::Value &, char const*);
     void serialize(std::set<Util::HashString, Util::HashString::HashFunc, std::allocator<Util::HashString>> const&, Json::Value &, char const*);
-    void serialize(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&, Json::Value &, char const*);
+    void serialize(std::vector<std::string, std::allocator<std::string>> const&, Json::Value &, char const*);
     void serialize(std::vector<Util::HashString, std::allocator<Util::HashString>> const&, Json::Value &, char const*);
     void serialize(std::vector<ActorDefinitionIdentifier, std::allocator<ActorDefinitionIdentifier>> const&, Json::Value &, char const*);
     void serialize(std::vector<LevelSoundEvent, std::allocator<LevelSoundEvent>> const&, Json::Value &, char const*);

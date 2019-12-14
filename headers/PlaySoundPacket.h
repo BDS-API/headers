@@ -9,5 +9,5 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void PlaySoundPacket(void);
-    void PlaySoundPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Vec3 const&, float, float);
+    void PlaySoundPacket(std::string, Vec3 const&, float, float);
 };

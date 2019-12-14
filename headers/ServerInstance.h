@@ -21,7 +21,7 @@ public:
     void getNetwork(void);
     void _assertThread(void);
     void ServerInstance(IMinecraftApp &, ServerInstanceEventCoordinator &);
-    void initializeServer(IMinecraftApp &, Whitelist &, PermissionsFile *, Core::FilePathManager *, std::chrono::duration<long, std::ratio<1l, 1l>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, LevelSettings, int, bool, ConnectionDefinition, bool, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, mce::UUID const&, IMinecraftEventing &, ResourcePackRepository &, ContentTierManager const&, ResourcePackManager &, std::function<std::unique_ptr<LevelStorage, std::default_delete<LevelStorage>> ()(Scheduler &)>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, LevelData *, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::unique_ptr<EducationOptions, std::default_delete<EducationOptions>>, ResourcePackManager*, std::function<void ()(void)>, std::function<void ()(void)>, ServerMetrics *, DebugEndPoint *, bool, std::shared_ptr<Core::FileStorageArea>, unsigned short);
+    void initializeServer(IMinecraftApp &, Whitelist &, PermissionsFile *, Core::FilePathManager *, std::chrono::duration<long, std::ratio<1l, 1l>>, std::string, std::string, std::string, LevelSettings, int, bool, ConnectionDefinition, bool, std::vector<std::string, std::allocator<std::string>> const&, std::string, mce::UUID const&, IMinecraftEventing &, ResourcePackRepository &, ContentTierManager const&, ResourcePackManager &, std::function<std::unique_ptr<LevelStorage, std::default_delete<LevelStorage>> ()(Scheduler &)>, std::string const&, LevelData *, std::string, std::string, std::unique_ptr<EducationOptions, std::default_delete<EducationOptions>>, ResourcePackManager*, std::function<void ()(void)>, std::function<void ()(void)>, ServerMetrics *, DebugEndPoint *, bool, std::shared_ptr<Core::FileStorageArea>, unsigned short);
     void startLeaveGame(void);
     void _threadSafeExecute(std::function<void ()(void)>);
     void leaveGameSync(void);
@@ -36,8 +36,8 @@ public:
     void resume(void);
     void getEventCoordinator(void);
     void getScriptEngine(void);
-    void disconnectRemoteClientsWithMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
-    void disconnectAllClientsWithMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void disconnectRemoteClientsWithMessage(std::string);
+    void disconnectAllClientsWithMessage(std::string);
     void getScheduler(void);
     bool isServerThreadRunning(void)const;
     void getPacketSender(void);

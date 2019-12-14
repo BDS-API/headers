@@ -22,8 +22,8 @@ public:
     void _setDirty(void);
     void removeModifier(std::shared_ptr<AttributeModifier>);
     void removeModifier(AttributeModifier const&);
-    void getModifiers(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
-    void removeModifiers(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void getModifiers(std::string const&)const;
+    void removeModifiers(std::string const&);
     void removeModifier(mce::UUID const&);
     void removeModifiers(void);
     void getCurrentValue(void)const;

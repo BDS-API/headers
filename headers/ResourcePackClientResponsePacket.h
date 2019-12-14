@@ -10,7 +10,7 @@ public:
 
     void ResourcePackClientResponsePacket(void);
     void ResourcePackClientResponsePacket(ResourcePackResponse);
-    void setDownloadingPacks(std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>> &);
+    void setDownloadingPacks(std::set<std::string, std::less<std::string>, std::allocator<std::string>> &);
     bool isResponse(ResourcePackResponse)const;
     void getResponse(void)const;
 };

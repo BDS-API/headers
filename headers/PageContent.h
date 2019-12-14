@@ -6,7 +6,7 @@ public:
     static long PageContent::BLANK_PAGE;
 
 
-    void PageContent(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void PageContent(std::string);
     void PageContent(void);
     void PageContent(PageContent&&);
     void read(CompoundTag const&);

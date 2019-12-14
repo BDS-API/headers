@@ -12,6 +12,6 @@ public:
     virtual void getOriginType(void)const;
     virtual void toCommandOriginData(void)const;
 
-    void AutomationPlayerCommandOrigin(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Player &);
-    void AutomationPlayerCommandOrigin(ActorUniqueID, Level &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, CommandPermissionLevel, NetworkIdentifier const&);
+    void AutomationPlayerCommandOrigin(std::string const&, Player &);
+    void AutomationPlayerCommandOrigin(ActorUniqueID, Level &, std::string const&, CommandPermissionLevel, NetworkIdentifier const&);
 };

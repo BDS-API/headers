@@ -19,7 +19,7 @@ public:
     void _unpackLootTable(Level &);
     bool canBeSiphonedFrom(void)const;
     bool isPrivate(void)const;
-    void setCustomName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void setCustomName(std::string const&);
     bool hasCustomName(void)const;
     void getContainerType(void)const;
     void getContainerSize(void)const;
@@ -37,5 +37,5 @@ public:
     void removeItemsOfType(ItemStack const&, int);
     void findFirstSlotForItem(ItemStack const&)const;
     void dropContents(BlockSource &, Vec3 const&, bool);
-    void setLootTable(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, int);
+    void setLootTable(std::string, int);
 };

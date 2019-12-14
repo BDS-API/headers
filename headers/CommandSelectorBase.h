@@ -11,10 +11,10 @@ public:
     void getType(void)const;
     void setOrder(CommandSelectionOrder);
     void getOrder(void)const;
-    void addNameFilter(InvertableFilter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> const&);
+    void addNameFilter(InvertableFilter<std::string> const&);
     bool hasName(void)const;
-    void addTypeFilter(InvertableFilter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> const&);
-    void addTagFilter(InvertableFilter<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> const&);
+    void addTypeFilter(InvertableFilter<std::string> const&);
+    void addTagFilter(InvertableFilter<std::string> const&);
     void setResultCount(unsigned long);
     void setPosition(CommandPosition);
     void setBox(BlockPos);
@@ -22,8 +22,8 @@ public:
     void setRadiusMax(float);
     void setIncludeDeadPlayers(bool);
     void addFilter(std::function<bool ()(CommandOrigin const&, Actor const&)>);
-    void setExplicitIdSelector(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void compile(CommandOrigin const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &);
+    void setExplicitIdSelector(std::string const&);
+    void compile(CommandOrigin const&, std::string &);
     bool isExpansionAllowed(CommandOrigin const&)const;
     void matchName(Actor const&)const;
     void matchType(Actor const&)const;

@@ -9,5 +9,5 @@ public:
     virtual void read(ReadOnlyBinaryStream &);
 
     void ShowStoreOfferPacket(void);
-    void ShowStoreOfferPacket(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, bool);
+    void ShowStoreOfferPacket(std::string const&, bool);
 };

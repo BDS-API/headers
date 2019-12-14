@@ -10,7 +10,7 @@ public:
     virtual bool canTaskRunAgain(void)const;
 
     void getCurrentTask(void);
-    void BackgroundWorker(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, bool, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, WorkerPool &, bool);
+    void BackgroundWorker(std::string, bool, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, WorkerPool &, bool);
     void wake(void);
     void _hasAvailableWork(void)const;
     void queue(std::shared_ptr<BackgroundTask>);

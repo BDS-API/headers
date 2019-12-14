@@ -11,7 +11,7 @@ public:
     void validateAlpha(mce::Image &, int, int, int, int, float, bool);
     void setForceAlpha(mce::Image &, int, int, int, int);
     void setNoAlpha(mce::Image &, int, int, int, int);
-    void verifyIsPremiumGeometry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void verifyIsPremiumGeometry(std::string const&);
     bool isValidFullSize(unsigned long);
     bool isDirty(void)const;
     void setClean(void);

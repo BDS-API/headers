@@ -28,7 +28,7 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void getEntityResourceItem(Random &, BlockActor const&, int)const;
 
-    void ItemFrameBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ItemFrameBlock(std::string const&, int);
     void getShape(int, AABB &, bool)const;
     void _getItemFrame(BlockSource &, BlockPos const&)const;
     void _getFacingID(int)const;

@@ -6,7 +6,7 @@ public:
     virtual ~Stopwatch();
     virtual void stop(void);
     virtual void stopContinue(void);
-    virtual void print(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void print(std::string const&);
 
     void Stopwatch(void);
     void getLast(void);
@@ -17,5 +17,5 @@ public:
     void getCount(void);
     void tick(void);
     bool isReset(void)const;
-    void printEvery(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void printEvery(int, std::string const&);
 };

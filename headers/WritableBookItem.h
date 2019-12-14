@@ -7,9 +7,9 @@ public:
     virtual void requiresInteract(void)const;
     virtual void use(ItemStack &, Player &)const;
 
-    void WritableBookItem(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void WritableBookItem(std::string const&, int);
     void makeSureTagIsValid(CompoundTag const&);
-    void signBook(ItemStack const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void signBook(ItemStack const&, std::string, std::string, std::string);
     void replacePage(ItemStack const&, int, PageContent const&);
     void addPageAt(ItemStack const&, int, PageContent const&);
     void deletePage(ItemStack const&, int);

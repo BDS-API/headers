@@ -21,6 +21,6 @@ public:
     void _getMostSignificantBit(int);
     void _getStringId(char const*);
     void init(Core::Path const&);
-    void startEventTimerForLog(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
-    void stopEventTimerForLog(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void startEventTimerForLog(std::string const&);
+    void stopEventTimerForLog(std::string const&);
 };

@@ -16,5 +16,5 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canBeSilkTouched(void)const;
 
-    void CocoaBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void CocoaBlock(std::string const&, int);
 };

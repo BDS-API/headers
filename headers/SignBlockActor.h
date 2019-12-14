@@ -12,8 +12,8 @@ public:
     virtual void getShadowRadius(BlockSource &)const;
 
     void SignBlockActor(BlockPos const&);
-    void setMessage(TextObjectRoot, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
-    void setMessage(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void setMessage(TextObjectRoot, std::string);
+    void setMessage(std::string, std::string);
     void _clearCachedMessage(void);
     void getType(void)const;
     void setType(SignBlockActor::SignType);

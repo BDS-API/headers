@@ -27,7 +27,7 @@ public:
     virtual bool canBeSilkTouched(void)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void CampfireBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void CampfireBlock(std::string const&, int);
     void tryLightFire(BlockSource &, BlockPos const&);
     void _canBeLit(BlockSource &, BlockPos const&);
     void tryDouseFire(BlockSource &, BlockPos const&, bool);

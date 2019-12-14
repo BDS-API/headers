@@ -19,7 +19,7 @@ public:
     virtual void getComparatorSignal(BlockSource &, BlockPos const&, Block const&, unsigned char)const;
     virtual void getVariant(Block const&)const;
 
-    void ComposterBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void ComposterBlock(std::string const&, int);
     void _emitBoneMeal(Level &, BlockSource &, BlockPos const&)const;
     void empty(BlockSource &, Block const&, BlockPos const&);
     void _notifyClientComposterUsed(Player const&, short, MinecraftEventing::POIBlockInteractionType)const;

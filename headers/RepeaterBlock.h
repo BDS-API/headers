@@ -27,6 +27,6 @@ public:
     virtual void getOnBlock(Block const*)const;
     virtual void getOffBlock(Block const*)const;
 
-    void RepeaterBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, bool);
+    void RepeaterBlock(std::string const&, int, bool);
     void updateDelay(BlockSource &, BlockPos const&, bool)const;
 };

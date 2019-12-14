@@ -13,7 +13,7 @@ public:
     void PackAccessStrategy(void);
     bool hasGeneratedAssetSet(void)const;
     void _isInAssetSet(Core::Path const&)const;
-    void _deleteFromAssetSet(Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> const&);
+    void _deleteFromAssetSet(Core::PathBuffer<std::string> const&);
     void _addToAssetSet(Core::Path const&);
     bool isAssetSetEmpty(void)const;
 };

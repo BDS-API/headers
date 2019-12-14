@@ -11,7 +11,7 @@ public:
     void spawnProjectile(BlockSource &, ActorDefinitionIdentifier const&, Actor *, Vec3 const&, Vec3 const&);
     void Spawner(Level &);
     void popCapAllows(Dimension const&, MobSpawnerData const&, bool, bool)const;
-    void spawnMobGroup(BlockSource &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Vec3 const&, bool, std::function<void ()(Mob &)> &&);
+    void spawnMobGroup(BlockSource &, std::string const&, Vec3 const&, bool, std::function<void ()(Mob &)> &&);
     bool isSpawnPositionOk(MobSpawnRules const&, BlockSource &, BlockPos const&);
     void _permuteId(ActorDefinitionIdentifier &, MobSpawnRules const&, Random &)const;
     void _updateMobCounts(BlockSource &, ActorDefinitionIdentifier const&, SpawnConditions const&);

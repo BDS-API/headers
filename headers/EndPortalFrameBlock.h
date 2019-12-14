@@ -15,7 +15,7 @@ public:
     virtual void getComparatorSignal(BlockSource &, BlockPos const&, Block const&, unsigned char)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void EndPortalFrameBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int);
+    void EndPortalFrameBlock(std::string const&, int);
     void tryCreatePortal(BlockSource &, BlockPos const&);
     void createPortal(BlockSource &, BlockPos const&);
 };

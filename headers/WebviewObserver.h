@@ -11,7 +11,7 @@ public:
     virtual void onDownloadUpdate(WebviewDownloadInfo const&);
     virtual void onDownloadComplete(WebviewDownloadInfo const&);
     virtual void onDownloadCanceled(WebviewDownloadInfo const&);
-    virtual void onMessageRecieved(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    virtual void onMessageRecieved(std::string const&);
 
     void WebviewObserver(void);
 };

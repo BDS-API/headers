@@ -32,7 +32,7 @@ public:
     void getAbility(AbilitiesIndex)const;
     void getFloat(AbilitiesIndex)const;
     void getAbilityName(AbilitiesIndex);
-    void nameToAbilityIndex(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void nameToAbilityIndex(std::string const&);
     void onSwitchToCustom(void);
     void getCustomAbilityFromCache(AbilitiesIndex);
     void getCustomAbilityFromCache(AbilitiesIndex)const;

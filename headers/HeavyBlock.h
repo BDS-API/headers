@@ -13,7 +13,7 @@ public:
     virtual bool isFreeToFall(BlockSource &, BlockPos const&)const;
     virtual void startFalling(BlockSource &, BlockPos const&, Block const*, bool)const;
 
-    void HeavyBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&);
+    void HeavyBlock(std::string const&, int, Material const&);
     void _scheduleCheck(BlockSource &, BlockPos const&, Block const&, int)const;
     void getTickDelay(void)const;
     void _scheduleCheckIfSliding(BlockSource &, BlockPos const&, Block const&)const;

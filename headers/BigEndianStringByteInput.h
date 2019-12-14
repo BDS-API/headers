@@ -12,5 +12,5 @@ public:
     virtual void readBytes(void *, unsigned long);
     virtual void readBigEndianBytes(void *, unsigned long);
 
-    void BigEndianStringByteInput(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void BigEndianStringByteInput(std::string const&);
 };

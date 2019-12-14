@@ -10,7 +10,7 @@ public:
     void StructureSettings(StructureSettings const&);
     void StructureSettings(StructureSettings&&);
     void StructureSettings(void);
-    void setPaletteName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
+    void setPaletteName(std::string);
     void setIgnoreEntities(bool);
     void getIgnoreEntities(void)const;
     void getIgnoreBlocks(void)const;

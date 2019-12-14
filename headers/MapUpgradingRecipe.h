@@ -15,6 +15,6 @@ public:
     virtual void size(void)const;
     virtual bool isExperimental(void)const;
 
-    void MapUpgradingRecipe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, mce::UUID const&);
+    void MapUpgradingRecipe(std::string, mce::UUID const&);
     void _getTagForUUID(mce::UUID const&);
 };

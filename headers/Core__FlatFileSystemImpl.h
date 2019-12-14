@@ -6,7 +6,7 @@ public:
 
     void getFlatFileManifestTracker(void)const;
     void createFlatFile(Core::Path const&, Core::Path const&);
-    void shouldAccessFlatFile(Core::Path const&, Core::PathBuffer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> &, bool);
+    void shouldAccessFlatFile(Core::Path const&, Core::PathBuffer<std::string> &, bool);
     bool isDirectoryPathAFlatFile(Core::Path const&);
     void fileOrDirectoryExists(Core::Path const&, Core::Path const&);
     void _findFileOrDirectoryEntry(Core::Path const&, Core::Path const&, bool);

@@ -17,8 +17,8 @@ public:
     void queueChildSync(gsl::basic_string_span<char const, -1l>, std::function<TaskResult ()(void)> &&);
     void queueChildSync(TaskStartInfo &, std::function<TaskResult ()(void)> &&);
     void queueSync(TaskStartInfo &, std::function<TaskResult ()(void)> &&);
-    void TaskGroup(WorkerPool &, Scheduler &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>);
-    void TaskGroup(WorkerPool &, Scheduler &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, TaskType);
+    void TaskGroup(WorkerPool &, Scheduler &, std::string);
+    void TaskGroup(WorkerPool &, Scheduler &, std::string, TaskType);
     void flush(std::function<void ()(void)>);
     void queue(gsl::basic_string_span<char const, -1l>, std::function<TaskResult ()(void)> &&, std::function&&<void ()(void)>);
     void _queueInternal(std::shared_ptr<BackgroundTask>);

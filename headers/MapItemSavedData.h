@@ -25,14 +25,14 @@ public:
     void trySave(LevelStorage &);
     void tickCarriedBy(Actor &, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&);
     void _updateTrackedEntityDecorations(BlockSource &);
-    void _addDecoration(MapDecoration::Type, Level &, MapItemTrackedActor::UniqueId const&, Vec3 const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, Color const&);
+    void _addDecoration(MapDecoration::Type, Level &, MapItemTrackedActor::UniqueId const&, Vec3 const&, std::string const&, Color const&);
     void tickByBlock(BlockPos const&, BlockSource &);
     void _findTrackedMapEntity(BlockPos const&)const;
     void addTrackedMapEntity(BlockPos const&, BlockSource &, MapDecoration::Type);
     void _updateTrackedEntityDecoration(BlockSource &, std::shared_ptr<MapItemTrackedActor>);
     void _removeDecoration(MapItemTrackedActor::UniqueId const&);
     void _getColorByDimension(AutomaticID<Dimension, int>);
-    void _updateTrackedPlayerDecorations(BlockSource &, Player &, Vec3 &, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> &, Color &, AutomaticID<Dimension, int>, MapDecoration::Type &);
+    void _updateTrackedPlayerDecorations(BlockSource &, Player &, Vec3 &, std::string &, Color &, AutomaticID<Dimension, int>, MapDecoration::Type &);
     void _isPlayerHoldingMap(Player &);
     void _setDirtyForDecoration(MapDecoration const&);
     void addTrackedMapEntity(Actor &, MapDecoration::Type);

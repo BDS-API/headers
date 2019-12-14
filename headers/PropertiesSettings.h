@@ -4,18 +4,18 @@ class PropertiesSettings {
 
 public:
 
-    void PropertiesSettings(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void PropertiesSettings(std::string const&);
     void getDefaultMaxPlayers(void);
-    void parseBoolValue(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void parseBoolValue(std::string const&);
     void getServerPort(void)const;
     void getServerPortv6(void)const;
     void getMaxPlayers(void)const;
     void getMaxThreads(void)const;
     void getServerTickRange(void)const;
     void getOpPermissionLevel(void)const;
-    void parseDifficulty(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void parseDifficulty(std::string const&);
     void getDifficulty(void)const;
-    void parseGameMode(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&);
+    void parseGameMode(std::string const&);
     void getGameMode(void)const;
     void forceGamemode(void)const;
     void useWhitelist(void)const;
@@ -30,9 +30,9 @@ public:
     void useWebsocketEncryption(void)const;
     void getRemoteServerCommunicationEndpoint(void)const;
     void getDefaultPlayerPermissionLevel(void)const;
-    void parseDefaultPlayerPermissionLevel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void parseDefaultPlayerPermissionLevel(std::string const&)const;
     void getServerWakeupFrequency(void)const;
-    void getCustomProperty(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)const;
+    void getCustomProperty(std::string const&)const;
     bool isContentLogFileEnabled(void)const;
     bool isServerAuthoritativeMovementEnabled(void)const;
     void getMovementScoreThreshold(void)const;

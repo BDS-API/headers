@@ -15,7 +15,7 @@ public:
     virtual void getRenderLayer(Block const&, BlockSource &, BlockPos const&)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void FlowerBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, FlowerBlock::Type);
+    void FlowerBlock(std::string const&, int, FlowerBlock::Type);
     void _randomWalk(BlockSource &, int &, int &, int &, int)const;
     void _getRenderLayerImpl(void)const;
 };

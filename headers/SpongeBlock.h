@@ -13,7 +13,7 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
-    void SpongeBlock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, int, Material const&);
+    void SpongeBlock(std::string const&, int, Material const&);
     void _evaporateWater(BlockSource &, BlockPos const&)const;
     void _setShouldDry(BlockSource &, BlockPos const&)const;
     void _attemptAbsorbWater(BlockSource &, BlockPos const&)const;
