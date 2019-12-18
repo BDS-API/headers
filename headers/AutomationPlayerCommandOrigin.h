@@ -4,6 +4,8 @@ class AutomationPlayerCommandOrigin : PlayerCommandOrigin {
 
 public:
     virtual ~AutomationPlayerCommandOrigin();
+    virtual void getRequestId[abi:cxx11](void)const;
+    virtual void getName[abi:cxx11](void)const;
     virtual void getPermissionsLevel(void)const;
     virtual void clone(void)const;
     virtual bool hasChatPerms(void)const;

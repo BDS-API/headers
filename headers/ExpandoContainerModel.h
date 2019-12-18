@@ -11,6 +11,7 @@ public:
     virtual void getItems(void)const;
     virtual void setItem(int, ContainerItemStack const&);
     virtual void getItemExpandStatus(int)const;
+    virtual void getItemGroupName[abi:cxx11](int)const;
     virtual void switchItemExpando(int);
     virtual void refreshContainer(bool);
 

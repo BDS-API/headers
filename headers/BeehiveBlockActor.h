@@ -5,6 +5,7 @@ class BeehiveBlockActor : BlockActor {
 public:
     static long BeehiveBlockActor::TypeId;
     static long BeehiveBlockActor::MAX_OCCUPANCY;
+    static long BeehiveBlockActor::TypeString[abi:cxx11];
 
     virtual ~BeehiveBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

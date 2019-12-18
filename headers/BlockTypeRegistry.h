@@ -3,6 +3,8 @@
 class BlockTypeRegistry {
 
 public:
+    static long BlockTypeRegistry::mBlockLookupMap[abi:cxx11];
+
 
     void unregisterBlock(std::string const&);
     void prepareBlocks(unsigned int);

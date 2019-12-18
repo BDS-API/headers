@@ -5,6 +5,7 @@ class AvailableActorIdentifiersPacket : Packet {
 public:
     virtual ~AvailableActorIdentifiersPacket();
     virtual void getId(void)const;
+    virtual void getName[abi:cxx11](void)const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

@@ -10,6 +10,7 @@ public:
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getRenderLayer(void)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual bool isAuxValueRelevantForPicking(void)const;
     virtual void getRenderLayer(Block const&, BlockSource &, BlockPos const&)const;
     virtual void getVariant(Block const&)const;

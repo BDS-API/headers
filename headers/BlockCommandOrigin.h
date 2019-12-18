@@ -4,6 +4,8 @@ class BlockCommandOrigin : CommandOrigin {
 
 public:
     virtual ~BlockCommandOrigin();
+    virtual void getRequestId[abi:cxx11](void)const;
+    virtual void getName[abi:cxx11](void)const;
     virtual void getBlockPosition(void)const;
     virtual void getWorldPosition(void)const;
     virtual void getLevel(void)const;

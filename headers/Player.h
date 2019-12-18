@@ -47,6 +47,7 @@ public:
     virtual void normalTick(void);
     virtual void rideTick(void);
     virtual void getRidingHeight(void);
+    virtual void getFormattedNameTag[abi:cxx11](void)const;
     virtual void getAlwaysShowNameTag(void)const;
     virtual void getCameraOffset(void)const;
     virtual bool isImmobile(void)const;

@@ -6,6 +6,8 @@ public:
     virtual ~RakNetInstance();
     virtual void onAppResumed(void);
     virtual void onAppSuspended(void);
+    virtual void getLocalIps[abi:cxx11](void)const;
+    virtual void getLocalIp[abi:cxx11](void);
     virtual void getPort(void)const;
     virtual void getRefinedLocalIps(void)const;
     virtual void getConnectedGameInfo(void)const;

@@ -4,6 +4,7 @@ class Block {
 
 public:
     static long Block::SIZE_OFFSET;
+    static long Block::BLOCK_DESCRIPTION_PREFIX[abi:cxx11];
 
     virtual ~Block();
     virtual void getRenderLayer(void)const;

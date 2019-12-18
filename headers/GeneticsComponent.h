@@ -4,6 +4,9 @@ class GeneticsComponent {
 
 public:
     static long GeneticsComponent::INVALID_ALLELE_VALUE;
+    static long GeneticsComponent::GENE_ARRAY[abi:cxx11];
+    static long GeneticsComponent::MAIN_ALLELE[abi:cxx11];
+    static long GeneticsComponent::HIDDEN_ALLELE[abi:cxx11];
 
 
     void _createRandomGene(GeneDefinition const&);

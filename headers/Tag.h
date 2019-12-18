@@ -3,6 +3,8 @@
 class Tag {
 
 public:
+    static long Tag::NullString[abi:cxx11];
+
     virtual ~Tag();
     virtual void deleteChildren(void);
     virtual void equals(Tag const&)const;

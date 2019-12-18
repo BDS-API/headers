@@ -3,6 +3,8 @@
 class ScriptTickingAreaBinderComponent : ScriptBinderComponent {
 
 public:
+    static long ScriptTickingAreaBinderComponent::TAG[abi:cxx11];
+
     virtual ~ScriptTickingAreaBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);

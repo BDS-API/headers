@@ -19,6 +19,7 @@ public:
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
     virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&);
+    virtual void getName[abi:cxx11](void)const;
     virtual void getContainer(void);
     virtual void startOpen(Player &);
     virtual void getContainerSize(void)const;

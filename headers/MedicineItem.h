@@ -7,6 +7,7 @@ public:
     virtual bool isValidAuxValue(int)const;
     virtual void use(ItemStack &, Player &)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
+    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&,std::unique_ptr<CompoundTag,std::default_delete<CompoundTag>> const&)const;
     virtual void setIcon(std::string const&, int);
 
     void MedicineItem(std::string const&, int);

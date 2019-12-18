@@ -4,6 +4,7 @@ class Potion {
 
 public:
     static long Potion::mPotionsById;
+    static long Potion::mPotionsByName[abi:cxx11];
     static long Potion::Water;
     static long Potion::Mundane;
     static long Potion::LongMundane;

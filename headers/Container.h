@@ -3,6 +3,8 @@
 class Container {
 
 public:
+    static long Container::containerTypeMap[abi:cxx11];
+
     virtual ~Container();
     virtual void init(void);
     virtual void addContentChangeListener(ContainerContentChangeListener *);

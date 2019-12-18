@@ -6,6 +6,7 @@ public:
     virtual ~DropperBlockActor();
     virtual void getUpdatePacket(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getName[abi:cxx11](void)const;
 
     void DropperBlockActor(BlockPos);
     void DropperBlockActor(BlockPos, BlockActorType);

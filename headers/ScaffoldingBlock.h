@@ -22,6 +22,7 @@ public:
     virtual bool canSlide(BlockSource &, BlockPos const&)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getDustColor(Block const&)const;
+    virtual void getDustParticleName[abi:cxx11](Block const&)const;
 
     void ScaffoldingBlock(std::string const&, int);
     void _updateBlockStability(BlockSource &, BlockPos const&)const;

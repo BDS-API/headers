@@ -3,6 +3,13 @@
 class FireworkChargeItem : Item {
 
 public:
+    static long FireworkChargeItem::TAG_EXPLOSION[abi:cxx11];
+    static long FireworkChargeItem::TAG_E_TYPE[abi:cxx11];
+    static long FireworkChargeItem::TAG_E_COLORS[abi:cxx11];
+    static long FireworkChargeItem::TAG_E_FADECOLORS[abi:cxx11];
+    static long FireworkChargeItem::TAG_E_TRAIL[abi:cxx11];
+    static long FireworkChargeItem::TAG_E_FLICKER[abi:cxx11];
+
     virtual ~FireworkChargeItem();
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;

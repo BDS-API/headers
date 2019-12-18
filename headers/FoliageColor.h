@@ -11,6 +11,8 @@ public:
     static long FoliageColor::FOLIAGE_TOP_RIGHT;
     static long FoliageColor::FOLIAGE_BOTTOM_LEFT;
     static long FoliageColor::FOLIAGE_BOTTOM_RIGHT;
+    static long FoliageColor::mGrassPalettes[abi:cxx11];
+    static long FoliageColor::mFoliagePalettes[abi:cxx11];
 
 
     void _index(float, float);

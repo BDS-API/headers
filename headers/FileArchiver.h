@@ -3,6 +3,11 @@
 class FileArchiver {
 
 public:
+    static long FileArchiver::EXTENSION_VANILLA[abi:cxx11];
+    static long FileArchiver::EXTENSION_TEMPLATE[abi:cxx11];
+    static long FileArchiver::EXTENSION_RESOURCEPACK[abi:cxx11];
+    static long FileArchiver::IMPORT_LOCK_FILE[abi:cxx11];
+
 
     void FileArchiver(Scheduler &, Core::FilePathManager *, ResourcePackRepository &, std::function<void ()(std::string const&)>);
     void archivePack(Core::Path const&, Core::Path const&, std::function<void ()(FileArchiver::Result &)>);

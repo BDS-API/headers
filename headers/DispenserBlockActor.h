@@ -9,6 +9,7 @@ public:
     virtual void getUpdatePacket(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
+    virtual void getName[abi:cxx11](void)const;
     virtual void getContainer(void);
     virtual void startOpen(Player &);
     virtual void getContainerSize(void)const;

@@ -6,6 +6,7 @@ public:
     static long EnderChestBlockActor::ITEMS_SIZE;
 
     virtual ~EnderChestBlockActor();
+    virtual void getName[abi:cxx11](void)const;
     virtual bool canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
     virtual bool canPullOutItem(BlockSource &, int, int, ItemInstance const&)const;
     virtual void playOpenSound(BlockSource &);

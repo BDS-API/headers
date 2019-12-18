@@ -9,10 +9,14 @@ public:
     static long I18n::mCurrentPackMetaLanguage;
     static long I18n::mResourcePackManager;
     static long I18n::mLanguages;
+    static long I18n::mLanguageCodes[abi:cxx11];
+    static long I18n::mLanguageNames[abi:cxx11];
     static long I18n::mAdditionalTranslationsBackupMutex;
     static long I18n::mAdditionalTranslationsBackup;
     static long I18n::mLanguageChangedListeners;
     static long I18n::mPackKeywordLanguages;
+    static long I18n::mPackReservedKeys[abi:cxx11];
+    static long I18n::mFormatDictionary[abi:cxx11];
 
 
     void clearLanguages(void);

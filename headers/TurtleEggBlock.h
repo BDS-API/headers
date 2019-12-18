@@ -17,6 +17,7 @@ public:
     virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual bool isAuxValueRelevantForPicking(void)const;
     virtual bool canBeSilkTouched(void)const;
     virtual void getSilkTouchItemInstance(Block const&)const;

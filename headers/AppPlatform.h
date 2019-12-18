@@ -11,6 +11,7 @@ public:
 
     virtual ~AppPlatform();
     virtual void restartRequested(void);
+    virtual void getLoggingPath[abi:cxx11](void)const;
     virtual bool isLowMemoryDevice(void)const;
     virtual void initializeScreenDependentResources(void);
     virtual void getHighPerformanceThreadsCount(void)const;
@@ -22,14 +23,28 @@ public:
     virtual void supportsInPackageRecursion(void)const;
     virtual void supportsXboxLiveAchievements(void)const;
     virtual void hideSplashScreen(void);
+    virtual void getFeedbackHelpLink[abi:cxx11](void)const;
+    virtual void getModalErrorMessageProc[abi:cxx11](void);
     virtual void updateLocalization(std::string const&);
     virtual void setSleepEnabled(bool);
+    virtual void getInternalPackStoragePath[abi:cxx11](void)const;
+    virtual void getSettingsPath[abi:cxx11](void);
+    virtual void getPackagedShaderCachePath[abi:cxx11](void);
+    virtual void getShaderCachePath[abi:cxx11](void);
+    virtual void getUserdataPathForLevels[abi:cxx11](void)const;
+    virtual void getCacheStoragePath[abi:cxx11](void);
+    virtual void getOnDiskScratchPath[abi:cxx11](void);
+    virtual void getOnDiskPackScratchPath[abi:cxx11](void);
+    virtual void getLevelInfoCachePath[abi:cxx11](void)const;
+    virtual void getCatalogSearchScratchPath[abi:cxx11](void);
     virtual bool hasSeparatedStorageAreasForContentAcquisition(void)const;
     virtual void getOptimalLDBSize(void);
     virtual void showDialog(int);
     virtual void createUserInput(void);
     virtual void getUserInputStatus(void);
+    virtual void getUserInput[abi:cxx11](void);
     virtual void getFileAccess(ResourceFileSystem);
+    virtual void copyImportFileToTempFolder[abi:cxx11](Core::Path const&);
     virtual void registerFileForCollectionWithCrashDump(Core::Path const&);
     virtual void getScreenWidth(void);
     virtual void getScreenHeight(void);
@@ -59,8 +74,11 @@ public:
     virtual bool isKeyboardVisible(void);
     virtual void supportsVibration(void);
     virtual void vibrate(int);
+    virtual void getAssetFileFullPath[abi:cxx11](Core::Path const&);
+    virtual void readAssetFile[abi:cxx11](Core::Path const&);
     virtual void listAssetFilesIn(Core::Path const&, std::string const&)const;
     virtual void supportsClientUpdate(void)const;
+    virtual void getClientUpdateUrl[abi:cxx11](void)const;
     virtual void checkLicense(void);
     virtual bool hasBuyButtonWhenInvalidLicense(void);
     virtual bool isNetworkAvailable(void);
@@ -82,6 +100,7 @@ public:
     virtual void useXboxControlHelpers(void)const;
     virtual void getPlatformType(void)const;
     virtual bool isCentennial(void)const;
+    virtual void getPackageFamilyName[abi:cxx11](void)const;
     virtual void getBuildPlatform(void)const;
     virtual void setARVRPlatform(ARVRPlatform);
     virtual void getARVRPlatform(void)const;
@@ -89,9 +108,13 @@ public:
     virtual void setVRControllerType(VRControllerType);
     virtual void getVRControllerType(void)const;
     virtual bool hasIDEProfiler(void);
+    virtual void getPlatformStringVar[abi:cxx11](int);
     virtual void getMaximumUsedMemory(void);
     virtual void getMaxSimRadiusInChunks(void)const;
+    virtual void getBroadcastAddresses[abi:cxx11](void);
+    virtual void getIPAddresses[abi:cxx11](void);
     virtual void useAppPlatformForTelemetryIPAddress(void);
+    virtual void getModelName[abi:cxx11](void);
     virtual void usesHDRBrightness(void)const;
     virtual void setFullscreenMode(FullscreenMode);
     virtual bool isNetworkThrottled(void);
@@ -104,6 +127,7 @@ public:
     virtual void sendBrazeToastClick(void);
     virtual void sendBrazeDialogButtonClick(int);
     virtual void collectGraphicsHardwareDetails(void);
+    virtual void getEdition[abi:cxx11](void)const;
     virtual void getOSVersion(void)const;
     virtual bool isBrazeEnabled(void)const;
     virtual bool isFireTV(void)const;

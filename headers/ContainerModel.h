@@ -18,6 +18,7 @@ public:
     virtual bool isItemFiltered(ContainerItemStack const&)const;
     virtual bool isExpanableItemFiltered(int)const;
     virtual void getItemExpandStatus(int)const;
+    virtual void getItemGroupName[abi:cxx11](int)const;
     virtual void switchItemExpando(int);
     virtual void _getContainerOffset(void)const;
     virtual void _onItemChanged(int, ItemStack const&, ItemStack const&);

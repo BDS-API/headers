@@ -3,6 +3,10 @@
 class PhotoStorage {
 
 public:
+    static long PhotoStorage::PHOTO_DIR[abi:cxx11];
+    static long PhotoStorage::BOOKS_DIR[abi:cxx11];
+    static long PhotoStorage::MANIFEST_NAME[abi:cxx11];
+
 
     void PhotoStorage(Core::Path const&);
     void _readManifest(void);

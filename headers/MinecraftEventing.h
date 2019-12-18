@@ -10,6 +10,7 @@ public:
     virtual ~MinecraftEventing();
     virtual void fireEventPackUpgradeAttempt(PackManifest const&, PackReport const&);
     virtual void init(Social::IUserManager &);
+    virtual void getPlayerSessionId[abi:cxx11](void);
     virtual void getShouldHaveAchievementsEnabled(void);
     virtual void setShouldHaveAchievementsEnabled(bool);
     virtual void getAchievementsAlwaysEnabled(void);
@@ -189,6 +190,7 @@ public:
     virtual void fireRealmConnectionEventRealmAPIResponse(IMinecraftEventing::RealmConnectionFlow, int);
     virtual void onUserSignIn(Social::XboxLiveUser &);
     virtual void onUserSignOut(Social::XboxLiveUser &);
+    virtual void getSessionId[abi:cxx11](void);
     virtual void fireEventChunkLoaded(LevelChunk &);
     virtual void fireEventChunkUnloaded(LevelChunk &);
     virtual void fireEventChunkChanged(LevelChunk &);

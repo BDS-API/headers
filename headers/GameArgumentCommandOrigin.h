@@ -4,6 +4,8 @@ class GameArgumentCommandOrigin : CommandOrigin {
 
 public:
     virtual ~GameArgumentCommandOrigin();
+    virtual void getRequestId[abi:cxx11](void)const;
+    virtual void getName[abi:cxx11](void)const;
     virtual void getBlockPosition(void)const;
     virtual void getWorldPosition(void)const;
     virtual void getLevel(void)const;

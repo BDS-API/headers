@@ -13,6 +13,7 @@ public:
     virtual void onPlace(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
+    virtual void getName[abi:cxx11](void)const;
 
     void getColorIndex(void)const;
     void BedBlockActor(BlockPos const&);

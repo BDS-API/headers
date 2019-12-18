@@ -3,6 +3,8 @@
 class GoalDefinition {
 
 public:
+    static long GoalDefinition::mGoalMap[abi:cxx11];
+
 
     void GoalDefinition(void);
     void GoalDefinition(GoalDefinition const&);

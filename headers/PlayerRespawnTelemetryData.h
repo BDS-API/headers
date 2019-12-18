@@ -3,6 +3,8 @@
 class PlayerRespawnTelemetryData {
 
 public:
+    static long PlayerRespawnTelemetryData::mEventName[abi:cxx11];
+
 
     void PlayerRespawnTelemetryData(void);
     void WriteEventData(Social::Events::Event &)const;

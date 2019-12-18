@@ -4,6 +4,7 @@ class Json::StyledWriter : Json::Writer {
 
 public:
     virtual ~StyledWriter();
+    virtual void write[abi:cxx11](Json::Value const&);
 
     void StyledWriter(void);
     void writeCommentBeforeValue(Json::Value const&);

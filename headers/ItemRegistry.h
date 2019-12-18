@@ -5,6 +5,8 @@ class ItemRegistry {
 public:
     static long ItemRegistry::mItemRegistry;
     static long ItemRegistry::mIdToItemMap;
+    static long ItemRegistry::mNameToItemMap[abi:cxx11];
+    static long ItemRegistry::mItemAliasLookupMap[abi:cxx11];
     static long ItemRegistry::mMaxItemID;
 
 

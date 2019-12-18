@@ -3,6 +3,16 @@
 class FurnaceBlockActor : BlockActor, Container {
 
 public:
+    static long FurnaceBlockActor::ITEMS_LIST_KEY[abi:cxx11];
+    static long FurnaceBlockActor::SLOT_KEY[abi:cxx11];
+    static long FurnaceBlockActor::BURN_TIME_KEY[abi:cxx11];
+    static long FurnaceBlockActor::COOK_TIME_KEY[abi:cxx11];
+    static long FurnaceBlockActor::BURN_DURATION_KEY[abi:cxx11];
+    static long FurnaceBlockActor::STORED_XP_DEPRECATED_KEY[abi:cxx11];
+    static long FurnaceBlockActor::STORED_XP_KEY[abi:cxx11];
+    static long FurnaceBlockActor::CUSTOM_NAME_KEY[abi:cxx11];
+    static long FurnaceBlockActor::LAST_FUEL_KEY[abi:cxx11];
+
     virtual ~FurnaceBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
@@ -13,6 +23,7 @@ public:
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
+    virtual void getName[abi:cxx11](void)const;
     virtual void getContainer(void);
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);

@@ -3,6 +3,9 @@
 class Description {
 
 public:
+    static long Description::NAME_TO_ID_MAP[abi:cxx11];
+    static long Description::ID_TO_NAME_MAP[abi:cxx11];
+
     virtual ~Description();
     virtual void deserializeData(Json::Value &);
 

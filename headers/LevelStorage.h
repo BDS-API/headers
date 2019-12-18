@@ -3,6 +3,9 @@
 class LevelStorage {
 
 public:
+    static long LevelStorage::LOCAL_PLAYER_TAG[abi:cxx11];
+    static long LevelStorage::LEGACY_CONSOLE_PLAYER_PREFIX[abi:cxx11];
+
     virtual ~LevelStorage();
     virtual void createWriteBatch(void);
     virtual void clonePlayerData(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>);

@@ -10,6 +10,7 @@ public:
     virtual void normalTick(void);
     virtual bool isInvisible(void)const;
     virtual bool canShowNameTag(void)const;
+    virtual void getFormattedNameTag[abi:cxx11](void)const;
     virtual void getAlwaysShowNameTag(void)const;
     virtual void interactPreventDefault(void);
     virtual bool isPickable(void);

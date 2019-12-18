@@ -4,6 +4,11 @@ class NpcAction {
 
 public:
     static long NpcAction::MAX_BUTTON_NAME_LENGTH;
+    static long NpcAction::TYPE_KEY[abi:cxx11];
+    static long NpcAction::DATA_KEY[abi:cxx11];
+    static long NpcAction::MODE_KEY[abi:cxx11];
+    static long NpcAction::TEXT_KEY[abi:cxx11];
+    static long NpcAction::BUTTON_NAME_KEY[abi:cxx11];
 
     virtual ~NpcAction();
     virtual void fromJson(Json::Value const&);

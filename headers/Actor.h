@@ -7,6 +7,7 @@ public:
     static long Actor::DAMAGE_NEARBY_MOBS_DURATION;
     static long Actor::DEFAULT_AMBIENT_SOUND_INTERVAL;
     static long Actor::DEFAULT_AMBIENT_SOUND_INTERVAL_RANGE;
+    static long Actor::RIDING_TAG[abi:cxx11];
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
@@ -61,11 +62,14 @@ public:
     virtual bool canShowNameTag(void)const;
     virtual bool canExistInPeaceful(void)const;
     virtual void setNameTagVisible(bool);
+    virtual void getNameTag[abi:cxx11](void)const;
     virtual void getNameTagAsHash(void)const;
+    virtual void getFormattedNameTag[abi:cxx11](void)const;
     virtual void filterFormattedNameTag(UIProfanityContext const&);
     virtual void setNameTag(std::string const&);
     virtual void getAlwaysShowNameTag(void)const;
     virtual void setScoreTag(std::string const&);
+    virtual void getScoreTag[abi:cxx11](void)const;
     virtual bool isInWater(void)const;
     virtual bool hasEnteredWater(void)const;
     virtual bool isImmersedInWater(void)const;

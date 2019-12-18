@@ -22,6 +22,13 @@ public:
     static long Village::UNINITIALIZED_VILLAGE_LIFETIME_MAX_TICKS;
     static long Village::DEBUG_DRAWING;
     static long Village::RAID_TIMEOUT_IN_TICKS;
+    static long Village::RAIDER_CELEBRATION_EVENT[abi:cxx11];
+    static long Village::STORAGE_KEY_PREFIX[abi:cxx11];
+    static long Village::STORAGE_KEY_VILLAGE[abi:cxx11];
+    static long Village::STORAGE_KEY_PLAYERS[abi:cxx11];
+    static long Village::STORAGE_KEY_DWELLERS[abi:cxx11];
+    static long Village::STORAGE_KEY_POI[abi:cxx11];
+    static long Village::STORAGE_KEY_RAID[abi:cxx11];
 
 
     void _sendSoundTheAlarmAchievement(Player const&)const;

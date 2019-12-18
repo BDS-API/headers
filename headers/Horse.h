@@ -48,6 +48,7 @@ public:
     virtual void nameYOffset(void);
     virtual void tameToPlayer(Player *, bool);
     virtual void getClosestMommy(Actor *, float);
+    virtual void getMadSound[abi:cxx11](void);
 
     void Horse(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
     void getHorseFlag(HorseFlags)const;

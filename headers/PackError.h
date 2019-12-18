@@ -4,6 +4,7 @@ class PackError {
 
 public:
     virtual ~PackError();
+    virtual void getLocErrorMessage[abi:cxx11](void)const;
 
     void PackError(PackErrorType, std::vector<std::string, std::allocator<std::string>> const&);
     void getErrorValue(void)const;

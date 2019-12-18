@@ -3,6 +3,11 @@
 class LevelSummary {
 
 public:
+    static long LevelSummary::INVALID_LEVEL_ID[abi:cxx11];
+    static long LevelSummary::CUSTOM_ICON_FILENAME[abi:cxx11];
+    static long LevelSummary::WORLD_ICON_FILENAME[abi:cxx11];
+    static long LevelSummary::DEFAULT_WORLD_ICON_FILENAME[abi:cxx11];
+
 
     void getSeed(void)const;
     void getGameType(void)const;

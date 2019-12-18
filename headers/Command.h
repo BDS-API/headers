@@ -3,6 +3,8 @@
 class Command {
 
 public:
+    static long Command::WILDCARD_TOKEN[abi:cxx11];
+
     virtual ~Command();
 
     void Command(void);

@@ -4,6 +4,8 @@ class BytesDataInput : IDataInput {
 
 public:
     virtual ~BytesDataInput();
+    virtual void readString[abi:cxx11](void);
+    virtual void readLongString[abi:cxx11](void);
     virtual void readFloat(void);
     virtual void readDouble(void);
     virtual void readByte(void);

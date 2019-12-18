@@ -15,10 +15,12 @@ public:
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemStack &, Player *, int)const;
+    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&,std::unique_ptr<CompoundTag,std::default_delete<CompoundTag>> const&)const;
     virtual void getMaxStackSize(ItemDescriptor const&)const;
     virtual bool isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void setIcon(std::string const&, int);
+    virtual void getAuxValuesDescription[abi:cxx11](void)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
     void BucketItem(std::string const&, int);

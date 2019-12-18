@@ -4,6 +4,7 @@ class PerfTimer {
 
 public:
     static long PerfTimer::MultiplyDeBruijnBitPosition;
+    static long PerfTimer::mPath[abi:cxx11];
     static long PerfTimer::test;
     static long PerfTimer::mEnabled;
 

@@ -8,6 +8,7 @@ public:
     virtual ~ElementBlock();
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual void tryLegacyUpgrade(unsigned short)const;
 
     void ElementBlock(std::string const&, int, ElementType);

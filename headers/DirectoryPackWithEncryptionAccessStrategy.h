@@ -6,6 +6,7 @@ public:
     virtual ~DirectoryPackWithEncryptionAccessStrategy();
     virtual void getPackSize(void)const;
     virtual void getPackLocation(void)const;
+    virtual void getPackName[abi:cxx11](void)const;
     virtual bool isWritable(void)const;
     virtual void setIsTrusted(bool);
     virtual bool isTrusted(void)const;

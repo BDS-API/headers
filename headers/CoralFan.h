@@ -4,6 +4,7 @@ class CoralFan : BushBlock {
 
 public:
     static long CoralFan::CORAL_FAN_NAMES_COUNT;
+    static long CoralFan::CORAL_FAN_NAMES[abi:cxx11];
 
     virtual ~CoralFan();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
@@ -23,6 +24,7 @@ public:
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual bool isAuxValueRelevantForPicking(void)const;
     virtual void getColor(Block const&)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;

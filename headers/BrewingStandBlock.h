@@ -16,6 +16,7 @@ public:
     virtual void use(Player &, BlockPos const&)const;
     virtual bool hasComparatorSignal(void)const;
     virtual void getComparatorSignal(BlockSource &, BlockPos const&, Block const&, unsigned char)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
 
     void BrewingStandBlock(std::string const&, int);

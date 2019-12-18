@@ -9,6 +9,7 @@ public:
     static long ExpressionNode::_defaultUnknownGenericQueryFunction;
     static long ExpressionNode::mTemporaryMolangEvalParams;
     static long ExpressionNode::mMolangInitialized;
+    static long ExpressionNode::mExpressionOpTokens[abi:cxx11];
 
 
     void ExpressionNode(ExpressionNode const&);

@@ -7,6 +7,7 @@ public:
     static long WallBlock::WALL_HEIGHT;
     static long WallBlock::POST_WIDTH;
     static long WallBlock::POST_HEIGHT;
+    static long WallBlock::WALL_NAMES[abi:cxx11];
 
     virtual ~WallBlock();
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
@@ -16,6 +17,7 @@ public:
     virtual bool isWallBlock(void)const;
     virtual bool canContainLiquid(void)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual bool isAuxValueRelevantForPicking(void)const;
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
     virtual void getVariant(Block const&)const;

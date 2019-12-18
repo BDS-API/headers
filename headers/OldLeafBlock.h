@@ -8,6 +8,7 @@ public:
     virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual bool isAuxValueRelevantForPicking(void)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getRenderLayer(Block const&, BlockSource &, BlockPos const&)const;

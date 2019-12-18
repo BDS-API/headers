@@ -10,6 +10,7 @@ public:
     virtual void getUpdatePacket(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual bool hasAlphaLayer(void)const;
+    virtual void getName[abi:cxx11](void)const;
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void removeItem(int, int);

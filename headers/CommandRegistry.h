@@ -6,6 +6,7 @@ public:
     static long CommandRegistry::TAG_VALUES_SOFTENUM_NAME;
     static long CommandRegistry::FUNCTION_NAME_SOFTENUM_NAME;
     static long CommandRegistry::COMMAND_NAME_ENUM_NAME;
+    static long CommandRegistry::ParseRuleSymbols[abi:cxx11];
 
 
     void collapse(CommandRegistry::ParseToken &, CommandRegistry::Symbol);

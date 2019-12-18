@@ -9,6 +9,7 @@ public:
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getName[abi:cxx11](void)const;
 
     void EnchantingTableBlockActor(BlockPos const&);
 };

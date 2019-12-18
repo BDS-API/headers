@@ -12,6 +12,7 @@ public:
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getName[abi:cxx11](void)const;
     virtual void getMaxStackSize(void)const;
     virtual bool canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
     virtual void playOpenSound(BlockSource &);

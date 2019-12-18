@@ -3,11 +3,15 @@
 class Npc : Mob {
 
 public:
+    static long Npc::SKIN_ID_TAG[abi:cxx11];
+    static long Npc::Skins[abi:cxx11];
+
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~Npc();
     virtual void breaksFallingBlocks(void)const;
     virtual bool canShowNameTag(void)const;
+    virtual void getFormattedNameTag[abi:cxx11](void)const;
     virtual void interactPreventDefault(void);
     virtual bool isFishable(void)const;
     virtual bool isTargetable(void)const;

@@ -4,6 +4,7 @@ class Core::FlatFile : Core::FileImpl {
 
 public:
     virtual ~FlatFile();
+    virtual void _getPath[abi:cxx11](void)const;
     virtual void _getBlockSize(void)const;
     virtual void _isOpen(void);
     virtual void _close(void);

@@ -14,6 +14,7 @@ public:
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void use(Player &, BlockPos const&)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual bool isAuxValueRelevantForPicking(void)const;
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
     virtual bool canBeSilkTouched(void)const;

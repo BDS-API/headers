@@ -30,6 +30,7 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canBeSilkTouched(void)const;
     virtual void getDustColor(Block const&)const;
+    virtual void getDustParticleName[abi:cxx11](Block const&)const;
     virtual bool isFreeToFall(BlockSource &, BlockPos const&)const;
     virtual void startFalling(BlockSource &, BlockPos const&, Block const*, bool)const;
 

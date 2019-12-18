@@ -10,6 +10,7 @@ public:
     virtual void getUpdatePacket(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getShadowRadius(BlockSource &)const;
+    virtual void getImmersiveReaderText[abi:cxx11](BlockSource &);
 
     void SignBlockActor(BlockPos const&);
     void setMessage(TextObjectRoot, std::string);

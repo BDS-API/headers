@@ -9,6 +9,7 @@ public:
     static long StructureEditorData::MAX_STRUCTURE_SIZE;
     static long StructureEditorData::MIN_STRUCTURE_OFFSET;
     static long StructureEditorData::MAX_STRUCTURE_OFFSET;
+    static long StructureEditorData::DEFAULT_STRUCTURE_NAMESPACE[abi:cxx11];
 
 
     void StructureEditorData(StructureEditorData const&);

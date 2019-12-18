@@ -6,6 +6,7 @@ public:
     virtual ~ZipPackAccessStrategy();
     virtual void getPackSize(void)const;
     virtual void getPackLocation(void)const;
+    virtual void getPackName[abi:cxx11](void)const;
     virtual bool isWritable(void)const;
     virtual void setIsTrusted(bool);
     virtual bool isTrusted(void)const;
@@ -16,6 +17,7 @@ public:
     virtual void writeAsset(Core::Path const&, std::string const&);
     virtual void forEachIn(Core::Path const&, std::function<void ()(Core::Path const&)>, bool)const;
     virtual void getStrategyType(void)const;
+    virtual void getSubPath[abi:cxx11](void)const;
     virtual void createSubPack(Core::Path const&)const;
     virtual void unload(void);
     virtual void readContentIdentity(void)const;

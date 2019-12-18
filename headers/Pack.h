@@ -3,6 +3,8 @@
 class Pack {
 
 public:
+    static long Pack::EDUCATION_METADATA_FILE[abi:cxx11];
+
 
     void Pack(std::unique_ptr<PackManifest, std::default_delete<PackManifest>>, std::unique_ptr<PackAccessStrategy, std::default_delete<PackAccessStrategy>>, std::unique_ptr<SubpackInfoCollection, std::default_delete<SubpackInfoCollection>>, std::unique_ptr<PackMetadata, std::default_delete<PackMetadata>>);
     void _loadLocalizationFiles(void);

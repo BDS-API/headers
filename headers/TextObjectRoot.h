@@ -4,6 +4,7 @@ class TextObjectRoot : ITextObject {
 
 public:
     virtual ~TextObjectRoot();
+    virtual void asString[abi:cxx11](void)const;
     virtual void asJsonValue(void)const;
 
     void TextObjectRoot(void);

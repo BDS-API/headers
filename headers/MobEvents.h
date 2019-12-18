@@ -3,6 +3,8 @@
 class MobEvents {
 
 public:
+    static long MobEvents::EVENTS_ENABLED_STRING[abi:cxx11];
+
     virtual ~MobEvents();
 
     void MobEvents(LevelStorage &);

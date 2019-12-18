@@ -9,6 +9,7 @@ public:
     static long ChemistryStickItem::DAMAGE_START_BIT;
     static long ChemistryStickItem::DAMAGE_BITS;
     static long ChemistryStickItem::DAMAGE_MASK;
+    static long ChemistryStickItem::ACTIVATION_TIMESTAMP_TAG[abi:cxx11];
 
     virtual ~ChemistryStickItem();
     virtual void setMaxDamage(int);

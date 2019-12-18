@@ -3,6 +3,8 @@
 class ScriptBlockPositionBinderComponent : ScriptBinderComponent {
 
 public:
+    static long ScriptBlockPositionBinderComponent::TAG[abi:cxx11];
+
     virtual ~ScriptBlockPositionBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);

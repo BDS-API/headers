@@ -15,6 +15,7 @@ public:
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void getRenderLayer(void)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual void getColor(Block const&)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getRenderLayer(Block const&, BlockSource &, BlockPos const&)const;

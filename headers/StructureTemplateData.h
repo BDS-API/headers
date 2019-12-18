@@ -3,6 +3,8 @@
 class StructureTemplateData {
 
 public:
+    static long StructureTemplateData::DEFAULT_PALETTE_NAME[abi:cxx11];
+
     virtual ~StructureTemplateData();
 
     void StructureTemplateData(void);

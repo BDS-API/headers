@@ -19,6 +19,7 @@ public:
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual void getColor(Block const&)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;
     virtual bool canBeSilkTouched(void)const;

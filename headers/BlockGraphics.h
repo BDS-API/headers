@@ -8,8 +8,11 @@ public:
     static long BlockGraphics::mBlocks;
     static long BlockGraphics::mTerrainTextureAtlas;
     static long BlockGraphics::mOwnedBlocks;
+    static long BlockGraphics::mBlockLookupMap[abi:cxx11];
     static long BlockGraphics::mDummyBlock;
+    static long BlockGraphics::mModels[abi:cxx11];
     static long BlockGraphics::mBlockModelAccess;
+    static long BlockGraphics::mTessellatedModels[abi:cxx11];
 
     virtual ~BlockGraphics();
     virtual void getIconYOffset(void)const;

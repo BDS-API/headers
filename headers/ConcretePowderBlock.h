@@ -10,9 +10,11 @@ public:
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void shouldStopFalling(Actor &)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual bool isAuxValueRelevantForPicking(void)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
     virtual void getDustColor(Block const&)const;
+    virtual void getDustParticleName[abi:cxx11](Block const&)const;
 
     void ConcretePowderBlock(std::string const&, int);
     void _tryTouchWater(BlockSource &, BlockPos const&, std::optional<BlockColor>)const;

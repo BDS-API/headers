@@ -11,6 +11,7 @@ public:
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
+    virtual void getName[abi:cxx11](void)const;
     virtual void getContainer(void);
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);

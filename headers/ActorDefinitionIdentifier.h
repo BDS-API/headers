@@ -3,6 +3,10 @@
 class ActorDefinitionIdentifier {
 
 public:
+    static long ActorDefinitionIdentifier::NAMESPACE_SEPARATOR[abi:cxx11];
+    static long ActorDefinitionIdentifier::EVENT_BEGIN[abi:cxx11];
+    static long ActorDefinitionIdentifier::EVENT_END[abi:cxx11];
+
 
     void ActorDefinitionIdentifier(void);
     void ActorDefinitionIdentifier(std::string, std::string, std::string);

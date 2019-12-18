@@ -7,6 +7,8 @@ public:
     static long DebugUtils::gShouldPresentDialog;
     static long DebugUtils::assertHandler;
     static long DebugUtils::gTelemetryRegistered;
+    static long DebugUtils::gFireAssertTelemetry[abi:cxx11];
+    static long DebugUtils::gp_modal_presenter[abi:cxx11];
     static long DebugUtils::gp_assert_handler;
 
 

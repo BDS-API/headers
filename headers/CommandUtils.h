@@ -3,6 +3,8 @@
 class CommandUtils {
 
 public:
+    static long CommandUtils::CMD_INPUT_UNICODE_TRANSLATE_MAP[abi:cxx11];
+
 
     void createItemInstance(Item const*, int, int);
     void createItemInstance(std::string const&, int, int);

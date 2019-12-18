@@ -3,8 +3,19 @@
 class ResourcePackRepository {
 
 public:
+    static long ResourcePackRepository::RESOURCE_PACKS_PATH[abi:cxx11];
+    static long ResourcePackRepository::BEHAVIOR_PACK_PATH[abi:cxx11];
+    static long ResourcePackRepository::DEVELOPMENT_RESOURCE_PACKS_PATH[abi:cxx11];
+    static long ResourcePackRepository::DEVELOPMENT_BEHAVIOR_PACKS_PATH[abi:cxx11];
+    static long ResourcePackRepository::DEVELOPMENT_SKIN_PACKS_PATH[abi:cxx11];
+    static long ResourcePackRepository::TREATMENT_PACK_PATH[abi:cxx11];
+    static long ResourcePackRepository::SKIN_PACKS_PATH[abi:cxx11];
+    static long ResourcePackRepository::KNOWN_VALID_PACKS_FILE_NAME[abi:cxx11];
+    static long ResourcePackRepository::KNOWN_INVALID_PACKS_FILE_NAME[abi:cxx11];
+    static long ResourcePackRepository::GLOBAL_RESOURCE_PACKS_FILENAME[abi:cxx11];
     static long ResourcePackRepository::CHEMISTRY_PACK_UUID;
     static long ResourcePackRepository::CHEMISTRY_SERVER_PACK_UUID;
+    static long ResourcePackRepository::EXPECTED_EXTENSIONS[abi:cxx11];
 
 
     void getVanillaPack(void)const;

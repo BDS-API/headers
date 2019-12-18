@@ -3,8 +3,16 @@
 class MapItem : ComplexItem {
 
 public:
+    static long MapItem::TAG_MAP_SCALING[abi:cxx11];
+    static long MapItem::TAG_MAP_SCALE[abi:cxx11];
+    static long MapItem::TAG_MAP_PLAYER_DISPLAY[abi:cxx11];
+    static long MapItem::TAG_MAP_UUID[abi:cxx11];
+    static long MapItem::TAG_MAP_NAME_INDEX[abi:cxx11];
+    static long MapItem::TAG_MAP_INIT[abi:cxx11];
+
     virtual ~MapItem();
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
+    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&,std::unique_ptr<CompoundTag,std::default_delete<CompoundTag>> const&)const;
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
     virtual void refreshedInContainer(ItemStackBase &, Level &)const;
     virtual void fixupOnLoad(ItemStackBase &, Level &)const;

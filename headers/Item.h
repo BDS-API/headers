@@ -4,6 +4,8 @@ class Item {
 
 public:
     static long Item::mGenerateDenyParticleEffect;
+    static long Item::TAG_DAMAGE[abi:cxx11];
+    static long Item::ICON_DESCRIPTION_PREFIX[abi:cxx11];
     static long Item::mItemTextureItems;
     static long Item::mCreativeListMutex;
     static long Item::mCreativeList;
@@ -78,6 +80,9 @@ public:
     virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemInstance &, Block const&, int, int, int, Actor *)const;
     virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
+    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&,std::unique_ptr<CompoundTag,std::default_delete<CompoundTag>> const&)const;
+    virtual void buildEffectDescriptionName[abi:cxx11](ItemStackBase const&)const;
+    virtual void buildCategoryDescriptionName[abi:cxx11](void)const;
     virtual void readUserData(ItemStackBase &, IDataInput &, ReadOnlyBinaryStream &)const;
     virtual void writeUserData(ItemStackBase const&, IDataOutput &)const;
     virtual void getMaxStackSize(ItemDescriptor const&)const;
@@ -92,6 +97,7 @@ public:
     virtual void getInHandUpdateType(Player const&, ItemInstance const&, ItemInstance const&, bool, bool)const;
     virtual void getInHandUpdateType(Player const&, ItemStack const&, ItemStack const&, bool, bool)const;
     virtual bool isSameItem(ItemStackBase const&, ItemStackBase const&)const;
+    virtual void getInteractText[abi:cxx11](Player const&)const;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual bool isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
@@ -102,6 +108,7 @@ public:
     virtual bool canBeCharged(void)const;
     virtual void playSoundIncrementally(ItemInstance const&, Mob &)const;
     virtual void playSoundIncrementally(ItemStack const&, Mob &)const;
+    virtual void getAuxValuesDescription[abi:cxx11](void)const;
     virtual void _checkUseOnPermissions(Actor &, ItemInstance &, unsigned char const&, BlockPos const&)const;
     virtual void _checkUseOnPermissions(Actor &, ItemStack &, unsigned char const&, BlockPos const&)const;
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;

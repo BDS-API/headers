@@ -15,6 +15,7 @@ public:
     virtual void stop(std::string const&);
     virtual void stop(unsigned long);
     virtual void stopAllSounds(void);
+    virtual void getCurrentlyPlayingMusicName[abi:cxx11](void);
     virtual void getItem(std::string const&, Core::Path const&, SoundItem &)const;
     virtual void registerLoop(std::string const&, std::function<void ()(LoopingSoundState &)>);
     virtual void unregisterLoop(unsigned long);

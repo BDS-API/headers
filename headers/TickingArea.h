@@ -5,6 +5,7 @@ class TickingArea : ITickingArea {
 public:
     virtual ~TickingArea();
     virtual void getId(void)const;
+    virtual void getName[abi:cxx11](void)const;
     virtual void getEntityId(void)const;
     virtual bool isEntityOwned(void)const;
     virtual void getBlockSource(void);

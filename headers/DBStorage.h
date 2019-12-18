@@ -12,6 +12,7 @@ public:
     virtual void loadLevelData(LevelData &);
     virtual void createChunkStorage(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>, StorageVersion);
     virtual void saveLevelData(LevelData const&);
+    virtual void getFullPath[abi:cxx11](void)const;
     virtual void saveData(std::string const&, std::string&&);
     virtual void createWriteBatch(void);
     virtual void saveDataSync(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>);

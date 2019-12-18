@@ -4,6 +4,7 @@ class Core::File_c : Core::FileImpl {
 
 public:
     virtual ~File_c();
+    virtual void _getPath[abi:cxx11](void)const;
     virtual void _getBlockSize(void)const;
     virtual void _isOpen(void);
     virtual void _close(void);

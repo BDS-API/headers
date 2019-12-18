@@ -22,6 +22,8 @@ public:
     virtual void requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual void use(ItemStack &, Player &)const;
+    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&,std::unique_ptr<CompoundTag,std::default_delete<CompoundTag>> const&)const;
+    virtual void getInteractText[abi:cxx11](Player const&)const;
 
     void WrittenBookItem(std::string const&, int);
     void makeSureTagIsValid(CompoundTag const&);

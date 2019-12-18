@@ -24,6 +24,7 @@ public:
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual bool canBeBuiltOver(BlockSource &, BlockPos const&)const;
     virtual void getRenderLayer(void)const;
+    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
     virtual bool isAuxValueRelevantForPicking(void)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getColorForParticle(BlockSource &, BlockPos const&, Block const&)const;

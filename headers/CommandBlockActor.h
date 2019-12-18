@@ -13,6 +13,8 @@ public:
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
     virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getCustomName[abi:cxx11](void)const;
+    virtual void getFilteredCustomName[abi:cxx11](UIProfanityContext const&);
 
     void CommandBlockActor(BlockPos const&, CommandBlockMode);
     bool isAutomatic(void)const;

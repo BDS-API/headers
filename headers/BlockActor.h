@@ -3,6 +3,9 @@
 class BlockActor {
 
 public:
+    static long BlockActor::mIdClassMap[abi:cxx11];
+    static long BlockActor::mClassIdMap[abi:cxx11];
+
     virtual ~BlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
@@ -27,6 +30,10 @@ public:
     virtual bool hasAlphaLayer(void)const;
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
     virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&);
+    virtual void getCustomName[abi:cxx11](void)const;
+    virtual void getFilteredCustomName[abi:cxx11](UIProfanityContext const&);
+    virtual void getName[abi:cxx11](void)const;
+    virtual void getImmersiveReaderText[abi:cxx11](BlockSource &);
     virtual void getRepairCost(void)const;
     virtual void getOwningPiston(BlockSource &);
     virtual void getContainer(void);

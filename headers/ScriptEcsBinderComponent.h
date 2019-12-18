@@ -3,6 +3,8 @@
 class ScriptEcsBinderComponent : ScriptBinderComponent {
 
 public:
+    static long ScriptEcsBinderComponent::TAG[abi:cxx11];
+
     virtual ~ScriptEcsBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
