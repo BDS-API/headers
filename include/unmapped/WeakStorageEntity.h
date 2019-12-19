@@ -1,0 +1,13 @@
+#pragma once
+
+class WeakStorageEntity {
+
+public:
+
+    WeakStorageEntity(WeakStorageEntity::EmptyInit);
+    WeakStorageEntity(OwnerStorageEntity const&);
+    WeakStorageEntity(StackResultStorageEntity const&);
+    WeakStorageEntity(WeakStorageEntity::VariadicInit, EntityContext const&);
+    void _reset(void);
+    void _isSet(void)const;
+};

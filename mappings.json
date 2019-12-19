@@ -1,0 +1,63 @@
+{
+  "parent": {
+    "Item": "bedrock/item/",
+    "BlockLegacy": "bedrock/block/",
+	"Actor": "bedrock/actor/",
+	"FilterTest": "bedrock/test/",
+	"Packet": "bedrock/network/packet/",
+	"PacketSender": "bedrock/network/packet/sender/",
+	"PacketObserver": "bedrock/network/packet/observer/",
+	"ITickingSystem": "bedrock/level/system/",
+	"Goal": "bedrock/actor/goal/",
+	"Command": "bedrock/command/commands/",
+	"CommandOrigin": "bedrock/command/orgin/",
+	"Tag": "bedrock/nbt/",
+	"Biome": "bedrock/level/biome/",
+	"IFeature": "bedrock/level/feature/",
+	"StructureFeature": "bedrock/level/feature/structure/",
+	"BlockActor": "bedrock/block/actor/",
+	"Container": "bedrock/container/",
+	"Recipe": "bedrock/crafting/recipe/",
+	"IContainerManager": "bedrock/container/manager/",
+	"ComponentDescription": "bedrock/description/component/",
+	"DefinitionDescription": "bedrock/description/definition/",
+	"BehaviorDefinition": "bedrock/description/behavior/",
+	"PropertyDescription": "bedrock/description/property/",
+	"TriggerDescription": "bedrock/description/trigger/",
+	"StructureStart": "bedrock/level/structure/start/",
+	"StructurePiece": "bedrock/level/structure/piece/",
+	"StrongholdPiece": "bedrock/level/structure/piece/stronghold/",
+	"OceanMonumentPiece": "bedrock/level/structure/piece/oceanmonument/",
+	"MineshaftPiece": "bedrock/level/structure/piece/mineshaft/",
+	"PathNavigation": "bedrock/actor/navigation/",
+	"ITextObject": "bedrock/text/",
+	"Enchant": "bedrock/item/enchant/",
+	"ChunkSource": "bedrock/level/chunksource/",
+	"ScriptEventData": "bedrock/scripting/event/data/",
+	"GameMode": "bedrock/gamemode/",
+	"Control": "bedrock/control/",
+	"WorldGenerator": "bedrock/level/generator/"
+  },
+  "namespace": {
+    "RakNet": "raknet/",
+	"BedrockLog": "bedrock/log/",
+	"ScriptApi": "bedrock/scripting/",
+	"moodycamel": "moodycamel/",
+	"Core": "core/",
+	"mce": "mce/",
+	"Json": "json/",
+	"Crypto": "crypto/",
+	"com::mojang::clacks": "clacks/",
+	"com::mojang::clacks::protocol": "clacks/protocol/",
+	"com::mojang::clacks::protocol::Commands": "clacks/protocol/commands/",
+	"AgentCommands": "bedrock/command/commands/agent/"
+  },
+  "name" : {
+    "DedicatedServer": "bedrock/",
+	"BedrockLog": "bedrock/log/",
+	"Command": "bedrock/command/"
+  },
+  "regex": {
+    "^Level(?!Db).*": "bedrock/level/"
+  }
+}
