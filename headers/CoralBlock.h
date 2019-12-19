@@ -3,8 +3,8 @@
 class CoralBlock : BlockLegacy {
 
 public:
-    static long CoralBlock::DEAD_CORAL_OFFSET;
-    static long CoralBlock::DEAD_CORAL_BIT;
+    static long DEAD_CORAL_OFFSET;
+    static long DEAD_CORAL_BIT;
 
     virtual ~CoralBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

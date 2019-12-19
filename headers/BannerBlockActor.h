@@ -3,12 +3,12 @@
 class BannerBlockActor : BlockActor {
 
 public:
-    static long BannerBlockActor::MAX_PATTERNS;
-    static long BannerBlockActor::TAG_BASE_COLOR[abi:cxx11];
-    static long BannerBlockActor::TAG_PATTERNS[abi:cxx11];
-    static long BannerBlockActor::TAG_PATTERN[abi:cxx11];
-    static long BannerBlockActor::TAG_COLOR[abi:cxx11];
-    static long BannerBlockActor::TAG_TYPE[abi:cxx11];
+    static long MAX_PATTERNS;
+    static long TAG_BASE_COLOR[abi:cxx11];
+    static long TAG_PATTERNS[abi:cxx11];
+    static long TAG_PATTERN[abi:cxx11];
+    static long TAG_COLOR[abi:cxx11];
+    static long TAG_TYPE[abi:cxx11];
 
     virtual ~BannerBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

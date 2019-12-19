@@ -3,8 +3,8 @@
 class Horse : Animal {
 
 public:
-    static long Horse::DATA_AGE;
-    static long Horse::DONKEY_CHEST_COUNT;
+    static long DATA_AGE;
+    static long DONKEY_CHEST_COUNT;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~Horse();

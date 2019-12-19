@@ -3,7 +3,7 @@
 class MinecraftScheduler {
 
 public:
-    static long MinecraftScheduler::mInstance;
+    static long mInstance;
 
 
     void client(void);

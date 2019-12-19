@@ -3,7 +3,7 @@
 class RailMovement {
 
 public:
-    static long RailMovement::EXITS;
+    static long EXITS;
 
 
     void getPosOffs(Actor &, Vec3 &, Vec3, float);

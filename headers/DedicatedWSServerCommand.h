@@ -3,7 +3,7 @@
 class DedicatedWSServerCommand : Command {
 
 public:
-    static long DedicatedWSServerCommand::mApp;
+    static long mApp;
 
     virtual ~DedicatedWSServerCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;

@@ -3,22 +3,22 @@
 class LegacyStructureTemplate {
 
 public:
-    static long LegacyStructureTemplate::STRUCTURE_VERSION;
-    static long LegacyStructureTemplate::CHUNK_SIZE;
-    static long LegacyStructureTemplate::SIZE_TAG[abi:cxx11];
-    static long LegacyStructureTemplate::AUTHOR_TAG[abi:cxx11];
-    static long LegacyStructureTemplate::VERSION_TAG[abi:cxx11];
-    static long LegacyStructureTemplate::PALETTE_TAG[abi:cxx11];
-    static long LegacyStructureTemplate::BLOCKS_TAG[abi:cxx11];
-    static long LegacyStructureTemplate::BLOCK_TAG_POS[abi:cxx11];
-    static long LegacyStructureTemplate::BLOCK_TAG_STATE[abi:cxx11];
-    static long LegacyStructureTemplate::BLOCK_TAG_NBT[abi:cxx11];
-    static long LegacyStructureTemplate::ENTITIES_TAG[abi:cxx11];
-    static long LegacyStructureTemplate::ENTITY_TAG_POS[abi:cxx11];
-    static long LegacyStructureTemplate::ENTITY_TAG_BLOCKPOS[abi:cxx11];
-    static long LegacyStructureTemplate::ENTITY_TAG_NBT[abi:cxx11];
-    static long LegacyStructureTemplate::MINECRAFT_PREFIX[abi:cxx11];
-    static long LegacyStructureTemplate::defaultSettings;
+    static long STRUCTURE_VERSION;
+    static long CHUNK_SIZE;
+    static long SIZE_TAG[abi:cxx11];
+    static long AUTHOR_TAG[abi:cxx11];
+    static long VERSION_TAG[abi:cxx11];
+    static long PALETTE_TAG[abi:cxx11];
+    static long BLOCKS_TAG[abi:cxx11];
+    static long BLOCK_TAG_POS[abi:cxx11];
+    static long BLOCK_TAG_STATE[abi:cxx11];
+    static long BLOCK_TAG_NBT[abi:cxx11];
+    static long ENTITIES_TAG[abi:cxx11];
+    static long ENTITY_TAG_POS[abi:cxx11];
+    static long ENTITY_TAG_BLOCKPOS[abi:cxx11];
+    static long ENTITY_TAG_NBT[abi:cxx11];
+    static long MINECRAFT_PREFIX[abi:cxx11];
+    static long defaultSettings;
 
 
     void LegacyStructureTemplate(void);

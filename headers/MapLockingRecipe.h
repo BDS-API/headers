@@ -3,7 +3,7 @@
 class MapLockingRecipe : MultiRecipe {
 
 public:
-    static long MapLockingRecipe::CartographyTableID;
+    static long CartographyTableID;
 
     virtual ~MapLockingRecipe();
     virtual void assemble(CraftingContainer &)const;

@@ -3,8 +3,8 @@
 class WorkerPool {
 
 public:
-    static long WorkerPool::sAllPools;
-    static long WorkerPool::sAllPoolsMutex;
+    static long sAllPools;
+    static long sAllPoolsMutex;
 
 
     void begin(void)const;

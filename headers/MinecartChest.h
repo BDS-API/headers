@@ -3,7 +3,7 @@
 class MinecartChest : Minecart {
 
 public:
-    static long MinecartChest::ITEMS_SIZE;
+    static long ITEMS_SIZE;
 
     virtual ~MinecartChest();
     virtual void destroy(ActorDamageSource const&, bool);

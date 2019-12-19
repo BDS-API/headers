@@ -3,8 +3,8 @@
 class SparklerItem : ChemistryStickItem {
 
 public:
-    static long SparklerItem::MAX_ACTIVE_TICKS;
-    static long SparklerItem::COLORS;
+    static long MAX_ACTIVE_TICKS;
+    static long COLORS;
 
     virtual ~SparklerItem();
     virtual bool isHandEquipped(void)const;

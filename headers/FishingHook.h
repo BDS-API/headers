@@ -3,7 +3,7 @@
 class FishingHook : Actor {
 
 public:
-    static long FishingHook::BOBBER_SIZE;
+    static long BOBBER_SIZE;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~FishingHook();

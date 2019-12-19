@@ -3,7 +3,7 @@
 class ProjectileFactory {
 
 public:
-    static long ProjectileFactory::mSubcomponentMap[abi:cxx11];
+    static long mSubcomponentMap[abi:cxx11];
 
 
     void ProjectileFactory(Level &);

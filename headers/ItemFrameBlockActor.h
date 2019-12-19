@@ -3,7 +3,7 @@
 class ItemFrameBlockActor : BlockActor {
 
 public:
-    static long ItemFrameBlockActor::ROTATION_DEGREES;
+    static long ROTATION_DEGREES;
 
     virtual ~ItemFrameBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

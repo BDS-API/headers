@@ -3,16 +3,16 @@
 class GameMode {
 
 public:
-    static long GameMode::PICKRANGE_VR_SURVIVAL;
-    static long GameMode::PICKRANGE_VR_CREATIVE;
-    static long GameMode::PICKRANGE_MOUSE;
-    static long GameMode::PICKRANGE_GAMEPAD;
-    static long GameMode::PICKRANGE_TOUCH_CREATIVE;
-    static long GameMode::PICKRANGE_TOUCH_SURVIVAL;
-    static long GameMode::PICKRANGE_SURVIVAL_MAXIMUM;
-    static long GameMode::PICKRANGE_CREATIVE_MAXIMUM;
-    static long GameMode::PICKRANGE_SURVIVAL_MAXIMUM_SQR;
-    static long GameMode::PICKRANGE_CREATIVE_MAXIMUM_SQR;
+    static long PICKRANGE_VR_SURVIVAL;
+    static long PICKRANGE_VR_CREATIVE;
+    static long PICKRANGE_MOUSE;
+    static long PICKRANGE_GAMEPAD;
+    static long PICKRANGE_TOUCH_CREATIVE;
+    static long PICKRANGE_TOUCH_SURVIVAL;
+    static long PICKRANGE_SURVIVAL_MAXIMUM;
+    static long PICKRANGE_CREATIVE_MAXIMUM;
+    static long PICKRANGE_SURVIVAL_MAXIMUM_SQR;
+    static long PICKRANGE_CREATIVE_MAXIMUM_SQR;
 
     virtual ~GameMode();
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &);

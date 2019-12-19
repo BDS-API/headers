@@ -3,9 +3,9 @@
 class DragonScanningGoal : Goal {
 
 public:
-    static long DragonScanningGoal::SITTING_SCANNING_IDLE_TICKS;
-    static long DragonScanningGoal::SITTING_ATTACK_VIEW_RANGE;
-    static long DragonScanningGoal::SITTING_CHARGE_VIEW_RANGE;
+    static long SITTING_SCANNING_IDLE_TICKS;
+    static long SITTING_ATTACK_VIEW_RANGE;
+    static long SITTING_CHARGE_VIEW_RANGE;
 
     virtual ~DragonScanningGoal();
     virtual bool canUse(void);

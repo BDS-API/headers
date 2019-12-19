@@ -3,9 +3,9 @@
 class MingleGoal : MoveToPOIGoal {
 
 public:
-    static long MingleGoal::FIND_PARTNER_INTERVAL_TICKS;
-    static long MingleGoal::SPEAK_INTERVAL_TICKS_MIN;
-    static long MingleGoal::SPEAK_INTERVAL_TICKS_MAX;
+    static long FIND_PARTNER_INTERVAL_TICKS;
+    static long SPEAK_INTERVAL_TICKS_MIN;
+    static long SPEAK_INTERVAL_TICKS_MAX;
 
     virtual ~MingleGoal();
     virtual bool canUse(void);

@@ -3,7 +3,7 @@
 class BiomeHeight {
 
 public:
-    static long BiomeHeight::MIN_DEPTH;
+    static long MIN_DEPTH;
 
 
     void BiomeHeight(float, float);

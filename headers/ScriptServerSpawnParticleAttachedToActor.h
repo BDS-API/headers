@@ -3,7 +3,7 @@
 class ScriptServerSpawnParticleAttachedToActor : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
 
 public:
-    static long ScriptServerSpawnParticleAttachedToActor::mHash;
+    static long mHash;
 
     virtual ~ScriptServerSpawnParticleAttachedToActor();
     virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);

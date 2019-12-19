@@ -3,7 +3,7 @@
 class ScriptServerActorCreatedEvent : ScriptEventData {
 
 public:
-    static long ScriptServerActorCreatedEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerActorCreatedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

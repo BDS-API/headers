@@ -3,23 +3,23 @@
 class Color {
 
 public:
-    static long Color::WHITE;
-    static long Color::GREY;
-    static long Color::BLACK;
-    static long Color::RED;
-    static long Color::GREEN;
-    static long Color::BLUE;
-    static long Color::YELLOW;
-    static long Color::ORANGE;
-    static long Color::PURPLE;
-    static long Color::CYAN;
-    static long Color::PINK;
-    static long Color::NIL;
-    static long Color::SHADE_DOWN;
-    static long Color::SHADE_UP;
-    static long Color::SHADE_NORTH_SOUTH;
-    static long Color::SHADE_WEST_EAST;
-    static long Color::MINECOIN_GOLD;
+    static long WHITE;
+    static long GREY;
+    static long BLACK;
+    static long RED;
+    static long GREEN;
+    static long BLUE;
+    static long YELLOW;
+    static long ORANGE;
+    static long PURPLE;
+    static long CYAN;
+    static long PINK;
+    static long NIL;
+    static long SHADE_DOWN;
+    static long SHADE_UP;
+    static long SHADE_NORTH_SOUTH;
+    static long SHADE_WEST_EAST;
+    static long MINECOIN_GOLD;
 
 
     void Color(float, float, float, float);

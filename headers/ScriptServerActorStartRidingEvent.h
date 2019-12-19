@@ -3,7 +3,7 @@
 class ScriptServerActorStartRidingEvent : ScriptEventData {
 
 public:
-    static long ScriptServerActorStartRidingEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerActorStartRidingEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

@@ -3,8 +3,8 @@
 class ScriptCommandFactory {
 
 public:
-    static long ScriptCommandFactory::mIdMutex;
-    static long ScriptCommandFactory::mCurrentId;
+    static long mIdMutex;
+    static long mCurrentId;
 
 
     void createScriptCommand(std::string const&);

@@ -3,9 +3,9 @@
 class MinecraftEventing : IMinecraftEventing {
 
 public:
-    static long MinecraftEventing::sMutex;
-    static long MinecraftEventing::mUseMethodMap;
-    static long MinecraftEventing::mAcquisitionMethodMap;
+    static long sMutex;
+    static long mUseMethodMap;
+    static long mAcquisitionMethodMap;
 
     virtual ~MinecraftEventing();
     virtual void fireEventPackUpgradeAttempt(PackManifest const&, PackReport const&);

@@ -3,7 +3,7 @@
 class Scheduler {
 
 public:
-    static long Scheduler::AVERAGE_TASK_TOLERANCE;
+    static long AVERAGE_TASK_TOLERANCE;
 
 
     void Scheduler(std::string, unsigned int);

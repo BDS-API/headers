@@ -3,32 +3,32 @@
 class Village {
 
 public:
-    static long Village::VILLAGE_VERSION_CURRENT;
-    static long Village::VILLAGE_START_XZ_BOUNDS;
-    static long Village::VILLAGE_START_HEIGHT;
-    static long Village::VILLAGE_UNCLAIMED_POI_CAP;
-    static long Village::VILLAGE_POI_PURGE_TIME;
-    static long Village::VILLAGE_RADIUS_APPROX_SCALAR;
-    static long Village::RAID_PREP_TIME_IN_TICKS;
-    static long Village::RAID_GROUP_COMPLETE_DELAY_IN_TICKS;
-    static long Village::RAID_LOCATION_HELP_DELAY_IN_TICKS;
-    static long Village::RAID_MAX_SPAWN_FAILURES;
-    static long Village::VILLAGE_HERO_EFFECT_DURATION;
-    static long Village::VILLAGE_HERO_BESTOW_TIME;
-    static long Village::ACHIEVEMENT_SOUND_THE_ALARM_TOLERANCE;
-    static long Village::VILLAGE_UPDATE_TICK_DELAY;
-    static long Village::VILLAGE_SAVE_TICK_DELAY;
-    static long Village::RAID_BOUNDS_PADDING;
-    static long Village::UNINITIALIZED_VILLAGE_LIFETIME_MAX_TICKS;
-    static long Village::DEBUG_DRAWING;
-    static long Village::RAID_TIMEOUT_IN_TICKS;
-    static long Village::RAIDER_CELEBRATION_EVENT[abi:cxx11];
-    static long Village::STORAGE_KEY_PREFIX[abi:cxx11];
-    static long Village::STORAGE_KEY_VILLAGE[abi:cxx11];
-    static long Village::STORAGE_KEY_PLAYERS[abi:cxx11];
-    static long Village::STORAGE_KEY_DWELLERS[abi:cxx11];
-    static long Village::STORAGE_KEY_POI[abi:cxx11];
-    static long Village::STORAGE_KEY_RAID[abi:cxx11];
+    static long VILLAGE_VERSION_CURRENT;
+    static long VILLAGE_START_XZ_BOUNDS;
+    static long VILLAGE_START_HEIGHT;
+    static long VILLAGE_UNCLAIMED_POI_CAP;
+    static long VILLAGE_POI_PURGE_TIME;
+    static long VILLAGE_RADIUS_APPROX_SCALAR;
+    static long RAID_PREP_TIME_IN_TICKS;
+    static long RAID_GROUP_COMPLETE_DELAY_IN_TICKS;
+    static long RAID_LOCATION_HELP_DELAY_IN_TICKS;
+    static long RAID_MAX_SPAWN_FAILURES;
+    static long VILLAGE_HERO_EFFECT_DURATION;
+    static long VILLAGE_HERO_BESTOW_TIME;
+    static long ACHIEVEMENT_SOUND_THE_ALARM_TOLERANCE;
+    static long VILLAGE_UPDATE_TICK_DELAY;
+    static long VILLAGE_SAVE_TICK_DELAY;
+    static long RAID_BOUNDS_PADDING;
+    static long UNINITIALIZED_VILLAGE_LIFETIME_MAX_TICKS;
+    static long DEBUG_DRAWING;
+    static long RAID_TIMEOUT_IN_TICKS;
+    static long RAIDER_CELEBRATION_EVENT[abi:cxx11];
+    static long STORAGE_KEY_PREFIX[abi:cxx11];
+    static long STORAGE_KEY_VILLAGE[abi:cxx11];
+    static long STORAGE_KEY_PLAYERS[abi:cxx11];
+    static long STORAGE_KEY_DWELLERS[abi:cxx11];
+    static long STORAGE_KEY_POI[abi:cxx11];
+    static long STORAGE_KEY_RAID[abi:cxx11];
 
 
     void _sendSoundTheAlarmAchievement(Player const&)const;

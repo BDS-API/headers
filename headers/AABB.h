@@ -3,7 +3,7 @@
 class AABB {
 
 public:
-    static long AABB::EMPTY;
+    static long EMPTY;
 
 
     void fromPoints(Vec3 const&, Vec3 const&);

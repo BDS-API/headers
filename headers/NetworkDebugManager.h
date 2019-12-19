@@ -3,9 +3,9 @@
 class NetworkDebugManager {
 
 public:
-    static long NetworkDebugManager::UPDATE_INTERVAL_MILLISECONDS;
-    static long NetworkDebugManager::MAX_NUMBER_OF_SAMPLES;
-    static long NetworkDebugManager::mNetworkDebugManager;
+    static long UPDATE_INTERVAL_MILLISECONDS;
+    static long MAX_NUMBER_OF_SAMPLES;
+    static long mNetworkDebugManager;
 
 
     void initialize(void);

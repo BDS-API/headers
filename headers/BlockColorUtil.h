@@ -3,7 +3,7 @@
 class BlockColorUtil {
 
 public:
-    static long BlockColorUtil::RAINBOW;
+    static long RAINBOW;
 
 
     void getColor(BlockColor);

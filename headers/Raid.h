@@ -3,10 +3,10 @@
 class Raid {
 
 public:
-    static long Raid::NUM_GROUPS_ON_EASY;
-    static long Raid::NUM_GROUPS_ON_NORMAL;
-    static long Raid::NUM_GROUPS_ON_HARD;
-    static long Raid::INVALID_SPAWN_POINT;
+    static long NUM_GROUPS_ON_EASY;
+    static long NUM_GROUPS_ON_NORMAL;
+    static long NUM_GROUPS_ON_HARD;
+    static long INVALID_SPAWN_POINT;
 
 
     void getCurrentRaidState(void)const;

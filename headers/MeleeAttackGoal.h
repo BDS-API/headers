@@ -3,14 +3,14 @@
 class MeleeAttackGoal : Goal {
 
 public:
-    static long MeleeAttackGoal::ATTACK_LOOK_DISTANCE;
-    static long MeleeAttackGoal::MIN_RECALC_TIME;
-    static long MeleeAttackGoal::MAX_RECALC_TIME;
-    static long MeleeAttackGoal::VERY_FAR_DISTANCE_SQUARED;
-    static long MeleeAttackGoal::FAR_DISTANCE_SQUARED;
-    static long MeleeAttackGoal::VERY_FAR_DISTANCE_RECALC_TIME_INCREASE;
-    static long MeleeAttackGoal::FAR_DISTANCE_RECALC_TIME_INCREASE;
-    static long MeleeAttackGoal::DEFAULT_RECALC_TIME;
+    static long ATTACK_LOOK_DISTANCE;
+    static long MIN_RECALC_TIME;
+    static long MAX_RECALC_TIME;
+    static long VERY_FAR_DISTANCE_SQUARED;
+    static long FAR_DISTANCE_SQUARED;
+    static long VERY_FAR_DISTANCE_RECALC_TIME_INCREASE;
+    static long FAR_DISTANCE_RECALC_TIME_INCREASE;
+    static long DEFAULT_RECALC_TIME;
 
     virtual ~MeleeAttackGoal();
     virtual bool canUse(void);

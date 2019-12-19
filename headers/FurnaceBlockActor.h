@@ -3,15 +3,15 @@
 class FurnaceBlockActor : BlockActor, Container {
 
 public:
-    static long FurnaceBlockActor::ITEMS_LIST_KEY[abi:cxx11];
-    static long FurnaceBlockActor::SLOT_KEY[abi:cxx11];
-    static long FurnaceBlockActor::BURN_TIME_KEY[abi:cxx11];
-    static long FurnaceBlockActor::COOK_TIME_KEY[abi:cxx11];
-    static long FurnaceBlockActor::BURN_DURATION_KEY[abi:cxx11];
-    static long FurnaceBlockActor::STORED_XP_DEPRECATED_KEY[abi:cxx11];
-    static long FurnaceBlockActor::STORED_XP_KEY[abi:cxx11];
-    static long FurnaceBlockActor::CUSTOM_NAME_KEY[abi:cxx11];
-    static long FurnaceBlockActor::LAST_FUEL_KEY[abi:cxx11];
+    static long ITEMS_LIST_KEY[abi:cxx11];
+    static long SLOT_KEY[abi:cxx11];
+    static long BURN_TIME_KEY[abi:cxx11];
+    static long COOK_TIME_KEY[abi:cxx11];
+    static long BURN_DURATION_KEY[abi:cxx11];
+    static long STORED_XP_DEPRECATED_KEY[abi:cxx11];
+    static long STORED_XP_KEY[abi:cxx11];
+    static long CUSTOM_NAME_KEY[abi:cxx11];
+    static long LAST_FUEL_KEY[abi:cxx11];
 
     virtual ~FurnaceBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

@@ -3,7 +3,7 @@
 class MolangQueryFunctionPtr {
 
 public:
-    static long MolangQueryFunctionPtr::defaultErrorValue;
+    static long defaultErrorValue;
 
 
     void MolangQueryFunctionPtr(MolangQueryFunctionPtr const&);

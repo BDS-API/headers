@@ -3,7 +3,7 @@
 class Spawner {
 
 public:
-    static long Spawner::SPAWN_RING_OFFSETS;
+    static long SPAWN_RING_OFFSETS;
 
 
     void spawnMob(BlockSource &, ActorDefinitionIdentifier const&, Actor *, Vec3 const&, bool, bool, bool);

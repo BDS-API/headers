@@ -3,7 +3,7 @@
 class LevelChunk {
 
 public:
-    static long LevelChunk::UPDATE_MAP_BIT_SHIFT;
+    static long UPDATE_MAP_BIT_SHIFT;
 
 
     bool isOwnedByTickingThread(void)const;

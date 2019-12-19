@@ -3,7 +3,7 @@
 class ElementBlock : BlockLegacy {
 
 public:
-    static long ElementBlock::mElements;
+    static long mElements;
 
     virtual ~ElementBlock();
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;

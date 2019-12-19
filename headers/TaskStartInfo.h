@@ -3,7 +3,7 @@
 class TaskStartInfo {
 
 public:
-    static long TaskStartInfo::NoAffinity;
+    static long NoAffinity;
 
 
     void TaskStartInfo(gsl::basic_string_span<char const, -1l>);

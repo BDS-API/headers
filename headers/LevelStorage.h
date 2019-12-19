@@ -3,8 +3,8 @@
 class LevelStorage {
 
 public:
-    static long LevelStorage::LOCAL_PLAYER_TAG[abi:cxx11];
-    static long LevelStorage::LEGACY_CONSOLE_PLAYER_PREFIX[abi:cxx11];
+    static long LOCAL_PLAYER_TAG[abi:cxx11];
+    static long LEGACY_CONSOLE_PLAYER_PREFIX[abi:cxx11];
 
     virtual ~LevelStorage();
     virtual void createWriteBatch(void);

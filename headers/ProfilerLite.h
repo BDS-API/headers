@@ -3,8 +3,8 @@
 class ProfilerLite {
 
 public:
-    static long ProfilerLite::sEmptyThreadID;
-    static long ProfilerLite::gProfilerLiteInstance;
+    static long sEmptyThreadID;
+    static long gProfilerLiteInstance;
 
 
     void logTimedEvent(std::string const&, double);

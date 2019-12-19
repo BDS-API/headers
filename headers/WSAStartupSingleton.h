@@ -3,7 +3,7 @@
 class WSAStartupSingleton {
 
 public:
-    static long WSAStartupSingleton::refCount;
+    static long refCount;
 
 
     void WSAStartupSingleton(void);

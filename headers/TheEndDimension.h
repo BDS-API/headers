@@ -3,7 +3,7 @@
 class TheEndDimension : Dimension {
 
 public:
-    static long TheEndDimension::AMBIENT_MULTIPLIER;
+    static long AMBIENT_MULTIPLIER;
 
     virtual ~TheEndDimension();
     virtual void init(void);

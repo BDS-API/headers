@@ -3,7 +3,7 @@
 class ConsoleChunkBlender {
 
 public:
-    static long ConsoleChunkBlender::sConversionBlendNoise;
+    static long sConversionBlendNoise;
 
 
     void ConsoleChunkBlender(void);

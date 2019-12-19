@@ -3,7 +3,7 @@
 class PistonBlock : ActorBlock {
 
 public:
-    static long PistonBlock::ARM_DIRECTION_OFFSETS;
+    static long ARM_DIRECTION_OFFSETS;
 
     virtual ~PistonBlock();
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;

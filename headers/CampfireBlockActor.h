@@ -3,8 +3,8 @@
 class CampfireBlockActor : BlockActor {
 
 public:
-    static long CampfireBlockActor::MIN_SMOKE_THRESHOLD_COUNTER;
-    static long CampfireBlockActor::MAX_SMOKE_THRESHOLD_COUNTER;
+    static long MIN_SMOKE_THRESHOLD_COUNTER;
+    static long MAX_SMOKE_THRESHOLD_COUNTER;
 
     virtual ~CampfireBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

@@ -3,7 +3,7 @@
 class ContentIdentity {
 
 public:
-    static long ContentIdentity::EMPTY;
+    static long EMPTY;
 
 
     void ContentIdentity(mce::UUID const&);

@@ -3,7 +3,7 @@
 class RandomThreadCheckManager : AppPlatformListener {
 
 public:
-    static long RandomThreadCheckManager::mInstance;
+    static long mInstance;
 
     virtual ~RandomThreadCheckManager();
     virtual void onAppResumed(void);

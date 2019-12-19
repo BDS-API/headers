@@ -3,9 +3,9 @@
 class AnvilContainerManagerModel : ContainerManagerModel {
 
 public:
-    static long AnvilContainerManagerModel::INPUT_SLOT;
-    static long AnvilContainerManagerModel::MATERIAL_SLOT;
-    static long AnvilContainerManagerModel::RESULT_SLOT;
+    static long INPUT_SLOT;
+    static long MATERIAL_SLOT;
+    static long RESULT_SLOT;
 
     virtual ~AnvilContainerManagerModel();
     virtual void getItems(void);

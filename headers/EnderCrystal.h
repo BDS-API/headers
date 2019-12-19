@@ -3,7 +3,7 @@
 class EnderCrystal : Actor {
 
 public:
-    static long EnderCrystal::HEAL_DISTANCE;
+    static long HEAL_DISTANCE;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);

@@ -3,11 +3,11 @@
 class BalloonComponent {
 
 public:
-    static long BalloonComponent::MAX_BALLOON_RANGE;
-    static long BalloonComponent::FENCE_BALLOON_RANGE;
-    static long BalloonComponent::ATTACHED_TAG[abi:cxx11];
-    static long BalloonComponent::MAX_HEIGHT_TAG[abi:cxx11];
-    static long BalloonComponent::SHOULD_DROP_TAG[abi:cxx11];
+    static long MAX_BALLOON_RANGE;
+    static long FENCE_BALLOON_RANGE;
+    static long ATTACHED_TAG[abi:cxx11];
+    static long MAX_HEIGHT_TAG[abi:cxx11];
+    static long SHOULD_DROP_TAG[abi:cxx11];
 
 
     void BalloonComponent(void);

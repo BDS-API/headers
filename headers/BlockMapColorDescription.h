@@ -3,7 +3,7 @@
 class BlockMapColorDescription : BlockComponentDescription {
 
 public:
-    static long BlockMapColorDescription::NameID[abi:cxx11];
+    static long NameID[abi:cxx11];
 
     virtual ~BlockMapColorDescription();
     virtual void getName[abi:cxx11](void)const;

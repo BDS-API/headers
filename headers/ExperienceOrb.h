@@ -3,7 +3,7 @@
 class ExperienceOrb : Actor {
 
 public:
-    static long ExperienceOrb::LIFETIME;
+    static long LIFETIME;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~ExperienceOrb();

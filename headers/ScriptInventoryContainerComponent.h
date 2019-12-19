@@ -3,7 +3,7 @@
 class ScriptInventoryContainerComponent : ScriptContainerComponentBase {
 
 public:
-    static long ScriptInventoryContainerComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptInventoryContainerComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

@@ -3,7 +3,7 @@
 class BiomeIdCompatibility {
 
 public:
-    static long BiomeIdCompatibility::MAX_CUSTOM_BIOMES;
+    static long MAX_CUSTOM_BIOMES;
 
 
     bool isReserved(unsigned int);

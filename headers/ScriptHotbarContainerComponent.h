@@ -3,7 +3,7 @@
 class ScriptHotbarContainerComponent : ScriptContainerComponentBase {
 
 public:
-    static long ScriptHotbarContainerComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptHotbarContainerComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

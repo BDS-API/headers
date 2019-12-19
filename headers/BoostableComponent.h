@@ -3,8 +3,8 @@
 class BoostableComponent {
 
 public:
-    static long BoostableComponent::SPEED_MODIFIER_BOOSTING_UUID;
-    static long BoostableComponent::SPEED_MODIFIER_BOOSTING;
+    static long SPEED_MODIFIER_BOOSTING_UUID;
+    static long SPEED_MODIFIER_BOOSTING;
 
 
     void BoostableComponent(BoostableComponent&&);

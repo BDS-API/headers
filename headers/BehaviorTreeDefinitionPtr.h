@@ -3,7 +3,7 @@
 class BehaviorTreeDefinitionPtr {
 
 public:
-    static long BehaviorTreeDefinitionPtr::NONE;
+    static long NONE;
 
 
     void BehaviorTreeDefinitionPtr(void);

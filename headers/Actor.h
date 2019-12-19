@@ -3,11 +3,11 @@
 class Actor {
 
 public:
-    static long Actor::TOTAL_AIR_SUPPLY;
-    static long Actor::DAMAGE_NEARBY_MOBS_DURATION;
-    static long Actor::DEFAULT_AMBIENT_SOUND_INTERVAL;
-    static long Actor::DEFAULT_AMBIENT_SOUND_INTERVAL_RANGE;
-    static long Actor::RIDING_TAG[abi:cxx11];
+    static long TOTAL_AIR_SUPPLY;
+    static long DAMAGE_NEARBY_MOBS_DURATION;
+    static long DEFAULT_AMBIENT_SOUND_INTERVAL;
+    static long DEFAULT_AMBIENT_SOUND_INTERVAL_RANGE;
+    static long RIDING_TAG[abi:cxx11];
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);

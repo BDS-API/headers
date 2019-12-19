@@ -3,11 +3,11 @@
 class NpcComponent {
 
 public:
-    static long NpcComponent::MAX_NPC_NAME_LENGTH;
-    static long NpcComponent::NAME_RAW_TEXT_TAG[abi:cxx11];
-    static long NpcComponent::INTERACTIVE_TAG[abi:cxx11];
-    static long NpcComponent::ACTIONS_TAG[abi:cxx11];
-    static long NpcComponent::URL_TAG[abi:cxx11];
+    static long MAX_NPC_NAME_LENGTH;
+    static long NAME_RAW_TEXT_TAG[abi:cxx11];
+    static long INTERACTIVE_TAG[abi:cxx11];
+    static long ACTIONS_TAG[abi:cxx11];
+    static long URL_TAG[abi:cxx11];
 
 
     void NpcComponent(void);

@@ -3,9 +3,9 @@
 class ResourcePack {
 
 public:
-    static long ResourcePack::RESOURCE_PACK_ICON_PATH[abi:cxx11];
-    static long ResourcePack::RESOURCE_PACK_BUG_ICON_PATH[abi:cxx11];
-    static long ResourcePack::TEXTURES_LIST_PATH[abi:cxx11];
+    static long RESOURCE_PACK_ICON_PATH[abi:cxx11];
+    static long RESOURCE_PACK_BUG_ICON_PATH[abi:cxx11];
+    static long TEXTURES_LIST_PATH[abi:cxx11];
 
 
     void ResourcePack(Pack &);

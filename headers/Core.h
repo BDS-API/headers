@@ -3,7 +3,7 @@
 class Core {
 
 public:
-    static long Core::sRootStorageArea;
+    static long sRootStorageArea;
 
 
     void oneOfCStr(char const*, std::initializer_list<char const*>);

@@ -3,9 +3,9 @@
 class ActorDefinitionIdentifier {
 
 public:
-    static long ActorDefinitionIdentifier::NAMESPACE_SEPARATOR[abi:cxx11];
-    static long ActorDefinitionIdentifier::EVENT_BEGIN[abi:cxx11];
-    static long ActorDefinitionIdentifier::EVENT_END[abi:cxx11];
+    static long NAMESPACE_SEPARATOR[abi:cxx11];
+    static long EVENT_BEGIN[abi:cxx11];
+    static long EVENT_END[abi:cxx11];
 
 
     void ActorDefinitionIdentifier(void);

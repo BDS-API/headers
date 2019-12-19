@@ -3,7 +3,7 @@
 class ScriptServerActorSneakChangedEvent : ScriptEventData {
 
 public:
-    static long ScriptServerActorSneakChangedEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerActorSneakChangedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

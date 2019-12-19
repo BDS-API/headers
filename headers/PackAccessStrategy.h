@@ -3,7 +3,7 @@
 class PackAccessStrategy {
 
 public:
-    static long PackAccessStrategy::PACK_IMPORT_LOCK_FILE[abi:cxx11];
+    static long PACK_IMPORT_LOCK_FILE[abi:cxx11];
 
     virtual ~PackAccessStrategy();
     virtual void forEachInAssetSet(Core::Path const&, std::function<void ()(Core::Path const&)>)const;

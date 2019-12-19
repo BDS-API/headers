@@ -3,8 +3,8 @@
 class VillageManager {
 
 public:
-    static long VillageManager::MAX_POI_TOLERANCE_DIST;
-    static long VillageManager::MAX_QUERY_SCAN_ITERATIONS;
+    static long MAX_POI_TOLERANCE_DIST;
+    static long MAX_QUERY_SCAN_ITERATIONS;
 
 
     void VillageManager(Dimension &);

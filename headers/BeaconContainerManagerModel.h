@@ -3,7 +3,7 @@
 class BeaconContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    static long BeaconContainerManagerModel::PAYMENT_SLOT;
+    static long PAYMENT_SLOT;
 
     virtual ~BeaconContainerManagerModel();
     virtual void getItems(void);

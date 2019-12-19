@@ -3,7 +3,7 @@
 class ShapedChemistryRecipe : ShapedRecipe {
 
 public:
-    static long ShapedChemistryRecipe::ID;
+    static long ID;
 
     virtual ~ShapedChemistryRecipe();
     virtual void matches(CraftingContainer &, Level &)const;

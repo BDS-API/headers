@@ -3,7 +3,7 @@
 class MolangTextureVariable {
 
 public:
-    static long MolangTextureVariable::defaultErrorValue;
+    static long defaultErrorValue;
 
 
     void MolangTextureVariable(MolangTextureVariable const&);

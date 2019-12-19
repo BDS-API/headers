@@ -3,13 +3,13 @@
 class SnackGoal : Goal {
 
 public:
-    static long SnackGoal::PATH_RANGE;
-    static long SnackGoal::RANDOM_EATING_START;
-    static long SnackGoal::RANDOM_EATING_END;
-    static long SnackGoal::EATING_TIME;
-    static long SnackGoal::CHEW_CHANCE;
-    static long SnackGoal::SEARCH_SIZE;
-    static long SnackGoal::STOP_DIST_SQRD;
+    static long PATH_RANGE;
+    static long RANDOM_EATING_START;
+    static long RANDOM_EATING_END;
+    static long EATING_TIME;
+    static long CHEW_CHANCE;
+    static long SEARCH_SIZE;
+    static long STOP_DIST_SQRD;
 
     virtual ~SnackGoal();
     virtual bool canUse(void);

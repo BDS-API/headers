@@ -3,9 +3,9 @@
 class LegacyStructureSettings {
 
 public:
-    static long LegacyStructureSettings::INTEGRITY_MAX;
-    static long LegacyStructureSettings::INTEGRITY_MIN;
-    static long LegacyStructureSettings::MAX_STRUCTURE_SIZE;
+    static long INTEGRITY_MAX;
+    static long INTEGRITY_MIN;
+    static long MAX_STRUCTURE_SIZE;
 
 
     void LegacyStructureSettings(LegacyStructureSettings const&);

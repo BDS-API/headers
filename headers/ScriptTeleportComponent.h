@@ -3,7 +3,7 @@
 class ScriptTeleportComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptTeleportComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptTeleportComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

@@ -3,14 +3,14 @@
 class ArmorItem : Item {
 
 public:
-    static long ArmorItem::mHealthPerSlot;
-    static long ArmorItem::LEATHER;
-    static long ArmorItem::CHAIN;
-    static long ArmorItem::IRON;
-    static long ArmorItem::GOLD;
-    static long ArmorItem::DIAMOND;
-    static long ArmorItem::ELYTRA;
-    static long ArmorItem::TURTLE;
+    static long mHealthPerSlot;
+    static long LEATHER;
+    static long CHAIN;
+    static long IRON;
+    static long GOLD;
+    static long DIAMOND;
+    static long ELYTRA;
+    static long TURTLE;
 
     virtual ~ArmorItem();
     virtual bool isArmor(void)const;

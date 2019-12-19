@@ -3,7 +3,7 @@
 class Skeleton : HumanoidMonster {
 
 public:
-    static long Skeleton::SPEED_MODIFIER_ATTACK_UUID;
+    static long SPEED_MODIFIER_ATTACK_UUID;
 
     virtual ~Skeleton();
     virtual void normalTick(void);

@@ -3,7 +3,7 @@
 class Sheep : Animal {
 
 public:
-    static long Sheep::EAT_ANIMATION_TICKS;
+    static long EAT_ANIMATION_TICKS;
 
     virtual ~Sheep();
     virtual void handleEntityEvent(ActorEvent, int);

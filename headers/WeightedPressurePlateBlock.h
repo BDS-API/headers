@@ -3,8 +3,8 @@
 class WeightedPressurePlateBlock : BasePressurePlateBlock {
 
 public:
-    static long WeightedPressurePlateBlock::MAX_WEIGHT_LIGHT;
-    static long WeightedPressurePlateBlock::MAX_WEIGHT_HEAVY;
+    static long MAX_WEIGHT_LIGHT;
+    static long MAX_WEIGHT_HEAVY;
 
     virtual ~WeightedPressurePlateBlock();
     virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;

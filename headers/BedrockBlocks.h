@@ -3,7 +3,7 @@
 class BedrockBlocks {
 
 public:
-    static long BedrockBlocks::mAir;
+    static long mAir;
 
 
     void assignBlocks(void);

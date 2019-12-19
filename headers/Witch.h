@@ -3,8 +3,8 @@
 class Witch : HumanoidMonster {
 
 public:
-    static long Witch::SPEED_MODIFIER_DRINKING_UUID;
-    static long Witch::SPEED_MODIFIER_DRINKING;
+    static long SPEED_MODIFIER_DRINKING_UUID;
+    static long SPEED_MODIFIER_DRINKING;
 
     virtual ~Witch();
     virtual bool canAttack(Actor *, bool)const;

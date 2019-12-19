@@ -3,7 +3,7 @@
 class ResourcePackFileDownloaderManager {
 
 public:
-    static long ResourcePackFileDownloaderManager::MAX_CHUNK_ATTEMPTS;
+    static long MAX_CHUNK_ATTEMPTS;
 
     virtual ~ResourcePackFileDownloaderManager();
 

@@ -3,7 +3,7 @@
 class ScriptServerChatReceived : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
 
 public:
-    static long ScriptServerChatReceived::mHash;
+    static long mHash;
 
     virtual ~ScriptServerChatReceived();
     virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);

@@ -3,7 +3,7 @@
 class ScriptCollisionBoxComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptCollisionBoxComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptCollisionBoxComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

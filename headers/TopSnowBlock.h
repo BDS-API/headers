@@ -3,7 +3,7 @@
 class TopSnowBlock : HeavyBlock {
 
 public:
-    static long TopSnowBlock::MAX_HEIGHT;
+    static long MAX_HEIGHT;
 
     virtual ~TopSnowBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

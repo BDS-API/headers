@@ -3,7 +3,7 @@
 class ScriptQueryBinderComponent : ScriptBinderComponent {
 
 public:
-    static long ScriptQueryBinderComponent::TAG[abi:cxx11];
+    static long TAG[abi:cxx11];
 
     virtual ~ScriptQueryBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;

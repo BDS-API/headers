@@ -3,9 +3,9 @@
 class MoveControl : Control {
 
 public:
-    static long MoveControl::MIN_SPEED;
-    static long MoveControl::MIN_SPEED_SQR;
-    static long MoveControl::MIN_DELTA_TO_MOVE;
+    static long MIN_SPEED;
+    static long MIN_SPEED_SQR;
+    static long MIN_DELTA_TO_MOVE;
 
     virtual ~MoveControl();
     virtual void initializeInternal(Mob &, MoveControlDescription *);

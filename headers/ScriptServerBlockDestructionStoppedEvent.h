@@ -3,7 +3,7 @@
 class ScriptServerBlockDestructionStoppedEvent : ScriptEventData {
 
 public:
-    static long ScriptServerBlockDestructionStoppedEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerBlockDestructionStoppedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

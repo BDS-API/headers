@@ -3,7 +3,7 @@
 class LootComponentDescription : BlockComponentDescription {
 
 public:
-    static long LootComponentDescription::NameID[abi:cxx11];
+    static long NameID[abi:cxx11];
 
     virtual ~LootComponentDescription();
     virtual void getName[abi:cxx11](void)const;

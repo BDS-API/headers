@@ -3,7 +3,7 @@
 class StairBlock : BlockLegacy {
 
 public:
-    static long StairBlock::DEAD_SPACES;
+    static long DEAD_SPACES;
 
     virtual ~StairBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

@@ -3,7 +3,7 @@
 class ScriptHealthComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptHealthComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptHealthComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

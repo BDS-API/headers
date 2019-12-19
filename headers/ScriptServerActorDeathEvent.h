@@ -3,7 +3,7 @@
 class ScriptServerActorDeathEvent : ScriptEventData {
 
 public:
-    static long ScriptServerActorDeathEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerActorDeathEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

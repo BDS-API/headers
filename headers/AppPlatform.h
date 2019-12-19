@@ -3,11 +3,11 @@
 class AppPlatform : IAppPlatform {
 
 public:
-    static long AppPlatform::HOME_PATH;
-    static long AppPlatform::SETTINGS_PATH;
-    static long AppPlatform::LOG_PATH;
-    static long AppPlatform::SHADERCACHE_PATH;
-    static long AppPlatform::mIsInitialized;
+    static long HOME_PATH;
+    static long SETTINGS_PATH;
+    static long LOG_PATH;
+    static long SHADERCACHE_PATH;
+    static long mIsInitialized;
 
     virtual ~AppPlatform();
     virtual void restartRequested(void);

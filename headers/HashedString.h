@@ -3,7 +3,7 @@
 class HashedString {
 
 public:
-    static long HashedString::defaultErrorValue;
+    static long defaultErrorValue;
 
 
     void HashedString(void);

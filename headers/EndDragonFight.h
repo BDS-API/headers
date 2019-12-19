@@ -3,14 +3,14 @@
 class EndDragonFight {
 
 public:
-    static long EndDragonFight::ARENA_SIZE_CHUNKS;
-    static long EndDragonFight::GATEWAY_CHUNK_RADIUS;
-    static long EndDragonFight::GATEWAY_COUNT;
-    static long EndDragonFight::GATEWAY_DISTANCE;
-    static long EndDragonFight::GATEWAY_HEIGHT;
-    static long EndDragonFight::TIME_BETWEEN_CRYSTAL_SCANS;
-    static long EndDragonFight::TIME_BETWEEN_PLAYER_SCANS;
-    static long EndDragonFight::TIME_BETWEEN_PORTAL_SCANS;
+    static long ARENA_SIZE_CHUNKS;
+    static long GATEWAY_CHUNK_RADIUS;
+    static long GATEWAY_COUNT;
+    static long GATEWAY_DISTANCE;
+    static long GATEWAY_HEIGHT;
+    static long TIME_BETWEEN_CRYSTAL_SCANS;
+    static long TIME_BETWEEN_PLAYER_SCANS;
+    static long TIME_BETWEEN_PORTAL_SCANS;
 
 
     void EndDragonFight(BlockSource &);

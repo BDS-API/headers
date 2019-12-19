@@ -3,7 +3,7 @@
 class MinecartTNT : Minecart {
 
 public:
-    static long MinecartTNT::DEFAULT_FUSE_LENGTH;
+    static long DEFAULT_FUSE_LENGTH;
 
     virtual ~MinecartTNT();
     virtual void normalTick(void);

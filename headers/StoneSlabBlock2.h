@@ -3,7 +3,7 @@
 class StoneSlabBlock2 : SlabBlock {
 
 public:
-    static long StoneSlabBlock2::SLAB_NAMES[abi:cxx11];
+    static long SLAB_NAMES[abi:cxx11];
 
     virtual ~StoneSlabBlock2();
     virtual bool isValidAuxValue(int)const;

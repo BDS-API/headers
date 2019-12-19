@@ -3,7 +3,7 @@
 class PolarBear : Animal {
 
 public:
-    static long PolarBear::STAND_ANIMATION_TICKS;
+    static long STAND_ANIMATION_TICKS;
 
     virtual ~PolarBear();
     virtual void normalTick(void);

@@ -3,9 +3,9 @@
 class ChorusFlowerBlock : BlockLegacy {
 
 public:
-    static long ChorusFlowerBlock::DEAD_AGE;
-    static long ChorusFlowerBlock::GROW_RATE;
-    static long ChorusFlowerBlock::BRANCH_DIRECTIONS;
+    static long DEAD_AGE;
+    static long GROW_RATE;
+    static long BRANCH_DIRECTIONS;
 
     virtual ~ChorusFlowerBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

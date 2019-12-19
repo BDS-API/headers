@@ -3,7 +3,7 @@
 class GoHomeGoal : Goal {
 
 public:
-    static long GoHomeGoal::GIVE_UP_TICKS;
+    static long GIVE_UP_TICKS;
 
     virtual ~GoHomeGoal();
     virtual bool canUse(void);

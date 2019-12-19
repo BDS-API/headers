@@ -3,7 +3,7 @@
 class PageContent {
 
 public:
-    static long PageContent::BLANK_PAGE;
+    static long BLANK_PAGE;
 
 
     void PageContent(std::string);

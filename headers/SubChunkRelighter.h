@@ -3,12 +3,12 @@
 class SubChunkRelighter {
 
 public:
-    static long SubChunkRelighter::mOuterEdgeOfComputationBits;
-    static long SubChunkRelighter::mAllSubChunkBorderBitsExceptTheOuterEdgeOfComputationBits;
-    static long SubChunkRelighter::sLitSpinLock;
-    static long SubChunkRelighter::sDarkSpinLock;
-    static long SubChunkRelighter::sFullyLitSubChunk;
-    static long SubChunkRelighter::sFullyDarkSubChunk;
+    static long mOuterEdgeOfComputationBits;
+    static long mAllSubChunkBorderBitsExceptTheOuterEdgeOfComputationBits;
+    static long sLitSpinLock;
+    static long sDarkSpinLock;
+    static long sFullyLitSubChunk;
+    static long sFullyDarkSubChunk;
 
 
     void computeOuterEdgeOfComputationBits(void);

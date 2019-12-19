@@ -3,7 +3,7 @@
 class MolangTempVariable {
 
 public:
-    static long MolangTempVariable::defaultErrorValue;
+    static long defaultErrorValue;
 
 
     void MolangTempVariable(MolangTempVariable const&);

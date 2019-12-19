@@ -3,20 +3,20 @@
 class I18n {
 
 public:
-    static long I18n::mLanguageSupportsHypenSplitting;
-    static long I18n::mEmptyLanguage;
-    static long I18n::mCurrentLanguage;
-    static long I18n::mCurrentPackMetaLanguage;
-    static long I18n::mResourcePackManager;
-    static long I18n::mLanguages;
-    static long I18n::mLanguageCodes[abi:cxx11];
-    static long I18n::mLanguageNames[abi:cxx11];
-    static long I18n::mAdditionalTranslationsBackupMutex;
-    static long I18n::mAdditionalTranslationsBackup;
-    static long I18n::mLanguageChangedListeners;
-    static long I18n::mPackKeywordLanguages;
-    static long I18n::mPackReservedKeys[abi:cxx11];
-    static long I18n::mFormatDictionary[abi:cxx11];
+    static long mLanguageSupportsHypenSplitting;
+    static long mEmptyLanguage;
+    static long mCurrentLanguage;
+    static long mCurrentPackMetaLanguage;
+    static long mResourcePackManager;
+    static long mLanguages;
+    static long mLanguageCodes[abi:cxx11];
+    static long mLanguageNames[abi:cxx11];
+    static long mAdditionalTranslationsBackupMutex;
+    static long mAdditionalTranslationsBackup;
+    static long mLanguageChangedListeners;
+    static long mPackKeywordLanguages;
+    static long mPackReservedKeys[abi:cxx11];
+    static long mFormatDictionary[abi:cxx11];
 
 
     void clearLanguages(void);

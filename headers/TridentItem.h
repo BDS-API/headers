@@ -3,8 +3,8 @@
 class TridentItem : Item {
 
 public:
-    static long TridentItem::THROW_THRESHOLD_TIME;
-    static long TridentItem::CHARGE_THRESHOLD_TIME;
+    static long THROW_THRESHOLD_TIME;
+    static long CHARGE_THRESHOLD_TIME;
 
     virtual ~TridentItem();
     virtual void getMaxDamage(void)const;

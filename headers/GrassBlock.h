@@ -3,7 +3,7 @@
 class GrassBlock : BlockLegacy {
 
 public:
-    static long GrassBlock::MIN_BRIGHTNESS;
+    static long MIN_BRIGHTNESS;
 
     virtual ~GrassBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

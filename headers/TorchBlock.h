@@ -3,8 +3,8 @@
 class TorchBlock : BlockLegacy {
 
 public:
-    static long TorchBlock::DATA_FROM_FACING;
-    static long TorchBlock::FACING_FROM_DATA;
+    static long DATA_FROM_FACING;
+    static long FACING_FROM_DATA;
 
     virtual ~TorchBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

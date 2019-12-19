@@ -3,7 +3,7 @@
 class ScriptEquipmentComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptEquipmentComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptEquipmentComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

@@ -3,7 +3,7 @@
 class ScriptObjectBinder {
 
 public:
-    static long ScriptObjectBinder::TYPE_TAG[abi:cxx11];
+    static long TYPE_TAG[abi:cxx11];
 
 
     void extract(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);

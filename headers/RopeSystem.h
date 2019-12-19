@@ -3,9 +3,9 @@
 class RopeSystem {
 
 public:
-    static long RopeSystem::sEpsilon;
-    static long RopeSystem::sBucketLength;
-    static long RopeSystem::sEnabled;
+    static long sEpsilon;
+    static long sBucketLength;
+    static long sEnabled;
 
 
     void RopeSystem(void);

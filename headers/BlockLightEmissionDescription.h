@@ -3,7 +3,7 @@
 class BlockLightEmissionDescription : BlockComponentDescription {
 
 public:
-    static long BlockLightEmissionDescription::NameID[abi:cxx11];
+    static long NameID[abi:cxx11];
 
     virtual ~BlockLightEmissionDescription();
     virtual void getName[abi:cxx11](void)const;

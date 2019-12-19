@@ -3,7 +3,7 @@
 class FeatureToggles {
 
 public:
-    static long FeatureToggles::mFeatureToggles;
+    static long mFeatureToggles;
 
 
     void makeDefault(void);

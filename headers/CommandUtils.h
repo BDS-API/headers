@@ -3,7 +3,7 @@
 class CommandUtils {
 
 public:
-    static long CommandUtils::CMD_INPUT_UNICODE_TRANSLATE_MAP[abi:cxx11];
+    static long CMD_INPUT_UNICODE_TRANSLATE_MAP[abi:cxx11];
 
 
     void createItemInstance(Item const*, int, int);

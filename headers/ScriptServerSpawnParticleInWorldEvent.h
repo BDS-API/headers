@@ -3,7 +3,7 @@
 class ScriptServerSpawnParticleInWorldEvent : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
 
 public:
-    static long ScriptServerSpawnParticleInWorldEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerSpawnParticleInWorldEvent();
     virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);

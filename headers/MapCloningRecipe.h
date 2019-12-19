@@ -3,8 +3,8 @@
 class MapCloningRecipe : MultiRecipe {
 
 public:
-    static long MapCloningRecipe::CraftingTableID;
-    static long MapCloningRecipe::CartographyTableID;
+    static long CraftingTableID;
+    static long CartographyTableID;
 
     virtual ~MapCloningRecipe();
     virtual void assemble(CraftingContainer &)const;

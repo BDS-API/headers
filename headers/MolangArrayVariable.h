@@ -3,7 +3,7 @@
 class MolangArrayVariable {
 
 public:
-    static long MolangArrayVariable::defaultErrorValue;
+    static long defaultErrorValue;
 
 
     void MolangArrayVariable(MolangArrayVariable const&);

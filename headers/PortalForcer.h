@@ -3,7 +3,7 @@
 class PortalForcer : SavedData {
 
 public:
-    static long PortalForcer::PORTAL_FILE_ID[abi:cxx11];
+    static long PORTAL_FILE_ID[abi:cxx11];
 
     virtual ~PortalForcer();
     virtual void deserialize(CompoundTag const&);

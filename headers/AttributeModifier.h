@@ -3,7 +3,7 @@
 class AttributeModifier {
 
 public:
-    static long AttributeModifier::mInvalidUUID;
+    static long mInvalidUUID;
 
     virtual ~AttributeModifier();
     virtual bool isInstantaneous(void)const;

@@ -3,9 +3,9 @@
 class TickWorldDescription : ComponentDescription {
 
 public:
-    static long TickWorldDescription::MinChunkRadius;
-    static long TickWorldDescription::MaxChunkRadius;
-    static long TickWorldDescription::MinDistToPlayers;
+    static long MinChunkRadius;
+    static long MaxChunkRadius;
+    static long MinDistToPlayers;
 
     virtual void getJsonName(void)const;
     virtual ~TickWorldDescription();

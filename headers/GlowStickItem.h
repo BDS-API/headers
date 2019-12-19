@@ -3,8 +3,8 @@
 class GlowStickItem : ChemistryStickItem {
 
 public:
-    static long GlowStickItem::MAX_ACTIVE_TICKS;
-    static long GlowStickItem::COLORS;
+    static long MAX_ACTIVE_TICKS;
+    static long COLORS;
 
     virtual ~GlowStickItem();
     virtual bool isValidAuxValue(int)const;

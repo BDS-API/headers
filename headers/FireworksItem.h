@@ -3,9 +3,9 @@
 class FireworksItem : Item {
 
 public:
-    static long FireworksItem::TAG_FIREWORKS[abi:cxx11];
-    static long FireworksItem::TAG_EXPLOSIONS[abi:cxx11];
-    static long FireworksItem::TAG_E_FLIGHT[abi:cxx11];
+    static long TAG_FIREWORKS[abi:cxx11];
+    static long TAG_EXPLOSIONS[abi:cxx11];
+    static long TAG_E_FLIGHT[abi:cxx11];
 
     virtual ~FireworksItem();
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;

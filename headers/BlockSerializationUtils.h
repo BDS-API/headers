@@ -3,7 +3,7 @@
 class BlockSerializationUtils {
 
 public:
-    static long BlockSerializationUtils::BLOCK_REPLACE_DATA_MAP[abi:cxx11];
+    static long BLOCK_REPLACE_DATA_MAP[abi:cxx11];
 
 
     void findInCache(BlockSerializationUtils::NbtToBlockCache &, unsigned long);

@@ -3,7 +3,7 @@
 class IntRange {
 
 public:
-    static long IntRange::ZERO;
+    static long ZERO;
 
 
     void IntRange(void);

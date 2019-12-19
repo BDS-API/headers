@@ -3,14 +3,14 @@
 class PackManifestFactory {
 
 public:
-    static long PackManifestFactory::mContentKeys[abi:cxx11];
-    static long PackManifestFactory::mAlternateContentKeys[abi:cxx11];
-    static long PackManifestFactory::MANIFEST_PATH[abi:cxx11];
-    static long PackManifestFactory::MANIFEST_PATH_OLD[abi:cxx11];
-    static long PackManifestFactory::MANIFEST_PATH_OLD_BACKUP[abi:cxx11];
-    static long PackManifestFactory::MANIFEST_LOG_PATH[abi:cxx11];
-    static long PackManifestFactory::MANIFEST_PACK_UUID_UPGRADE_SALT[abi:cxx11];
-    static long PackManifestFactory::REQUIRED_VANILLA_FOR_OLD_PACKS;
+    static long mContentKeys[abi:cxx11];
+    static long mAlternateContentKeys[abi:cxx11];
+    static long MANIFEST_PATH[abi:cxx11];
+    static long MANIFEST_PATH_OLD[abi:cxx11];
+    static long MANIFEST_PATH_OLD_BACKUP[abi:cxx11];
+    static long MANIFEST_LOG_PATH[abi:cxx11];
+    static long MANIFEST_PACK_UUID_UPGRADE_SALT[abi:cxx11];
+    static long REQUIRED_VANILLA_FOR_OLD_PACKS;
 
 
     void contentKeyLookup(std::string const&);

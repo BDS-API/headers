@@ -3,9 +3,9 @@
 class Brightness {
 
 public:
-    static long Brightness::MAX;
-    static long Brightness::MIN;
-    static long Brightness::INVALID;
+    static long MAX;
+    static long MIN;
+    static long INVALID;
 
 
     void Brightness(unsigned char const&);

@@ -3,7 +3,7 @@
 class ServerInstance : AppPlatformListener, GameCallbacks {
 
 public:
-    static long ServerInstance::SERVER_MAX_DELAY_BEFORE_SLOWDOWN;
+    static long SERVER_MAX_DELAY_BEFORE_SLOWDOWN;
 
     virtual ~ServerInstance();
     virtual void onLowMemory(void);

@@ -3,19 +3,19 @@
 class Facing {
 
 public:
-    static long Facing::OPPOSITE_FACING;
-    static long Facing::STEP_X;
-    static long Facing::STEP_Y;
-    static long Facing::STEP_Z;
-    static long Facing::DIRECTIONS;
-    static long Facing::BY2DDATA;
-    static long Facing::FACINGMASK;
-    static long Facing::FACINGMASK_INV;
-    static long Facing::NORMAL;
-    static long Facing::DIRECTION;
-    static long Facing::ALL_FACES;
-    static long Facing::ALL_EXCEPT;
-    static long Facing::ALL_EXCEPT_AXIS_Y;
+    static long OPPOSITE_FACING;
+    static long STEP_X;
+    static long STEP_Y;
+    static long STEP_Z;
+    static long DIRECTIONS;
+    static long BY2DDATA;
+    static long FACINGMASK;
+    static long FACINGMASK_INV;
+    static long NORMAL;
+    static long DIRECTION;
+    static long ALL_FACES;
+    static long ALL_EXCEPT;
+    static long ALL_EXCEPT_AXIS_Y;
 
 
     void getStepX(unsigned char);

@@ -3,8 +3,8 @@
 class EndCityPieces {
 
 public:
-    static long EndCityPieces::mOverwriteSettings;
-    static long EndCityPieces::mInsertSettings;
+    static long mOverwriteSettings;
+    static long mInsertSettings;
 
 
     void init(void);

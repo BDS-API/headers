@@ -3,7 +3,7 @@
 class Container {
 
 public:
-    static long Container::containerTypeMap[abi:cxx11];
+    static long containerTypeMap[abi:cxx11];
 
     virtual ~Container();
     virtual void init(void);

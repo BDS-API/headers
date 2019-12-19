@@ -3,8 +3,8 @@
 class CoralFan : BushBlock {
 
 public:
-    static long CoralFan::CORAL_FAN_NAMES_COUNT;
-    static long CoralFan::CORAL_FAN_NAMES[abi:cxx11];
+    static long CORAL_FAN_NAMES_COUNT;
+    static long CORAL_FAN_NAMES[abi:cxx11];
 
     virtual ~CoralFan();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

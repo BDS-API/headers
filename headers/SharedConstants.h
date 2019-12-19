@@ -3,25 +3,25 @@
 class SharedConstants {
 
 public:
-    static long SharedConstants::MajorVersion;
-    static long SharedConstants::MinorVersion;
-    static long SharedConstants::PatchVersion;
-    static long SharedConstants::RevisionVersion;
-    static long SharedConstants::IsBeta;
-    static long SharedConstants::NetworkProtocolVersion;
-    static long SharedConstants::StoreVersion;
-    static long SharedConstants::AutomationProtocolVersion;
-    static long SharedConstants::CompanionAppProtocolVersion;
-    static long SharedConstants::MaxChatLength;
-    static long SharedConstants::LevelDBCompressorID;
-    static long SharedConstants::CurrentStorageVersion;
-    static long SharedConstants::CurrentLevelChunkFormat;
-    static long SharedConstants::CurrentSubChunkFormat;
-    static long SharedConstants::NetworkDefaultGamePort;
-    static long SharedConstants::NetworkDefaultGamePortv6;
-    static long SharedConstants::NetworkEphemeralPort;
-    static long SharedConstants::NetworkDefaultMaxConnections;
-    static long SharedConstants::MinimumCompatibleGameVersionForLevelData;
+    static long MajorVersion;
+    static long MinorVersion;
+    static long PatchVersion;
+    static long RevisionVersion;
+    static long IsBeta;
+    static long NetworkProtocolVersion;
+    static long StoreVersion;
+    static long AutomationProtocolVersion;
+    static long CompanionAppProtocolVersion;
+    static long MaxChatLength;
+    static long LevelDBCompressorID;
+    static long CurrentStorageVersion;
+    static long CurrentLevelChunkFormat;
+    static long CurrentSubChunkFormat;
+    static long NetworkDefaultGamePort;
+    static long NetworkDefaultGamePortv6;
+    static long NetworkEphemeralPort;
+    static long NetworkDefaultMaxConnections;
+    static long MinimumCompatibleGameVersionForLevelData;
 
 
     bool isVersion(int, int, int, int);

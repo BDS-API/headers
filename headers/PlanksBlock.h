@@ -3,7 +3,7 @@
 class PlanksBlock : BlockLegacy {
 
 public:
-    static long PlanksBlock::WOOD_NAMES[abi:cxx11];
+    static long WOOD_NAMES[abi:cxx11];
 
     virtual ~PlanksBlock();
     virtual void getResourceItem(Random &, Block const&, int)const;

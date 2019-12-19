@@ -3,8 +3,8 @@
 class CauldronBlock : ActorBlock {
 
 public:
-    static long CauldronBlock::BASE_WATER_PIXEL;
-    static long CauldronBlock::PIXEL_PER_LEVEL;
+    static long BASE_WATER_PIXEL;
+    static long PIXEL_PER_LEVEL;
 
     virtual ~CauldronBlock();
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;

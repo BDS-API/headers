@@ -3,7 +3,7 @@
 class ShapelessChemistryRecipe : ShapelessRecipe {
 
 public:
-    static long ShapelessChemistryRecipe::ID;
+    static long ID;
 
     virtual ~ShapelessChemistryRecipe();
     virtual void matches(CraftingContainer &, Level &)const;

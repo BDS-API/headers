@@ -3,10 +3,10 @@
 class BlockPos {
 
 public:
-    static long BlockPos::MIN;
-    static long BlockPos::MAX;
-    static long BlockPos::ONE;
-    static long BlockPos::ZERO;
+    static long MIN;
+    static long MAX;
+    static long ONE;
+    static long ZERO;
 
 
     void BlockPos(BlockPos const&);

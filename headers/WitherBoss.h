@@ -3,8 +3,8 @@
 class WitherBoss : Monster {
 
 public:
-    static long WitherBoss::TIME_BEFORE_MOVING;
-    static long WitherBoss::MAX_HEALTH_CAP_UUID;
+    static long TIME_BEFORE_MOVING;
+    static long MAX_HEALTH_CAP_UUID;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);

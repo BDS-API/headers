@@ -3,7 +3,7 @@
 class WorldSystems {
 
 public:
-    static long WorldSystems::mInitialized;
+    static long mInitialized;
 
 
     void init(ResourcePackManager *);

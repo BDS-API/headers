@@ -3,7 +3,7 @@
 class MaterialReducerContainerManagerModel : ContainerManagerModel {
 
 public:
-    static long MaterialReducerContainerManagerModel::OUTPUT_SLOTS;
+    static long OUTPUT_SLOTS;
 
     virtual ~MaterialReducerContainerManagerModel();
     virtual void getItems(void);

@@ -3,7 +3,7 @@
 class LootItemFunction {
 
 public:
-    static long LootItemFunction::mLootingFunctions;
+    static long mLootingFunctions;
 
     virtual ~LootItemFunction();
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &);

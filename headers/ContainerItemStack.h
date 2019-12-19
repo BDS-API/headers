@@ -3,7 +3,7 @@
 class ContainerItemStack {
 
 public:
-    static long ContainerItemStack::EMPTY_ITEM;
+    static long EMPTY_ITEM;
 
 
     void ContainerItemStack(void);

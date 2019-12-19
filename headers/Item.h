@@ -3,19 +3,19 @@
 class Item {
 
 public:
-    static long Item::mGenerateDenyParticleEffect;
-    static long Item::TAG_DAMAGE[abi:cxx11];
-    static long Item::ICON_DESCRIPTION_PREFIX[abi:cxx11];
-    static long Item::mItemTextureItems;
-    static long Item::mCreativeListMutex;
-    static long Item::mCreativeList;
-    static long Item::mCreativeListStack;
-    static long Item::mInCreativeGroup;
-    static long Item::mCreativeGroups;
-    static long Item::mCreativeGroupInfo;
-    static long Item::mInvalidTextureUVCoordinateSet;
-    static long Item::mAllowExperimental;
-    static long Item::mWorldBaseGameVersion;
+    static long mGenerateDenyParticleEffect;
+    static long TAG_DAMAGE[abi:cxx11];
+    static long ICON_DESCRIPTION_PREFIX[abi:cxx11];
+    static long mItemTextureItems;
+    static long mCreativeListMutex;
+    static long mCreativeList;
+    static long mCreativeListStack;
+    static long mInCreativeGroup;
+    static long mCreativeGroups;
+    static long mCreativeGroupInfo;
+    static long mInvalidTextureUVCoordinateSet;
+    static long mAllowExperimental;
+    static long mWorldBaseGameVersion;
 
     virtual ~Item();
     virtual void tearDown(void);

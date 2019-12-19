@@ -3,11 +3,11 @@
 class BannerBlock : ActorBlock {
 
 public:
-    static long BannerBlock::STANDING_AABB;
-    static long BannerBlock::NORTH_AABB;
-    static long BannerBlock::SOUTH_AABB;
-    static long BannerBlock::EAST_AABB;
-    static long BannerBlock::WEST_AABB;
+    static long STANDING_AABB;
+    static long NORTH_AABB;
+    static long SOUTH_AABB;
+    static long EAST_AABB;
+    static long WEST_AABB;
 
     virtual ~BannerBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

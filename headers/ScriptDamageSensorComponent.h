@@ -3,7 +3,7 @@
 class ScriptDamageSensorComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptDamageSensorComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptDamageSensorComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

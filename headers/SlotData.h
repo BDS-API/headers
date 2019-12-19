@@ -3,7 +3,7 @@
 class SlotData {
 
 public:
-    static long SlotData::UNKNOWN_LOCATION;
+    static long UNKNOWN_LOCATION;
 
 
     void SlotData(SlotData&&);

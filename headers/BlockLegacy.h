@@ -3,8 +3,8 @@
 class BlockLegacy {
 
 public:
-    static long BlockLegacy::SIZE_OFFSET;
-    static long BlockLegacy::BLOCK_DESCRIPTION_PREFIX[abi:cxx11];
+    static long SIZE_OFFSET;
+    static long BLOCK_DESCRIPTION_PREFIX[abi:cxx11];
 
     virtual ~BlockLegacy();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

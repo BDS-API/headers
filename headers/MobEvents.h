@@ -3,7 +3,7 @@
 class MobEvents {
 
 public:
-    static long MobEvents::EVENTS_ENABLED_STRING[abi:cxx11];
+    static long EVENTS_ENABLED_STRING[abi:cxx11];
 
     virtual ~MobEvents();
 

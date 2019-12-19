@@ -3,9 +3,9 @@
 class EnchantUtils {
 
 public:
-    static long EnchantUtils::PROTECTIONFACTOR_PRIMARYCAP;
-    static long EnchantUtils::PROTECTIONFACTOR_SECONDARYCAP;
-    static long EnchantUtils::mEnchantmentNames[abi:cxx11];
+    static long PROTECTIONFACTOR_PRIMARYCAP;
+    static long PROTECTIONFACTOR_SECONDARYCAP;
+    static long mEnchantmentNames[abi:cxx11];
 
 
     void getBestEnchantLevel(Enchant::Type, Mob const&, EquipmentFilter);

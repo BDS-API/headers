@@ -3,7 +3,7 @@
 class AgentLookControl : LookControl {
 
 public:
-    static long AgentLookControl::sBaseYMax;
+    static long sBaseYMax;
 
     virtual ~AgentLookControl();
     virtual void initializeInternal(Mob &);

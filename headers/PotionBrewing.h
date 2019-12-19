@@ -3,11 +3,11 @@
 class PotionBrewing {
 
 public:
-    static long PotionBrewing::mPotionMixes;
-    static long PotionBrewing::mContainerMixes;
-    static long PotionBrewing::mChemistryMixes;
-    static long PotionBrewing::mValidIngredients;
-    static long PotionBrewing::mValidContainers;
+    static long mPotionMixes;
+    static long mContainerMixes;
+    static long mChemistryMixes;
+    static long mValidIngredients;
+    static long mValidContainers;
 
 
     void getPotionMixes(void);

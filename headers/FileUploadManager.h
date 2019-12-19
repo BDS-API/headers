@@ -3,8 +3,8 @@
 class FileUploadManager {
 
 public:
-    static long FileUploadManager::CHUNK_UPLOAD_SIZE;
-    static long FileUploadManager::BOUNDARY[abi:cxx11];
+    static long CHUNK_UPLOAD_SIZE;
+    static long BOUNDARY[abi:cxx11];
 
     virtual ~FileUploadManager();
     virtual void getUploadProgress(void)const;

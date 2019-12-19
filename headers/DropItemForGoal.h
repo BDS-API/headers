@@ -3,7 +3,7 @@
 class DropItemForGoal : BaseMoveToBlockGoal {
 
 public:
-    static long DropItemForGoal::COOLDOWN_TICKS;
+    static long COOLDOWN_TICKS;
 
     virtual ~DropItemForGoal();
     virtual bool canUse(void);

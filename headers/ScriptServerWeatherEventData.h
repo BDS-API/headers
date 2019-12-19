@@ -3,7 +3,7 @@
 class ScriptServerWeatherEventData : ScriptEventData {
 
 public:
-    static long ScriptServerWeatherEventData::mHash;
+    static long mHash;
 
     virtual ~ScriptServerWeatherEventData();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

@@ -3,7 +3,7 @@
 class ScriptBlockStateComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptBlockStateComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptBlockStateComponent();
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

@@ -3,7 +3,7 @@
 class PlayerRespawnTelemetryData {
 
 public:
-    static long PlayerRespawnTelemetryData::mEventName[abi:cxx11];
+    static long mEventName[abi:cxx11];
 
 
     void PlayerRespawnTelemetryData(void);

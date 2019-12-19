@@ -3,8 +3,8 @@
 class BaseRailBlock : BlockLegacy {
 
 public:
-    static long BaseRailBlock::DIR_FLAT_Z;
-    static long BaseRailBlock::DIR_FLAT_X;
+    static long DIR_FLAT_Z;
+    static long DIR_FLAT_X;
 
     virtual ~BaseRailBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

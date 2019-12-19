@@ -3,7 +3,7 @@
 class PropertyBag {
 
 public:
-    static long PropertyBag::EMPTY;
+    static long EMPTY;
 
 
     void PropertyBag(void);

@@ -3,7 +3,7 @@
 class NetworkStackLatencyPacket : Packet {
 
 public:
-    static long NetworkStackLatencyPacket::DEFAULT_SEND_INTERVAL;
+    static long DEFAULT_SEND_INTERVAL;
 
     virtual ~NetworkStackLatencyPacket();
     virtual void getId(void)const;

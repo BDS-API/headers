@@ -3,7 +3,7 @@
 class ScriptTickingAreaDescriptionComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptTickingAreaDescriptionComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptTickingAreaDescriptionComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

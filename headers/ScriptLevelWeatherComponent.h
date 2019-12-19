@@ -3,7 +3,7 @@
 class ScriptLevelWeatherComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptLevelWeatherComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptLevelWeatherComponent();
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

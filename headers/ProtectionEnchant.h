@@ -3,7 +3,7 @@
 class ProtectionEnchant : Enchant {
 
 public:
-    static long ProtectionEnchant::THORNS_CHANCE_PER_LEVEL;
+    static long THORNS_CHANCE_PER_LEVEL;
 
     virtual ~ProtectionEnchant();
     virtual void getMinCost(int)const;

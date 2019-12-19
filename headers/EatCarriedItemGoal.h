@@ -3,8 +3,8 @@
 class EatCarriedItemGoal : Goal {
 
 public:
-    static long EatCarriedItemGoal::EATING_TIME;
-    static long EatCarriedItemGoal::CHEW_CHANCE;
+    static long EATING_TIME;
+    static long CHEW_CHANCE;
 
     virtual ~EatCarriedItemGoal();
     virtual bool canUse(void);

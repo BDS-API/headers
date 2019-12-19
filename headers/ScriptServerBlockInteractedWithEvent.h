@@ -3,7 +3,7 @@
 class ScriptServerBlockInteractedWithEvent : ScriptEventData {
 
 public:
-    static long ScriptServerBlockInteractedWithEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerBlockInteractedWithEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

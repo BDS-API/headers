@@ -3,7 +3,7 @@
 class MolangEntityVariable {
 
 public:
-    static long MolangEntityVariable::defaultErrorValue;
+    static long defaultErrorValue;
 
 
     void MolangEntityVariable(MolangEntityVariable const&);

@@ -3,7 +3,7 @@
 class TrailComponent {
 
 public:
-    static long TrailComponent::MAX_SPAWN_OFFSET;
+    static long MAX_SPAWN_OFFSET;
 
 
     void TrailComponent(TrailComponent&&);

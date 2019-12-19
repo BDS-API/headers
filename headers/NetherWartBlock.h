@@ -3,7 +3,7 @@
 class NetherWartBlock : BushBlock {
 
 public:
-    static long NetherWartBlock::MAX_AGE;
+    static long MAX_AGE;
 
     virtual ~NetherWartBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

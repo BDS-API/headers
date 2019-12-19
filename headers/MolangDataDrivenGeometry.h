@@ -3,7 +3,7 @@
 class MolangDataDrivenGeometry {
 
 public:
-    static long MolangDataDrivenGeometry::defaultErrorValue;
+    static long defaultErrorValue;
 
 
     void MolangDataDrivenGeometry(MolangDataDrivenGeometry const&);

@@ -3,12 +3,12 @@
 class VanillaDimensions {
 
 public:
-    static long VanillaDimensions::TheEndSpawnPoint;
-    static long VanillaDimensions::Overworld;
-    static long VanillaDimensions::Nether;
-    static long VanillaDimensions::TheEnd;
-    static long VanillaDimensions::Undefined;
-    static long VanillaDimensions::DimensionMap[abi:cxx11];
+    static long TheEndSpawnPoint;
+    static long Overworld;
+    static long Nether;
+    static long TheEnd;
+    static long Undefined;
+    static long DimensionMap[abi:cxx11];
 
 
     void fromSerializedInt(int);

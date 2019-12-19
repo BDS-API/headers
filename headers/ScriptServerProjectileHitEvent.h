@@ -3,7 +3,7 @@
 class ScriptServerProjectileHitEvent : ScriptEventData {
 
 public:
-    static long ScriptServerProjectileHitEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerProjectileHitEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

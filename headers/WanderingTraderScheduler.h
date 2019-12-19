@@ -3,12 +3,12 @@
 class WanderingTraderScheduler {
 
 public:
-    static long WanderingTraderScheduler::DISTANCE_IN_BLOCKS_FROM_PLAYER;
-    static long WanderingTraderScheduler::DISTANCE_IN_BLOCKS_FROM_PLAYER_SQUARE;
-    static long WanderingTraderScheduler::DISTANCE_IN_BLOCKS_FROM_MEETING_AREA;
-    static long WanderingTraderScheduler::CHANCE_TO_SPAWN_IN_WILDERNESS;
-    static long WanderingTraderScheduler::LENGTH_OF_DAY_IN_TICKS;
-    static long WanderingTraderScheduler::CHANCE_TO_SPAWN_PER_DAY;
+    static long DISTANCE_IN_BLOCKS_FROM_PLAYER;
+    static long DISTANCE_IN_BLOCKS_FROM_PLAYER_SQUARE;
+    static long DISTANCE_IN_BLOCKS_FROM_MEETING_AREA;
+    static long CHANCE_TO_SPAWN_IN_WILDERNESS;
+    static long LENGTH_OF_DAY_IN_TICKS;
+    static long CHANCE_TO_SPAWN_PER_DAY;
 
 
     void WanderingTraderScheduler(Level &);

@@ -3,11 +3,11 @@
 class VineBlock : BlockLegacy {
 
 public:
-    static long VineBlock::VINE_SOUTH;
-    static long VineBlock::VINE_NORTH;
-    static long VineBlock::VINE_EAST;
-    static long VineBlock::VINE_WEST;
-    static long VineBlock::VINE_ALL;
+    static long VINE_SOUTH;
+    static long VINE_NORTH;
+    static long VINE_EAST;
+    static long VINE_WEST;
+    static long VINE_ALL;
 
     virtual ~VineBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

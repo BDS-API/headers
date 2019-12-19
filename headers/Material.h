@@ -3,8 +3,8 @@
 class Material {
 
 public:
-    static long Material::mMaterials;
-    static long Material::mInitialized;
+    static long mMaterials;
+    static long mInitialized;
 
 
     void getType(void)const;

@@ -3,7 +3,7 @@
 class BlockFlammableDescription : BlockComponentDescription {
 
 public:
-    static long BlockFlammableDescription::NameID[abi:cxx11];
+    static long NameID[abi:cxx11];
 
     virtual ~BlockFlammableDescription();
     virtual void getName[abi:cxx11](void)const;

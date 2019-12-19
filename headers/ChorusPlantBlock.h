@@ -3,9 +3,9 @@
 class ChorusPlantBlock : BlockLegacy {
 
 public:
-    static long ChorusPlantBlock::PLANT_WIDTH;
-    static long ChorusPlantBlock::PLANT_HEIGHT;
-    static long ChorusPlantBlock::PLANT_ITEM_DIMENSION;
+    static long PLANT_WIDTH;
+    static long PLANT_HEIGHT;
+    static long PLANT_ITEM_DIMENSION;
 
     virtual ~ChorusPlantBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

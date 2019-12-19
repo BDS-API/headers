@@ -3,7 +3,7 @@
 class ProjectileComponent {
 
 public:
-    static long ProjectileComponent::DELAY_ON_HIT;
+    static long DELAY_ON_HIT;
 
 
     void getWaitingForServer(void)const;

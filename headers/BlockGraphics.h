@@ -3,16 +3,16 @@
 class BlockGraphics {
 
 public:
-    static long BlockGraphics::SIZE_OFFSET;
-    static long BlockGraphics::mInitialized;
-    static long BlockGraphics::mBlocks;
-    static long BlockGraphics::mTerrainTextureAtlas;
-    static long BlockGraphics::mOwnedBlocks;
-    static long BlockGraphics::mBlockLookupMap[abi:cxx11];
-    static long BlockGraphics::mDummyBlock;
-    static long BlockGraphics::mModels[abi:cxx11];
-    static long BlockGraphics::mBlockModelAccess;
-    static long BlockGraphics::mTessellatedModels[abi:cxx11];
+    static long SIZE_OFFSET;
+    static long mInitialized;
+    static long mBlocks;
+    static long mTerrainTextureAtlas;
+    static long mOwnedBlocks;
+    static long mBlockLookupMap[abi:cxx11];
+    static long mDummyBlock;
+    static long mModels[abi:cxx11];
+    static long mBlockModelAccess;
+    static long mTessellatedModels[abi:cxx11];
 
     virtual ~BlockGraphics();
     virtual void getIconYOffset(void)const;

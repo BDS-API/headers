@@ -3,18 +3,18 @@
 class ItemStackBase {
 
 public:
-    static long ItemStackBase::MAX_STACK_SIZE;
-    static long ItemStackBase::sPickupPopDuration;
-    static long ItemStackBase::TAG_DISPLAY[abi:cxx11];
-    static long ItemStackBase::TAG_DISPLAY_NAME[abi:cxx11];
-    static long ItemStackBase::TAG_LORE[abi:cxx11];
-    static long ItemStackBase::TAG_REPAIR_COST[abi:cxx11];
-    static long ItemStackBase::TAG_ENCHANTS[abi:cxx11];
-    static long ItemStackBase::TAG_CAN_PLACE_ON[abi:cxx11];
-    static long ItemStackBase::TAG_CAN_DESTROY[abi:cxx11];
-    static long ItemStackBase::TAG_STORE_CAN_PLACE_ON[abi:cxx11];
-    static long ItemStackBase::TAG_STORE_CAN_DESTROY[abi:cxx11];
-    static long ItemStackBase::TAG_CHARGED_ITEM[abi:cxx11];
+    static long MAX_STACK_SIZE;
+    static long sPickupPopDuration;
+    static long TAG_DISPLAY[abi:cxx11];
+    static long TAG_DISPLAY_NAME[abi:cxx11];
+    static long TAG_LORE[abi:cxx11];
+    static long TAG_REPAIR_COST[abi:cxx11];
+    static long TAG_ENCHANTS[abi:cxx11];
+    static long TAG_CAN_PLACE_ON[abi:cxx11];
+    static long TAG_CAN_DESTROY[abi:cxx11];
+    static long TAG_STORE_CAN_PLACE_ON[abi:cxx11];
+    static long TAG_STORE_CAN_DESTROY[abi:cxx11];
+    static long TAG_CHARGED_ITEM[abi:cxx11];
 
     virtual ~ItemStackBase();
 

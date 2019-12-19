@@ -3,10 +3,10 @@
 class Biome {
 
 public:
-    static long Biome::RAIN_TEMP_THRESHOLD;
-    static long Biome::HEIGHTS_DEFAULT;
-    static long Biome::DEFAULT_WATER_COLOR;
-    static long Biome::DEFAULT_UNDERWATER_COLOR;
+    static long RAIN_TEMP_THRESHOLD;
+    static long HEIGHTS_DEFAULT;
+    static long DEFAULT_WATER_COLOR;
+    static long DEFAULT_UNDERWATER_COLOR;
 
     virtual ~Biome();
 

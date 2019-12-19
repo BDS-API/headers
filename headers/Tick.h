@@ -3,7 +3,7 @@
 class Tick {
 
 public:
-    static long Tick::MAX;
+    static long MAX;
 
 
     void Tick(void);

@@ -3,10 +3,10 @@
 class EnderMan : Monster {
 
 public:
-    static long EnderMan::mMayTake;
-    static long EnderMan::mMayTakeIsSetup;
-    static long EnderMan::SPEED_MODIFIER_ATTACKING_UUID;
-    static long EnderMan::SPEED_MODIFIER_ATTACKING;
+    static long mMayTake;
+    static long mMayTakeIsSetup;
+    static long SPEED_MODIFIER_ATTACKING_UUID;
+    static long SPEED_MODIFIER_ATTACKING;
 
     virtual ~EnderMan();
     virtual void normalTick(void);

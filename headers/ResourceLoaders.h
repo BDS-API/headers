@@ -3,9 +3,9 @@
 class ResourceLoaders {
 
 public:
-    static long ResourceLoaders::loaders;
-    static long ResourceLoaders::backCompatGroup;
-    static long ResourceLoaders::supportedImageExtensions[abi:cxx11];
+    static long loaders;
+    static long backCompatGroup;
+    static long supportedImageExtensions[abi:cxx11];
 
 
     void clearLoaders(void);

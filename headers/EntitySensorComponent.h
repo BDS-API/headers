@@ -3,7 +3,7 @@
 class EntitySensorComponent {
 
 public:
-    static long EntitySensorComponent::NO_MAX_COUNT;
+    static long NO_MAX_COUNT;
 
 
     void EntitySensorComponent(EntitySensorComponent&&);

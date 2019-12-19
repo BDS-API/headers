@@ -3,7 +3,7 @@
 class Tag {
 
 public:
-    static long Tag::NullString[abi:cxx11];
+    static long NullString[abi:cxx11];
 
     virtual ~Tag();
     virtual void deleteChildren(void);

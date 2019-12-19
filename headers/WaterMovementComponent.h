@@ -3,7 +3,7 @@
 class WaterMovementComponent {
 
 public:
-    static long WaterMovementComponent::DefaultDragFactor;
+    static long DefaultDragFactor;
 
 
     void WaterMovementComponent(WaterMovementComponent&&);

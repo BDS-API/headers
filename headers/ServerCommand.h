@@ -3,7 +3,7 @@
 class ServerCommand : Command {
 
 public:
-    static long ServerCommand::mGame;
+    static long mGame;
 
     virtual ~ServerCommand();
 

@@ -3,16 +3,16 @@
 class FoliageColor {
 
 public:
-    static long FoliageColor::GRASS_TOP_LEFT;
-    static long FoliageColor::GRASS_TOP_RIGHT;
-    static long FoliageColor::GRASS_BOTTOM_LEFT;
-    static long FoliageColor::GRASS_BOTTOM_RIGHT;
-    static long FoliageColor::FOLIAGE_TOP_LEFT;
-    static long FoliageColor::FOLIAGE_TOP_RIGHT;
-    static long FoliageColor::FOLIAGE_BOTTOM_LEFT;
-    static long FoliageColor::FOLIAGE_BOTTOM_RIGHT;
-    static long FoliageColor::mGrassPalettes[abi:cxx11];
-    static long FoliageColor::mFoliagePalettes[abi:cxx11];
+    static long GRASS_TOP_LEFT;
+    static long GRASS_TOP_RIGHT;
+    static long GRASS_BOTTOM_LEFT;
+    static long GRASS_BOTTOM_RIGHT;
+    static long FOLIAGE_TOP_LEFT;
+    static long FOLIAGE_TOP_RIGHT;
+    static long FOLIAGE_BOTTOM_LEFT;
+    static long FOLIAGE_BOTTOM_RIGHT;
+    static long mGrassPalettes[abi:cxx11];
+    static long mFoliagePalettes[abi:cxx11];
 
 
     void _index(float, float);

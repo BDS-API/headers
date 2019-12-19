@@ -3,7 +3,7 @@
 class BannerDuplicateRecipe : MultiRecipe {
 
 public:
-    static long BannerDuplicateRecipe::ID;
+    static long ID;
 
     virtual ~BannerDuplicateRecipe();
     virtual void assemble(CraftingContainer &)const;

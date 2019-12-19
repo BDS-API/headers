@@ -3,8 +3,8 @@
 class RotatedPillarBlock : BlockLegacy {
 
 public:
-    static long RotatedPillarBlock::mRotatedX;
-    static long RotatedPillarBlock::mRotatedZ;
+    static long mRotatedX;
+    static long mRotatedZ;
 
     virtual ~RotatedPillarBlock();
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;

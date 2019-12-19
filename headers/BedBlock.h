@@ -3,9 +3,9 @@
 class BedBlock : BlockLegacy {
 
 public:
-    static long BedBlock::HEAD_DIRECTION_OFFSETS;
-    static long BedBlock::HEAD_PIECE_DATA;
-    static long BedBlock::OCCUPIED_DATA;
+    static long HEAD_DIRECTION_OFFSETS;
+    static long HEAD_PIECE_DATA;
+    static long OCCUPIED_DATA;
 
     virtual ~BedBlock();
     virtual void getNextBlockPermutation(Block const&)const;

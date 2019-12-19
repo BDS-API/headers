@@ -3,8 +3,8 @@
 class Shulker : Mob {
 
 public:
-    static long Shulker::COVERED_ARMOR_MODIFIER_UUID;
-    static long Shulker::COVERED_ARMOR_MODIFIER;
+    static long COVERED_ARMOR_MODIFIER_UUID;
+    static long COVERED_ARMOR_MODIFIER;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~Shulker();

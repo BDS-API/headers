@@ -3,12 +3,12 @@
 class MapItem : ComplexItem {
 
 public:
-    static long MapItem::TAG_MAP_SCALING[abi:cxx11];
-    static long MapItem::TAG_MAP_SCALE[abi:cxx11];
-    static long MapItem::TAG_MAP_PLAYER_DISPLAY[abi:cxx11];
-    static long MapItem::TAG_MAP_UUID[abi:cxx11];
-    static long MapItem::TAG_MAP_NAME_INDEX[abi:cxx11];
-    static long MapItem::TAG_MAP_INIT[abi:cxx11];
+    static long TAG_MAP_SCALING[abi:cxx11];
+    static long TAG_MAP_SCALE[abi:cxx11];
+    static long TAG_MAP_PLAYER_DISPLAY[abi:cxx11];
+    static long TAG_MAP_UUID[abi:cxx11];
+    static long TAG_MAP_NAME_INDEX[abi:cxx11];
+    static long TAG_MAP_INIT[abi:cxx11];
 
     virtual ~MapItem();
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;

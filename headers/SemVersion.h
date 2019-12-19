@@ -3,7 +3,7 @@
 class SemVersion {
 
 public:
-    static long SemVersion::AnyVersionConstructor;
+    static long AnyVersionConstructor;
 
 
     void SemVersion(SemVersion const&);

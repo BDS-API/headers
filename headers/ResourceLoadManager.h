@@ -3,7 +3,7 @@
 class ResourceLoadManager {
 
 public:
-    static long ResourceLoadManager::CURRENT_RUNNING_GROUP;
+    static long CURRENT_RUNNING_GROUP;
 
 
     void _wrapTaskCallback(ResourceLoadManager::ResourceLoadTaskGroup &, std::function<TaskResult ()(void)> &&);

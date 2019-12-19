@@ -3,7 +3,7 @@
 class ScoreboardIdentityRef {
 
 public:
-    static long ScoreboardIdentityRef::Undefined;
+    static long Undefined;
 
 
     void ScoreboardIdentityRef(ScoreboardIdentityRef const&);

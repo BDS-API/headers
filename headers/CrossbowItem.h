@@ -3,7 +3,7 @@
 class CrossbowItem : RangedWeaponItem {
 
 public:
-    static long CrossbowItem::DEFAULT_USE_DURATION;
+    static long DEFAULT_USE_DURATION;
 
     virtual ~CrossbowItem();
     virtual void getMaxUseDuration(ItemStack const*)const;

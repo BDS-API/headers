@@ -3,7 +3,7 @@
 class IdentityDefinition {
 
 public:
-    static long IdentityDefinition::Invalid;
+    static long Invalid;
 
 
     void _init(void);

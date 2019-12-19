@@ -3,7 +3,7 @@
 class PermissionCommand : ServerCommand {
 
 public:
-    static long PermissionCommand::mPermissionsFile;
+    static long mPermissionsFile;
 
     virtual ~PermissionCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;

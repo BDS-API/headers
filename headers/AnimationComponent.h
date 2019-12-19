@@ -3,7 +3,7 @@
 class AnimationComponent {
 
 public:
-    static long AnimationComponent::mReloadTimeStamp;
+    static long mReloadTimeStamp;
 
 
     void getAnimationResourceDefinitionMap(void)const;

@@ -3,7 +3,7 @@
 class BlockFrictionDescription : BlockComponentDescription {
 
 public:
-    static long BlockFrictionDescription::NameID[abi:cxx11];
+    static long NameID[abi:cxx11];
 
     virtual ~BlockFrictionDescription();
     virtual void getName[abi:cxx11](void)const;

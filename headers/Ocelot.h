@@ -3,8 +3,8 @@
 class Ocelot : Animal {
 
 public:
-    static long Ocelot::SNEAK_SPEED_MOD;
-    static long Ocelot::SPRINT_SPEED_MOD;
+    static long SNEAK_SPEED_MOD;
+    static long SPRINT_SPEED_MOD;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~Ocelot();

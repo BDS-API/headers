@@ -3,15 +3,15 @@
 class Vec2 {
 
 public:
-    static long Vec2::ZERO;
-    static long Vec2::ONE;
-    static long Vec2::UNIT_X;
-    static long Vec2::NEG_UNIT_X;
-    static long Vec2::UNIT_Y;
-    static long Vec2::NEG_UNIT_Y;
-    static long Vec2::MAX;
-    static long Vec2::MIN;
-    static long Vec2::LOWEST;
+    static long ZERO;
+    static long ONE;
+    static long UNIT_X;
+    static long NEG_UNIT_X;
+    static long UNIT_Y;
+    static long NEG_UNIT_Y;
+    static long MAX;
+    static long MIN;
+    static long LOWEST;
 
 
     void Vec2(float, float);

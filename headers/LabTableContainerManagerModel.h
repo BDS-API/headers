@@ -3,7 +3,7 @@
 class LabTableContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    static long LabTableContainerManagerModel::INPUT_SLOTS;
+    static long INPUT_SLOTS;
 
     virtual ~LabTableContainerManagerModel();
     virtual void getItems(void);

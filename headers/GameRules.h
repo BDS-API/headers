@@ -3,12 +3,12 @@
 class GameRules {
 
 public:
-    static long GameRules::DEFAULT_RANDOMTICKSPEED;
-    static long GameRules::MAX_RANDOMTICKSPEED;
-    static long GameRules::MAX_FUNCTIONCOMMANDLIMIT;
-    static long GameRules::DEFAULT_PLAYER_SPAWN_RADIUS;
-    static long GameRules::MIN_PLAYER_SPAWN_RADIUS;
-    static long GameRules::MAX_PLAYER_SPAWN_RADIUS;
+    static long DEFAULT_RANDOMTICKSPEED;
+    static long MAX_RANDOMTICKSPEED;
+    static long MAX_FUNCTIONCOMMANDLIMIT;
+    static long DEFAULT_PLAYER_SPAWN_RADIUS;
+    static long MIN_PLAYER_SPAWN_RADIUS;
+    static long MAX_PLAYER_SPAWN_RADIUS;
 
 
     void GameRules(GameRules const&);

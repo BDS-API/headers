@@ -3,10 +3,10 @@
 class Util {
 
 public:
-    static long Util::COLOR_CODE;
-    static long Util::EMPTY_STRING[abi:cxx11];
-    static long Util::NEW_LINE[abi:cxx11];
-    static long Util::EMPTY_GUID[abi:cxx11];
+    static long COLOR_CODE;
+    static long EMPTY_STRING[abi:cxx11];
+    static long NEW_LINE[abi:cxx11];
+    static long EMPTY_GUID[abi:cxx11];
 
 
     void compress(std::string const&, std::string&);

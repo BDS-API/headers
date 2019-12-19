@@ -3,7 +3,7 @@
 class BodyControl : Control {
 
 public:
-    static long BodyControl::MAX_CLAMP_ANGLE;
+    static long MAX_CLAMP_ANGLE;
 
     virtual ~BodyControl();
     virtual void clientTick(Mob &);

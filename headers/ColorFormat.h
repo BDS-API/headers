@@ -3,28 +3,28 @@
 class ColorFormat {
 
 public:
-    static long ColorFormat::ESCAPE[abi:cxx11];
-    static long ColorFormat::BLACK[abi:cxx11];
-    static long ColorFormat::DARK_BLUE[abi:cxx11];
-    static long ColorFormat::DARK_GREEN[abi:cxx11];
-    static long ColorFormat::DARK_AQUA[abi:cxx11];
-    static long ColorFormat::DARK_RED[abi:cxx11];
-    static long ColorFormat::DARK_PURPLE[abi:cxx11];
-    static long ColorFormat::GOLD[abi:cxx11];
-    static long ColorFormat::GRAY[abi:cxx11];
-    static long ColorFormat::DARK_GRAY[abi:cxx11];
-    static long ColorFormat::BLUE[abi:cxx11];
-    static long ColorFormat::GREEN[abi:cxx11];
-    static long ColorFormat::AQUA[abi:cxx11];
-    static long ColorFormat::RED[abi:cxx11];
-    static long ColorFormat::LIGHT_PURPLE[abi:cxx11];
-    static long ColorFormat::YELLOW[abi:cxx11];
-    static long ColorFormat::WHITE[abi:cxx11];
-    static long ColorFormat::MINECOIN_GOLD[abi:cxx11];
-    static long ColorFormat::OBFUSCATED[abi:cxx11];
-    static long ColorFormat::BOLD[abi:cxx11];
-    static long ColorFormat::ITALIC[abi:cxx11];
-    static long ColorFormat::RESET[abi:cxx11];
+    static long ESCAPE[abi:cxx11];
+    static long BLACK[abi:cxx11];
+    static long DARK_BLUE[abi:cxx11];
+    static long DARK_GREEN[abi:cxx11];
+    static long DARK_AQUA[abi:cxx11];
+    static long DARK_RED[abi:cxx11];
+    static long DARK_PURPLE[abi:cxx11];
+    static long GOLD[abi:cxx11];
+    static long GRAY[abi:cxx11];
+    static long DARK_GRAY[abi:cxx11];
+    static long BLUE[abi:cxx11];
+    static long GREEN[abi:cxx11];
+    static long AQUA[abi:cxx11];
+    static long RED[abi:cxx11];
+    static long LIGHT_PURPLE[abi:cxx11];
+    static long YELLOW[abi:cxx11];
+    static long WHITE[abi:cxx11];
+    static long MINECOIN_GOLD[abi:cxx11];
+    static long OBFUSCATED[abi:cxx11];
+    static long BOLD[abi:cxx11];
+    static long ITALIC[abi:cxx11];
+    static long RESET[abi:cxx11];
 
 
     void FromString(std::string const&);

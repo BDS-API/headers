@@ -3,7 +3,7 @@
 class MolangGeometryVariable {
 
 public:
-    static long MolangGeometryVariable::defaultErrorValue;
+    static long defaultErrorValue;
 
 
     void MolangGeometryVariable(MolangGeometryVariable const&);

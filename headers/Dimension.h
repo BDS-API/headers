@@ -3,9 +3,9 @@
 class Dimension : LevelListener, SavedData {
 
 public:
-    static long Dimension::MOON_BRIGHTNESS_PER_PHASE;
-    static long Dimension::CurrentLimboEntitiesVersion;
-    static long Dimension::STRUCTURE_PRUNE_INTERVAL;
+    static long MOON_BRIGHTNESS_PER_PHASE;
+    static long CurrentLimboEntitiesVersion;
+    static long STRUCTURE_PRUNE_INTERVAL;
 
     virtual ~Dimension();
     virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);

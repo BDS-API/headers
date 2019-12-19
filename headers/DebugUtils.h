@@ -3,13 +3,13 @@
 class DebugUtils {
 
 public:
-    static long DebugUtils::gShouldDebugBreak;
-    static long DebugUtils::gShouldPresentDialog;
-    static long DebugUtils::assertHandler;
-    static long DebugUtils::gTelemetryRegistered;
-    static long DebugUtils::gFireAssertTelemetry[abi:cxx11];
-    static long DebugUtils::gp_modal_presenter[abi:cxx11];
-    static long DebugUtils::gp_assert_handler;
+    static long gShouldDebugBreak;
+    static long gShouldPresentDialog;
+    static long assertHandler;
+    static long gTelemetryRegistered;
+    static long gFireAssertTelemetry[abi:cxx11];
+    static long gp_modal_presenter[abi:cxx11];
+    static long gp_assert_handler;
 
 
     void DEFAULT_ASSERT_HANDLER(char const*, char const*, char const*, bool, int, char const*, char const*, bool);

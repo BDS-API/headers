@@ -3,13 +3,13 @@
 class StructureEditorData {
 
 public:
-    static long StructureEditorData::NAMESPACE_DELIMITER;
-    static long StructureEditorData::DEFAULT_STRUCTURE_TYPE;
-    static long StructureEditorData::MIN_STRUCTURE_SIZE;
-    static long StructureEditorData::MAX_STRUCTURE_SIZE;
-    static long StructureEditorData::MIN_STRUCTURE_OFFSET;
-    static long StructureEditorData::MAX_STRUCTURE_OFFSET;
-    static long StructureEditorData::DEFAULT_STRUCTURE_NAMESPACE[abi:cxx11];
+    static long NAMESPACE_DELIMITER;
+    static long DEFAULT_STRUCTURE_TYPE;
+    static long MIN_STRUCTURE_SIZE;
+    static long MAX_STRUCTURE_SIZE;
+    static long MIN_STRUCTURE_OFFSET;
+    static long MAX_STRUCTURE_OFFSET;
+    static long DEFAULT_STRUCTURE_NAMESPACE[abi:cxx11];
 
 
     void StructureEditorData(StructureEditorData const&);

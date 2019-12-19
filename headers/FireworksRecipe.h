@@ -3,7 +3,7 @@
 class FireworksRecipe : MultiRecipe {
 
 public:
-    static long FireworksRecipe::ID;
+    static long ID;
 
     virtual ~FireworksRecipe();
     virtual void assemble(CraftingContainer &)const;

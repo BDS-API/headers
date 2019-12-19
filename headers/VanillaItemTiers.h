@@ -3,11 +3,11 @@
 class VanillaItemTiers {
 
 public:
-    static long VanillaItemTiers::WOOD;
-    static long VanillaItemTiers::STONE;
-    static long VanillaItemTiers::IRON;
-    static long VanillaItemTiers::DIAMOND;
-    static long VanillaItemTiers::GOLD;
+    static long WOOD;
+    static long STONE;
+    static long IRON;
+    static long DIAMOND;
+    static long GOLD;
 
 
     void getTierItem(Item::Tier const&);

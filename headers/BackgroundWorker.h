@@ -3,7 +3,7 @@
 class BackgroundWorker : ITaskExecutionContext {
 
 public:
-    static long BackgroundWorker::gLocalWorkerMappingSingleton;
+    static long gLocalWorkerMappingSingleton;
 
     virtual ~BackgroundWorker();
     virtual bool isAsync(void)const;

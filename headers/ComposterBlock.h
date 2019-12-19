@@ -3,7 +3,7 @@
 class ComposterBlock : BlockLegacy {
 
 public:
-    static long ComposterBlock::PARTICLE_OFFSET;
+    static long PARTICLE_OFFSET;
 
     virtual ~ComposterBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

@@ -3,10 +3,10 @@
 class SimplexNoise {
 
 public:
-    static long SimplexNoise::GRAD3;
-    static long SimplexNoise::SQRT3;
-    static long SimplexNoise::F2;
-    static long SimplexNoise::G2;
+    static long GRAD3;
+    static long SQRT3;
+    static long F2;
+    static long G2;
 
 
     void SimplexNoise(Random &);

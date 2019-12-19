@@ -3,8 +3,8 @@
 class CompoundItem : ChemistryItem {
 
 public:
-    static long CompoundItem::mIdToSpecialCompound;
-    static long CompoundItem::mTypeToSpecialCompound;
+    static long mIdToSpecialCompound;
+    static long mTypeToSpecialCompound;
 
     virtual ~CompoundItem();
     virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&,std::unique_ptr<CompoundTag,std::default_delete<CompoundTag>> const&)const;

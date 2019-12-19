@@ -3,8 +3,8 @@
 class MobEffectInstance {
 
 public:
-    static long MobEffectInstance::MAX_AMPLIFIER_COUNT;
-    static long MobEffectInstance::NO_EFFECT;
+    static long MAX_AMPLIFIER_COUNT;
+    static long NO_EFFECT;
 
 
     void MobEffectInstance(void);

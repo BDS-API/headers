@@ -3,7 +3,7 @@
 class BushBlock : BlockLegacy {
 
 public:
-    static long BushBlock::MAX_GROWTH;
+    static long MAX_GROWTH;
 
     virtual ~BushBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

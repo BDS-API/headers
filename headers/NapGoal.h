@@ -3,7 +3,7 @@
 class NapGoal : Goal {
 
 public:
-    static long NapGoal::MOB_DETECT_TIME;
+    static long MOB_DETECT_TIME;
 
     virtual ~NapGoal();
     virtual bool canUse(void);

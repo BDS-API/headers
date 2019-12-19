@@ -3,7 +3,7 @@
 class ItemActor : Actor {
 
 public:
-    static long ItemActor::LIFETIME;
+    static long LIFETIME;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~ItemActor();

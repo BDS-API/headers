@@ -3,8 +3,8 @@
 class HugeMushroomFeature : Feature {
 
 public:
-    static long HugeMushroomFeature::mMushroomTypes;
-    static long HugeMushroomFeature::mHugeMushroomTypes;
+    static long mMushroomTypes;
+    static long mHugeMushroomTypes;
 
     virtual ~HugeMushroomFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;

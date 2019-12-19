@@ -3,7 +3,7 @@
 class DragonFireball : Fireball {
 
 public:
-    static long DragonFireball::SPLASH_RANGE;
+    static long SPLASH_RANGE;
 
     virtual ~DragonFireball();
     virtual bool isPickable(void);

@@ -3,10 +3,10 @@
 class MobSpawnRules {
 
 public:
-    static long MobSpawnRules::MAX_SPAWN_DISTANCE;
-    static long MobSpawnRules::MIN_DEFAULT_SPAWN_DISTANCE;
-    static long MobSpawnRules::MAX_DEFAULT_SPAWN_DISTANCE;
-    static long MobSpawnRules::MAX_WORLD_AGE;
+    static long MAX_SPAWN_DISTANCE;
+    static long MIN_DEFAULT_SPAWN_DISTANCE;
+    static long MAX_DEFAULT_SPAWN_DISTANCE;
+    static long MAX_WORLD_AGE;
 
 
     void MobSpawnRules(MobSpawnRules const&);

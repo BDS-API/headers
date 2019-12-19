@@ -3,20 +3,20 @@
 class ArmorStand : Mob {
 
 public:
-    static long ArmorStand::STAND_POSES;
-    static long ArmorStand::POSE_DEFAULT;
-    static long ArmorStand::POSE_ZERO_ROTATION;
-    static long ArmorStand::POSE_SOLEMN;
-    static long ArmorStand::POSE_ATHENA;
-    static long ArmorStand::POSE_BRANDISH;
-    static long ArmorStand::POSE_HONOR;
-    static long ArmorStand::POSE_ENTERTAIN;
-    static long ArmorStand::POSE_SALUTE;
-    static long ArmorStand::POSE_RIPOSTE;
-    static long ArmorStand::POSE_ZOMBIE;
-    static long ArmorStand::POSE_CANCAN_A;
-    static long ArmorStand::POSE_CANCAN_B;
-    static long ArmorStand::POSE_HERO;
+    static long STAND_POSES;
+    static long POSE_DEFAULT;
+    static long POSE_ZERO_ROTATION;
+    static long POSE_SOLEMN;
+    static long POSE_ATHENA;
+    static long POSE_BRANDISH;
+    static long POSE_HONOR;
+    static long POSE_ENTERTAIN;
+    static long POSE_SALUTE;
+    static long POSE_RIPOSTE;
+    static long POSE_ZOMBIE;
+    static long POSE_CANCAN_A;
+    static long POSE_CANCAN_B;
+    static long POSE_HERO;
 
     virtual ~ArmorStand();
     virtual void normalTick(void);

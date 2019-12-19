@@ -3,7 +3,7 @@
 class ScriptServerBlockMovedByPistonEvent : ScriptEventData {
 
 public:
-    static long ScriptServerBlockMovedByPistonEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerBlockMovedByPistonEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

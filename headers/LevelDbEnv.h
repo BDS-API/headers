@@ -3,7 +3,7 @@
 class LevelDbEnv : leveldb::Env {
 
 public:
-    static long LevelDbEnv::sSingleton;
+    static long sSingleton;
 
     virtual ~LevelDbEnv();
     virtual void NewSequentialFile(std::string const&, leveldb::SequentialFile **);

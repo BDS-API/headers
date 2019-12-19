@@ -3,7 +3,7 @@
 class RecipeIngredient {
 
 public:
-    static long RecipeIngredient::EMPTY_INGREDIENT;
+    static long EMPTY_INGREDIENT;
 
 
     void RecipeIngredient(RecipeIngredient const&);

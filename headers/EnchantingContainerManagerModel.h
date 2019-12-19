@@ -3,7 +3,7 @@
 class EnchantingContainerManagerModel : ContainerManagerModel {
 
 public:
-    static long EnchantingContainerManagerModel::NUM_OPTIONS;
+    static long NUM_OPTIONS;
 
     virtual ~EnchantingContainerManagerModel();
     virtual void getItems(void);

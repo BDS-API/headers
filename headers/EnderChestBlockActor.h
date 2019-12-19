@@ -3,7 +3,7 @@
 class EnderChestBlockActor : ChestBlockActor {
 
 public:
-    static long EnderChestBlockActor::ITEMS_SIZE;
+    static long ITEMS_SIZE;
 
     virtual ~EnderChestBlockActor();
     virtual void getName[abi:cxx11](void)const;

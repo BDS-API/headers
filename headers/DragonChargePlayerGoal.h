@@ -3,8 +3,8 @@
 class DragonChargePlayerGoal : Goal {
 
 public:
-    static long DragonChargePlayerGoal::CHARGE_RECOVERY_TIME;
-    static long DragonChargePlayerGoal::SITTING_CHARGE_VIEW_RANGE;
+    static long CHARGE_RECOVERY_TIME;
+    static long SITTING_CHARGE_VIEW_RANGE;
 
     virtual ~DragonChargePlayerGoal();
     virtual bool canUse(void);

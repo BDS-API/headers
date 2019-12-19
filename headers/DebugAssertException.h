@@ -3,7 +3,7 @@
 class DebugAssertException : std::exception {
 
 public:
-    static long DebugAssertException::WHAT;
+    static long WHAT;
 
     virtual ~DebugAssertException();
     virtual void what(void)const;

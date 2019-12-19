@@ -3,7 +3,7 @@
 class BlockDestroyTimeDescription : BlockComponentDescription {
 
 public:
-    static long BlockDestroyTimeDescription::NameID[abi:cxx11];
+    static long NameID[abi:cxx11];
 
     virtual ~BlockDestroyTimeDescription();
     virtual void getName[abi:cxx11](void)const;

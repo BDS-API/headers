@@ -3,9 +3,9 @@
 class SaveCommand : ServerCommand {
 
 public:
-    static long SaveCommand::mSaveAllMutex;
-    static long SaveCommand::mSaveAllFileList;
-    static long SaveCommand::mState;
+    static long mSaveAllMutex;
+    static long mSaveAllFileList;
+    static long mState;
 
     virtual ~SaveCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;

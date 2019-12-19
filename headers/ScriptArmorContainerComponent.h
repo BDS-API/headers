@@ -3,7 +3,7 @@
 class ScriptArmorContainerComponent : ScriptContainerComponentBase {
 
 public:
-    static long ScriptArmorContainerComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptArmorContainerComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

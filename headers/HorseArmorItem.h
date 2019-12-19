@@ -3,7 +3,7 @@
 class HorseArmorItem : Item {
 
 public:
-    static long HorseArmorItem::mHealthPerTier;
+    static long mHealthPerTier;
 
     virtual ~HorseArmorItem();
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;

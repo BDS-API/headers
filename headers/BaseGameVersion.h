@@ -3,9 +3,9 @@
 class BaseGameVersion {
 
 public:
-    static long BaseGameVersion::AnyVersionConstructor;
-    static long BaseGameVersion::EMPTY;
-    static long BaseGameVersion::ANY;
+    static long AnyVersionConstructor;
+    static long EMPTY;
+    static long ANY;
 
 
     void BaseGameVersion(void);

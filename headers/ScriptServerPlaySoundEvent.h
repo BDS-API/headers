@@ -3,7 +3,7 @@
 class ScriptServerPlaySoundEvent : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
 
 public:
-    static long ScriptServerPlaySoundEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerPlaySoundEvent();
     virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);

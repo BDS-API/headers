@@ -3,13 +3,13 @@
 class MinecraftWorkerPool {
 
 public:
-    static long MinecraftWorkerPool::ASYNC;
-    static long MinecraftWorkerPool::DISK;
-    static long MinecraftWorkerPool::NETWORK;
-    static long MinecraftWorkerPool::RENDERING;
-    static long MinecraftWorkerPool::LEVELDB;
-    static long MinecraftWorkerPool::CONNECTEDSTORAGE;
-    static long MinecraftWorkerPool::WATCHDOG;
+    static long ASYNC;
+    static long DISK;
+    static long NETWORK;
+    static long RENDERING;
+    static long LEVELDB;
+    static long CONNECTEDSTORAGE;
+    static long WATCHDOG;
 
 
     void loadWorkerConfigurations(unsigned int, unsigned int);

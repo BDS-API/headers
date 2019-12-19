@@ -3,7 +3,7 @@
 class CommandOrigin {
 
 public:
-    static long CommandOrigin::sUnknownSource;
+    static long sUnknownSource;
 
     virtual ~CommandOrigin();
     virtual void getCursorHitBlockPos(void)const;

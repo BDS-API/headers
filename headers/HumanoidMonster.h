@@ -3,10 +3,10 @@
 class HumanoidMonster : Monster {
 
 public:
-    static long HumanoidMonster::MAX_WEARING_ARMOR_CHANCE;
-    static long HumanoidMonster::MAX_PICKUP_LOOT_CHANCE;
-    static long HumanoidMonster::MAX_ENCHANTED_ARMOR_CHANCE;
-    static long HumanoidMonster::MAX_ENCHANTED_WEAPON_CHANCE;
+    static long MAX_WEARING_ARMOR_CHANCE;
+    static long MAX_PICKUP_LOOT_CHANCE;
+    static long MAX_ENCHANTED_ARMOR_CHANCE;
+    static long MAX_ENCHANTED_WEAPON_CHANCE;
 
     virtual ~HumanoidMonster();
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);

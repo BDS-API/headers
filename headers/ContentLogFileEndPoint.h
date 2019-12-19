@@ -3,7 +3,7 @@
 class ContentLogFileEndPoint : ContentLogEndPoint {
 
 public:
-    static long ContentLogFileEndPoint::FILE_NAME;
+    static long FILE_NAME;
 
     virtual ~ContentLogFileEndPoint();
     virtual void flush(void);

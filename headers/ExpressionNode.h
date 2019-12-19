@@ -3,13 +3,13 @@
 class ExpressionNode {
 
 public:
-    static long ExpressionNode::mQueryFunctionAccessors;
-    static long ExpressionNode::mGenericQueryFunctionAccessors;
-    static long ExpressionNode::_defaultUnknownQueryFunction;
-    static long ExpressionNode::_defaultUnknownGenericQueryFunction;
-    static long ExpressionNode::mTemporaryMolangEvalParams;
-    static long ExpressionNode::mMolangInitialized;
-    static long ExpressionNode::mExpressionOpTokens[abi:cxx11];
+    static long mQueryFunctionAccessors;
+    static long mGenericQueryFunctionAccessors;
+    static long _defaultUnknownQueryFunction;
+    static long _defaultUnknownGenericQueryFunction;
+    static long mTemporaryMolangEvalParams;
+    static long mMolangInitialized;
+    static long mExpressionOpTokens[abi:cxx11];
 
 
     void ExpressionNode(ExpressionNode const&);

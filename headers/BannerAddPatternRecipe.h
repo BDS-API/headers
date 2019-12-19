@@ -3,7 +3,7 @@
 class BannerAddPatternRecipe : MultiRecipe {
 
 public:
-    static long BannerAddPatternRecipe::ID;
+    static long ID;
 
     virtual ~BannerAddPatternRecipe();
     virtual void assemble(CraftingContainer &)const;

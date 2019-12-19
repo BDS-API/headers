@@ -3,7 +3,7 @@
 class CommandBlock : ActorBlock {
 
 public:
-    static long CommandBlock::mCBModeMap;
+    static long mCBModeMap;
 
     virtual ~CommandBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

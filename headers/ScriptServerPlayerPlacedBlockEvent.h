@@ -3,7 +3,7 @@
 class ScriptServerPlayerPlacedBlockEvent : ScriptEventData {
 
 public:
-    static long ScriptServerPlayerPlacedBlockEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerPlayerPlacedBlockEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

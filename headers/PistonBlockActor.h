@@ -3,7 +3,7 @@
 class PistonBlockActor : BlockActor {
 
 public:
-    static long PistonBlockActor::ARM_ANIMATION_SPEED;
+    static long ARM_ANIMATION_SPEED;
 
     virtual ~PistonBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

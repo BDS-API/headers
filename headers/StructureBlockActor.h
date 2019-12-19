@@ -3,10 +3,10 @@
 class StructureBlockActor : BlockActor {
 
 public:
-    static long StructureBlockActor::MAX_WIREFRAME_RENDER_DISTANCE;
-    static long StructureBlockActor::X_AXIS_COLOR;
-    static long StructureBlockActor::Y_AXIS_COLOR;
-    static long StructureBlockActor::Z_AXIS_COLOR;
+    static long MAX_WIREFRAME_RENDER_DISTANCE;
+    static long X_AXIS_COLOR;
+    static long Y_AXIS_COLOR;
+    static long Z_AXIS_COLOR;
 
     virtual ~StructureBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

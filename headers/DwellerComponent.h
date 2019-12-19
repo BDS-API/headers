@@ -3,8 +3,8 @@
 class DwellerComponent {
 
 public:
-    static long DwellerComponent::DWELLING_TYPES[abi:cxx11];
-    static long DwellerComponent::DWELLING_ROLES[abi:cxx11];
+    static long DWELLING_TYPES[abi:cxx11];
+    static long DWELLING_ROLES[abi:cxx11];
 
 
     void DwellerComponent(DwellerComponent&&);

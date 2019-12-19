@@ -3,9 +3,9 @@
 class EndGatewayBlockActor : BlockActor {
 
 public:
-    static long EndGatewayBlockActor::SPAWN_TIME;
-    static long EndGatewayBlockActor::COOLDOWN_TIME;
-    static long EndGatewayBlockActor::EVENT_COOLDOWN;
+    static long SPAWN_TIME;
+    static long COOLDOWN_TIME;
+    static long EVENT_COOLDOWN;
 
     virtual ~EndGatewayBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

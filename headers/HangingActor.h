@@ -3,7 +3,7 @@
 class HangingActor : Actor {
 
 public:
-    static long HangingActor::HANGING_OFFSET;
+    static long HANGING_OFFSET;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);

@@ -3,10 +3,10 @@
 class EnderDragon : Monster {
 
 public:
-    static long EnderDragon::GROWL_INTERVAL_MIN;
-    static long EnderDragon::GROWL_INTERVAL_MAX;
-    static long EnderDragon::SITTING_ALLOWED_DAMAGE_PERCENTAGE;
-    static long EnderDragon::MAX_PATH_RADIUS;
+    static long GROWL_INTERVAL_MIN;
+    static long GROWL_INTERVAL_MAX;
+    static long SITTING_ALLOWED_DAMAGE_PERCENTAGE;
+    static long MAX_PATH_RADIUS;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~EnderDragon();

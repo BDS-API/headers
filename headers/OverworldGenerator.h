@@ -3,8 +3,8 @@
 class OverworldGenerator : ChunkSource, WorldGenerator {
 
 public:
-    static long OverworldGenerator::SNOW_CUTOFF;
-    static long OverworldGenerator::SNOW_SCALE;
+    static long SNOW_CUTOFF;
+    static long SNOW_SCALE;
 
     virtual ~OverworldGenerator();
     virtual void postProcess(ChunkViewSource &);

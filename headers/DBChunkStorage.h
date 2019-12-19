@@ -3,8 +3,8 @@
 class DBChunkStorage : ChunkSource {
 
 public:
-    static long DBChunkStorage::threadBatch;
-    static long DBChunkStorage::threadBuffer[abi:cxx11];
+    static long threadBatch;
+    static long threadBuffer[abi:cxx11];
 
     virtual ~DBChunkStorage();
     virtual void shutdown(void);

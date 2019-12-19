@@ -3,8 +3,8 @@
 class Abilities {
 
 public:
-    static long Abilities::ABILITY_NAMES;
-    static long Abilities::TAG[abi:cxx11];
+    static long ABILITY_NAMES;
+    static long TAG[abi:cxx11];
 
 
     void Abilities(void);

@@ -3,7 +3,7 @@
 class Random {
 
 public:
-    static long Random::mThreadLocalRandom;
+    static long mThreadLocalRandom;
 
 
     void nextInt(int);

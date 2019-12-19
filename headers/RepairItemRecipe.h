@@ -3,7 +3,7 @@
 class RepairItemRecipe : MultiRecipe {
 
 public:
-    static long RepairItemRecipe::ID;
+    static long ID;
 
     virtual ~RepairItemRecipe();
     virtual void assemble(CraftingContainer &)const;

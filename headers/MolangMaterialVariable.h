@@ -3,7 +3,7 @@
 class MolangMaterialVariable {
 
 public:
-    static long MolangMaterialVariable::defaultErrorValue;
+    static long defaultErrorValue;
 
 
     void MolangMaterialVariable(MolangMaterialVariable const&);

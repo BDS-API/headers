@@ -3,7 +3,7 @@
 class MyceliumBlock : BlockLegacy {
 
 public:
-    static long MyceliumBlock::MIN_BRIGHTNESS;
+    static long MIN_BRIGHTNESS;
 
     virtual ~MyceliumBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

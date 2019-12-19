@@ -3,7 +3,7 @@
 class ScriptServerActorCarriedItemChangedEvent : ScriptEventData {
 
 public:
-    static long ScriptServerActorCarriedItemChangedEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerActorCarriedItemChangedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

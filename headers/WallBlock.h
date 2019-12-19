@@ -3,11 +3,11 @@
 class WallBlock : BlockLegacy {
 
 public:
-    static long WallBlock::WALL_WIDTH;
-    static long WallBlock::WALL_HEIGHT;
-    static long WallBlock::POST_WIDTH;
-    static long WallBlock::POST_HEIGHT;
-    static long WallBlock::WALL_NAMES[abi:cxx11];
+    static long WALL_WIDTH;
+    static long WALL_HEIGHT;
+    static long POST_WIDTH;
+    static long POST_HEIGHT;
+    static long WALL_NAMES[abi:cxx11];
 
     virtual ~WallBlock();
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;

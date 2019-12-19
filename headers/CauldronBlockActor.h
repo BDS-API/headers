@@ -3,7 +3,7 @@
 class CauldronBlockActor : BlockActor, Container {
 
 public:
-    static long CauldronBlockActor::WATER_COLOR;
+    static long WATER_COLOR;
 
     virtual ~CauldronBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

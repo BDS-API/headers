@@ -3,10 +3,10 @@
 class PillagerOutpostPieces {
 
 public:
-    static long PillagerOutpostPieces::PILLAGER_LOOT;
-    static long PillagerOutpostPieces::STRUCTURE_WATCHTOWER_OVERGROWN;
-    static long PillagerOutpostPieces::STRUCTURE_WATCHTOWER;
-    static long PillagerOutpostPieces::MSC_FEATURES;
+    static long PILLAGER_LOOT;
+    static long STRUCTURE_WATCHTOWER_OVERGROWN;
+    static long STRUCTURE_WATCHTOWER;
+    static long MSC_FEATURES;
 
 
     void _getMscFeature(Random &);

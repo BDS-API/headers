@@ -3,9 +3,9 @@
 class GrindstoneContainerManagerModel : ContainerManagerModel {
 
 public:
-    static long GrindstoneContainerManagerModel::INPUT_SLOT;
-    static long GrindstoneContainerManagerModel::ADDITIONAL_SLOT;
-    static long GrindstoneContainerManagerModel::RESULT_SLOT;
+    static long INPUT_SLOT;
+    static long ADDITIONAL_SLOT;
+    static long RESULT_SLOT;
 
     virtual ~GrindstoneContainerManagerModel();
     virtual void getItems(void);

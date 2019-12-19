@@ -3,8 +3,8 @@
 class Cat : Animal {
 
 public:
-    static long Cat::SNEAK_SPEED_MOD;
-    static long Cat::SPRINT_SPEED_MOD;
+    static long SNEAK_SPEED_MOD;
+    static long SPRINT_SPEED_MOD;
 
     virtual ~Cat();
     virtual void onTame(void);

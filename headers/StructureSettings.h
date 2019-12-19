@@ -3,8 +3,8 @@
 class StructureSettings {
 
 public:
-    static long StructureSettings::DEFAULT_STRUCTURE_SIZE;
-    static long StructureSettings::DEFAULT_STRUCTURE_OFFSET;
+    static long DEFAULT_STRUCTURE_SIZE;
+    static long DEFAULT_STRUCTURE_OFFSET;
 
 
     void StructureSettings(StructureSettings const&);

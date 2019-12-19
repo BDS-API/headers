@@ -3,7 +3,7 @@
 class DyePowderItem : FertilizerItem {
 
 public:
-    static long DyePowderItem::mColorMap;
+    static long mColorMap;
 
     virtual ~DyePowderItem();
     virtual bool isDye(void)const;

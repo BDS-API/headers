@@ -3,7 +3,7 @@
 class ActorSkeletalAnimationPtr {
 
 public:
-    static long ActorSkeletalAnimationPtr::NONE;
+    static long NONE;
 
 
     void ActorSkeletalAnimationPtr(void);

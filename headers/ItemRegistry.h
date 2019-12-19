@@ -3,11 +3,11 @@
 class ItemRegistry {
 
 public:
-    static long ItemRegistry::mItemRegistry;
-    static long ItemRegistry::mIdToItemMap;
-    static long ItemRegistry::mNameToItemMap[abi:cxx11];
-    static long ItemRegistry::mItemAliasLookupMap[abi:cxx11];
-    static long ItemRegistry::mMaxItemID;
+    static long mItemRegistry;
+    static long mIdToItemMap;
+    static long mNameToItemMap[abi:cxx11];
+    static long mItemAliasLookupMap[abi:cxx11];
+    static long mMaxItemID;
 
 
     void getItem(short);

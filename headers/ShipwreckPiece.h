@@ -3,7 +3,7 @@
 class ShipwreckPiece : StructurePiece {
 
 public:
-    static long ShipwreckPiece::STRUCTURE_SHIPWRECK_TYPES[abi:cxx11];
+    static long STRUCTURE_SHIPWRECK_TYPES[abi:cxx11];
 
     virtual ~ShipwreckPiece();
     virtual void getType(void)const;

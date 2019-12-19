@@ -3,8 +3,8 @@
 class FrostedIceBlock : BlockLegacy {
 
 public:
-    static long FrostedIceBlock::MIN_NEIGHBORS;
-    static long FrostedIceBlock::MAX_AGE;
+    static long MIN_NEIGHBORS;
+    static long MAX_AGE;
 
     virtual ~FrostedIceBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

@@ -3,8 +3,8 @@
 class PackManifest {
 
 public:
-    static long PackManifest::MarioPackId[abi:cxx11];
-    static long PackManifest::STRING_TO_PACK_SCOPE[abi:cxx11];
+    static long MarioPackId[abi:cxx11];
+    static long STRING_TO_PACK_SCOPE[abi:cxx11];
 
     virtual ~PackManifest();
     virtual void clone(void)const;

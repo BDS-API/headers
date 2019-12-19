@@ -3,7 +3,7 @@
 class ScriptInventoryComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptInventoryComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptInventoryComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

@@ -3,8 +3,8 @@
 class DrinkPotionGoal : Goal {
 
 public:
-    static long DrinkPotionGoal::THROTTLE_COOLDOWN;
-    static long DrinkPotionGoal::SPEED_MODIFIER_DRINKING_UUID;
+    static long THROTTLE_COOLDOWN;
+    static long SPEED_MODIFIER_DRINKING_UUID;
 
     virtual ~DrinkPotionGoal();
     virtual bool canUse(void);

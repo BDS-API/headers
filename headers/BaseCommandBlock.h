@@ -3,7 +3,7 @@
 class BaseCommandBlock {
 
 public:
-    static long BaseCommandBlock::DefaultCommandBlockName[abi:cxx11];
+    static long DefaultCommandBlockName[abi:cxx11];
 
 
     void BaseCommandBlock(BaseCommandBlock&&);

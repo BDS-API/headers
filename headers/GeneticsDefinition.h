@@ -3,7 +3,7 @@
 class GeneticsDefinition {
 
 public:
-    static long GeneticsDefinition::DEFAULT_MUTATION_RATE;
+    static long DEFAULT_MUTATION_RATE;
 
 
     void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, GeneticsDefinition>> &);

@@ -3,13 +3,13 @@
 class ChemistryStickItem : ChemistryItem {
 
 public:
-    static long ChemistryStickItem::COLOR_BITS;
-    static long ChemistryStickItem::COLOR_MASK;
-    static long ChemistryStickItem::ACTIVE_BIT;
-    static long ChemistryStickItem::DAMAGE_START_BIT;
-    static long ChemistryStickItem::DAMAGE_BITS;
-    static long ChemistryStickItem::DAMAGE_MASK;
-    static long ChemistryStickItem::ACTIVATION_TIMESTAMP_TAG[abi:cxx11];
+    static long COLOR_BITS;
+    static long COLOR_MASK;
+    static long ACTIVE_BIT;
+    static long DAMAGE_START_BIT;
+    static long DAMAGE_BITS;
+    static long DAMAGE_MASK;
+    static long ACTIVATION_TIMESTAMP_TAG[abi:cxx11];
 
     virtual ~ChemistryStickItem();
     virtual void setMaxDamage(int);

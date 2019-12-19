@@ -3,7 +3,7 @@
 class PigZombie : Zombie {
 
 public:
-    static long PigZombie::SPEED_MODIFIER_ATTACK_UUID;
+    static long SPEED_MODIFIER_ATTACK_UUID;
 
     virtual ~PigZombie();
     virtual void normalTick(void);

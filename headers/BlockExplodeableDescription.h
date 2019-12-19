@@ -3,7 +3,7 @@
 class BlockExplodeableDescription : BlockComponentDescription {
 
 public:
-    static long BlockExplodeableDescription::NameID[abi:cxx11];
+    static long NameID[abi:cxx11];
 
     virtual ~BlockExplodeableDescription();
     virtual void getName[abi:cxx11](void)const;

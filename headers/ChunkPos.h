@@ -3,9 +3,9 @@
 class ChunkPos {
 
 public:
-    static long ChunkPos::INVALID;
-    static long ChunkPos::MIN;
-    static long ChunkPos::MAX;
+    static long INVALID;
+    static long MIN;
+    static long MAX;
 
 
     void ChunkPos(int, int);

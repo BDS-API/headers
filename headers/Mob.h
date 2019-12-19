@@ -3,18 +3,18 @@
 class Mob : Actor {
 
 public:
-    static long Mob::PLAYER_HURT_EXPERIENCE_TIME;
-    static long Mob::MAX_INACTIVITY_TIMER;
-    static long Mob::ABSORPTION_FACTOR_MAX;
-    static long Mob::ABSORPTION_FACTOR_MIN;
-    static long Mob::TOTAL_ROLL_STEPS;
-    static long Mob::REMOVE_RIDERS_DELAY;
-    static long Mob::PLAYER_SWIMMING_SURFACE_OFFSET;
-    static long Mob::GLIDING_FALL_RESET_DELTA;
-    static long Mob::SLOW_FALL_GRAVITY;
-    static long Mob::DEFAULT_GRAVITY;
-    static long Mob::LADDER_CLIMB_SPEED;
-    static long Mob::SCAFFOLDING_CLIMB_SPEED;
+    static long PLAYER_HURT_EXPERIENCE_TIME;
+    static long MAX_INACTIVITY_TIMER;
+    static long ABSORPTION_FACTOR_MAX;
+    static long ABSORPTION_FACTOR_MIN;
+    static long TOTAL_ROLL_STEPS;
+    static long REMOVE_RIDERS_DELAY;
+    static long PLAYER_SWIMMING_SURFACE_OFFSET;
+    static long GLIDING_FALL_RESET_DELTA;
+    static long SLOW_FALL_GRAVITY;
+    static long DEFAULT_GRAVITY;
+    static long LADDER_CLIMB_SPEED;
+    static long SCAFFOLDING_CLIMB_SPEED;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);

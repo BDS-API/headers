@@ -3,7 +3,7 @@
 class ScriptBlockContainerComponent : ScriptContainerComponentBase {
 
 public:
-    static long ScriptBlockContainerComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptBlockContainerComponent();
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

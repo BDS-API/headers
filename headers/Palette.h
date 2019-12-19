@@ -3,22 +3,22 @@
 class Palette {
 
 public:
-    static long Palette::WHITE;
-    static long Palette::ORANGE;
-    static long Palette::MAGENTA;
-    static long Palette::LIGHT_BLUE;
-    static long Palette::YELLOW;
-    static long Palette::LIGHT_GREEN;
-    static long Palette::PINK;
-    static long Palette::GRAY;
-    static long Palette::SILVER;
-    static long Palette::CYAN;
-    static long Palette::PURPLE;
-    static long Palette::BLUE;
-    static long Palette::BROWN;
-    static long Palette::GREEN;
-    static long Palette::RED;
-    static long Palette::BLACK;
+    static long WHITE;
+    static long ORANGE;
+    static long MAGENTA;
+    static long LIGHT_BLUE;
+    static long YELLOW;
+    static long LIGHT_GREEN;
+    static long PINK;
+    static long GRAY;
+    static long SILVER;
+    static long CYAN;
+    static long PURPLE;
+    static long BLUE;
+    static long BROWN;
+    static long GREEN;
+    static long RED;
+    static long BLACK;
 
 
     void getColor(PaletteColor);

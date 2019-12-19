@@ -3,7 +3,7 @@
 class MemoryMappedFileAccess : IFileAccess {
 
 public:
-    static long MemoryMappedFileAccess::EMPTY_TRANSFORMS;
+    static long EMPTY_TRANSFORMS;
 
     virtual ~MemoryMappedFileAccess();
     virtual void fopen(Core::Path const&, std::string const&);

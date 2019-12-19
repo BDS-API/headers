@@ -3,7 +3,7 @@
 class LocalConnector : Connector {
 
 public:
-    static long LocalConnector::sLocalConnectivitySystem;
+    static long sLocalConnectivitySystem;
 
     virtual ~LocalConnector();
     virtual void onAppResumed(void);

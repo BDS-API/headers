@@ -3,7 +3,7 @@
 class ScoreboardId {
 
 public:
-    static long ScoreboardId::INVALID;
+    static long INVALID;
 
 
     void ScoreboardId(void);

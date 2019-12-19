@@ -3,7 +3,7 @@
 class ItemStack : ItemStackBase {
 
 public:
-    static long ItemStack::EMPTY_ITEM;
+    static long EMPTY_ITEM;
 
     virtual ~ItemStack();
     virtual void reinit(Item const&, int, int);

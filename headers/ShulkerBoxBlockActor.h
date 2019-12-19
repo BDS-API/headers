@@ -3,7 +3,7 @@
 class ShulkerBoxBlockActor : ChestBlockActor {
 
 public:
-    static long ShulkerBoxBlockActor::ITEMS_SIZE;
+    static long ITEMS_SIZE;
 
     virtual ~ShulkerBoxBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

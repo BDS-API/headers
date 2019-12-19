@@ -3,7 +3,7 @@
 class VanillaBlockUpdater {
 
 public:
-    static long VanillaBlockUpdater::mContext;
+    static long mContext;
 
 
     void initialize(void);

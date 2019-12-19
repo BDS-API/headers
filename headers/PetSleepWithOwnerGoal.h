@@ -3,8 +3,8 @@
 class PetSleepWithOwnerGoal : BaseMoveToBlockGoal {
 
 public:
-    static long PetSleepWithOwnerGoal::SETTLE_TICKS;
-    static long PetSleepWithOwnerGoal::WAIT_TICKS;
+    static long SETTLE_TICKS;
+    static long WAIT_TICKS;
 
     virtual ~PetSleepWithOwnerGoal();
     virtual bool canUse(void);

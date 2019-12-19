@@ -3,7 +3,7 @@
 class ThrownPotion : Throwable {
 
 public:
-    static long ThrownPotion::SPLASH_RANGE;
+    static long SPLASH_RANGE;
 
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual ~ThrownPotion();

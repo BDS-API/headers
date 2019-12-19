@@ -3,7 +3,7 @@
 class ShieldItemUtils {
 
 public:
-    static long ShieldItemUtils::mAlwaysBlockableDamageCauses;
+    static long mAlwaysBlockableDamageCauses;
 
 
     bool isBlockedDamageCause(ActorDamageSource const&);

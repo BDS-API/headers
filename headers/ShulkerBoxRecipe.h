@@ -3,7 +3,7 @@
 class ShulkerBoxRecipe : ShapelessRecipe {
 
 public:
-    static long ShulkerBoxRecipe::ID;
+    static long ID;
 
     virtual ~ShulkerBoxRecipe();
     virtual void assemble(CraftingContainer &)const;

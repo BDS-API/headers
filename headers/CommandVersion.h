@@ -3,7 +3,7 @@
 class CommandVersion {
 
 public:
-    static long CommandVersion::CurrentVersion;
+    static long CurrentVersion;
 
 
     void getVersionMapping(SemVersion const&);

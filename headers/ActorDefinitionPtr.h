@@ -3,7 +3,7 @@
 class ActorDefinitionPtr {
 
 public:
-    static long ActorDefinitionPtr::NONE;
+    static long NONE;
 
 
     void onGroupDestroyed(void);

@@ -3,8 +3,8 @@
 class TaskResult {
 
 public:
-    static long TaskResult::Done;
-    static long TaskResult::Requeue;
+    static long Done;
+    static long Requeue;
 
 
     void TaskResult(TaskResult const&);

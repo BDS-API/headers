@@ -3,7 +3,7 @@
 class ActorUniqueID {
 
 public:
-    static long ActorUniqueID::INVALID_ID;
+    static long INVALID_ID;
 
 
     void ActorUniqueID(void);

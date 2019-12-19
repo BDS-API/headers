@@ -3,7 +3,7 @@
 class BaseAttributeMap {
 
 public:
-    static long BaseAttributeMap::mInvalidInstance;
+    static long mInvalidInstance;
 
 
     void BaseAttributeMap(void);

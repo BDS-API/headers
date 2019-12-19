@@ -3,7 +3,7 @@
 class StopCommand : Command {
 
 public:
-    static long StopCommand::mServer;
+    static long mServer;
 
     virtual ~StopCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;

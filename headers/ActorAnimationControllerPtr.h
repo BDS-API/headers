@@ -3,7 +3,7 @@
 class ActorAnimationControllerPtr {
 
 public:
-    static long ActorAnimationControllerPtr::NONE;
+    static long NONE;
 
 
     void ActorAnimationControllerPtr(void);

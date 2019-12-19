@@ -3,7 +3,7 @@
 class BedrockItems {
 
 public:
-    static long BedrockItems::mAir;
+    static long mAir;
 
 
     void registerItems(void);

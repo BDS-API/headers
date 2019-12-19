@@ -3,8 +3,8 @@
 class BucketItem : Item {
 
 public:
-    static long BucketItem::DRINK_DURATION;
-    static long BucketItem::mFillTypeToEntityType;
+    static long DRINK_DURATION;
+    static long mFillTypeToEntityType;
 
     virtual ~BucketItem();
     virtual bool isDestructive(int)const;

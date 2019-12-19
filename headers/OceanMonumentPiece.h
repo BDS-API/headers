@@ -3,13 +3,13 @@
 class OceanMonumentPiece : StructurePiece {
 
 public:
-    static long OceanMonumentPiece::mLeftWingIndex;
-    static long OceanMonumentPiece::mRightWingIndex;
-    static long OceanMonumentPiece::mPenthouseIndex;
-    static long OceanMonumentPiece::mGridroomSourceIndex;
-    static long OceanMonumentPiece::mGridroomTopConnectIndex;
-    static long OceanMonumentPiece::mGridroomLeftWingConnectIndex;
-    static long OceanMonumentPiece::mGridroomRightWingConnectIndex;
+    static long mLeftWingIndex;
+    static long mRightWingIndex;
+    static long mPenthouseIndex;
+    static long mGridroomSourceIndex;
+    static long mGridroomTopConnectIndex;
+    static long mGridroomLeftWingConnectIndex;
+    static long mGridroomRightWingConnectIndex;
 
     virtual ~OceanMonumentPiece();
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);

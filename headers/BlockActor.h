@@ -3,8 +3,8 @@
 class BlockActor {
 
 public:
-    static long BlockActor::mIdClassMap[abi:cxx11];
-    static long BlockActor::mClassIdMap[abi:cxx11];
+    static long mIdClassMap[abi:cxx11];
+    static long mClassIdMap[abi:cxx11];
 
     virtual ~BlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);

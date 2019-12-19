@@ -3,7 +3,7 @@
 class ScriptHandContainerComponent : ScriptContainerComponentBase {
 
 public:
-    static long ScriptHandContainerComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptHandContainerComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

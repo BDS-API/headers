@@ -3,15 +3,15 @@
 class SharedAttributes {
 
 public:
-    static long SharedAttributes::HEALTH;
-    static long SharedAttributes::FOLLOW_RANGE;
-    static long SharedAttributes::KNOCKBACK_RESISTANCE;
-    static long SharedAttributes::MOVEMENT_SPEED;
-    static long SharedAttributes::UNDERWATER_MOVEMENT_SPEED;
-    static long SharedAttributes::ATTACK_DAMAGE;
-    static long SharedAttributes::ABSORPTION;
-    static long SharedAttributes::LUCK;
-    static long SharedAttributes::JUMP_STRENGTH;
+    static long HEALTH;
+    static long FOLLOW_RANGE;
+    static long KNOCKBACK_RESISTANCE;
+    static long MOVEMENT_SPEED;
+    static long UNDERWATER_MOVEMENT_SPEED;
+    static long ATTACK_DAMAGE;
+    static long ABSORPTION;
+    static long LUCK;
+    static long JUMP_STRENGTH;
 
 
     void saveAttributes(BaseAttributeMap *);

@@ -3,7 +3,7 @@
 class ScriptExplodeComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptExplodeComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptExplodeComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

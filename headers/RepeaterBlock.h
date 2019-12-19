@@ -3,8 +3,8 @@
 class RepeaterBlock : DiodeBlock {
 
 public:
-    static long RepeaterBlock::DELAY_RENDER_OFFSETS;
-    static long RepeaterBlock::DELAYS;
+    static long DELAY_RENDER_OFFSETS;
+    static long DELAYS;
 
     virtual ~RepeaterBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

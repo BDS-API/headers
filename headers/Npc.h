@@ -3,8 +3,8 @@
 class Npc : Mob {
 
 public:
-    static long Npc::SKIN_ID_TAG[abi:cxx11];
-    static long Npc::Skins[abi:cxx11];
+    static long SKIN_ID_TAG[abi:cxx11];
+    static long Skins[abi:cxx11];
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);

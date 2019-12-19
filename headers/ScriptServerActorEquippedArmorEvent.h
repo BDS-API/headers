@@ -3,7 +3,7 @@
 class ScriptServerActorEquippedArmorEvent : ScriptEventData {
 
 public:
-    static long ScriptServerActorEquippedArmorEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerActorEquippedArmorEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

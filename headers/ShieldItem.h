@@ -3,9 +3,9 @@
 class ShieldItem : Item {
 
 public:
-    static long ShieldItem::EFFECTIVE_BLOCK_DELAY;
-    static long ShieldItem::IN_HAND_BLOCK_DURATION;
-    static long ShieldItem::TIMESTAMP_TAG[abi:cxx11];
+    static long EFFECTIVE_BLOCK_DELAY;
+    static long IN_HAND_BLOCK_DURATION;
+    static long TIMESTAMP_TAG[abi:cxx11];
 
     virtual ~ShieldItem();
     virtual bool isHandEquipped(void)const;

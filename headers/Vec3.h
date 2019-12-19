@@ -3,18 +3,18 @@
 class Vec3 {
 
 public:
-    static long Vec3::UNIT_X;
-    static long Vec3::NEG_UNIT_X;
-    static long Vec3::UNIT_Y;
-    static long Vec3::NEG_UNIT_Y;
-    static long Vec3::UNIT_Z;
-    static long Vec3::NEG_UNIT_Z;
-    static long Vec3::ZERO;
-    static long Vec3::ONE;
-    static long Vec3::TWO;
-    static long Vec3::HALF;
-    static long Vec3::MAX;
-    static long Vec3::MIN;
+    static long UNIT_X;
+    static long NEG_UNIT_X;
+    static long UNIT_Y;
+    static long NEG_UNIT_Y;
+    static long UNIT_Z;
+    static long NEG_UNIT_Z;
+    static long ZERO;
+    static long ONE;
+    static long TWO;
+    static long HALF;
+    static long MAX;
+    static long MIN;
 
 
     void Vec3(void);

@@ -3,8 +3,8 @@
 class StructureManager {
 
 public:
-    static long StructureManager::LEVEL_STORAGE_STRUCTURE_TEMPLATE_PREFIX;
-    static long StructureManager::BEHAVIOR_PACK_STRUCTURES_FOLDER;
+    static long LEVEL_STORAGE_STRUCTURE_TEMPLATE_PREFIX;
+    static long BEHAVIOR_PACK_STRUCTURES_FOLDER;
 
 
     void StructureManager(void);

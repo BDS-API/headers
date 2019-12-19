@@ -3,8 +3,8 @@
 class Enchant {
 
 public:
-    static long Enchant::mEnchants;
-    static long Enchant::mAllowExperimental;
+    static long mEnchants;
+    static long mAllowExperimental;
 
     virtual ~Enchant();
     virtual bool isCompatibleWith(Enchant::Type)const;

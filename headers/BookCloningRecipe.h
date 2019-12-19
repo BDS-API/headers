@@ -3,7 +3,7 @@
 class BookCloningRecipe : MultiRecipe {
 
 public:
-    static long BookCloningRecipe::ID;
+    static long ID;
 
     virtual ~BookCloningRecipe();
     virtual void assemble(CraftingContainer &)const;

@@ -3,10 +3,10 @@
 class RakNet {
 
 public:
-    static long RakNet::rakDebugLogCallback;
-    static long RakNet::rak64BitGuidGeneratorOverride;
-    static long RakNet::UNASSIGNED_RAKNET_GUID;
-    static long RakNet::UNASSIGNED_SYSTEM_ADDRESS;
+    static long rakDebugLogCallback;
+    static long rak64BitGuidGeneratorOverride;
+    static long UNASSIGNED_RAKNET_GUID;
+    static long UNASSIGNED_SYSTEM_ADDRESS;
 
 
     void GetTime(void);

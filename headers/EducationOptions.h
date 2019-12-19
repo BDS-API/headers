@@ -3,8 +3,8 @@
 class EducationOptions : ResourcePackListener {
 
 public:
-    static long EducationOptions::DEFAULT_OPTION;
-    static long EducationOptions::CHEMISTRY_ENABLED;
+    static long DEFAULT_OPTION;
+    static long CHEMISTRY_ENABLED;
 
     virtual ~EducationOptions();
     virtual void onActiveResourcePacksChanged(ResourcePackManager &);

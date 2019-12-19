@@ -3,7 +3,7 @@
 class ScriptSpawnActorComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptSpawnActorComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptSpawnActorComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

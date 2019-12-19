@@ -3,7 +3,7 @@
 class ScriptLevelTickingAreasComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptLevelTickingAreasComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptLevelTickingAreasComponent();
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

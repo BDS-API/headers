@@ -3,7 +3,7 @@
 class ScriptTagComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    static long ScriptTagComponent::mHash;
+    static long mHash;
 
     virtual ~ScriptTagComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;

@@ -3,7 +3,7 @@
 class ScaffoldingBlock : HeavyBlock {
 
 public:
-    static long ScaffoldingBlock::MAX_STABILITY;
+    static long MAX_STABILITY;
 
     virtual ~ScaffoldingBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;

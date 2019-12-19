@@ -3,11 +3,11 @@
 class Scoreboard {
 
 public:
-    static long Scoreboard::OBJECTIVES_ENUM;
-    static long Scoreboard::DISPLAY_SLOT_LIST[abi:cxx11];
-    static long Scoreboard::DISPLAY_SLOT_SIDEBAR[abi:cxx11];
-    static long Scoreboard::DISPLAY_SLOT_BELOWNAME[abi:cxx11];
-    static long Scoreboard::DEFAULT_CRITERIA[abi:cxx11];
+    static long OBJECTIVES_ENUM;
+    static long DISPLAY_SLOT_LIST[abi:cxx11];
+    static long DISPLAY_SLOT_SIDEBAR[abi:cxx11];
+    static long DISPLAY_SLOT_BELOWNAME[abi:cxx11];
+    static long DEFAULT_CRITERIA[abi:cxx11];
 
     virtual ~Scoreboard();
     virtual void setDisplayObjective(std::string const&, Objective const&, ObjectiveSortOrder);

@@ -3,7 +3,7 @@
 class GUIDGenerator {
 
 public:
-    static long GUIDGenerator::once_control;
+    static long once_control;
 
 
     void CreateGUID(MDGUID *);

@@ -3,7 +3,7 @@
 class ScriptServerActorRemovedEvent : ScriptEventData {
 
 public:
-    static long ScriptServerActorRemovedEvent::mHash;
+    static long mHash;
 
     virtual ~ScriptServerActorRemovedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;

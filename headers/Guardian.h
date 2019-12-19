@@ -3,8 +3,8 @@
 class Guardian : Monster {
 
 public:
-    static long Guardian::ATTACK_TIME;
-    static long Guardian::FIRST_DAMAGE_TIME;
+    static long ATTACK_TIME;
+    static long FIRST_DAMAGE_TIME;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);

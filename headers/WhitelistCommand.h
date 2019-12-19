@@ -3,7 +3,7 @@
 class WhitelistCommand : Command {
 
 public:
-    static long WhitelistCommand::mWhitelistFile;
+    static long mWhitelistFile;
 
     virtual ~WhitelistCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
