@@ -28,4 +28,9 @@ public:
     void shutdownProfile(void);
     void profileFlip(void);
     void dumpFile(char const*, Core::Profile::FileExtension);
+    void onFileOpenRequest(bool);
+    void onFileOpenRetry(bool);
+    void onFileOpenRetrySuccess(bool);
+    void onFileOpenFailed(bool);
+    void getFileOpenStats(Core::Profile::FileCounters &, Core::Profile::FileCounters &);
 };

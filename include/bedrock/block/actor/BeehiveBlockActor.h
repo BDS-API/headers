@@ -21,5 +21,6 @@ public:
     void _findFreeDirections(BlockSource &, unsigned char, unsigned long);
     void _revive(BlockSource &, BeehiveBlockActor::Occupant const&, unsigned char);
     void disableBeeSpawn(void);
+    void getNumberOfOccupants(void)const;
     void _isUsableAsSpawnBlock(BlockSource &, unsigned char);
 };

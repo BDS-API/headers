@@ -6,7 +6,7 @@ public:
     virtual LegacyChunkStorage::~LegacyChunkStorage();
     virtual void loadChunk(LevelChunk &, bool);
     virtual void saveLiveChunk(LevelChunk &);
-    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, std::default_delete<LevelChunk>>);
+    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, LevelChunkFinalDeleter>);
 
     LegacyChunkStorage(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>, LevelStorage &, StorageVersion, Biome &);
     void _loadEntities(void);

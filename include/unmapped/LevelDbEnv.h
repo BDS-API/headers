@@ -28,6 +28,7 @@ public:
 
     void createInstance(void);
     void getSingleton(void);
+    void exists(void);
     void destroyInstance(void);
     LevelDbEnv(void);
     void IsComplete(void)const;

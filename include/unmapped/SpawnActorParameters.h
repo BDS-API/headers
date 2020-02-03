@@ -4,7 +4,7 @@ class SpawnActorParameters {
 
 public:
 
-    SpawnActorParameters(void);
     SpawnActorParameters(SpawnActorParameters const&);
+    SpawnActorParameters(void);
     SpawnActorParameters(SpawnActorParameters&&);
 };

@@ -191,6 +191,7 @@ public:
     bool isFrostWalking(void)const;
     void setInterpolation(bool);
     void lerpTo(Vec3 const&, Vec2 const&, float, int);
+    void lerpToRotation(Vec2 const&, int);
     bool isGliding(void)const;
     void getTravelType(void);
     void calcMoveRelativeSpeed(Mob::TravelType);

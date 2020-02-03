@@ -86,10 +86,13 @@ public:
     virtual void fireEventDeviceAccountFailure(IMinecraftEventing::SignInStage, IMinecraftEventing::DeviceAccountFailurePhase, unsigned int, std::string const&);
     virtual void fireEventDeviceAccountSuccess(bool, std::string const&);
     virtual void fireEventStorage(int, std::string const&);
-    virtual void fireEventStoreOfferPurchaseAttempt(std::string const&, Offer &);
-    virtual void fireEventStoreOfferPurchaseResolved(std::string const&, IMinecraftEventing::PurchaseStage, IMinecraftEventing::PurchaseResult, Offer &, PurchasePath);
-    virtual void fireEventStoreOfferPurchaseFailure(std::string const&, unsigned short, std::string const&, PurchaseInfo const&);
-    virtual void fireEventPurchaseResolved(std::string const&, std::string const&, std::string const&, IMinecraftEventing::StoreType, std::string const&, IMinecraftEventing::PurchaseStage, IMinecraftEventing::PurchaseResult, PurchasePath);
+    virtual void fireEventIAPPurchaseAttempt(std::string const&, std::string const&, Offer &, PurchasePath);
+    virtual void fireEventIAPPurchaseResolved(std::string const&, std::string const&, Offer &, IMinecraftEventing::PurchaseResult, PurchasePath);
+    virtual void fireEventIAPRedeemAttempt(std::string const&, std::string const&, std::string const&, PurchasePath);
+    virtual void fireEventIAPRedeemResolved(std::string const&, std::string const&, std::string const&, IMinecraftEventing::PurchaseResult, PurchasePath);
+    virtual void fireEventPurchaseAttempt(std::string const&, std::string const&, std::string const&, IMinecraftEventing::StoreType, PurchasePath);
+    virtual void fireEventPurchaseResolved(std::string const&, std::string const&, std::string const&, IMinecraftEventing::StoreType, IMinecraftEventing::PurchaseResult, PurchasePath);
+    virtual void fireEventIAPPurchaseFailure(std::string const&, unsigned short, std::string const&, PurchaseInfo const&);
     virtual void fireEventPurchaseFailureDetails(int, std::string const&, std::string const&, std::string const&);
     virtual void fireEventTreatmentsCleared(void);
     virtual void fireEventTreatmentsSet(std::vector<std::string, std::allocator<std::string>> const&);
@@ -185,7 +188,6 @@ public:
     virtual void fireEventSearchItemSelected(int, int, std::string const&, int, int);
     virtual void fireEventUgcDownloadStarted(std::string const&);
     virtual void fireEventUgcDownloadCompleted(std::string const&, bool);
-    virtual void fireEventPurchaseAttempt(std::string const&, std::string const&, std::string const&, IMinecraftEventing::StoreType, std::string const&);
     virtual void fireRealmConnectionEventRealmAPIRequest(IMinecraftEventing::RealmConnectionFlow);
     virtual void fireRealmConnectionEventRealmAPIResponse(IMinecraftEventing::RealmConnectionFlow, int);
     virtual void onUserSignIn(Social::XboxLiveUser &);
@@ -307,4 +309,5 @@ public:
     void _addConversionReportData(Social::Events::Event &, mclc::ConversionReport const*);
     void _getAccountType(std::shared_ptr<Social::User>);
     void fireEventPetDied(Player *, bool, Actor *, ActorType, unsigned int);
+    void _addCommonPurchaseEventProperties(Social::Events::Event &, std::string const&, std::string const&, std::string const&, PurchasePath)const;
 };

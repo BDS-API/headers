@@ -25,4 +25,5 @@ public:
     void removePlayerGlobalProperty(unsigned int, std::string const&);
     void buildCommonProperties(std::unordered_map<std::string, Social::Events::Property, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, Social::Events::Property>>> &, unsigned int)const;
     bool hasListeners(int);
+    void getNextSequenceNumber(void);
 };

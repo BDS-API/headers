@@ -49,6 +49,7 @@ public:
     void getDefaultBrightness(void)const;
     bool hasWeather(void)const;
     void getLevelChunkBuilderData(void);
+    void getLevelChunkGarbageCollector(void)const;
     void getLevelChunkGarbageCollector(void);
     Dimension(Level &, AutomaticID<Dimension, int>, short, Scheduler &, std::string);
     bool isRedstoneTick(void);

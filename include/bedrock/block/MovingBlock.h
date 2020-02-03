@@ -4,6 +4,7 @@ class MovingBlock : ActorBlock {
 
 public:
     virtual MovingBlock::~MovingBlock();
+    virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;

@@ -7,7 +7,7 @@ public:
     virtual void getExistingChunk(ChunkPos const&);
     virtual void getRandomChunk(Random &);
     virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
-    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, std::default_delete<LevelChunk>>);
+    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, LevelChunkFinalDeleter>);
     virtual bool isWithinWorldLimit(ChunkPos const&)const;
 
     ChunkViewSource(ChunkSource &, ChunkSource::LoadMode);

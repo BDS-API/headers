@@ -17,6 +17,7 @@ public:
     virtual void getVariant(Block const&)const;
     virtual void getMappedFace(unsigned char, Block const&)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
+    virtual void init(void);
     virtual bool canBeSilkTouched(void)const;
 
     BeehiveBlock(std::string const&, int);
@@ -32,4 +33,5 @@ public:
     void deliverNectar(BlockSource &, Block const&, BlockPos const&);
     void _getSilkTouchItemInstance(Block const&, Player &, BlockPos const&)const;
     void _playBottleSound(BlockSource &, BlockPos const&)const;
+    void getNumberOfOccupants(BlockSource &, BlockPos const&)const;
 };

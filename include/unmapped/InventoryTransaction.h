@@ -17,6 +17,7 @@ public:
     void getVerifyFunction(InventorySource const&)const;
     void getExecuteFunction(InventorySource const&)const;
     void verifyFull(Player &, bool)const;
+    void _dropCreatedItems(Player &)const;
     void executeFull(Player &, bool)const;
     void getActions(InventorySource const&)const;
     void reverse(void)const;

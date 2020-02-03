@@ -15,7 +15,7 @@ public:
     virtual void saveLiveChunk(LevelChunk &);
     virtual void hintDiscardBatchBegin(void);
     virtual void hintDiscardBatchEnd(void);
-    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, std::default_delete<LevelChunk>>);
+    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, LevelChunkFinalDeleter>);
     virtual void flushPendingWrites(void);
 
     DBChunkStorage(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>, DBStorage &, Scheduler &);

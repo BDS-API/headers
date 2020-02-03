@@ -9,6 +9,7 @@ public:
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
     virtual void getExtraRenderLayers(void)const;
+    virtual void getVisualShape(Block const&, AABB &, bool)const;
 
     HoneyBlock(std::string const&, int, Material const&);
     void _isSlidingDown(BlockPos const&, Actor &)const;

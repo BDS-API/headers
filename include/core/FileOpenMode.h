@@ -31,4 +31,5 @@ public:
     bool isCreate(void)const;
     bool isAppend(void)const;
     bool isBinary(void)const;
+    bool isReadOnly(void)const;
 };

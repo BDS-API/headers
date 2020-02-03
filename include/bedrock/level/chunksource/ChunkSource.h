@@ -17,7 +17,7 @@ public:
     virtual void saveLiveChunk(LevelChunk &);
     virtual void hintDiscardBatchBegin(void);
     virtual void hintDiscardBatchEnd(void);
-    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, std::default_delete<LevelChunk>>);
+    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, LevelChunkFinalDeleter>);
     virtual void compact(void);
     virtual void flushPendingWrites(void);
     virtual bool isWithinWorldLimit(ChunkPos const&)const;
@@ -28,6 +28,7 @@ public:
     void createEmptyView(ChunkSource::LoadMode, bool, std::function<void ()(buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>);
     void fireChunkLoaded(LevelChunk &);
     void checkAndLaunchChunkGenerationTasks(bool);
+    void _hasTooManyChunksPendingDelete(void)const;
     void _spawnChunkGenerationTasks(int, bool);
     void _checkAndDispatchTaskForLevelChunk(ChunkPos const&, bool);
     void _dispatchTaskForLevelChunk(std::shared_ptr<LevelChunk> &, std::shared_ptr<ChunkViewSource>, bool);

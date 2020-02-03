@@ -8,8 +8,8 @@ public:
     virtual void _handleUnknownMember(std::string const&, Json::Value const&);
 
     ActorFilterGroup(ActorFilterGroup&&);
-    ActorFilterGroup(FilterGroup::CollectionType);
     ActorFilterGroup(ActorFilterGroup const&);
+    ActorFilterGroup(FilterGroup::CollectionType);
     void initialize(void);
     void evaluate(Actor const&, VariantParameterList const&)const;
     void _addLegacyFilter(std::string const&, ActorFilterGroup::LegacyMapping const&, FilterInput const&);

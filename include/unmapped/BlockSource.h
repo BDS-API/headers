@@ -159,7 +159,7 @@ public:
     void getHardcodedEntitySpawn(BlockPos const&, ActorType)const;
     void findNextTopSolidBlockUnder(BlockPos &);
     void findNextTopSolidBlockAbove(BlockPos &);
-    void findNextSpawnBlockUnder(BlockPos &, MaterialType, SpawnBlockRequirements);
+    void findNextSpawnBlockUnder(BlockPos &, MaterialType);
     bool canSeeSkyFromBelowWater(BlockPos const&);
     void getRawBrightness(int, int, int, bool);
     void getAboveTopSolidBlock(int, int, bool, bool);

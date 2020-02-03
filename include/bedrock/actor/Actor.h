@@ -274,6 +274,8 @@ public:
     void getLevel(void);
     void _setupServerAnimationComponent(void);
     bool hasCategory(ActorCategory)const;
+    void requireReload(void);
+    void reloadIfRequired(void);
     void sendActorDefinitionEventTriggered(std::string const&);
     bool hasType(ActorType)const;
     void executeEvent(std::string const&, VariantParameterList const&);
