@@ -113,6 +113,7 @@ public:
     virtual void fireWorldConversionInitiatedEvent(std::string const&);
     virtual void fireLegacyWorldUploadEvent(Legacy::WorldConversionReport const&, bool, WorldConversionError);
     virtual void fireEventAssertFailed(std::string &);
+    virtual void fireEventSessionCrashed(std::string const&, std::string const&);
     virtual void fireChatUsedEvent(unsigned int, bool);
     virtual void fireEventJoinByCode(std::string const&);
     virtual void fireEventBlockPlacedByCommand(Block const&, int);

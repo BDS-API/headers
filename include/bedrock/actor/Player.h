@@ -374,7 +374,6 @@ public:
     void getCreativeItemList(void)const;
     void getFilteredCreativeItemList(void)const;
     void _handleCarriedItemInteractText(void);
-    void _aboveBlockHasCollisionShape(BlockPos const&, int, BlockSource &, AABB &, Actor &);
     void checkNeedAutoJump(float, float);
     void getSkinAdjustments(void)const;
     void updateSkin(SerializedSkin const&, int);
