@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../actor/Actor"
+#include "../ItemInstance"
+#include "../../actor/damagesource/ActorDamageSource"
+
+
 class Enchant {
 
 public:

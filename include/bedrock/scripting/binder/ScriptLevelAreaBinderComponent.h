@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ScriptEngine"
+#include "../../../mce/UUID"
+#include "../../level/tickingarea/ITickingArea"
+
+
 class ScriptLevelAreaBinderComponent : ScriptBinderComponent {
 
 public:

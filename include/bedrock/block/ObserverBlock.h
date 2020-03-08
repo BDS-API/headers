@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+
+
 class ObserverBlock : FaceDirectionalBlock {
 
 public:
@@ -12,7 +17,7 @@ public:
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual void getVariant(Block const&)const;
     virtual void getMappedFace(unsigned char, Block const&)const;

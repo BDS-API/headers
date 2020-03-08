@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../core/Path"
+#include "../../unmapped/WorldPackHistory"
+#include "../../unmapped/PackIdVersion"
+#include "../../unmapped/PackManifestFactory"
+
+
 class WorldHistoryPackSource : PackSource {
 
 public:
@@ -14,7 +20,7 @@ public:
     void _readWorldHistoryFile(void);
     void _addPackFromHistoryPack(WorldPackHistory const&);
     void trackNewPackIfNotTracked(WorldPackHistory const&);
-    void needsSaving(void)const;
+    bool needsSaving(void)const;
     void saveHistoryFile(void);
     void setSourceUUIDForPackHistory(PackIdVersion const&, mce::UUID const&);
     void _createPackFromHistoryPack(WorldPackHistory const&);

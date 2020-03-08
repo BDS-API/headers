@@ -1,5 +1,8 @@
 #pragma once
 
+#include "orgin/CommandOrigin"
+
+
 class Command {
 
 public:

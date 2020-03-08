@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/PackIdVersion"
+#include "../../unmapped/Pack"
+
+
 class PackSource {
 
 public:

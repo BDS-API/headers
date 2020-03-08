@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../json/Value"
+#include "../bedrock/actor/Actor"
+
+
 class CatchFireSubcomponent : OnHitSubcomponent {
 
 public:

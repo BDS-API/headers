@@ -1,11 +1,14 @@
 #pragma once
 
+#include "../bedrock/level/LevelChunk"
+
+
 class DBChunkStorageKey {
 
 public:
 
     DBChunkStorageKey(LevelChunk const&);
     DBChunkStorageKey(ChunkPos const&, AutomaticID<Dimension, int>);
-    void asSpan(void)const;
+    bool asSpan(void)const;
     void hashCode(void)const;
 };

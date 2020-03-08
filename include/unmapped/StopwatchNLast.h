@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class StopwatchNLast : Stopwatch {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/CommonPlatform"
+#include "../../core/Path"
+#include "../../unmapped/AppPlatformListener"
+
+
 class AppPlatform : IAppPlatform {
 
 public:
@@ -19,9 +24,9 @@ public:
     virtual void restartApp(bool);
     virtual void _fireAppTerminated(void);
     virtual bool hasFastAlphaTest(void)const;
-    virtual void supportsScripting(void)const;
-    virtual void supportsInPackageRecursion(void)const;
-    virtual void supportsXboxLiveAchievements(void)const;
+    virtual bool supportsScripting(void)const;
+    virtual bool supportsInPackageRecursion(void)const;
+    virtual bool supportsXboxLiveAchievements(void)const;
     virtual void hideSplashScreen(void);
     virtual void getFeedbackHelpLink[abi:cxx11](void)const;
     virtual void getModalErrorMessageProc[abi:cxx11](void);
@@ -54,10 +59,10 @@ public:
     virtual void getPixelsPerMillimeter(void);
     virtual void getOperationMode(void)const;
     virtual void allowContentLogWriteToDisk(void);
-    virtual void supportsLaunchingLegacyVersion(void)const;
+    virtual bool supportsLaunchingLegacyVersion(void)const;
     virtual void launchLegacyVersion(void);
     virtual bool canManageLegacyData(void)const;
-    virtual void supportsDayOneExperience(void)const;
+    virtual bool supportsDayOneExperience(void)const;
     virtual bool hasBroadcastPermission(void);
     virtual bool hasAppInstalled(ExternalApp)const;
     virtual void navigateToStoreForApp(ExternalApp)const;
@@ -69,15 +74,15 @@ public:
     virtual void getMaxSimultaneousServiceRequests(void)const;
     virtual bool isDownloadAndImportBlocking(void)const;
     virtual bool isDownloadBuffered(void)const;
-    virtual void supportsAutoSaveOnDBCompaction(void)const;
+    virtual bool supportsAutoSaveOnDBCompaction(void)const;
     virtual void updateTextBoxText(std::string const&);
     virtual bool isKeyboardVisible(void);
-    virtual void supportsVibration(void);
+    virtual bool supportsVibration(void);
     virtual void vibrate(int);
     virtual void getAssetFileFullPath[abi:cxx11](Core::Path const&);
     virtual void readAssetFile[abi:cxx11](Core::Path const&);
     virtual void listAssetFilesIn(Core::Path const&, std::string const&)const;
-    virtual void supportsClientUpdate(void)const;
+    virtual bool supportsClientUpdate(void)const;
     virtual void getClientUpdateUrl[abi:cxx11](void)const;
     virtual void checkLicense(void);
     virtual bool hasBuyButtonWhenInvalidLicense(void);
@@ -115,11 +120,11 @@ public:
     virtual void getIPAddresses[abi:cxx11](void);
     virtual void useAppPlatformForTelemetryIPAddress(void);
     virtual void getModelName[abi:cxx11](void);
-    virtual void usesHDRBrightness(void)const;
+    virtual bool usesHDRBrightness(void)const;
     virtual void setFullscreenMode(FullscreenMode);
     virtual bool isNetworkThrottled(void);
     virtual bool isLANAllowed(void)const;
-    virtual void doesLANRequireMultiplayerRestrictions(void)const;
+    virtual bool doesLANRequireMultiplayerRestrictions(void)const;
     virtual void trackPurchaseEvent(std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&);
     virtual void sendBrazeEvent(std::string const&);
     virtual void sendBrazeEventWithProperty(std::string const&, std::string const&, int);
@@ -143,7 +148,7 @@ public:
     virtual void notifyControllerConnectionStateChange(void)const;
     virtual void platformRequiresControllerApplet(void)const;
     virtual void getDefaultInputMode(void)const;
-    virtual void supportsTextToSpeech(void)const;
+    virtual bool supportsTextToSpeech(void)const;
     virtual void getSecureStorage(void);
     virtual void getSecureStorageKey(std::string const&);
     virtual void setSecureStorageKey(std::string const&, SecureStorageKey const&);
@@ -151,24 +156,24 @@ public:
     virtual void shouldPauseDownloadsWhenEnterGame(void)const;
     virtual void compareAppReceiptToLocalReceipt(std::string const&);
     virtual void getThirdPartyPackUUID(void)const;
-    virtual void alwaysUseZippedPacksForDlc(void)const;
-    virtual void allowsResourcePackDevelopment(void)const;
-    virtual void supportsLegacySinglePremiumCacheDirectory(void)const;
-    virtual void supportsWorldShare(void)const;
+    virtual bool alwaysUseZippedPacksForDlc(void)const;
+    virtual bool allowsResourcePackDevelopment(void)const;
+    virtual bool supportsLegacySinglePremiumCacheDirectory(void)const;
+    virtual bool supportsWorldShare(void)const;
     virtual bool hasJournalingFilesystem(void)const;
     virtual bool isAutoCompactionEnabled(void)const;
     virtual void getLevelSaveInterval(void)const;
     virtual void getOptionsSaveInterval(void)const;
     virtual bool hasPlatformSpecificInvites(void)const;
     virtual void usePlatformProfilePicturesOnly(void)const;
-    virtual void requiresXboxLiveSigninToPlay(void)const;
-    virtual void requiresLiveGoldForMultiplayer(void)const;
+    virtual bool requiresXboxLiveSigninToPlay(void)const;
+    virtual bool requiresLiveGoldForMultiplayer(void)const;
     virtual void shouldRegisterForXboxLiveNotifications(void)const;
     virtual bool isRealmsEnabled(void)const;
     virtual void minimizeBackgroundDownloads(void)const;
-    virtual void requiresAutoSaveIconExplanationPopup(void)const;
+    virtual bool requiresAutoSaveIconExplanationPopup(void)const;
     virtual void getExtraLevelSaveDataIconParams(std::string const&)const;
-    virtual void requiresPatchNoticePopup(void)const;
+    virtual bool requiresPatchNoticePopup(void)const;
     virtual void getMultiplayerServiceListToRegister(void)const;
     virtual void getBroadcastingMultiplayerServiceIds(bool, bool)const;
     virtual void maxFileDataRequestConcurrency(void)const;
@@ -187,8 +192,8 @@ public:
     virtual void shouldRemoveGraphicsDeviceOnAppTermination(void)const;
     virtual bool isJoinableViaExternalServers(void)const;
     virtual void onPrimaryUserNetworkReady(void);
-    virtual void requiresNetworkOutageMessaging(void)const;
-    virtual void usesAsyncOptionSaving(void)const;
+    virtual bool requiresNetworkOutageMessaging(void)const;
+    virtual bool usesAsyncOptionSaving(void)const;
     virtual void showPlatformStoreIcon(bool);
     virtual void getPlatformDpi(void)const;
     virtual void getPlatformUIScalingRules(void)const;

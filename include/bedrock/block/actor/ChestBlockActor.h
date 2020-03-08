@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Player"
+#include "../../../unmapped/ContainerContentChangeListener"
+#include "../../item/ItemStack"
+#include "../../nbt/CompoundTag"
+
+
 class ChestBlockActor : RandomizableBlockActorFillingContainer {
 
 public:
@@ -11,7 +20,6 @@ public:
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);
@@ -21,6 +29,7 @@ public:
     virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&);
     virtual void getName[abi:cxx11](void)const;
     virtual void getContainer(void);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void startOpen(Player &);
     virtual void getContainerSize(void)const;
     virtual void getMaxStackSize(void)const;

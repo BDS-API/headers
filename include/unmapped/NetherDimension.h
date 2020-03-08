@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/Level"
+
+
 class NetherDimension : Dimension {
 
 public:

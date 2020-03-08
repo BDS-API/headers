@@ -1,10 +1,15 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+
+
 class DragonEggBlock : HeavyBlock {
 
 public:
     virtual DragonEggBlock::~DragonEggBlock();
-    virtual void breaksFallingBlocks(Block const&)const;
+    virtual bool breaksFallingBlocks(Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void attack(Player *, BlockPos const&)const;
     virtual void getDustColor(Block const&)const;

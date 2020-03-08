@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace Recipes;
 
 class FurnaceRecipeKey {

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../../unmapped/NetworkIdentifier"
+
+
 class PacketSender {
 
 public:

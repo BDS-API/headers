@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Mob"
+#include "../bedrock/actor/Actor"
+
+
 class FlockingComponent {
 
 public:
@@ -15,7 +19,7 @@ public:
     void clearNeighborhood(void);
     void updateNeighborhoodData(Actor const&);
     void validateVariantEntityTypes(Actor const&, Actor const&)const;
-    void containsMember(ActorUniqueID);
+    bool containsMember(ActorUniqueID);
     void manageNeighborhood(Actor &);
     void mergeNeighborhoods(Actor &);
     void calculateFlockVector(Actor const&);
@@ -40,6 +44,6 @@ public:
     void getGoalHeading(void)const;
     bool hasGoalTarget(void)const;
     void getUsingDirection(void)const;
-    void needsDoubleSpeed(void);
+    bool needsDoubleSpeed(void);
     void getCurrentHeading(void)const;
 };

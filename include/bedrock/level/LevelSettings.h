@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/EducationLevelSettings"
+#include "../../unmapped/BaseGameVersion"
+#include "../../unmapped/PackInstanceId"
+
+
 class LevelSettings {
 
 public:
@@ -50,7 +55,7 @@ public:
     void setOverrideSavedSettings(bool);
     void shouldOverrideSavedSettings(void)const;
     void overrideSavedSettings(LevelData &)const;
-    void achievementsWillBeDisabledOnLoad(void)const;
+    bool achievementsWillBeDisabledOnLoad(void)const;
     void setNewWorldBehaviorPackIdentities(std::vector<PackInstanceId, std::allocator<PackInstanceId>> const&);
     void getNewWorldBehaviorPackIdentities(void)const;
     void setNewWorldResourcePackIdentities(std::vector<PackInstanceId, std::allocator<PackInstanceId>> const&);

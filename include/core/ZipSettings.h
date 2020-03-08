@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace Core::ZipUtils;
 
 class ZipSettings {

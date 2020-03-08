@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../json/Value"
+#include "../bedrock/actor/Actor"
+
+
 class SpawnChanceSubcomponent : OnHitSubcomponent {
 
 public:

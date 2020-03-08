@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class PistonArmBlock : BlockLegacy {
 
 public:
@@ -8,12 +15,12 @@ public:
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
     virtual bool canContainLiquid(void)const;
-    virtual void breaksFallingBlocks(Block const&)const;
+    virtual bool breaksFallingBlocks(Block const&)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getSecondPart(BlockSource &, BlockPos const&, BlockPos&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void clip(BlockSource &, BlockPos const&, Vec3 const&, Vec3 const&, bool)const;
     virtual bool canBeSilkTouched(void)const;
 

@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../Actor"
+#include "../../../unmapped/ContainerContentChangeListener"
+#include "../../item/ItemStack"
+#include "../../nbt/CompoundTag"
+#include "../ItemActor"
+
+
 class ContainerComponent : ContainerContentChangeListener, IEntityComponent {
 
 public:

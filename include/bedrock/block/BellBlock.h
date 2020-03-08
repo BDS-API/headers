@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../actor/Player"
+
+
 class BellBlock : ActorBlock {
 
 public:
@@ -13,7 +19,7 @@ public:
     virtual void movedByPiston(BlockSource &, BlockPos const&)const;
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;

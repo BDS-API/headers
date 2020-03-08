@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../../../unmapped/BoundingBox"
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/BlockVolume"
+#include "../../../unmapped/ChunkPos"
+#include "../LevelChunk"
+#include "../../../unmapped/Dimension"
+#include "../../../unmapped/BlockSource"
+#include "../generator/WorldGenerator"
+
+
 class TheEndGenerator : ChunkSource, WorldGenerator {
 
 public:

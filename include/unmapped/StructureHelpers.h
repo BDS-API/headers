@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/structure/piece/StructurePiece"
+
+
 class StructureHelpers {
 
 public:

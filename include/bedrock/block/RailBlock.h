@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/Block"
+
+
 class RailBlock : BaseRailBlock {
 
 public:

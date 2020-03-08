@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/ActorUniqueID"
+#include "../../../../unmapped/Vec3"
+#include "../../../../unmapped/ScriptEngine"
+
+
 class ScriptServerProjectileHitEvent : ScriptEventData {
 
 public:

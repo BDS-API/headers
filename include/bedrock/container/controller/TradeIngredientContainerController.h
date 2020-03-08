@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../model/ContainerModel"
+#include "../../item/ItemInstance"
+#include "../../item/ItemStack"
+
+
 class TradeIngredientContainerController : ContainerController {
 
 public:

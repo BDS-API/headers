@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../file/access/IFileAccess"
+#include "../../unmapped/ResourceLocation"
+
+
 class ZipPackAccessStrategyOwningFileAcccess : ZipPackAccessStrategy {
 
 public:

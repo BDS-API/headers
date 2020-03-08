@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../actor/Player"
+#include "../item/ItemStack"
+
+
 class SimpleContainer : Container {
 
 public:

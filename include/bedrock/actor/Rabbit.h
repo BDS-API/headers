@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../nbt/CompoundTag"
+
+
 class Rabbit : Animal {
 
 public:
@@ -16,6 +21,6 @@ public:
     void getRabbitType(void)const;
     void setRabbitType(int);
     void readyToEat(void)const;
-    void wantsMoreFood(void)const;
+    bool wantsMoreFood(void)const;
     void eatCarrot(void);
 };

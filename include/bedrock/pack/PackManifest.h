@@ -1,5 +1,16 @@
 #pragma once
 
+#include "../../unmapped/PackIdVersion"
+#include "../../unmapped/BaseGameVersion"
+#include "../../unmapped/SemVersion"
+#include "../../unmapped/ResourceMetadata"
+#include "../../unmapped/ResourceInformation"
+#include "../../unmapped/LegacyPackIdVersion"
+#include "../../unmapped/ContentIdentity"
+#include "../../json/Value"
+#include "../../unmapped/ResourceLocation"
+
+
 class PackManifest {
 
 public:

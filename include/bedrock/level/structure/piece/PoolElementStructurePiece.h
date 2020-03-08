@@ -1,11 +1,17 @@
 #pragma once
 
+#include "../../../../unmapped/BlockPos"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/BlockSource"
+#include "../../../../unmapped/StructurePoolElement"
+
+
 class PoolElementStructurePiece : StructurePiece {
 
 public:
     virtual PoolElementStructurePiece::~PoolElementStructurePiece();
     virtual void moveBoundingBox(int, int, int);
-    virtual void asPoolElement(void);
+    virtual bool asPoolElement(void);
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
 

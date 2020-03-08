@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../level/chunksource/ChunkViewSource"
+
+
 class CommandArea {
 
 public:

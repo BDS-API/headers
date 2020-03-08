@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class GameRule {
 
 public:
@@ -25,7 +27,7 @@ public:
     void shouldSave(void)const;
     void allowUseInCommand(void)const;
     bool hasDefaultSet(void)const;
-    void requiresCheats(void)const;
+    bool requiresCheats(void)const;
     void setName(std::string const&);
     void _setDefaultValue(bool);
     void _setDefaultValue(int);

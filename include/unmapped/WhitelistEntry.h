@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../mce/UUID"
+#include "../json/Value"
+
+
 class WhitelistEntry : IJsonSerializable {
 
 public:

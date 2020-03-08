@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/BlockPos"
+#include "../../../../unmapped/CircuitSceneGraph"
+#include "../../../../unmapped/CircuitSystem"
+
+
 class RedstoneTorchCapacitor : CapacitorComponent {
 
 public:

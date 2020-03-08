@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../actor/Actor"
+#include "../../unmapped/Random"
+
+
 class TrapDoorBlock : BlockLegacy {
 
 public:
@@ -10,7 +17,7 @@ public:
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;

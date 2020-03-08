@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../orgin/CommandOrigin"
+#include "../CommandOutput"
+#include "../../actor/Player"
+#include "../Command"
+#include "../CommandRegistry"
+#include "../../actor/Agent"
+
+
 class AgentCommand : Command {
 
 public:

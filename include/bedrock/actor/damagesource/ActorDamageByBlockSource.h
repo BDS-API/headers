@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/Block"
+#include "../Actor"
+
+
 class ActorDamageByBlockSource : ActorDamageSource {
 
 public:

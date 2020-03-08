@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/ActorRuntimeID"
+
+
 class PlayerActionPacket : Packet {
 
 public:

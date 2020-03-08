@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/BaseCommandBlock"
+#include "../../../unmapped/BlockSource"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/ActorRuntimeID"
+
+
 class CommandBlockUpdatePacket : Packet {
 
 public:

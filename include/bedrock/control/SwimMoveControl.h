@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../actor/Mob"
+#include "../../unmapped/MoveControlComponent"
+
+
 class SwimMoveControl : MoveControl {
 
 public:

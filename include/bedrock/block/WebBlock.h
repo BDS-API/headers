@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class WebBlock : BlockLegacy {
 
 public:

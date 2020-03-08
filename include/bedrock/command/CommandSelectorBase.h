@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "orgin/CommandOrigin"
+#include "../actor/Actor"
+
+
 class CommandSelectorBase {
 
 public:

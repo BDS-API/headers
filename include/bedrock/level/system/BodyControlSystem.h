@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/EntityRegistry"
+
+
 class BodyControlSystem : ITickingSystem {
 
 public:

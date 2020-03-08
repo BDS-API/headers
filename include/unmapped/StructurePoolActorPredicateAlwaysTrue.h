@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class StructurePoolActorPredicateAlwaysTrue : IStructurePoolActorPredicate {
 
 public:

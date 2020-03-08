@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/EntityContext"
+#include "../../unmapped/BreedableType"
+#include "../../unmapped/EnvironmentRequirement"
+#include "../../json/Value"
+
+
 class BreedableDefinition {
 
 public:

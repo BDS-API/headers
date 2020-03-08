@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../CommandOutput"
+#include "../Command"
+#include "../CommandRegistry"
+#include "../orgin/CommandOrigin"
+
+
 class TagCommand : Command {
 
 public:

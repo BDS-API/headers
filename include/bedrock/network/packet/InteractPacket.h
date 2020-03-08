@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/ActorRuntimeID"
+#include "../../../unmapped/Vec3"
+
+
 class InteractPacket : Packet {
 
 public:

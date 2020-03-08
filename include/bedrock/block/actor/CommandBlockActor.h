@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/UIProfanityContext"
+#include "../../actor/Player"
+#include "../../nbt/CompoundTag"
+
+
 class CommandBlockActor : BlockActor {
 
 public:
@@ -12,9 +20,10 @@ public:
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getCustomName[abi:cxx11](void)const;
     virtual void getFilteredCustomName[abi:cxx11](UIProfanityContext const&);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void _playerCanUpdate(Player const&)const;
 
     CommandBlockActor(BlockPos const&, CommandBlockMode);
     bool isAutomatic(void)const;
@@ -39,7 +48,7 @@ public:
     void getPowered(void)const;
     void getTickDelay(void)const;
     void shouldExecuteOnFirstTick(void)const;
-    void wasConditionMet(void);
+    bool wasConditionMet(void);
     void getSuccessCount(void)const;
     void setSuccessCount(int);
     void setTrackOutput(bool);

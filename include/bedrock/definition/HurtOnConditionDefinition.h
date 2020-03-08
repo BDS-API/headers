@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/DamageCondition"
+#include "../../json/Value"
+
+
 class HurtOnConditionDefinition {
 
 public:

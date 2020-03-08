@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/BaseGameVersion"
+#include "../../../unmapped/PackInstanceId"
+
+
 class ResourcePackStackPacket : Packet {
 
 public:

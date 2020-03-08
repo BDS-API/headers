@@ -1,5 +1,22 @@
 #pragma once
 
+#include "../io/BinaryStream"
+#include "../actor/Actor"
+#include "../io/IDataInput"
+#include "../io/IDataOutput"
+#include "../actor/Player"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/Block"
+#include "../level/Level"
+#include "../block/BlockLegacy"
+#include "../../unmapped/ItemEnchants"
+#include "../io/ReadOnlyBinaryStream"
+#include "../../unmapped/RecipeIngredient"
+#include "../../unmapped/Tick"
+#include "../block/actor/BlockActor"
+#include "../../json/Value"
+
+
 class ItemStackBase {
 
 public:
@@ -72,9 +89,9 @@ public:
     void getNetworkUserData(void)const;
     void addCustomUserData(BlockActor &, BlockSource &);
     bool isGlint(void)const;
-    void showsDurabilityInCreative(void)const;
+    bool showsDurabilityInCreative(void)const;
     void setJustBrewed(bool);
-    void wasJustBrewed(void)const;
+    bool wasJustBrewed(void)const;
     void startCoolDown(Player *)const;
     bool isEquivalentArmor(ItemStackBase const&)const;
     void retrieveIDFromIDAux(int);
@@ -97,7 +114,7 @@ public:
     bool isDamaged(void)const;
     bool isStackable(ItemStackBase const&)const;
     bool isStackedByData(void)const;
-    void componentsMatch(ItemStackBase const&)const;
+    bool componentsMatch(ItemStackBase const&)const;
     void setDamageValue(short);
     void getMaxDamage(void)const;
     void hurtAndBreak(int, Actor *);
@@ -115,8 +132,8 @@ public:
     void getIdAuxEnchanted(void)const;
     bool isInstance(BlockLegacy const&)const;
     void matches(ItemStackBase const&)const;
-    void matchesItem(ItemStackBase const&)const;
-    void matchesChargedItem(ItemStackBase const&)const;
+    bool matchesItem(ItemStackBase const&)const;
+    bool matchesChargedItem(ItemStackBase const&)const;
     bool hasChargedItem(void)const;
     void getChargedItem(void)const;
     void getColor(void)const;

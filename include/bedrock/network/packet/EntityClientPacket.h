@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../../unmapped/NetworkComponent"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class EntityClientPacket : Packet {
 
 public:

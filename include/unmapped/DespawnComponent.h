@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+
+
 class DespawnComponent {
 
 public:

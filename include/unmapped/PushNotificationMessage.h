@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class PushNotificationMessage {
 
 public:

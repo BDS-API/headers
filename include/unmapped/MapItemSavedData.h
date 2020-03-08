@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/actor/Player"
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/level/Level"
+#include "../bedrock/level/storage/LevelStorage"
+
+
 class MapItemSavedData {
 
 public:

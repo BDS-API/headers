@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class NavigationHoverDescription : NavigationDescription {
 
 public:

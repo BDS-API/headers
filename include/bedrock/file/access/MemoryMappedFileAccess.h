@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/StreamDetails"
+#include "../../../core/Path"
+
+
 class MemoryMappedFileAccess : IFileAccess {
 
 public:

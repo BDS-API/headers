@@ -1,12 +1,15 @@
 #pragma once
 
+#include "../json/Value"
+
+
 class PackReport {
 
 public:
 
     PackReport(void);
     void merge(PackReport&&);
-    void wasUpgraded(void)const;
+    bool wasUpgraded(void)const;
     void attemptedUpgrade(void)const;
     bool hasErrors(void)const;
     bool hasErrors(PackErrorType);

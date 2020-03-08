@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../actor/Player"
+#include "../../item/ItemInstance"
+
+
 class EnchantingContainerManagerModel : ContainerManagerModel {
 
 public:

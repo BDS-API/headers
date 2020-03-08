@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../io/IDataOutput"
+#include "../../unmapped/TagMemoryChunk"
+#include "../io/IDataInput"
+
+
 class CompoundTag : Tag {
 
 public:

@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace Json;
 
 class Value {
@@ -21,17 +23,17 @@ public:
     void swap(Json::Value&);
     void type(void)const;
     void compare(Json::Value const&)const;
-    void asCString(void)const;
-    void asString(std::string const&)const;
-    void asInt(int)const;
-    void asUInt(unsigned int)const;
-    void asInt64(long long)const;
-    void asUInt64(unsigned long long)const;
-    void asLargestInt(void)const;
-    void asLargestUInt(void)const;
-    void asDouble(double)const;
-    void asFloat(float)const;
-    void asBool(bool)const;
+    bool asCString(void)const;
+    bool asString(std::string const&)const;
+    bool asInt(int)const;
+    bool asUInt(unsigned int)const;
+    bool asInt64(long long)const;
+    bool asUInt64(unsigned long long)const;
+    bool asLargestInt(void)const;
+    bool asLargestUInt(void)const;
+    bool asDouble(double)const;
+    bool asFloat(float)const;
+    bool asBool(bool)const;
     bool isConvertibleTo(Json::ValueType)const;
     void size(void)const;
     void empty(void)const;

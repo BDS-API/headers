@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/ActorRuntimeID"
+#include "../../actor/Actor"
+
+
 class AnimatePacket : Packet {
 
 public:

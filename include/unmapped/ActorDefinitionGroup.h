@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/level/Level"
+#include "../json/Value"
+#include "../bedrock/definition/ActorDefinition"
+
+
 class ActorDefinitionGroup {
 
 public:

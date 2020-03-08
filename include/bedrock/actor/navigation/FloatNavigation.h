@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/NavigationComponent"
+
+
 class FloatNavigation : PathNavigation {
 
 public:

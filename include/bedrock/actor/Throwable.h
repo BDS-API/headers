@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/HitResult"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/Vec3"
+
+
 class Throwable : Actor {
 
 public:

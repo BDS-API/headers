@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../EnderDragon"
+
+
 class DragonLandingGoal : Goal {
 
 public:

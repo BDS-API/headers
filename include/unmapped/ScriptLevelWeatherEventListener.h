@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/LevelEventListener"
+
+
 class ScriptLevelWeatherEventListener : LevelEventListener {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../core/Path"
+
+
 using namespace BedrockLog;
 
 class LogDetails {
@@ -23,6 +26,7 @@ public:
     void _filterLog(LogAreaID, unsigned int);
     void _log_va(LogAreaID, unsigned int, char const*, int, int, char const*, __va_list_tag *);
     void _appendLogEntryMetadata(std::string &, LogAreaID, unsigned int, std::string, int, int);
+    void _appendLogEntryMetadata(std::string &, LogAreaID, unsigned int, std::string, int, int)::{lambda(std::string const&, std::string const&)#1}::operator()[abi:cxx11] const(std::string const&, std::string const&);
     void _setAppend(bool);
     void _setFlushImmediate(bool);
     void _setTimestamp(bool);

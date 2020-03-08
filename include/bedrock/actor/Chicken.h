@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/RenderParams"
+
+
 class Chicken : Animal {
 
 public:

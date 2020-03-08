@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/RaidBossComponent"
+#include "../../../unmapped/BossComponent"
+
+
 class BossEventPacket : Packet {
 
 public:

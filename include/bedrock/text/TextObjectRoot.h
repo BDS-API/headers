@@ -1,11 +1,13 @@
 #pragma once
 
+
+
 class TextObjectRoot : ITextObject {
 
 public:
     virtual TextObjectRoot::~TextObjectRoot();
-    virtual void asString[abi:cxx11](void)const;
-    virtual void asJsonValue(void)const;
+    virtual bool asString[abi:cxx11](void)const;
+    virtual bool asJsonValue(void)const;
 
     TextObjectRoot(void);
     TextObjectRoot(TextObjectRoot&&);

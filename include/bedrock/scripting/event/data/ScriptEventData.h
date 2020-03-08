@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../../unmapped/ScriptEngine"
+
+
 class ScriptEventData {
 
 public:

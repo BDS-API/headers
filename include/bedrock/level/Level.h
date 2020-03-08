@@ -1,5 +1,35 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/ServerPlayerEventCoordinator"
+#include "../../unmapped/BlockEventCoordinator"
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/EntityNetId"
+#include "../../unmapped/ItemEventCoordinator"
+#include "../actor/Actor"
+#include "../../unmapped/_TickPtr"
+#include "../network/NetEventCallback"
+#include "../../unmapped/PlayerEventCoordinator"
+#include "../../unmapped/ActorUniqueID"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/ClientPlayerEventCoordinator"
+#include "../../unmapped/ActorRuntimeID"
+#include "../actor/Player"
+#include "../network/packet/sender/PacketSender"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/BlockSourceListener"
+#include "../../unmapped/EducationLevelSettings"
+#include "../block/BlockLegacy"
+#include "../../mce/UUID"
+#include "../../unmapped/ServerLevelEventCoordinator"
+#include "../../unmapped/IWorldRegistriesProvider"
+#include "../../unmapped/ClientLevelEventCoordinator"
+#include "../../unmapped/Dimension"
+#include "../../unmapped/ActorEventCoordinator"
+#include "../../unmapped/HashedString"
+#include "../../unmapped/Vec3"
+
+
 class Level : BlockSourceListener, IWorldRegistriesProvider {
 
 public:
@@ -134,8 +164,6 @@ public:
     void _saveSomeChunks(void);
     void _isSavingRequired(void)const;
     void _pollSaveGameStatistics(void);
-    bool hasLevelStorage(void)const;
-    void getLevelStorage(void);
     void saveDirtyChunks(void);
     void findPath(Actor &, int, int, int, NavigationComponent &);
     void findPath(Actor &, Actor &, NavigationComponent &);
@@ -226,6 +254,8 @@ public:
     void broadcastBossEvent(BossEventUpdateType, ActorUniqueID const&, BossEventPacket const&);
     void broadcastBossEvent(BossEventUpdateType);
     void areBossEventListenersReady(void);
+    bool hasLevelStorage(void)const;
+    void getLevelStorage(void);
     void getLevelStorage(void)const;
     void getLevelData(void);
     void getPhotoStorage(void);

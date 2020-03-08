@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../../unmapped/BlockSource"
+#include "../../../../unmapped/Random"
+
+
 class NBBridgeEndFiller : NetherFortressPiece {
 
 public:

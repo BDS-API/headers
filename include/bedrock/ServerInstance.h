@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../unmapped/AppPlatformListener"
+#include "../unmapped/GameCallbacks"
+
+
 class ServerInstance : AppPlatformListener, GameCallbacks {
 
 public:

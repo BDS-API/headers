@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/level/Level"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class TimerComponent {
 
 public:

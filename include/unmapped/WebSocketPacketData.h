@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/io/BinaryStream"
+#include "../bedrock/io/ReadOnlyBinaryStream"
+
+
 class WebSocketPacketData {
 
 public:

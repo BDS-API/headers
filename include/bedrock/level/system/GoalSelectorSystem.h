@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/EntityContext"
+#include "../../../unmapped/PrioritizedGoal"
+#include "../../../unmapped/ActorComponent"
+#include "../../../unmapped/EntityRegistry"
+#include "../../../unmapped/GoalSelectorComponent"
+
+
 class GoalSelectorSystem : ITickingSystem {
 
 public:

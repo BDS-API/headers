@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../block/BlockLegacy"
+#include "../../definition/BlockDefinition"
+
+
 class BlockFlammableDescription : BlockComponentDescription {
 
 public:

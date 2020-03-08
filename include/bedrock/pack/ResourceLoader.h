@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/ResourceLocation"
+
+
 class ResourceLoader {
 
 public:

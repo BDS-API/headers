@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/ScriptEngine"
+#include "../ScriptObjectHandle"
+
+
 class ScriptComponentBinderComponent : ScriptBinderComponent {
 
 public:

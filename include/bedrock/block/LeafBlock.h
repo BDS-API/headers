@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../../unmapped/Random"
+
+
 class LeafBlock : BlockLegacy {
 
 public:
@@ -8,7 +14,7 @@ public:
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
     virtual bool canContainLiquid(void)const;
     virtual void onRemove(BlockSource &, BlockPos const&)const;
-    virtual void breaksFallingBlocks(Block const&)const;
+    virtual bool breaksFallingBlocks(Block const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;

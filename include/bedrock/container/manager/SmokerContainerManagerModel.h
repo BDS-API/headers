@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../actor/Player"
+
+
 class SmokerContainerManagerModel : FurnaceContainerManagerModel {
 
 public:

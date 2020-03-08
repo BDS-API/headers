@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/file/access/IFileAccess"
+
+
 using namespace Core;
 
 class UnzipFile {

@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../../unmapped/ChunkPos"
+#include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/StrongholdResult"
+#include "../../../../unmapped/Random"
+#include "../../../../unmapped/BiomeSource"
+
+
 class StrongholdFeature : StructureFeature {
 
 public:

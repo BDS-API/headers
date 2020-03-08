@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/EntityContext"
+#include "../../../unmapped/AreaAttackComponent"
+#include "../../../unmapped/ActorComponent"
+#include "../../../unmapped/EntityRegistry"
+
+
 class AreaAttackSystem : ITickingSystem {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/EntityRegistry"
+
+
 class CommandBlockSystem : ITickingSystem {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/FilterContext"
+#include "../definition/Definition"
+
+
 class FilterTestGameRule : FilterTest {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/ItemDescriptor"
+
+
 class ArmorItem : Item {
 
 public:

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/network/packet/UpdateBlockPropertiesPacket"
+#include "../json/Value"
+#include "../bedrock/pack/ResourcePackManager"
+#include "../bedrock/definition/BlockDefinition"
+
+
 class BlockDefinitionGroup {
 
 public:

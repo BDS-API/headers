@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/MobDescriptor"
+
+
 class NearestPrioritizedAttackableTargetGoal : NearestAttackableTargetGoal {
 
 public:

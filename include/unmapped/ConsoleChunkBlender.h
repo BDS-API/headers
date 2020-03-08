@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/LevelChunk"
+
+
 class ConsoleChunkBlender {
 
 public:

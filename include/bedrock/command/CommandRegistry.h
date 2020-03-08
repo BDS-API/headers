@@ -1,5 +1,10 @@
 #pragma once
 
+#include "orgin/CommandOrigin"
+#include "../network/packet/Packet"
+#include "../network/packet/AvailableCommandsPacket"
+
+
 class CommandRegistry {
 
 public:
@@ -47,7 +52,7 @@ public:
     bool isValidCommand(std::string const&)const;
     void getCommandStatus(std::string const&)const;
     bool isCommandOfType(std::string const&, CommandTypeFlag)const;
-    void requiresCheatsEnabled(std::string const&)const;
+    bool requiresCheatsEnabled(std::string const&)const;
     void getCommandsPermissionLevel(std::string const&)const;
     void buildRules(CommandRegistry::Signature &, std::vector<CommandRegistry::Overload *, std::allocator<CommandRegistry::Overload *>> const&, unsigned long);
     void buildOptionalRuleChain(CommandRegistry::Signature const&, std::vector<CommandParameterData, std::allocator<CommandParameterData>> const&, CommandParameterData const*, unsigned long);

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/Dimension"
+
+
 class LevelChunkGarbageCollector {
 
 public:

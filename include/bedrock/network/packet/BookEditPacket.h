@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/PageContent"
+#include "../../io/BinaryStream"
+
+
 class BookEditPacket : Packet {
 
 public:

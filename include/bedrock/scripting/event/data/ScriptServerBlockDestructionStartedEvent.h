@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/BlockPos"
+#include "../../../../unmapped/ActorUniqueID"
+#include "../../../../unmapped/ScriptEngine"
+
+
 class ScriptServerBlockDestructionStartedEvent : ScriptEventData {
 
 public:

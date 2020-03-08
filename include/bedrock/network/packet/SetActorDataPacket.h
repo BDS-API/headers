@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/SynchedActorData"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/ActorRuntimeID"
+
+
 class SetActorDataPacket : Packet {
 
 public:

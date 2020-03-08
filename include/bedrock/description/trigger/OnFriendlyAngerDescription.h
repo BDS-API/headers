@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class OnFriendlyAngerDescription : TriggerDescription {
 
 public:

@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../core/Path"
+#include "../mce/UUID"
+#include "../bedrock/eventing/IMinecraftEventing"
+#include "../bedrock/pack/PackManifest"
+#include "../json/Value"
+
+
 class ResourcePackRepository {
 
 public:

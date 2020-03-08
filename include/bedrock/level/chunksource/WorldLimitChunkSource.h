@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/ChunkPos"
+
+
 class WorldLimitChunkSource : ChunkSource {
 
 public:

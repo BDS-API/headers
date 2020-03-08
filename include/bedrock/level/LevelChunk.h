@@ -1,5 +1,25 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/AABB"
+#include "../../unmapped/BlockID"
+#include "../actor/Actor"
+#include "../io/IDataInput"
+#include "../../unmapped/ActorUniqueID"
+#include "../../unmapped/ChunkBlockPos"
+#include "../../unmapped/BlockSource"
+#include "../io/IDataOutput"
+#include "chunksource/ChunkSource"
+#include "../../unmapped/Block"
+#include "../../unmapped/SubChunk"
+#include "biome/Biome"
+#include "../../unmapped/BoundingBox"
+#include "chunksource/ChunkViewSource"
+#include "../../unmapped/Dimension"
+#include "../block/actor/BlockActor"
+#include "../../unmapped/Tick"
+
+
 class LevelChunk {
 
 public:
@@ -115,7 +135,7 @@ public:
     void getAboveTopSolidBlock(ChunkBlockPos const&, bool, bool, bool);
     bool isAABBOverlappingChunk(BlockPos const&, BlockPos const&)const;
     bool isAABBFullyInChunk(BlockPos const&, BlockPos const&)const;
-    void needsSaving(int, int)const;
+    bool needsSaving(int, int)const;
     bool isDirty(void)const;
     void getBiome(ChunkBlockPos const&)const;
     void setBiome(Biome const&, ChunkBlockPos const&);
@@ -125,7 +145,7 @@ public:
     void getWaterColor(ChunkBlockPos const&);
     void setCachedTemperatureNoise(ChunkBlockPos const&, signed char);
     void getCachedTemperatureNoise(ChunkBlockPos const&);
-    void wasTickedThisTick(Tick const&)const;
+    bool wasTickedThisTick(Tick const&)const;
     void _generateOriginalLightingSubChunk(BlockSource &, unsigned long, bool);
     void generateOriginalLighting(ChunkViewSource &, bool);
     void getDimension(void)const;
@@ -144,7 +164,7 @@ public:
     void onBlockEntityChanged(void);
     void setupRedstoneCircuit(BlockSource &);
     bool isRedstoneSetupDone(void)const;
-    void needsUpgradeFix(void)const;
+    bool needsUpgradeFix(void)const;
     void getLoadedFormat(void)const;
     void applySeasonsPostProcess(BlockSource &);
     void checkSeasonsPostProcessDirty(void);

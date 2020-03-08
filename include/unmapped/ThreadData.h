@@ -1,6 +1,8 @@
 #pragma once
 
-using namespace NetherGenerator;
+
+
+using namespace OverworldGenerator;
 
 class ThreadData {
 

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../json/Value"
+#include "../../actor/Actor"
+#include "../../../unmapped/BehaviorFactory"
+
+
 class BehaviorDefinition {
 
 public:

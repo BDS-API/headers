@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/LevelChunk"
+#include "../bedrock/level/biome/Biome"
+
+
 class LayerBiomeSource : BiomeSource {
 
 public:

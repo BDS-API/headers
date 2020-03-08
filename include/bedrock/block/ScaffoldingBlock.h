@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+
+
 class ScaffoldingBlock : HeavyBlock {
 
 public:
@@ -15,7 +21,7 @@ public:
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
-    virtual void breaksFallingBlocks(Block const&)const;
+    virtual bool breaksFallingBlocks(Block const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void clip(BlockSource &, BlockPos const&, Vec3 const&, Vec3 const&, bool)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;

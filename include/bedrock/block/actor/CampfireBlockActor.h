@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../nbt/CompoundTag"
+
+
 class CampfireBlockActor : BlockActor {
 
 public:
@@ -12,8 +18,8 @@ public:
     virtual void tick(BlockSource &);
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getShadowRadius(BlockSource &)const;
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     CampfireBlockActor(BlockPos const&);
     void _finishCooking(BlockSource &, int);

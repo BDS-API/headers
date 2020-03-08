@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class CSHA1 {
 
 public:

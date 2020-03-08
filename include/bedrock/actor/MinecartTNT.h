@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "damagesource/ActorDamageSource"
+
+
 class MinecartTNT : Minecart {
 
 public:

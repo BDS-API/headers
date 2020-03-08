@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/level/LevelStorageSource"
+#include "../bedrock/level/LevelData"
+#include "../core/Path"
+#include "../core/FilePathManager"
+
+
 class ExternalFileLevelStorageSource : LevelStorageSource {
 
 public:
@@ -16,7 +22,7 @@ public:
     virtual void renameLevel(LevelData &, Core::Path const&, std::string const&);
     virtual void createBackupCopyOfWorld(std::string const&, std::string const&, std::string const&);
     virtual bool isConvertible(std::string const&);
-    virtual void requiresConversion(std::string const&);
+    virtual bool requiresConversion(std::string const&);
     virtual void convertLevel(std::string const&, ProgressListener *);
     virtual bool isLevelMarkedForSync(Core::Path const&)const;
     virtual bool isLevelPartiallyCopied(Core::Path const&)const;

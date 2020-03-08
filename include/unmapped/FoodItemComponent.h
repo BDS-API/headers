@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/item/ItemStack"
+#include "../json/Value"
+#include "../bedrock/item/Item"
+
+
 class FoodItemComponent {
 
 public:

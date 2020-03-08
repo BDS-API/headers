@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace EndCityPieces;
 
 class HouseTowerGenerator : EndCityPieces::SectionGenerator {

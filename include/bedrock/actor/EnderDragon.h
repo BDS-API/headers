@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/PathfinderNode"
+#include "../../unmapped/EndDragonFight"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/Vec3"
+
+
 class EnderDragon : Monster {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Mob"
+
+
 class OcelotAttackGoal : Goal {
 
 public:

@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+
+
 class Guardian : Monster {
 
 public:

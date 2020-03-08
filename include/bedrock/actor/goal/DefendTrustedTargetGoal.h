@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/TrustComponent"
+
+
 class DefendTrustedTargetGoal : NearestAttackableTargetGoal {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/BiomeSource"
+#include "../../../../unmapped/HardcodedSpawnAreaRegistry"
+
+
 class RandomScatteredLargeFeature : StructureFeature {
 
 public:

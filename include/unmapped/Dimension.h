@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../bedrock/network/packet/Packet"
+#include "../bedrock/level/LevelChunk"
+#include "../bedrock/level/Level"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/level/LevelListener"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class Dimension : LevelListener, SavedData {
 
 public:
@@ -96,8 +104,8 @@ public:
     void getTickingAreasConst(void)const;
     void getTickingAreas(void);
     void _onNewTickingEntity(Actor &);
-    void processTickingAreaRemoves(void);
-    void processTickingAreaUpdates(void);
+    bool processTickingAreaRemoves(void);
+    bool processTickingAreaUpdates(void);
     void getEntityIdMapConst(void)const;
     void forEachPlayer(std::function<bool ()(Player const&)>)const;
     void findPlayer(std::function<bool ()(Player const&)>)const;

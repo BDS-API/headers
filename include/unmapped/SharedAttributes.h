@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/actor/attribute/TemporalAttributeBuff"
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/attribute/AttributeInstance"
+#include "../bedrock/actor/attribute/AttributeModifier"
+
+
 class SharedAttributes {
 
 public:

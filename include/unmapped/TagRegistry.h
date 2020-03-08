@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class TagRegistry {
 
 public:
@@ -18,6 +20,6 @@ public:
     void addTagToSet(IDType<TagIDType>, IDType const&<TagSetIDType>);
     void removeTagFromSet(IDType<TagIDType>, IDType const&<TagSetIDType>);
     void removeTagFromSet(std::string const&, IDType<TagSetIDType> const&);
-    void setsIntersect(IDType<TagSetIDType>, IDType<TagSetIDType>)const;
+    bool setsIntersect(IDType<TagSetIDType>, IDType<TagSetIDType>)const;
     void getTagIDsInSet(IDType<TagSetIDType>);
 };

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../actor/Actor"
+#include "../actor/Player"
+
+
 class EnchantingTableBlock : ActorBlock {
 
 public:

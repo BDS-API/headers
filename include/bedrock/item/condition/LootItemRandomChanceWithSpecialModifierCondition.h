@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/Random"
+#include "../../../json/Value"
+
+
 class LootItemRandomChanceWithSpecialModifierCondition : LootItemCondition {
 
 public:

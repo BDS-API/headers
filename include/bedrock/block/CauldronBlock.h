@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../level/Level"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+#include "../item/ItemStack"
+
+
 class CauldronBlock : ActorBlock {
 
 public:
@@ -16,7 +24,7 @@ public:
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void handleEntityInside(BlockSource &, BlockPos const&, Actor *, Vec3 &)const;
     virtual bool hasComparatorSignal(void)const;

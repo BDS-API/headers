@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class DisconnectPacket : Packet {
 
 public:

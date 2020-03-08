@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class Util {
 
 public:
@@ -94,8 +96,8 @@ public:
     void toUpper(std::string const&);
     void toLowerInPlace(std::string &);
     void toUpperInPlace(std::string &);
-    void startsWith(std::string const&, std::string const&);
-    void startsWith(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>);
+    bool startsWith(std::string const&, std::string const&);
+    bool startsWith(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>);
     void normalizeLineEndings(std::string &);
     void cp437ToUTF8(std::string const&);
     void cp1252ToUTF8(std::string const&);
@@ -104,9 +106,9 @@ public:
     bool isValidUTF8(std::string const&);
     void u64FromString(std::string const&);
     void utf8len(std::string const&);
-    void endsWith(std::string const&, std::string const&);
-    void endsWith(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>);
-    void endsWithCaseInsensitive(std::string const&, std::string const&);
+    bool endsWith(std::string const&, std::string const&);
+    bool endsWith(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>);
+    bool endsWithCaseInsensitive(std::string const&, std::string const&);
     void split(std::string const&, char);
     void split(std::string const&, std::function<bool ()(char)>);
     void safeGetline(std::istream &, std::string &);

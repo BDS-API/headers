@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/NetworkIdentifier"
+
+
 class Packet {
 
 public:

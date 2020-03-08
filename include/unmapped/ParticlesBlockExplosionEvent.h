@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/nbt/CompoundTag"
+
+
 class ParticlesBlockExplosionEvent {
 
 public:

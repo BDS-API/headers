@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../level/biome/Biome"
+#include "../../unmapped/IWorldRegistriesProvider"
+#include "../../unmapped/FilterContext"
+
+
 class FilterTestBiomeHasTag : SimpleTagIDFilterTest {
 
 public:

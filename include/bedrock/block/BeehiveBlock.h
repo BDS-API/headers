@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+#include "../item/ItemStack"
+
+
 class BeehiveBlock : ActorBlock {
 
 public:
@@ -8,7 +16,7 @@ public:
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual void executeEvent(BlockSource &, BlockPos const&, Block const&, std::string const&, Actor &)const;

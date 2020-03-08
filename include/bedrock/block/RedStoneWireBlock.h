@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/Random"
+
+
 class RedStoneWireBlock : BlockLegacy {
 
 public:
@@ -15,7 +20,7 @@ public:
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getColor(Block const&)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;

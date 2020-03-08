@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/Random"
+#include "../../unmapped/Block"
+
+
 class MelonBlock : BlockLegacy {
 
 public:

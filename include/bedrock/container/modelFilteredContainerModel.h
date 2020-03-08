@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+
+
 class FilteredContainerModel : ExpandoContainerModel {
 
 public:

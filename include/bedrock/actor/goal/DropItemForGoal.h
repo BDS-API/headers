@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/BlockSource"
+#include "../Actor"
+
+
 class DropItemForGoal : BaseMoveToBlockGoal {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../actor/Player"
+#include "../../block/actor/BeaconBlockActor"
+
+
 class BeaconContainerManagerModel : LevelContainerManagerModel {
 
 public:

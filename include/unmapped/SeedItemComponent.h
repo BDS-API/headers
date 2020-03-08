@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/item/ItemStack"
+#include "../json/Value"
+#include "../bedrock/item/Item"
+
+
 class SeedItemComponent {
 
 public:

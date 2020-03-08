@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../container/CraftingContainer"
+#include "../../../unmapped/RecipeIngredient"
+#include "../../../mce/UUID"
+
+
 class ShapelessRecipe : Recipe {
 
 public:

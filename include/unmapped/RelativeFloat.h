@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class RelativeFloat {
 
 public:

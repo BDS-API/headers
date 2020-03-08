@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../../unmapped/Recipes"
+#include "../../item/ItemInstance"
+#include "../model/ContainerModel"
+#include "../../../unmapped/ItemDescriptor"
+
+
 class EnchantingInputContainerController : ContainerController {
 
 public:

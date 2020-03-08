@@ -1,5 +1,9 @@
 #pragma once
 
+#include "orgin/CommandOrigin"
+#include "../../unmapped/Vec3"
+
+
 class CommandPosition {
 
 public:

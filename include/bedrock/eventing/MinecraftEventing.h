@@ -1,5 +1,29 @@
 #pragma once
 
+#include "../../unmapped/ResourcePacksInfoData"
+#include "../../unmapped/NewBlockID"
+#include "../actor/Actor"
+#include "../block/actor/ChalkboardBlockActor"
+#include "../../unmapped/PackSettings"
+#include "../../unmapped/Option"
+#include "../../unmapped/ResourcePack"
+#include "../level/LevelChunk"
+#include "../../core/Path"
+#include "../actor/Player"
+#include "../../unmapped/Event"
+#include "../../unmapped/ItemDescriptor"
+#include "../../unmapped/PushNotificationMessage"
+#include "../../unmapped/StackStats"
+#include "../actor/Mob"
+#include "../../unmapped/Block"
+#include "../level/Level"
+#include "../../unmapped/StructureEditorData"
+#include "../../unmapped/PackInstance"
+#include "../../unmapped/ContentIdentity"
+#include "../pack/PackManifest"
+#include "../actor/ArmorStand"
+
+
 class MinecraftEventing : IMinecraftEventing {
 
 public:

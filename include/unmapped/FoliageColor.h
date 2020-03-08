@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../mce/Image"
+
+
 class FoliageColor {
 
 public:

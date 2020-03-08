@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../../../unmapped/BoundingBox"
+#include "../../../../../unmapped/BlockSource"
+#include "../StrongholdPiece"
+#include "../StructurePiece"
+
+
 class SHPortalRoom : StrongholdPiece {
 
 public:

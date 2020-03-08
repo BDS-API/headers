@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/Random"
+
+
 class EndGatewayBlock : ActorBlock {
 
 public:
@@ -9,7 +14,7 @@ public:
     virtual void waterSpreadCausesSpawn(void)const;
     virtual bool canContainLiquid(void)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
 

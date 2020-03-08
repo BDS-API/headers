@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class AABBBucket {
 
 public:
@@ -14,6 +16,6 @@ public:
     void mergeAABBs(void);
     void markDirty(void);
     bool isDirty(void);
-    void needsFinalize(void)const;
+    bool needsFinalize(void)const;
     void clearNeedsFinalize(void);
 };

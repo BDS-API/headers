@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../actor/Player"
+#include "../../item/ItemInstance"
+#include "../../network/packet/CraftingEventPacket"
+
+
 class AnvilContainerManagerModel : ContainerManagerModel {
 
 public:

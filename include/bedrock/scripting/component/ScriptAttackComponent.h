@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/ScriptServerContext"
+#include "../ScriptVersionInfo"
+
+
 class ScriptAttackComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:

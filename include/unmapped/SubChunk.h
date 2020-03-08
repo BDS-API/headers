@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/io/IDataOutput"
+#include "../bedrock/io/IDataInput"
+
+
 class SubChunk {
 
 public:

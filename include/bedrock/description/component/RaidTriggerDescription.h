@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../json/Value"
+
+
 class RaidTriggerDescription : ComponentDescription {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../block/actor/ChestBlockActor"
+#include "../actor/Player"
+
+
 class EnderChestContainer : FillingContainer {
 
 public:

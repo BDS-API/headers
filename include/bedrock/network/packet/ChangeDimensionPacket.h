@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/Dimension"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/Vec3"
+
+
 class ChangeDimensionPacket : Packet {
 
 public:

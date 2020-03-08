@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/command/Symbol"
+
+
 using namespace CommandRegistry;
 
 class ParseToken {

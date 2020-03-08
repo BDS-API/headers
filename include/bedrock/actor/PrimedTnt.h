@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/Vec3"
+
+
 class PrimedTnt : Actor {
 
 public:

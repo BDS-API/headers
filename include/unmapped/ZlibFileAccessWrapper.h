@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/file/access/IFileAccess"
+
+
 class ZlibFileAccessWrapper {
 
 public:

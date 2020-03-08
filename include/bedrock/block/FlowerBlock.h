@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/Random"
+
+
 class FlowerBlock : BushBlock {
 
 public:

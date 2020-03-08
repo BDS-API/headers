@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../../unmapped/Random"
+
+
 class LadderBlock : BlockLegacy {
 
 public:

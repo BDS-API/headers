@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../Container"
+#include "../../actor/Player"
+#include "../../../unmapped/ContainerContentChangeListener"
+#include "../../item/ItemStack"
+
+
 class BaseContainerMenu : ContainerContentChangeListener, IContainerManager {
 
 public:

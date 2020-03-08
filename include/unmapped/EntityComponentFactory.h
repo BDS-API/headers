@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/definition/DefinitionInstanceGroup"
+
+
 class EntityComponentFactory {
 
 public:

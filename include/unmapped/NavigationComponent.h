@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/actor/Mob"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/actor/navigation/PathNavigation"
+
+
 class NavigationComponent {
 
 public:

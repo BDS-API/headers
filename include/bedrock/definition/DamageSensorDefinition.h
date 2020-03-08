@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/EntityContext"
+#include "../../unmapped/DamageSensorTrigger"
+#include "../../json/Value"
+
+
 class DamageSensorDefinition {
 
 public:

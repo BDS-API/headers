@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/SemVersion"
+
+
 class CommandVersion {
 
 public:

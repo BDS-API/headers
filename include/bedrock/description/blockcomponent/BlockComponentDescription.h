@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../block/BlockLegacy"
+#include "../../definition/BlockDefinition"
+
+
 class BlockComponentDescription {
 
 public:

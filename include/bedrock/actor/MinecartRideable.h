@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+
+
 class MinecartRideable : Minecart {
 
 public:

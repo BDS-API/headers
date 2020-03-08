@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/definition/ConnectionDefinition"
+#include "../raknet/SystemAddress"
+
+
 class RakNetInstance : Connector {
 
 public:

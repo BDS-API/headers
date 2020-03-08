@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../actor/Mob"
+#include "../actor/Player"
+
+
 class CrossbowItem : RangedWeaponItem {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/FeatureRegistry"
+
+
 class LegacyIceFeature : Feature {
 
 public:

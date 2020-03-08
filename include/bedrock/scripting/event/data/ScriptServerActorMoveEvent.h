@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../../unmapped/ActorUniqueID"
+#include "../../../../unmapped/ScriptEngine"
+
+
 class ScriptServerActorMoveEvent : ScriptEventData {
 
 public:

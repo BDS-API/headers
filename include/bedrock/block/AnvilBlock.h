@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class AnvilBlock : HeavyBlock {
 
 public:
@@ -8,9 +15,9 @@ public:
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const;
     virtual bool isCraftingBlock(void)const;
     virtual bool canContainLiquid(void)const;
-    virtual void breaksFallingBlocks(Block const&)const;
+    virtual bool breaksFallingBlocks(Block const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual void buildDescriptionId[abi:cxx11](Block const&)const;

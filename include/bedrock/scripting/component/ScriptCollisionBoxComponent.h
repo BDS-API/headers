@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/ScriptServerContext"
+#include "../ScriptVersionInfo"
+
+
 class ScriptCollisionBoxComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:

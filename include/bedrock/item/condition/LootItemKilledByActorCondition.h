@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ActorDefinitionIdentifier"
+#include "../../../unmapped/Random"
+#include "../../../json/Value"
+
+
 class LootItemKilledByActorCondition : LootItemCondition {
 
 public:

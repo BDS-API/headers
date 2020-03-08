@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+
+
 class Llama : Animal {
 
 public:

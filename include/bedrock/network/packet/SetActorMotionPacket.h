@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../actor/Actor"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class SetActorMotionPacket : Packet {
 
 public:

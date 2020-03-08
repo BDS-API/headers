@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/StructureManager"
+#include "../../LevelChunk"
+#include "../../../../unmapped/BlockSource"
+
+
 using namespace PillagerOutpostPieces;
 
 class PillagerOutpostPiece : TemplateStructurePiece {

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../raknet/BitStream"
+
+
 class DatagramHeaderFormat {
 
 public:

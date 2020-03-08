@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../eventing/IMinecraftEventing"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/StructureEditorData"
+#include "../../nbt/CompoundTag"
+
+
 class StructureBlockActor : BlockActor {
 
 public:
@@ -13,7 +21,7 @@ public:
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     StructureBlockActor(BlockPos const&);
     void _loadStructure(BlockSource &, BlockPos const&);

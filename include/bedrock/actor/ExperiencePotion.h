@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+
+
 class ExperiencePotion : Throwable {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/Level"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class BlockPalette {
 
 public:

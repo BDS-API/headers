@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Actor"
+#include "../../nbt/CompoundTag"
+#include "../../level/generator/WorldGenerator"
+
+
 class EndGatewayBlockActor : BlockActor {
 
 public:

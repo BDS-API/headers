@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../raknet/SocketDescriptor"
+#include "../raknet/RakPeerInterface"
+
+
 class RakPeerHelper {
 
 public:

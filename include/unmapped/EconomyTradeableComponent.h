@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../bedrock/network/packet/UpdateTradePacket"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Player"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class EconomyTradeableComponent {
 
 public:

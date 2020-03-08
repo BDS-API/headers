@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../raknet/BitStream"
+#include "../core/Path"
+
+
 class RegionFile {
 
 public:

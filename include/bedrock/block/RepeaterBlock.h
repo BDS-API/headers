@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class RepeaterBlock : DiodeBlock {
 
 public:
@@ -16,7 +22,7 @@ public:
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;

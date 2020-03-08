@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Mob"
+
+
 class MoveThroughVillageGoal : Goal {
 
 public:

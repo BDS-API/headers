@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../io/IDataOutput"
+#include "../io/IDataInput"
+#include "../../unmapped/TagMemoryChunk"
+
+
 class ByteArrayTag : Tag {
 
 public:

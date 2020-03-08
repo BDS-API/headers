@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Description"
+
+
 class PropertyDescription : Description {
 
 public:

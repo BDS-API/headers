@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/level/Level"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Player"
+#include "../bedrock/actor/damagesource/ActorDamageSource"
+
+
 using namespace LootTableContext;
 
 class Builder {

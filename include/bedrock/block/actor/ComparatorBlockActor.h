@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../nbt/CompoundTag"
+
+
 class ComparatorBlockActor : BlockActor {
 
 public:

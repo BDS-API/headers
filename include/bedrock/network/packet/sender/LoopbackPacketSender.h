@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../Packet"
+#include "../../../../unmapped/NetworkIdentifier"
+#include "../../../actor/Player"
+#include "../../NetEventCallback"
+
+
 class LoopbackPacketSender : PacketSender {
 
 public:

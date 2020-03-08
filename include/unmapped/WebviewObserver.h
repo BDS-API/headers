@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../core/SingleThreadedLock"
+
+
 class WebviewObserver : Core::Observer<WebviewObserver, Core::SingleThreadedLock> {
 
 public:

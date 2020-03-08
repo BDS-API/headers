@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/BlockPos"
+#include "../../../../unmapped/StructureManager"
+#include "../../../../unmapped/BlockSource"
+
+
 using namespace OceanRuinPieces;
 
 class OceanRuinPiece : TemplateStructurePiece {

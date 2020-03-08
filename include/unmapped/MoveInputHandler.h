@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Player"
+#include "../bedrock/network/packet/PlayerAuthInputPacket"
+
+
 class MoveInputHandler : MoveInput {
 
 public:
@@ -15,7 +19,7 @@ public:
     bool isMovingForward(void)const;
     bool isMovingLeft(void)const;
     bool isMovingRight(void)const;
-    void wantsMoveForward(void)const;
+    bool wantsMoveForward(void)const;
     bool isJumpDown(void)const;
     void setSneakPersistence(bool);
     void setGazeDirection(Vec3 const&);

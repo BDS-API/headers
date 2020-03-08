@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/LevelData"
+#include "../bedrock/pack/ResourcePackManager"
+
+
 class EducationOptions : ResourcePackListener {
 
 public:

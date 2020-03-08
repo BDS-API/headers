@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/Player"
+
+
 class ClientPlayerEventCoordinator {
 
 public:

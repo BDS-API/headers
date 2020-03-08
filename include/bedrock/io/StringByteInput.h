@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class StringByteInput : BytesDataInput {
 
 public:

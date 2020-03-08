@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/BlockSource"
+#include "stronghold/SHStartPiece"
+#include "../../../../unmapped/Random"
+
+
 class StrongholdPiece : StructurePiece {
 
 public:

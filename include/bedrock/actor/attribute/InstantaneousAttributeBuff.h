@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class InstantaneousAttributeBuff : AttributeBuff {
 
 public:

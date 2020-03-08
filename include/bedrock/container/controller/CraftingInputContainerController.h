@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../model/ContainerModel"
+#include "../../crafting/recipe/Recipe"
+
+
 class CraftingInputContainerController : CraftingContainerController {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/Vec3"
+
+
 class LevelSoundEventPacketV1 : Packet {
 
 public:

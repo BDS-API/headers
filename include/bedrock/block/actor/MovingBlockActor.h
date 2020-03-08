@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../nbt/CompoundTag"
+
+
 class MovingBlockActor : BlockActor {
 
 public:
@@ -8,9 +15,9 @@ public:
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getOwningPiston(BlockSource &);
     virtual void getDeletionDelayTimeSeconds(void)const;
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     MovingBlockActor(BlockPos const&);
     void getDrawPos(BlockSource &, float);

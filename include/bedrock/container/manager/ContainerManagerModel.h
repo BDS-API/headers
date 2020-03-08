@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../actor/Player"
+#include "../model/ContainerModel"
+
+
 class ContainerManagerModel : IContainerManager {
 
 public:

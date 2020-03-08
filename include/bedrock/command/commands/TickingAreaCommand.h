@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../Command"
+#include "../CommandRegistry"
+#include "../orgin/CommandOrigin"
+
+
 class TickingAreaCommand : Command {
 
 public:

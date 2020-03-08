@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../mce/UUID"
+
+
 class WorldTemplateManager {
 
 public:

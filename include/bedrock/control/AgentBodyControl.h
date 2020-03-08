@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../actor/Mob"
+
+
 class AgentBodyControl : BodyControl {
 
 public:

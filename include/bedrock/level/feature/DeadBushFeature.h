@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/Material"
+#include "../../../unmapped/BlockSource"
+
+
 class DeadBushFeature : Feature {
 
 public:

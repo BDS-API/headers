@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Player"
+
+
 class Goal {
 
 public:

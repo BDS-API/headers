@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../orgin/CommandOrigin"
+#include "../CommandRegistry"
+
+
 class TellRawCommand : MessagingCommand {
 
 public:

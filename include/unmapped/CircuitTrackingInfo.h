@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/circuit/component/BaseCircuitComponent"
+
+
 class CircuitTrackingInfo {
 
 public:

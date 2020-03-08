@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/ActorUniqueID"
+#include "../../level/Level"
+
+
 class AutomationPlayerCommandOrigin : PlayerCommandOrigin {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Pack"
+#include "../../mce/UUID"
+#include "../../unmapped/PackManifestFactory"
+
+
 class RealmsUnknownPackSource : PackSource {
 
 public:

@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace ScoreboardCommand;
 
 class SetScoreOutput {

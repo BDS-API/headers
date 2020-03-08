@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../json/Value"
+#include "../../level/ServerLevel"
+
+
 class ScriptCommandOrigin : CommandOrigin {
 
 public:

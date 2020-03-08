@@ -1,5 +1,19 @@
 #pragma once
 
+#include "../../actor/Actor"
+#include "../../../unmapped/Objective"
+#include "../../actor/Player"
+#include "../../command/CommandSoftEnumRegistry"
+#include "../../nbt/CompoundTag"
+#include "../../network/packet/sender/PacketSender"
+#include "../../../unmapped/ScoreboardIdentityRef"
+#include "../../network/packet/Packet"
+#include "../../../unmapped/ScoreboardId"
+#include "../../../unmapped/NetworkIdentifier"
+#include "../storage/LevelStorage"
+#include "../../../unmapped/PlayerScoreboardId"
+
+
 class ServerScoreboard : Scoreboard {
 
 public:

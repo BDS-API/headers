@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/Vec3"
+
+
 class Shulker : Mob {
 
 public:

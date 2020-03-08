@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class ScriptBinderLevelTemplate : ScriptBinderTemplate {
 
 public:

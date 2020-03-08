@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class ClientAutomationCommandOrigin : CommandOrigin {
 
 public:

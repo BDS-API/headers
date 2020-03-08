@@ -1,10 +1,14 @@
 #pragma once
 
+#include "../actor/Player"
+#include "../nbt/CompoundTag"
+
+
 class WritableBookItem : Item {
 
 public:
     virtual WritableBookItem::~WritableBookItem();
-    virtual void requiresInteract(void)const;
+    virtual bool requiresInteract(void)const;
     virtual void use(ItemStack &, Player &)const;
     virtual void getInteractText[abi:cxx11](Player const&)const;
 

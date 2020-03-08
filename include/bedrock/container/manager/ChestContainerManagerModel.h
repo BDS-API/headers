@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../item/ItemInstance"
+#include "../../actor/Player"
+
+
 class ChestContainerManagerModel : LevelContainerManagerModel {
 
 public:

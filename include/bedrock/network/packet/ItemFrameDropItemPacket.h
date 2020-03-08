@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../item/ItemStack"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class ItemFrameDropItemPacket : Packet {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/Random"
+
+
 class StemBlock : BushBlock {
 
 public:
@@ -11,7 +16,7 @@ public:
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getColor(Block const&)const;
     virtual void getColorAtPos(BlockSource &, BlockPos const&)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;

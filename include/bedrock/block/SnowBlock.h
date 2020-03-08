@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../actor/Mob"
+#include "../../unmapped/Random"
+
+
 class SnowBlock : BlockLegacy {
 
 public:

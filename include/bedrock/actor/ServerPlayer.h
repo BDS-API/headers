@@ -1,5 +1,24 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/InventoryTransaction"
+#include "../item/ItemStack"
+#include "../../unmapped/ActorUniqueID"
+#include "../level/chunksource/ChunkSource"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../network/packet/Packet"
+#include "../level/Level"
+#include "../../unmapped/ComplexInventoryTransaction"
+#include "../container/manager/IContainerManager"
+#include "../../unmapped/Dimension"
+#include "../../unmapped/Tick"
+#include "../text/TextObjectRoot"
+#include "../../unmapped/Vec3"
+
+
 class ServerPlayer : Player {
 
 public:

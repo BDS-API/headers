@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/definition/GeneDefinition"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class GeneticsComponent {
 
 public:

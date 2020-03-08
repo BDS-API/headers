@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../item/ItemStack"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+
+
 class ItemActor : Actor {
 
 public:

@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../unmapped/ActorUniqueID"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/Random"
+#include "../../unmapped/Color"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+
+
 class AreaEffectCloud : Actor {
 
 public:

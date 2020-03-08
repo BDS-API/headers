@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "damagesource/ActorDamageSource"
+
+
 class Npc : Mob {
 
 public:
@@ -9,7 +15,7 @@ public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual Npc::~Npc();
-    virtual void breaksFallingBlocks(void)const;
+    virtual bool breaksFallingBlocks(void)const;
     virtual bool canShowNameTag(void)const;
     virtual void getFormattedNameTag[abi:cxx11](void)const;
     virtual void interactPreventDefault(void);

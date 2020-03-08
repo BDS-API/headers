@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../bedrock/scripting/ScriptObjectHandle"
+#include "../bedrock/scripting/ScriptReportItem"
+#include "../bedrock/ServerInstance"
+#include "../bedrock/scripting/ScriptVersionInfo"
+#include "../bedrock/level/Level"
+#include "../bedrock/pack/ResourcePackManager"
+
+
 class MinecraftServerScriptEngine : ScriptEngineWithContext<ScriptServerContext>, ServerInstanceEventListener {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../json/Value"
+
+
 class SkinData {
 
 public:

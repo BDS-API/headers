@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../../unmapped/ActorLink"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class SetActorLinkPacket : Packet {
 
 public:

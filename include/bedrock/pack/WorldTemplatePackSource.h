@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/WorldTemplateManager"
+#include "../../unmapped/PackManifestFactory"
+
+
 class WorldTemplatePackSource : DirectoryPackSource {
 
 public:

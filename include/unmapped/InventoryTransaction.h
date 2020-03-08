@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Player"
+#include "../bedrock/item/ItemStack"
+
+
 class InventoryTransaction {
 
 public:

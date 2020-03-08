@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace com::mojang::clacks::protocol;
 
 class Xuid : google::protobuf::Message {

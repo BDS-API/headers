@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/StructureEditorData"
+#include "../../../unmapped/NetworkBlockPosition"
+
+
 class StructureBlockUpdatePacket : Packet {
 
 public:

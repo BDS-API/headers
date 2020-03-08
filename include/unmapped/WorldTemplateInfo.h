@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/pack/WorldTemplatePackSource"
+#include "../core/Path"
+#include "../bedrock/pack/WorldTemplatePackManifest"
+
+
 class WorldTemplateInfo {
 
 public:

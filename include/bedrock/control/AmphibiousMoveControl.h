@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/MoveControlComponent"
+
+
 class AmphibiousMoveControl : GenericMoveControl {
 
 public:

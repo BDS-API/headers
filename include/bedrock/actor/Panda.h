@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../nbt/CompoundTag"
+
+
 class Panda : Animal {
 
 public:

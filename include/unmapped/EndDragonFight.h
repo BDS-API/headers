@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../bedrock/level/chunksource/ChunkViewSource"
+#include "../bedrock/actor/EnderCrystal"
+#include "../bedrock/block/actor/EndGatewayBlockActor"
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/EnderDragon"
+
+
 class EndDragonFight {
 
 public:

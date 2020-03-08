@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class TridentRiptideEnchant : Enchant {
 
 public:

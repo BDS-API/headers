@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/item/ItemStack"
+#include "../json/Value"
+
+
 class LootTableEntry : LootPoolEntry {
 
 public:

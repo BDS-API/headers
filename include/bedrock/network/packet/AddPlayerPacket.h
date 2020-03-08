@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../actor/Player"
+#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class AddPlayerPacket : Packet {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/biome/Biome"
+
+
 using namespace VanillaSurfaceBuilders;
 
 class NetherSurfaceBuilder : ISurfaceBuilder {

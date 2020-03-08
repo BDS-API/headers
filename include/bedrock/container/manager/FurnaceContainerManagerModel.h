@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/HashString"
+#include "../../../unmapped/ContainerItemStack"
+#include "../../actor/Player"
+#include "../../item/ItemInstance"
+#include "../../item/ItemStack"
+#include "../../../unmapped/ItemDescriptor"
+
+
 class FurnaceContainerManagerModel : ContainerManagerModel {
 
 public:

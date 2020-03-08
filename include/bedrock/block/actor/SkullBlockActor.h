@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../nbt/CompoundTag"
+
+
 class SkullBlockActor : BlockActor {
 
 public:
@@ -9,7 +15,7 @@ public:
     virtual void tick(BlockSource &);
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     SkullBlockActor(BlockPos const&);
     void getSkullType(void)const;

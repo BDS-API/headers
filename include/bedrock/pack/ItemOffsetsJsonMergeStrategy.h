@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/LoadedResourceData"
+
+
 class ItemOffsetsJsonMergeStrategy : ResourcePackMergeStrategy {
 
 public:

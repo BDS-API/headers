@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../CommandOutput"
+#include "../CommandRegistry"
+#include "../orgin/CommandOrigin"
+
+
 class SaveCommand : ServerCommand {
 
 public:

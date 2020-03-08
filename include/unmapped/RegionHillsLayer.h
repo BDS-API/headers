@@ -1,6 +1,9 @@
 #pragma once
 
-class RegionHillsLayer {
+#include "../bedrock/level/biome/Biome"
+
+
+class RegionHillsLayer : MixerLayer<Biome *, Biome *> {
 
 public:
     virtual RegionHillsLayer::~RegionHillsLayer();

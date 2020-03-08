@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../bedrock/ServerInstance"
+#include "../bedrock/level/Level"
+#include "../bedrock/actor/Player"
+#include "../bedrock/command/CommandRegistry"
+#include "../bedrock/pack/ResourcePackManager"
+
+
 class VanillaGameModuleServer : GameModuleServer {
 
 public:

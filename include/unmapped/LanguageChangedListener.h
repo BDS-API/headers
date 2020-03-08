@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace I18n;
 
 class LanguageChangedListener {

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../level/Level"
+
+
 class StompEggGoal : StompBlockGoal {
 
 public:

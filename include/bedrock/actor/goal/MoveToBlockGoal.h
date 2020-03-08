@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/Block"
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/Path"
+
+
 class MoveToBlockGoal : Goal {
 
 public:

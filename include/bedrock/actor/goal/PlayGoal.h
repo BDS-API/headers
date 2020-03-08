@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Villager"
+
+
 class PlayGoal : Goal {
 
 public:

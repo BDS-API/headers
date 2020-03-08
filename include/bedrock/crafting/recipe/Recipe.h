@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/HashString"
+#include "../../item/ItemInstance"
+#include "../../../unmapped/ItemDescriptor"
+
+
 class Recipe {
 
 public:
@@ -7,9 +12,9 @@ public:
     virtual void getId(void)const;
     virtual void getItemPack(void)const;
     virtual bool isMultiRecipe(void)const;
-    virtual void itemsMatch(ItemDescriptor const&, ItemDescriptor const&)const;
-    virtual void itemsMatch(ItemDescriptor const&, ItemDescriptor const&, CompoundTag const*)const;
-    virtual void itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;
+    virtual bool itemsMatch(ItemDescriptor const&, ItemDescriptor const&)const;
+    virtual bool itemsMatch(ItemDescriptor const&, ItemDescriptor const&, CompoundTag const*)const;
+    virtual bool itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;
 
     Recipe(std::string, Util::HashString);
     Recipe(Recipe&&);

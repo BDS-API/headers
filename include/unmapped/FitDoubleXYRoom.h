@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/definition/RoomDefinition"
+
+
 class FitDoubleXYRoom : MonumentRoomFitter {
 
 public:

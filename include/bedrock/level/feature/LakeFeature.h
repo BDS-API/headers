@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/Block"
+
+
 class LakeFeature : Feature {
 
 public:

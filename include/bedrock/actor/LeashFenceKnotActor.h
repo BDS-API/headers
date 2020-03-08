@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/Vec3"
+
+
 class LeashFenceKnotActor : HangingActor {
 
 public:

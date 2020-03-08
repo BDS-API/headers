@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../item/ItemInstance"
+#include "../model/ContainerModel"
+#include "../../crafting/recipe/Recipe"
+
+
 class CraftingOutputContainerController : CraftingContainerController {
 
 public:

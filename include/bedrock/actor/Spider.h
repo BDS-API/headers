@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/ActorDefinitionGroup"
+
+
 class Spider : Monster {
 
 public:

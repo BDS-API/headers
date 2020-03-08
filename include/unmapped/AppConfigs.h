@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class AppConfigs {
 
 public:
@@ -15,7 +17,7 @@ public:
     virtual bool isCoursesCacheEnabled(void)const;
     virtual void getEducationEditionOffering(void)const;
     virtual void getConnectionDefinition(void)const;
-    virtual void supportsChangingMultiplayerDuringPlay(void)const;
+    virtual bool supportsChangingMultiplayerDuringPlay(void)const;
 
     AppConfigs(void);
     void tryLeaveGameOverride(SceneStack &, SceneFactory &);

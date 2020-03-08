@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../../../unmapped/BlockSource"
+#include "../../../../../unmapped/Random"
+#include "../StrongholdPiece"
+#include "../StructurePiece"
+
+
 class SHStraightStairsDown : StrongholdPiece {
 
 public:

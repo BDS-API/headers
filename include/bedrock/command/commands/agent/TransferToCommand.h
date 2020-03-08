@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../actor/Player"
+
+
 using namespace AgentCommands;
 
 class TransferToCommand : AgentCommands::Command {

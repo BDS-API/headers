@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/Vec3"
+
+
 class MoveToPOIGoal : BaseMoveToGoal {
 
 public:

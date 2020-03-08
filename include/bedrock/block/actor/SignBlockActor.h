@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/CachedMessageData"
+#include "../../text/TextObjectRoot"
+#include "../../nbt/CompoundTag"
+
+
 class SignBlockActor : BlockActor {
 
 public:
@@ -8,9 +16,9 @@ public:
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getShadowRadius(BlockSource &)const;
     virtual void getImmersiveReaderText[abi:cxx11](BlockSource &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     SignBlockActor(BlockPos const&);
     void setMessage(TextObjectRoot, std::string);

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/goal/Goal"
+
+
 class PrioritizedGoal {
 
 public:

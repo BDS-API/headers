@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/BlockSource"
+
+
 class RaidGardenGoal : BaseMoveToBlockGoal {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/AttributeData"
+#include "../../io/BinaryStream"
+
+
 using namespace UpdateAttributesPacket;
 
 class AttributeData {

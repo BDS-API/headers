@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/Random"
+#include "../../unmapped/Vec3"
+
+
 class PortalBlock : BlockLegacy {
 
 public:
@@ -14,7 +20,7 @@ public:
     virtual void mayPick(BlockSource &, Block const&, bool)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;

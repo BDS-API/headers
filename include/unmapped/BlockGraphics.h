@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/pack/ResourcePackManager"
+#include "../bedrock/block/BlockLegacy"
+#include "../json/Value"
+
+
 class BlockGraphics {
 
 public:

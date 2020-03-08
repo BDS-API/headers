@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/Scheduler"
+
+
 class BatchedNetworkPeer : NetworkPeer {
 
 public:

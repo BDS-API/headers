@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../json/Value"
+
+
 class ExpressionNode {
 
 public:
@@ -60,14 +63,14 @@ public:
     void _getToken(char const*&, std::function<std::function const*<float ()(RenderParams &, std::vector<float, std::allocator<float>> const&)> ()(std::string const&, bool)>, std::function<std::function const*<MolangScriptArg ()(std::function const*, RenderParams const&<std::function const, std::allocator<std::function const>>)> ()(std::string const&, bool)>, unsigned long &);
     void tokenize(char const*, unsigned long &, std::function<std::function const*<float ()(RenderParams &, std::vector<float, std::allocator<float>> const&)> ()(std::string const&, bool)>, std::function<std::function const*<MolangScriptArg ()(std::function const*, RenderParams const&<std::function const, std::allocator<std::function const>>)> ()(std::string const&, bool)>);
     void buildTree(unsigned long, std::function<std::function const*<float ()(RenderParams &, std::vector<float, std::allocator<float>> const&)> ()(std::string const&, bool)>, std::function<std::function const*<MolangScriptArg ()(std::function const*, RenderParams const&<std::function const, std::allocator<std::function const>>)> ()(std::string const&, bool)>);
-    void processSections(void);
-    void processParamsAndVariables(void);
-    void processSemicolons(void);
-    void processArrays(void);
-    void processMathFuncs(void);
-    void processNegatives(void);
-    void processBinaryExpression(ExpressionOp);
-    void processUnaryExpression(ExpressionOp);
+    bool processSections(void);
+    bool processParamsAndVariables(void);
+    bool processSemicolons(void);
+    bool processArrays(void);
+    bool processMathFuncs(void);
+    bool processNegatives(void);
+    bool processBinaryExpression(ExpressionOp);
+    bool processUnaryExpression(ExpressionOp);
     bool hasSubExpressions(void)const;
     void findClosingOp(unsigned long &, ExpressionOp)const;
     void queryFunctionAccessorFromString(std::string const&, bool);

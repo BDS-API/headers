@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../Actor"
+
+
 class MeleeAttackGoal : Goal {
 
 public:

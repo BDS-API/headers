@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/Mob"
+#include "../../io/BinaryStream"
+#include "../../item/ItemStack"
+
+
 class MobArmorEquipmentPacket : Packet {
 
 public:

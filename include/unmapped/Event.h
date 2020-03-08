@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace Social::Events;
 
 class Event {
@@ -12,10 +14,10 @@ public:
     Event(unsigned int, std::string const&, std::unordered_map<std::string, Social::Events::Property, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, Social::Events::Property>>> &&, int);
     bool hasMeasurements(void);
     void stampWithRecord(unsigned int);
-    void propertiesAsJsonValue(void)const;
-    void measurementsAsJsonValue(void)const;
+    bool propertiesAsJsonValue(void)const;
+    bool measurementsAsJsonValue(void)const;
     void updateMeasurements(Social::Events::Event const&);
-    void passesFilter(int)const;
+    bool passesFilter(int)const;
     void getUserId(void)const;
     void shouldAggregate(void)const;
 };

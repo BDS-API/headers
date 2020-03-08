@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../definition/Definition"
+#include "../../unmapped/IWorldRegistriesProvider"
+
+
 class FilterTest {
 
 public:

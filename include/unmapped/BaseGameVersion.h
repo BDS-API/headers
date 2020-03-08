@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class BaseGameVersion {
 
 public:
@@ -14,7 +16,7 @@ public:
     BaseGameVersion(BaseGameVersion::any_version_constructor);
     BaseGameVersion(SemVersion const&);
     bool isValid(void)const;
-    void asSemVersion(void)const;
+    bool asSemVersion(void)const;
     bool isAnyVersion(void)const;
     void getMajor(void)const;
     void getMinor(void)const;

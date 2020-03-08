@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/ContainerContentChangeListener"
+#include "../item/ItemStack"
+#include "../../unmapped/ContainerSizeChangeListener"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/ItemDescriptor"
+
+
 class Container {
 
 public:

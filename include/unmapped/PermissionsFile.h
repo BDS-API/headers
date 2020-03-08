@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Player"
+#include "../core/Path"
+
+
 class PermissionsFile {
 
 public:

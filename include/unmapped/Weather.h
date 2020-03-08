@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/LevelData"
+#include "../bedrock/level/LevelListener"
+
+
 class Weather : LevelListener {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../model/ContainerModel"
+#include "../../item/ItemInstance"
+
+
 class LabTableInputContainerController : ContainerController {
 
 public:

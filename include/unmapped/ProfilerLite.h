@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../core/Path"
+#include "../core/OutputFileStream"
+
+
 class ProfilerLite {
 
 public:

@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace Core;
 
 class FileStdStreamBuf : std::basic_streambuf<char, std::char_traits<char>> {

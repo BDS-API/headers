@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/EntityContext"
+#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class EntityServerPacket : Packet {
 
 public:

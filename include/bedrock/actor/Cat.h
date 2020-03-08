@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/RenderParams"
+
+
 class Cat : Animal {
 
 public:

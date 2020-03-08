@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/NavigationComponent"
+
+
 class WallClimberPathNavigation : PathNavigation {
 
 public:

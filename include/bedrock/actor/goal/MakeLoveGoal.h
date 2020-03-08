@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../VillagerBase"
+
+
 class MakeLoveGoal : Goal {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/FilterContext"
+
+
 class FilterTestDaytime : SimpleBoolFilterTest {
 
 public:

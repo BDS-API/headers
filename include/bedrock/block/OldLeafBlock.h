@@ -1,11 +1,17 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class OldLeafBlock : LeafBlock {
 
 public:
     virtual OldLeafBlock::~OldLeafBlock();
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void buildDescriptionId[abi:cxx11](Block const&)const;

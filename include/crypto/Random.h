@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace Crypto::Random;
 
 class Random {

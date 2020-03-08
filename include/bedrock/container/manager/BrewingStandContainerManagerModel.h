@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../actor/Player"
+#include "../../item/ItemInstance"
+#include "../../item/ItemStack"
+#include "../../../unmapped/ItemDescriptor"
+
+
 class BrewingStandContainerManagerModel : ContainerManagerModel {
 
 public:

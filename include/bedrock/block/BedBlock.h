@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../actor/Actor"
+
+
 class BedBlock : BlockLegacy {
 
 public:
@@ -21,7 +27,7 @@ public:
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getSecondPart(BlockSource &, BlockPos const&, BlockPos&)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void telemetryVariant(BlockSource &, BlockPos const&)const;

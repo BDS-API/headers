@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Silverfish"
+
+
 class SilverfishMergeWithStoneGoal : RandomStrollGoal {
 
 public:

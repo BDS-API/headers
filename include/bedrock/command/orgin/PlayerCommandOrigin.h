@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../level/Level"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../actor/Player"
+
+
 class PlayerCommandOrigin : CommandOrigin {
 
 public:

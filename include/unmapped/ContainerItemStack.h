@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/item/ItemStack"
+
+
 class ContainerItemStack {
 
 public:
@@ -31,15 +35,15 @@ public:
     void getMaxStackSize(void)const;
     void getItemStack(void)const;
     void getItemInstance(void)const;
-    void matchesItem(ContainerItemStack const&)const;
+    bool matchesItem(ContainerItemStack const&)const;
     void getDescriptor(void)const;
     bool hasUserData(void)const;
     void getUserData(void)const;
     void getColor(void)const;
     void getItemStack(void);
     void getItemInstance(void);
-    void asItemStack(void)const;
-    void asItemInstance(void)const;
+    bool asItemStack(void)const;
+    bool asItemInstance(void)const;
     ContainerItemStack(ContainerItemStack const&);
     ContainerItemStack(ContainerItemStack&&);
 };

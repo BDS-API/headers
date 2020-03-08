@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class BoolOption : Option {
 
 public:

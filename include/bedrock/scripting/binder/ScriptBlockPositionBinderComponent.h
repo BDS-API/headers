@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/ScriptEngine"
+#include "../../../unmapped/BlockPos"
+
+
 class ScriptBlockPositionBinderComponent : ScriptBinderComponent {
 
 public:

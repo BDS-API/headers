@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/Random"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Actor"
+
+
 class MegaTreeFeature : TreeFeature {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Actor"
+
+
 class FlyNode : BehaviorNode {
 
 public:

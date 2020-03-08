@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+
+
 class Monster : Mob {
 
 public:

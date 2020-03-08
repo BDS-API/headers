@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../nbt/CompoundTag"
+
+
 class FireworkChargeItem : Item {
 
 public:

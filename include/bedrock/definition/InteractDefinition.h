@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/EntityContext"
+#include "../../unmapped/Interaction"
+#include "../../json/Value"
+
+
 class InteractDefinition {
 
 public:

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/HitResult"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/Vec3"
+
+
 class Fireball : Actor {
 
 public:

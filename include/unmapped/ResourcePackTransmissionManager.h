@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/network/packet/sender/PacketSender"
+
+
 class ResourcePackTransmissionManager {
 
 public:

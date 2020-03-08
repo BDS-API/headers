@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class DebugAssertException : std::exception {
 
 public:

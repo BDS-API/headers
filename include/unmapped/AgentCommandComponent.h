@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/command/commands/agent/Command"
+
+
 class AgentCommandComponent {
 
 public:

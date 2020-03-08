@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace SubChunkBrightnessStorage;
 
 class LightPair {

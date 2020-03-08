@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../MineshaftPiece"
+#include "../../../../../unmapped/BlockSource"
+#include "../../../../../unmapped/MineshaftData"
+#include "../StructurePiece"
+
+
 class MineshaftRoom : MineshaftPiece {
 
 public:

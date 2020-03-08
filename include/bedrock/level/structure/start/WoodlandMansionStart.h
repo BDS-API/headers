@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/BlockPos"
+#include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/BlockSource"
+
+
 class WoodlandMansionStart : StructureStart {
 
 public:

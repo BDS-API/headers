@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "damagesource/ActorDamageSource"
+
+
 class Turtle : Animal {
 
 public:

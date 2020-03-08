@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/Random"
+
+
 class SeaLanternBlock : BlockLegacy {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/tickingarea/ITickingArea"
+
+
 class ScriptBinderLevelTickingAreaTemplate : ScriptBinderTemplate {
 
 public:

@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Actor"
+#include "../../actor/Player"
+#include "../../nbt/CompoundTag"
+#include "../../../unmapped/CachedMessageData"
+
+
 class ChalkboardBlockActor : BlockActor {
 
 public:
@@ -8,9 +18,9 @@ public:
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getShadowRadius(BlockSource &)const;
     virtual void getImmersiveReaderText[abi:cxx11](BlockSource &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     ChalkboardBlockActor(BlockPos const&);
     bool isBaseChalkboard(void)const;

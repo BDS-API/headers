@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../actor/Player"
+
+
 class LecternBlock : ActorBlock {
 
 public:

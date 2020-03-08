@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../json/Value"
+
+
 class RandomValueBounds {
 
 public:
@@ -9,6 +12,6 @@ public:
     void getMax(void)const;
     void getInt(Random &)const;
     void getFloat(Random &)const;
-    void matchesValue(int)const;
+    bool matchesValue(int)const;
     void deserialize(Json::Value);
 };

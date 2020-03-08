@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../definition/Definition"
+
+
 class SimpleBoolFilterTest : FilterTest {
 
 public:

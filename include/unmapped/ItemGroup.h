@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/item/ItemInstance"
+
+
 class ItemGroup {
 
 public:

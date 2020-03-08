@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Actor"
+#include "../../../unmapped/BehaviorComponent"
+
+
 class BehaviorNode {
 
 public:

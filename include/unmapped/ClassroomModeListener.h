@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/eventing/IMinecraftEventing"
+#include "../bedrock/level/LevelChunk"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/level/LevelListener"
+
+
 class ClassroomModeListener : LevelListener {
 
 public:

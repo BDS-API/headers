@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../core/Path"
+#include "../../unmapped/ResourceLocation"
+
+
 class DirectoryPackAccessStrategy : PackAccessStrategy {
 
 public:

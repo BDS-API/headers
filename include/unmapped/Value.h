@@ -1,6 +1,8 @@
 #pragma once
 
-using namespace Ability;
+
+
+using namespace GameRule;
 
 class Value {
 
@@ -8,5 +10,6 @@ public:
 
     Value(void);
     Value(bool);
+    Value(int);
     Value(float);
 };

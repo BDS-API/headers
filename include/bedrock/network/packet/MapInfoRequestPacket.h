@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class MapInfoRequestPacket : Packet {
 
 public:

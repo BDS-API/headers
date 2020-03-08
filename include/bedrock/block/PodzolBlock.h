@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/Random"
+#include "../../unmapped/BlockSource"
+
+
 class PodzolBlock : BlockLegacy {
 
 public:

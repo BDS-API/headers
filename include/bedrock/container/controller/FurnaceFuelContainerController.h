@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../item/ItemInstance"
+#include "../model/ContainerModel"
+#include "../../../unmapped/ItemDescriptor"
+
+
 class FurnaceFuelContainerController : ContainerController {
 
 public:

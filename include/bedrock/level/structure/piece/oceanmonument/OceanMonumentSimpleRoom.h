@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../OceanMonumentPiece"
+#include "../../../../../unmapped/BlockSource"
+
+
 class OceanMonumentSimpleRoom : OceanMonumentPiece {
 
 public:

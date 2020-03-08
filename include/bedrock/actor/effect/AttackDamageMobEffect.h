@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../attribute/AttributeModifier"
+
+
 class AttackDamageMobEffect : MobEffect {
 
 public:

@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class ContentLogEndPoint : Bedrock::LogEndPoint {
 
 public:

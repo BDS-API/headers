@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../../unmapped/ActorRuntimeID"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class SetLocalPlayerAsInitializedPacket : Packet {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Actor"
+
+
 class MegaPineTreeFeature : MegaTreeFeature {
 
 public:

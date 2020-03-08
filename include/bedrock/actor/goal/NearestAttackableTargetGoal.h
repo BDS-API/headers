@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/MobDescriptor"
+#include "../Player"
+
+
 class NearestAttackableTargetGoal : TargetGoal {
 
 public:

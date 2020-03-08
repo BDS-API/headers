@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../actor/Mob"
+#include "../../unmapped/JumpControlComponent"
+
+
 class DynamicJumpControl : JumpControl {
 
 public:

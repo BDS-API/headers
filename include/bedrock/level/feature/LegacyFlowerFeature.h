@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/BlockSource"
+#include "../biome/Biome"
+
+
 class LegacyFlowerFeature : Feature {
 
 public:

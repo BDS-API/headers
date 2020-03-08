@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/LevelEventListener"
+
+
 class ScriptServerLevelEventListener : LevelEventListener {
 
 public:

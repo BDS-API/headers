@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/Player"
+
+
 class MoveInput {
 
 public:
@@ -19,10 +22,10 @@ public:
     void scaleMoveVector(float);
     void getMoveVector(void)const;
     void getLookDelta(void)const;
-    void wantsUp(void)const;
-    void wantsUpSlow(void)const;
-    void wantsDown(void)const;
-    void wantsDownSlow(void)const;
+    bool wantsUp(void)const;
+    bool wantsUpSlow(void)const;
+    bool wantsDown(void)const;
+    bool wantsDownSlow(void)const;
     bool isJumping(void)const;
     bool isSneaking(void)const;
     bool isDescendScaffolding(void)const;

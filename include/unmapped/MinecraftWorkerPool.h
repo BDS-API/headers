@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class MinecraftWorkerPool {
 
 public:
@@ -8,6 +10,7 @@ public:
     static long NETWORK;
     static long RENDERING;
     static long LEVELDB;
+    static long LEVELDB_COMPACTION;
     static long CONNECTEDSTORAGE;
     static long WATCHDOG;
 

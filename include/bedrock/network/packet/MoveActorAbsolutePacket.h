@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/MoveActorAbsoluteData"
+
+
 class MoveActorAbsolutePacket : Packet {
 
 public:

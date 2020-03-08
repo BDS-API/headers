@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../definition/Definition"
+
+
 class SimpleTagIDFilterTest : FilterTest {
 
 public:

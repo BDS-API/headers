@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/command/dispatcher/ICommandDispatcher"
+#include "../bedrock/command/orgin/CommandOrigin"
+#include "../json/Value"
+#include "../bedrock/pack/ResourcePackManager"
+
+
 class FunctionManager {
 
 public:

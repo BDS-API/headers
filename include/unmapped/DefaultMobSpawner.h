@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/block/actor/MobSpawnerBlockActor"
+
+
 class DefaultMobSpawner : BaseMobSpawner {
 
 public:

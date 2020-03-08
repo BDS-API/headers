@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class FrostedIceBlock : BlockLegacy {
 
 public:
@@ -12,7 +17,7 @@ public:
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
     virtual bool canBeSilkTouched(void)const;
 

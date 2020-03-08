@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../../unmapped/BiomeSource"
+
+
 class ScatteredFeatureStart : StructureStart {
 
 public:

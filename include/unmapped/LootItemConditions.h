@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../json/Value"
+#include "../bedrock/item/condition/LootItemCondition"
+
+
 class LootItemConditions {
 
 public:

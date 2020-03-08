@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/FilterInput"
+
+
 class FilterInputDefinition {
 
 public:

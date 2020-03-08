@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../unmapped/Particle"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../item/ItemStack"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/Vec3"
+
+
 class Arrow : AbstractArrow {
 
 public:

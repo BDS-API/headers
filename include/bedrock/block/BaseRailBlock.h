@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/Random"
+
+
 class BaseRailBlock : BlockLegacy {
 
 public:
@@ -19,7 +24,7 @@ public:
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getRenderLayer(Block const&, BlockSource &, BlockPos const&)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canSpawnOn(void)const;

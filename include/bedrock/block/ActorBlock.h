@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class ActorBlock : BlockLegacy {
 
 public:

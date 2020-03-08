@@ -1,5 +1,9 @@
 #pragma once
 
+#include "scoreboard/ServerScoreboard"
+#include "../../unmapped/HashedString"
+
+
 class ServerLevel : Level {
 
 public:

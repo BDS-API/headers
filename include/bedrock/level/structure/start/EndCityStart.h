@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/ChunkPos"
+
+
 class EndCityStart : StructureStart {
 
 public:

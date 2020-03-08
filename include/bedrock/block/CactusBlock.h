@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+
+
 class CactusBlock : BlockLegacy {
 
 public:
@@ -12,7 +16,7 @@ public:
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void onGraphicsModeChanged(bool, bool, bool);
     virtual bool canBeSilkTouched(void)const;
-    virtual void dealsContactDamage(Actor const&, Block const&, bool)const;
+    virtual bool dealsContactDamage(Actor const&, Block const&, bool)const;
 
     CactusBlock(std::string const&, int);
     void _checkAlive(BlockSource &, BlockPos const&)const;

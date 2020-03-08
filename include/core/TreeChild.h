@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../unmapped/HashedString"
+
+
 using namespace Core::StorageAreasTree;
 
 class TreeChild {

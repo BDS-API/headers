@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/DedicatedServer"
+#include "../clacks/protocol/commands/Service"
+
+
 class ClacksServer : com::mojang::clacks::protocol::Commands::Service {
 
 public:

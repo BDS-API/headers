@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../io/IDataInput"
+
+
 class Tag {
 
 public:

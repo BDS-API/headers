@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/Vec3"
+
+
 class FindCoverGoal : Goal {
 
 public:

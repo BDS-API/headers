@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../ScriptVersionInfo"
+
+
 class ScriptHandContainerComponent : ScriptContainerComponentBase {
 
 public:

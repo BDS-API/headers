@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../actor/Actor"
+#include "../../unmapped/Random"
+
+
 class VineBlock : BlockLegacy {
 
 public:

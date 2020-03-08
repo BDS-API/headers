@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../json/Value"
+
+
 using namespace Automation;
 
 class MessageHeader {

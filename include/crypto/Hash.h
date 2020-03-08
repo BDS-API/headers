@@ -1,13 +1,17 @@
 #pragma once
 
-using namespace Crypto;
+
+
+using namespace Crypto::Hash;
 
 class Hash {
 
 public:
 
-    void hash(Crypto::Hash::HashType, std::string const&);
-    void generateUUID(void const*, unsigned int, Crypto::Hash::HashType);
-    void hash(Crypto::Hash::HashType, std::string const&);
-    void generateUUID(void const*, unsigned int, Crypto::Hash::HashType);
+    void update(void const*, unsigned int);
+    void getUUID(void);
+    Hash(Crypto::Hash::HashType);
+    void update(void const*, unsigned int);
+    void getUUID(void);
+    Hash(Crypto::Hash::HashType);
 };

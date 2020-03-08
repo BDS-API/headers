@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/EntityContext"
+#include "../../../unmapped/EntityRegistry"
+
+
 class MobEffectSystem : ITickingSystem {
 
 public:

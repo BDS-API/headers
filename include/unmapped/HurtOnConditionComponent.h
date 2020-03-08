@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class HurtOnConditionComponent {
 
 public:

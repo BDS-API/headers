@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../LevelChunk"
+
+
 class WorldGenerator {
 
 public:

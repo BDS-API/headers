@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../../unmapped/BoundingBox"
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/BlockVolume"
+#include "../../../unmapped/ChunkPos"
+#include "../LevelChunk"
+#include "../../../unmapped/Dimension"
+#include "../generator/WorldGenerator"
+
+
 class NetherGenerator : ChunkSource, WorldGenerator {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/network/packet/Packet"
+#include "../bedrock/actor/Actor"
+
+
 class SpatialActorNetworkData {
 
 public:

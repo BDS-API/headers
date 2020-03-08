@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/BoundingBox"
+#include "../../LevelChunk"
+#include "../../../../unmapped/BlockSource"
+
+
 class OceanMonumentPiece : StructurePiece {
 
 public:

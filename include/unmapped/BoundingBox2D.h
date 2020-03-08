@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace StructureTemplateFeature;
 
 class BoundingBox2D {

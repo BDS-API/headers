@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Mob"
+#include "../bedrock/actor/Actor"
+
+
 class AngryComponent {
 
 public:

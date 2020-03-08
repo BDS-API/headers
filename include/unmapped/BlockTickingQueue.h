@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/nbt/ListTag"
+#include "../bedrock/level/LevelChunk"
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class BlockTickingQueue {
 
 public:
@@ -21,7 +27,7 @@ public:
     void save(CompoundTag &)const;
     void _saveQueue(ListTag &, BlockTickingQueue::TickDataSet const&)const;
     void getTickDelaysInArea(BoundingBox const&)const;
-    void ticksFromNow(int)const;
+    bool ticksFromNow(int)const;
     void getNextUpdateForPos(BlockPos const&, Tick &)const;
     void eliminateDuplicatesOf(BlockLegacy const&);
     BlockTickingQueue(LevelChunk &, TickingQueueType);

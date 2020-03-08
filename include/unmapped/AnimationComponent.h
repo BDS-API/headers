@@ -1,9 +1,14 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+
+
 class AnimationComponent {
 
 public:
     static long mReloadTimeStamp;
+    static long mClientFrameIndex;
+    static long mServerFrameIndex;
 
 
     void getAnimationResourceDefinitionMap(void)const;
@@ -14,7 +19,7 @@ public:
     void setupDeltaTimeAndLifeTimeParams(bool);
     void initializeClientAnimationComponent(std::function<void ()(ActorAnimationPlayer &)>);
     void applyAnimations(bool);
-    void getCurrentFrameIndex(void);
+    void _getCurrentFrameIndex(void);
     void setDefaultPoses(void);
     void getAllBoneOrientations(void);
     void setDirty(void);
@@ -51,6 +56,8 @@ public:
     void getAnimationComponent(AnimationComponentGroup, AnimationComponentID);
     void _getAnimationComponentMapLock(void);
     void _getAllAnimationComponents(AnimationComponentGroup);
+    void incrementCurrentClientFrameIndex(void);
+    void incrementCurrentServerFrameIndex(void);
     AnimationComponent(AnimationComponentGroup, AnimationComponentID const&);
     void _removeAnimationComponentFromGlobalMap(AnimationComponentGroup, AnimationComponentID const&);
 };

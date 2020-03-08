@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+
+
 class LabTablePacket : Packet {
 
 public:

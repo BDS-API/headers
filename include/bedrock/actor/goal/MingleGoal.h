@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/ActorUniqueID"
+#include "../Actor"
+#include "../../../unmapped/MingleComponent"
+
+
 class MingleGoal : MoveToPOIGoal {
 
 public:

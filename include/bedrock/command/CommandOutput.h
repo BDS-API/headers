@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class CommandOutput {
 
 public:
@@ -13,7 +15,7 @@ public:
     void success(std::string const&, std::vector<CommandOutputParameter, std::allocator<CommandOutputParameter>> const&);
     void success(void);
     void getSuccessCount(void)const;
-    void wantsData(void)const;
+    bool wantsData(void)const;
     void empty(void)const;
     void getData(void)const;
     void addToResultList(std::string const&, std::string const&);

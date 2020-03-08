@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../actor/Player"
+
+
 class TradeContainerManagerModel : LevelContainerManagerModel {
 
 public:

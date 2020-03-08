@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Horse"
+
+
 class SkeletonHorseTrapGoal : Goal {
 
 public:

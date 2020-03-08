@@ -1,5 +1,16 @@
 #pragma once
 
+#include "../../unmapped/PackIdVersion"
+#include "../../unmapped/ResourcePackStack"
+#include "../../unmapped/ResourcePack"
+#include "../../core/Path"
+#include "../../unmapped/PackReport"
+#include "../../unmapped/PackSourceReport"
+#include "../../unmapped/ResourcePackListener"
+#include "../../unmapped/PackInstance"
+#include "../../unmapped/ResourceLocation"
+
+
 class ResourcePackManager : ResourceLoader {
 
 public:

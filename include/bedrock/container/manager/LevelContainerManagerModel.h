@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/ContainerItemStack"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+
+
 class LevelContainerManagerModel : ContainerManagerModel {
 
 public:

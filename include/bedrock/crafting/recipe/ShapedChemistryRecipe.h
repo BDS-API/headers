@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../container/CraftingContainer"
+#include "../../../unmapped/RecipeIngredient"
+
+
 class ShapedChemistryRecipe : ShapedRecipe {
 
 public:

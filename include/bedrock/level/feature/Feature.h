@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Actor"
+#include "../../../unmapped/WorldChangeTransaction"
+#include "../../../unmapped/IBlockPlacementTarget"
+
+
 class Feature : IFeature {
 
 public:

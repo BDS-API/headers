@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../container/CraftingContainer"
+#include "../../level/Level"
+#include "../../item/ItemInstance"
+#include "../../../mce/UUID"
+
+
 class MapExtendingRecipe : MultiRecipe {
 
 public:

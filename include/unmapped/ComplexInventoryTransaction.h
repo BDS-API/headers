@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/io/ReadOnlyBinaryStream"
+#include "../bedrock/io/BinaryStream"
+#include "../bedrock/actor/Player"
+
+
 class ComplexInventoryTransaction {
 
 public:

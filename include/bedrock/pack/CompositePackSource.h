@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/PackManifestFactory"
+
+
 class CompositePackSource : PackSource {
 
 public:

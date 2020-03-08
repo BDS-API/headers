@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Actor"
+
+
 class BreathableComponent {
 
 public:
@@ -21,6 +25,6 @@ public:
     bool canBreatheWater(void)const;
     bool canBreatheLava(void)const;
     bool canBreathSolids(void)const;
-    void generatesBubbles(void)const;
+    bool generatesBubbles(void)const;
     void getBreathableState(void);
 };

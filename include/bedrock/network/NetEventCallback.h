@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/NetworkIdentifier"
+#include "../actor/Player"
+
+
 class NetEventCallback {
 
 public:

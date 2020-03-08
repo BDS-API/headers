@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/HardcodedSpawningArea"
+
+
 using namespace LevelChunk;
 
 class HardcodedSpawningArea {

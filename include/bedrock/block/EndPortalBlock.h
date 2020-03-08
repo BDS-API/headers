@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/Random"
+
+
 class EndPortalBlock : ActorBlock {
 
 public:
@@ -12,7 +18,7 @@ public:
     virtual bool canContainLiquid(void)const;
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;

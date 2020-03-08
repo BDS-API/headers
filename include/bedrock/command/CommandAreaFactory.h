@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Dimension"
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/Bounds"
+
+
 class CommandAreaFactory {
 
 public:

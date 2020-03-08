@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+#include "actor/BannerBlockActor"
+
+
 class BannerBlock : ActorBlock {
 
 public:
@@ -16,7 +25,7 @@ public:
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void getVariant(Block const&)const;

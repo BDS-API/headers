@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../actor/Player"
+
+
 class CompoundCreatorContainerManagerModel : ContainerManagerModel {
 
 public:

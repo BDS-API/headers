@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/storage/LevelStorage"
+#include "../bedrock/pack/ResourcePackManager"
+
+
 class StructureManager {
 
 public:

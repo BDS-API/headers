@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../../unmapped/BlockSource"
+#include "../../../../unmapped/StructureManager"
+
+
 using namespace WoodlandMansionPieces;
 
 class WoodlandMansionPiece : TemplateStructurePiece {

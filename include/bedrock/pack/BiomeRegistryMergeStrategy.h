@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/LoadedResourceData"
+#include "../../core/Path"
+
+
 class BiomeRegistryMergeStrategy : ResourcePackMergeStrategy {
 
 public:

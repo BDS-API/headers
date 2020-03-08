@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../../unmapped/WebSocketPacketData"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class AutomationClientConnectPacket : Packet {
 
 public:

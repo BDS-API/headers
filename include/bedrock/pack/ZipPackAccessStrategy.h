@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../file/access/IFileAccess"
+#include "../../core/Path"
+
+
 class ZipPackAccessStrategy : PackAccessStrategy {
 
 public:

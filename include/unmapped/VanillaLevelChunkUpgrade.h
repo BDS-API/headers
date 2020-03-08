@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/level/LevelChunk"
+
+
 class VanillaLevelChunkUpgrade {
 
 public:

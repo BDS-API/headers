@@ -1,9 +1,11 @@
 #pragma once
 
+
+
 class PacketUtil {
 
 public:
 
-    void degreesToByte(float);
+    bool degreesToByte(float);
     void byteToDegrees(signed char);
 };

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/EntityRegistry"
+
+
 class BoostableSystem : ITickingSystem {
 
 public:

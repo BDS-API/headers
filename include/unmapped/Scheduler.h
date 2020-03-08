@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class Scheduler {
 
 public:
@@ -15,7 +17,7 @@ public:
     void _processNextCoroutine(void);
     void _runCoroutines(double);
     void _updateTimeCap(unsigned int);
-    void processCoroutines(std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>);
+    bool processCoroutines(std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>);
     void getTotalFrameTime(void)const;
     void _getNumberOfStarvedFrames(void)const;
     void changeThread(std::thread::id);

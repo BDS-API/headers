@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/Vec3"
+
+
 class FallingBlock : Actor {
 
 public:

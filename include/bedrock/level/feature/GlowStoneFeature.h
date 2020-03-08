@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/BlockSource"
+
+
 class GlowStoneFeature : Feature {
 
 public:

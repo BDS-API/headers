@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../item/Item"
+#include "../../unmapped/VariantParameterList"
+#include "damagesource/ActorDamageSource"
+
+
 class Horse : Animal {
 
 public:

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../LevelChunkFinalDeleter"
+#include "../../../unmapped/ChunkPos"
+#include "../LevelChunk"
+#include "../../../unmapped/Dimension"
+
+
 class NetworkChunkSource : ChunkSource {
 
 public:

@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../LevelChunk"
+#include "../../../unmapped/Dimension"
+#include "../../../unmapped/Tick"
+#include "../../actor/Actor"
+#include "../../../unmapped/Random"
+#include "../../../unmapped/Vec3"
+
+
 class TickingArea : ITickingArea {
 
 public:

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/ScoreboardId"
+#include "../../../unmapped/ScorePacketInfo"
+#include "../../io/BinaryStream"
+
+
 class SetScorePacket : Packet {
 
 public:

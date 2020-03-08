@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../text/TextObjectRoot"
+
+
 class TextPacket : Packet {
 
 public:

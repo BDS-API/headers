@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/actor/Player"
+#include "../bedrock/item/ItemStack"
+#include "../json/Value"
+#include "../bedrock/item/Item"
+
+
 class CameraItemComponent {
 
 public:

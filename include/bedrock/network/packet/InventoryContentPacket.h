@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+
+
 class InventoryContentPacket : Packet {
 
 public:

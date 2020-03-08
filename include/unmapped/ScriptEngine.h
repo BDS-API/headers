@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../bedrock/scripting/ScriptObjectHandle"
+#include "../bedrock/scripting/ScriptSystemInfo"
+#include "../bedrock/scripting/ScriptFramework"
+#include "../core/Path"
+#include "../bedrock/scripting/ScriptCallbackInterface"
+
+
 class ScriptEngine : ScriptApi::ScriptFramework, ScriptApi::ScriptCallbackInterface {
 
 public:
@@ -11,30 +18,30 @@ public:
     virtual void onWarnReceived(std::string const&);
     virtual void onErrorReceived(std::string const&);
     virtual void makeErrorResultObject(ScriptApi::ScriptObjectHandle &);
-    virtual void processLogCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processRegisterEventDataCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processCreateEventDataCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processListenForEventCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processBroadcastEventCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processCreateEntityCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processDestroyEntityCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processIsValidEntityCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processRegisterComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processCreateComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processDestroyComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processHasComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processGetComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processApplyComponentChangesCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processRegisterQueryCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processAddFilterToQueryCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processGetEntitiesFromQueryCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processGetBlockCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processGetBlocksCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processExecuteCommandCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processRegisterSystemCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processInfoCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processWarningCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
-    virtual void processErrorCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processLogCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processRegisterEventDataCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processCreateEventDataCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processListenForEventCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processBroadcastEventCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processCreateEntityCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processDestroyEntityCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processIsValidEntityCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processRegisterComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processCreateComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processDestroyComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processHasComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processGetComponentCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processApplyComponentChangesCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processRegisterQueryCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processAddFilterToQueryCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processGetEntitiesFromQueryCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processGetBlockCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processGetBlocksCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processExecuteCommandCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processRegisterSystemCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processInfoCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processWarningCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
+    virtual bool processErrorCallback(std::vector<ScriptApi::ScriptObjectHandle, std::allocator<ScriptApi::ScriptObjectHandle>> const&, ScriptApi::ScriptObjectHandle&);
     virtual void _registerSystemObjects(ScriptApi::ScriptObjectHandle const&);
 
     void _getVersionInfo(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptVersionInfo &);
@@ -52,7 +59,7 @@ public:
     void setScriptEventCoordinator(std::unique_ptr<ScriptEventCoordinator, std::default_delete<ScriptEventCoordinator>> &&);
     bool isInitialized(void)const;
     void update(void);
-    void processScriptReportItems(void);
+    bool processScriptReportItems(void);
     void _processSystemUpdate(void);
     void _processSystemShutdown(void);
     void fireEventToScript(EventInfo const&, ScriptApi::ScriptObjectHandle &&);

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/ChunkPos"
+#include "../../io/BinaryStream"
+
+
 class LevelChunkPacket : Packet {
 
 public:

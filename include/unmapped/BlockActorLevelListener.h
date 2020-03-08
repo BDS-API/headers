@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/LevelListener"
+#include "../bedrock/level/LevelChunk"
+
+
 class BlockActorLevelListener : LevelListener {
 
 public:

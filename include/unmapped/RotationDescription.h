@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../json/Value"
+#include "../bedrock/description/Description"
+
+
 class RotationDescription : Description {
 
 public:

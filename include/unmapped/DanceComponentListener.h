@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/Level"
+#include "../bedrock/level/LevelListener"
+
+
 class DanceComponentListener : LevelListener {
 
 public:

@@ -1,5 +1,20 @@
 #pragma once
 
+#include "../../unmapped/AtlasItemManager"
+#include "../actor/Actor"
+#include "../../unmapped/ActorInfoRegistry"
+#include "../../unmapped/BaseGameVersion"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/ItemDescriptor"
+#include "../actor/Mob"
+#include "../../unmapped/TextureAtlasItem"
+#include "../../unmapped/Block"
+#include "../../unmapped/TextureUVCoordinateSet"
+#include "../../json/Value"
+
+
 class Item {
 
 public:
@@ -47,12 +62,12 @@ public:
     virtual bool isGlint(ItemStackBase const&)const;
     virtual bool isThrowable(void)const;
     virtual bool isPattern(void)const;
-    virtual void showsDurabilityInCreative(void)const;
+    virtual bool showsDurabilityInCreative(void)const;
     virtual bool isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual bool canDestroyInCreative(void)const;
     virtual bool isDestructive(int)const;
     virtual bool isLiquidClipItem(int)const;
-    virtual void requiresInteract(void)const;
+    virtual bool requiresInteract(void)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot(void)const;
@@ -80,7 +95,7 @@ public:
     virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemInstance &, Block const&, int, int, int, Actor *)const;
     virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
-    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&,std::unique_ptr<CompoundTag,std::default_delete<CompoundTag>> const&)const;
+    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void buildEffectDescriptionName[abi:cxx11](ItemStackBase const&)const;
     virtual void buildCategoryDescriptionName[abi:cxx11](void)const;
     virtual void readUserData(ItemStackBase &, IDataInput &, ReadOnlyBinaryStream &)const;

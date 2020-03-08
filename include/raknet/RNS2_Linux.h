@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace RakNet;
 
 class RNS2_Linux : RakNet::RNS2_Berkley, RakNet::RNS2_Windows_Linux_360 {

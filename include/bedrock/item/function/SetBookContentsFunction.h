@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../ItemInstance"
+#include "../ItemStack"
+#include "../../../json/Value"
+#include "../../nbt/CompoundTag"
+#include "../condition/LootItemCondition"
+
+
 class SetBookContentsFunction : LootItemFunction {
 
 public:

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "damagesource/ActorDamageSource"
+
+
 class IronGolem : Mob {
 
 public:

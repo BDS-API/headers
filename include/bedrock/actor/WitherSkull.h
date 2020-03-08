@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "damagesource/ActorDamageSource"
+
+
 class WitherSkull : Fireball {
 
 public:

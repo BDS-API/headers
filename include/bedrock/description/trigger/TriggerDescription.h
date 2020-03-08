@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../json/Value"
+#include "../Description"
+
+
 class TriggerDescription : Description {
 
 public:

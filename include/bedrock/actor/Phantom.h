@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+
+
 class Phantom : Monster {
 
 public:

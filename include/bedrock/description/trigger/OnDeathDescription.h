@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class OnDeathDescription : TriggerDescription {
 
 public:

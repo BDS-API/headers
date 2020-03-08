@@ -1,5 +1,8 @@
 #pragma once
 
+#include "instance/IDefinitionInstance"
+
+
 class DefinitionInstanceGroup {
 
 public:

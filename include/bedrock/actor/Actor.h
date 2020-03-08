@@ -1,5 +1,39 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/ActionEvent"
+#include "../../unmapped/ActorLink"
+#include "../../unmapped/MobEffectInstance"
+#include "../item/ItemStack"
+#include "../../unmapped/EntityRegistryOwned"
+#include "../description/property/CollisionBoxDescription"
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorUniqueID"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/ActorRuntimeID"
+#include "../../unmapped/Random"
+#include "../../unmapped/Vec2"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/HashString"
+#include "../../unmapped/Block"
+#include "../network/packet/ChangeDimensionPacket"
+#include "../level/Level"
+#include "../../unmapped/UIProfanityContext"
+#include "../../unmapped/Attribute"
+#include "../network/packet/UpdateTradePacket"
+#include "../../unmapped/Dimension"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../network/packet/UpdateEquipPacket"
+#include "../description/property/EquipmentTableDescription"
+#include "../../unmapped/ActorDefinitionIdentifier"
+#include "effect/MobEffect"
+#include "../../unmapped/HashedString"
+#include "../../unmapped/Vec3"
+
+
 class Actor {
 
 public:
@@ -36,12 +70,12 @@ public:
     virtual void getInterpolatedRidingOffset(float)const;
     virtual void checkBlockCollisions(AABB const&);
     virtual void checkBlockCollisions(void);
-    virtual void breaksFallingBlocks(void)const;
+    virtual bool breaksFallingBlocks(void)const;
     virtual void blockedByShield(ActorDamageSource const&, Actor&);
     virtual void moveRelative(float, float, float, float);
     virtual void teleportTo(Vec3 const&, bool, int, int);
     virtual void tryTeleportTo(Vec3 const&, bool, bool, int, int);
-    virtual void chorusFruitTeleport(Vec3 &);
+    virtual bool chorusFruitTeleport(Vec3 &);
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void lerpMotion(Vec3 const&);
     virtual void getAddPacket(void);
@@ -227,7 +261,7 @@ public:
     virtual void getLifeSpan(void)const;
     virtual void onOrphan(void);
     virtual void wobble(void);
-    virtual void wasHurt(void);
+    virtual bool wasHurt(void);
     virtual void startSpinAttack(void);
     virtual void stopSpinAttack(void);
     virtual void setDamageNearbyMobs(bool);
@@ -607,7 +641,7 @@ public:
     bool hasEnoughFoodToBreed(void);
     void _countFood(int);
     bool hasExcessFood(void);
-    void wantsMoreFood(void);
+    bool wantsMoreFood(void);
     void doEnchantDamageEffects(Mob &, Mob &);
     void setChainedDamageEffects(bool);
     void getChainedDamageEffects(void)const;
@@ -620,7 +654,7 @@ public:
     void setCollidableMob(bool);
     void setExperimental(bool);
     bool isExperimental(void)const;
-    void wasLastHitByPlayer(void);
+    bool wasLastHitByPlayer(void);
     void setTradingPlayer(Player *);
     void getTradingPlayer(void)const;
     bool isTrading(void)const;

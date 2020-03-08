@@ -1,11 +1,18 @@
 #pragma once
 
+#include "../../../../unmapped/ChunkPos"
+#include "../../LevelChunk"
+#include "../../../../unmapped/Block"
+#include "../../../../unmapped/PieceWeight"
+#include "../../../../unmapped/BlockSource"
+
+
 class StructurePiece {
 
 public:
     virtual StructurePiece::~StructurePiece();
     virtual void moveBoundingBox(int, int, int);
-    virtual void asPoolElement(void);
+    virtual bool asPoolElement(void);
     virtual void getType(void)const;
     virtual void addChildren(StructurePiece*, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
@@ -23,7 +30,7 @@ public:
     bool isCloseToChunk(ChunkPos const&, int)const;
     void findCollisionPiece(std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> const&, BoundingBox const&);
     void getLocatorPosition(void)const;
-    void edgesLiquid(BlockSource *, BoundingBox const&);
+    bool edgesLiquid(BlockSource *, BoundingBox const&);
     void getWorldY(int);
     void getOrientationData(Block const*, unsigned short);
     void _getWorldPos(int, int, int);

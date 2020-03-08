@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/network/packet/observer/NetworkStatistics"
+
+
 class NetworkDebugManager {
 
 public:
@@ -22,6 +25,6 @@ public:
     void _getGraphBars(std::string const&, int, std::vector<TrackerStat, std::allocator<TrackerStat>> const&)const;
     void getMode(void)const;
     void nextGraph(void);
-    void previousGraph(void);
+    bool previousGraph(void);
     void resetData(void);
 };

@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace Core;
 
 class FileStorageArea {
@@ -7,10 +9,10 @@ class FileStorageArea {
 public:
     virtual void Core::FileStorageArea::~FileStorageArea();
     virtual void notifyChangeInFileSize(long, long);
-    virtual void handlesPendingWrites(void)const;
+    virtual bool handlesPendingWrites(void)const;
     virtual void informPendingWriteSize(unsigned long const&, bool);
     virtual void informStorageAreaCopy(unsigned long const&);
-    virtual void supportsExtendSize(void)const;
+    virtual bool supportsExtendSize(void)const;
     virtual bool canExtendSize(void)const;
     virtual void resetCanAttemptExtendSize(void);
     virtual void getExtendSizeThreshold(unsigned long &)const;
@@ -18,7 +20,7 @@ public:
     virtual void preemptiveExtendSize(unsigned long, std::function<void ()(void)>, std::function<void ()(void)>);
     virtual void unloadFlatFileManifests(bool);
     virtual bool canFlushToDisk(void)const;
-    virtual void needsTick(void)const;
+    virtual bool needsTick(void)const;
     virtual void tick(void);
     virtual void flushImmediately(void);
     virtual void enableFlushToDisk(bool);

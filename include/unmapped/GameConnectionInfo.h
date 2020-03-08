@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../raknet/SystemAddress"
+#include "../json/Value"
+
+
 using namespace Social;
 
 class GameConnectionInfo {

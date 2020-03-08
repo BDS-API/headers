@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../core/Path"
+#include "../../unmapped/ResourceLocation"
+#include "../../core/InputFileStream"
+
+
 class EncryptedFileAccessStrategy : DirectoryPackAccessStrategy {
 
 public:

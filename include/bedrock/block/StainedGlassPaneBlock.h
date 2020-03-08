@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/Block"
+
+
 class StainedGlassPaneBlock : ThinFenceBlock {
 
 public:

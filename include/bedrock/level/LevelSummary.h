@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../core/Path"
+
+
 class LevelSummary {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../mce/UUID"
+
+
 class VillageManager {
 
 public:

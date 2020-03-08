@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class LevelDbLogger : leveldb::Logger {
 
 public:

@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class AABB {
 
 public:
@@ -7,9 +9,9 @@ public:
 
 
     void fromPoints(Vec3 const&, Vec3 const&);
-    void containsX(Vec3 const&)const;
-    void containsY(Vec3 const&)const;
-    void containsZ(Vec3 const&)const;
+    bool containsX(Vec3 const&)const;
+    bool containsY(Vec3 const&)const;
+    bool containsZ(Vec3 const&)const;
     AABB(void);
     AABB(float, float, float, float, float, float);
     AABB(Vec3 const&, Vec3 const&);
@@ -27,9 +29,9 @@ public:
     void clipYCollide(AABB const&, float, bool)const;
     void clipZCollide(AABB const&, float, bool)const;
     void intersects(AABB const&)const;
-    void intersectsInner(AABB const&)const;
+    bool intersectsInner(AABB const&)const;
     void getSmallestAxisOut(AABB const&)const;
-    void axisInside(AABB const&, Vec3)const;
+    bool axisInside(AABB const&, Vec3)const;
     void distanceTo(Vec3 const&)const;
     void distanceToSqr(Vec3 const&)const;
     void distanceTo(AABB const&)const;

@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class DoublePlantBlock : BushBlock {
 
 public:
@@ -19,7 +26,7 @@ public:
     virtual void getSecondPart(BlockSource &, BlockPos const&, BlockPos&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual bool canBeBuiltOver(BlockSource &, BlockPos const&)const;

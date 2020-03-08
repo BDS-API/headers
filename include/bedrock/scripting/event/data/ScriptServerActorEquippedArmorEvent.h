@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/ScriptEngine"
+#include "../../../../unmapped/ActorUniqueID"
+#include "../../../item/ItemInstance"
+
+
 class ScriptServerActorEquippedArmorEvent : ScriptEventData {
 
 public:

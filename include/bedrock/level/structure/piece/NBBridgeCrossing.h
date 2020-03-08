@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/BlockSource"
+#include "../../../../unmapped/Random"
+
+
 class NBBridgeCrossing : NetherFortressPiece {
 
 public:

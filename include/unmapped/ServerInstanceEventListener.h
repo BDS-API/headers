@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/ServerInstance"
+
+
 class ServerInstanceEventListener {
 
 public:

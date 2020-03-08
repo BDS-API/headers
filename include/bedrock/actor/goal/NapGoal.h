@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/Tick"
+
+
 class NapGoal : Goal {
 
 public:

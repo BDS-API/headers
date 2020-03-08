@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../core/Path"
+#include "../../unmapped/Pack"
+#include "../../unmapped/PackManifestFactory"
+
+
 class TreatmentPackSource : PackSource {
 
 public:

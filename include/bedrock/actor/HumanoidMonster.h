@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../nbt/CompoundTag"
+#include "../../unmapped/ActorDefinitionGroup"
+
+
 class HumanoidMonster : Monster {
 
 public:

@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class CircuitSceneGraph {
 
 public:
@@ -9,16 +11,16 @@ public:
     void getBaseComponent(BlockPos const&);
     void getFromPendingAdd(BlockPos const&, unsigned long);
     void getFromPendingAdd(BlockPos const&);
-    void processPendingAdds(void);
+    bool processPendingAdds(void);
     void scheduleRelationshipUpdate(BlockPos const&, BaseCircuitComponent *);
     void setPendingAddAsNewlyLoaded(void);
     bool isPendingAdd(BlockPos const&);
     void add(BlockPos const&, std::unique_ptr<BaseCircuitComponent, std::default_delete<BaseCircuitComponent>>);
     void remove(BlockPos const&, BaseCircuitComponent *);
     void removeComponent(BlockPos const&);
-    void processPendingRemoves(void);
+    bool processPendingRemoves(void);
     void update(BlockSource *);
-    void processPendingUpdates(BlockSource *);
+    bool processPendingUpdates(BlockSource *);
     void removeStaleRelationships(void);
     void findRelationships(BlockPos const&, BaseCircuitComponent *, BlockSource *);
     void addIfPoweredBlockAt(BlockSource &, BlockPos const&);

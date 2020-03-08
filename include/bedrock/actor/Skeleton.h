@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "damagesource/ActorDamageSource"
+
+
 class Skeleton : HumanoidMonster {
 
 public:

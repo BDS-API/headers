@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../../unmapped/CircuitSceneGraph"
+
+
 class PistonConsumer : ConsumerComponent {
 
 public:

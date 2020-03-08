@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/Random"
+#include "../../unmapped/BlockSource"
+
+
 class NetherWartBlock : BushBlock {
 
 public:
@@ -12,7 +16,7 @@ public:
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual bool canBeSilkTouched(void)const;
 

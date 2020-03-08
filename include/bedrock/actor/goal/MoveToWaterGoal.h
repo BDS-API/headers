@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/BlockSource"
+
+
 class MoveToWaterGoal : BaseMoveToBlockGoal {
 
 public:

@@ -1,5 +1,16 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/AABB"
+#include "../../level/LevelChunk"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/UIProfanityContext"
+#include "../../actor/Player"
+#include "../../nbt/CompoundTag"
+#include "../../../unmapped/Vec3"
+
+
 class BlockActor {
 
 public:
@@ -20,7 +31,6 @@ public:
     virtual bool isCustomNameSaved(void);
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onMove(void);
     virtual void onRemoved(BlockSource &);
     virtual void triggerEvent(int, int);
@@ -40,6 +50,8 @@ public:
     virtual void getDeletionDelayTimeSeconds(void)const;
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onChunkUnloaded(LevelChunk &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void _playerCanUpdate(Player const&)const;
 
     void setId(BlockActorType, std::string const&);
     void initBlockEntities(void);
@@ -53,6 +65,7 @@ public:
     void setMovable(bool);
     void setCustomNameSaved(bool);
     void distanceToSqr(Vec3 const&);
+    void onUpdatePacket(CompoundTag const&, BlockSource &, Player const*);
     bool isType(BlockActorType)const;
     bool isType(BlockActor&, BlockActorType);
     bool isInWorld(void)const;

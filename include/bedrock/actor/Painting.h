@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/Vec3"
+
+
 class Painting : HangingActor {
 
 public:

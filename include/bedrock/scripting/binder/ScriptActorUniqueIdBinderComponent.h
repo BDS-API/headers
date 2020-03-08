@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/ScriptEngine"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../actor/Actor"
+#include "../../actor/ItemActor"
+
+
 class ScriptActorUniqueIdBinderComponent : ScriptBinderComponent {
 
 public:

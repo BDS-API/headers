@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../../mce/UUID"
+#include "../../../unmapped/SerializedSkin"
+
+
 class PlayerSkinPacket : Packet {
 
 public:

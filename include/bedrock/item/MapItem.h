@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../level/Level"
+#include "../../unmapped/Dimension"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/MapSample"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/ItemDescriptor"
+
+
 class MapItem : ComplexItem {
 
 public:
@@ -12,7 +20,7 @@ public:
 
     virtual MapItem::~MapItem();
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
-    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&,std::unique_ptr<CompoundTag,std::default_delete<CompoundTag>> const&)const;
+    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
     virtual void refreshedInContainer(ItemStackBase &, Level &)const;
     virtual void fixupOnLoad(ItemStackBase &, Level &)const;
@@ -29,7 +37,7 @@ public:
     void _makeNewExplorationMap(ItemStack &, Level &, Actor *, std::string &)const;
     void setItemInstanceInfo(ItemStack &, MapItemSavedData &);
     void blockTick(ItemStack &, BlockSource &, BlockPos const&)const;
-    void doesDisplayPlayerMarkers(ItemStack const&);
+    bool doesDisplayPlayerMarkers(ItemStack const&);
     void setItemInstanceInfo(ItemInstance &, MapItemSavedData &);
     void setMapNameIndex(ItemStack &, int);
     void serializeMapData(std::vector<MapSample, std::allocator<MapSample>> const&, std::string &);

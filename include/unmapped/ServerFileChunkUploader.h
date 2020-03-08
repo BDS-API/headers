@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/network/packet/sender/PacketSender"
+
+
 class ServerFileChunkUploader : IFileChunkUploader, std::enable_shared_from_this<ServerFileChunkUploader> {
 
 public:

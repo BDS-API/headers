@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/IBlockPlacementTarget"
+
+
 class ScatterFeature : IFeature {
 
 public:

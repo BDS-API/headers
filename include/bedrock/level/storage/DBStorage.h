@@ -1,11 +1,18 @@
 #pragma once
 
+#include "../../../unmapped/DBStorageConfig"
+#include "../../../core/Path"
+#include "../chunksource/ChunkSource"
+#include "../../../unmapped/TaskResult"
+#include "../LevelData"
+#include "../chunksource/DBChunkStorage"
+
+
 class DBStorage : LevelStorage {
 
 public:
     virtual DBStorage::~DBStorage();
     virtual void addStorageObserver(std::unique_ptr<LevelStorageObserver, std::default_delete<LevelStorageObserver>>);
-    virtual void tick(void);
     virtual void getCompoundTag(std::string const&);
     virtual bool hasKey(gsl::basic_string_span<char const, -1l>)const;
     virtual void forEachKeyWithPrefix(gsl::basic_string_span<char const, -1l>, std::function<void ()(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>)> const&)const;
@@ -15,7 +22,6 @@ public:
     virtual void getFullPath[abi:cxx11](void)const;
     virtual void saveData(std::string const&, std::string&&);
     virtual void createWriteBatch(void);
-    virtual void saveDataSync(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>);
     virtual void deleteData(std::string const&);
     virtual void syncIO(void);
     virtual void getStatistics(std::string &)const;
@@ -38,17 +44,16 @@ public:
     virtual void _saveDataSync(gsl::basic_string_span<char const, -1l>, std::string &&);
 
     void tryRepair(Core::Path const&)const;
-    DBStorage(DBStorage::Config);
+    DBStorage(DBStorageConfig);
     void _isMarkedAsCorrupted(void)const;
     void _removeCorruptedMark(void)const;
     void _queueSaveCallback(bool);
-    void _tryAutoCompaction(void);
     void _isDBUsable(std::string const&, bool)const;
     void _isDBSaveable(std::string const&, bool)const;
     void getTaskGroup(void);
     void _write(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>);
     void _read(gsl::basic_string_span<char const, -1l>, std::function<void ()(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>)> const&)const;
-    void _waitForPendingKeyWrite(std::string const&)const;
+    void _readPendingWrite(std::string const&)const;
     void _markAsCorrupted(gsl::basic_string_span<char const, -1l>)const;
     void _handleErrorStatus(leveldb::Status const&);
     void _write(leveldb::WriteBatch &);
@@ -56,4 +61,5 @@ public:
     void _writeAsync(std::string const&, std::string&&);
     void _suspendAndPerformSaveAction(std::function<TaskResult ()(void)>, std::function<void ()(void)>);
     void _notifyChunkStorageDestroyed(DBChunkStorage &);
+    void _scheduleNextAutoCompaction(void);
 };

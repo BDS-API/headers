@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class CameraItem : Item {
 
 public:

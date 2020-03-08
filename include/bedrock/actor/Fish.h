@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+
+
 class Fish : WaterAnimal {
 
 public:

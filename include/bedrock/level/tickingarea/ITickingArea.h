@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/Dimension"
+
+
 class ITickingArea {
 
 public:

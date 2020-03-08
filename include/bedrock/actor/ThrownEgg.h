@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/ActorDefinitionGroup"
+
+
 class ThrownEgg : Throwable {
 
 public:

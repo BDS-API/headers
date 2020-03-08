@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class MendingEnchant : Enchant {
 
 public:

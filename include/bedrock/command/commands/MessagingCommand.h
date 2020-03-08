@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Command"
+#include "../orgin/CommandOrigin"
+
+
 class MessagingCommand : Command {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/BiomeSource"
+#include "../../chunksource/OverworldGenerator"
+
+
 class OceanRuinFeature : StructureFeature {
 
 public:

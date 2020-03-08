@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/HashString"
+
+
 class MultiRecipe : Recipe {
 
 public:

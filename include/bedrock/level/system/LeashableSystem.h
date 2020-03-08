@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/EntityRegistry"
+
+
 class LeashableSystem : ITickingSystem {
 
 public:

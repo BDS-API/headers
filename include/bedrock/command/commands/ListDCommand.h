@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../CommandRegistry"
+#include "../orgin/CommandOrigin"
+
+
 class ListDCommand : ServerCommand {
 
 public:

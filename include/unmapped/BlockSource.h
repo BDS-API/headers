@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/level/LevelChunk"
+#include "../bedrock/level/Level"
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/block/actor/BlockActor"
+
+
 class BlockSource {
 
 public:
@@ -39,7 +46,7 @@ public:
     bool hasTickInPendingTicks(BlockPos const&)const;
     bool hasTickInPendingTicks(BlockPos const&, TickingQueueType)const;
     void getNextTickUpdateForPos(BlockPos const&, TickingQueueType, Tick &)const;
-    void ticksFromNow(BlockPos const&, TickingQueueType, int)const;
+    bool ticksFromNow(BlockPos const&, TickingQueueType, int)const;
     void setTickingQueue(BlockTickingQueue &);
     void setRandomTickingQueue(BlockTickingQueue &);
     void getWritableChunk(ChunkPos const&);
@@ -120,16 +127,16 @@ public:
     bool hasBlock(int, int, int);
     void _fetchBorderBlockCollisions(AABB const&, Actor *, bool);
     void fetchCollisionShapes(AABB const&, float *, bool, Actor *);
-    void containsAnyLiquid(AABB const&);
-    void containsAnySolidBlocking(AABB const&);
-    void containsAny(BlockPos const&, BlockPos const&);
-    void containsAnyBlockOfType(BlockPos const&, BlockPos const&, Block const&);
-    void containsFireBlock(AABB const&);
+    bool containsAnyLiquid(AABB const&);
+    bool containsAnySolidBlocking(AABB const&);
+    bool containsAny(BlockPos const&, BlockPos const&);
+    bool containsAnyBlockOfType(BlockPos const&, BlockPos const&, Block const&);
+    bool containsFireBlock(AABB const&);
     void getMaterial(int, int, int)const;
     bool isOnTopOfBlock(AABB const&, BlockLegacy const&);
     bool isOnTopOfBlock(AABB const&, std::function<bool ()(Block const&)>);
-    void containsMaterial(AABB const&, MaterialType);
-    void containsLiquid(AABB const&, MaterialType);
+    bool containsMaterial(AABB const&, MaterialType);
+    bool containsLiquid(AABB const&, MaterialType);
     void clip(Vec3 const&, Vec3 const&, bool, bool, int, bool, bool);
     void getSeenPercent(Vec3 const&, AABB const&);
     bool canProvideSupport(BlockPos const&, unsigned char, BlockSupportType)const;
@@ -146,7 +153,7 @@ public:
     void fireEntityChanged(Actor &);
     bool isEmptyBlock(BlockPos const&);
     bool isEmptyWaterBlock(BlockPos const&)const;
-    void allowsRunes(BlockPos const&);
+    bool allowsRunes(BlockPos const&);
     bool isEmptyBlock(int, int, int);
     void getTopBlock(int, int &, int);
     void tryGetBiome(BlockPos const&)const;

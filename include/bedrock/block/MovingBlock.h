@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+
+
 class MovingBlock : ActorBlock {
 
 public:
@@ -7,9 +13,9 @@ public:
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
-    virtual void pushesUpFallingBlocks(void)const;
+    virtual bool pushesUpFallingBlocks(void)const;
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
 
     MovingBlock(std::string const&, int);

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Player"
+#include "../bedrock/level/LevelEventListener"
+
+
 class VanillaServerGameplayEventListener : ActorEventListener, BlockEventListener, PlayerEventListener, LevelEventListener {
 
 public:

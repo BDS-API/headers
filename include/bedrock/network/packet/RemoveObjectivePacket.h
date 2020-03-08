@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/Objective"
+#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class RemoveObjectivePacket : Packet {
 
 public:

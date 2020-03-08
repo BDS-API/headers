@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockSource"
+#include "../Mob"
+#include "../../../unmapped/NavigationComponent"
+
+
 class PathNavigation {
 
 public:

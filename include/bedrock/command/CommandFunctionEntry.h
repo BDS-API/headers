@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/FunctionManager"
+#include "../../unmapped/IFunctionEntry"
+
+
 class CommandFunctionEntry : IFunctionEntry {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../../unmapped/EducationLevelSettings"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class EducationSettingsPacket : Packet {
 
 public:

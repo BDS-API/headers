@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/item/Item"
+
+
 using namespace PotionBrewing;
 
 class Ingredient {

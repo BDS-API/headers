@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class ChemistryStickItem : ChemistryItem {
 
 public:
@@ -13,7 +15,7 @@ public:
 
     virtual ChemistryStickItem::~ChemistryStickItem();
     virtual void setMaxDamage(int);
-    virtual void showsDurabilityInCreative(void)const;
+    virtual bool showsDurabilityInCreative(void)const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void uniqueAuxValues(void)const;
     virtual void use(ItemStack &, Player &)const;

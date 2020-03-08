@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/command/orgin/CommandOrigin"
+#include "../bedrock/command/CommandContext"
+#include "../bedrock/command/CommandOutputSender"
+
+
 class MinecraftCommands {
 
 public:

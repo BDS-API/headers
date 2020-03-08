@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/level/Level"
+#include "../bedrock/level/chunksource/ChunkSource"
+#include "../bedrock/network/packet/LevelChunkPacket"
+
+
 class NetworkChunkPublisher {
 
 public:

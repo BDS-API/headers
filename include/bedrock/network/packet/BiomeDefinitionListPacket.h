@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../nbt/CompoundTag"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class BiomeDefinitionListPacket : Packet {
 
 public:

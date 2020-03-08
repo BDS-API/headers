@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/Vec3"
+
+
 class VirtualCommandOrigin : CommandOrigin {
 
 public:

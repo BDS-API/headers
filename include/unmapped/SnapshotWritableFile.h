@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class SnapshotWritableFile : leveldb::WritableFile {
 
 public:

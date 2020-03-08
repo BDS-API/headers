@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../item/Item"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+
+
 class VillagerBase : Mob {
 
 public:

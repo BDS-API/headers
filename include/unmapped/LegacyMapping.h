@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/definition/Definition"
+
+
 using namespace ActorFilterGroup;
 
 class LegacyMapping {

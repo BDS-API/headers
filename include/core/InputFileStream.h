@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace Core;
 
 class InputFileStream : Core::FileStream {

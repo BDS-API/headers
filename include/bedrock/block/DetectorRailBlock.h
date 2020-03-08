@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+
+
 class DetectorRailBlock : BaseRailBlock {
 
 public:

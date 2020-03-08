@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../model/ContainerModel"
+
+
 class TradeResultContainerController : ContainerController {
 
 public:

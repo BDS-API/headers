@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/EntityContext"
+#include "../../unmapped/GiveableTrigger"
+#include "../../json/Value"
+
+
 class GiveableDefinition {
 
 public:

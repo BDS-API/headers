@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../raknet/RakNetGUID"
+
+
 class RakNetServerLocator : ServerLocator {
 
 public:

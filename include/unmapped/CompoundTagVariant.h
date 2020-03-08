@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/nbt/Tag"
+
+
 class CompoundTagVariant {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/EntityContext"
+#include "../../../unmapped/EntityRegistry"
+#include "../../actor/Actor"
+
+
 class TrailSystem : ITickingSystem {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../container/CraftingContainer"
+#include "../../../mce/UUID"
+
+
 class BannerAddPatternRecipe : MultiRecipe {
 
 public:

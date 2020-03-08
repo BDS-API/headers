@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../item/ItemStack"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/Vec3"
+
+
 class ArmorStand : Mob {
 
 public:

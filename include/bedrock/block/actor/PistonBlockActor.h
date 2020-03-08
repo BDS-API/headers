@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Actor"
+#include "../../nbt/CompoundTag"
+
+
 class PistonBlockActor : BlockActor {
 
 public:
@@ -10,10 +18,10 @@ public:
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void onRemoved(BlockSource &);
     virtual void getOwningPiston(BlockSource &);
     virtual void getDeletionDelayTimeSeconds(void)const;
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     PistonBlockActor(BlockPos const&, bool);
     void _moveCollidedEntities(BlockSource &);

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../nbt/CompoundTag"
+#include "../actor/Actor"
+
+
 class CommandBlockComponent {
 
 public:

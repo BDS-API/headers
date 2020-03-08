@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class batch_control {
 
 public:

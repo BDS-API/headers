@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../actor/Mob"
+#include "../../json/Value"
+
+
 class GoalDefinition {
 
 public:

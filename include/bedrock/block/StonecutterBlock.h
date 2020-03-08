@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../actor/Actor"
+
+
 class StonecutterBlock : BlockLegacy {
 
 public:

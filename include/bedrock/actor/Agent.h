@@ -1,11 +1,19 @@
 #pragma once
 
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../item/ItemStack"
+#include "../../unmapped/VariantParameterList"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/Vec3"
+
+
 class Agent : Mob {
 
 public:
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual Agent::~Agent();
-    virtual void breaksFallingBlocks(void)const;
+    virtual bool breaksFallingBlocks(void)const;
     virtual void teleportTo(Vec3 const&, bool, int, int);
     virtual void normalTick(void);
     virtual bool isInvisible(void)const;

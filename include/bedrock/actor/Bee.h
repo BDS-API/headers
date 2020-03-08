@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+
+
 class Bee : Animal {
 
 public:

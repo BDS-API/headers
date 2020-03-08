@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../core/FileSystemImpl"
+#include "../core/StringSpan"
+
+
 class Core {
 
 public:

@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class ScriptBinderComponentTemplate : ScriptBinderTemplate {
 
 public:

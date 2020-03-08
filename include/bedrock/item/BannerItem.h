@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../nbt/CompoundTag"
+#include "../../unmapped/ItemDescriptor"
+
+
 class BannerItem : Item {
 
 public:
@@ -7,7 +11,7 @@ public:
     virtual bool isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual bool isValidAuxValue(int)const;
-    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&,std::unique_ptr<CompoundTag,std::default_delete<CompoundTag>> const&)const;
+    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
     BannerItem(std::string const&, int);

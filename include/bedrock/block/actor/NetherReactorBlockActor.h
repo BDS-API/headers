@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../level/Level"
+#include "../../../unmapped/BlockPos"
+#include "../../nbt/CompoundTag"
+
+
 class NetherReactorBlockActor : BlockActor {
 
 public:

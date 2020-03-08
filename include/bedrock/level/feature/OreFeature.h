@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/IBlockPlacementTarget"
+#include "../../../unmapped/Block"
+
+
 class OreFeature : IFeature {
 
 public:

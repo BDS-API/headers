@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/IMinecraftApp"
+#include "../bedrock/level/Level"
+#include "../bedrock/network/NetEventCallback"
+
+
 class Minecraft : IEntityRegistryOwner {
 
 public:
@@ -34,7 +39,7 @@ public:
     void hostMultiplayer(std::string const&, std::unique_ptr<Level, std::default_delete<Level>>, Player *, mce::UUID const&, std::unique_ptr<NetEventCallback, std::default_delete<NetEventCallback>>, int, bool, bool, std::vector<std::string, std::allocator<std::string>> const&, std::string, ConnectionDefinition const&, std::unordered_map<PackIdVersion, std::string, std::hash<PackIdVersion>, std::equal_to<PackIdVersion>, std::allocator<std::pair<PackIdVersion const, std::string>>> const&, Scheduler &, TextFilteringProcessor *);
     void getClientSubId(void)const;
     void setupServerCommands(std::string const&, std::string const&);
-    void usesNonLocalConnection(NetworkIdentifier const&);
+    bool usesNonLocalConnection(NetworkIdentifier const&);
     void getNetworkHandler(void);
     void startClientGame(std::unique_ptr<NetEventCallback, std::default_delete<NetEventCallback>>);
     void joinWorldInProgress(std::unique_ptr<NetEventCallback, std::default_delete<NetEventCallback>>);

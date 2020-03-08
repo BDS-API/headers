@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class ISubChunkBlockStoragePaletted : SubChunkBlockStorage {
 
 public:

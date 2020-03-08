@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../definition/Definition"
+
+
 class SimpleHashStringFilterTest : FilterTest {
 
 public:

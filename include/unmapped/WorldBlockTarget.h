@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/feature/Feature"
+
+
 class WorldBlockTarget : IBlockPlacementTarget {
 
 public:

@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace com::mojang::clacks::protocol;
 
 class Message : google::protobuf::Message {

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../json/Value"
+#include "../../unmapped/ActorDefinitionDescriptor"
+
+
 class ActorDefinition {
 
 public:

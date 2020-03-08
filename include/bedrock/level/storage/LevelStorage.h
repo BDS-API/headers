@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/PlayerStorageIds"
+#include "../../actor/Actor"
+#include "../../actor/Player"
+
+
 class LevelStorage {
 
 public:

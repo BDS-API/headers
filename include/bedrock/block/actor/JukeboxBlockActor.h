@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../nbt/CompoundTag"
+
+
 class JukeboxBlockActor : RandomizableBlockActorContainer {
 
 public:
@@ -9,8 +17,8 @@ public:
     virtual void tick(BlockSource &);
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getContainer(void);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void startOpen(Player &);
     virtual void getContainerSize(void)const;
     virtual void getMaxStackSize(void)const;

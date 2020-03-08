@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../Mob"
+#include "../../item/ItemStack"
+#include "../../item/Item"
+
+
 class EatCarriedItemGoal : Goal {
 
 public:

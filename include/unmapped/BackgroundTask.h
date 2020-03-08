@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class BackgroundTask : Bedrock::Threading::IAsyncResult<void> {
 
 public:

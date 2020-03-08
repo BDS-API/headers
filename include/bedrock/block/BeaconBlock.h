@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../actor/Player"
+
+
 class BeaconBlock : ActorBlock {
 
 public:

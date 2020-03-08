@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../Mob"
+#include "../Actor"
+#include "../../../unmapped/ActorDefinitionIdentifier"
+
+
 class SummonActorGoal : Goal {
 
 public:

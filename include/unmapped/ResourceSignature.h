@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/pack/PackAccessStrategy"
+#include "../core/Path"
+
+
 class ResourceSignature {
 
 public:

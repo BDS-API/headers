@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Player"
+
+
 class BarrelBlockActor : ChestBlockActor {
 
 public:

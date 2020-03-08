@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/Vec3"
+
+
 class SpawnExperienceOrbPacket : Packet {
 
 public:

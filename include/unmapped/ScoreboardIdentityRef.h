@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/scoreboard/Scoreboard"
+
+
 class ScoreboardIdentityRef {
 
 public:

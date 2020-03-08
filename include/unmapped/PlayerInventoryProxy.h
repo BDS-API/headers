@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/nbt/ListTag"
+#include "../bedrock/container/Inventory"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/container/manager/HudContainerManagerModel"
+
+
 class PlayerInventoryProxy : ContainerSizeChangeListener, ContainerContentChangeListener {
 
 public:

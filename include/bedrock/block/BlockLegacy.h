@@ -1,5 +1,22 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/Brightness"
+#include "../actor/Actor"
+#include "../../unmapped/Color"
+#include "../../unmapped/SpawnConditions"
+#include "../../unmapped/BaseGameVersion"
+#include "../../unmapped/ItemState"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+#include "../actor/Mob"
+#include "../../unmapped/Block"
+#include "../definition/BlockDefinition"
+#include "../../unmapped/Vec3"
+
+
 class BlockLegacy {
 
 public:
@@ -71,7 +88,7 @@ public:
     virtual void transformOnFall(BlockSource &, BlockPos const&, Actor *, float)const;
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;
     virtual void onMove(BlockSource &, BlockPos const&, BlockPos const&)const;
-    virtual void detachesOnPistonMove(BlockSource &, BlockPos const&)const;
+    virtual bool detachesOnPistonMove(BlockSource &, BlockPos const&)const;
     virtual void movedByPiston(BlockSource &, BlockPos const&)const;
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
     virtual void getRedstoneProperty(BlockSource &, BlockPos const&)const;
@@ -86,7 +103,7 @@ public:
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const;
     virtual void tryToPlace(BlockSource &, BlockPos const&, Block const&, ActorBlockSyncMessage const*)const;
-    virtual void breaksFallingBlocks(Block const&)const;
+    virtual bool breaksFallingBlocks(Block const&)const;
     virtual void destroy(BlockSource &, BlockPos const&, Block const&, Actor *)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void getIgnoresDestroyPermissions(Actor &, BlockPos const&)const;
@@ -94,7 +111,7 @@ public:
     virtual void getSecondPart(BlockSource &, BlockPos const&, BlockPos&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void spawnBurnResources(BlockSource &, float, float, float)const;
     virtual void getExplosionResistance(Actor *)const;
@@ -117,7 +134,7 @@ public:
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void getMapColor(void)const;
     virtual void shouldStopFalling(Actor &)const;
-    virtual void pushesUpFallingBlocks(void)const;
+    virtual bool pushesUpFallingBlocks(void)const;
     virtual void calcGroundFriction(Mob &, BlockPos const&)const;
     virtual bool canHaveExtraData(void)const;
     virtual bool hasComparatorSignal(void)const;
@@ -161,13 +178,13 @@ public:
     virtual void setVisualShape(AABB const&);
     virtual void setVisualShape(Vec3 const&, Vec3 const&);
     virtual void tryLegacyUpgrade(unsigned short)const;
-    virtual void dealsContactDamage(Actor const&, Block const&, bool)const;
+    virtual bool dealsContactDamage(Actor const&, Block const&, bool)const;
 
     void getBlockID(void)const;
     void getNumPermutations(void)const;
     bool hasState(ItemState const&)const;
     bool isDoor(void)const;
-    void matchesStates(BlockLegacy const&)const;
+    bool matchesStates(BlockLegacy const&)const;
     bool isMobPiece(void)const;
     bool canBeExtraBlock(void)const;
     bool canPropagateBrightness(void)const;
@@ -192,7 +209,7 @@ public:
     void popResource(BlockSource &, BlockPos const&, ItemInstance const&)const;
     void addAABB(AABB const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     bool isSolid(void)const;
-    void pushesOutItems(void)const;
+    bool pushesOutItems(void)const;
     void setPushesOutItems(bool);
     void ignoreBlockForInsideCubeRenderer(void)const;
     void setIgnoreBlockForInsideCubeRenderer(bool);

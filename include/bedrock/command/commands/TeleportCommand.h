@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../Command"
+#include "../CommandRegistry"
+#include "../../actor/Actor"
+#include "../orgin/CommandOrigin"
+
+
 class TeleportCommand : Command {
 
 public:

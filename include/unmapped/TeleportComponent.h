@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/description/component/TeleportDescription"
+
+
 class TeleportComponent {
 
 public:

@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../actor/Mob"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class TopSnowBlock : HeavyBlock {
 
 public:
@@ -20,7 +29,7 @@ public:
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
     virtual bool canBeBuiltOver(BlockSource &, BlockPos const&)const;

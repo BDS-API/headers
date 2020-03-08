@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../OceanMonumentPiece"
+#include "../../../../../unmapped/BlockSource"
+#include "../../../../../unmapped/Random"
+
+
 class MonumentBuilding : OceanMonumentPiece {
 
 public:

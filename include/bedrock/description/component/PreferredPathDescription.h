@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../block/BlockLegacy"
+#include "../../../json/Value"
+
+
 class PreferredPathDescription : ComponentDescription {
 
 public:

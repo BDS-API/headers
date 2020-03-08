@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../level/LevelSettings"
+#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class StartGamePacket : Packet {
 
 public:

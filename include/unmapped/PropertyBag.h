@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../json/Value"
+
+
 class PropertyBag {
 
 public:
@@ -15,7 +18,7 @@ public:
     void set(gsl::basic_string_span<char const, -1l>, buffer_span<int>);
     void set(gsl::basic_string_span<char const, -1l>, buffer_span<std::string>);
     void set(gsl::basic_string_span<char const, -1l>, std::vector<Json::Value, std::allocator<Json::Value>> const&);
-    void has(gsl::basic_string_span<char const, -1l>)const;
+    bool has(gsl::basic_string_span<char const, -1l>)const;
     void memberCount(void)const;
     void toJsonValue(void)const;
     void getChangeVersion(void)const;

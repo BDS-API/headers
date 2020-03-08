@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class DwellerComponent {
 
 public:
@@ -40,8 +44,8 @@ public:
     void clearPreferredProfession(void);
     bool isWithinRestriction(Actor const&)const;
     void tryToMigrate(Actor &, Village *, Village *);
-    void wantsToMigrate(Actor const&, Village *)const;
+    bool wantsToMigrate(Actor const&, Village *)const;
     void tryToFixupRole(Actor const&, Village *);
-    void needsToFixupVillageRole(Actor const&, Village *)const;
+    bool needsToFixupVillageRole(Actor const&, Village *)const;
     void checkandUpdateDwellingStatus(Actor const&, Village *);
 };

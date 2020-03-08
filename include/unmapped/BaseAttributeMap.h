@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/attribute/AttributeInstance"
+
+
 class BaseAttributeMap {
 
 public:

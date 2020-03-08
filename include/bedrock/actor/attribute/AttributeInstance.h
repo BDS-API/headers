@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../mce/UUID"
+#include "../../../unmapped/BaseAttributeMap"
+
+
 class AttributeInstance {
 
 public:

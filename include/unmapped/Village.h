@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Player"
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Mob"
+
+
 class Village {
 
 public:

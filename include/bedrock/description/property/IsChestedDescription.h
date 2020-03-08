@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../json/Value"
+
+
 class IsChestedDescription : PropertyDescription {
 
 public:

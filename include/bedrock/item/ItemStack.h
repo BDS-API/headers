@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../actor/Mob"
+#include "../../unmapped/Block"
+#include "../level/Level"
+#include "../../unmapped/RecipeIngredient"
+#include "../block/BlockLegacy"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../nbt/CompoundTag"
+
+
 class ItemStack : ItemStackBase {
 
 public:

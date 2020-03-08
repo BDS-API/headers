@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../nbt/CompoundTag"
+
+
 class FlowerPotBlockActor : BlockActor {
 
 public:
@@ -8,7 +15,7 @@ public:
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     FlowerPotBlockActor(BlockPos const&);
     void setPlantItem(Block const*);

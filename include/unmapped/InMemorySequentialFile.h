@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class InMemorySequentialFile : leveldb::SequentialFile {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../container/CraftingContainer"
+#include "../../level/Level"
+#include "../../../mce/UUID"
+
+
 class MapLockingRecipe : MultiRecipe {
 
 public:

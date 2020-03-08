@@ -1,11 +1,13 @@
 #pragma once
 
-using namespace LocalConnector;
+
+
+using namespace RakNetInstance;
 
 class ConnectionCallbacks {
 
 public:
-    virtual void LocalConnector::ConnectionCallbacks::~ConnectionCallbacks();
+    virtual void RakNetInstance::ConnectionCallbacks::~ConnectionCallbacks();
 
     ConnectionCallbacks(void);
 };

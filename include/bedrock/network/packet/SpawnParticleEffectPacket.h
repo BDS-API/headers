@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/Vec3"
+
+
 class SpawnParticleEffectPacket : Packet {
 
 public:

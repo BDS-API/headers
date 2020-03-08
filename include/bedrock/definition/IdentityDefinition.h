@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/ScoreboardId"
+#include "../../unmapped/PlayerScoreboardId"
+
+
 class IdentityDefinition {
 
 public:

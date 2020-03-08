@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/command/CommandVersion"
+#include "../bedrock/command/Command"
+
+
 using namespace CommandRegistry;
 
 class Overload {

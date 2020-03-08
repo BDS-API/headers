@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../unmapped/AppIsland"
+
+
 class DedicatedServer : IMinecraftApp, BedrockEngine::AppIsland {
 
 public:

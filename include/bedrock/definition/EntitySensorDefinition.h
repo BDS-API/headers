@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/EntityContext"
+
+
 class EntitySensorDefinition {
 
 public:

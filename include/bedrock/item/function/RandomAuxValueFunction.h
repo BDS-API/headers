@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../ItemInstance"
+#include "../ItemStack"
+#include "../../../json/Value"
+#include "../condition/LootItemCondition"
+
+
 class RandomAuxValueFunction : LootItemFunction {
 
 public:

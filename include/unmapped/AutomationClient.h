@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/IMinecraftApp"
+
+
 using namespace Automation;
 
 class AutomationClient : UriListener {

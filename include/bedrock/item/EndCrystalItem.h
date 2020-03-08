@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class EndCrystalItem : Item {
 
 public:

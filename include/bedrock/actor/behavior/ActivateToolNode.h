@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Actor"
+
+
 class ActivateToolNode : BehaviorNode {
 
 public:

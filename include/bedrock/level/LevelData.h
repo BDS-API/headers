@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../raknet/BitStream"
+#include "../../unmapped/PackIdVersion"
+#include "../../unmapped/BaseGameVersion"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/GameRuleId"
+#include "../../unmapped/Tick"
+#include "../../unmapped/ContentIdentity"
+
+
 class LevelData {
 
 public:
@@ -60,7 +70,7 @@ public:
     void disableAchievements(void);
     void getUseMsaGamertagsOnly(void)const;
     void setUseMsaGamertagsOnly(bool);
-    void achievementsWillBeDisabledOnLoad(void)const;
+    bool achievementsWillBeDisabledOnLoad(void)const;
     bool hasCommandsEnabled(void)const;
     void recordStartUp(void);
     bool isNewLevel(void)const;
@@ -133,6 +143,6 @@ public:
     void getOnlySpawnV1Villagers(void)const;
     void getNetherScale(void)const;
     bool isLegacyLevel(void)const;
-    void requiresCopiedPackRemovalCheck(void)const;
+    bool requiresCopiedPackRemovalCheck(void)const;
     void setRequiresCopiedPackRemovalCheck(bool);
 };

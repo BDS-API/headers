@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/Level"
+#include "../json/Value"
+
+
 class ProjectileFactory {
 
 public:

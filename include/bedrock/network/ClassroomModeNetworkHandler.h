@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/NetworkIdentifier"
+#include "../../unmapped/AutomationClient"
+
+
 class ClassroomModeNetworkHandler : NetEventCallback {
 
 public:

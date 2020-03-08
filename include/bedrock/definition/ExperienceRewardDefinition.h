@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/EntityContext"
+#include "../../json/Value"
+#include "../../unmapped/ExpressionNode"
+
+
 class ExperienceRewardDefinition {
 
 public:

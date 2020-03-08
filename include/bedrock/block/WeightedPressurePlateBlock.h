@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/BlockSource"
+
+
 class WeightedPressurePlateBlock : BasePressurePlateBlock {
 
 public:
@@ -7,7 +10,7 @@ public:
     static long MAX_WEIGHT_HEAVY;
 
     virtual WeightedPressurePlateBlock::~WeightedPressurePlateBlock();
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getTickDelay(void)const;
     virtual void getSignalStrength(BlockSource &, BlockPos const&)const;
     virtual void getSignalForData(int)const;

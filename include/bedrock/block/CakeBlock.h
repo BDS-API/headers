@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../actor/Actor"
+#include "../../unmapped/Random"
+
+
 class CakeBlock : BlockLegacy {
 
 public:
@@ -8,7 +15,7 @@ public:
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual bool hasComparatorSignal(void)const;

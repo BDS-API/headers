@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/actor/Mob"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/control/LookControl"
+
+
 class LookControlComponent {
 
 public:

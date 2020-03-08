@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../level/Level"
+#include "../../nbt/CompoundTag"
+
+
 class RandomizableBlockActorContainerBase : BlockActor {
 
 public:

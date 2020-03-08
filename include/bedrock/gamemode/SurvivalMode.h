@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../item/ItemStack"
+
+
 class SurvivalMode : GameMode {
 
 public:

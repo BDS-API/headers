@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../../unmapped/ContainerContentChangeListener"
+#include "../../item/ItemStack"
+#include "../../../unmapped/SlotData"
+#include "../../../unmapped/ItemDescriptor"
+
+
 class ContainerModel : ContainerContentChangeListener {
 
 public:

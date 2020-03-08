@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class BackgroundWorker : ITaskExecutionContext {
 
 public:
@@ -21,7 +23,7 @@ public:
     void _doNoWorkDelay(void);
     void _sleepTimeoutElapsed(void)const;
     void _workerThread(void)const;
-    void processTaskSync(void);
+    bool processTaskSync(void);
     void _processNextTask(void);
     void _tryPop(void);
     void resortPriorityQueue(void);

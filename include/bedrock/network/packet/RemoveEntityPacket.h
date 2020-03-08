@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/EntityContext"
+
+
 class RemoveEntityPacket : EntityServerPacket {
 
 public:

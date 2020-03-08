@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../orgin/CommandOrigin"
+#include "../../../unmapped/ScoreboardId"
+#include "../Command"
+#include "../CommandRegistry"
+#include "../../../unmapped/SetScoreOutput"
+#include "../../level/scoreboard/Scoreboard"
+
+
 class ScoreboardCommand : Command {
 
 public:

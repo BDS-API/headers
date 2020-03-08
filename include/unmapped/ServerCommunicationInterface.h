@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../raknet/TCPInterface"
+#include "../raknet/SystemAddress"
+
+
 class ServerCommunicationInterface {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class MobEffectInstance {
 
 public:
@@ -24,7 +28,7 @@ public:
     void getSplashEffect(void)const;
     bool isAmbient(void)const;
     bool isEffectVisible(void)const;
-    void displaysOnScreenTextureAnimation(void)const;
+    bool displaysOnScreenTextureAnimation(void)const;
     void tick(Actor *);
     void _tickDownDuration(void);
     void applyEffects(Actor *)const;

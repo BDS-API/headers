@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace mce;
 
 class Math {
@@ -23,7 +25,7 @@ public:
     void safeIncrement(int &);
     void fastRandom(void);
     void intFloorDiv(int, int);
-    void absDecrease(float, float, float);
+    bool absDecrease(float, float, float);
     void wrapRadians(float);
     void wrapDegrees(mce::Degree);
     void wrapDegrees(float);
@@ -35,8 +37,8 @@ public:
     void lerpRotate(mce::Degree, mce::Degree, float);
     void lerpRotate(float, float, float);
     bool isNan(float);
-    void absMax(float, float);
-    void absMaxSigned(float, float);
+    bool absMax(float, float);
+    bool absMaxSigned(float, float);
     void clampedLerp(float, float, float);
     void signum(float);
     void wrap(float, float);
@@ -47,8 +49,8 @@ public:
     void hermiteBlend(float);
     void log2(float);
     void log2(unsigned int);
-    void degreesDifference(float, float);
-    void degreesDifferenceAbs(float, float);
+    bool degreesDifference(float, float);
+    bool degreesDifferenceAbs(float, float);
     void approach(float, float, float);
     void approachDegrees(float, float, float);
     void acos_approx(float);

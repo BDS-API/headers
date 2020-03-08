@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../raknet/SystemAddress"
+
+
 class RakNet {
 
 public:

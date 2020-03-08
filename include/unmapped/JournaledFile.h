@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../core/Path"
+#include "../core/FileOpenMode"
+#include "../core/Result"
+
+
 class JournaledFile {
 
 public:

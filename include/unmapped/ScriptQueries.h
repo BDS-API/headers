@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/scripting/ScriptVersionInfo"
+
+
 class ScriptQueries {
 
 public:

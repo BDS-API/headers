@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../container/Container"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../nbt/CompoundTag"
+#include "../../../unmapped/ItemDescriptor"
+
+
 class BeaconBlockActor : BlockActor, Container {
 
 public:
@@ -8,9 +18,9 @@ public:
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual bool hasAlphaLayer(void)const;
     virtual void getName[abi:cxx11](void)const;
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void removeItem(int, int);

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../core/File"
+
+
 class LevelDbSequentialFile : leveldb::SequentialFile {
 
 public:

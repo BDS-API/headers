@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/level/biome/Biome"
+#include "../json/Value"
+#include "../bedrock/pack/ResourcePackManager"
+
+
 class BiomeRegistry : IEntityRegistryOwner {
 
 public:

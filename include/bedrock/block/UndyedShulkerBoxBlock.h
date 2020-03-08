@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/Block"
+
+
 class UndyedShulkerBoxBlock : ShulkerBoxBlock {
 
 public:

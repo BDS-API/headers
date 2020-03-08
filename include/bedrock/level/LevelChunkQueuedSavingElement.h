@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/Dimension"
+#include "../../unmapped/ChunkPos"
+
+
 using namespace Level;
 
 class LevelChunkQueuedSavingElement {

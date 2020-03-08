@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../level/Level"
+#include "../../io/BinaryStream"
+
+
 class UpdateBlockPacket : Packet {
 
 public:

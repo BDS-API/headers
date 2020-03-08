@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/ChunkPos"
+#include "../../../unmapped/Tick"
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/Bounds"
+#include "../chunksource/ChunkSource"
+
+
 class TickingAreaView : ITickingAreaView {
 
 public:

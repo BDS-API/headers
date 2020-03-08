@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../raknet/AddressOrGUID"
+#include "../raknet/RakNetGUID"
+#include "../raknet/SystemAddress"
+
+
 class NetworkIdentifier {
 
 public:
@@ -19,7 +24,7 @@ public:
     NetworkIdentifier(sockaddr_in6 const&);
     void getHash(void)const;
     void getPort(void)const;
-    void equalsTypeData(NetworkIdentifier const&)const;
+    bool equalsTypeData(NetworkIdentifier const&)const;
     void getSocketAddress(void)const;
     void getSocketAddress6(void)const;
     bool isUnassigned(void)const;

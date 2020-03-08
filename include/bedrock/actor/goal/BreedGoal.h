@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/Vec2"
+#include "../../../unmapped/Vec3"
+
+
 class BreedGoal : Goal {
 
 public:

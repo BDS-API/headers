@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../container/Container"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../nbt/CompoundTag"
+
+
 class LecternBlockActor : BlockActor, Container {
 
 public:
@@ -8,7 +17,7 @@ public:
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void getMaxStackSize(void)const;

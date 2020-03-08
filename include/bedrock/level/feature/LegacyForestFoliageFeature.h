@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/Random"
+#include "../../../unmapped/FeatureRegistry"
+
+
 class LegacyForestFoliageFeature : Feature {
 
 public:

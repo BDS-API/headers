@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+
+
 class MaterialReducerContainerManagerModel : ContainerManagerModel {
 
 public:

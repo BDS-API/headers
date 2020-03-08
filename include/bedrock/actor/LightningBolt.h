@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+
+
 class LightningBolt : Actor {
 
 public:

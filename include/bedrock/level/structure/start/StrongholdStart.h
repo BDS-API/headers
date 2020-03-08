@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../../unmapped/Dimension"
+
+
 class StrongholdStart : StructureStart {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../model/ContainerModel"
+#include "../../item/ItemInstance"
+
+
 class HorseEquipContainerController : ContainerController {
 
 public:

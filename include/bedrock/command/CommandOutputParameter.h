@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../../unmapped/Vec3"
+
+
 class CommandOutputParameter {
 
 public:

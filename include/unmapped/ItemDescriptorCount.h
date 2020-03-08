@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/item/Item"
+
+
 class ItemDescriptorCount {
 
 public:

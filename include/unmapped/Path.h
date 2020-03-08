@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+
+
 class Path {
 
 public:
@@ -25,6 +28,6 @@ public:
     void getEndPos(void)const;
     void getLastPos(void)const;
     void sameAs(Path*)const;
-    void endsInXZ(Vec3 const&);
+    bool endsInXZ(Vec3 const&);
     void makeCopy(void)const;
 };

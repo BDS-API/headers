@@ -1,5 +1,22 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../nbt/ListTag"
+#include "../definition/GoalDefinition"
+#include "../item/ItemStack"
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorUniqueID"
+#include "../../unmapped/Vec2"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/HashString"
+#include "../level/Level"
+#include "../../mce/UUID"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/Vec3"
+
+
 class Mob : Actor {
 
 public:
@@ -231,7 +248,7 @@ public:
     void getEatCounter(void)const;
     void setEatCounter(int);
     void setWantsToBeJockey(bool);
-    void wantsToBeJockey(void)const;
+    bool wantsToBeJockey(void)const;
     void setJumpVelRedux(bool);
     void setSpeedModifier(float);
     void _doSprintParticleEffect(void);

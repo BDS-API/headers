@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+
+
 class Villager : VillagerBase {
 
 public:

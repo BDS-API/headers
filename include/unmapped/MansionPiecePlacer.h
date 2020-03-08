@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/structure/piece/StructurePiece"
+
+
 using namespace WoodlandMansionPieces;
 
 class MansionPiecePlacer {

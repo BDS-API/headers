@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../clacks/protocol/MetricReport"
+#include "../ServerInstance"
+#include "../../unmapped/ServerCommunicationInterface"
+
+
 class ServerMetricsImpl : ServerMetrics {
 
 public:

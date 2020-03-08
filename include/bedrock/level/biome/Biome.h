@@ -1,5 +1,18 @@
 #pragma once
 
+#include "../../../unmapped/HashString"
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/WellKnownTagID"
+#include "../../../unmapped/BlockSource"
+#include "../LevelChunk"
+#include "../../../unmapped/TagRegistry"
+#include "../../../json/Value"
+#include "../../../unmapped/BiomeHeight"
+#include "../../../unmapped/EntityRegistryOwned"
+#include "../../../unmapped/Color"
+#include "../../nbt/CompoundTag"
+
+
 class Biome {
 
 public:

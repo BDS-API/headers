@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../EnderMan"
+
+
 class EndermanLeaveBlockGoal : Goal {
 
 public:

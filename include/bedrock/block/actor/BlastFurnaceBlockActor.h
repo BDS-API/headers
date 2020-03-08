@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+
+
 class BlastFurnaceBlockActor : FurnaceBlockActor {
 
 public:

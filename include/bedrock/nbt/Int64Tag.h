@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../io/IDataOutput"
+#include "../io/IDataInput"
+
+
 class Int64Tag : Tag {
 
 public:

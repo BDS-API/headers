@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/RenderParams"
+#include "damagesource/ActorDamageSource"
+
+
 class Ghast : Mob {
 
 public:

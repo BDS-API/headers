@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/biome/Biome"
+
+
 class OceanMixerLayer : MixerLayer<Biome *, Biome *, BiomeTemperatureCategory> {
 
 public:

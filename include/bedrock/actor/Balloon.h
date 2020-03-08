@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/Vec3"
+
+
 class Balloon : Actor {
 
 public:

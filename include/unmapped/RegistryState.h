@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/command/RegistryState"
+
+
 using namespace CommandRegistry;
 
 class RegistryState {

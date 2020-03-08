@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../../unmapped/Random"
+
+
 class SweetBerryBushBlock : BushBlock {
 
 public:
@@ -14,7 +21,7 @@ public:
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void attack(Player *, BlockPos const&)const;
@@ -27,7 +34,7 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void getVariant(Block const&)const;
     virtual bool canBeSilkTouched(void)const;
-    virtual void dealsContactDamage(Actor const&, Block const&, bool)const;
+    virtual bool dealsContactDamage(Actor const&, Block const&, bool)const;
 
     SweetBerryBushBlock(std::string const&, int);
     void _growBush(BlockSource &, BlockPos const&)const;

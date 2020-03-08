@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "damagesource/ActorDamageSource"
+
+
 class Squid : Mob {
 
 public:

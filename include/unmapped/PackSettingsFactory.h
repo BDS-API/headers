@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/pack/PackManifest"
+
+
 class PackSettingsFactory {
 
 public:

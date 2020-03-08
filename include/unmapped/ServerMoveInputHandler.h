@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/network/packet/PlayerAuthInputPacket"
+#include "../bedrock/actor/Player"
+
+
 class ServerMoveInputHandler : MoveInputHandler {
 
 public:

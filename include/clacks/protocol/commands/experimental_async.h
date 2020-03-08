@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 using namespace com::mojang::clacks::protocol::Commands::Stub;
 
 class experimental_async : com::mojang::clacks::protocol::Commands::StubInterface::experimental_async_interface {

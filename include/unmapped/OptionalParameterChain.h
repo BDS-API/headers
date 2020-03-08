@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/command/OptionalParameterChain"
+#include "../bedrock/command/Symbol"
+
+
 using namespace CommandRegistry;
 
 class OptionalParameterChain {

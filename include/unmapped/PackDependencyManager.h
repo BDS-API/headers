@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/pack/PackManifest"
+#include "../bedrock/pack/PackSource"
+
+
 class PackDependencyManager {
 
 public:

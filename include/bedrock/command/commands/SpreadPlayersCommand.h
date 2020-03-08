@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../orgin/CommandOrigin"
+#include "../CommandOutput"
+#include "../../actor/Actor"
+#include "../Command"
+#include "../CommandRegistry"
+#include "../../../unmapped/Random"
+
+
 class SpreadPlayersCommand : Command {
 
 public:

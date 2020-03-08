@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../../unmapped/BoundingBox"
+#include "../../LevelChunk"
+#include "../../../../unmapped/PieceWeight"
+#include "../../../../unmapped/BlockSource"
+
+
 class NetherFortressPiece : StructurePiece {
 
 public:

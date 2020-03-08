@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../ItemInstance"
+#include "../../actor/damagesource/ActorDamageSource"
+
+
 class ProtectionEnchant : Enchant {
 
 public:

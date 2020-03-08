@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/io/IDataInput"
+
+
 class NbtIo {
 
 public:

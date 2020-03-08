@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../actor/Mob"
+
+
 class RangedWeaponItem : Item {
 
 public:

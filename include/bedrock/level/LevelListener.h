@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/BlockSourceListener"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/HashedString"
+#include "../../unmapped/Vec3"
+
+
 class LevelListener : BlockSourceListener {
 
 public:

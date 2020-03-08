@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+
+
 class StructureVoid : BlockLegacy {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../../unmapped/CircuitSceneGraph"
+#include "../../../../unmapped/CircuitSystem"
+
+
 class PoweredBlockComponent : BaseCircuitComponent {
 
 public:

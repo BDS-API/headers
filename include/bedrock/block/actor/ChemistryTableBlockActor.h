@@ -1,5 +1,16 @@
 #pragma once
 
+#include "../../network/packet/LabTablePacket"
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../container/Container"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../../unmapped/Random"
+#include "../../nbt/CompoundTag"
+
+
 class ChemistryTableBlockActor : BlockActor, Container {
 
 public:

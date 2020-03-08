@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/item/ItemStack"
+
+
 class ItemReactionComponent : LabTableReactionComponent {
 
 public:

@@ -1,5 +1,32 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../block/actor/ChalkboardBlockActor"
+#include "../item/ItemStack"
+#include "../../unmapped/ActorUniqueID"
+#include "../container/Container"
+#include "../../unmapped/BlockSource"
+#include "../level/chunksource/ChunkSource"
+#include "../item/Item"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../network/packet/Packet"
+#include "../../unmapped/Block"
+#include "../level/Level"
+#include "../container/manager/IContainerManager"
+#include "../network/packet/EventPacket"
+#include "../item/ShieldItem"
+#include "../../unmapped/Dimension"
+#include "../../unmapped/Tick"
+#include "../block/actor/BlockActor"
+#include "../../unmapped/ItemGroup"
+#include "../item/ItemInstance"
+#include "../text/TextObjectRoot"
+#include "../../unmapped/SerializedSkin"
+#include "../../unmapped/Vec3"
+
+
 class Player : Mob {
 
 public:

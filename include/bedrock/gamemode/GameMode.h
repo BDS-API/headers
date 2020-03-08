@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/Block"
+#include "../actor/Actor"
+#include "../actor/Player"
+#include "../item/ItemStack"
+
+
 class GameMode {
 
 public:

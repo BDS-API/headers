@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/EntityContext"
+#include "../../json/Value"
+
+
 class SchedulerDefinition {
 
 public:

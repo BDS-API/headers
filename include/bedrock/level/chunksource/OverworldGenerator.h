@@ -1,5 +1,17 @@
 #pragma once
 
+#include "../../../unmapped/BoundingBox"
+#include "../../../unmapped/BlockVolume"
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/ChunkPos"
+#include "../LevelChunk"
+#include "../LevelData"
+#include "../../../unmapped/Dimension"
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/ThreadData"
+#include "../generator/WorldGenerator"
+
+
 class OverworldGenerator : ChunkSource, WorldGenerator {
 
 public:

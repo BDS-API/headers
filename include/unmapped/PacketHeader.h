@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/io/BinaryStream"
+
+
 class PacketHeader {
 
 public:

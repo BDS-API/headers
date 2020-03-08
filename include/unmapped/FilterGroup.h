@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/test/FilterTest"
+#include "../json/Value"
+#include "../bedrock/definition/Definition"
+
+
 class FilterGroup {
 
 public:

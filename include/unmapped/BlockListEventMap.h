@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/block/BlockLegacy"
+
+
 class BlockListEventMap {
 
 public:

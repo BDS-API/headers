@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../model/ContainerModel"
+#include "../../crafting/recipe/Recipe"
+
+
 class CraftingContainerController : ContainerController {
 
 public:

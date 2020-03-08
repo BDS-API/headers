@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ActorUniqueID"
+#include "../../level/Level"
+#include "../../actor/Actor"
+
+
 class GameMasterEntityServerCommandOrigin : ActorServerCommandOrigin {
 
 public:

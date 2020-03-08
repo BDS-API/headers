@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+
+
 class BarrelBlock : FaceDirectionalBlock {
 
 public:

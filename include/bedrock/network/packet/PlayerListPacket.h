@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/PlayerListEntry"
+#include "../../io/BinaryStream"
+#include "../../../mce/UUID"
+
+
 class PlayerListPacket : Packet {
 
 public:

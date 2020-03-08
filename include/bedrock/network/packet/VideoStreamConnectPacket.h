@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../../unmapped/WebSocketPacketData"
+
+
 class VideoStreamConnectPacket : Packet {
 
 public:

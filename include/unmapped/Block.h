@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/actor/Mob"
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/actor/Player"
+#include "../bedrock/actor/Actor"
+
+
 class Block {
 
 public:
@@ -17,14 +23,14 @@ public:
     bool isDoor(void)const;
     void getLegacyBlockPtr(void)const;
     bool canContainLiquid(void)const;
-    void matchesStates(BlockLegacy const&)const;
+    bool matchesStates(BlockLegacy const&)const;
     void getBurnOdds(void)const;
     void setFlammable(int, int)const;
     void getFlameOdds(void)const;
     void getLight(void)const;
     bool isSolid(void)const;
     void ignoreBlockForInsideCubeRenderer(void)const;
-    void pushesOutItems(void)const;
+    bool pushesOutItems(void)const;
     void shouldRandomTick(void)const;
     void shouldRandomTickExtraLayer(void)const;
     void getTranslucency(void)const;
@@ -70,7 +76,7 @@ public:
     void mayPick(void)const;
     void mayPick(BlockSource &, bool)const;
     void getResourceCount(Random &, int)const;
-    void asItemInstance(BlockSource &, BlockPos const&)const;
+    bool asItemInstance(BlockSource &, BlockPos const&)const;
     void getExplosionResistance(Actor *)const;
     bool isInteraction(void)const;
     void use(Player &, BlockPos const&)const;
@@ -108,7 +114,7 @@ public:
     void mayPlace(BlockSource &, BlockPos const&)const;
     void mayPlace(BlockSource &, BlockPos const&, unsigned char)const;
     void tryToPlace(BlockSource &, BlockPos const&, ActorBlockSyncMessage const*)const;
-    void breaksFallingBlocks(void)const;
+    bool breaksFallingBlocks(void)const;
     void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     void getSecondPart(BlockSource &, BlockPos const&, BlockPos&)const;
     void DEPRECATEDcallOnGraphicsModeChanged(bool, bool, bool);
@@ -169,7 +175,7 @@ public:
     bool hasComparatorSignal(void)const;
     void getComparatorSignal(BlockSource &, BlockPos const&, unsigned char)const;
     void shouldStopFalling(Actor &)const;
-    void pushesUpFallingBlocks(void)const;
+    bool pushesUpFallingBlocks(void)const;
     bool hasProperty(BlockProperty)const;
     void getProperties(void)const;
     void keepState(ItemState const&)const;
@@ -178,13 +184,13 @@ public:
     void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&)const;
     void getParticleQuantityScalar(void)const;
     bool isStandingSign(void)const;
-    void dealsContactDamage(Actor const&, bool)const;
+    bool dealsContactDamage(Actor const&, bool)const;
     bool hasTag(BlockSource &, BlockPos const&, Block const&, std::string const&)const;
     void getPlacementFacingAll(Actor &, BlockPos const&, float);
     void getPlacementFacingAllExceptAxisY(Actor &, BlockPos const&, float);
     bool isTrapdoor(void)const;
     void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block const& ()(BlockPos const&)> const&, BlockPos const&)const;
-    void detachesOnPistonMove(BlockSource &, BlockPos const&)const;
+    bool detachesOnPistonMove(BlockSource &, BlockPos const&)const;
     void onMove(BlockSource &, BlockPos const&, BlockPos const&)const;
     void handleRain(BlockSource &, BlockPos const&, float)const;
     void setupRedstoneComponent(BlockSource &, BlockPos const&)const;

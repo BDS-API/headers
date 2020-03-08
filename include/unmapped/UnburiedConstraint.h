@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class UnburiedConstraint : IStructureConstraint {
 
 public:

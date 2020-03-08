@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Creeper"
+
+
 class SwellGoal : Goal {
 
 public:

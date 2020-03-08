@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+
+
 class PlayerUIContainerModelBase : ContainerModel {
 
 public:

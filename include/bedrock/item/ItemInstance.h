@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../block/BlockLegacy"
+#include "../nbt/CompoundTag"
+
+
 class ItemInstance : ItemStackBase {
 
 public:

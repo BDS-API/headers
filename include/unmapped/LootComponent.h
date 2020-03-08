@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/description/blockcomponent/LootComponentDescription"
+
+
 class LootComponent {
 
 public:

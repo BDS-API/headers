@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../level/Level"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/Random"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/Vec3"
+
+
 class FireworksRocketActor : Actor {
 
 public:

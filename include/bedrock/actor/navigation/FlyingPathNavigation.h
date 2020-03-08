@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../../unmapped/NavigationComponent"
+
+
 class FlyingPathNavigation : PathNavigation {
 
 public:

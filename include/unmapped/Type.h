@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/item/Item"
+
+
 using namespace Recipes;
 
 class Type {

@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../bedrock/actor/Mob"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/item/ItemStackBase"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/Item"
+#include "../bedrock/actor/damagesource/ActorDamageSource"
+
+
 class EnchantUtils {
 
 public:

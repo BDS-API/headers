@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../../item/ItemStack"
+
+
 class SnackGoal : Goal {
 
 public:

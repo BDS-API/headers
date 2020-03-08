@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../core/Path"
+#include "../bedrock/level/Level"
+
+
 class FileArchiver {
 
 public:

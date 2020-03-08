@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class TextureAtlasItem {
 
 public:

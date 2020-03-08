@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/Level"
+#include "../bedrock/level/storage/LevelStorage"
+
+
 class TickingAreasManager {
 
 public:

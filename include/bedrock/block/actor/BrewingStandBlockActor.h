@@ -1,5 +1,17 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../container/Container"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Player"
+#include "../../item/ItemInstance"
+#include "../../item/ItemStack"
+#include "../../item/Item"
+#include "../../nbt/CompoundTag"
+#include "../../../unmapped/ItemDescriptor"
+
+
 class BrewingStandBlockActor : BlockActor, Container {
 
 public:

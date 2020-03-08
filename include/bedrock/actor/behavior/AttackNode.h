@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Actor"
+
+
 class AttackNode : BehaviorNode {
 
 public:

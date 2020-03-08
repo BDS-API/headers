@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../core/Path"
+
+
 class SnapshotEnv : leveldb::EnvWrapper {
 
 public:
@@ -12,6 +15,7 @@ public:
     virtual void RenameFile(std::string const&, std::string const&);
 
     SnapshotEnv(leveldb::Env *);
+    void _isQueuedForRemoval(Core::PathBuffer<std::string> const&);
     void _newWrappedWritableFile(std::string const&, leveldb::WritableFile **);
     void createSnapshot(Core::Path const&);
     void releaseSnapshot(void);

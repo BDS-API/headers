@@ -1,5 +1,14 @@
 #pragma once
 
+#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/ChunkPos"
+#include "../../LevelChunk"
+#include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/BlockSource"
+#include "../../../../unmapped/Random"
+#include "../../../../unmapped/HardcodedSpawnAreaRegistry"
+
+
 class StructureFeature {
 
 public:

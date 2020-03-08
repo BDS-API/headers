@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+
+
 class UpdateSoftEnumPacket : Packet {
 
 public:

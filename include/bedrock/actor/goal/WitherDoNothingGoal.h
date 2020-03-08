@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../WitherBoss"
+
+
 class WitherDoNothingGoal : Goal {
 
 public:

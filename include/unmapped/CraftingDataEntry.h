@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../bedrock/io/ReadOnlyBinaryStream"
+#include "../bedrock/io/BinaryStream"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/crafting/recipe/MultiRecipe"
+#include "../bedrock/crafting/recipe/Recipe"
+
+
 class CraftingDataEntry {
 
 public:

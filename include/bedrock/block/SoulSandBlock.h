@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+
+
 class SoulSandBlock : BlockLegacy {
 
 public:

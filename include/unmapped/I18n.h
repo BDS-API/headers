@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../bedrock/pack/PackManifest"
+#include "../bedrock/pack/PackAccessStrategy"
+#include "../json/Value"
+#include "../bedrock/pack/ResourcePackManager"
+
+
 class I18n {
 
 public:

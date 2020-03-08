@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/actor/Player"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/item/ItemStack"
+
+
 class ItemEventCoordinator {
 
 public:

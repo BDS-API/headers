@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Command"
+#include "../../../unmapped/Minecraft"
+
+
 class ServerCommand : Command {
 
 public:

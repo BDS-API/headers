@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/AABB"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../nbt/CompoundTag"
+
+
 class ShulkerBoxBlockActor : ChestBlockActor {
 
 public:
@@ -11,8 +18,8 @@ public:
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getName[abi:cxx11](void)const;
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getMaxStackSize(void)const;
     virtual bool canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
     virtual void playOpenSound(BlockSource &);

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/level/Batch"
+#include "../bedrock/level/storage/LevelStorage"
+
+
 class DBStorageWriteBatch : LevelStorage::Batch {
 
 public:

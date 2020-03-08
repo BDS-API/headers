@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/IInPackagePacks"
+#include "../../unmapped/PackManifestFactory"
+
+
 class InPackagePackSource : PackSource {
 
 public:

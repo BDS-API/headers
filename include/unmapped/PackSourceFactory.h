@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../core/Path"
+#include "../mce/UUID"
+
+
 class PackSourceFactory {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/eventing/IMinecraftEventing"
+
+
 class ScriptTelemetryEventListener : ScriptEventListener {
 
 public:

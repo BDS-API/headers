@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../model/ContainerModel"
+#include "../../item/ItemInstance"
+#include "../../../unmapped/ItemDescriptor"
+
+
 class BrewingStandFuelContainerController : ContainerController {
 
 public:

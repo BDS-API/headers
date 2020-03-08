@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/NetworkIdentifier"
+#include "../../io/BinaryStream"
+#include "../../command/CommandContext"
+
+
 class CommandRequestPacket : Packet {
 
 public:

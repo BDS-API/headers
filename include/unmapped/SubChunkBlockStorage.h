@@ -1,11 +1,15 @@
 #pragma once
 
+#include "../bedrock/io/IDataOutput"
+#include "../bedrock/io/IDataInput"
+
+
 class SubChunkBlockStorage {
 
 public:
     virtual SubChunkBlockStorage::~SubChunkBlockStorage();
-    virtual void asPalettedStorage(void);
-    virtual void asPalettedStorage(void)const;
+    virtual bool asPalettedStorage(void);
+    virtual bool asPalettedStorage(void)const;
 
     void makeType(SubChunkBlockStorage::Type, SubChunkBlockStorage const*);
     void makeUniform(Block const&);

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../command/orgin/CommandOrigin"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class CommandOutputPacket : Packet {
 
 public:

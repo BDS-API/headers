@@ -1,5 +1,14 @@
 #pragma once
 
+#include "orgin/CommandOrigin"
+#include "../level/LevelData"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../item/ItemInstance"
+#include "../actor/Player"
+#include "../item/Item"
+
+
 class CommandUtils {
 
 public:

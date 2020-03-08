@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../container/Container"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../../unmapped/Color"
+#include "../../nbt/CompoundTag"
+
+
 class CauldronBlockActor : BlockActor, Container {
 
 public:
@@ -12,8 +22,8 @@ public:
     virtual bool isFinished(void);
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getName[abi:cxx11](void)const;
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void getMaxStackSize(void)const;

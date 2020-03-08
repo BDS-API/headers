@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class ProjectileComponent {
 
 public:

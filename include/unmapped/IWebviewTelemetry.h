@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/eventing/IMinecraftEventing"
+
+
 class IWebviewTelemetry : WebviewObserver {
 
 public:

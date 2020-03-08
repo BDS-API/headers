@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../item/ItemStack"
+#include "../actor/Player"
+
+
 class CraftingContainer : Container {
 
 public:

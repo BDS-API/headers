@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../nbt/CompoundTag"
+#include "../Command"
+#include "../CommandRegistry"
+#include "../orgin/CommandOrigin"
+
+
 class CloneCommand : Command {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/Random"
+
+
 class PlanksBlock : BlockLegacy {
 
 public:

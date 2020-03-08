@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Guardian"
+
+
 class GuardianAttackGoal : Goal {
 
 public:

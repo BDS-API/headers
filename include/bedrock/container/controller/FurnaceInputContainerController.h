@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/HashString"
+#include "../../../unmapped/Recipes"
+#include "../model/ContainerModel"
+#include "../../item/ItemInstance"
+
+
 class FurnaceInputContainerController : ContainerController {
 
 public:

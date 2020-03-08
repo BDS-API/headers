@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/Block"
+
+
 class IceSpikeFeature : Feature {
 
 public:

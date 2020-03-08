@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../model/ContainerModel"
+#include "../../item/ItemInstance"
+
+
 class LoomBannerContainerController : ContainerController {
 
 public:

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../../unmapped/Random"
+#include "../../unmapped/BaseGameVersion"
+
+
 class ThinFenceBlock : BlockLegacy {
 
 public:

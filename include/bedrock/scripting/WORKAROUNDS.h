@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../json/Value"
+
+
 using namespace ScriptApi;
 
 class WORKAROUNDS {

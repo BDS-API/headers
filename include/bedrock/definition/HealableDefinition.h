@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/FeedItem"
+#include "../../json/Value"
+
+
 class HealableDefinition {
 
 public:

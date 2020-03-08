@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../actor/Actor"
+
+
 class FaceDirectionalBlock : BlockLegacy {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../raknet/RakPeerInterface"
+
+
 using namespace RakNetInstance;
 
 class RakNetNetworkPeer : NetworkPeer {

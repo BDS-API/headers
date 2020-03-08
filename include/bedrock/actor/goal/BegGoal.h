@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../Player"
+
+
 class BegGoal : Goal {
 
 public:

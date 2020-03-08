@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Actor"
+#include "../EnderDragon"
+
+
 class DragonStrafePlayerGoal : Goal {
 
 public:

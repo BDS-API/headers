@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../item/ItemInstance"
+#include "../item/ItemStack"
+#include "../../unmapped/BaseGameVersion"
+
+
 class ElementBlock : BlockLegacy {
 
 public:

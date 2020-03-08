@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../actor/Actor"
+
+
 class RotatedPillarBlock : BlockLegacy {
 
 public:

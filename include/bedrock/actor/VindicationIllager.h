@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/ActorDefinitionGroup"
+
+
 class VindicationIllager : HumanoidMonster {
 
 public:

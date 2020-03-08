@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../bedrock/crafting/recipe/ShapedRecipe"
+#include "../bedrock/crafting/recipe/MultiRecipe"
+#include "../bedrock/crafting/recipe/RepairItemRecipe"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/crafting/recipe/ShapelessRecipe"
+#include "../json/Value"
+#include "../bedrock/pack/ResourcePackManager"
+#include "../bedrock/crafting/recipe/Recipe"
+
+
 class Recipes {
 
 public:

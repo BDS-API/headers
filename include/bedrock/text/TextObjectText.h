@@ -1,11 +1,13 @@
 #pragma once
 
+
+
 class TextObjectText : ITextObject {
 
 public:
     virtual TextObjectText::~TextObjectText();
-    virtual void asString[abi:cxx11](void)const;
-    virtual void asJsonValue(void)const;
+    virtual bool asString[abi:cxx11](void)const;
+    virtual bool asJsonValue(void)const;
 
     TextObjectText(std::string);
 };

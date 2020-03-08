@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../io/BinaryStream"
+#include "../../actor/Player"
+
+
 class EventPacket : Packet {
 
 public:

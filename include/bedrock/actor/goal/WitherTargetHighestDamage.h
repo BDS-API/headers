@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../WitherBoss"
+
+
 class WitherTargetHighestDamage : TargetGoal {
 
 public:

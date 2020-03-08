@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/Random"
+#include "../../../unmapped/Material"
+
+
 class CoralFeature : Feature {
 
 public:

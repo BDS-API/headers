@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/Item"
+
+
 class ItemDescriptor {
 
 public:

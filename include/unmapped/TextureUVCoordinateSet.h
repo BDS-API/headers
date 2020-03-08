@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class TextureUVCoordinateSet {
 
 public:
@@ -22,8 +24,8 @@ public:
     void pixelHeight(void)const;
     void pixelSizeU(void)const;
     void pixelSizeV(void)const;
-    void asPixelU1(void)const;
-    void asPixelU0(void)const;
-    void asPixelV1(void)const;
-    void asPixelV0(void)const;
+    bool asPixelU1(void)const;
+    bool asPixelU0(void)const;
+    bool asPixelV1(void)const;
+    bool asPixelV0(void)const;
 };

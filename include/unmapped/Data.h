@@ -1,11 +1,12 @@
 #pragma once
 
-using namespace EventPacket;
+
+
+using namespace WorldChangeTransaction;
 
 class Data {
 
 public:
 
-    Data(EventPacket::Data const&);
     Data(void);
 };

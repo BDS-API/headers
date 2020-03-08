@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+
+
 using namespace CommandMessage;
 
 class MessageComponent {

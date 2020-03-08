@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../level/Level"
+#include "../container/Container"
+#include "../../unmapped/BlockSource"
+#include "../actor/Player"
+#include "../item/ItemStack"
+
+
 class ComposterBlock : BlockLegacy {
 
 public:

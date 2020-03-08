@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+
+
 class EnderMan : Monster {
 
 public:

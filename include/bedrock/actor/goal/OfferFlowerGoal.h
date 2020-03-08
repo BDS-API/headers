@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../IronGolem"
+
+
 class OfferFlowerGoal : Goal {
 
 public:

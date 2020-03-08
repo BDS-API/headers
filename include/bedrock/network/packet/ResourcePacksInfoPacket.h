@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ResourcePackInfoData"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+
+
 class ResourcePacksInfoPacket : Packet {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../mce/Degree"
+#include "../mce/Radian"
+
+
 class mce {
 
 public:

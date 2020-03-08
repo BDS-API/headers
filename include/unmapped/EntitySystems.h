@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/system/ITickingSystem"
+
+
 class EntitySystems {
 
 public:

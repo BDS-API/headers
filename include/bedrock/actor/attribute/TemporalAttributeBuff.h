@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/Amplifier"
+
+
 class TemporalAttributeBuff : AttributeBuff {
 
 public:

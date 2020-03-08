@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockDefinitionGroup"
+#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class UpdateBlockPropertiesPacket : Packet {
 
 public:

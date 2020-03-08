@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/BlockPos"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+
+
 class BasePressurePlateBlock : BlockLegacy {
 
 public:

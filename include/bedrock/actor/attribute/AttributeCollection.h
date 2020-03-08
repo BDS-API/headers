@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../unmapped/HashedString"
+
+
 class AttributeCollection {
 
 public:

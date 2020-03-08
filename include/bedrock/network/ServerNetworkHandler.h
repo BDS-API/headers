@@ -1,5 +1,18 @@
 #pragma once
 
+#include "../../unmapped/MultiplayerServiceObserver"
+#include "../../unmapped/NetworkIdentifier"
+#include "../actor/ServerPlayer"
+#include "../actor/Player"
+#include "../../unmapped/Vec3"
+#include "../../unmapped/AutomationClient"
+#include "../../mce/UUID"
+#include "packet/EntityClientPacket"
+#include "../../unmapped/XboxLiveUserObserver"
+#include "../../unmapped/GameCallbacks"
+#include "../level/LevelListener"
+
+
 class ServerNetworkHandler : NetEventCallback, LevelListener, Social::MultiplayerServiceObserver, Social::XboxLiveUserObserver {
 
 public:

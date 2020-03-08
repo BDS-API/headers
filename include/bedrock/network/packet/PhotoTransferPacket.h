@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../core/Path"
+#include "../../io/BinaryStream"
+
+
 class PhotoTransferPacket : Packet {
 
 public:

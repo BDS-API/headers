@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/ContainerItemStack"
+#include "../../item/ItemInstance"
+#include "../model/ContainerModel"
+
+
 class MaterialReducerInputContainerController : ContainerController {
 
 public:

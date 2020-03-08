@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/BlockPos"
+#include "../../io/BinaryStream"
+
+
 class ContainerOpenPacket : Packet {
 
 public:

@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../LevelChunkFinalDeleter"
+#include "../../../unmapped/ChunkPos"
+#include "../LevelChunk"
+#include "../../../unmapped/Bounds"
+#include "../../../unmapped/Random"
+
+
 class ChunkViewSource : ChunkSource {
 
 public:

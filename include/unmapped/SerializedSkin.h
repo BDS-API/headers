@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/io/ReadOnlyBinaryStream"
+#include "../bedrock/io/BinaryStream"
+#include "../mce/Image"
+
+
 class SerializedSkin {
 
 public:

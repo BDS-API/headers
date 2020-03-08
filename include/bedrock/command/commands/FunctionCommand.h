@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../Command"
+#include "../CommandRegistry"
+#include "../orgin/CommandOrigin"
+
+
 class FunctionCommand : Command {
 
 public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../mce/UUID"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class PendingArea {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/GeneticVariant"
+
+
 class GeneDefinition {
 
 public:

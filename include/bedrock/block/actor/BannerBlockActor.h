@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+#include "../../item/ItemInstance"
+#include "../../item/ItemStack"
+#include "../../nbt/CompoundTag"
+
+
 class BannerBlockActor : BlockActor {
 
 public:
@@ -16,7 +24,7 @@ public:
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     BannerBlockActor(BlockPos const&);
     void setItemValues(ItemStack const&);

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/ActorInfo"
+#include "../../io/BinaryStream"
+
+
 class AvailableActorIdentifiersPacket : Packet {
 
 public:

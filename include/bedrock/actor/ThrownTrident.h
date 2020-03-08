@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../item/ItemStack"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/Vec3"
+
+
 class ThrownTrident : AbstractArrow {
 
 public:

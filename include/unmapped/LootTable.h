@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/container/Container"
+#include "../bedrock/item/ItemStack"
+#include "../json/Value"
+
+
 class LootTable {
 
 public:

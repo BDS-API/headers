@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/Amplifier"
+#include "../attribute/AttributeBuff"
+#include "../Actor"
+#include "../../../unmapped/Attribute"
+#include "../attribute/AttributeModifier"
+#include "../../pack/ResourcePackManager"
+
+
 class MobEffect {
 
 public:

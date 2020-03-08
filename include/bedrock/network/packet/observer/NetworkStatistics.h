@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/NetworkIdentifier"
+#include "../../../actor/Player"
+#include "../../../../unmapped/NetworkHandler"
+
+
 class NetworkStatistics : PacketObserver {
 
 public:

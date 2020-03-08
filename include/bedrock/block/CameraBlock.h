@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/BaseGameVersion"
+
+
 class CameraBlock : BlockLegacy {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../../mce/UUID"
+
+
 class CraftingEventPacket : Packet {
 
 public:

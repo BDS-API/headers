@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../core/File"
+
+
 class LevelDbRandomAccessFile : leveldb::RandomAccessFile {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../unmapped/Minecraft"
+
+
 class DedicatedServerCommands {
 
 public:

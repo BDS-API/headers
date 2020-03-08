@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../LevelChunkFinalDeleter"
+#include "../LevelChunk"
+#include "../storage/DBStorage"
+#include "../../../unmapped/DBChunkStorageKey"
+
+
 class DBChunkStorage : ChunkSource {
 
 public:

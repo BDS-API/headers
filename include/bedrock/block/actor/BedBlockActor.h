@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../level/Level"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../../unmapped/BlockSource"
+#include "../../nbt/CompoundTag"
+
+
 class BedBlockActor : BlockActor {
 
 public:
@@ -11,9 +18,9 @@ public:
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
-    virtual void onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
     virtual void getName[abi:cxx11](void)const;
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     void getColorIndex(void)const;
     BedBlockActor(BlockPos const&);

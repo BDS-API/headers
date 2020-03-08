@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../Mob"
+
+
 class MoveIndoorsGoal : Goal {
 
 public:

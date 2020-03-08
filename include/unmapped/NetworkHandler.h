@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../bedrock/network/NetEventCallback"
+#include "../bedrock/actor/Player"
+#include "../bedrock/network/packet/sender/PacketSender"
+#include "../bedrock/network/packet/observer/PacketObserver"
+#include "../bedrock/definition/ConnectionDefinition"
+
+
 class NetworkHandler : RakNetInstance::ConnectionCallbacks, RakPeerHelper::IPSupportInterface, LocalConnector::ConnectionCallbacks {
 
 public:

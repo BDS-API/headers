@@ -1,12 +1,16 @@
 #pragma once
 
-using namespace MobEventCommand;
+#include "../bedrock/level/ServerLevel"
+#include "../bedrock/level/scoreboard/Scoreboard"
+
+
+using namespace ScoreboardCommand;
 
 class InitProxy {
 
 public:
 
     InitProxy(ServerLevel &);
-    InitProxy(MobEvents &);
-    void getMobEvents(void);
+    InitProxy(Scoreboard &);
+    void getScoreboard(void);
 };

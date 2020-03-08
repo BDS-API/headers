@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/MapItemSavedData"
+#include "../../../unmapped/ActorUniqueID"
+#include "../../io/BinaryStream"
+
+
 class ClientboundMapItemDataPacket : Packet {
 
 public:

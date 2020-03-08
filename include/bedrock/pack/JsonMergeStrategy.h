@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/LoadedResourceData"
+#include "../../json/Value"
+
+
 class JsonMergeStrategy : ResourcePackMergeStrategy {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/chunksource/ChunkViewSource"
+
+
 using namespace EndDragonFight;
 
 class GateWayGenerator {

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../level/Level"
+#include "../../../unmapped/BlockSource"
+
+
 class StompBlockGoal : BaseMoveToBlockGoal {
 
 public:

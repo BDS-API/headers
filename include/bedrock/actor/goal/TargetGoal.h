@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../Mob"
+#include "../Actor"
+
+
 class TargetGoal : Goal {
 
 public:

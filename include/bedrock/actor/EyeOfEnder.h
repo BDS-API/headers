@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/Vec3"
+
+
 class EyeOfEnder : Actor {
 
 public:

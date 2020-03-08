@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../Mob"
+#include "../../../unmapped/BlockSource"
+
+
 class LayEggGoal : BaseMoveToBlockGoal {
 
 public:

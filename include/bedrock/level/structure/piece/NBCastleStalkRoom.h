@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/BlockSource"
+
+
 class NBCastleStalkRoom : NetherFortressPiece {
 
 public:

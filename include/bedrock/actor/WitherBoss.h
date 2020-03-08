@@ -1,5 +1,15 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/ActorUniqueID"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/Vec3"
+
+
 class WitherBoss : Monster {
 
 public:
@@ -45,7 +55,7 @@ public:
     void performRangedAttack(Mob &, float);
     void changePhase(void);
     void getHeadRot(int);
-    void wantsToMove(void);
+    bool wantsToMove(void);
     void setWantsToMove(bool);
     void getPhase(void);
     bool canSummonSkeleton(void);

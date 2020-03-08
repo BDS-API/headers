@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../nbt/ListTag"
+#include "../actor/Player"
+#include "../item/ItemStack"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/ItemDescriptor"
+
+
 class FillingContainer : Container {
 
 public:

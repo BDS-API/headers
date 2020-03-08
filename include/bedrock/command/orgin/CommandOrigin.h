@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../../../mce/UUID"
+#include "../../../json/Value"
+#include "../CommandOriginData"
+
+
 class CommandOrigin {
 
 public:

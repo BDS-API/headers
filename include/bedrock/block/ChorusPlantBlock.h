@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../../unmapped/Random"
+
+
 class ChorusPlantBlock : BlockLegacy {
 
 public:
@@ -24,5 +30,5 @@ public:
 
     ChorusPlantBlock(std::string const&, int);
     bool canGrowChorus(Block const&);
-    void connectsTo(BlockSource &, BlockPos const&, BlockPos const&)const;
+    bool connectsTo(BlockSource &, BlockPos const&, BlockPos const&)const;
 };

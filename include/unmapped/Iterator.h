@@ -1,11 +1,12 @@
 #pragma once
 
-using namespace Bounds;
+
+
+using namespace ReverseableIterator;
 
 class Iterator {
 
 public:
 
-    Iterator(Bounds const&, int);
-    void index(void);
+    Iterator(int, bool);
 };

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../nbt/CompoundTag"
+#include "damagesource/ActorDamageSource"
+
+
 class Wolf : Animal {
 
 public:

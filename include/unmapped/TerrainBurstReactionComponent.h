@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class TerrainBurstReactionComponent : LabTableReactionComponent {
 
 public:

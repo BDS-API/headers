@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../container/Container"
+#include "../../../unmapped/BlockSource"
+#include "../../actor/Player"
+
+
 class RandomizableBlockActorContainer : RandomizableBlockActorContainerBase, Container {
 
 public:

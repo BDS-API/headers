@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../bedrock/io/ReadOnlyBinaryStream"
+#include "../bedrock/level/Level"
+#include "../bedrock/io/BinaryStream"
+#include "../bedrock/actor/Player"
+#include "../bedrock/item/ItemStack"
+
+
 class ItemUseInventoryTransaction : ComplexInventoryTransaction {
 
 public:

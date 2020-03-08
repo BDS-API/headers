@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../../unmapped/ActorUniqueID"
+#include "../../../item/ItemInstance"
+#include "../../../../unmapped/ScriptEngine"
+
+
 class ScriptServerActorDroppedItemEvent : ScriptEventData {
 
 public:

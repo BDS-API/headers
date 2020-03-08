@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/tickingarea/ITickingArea"
+
+
 class TickingAreaListBase {
 
 public:
@@ -18,8 +21,8 @@ public:
     void getTickingAreasDescription(void)const;
     void countStandaloneTickingAreas(void)const;
     void destroyAreas(void);
-    void processRemoves(void);
-    void processUpdates(void);
+    bool processRemoves(void);
+    bool processUpdates(void);
     void getAreaFor(ActorUniqueID const&)const;
     void _shouldRemoveArea(unsigned int, std::vector<Vec3, std::allocator<Vec3>> const&)const;
 };

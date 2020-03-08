@@ -1,12 +1,18 @@
 #pragma once
 
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "damagesource/ActorDamageSource"
+
+
 class TripodCamera : Mob {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual TripodCamera::~TripodCamera();
     virtual void remove(void);
-    virtual void breaksFallingBlocks(void)const;
+    virtual bool breaksFallingBlocks(void)const;
     virtual void normalTick(void);
     virtual void getShadowHeightOffs(void);
     virtual void getShadowRadius(void)const;

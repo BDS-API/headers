@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../ScriptVersionInfo"
+
+
 class ScriptInventoryContainerComponent : ScriptContainerComponentBase {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../core/Path"
+
+
 class SystemFilePicker : IFilePicker, std::enable_shared_from_this<SystemFilePicker> {
 
 public:

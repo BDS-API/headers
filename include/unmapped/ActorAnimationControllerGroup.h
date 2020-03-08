@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/pack/ResourcePackManager"
+#include "../json/Value"
+
+
 class ActorAnimationControllerGroup {
 
 public:

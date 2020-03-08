@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Actor"
+
+
 class GetInteractionPositionForBlockNode : BehaviorNode {
 
 public:

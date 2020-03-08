@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/nbt/CompoundTag"
+
+
 using namespace MapItemTrackedActor;
 
 class UniqueId {

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../unmapped/JumpControlComponent"
+#include "../actor/Mob"
+
+
 class JumpControl : Control {
 
 public:

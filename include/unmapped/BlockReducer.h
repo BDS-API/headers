@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/ItemInstance"
+
+
 class BlockReducer {
 
 public:

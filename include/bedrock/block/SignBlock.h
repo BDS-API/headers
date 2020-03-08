@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../../unmapped/AABB"
+#include "../../unmapped/Block"
+#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../../unmapped/Random"
+
+
 class SignBlock : ActorBlock {
 
 public:
@@ -7,7 +14,7 @@ public:
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
-    virtual void asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
+    virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void getEntityResourceItem(Random &, BlockActor const&, int)const;
 

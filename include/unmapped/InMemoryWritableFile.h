@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 class InMemoryWritableFile : leveldb::WritableFile {
 
 public:

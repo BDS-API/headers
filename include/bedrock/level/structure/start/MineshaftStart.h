@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../../../../unmapped/BiomeSource"
+
+
 class MineshaftStart : StructureStart {
 
 public:

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/item/ItemInstance"
+
+
 class BannerPattern {
 
 public:
@@ -53,10 +56,10 @@ public:
     BannerPattern(std::string const&, std::string const&, ItemStack, short, bool);
     void initPatterns(void);
     bool hasPattern(void)const;
-    void requiresIngredientItem(void)const;
+    bool requiresIngredientItem(void)const;
     void getIngredientItem(void)const;
     void getIgnoreAux(void)const;
-    void requiresPatternItem(void)const;
-    void matchesPatternItem(ItemInstance const&)const;
+    bool requiresPatternItem(void)const;
+    bool matchesPatternItem(ItemInstance const&)const;
     void getPatternItemType(void)const;
 };

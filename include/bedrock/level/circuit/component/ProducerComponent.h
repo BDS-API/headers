@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../../unmapped/CircuitSceneGraph"
+#include "../../../../unmapped/CircuitSystem"
+
+
 class ProducerComponent : BaseCircuitComponent {
 
 public:
@@ -12,7 +16,7 @@ public:
     virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
     virtual void evaluate(CircuitSystem &, BlockPos const&);
 
-    void doesAllowAttachments(void);
+    bool doesAllowAttachments(void);
     ProducerComponent(void);
     void allowAttachments(bool);
 };

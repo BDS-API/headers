@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../Squid"
+
+
 class SquidMoveAwayFromGroundGoal : Goal {
 
 public:

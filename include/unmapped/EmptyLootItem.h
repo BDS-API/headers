@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/condition/LootItemCondition"
+
+
 class EmptyLootItem : LootPoolEntry {
 
 public:

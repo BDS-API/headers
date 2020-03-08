@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../../unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/Vec3"
+
+
 class AbstractArrow : Actor {
 
 public:

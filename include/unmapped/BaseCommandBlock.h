@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/command/orgin/CommandOrigin"
+#include "../bedrock/nbt/CompoundTag"
+
+
 class BaseCommandBlock {
 
 public:

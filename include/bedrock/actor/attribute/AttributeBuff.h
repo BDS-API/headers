@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../../unmapped/Amplifier"
+#include "../Actor"
+
+
 class AttributeBuff {
 
 public:

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/MoveActorDeltaData"
+#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+
+
 class MoveActorDeltaPacket : Packet {
 
 public:

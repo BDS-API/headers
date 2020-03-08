@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../../../unmapped/BlockPos"
+#include "../Mob"
+#include "../../../unmapped/Vec3"
+
+
 class StalkAndPounceOnTargetGoal : Goal {
 
 public:
