@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../nbt/ListTag"
 #include "../../../unmapped/EnchantmentInstance"
+#include "../../nbt/ListTag"
 
 
 class ItemEnchants {

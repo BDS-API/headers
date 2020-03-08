@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../LevelChunk"
-#include "../../block/unmapped/BlockVolume"
-#include "../../../json/Value"
-#include "../../util/ChunkPos"
-#include "../../../unmapped/BoundingBox"
-#include "../../../unmapped/FlatWorldGeneratorOptions"
 #include "../../../unmapped/Dimension"
+#include "../LevelChunk"
 #include "../../util/BlockPos"
+#include "../../../unmapped/FlatWorldGeneratorOptions"
+#include "../../../unmapped/BoundingBox"
+#include "../../util/ChunkPos"
 #include "../generator/WorldGenerator"
+#include "../../../json/Value"
+#include "../../block/unmapped/BlockVolume"
 
 
 class FlatWorldGenerator : ChunkSource, WorldGenerator {
 
 public:
-    FlatWorldGenerator::~FlatWorldGenerator()
+    virtual FlatWorldGenerator::~FlatWorldGenerator()
     virtual void postProcess(ChunkViewSource &);
     virtual void loadChunk(LevelChunk &, bool);
     virtual void getFeatureTypeAt(BlockPos const&);

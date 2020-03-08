@@ -7,7 +7,7 @@ class ShooterDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    ShooterDescription::~ShooterDescription()
+    virtual ShooterDescription::~ShooterDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

@@ -6,7 +6,7 @@
 class FilterTestHasTradeSupply : SimpleBoolFilterTest {
 
 public:
-    FilterTestHasTradeSupply::~FilterTestHasTradeSupply()
+    virtual FilterTestHasTradeSupply::~FilterTestHasTradeSupply()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

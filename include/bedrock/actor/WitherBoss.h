@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/MobEffectInstance"
-#include "../../unmapped/DataLoadHelper"
-#include "unmapped/ActorUniqueID"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/Block"
 #include "../nbt/CompoundTag"
+#include "../../unmapped/MobEffectInstance"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/Block"
+#include "../../unmapped/VariantParameterList"
+#include "../util/Vec3"
+#include "unmapped/ActorUniqueID"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class WitherBoss : Monster {
@@ -20,7 +20,7 @@ public:
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    WitherBoss::~WitherBoss()
+    virtual WitherBoss::~WitherBoss()
     virtual void remove();
     virtual void getFiringPos()const;
     virtual void startRiding(Actor &);

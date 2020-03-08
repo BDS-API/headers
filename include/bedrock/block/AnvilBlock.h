@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
 class AnvilBlock : HeavyBlock {
 
 public:
-    AnvilBlock::~AnvilBlock()
+    virtual AnvilBlock::~AnvilBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const;
     virtual bool isCraftingBlock()const;

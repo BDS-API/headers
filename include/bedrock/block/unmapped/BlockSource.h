@@ -1,30 +1,30 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorBlockSyncMessage"
-#include "../../item/ItemStack"
-#include "../../util/Brightness"
-#include "../../util/Tick"
 #include "../../level/chunksource/ChunkSource"
-#include "../../../unmapped/Bounds"
-#include "../../util/ChunkPos"
+#include "../BlockLegacy"
+#include "../../util/Vec3"
+#include "../../actor/unmapped/ActorDefinitionIdentifier"
+#include "../../item/ItemStack"
+#include "../../util/Tick"
 #include "../../../unmapped/Dimension"
+#include "../actor/BlockActor"
+#include "../../util/Brightness"
+#include "../../actor/unmapped/ActorBlockSyncMessage"
+#include "../../level/Level"
+#include "../../level/LevelChunk"
 #include "../../util/BlockPos"
 #include "../../../unmapped/Block"
-#include "../../level/LevelChunk"
-#include "../actor/BlockActor"
-#include "../../actor/Actor"
-#include "../../actor/unmapped/ActorDefinitionIdentifier"
-#include "../BlockLegacy"
-#include "../../../unmapped/BoundingBox"
-#include "../../util/Vec3"
+#include "../../util/ChunkPos"
 #include "../../util/AABB"
-#include "../../level/Level"
+#include "../../actor/Actor"
+#include "../../../unmapped/Bounds"
+#include "../../../unmapped/BoundingBox"
 
 
 class BlockSource {
 
 public:
-    BlockSource::~BlockSource()
+    virtual BlockSource::~BlockSource()
 
     void getMaxHeight()const;
     BlockSource(Level &, Dimension &, ChunkSource &, bool, bool);

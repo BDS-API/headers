@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 
 
 class ActivatorRailBlock : BaseRailBlock {
 
 public:
-    ActivatorRailBlock::~ActivatorRailBlock()
+    virtual ActivatorRailBlock::~ActivatorRailBlock()
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;
     virtual void getVariant(Block const&)const;
 

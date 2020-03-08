@@ -11,7 +11,7 @@ public:
     static long MinDistToPlayers;
 
     virtual void getJsonName()const;
-    TickWorldDescription::~TickWorldDescription()
+    virtual TickWorldDescription::~TickWorldDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

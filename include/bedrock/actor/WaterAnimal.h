@@ -7,7 +7,7 @@
 class WaterAnimal : Mob {
 
 public:
-    WaterAnimal::~WaterAnimal()
+    virtual WaterAnimal::~WaterAnimal()
     virtual void aiStep();
     virtual void checkSpawnRules(bool);
     virtual void useNewAi()const;

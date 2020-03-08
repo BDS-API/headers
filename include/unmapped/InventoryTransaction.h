@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
 #include "../bedrock/actor/Player"
+#include "../bedrock/item/ItemStack"
 
 
 class InventoryTransaction {

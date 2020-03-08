@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class StopSoundPacket : Packet {
 
 public:
-    StopSoundPacket::~StopSoundPacket()
+    virtual StopSoundPacket::~StopSoundPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

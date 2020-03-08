@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../../actor/unmapped/ActorComponent"
+#include "../../../unmapped/TimerComponent"
 #include "../../../unmapped/EntityRegistry"
 #include "../../../unmapped/EntityContext"
-#include "../../../unmapped/TimerComponent"
-#include "../../actor/unmapped/ActorComponent"
 
 
 class TimerSystem : ITickingSystem {
 
 public:
-    TimerSystem::~TimerSystem()
+    virtual TimerSystem::~TimerSystem()
     virtual void tick(EntityRegistry &);
 
     TimerSystem(void);

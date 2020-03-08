@@ -6,7 +6,7 @@
 class SmokerBlockActor : FurnaceBlockActor {
 
 public:
-    SmokerBlockActor::~SmokerBlockActor()
+    virtual SmokerBlockActor::~SmokerBlockActor()
     virtual void getName()const;
 
     SmokerBlockActor(BlockPos const&);

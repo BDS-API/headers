@@ -5,7 +5,7 @@
 class StoneButtonBlock : ButtonBlock {
 
 public:
-    StoneButtonBlock::~StoneButtonBlock()
+    virtual StoneButtonBlock::~StoneButtonBlock()
 
     StoneButtonBlock(std::string const&, int);
 };

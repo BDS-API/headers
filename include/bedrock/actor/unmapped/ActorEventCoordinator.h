@@ -1,12 +1,12 @@
 #pragma once
 
+#include "../../util/Vec3"
+#include "../../../unmapped/HitResult"
 #include "../../item/ItemStack"
 #include "../../util/BlockPos"
-#include "../damagesource/ActorDamageSource"
-#include "../../../unmapped/HitResult"
-#include "../Actor"
 #include "../../item/ItemInstance"
-#include "../../util/Vec3"
+#include "../damagesource/ActorDamageSource"
+#include "../Actor"
 
 
 class ActorEventCoordinator {

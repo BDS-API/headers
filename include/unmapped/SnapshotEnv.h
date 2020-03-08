@@ -6,7 +6,7 @@
 class SnapshotEnv : leveldb::EnvWrapper {
 
 public:
-    SnapshotEnv::~SnapshotEnv()
+    virtual SnapshotEnv::~SnapshotEnv()
     virtual void NewSequentialFile(std::string const&, leveldb::SequentialFile **);
     virtual void NewRandomAccessFile(std::string const&, leveldb::RandomAccessFile **);
     virtual void NewWritableFile(std::string const&, leveldb::WritableFile **);

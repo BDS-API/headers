@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 
 
 class Sapling : BushBlock {
 
 public:
-    Sapling::~Sapling()
+    virtual Sapling::~Sapling()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool canContainLiquid()const;
     virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;

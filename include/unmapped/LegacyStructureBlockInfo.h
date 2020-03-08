@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/BlockPos"
 
 
 class LegacyStructureBlockInfo {

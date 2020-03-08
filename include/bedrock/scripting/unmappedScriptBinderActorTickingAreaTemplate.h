@@ -7,7 +7,7 @@
 class ScriptBinderActorTickingAreaTemplate : ScriptBinderTemplate {
 
 public:
-    ScriptBinderActorTickingAreaTemplate::~ScriptBinderActorTickingAreaTemplate()
+    virtual ScriptBinderActorTickingAreaTemplate::~ScriptBinderActorTickingAreaTemplate()
     virtual void getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
 

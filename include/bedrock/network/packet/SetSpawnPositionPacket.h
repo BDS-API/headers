@@ -1,14 +1,14 @@
 #pragma once
 
+#include "../../io/BinaryStream"
 #include "../../util/BlockPos"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../io/BinaryStream"
 
 
 class SetSpawnPositionPacket : Packet {
 
 public:
-    SetSpawnPositionPacket::~SetSpawnPositionPacket()
+    virtual SetSpawnPositionPacket::~SetSpawnPositionPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

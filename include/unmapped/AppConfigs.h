@@ -5,7 +5,7 @@
 class AppConfigs {
 
 public:
-    AppConfigs::~AppConfigs()
+    virtual AppConfigs::~AppConfigs()
     virtual void areResourcePacksAllowed()const;
     virtual bool isPlayScreenAllowed()const;
     virtual bool isGameTabShownInSettings()const;

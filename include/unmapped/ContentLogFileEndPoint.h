@@ -8,7 +8,7 @@ class ContentLogFileEndPoint : ContentLogEndPoint {
 public:
     static long FILE_NAME;
 
-    ContentLogFileEndPoint::~ContentLogFileEndPoint()
+    virtual ContentLogFileEndPoint::~ContentLogFileEndPoint()
     virtual void flush();
     virtual void setEnabled(bool);
     virtual bool isEnabled()const;

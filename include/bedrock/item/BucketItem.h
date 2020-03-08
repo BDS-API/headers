@@ -1,14 +1,14 @@
 #pragma once
 
+#include "../util/Vec3"
+#include "../nbt/CompoundTag"
+#include "../actor/Player"
+#include "../container/Container"
 #include "../block/unmapped/BlockSource"
 #include "../level/Level"
-#include "../container/Container"
 #include "../util/BlockPos"
-#include "../actor/Player"
 #include "../../unmapped/Block"
 #include "../actor/Actor"
-#include "../nbt/CompoundTag"
-#include "../util/Vec3"
 #include "unmapped/ItemDescriptor"
 
 
@@ -18,7 +18,7 @@ public:
     static long DRINK_DURATION;
     static long mFillTypeToEntityType;
 
-    BucketItem::~BucketItem()
+    virtual BucketItem::~BucketItem()
     virtual bool isDestructive(int)const;
     virtual bool isLiquidClipItem(int)const;
     virtual bool isValidAuxValue(int)const;

@@ -6,7 +6,7 @@
 class ScriptBinderEventDataTemplate : ScriptBinderTemplate {
 
 public:
-    ScriptBinderEventDataTemplate::~ScriptBinderEventDataTemplate()
+    virtual ScriptBinderEventDataTemplate::~ScriptBinderEventDataTemplate()
     virtual void getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
 

@@ -7,7 +7,7 @@
 class ScriptServerLevelEventListener : LevelEventListener {
 
 public:
-    ScriptServerLevelEventListener::~ScriptServerLevelEventListener()
+    virtual ScriptServerLevelEventListener::~ScriptServerLevelEventListener()
     virtual void onLevelTick();
 
     ScriptServerLevelEventListener(MinecraftServerScriptEngine &);

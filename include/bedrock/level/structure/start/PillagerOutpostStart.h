@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../../unmapped/BoundingBox"
 #include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
 #include "../../../../unmapped/Dimension"
 #include "../../../util/BlockPos"
-#include "../../../block/unmapped/BlockSource"
 #include "../../../../unmapped/Block"
+#include "../../../../unmapped/BoundingBox"
 
 
 class PillagerOutpostStart : StructureStart {
 
 public:
-    PillagerOutpostStart::~PillagerOutpostStart()
+    virtual PillagerOutpostStart::~PillagerOutpostStart()
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void getType()const;
 

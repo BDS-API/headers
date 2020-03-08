@@ -7,7 +7,7 @@ class BehaviorTreeDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    BehaviorTreeDescription::~BehaviorTreeDescription()
+    virtual BehaviorTreeDescription::~BehaviorTreeDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

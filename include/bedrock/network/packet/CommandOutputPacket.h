@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../command/orgin/CommandOrigin"
-#include "../../command/CommandOutput"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../command/CommandOutput"
+#include "../../command/orgin/CommandOrigin"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class CommandOutputPacket : Packet {
 
 public:
-    CommandOutputPacket::~CommandOutputPacket()
+    virtual CommandOutputPacket::~CommandOutputPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

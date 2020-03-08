@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../io/ReadOnlyBinaryStream"
+#include "../block/BlockLegacy"
 #include "../util/Tick"
 #include "../io/BinaryStream"
-#include "../block/unmapped/BlockSource"
-#include "unmapped/ItemEnchants"
-#include "../../json/Value"
-#include "../io/IDataOutput"
-#include "../../unmapped/RecipeIngredient"
-#include "../actor/Player"
-#include "../../unmapped/Block"
-#include "../block/actor/BlockActor"
-#include "../actor/Actor"
 #include "../nbt/CompoundTag"
-#include "../block/BlockLegacy"
-#include "../io/IDataInput"
+#include "../block/actor/BlockActor"
+#include "../io/IDataOutput"
+#include "../actor/Player"
+#include "../block/unmapped/BlockSource"
 #include "../level/Level"
+#include "../io/IDataInput"
+#include "../../unmapped/Block"
+#include "../io/ReadOnlyBinaryStream"
+#include "../../unmapped/RecipeIngredient"
+#include "../../json/Value"
+#include "../actor/Actor"
+#include "unmapped/ItemEnchants"
 
 
 class ItemStackBase {
@@ -34,7 +34,7 @@ public:
     static long TAG_STORE_CAN_DESTROY[abi:cxx11];
     static long TAG_CHARGED_ITEM[abi:cxx11];
 
-    ItemStackBase::~ItemStackBase()
+    virtual ItemStackBase::~ItemStackBase()
 
     bool isValid()const;
     bool isItem()const;

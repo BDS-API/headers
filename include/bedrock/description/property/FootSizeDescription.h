@@ -7,7 +7,7 @@ class FootSizeDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    FootSizeDescription::~FootSizeDescription()
+    virtual FootSizeDescription::~FootSizeDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

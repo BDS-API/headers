@@ -9,7 +9,7 @@ class DragonStrafePlayerGoal : Goal {
 public:
     static long FIREBALL_CHARGE_AMOUNT;
 
-    DragonStrafePlayerGoal::~DragonStrafePlayerGoal()
+    virtual DragonStrafePlayerGoal::~DragonStrafePlayerGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

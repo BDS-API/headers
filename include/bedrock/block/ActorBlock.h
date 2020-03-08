@@ -1,18 +1,18 @@
 #pragma once
 
-#include "actor/BlockActor"
-#include "../actor/Player"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
-#include "../../unmapped/Block"
+#include "../util/Random"
 #include "../../unmapped/Material"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "actor/BlockActor"
 
 
 class ActorBlock : BlockLegacy {
 
 public:
-    ActorBlock::~ActorBlock()
+    virtual ActorBlock::~ActorBlock()
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;

@@ -7,7 +7,7 @@ class HudContainerModel : ContainerModel {
 
 public:
     virtual void containerContentChanged(int);
-    HudContainerModel::~HudContainerModel()
+    virtual HudContainerModel::~HudContainerModel()
     virtual bool isValid();
 
     HudContainerModel(ContainerEnumName, Player &);

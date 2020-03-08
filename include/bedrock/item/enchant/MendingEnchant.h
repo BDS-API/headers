@@ -5,7 +5,7 @@
 class MendingEnchant : Enchant {
 
 public:
-    MendingEnchant::~MendingEnchant()
+    virtual MendingEnchant::~MendingEnchant()
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMaxLevel()const;

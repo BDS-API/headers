@@ -6,7 +6,7 @@
 class BreedableSystem : ITickingSystem {
 
 public:
-    BreedableSystem::~BreedableSystem()
+    virtual BreedableSystem::~BreedableSystem()
     virtual void tick(EntityRegistry &);
 
     BreedableSystem(void);

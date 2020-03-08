@@ -1,14 +1,14 @@
 #pragma once
 
+#include "../../level/ServerLevel"
 #include "../../../json/Value"
 #include "../../scripting/unmapped/ScriptEngine"
-#include "../../level/ServerLevel"
 
 
 class ScriptCommandOrigin : CommandOrigin {
 
 public:
-    ScriptCommandOrigin::~ScriptCommandOrigin()
+    virtual ScriptCommandOrigin::~ScriptCommandOrigin()
     virtual void getRequestId()const;
     virtual void getName()const;
     virtual void getBlockPosition()const;

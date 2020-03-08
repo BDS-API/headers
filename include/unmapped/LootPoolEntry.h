@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
-#include "../json/Value"
 #include "../bedrock/util/Random"
 #include "../bedrock/item/condition/LootItemCondition"
+#include "../bedrock/item/ItemStack"
+#include "../json/Value"
 
 
 class LootPoolEntry {
 
 public:
-    LootPoolEntry::~LootPoolEntry()
+    virtual LootPoolEntry::~LootPoolEntry()
 
     void getConditions()const;
     void getWeight(float)const;

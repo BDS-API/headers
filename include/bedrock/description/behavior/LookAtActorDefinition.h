@@ -7,7 +7,7 @@
 class LookAtActorDefinition : BehaviorDefinition {
 
 public:
-    LookAtActorDefinition::~LookAtActorDefinition()
+    virtual LookAtActorDefinition::~LookAtActorDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     LookAtActorDefinition(void);

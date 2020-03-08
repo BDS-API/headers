@@ -6,7 +6,7 @@
 class FollowFlockGoal : Goal {
 
 public:
-    FollowFlockGoal::~FollowFlockGoal()
+    virtual FollowFlockGoal::~FollowFlockGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual bool canBeInterrupted();

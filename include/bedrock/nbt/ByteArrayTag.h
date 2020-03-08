@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../io/IDataOutput"
 #include "../io/IDataInput"
+#include "../io/IDataOutput"
 #include "../../unmapped/TagMemoryChunk"
 
 
 class ByteArrayTag : Tag {
 
 public:
-    ByteArrayTag::~ByteArrayTag()
+    virtual ByteArrayTag::~ByteArrayTag()
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
     virtual void toString()const;

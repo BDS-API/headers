@@ -1,22 +1,22 @@
 #pragma once
 
-#include "../../../unmapped/ComplexInventoryTransaction"
-#include "../ItemStack"
-#include "../../level/Level"
-#include "../../../unmapped/InventoryTransaction"
 #include "../../../unmapped/NetworkBlockPosition"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
+#include "../../level/Level"
 #include "../../../unmapped/Block"
 #include "../../util/BlockPos"
-#include "../../util/Vec3"
-#include "../../io/BinaryStream"
 #include "../../actor/Player"
+#include "../../../unmapped/InventoryTransaction"
+#include "../../util/Vec3"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../ItemStack"
+#include "../../../unmapped/ComplexInventoryTransaction"
 
 
 class ItemUseInventoryTransaction : ComplexInventoryTransaction {
 
 public:
-    ItemUseInventoryTransaction::~ItemUseInventoryTransaction()
+    virtual ItemUseInventoryTransaction::~ItemUseInventoryTransaction()
     virtual void read(ReadOnlyBinaryStream &);
     virtual void write(BinaryStream &)const;
     virtual void handle(Player &, bool)const;

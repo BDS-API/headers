@@ -7,7 +7,7 @@
 class MoveIndoorsGoal : Goal {
 
 public:
-    MoveIndoorsGoal::~MoveIndoorsGoal()
+    virtual MoveIndoorsGoal::~MoveIndoorsGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

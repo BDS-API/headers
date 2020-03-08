@@ -1,10 +1,10 @@
 #pragma once
 
 #include "../raknet/RakPeer"
-#include "../raknet/BitStream"
-#include "../raknet/SystemAddress"
 #include "../raknet/RakNetSocket2"
 #include "../raknet/SplitPacketChannel"
+#include "../raknet/BitStream"
+#include "../raknet/SystemAddress"
 
 
 class RakNet {

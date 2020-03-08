@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/VariantParameterList"
-#include "../../../json/Value"
 #include "../Actor"
-#include "../../../unmapped/FilterInput"
+#include "../../../unmapped/VariantParameterList"
 #include "../../../unmapped/FilterGroup"
+#include "../../../unmapped/FilterInput"
+#include "../../../json/Value"
 
 
 class ActorFilterGroup : FilterGroup {
 
 public:
-    ActorFilterGroup::~ActorFilterGroup()
+    virtual ActorFilterGroup::~ActorFilterGroup()
     virtual void _createSubgroup(FilterGroup::CollectionType)const;
     virtual void _handleUnknownMember(std::string const&, Json::Value const&);
 

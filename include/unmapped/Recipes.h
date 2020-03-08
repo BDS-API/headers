@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../bedrock/pack/ResourcePackManager"
+#include "../bedrock/crafting/recipe/ShapedRecipe"
+#include "../bedrock/crafting/recipe/Recipe"
+#include "../bedrock/item/ItemInstance"
 #include "../bedrock/crafting/recipe/MultiRecipe"
 #include "../json/Value"
-#include "../bedrock/crafting/recipe/Recipe"
+#include "../bedrock/pack/ResourcePackManager"
 #include "../bedrock/crafting/recipe/RepairItemRecipe"
 #include "../bedrock/crafting/recipe/ShapelessRecipe"
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/crafting/recipe/ShapedRecipe"
 
 
 class Recipes {

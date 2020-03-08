@@ -5,7 +5,7 @@
 class GameCallbacks {
 
 public:
-    GameCallbacks::~GameCallbacks()
+    virtual GameCallbacks::~GameCallbacks()
 
     GameCallbacks(void);
 };

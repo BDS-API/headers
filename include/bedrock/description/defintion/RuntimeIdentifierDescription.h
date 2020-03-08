@@ -6,7 +6,7 @@
 class RuntimeIdentifierDescription : DefintionDescription {
 
 public:
-    RuntimeIdentifierDescription::~RuntimeIdentifierDescription()
+    virtual RuntimeIdentifierDescription::~RuntimeIdentifierDescription()
     virtual void getJsonName()const;
 
     RuntimeIdentifierDescription(void);

@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/DataLoadHelper"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class ShulkerBullet : Actor {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    ShulkerBullet::~ShulkerBullet()
+    virtual ShulkerBullet::~ShulkerBullet()
     virtual void normalTick();
     virtual bool isPickable();
     virtual bool isOnFire()const;

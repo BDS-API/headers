@@ -6,7 +6,7 @@
 class FollowMobGoal : Goal {
 
 public:
-    FollowMobGoal::~FollowMobGoal()
+    virtual FollowMobGoal::~FollowMobGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

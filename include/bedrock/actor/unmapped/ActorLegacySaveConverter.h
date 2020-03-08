@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../nbt/CompoundTag"
 #include "../Actor"
+#include "../../nbt/CompoundTag"
 
 
 class ActorLegacySaveConverter {

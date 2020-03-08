@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../../unmapped/BiomeSource"
 #include "../../../util/Random"
+#include "../../../../unmapped/BiomeSource"
 
 
 class ShipwreckStart : StructureStart {
 
 public:
-    ShipwreckStart::~ShipwreckStart()
+    virtual ShipwreckStart::~ShipwreckStart()
     virtual void getType()const;
 
     ShipwreckStart(void);

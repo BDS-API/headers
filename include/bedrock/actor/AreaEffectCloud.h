@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
+#include "../util/Random"
+#include "../nbt/CompoundTag"
 #include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/DataLoadHelper"
-#include "unmapped/ActorUniqueID"
 #include "../../unmapped/MobEffectInstance"
 #include "../util/Color"
-#include "../util/Random"
+#include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorUniqueID"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class AreaEffectCloud : Actor {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    AreaEffectCloud::~AreaEffectCloud()
+    virtual AreaEffectCloud::~AreaEffectCloud()
     virtual void normalTick();
     virtual void getShadowRadius()const;
     virtual void setOwner(ActorUniqueID);

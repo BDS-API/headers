@@ -7,7 +7,7 @@
 class CaveSpider : Spider {
 
 public:
-    CaveSpider::~CaveSpider()
+    virtual CaveSpider::~CaveSpider()
     virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &);
     virtual void getModelScale()const;
     virtual void getSpiderType()const;

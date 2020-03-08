@@ -6,7 +6,7 @@
 class LabTableReactionComponent {
 
 public:
-    LabTableReactionComponent::~LabTableReactionComponent()
+    virtual LabTableReactionComponent::~LabTableReactionComponent()
     virtual void _onStart(LabTableReaction &, BlockSource &);
     virtual void _onTick(LabTableReaction &, BlockSource &);
     virtual void _onEnd(LabTableReaction &, BlockSource &);

@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/LookAtComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/LookAtComponent"
 
 
 class LookAtDefinition {

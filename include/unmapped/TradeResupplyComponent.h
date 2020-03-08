@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class TradeResupplyComponent {

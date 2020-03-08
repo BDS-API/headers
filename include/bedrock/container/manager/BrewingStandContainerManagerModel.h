@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../item/unmapped/ItemDescriptor"
 #include "../../../unmapped/ContainerItemStack"
 #include "../../util/BlockPos"
 #include "../../actor/Player"
 #include "../../item/ItemInstance"
+#include "../../item/unmapped/ItemDescriptor"
+#include "../../item/ItemStack"
 
 
 class BrewingStandContainerManagerModel : ContainerManagerModel {
 
 public:
-    BrewingStandContainerManagerModel::~BrewingStandContainerManagerModel()
+    virtual BrewingStandContainerManagerModel::~BrewingStandContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

@@ -1,18 +1,18 @@
 #pragma once
 
-#include "actor/BlockActor"
+#include "unmapped/BlockSource"
 #include "../actor/Actor"
 #include "../util/Random"
 #include "../util/BlockPos"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "actor/BlockActor"
 #include "../util/AABB"
 
 
 class EndPortalBlock : ActorBlock {
 
 public:
-    EndPortalBlock::~EndPortalBlock()
+    virtual EndPortalBlock::~EndPortalBlock()
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;

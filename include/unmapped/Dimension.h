@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
-#include "../bedrock/util/Brightness"
-#include "../bedrock/level/LevelListener"
-#include "../bedrock/network/packet/Packet"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/util/ChunkPos"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/actor/Player"
-#include "../bedrock/level/LevelChunk"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/Scheduler"
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Player"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/util/Brightness"
+#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
 #include "../bedrock/level/Level"
+#include "../bedrock/level/LevelChunk"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/ChunkPos"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/network/packet/Packet"
+#include "../bedrock/Scheduler"
+#include "../bedrock/level/LevelListener"
 
 
 class Dimension : LevelListener, SavedData {
@@ -24,7 +24,7 @@ public:
     static long CurrentLimboEntitiesVersion;
     static long STRUCTURE_PRUNE_INTERVAL;
 
-    Dimension::~Dimension()
+    virtual Dimension::~Dimension()
     virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);
     virtual void onBlockEvent(BlockSource &, int, int, int, int, int);
     virtual void onNewChunk(BlockSource &, LevelChunk &);

@@ -1,18 +1,18 @@
 #pragma once
 
 #include "../../../unmapped/StringKey"
+#include "../../../unmapped/AnimationComponent"
 #include "../../../unmapped/HashedString"
+#include "../../../unmapped/BoneOrientation"
+#include "../../../unmapped/RenderParams"
 #include "../../../unmapped/ExpressionNode"
 #include "../Actor"
-#include "../../../unmapped/RenderParams"
-#include "../../../unmapped/AnimationComponent"
-#include "../../../unmapped/BoneOrientation"
 
 
 class ActorSkeletalAnimationPlayer : ActorAnimationPlayer {
 
 public:
-    ActorSkeletalAnimationPlayer::~ActorSkeletalAnimationPlayer()
+    virtual ActorSkeletalAnimationPlayer::~ActorSkeletalAnimationPlayer()
     virtual void applyToPose(RenderParams &, std::unordered_map<SkeletalHierarchyIndex, std::vector<BoneOrientation, std::allocator<BoneOrientation>>, std::hash<SkeletalHierarchyIndex>, std::equal_to<SkeletalHierarchyIndex>, std::allocator<std::pair<SkeletalHierarchyIndex const, std::vector<BoneOrientation, std::allocator<BoneOrientation>>>>> &, float);
     virtual void resetAnimation();
     virtual void buildBoneToPartMapping(AnimationComponent &);

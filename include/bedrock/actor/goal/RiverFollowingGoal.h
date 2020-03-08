@@ -6,7 +6,7 @@
 class RiverFollowingGoal : Goal {
 
 public:
-    RiverFollowingGoal::~RiverFollowingGoal()
+    virtual RiverFollowingGoal::~RiverFollowingGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

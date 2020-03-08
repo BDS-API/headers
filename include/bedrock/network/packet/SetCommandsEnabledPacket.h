@@ -7,7 +7,7 @@
 class SetCommandsEnabledPacket : Packet {
 
 public:
-    SetCommandsEnabledPacket::~SetCommandsEnabledPacket()
+    virtual SetCommandsEnabledPacket::~SetCommandsEnabledPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

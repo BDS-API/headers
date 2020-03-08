@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../../unmapped/IBlockPlacementTarget"
 #include "../../util/Random"
+#include "../../block/unmapped/BlockSource"
+#include "../../actor/Actor"
 #include "../../../unmapped/WorldChangeTransaction"
 #include "../../util/BlockPos"
-#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Block"
+#include "../../../unmapped/IBlockPlacementTarget"
 
 
 class Feature : IFeature {
 
 public:
-    Feature::~Feature()
+    virtual Feature::~Feature()
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
 
     Feature(Actor *);

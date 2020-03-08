@@ -7,7 +7,7 @@
 class BlastFurnaceContainerManagerModel : FurnaceContainerManagerModel {
 
 public:
-    BlastFurnaceContainerManagerModel::~BlastFurnaceContainerManagerModel()
+    virtual BlastFurnaceContainerManagerModel::~BlastFurnaceContainerManagerModel()
 
     BlastFurnaceContainerManagerModel(ContainerID, Player &, BlockPos const&);
 };

@@ -7,7 +7,7 @@
 class TriggerDescription : Description {
 
 public:
-    TriggerDescription::~TriggerDescription()
+    virtual TriggerDescription::~TriggerDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

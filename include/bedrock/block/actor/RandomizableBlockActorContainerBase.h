@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../container/Container"
 #include "../../actor/Actor"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../container/Container"
 
 
 class RandomizableBlockActorContainerBase : BlockActor {
 
 public:
-    RandomizableBlockActorContainerBase::~RandomizableBlockActorContainerBase()
+    virtual RandomizableBlockActorContainerBase::~RandomizableBlockActorContainerBase()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
 

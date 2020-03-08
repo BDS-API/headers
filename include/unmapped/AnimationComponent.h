@@ -1,9 +1,9 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr"
 #include "../bedrock/actor/unmapped/ActorAnimationControllerStatePlayer"
 #include "../bedrock/actor/unmapped/ActorAnimationPlayer"
-#include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr"
 
 
 class AnimationComponent {

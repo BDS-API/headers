@@ -7,7 +7,7 @@
 class LecternUpdatePacket : Packet {
 
 public:
-    LecternUpdatePacket::~LecternUpdatePacket()
+    virtual LecternUpdatePacket::~LecternUpdatePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

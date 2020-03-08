@@ -6,7 +6,7 @@
 class LeapAtTargetGoal : Goal {
 
 public:
-    LeapAtTargetGoal::~LeapAtTargetGoal()
+    virtual LeapAtTargetGoal::~LeapAtTargetGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../../block/unmapped/BlockVolume"
-#include "../../block/unmapped/BlockSource"
-#include "../../../unmapped/BiomeSource"
-#include "../../util/ChunkPos"
 #include "../../../unmapped/Dimension"
-#include "../../util/BlockPos"
-#include "../generator/WorldGenerator"
 #include "../../util/Random"
-#include "../../../unmapped/BoundingBox"
+#include "../../block/unmapped/BlockSource"
 #include "../LevelChunk"
+#include "../../util/BlockPos"
+#include "../../util/ChunkPos"
+#include "../../block/unmapped/BlockVolume"
+#include "../../../unmapped/BoundingBox"
+#include "../generator/WorldGenerator"
+#include "../../../unmapped/BiomeSource"
 
 
 class TheEndGenerator : ChunkSource, WorldGenerator {
 
 public:
-    TheEndGenerator::~TheEndGenerator()
+    virtual TheEndGenerator::~TheEndGenerator()
     virtual void postProcess(ChunkViewSource &);
     virtual void loadChunk(LevelChunk &, bool);
     virtual void postProcessMobsAt(BlockSource *, int, int, Random &);

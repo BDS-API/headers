@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/BlockPos"
 #include "../block/unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../nbt/CompoundTag"
+#include "../util/BlockPos"
 #include "unmapped/ItemDescriptor"
 
 
 class BalloonItem : ChemistryItem {
 
 public:
-    BalloonItem::~BalloonItem()
+    virtual BalloonItem::~BalloonItem()
     virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
     virtual bool isTintable()const;
     virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;

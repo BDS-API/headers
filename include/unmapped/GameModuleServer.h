@@ -5,7 +5,7 @@
 class GameModuleServer {
 
 public:
-    GameModuleServer::~GameModuleServer()
+    virtual GameModuleServer::~GameModuleServer()
 
     GameModuleServer(void);
 };

@@ -1,18 +1,18 @@
 #pragma once
 
 #include "../../actor/damagesource/ActorDamageSource"
-#include "../../../unmapped/HitResult"
 #include "../../actor/Actor"
-#include "../../actor/unmapped/ActorEventListener"
-#include "../../util/Vec3"
 #include "../../../unmapped/MinecraftServerScriptEngine"
 #include "../../item/ItemInstance"
+#include "../../util/Vec3"
+#include "../../../unmapped/HitResult"
+#include "../../actor/unmapped/ActorEventListener"
 
 
 class ScriptServerActorEventListener : ActorEventListener {
 
 public:
-    ScriptServerActorEventListener::~ScriptServerActorEventListener()
+    virtual ScriptServerActorEventListener::~ScriptServerActorEventListener()
     virtual void onActorAttack(Actor &, Actor &);
     virtual void onActorHurt(Actor &, ActorDamageSource const&, int, int);
     virtual void onActorMove(Actor &, Vec3 const&);

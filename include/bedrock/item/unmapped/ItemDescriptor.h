@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../ItemStack"
 #include "../../block/BlockLegacy"
 #include "../Item"
 #include "../../../unmapped/Block"
+#include "../ItemStack"
 
 
 class ItemDescriptor {

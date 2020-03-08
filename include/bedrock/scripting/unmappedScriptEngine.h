@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../../../unmapped/EventInfo"
+#include "../ScriptCallbackInterface"
 #include "../ScriptObjectHandle"
+#include "../../util/Vec3"
+#include "../../../unmapped/EventInfo"
+#include "../../../core/Path"
+#include "../../util/BlockPos"
 #include "../ScriptSystemInfo"
 #include "../../../json/Value"
-#include "../ScriptCallbackInterface"
 #include "../ScriptFramework"
-#include "../../util/BlockPos"
 #include "../ScriptVersionInfo"
-#include "../../../core/Path"
-#include "../../util/Vec3"
 
 
 class ScriptEngine : ScriptApi::ScriptFramework, ScriptApi::ScriptCallbackInterface {
 
 public:
-    ScriptEngine::~ScriptEngine()
+    virtual ScriptEngine::~ScriptEngine()
     virtual void initialize();
     virtual void shutdown();
     virtual void onLogReceived(std::string const&);

@@ -5,7 +5,7 @@
 class BowEnchant : Enchant {
 
 public:
-    BowEnchant::~BowEnchant()
+    virtual BowEnchant::~BowEnchant()
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMaxLevel()const;

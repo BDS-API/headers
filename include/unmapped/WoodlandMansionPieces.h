@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/util/Random"
 #include "../bedrock/level/structure/piece/StructurePiece"
+#include "../bedrock/util/BlockPos"
 
 
 class WoodlandMansionPieces {

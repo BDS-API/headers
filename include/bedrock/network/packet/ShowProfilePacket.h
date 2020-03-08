@@ -7,7 +7,7 @@
 class ShowProfilePacket : Packet {
 
 public:
-    ShowProfilePacket::~ShowProfilePacket()
+    virtual ShowProfilePacket::~ShowProfilePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

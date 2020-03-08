@@ -9,7 +9,7 @@ class Sheep : Animal {
 public:
     static long EAT_ANIMATION_TICKS;
 
-    Sheep::~Sheep()
+    virtual Sheep::~Sheep()
     virtual void handleEntityEvent(ActorEvent, int);
     virtual void getLootTable();
     virtual void getDefaultLootTable();

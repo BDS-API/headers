@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../Actor"
-#include "../../../unmapped/Amplifier"
-#include "../../../unmapped/Attribute"
-#include "../../pack/ResourcePackManager"
-#include "../attribute/AttributeBuff"
 #include "../attribute/AttributeModifier"
+#include "../Actor"
+#include "../attribute/AttributeBuff"
+#include "../../../unmapped/Attribute"
+#include "../../../unmapped/Amplifier"
+#include "../../pack/ResourcePackManager"
 
 
 class MobEffect {
@@ -44,7 +44,7 @@ public:
     static long HERO_OF_THE_VILLAGE;
     static long mMobEffects;
 
-    MobEffect::~MobEffect()
+    virtual MobEffect::~MobEffect()
     virtual void applyEffects(Actor *, int, int)const;
     virtual void removeEffects(Actor *);
     virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const;

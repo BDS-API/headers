@@ -1,16 +1,16 @@
 #pragma once
 
+#include "../nbt/CompoundTag"
 #include "../level/Level"
-#include "unmapped/ItemDescriptor"
 #include "../actor/Player"
 #include "../actor/ThrownPotion"
-#include "../nbt/CompoundTag"
+#include "unmapped/ItemDescriptor"
 
 
 class PotionItem : Item {
 
 public:
-    PotionItem::~PotionItem()
+    virtual PotionItem::~PotionItem()
     virtual bool isGlint(ItemStackBase const&)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual bool isValidAuxValue(int)const;

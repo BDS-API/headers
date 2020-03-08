@@ -1,22 +1,22 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../container/Container"
-#include "../../item/unmapped/ItemDescriptor"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../item/Item"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
-#include "../../item/ItemInstance"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../item/Item"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../item/ItemInstance"
+#include "../../item/unmapped/ItemDescriptor"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../container/Container"
 
 
 class BrewingStandBlockActor : BlockActor, Container {
 
 public:
-    BrewingStandBlockActor::~BrewingStandBlockActor()
+    virtual BrewingStandBlockActor::~BrewingStandBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

@@ -6,7 +6,7 @@
 class ReceiveLoveGoal : Goal {
 
 public:
-    ReceiveLoveGoal::~ReceiveLoveGoal()
+    virtual ReceiveLoveGoal::~ReceiveLoveGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void tick();

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../../unmapped/BoundingBox"
-#include "../../../block/unmapped/BlockSource"
 #include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/BoundingBox"
 
 
 class StructureStart {
 
 public:
-    StructureStart::~StructureStart()
+    virtual StructureStart::~StructureStart()
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual bool isValid()const;
 

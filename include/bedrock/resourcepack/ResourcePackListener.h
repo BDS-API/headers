@@ -6,7 +6,7 @@
 class ResourcePackListener {
 
 public:
-    ResourcePackListener::~ResourcePackListener()
+    virtual ResourcePackListener::~ResourcePackListener()
     virtual void onFullPackStackInvalid();
     virtual void onBaseGamePackDownloadComplete();
     virtual void onLanguageSubpacksChanged();

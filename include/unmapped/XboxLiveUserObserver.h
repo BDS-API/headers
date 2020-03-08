@@ -8,7 +8,7 @@ using namespace Social;
 class XboxLiveUserObserver : Core::Observer<Social::XboxLiveUserObserver, Core::SingleThreadedLock> {
 
 public:
-    Social::XboxLiveUserObserver::~XboxLiveUserObserver()
+    virtual Social::XboxLiveUserObserver::~XboxLiveUserObserver()
 
     XboxLiveUserObserver(void);
 };

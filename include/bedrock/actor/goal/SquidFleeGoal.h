@@ -6,7 +6,7 @@
 class SquidFleeGoal : Goal {
 
 public:
-    SquidFleeGoal::~SquidFleeGoal()
+    virtual SquidFleeGoal::~SquidFleeGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

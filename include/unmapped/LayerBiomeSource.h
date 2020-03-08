@@ -7,7 +7,7 @@
 class LayerBiomeSource : BiomeSource {
 
 public:
-    LayerBiomeSource::~LayerBiomeSource()
+    virtual LayerBiomeSource::~LayerBiomeSource()
     virtual void fillBiomes(LevelChunk &)const;
     virtual void getBiome(int, int)const;
 

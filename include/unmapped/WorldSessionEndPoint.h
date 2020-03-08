@@ -6,7 +6,7 @@
 class WorldSessionEndPoint : ContentLogEndPoint {
 
 public:
-    WorldSessionEndPoint::~WorldSessionEndPoint()
+    virtual WorldSessionEndPoint::~WorldSessionEndPoint()
     virtual void flush();
     virtual void setEnabled(bool);
     virtual bool isEnabled()const;

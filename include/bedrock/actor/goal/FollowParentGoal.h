@@ -6,7 +6,7 @@
 class FollowParentGoal : Goal {
 
 public:
-    FollowParentGoal::~FollowParentGoal()
+    virtual FollowParentGoal::~FollowParentGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

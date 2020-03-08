@@ -9,7 +9,7 @@ public:
     static long NAME_TO_ID_MAP[abi:cxx11];
     static long ID_TO_NAME_MAP[abi:cxx11];
 
-    Description::~Description()
+    virtual Description::~Description()
     virtual void deserializeData(Json::Value &);
 
     Description(void);

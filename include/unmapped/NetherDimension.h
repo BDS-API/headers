@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/Scheduler"
-#include "../bedrock/util/Vec3"
 #include "../bedrock/level/Level"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/Scheduler"
 
 
 class NetherDimension : Dimension {
 
 public:
-    NetherDimension::~NetherDimension()
+    virtual NetherDimension::~NetherDimension()
     virtual void init();
     virtual void createGenerator();
     virtual void updateLightRamp();

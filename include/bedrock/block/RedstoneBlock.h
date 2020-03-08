@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/BlockPos"
 
 
 class RedstoneBlock : BlockLegacy {
 
 public:
-    RedstoneBlock::~RedstoneBlock()
+    virtual RedstoneBlock::~RedstoneBlock()
     virtual bool isSignalSource()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
-#include "../../unmapped/Block"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../util/Vec3"
-#include "../util/BlockPos"
-#include "../block/unmapped/BlockSource"
 #include "../nbt/CompoundTag"
+#include "../block/unmapped/BlockSource"
+#include "unmapped/ActorDefinitionGroup"
+#include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/Block"
+#include "../util/Vec3"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class ExperienceOrb : Actor {
@@ -18,7 +18,7 @@ public:
     static long LIFETIME;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    ExperienceOrb::~ExperienceOrb()
+    virtual ExperienceOrb::~ExperienceOrb()
     virtual void normalTick();
     virtual void getShadowRadius()const;
     virtual void playerTouch(Player &);

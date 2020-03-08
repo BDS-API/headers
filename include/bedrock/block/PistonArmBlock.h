@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/Random"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
 class PistonArmBlock : BlockLegacy {
 
 public:
-    PistonArmBlock::~PistonArmBlock()
+    virtual PistonArmBlock::~PistonArmBlock()
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;

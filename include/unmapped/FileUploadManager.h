@@ -10,7 +10,7 @@ public:
     static long CHUNK_UPLOAD_SIZE;
     static long BOUNDARY[abi:cxx11];
 
-    FileUploadManager::~FileUploadManager()
+    virtual FileUploadManager::~FileUploadManager()
     virtual void getUploadProgress()const;
 
     FileUploadManager(TaskGroup &, std::shared_ptr<IFileChunkUploader>);

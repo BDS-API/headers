@@ -5,7 +5,7 @@
 class TextObjectText : ITextObject {
 
 public:
-    TextObjectText::~TextObjectText()
+    virtual TextObjectText::~TextObjectText()
     virtual bool asString()const;
     virtual bool asJsonValue()const;
 

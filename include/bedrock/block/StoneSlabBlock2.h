@@ -1,9 +1,9 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class StoneSlabBlock2 : SlabBlock {
@@ -11,7 +11,7 @@ class StoneSlabBlock2 : SlabBlock {
 public:
     static long SLAB_NAMES[abi:cxx11];
 
-    StoneSlabBlock2::~StoneSlabBlock2()
+    virtual StoneSlabBlock2::~StoneSlabBlock2()
     virtual bool isValidAuxValue(int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;

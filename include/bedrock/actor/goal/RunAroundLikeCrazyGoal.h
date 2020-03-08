@@ -6,7 +6,7 @@
 class RunAroundLikeCrazyGoal : Goal {
 
 public:
-    RunAroundLikeCrazyGoal::~RunAroundLikeCrazyGoal()
+    virtual RunAroundLikeCrazyGoal::~RunAroundLikeCrazyGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

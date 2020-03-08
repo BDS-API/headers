@@ -7,7 +7,7 @@
 class RequestChunkRadiusPacket : Packet {
 
 public:
-    RequestChunkRadiusPacket::~RequestChunkRadiusPacket()
+    virtual RequestChunkRadiusPacket::~RequestChunkRadiusPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

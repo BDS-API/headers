@@ -6,7 +6,7 @@
 class FilterTestClock : SimpleFloatFilterTest {
 
 public:
-    FilterTestClock::~FilterTestClock()
+    virtual FilterTestClock::~FilterTestClock()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

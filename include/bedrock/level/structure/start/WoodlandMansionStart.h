@@ -1,19 +1,19 @@
 #pragma once
 
+#include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/Dimension"
+#include "../../chunksource/ChunkSource"
+#include "../../../util/BlockPos"
+#include "../../chunksource/OverworldGenerator"
 #include "../../../../unmapped/Block"
 #include "../../../../unmapped/BoundingBox"
-#include "../../../util/Random"
-#include "../../../../unmapped/Dimension"
-#include "../../../util/BlockPos"
-#include "../../../block/unmapped/BlockSource"
-#include "../../chunksource/OverworldGenerator"
-#include "../../chunksource/ChunkSource"
 
 
 class WoodlandMansionStart : StructureStart {
 
 public:
-    WoodlandMansionStart::~WoodlandMansionStart()
+    virtual WoodlandMansionStart::~WoodlandMansionStart()
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void getType()const;
 

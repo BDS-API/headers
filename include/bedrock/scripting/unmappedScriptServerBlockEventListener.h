@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../actor/Player"
 #include "../../actor/Actor"
-#include "../../block/unmapped/BlockEventListener"
 #include "../../util/BlockPos"
 #include "../../../unmapped/Block"
+#include "../../block/unmapped/BlockEventListener"
+#include "../../actor/Player"
 #include "../../../unmapped/MinecraftServerScriptEngine"
 
 
 class ScriptServerBlockEventListener : BlockEventListener {
 
 public:
-    ScriptServerBlockEventListener::~ScriptServerBlockEventListener()
+    virtual ScriptServerBlockEventListener::~ScriptServerBlockEventListener()
     virtual void onBlockPlacedByPlayer(Player &, Block const&, BlockPos const&, bool);
     virtual void onBlockDestroyedByPlayer(Player &, std::string, BlockPos const&);
     virtual void onBlockMovedByPiston(BlockPos const&, BlockPos const&, PistonBlockActor::PistonState);

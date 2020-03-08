@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../unmapped/ScriptEngine"
 #include "../ScriptObjectHandle"
 #include "../../item/ItemInstance"
+#include "../unmapped/ScriptEngine"
 
 
 class ScriptItemStackBinderComponent : ScriptBinderComponent {
@@ -13,7 +13,7 @@ public:
     static long ITEM[abi:cxx11];
     static long UNDEFINED[abi:cxx11];
 
-    ScriptItemStackBinderComponent::~ScriptItemStackBinderComponent()
+    virtual ScriptItemStackBinderComponent::~ScriptItemStackBinderComponent()
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 

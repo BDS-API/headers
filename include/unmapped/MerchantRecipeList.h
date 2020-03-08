@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/item/ItemInstance"
 
 
 class MerchantRecipeList {
 
 public:
-    MerchantRecipeList::~MerchantRecipeList()
+    virtual MerchantRecipeList::~MerchantRecipeList()
     virtual void getRecipeFor(ItemInstance const&, ItemInstance const&, int);
     virtual void addIfNewOrBetter(MerchantRecipe *);
     virtual void getMatchingRecipeFor(ItemInstance const&, ItemInstance const&, ItemInstance const&);

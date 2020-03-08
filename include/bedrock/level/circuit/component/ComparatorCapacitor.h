@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../util/BlockPos"
+#include "../../../../unmapped/CircuitTrackingInfo"
 
 
 class ComparatorCapacitor : CapacitorComponent {
 
 public:
-    ComparatorCapacitor::~ComparatorCapacitor()
+    virtual ComparatorCapacitor::~ComparatorCapacitor()
     virtual void consumePowerAnyDirection();
     virtual bool canConsumerPower();
     virtual void getInstanceType()const;

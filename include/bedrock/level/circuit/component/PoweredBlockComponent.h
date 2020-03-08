@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../util/BlockPos"
+#include "../../../../unmapped/CircuitTrackingInfo"
 
 
 class PoweredBlockComponent : BaseCircuitComponent {
 
 public:
-    PoweredBlockComponent::~PoweredBlockComponent()
+    virtual PoweredBlockComponent::~PoweredBlockComponent()
     virtual void getStrength()const;
     virtual bool canConsumerPower();
     virtual void getBaseType()const;

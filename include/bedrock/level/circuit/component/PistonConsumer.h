@@ -7,7 +7,7 @@
 class PistonConsumer : ConsumerComponent {
 
 public:
-    PistonConsumer::~PistonConsumer()
+    virtual PistonConsumer::~PistonConsumer()
     virtual void consumePowerAnyDirection();
     virtual void getInstanceType()const;
     virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);

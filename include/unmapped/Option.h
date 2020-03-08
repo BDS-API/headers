@@ -6,7 +6,7 @@
 class Option {
 
 public:
-    Option::~Option()
+    virtual Option::~Option()
     virtual void load(std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>> &);
     virtual void load(Json::Value const&);
 

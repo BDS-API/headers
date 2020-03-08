@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../../text/TextObjectRoot"
-#include "../../actor/Actor"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../../unmapped/CachedMessageData"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
+#include "../../actor/Actor"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../../unmapped/CachedMessageData"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../text/TextObjectRoot"
 
 
 class ChalkboardBlockActor : BlockActor {
 
 public:
-    ChalkboardBlockActor::~ChalkboardBlockActor()
+    virtual ChalkboardBlockActor::~ChalkboardBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);

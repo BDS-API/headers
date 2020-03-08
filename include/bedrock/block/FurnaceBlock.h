@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "../util/Vec3"
 
 
 class FurnaceBlock : ActorBlock {
 
 public:
-    FurnaceBlock::~FurnaceBlock()
+    virtual FurnaceBlock::~FurnaceBlock()
     virtual bool isContainerBlock()const;
     virtual bool isCraftingBlock()const;
     virtual bool isInteractiveBlock()const;

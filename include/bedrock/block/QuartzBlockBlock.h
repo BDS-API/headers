@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../util/Vec3"
 
 
 class QuartzBlockBlock : RotatedPillarBlock {
 
 public:
-    QuartzBlockBlock::~QuartzBlockBlock()
+    virtual QuartzBlockBlock::~QuartzBlockBlock()
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;

@@ -7,7 +7,7 @@ using namespace ScriptApi;
 class ScriptFramework {
 
 public:
-    ScriptApi::ScriptFramework::~ScriptFramework()
+    virtual ScriptApi::ScriptFramework::~ScriptFramework()
     virtual void initialize();
     virtual void shutdown();
 

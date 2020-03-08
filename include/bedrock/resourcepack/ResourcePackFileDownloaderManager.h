@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../unmapped/FileChunkInfo"
-#include "../../core/Path"
 #include "../network/packet/sender/PacketSender"
+#include "../../core/Path"
 #include "../../unmapped/TaskGroup"
+#include "../../unmapped/FileChunkInfo"
 
 
 class ResourcePackFileDownloaderManager {
@@ -11,7 +11,7 @@ class ResourcePackFileDownloaderManager {
 public:
     static long MAX_CHUNK_ATTEMPTS;
 
-    ResourcePackFileDownloaderManager::~ResourcePackFileDownloaderManager()
+    virtual ResourcePackFileDownloaderManager::~ResourcePackFileDownloaderManager()
 
     ResourcePackFileDownloaderManager(TaskGroup &, PacketSender &);
     void cleanup();

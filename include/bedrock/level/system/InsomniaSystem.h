@@ -6,7 +6,7 @@
 class InsomniaSystem : ITickingSystem {
 
 public:
-    InsomniaSystem::~InsomniaSystem()
+    virtual InsomniaSystem::~InsomniaSystem()
     virtual void tick(EntityRegistry &);
 
     InsomniaSystem(void);

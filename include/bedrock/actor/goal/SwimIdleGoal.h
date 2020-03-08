@@ -6,7 +6,7 @@
 class SwimIdleGoal : Goal {
 
 public:
-    SwimIdleGoal::~SwimIdleGoal()
+    virtual SwimIdleGoal::~SwimIdleGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

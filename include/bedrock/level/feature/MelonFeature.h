@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../util/BlockPos"
-#include "../../block/unmapped/BlockSource"
 #include "../../util/Random"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class MelonFeature : Feature {
 
 public:
-    MelonFeature::~MelonFeature()
+    virtual MelonFeature::~MelonFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     MelonFeature(void);

@@ -8,7 +8,7 @@ using namespace AgentCommands;
 class CollectCommand : AgentCommands::Command {
 
 public:
-    AgentCommands::CollectCommand::~CollectCommand()
+    virtual AgentCommands::CollectCommand::~CollectCommand()
     virtual void execute();
     virtual bool isDone();
 

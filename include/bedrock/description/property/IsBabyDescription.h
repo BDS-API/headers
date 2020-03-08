@@ -7,7 +7,7 @@ class IsBabyDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    IsBabyDescription::~IsBabyDescription()
+    virtual IsBabyDescription::~IsBabyDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

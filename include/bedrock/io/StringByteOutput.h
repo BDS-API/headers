@@ -5,7 +5,7 @@
 class StringByteOutput : BytesDataOutput {
 
 public:
-    StringByteOutput::~StringByteOutput()
+    virtual StringByteOutput::~StringByteOutput()
     virtual void writeBytes(void const*, unsigned long);
 
     StringByteOutput(std::string &);

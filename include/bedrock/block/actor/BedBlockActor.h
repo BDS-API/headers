@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/DataLoadHelper"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class BedBlockActor : BlockActor {
 
 public:
-    BedBlockActor::~BedBlockActor()
+    virtual BedBlockActor::~BedBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

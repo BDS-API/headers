@@ -6,7 +6,7 @@
 class DragonLandingGoal : Goal {
 
 public:
-    DragonLandingGoal::~DragonLandingGoal()
+    virtual DragonLandingGoal::~DragonLandingGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -5,7 +5,7 @@
 class UIProfanityContext {
 
 public:
-    UIProfanityContext::~UIProfanityContext()
+    virtual UIProfanityContext::~UIProfanityContext()
     virtual void _doMaskProfanity(std::string const&)const;
     virtual void _doFindProfanity(std::string const&)const;
 

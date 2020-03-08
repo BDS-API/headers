@@ -1,9 +1,9 @@
 #pragma once
 
+#include "../network/packet/AvailableCommandsPacket"
+#include "../../unmapped/AutoCompleteInformation"
 #include "../network/packet/Packet"
 #include "orgin/CommandOrigin"
-#include "../../unmapped/AutoCompleteInformation"
-#include "../network/packet/AvailableCommandsPacket"
 
 
 class CommandRegistry {

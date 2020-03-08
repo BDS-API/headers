@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID"
 #include "../../util/BlockPos"
 #include "../../actor/Player"
 #include "../../item/ItemInstance"
+#include "../../actor/unmapped/ActorUniqueID"
 
 
 class ChestContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    ChestContainerManagerModel::~ChestContainerManagerModel()
+    virtual ChestContainerManagerModel::~ChestContainerManagerModel()
     virtual void init();
     virtual bool isValid(float);
 

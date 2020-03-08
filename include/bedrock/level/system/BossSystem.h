@@ -6,7 +6,7 @@
 class BossSystem : ITickingSystem {
 
 public:
-    BossSystem::~BossSystem()
+    virtual BossSystem::~BossSystem()
     virtual void tick(EntityRegistry &);
 
     BossSystem(void);

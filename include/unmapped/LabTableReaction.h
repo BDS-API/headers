@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/item/ItemStack"
 
 
 class LabTableReaction {
 
 public:
-    LabTableReaction::~LabTableReaction()
+    virtual LabTableReaction::~LabTableReaction()
 
     LabTableReaction(LabTableReactionType, BlockPos const&, bool, int, int);
     void _setLifetime(int, int);

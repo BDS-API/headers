@@ -6,7 +6,7 @@
 class PackError {
 
 public:
-    PackError::~PackError()
+    virtual PackError::~PackError()
     virtual void getLocErrorMessage()const;
 
     PackError(PackErrorType, std::vector<std::string, std::allocator<std::string>> const&);

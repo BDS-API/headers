@@ -5,7 +5,7 @@
 class LootEnchant : Enchant {
 
 public:
-    LootEnchant::~LootEnchant()
+    virtual LootEnchant::~LootEnchant()
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMaxLevel()const;

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "../block/unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/VariantParameterList"
+#include "../util/Vec3"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class FallingBlock : Actor {
@@ -16,7 +16,7 @@ class FallingBlock : Actor {
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    FallingBlock::~FallingBlock()
+    virtual FallingBlock::~FallingBlock()
     virtual void teleportTo(Vec3 const&, bool, int, int);
     virtual void normalTick();
     virtual void getShadowHeightOffs();

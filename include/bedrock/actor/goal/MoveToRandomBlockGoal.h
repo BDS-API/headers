@@ -1,14 +1,14 @@
 #pragma once
 
+#include "../../block/unmapped/BlockSource"
 #include "../Mob"
 #include "../../util/BlockPos"
-#include "../../block/unmapped/BlockSource"
 
 
 class MoveToRandomBlockGoal : Goal {
 
 public:
-    MoveToRandomBlockGoal::~MoveToRandomBlockGoal()
+    virtual MoveToRandomBlockGoal::~MoveToRandomBlockGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

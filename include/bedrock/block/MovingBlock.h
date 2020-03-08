@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../actor/Player"
+#include "unmapped/BlockSource"
 #include "../actor/Actor"
 #include "../util/BlockPos"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../actor/Player"
 #include "../util/AABB"
 
 
 class MovingBlock : ActorBlock {
 
 public:
-    MovingBlock::~MovingBlock()
+    virtual MovingBlock::~MovingBlock()
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;

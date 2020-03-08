@@ -5,7 +5,7 @@
 class InstantaneousMobEffect : MobEffect {
 
 public:
-    InstantaneousMobEffect::~InstantaneousMobEffect()
+    virtual InstantaneousMobEffect::~InstantaneousMobEffect()
     virtual bool isInstantaneous()const;
     virtual bool isDurationEffectTick(int, int)const;
 

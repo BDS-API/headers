@@ -1,22 +1,22 @@
 #pragma once
 
-#include "../core/FileStorageArea"
-#include "definition/ConnectionDefinition"
-#include "../unmapped/EducationOptions"
-#include "pack/ResourcePackManager"
-#include "metrics/ServerMetrics"
-#include "../unmapped/GameCallbacks"
 #include "../unmapped/AppPlatformListener"
-#include "util/Whitelist"
-#include "../unmapped/PermissionsFile"
 #include "../unmapped/ServerInstanceEventCoordinator"
-#include "../core/FilePathManager"
-#include "../unmapped/ContentTierManager"
-#include "resourcepack/ResourcePackRepository"
-#include "../mce/UUID"
-#include "level/LevelSettings"
 #include "eventing/IMinecraftEventing"
+#include "util/Whitelist"
+#include "../core/FilePathManager"
+#include "../unmapped/EducationOptions"
+#include "../unmapped/GameCallbacks"
+#include "level/LevelSettings"
+#include "../mce/UUID"
+#include "../unmapped/ContentTierManager"
+#include "metrics/ServerMetrics"
+#include "definition/ConnectionDefinition"
+#include "../core/FileStorageArea"
+#include "../unmapped/PermissionsFile"
 #include "level/LevelData"
+#include "pack/ResourcePackManager"
+#include "resourcepack/ResourcePackRepository"
 
 
 class ServerInstance : AppPlatformListener, GameCallbacks {
@@ -24,7 +24,7 @@ class ServerInstance : AppPlatformListener, GameCallbacks {
 public:
     static long SERVER_MAX_DELAY_BEFORE_SLOWDOWN;
 
-    ServerInstance::~ServerInstance()
+    virtual ServerInstance::~ServerInstance()
     virtual void onLowMemory();
     virtual void onLevelCorrupt();
     virtual void onGameModeChanged();

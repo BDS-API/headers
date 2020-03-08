@@ -7,7 +7,7 @@
 class InteractActionDefinition : BehaviorDefinition {
 
 public:
-    InteractActionDefinition::~InteractActionDefinition()
+    virtual InteractActionDefinition::~InteractActionDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     InteractActionDefinition(void);

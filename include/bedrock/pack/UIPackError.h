@@ -5,7 +5,7 @@
 class UIPackError : PackError {
 
 public:
-    UIPackError::~UIPackError()
+    virtual UIPackError::~UIPackError()
     virtual void getLocErrorMessageMap()const;
     virtual void getEventErrorMessageMap()const;
 

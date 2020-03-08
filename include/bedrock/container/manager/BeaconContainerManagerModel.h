@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../block/actor/BeaconBlockActor"
 #include "../../../unmapped/ContainerItemStack"
 #include "../../util/BlockPos"
 #include "../../actor/Player"
+#include "../../block/actor/BeaconBlockActor"
 
 
 class BeaconContainerManagerModel : LevelContainerManagerModel {
@@ -11,7 +11,7 @@ class BeaconContainerManagerModel : LevelContainerManagerModel {
 public:
     static long PAYMENT_SLOT;
 
-    BeaconContainerManagerModel::~BeaconContainerManagerModel()
+    virtual BeaconContainerManagerModel::~BeaconContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

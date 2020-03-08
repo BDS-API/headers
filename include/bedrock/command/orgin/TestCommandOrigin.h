@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../actor/Player"
 #include "../../../unmapped/NetworkIdentifier"
 #include "../../level/Level"
+#include "../../actor/Player"
+#include "../../actor/unmapped/ActorUniqueID"
 
 
 class TestCommandOrigin : CommandOrigin {
 
 public:
-    TestCommandOrigin::~TestCommandOrigin()
+    virtual TestCommandOrigin::~TestCommandOrigin()
     virtual void getRequestId()const;
     virtual void getName()const;
     virtual void getBlockPosition()const;

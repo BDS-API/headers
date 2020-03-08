@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/ScaleByAgeComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/ScaleByAgeComponent"
 
 
 class ScaleByAgeDefinition {

@@ -5,7 +5,7 @@
 class LevelStorageSource {
 
 public:
-    LevelStorageSource::~LevelStorageSource()
+    virtual LevelStorageSource::~LevelStorageSource()
 
     LevelStorageSource(void);
 };

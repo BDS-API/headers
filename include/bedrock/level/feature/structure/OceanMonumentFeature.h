@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../../unmapped/HardcodedSpawnAreaRegistry"
-#include "../../../../unmapped/BiomeSource"
-#include "../../../util/ChunkPos"
 #include "../../../util/Random"
 #include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/BiomeSource"
 #include "../../../util/BlockPos"
+#include "../../../util/ChunkPos"
+#include "../../../../unmapped/HardcodedSpawnAreaRegistry"
 
 
 class OceanMonumentFeature : StructureFeature {
 
 public:
-    OceanMonumentFeature::~OceanMonumentFeature()
+    virtual OceanMonumentFeature::~OceanMonumentFeature()
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);

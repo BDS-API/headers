@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Actor"
 #include "../Mob"
+#include "../Actor"
 #include "../unmapped/ActorDefinitionIdentifier"
 #include "../../../unmapped/SummonSpellData"
 
@@ -9,7 +9,7 @@
 class SummonActorGoal : Goal {
 
 public:
-    SummonActorGoal::~SummonActorGoal()
+    virtual SummonActorGoal::~SummonActorGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../util/AABB"
 
 
 class BeetrootBlock : CropBlock {
 
 public:
-    BeetrootBlock::~BeetrootBlock()
+    virtual BeetrootBlock::~BeetrootBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void getVariant(Block const&)const;
     virtual void getBaseSeed()const;

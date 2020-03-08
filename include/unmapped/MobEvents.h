@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/level/storage/LevelStorage"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/level/storage/LevelStorage"
 
 
 class MobEvents {
@@ -9,7 +9,7 @@ class MobEvents {
 public:
     static long EVENTS_ENABLED_STRING[abi:cxx11];
 
-    MobEvents::~MobEvents()
+    virtual MobEvents::~MobEvents()
 
     MobEvents(LevelStorage &);
     void readFromLevelStorage();

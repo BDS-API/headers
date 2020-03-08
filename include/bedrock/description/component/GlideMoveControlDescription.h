@@ -7,7 +7,7 @@ class GlideMoveControlDescription : MoveControlDescription {
 
 public:
     virtual void getJsonName()const;
-    GlideMoveControlDescription::~GlideMoveControlDescription()
+    virtual GlideMoveControlDescription::~GlideMoveControlDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

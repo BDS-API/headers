@@ -7,7 +7,7 @@ using namespace WoodlandMansionPieces;
 class FloorRoomCollection {
 
 public:
-    WoodlandMansionPieces::FloorRoomCollection::~FloorRoomCollection()
+    virtual WoodlandMansionPieces::FloorRoomCollection::~FloorRoomCollection()
 
     FloorRoomCollection(void);
 };

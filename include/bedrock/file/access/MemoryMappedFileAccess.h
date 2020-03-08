@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../../core/Path"
 #include "../../../unmapped/FileAccessTransforms"
 #include "../../../unmapped/StreamDetails"
+#include "../../../core/Path"
 
 
 class MemoryMappedFileAccess : IFileAccess {
@@ -10,7 +10,7 @@ class MemoryMappedFileAccess : IFileAccess {
 public:
     static long EMPTY_TRANSFORMS;
 
-    MemoryMappedFileAccess::~MemoryMappedFileAccess()
+    virtual MemoryMappedFileAccess::~MemoryMappedFileAccess()
     virtual void fopen(Core::Path const&, std::string const&);
     virtual void fclose(void *);
     virtual void fseek(void *, long, int);

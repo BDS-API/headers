@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/container/Container"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/actor/Player"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/item/unmapped/ItemState"
-#include "../bedrock/util/Random"
-#include "../bedrock/item/ItemInstance"
 #include "../bedrock/block/BlockLegacy"
-#include "../bedrock/actor/Mob"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/item/unmapped/ItemState"
+#include "../bedrock/actor/Player"
+#include "../bedrock/container/Container"
+#include "../bedrock/util/Random"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/item/ItemInstance"
 #include "../bedrock/util/AABB"
+#include "../bedrock/actor/Mob"
+#include "../bedrock/actor/Actor"
 
 
 class Block {
@@ -21,7 +21,7 @@ public:
     static long SIZE_OFFSET;
     static long BLOCK_DESCRIPTION_PREFIX[abi:cxx11];
 
-    Block::~Block()
+    virtual Block::~Block()
     virtual void getRenderLayer()const;
 
     void getLegacyBlock()const;

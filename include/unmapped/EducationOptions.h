@@ -11,7 +11,7 @@ public:
     static long DEFAULT_OPTION;
     static long CHEMISTRY_ENABLED;
 
-    EducationOptions::~EducationOptions()
+    virtual EducationOptions::~EducationOptions()
     virtual void onActiveResourcePacksChanged(ResourcePackManager &);
 
     EducationOptions(ResourcePackManager *);

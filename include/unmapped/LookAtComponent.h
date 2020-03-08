@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/definition/LookAtDefinition"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/definition/LookAtDefinition"
 
 
 class LookAtComponent {

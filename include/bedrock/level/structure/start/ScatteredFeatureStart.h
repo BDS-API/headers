@@ -6,7 +6,7 @@
 class ScatteredFeatureStart : StructureStart {
 
 public:
-    ScatteredFeatureStart::~ScatteredFeatureStart()
+    virtual ScatteredFeatureStart::~ScatteredFeatureStart()
     virtual void getType()const;
 
     ScatteredFeatureStart(void);

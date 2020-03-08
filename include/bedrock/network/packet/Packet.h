@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../NetEventCallback"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
 #include "../../../unmapped/NetworkIdentifier"
+#include "../NetEventCallback"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class Packet {
 
 public:
-    Packet::~Packet()
+    virtual Packet::~Packet()
     virtual void disallowBatching()const;
 
     void getReliability()const;

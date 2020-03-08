@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../bedrock/crafting/recipe/MultiRecipe"
-#include "../bedrock/io/ReadOnlyBinaryStream"
-#include "../bedrock/crafting/recipe/Recipe"
 #include "../bedrock/io/BinaryStream"
+#include "../bedrock/crafting/recipe/Recipe"
 #include "../bedrock/item/ItemInstance"
+#include "../bedrock/io/ReadOnlyBinaryStream"
+#include "../bedrock/crafting/recipe/MultiRecipe"
 
 
 class CraftingDataEntry {

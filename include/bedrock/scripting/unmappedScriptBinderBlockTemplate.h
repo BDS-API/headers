@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../util/BlockPos"
-#include "../ScriptObjectHandle"
 #include "../../../unmapped/Block"
+#include "../ScriptObjectHandle"
 
 
 class ScriptBinderBlockTemplate : ScriptBinderTemplate {
 
 public:
-    ScriptBinderBlockTemplate::~ScriptBinderBlockTemplate()
+    virtual ScriptBinderBlockTemplate::~ScriptBinderBlockTemplate()
     virtual void getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
 

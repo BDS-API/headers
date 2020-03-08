@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/BribeableComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/BribeableComponent"
 
 
 class BribeableDefinition {

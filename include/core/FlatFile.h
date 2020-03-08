@@ -7,7 +7,7 @@ using namespace Core;
 class FlatFile : Core::FileImpl {
 
 public:
-    Core::FlatFile::~FlatFile()
+    virtual Core::FlatFile::~FlatFile()
     virtual void _getPath()const;
     virtual void _getBlockSize()const;
     virtual void _isOpen();

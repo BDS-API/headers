@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/unmapped/ItemDescriptor"
 #include "../bedrock/level/Level"
 #include "../bedrock/nbt/ListTag"
-#include "../bedrock/item/unmapped/ItemDescriptor"
 #include "../bedrock/container/Inventory"
+#include "../bedrock/item/ItemStack"
 #include "../bedrock/container/manager/HudContainerManagerModel"
 
 
@@ -12,7 +12,7 @@ class PlayerInventoryProxy : ContainerSizeChangeListener, ContainerContentChange
 
 public:
     virtual void containerSizeChanged(int);
-    PlayerInventoryProxy::~PlayerInventoryProxy()
+    virtual PlayerInventoryProxy::~PlayerInventoryProxy()
     virtual void containerContentChanged(int);
     virtual void createTransactionContext(std::function<void ()(Container &, int, ItemStack const&, ItemStack const&)>, std::function<void ()(void)>);
 

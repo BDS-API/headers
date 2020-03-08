@@ -6,7 +6,7 @@
 class FindUnderwaterTreasureGoal : Goal {
 
 public:
-    FindUnderwaterTreasureGoal::~FindUnderwaterTreasureGoal()
+    virtual FindUnderwaterTreasureGoal::~FindUnderwaterTreasureGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual bool canBeInterrupted();

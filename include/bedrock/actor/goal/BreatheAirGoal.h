@@ -6,7 +6,7 @@
 class BreatheAirGoal : Goal {
 
 public:
-    BreatheAirGoal::~BreatheAirGoal()
+    virtual BreatheAirGoal::~BreatheAirGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual bool canBeInterrupted();

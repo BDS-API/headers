@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../unmapped/Material"
-#include "../../unmapped/SpawnConditions"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
-#include "../../unmapped/Block"
+#include "../util/Random"
+#include "../actor/Actor"
 #include "../util/AABB"
+#include "../../unmapped/Material"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../util/Vec3"
+#include "../../unmapped/SpawnConditions"
 
 
 class SlabBlock : BlockLegacy {
 
 public:
-    SlabBlock::~SlabBlock()
+    virtual SlabBlock::~SlabBlock()
     virtual bool isObstructingChests(BlockSource &, BlockPos const&)const;
     virtual void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block ()(BlockPos const&)> const&, BlockPos const&)const;
     virtual bool isSlabBlock()const;

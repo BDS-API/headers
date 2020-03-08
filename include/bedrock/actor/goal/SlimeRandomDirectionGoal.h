@@ -6,7 +6,7 @@
 class SlimeRandomDirectionGoal : Goal {
 
 public:
-    SlimeRandomDirectionGoal::~SlimeRandomDirectionGoal()
+    virtual SlimeRandomDirectionGoal::~SlimeRandomDirectionGoal()
     virtual bool canUse();
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;

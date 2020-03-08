@@ -6,7 +6,7 @@
 class FunctionEntry : IFunctionEntry {
 
 public:
-    FunctionEntry::~FunctionEntry()
+    virtual FunctionEntry::~FunctionEntry()
     virtual void execute(FunctionManager &, CommandOrigin const&);
 
     FunctionEntry(void);

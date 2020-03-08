@@ -6,7 +6,7 @@
 class FilterTestDaytime : SimpleBoolFilterTest {
 
 public:
-    FilterTestDaytime::~FilterTestDaytime()
+    virtual FilterTestDaytime::~FilterTestDaytime()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

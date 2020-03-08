@@ -7,7 +7,7 @@
 class RakNetServerLocator : ServerLocator {
 
 public:
-    RakNetServerLocator::~RakNetServerLocator()
+    virtual RakNetServerLocator::~RakNetServerLocator()
     virtual void announceServer(std::string const&, std::string const&, GameType, int, int, bool);
     virtual void stopAnnouncingServer();
     virtual void findServers(int, int);

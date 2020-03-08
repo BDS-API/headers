@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Player"
+#include "unmapped/BlockSource"
 #include "../actor/Actor"
 #include "../util/Random"
 #include "../util/BlockPos"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../actor/Player"
 #include "../util/AABB"
 
 
 class BrewingStandBlock : ActorBlock {
 
 public:
-    BrewingStandBlock::~BrewingStandBlock()
+    virtual BrewingStandBlock::~BrewingStandBlock()
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;

@@ -6,7 +6,7 @@
 class BlastFurnaceBlockActor : FurnaceBlockActor {
 
 public:
-    BlastFurnaceBlockActor::~BlastFurnaceBlockActor()
+    virtual BlastFurnaceBlockActor::~BlastFurnaceBlockActor()
     virtual void getName()const;
 
     BlastFurnaceBlockActor(BlockPos const&);

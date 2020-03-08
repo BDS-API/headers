@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../container/Container"
-#include "../../util/Vec3"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
 #include "../../nbt/CompoundTag"
+#include "../../util/BlockPos"
+#include "../../util/Vec3"
+#include "../../item/ItemStack"
+#include "../../container/Container"
 
 
 class DropperBlockActor : DispenserBlockActor {
 
 public:
-    DropperBlockActor::~DropperBlockActor()
+    virtual DropperBlockActor::~DropperBlockActor()
     virtual void getUpdatePacket(BlockSource &);
     virtual void getName()const;
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);

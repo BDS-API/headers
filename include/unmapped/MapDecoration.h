@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/Color"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/Color"
 
 
 class MapDecoration {

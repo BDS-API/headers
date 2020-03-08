@@ -7,7 +7,7 @@
 class CraftingDataPacket : Packet {
 
 public:
-    CraftingDataPacket::~CraftingDataPacket()
+    virtual CraftingDataPacket::~CraftingDataPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

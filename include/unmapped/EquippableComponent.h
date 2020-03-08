@@ -2,8 +2,8 @@
 
 #include "../bedrock/actor/Actor"
 #include "../bedrock/definition/EquippableDefinition"
-#include "../bedrock/network/packet/UpdateEquipPacket"
 #include "../bedrock/item/Item"
+#include "../bedrock/network/packet/UpdateEquipPacket"
 
 
 class EquippableComponent {

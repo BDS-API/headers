@@ -6,7 +6,7 @@
 class ScriptContainerComponentBase : ScriptTemplateFactory<ScriptServerContext>::Component {
 
 public:
-    ScriptContainerComponentBase::~ScriptContainerComponentBase()
+    virtual ScriptContainerComponentBase::~ScriptContainerComponentBase()
 
     ScriptContainerComponentBase(void);
 };

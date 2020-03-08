@@ -8,7 +8,7 @@ using namespace AgentCommands;
 class DropCommand : AgentCommands::Command {
 
 public:
-    AgentCommands::DropCommand::~DropCommand()
+    virtual AgentCommands::DropCommand::~DropCommand()
     virtual void execute();
     virtual bool isDone();
 

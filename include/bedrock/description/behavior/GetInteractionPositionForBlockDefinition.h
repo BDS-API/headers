@@ -7,7 +7,7 @@
 class GetInteractionPositionForBlockDefinition : BehaviorDefinition {
 
 public:
-    GetInteractionPositionForBlockDefinition::~GetInteractionPositionForBlockDefinition()
+    virtual GetInteractionPositionForBlockDefinition::~GetInteractionPositionForBlockDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     GetInteractionPositionForBlockDefinition(void);

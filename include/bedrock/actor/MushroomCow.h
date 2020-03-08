@@ -8,7 +8,7 @@
 class MushroomCow : Animal {
 
 public:
-    MushroomCow::~MushroomCow()
+    virtual MushroomCow::~MushroomCow()
     virtual void checkSpawnRules(bool);
 
     MushroomCow(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);

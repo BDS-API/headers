@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
 #include "../../nbt/CompoundTag"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class LevelEventGenericPacket : Packet {
 
 public:
-    LevelEventGenericPacket::~LevelEventGenericPacket()
+    virtual LevelEventGenericPacket::~LevelEventGenericPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

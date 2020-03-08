@@ -7,7 +7,7 @@ class TeleportDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    TeleportDescription::~TeleportDescription()
+    virtual TeleportDescription::~TeleportDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

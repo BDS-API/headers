@@ -1,18 +1,18 @@
 #pragma once
 
+#include "../CommandRegistry"
+#include "../Command"
+#include "../CommandOutput"
+#include "../../../unmapped/InitProxy"
+#include "../../../unmapped/GameRule"
 #include "../orgin/CommandOrigin"
 #include "../../../json/Value"
-#include "../../../unmapped/GameRule"
-#include "../CommandOutput"
-#include "../Command"
-#include "../../../unmapped/InitProxy"
-#include "../CommandRegistry"
 
 
 class GameRuleCommand : Command {
 
 public:
-    GameRuleCommand::~GameRuleCommand()
+    virtual GameRuleCommand::~GameRuleCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &, GameRuleCommand::InitProxy &&);

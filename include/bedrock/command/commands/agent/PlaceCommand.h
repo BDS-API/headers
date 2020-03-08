@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../../item/ItemStack"
 #include "../../../actor/Player"
+#include "../../../item/ItemStack"
 
 
 using namespace AgentCommands;
@@ -9,7 +9,7 @@ using namespace AgentCommands;
 class PlaceCommand : AgentCommands::Command {
 
 public:
-    AgentCommands::PlaceCommand::~PlaceCommand()
+    virtual AgentCommands::PlaceCommand::~PlaceCommand()
     virtual void execute();
     virtual bool isDone();
 

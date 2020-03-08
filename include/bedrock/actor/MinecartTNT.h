@@ -1,7 +1,7 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionGroup"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -10,7 +10,7 @@ class MinecartTNT : Minecart {
 public:
     static long DEFAULT_FUSE_LENGTH;
 
-    MinecartTNT::~MinecartTNT()
+    virtual MinecartTNT::~MinecartTNT()
     virtual void normalTick();
     virtual void handleEntityEvent(ActorEvent, int);
     virtual void causeFallDamage(float);

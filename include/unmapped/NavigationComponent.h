@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
 #include "../bedrock/actor/Mob"
-#include "../bedrock/description/component/NavigationDescription"
-#include "../bedrock/actor/navigation/PathNavigation"
+#include "../bedrock/actor/Actor"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/actor/navigation/PathNavigation"
+#include "../bedrock/description/component/NavigationDescription"
 
 
 class NavigationComponent {

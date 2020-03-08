@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
 #include "../../unmapped/RenderParams"
-#include "../../unmapped/DataLoadHelper"
+#include "damagesource/ActorDamageSource"
+#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../item/ItemStack"
 #include "../util/Vec3"
 #include "unmapped/ActorInteraction"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class ArmorStand : Mob {
@@ -29,7 +29,7 @@ public:
     static long POSE_CANCAN_B;
     static long POSE_HERO;
 
-    ArmorStand::~ArmorStand()
+    virtual ArmorStand::~ArmorStand()
     virtual void normalTick();
     virtual void getShadowRadius()const;
     virtual void interactPreventDefault();

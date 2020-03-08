@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../actor/Player"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
 
 
 class ChorusFlowerBlock : BlockLegacy {
@@ -14,7 +14,7 @@ public:
     static long GROW_RATE;
     static long BRANCH_DIRECTIONS;
 
-    ChorusFlowerBlock::~ChorusFlowerBlock()
+    virtual ChorusFlowerBlock::~ChorusFlowerBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
     virtual bool isWaterBlocking()const;

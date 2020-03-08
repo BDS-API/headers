@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/Random"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 #include "../util/AABB"
 
@@ -11,7 +11,7 @@
 class EndGatewayBlock : ActorBlock {
 
 public:
-    EndGatewayBlock::~EndGatewayBlock()
+    virtual EndGatewayBlock::~EndGatewayBlock()
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;
     virtual bool isWaterBlocking()const;
     virtual void waterSpreadCausesSpawn()const;

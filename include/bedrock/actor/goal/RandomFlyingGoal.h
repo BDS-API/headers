@@ -7,7 +7,7 @@
 class RandomFlyingGoal : RandomStrollGoal {
 
 public:
-    RandomFlyingGoal::~RandomFlyingGoal()
+    virtual RandomFlyingGoal::~RandomFlyingGoal()
     virtual bool canUse();
     virtual void appendDebugInfo(std::string &)const;
     virtual void _setWantedPosition();

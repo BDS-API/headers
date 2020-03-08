@@ -5,7 +5,7 @@
 class TridentLoyaltyEnchant : Enchant {
 
 public:
-    TridentLoyaltyEnchant::~TridentLoyaltyEnchant()
+    virtual TridentLoyaltyEnchant::~TridentLoyaltyEnchant()
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMaxLevel()const;

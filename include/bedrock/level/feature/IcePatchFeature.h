@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class IcePatchFeature : Feature {
 
 public:
-    IcePatchFeature::~IcePatchFeature()
+    virtual IcePatchFeature::~IcePatchFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     IcePatchFeature(int);

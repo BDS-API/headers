@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../item/ItemStack"
+#include "../../io/BinaryStream"
 #include "../../../mce/UUID"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../io/BinaryStream"
+#include "../../item/ItemStack"
 
 
 class CraftingEventPacket : Packet {
 
 public:
-    CraftingEventPacket::~CraftingEventPacket()
+    virtual CraftingEventPacket::~CraftingEventPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

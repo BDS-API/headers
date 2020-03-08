@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorAnimationControllerPtr"
 #include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr"
+#include "../bedrock/actor/unmapped/ActorAnimationControllerPtr"
 
 
 class AnimationResourceDefinitionMap {

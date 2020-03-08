@@ -1,10 +1,10 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class PigZombie : Zombie {
@@ -12,7 +12,7 @@ class PigZombie : Zombie {
 public:
     static long SPEED_MODIFIER_ATTACK_UUID;
 
-    PigZombie::~PigZombie()
+    virtual PigZombie::~PigZombie()
     virtual void normalTick();
     virtual void findAttackTarget();
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);

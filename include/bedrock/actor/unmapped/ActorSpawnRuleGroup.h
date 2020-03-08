@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/IWorldRegistriesProvider"
-#include "../../../json/Value"
 #include "../../../unmapped/MobSpawnRules"
-#include "../../pack/ResourcePackManager"
 #include "../../util/Random"
 #include "../../util/Tick"
+#include "../../../unmapped/IWorldRegistriesProvider"
+#include "../../../json/Value"
+#include "../../pack/ResourcePackManager"
 
 
 class ActorSpawnRuleGroup : ActorSpawnRuleBase {
 
 public:
-    ActorSpawnRuleGroup::~ActorSpawnRuleGroup()
+    virtual ActorSpawnRuleGroup::~ActorSpawnRuleGroup()
     virtual void getRootKey();
     virtual void getFileType();
     virtual bool processPopulationControl(std::string const&, Json::Value &);

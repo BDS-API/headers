@@ -1,14 +1,14 @@
 #pragma once
 
+#include "../../unmapped/TagRegistry"
 #include "../../unmapped/FilterInputs"
 #include "../definition/Definition"
-#include "../../unmapped/TagRegistry"
 
 
 class SimpleTagIDFilterTest : FilterTest {
 
 public:
-    SimpleTagIDFilterTest::~SimpleTagIDFilterTest()
+    virtual SimpleTagIDFilterTest::~SimpleTagIDFilterTest()
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void _serializeValue()const;
 

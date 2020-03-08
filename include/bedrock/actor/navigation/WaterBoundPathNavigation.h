@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../Mob"
-#include "../../description/component/NavigationDescription"
 #include "../../../unmapped/NavigationComponent"
+#include "../../description/component/NavigationDescription"
 
 
 class WaterBoundPathNavigation : PathNavigation {
 
 public:
-    WaterBoundPathNavigation::~WaterBoundPathNavigation()
+    virtual WaterBoundPathNavigation::~WaterBoundPathNavigation()
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

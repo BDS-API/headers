@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
 #include "unmapped/ActorDefinitionGroup"
-#include "../util/Vec2"
+#include "../../unmapped/VariantParameterList"
 #include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
+#include "../util/Vec2"
 
 
 class FishingHook : Actor {
@@ -14,7 +14,7 @@ public:
     static long BOBBER_SIZE;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    FishingHook::~FishingHook()
+    virtual FishingHook::~FishingHook()
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void lerpMotion(Vec3 const&);
     virtual void normalTick();

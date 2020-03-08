@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../core/Path"
 #include "../bedrock/util/Vec3"
+#include "../core/Path"
 
 
 class NullSoundPlayer : SoundPlayer {
 
 public:
-    NullSoundPlayer::~NullSoundPlayer()
+    virtual NullSoundPlayer::~NullSoundPlayer()
     virtual void play(std::string const&, Vec3 const&, float, float);
     virtual void playUI(std::string const&, float, float);
     virtual void playMusic(std::string const&, float, unsigned int &);

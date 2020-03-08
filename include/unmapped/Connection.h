@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../bedrock/network/NetworkPeer"
-#include "../bedrock/network/packet/observer/PacketObserver"
 #include "../bedrock/Scheduler"
+#include "../bedrock/network/packet/observer/PacketObserver"
 
 
 using namespace NetworkHandler;

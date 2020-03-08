@@ -7,7 +7,7 @@
 class StoneSlabBlockItem : SlabBlockItem {
 
 public:
-    StoneSlabBlockItem::~StoneSlabBlockItem()
+    virtual StoneSlabBlockItem::~StoneSlabBlockItem()
     virtual void getLevelDataForAuxValue(int)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
 

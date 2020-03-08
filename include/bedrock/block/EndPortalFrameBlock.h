@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/Random"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
 class EndPortalFrameBlock : BlockLegacy {
 
 public:
-    EndPortalFrameBlock::~EndPortalFrameBlock()
+    virtual EndPortalFrameBlock::~EndPortalFrameBlock()
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;
     virtual bool isInteractiveBlock()const;

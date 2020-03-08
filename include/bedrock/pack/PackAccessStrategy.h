@@ -8,7 +8,7 @@ class PackAccessStrategy {
 public:
     static long PACK_IMPORT_LOCK_FILE[abi:cxx11];
 
-    PackAccessStrategy::~PackAccessStrategy()
+    virtual PackAccessStrategy::~PackAccessStrategy()
     virtual void forEachInAssetSet(Core::Path const&, std::function<void ()(Core::Path const&)>)const;
     virtual void getSubPath()const;
     virtual void generateAssetSet();

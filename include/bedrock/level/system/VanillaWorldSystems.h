@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../block/unmapped/BlockDefinitionGroup"
 #include "../../pack/ResourcePackManager"
+#include "../../block/unmapped/BlockDefinitionGroup"
 
 
 class VanillaWorldSystems {

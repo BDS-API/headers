@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/BlockPos"
 
 
 class StructureTemplateData {
@@ -9,7 +9,7 @@ class StructureTemplateData {
 public:
     static long DEFAULT_PALETTE_NAME[abi:cxx11];
 
-    StructureTemplateData::~StructureTemplateData()
+    virtual StructureTemplateData::~StructureTemplateData()
 
     StructureTemplateData(void);
     void load(CompoundTag const&);

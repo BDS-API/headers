@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../item/ItemInstance"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../item/ItemInstance"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class ItemFrameBlockActor : BlockActor {
@@ -13,7 +13,7 @@ class ItemFrameBlockActor : BlockActor {
 public:
     static long ROTATION_DEGREES;
 
-    ItemFrameBlockActor::~ItemFrameBlockActor()
+    virtual ItemFrameBlockActor::~ItemFrameBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

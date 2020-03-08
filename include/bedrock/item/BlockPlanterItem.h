@@ -8,7 +8,7 @@
 class BlockPlanterItem : Item {
 
 public:
-    BlockPlanterItem::~BlockPlanterItem()
+    virtual BlockPlanterItem::~BlockPlanterItem()
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 

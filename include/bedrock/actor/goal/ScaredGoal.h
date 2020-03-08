@@ -6,7 +6,7 @@
 class ScaredGoal : Goal {
 
 public:
-    ScaredGoal::~ScaredGoal()
+    virtual ScaredGoal::~ScaredGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

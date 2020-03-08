@@ -1,24 +1,24 @@
 #pragma once
 
-#include "../../unmapped/IContentKeyProvider"
-#include "../resourcepack/ResourcePack"
-#include "../resourcepack/ResourcePackListener"
-#include "../../unmapped/PackSourceReport"
+#include "../../unmapped/ResourceLocation"
+#include "../../unmapped/PackSourceFactory"
 #include "../../unmapped/ContentTierManager"
-#include "../../unmapped/PackInstance"
 #include "../../core/Path"
+#include "../../unmapped/IContentKeyProvider"
+#include "../../unmapped/PackSourceReport"
 #include "../../unmapped/PackManifestFactory"
+#include "../../unmapped/PackInstance"
+#include "../resourcepack/ResourcePack"
 #include "../../unmapped/PackReport"
+#include "../resourcepack/ResourcePackListener"
 #include "../../unmapped/PackIdVersion"
 #include "../resourcepack/ResourcePackStack"
-#include "../../unmapped/PackSourceFactory"
-#include "../../unmapped/ResourceLocation"
 
 
 class ResourcePackManager : ResourceLoader {
 
 public:
-    ResourcePackManager::~ResourcePackManager()
+    virtual ResourcePackManager::~ResourcePackManager()
     virtual void load(ResourceLocation const&, std::string &)const;
     virtual void load(ResourceLocation const&, std::string &, std::vector<std::string, std::allocator<std::string>> const&)const;
     virtual void loadAllVersionsOf(ResourceLocation const&)const;

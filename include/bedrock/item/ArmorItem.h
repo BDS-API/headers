@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../util/Color"
-#include "../block/unmapped/BlockSource"
-#include "../container/Container"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/ArmorMaterial"
-#include "unmapped/ItemDescriptor"
-#include "../actor/Mob"
 #include "../util/Vec3"
+#include "../../unmapped/ArmorMaterial"
+#include "../nbt/CompoundTag"
+#include "../actor/Player"
+#include "../container/Container"
+#include "../block/unmapped/BlockSource"
 #include "../level/Level"
+#include "../../unmapped/Block"
+#include "../actor/Mob"
+#include "../actor/Actor"
+#include "../util/Color"
+#include "unmapped/ItemDescriptor"
 
 
 class ArmorItem : Item {
@@ -26,7 +26,7 @@ public:
     static long ELYTRA;
     static long TURTLE;
 
-    ArmorItem::~ArmorItem()
+    virtual ArmorItem::~ArmorItem()
     virtual bool isArmor()const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;

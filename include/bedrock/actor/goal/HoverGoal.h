@@ -6,7 +6,7 @@
 class HoverGoal : Goal {
 
 public:
-    HoverGoal::~HoverGoal()
+    virtual HoverGoal::~HoverGoal()
     virtual bool canUse();
     virtual void start();
     virtual void stop();

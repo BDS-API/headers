@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../container/Container"
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../block/unmapped/BlockSource"
-#include "../util/BlockPos"
 #include "../nbt/CompoundTag"
+#include "../actor/Actor"
+#include "../util/BlockPos"
+#include "../util/Vec3"
 #include "unmapped/ItemDescriptor"
+#include "../container/Container"
 
 
 class BoatItem : Item {
 
 public:
-    BoatItem::~BoatItem()
+    virtual BoatItem::~BoatItem()
     virtual bool isStackedByData()const;
     virtual bool isLiquidClipItem(int)const;
     virtual bool isValidAuxValue(int)const;

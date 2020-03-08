@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
 #include "../util/AABB"
 
 
 class SeaGrass : BlockLegacy {
 
 public:
-    SeaGrass::~SeaGrass()
+    virtual SeaGrass::~SeaGrass()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;

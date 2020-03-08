@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../item/ItemStack"
 #include "../actor/Player"
+#include "../item/ItemStack"
 
 
 class Inventory : FillingContainer {
 
 public:
-    Inventory::~Inventory()
+    virtual Inventory::~Inventory()
     virtual void init();
     virtual void add(ItemStack &);
     virtual bool canAdd(ItemStack const&)const;

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../io/IDataOutput"
 #include "../io/IDataInput"
+#include "../io/IDataOutput"
 
 
 class ByteTag : Tag {
 
 public:
-    ByteTag::~ByteTag()
+    virtual ByteTag::~ByteTag()
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
     virtual void toString()const;

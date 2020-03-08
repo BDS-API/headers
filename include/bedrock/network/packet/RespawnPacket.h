@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
 #include "../../actor/unmapped/ActorRuntimeID"
 #include "../../util/Vec3"
-#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class RespawnPacket : Packet {
 
 public:
-    RespawnPacket::~RespawnPacket()
+    virtual RespawnPacket::~RespawnPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

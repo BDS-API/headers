@@ -8,7 +8,7 @@
 class DecoratorDefinition : BehaviorDefinition {
 
 public:
-    DecoratorDefinition::~DecoratorDefinition()
+    virtual DecoratorDefinition::~DecoratorDefinition()
 
     DecoratorDefinition(void);
     void get()const;

@@ -1,9 +1,9 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../util/AABB"
 
 
@@ -13,7 +13,7 @@ public:
     static long DIR_FLAT_Z;
     static long DIR_FLAT_X;
 
-    BaseRailBlock::~BaseRailBlock()
+    virtual BaseRailBlock::~BaseRailBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool isWaterBlocking()const;

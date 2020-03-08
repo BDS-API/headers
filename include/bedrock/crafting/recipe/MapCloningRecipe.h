@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../../mce/UUID"
-#include "../../container/CraftingContainer"
 #include "../../level/Level"
+#include "../../container/CraftingContainer"
+#include "../../../mce/UUID"
 
 
 class MapCloningRecipe : MultiRecipe {
@@ -11,7 +11,7 @@ public:
     static long CraftingTableID;
     static long CartographyTableID;
 
-    MapCloningRecipe::~MapCloningRecipe()
+    virtual MapCloningRecipe::~MapCloningRecipe()
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize()const;
     virtual void getIngredient(int, int)const;

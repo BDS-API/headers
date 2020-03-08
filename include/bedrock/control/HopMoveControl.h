@@ -8,7 +8,7 @@
 class HopMoveControl : MoveControl {
 
 public:
-    HopMoveControl::~HopMoveControl()
+    virtual HopMoveControl::~HopMoveControl()
     virtual void tick(MoveControlComponent &, Mob &);
     virtual void setWantedPosition(MoveControlComponent &, Mob &, Vec3 const&, float);
 

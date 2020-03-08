@@ -8,7 +8,7 @@ using namespace Automation;
 class AutomationClient : UriListener {
 
 public:
-    Automation::AutomationClient::~AutomationClient()
+    virtual Automation::AutomationClient::~AutomationClient()
     virtual void onUri(ActivationUri const&);
 
     AutomationClient(IMinecraftApp &);

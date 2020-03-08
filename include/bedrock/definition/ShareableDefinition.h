@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../json/Value"
 #include "../../unmapped/Shareable"
+#include "../../json/Value"
 
 
 class ShareableDefinition {

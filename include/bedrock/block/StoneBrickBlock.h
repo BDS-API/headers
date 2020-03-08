@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../util/Random"
-#include "../../unmapped/Block"
 #include "../../unmapped/Material"
+#include "../../unmapped/Block"
 
 
 class StoneBrickBlock : BlockLegacy {
 
 public:
-    StoneBrickBlock::~StoneBrickBlock()
+    virtual StoneBrickBlock::~StoneBrickBlock()
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void buildDescriptionId(Block const&)const;
     virtual bool isAuxValueRelevantForPicking()const;

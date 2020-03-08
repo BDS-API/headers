@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../../../unmapped/PieceWeight"
-#include "../../LevelChunk"
-#include "../../../block/selector/BlockSelector"
-#include "../../../../unmapped/Block"
-#include "../../../util/ChunkPos"
-#include "../../../../unmapped/BoundingBox"
 #include "../../../util/Random"
 #include "../../../block/unmapped/BlockSource"
+#include "../../LevelChunk"
+#include "../../../../unmapped/Block"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../util/ChunkPos"
+#include "../../../block/selector/BlockSelector"
+#include "../../../../unmapped/PieceWeight"
 
 
 class StructurePiece {
 
 public:
-    StructurePiece::~StructurePiece()
+    virtual StructurePiece::~StructurePiece()
     virtual void moveBoundingBox(int, int, int);
     virtual bool asPoolElement();
     virtual void getType()const;

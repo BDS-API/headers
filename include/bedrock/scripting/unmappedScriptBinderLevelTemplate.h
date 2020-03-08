@@ -5,7 +5,7 @@
 class ScriptBinderLevelTemplate : ScriptBinderTemplate {
 
 public:
-    ScriptBinderLevelTemplate::~ScriptBinderLevelTemplate()
+    virtual ScriptBinderLevelTemplate::~ScriptBinderLevelTemplate()
     virtual void getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
 

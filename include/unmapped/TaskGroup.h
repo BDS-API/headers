@@ -6,7 +6,7 @@
 class TaskGroup : ITaskGroup {
 
 public:
-    TaskGroup::~TaskGroup()
+    virtual TaskGroup::~TaskGroup()
     virtual void taskRegister(std::shared_ptr<BackgroundTask>);
     virtual void requeueTask(std::shared_ptr<BackgroundTask>, bool);
     virtual void getState()const;

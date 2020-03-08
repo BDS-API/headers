@@ -7,7 +7,7 @@
 class ShootBowDefinition : BehaviorDefinition {
 
 public:
-    ShootBowDefinition::~ShootBowDefinition()
+    virtual ShootBowDefinition::~ShootBowDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     ShootBowDefinition(void);

@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../../unmapped/NetworkComponent"
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/NetworkComponent"
 
 
 class EntityClientPacket : Packet {
 
 public:
-    EntityClientPacket::~EntityClientPacket()
+    virtual EntityClientPacket::~EntityClientPacket()
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

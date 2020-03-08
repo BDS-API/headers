@@ -6,7 +6,7 @@
 class PropertyDescription : Description {
 
 public:
-    PropertyDescription::~PropertyDescription()
+    virtual PropertyDescription::~PropertyDescription()
 
     PropertyDescription(void);
 };

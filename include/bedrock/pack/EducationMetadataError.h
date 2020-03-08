@@ -5,7 +5,7 @@
 class EducationMetadataError : PackError {
 
 public:
-    EducationMetadataError::~EducationMetadataError()
+    virtual EducationMetadataError::~EducationMetadataError()
     virtual void getLocErrorMessageMap()const;
     virtual void getEventErrorMessageMap()const;
 

@@ -7,7 +7,7 @@ class IsTamedDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    IsTamedDescription::~IsTamedDescription()
+    virtual IsTamedDescription::~IsTamedDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

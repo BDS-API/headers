@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/IBlockPlacementTarget"
 #include "../../util/Random"
 #include "../../util/BlockPos"
 #include "../../../unmapped/Block"
+#include "../../../unmapped/IBlockPlacementTarget"
 
 
 class OreFeature : IFeature {
 
 public:
-    OreFeature::~OreFeature()
+    virtual OreFeature::~OreFeature()
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
 
     OreFeature(void);

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
 #include "../../unmapped/MobEffectInstance"
+#include "unmapped/ActorDefinitionGroup"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -11,7 +11,7 @@ class Skeleton : HumanoidMonster {
 public:
     static long SPEED_MODIFIER_ATTACK_UUID;
 
-    Skeleton::~Skeleton()
+    virtual Skeleton::~Skeleton()
     virtual void normalTick();
     virtual void rideTick();
     virtual void getRidingHeight();

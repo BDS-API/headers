@@ -6,7 +6,7 @@
 class LegacyBodyControl : BodyControl {
 
 public:
-    LegacyBodyControl::~LegacyBodyControl()
+    virtual LegacyBodyControl::~LegacyBodyControl()
     virtual void clientTick(Mob &);
 
     LegacyBodyControl(void);

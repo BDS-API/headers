@@ -5,7 +5,7 @@
 class VanillaAppConfigs : AppConfigs {
 
 public:
-    VanillaAppConfigs::~VanillaAppConfigs()
+    virtual VanillaAppConfigs::~VanillaAppConfigs()
 
     VanillaAppConfigs(void);
 };

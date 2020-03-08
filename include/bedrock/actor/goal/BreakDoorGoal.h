@@ -6,7 +6,7 @@
 class BreakDoorGoal : DoorInteractGoal {
 
 public:
-    BreakDoorGoal::~BreakDoorGoal()
+    virtual BreakDoorGoal::~BreakDoorGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

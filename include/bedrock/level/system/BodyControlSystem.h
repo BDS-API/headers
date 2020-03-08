@@ -6,7 +6,7 @@
 class BodyControlSystem : ITickingSystem {
 
 public:
-    BodyControlSystem::~BodyControlSystem()
+    virtual BodyControlSystem::~BodyControlSystem()
     virtual void tick(EntityRegistry &);
 
     BodyControlSystem(void);

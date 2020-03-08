@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../actor/unmapped/ActorUniqueID"
 #include "../../../unmapped/ContainerItemStack"
 #include "../../util/BlockPos"
 #include "../../actor/Player"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../item/ItemStack"
 
 
 class LevelContainerManagerModel : ContainerManagerModel {
 
 public:
-    LevelContainerManagerModel::~LevelContainerManagerModel()
+    virtual LevelContainerManagerModel::~LevelContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

@@ -7,7 +7,7 @@
 class LoomBlock : FaceDirectionalBlock {
 
 public:
-    LoomBlock::~LoomBlock()
+    virtual LoomBlock::~LoomBlock()
     virtual bool isCraftingBlock()const;
     virtual void use(Player &, BlockPos const&)const;
 

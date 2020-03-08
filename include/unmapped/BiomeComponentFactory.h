@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/level/biome/Biome"
 #include "../json/Value"
-#include "../bedrock/nbt/CompoundTag"
 
 
 class BiomeComponentFactory {

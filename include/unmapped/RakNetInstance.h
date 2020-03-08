@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../bedrock/definition/ConnectionDefinition"
 #include "../raknet/SystemAddress"
+#include "../bedrock/definition/ConnectionDefinition"
 
 
 class RakNetInstance : Connector {
 
 public:
-    RakNetInstance::~RakNetInstance()
+    virtual RakNetInstance::~RakNetInstance()
     virtual void onAppResumed();
     virtual void onAppSuspended();
     virtual void getLocalIps()const;

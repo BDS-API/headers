@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 #include "../util/AABB"
 
@@ -11,7 +11,7 @@
 class StemBlock : BushBlock {
 
 public:
-    StemBlock::~StemBlock()
+    virtual StemBlock::~StemBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isStemBlock()const;
     virtual bool canContainLiquid()const;

@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/Objective"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
 #include "../../../unmapped/ScoreboardId"
 #include "../../../unmapped/ScorePacketInfo"
-#include "../../io/BinaryStream"
+#include "../../../unmapped/Objective"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class SetScorePacket : Packet {
 
 public:
-    SetScorePacket::~SetScorePacket()
+    virtual SetScorePacket::~SetScorePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/Random"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
 #include "../util/AABB"
 
 
 class CakeBlock : BlockLegacy {
 
 public:
-    CakeBlock::~CakeBlock()
+    virtual CakeBlock::~CakeBlock()
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;

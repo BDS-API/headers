@@ -1,13 +1,13 @@
 #pragma once
 
 #include "../util/Tick"
-#include "../../unmapped/ContentIdentity"
+#include "../nbt/CompoundTag"
+#include "../../raknet/BitStream"
 #include "../../unmapped/GameRuleId"
 #include "../util/BlockPos"
-#include "../../unmapped/PackIdVersion"
-#include "../nbt/CompoundTag"
 #include "../../unmapped/BaseGameVersion"
-#include "../../raknet/BitStream"
+#include "../../unmapped/ContentIdentity"
+#include "../../unmapped/PackIdVersion"
 
 
 class LevelData {

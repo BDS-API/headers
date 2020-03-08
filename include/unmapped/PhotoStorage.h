@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../core/Path"
 #include "../bedrock/actor/Player"
+#include "../core/Path"
 
 
 class PhotoStorage {

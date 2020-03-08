@@ -6,7 +6,7 @@
 class AttributeDescription : Description {
 
 public:
-    AttributeDescription::~AttributeDescription()
+    virtual AttributeDescription::~AttributeDescription()
 
     AttributeDescription(void);
 };

@@ -5,7 +5,7 @@
 class CatalogPackManifest : PackManifest {
 
 public:
-    CatalogPackManifest::~CatalogPackManifest()
+    virtual CatalogPackManifest::~CatalogPackManifest()
     virtual void clone()const;
 
     CatalogPackManifest(void);

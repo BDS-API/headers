@@ -7,7 +7,7 @@
 class CraftingContainer : Container {
 
 public:
-    CraftingContainer::~CraftingContainer()
+    virtual CraftingContainer::~CraftingContainer()
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void getContainerSize()const;

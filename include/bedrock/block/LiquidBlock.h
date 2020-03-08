@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../unmapped/Material"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/Random"
+#include "../../unmapped/Material"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
 class LiquidBlock : BlockLegacy {
 
 public:
-    LiquidBlock::~LiquidBlock()
+    virtual LiquidBlock::~LiquidBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool canContainLiquid()const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;

@@ -6,7 +6,7 @@
 class BreakBlocksSystem : ITickingSystem {
 
 public:
-    BreakBlocksSystem::~BreakBlocksSystem()
+    virtual BreakBlocksSystem::~BreakBlocksSystem()
     virtual void tick(EntityRegistry &);
 
     BreakBlocksSystem(void);

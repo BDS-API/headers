@@ -1,20 +1,20 @@
 #pragma once
 
+#include "../../../unmapped/ContainerContentChangeListener"
 #include "../../item/ItemStack"
+#include "../../nbt/CompoundTag"
+#include "../../actor/Player"
 #include "../unmapped/BlockSource"
 #include "../../level/Level"
 #include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../../unmapped/ContainerContentChangeListener"
 #include "../../item/ItemInstance"
-#include "../../nbt/CompoundTag"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class ChestBlockActor : RandomizableBlockActorFillingContainer {
 
 public:
-    ChestBlockActor::~ChestBlockActor()
+    virtual ChestBlockActor::~ChestBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

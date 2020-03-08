@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockPalette"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/block/unmapped/BlockPalette"
 
 
 class StructureBlockPalette {

@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
 #include "../bedrock/block/BlockLegacy"
-#include "../bedrock/util/Vec2"
+#include "../bedrock/actor/Actor"
 #include "../bedrock/util/BlockPos"
 #include "../bedrock/actor/Player"
+#include "../bedrock/util/Vec2"
 
 
 class ClientPlayerEventCoordinator {

@@ -1,15 +1,15 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
 #include "../../unmapped/RenderParams"
+#include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionGroup"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
 class Pufferfish : Fish {
 
 public:
-    Pufferfish::~Pufferfish()
+    virtual Pufferfish::~Pufferfish()
     virtual void normalTick();
     virtual void startRiding(Actor &);
     virtual void playerTouch(Player &);

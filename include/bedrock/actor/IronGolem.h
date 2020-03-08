@@ -1,17 +1,17 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
 #include "../../unmapped/RenderParams"
+#include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionGroup"
 #include "../util/BlockPos"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../../unmapped/Block"
+#include "unmapped/ActorDefinitionIdentifier"
 
 
 class IronGolem : Mob {
 
 public:
-    IronGolem::~IronGolem()
+    virtual IronGolem::~IronGolem()
     virtual void getShadowRadius()const;
     virtual void handleEntityEvent(ActorEvent, int);
     virtual void die(ActorDamageSource const&);

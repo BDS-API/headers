@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/SchedulerComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/SchedulerComponent"
 
 
 class SchedulerDefinition {

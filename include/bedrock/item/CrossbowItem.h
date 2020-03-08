@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../actor/Mob"
-#include "../actor/Player"
 #include "../level/Level"
+#include "../actor/Player"
 
 
 class CrossbowItem : RangedWeaponItem {
@@ -10,7 +10,7 @@ class CrossbowItem : RangedWeaponItem {
 public:
     static long DEFAULT_USE_DURATION;
 
-    CrossbowItem::~CrossbowItem()
+    virtual CrossbowItem::~CrossbowItem()
     virtual void getMaxUseDuration(ItemStack const*)const;
     virtual void getEnchantSlot()const;
     virtual void use(ItemStack &, Player &)const;

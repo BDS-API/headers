@@ -7,7 +7,7 @@ class RandomThreadCheckManager : AppPlatformListener {
 public:
     static long mInstance;
 
-    RandomThreadCheckManager::~RandomThreadCheckManager()
+    virtual RandomThreadCheckManager::~RandomThreadCheckManager()
     virtual void onAppResumed();
 
     void invalidateThreadIndex();

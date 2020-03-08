@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../CommandRegistry"
 #include "../orgin/CommandOrigin"
 #include "../CommandOutput"
 #include "../Command"
-#include "../CommandRegistry"
 
 
 class ReloadCommand : Command {
 
 public:
-    ReloadCommand::~ReloadCommand()
+    virtual ReloadCommand::~ReloadCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

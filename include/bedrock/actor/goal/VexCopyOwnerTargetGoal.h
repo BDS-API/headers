@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/MobDescriptor"
 #include "../Mob"
+#include "../../../unmapped/MobDescriptor"
 
 
 class VexCopyOwnerTargetGoal : TargetGoal {
 
 public:
-    VexCopyOwnerTargetGoal::~VexCopyOwnerTargetGoal()
+    virtual VexCopyOwnerTargetGoal::~VexCopyOwnerTargetGoal()
     virtual bool canUse();
     virtual void start();
     virtual void appendDebugInfo(std::string &)const;

@@ -5,7 +5,7 @@
 class BackgroundTask : Bedrock::Threading::IAsyncResult<void> {
 
 public:
-    BackgroundTask::~BackgroundTask()
+    virtual BackgroundTask::~BackgroundTask()
     virtual void getStatus()const;
     virtual void getError()const;
     virtual void getException()const;

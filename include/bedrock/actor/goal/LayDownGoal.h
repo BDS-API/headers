@@ -6,7 +6,7 @@
 class LayDownGoal : Goal {
 
 public:
-    LayDownGoal::~LayDownGoal()
+    virtual LayDownGoal::~LayDownGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

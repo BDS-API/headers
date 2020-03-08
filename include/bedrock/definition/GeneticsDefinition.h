@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/GeneticsComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/GeneticsComponent"
 
 
 class GeneticsDefinition {

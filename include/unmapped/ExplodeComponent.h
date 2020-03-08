@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/definition/ExplodeDefinition"
 #include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/definition/ExplodeDefinition"
+#include "../bedrock/util/Vec3"
 
 
 class ExplodeComponent {

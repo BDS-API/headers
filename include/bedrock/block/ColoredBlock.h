@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
-#include "../../unmapped/Block"
 #include "../../unmapped/Material"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class ColoredBlock : BlockLegacy {
 
 public:
-    ColoredBlock::~ColoredBlock()
+    virtual ColoredBlock::~ColoredBlock()
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void buildDescriptionId(Block const&)const;

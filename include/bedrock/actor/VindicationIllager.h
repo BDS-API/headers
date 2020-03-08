@@ -8,7 +8,7 @@
 class VindicationIllager : HumanoidMonster {
 
 public:
-    VindicationIllager::~VindicationIllager()
+    virtual VindicationIllager::~VindicationIllager()
     virtual void getRidingHeight();
     virtual bool canExistInPeaceful()const;
     virtual void _getWalkTargetValue(BlockPos const&);

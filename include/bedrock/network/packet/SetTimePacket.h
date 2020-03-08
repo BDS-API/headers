@@ -7,7 +7,7 @@
 class SetTimePacket : Packet {
 
 public:
-    SetTimePacket::~SetTimePacket()
+    virtual SetTimePacket::~SetTimePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

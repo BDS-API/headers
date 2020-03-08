@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../core/Path"
-#include "../bedrock/level/LevelData"
-#include "../bedrock/level/LevelStorageSource"
-#include "../bedrock/Scheduler"
 #include "../core/FilePathManager"
+#include "../bedrock/Scheduler"
+#include "../bedrock/level/LevelStorageSource"
+#include "../bedrock/level/LevelData"
+#include "../core/Path"
 
 
 class ExternalFileLevelStorageSource : LevelStorageSource {
 
 public:
-    ExternalFileLevelStorageSource::~ExternalFileLevelStorageSource()
+    virtual ExternalFileLevelStorageSource::~ExternalFileLevelStorageSource()
     virtual void getName()const;
     virtual void getLevelData(std::string const&)const;
     virtual void getLevelData(std::string const&, LevelData &)const;

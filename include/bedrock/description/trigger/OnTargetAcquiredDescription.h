@@ -6,7 +6,7 @@ class OnTargetAcquiredDescription : TriggerDescription {
 
 public:
     virtual void getJsonName()const;
-    OnTargetAcquiredDescription::~OnTargetAcquiredDescription()
+    virtual OnTargetAcquiredDescription::~OnTargetAcquiredDescription()
 
     OnTargetAcquiredDescription(void);
 };

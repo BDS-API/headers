@@ -5,7 +5,7 @@
 class PlaceBlockDefinition : BehaviorDefinition {
 
 public:
-    PlaceBlockDefinition::~PlaceBlockDefinition()
+    virtual PlaceBlockDefinition::~PlaceBlockDefinition()
 
     PlaceBlockDefinition(void);
 };

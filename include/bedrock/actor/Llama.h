@@ -1,16 +1,16 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
 #include "../../unmapped/RenderParams"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/Block"
 #include "../util/BlockPos"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/Block"
 
 
 class Llama : Animal {
 
 public:
-    Llama::~Llama()
+    virtual Llama::~Llama()
     virtual void onFailedTame();
     virtual void causeFallDamage(float);
     virtual void updateEntitySpecificMolangVariables(RenderParams &);

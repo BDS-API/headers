@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/BoundingBox"
 #include "../../../util/Random"
-#include "stronghold/SHStartPiece"
 #include "../../../block/unmapped/BlockSource"
+#include "stronghold/SHStartPiece"
+#include "../../../../unmapped/BoundingBox"
 
 
 class StrongholdPiece : StructurePiece {
 
 public:
-    StrongholdPiece::~StrongholdPiece()
+    virtual StrongholdPiece::~StrongholdPiece()
 
     void findAndCreatePieceFactory(std::string const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
     void generatePieceFromSmallDoor(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random const&, int, int, int, int, int);

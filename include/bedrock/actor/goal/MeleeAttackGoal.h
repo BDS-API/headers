@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Actor"
 #include "../Mob"
+#include "../Actor"
 #include "../../definition/DefinitionTrigger"
 
 
@@ -17,7 +17,7 @@ public:
     static long FAR_DISTANCE_RECALC_TIME_INCREASE;
     static long DEFAULT_RECALC_TIME;
 
-    MeleeAttackGoal::~MeleeAttackGoal()
+    virtual MeleeAttackGoal::~MeleeAttackGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

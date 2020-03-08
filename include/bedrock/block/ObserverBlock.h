@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../level/circuit/component/PulseCapacitor"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../util/Vec3"
+#include "../level/circuit/component/PulseCapacitor"
 
 
 class ObserverBlock : FaceDirectionalBlock {
 
 public:
-    ObserverBlock::~ObserverBlock()
+    virtual ObserverBlock::~ObserverBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isSignalSource()const;
     virtual bool isValidAuxValue(int)const;

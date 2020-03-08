@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../util/AABB"
 
 
 class CoralFanHang : CoralFan {
 
 public:
-    CoralFanHang::~CoralFanHang()
+    virtual CoralFanHang::~CoralFanHang()
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

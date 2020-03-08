@@ -7,7 +7,7 @@ using namespace com::mojang::clacks::protocol;
 class SaveStateResult : google::protobuf::Message {
 
 public:
-    com::mojang::clacks::protocol::SaveStateResult::~SaveStateResult()
+    virtual com::mojang::clacks::protocol::SaveStateResult::~SaveStateResult()
     virtual void New()const;
     virtual void New(google::protobuf::Arena *)const;
     virtual void Clear();

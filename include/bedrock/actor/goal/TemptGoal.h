@@ -7,7 +7,7 @@
 class TemptGoal : Goal {
 
 public:
-    TemptGoal::~TemptGoal()
+    virtual TemptGoal::~TemptGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

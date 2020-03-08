@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
 #include "../util/AABB"
 
 
 class TripWireBlock : BlockLegacy {
 
 public:
-    TripWireBlock::~TripWireBlock()
+    virtual TripWireBlock::~TripWireBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

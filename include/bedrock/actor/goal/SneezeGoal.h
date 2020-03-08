@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/MobDescriptor"
 #include "../Mob"
+#include "../../../unmapped/MobDescriptor"
 
 
 class SneezeGoal : Goal {
 
 public:
-    SneezeGoal::~SneezeGoal()
+    virtual SneezeGoal::~SneezeGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

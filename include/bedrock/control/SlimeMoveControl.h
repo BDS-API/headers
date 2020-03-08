@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../unmapped/MoveControlComponent"
 #include "../actor/Mob"
+#include "../../unmapped/MoveControlComponent"
 
 
 class SlimeMoveControl : MoveControl {
 
 public:
-    SlimeMoveControl::~SlimeMoveControl()
+    virtual SlimeMoveControl::~SlimeMoveControl()
     virtual void tick(MoveControlComponent &, Mob &);
 
     SlimeMoveControl(void);

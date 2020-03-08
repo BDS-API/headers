@@ -1,22 +1,22 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../container/Container"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../../unmapped/Block"
-#include "../actor/Actor"
-#include "../util/Random"
-#include "../nbt/CompoundTag"
 #include "../util/Vec3"
-#include "../util/AABB"
+#include "../nbt/CompoundTag"
+#include "../actor/Player"
+#include "../container/Container"
+#include "../util/Random"
+#include "unmapped/BlockSource"
 #include "../level/Level"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../util/AABB"
+#include "../actor/Actor"
 
 
 class ShulkerBoxBlock : ChestBlock {
 
 public:
-    ShulkerBoxBlock::~ShulkerBoxBlock()
+    virtual ShulkerBoxBlock::~ShulkerBoxBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;

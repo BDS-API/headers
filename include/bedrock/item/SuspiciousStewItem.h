@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../actor/Actor"
-#include "../actor/Player"
 #include "../level/Level"
+#include "../actor/Player"
 
 
 class SuspiciousStewItem : Item {
 
 public:
-    SuspiciousStewItem::~SuspiciousStewItem()
+    virtual SuspiciousStewItem::~SuspiciousStewItem()
     virtual void uniqueAuxValues()const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
 

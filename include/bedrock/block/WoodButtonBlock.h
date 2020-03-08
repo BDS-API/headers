@@ -5,7 +5,7 @@
 class WoodButtonBlock : ButtonBlock {
 
 public:
-    WoodButtonBlock::~WoodButtonBlock()
+    virtual WoodButtonBlock::~WoodButtonBlock()
 
     WoodButtonBlock(std::string const&, int);
 };

@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../util/Color"
-#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/TagRegistry"
-#include "../../../json/Value"
-#include "../../../unmapped/EntityRegistryOwned"
-#include "../../../unmapped/WellKnownTagID"
-#include "../../util/BlockPos"
-#include "../../../unmapped/BiomeHeight"
-#include "../../util/Random"
 #include "../../nbt/CompoundTag"
 #include "../../../unmapped/HashString"
+#include "../../../unmapped/EntityRegistryOwned"
+#include "../../util/Random"
+#include "../../block/unmapped/BlockSource"
 #include "../LevelChunk"
+#include "../../util/BlockPos"
+#include "../../../json/Value"
+#include "../../../unmapped/WellKnownTagID"
+#include "../../util/Color"
+#include "../../../unmapped/BiomeHeight"
 
 
 class Biome {
@@ -22,7 +22,7 @@ public:
     static long DEFAULT_WATER_COLOR;
     static long DEFAULT_UNDERWATER_COLOR;
 
-    Biome::~Biome()
+    virtual Biome::~Biome()
 
     void getEntity()const;
     void getMaxSnowLayers()const;

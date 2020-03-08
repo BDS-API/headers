@@ -7,7 +7,7 @@ using namespace RakNetInstance;
 class ConnectionCallbacks {
 
 public:
-    RakNetInstance::ConnectionCallbacks::~ConnectionCallbacks()
+    virtual RakNetInstance::ConnectionCallbacks::~ConnectionCallbacks()
 
     ConnectionCallbacks(void);
 };

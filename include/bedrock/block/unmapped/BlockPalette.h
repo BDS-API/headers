@@ -1,10 +1,10 @@
 #pragma once
 
 #include "../BlockLegacy"
-#include "../../../unmapped/NewBlockID"
-#include "../../../unmapped/Block"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../../unmapped/Block"
+#include "../../../unmapped/NewBlockID"
 
 
 class BlockPalette {

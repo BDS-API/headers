@@ -1,23 +1,23 @@
 #pragma once
 
 #include "../../unmapped/MolangVariableMap"
-#include "../../unmapped/HashedString"
-#include "../block/unmapped/BlockSourceListener"
-#include "../block/unmapped/BlockSource"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../../unmapped/Block"
-#include "../actor/Actor"
+#include "../../unmapped/TextureUVCoordinateSet"
+#include "../util/Vec3"
 #include "../actor/unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
-#include "../util/Vec3"
-#include "../../unmapped/TextureUVCoordinateSet"
+#include "../actor/Player"
+#include "../block/unmapped/BlockSource"
+#include "../../unmapped/HashedString"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../block/unmapped/BlockSourceListener"
+#include "../actor/Actor"
 
 
 class LevelListener : BlockSourceListener {
 
 public:
-    LevelListener::~LevelListener()
+    virtual LevelListener::~LevelListener()
     virtual void allChanged();
     virtual void addParticle(ParticleType, Vec3 const&, Vec3 const&, int, CompoundTag const*, bool);
     virtual void sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int);

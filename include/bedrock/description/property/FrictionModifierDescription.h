@@ -7,7 +7,7 @@ class FrictionModifierDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    FrictionModifierDescription::~FrictionModifierDescription()
+    virtual FrictionModifierDescription::~FrictionModifierDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

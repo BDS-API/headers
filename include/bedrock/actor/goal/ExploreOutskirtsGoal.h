@@ -6,7 +6,7 @@
 class ExploreOutskirtsGoal : Goal {
 
 public:
-    ExploreOutskirtsGoal::~ExploreOutskirtsGoal()
+    virtual ExploreOutskirtsGoal::~ExploreOutskirtsGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

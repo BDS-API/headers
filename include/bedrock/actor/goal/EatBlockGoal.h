@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../definition/DefinitionTrigger"
 #include "../Mob"
+#include "../../definition/DefinitionTrigger"
 
 
 class EatBlockGoal : Goal {
 
 public:
-    EatBlockGoal::~EatBlockGoal()
+    virtual EatBlockGoal::~EatBlockGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

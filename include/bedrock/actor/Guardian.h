@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
-#include "../util/BlockPos"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Guardian : Monster {
@@ -17,7 +17,7 @@ public:
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    Guardian::~Guardian()
+    virtual Guardian::~Guardian()
     virtual bool canSeeInvisible()const;
     virtual void setTarget(Actor *);
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);

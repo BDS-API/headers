@@ -5,7 +5,7 @@
 class SnapshotWritableFile : leveldb::WritableFile {
 
 public:
-    SnapshotWritableFile::~SnapshotWritableFile()
+    virtual SnapshotWritableFile::~SnapshotWritableFile()
     virtual void Append(leveldb::Slice const&);
     virtual void Close();
     virtual void Flush();

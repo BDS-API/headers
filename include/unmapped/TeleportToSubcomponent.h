@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/actor/Actor"
+#include "../json/Value"
 
 
 class TeleportToSubcomponent : OnHitSubcomponent {
 
 public:
-    TeleportToSubcomponent::~TeleportToSubcomponent()
+    virtual TeleportToSubcomponent::~TeleportToSubcomponent()
     virtual void readfromJSON(Json::Value &);
     virtual void writetoJSON(Json::Value &)const;
     virtual void doOnHitEffect(Actor &, ProjectileComponent &);

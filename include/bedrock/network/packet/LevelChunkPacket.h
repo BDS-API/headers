@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../util/ChunkPos"
 #include "../../io/BinaryStream"
+#include "../../util/ChunkPos"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class LevelChunkPacket : Packet {
 
 public:
 
-    LevelChunkPacket::~LevelChunkPacket()
+    virtual LevelChunkPacket::~LevelChunkPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

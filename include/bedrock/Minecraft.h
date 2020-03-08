@@ -1,30 +1,30 @@
 #pragma once
 
-#include "network/NetEventCallback"
-#include "definition/ConnectionDefinition"
-#include "metrics/ServerMetrics"
-#include "../unmapped/GameCallbacks"
-#include "../unmapped/Timer"
-#include "util/Whitelist"
-#include "../unmapped/PermissionsFile"
-#include "../unmapped/IEntityRegistryOwner"
-#include "../core/FilePathManager"
-#include "actor/Player"
-#include "../unmapped/ContentTierManager"
-#include "../unmapped/NetworkIdentifier"
-#include "../mce/UUID"
-#include "../unmapped/PackIdVersion"
-#include "network/packet/sender/PacketSender"
 #include "eventing/IMinecraftEventing"
+#include "util/Whitelist"
+#include "../core/FilePathManager"
 #include "../unmapped/NetworkHandler"
+#include "../unmapped/Timer"
+#include "../unmapped/NetworkIdentifier"
+#include "../unmapped/IEntityRegistryOwner"
+#include "network/NetEventCallback"
+#include "../unmapped/GameCallbacks"
+#include "actor/Player"
+#include "../mce/UUID"
+#include "../unmapped/ContentTierManager"
+#include "metrics/ServerMetrics"
+#include "network/packet/sender/PacketSender"
+#include "definition/ConnectionDefinition"
 #include "level/Level"
+#include "../unmapped/PermissionsFile"
+#include "../unmapped/PackIdVersion"
 
 
 class Minecraft : IEntityRegistryOwner {
 
 public:
     virtual void getEntityRegistry();
-    Minecraft::~Minecraft()
+    virtual Minecraft::~Minecraft()
 
     Minecraft(IMinecraftApp &, GameCallbacks &, Whitelist &, PermissionsFile *, Core::FilePathManager *, std::chrono::duration<long, std::ratio<1l, 1l>>, IMinecraftEventing &, NetworkHandler &, PacketSender &, unsigned char, Timer &, Timer &, ContentTierManager const&, ServerMetrics *);
     void resetGameSession();

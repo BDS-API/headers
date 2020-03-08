@@ -6,7 +6,7 @@
 class WitherDoNothingGoal : Goal {
 
 public:
-    WitherDoNothingGoal::~WitherDoNothingGoal()
+    virtual WitherDoNothingGoal::~WitherDoNothingGoal()
     virtual bool canUse();
     virtual void appendDebugInfo(std::string &)const;
 

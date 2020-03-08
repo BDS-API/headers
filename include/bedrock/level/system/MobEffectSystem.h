@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../../../unmapped/MobEffectComponent"
+#include "../../actor/unmapped/ActorComponent"
 #include "../../../unmapped/EntityRegistry"
 #include "../../../unmapped/EntityContext"
-#include "../../actor/unmapped/ActorComponent"
-#include "../../../unmapped/MobEffectComponent"
 
 
 class MobEffectSystem : ITickingSystem {
 
 public:
-    MobEffectSystem::~MobEffectSystem()
+    virtual MobEffectSystem::~MobEffectSystem()
     virtual void tick(EntityRegistry &);
 
     MobEffectSystem(void);

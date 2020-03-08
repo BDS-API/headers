@@ -7,7 +7,7 @@
 class TradeInterestGoal : Goal {
 
 public:
-    TradeInterestGoal::~TradeInterestGoal()
+    virtual TradeInterestGoal::~TradeInterestGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

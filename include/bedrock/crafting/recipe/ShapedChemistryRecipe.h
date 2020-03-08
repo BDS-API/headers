@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../level/Level"
 #include "../../container/CraftingContainer"
 #include "../../../unmapped/RecipeIngredient"
-#include "../../level/Level"
 
 
 class ShapedChemistryRecipe : ShapedRecipe {
@@ -10,7 +10,7 @@ class ShapedChemistryRecipe : ShapedRecipe {
 public:
     static long ID;
 
-    ShapedChemistryRecipe::~ShapedChemistryRecipe()
+    virtual ShapedChemistryRecipe::~ShapedChemistryRecipe()
     virtual void matches(CraftingContainer &, Level &)const;
     virtual void getId()const;
 

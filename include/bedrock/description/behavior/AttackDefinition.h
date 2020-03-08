@@ -7,7 +7,7 @@
 class AttackDefinition : BehaviorDefinition {
 
 public:
-    AttackDefinition::~AttackDefinition()
+    virtual AttackDefinition::~AttackDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     AttackDefinition(void);

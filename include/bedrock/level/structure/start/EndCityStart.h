@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../util/ChunkPos"
 #include "../../../util/Random"
-#include "../../chunksource/TheEndGenerator"
 #include "../../../../unmapped/Dimension"
+#include "../../../util/ChunkPos"
+#include "../../chunksource/TheEndGenerator"
 
 
 class EndCityStart : StructureStart {
 
 public:
-    EndCityStart::~EndCityStart()
+    virtual EndCityStart::~EndCityStart()
     virtual bool isValid()const;
     virtual void getType()const;
 

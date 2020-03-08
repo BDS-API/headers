@@ -6,7 +6,7 @@
 class TradeableSystem : ITickingSystem {
 
 public:
-    TradeableSystem::~TradeableSystem()
+    virtual TradeableSystem::~TradeableSystem()
     virtual void tick(EntityRegistry &);
 
     TradeableSystem(void);

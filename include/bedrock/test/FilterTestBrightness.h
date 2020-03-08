@@ -6,7 +6,7 @@
 class FilterTestBrightness : SimpleFloatFilterTest {
 
 public:
-    FilterTestBrightness::~FilterTestBrightness()
+    virtual FilterTestBrightness::~FilterTestBrightness()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

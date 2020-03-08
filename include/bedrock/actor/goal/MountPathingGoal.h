@@ -6,7 +6,7 @@
 class MountPathingGoal : Goal {
 
 public:
-    MountPathingGoal::~MountPathingGoal()
+    virtual MountPathingGoal::~MountPathingGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../unmapped/IContentKeyProvider"
-#include "../../core/Path"
-#include "../../unmapped/PackManifestFactory"
 #include "../../unmapped/Pack"
+#include "../../unmapped/IContentKeyProvider"
+#include "../../unmapped/PackManifestFactory"
+#include "../../core/Path"
 
 
 class DirectoryPackSource : PackSource {
 
 public:
-    DirectoryPackSource::~DirectoryPackSource()
+    virtual DirectoryPackSource::~DirectoryPackSource()
     virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
     virtual void forEachPack(std::function<void ()(Pack &)>);
     virtual void getPackOrigin()const;

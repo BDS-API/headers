@@ -6,7 +6,7 @@
 class MoveNode : BehaviorNode {
 
 public:
-    MoveNode::~MoveNode()
+    virtual MoveNode::~MoveNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

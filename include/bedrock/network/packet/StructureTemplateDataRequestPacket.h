@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../../../unmapped/NetworkBlockPosition"
+#include "../../io/BinaryStream"
 #include "../../io/ReadOnlyBinaryStream"
 #include "../../../unmapped/StructureSettings"
-#include "../../io/BinaryStream"
 
 
 class StructureTemplateDataRequestPacket : Packet {
 
 public:
-    StructureTemplateDataRequestPacket::~StructureTemplateDataRequestPacket()
+    virtual StructureTemplateDataRequestPacket::~StructureTemplateDataRequestPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
 #include "../CommandRegistry"
+#include "../../nbt/CompoundTag"
+#include "../Command"
+#include "../CommandOutput"
 #include "../../block/actor/BlockActor"
 #include "../../util/BlockPos"
-#include "../CommandOutput"
-#include "../Command"
-#include "../../nbt/CompoundTag"
+#include "../orgin/CommandOrigin"
 
 
 class CloneCommand : Command {
 
 public:
-    CloneCommand::~CloneCommand()
+    virtual CloneCommand::~CloneCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

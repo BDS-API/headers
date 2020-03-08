@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../CommandRegistry"
 #include "../orgin/CommandOrigin"
 #include "../CommandOutput"
 #include "../Command"
-#include "../CommandRegistry"
 
 
 class EffectCommand : Command {
 
 public:
-    EffectCommand::~EffectCommand()
+    virtual EffectCommand::~EffectCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

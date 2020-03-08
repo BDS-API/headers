@@ -1,12 +1,12 @@
 #pragma once
 
+#include "../../unmapped/PackInstanceId"
 #include "../../unmapped/Dimension"
-#include "../util/BlockPos"
 #include "../../unmapped/EducationLevelSettings"
+#include "../util/BlockPos"
+#include "../../unmapped/BaseGameVersion"
 #include "../../unmapped/GameRules"
 #include "../../unmapped/Abilities"
-#include "../../unmapped/BaseGameVersion"
-#include "../../unmapped/PackInstanceId"
 
 
 class LevelSettings {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/level/circuit/component/BaseCircuitComponent"
+#include "../bedrock/util/BlockPos"
 
 
 class CircuitTrackingInfo {

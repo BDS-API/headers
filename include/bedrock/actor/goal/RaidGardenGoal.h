@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../Mob"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 #include "../../../unmapped/Block"
 
 
 class RaidGardenGoal : BaseMoveToBlockGoal {
 
 public:
-    RaidGardenGoal::~RaidGardenGoal()
+    virtual RaidGardenGoal::~RaidGardenGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

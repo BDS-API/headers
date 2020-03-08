@@ -6,7 +6,7 @@
 class FileSystemFileAccess : IFileAccess {
 
 public:
-    FileSystemFileAccess::~FileSystemFileAccess()
+    virtual FileSystemFileAccess::~FileSystemFileAccess()
     virtual void fopen(Core::Path const&, std::string const&);
     virtual void fclose(void *);
     virtual void fseek(void *, long, int);

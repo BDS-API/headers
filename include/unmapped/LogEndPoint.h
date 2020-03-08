@@ -7,7 +7,7 @@ using namespace Bedrock;
 class LogEndPoint {
 
 public:
-    Bedrock::LogEndPoint::~LogEndPoint()
+    virtual Bedrock::LogEndPoint::~LogEndPoint()
 
     LogEndPoint(void);
 };

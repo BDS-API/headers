@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/util/BlockPos"
 #include "../bedrock/nbt/CompoundTag"
 
 

@@ -7,7 +7,7 @@
 class BeaconBlock : ActorBlock {
 
 public:
-    BeaconBlock::~BeaconBlock()
+    virtual BeaconBlock::~BeaconBlock()
     virtual bool isInteractiveBlock()const;
     virtual bool canContainLiquid()const;
     virtual void use(Player &, BlockPos const&)const;

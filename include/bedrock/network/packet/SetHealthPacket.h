@@ -7,7 +7,7 @@
 class SetHealthPacket : Packet {
 
 public:
-    SetHealthPacket::~SetHealthPacket()
+    virtual SetHealthPacket::~SetHealthPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

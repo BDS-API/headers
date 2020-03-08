@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../util/BlockPos"
-#include "../../block/unmapped/BlockSource"
 #include "../../util/Random"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class BambooFeature : Feature {
 
 public:
-    BambooFeature::~BambooFeature()
+    virtual BambooFeature::~BambooFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     BambooFeature(void);

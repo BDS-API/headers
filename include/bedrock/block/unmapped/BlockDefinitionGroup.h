@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../definition/BlockDefinition"
-#include "../../../json/Value"
+#include "../../pack/ResourcePackManager"
 #include "../../network/packet/UpdateBlockPropertiesPacket"
 #include "../../../unmapped/SemVersion"
-#include "../../pack/ResourcePackManager"
+#include "../../definition/BlockDefinition"
+#include "../../../json/Value"
 
 
 class BlockDefinitionGroup {

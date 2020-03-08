@@ -8,7 +8,7 @@ using namespace AgentCommands;
 class AttackCommand : AgentCommands::Command {
 
 public:
-    AgentCommands::AttackCommand::~AttackCommand()
+    virtual AgentCommands::AttackCommand::~AttackCommand()
     virtual void execute();
     virtual bool isDone();
 

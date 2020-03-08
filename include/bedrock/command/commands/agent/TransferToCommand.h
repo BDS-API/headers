@@ -8,7 +8,7 @@ using namespace AgentCommands;
 class TransferToCommand : AgentCommands::Command {
 
 public:
-    AgentCommands::TransferToCommand::~TransferToCommand()
+    virtual AgentCommands::TransferToCommand::~TransferToCommand()
     virtual void execute();
     virtual bool isDone();
 

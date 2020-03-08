@@ -5,7 +5,7 @@
 class CompactionListenerEnv : leveldb::EnvWrapper {
 
 public:
-    CompactionListenerEnv::~CompactionListenerEnv()
+    virtual CompactionListenerEnv::~CompactionListenerEnv()
     virtual void Schedule(void ()((void *), , void *);
 
     CompactionListenerEnv(leveldb::Env *);

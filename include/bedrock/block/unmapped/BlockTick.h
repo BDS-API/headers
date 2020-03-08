@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../../util/Tick"
-#include "../../util/BlockPos"
 #include "../../../unmapped/Block"
+#include "../../util/BlockPos"
 
 
 using namespace BlockTickingQueue;

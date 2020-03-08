@@ -5,7 +5,7 @@
 class FrostWalkerEnchant : Enchant {
 
 public:
-    FrostWalkerEnchant::~FrostWalkerEnchant()
+    virtual FrostWalkerEnchant::~FrostWalkerEnchant()
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMaxLevel()const;

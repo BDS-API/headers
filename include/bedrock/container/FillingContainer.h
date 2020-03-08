@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../item/ItemStack"
+#include "../nbt/CompoundTag"
 #include "../level/Level"
+#include "../actor/Player"
 #include "../nbt/ListTag"
 #include "../../unmapped/SemVersion"
-#include "../actor/Player"
-#include "../nbt/CompoundTag"
 #include "../item/unmapped/ItemDescriptor"
+#include "../item/ItemStack"
 
 
 class FillingContainer : Container {
 
 public:
-    FillingContainer::~FillingContainer()
+    virtual FillingContainer::~FillingContainer()
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void removeItem(int, int);

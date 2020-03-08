@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../unmapped/Material"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/Random"
+#include "../../unmapped/Material"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../util/AABB"
 
 
@@ -17,7 +17,7 @@ public:
     static long POST_HEIGHT;
     static long WALL_NAMES[abi:cxx11];
 
-    WallBlock::~WallBlock()
+    virtual WallBlock::~WallBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;

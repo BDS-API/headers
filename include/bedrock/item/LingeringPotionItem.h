@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../level/Level"
-#include "../container/Container"
-#include "unmapped/ItemDescriptor"
-#include "../util/Vec3"
 #include "../block/unmapped/BlockSource"
-#include "../actor/Player"
 #include "../nbt/CompoundTag"
+#include "../level/Level"
+#include "../actor/Player"
+#include "../util/Vec3"
+#include "unmapped/ItemDescriptor"
+#include "../container/Container"
 
 
 class LingeringPotionItem : PotionItem {
 
 public:
-    LingeringPotionItem::~LingeringPotionItem()
+    virtual LingeringPotionItem::~LingeringPotionItem()
     virtual bool isThrowable()const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual void use(ItemStack &, Player &)const;

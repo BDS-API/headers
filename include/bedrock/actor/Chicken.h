@@ -1,16 +1,16 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
 #include "../../unmapped/RenderParams"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/Block"
 #include "../util/BlockPos"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/Block"
 
 
 class Chicken : Animal {
 
 public:
-    Chicken::~Chicken()
+    virtual Chicken::~Chicken()
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void _playStepSound(BlockPos const&, Block const&);
     virtual void aiStep();

@@ -7,7 +7,7 @@
 class FloatNavigation : PathNavigation {
 
 public:
-    FloatNavigation::~FloatNavigation()
+    virtual FloatNavigation::~FloatNavigation()
     virtual void travel(NavigationComponent &, Mob &, float &, float &, float &);
 
     FloatNavigation(void);

@@ -1,18 +1,18 @@
 #pragma once
 
 #include "../../unmapped/IFileChunkUploader"
+#include "../../unmapped/FileUploadManager"
+#include "../../unmapped/ResourceLocation"
+#include "../../unmapped/FileArchiver"
 #include "../../json/Value"
 #include "../../core/Path"
-#include "../../unmapped/FileUploadManager"
-#include "../../unmapped/FileArchiver"
 #include "../../unmapped/TaskGroup"
-#include "../../unmapped/ResourceLocation"
 
 
 class ResourcePackFileUploadManager : FileUploadManager {
 
 public:
-    ResourcePackFileUploadManager::~ResourcePackFileUploadManager()
+    virtual ResourcePackFileUploadManager::~ResourcePackFileUploadManager()
     virtual void uploadFileToRealmStorage(std::string const&, Core::Path const&, std::string const&);
 
     ResourcePackFileUploadManager(TaskGroup &, std::shared_ptr<IFileChunkUploader>);

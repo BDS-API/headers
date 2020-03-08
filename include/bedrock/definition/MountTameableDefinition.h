@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/MountTamingComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/MountTamingComponent"
 
 
 class MountTameableDefinition {

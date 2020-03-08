@@ -7,7 +7,7 @@ class DynamicJumpControlDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    DynamicJumpControlDescription::~DynamicJumpControlDescription()
+    virtual DynamicJumpControlDescription::~DynamicJumpControlDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

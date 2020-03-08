@@ -7,7 +7,7 @@ class BucketableDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    BucketableDescription::~BucketableDescription()
+    virtual BucketableDescription::~BucketableDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

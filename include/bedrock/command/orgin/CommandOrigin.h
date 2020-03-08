@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../../mce/UUID"
-#include "../../../json/Value"
 #include "../../../unmapped/NetworkIdentifier"
-#include "../../util/BlockPos"
-#include "../CommandOriginData"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../../mce/UUID"
+#include "../CommandOriginData"
+#include "../../../json/Value"
 
 
 class CommandOrigin {
@@ -13,7 +13,7 @@ class CommandOrigin {
 public:
     static long sUnknownSource;
 
-    CommandOrigin::~CommandOrigin()
+    virtual CommandOrigin::~CommandOrigin()
     virtual void getCursorHitBlockPos()const;
     virtual void getCursorHitPos()const;
     virtual bool hasChatPerms()const;

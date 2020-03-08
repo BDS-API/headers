@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../bedrock/definition/RoomDefinition"
 #include "../bedrock/util/Random"
+#include "../bedrock/definition/RoomDefinition"
 
 
 class FitDoubleZRoom : MonumentRoomFitter {
 
 public:
-    FitDoubleZRoom::~FitDoubleZRoom()
+    virtual FitDoubleZRoom::~FitDoubleZRoom()
     virtual void fits(std::shared_ptr<RoomDefinition> &);
     virtual void create(int &, std::shared_ptr<RoomDefinition> &, Random &);
 

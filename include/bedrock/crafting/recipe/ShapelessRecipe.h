@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../mce/UUID"
-#include "../../container/CraftingContainer"
-#include "../../../unmapped/RecipeIngredient"
 #include "../../level/Level"
+#include "../../container/CraftingContainer"
+#include "../../../mce/UUID"
+#include "../../../unmapped/RecipeIngredient"
 
 
 class ShapelessRecipe : Recipe {
 
 public:
-    ShapelessRecipe::~ShapelessRecipe()
+    virtual ShapelessRecipe::~ShapelessRecipe()
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize()const;
     virtual void getIngredient(int, int)const;

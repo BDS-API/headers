@@ -7,7 +7,7 @@ class ItemControlDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    ItemControlDescription::~ItemControlDescription()
+    virtual ItemControlDescription::~ItemControlDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

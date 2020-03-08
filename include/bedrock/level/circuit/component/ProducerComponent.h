@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../util/BlockPos"
+#include "../../../../unmapped/CircuitTrackingInfo"
 
 
 class ProducerComponent : BaseCircuitComponent {
 
 public:
-    ProducerComponent::~ProducerComponent()
+    virtual ProducerComponent::~ProducerComponent()
     virtual void setStrength(int);
     virtual bool canStopPower();
     virtual void setStopPower(bool);

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
+#include "../../util/BlockPos"
 #include "../../item/ItemInstance"
 
 
@@ -10,7 +10,7 @@ class EnderChestBlockActor : ChestBlockActor {
 public:
     static long ITEMS_SIZE;
 
-    EnderChestBlockActor::~EnderChestBlockActor()
+    virtual EnderChestBlockActor::~EnderChestBlockActor()
     virtual void getName()const;
     virtual bool canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
     virtual bool canPullOutItem(BlockSource &, int, int, ItemInstance const&)const;

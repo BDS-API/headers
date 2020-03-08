@@ -7,7 +7,7 @@
 class FindCoverGoal : Goal {
 
 public:
-    FindCoverGoal::~FindCoverGoal()
+    virtual FindCoverGoal::~FindCoverGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

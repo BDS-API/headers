@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
 #include "../CommandOutput"
+#include "../orgin/CommandOrigin"
 #include "../CommandRegistry"
 
 
 class DeOpCommand : ServerCommand {
 
 public:
-    DeOpCommand::~DeOpCommand()
+    virtual DeOpCommand::~DeOpCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

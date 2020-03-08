@@ -7,7 +7,7 @@ using namespace ScriptApi;
 class EmptyScriptInterface : ScriptApi::ScriptLanguageInterface {
 
 public:
-    ScriptApi::EmptyScriptInterface::~EmptyScriptInterface()
+    virtual ScriptApi::EmptyScriptInterface::~EmptyScriptInterface()
     virtual void initialize();
     virtual void shutdown();
     virtual void initialized()const;

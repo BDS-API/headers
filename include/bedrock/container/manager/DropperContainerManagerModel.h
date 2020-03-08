@@ -7,7 +7,7 @@
 class DropperContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    DropperContainerManagerModel::~DropperContainerManagerModel()
+    virtual DropperContainerManagerModel::~DropperContainerManagerModel()
     virtual void init();
 
     DropperContainerManagerModel(ContainerID, Player &, BlockPos const&);

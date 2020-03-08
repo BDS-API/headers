@@ -8,7 +8,7 @@ using namespace AgentCommands;
 class DetectRedstoneCommand : AgentCommands::Command {
 
 public:
-    AgentCommands::DetectRedstoneCommand::~DetectRedstoneCommand()
+    virtual AgentCommands::DetectRedstoneCommand::~DetectRedstoneCommand()
     virtual void execute();
     virtual bool isDone();
 

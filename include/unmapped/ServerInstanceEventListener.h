@@ -8,7 +8,7 @@
 class ServerInstanceEventListener {
 
 public:
-    ServerInstanceEventListener::~ServerInstanceEventListener()
+    virtual ServerInstanceEventListener::~ServerInstanceEventListener()
     virtual void onServerInitializeStart(ServerInstance &);
     virtual void onServerInitializeEnd(ServerInstance &);
     virtual void onServerMinecraftInitialized(ServerInstance &, Minecraft &);

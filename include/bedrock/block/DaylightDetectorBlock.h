@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/Random"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
 
 
 class DaylightDetectorBlock : ActorBlock {
 
 public:
-    DaylightDetectorBlock::~DaylightDetectorBlock()
+    virtual DaylightDetectorBlock::~DaylightDetectorBlock()
     virtual bool isInteractiveBlock()const;
     virtual bool isSignalSource()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;

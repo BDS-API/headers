@@ -6,7 +6,7 @@
 class DriedKelpBlock : BlockLegacy {
 
 public:
-    DriedKelpBlock::~DriedKelpBlock()
+    virtual DriedKelpBlock::~DriedKelpBlock()
 
     DriedKelpBlock(std::string const&, int, Material const&);
 };

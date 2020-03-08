@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../../../unmapped/ScoreboardId"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../nbt/CompoundTag"
+#include "../../command/CommandSoftEnumRegistry"
+#include "../../actor/Player"
+#include "../../../unmapped/Objective"
+#include "../../network/packet/sender/PacketSender"
+#include "../../actor/Actor"
 #include "../../../unmapped/PlayerScoreboardId"
 #include "../../../unmapped/ObjectiveCriteria"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../actor/Player"
-#include "../../actor/Actor"
-#include "../../../unmapped/ScoreboardId"
-#include "../../command/CommandSoftEnumRegistry"
-#include "../../nbt/CompoundTag"
-#include "../../network/packet/sender/PacketSender"
-#include "../../../unmapped/Objective"
 
 
 class Scoreboard {
@@ -21,7 +21,7 @@ public:
     static long DISPLAY_SLOT_BELOWNAME[abi:cxx11];
     static long DEFAULT_CRITERIA[abi:cxx11];
 
-    Scoreboard::~Scoreboard()
+    virtual Scoreboard::~Scoreboard()
     virtual void setDisplayObjective(std::string const&, Objective const&, ObjectiveSortOrder);
     virtual void clearDisplayObjective(std::string const&);
     virtual void createScoreboardId(Player const&);

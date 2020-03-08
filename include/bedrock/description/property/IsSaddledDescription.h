@@ -7,7 +7,7 @@ class IsSaddledDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    IsSaddledDescription::~IsSaddledDescription()
+    virtual IsSaddledDescription::~IsSaddledDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

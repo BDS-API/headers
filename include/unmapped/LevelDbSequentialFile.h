@@ -6,7 +6,7 @@
 class LevelDbSequentialFile : leveldb::SequentialFile {
 
 public:
-    LevelDbSequentialFile::~LevelDbSequentialFile()
+    virtual LevelDbSequentialFile::~LevelDbSequentialFile()
     virtual void Read(unsigned long, leveldb::Slice *, char *);
     virtual void Skip(unsigned long);
 

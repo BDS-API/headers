@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../bedrock/util/ChunkPos"
 #include "../bedrock/util/Color"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/util/ChunkPos"
 
 
 class DebugRenderer {

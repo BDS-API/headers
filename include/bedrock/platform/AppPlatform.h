@@ -1,9 +1,9 @@
 #pragma once
 
+#include "../../unmapped/AppPlatformListener"
 #include "../../unmapped/SecureStorageKey"
 #include "../../core/Path"
 #include "../../unmapped/CommonPlatform"
-#include "../../unmapped/AppPlatformListener"
 
 
 class AppPlatform : IAppPlatform {
@@ -15,7 +15,7 @@ public:
     static long SHADERCACHE_PATH;
     static long mIsInitialized;
 
-    AppPlatform::~AppPlatform()
+    virtual AppPlatform::~AppPlatform()
     virtual void restartRequested();
     virtual void getLoggingPath()const;
     virtual bool isLowMemoryDevice()const;

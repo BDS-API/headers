@@ -5,7 +5,7 @@
 class ExecCtxPluck : grpc_core::ExecCtx {
 
 public:
-    ExecCtxPluck::~ExecCtxPluck()
+    virtual ExecCtxPluck::~ExecCtxPluck()
     virtual void CheckReadyToFinish();
 
     ExecCtxPluck(void *);

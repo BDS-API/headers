@@ -6,7 +6,7 @@ class ItemState {
 
 public:
 
-    ItemState::~ItemState()
+    virtual ItemState::~ItemState()
 
     void getID()const;
     void getVariationCount()const;

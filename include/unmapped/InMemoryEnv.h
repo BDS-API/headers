@@ -6,7 +6,7 @@
 class InMemoryEnv : FlushableEnv {
 
 public:
-    InMemoryEnv::~InMemoryEnv()
+    virtual InMemoryEnv::~InMemoryEnv()
     virtual void NewSequentialFile(std::string const&, leveldb::SequentialFile **);
     virtual void NewRandomAccessFile(std::string const&, leveldb::RandomAccessFile **);
     virtual void NewWritableFile(std::string const&, leveldb::WritableFile **);

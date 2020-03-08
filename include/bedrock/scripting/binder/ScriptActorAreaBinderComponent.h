@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../unmapped/ScriptEngine"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../ScriptObjectHandle"
 #include "../../level/tickingarea/ITickingArea"
+#include "../ScriptObjectHandle"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../unmapped/ScriptEngine"
 
 
 class ScriptActorAreaBinderComponent : ScriptBinderComponent {
@@ -11,7 +11,7 @@ class ScriptActorAreaBinderComponent : ScriptBinderComponent {
 public:
     static long TAG[abi:cxx11];
 
-    ScriptActorAreaBinderComponent::~ScriptActorAreaBinderComponent()
+    virtual ScriptActorAreaBinderComponent::~ScriptActorAreaBinderComponent()
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 

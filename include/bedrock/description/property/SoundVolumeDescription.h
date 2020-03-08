@@ -7,7 +7,7 @@ class SoundVolumeDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    SoundVolumeDescription::~SoundVolumeDescription()
+    virtual SoundVolumeDescription::~SoundVolumeDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

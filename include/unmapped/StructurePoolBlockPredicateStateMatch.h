@@ -6,7 +6,7 @@
 class StructurePoolBlockPredicateStateMatch : IStructurePoolBlockPredicate {
 
 public:
-    StructurePoolBlockPredicateStateMatch::~StructurePoolBlockPredicateStateMatch()
+    virtual StructurePoolBlockPredicateStateMatch::~StructurePoolBlockPredicateStateMatch()
     virtual void test(Block const&, Random &)const;
 
     StructurePoolBlockPredicateStateMatch(Block const&);

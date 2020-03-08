@@ -1,14 +1,14 @@
 #pragma once
 
+#include "../CommandRegistry"
 #include "../orgin/CommandOrigin"
 #include "../CommandOutput"
-#include "../CommandRegistry"
 
 
 class TitleRawCommand : MessagingCommand {
 
 public:
-    TitleRawCommand::~TitleRawCommand()
+    virtual TitleRawCommand::~TitleRawCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

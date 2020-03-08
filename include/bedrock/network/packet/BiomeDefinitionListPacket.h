@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../nbt/CompoundTag"
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../nbt/CompoundTag"
 
 
 class BiomeDefinitionListPacket : Packet {
 
 public:
-    BiomeDefinitionListPacket::~BiomeDefinitionListPacket()
+    virtual BiomeDefinitionListPacket::~BiomeDefinitionListPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

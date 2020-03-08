@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../resourcepack/ResourcePackInfoData"
 #include "../../io/BinaryStream"
+#include "../../resourcepack/ResourcePackInfoData"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class ResourcePacksInfoPacket : Packet {
 
 public:
-    ResourcePacksInfoPacket::~ResourcePacksInfoPacket()
+    virtual ResourcePacksInfoPacket::~ResourcePacksInfoPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

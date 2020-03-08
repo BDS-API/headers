@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
 #include "../actor/Mob"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../actor/Player"
 
 
 class FishingRodItem : Item {
 
 public:
-    FishingRodItem::~FishingRodItem()
+    virtual FishingRodItem::~FishingRodItem()
     virtual bool isHandEquipped()const;
     virtual bool requiresInteract()const;
     virtual void getEnchantSlot()const;

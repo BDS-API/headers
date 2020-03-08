@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../../unmapped/ContainerItemStack"
-#include "../model/ContainerModel"
 #include "../../../unmapped/HashString"
-#include "../../../unmapped/Recipes"
 #include "../../item/ItemInstance"
+#include "../model/ContainerModel"
+#include "../../../unmapped/Recipes"
 
 
 class FurnaceInputContainerController : ContainerController {
 
 public:
-    FurnaceInputContainerController::~FurnaceInputContainerController()
+    virtual FurnaceInputContainerController::~FurnaceInputContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
     virtual bool isItemFiltered(Recipes const&, ContainerItemStack const&)const;
 

@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../actor/Actor"
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../actor/Actor"
+#include "../../util/BlockPos"
 
 
 class MegaTreeFeature : TreeFeature {
 
 public:
-    MegaTreeFeature::~MegaTreeFeature()
+    virtual MegaTreeFeature::~MegaTreeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     MegaTreeFeature(Actor *, int, int, int, int);

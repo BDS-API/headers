@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
+#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
 #include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class PrimedTnt : Actor {
@@ -14,7 +14,7 @@ class PrimedTnt : Actor {
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    PrimedTnt::~PrimedTnt()
+    virtual PrimedTnt::~PrimedTnt()
     virtual void getOwnerEntityType();
     virtual void teleportTo(Vec3 const&, bool, int, int);
     virtual void normalTick();

@@ -1,22 +1,22 @@
 #pragma once
 
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/util/Vec3"
 #include "../bedrock/item/ItemStack"
-#include "../bedrock/item/unmapped/ItemEnchants"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/actor/Player"
+#include "../bedrock/util/Vec2"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/item/ItemInstance"
 #include "../bedrock/actor/damagesource/ActorDamageSource"
 #include "../bedrock/actor/Actor"
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/block/BlockLegacy"
-#include "../bedrock/util/Vec2"
-#include "../bedrock/util/Vec3"
 #include "../bedrock/item/unmapped/ItemDescriptor"
+#include "../bedrock/item/unmapped/ItemEnchants"
 
 
 class PlayerEventListener {
 
 public:
-    PlayerEventListener::~PlayerEventListener()
+    virtual PlayerEventListener::~PlayerEventListener()
     virtual void onPlayerAwardAchievement(Player &, MinecraftEventing::AchievementIds);
     virtual void onPlayerPortalBuilt(Player &, AutomaticID<Dimension, int>);
     virtual void onPlayerPortalUsed(Player &, AutomaticID<Dimension, int>, AutomaticID<Dimension, int>);

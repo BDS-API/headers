@@ -8,7 +8,7 @@ class Command {
 public:
     static long WILDCARD_TOKEN[abi:cxx11];
 
-    Command::~Command()
+    virtual Command::~Command()
 
     Command(void);
     bool hasFlag(CommandFlag)const;

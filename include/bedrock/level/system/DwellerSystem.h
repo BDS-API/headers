@@ -6,7 +6,7 @@
 class DwellerSystem : ITickingSystem {
 
 public:
-    DwellerSystem::~DwellerSystem()
+    virtual DwellerSystem::~DwellerSystem()
     virtual void tick(EntityRegistry &);
 
     DwellerSystem(void);

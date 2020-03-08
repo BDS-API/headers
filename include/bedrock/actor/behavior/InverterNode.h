@@ -6,7 +6,7 @@
 class InverterNode : BehaviorNode {
 
 public:
-    InverterNode::~InverterNode()
+    virtual InverterNode::~InverterNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

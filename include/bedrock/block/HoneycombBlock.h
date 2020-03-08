@@ -6,7 +6,7 @@
 class HoneycombBlock : BlockLegacy {
 
 public:
-    HoneycombBlock::~HoneycombBlock()
+    virtual HoneycombBlock::~HoneycombBlock()
 
     HoneycombBlock(std::string const&, int, Material const&);
 };

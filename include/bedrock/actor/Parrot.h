@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../util/Vec3"
+#include "unmapped/ActorDefinitionGroup"
 #include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
 #include "../../unmapped/Block"
+#include "../util/Vec3"
+#include "unmapped/ActorDefinitionIdentifier"
 
 
 class Parrot : Animal {
 
 public:
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    Parrot::~Parrot()
+    virtual Parrot::~Parrot()
     virtual void getInterpolatedRidingPosition(float)const;
     virtual void getShadowRadius()const;
     virtual void setSitting(bool);

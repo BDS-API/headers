@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/BlockPos"
 
 
 class HomeComponent {

@@ -6,7 +6,7 @@
 class SlimeFloatGoal : Goal {
 
 public:
-    SlimeFloatGoal::~SlimeFloatGoal()
+    virtual SlimeFloatGoal::~SlimeFloatGoal()
     virtual bool canUse();
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;

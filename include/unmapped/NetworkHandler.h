@@ -2,18 +2,18 @@
 
 #include "../bedrock/network/NetEventCallback"
 #include "../bedrock/network/NetworkPeer"
-#include "../bedrock/definition/ConnectionDefinition"
-#include "../bedrock/network/packet/Packet"
 #include "../bedrock/actor/Player"
-#include "../bedrock/Scheduler"
 #include "../bedrock/network/packet/sender/PacketSender"
+#include "../bedrock/definition/ConnectionDefinition"
 #include "../bedrock/network/packet/observer/PacketObserver"
+#include "../bedrock/network/packet/Packet"
+#include "../bedrock/Scheduler"
 
 
 class NetworkHandler : RakNetInstance::ConnectionCallbacks, RakPeerHelper::IPSupportInterface, LocalConnector::ConnectionCallbacks {
 
 public:
-    NetworkHandler::~NetworkHandler()
+    virtual NetworkHandler::~NetworkHandler()
     virtual void onNewIncomingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onNewOutgoingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onConnectionClosed(NetworkIdentifier const&, std::string const&, bool);

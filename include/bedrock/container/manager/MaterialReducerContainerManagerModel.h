@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../item/ItemStack"
 #include "../../../unmapped/ContainerItemStack"
 #include "../../util/BlockPos"
 #include "../../actor/Player"
+#include "../../item/ItemStack"
 
 
 class MaterialReducerContainerManagerModel : ContainerManagerModel {
@@ -11,7 +11,7 @@ class MaterialReducerContainerManagerModel : ContainerManagerModel {
 public:
     static long OUTPUT_SLOTS;
 
-    MaterialReducerContainerManagerModel::~MaterialReducerContainerManagerModel()
+    virtual MaterialReducerContainerManagerModel::~MaterialReducerContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

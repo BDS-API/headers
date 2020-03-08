@@ -5,7 +5,7 @@
 class TridentChannelingEnchant : Enchant {
 
 public:
-    TridentChannelingEnchant::~TridentChannelingEnchant()
+    virtual TridentChannelingEnchant::~TridentChannelingEnchant()
     virtual bool isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

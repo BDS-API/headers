@@ -7,7 +7,7 @@
 class EvocationFang : Actor {
 
 public:
-    EvocationFang::~EvocationFang()
+    virtual EvocationFang::~EvocationFang()
     virtual void normalTick();
     virtual void getShadowRadius()const;
     virtual void handleEntityEvent(ActorEvent, int);

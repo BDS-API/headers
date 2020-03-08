@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../raknet/RakPeerInterface"
 #include "../../unmapped/NetworkIdentifier"
+#include "../../raknet/RakPeerInterface"
 
 
 using namespace RakNetInstance;
@@ -9,7 +9,7 @@ using namespace RakNetInstance;
 class RakNetNetworkPeer : NetworkPeer {
 
 public:
-    RakNetInstance::RakNetNetworkPeer::~RakNetNetworkPeer()
+    virtual RakNetInstance::RakNetNetworkPeer::~RakNetNetworkPeer()
     virtual void sendPacket(std::string const&, NetworkPeer::Reliability, int, unsigned short, Compressibility);
     virtual void receivePacket(std::string &);
     virtual void getNetworkStatus();

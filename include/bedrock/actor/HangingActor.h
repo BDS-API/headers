@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
+#include "../nbt/CompoundTag"
+#include "../block/unmapped/BlockSource"
+#include "unmapped/ActorDefinitionGroup"
 #include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
 #include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../block/unmapped/BlockSource"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class HangingActor : Actor {
@@ -18,7 +18,7 @@ public:
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    HangingActor::~HangingActor()
+    virtual HangingActor::~HangingActor()
     virtual void move(Vec3 const&);
     virtual void normalTick();
     virtual void getBrightness(float)const;

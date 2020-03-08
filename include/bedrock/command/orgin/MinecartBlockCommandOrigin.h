@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID"
 #include "../../block/unmapped/BlockSource"
+#include "../../actor/unmapped/ActorUniqueID"
 
 
 class MinecartBlockCommandOrigin : BlockCommandOrigin {
 
 public:
-    MinecartBlockCommandOrigin::~MinecartBlockCommandOrigin()
+    virtual MinecartBlockCommandOrigin::~MinecartBlockCommandOrigin()
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void clone()const;

@@ -7,7 +7,7 @@ class RideableDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    RideableDescription::~RideableDescription()
+    virtual RideableDescription::~RideableDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

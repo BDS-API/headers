@@ -6,7 +6,7 @@
 class SavedDataStorage {
 
 public:
-    SavedDataStorage::~SavedDataStorage()
+    virtual SavedDataStorage::~SavedDataStorage()
 
     SavedDataStorage(LevelStorage *);
     void loadAndSet(SavedData &, std::string const&);

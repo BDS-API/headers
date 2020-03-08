@@ -5,7 +5,7 @@
 class IdentifierDescription : DefintionDescription {
 
 public:
-    IdentifierDescription::~IdentifierDescription()
+    virtual IdentifierDescription::~IdentifierDescription()
     virtual void getJsonName()const;
 
     IdentifierDescription(std::string const&);

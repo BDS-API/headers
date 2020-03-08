@@ -1,15 +1,15 @@
 #pragma once
 
 #include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/Block"
 #include "../util/BlockPos"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/Block"
 
 
 class Silverfish : Monster {
 
 public:
-    Silverfish::~Silverfish()
+    virtual Silverfish::~Silverfish()
     virtual void normalTick();
     virtual void findAttackTarget();
     virtual void handleEntityEvent(ActorEvent, int);

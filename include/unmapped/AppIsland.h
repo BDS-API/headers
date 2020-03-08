@@ -7,7 +7,7 @@ using namespace BedrockEngine;
 class AppIsland : BedrockEngine::IIslandCore {
 
 public:
-    BedrockEngine::AppIsland::~AppIsland()
+    virtual BedrockEngine::AppIsland::~AppIsland()
     virtual void getId();
     virtual void start();
     virtual void suspend();

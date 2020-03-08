@@ -6,7 +6,7 @@
 class HungerAttributeDelegate : AttributeInstanceDelegate {
 
 public:
-    HungerAttributeDelegate::~HungerAttributeDelegate()
+    virtual HungerAttributeDelegate::~HungerAttributeDelegate()
     virtual void tick();
     virtual void notify(long);
 

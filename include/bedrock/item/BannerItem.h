@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../level/Level"
-#include "unmapped/ItemDescriptor"
-#include "../actor/Actor"
-#include "../util/BlockPos"
 #include "../nbt/CompoundTag"
+#include "../actor/Actor"
+#include "../level/Level"
+#include "../util/BlockPos"
+#include "unmapped/ItemDescriptor"
 
 
 class BannerItem : Item {
 
 public:
-    BannerItem::~BannerItem()
+    virtual BannerItem::~BannerItem()
     virtual bool isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual bool isValidAuxValue(int)const;

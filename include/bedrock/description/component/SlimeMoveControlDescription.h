@@ -7,7 +7,7 @@ class SlimeMoveControlDescription : MoveControlDescription {
 
 public:
     virtual void getJsonName()const;
-    SlimeMoveControlDescription::~SlimeMoveControlDescription()
+    virtual SlimeMoveControlDescription::~SlimeMoveControlDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

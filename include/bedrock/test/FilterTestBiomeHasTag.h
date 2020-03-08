@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../unmapped/IWorldRegistriesProvider"
 #include "../../unmapped/FilterContext"
+#include "../../unmapped/IWorldRegistriesProvider"
 #include "../level/biome/Biome"
 
 
 class FilterTestBiomeHasTag : SimpleTagIDFilterTest {
 
 public:
-    FilterTestBiomeHasTag::~FilterTestBiomeHasTag()
+    virtual FilterTestBiomeHasTag::~FilterTestBiomeHasTag()
     virtual void evaluate(FilterContext const&)const;
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);
     virtual void getName()const;

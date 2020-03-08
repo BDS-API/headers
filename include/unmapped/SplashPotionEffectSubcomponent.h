@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/actor/Actor"
 #include "../bedrock/actor/effect/MobEffect"
+#include "../json/Value"
 
 
 class SplashPotionEffectSubcomponent : OnHitSubcomponent {
 
 public:
-    SplashPotionEffectSubcomponent::~SplashPotionEffectSubcomponent()
+    virtual SplashPotionEffectSubcomponent::~SplashPotionEffectSubcomponent()
     virtual void readfromJSON(Json::Value &);
     virtual void writetoJSON(Json::Value &)const;
     virtual void doOnHitEffect(Actor &, ProjectileComponent &);

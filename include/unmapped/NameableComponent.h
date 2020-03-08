@@ -1,9 +1,9 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
-#include "../bedrock/actor/unmapped/ActorInteraction"
-#include "../bedrock/description/component/NameableDescription"
 #include "../bedrock/actor/Player"
+#include "../bedrock/description/component/NameableDescription"
+#include "../bedrock/actor/unmapped/ActorInteraction"
 
 
 class NameableComponent {

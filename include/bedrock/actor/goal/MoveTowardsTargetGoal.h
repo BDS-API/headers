@@ -6,7 +6,7 @@
 class MoveTowardsTargetGoal : Goal {
 
 public:
-    MoveTowardsTargetGoal::~MoveTowardsTargetGoal()
+    virtual MoveTowardsTargetGoal::~MoveTowardsTargetGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

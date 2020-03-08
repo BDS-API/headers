@@ -8,7 +8,7 @@
 class SetActorLinkPacket : Packet {
 
 public:
-    SetActorLinkPacket::~SetActorLinkPacket()
+    virtual SetActorLinkPacket::~SetActorLinkPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

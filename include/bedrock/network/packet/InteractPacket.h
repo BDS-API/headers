@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
 #include "../../actor/unmapped/ActorRuntimeID"
 #include "../../util/Vec3"
-#include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class InteractPacket : Packet {
 
 public:
-    InteractPacket::~InteractPacket()
+    virtual InteractPacket::~InteractPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

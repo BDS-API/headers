@@ -6,7 +6,7 @@
 class Vec3Option : Option {
 
 public:
-    Vec3Option::~Vec3Option()
+    virtual Vec3Option::~Vec3Option()
     virtual void save(std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> &);
     virtual void load(std::string const&);
     virtual void load(Json::Value const&);

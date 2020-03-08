@@ -6,7 +6,7 @@
 class DragonDeathGoal : Goal {
 
 public:
-    DragonDeathGoal::~DragonDeathGoal()
+    virtual DragonDeathGoal::~DragonDeathGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -6,7 +6,7 @@
 class ScriptBinderActorTemplate : ScriptBinderTemplate {
 
 public:
-    ScriptBinderActorTemplate::~ScriptBinderActorTemplate()
+    virtual ScriptBinderActorTemplate::~ScriptBinderActorTemplate()
     virtual void getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
 

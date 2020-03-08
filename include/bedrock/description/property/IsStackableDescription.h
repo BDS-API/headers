@@ -7,7 +7,7 @@ class IsStackableDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    IsStackableDescription::~IsStackableDescription()
+    virtual IsStackableDescription::~IsStackableDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

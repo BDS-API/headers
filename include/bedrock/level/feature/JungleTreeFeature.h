@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../actor/Actor"
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../actor/Actor"
+#include "../../util/BlockPos"
 
 
 class JungleTreeFeature : TreeFeature {
 
 public:
-    JungleTreeFeature::~JungleTreeFeature()
+    virtual JungleTreeFeature::~JungleTreeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     JungleTreeFeature(Actor *);

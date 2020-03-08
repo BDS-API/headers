@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class PlayerAuthInputPacket : Packet {
 
 public:
-    PlayerAuthInputPacket::~PlayerAuthInputPacket()
+    virtual PlayerAuthInputPacket::~PlayerAuthInputPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../mce/UUID"
 #include "../bedrock/actor/damagesource/ActorDamageSource"
-#include "../bedrock/actor/Actor"
 #include "../bedrock/actor/Mob"
+#include "../bedrock/actor/Actor"
 #include "../bedrock/nbt/CompoundTag"
+#include "../mce/UUID"
 
 
 class DwellerComponent {

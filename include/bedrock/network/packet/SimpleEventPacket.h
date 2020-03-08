@@ -7,7 +7,7 @@
 class SimpleEventPacket : Packet {
 
 public:
-    SimpleEventPacket::~SimpleEventPacket()
+    virtual SimpleEventPacket::~SimpleEventPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

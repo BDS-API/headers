@@ -6,7 +6,7 @@
 class StrollTowardsVillageGoal : MoveToVillageGoal {
 
 public:
-    StrollTowardsVillageGoal::~StrollTowardsVillageGoal()
+    virtual StrollTowardsVillageGoal::~StrollTowardsVillageGoal()
     virtual bool canUse();
     virtual void appendDebugInfo(std::string &)const;
     virtual void _selectRandomPosInVillage();

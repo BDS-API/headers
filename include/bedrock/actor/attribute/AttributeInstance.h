@@ -8,7 +8,7 @@
 class AttributeInstance {
 
 public:
-    AttributeInstance::~AttributeInstance()
+    virtual AttributeInstance::~AttributeInstance()
     virtual void tick();
 
     AttributeInstance(AttributeInstance const&);

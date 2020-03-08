@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../actor/Player"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
 
 
 class OldLeafBlock : LeafBlock {
 
 public:
-    OldLeafBlock::~OldLeafBlock()
+    virtual OldLeafBlock::~OldLeafBlock()
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;

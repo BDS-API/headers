@@ -7,7 +7,7 @@ class WalkAnimationSpeedDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    WalkAnimationSpeedDescription::~WalkAnimationSpeedDescription()
+    virtual WalkAnimationSpeedDescription::~WalkAnimationSpeedDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

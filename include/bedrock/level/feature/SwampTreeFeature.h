@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class SwampTreeFeature : TreeFeature {
 
 public:
-    SwampTreeFeature::~SwampTreeFeature()
+    virtual SwampTreeFeature::~SwampTreeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     SwampTreeFeature(void);

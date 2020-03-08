@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../util/ChunkPos"
 #include "../LevelChunkFinalDeleter"
 #include "../../../unmapped/Dimension"
 #include "../LevelChunk"
+#include "../../util/ChunkPos"
 
 
 class NetworkChunkSource : ChunkSource {
 
 public:
-    NetworkChunkSource::~NetworkChunkSource()
+    virtual NetworkChunkSource::~NetworkChunkSource()
     virtual void getExistingChunk(ChunkPos const&);
     virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
     virtual void getOrLoadChunk(ChunkPos const&, ChunkSource::LoadMode);

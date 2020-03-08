@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/unmapped/ActorUniqueID"
 #include "../../io/BinaryStream"
 #include "../../nbt/CompoundTag"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorUniqueID"
 
 
 class UpdateTradePacket : Packet {
 
 public:
-    UpdateTradePacket::~UpdateTradePacket()
+    virtual UpdateTradePacket::~UpdateTradePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

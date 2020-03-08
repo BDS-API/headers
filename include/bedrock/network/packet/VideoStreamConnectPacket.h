@@ -1,14 +1,14 @@
 #pragma once
 
+#include "../../io/BinaryStream"
 #include "../../../unmapped/WebSocketPacketData"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../io/BinaryStream"
 
 
 class VideoStreamConnectPacket : Packet {
 
 public:
-    VideoStreamConnectPacket::~VideoStreamConnectPacket()
+    virtual VideoStreamConnectPacket::~VideoStreamConnectPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

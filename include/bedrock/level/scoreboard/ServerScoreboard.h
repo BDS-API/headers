@@ -1,24 +1,24 @@
 #pragma once
 
-#include "../../network/packet/Packet"
-#include "../../../unmapped/PlayerScoreboardId"
-#include "../../../unmapped/DisplayObjective"
-#include "../../actor/Player"
-#include "../../../unmapped/NetworkIdentifier"
-#include "../../actor/Actor"
 #include "../../../unmapped/ScoreboardId"
-#include "../../command/CommandSoftEnumRegistry"
-#include "../storage/LevelStorage"
+#include "../../../unmapped/DisplayObjective"
+#include "../../../unmapped/NetworkIdentifier"
 #include "../../nbt/CompoundTag"
-#include "../../network/packet/sender/PacketSender"
+#include "../../command/CommandSoftEnumRegistry"
+#include "../../actor/Player"
 #include "../../../unmapped/Objective"
+#include "../../network/packet/sender/PacketSender"
+#include "../../actor/Actor"
 #include "../../../unmapped/ScoreboardIdentityRef"
+#include "../../../unmapped/PlayerScoreboardId"
+#include "../../network/packet/Packet"
+#include "../storage/LevelStorage"
 
 
 class ServerScoreboard : Scoreboard {
 
 public:
-    ServerScoreboard::~ServerScoreboard()
+    virtual ServerScoreboard::~ServerScoreboard()
     virtual void setDisplayObjective(std::string const&, Objective const&, ObjectiveSortOrder);
     virtual void clearDisplayObjective(std::string const&);
     virtual void createScoreboardId(Player const&);

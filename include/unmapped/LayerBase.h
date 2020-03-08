@@ -7,7 +7,7 @@ using namespace LayerDetails;
 class LayerBase {
 
 public:
-    LayerDetails::LayerBase::~LayerBase()
+    virtual LayerDetails::LayerBase::~LayerBase()
     virtual void init(long);
 
     LayerBase(unsigned int);

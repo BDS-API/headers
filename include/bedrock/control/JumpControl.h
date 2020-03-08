@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../description/component/JumpControlDescription"
 #include "../actor/Mob"
 #include "../../unmapped/JumpControlComponent"
+#include "../description/component/JumpControlDescription"
 
 
 class JumpControl : Control {
 
 public:
-    JumpControl::~JumpControl()
+    virtual JumpControl::~JumpControl()
     virtual void initializeInternal(Mob &, JumpControlDescription *);
     virtual void tick(JumpControlComponent &, Mob &);
     virtual void getJumpDelay(JumpControlComponent const&, Mob const&)const;

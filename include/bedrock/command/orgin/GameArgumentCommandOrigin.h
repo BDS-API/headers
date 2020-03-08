@@ -5,7 +5,7 @@
 class GameArgumentCommandOrigin : CommandOrigin {
 
 public:
-    GameArgumentCommandOrigin::~GameArgumentCommandOrigin()
+    virtual GameArgumentCommandOrigin::~GameArgumentCommandOrigin()
     virtual void getRequestId()const;
     virtual void getName()const;
     virtual void getBlockPosition()const;

@@ -6,7 +6,7 @@
 class DragonHoldingPatternGoal : Goal {
 
 public:
-    DragonHoldingPatternGoal::~DragonHoldingPatternGoal()
+    virtual DragonHoldingPatternGoal::~DragonHoldingPatternGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../io/IDataOutput"
 #include "../io/IDataInput"
+#include "../io/IDataOutput"
 
 
 class Tag {
@@ -9,7 +9,7 @@ class Tag {
 public:
     static long NullString[abi:cxx11];
 
-    Tag::~Tag()
+    virtual Tag::~Tag()
     virtual void deleteChildren();
     virtual void equals(Tag const&)const;
     virtual void print(PrintStream &)const;

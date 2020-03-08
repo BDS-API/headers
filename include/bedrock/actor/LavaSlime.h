@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
 #include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -9,7 +9,7 @@ class LavaSlime : Slime {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    LavaSlime::~LavaSlime()
+    virtual LavaSlime::~LavaSlime()
     virtual bool isInLava()const;
     virtual void getBrightness(float)const;
     virtual bool isOnFire()const;

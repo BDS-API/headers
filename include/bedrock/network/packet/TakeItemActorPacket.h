@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID"
 
 
 class TakeItemActorPacket : Packet {
 
 public:
-    TakeItemActorPacket::~TakeItemActorPacket()
+    virtual TakeItemActorPacket::~TakeItemActorPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

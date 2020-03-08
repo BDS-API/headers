@@ -5,7 +5,7 @@
 class PrivateKeyManager : KeyManager {
 
 public:
-    PrivateKeyManager::~PrivateKeyManager()
+    virtual PrivateKeyManager::~PrivateKeyManager()
     virtual bool isValid()const;
 
     PrivateKeyManager(Crypto::Asymmetric::System);

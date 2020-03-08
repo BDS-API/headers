@@ -6,7 +6,7 @@
 class RandomSitGoal : Goal {
 
 public:
-    RandomSitGoal::~RandomSitGoal()
+    virtual RandomSitGoal::~RandomSitGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

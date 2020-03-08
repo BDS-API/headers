@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../bedrock/pack/PackAccessStrategy"
-#include "../bedrock/pack/ResourcePackManager"
 #include "../json/Value"
+#include "../bedrock/pack/ResourcePackManager"
 #include "../bedrock/pack/PackManifest"
 
 

@@ -6,7 +6,7 @@ class OnTargetEscapeDescription : TriggerDescription {
 
 public:
     virtual void getJsonName()const;
-    OnTargetEscapeDescription::~OnTargetEscapeDescription()
+    virtual OnTargetEscapeDescription::~OnTargetEscapeDescription()
 
     OnTargetEscapeDescription(void);
 };

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 
 
 class StructureEditorData {

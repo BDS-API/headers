@@ -6,7 +6,7 @@
 class RemoveEntityPacket : EntityServerPacket {
 
 public:
-    RemoveEntityPacket::~RemoveEntityPacket()
+    virtual RemoveEntityPacket::~RemoveEntityPacket()
     virtual void getId()const;
     virtual void getName()const;
 

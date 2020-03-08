@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../level/Level"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
 #include "../../../unmapped/NetworkIdentifier"
+#include "../../level/Level"
+#include "../../io/ReadOnlyBinaryStream"
 #include "../../command/CommandContext"
 
 
 class CommandRequestPacket : Packet {
 
 public:
-    CommandRequestPacket::~CommandRequestPacket()
+    virtual CommandRequestPacket::~CommandRequestPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

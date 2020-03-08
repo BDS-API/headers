@@ -7,7 +7,7 @@
 class HoldGroundGoal : Goal {
 
 public:
-    HoldGroundGoal::~HoldGroundGoal()
+    virtual HoldGroundGoal::~HoldGroundGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -6,7 +6,7 @@
 class ITickingArea {
 
 public:
-    ITickingArea::~ITickingArea()
+    virtual ITickingArea::~ITickingArea()
 
     ITickingArea(void);
     void serialize(AutomaticID<Dimension, int>)const;

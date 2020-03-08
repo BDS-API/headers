@@ -7,7 +7,7 @@
 class SpawnData {
 
 public:
-    SpawnData::~SpawnData()
+    virtual SpawnData::~SpawnData()
 
     SpawnData(void);
     SpawnData(CompoundTag const&);

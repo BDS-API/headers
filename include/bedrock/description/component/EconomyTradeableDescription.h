@@ -7,7 +7,7 @@ class EconomyTradeableDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    EconomyTradeableDescription::~EconomyTradeableDescription()
+    virtual EconomyTradeableDescription::~EconomyTradeableDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

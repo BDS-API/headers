@@ -6,7 +6,7 @@
 class VexRandomMoveGoal : Goal {
 
 public:
-    VexRandomMoveGoal::~VexRandomMoveGoal()
+    virtual VexRandomMoveGoal::~VexRandomMoveGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void tick();

@@ -1,24 +1,24 @@
 #pragma once
 
-#include "../../unmapped/HashedString"
-#include "../pack/ResourcePackManager"
-#include "../../unmapped/StructureManager"
 #include "../../unmapped/TagRegistry"
-#include "../command/orgin/CommandOrigin"
-#include "../../unmapped/IEntityRegistryOwner"
+#include "../eventing/IMinecraftEventing"
 #include "../../unmapped/MinecraftCommands"
 #include "scoreboard/ServerScoreboard"
+#include "../../unmapped/IEntityRegistryOwner"
+#include "../../unmapped/StructureManager"
+#include "../../unmapped/HashedString"
 #include "../block/unmapped/BlockComponentFactory"
-#include "../Scheduler"
+#include "../pack/ResourcePackManager"
 #include "../block/unmapped/BlockDefinitionGroup"
+#include "../command/orgin/CommandOrigin"
+#include "../Scheduler"
 #include "storage/LevelStorage"
-#include "../eventing/IMinecraftEventing"
 
 
 class ServerLevel : Level {
 
 public:
-    ServerLevel::~ServerLevel()
+    virtual ServerLevel::~ServerLevel()
     virtual void initialize(std::string const&, LevelSettings const&, LevelData *, std::string const*);
     virtual void tick();
     virtual void updateSleepingPlayerList();

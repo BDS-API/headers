@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/FeatureRegistry"
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../../unmapped/FeatureRegistry"
+#include "../../util/BlockPos"
 
 
 class LegacyForestFoliageFeature : Feature {
 
 public:
-    LegacyForestFoliageFeature::~LegacyForestFoliageFeature()
+    virtual LegacyForestFoliageFeature::~LegacyForestFoliageFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     LegacyForestFoliageFeature(LegacyForestFoliageFeature::Type, FeatureRegistry const&);

@@ -9,7 +9,7 @@ class ServerCommand : Command {
 public:
     static long mGame;
 
-    ServerCommand::~ServerCommand()
+    virtual ServerCommand::~ServerCommand()
 
     ServerCommand(void);
     void setup(Minecraft &);

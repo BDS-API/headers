@@ -7,7 +7,7 @@
 class ClientCacheMissResponsePacket : Packet {
 
 public:
-    ClientCacheMissResponsePacket::~ClientCacheMissResponsePacket()
+    virtual ClientCacheMissResponsePacket::~ClientCacheMissResponsePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

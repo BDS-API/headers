@@ -7,7 +7,7 @@
 class CartographyTableBlock : BlockLegacy {
 
 public:
-    CartographyTableBlock::~CartographyTableBlock()
+    virtual CartographyTableBlock::~CartographyTableBlock()
     virtual bool isCraftingBlock()const;
     virtual void use(Player &, BlockPos const&)const;
 

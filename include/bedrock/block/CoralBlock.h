@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 
 
@@ -12,7 +12,7 @@ public:
     static long DEAD_CORAL_OFFSET;
     static long DEAD_CORAL_BIT;
 
-    CoralBlock::~CoralBlock()
+    virtual CoralBlock::~CoralBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isValidAuxValue(int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../actor/unmapped/ActorUniqueID"
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorUniqueID"
 
 
 class MapCreateLockedCopyPacket : Packet {
 
 public:
-    MapCreateLockedCopyPacket::~MapCreateLockedCopyPacket()
+    virtual MapCreateLockedCopyPacket::~MapCreateLockedCopyPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

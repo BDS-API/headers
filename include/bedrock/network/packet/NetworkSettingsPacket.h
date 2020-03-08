@@ -7,7 +7,7 @@
 class NetworkSettingsPacket : Packet {
 
 public:
-    NetworkSettingsPacket::~NetworkSettingsPacket()
+    virtual NetworkSettingsPacket::~NetworkSettingsPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

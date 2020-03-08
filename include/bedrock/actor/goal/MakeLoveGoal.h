@@ -6,7 +6,7 @@
 class MakeLoveGoal : Goal {
 
 public:
-    MakeLoveGoal::~MakeLoveGoal()
+    virtual MakeLoveGoal::~MakeLoveGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

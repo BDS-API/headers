@@ -6,7 +6,7 @@
 class ActorDamageSource {
 
 public:
-    ActorDamageSource::~ActorDamageSource()
+    virtual ActorDamageSource::~ActorDamageSource()
     virtual bool isEntitySource()const;
     virtual bool isChildEntitySource()const;
     virtual bool isBlockSource()const;

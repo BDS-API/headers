@@ -7,7 +7,7 @@ using namespace com::mojang::clacks::protocol;
 class LevelFileAndSize : google::protobuf::Message {
 
 public:
-    com::mojang::clacks::protocol::LevelFileAndSize::~LevelFileAndSize()
+    virtual com::mojang::clacks::protocol::LevelFileAndSize::~LevelFileAndSize()
     virtual void New()const;
     virtual void New(google::protobuf::Arena *)const;
     virtual void Clear();

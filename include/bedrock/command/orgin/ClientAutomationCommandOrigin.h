@@ -5,7 +5,7 @@
 class ClientAutomationCommandOrigin : CommandOrigin {
 
 public:
-    ClientAutomationCommandOrigin::~ClientAutomationCommandOrigin()
+    virtual ClientAutomationCommandOrigin::~ClientAutomationCommandOrigin()
     virtual void getRequestId()const;
     virtual void getName()const;
     virtual void getBlockPosition()const;

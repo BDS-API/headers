@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/BossComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/BossComponent"
 
 
 class BossDefinition {

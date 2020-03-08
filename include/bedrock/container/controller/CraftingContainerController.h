@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../crafting/recipe/Recipe"
 #include "../../../unmapped/ContainerItemStack"
+#include "../../crafting/recipe/Recipe"
 #include "../model/ContainerModel"
 
 
 class CraftingContainerController : ContainerController {
 
 public:
-    CraftingContainerController::~CraftingContainerController()
+    virtual CraftingContainerController::~CraftingContainerController()
     virtual void onRecipeSelected(Recipe const*, bool, bool);
     virtual void clearSelectedRecipe();
     virtual void getSelectedRecipe()const;

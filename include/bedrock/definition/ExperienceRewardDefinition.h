@@ -1,9 +1,9 @@
 #pragma once
 
+#include "../../unmapped/ExpressionNode"
+#include "../../unmapped/ExperienceRewardComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/ExperienceRewardComponent"
-#include "../../unmapped/ExpressionNode"
 
 
 class ExperienceRewardDefinition {

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../util/Vec3"
-#include "../../util/BlockPos"
 #include "../../../unmapped/Block"
+#include "../../util/BlockPos"
+#include "../../util/Vec3"
 
 
 class BlockEventDispatcher {

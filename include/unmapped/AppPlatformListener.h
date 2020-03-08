@@ -5,7 +5,7 @@
 class AppPlatformListener {
 
 public:
-    AppPlatformListener::~AppPlatformListener()
+    virtual AppPlatformListener::~AppPlatformListener()
     virtual void onLowMemory();
     virtual void onAppPaused();
     virtual void onAppUnpaused();

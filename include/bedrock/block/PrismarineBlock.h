@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class PrismarineBlock : BlockLegacy {
 
 public:
-    PrismarineBlock::~PrismarineBlock()
+    virtual PrismarineBlock::~PrismarineBlock()
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void buildDescriptionId(Block const&)const;

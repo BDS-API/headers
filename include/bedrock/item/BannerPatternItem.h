@@ -6,7 +6,7 @@
 class BannerPatternItem : Item {
 
 public:
-    BannerPatternItem::~BannerPatternItem()
+    virtual BannerPatternItem::~BannerPatternItem()
     virtual bool isPattern()const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
 

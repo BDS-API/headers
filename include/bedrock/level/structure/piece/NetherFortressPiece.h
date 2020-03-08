@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../../../unmapped/PieceWeight"
-#include "../../../../unmapped/BoundingBox"
 #include "../../../util/Random"
 #include "../../../block/unmapped/BlockSource"
 #include "../../LevelChunk"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/PieceWeight"
 
 
 class NetherFortressPiece : StructurePiece {
 
 public:
-    NetherFortressPiece::~NetherFortressPiece()
+    virtual NetherFortressPiece::~NetherFortressPiece()
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void addHardcodedSpawnAreas(LevelChunk &)const;
 

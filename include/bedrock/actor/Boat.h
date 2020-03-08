@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
 #include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
 
@@ -12,7 +12,7 @@ class Boat : Actor {
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    Boat::~Boat()
+    virtual Boat::~Boat()
     virtual void remove();
     virtual void normalTick();
     virtual void addRider(Actor &);

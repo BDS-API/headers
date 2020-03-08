@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
 #include "../CommandOutput"
+#include "../orgin/CommandOrigin"
 #include "../CommandRegistry"
 
 
@@ -12,7 +12,7 @@ public:
     static long mSaveAllFileList;
     static long mState;
 
-    SaveCommand::~SaveCommand()
+    virtual SaveCommand::~SaveCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void saveHold(CommandOutput &);

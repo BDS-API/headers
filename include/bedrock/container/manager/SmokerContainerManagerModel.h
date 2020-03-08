@@ -7,7 +7,7 @@
 class SmokerContainerManagerModel : FurnaceContainerManagerModel {
 
 public:
-    SmokerContainerManagerModel::~SmokerContainerManagerModel()
+    virtual SmokerContainerManagerModel::~SmokerContainerManagerModel()
 
     SmokerContainerManagerModel(ContainerID, Player &, BlockPos const&);
 };

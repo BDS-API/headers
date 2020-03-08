@@ -6,7 +6,7 @@
 class SHStartPiece : SHStairsDown {
 
 public:
-    SHStartPiece::~SHStartPiece()
+    virtual SHStartPiece::~SHStartPiece()
     virtual void getType()const;
 
     SHStartPiece(void);

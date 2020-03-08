@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 
 
 class MagmaBlock : BlockLegacy {
 
 public:
-    MagmaBlock::~MagmaBlock()
+    virtual MagmaBlock::~MagmaBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

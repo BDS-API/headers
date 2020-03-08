@@ -5,7 +5,7 @@
 class IDataInput {
 
 public:
-    IDataInput::~IDataInput()
+    virtual IDataInput::~IDataInput()
 
     IDataInput(void);
 };

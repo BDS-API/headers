@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
-#include "../util/BlockPos"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class EnderCrystal : Actor {
@@ -16,7 +16,7 @@ public:
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    EnderCrystal::~EnderCrystal()
+    virtual EnderCrystal::~EnderCrystal()
     virtual void normalTick();
     virtual void getShadowRadius()const;
     virtual bool isPickable();

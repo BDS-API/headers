@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../container/Container"
-#include "../../../unmapped/DataLoadHelper"
 #include "../../util/Tick"
-#include "../../../unmapped/Hopper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../../unmapped/Hopper"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../container/Container"
 
 
 class HopperBlockActor : BlockActor, Container, Hopper {
 
 public:
-    HopperBlockActor::~HopperBlockActor()
+    virtual HopperBlockActor::~HopperBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

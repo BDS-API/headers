@@ -7,7 +7,7 @@
 class StoneBlock : BlockLegacy {
 
 public:
-    StoneBlock::~StoneBlock()
+    virtual StoneBlock::~StoneBlock()
     virtual bool canBeOriginalSurface()const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void buildDescriptionId(Block const&)const;

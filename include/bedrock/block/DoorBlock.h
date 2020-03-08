@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../unmapped/Material"
-#include "../actor/Player"
+#include "unmapped/BlockSource"
 #include "../actor/Actor"
 #include "../util/Random"
+#include "../../unmapped/Material"
 #include "../util/BlockPos"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../actor/Player"
 #include "../util/AABB"
 
 
 class DoorBlock : BlockLegacy {
 
 public:
-    DoorBlock::~DoorBlock()
+    virtual DoorBlock::~DoorBlock()
     virtual void getNextBlockPermutation(Block const&)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const;

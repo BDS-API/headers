@@ -6,7 +6,7 @@
 class StructurePoolBlockPredicateAlwaysTrue : IStructurePoolBlockPredicate {
 
 public:
-    StructurePoolBlockPredicateAlwaysTrue::~StructurePoolBlockPredicateAlwaysTrue()
+    virtual StructurePoolBlockPredicateAlwaysTrue::~StructurePoolBlockPredicateAlwaysTrue()
     virtual void test(Block const&, Random &)const;
 
     StructurePoolBlockPredicateAlwaysTrue(void);

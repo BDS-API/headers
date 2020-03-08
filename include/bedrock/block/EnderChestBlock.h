@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class EnderChestBlock : ChestBlock {
 
 public:
-    EnderChestBlock::~EnderChestBlock()
+    virtual EnderChestBlock::~EnderChestBlock()
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;

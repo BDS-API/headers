@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../unmapped/IWorldRegistriesProvider"
-#include "../../unmapped/FilterInputs"
 #include "../definition/Definition"
+#include "../../unmapped/FilterInputs"
 
 
 class FilterTest {
 
 public:
-    FilterTest::~FilterTest()
+    virtual FilterTest::~FilterTest()
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void finalizeParsedValue(IWorldRegistriesProvider &);
     virtual void _serializeDomain()const;

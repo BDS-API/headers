@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../io/IDataOutput"
 #include "../io/IDataInput"
+#include "../io/IDataOutput"
 
 
 class IntTag : Tag {
 
 public:
-    IntTag::~IntTag()
+    virtual IntTag::~IntTag()
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
     virtual void toString()const;

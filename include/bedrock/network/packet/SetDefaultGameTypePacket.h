@@ -7,7 +7,7 @@
 class SetDefaultGameTypePacket : Packet {
 
 public:
-    SetDefaultGameTypePacket::~SetDefaultGameTypePacket()
+    virtual SetDefaultGameTypePacket::~SetDefaultGameTypePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

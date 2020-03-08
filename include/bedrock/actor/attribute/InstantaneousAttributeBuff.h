@@ -5,7 +5,7 @@
 class InstantaneousAttributeBuff : AttributeBuff {
 
 public:
-    InstantaneousAttributeBuff::~InstantaneousAttributeBuff()
+    virtual InstantaneousAttributeBuff::~InstantaneousAttributeBuff()
     virtual bool isInstantaneous()const;
     virtual bool isSerializable()const;
 

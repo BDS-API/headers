@@ -7,7 +7,7 @@
 class HangingActorItem : Item {
 
 public:
-    HangingActorItem::~HangingActorItem()
+    virtual HangingActorItem::~HangingActorItem()
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
     HangingActorItem(std::string const&, int, ActorType);

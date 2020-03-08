@@ -5,7 +5,7 @@
 class FlushableEnv : leveldb::EnvWrapper {
 
 public:
-    FlushableEnv::~FlushableEnv()
+    virtual FlushableEnv::~FlushableEnv()
 
     FlushableEnv(leveldb::Env *);
 };

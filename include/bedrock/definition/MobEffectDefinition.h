@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/MobEffectComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/MobEffectComponent"
 
 
 class MobEffectDefinition {

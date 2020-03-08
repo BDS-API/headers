@@ -6,7 +6,7 @@
 class GetInteractionPositionForBlockNode : BehaviorNode {
 
 public:
-    GetInteractionPositionForBlockNode::~GetInteractionPositionForBlockNode()
+    virtual GetInteractionPositionForBlockNode::~GetInteractionPositionForBlockNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockPalette"
 #include "../json/Value"
+#include "../bedrock/block/unmapped/BlockPalette"
 
 
 class FlatWorldGeneratorOptions {

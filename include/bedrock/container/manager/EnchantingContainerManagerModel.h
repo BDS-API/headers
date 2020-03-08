@@ -11,7 +11,7 @@ class EnchantingContainerManagerModel : ContainerManagerModel {
 public:
     static long NUM_OPTIONS;
 
-    EnchantingContainerManagerModel::~EnchantingContainerManagerModel()
+    virtual EnchantingContainerManagerModel::~EnchantingContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

@@ -7,7 +7,7 @@
 class LargeFireball : Fireball {
 
 public:
-    LargeFireball::~LargeFireball()
+    virtual LargeFireball::~LargeFireball()
 
     LargeFireball(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
     void setExplosionPower(int);

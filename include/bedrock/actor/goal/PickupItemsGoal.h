@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../item/ItemStack"
 #include "../Mob"
+#include "../../item/ItemStack"
 
 
 class PickupItemsGoal : Goal {
 
 public:
-    PickupItemsGoal::~PickupItemsGoal()
+    virtual PickupItemsGoal::~PickupItemsGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

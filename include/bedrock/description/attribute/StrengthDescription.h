@@ -7,7 +7,7 @@ class StrengthDescription : AttributeDescription {
 
 public:
     virtual void getJsonName()const;
-    StrengthDescription::~StrengthDescription()
+    virtual StrengthDescription::~StrengthDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

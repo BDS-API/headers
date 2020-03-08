@@ -7,7 +7,7 @@ using namespace Core;
 class File_c : Core::FileImpl {
 
 public:
-    Core::File_c::~File_c()
+    virtual Core::File_c::~File_c()
     virtual void _getPath()const;
     virtual void _getBlockSize()const;
     virtual void _isOpen();

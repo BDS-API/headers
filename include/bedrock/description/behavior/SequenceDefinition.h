@@ -7,7 +7,7 @@
 class SequenceDefinition : CompositeDefinition {
 
 public:
-    SequenceDefinition::~SequenceDefinition()
+    virtual SequenceDefinition::~SequenceDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     SequenceDefinition(void);

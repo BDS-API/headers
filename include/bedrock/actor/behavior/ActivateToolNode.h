@@ -6,7 +6,7 @@
 class ActivateToolNode : BehaviorNode {
 
 public:
-    ActivateToolNode::~ActivateToolNode()
+    virtual ActivateToolNode::~ActivateToolNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

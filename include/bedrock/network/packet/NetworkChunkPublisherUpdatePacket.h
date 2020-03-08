@@ -1,14 +1,14 @@
 #pragma once
 
+#include "../../io/BinaryStream"
 #include "../../util/BlockPos"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../io/BinaryStream"
 
 
 class NetworkChunkPublisherUpdatePacket : Packet {
 
 public:
-    NetworkChunkPublisherUpdatePacket::~NetworkChunkPublisherUpdatePacket()
+    virtual NetworkChunkPublisherUpdatePacket::~NetworkChunkPublisherUpdatePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

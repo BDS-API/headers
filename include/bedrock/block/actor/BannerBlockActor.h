@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
-#include "../../item/ItemInstance"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../item/ItemInstance"
+#include "../../item/ItemStack"
+#include "../../actor/Player"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class BannerBlockActor : BlockActor {
@@ -20,7 +20,7 @@ public:
     static long TAG_COLOR[abi:cxx11];
     static long TAG_TYPE[abi:cxx11];
 
-    BannerBlockActor::~BannerBlockActor()
+    virtual BannerBlockActor::~BannerBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

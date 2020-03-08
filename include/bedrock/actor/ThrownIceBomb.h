@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
 #include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -9,7 +9,7 @@ class ThrownIceBomb : Throwable {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    ThrownIceBomb::~ThrownIceBomb()
+    virtual ThrownIceBomb::~ThrownIceBomb()
 
     ThrownIceBomb(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

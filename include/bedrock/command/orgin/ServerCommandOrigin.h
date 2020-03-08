@@ -6,7 +6,7 @@
 class ServerCommandOrigin : CommandOrigin {
 
 public:
-    ServerCommandOrigin::~ServerCommandOrigin()
+    virtual ServerCommandOrigin::~ServerCommandOrigin()
     virtual void getRequestId()const;
     virtual void getName()const;
     virtual void getBlockPosition()const;

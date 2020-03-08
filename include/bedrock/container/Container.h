@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../../unmapped/ContainerSizeChangeListener"
-#include "../item/unmapped/ItemDescriptor"
-#include "../util/Vec3"
-#include "../../unmapped/ContainerContentChangeListener"
 #include "../block/unmapped/BlockSource"
-#include "../item/ItemInstance"
 #include "../nbt/CompoundTag"
+#include "../../unmapped/ContainerSizeChangeListener"
+#include "../../unmapped/ContainerContentChangeListener"
+#include "../item/ItemInstance"
+#include "../util/Vec3"
+#include "../item/unmapped/ItemDescriptor"
+#include "../item/ItemStack"
 
 
 class Container {
@@ -15,7 +15,7 @@ class Container {
 public:
     static long containerTypeMap[abi:cxx11];
 
-    Container::~Container()
+    virtual Container::~Container()
     virtual void init();
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);

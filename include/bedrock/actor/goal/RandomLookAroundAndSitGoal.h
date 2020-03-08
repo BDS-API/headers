@@ -6,7 +6,7 @@
 class RandomLookAroundAndSitGoal : RandomLookAroundGoal {
 
 public:
-    RandomLookAroundAndSitGoal::~RandomLookAroundAndSitGoal()
+    virtual RandomLookAroundAndSitGoal::~RandomLookAroundAndSitGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

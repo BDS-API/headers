@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/RailMovementComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/RailMovementComponent"
 
 
 class RailMovementDefinition {

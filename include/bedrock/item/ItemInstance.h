@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../block/BlockLegacy"
-#include "../../unmapped/Block"
 #include "../nbt/CompoundTag"
+#include "../../unmapped/Block"
 
 
 class ItemInstance : ItemStackBase {
@@ -10,7 +10,7 @@ class ItemInstance : ItemStackBase {
 public:
     static long EMPTY_ITEM;
 
-    ItemInstance::~ItemInstance()
+    virtual ItemInstance::~ItemInstance()
     virtual void reinit(Item const&, int, int);
     virtual void reinit(BlockLegacy const&, int);
 

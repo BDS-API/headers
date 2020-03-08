@@ -7,7 +7,7 @@ using namespace Core;
 class FileStorageArea {
 
 public:
-    Core::FileStorageArea::~FileStorageArea()
+    virtual Core::FileStorageArea::~FileStorageArea()
     virtual void notifyChangeInFileSize(long, long);
     virtual bool handlesPendingWrites()const;
     virtual void informPendingWriteSize(unsigned long const&, bool);

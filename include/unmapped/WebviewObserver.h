@@ -6,7 +6,7 @@
 class WebviewObserver : Core::Observer<WebviewObserver, Core::SingleThreadedLock> {
 
 public:
-    WebviewObserver::~WebviewObserver()
+    virtual WebviewObserver::~WebviewObserver()
     virtual void onLoadingBegin();
     virtual void onLoadingEnd();
     virtual void onError(WebviewError const&);

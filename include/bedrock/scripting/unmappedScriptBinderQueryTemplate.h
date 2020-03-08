@@ -5,7 +5,7 @@
 class ScriptBinderQueryTemplate : ScriptBinderTemplate {
 
 public:
-    ScriptBinderQueryTemplate::~ScriptBinderQueryTemplate()
+    virtual ScriptBinderQueryTemplate::~ScriptBinderQueryTemplate()
     virtual void getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
 

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../json/Value"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../json/Value"
 
 
 class ScriptCustomEventPacket : Packet {
 
 public:
-    ScriptCustomEventPacket::~ScriptCustomEventPacket()
+    virtual ScriptCustomEventPacket::~ScriptCustomEventPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

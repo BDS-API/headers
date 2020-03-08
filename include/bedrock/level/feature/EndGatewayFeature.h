@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../util/BlockPos"
-#include "../../block/unmapped/BlockSource"
 #include "../../util/Random"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class EndGatewayFeature : Feature {
 
 public:
-    EndGatewayFeature::~EndGatewayFeature()
+    virtual EndGatewayFeature::~EndGatewayFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     EndGatewayFeature(void);

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../../unmapped/ConnectionRequest"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class LoginPacket : Packet {
 
 public:
-    LoginPacket::~LoginPacket()
+    virtual LoginPacket::~LoginPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

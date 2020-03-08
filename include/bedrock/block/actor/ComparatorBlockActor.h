@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class ComparatorBlockActor : BlockActor {
 
 public:
-    ComparatorBlockActor::~ComparatorBlockActor()
+    virtual ComparatorBlockActor::~ComparatorBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

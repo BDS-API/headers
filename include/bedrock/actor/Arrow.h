@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "../item/ItemStack"
-#include "../../unmapped/DataLoadHelper"
-#include "../../unmapped/Particle"
-#include "../../unmapped/MobEffectInstance"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/VariantParameterList"
+#include "../item/ItemStack"
+#include "../util/Vec3"
+#include "../../unmapped/Particle"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Arrow : AbstractArrow {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    Arrow::~Arrow()
+    virtual Arrow::~Arrow()
     virtual void normalTick();
     virtual void playerTouch(Player &);
     virtual void setAuxValue(int);

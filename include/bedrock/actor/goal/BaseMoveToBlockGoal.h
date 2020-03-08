@@ -6,7 +6,7 @@
 class BaseMoveToBlockGoal : BaseMoveToGoal {
 
 public:
-    BaseMoveToBlockGoal::~BaseMoveToBlockGoal()
+    virtual BaseMoveToBlockGoal::~BaseMoveToBlockGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void _moveToBlock();

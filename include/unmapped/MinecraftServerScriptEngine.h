@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../bedrock/scripting/ScriptVersionInfo"
-#include "../bedrock/network/packet/sender/PacketSender"
-#include "../bedrock/ServerInstance"
 #include "../bedrock/scripting/unmapped/ScriptCommand"
+#include "../bedrock/network/packet/sender/PacketSender"
 #include "../bedrock/scripting/ScriptReportItem"
-#include "../bedrock/scripting/ScriptObjectHandle"
-#include "../bedrock/pack/ResourcePackManager"
-#include "../bedrock/Minecraft"
-#include "../bedrock/scripting/unmapped/ScriptServerContext"
 #include "../bedrock/level/Level"
+#include "../bedrock/scripting/ScriptObjectHandle"
+#include "../bedrock/Minecraft"
+#include "../bedrock/ServerInstance"
+#include "../bedrock/scripting/unmapped/ScriptServerContext"
+#include "../bedrock/scripting/ScriptVersionInfo"
+#include "../bedrock/pack/ResourcePackManager"
 
 
 class MinecraftServerScriptEngine : ScriptEngineWithContext<ScriptServerContext>, ServerInstanceEventListener {
 
 public:
-    MinecraftServerScriptEngine::~MinecraftServerScriptEngine()
+    virtual MinecraftServerScriptEngine::~MinecraftServerScriptEngine()
     virtual void setupInterface();
     virtual void onExecuteCommandCalled(ScriptApi::ScriptVersionInfo const&, ScriptCommand &&);
     virtual void executeCommand(ScriptCommand const&);

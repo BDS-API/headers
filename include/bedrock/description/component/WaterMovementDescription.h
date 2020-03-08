@@ -7,7 +7,7 @@ class WaterMovementDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    WaterMovementDescription::~WaterMovementDescription()
+    virtual WaterMovementDescription::~WaterMovementDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

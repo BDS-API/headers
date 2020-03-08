@@ -1,37 +1,37 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../text/TextObjectRoot"
-#include "../item/ShieldItem"
-#include "../util/Tick"
-#include "../network/packet/Packet"
-#include "../block/unmapped/BlockSource"
-#include "../util/AABB"
-#include "../../unmapped/Certificate"
-#include "../container/Container"
+#include "../level/chunksource/ChunkSource"
+#include "../container/manager/IContainerManager"
+#include "../network/packet/EventPacket"
+#include "../util/Vec3"
 #include "unmapped/ActorUniqueID"
-#include "../../unmapped/SerializedSkin"
+#include "../item/ItemStack"
+#include "../util/Tick"
 #include "../../unmapped/Dimension"
+#include "../../unmapped/NetworkIdentifier"
+#include "../nbt/CompoundTag"
+#include "../item/ShieldItem"
+#include "../block/actor/BlockActor"
+#include "../../mce/UUID"
+#include "../util/Vec2"
+#include "../../unmapped/Certificate"
+#include "../text/TextObjectRoot"
+#include "../network/packet/sender/PacketSender"
+#include "../container/Container"
+#include "../block/unmapped/BlockSource"
+#include "../level/Level"
+#include "../item/Item"
+#include "../item/unmapped/ItemGroup"
 #include "../util/BlockPos"
 #include "../../unmapped/Block"
-#include "../../unmapped/NetworkIdentifier"
-#include "../../unmapped/VariantParameterList"
-#include "../../mce/UUID"
-#include "damagesource/ActorDamageSource"
-#include "../block/actor/BlockActor"
-#include "../../unmapped/DataLoadHelper"
-#include "../item/unmapped/ItemGroup"
-#include "../block/actor/ChalkboardBlockActor"
 #include "../item/ItemInstance"
-#include "../nbt/CompoundTag"
-#include "../network/packet/sender/PacketSender"
-#include "../network/packet/EventPacket"
-#include "../container/manager/IContainerManager"
-#include "../util/Vec2"
-#include "../util/Vec3"
-#include "../item/Item"
-#include "../level/chunksource/ChunkSource"
-#include "../level/Level"
+#include "../util/AABB"
+#include "damagesource/ActorDamageSource"
+#include "../network/packet/Packet"
+#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/SerializedSkin"
+#include "../block/actor/ChalkboardBlockActor"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Player : Mob {
@@ -72,7 +72,7 @@ public:
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    Player::~Player()
+    virtual Player::~Player()
     virtual void remove();
     virtual void getAttachPos(ActorLocation, float)const;
     virtual void move(Vec3 const&);

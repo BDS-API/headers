@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../mce/UUID"
-#include "../bedrock/resourcepack/ResourcePackStack"
 #include "../bedrock/resourcepack/ResourcePack"
+#include "../mce/UUID"
 #include "../bedrock/resourcepack/ResourcePackRepository"
+#include "../bedrock/resourcepack/ResourcePackStack"
 
 
 class BaseGamePackSlices {

@@ -7,7 +7,7 @@
 class SetDifficultyPacket : Packet {
 
 public:
-    SetDifficultyPacket::~SetDifficultyPacket()
+    virtual SetDifficultyPacket::~SetDifficultyPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

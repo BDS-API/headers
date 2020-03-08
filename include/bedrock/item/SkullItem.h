@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../container/Container"
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../block/unmapped/BlockSource"
-#include "../util/BlockPos"
 #include "../nbt/CompoundTag"
+#include "../actor/Actor"
+#include "../util/BlockPos"
+#include "../util/Vec3"
 #include "unmapped/ItemDescriptor"
+#include "../container/Container"
 
 
 class SkullItem : Item {
 
 public:
-    SkullItem::~SkullItem()
+    virtual SkullItem::~SkullItem()
     virtual void getBlockShape()const;
     virtual void getLevelDataForAuxValue(int)const;
     virtual bool isValidAuxValue(int)const;

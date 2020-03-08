@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../bedrock/item/unmapped/ItemEnchants"
-#include "../bedrock/item/ItemStack"
 #include "../bedrock/actor/damagesource/ActorDamageSource"
 #include "../bedrock/actor/Actor"
 #include "../bedrock/actor/Player"
 #include "../bedrock/item/ItemInstance"
 #include "../bedrock/item/unmapped/ItemDescriptor"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/unmapped/ItemEnchants"
 
 
 class PlayerEventCoordinator {

@@ -8,7 +8,7 @@ using namespace WoodlandMansionPieces;
 class FirstFloorRoomCollection : WoodlandMansionPieces::FloorRoomCollection {
 
 public:
-    WoodlandMansionPieces::FirstFloorRoomCollection::~FirstFloorRoomCollection()
+    virtual WoodlandMansionPieces::FirstFloorRoomCollection::~FirstFloorRoomCollection()
     virtual void get1x1(Random &);
     virtual void get1x1Secret(Random &);
     virtual void get1x2SideEntrance(Random &, bool);

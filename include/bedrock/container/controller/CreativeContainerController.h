@@ -8,7 +8,7 @@
 class CreativeContainerController : ContainerController {
 
 public:
-    CreativeContainerController::~CreativeContainerController()
+    virtual CreativeContainerController::~CreativeContainerController()
     virtual bool isItemFiltered(Recipes const&, ContainerItemStack const&)const;
     virtual void getBackgroundStyle(int)const;
 

@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../Mob"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class MoveToWaterGoal : BaseMoveToBlockGoal {
 
 public:
-    MoveToWaterGoal::~MoveToWaterGoal()
+    virtual MoveToWaterGoal::~MoveToWaterGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void appendDebugInfo(std::string &)const;

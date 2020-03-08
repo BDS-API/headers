@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../Mob"
 #include "../../../unmapped/Dimension"
+#include "../Mob"
 #include "../Player"
 
 
 class FollowOwnerGoal : Goal {
 
 public:
-    FollowOwnerGoal::~FollowOwnerGoal()
+    virtual FollowOwnerGoal::~FollowOwnerGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

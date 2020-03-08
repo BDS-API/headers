@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../unmapped/Material"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../../unmapped/Material"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../util/AABB"
 
 
@@ -13,7 +13,7 @@ class BushBlock : BlockLegacy {
 public:
     static long MAX_GROWTH;
 
-    BushBlock::~BushBlock()
+    virtual BushBlock::~BushBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void waterSpreadCausesSpawn()const;

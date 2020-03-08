@@ -8,7 +8,7 @@
 class UpdateBlockPropertiesPacket : Packet {
 
 public:
-    UpdateBlockPropertiesPacket::~UpdateBlockPropertiesPacket()
+    virtual UpdateBlockPropertiesPacket::~UpdateBlockPropertiesPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

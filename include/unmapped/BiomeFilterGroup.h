@@ -5,7 +5,7 @@
 class BiomeFilterGroup : FilterGroup {
 
 public:
-    BiomeFilterGroup::~BiomeFilterGroup()
+    virtual BiomeFilterGroup::~BiomeFilterGroup()
     virtual void _createSubgroup(FilterGroup::CollectionType)const;
 
     BiomeFilterGroup(BiomeFilterGroup const&);

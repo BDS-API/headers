@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../util/BlockPos"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
-#include "../../../unmapped/Block"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class UpdateBlockPacket : Packet {
 
 public:
-    UpdateBlockPacket::~UpdateBlockPacket()
+    virtual UpdateBlockPacket::~UpdateBlockPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

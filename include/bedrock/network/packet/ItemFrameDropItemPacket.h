@@ -8,7 +8,7 @@
 class ItemFrameDropItemPacket : Packet {
 
 public:
-    ItemFrameDropItemPacket::~ItemFrameDropItemPacket()
+    virtual ItemFrameDropItemPacket::~ItemFrameDropItemPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../mce/UUID"
-#include "../../unmapped/IContentKeyProvider"
-#include "../../core/Path"
 #include "../../unmapped/WorldPackHistory"
-#include "../../unmapped/PackManifestFactory"
+#include "../../unmapped/IContentKeyProvider"
+#include "../../mce/UUID"
 #include "../../unmapped/PackIdVersion"
+#include "../../unmapped/PackManifestFactory"
+#include "../../core/Path"
 
 
 class WorldHistoryPackSource : PackSource {
 
 public:
-    WorldHistoryPackSource::~WorldHistoryPackSource()
+    virtual WorldHistoryPackSource::~WorldHistoryPackSource()
     virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
     virtual void forEachPack(std::function<void ()(Pack &)>);
     virtual void getPackOrigin()const;

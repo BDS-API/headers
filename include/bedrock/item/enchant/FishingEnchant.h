@@ -5,7 +5,7 @@
 class FishingEnchant : Enchant {
 
 public:
-    FishingEnchant::~FishingEnchant()
+    virtual FishingEnchant::~FishingEnchant()
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMaxLevel()const;

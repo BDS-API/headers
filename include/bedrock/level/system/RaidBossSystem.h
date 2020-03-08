@@ -6,7 +6,7 @@
 class RaidBossSystem : ITickingSystem {
 
 public:
-    RaidBossSystem::~RaidBossSystem()
+    virtual RaidBossSystem::~RaidBossSystem()
     virtual void tick(EntityRegistry &);
 
     RaidBossSystem(void);

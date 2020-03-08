@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
 #include "../bedrock/item/unmapped/ItemDescriptor"
+#include "../bedrock/item/ItemStack"
 
 
 class CraftableCompounds {
 
 public:
-    CraftableCompounds::~CraftableCompounds()
+    virtual CraftableCompounds::~CraftableCompounds()
     virtual void _registerCompound(std::vector<ItemStack, std::allocator<ItemStack>> const&, ItemStack const&, LabTableReactionType, CompoundContainerType);
 
     void getCompound(std::vector<ItemStack, std::allocator<ItemStack>> const&);

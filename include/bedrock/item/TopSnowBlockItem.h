@@ -7,7 +7,7 @@
 class TopSnowBlockItem : BlockItem {
 
 public:
-    TopSnowBlockItem::~TopSnowBlockItem()
+    virtual TopSnowBlockItem::~TopSnowBlockItem()
     virtual void getLevelDataForAuxValue(int)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 

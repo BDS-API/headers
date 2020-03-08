@@ -1,19 +1,19 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/DataLoadHelper"
-#include "unmapped/ActorUniqueID"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "../level/Level"
+#include "../util/Vec3"
+#include "unmapped/ActorUniqueID"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class FireworksRocketActor : Actor {
 
 public:
-    FireworksRocketActor::~FireworksRocketActor()
+    virtual FireworksRocketActor::~FireworksRocketActor()
     virtual void lerpMotion(Vec3 const&);
     virtual void normalTick();
     virtual void getShadowRadius()const;

@@ -6,7 +6,7 @@ class OnFriendlyAngerDescription : TriggerDescription {
 
 public:
     virtual void getJsonName()const;
-    OnFriendlyAngerDescription::~OnFriendlyAngerDescription()
+    virtual OnFriendlyAngerDescription::~OnFriendlyAngerDescription()
 
     OnFriendlyAngerDescription(void);
 };

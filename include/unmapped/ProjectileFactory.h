@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/actor/Mob"
+#include "../bedrock/level/Level"
 #include "../bedrock/util/Vec3"
 #include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
-#include "../bedrock/level/Level"
+#include "../json/Value"
 
 
 class ProjectileFactory {

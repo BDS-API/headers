@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/MobDescriptor"
 #include "../Mob"
+#include "../../../unmapped/MobDescriptor"
 
 
 class OwnerHurtTargetGoal : TargetGoal {
 
 public:
-    OwnerHurtTargetGoal::~OwnerHurtTargetGoal()
+    virtual OwnerHurtTargetGoal::~OwnerHurtTargetGoal()
     virtual bool canUse();
     virtual void start();
 

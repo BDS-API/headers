@@ -7,7 +7,7 @@ class FireImmuneDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    FireImmuneDescription::~FireImmuneDescription()
+    virtual FireImmuneDescription::~FireImmuneDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

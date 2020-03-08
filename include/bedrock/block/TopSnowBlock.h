@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../actor/unmapped/ActorBlockSyncMessage"
-#include "../actor/Player"
+#include "../util/Random"
+#include "unmapped/BlockSource"
 #include "../actor/Actor"
 #include "../actor/Mob"
-#include "../util/Vec3"
-#include "../util/Random"
+#include "../actor/unmapped/ActorBlockSyncMessage"
 #include "../util/BlockPos"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
@@ -17,7 +17,7 @@ class TopSnowBlock : HeavyBlock {
 public:
     static long MAX_HEIGHT;
 
-    TopSnowBlock::~TopSnowBlock()
+    virtual TopSnowBlock::~TopSnowBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;

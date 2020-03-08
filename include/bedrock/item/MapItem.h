@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../block/unmapped/BlockSource"
-#include "../../unmapped/MapItemSavedData"
 #include "../../unmapped/Dimension"
-#include "../util/BlockPos"
-#include "../../unmapped/MapItemTrackedActor"
-#include "../actor/Actor"
-#include "../../unmapped/MapSample"
 #include "../nbt/CompoundTag"
-#include "unmapped/ItemDescriptor"
+#include "../block/unmapped/BlockSource"
 #include "../level/Level"
+#include "../util/BlockPos"
+#include "../../unmapped/MapItemSavedData"
+#include "../../unmapped/MapSample"
+#include "../actor/Actor"
+#include "../../unmapped/MapItemTrackedActor"
+#include "unmapped/ItemDescriptor"
 
 
 class MapItem : ComplexItem {
@@ -22,7 +22,7 @@ public:
     static long TAG_MAP_NAME_INDEX[abi:cxx11];
     static long TAG_MAP_INIT[abi:cxx11];
 
-    MapItem::~MapItem()
+    virtual MapItem::~MapItem()
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;

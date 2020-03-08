@@ -6,7 +6,7 @@
 class PlayerUIContainerModel : PlayerUIContainerModelBase {
 
 public:
-    PlayerUIContainerModel::~PlayerUIContainerModel()
+    virtual PlayerUIContainerModel::~PlayerUIContainerModel()
     virtual void _getContainerOffset()const;
 
     PlayerUIContainerModel(ContainerEnumName, Player &);

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../unmapped/Block"
 #include "../../unmapped/Material"
+#include "../../unmapped/Block"
 
 
 class StainedGlassPaneBlock : ThinFenceBlock {
 
 public:
-    StainedGlassPaneBlock::~StainedGlassPaneBlock()
+    virtual StainedGlassPaneBlock::~StainedGlassPaneBlock()
     virtual void buildDescriptionId(Block const&)const;
     virtual bool isAuxValueRelevantForPicking()const;
     virtual void getSilkTouchItemInstance(Block const&)const;

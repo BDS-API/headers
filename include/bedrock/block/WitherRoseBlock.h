@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 
 
 class WitherRoseBlock : FlowerBlock {
 
 public:
-    WitherRoseBlock::~WitherRoseBlock()
+    virtual WitherRoseBlock::~WitherRoseBlock()
     virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;

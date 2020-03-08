@@ -6,7 +6,7 @@
 class SpawnActorSystem : ITickingSystem {
 
 public:
-    SpawnActorSystem::~SpawnActorSystem()
+    virtual SpawnActorSystem::~SpawnActorSystem()
     virtual void tick(EntityRegistry &);
 
     SpawnActorSystem(void);

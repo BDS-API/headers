@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/PhysicsComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/PhysicsComponent"
 
 
 class PhysicsDefinition {

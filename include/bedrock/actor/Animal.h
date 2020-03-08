@@ -1,7 +1,7 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionGroup"
 #include "../util/BlockPos"
 #include "unmapped/ActorDefinitionIdentifier"
 
@@ -9,7 +9,7 @@
 class Animal : Mob {
 
 public:
-    Animal::~Animal()
+    virtual Animal::~Animal()
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void _onSizeUpdated();

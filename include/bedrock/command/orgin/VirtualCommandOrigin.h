@@ -7,7 +7,7 @@
 class VirtualCommandOrigin : CommandOrigin {
 
 public:
-    VirtualCommandOrigin::~VirtualCommandOrigin()
+    virtual VirtualCommandOrigin::~VirtualCommandOrigin()
     virtual void getRequestId()const;
     virtual void getName()const;
     virtual void getBlockPosition()const;

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../unmapped/Block"
 #include "../nbt/CompoundTag"
+#include "../../unmapped/Block"
 #include "unmapped/ItemDescriptor"
 
 
 class ClothBlockItem : BlockItem {
 
 public:
-    ClothBlockItem::~ClothBlockItem()
+    virtual ClothBlockItem::~ClothBlockItem()
     virtual void getLevelDataForAuxValue(int)const;
     virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
 

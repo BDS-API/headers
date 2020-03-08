@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../util/AABB"
 
 
 class PotatoBlock : CropBlock {
 
 public:
-    PotatoBlock::~PotatoBlock()
+    virtual PotatoBlock::~PotatoBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void getVariant(Block const&)const;

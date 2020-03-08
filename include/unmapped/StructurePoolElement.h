@@ -1,10 +1,10 @@
 #pragma once
 
+#include "../bedrock/util/Vec3"
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
+#include "../bedrock/util/Random"
 #include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Random"
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
-#include "../bedrock/util/Vec3"
 
 
 class StructurePoolElement {
@@ -20,7 +20,7 @@ public:
     virtual void handleJigsawBlock(BlockSource *, JigsawBlockInfo &, LegacyStructureSettings &)const;
     virtual void handleDataMarker(BlockSource *, BlockPos, std::string, std::unordered_map<BlockPos, ActorDefinitionIdentifier, std::hash<BlockPos>, std::equal_to<BlockPos>, std::allocator<std::pair<BlockPos const, ActorDefinitionIdentifier>>> &)const;
     virtual bool isValid()const;
-    StructurePoolElement::~StructurePoolElement()
+    virtual StructurePoolElement::~StructurePoolElement()
 
     StructurePoolElement(StructureManager &, std::string, Projection);
     void _getTemplate()const;

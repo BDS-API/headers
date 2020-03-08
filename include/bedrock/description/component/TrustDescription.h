@@ -7,7 +7,7 @@ class TrustDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    TrustDescription::~TrustDescription()
+    virtual TrustDescription::~TrustDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

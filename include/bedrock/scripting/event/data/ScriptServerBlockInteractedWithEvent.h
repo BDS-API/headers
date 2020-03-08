@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../unmapped/ScriptEngine"
-#include "../../../actor/unmapped/ActorUniqueID"
-#include "../../ScriptObjectHandle"
 #include "../../../util/BlockPos"
+#include "../../ScriptObjectHandle"
+#include "../../../actor/unmapped/ActorUniqueID"
+#include "../../unmapped/ScriptEngine"
 
 
 class ScriptServerBlockInteractedWithEvent : ScriptEventData {
@@ -11,7 +11,7 @@ class ScriptServerBlockInteractedWithEvent : ScriptEventData {
 public:
     static long mHash;
 
-    ScriptServerBlockInteractedWithEvent::~ScriptServerBlockInteractedWithEvent()
+    virtual ScriptServerBlockInteractedWithEvent::~ScriptServerBlockInteractedWithEvent()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
     void getHash();

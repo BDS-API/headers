@@ -7,7 +7,7 @@ class TimerDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    TimerDescription::~TimerDescription()
+    virtual TimerDescription::~TimerDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

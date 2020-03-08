@@ -6,7 +6,7 @@
 class EnderpearlItem : Item {
 
 public:
-    EnderpearlItem::~EnderpearlItem()
+    virtual EnderpearlItem::~EnderpearlItem()
     virtual bool isThrowable()const;
     virtual void use(ItemStack &, Player &)const;
     virtual void getCooldownType()const;

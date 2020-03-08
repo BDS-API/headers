@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../unmapped/ScriptEngine"
-#include "../../ScriptObjectHandle"
 #include "../../../util/BlockPos"
+#include "../../ScriptObjectHandle"
+#include "../../unmapped/ScriptEngine"
 
 
 class ScriptServerBlockMovedByPistonEvent : ScriptEventData {
@@ -10,7 +10,7 @@ class ScriptServerBlockMovedByPistonEvent : ScriptEventData {
 public:
     static long mHash;
 
-    ScriptServerBlockMovedByPistonEvent::~ScriptServerBlockMovedByPistonEvent()
+    virtual ScriptServerBlockMovedByPistonEvent::~ScriptServerBlockMovedByPistonEvent()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
     void getHash();

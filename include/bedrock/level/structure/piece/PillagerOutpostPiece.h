@@ -1,13 +1,13 @@
 #pragma once
 
+#include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/Dimension"
+#include "../../../actor/unmapped/ActorDefinitionIdentifier"
+#include "../../LevelChunk"
+#include "../../../util/BlockPos"
 #include "../../../../unmapped/StructureManager"
 #include "../../../../unmapped/BoundingBox"
-#include "../../../util/Random"
-#include "../../../../unmapped/Dimension"
-#include "../../../util/BlockPos"
-#include "../../../actor/unmapped/ActorDefinitionIdentifier"
-#include "../../../block/unmapped/BlockSource"
-#include "../../LevelChunk"
 
 
 using namespace PillagerOutpostPieces;
@@ -15,7 +15,7 @@ using namespace PillagerOutpostPieces;
 class PillagerOutpostPiece : TemplateStructurePiece {
 
 public:
-    PillagerOutpostPieces::PillagerOutpostPiece::~PillagerOutpostPiece()
+    virtual PillagerOutpostPieces::PillagerOutpostPiece::~PillagerOutpostPiece()
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void addHardcodedSpawnAreas(LevelChunk &)const;

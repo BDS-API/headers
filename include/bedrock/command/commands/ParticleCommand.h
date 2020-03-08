@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../CommandRegistry"
 #include "../orgin/CommandOrigin"
 #include "../CommandOutput"
 #include "../Command"
-#include "../CommandRegistry"
 
 
 class ParticleCommand : Command {
 
 public:
-    ParticleCommand::~ParticleCommand()
+    virtual ParticleCommand::~ParticleCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

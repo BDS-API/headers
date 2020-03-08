@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../../io/IDataInput"
-#include "../../block/unmapped/BlockPalette"
-#include "../../io/IDataOutput"
 #include "../../../unmapped/Block"
+#include "../../io/IDataOutput"
+#include "../../block/unmapped/BlockPalette"
 
 
 class SubChunkBlockStorage {
 
 public:
-    SubChunkBlockStorage::~SubChunkBlockStorage()
+    virtual SubChunkBlockStorage::~SubChunkBlockStorage()
     virtual bool asPalettedStorage();
     virtual bool asPalettedStorage()const;
 

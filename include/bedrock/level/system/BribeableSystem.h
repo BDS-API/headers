@@ -6,7 +6,7 @@
 class BribeableSystem : ITickingSystem {
 
 public:
-    BribeableSystem::~BribeableSystem()
+    virtual BribeableSystem::~BribeableSystem()
     virtual void tick(EntityRegistry &);
 
     BribeableSystem(void);

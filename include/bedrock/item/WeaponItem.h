@@ -1,16 +1,16 @@
 #pragma once
 
-#include "unmapped/Tier"
-#include "../actor/Player"
 #include "../actor/Mob"
-#include "../../unmapped/Block"
 #include "../level/Level"
+#include "../../unmapped/Block"
+#include "../actor/Player"
+#include "unmapped/Tier"
 
 
 class WeaponItem : Item {
 
 public:
-    WeaponItem::~WeaponItem()
+    virtual WeaponItem::~WeaponItem()
     virtual bool canDestroySpecial(Block const&)const;
     virtual void getAttackDamage()const;
     virtual bool isHandEquipped()const;

@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../Mob"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class HarvestFarmBlockGoal : BaseMoveToBlockGoal {
 
 public:
-    HarvestFarmBlockGoal::~HarvestFarmBlockGoal()
+    virtual HarvestFarmBlockGoal::~HarvestFarmBlockGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

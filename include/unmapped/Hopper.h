@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/container/Container"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/util/BlockPos"
 #include "../bedrock/actor/ItemActor"
 #include "../bedrock/util/Vec3"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/container/Container"
 
 
 class Hopper {

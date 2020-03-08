@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../ItemStack"
 #include "../../actor/Actor"
-#include "../../actor/Player"
 #include "../ItemInstance"
+#include "../../actor/Player"
+#include "../ItemStack"
 
 
 class ItemEventCoordinator {

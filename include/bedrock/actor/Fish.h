@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "../../unmapped/RenderParams"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -10,7 +10,7 @@ class Fish : WaterAnimal {
 
 public:
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    Fish::~Fish()
+    virtual Fish::~Fish()
     virtual void normalTick();
     virtual void startRiding(Actor &);
     virtual void playerTouch(Player &);

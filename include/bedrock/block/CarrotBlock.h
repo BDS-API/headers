@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../util/AABB"
 
 
 class CarrotBlock : CropBlock {
 
 public:
-    CarrotBlock::~CarrotBlock()
+    virtual CarrotBlock::~CarrotBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getRenderLayer()const;

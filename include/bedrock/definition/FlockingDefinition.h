@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../../json/Value"
-#include "../../unmapped/EntityContext"
 #include "../../unmapped/FlockingComponent"
+#include "../../unmapped/EntityContext"
 
 
 class FlockingDefinition {

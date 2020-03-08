@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
 #include "../../../unmapped/PageContent"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class BookEditPacket : Packet {
 
 public:
-    BookEditPacket::~BookEditPacket()
+    virtual BookEditPacket::~BookEditPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

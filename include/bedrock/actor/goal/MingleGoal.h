@@ -1,10 +1,10 @@
 #pragma once
 
+#include "../Mob"
 #include "../Actor"
 #include "../unmapped/ActorUniqueID"
-#include "../Mob"
-#include "../../../unmapped/MingleComponent"
 #include "../unmapped/ActorDefinitionIdentifier"
+#include "../../../unmapped/MingleComponent"
 
 
 class MingleGoal : MoveToPOIGoal {
@@ -14,7 +14,7 @@ public:
     static long SPEAK_INTERVAL_TICKS_MIN;
     static long SPEAK_INTERVAL_TICKS_MAX;
 
-    MingleGoal::~MingleGoal()
+    virtual MingleGoal::~MingleGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

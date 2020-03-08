@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../unmapped/Block"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
 #include "../actor/Player"
 
 
@@ -13,7 +13,7 @@ public:
     static long MIN_NEIGHBORS;
     static long MAX_AGE;
 
-    FrostedIceBlock::~FrostedIceBlock()
+    virtual FrostedIceBlock::~FrostedIceBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;

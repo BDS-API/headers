@@ -7,7 +7,7 @@ using namespace Core;
 class FileSystemImpl {
 
 public:
-    Core::FileSystemImpl::~FileSystemImpl()
+    virtual Core::FileSystemImpl::~FileSystemImpl()
     virtual bool isValidPath(Core::Path const&);
     virtual bool isRelativePath(Core::Path const&);
     virtual void getLastModificationTime(Core::Path const&, long *);

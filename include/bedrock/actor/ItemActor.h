@@ -1,14 +1,14 @@
 #pragma once
 
+#include "damagesource/ActorDamageSource"
+#include "../nbt/CompoundTag"
+#include "../block/unmapped/BlockSource"
+#include "unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
 #include "../item/ItemStack"
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
 #include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../block/unmapped/BlockSource"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class ItemActor : Actor {
@@ -17,7 +17,7 @@ public:
     static long LIFETIME;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    ItemActor::~ItemActor()
+    virtual ItemActor::~ItemActor()
     virtual void getAddPacket();
     virtual void normalTick();
     virtual void playerTouch(Player &);

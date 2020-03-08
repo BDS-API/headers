@@ -6,7 +6,7 @@
 class EndermanTakeBlockGoal : Goal {
 
 public:
-    EndermanTakeBlockGoal::~EndermanTakeBlockGoal()
+    virtual EndermanTakeBlockGoal::~EndermanTakeBlockGoal()
     virtual bool canUse();
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;

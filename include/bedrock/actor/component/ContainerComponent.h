@@ -1,23 +1,23 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../level/Level"
+#include "../../block/unmapped/BlockSource"
 #include "../Actor"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../nbt/CompoundTag"
+#include "../../level/Level"
+#include "../../../unmapped/ContainerContentChangeListener"
 #include "../../description/component/ContainerDescription"
+#include "../Player"
+#include "../../item/ItemStack"
 #include "../ItemActor"
 #include "../../util/Vec3"
-#include "../../../unmapped/ContainerContentChangeListener"
-#include "../../block/unmapped/BlockSource"
-#include "../Player"
-#include "../../nbt/CompoundTag"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class ContainerComponent : ContainerContentChangeListener, IEntityComponent {
 
 public:
     virtual void containerContentChanged(int);
-    ContainerComponent::~ContainerComponent()
+    virtual ContainerComponent::~ContainerComponent()
 
     ContainerComponent(void);
     ContainerComponent(ContainerComponent&&);

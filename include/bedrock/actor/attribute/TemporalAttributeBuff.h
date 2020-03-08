@@ -6,7 +6,7 @@
 class TemporalAttributeBuff : AttributeBuff {
 
 public:
-    TemporalAttributeBuff::~TemporalAttributeBuff()
+    virtual TemporalAttributeBuff::~TemporalAttributeBuff()
     virtual bool isInstantaneous()const;
     virtual bool isSerializable()const;
     virtual void setDurationAmplifier(std::shared_ptr<Amplifier>);

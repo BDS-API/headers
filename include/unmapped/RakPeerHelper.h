@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../raknet/SocketDescriptor"
-#include "../bedrock/definition/ConnectionDefinition"
 #include "../raknet/RakPeerInterface"
+#include "../bedrock/definition/ConnectionDefinition"
 
 
 class RakPeerHelper {

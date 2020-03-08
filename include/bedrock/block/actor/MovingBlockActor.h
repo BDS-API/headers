@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../../unmapped/Block"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class MovingBlockActor : BlockActor {
 
 public:
-    MovingBlockActor::~MovingBlockActor()
+    virtual MovingBlockActor::~MovingBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

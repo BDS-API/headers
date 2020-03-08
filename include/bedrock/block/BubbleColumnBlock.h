@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 #include "../util/AABB"
 
@@ -11,7 +11,7 @@
 class BubbleColumnBlock : BlockLegacy {
 
 public:
-    BubbleColumnBlock::~BubbleColumnBlock()
+    virtual BubbleColumnBlock::~BubbleColumnBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;

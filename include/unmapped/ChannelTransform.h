@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/util/Vec3"
+#include "../json/Value"
 
 
 class ChannelTransform {

@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../bedrock/item/Item"
-#include "../bedrock/item/ItemInstance"
 #include "../bedrock/item/unmapped/ItemDescriptor"
+#include "../bedrock/item/ItemInstance"
 
 
 using namespace PotionBrewing;

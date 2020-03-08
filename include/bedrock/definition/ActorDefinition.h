@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../actor/unmapped/ActorDefinitionDescriptor"
 #include "../../json/Value"
+#include "../actor/unmapped/ActorDefinitionDescriptor"
 
 
 class ActorDefinition {

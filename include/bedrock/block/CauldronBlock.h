@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "unmapped/BlockSource"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../../unmapped/Block"
-#include "../actor/Actor"
-#include "../util/Random"
 #include "../util/Vec3"
-#include "../util/AABB"
+#include "../item/ItemStack"
+#include "../actor/Player"
+#include "../util/Random"
+#include "unmapped/BlockSource"
 #include "../level/Level"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../util/AABB"
+#include "../actor/Actor"
 
 
 class CauldronBlock : ActorBlock {
@@ -18,7 +18,7 @@ public:
     static long BASE_WATER_PIXEL;
     static long PIXEL_PER_LEVEL;
 
-    CauldronBlock::~CauldronBlock()
+    virtual CauldronBlock::~CauldronBlock()
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;

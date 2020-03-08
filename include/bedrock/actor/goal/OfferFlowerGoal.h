@@ -6,7 +6,7 @@
 class OfferFlowerGoal : Goal {
 
 public:
-    OfferFlowerGoal::~OfferFlowerGoal()
+    virtual OfferFlowerGoal::~OfferFlowerGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

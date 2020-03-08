@@ -5,7 +5,7 @@
 class CameraItem : Item {
 
 public:
-    CameraItem::~CameraItem()
+    virtual CameraItem::~CameraItem()
 
     CameraItem(std::string const&, int);
 };

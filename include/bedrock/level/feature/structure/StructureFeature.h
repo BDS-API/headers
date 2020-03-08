@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../../../unmapped/HardcodedSpawnAreaRegistry"
-#include "../../../../unmapped/BiomeSource"
-#include "../../../util/ChunkPos"
-#include "../../../../unmapped/BoundingBox"
 #include "../../../util/Random"
-#include "../../../../unmapped/Dimension"
-#include "../../../util/BlockPos"
 #include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/BiomeSource"
 #include "../../LevelChunk"
+#include "../../../util/BlockPos"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../util/ChunkPos"
+#include "../../../../unmapped/HardcodedSpawnAreaRegistry"
 
 
 class StructureFeature {
 
 public:
-    StructureFeature::~StructureFeature()
+    virtual StructureFeature::~StructureFeature()
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void postProcess(BlockSource *, Random &, int, int);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);

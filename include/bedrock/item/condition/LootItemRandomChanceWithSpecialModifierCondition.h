@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../json/Value"
-#include "../../../unmapped/LootTableContext"
 #include "../../util/Random"
+#include "../../../unmapped/LootTableContext"
+#include "../../../json/Value"
 
 
 class LootItemRandomChanceWithSpecialModifierCondition : LootItemCondition {
 
 public:
-    LootItemRandomChanceWithSpecialModifierCondition::~LootItemRandomChanceWithSpecialModifierCondition()
+    virtual LootItemRandomChanceWithSpecialModifierCondition::~LootItemRandomChanceWithSpecialModifierCondition()
     virtual void applies(Random &, LootTableContext &);
 
     LootItemRandomChanceWithSpecialModifierCondition(float);

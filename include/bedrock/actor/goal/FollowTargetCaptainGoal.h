@@ -6,7 +6,7 @@
 class FollowTargetCaptainGoal : MoveTowardsTargetGoal {
 
 public:
-    FollowTargetCaptainGoal::~FollowTargetCaptainGoal()
+    virtual FollowTargetCaptainGoal::~FollowTargetCaptainGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/ChunkPos"
 #include "../bedrock/util/BlockPos"
+#include "../bedrock/util/ChunkPos"
 
 
 class Bounds {

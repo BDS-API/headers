@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../io/IDataOutput"
 #include "../io/IDataInput"
+#include "../io/IDataOutput"
 
 
 class ShortTag : Tag {
 
 public:
-    ShortTag::~ShortTag()
+    virtual ShortTag::~ShortTag()
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
     virtual void toString()const;

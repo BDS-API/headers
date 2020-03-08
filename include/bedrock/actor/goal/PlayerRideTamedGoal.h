@@ -6,7 +6,7 @@
 class PlayerRideTamedGoal : Goal {
 
 public:
-    PlayerRideTamedGoal::~PlayerRideTamedGoal()
+    virtual PlayerRideTamedGoal::~PlayerRideTamedGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

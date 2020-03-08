@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../container/Container"
-#include "../actor/Actor"
-#include "../actor/Mob"
-#include "../util/Vec3"
-#include "../util/BlockPos"
 #include "../block/unmapped/BlockSource"
+#include "../actor/Mob"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../util/Vec3"
+#include "../container/Container"
 
 
 class ShearsItem : Item {
 
 public:
-    ShearsItem::~ShearsItem()
+    virtual ShearsItem::~ShearsItem()
     virtual bool canDestroySpecial(Block const&)const;
     virtual void getEnchantSlot()const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;

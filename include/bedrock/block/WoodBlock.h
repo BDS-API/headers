@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class WoodBlock : RotatedPillarBlock {
 
 public:
-    WoodBlock::~WoodBlock()
+    virtual WoodBlock::~WoodBlock()
     virtual bool isStrippable(Block const&)const;
     virtual void getStrippedBlock(Block const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;

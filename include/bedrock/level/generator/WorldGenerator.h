@@ -6,7 +6,7 @@
 class WorldGenerator {
 
 public:
-    WorldGenerator::~WorldGenerator()
+    virtual WorldGenerator::~WorldGenerator()
     virtual void debugRender();
     virtual void addHardcodedSpawnAreas(LevelChunk &);
 

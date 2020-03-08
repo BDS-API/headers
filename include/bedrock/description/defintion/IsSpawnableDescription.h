@@ -6,7 +6,7 @@
 class IsSpawnableDescription : DefintionDescription {
 
 public:
-    IsSpawnableDescription::~IsSpawnableDescription()
+    virtual IsSpawnableDescription::~IsSpawnableDescription()
     virtual void getJsonName()const;
 
     IsSpawnableDescription(void);

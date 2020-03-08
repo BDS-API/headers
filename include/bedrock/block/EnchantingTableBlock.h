@@ -8,7 +8,7 @@
 class EnchantingTableBlock : ActorBlock {
 
 public:
-    EnchantingTableBlock::~EnchantingTableBlock()
+    virtual EnchantingTableBlock::~EnchantingTableBlock()
     virtual bool isCraftingBlock()const;
     virtual bool isInteractiveBlock()const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;

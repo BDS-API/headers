@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/LegacyTradeableComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/LegacyTradeableComponent"
 
 
 class LegacyTradeableDefinition {

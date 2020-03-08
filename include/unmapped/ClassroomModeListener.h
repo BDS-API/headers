@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
+#include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/actor/Actor"
 #include "../bedrock/eventing/IMinecraftEventing"
-#include "../bedrock/level/LevelListener"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
 #include "../bedrock/level/LevelChunk"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/level/LevelListener"
 
 
 class ClassroomModeListener : LevelListener {
 
 public:
-    ClassroomModeListener::~ClassroomModeListener()
+    virtual ClassroomModeListener::~ClassroomModeListener()
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);
     virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);
     virtual void onEntityAdded(Actor &);

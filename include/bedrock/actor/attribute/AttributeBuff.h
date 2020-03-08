@@ -7,7 +7,7 @@
 class AttributeBuff {
 
 public:
-    AttributeBuff::~AttributeBuff()
+    virtual AttributeBuff::~AttributeBuff()
     virtual void setDurationAmplifier(std::shared_ptr<Amplifier>);
 
     AttributeBuff(AttributeBuff const&);

@@ -5,7 +5,7 @@
 class ISurfaceBuilder {
 
 public:
-    ISurfaceBuilder::~ISurfaceBuilder()
+    virtual ISurfaceBuilder::~ISurfaceBuilder()
 
     ISurfaceBuilder(void);
 };

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/MobDescriptor"
 #include "../Mob"
+#include "../../../unmapped/MobDescriptor"
 
 
 class DefendVillageTargetGoal : TargetGoal {
 
 public:
-    DefendVillageTargetGoal::~DefendVillageTargetGoal()
+    virtual DefendVillageTargetGoal::~DefendVillageTargetGoal()
     virtual bool canUse();
     virtual void start();
     virtual void appendDebugInfo(std::string &)const;

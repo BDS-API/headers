@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/container/Container"
-#include "../json/Value"
 #include "../bedrock/util/Random"
+#include "../bedrock/container/Container"
+#include "../bedrock/item/ItemStack"
+#include "../json/Value"
 
 
 class LootTable {

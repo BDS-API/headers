@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/definition/BehaviorTreeDefinition"
+#include "../json/Value"
 #include "../bedrock/pack/ResourcePackManager"
 
 

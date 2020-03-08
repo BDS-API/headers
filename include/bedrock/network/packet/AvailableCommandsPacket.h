@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/EnumData"
+#include "../../io/BinaryStream"
 #include "../../../unmapped/CommandData"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/SoftEnumData"
 #include "../../../unmapped/ConstrainedValueData"
-#include "../../io/BinaryStream"
+#include "../../../unmapped/SoftEnumData"
+#include "../../../unmapped/EnumData"
 
 
 class AvailableCommandsPacket : Packet {
 
 public:
-    AvailableCommandsPacket::~AvailableCommandsPacket()
+    virtual AvailableCommandsPacket::~AvailableCommandsPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

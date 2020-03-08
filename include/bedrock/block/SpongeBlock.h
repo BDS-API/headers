@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
-#include "../../unmapped/Block"
 #include "../../unmapped/Material"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
 
 
 class SpongeBlock : BlockLegacy {
 
 public:
-    SpongeBlock::~SpongeBlock()
+    virtual SpongeBlock::~SpongeBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isValidAuxValue(int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

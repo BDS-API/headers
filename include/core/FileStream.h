@@ -7,7 +7,7 @@ using namespace Core;
 class FileStream : std::iostream {
 
 public:
-    Core::FileStream::~FileStream()
+    virtual Core::FileStream::~FileStream()
 
     void is_open()const;
     void close();

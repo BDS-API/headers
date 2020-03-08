@@ -8,7 +8,7 @@
 class KnockbackRoarGoal : Goal {
 
 public:
-    KnockbackRoarGoal::~KnockbackRoarGoal()
+    virtual KnockbackRoarGoal::~KnockbackRoarGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

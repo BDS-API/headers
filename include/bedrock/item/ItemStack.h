@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
 #include "../block/BlockLegacy"
 #include "../actor/Mob"
-#include "../../unmapped/RecipeIngredient"
-#include "../../unmapped/Block"
+#include "../actor/Actor"
 #include "../nbt/CompoundTag"
 #include "../level/Level"
+#include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../../unmapped/RecipeIngredient"
 
 
 class ItemStack : ItemStackBase {
@@ -15,7 +15,7 @@ class ItemStack : ItemStackBase {
 public:
     static long EMPTY_ITEM;
 
-    ItemStack::~ItemStack()
+    virtual ItemStack::~ItemStack()
     virtual void reinit(Item const&, int, int);
     virtual void reinit(BlockLegacy const&, int);
 

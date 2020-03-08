@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/Scheduler"
-#include "../bedrock/util/Vec3"
 #include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/level/Level"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/Scheduler"
 
 
 class TheEndDimension : Dimension {
@@ -11,7 +11,7 @@ class TheEndDimension : Dimension {
 public:
     static long AMBIENT_MULTIPLIER;
 
-    TheEndDimension::~TheEndDimension()
+    virtual TheEndDimension::~TheEndDimension()
     virtual void init();
     virtual void tick();
     virtual void createGenerator();

@@ -8,7 +8,7 @@
 class RemoveObjectivePacket : Packet {
 
 public:
-    RemoveObjectivePacket::~RemoveObjectivePacket()
+    virtual RemoveObjectivePacket::~RemoveObjectivePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

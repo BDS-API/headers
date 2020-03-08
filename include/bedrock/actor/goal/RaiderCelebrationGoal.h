@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/FloatRange"
 #include "../Mob"
 #include "../../definition/DefinitionTrigger"
+#include "../../../unmapped/FloatRange"
 
 
 class RaiderCelebrationGoal : Goal {
 
 public:
-    RaiderCelebrationGoal::~RaiderCelebrationGoal()
+    virtual RaiderCelebrationGoal::~RaiderCelebrationGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

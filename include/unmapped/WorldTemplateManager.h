@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../mce/UUID"
 #include "../core/FilePathManager"
+#include "../mce/UUID"
 
 
 class WorldTemplateManager {

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../../mce/UUID"
-#include "../../container/CraftingContainer"
 #include "../../level/Level"
+#include "../../container/CraftingContainer"
+#include "../../../mce/UUID"
 
 
 class FireworksRecipe : MultiRecipe {
@@ -10,7 +10,7 @@ class FireworksRecipe : MultiRecipe {
 public:
     static long ID;
 
-    FireworksRecipe::~FireworksRecipe()
+    virtual FireworksRecipe::~FireworksRecipe()
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize()const;
     virtual void getIngredient(int, int)const;

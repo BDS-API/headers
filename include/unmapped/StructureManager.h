@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../core/Path"
 #include "../bedrock/pack/ResourcePackManager"
 #include "../bedrock/level/storage/LevelStorage"
+#include "../core/Path"
 
 
 class StructureManager {

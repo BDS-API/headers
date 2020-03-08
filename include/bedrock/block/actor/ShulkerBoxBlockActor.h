@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
-#include "../../util/AABB"
 #include "../unmapped/BlockSource"
-#include "../../item/ItemInstance"
+#include "../../actor/Actor"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../item/ItemInstance"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/AABB"
 
 
 class ShulkerBoxBlockActor : ChestBlockActor {
@@ -15,7 +15,7 @@ class ShulkerBoxBlockActor : ChestBlockActor {
 public:
     static long ITEMS_SIZE;
 
-    ShulkerBoxBlockActor::~ShulkerBoxBlockActor()
+    virtual ShulkerBoxBlockActor::~ShulkerBoxBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

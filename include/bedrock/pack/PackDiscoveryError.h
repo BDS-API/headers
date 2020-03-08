@@ -5,7 +5,7 @@
 class PackDiscoveryError : PackError {
 
 public:
-    PackDiscoveryError::~PackDiscoveryError()
+    virtual PackDiscoveryError::~PackDiscoveryError()
     virtual void getLocErrorMessageMap()const;
     virtual void getEventErrorMessageMap()const;
 

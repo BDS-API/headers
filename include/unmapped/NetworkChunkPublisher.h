@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../bedrock/util/ChunkPos"
-#include "../bedrock/network/packet/LevelChunkPacket"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/level/chunksource/ChunkSource"
+#include "../bedrock/network/packet/LevelChunkPacket"
 #include "../bedrock/level/Level"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/ChunkPos"
 
 
 class NetworkChunkPublisher {
 
 public:
-    NetworkChunkPublisher::~NetworkChunkPublisher()
+    virtual NetworkChunkPublisher::~NetworkChunkPublisher()
 
     NetworkChunkPublisher(Level &, NetworkHandler &, ClientBlobCache::Server::ActiveTransfersManager &, NetworkIdentifier const&, unsigned char);
     void prepareRegion(ChunkSource &, ChunkPos &);

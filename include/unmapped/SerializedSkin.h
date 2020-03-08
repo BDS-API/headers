@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../json/Value"
+#include "../bedrock/io/BinaryStream"
 #include "../mce/Image"
 #include "../bedrock/io/ReadOnlyBinaryStream"
-#include "../bedrock/io/BinaryStream"
+#include "../json/Value"
 
 
 class SerializedSkin {

@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/LevelChunk"
 #include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/level/LevelChunk"
 
 
 class VanillaLevelChunkUpgrade {

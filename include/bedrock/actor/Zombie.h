@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -13,7 +13,7 @@ public:
     static long SPAWN_REINFORCEMENTS_CHANCE;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    Zombie::~Zombie()
+    virtual Zombie::~Zombie()
     virtual void getRidingHeight();
     virtual void die(ActorDamageSource const&);
     virtual void checkSpawnRules(bool);

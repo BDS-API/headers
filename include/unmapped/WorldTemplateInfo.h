@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../bedrock/pack/WorldTemplatePackManifest"
 #include "../bedrock/pack/WorldTemplatePackSource"
 #include "../core/Path"
-#include "../bedrock/pack/WorldTemplatePackManifest"
 
 
 class WorldTemplateInfo {

@@ -6,7 +6,7 @@ class OnHurtDescription : TriggerDescription {
 
 public:
     virtual void getJsonName()const;
-    OnHurtDescription::~OnHurtDescription()
+    virtual OnHurtDescription::~OnHurtDescription()
 
     OnHurtDescription(void);
 };

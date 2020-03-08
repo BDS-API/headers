@@ -7,7 +7,7 @@
 class SleepGoal : MoveToPOIGoal {
 
 public:
-    SleepGoal::~SleepGoal()
+    virtual SleepGoal::~SleepGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

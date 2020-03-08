@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../bedrock/level/LevelData"
-#include "../bedrock/level/LevelListener"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/level/LevelListener"
+#include "../bedrock/level/LevelData"
 
 
 class Weather : LevelListener {
 
 public:
-    Weather::~Weather()
+    virtual Weather::~Weather()
     virtual void levelEvent(LevelEvent, Vec3 const&, int);
 
     Weather(Dimension &);

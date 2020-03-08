@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../unmapped/BaseGameVersion"
-#include "actor/BlockActor"
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/Random"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "actor/BlockActor"
+#include "../util/Vec3"
+#include "../../unmapped/BaseGameVersion"
 
 
 class ChemistryTableBlock : ActorBlock {
 
 public:
-    ChemistryTableBlock::~ChemistryTableBlock()
+    virtual ChemistryTableBlock::~ChemistryTableBlock()
     virtual bool isCraftingBlock()const;
     virtual bool isWaterBlocking()const;
     virtual bool isValidAuxValue(int)const;

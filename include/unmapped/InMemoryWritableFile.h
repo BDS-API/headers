@@ -5,7 +5,7 @@
 class InMemoryWritableFile : leveldb::WritableFile {
 
 public:
-    InMemoryWritableFile::~InMemoryWritableFile()
+    virtual InMemoryWritableFile::~InMemoryWritableFile()
     virtual void Append(leveldb::Slice const&);
     virtual void Close();
     virtual void Flush();

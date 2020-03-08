@@ -6,7 +6,7 @@
 class IsExperimentalDescription : DefintionDescription {
 
 public:
-    IsExperimentalDescription::~IsExperimentalDescription()
+    virtual IsExperimentalDescription::~IsExperimentalDescription()
     virtual void getJsonName()const;
 
     IsExperimentalDescription(void);

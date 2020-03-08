@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/Mob"
 #include "../../io/BinaryStream"
+#include "../../actor/Mob"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../item/ItemStack"
 
 
 class MobArmorEquipmentPacket : Packet {
 
 public:
-    MobArmorEquipmentPacket::~MobArmorEquipmentPacket()
+    virtual MobArmorEquipmentPacket::~MobArmorEquipmentPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

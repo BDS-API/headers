@@ -7,7 +7,7 @@
 class WorkbenchBlock : BlockLegacy {
 
 public:
-    WorkbenchBlock::~WorkbenchBlock()
+    virtual WorkbenchBlock::~WorkbenchBlock()
     virtual bool isCraftingBlock()const;
     virtual void use(Player &, BlockPos const&)const;
 

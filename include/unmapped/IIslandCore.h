@@ -7,7 +7,7 @@ using namespace BedrockEngine;
 class IIslandCore {
 
 public:
-    BedrockEngine::IIslandCore::~IIslandCore()
+    virtual BedrockEngine::IIslandCore::~IIslandCore()
 
     IIslandCore(void);
 };

@@ -7,7 +7,7 @@
 class Goal {
 
 public:
-    Goal::~Goal()
+    virtual Goal::~Goal()
     virtual bool canContinueToUse();
     virtual bool canBeInterrupted();
     virtual void start();

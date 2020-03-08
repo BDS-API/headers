@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
 #include "../bedrock/definition/GeneDefinition"
+#include "../bedrock/actor/Actor"
 #include "../bedrock/nbt/CompoundTag"
 
 

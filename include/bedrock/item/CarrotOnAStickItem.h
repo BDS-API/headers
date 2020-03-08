@@ -7,7 +7,7 @@
 class CarrotOnAStickItem : Item {
 
 public:
-    CarrotOnAStickItem::~CarrotOnAStickItem()
+    virtual CarrotOnAStickItem::~CarrotOnAStickItem()
     virtual bool isHandEquipped()const;
     virtual bool requiresInteract()const;
     virtual void getEnchantSlot()const;

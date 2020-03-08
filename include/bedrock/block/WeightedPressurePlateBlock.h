@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
-#include "../../unmapped/Block"
 #include "../../unmapped/Material"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class WeightedPressurePlateBlock : BasePressurePlateBlock {
@@ -12,7 +12,7 @@ public:
     static long MAX_WEIGHT_LIGHT;
     static long MAX_WEIGHT_HEAVY;
 
-    WeightedPressurePlateBlock::~WeightedPressurePlateBlock()
+    virtual WeightedPressurePlateBlock::~WeightedPressurePlateBlock()
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getTickDelay()const;
     virtual void getSignalStrength(BlockSource &, BlockPos const&)const;

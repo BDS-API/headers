@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../block/unmapped/BlockPalette"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
-#include "../../../unmapped/ContentIdentity"
-#include "../../util/Vec2"
-#include "../../util/Vec3"
 #include "../../io/BinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID"
 #include "../../level/LevelSettings"
+#include "../../../unmapped/ContentIdentity"
+#include "../../util/Vec3"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../util/Vec2"
+#include "../../block/unmapped/BlockPalette"
 
 
 class StartGamePacket : Packet {
 
 public:
-    StartGamePacket::~StartGamePacket()
+    virtual StartGamePacket::~StartGamePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

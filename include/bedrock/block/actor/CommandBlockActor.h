@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../../unmapped/DataLoadHelper"
-#include "../../../unmapped/UIProfanityContext"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../../unmapped/UIProfanityContext"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class CommandBlockActor : BlockActor {
 
 public:
-    CommandBlockActor::~CommandBlockActor()
+    virtual CommandBlockActor::~CommandBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveBlockData(CompoundTag &, BlockSource &)const;

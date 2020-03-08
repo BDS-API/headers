@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
@@ -19,7 +19,7 @@ public:
     static long VINE_WEST;
     static long VINE_ALL;
 
-    VineBlock::~VineBlock()
+    virtual VineBlock::~VineBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void waterSpreadCausesSpawn()const;

@@ -7,7 +7,7 @@
 class SignItem : Item {
 
 public:
-    SignItem::~SignItem()
+    virtual SignItem::~SignItem()
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 

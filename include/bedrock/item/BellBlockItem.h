@@ -7,7 +7,7 @@
 class BellBlockItem : BlockItem {
 
 public:
-    BellBlockItem::~BellBlockItem()
+    virtual BellBlockItem::~BellBlockItem()
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
     BellBlockItem(std::string const&, int);

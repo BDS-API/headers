@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
@@ -14,7 +14,7 @@ class ScaffoldingBlock : HeavyBlock {
 public:
     static long MAX_STABILITY;
 
-    ScaffoldingBlock::~ScaffoldingBlock()
+    virtual ScaffoldingBlock::~ScaffoldingBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;

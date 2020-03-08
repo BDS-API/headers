@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../../../unmapped/NetworkHandler"
 #include "../../../../unmapped/NetworkIdentifier"
+#include "../../../../unmapped/NetworkHandler"
 #include "../Packet"
 #include "../../../actor/Player"
 
@@ -9,7 +9,7 @@
 class NetworkStatistics : PacketObserver {
 
 public:
-    NetworkStatistics::~NetworkStatistics()
+    virtual NetworkStatistics::~NetworkStatistics()
     virtual void packetSentTo(NetworkIdentifier const&, Packet const&, unsigned int);
     virtual void packetReceivedFrom(NetworkIdentifier const&, Packet const&, unsigned int);
     virtual void dataSentTo(NetworkIdentifier const&, gsl::basic_string_span<char const, -1l>);

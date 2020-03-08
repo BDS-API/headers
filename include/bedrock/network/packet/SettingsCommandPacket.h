@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class SettingsCommandPacket : Packet {
 
 public:
-    SettingsCommandPacket::~SettingsCommandPacket()
+    virtual SettingsCommandPacket::~SettingsCommandPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

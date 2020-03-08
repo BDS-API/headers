@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
-#include "../bedrock/description/component/SpawnActorDescription"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/description/component/SpawnActorDescription"
 
 
 class SpawnActorComponent {

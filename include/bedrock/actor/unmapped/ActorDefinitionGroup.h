@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../level/Level"
-#include "../../../json/Value"
-#include "../../../core/Path"
-#include "../../eventing/IMinecraftEventing"
 #include "../../definition/ActorDefinition"
-#include "../../../unmapped/SemVersion"
 #include "../../../unmapped/PackInstance"
-#include "../../pack/ResourcePackManager"
+#include "../../eventing/IMinecraftEventing"
+#include "../../level/Level"
 #include "../../../unmapped/HashString"
+#include "../../../unmapped/SemVersion"
+#include "../../../core/Path"
+#include "../../../json/Value"
+#include "../../pack/ResourcePackManager"
 
 
 class ActorDefinitionGroup {
 
 public:
-    ActorDefinitionGroup::~ActorDefinitionGroup()
+    virtual ActorDefinitionGroup::~ActorDefinitionGroup()
 
     ActorDefinitionGroup(Level &, ResourcePackManager &, IMinecraftEventing &, bool);
     void _getResources(Level &);

@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../util/BlockPos"
+#include "../../../../unmapped/CircuitTrackingInfo"
 
 
 class BaseCircuitComponent {
 
 public:
-    BaseCircuitComponent::~BaseCircuitComponent()
+    virtual BaseCircuitComponent::~BaseCircuitComponent()
     virtual void getStrength()const;
     virtual void getDirection()const;
     virtual void setStrength(int);

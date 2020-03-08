@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
 #include "../../unmapped/RenderParams"
+#include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -11,7 +11,7 @@ class TripodCamera : Mob {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    TripodCamera::~TripodCamera()
+    virtual TripodCamera::~TripodCamera()
     virtual void remove();
     virtual bool breaksFallingBlocks()const;
     virtual void normalTick();

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../Actor"
-#include "../../../unmapped/FloatRange"
 #include "../Mob"
-#include "../../definition/DefinitionTrigger"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../definition/DefinitionTrigger"
+#include "../Actor"
+#include "../../util/BlockPos"
+#include "../../../unmapped/FloatRange"
 
 
 class DropItemForGoal : BaseMoveToBlockGoal {
@@ -13,7 +13,7 @@ class DropItemForGoal : BaseMoveToBlockGoal {
 public:
     static long COOLDOWN_TICKS;
 
-    DropItemForGoal::~DropItemForGoal()
+    virtual DropItemForGoal::~DropItemForGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

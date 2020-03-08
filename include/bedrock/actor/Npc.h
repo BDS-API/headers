@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
 #include "../../unmapped/MobEffectInstance"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -15,7 +15,7 @@ public:
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    Npc::~Npc()
+    virtual Npc::~Npc()
     virtual bool breaksFallingBlocks()const;
     virtual bool canShowNameTag()const;
     virtual void getFormattedNameTag()const;

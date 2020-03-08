@@ -7,7 +7,7 @@
 class RegionFile {
 
 public:
-    RegionFile::~RegionFile()
+    virtual RegionFile::~RegionFile()
 
     RegionFile(Core::Path const&);
     void _close();

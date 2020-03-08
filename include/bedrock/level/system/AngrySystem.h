@@ -6,7 +6,7 @@
 class AngrySystem : ITickingSystem {
 
 public:
-    AngrySystem::~AngrySystem()
+    virtual AngrySystem::~AngrySystem()
     virtual void tick(EntityRegistry &);
 
     AngrySystem(void);

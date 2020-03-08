@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../unmapped/PathfinderNode"
-#include "../../unmapped/EndDragonFight"
-#include "../util/BlockPos"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/MobEffectInstance"
 #include "../util/Vec3"
+#include "../../unmapped/EndDragonFight"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/PathfinderNode"
+#include "../../unmapped/MobEffectInstance"
+#include "unmapped/ActorDefinitionGroup"
+#include "../util/BlockPos"
 #include "../util/AABB"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/VariantParameterList"
 
 
 class EnderDragon : Monster {
@@ -21,7 +21,7 @@ public:
     static long MAX_PATH_RADIUS;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    EnderDragon::~EnderDragon()
+    virtual EnderDragon::~EnderDragon()
     virtual void remove();
     virtual bool canExistInPeaceful()const;
     virtual void getShadowRadius()const;

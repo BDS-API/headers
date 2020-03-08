@@ -6,7 +6,7 @@
 class TakeFlowerGoal : Goal {
 
 public:
-    TakeFlowerGoal::~TakeFlowerGoal()
+    virtual TakeFlowerGoal::~TakeFlowerGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

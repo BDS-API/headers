@@ -6,7 +6,7 @@
 class WaitTicksNode : BehaviorNode {
 
 public:
-    WaitTicksNode::~WaitTicksNode()
+    virtual WaitTicksNode::~WaitTicksNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

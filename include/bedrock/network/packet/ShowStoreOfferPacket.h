@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class ShowStoreOfferPacket : Packet {
 
 public:
-    ShowStoreOfferPacket::~ShowStoreOfferPacket()
+    virtual ShowStoreOfferPacket::~ShowStoreOfferPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

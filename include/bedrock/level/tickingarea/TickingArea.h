@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../../mce/UUID"
-#include "../LevelChunk"
-#include "../../actor/Actor"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../../unmapped/Bounds"
-#include "../../util/Tick"
-#include "../../util/Vec3"
 #include "../../util/Random"
+#include "../../util/Tick"
+#include "../../actor/Actor"
 #include "../../../unmapped/Dimension"
+#include "../LevelChunk"
+#include "../../../unmapped/Bounds"
+#include "../../../mce/UUID"
+#include "../../util/Vec3"
+#include "../../actor/unmapped/ActorUniqueID"
 
 
 class TickingArea : ITickingArea {
 
 public:
-    TickingArea::~TickingArea()
+    virtual TickingArea::~TickingArea()
     virtual void getId()const;
     virtual void getName()const;
     virtual void getEntityId()const;

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/item/ItemInstance"
 
 
 class MerchantRecipe {

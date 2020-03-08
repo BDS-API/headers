@@ -6,7 +6,7 @@
 class EndPortalBlockActor : BlockActor {
 
 public:
-    EndPortalBlockActor::~EndPortalBlockActor()
+    virtual EndPortalBlockActor::~EndPortalBlockActor()
 
     EndPortalBlockActor(BlockPos const&);
 };

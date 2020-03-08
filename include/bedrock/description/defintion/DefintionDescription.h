@@ -5,7 +5,7 @@
 class DefintionDescription {
 
 public:
-    DefintionDescription::~DefintionDescription()
+    virtual DefintionDescription::~DefintionDescription()
 
     DefintionDescription(void);
     DefintionDescription(DefintionDescription const&);

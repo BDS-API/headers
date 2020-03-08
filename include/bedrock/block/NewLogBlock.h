@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class NewLogBlock : LogBlock {
 
 public:
-    NewLogBlock::~NewLogBlock()
+    virtual NewLogBlock::~NewLogBlock()
     virtual bool isStrippable(Block const&)const;
     virtual void getStrippedBlock(Block const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;

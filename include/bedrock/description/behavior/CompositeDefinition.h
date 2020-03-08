@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../../../unmapped/BehaviorFactory"
 #include "../../../unmapped/BehaviorTreeDefinitionPtr"
+#include "../../../json/Value"
 
 
 class CompositeDefinition : BehaviorDefinition {
 
 public:
-    CompositeDefinition::~CompositeDefinition()
+    virtual CompositeDefinition::~CompositeDefinition()
 
     CompositeDefinition(void);
     void getCount()const;

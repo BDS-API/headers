@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Block"
+#include "../../util/BlockPos"
 
 
 class TallGrassFeature : Feature {
 
 public:
-    TallGrassFeature::~TallGrassFeature()
+    virtual TallGrassFeature::~TallGrassFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     TallGrassFeature(Block const&);

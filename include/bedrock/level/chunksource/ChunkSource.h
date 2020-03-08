@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../block/unmapped/BlockSource"
-#include "../../util/ChunkPos"
-#include "../../../unmapped/Dimension"
-#include "../../util/BlockPos"
-#include "../LevelChunk"
-#include "../../util/Random"
 #include "../LevelChunkFinalDeleter"
+#include "../../../unmapped/Dimension"
+#include "../../util/Random"
+#include "../../block/unmapped/BlockSource"
+#include "../LevelChunk"
+#include "../../util/BlockPos"
+#include "../../util/ChunkPos"
 
 
 class ChunkSource {
 
 public:
-    ChunkSource::~ChunkSource()
+    virtual ChunkSource::~ChunkSource()
     virtual void shutdown();
     virtual bool isShutdownDone();
     virtual void getExistingChunk(ChunkPos const&);

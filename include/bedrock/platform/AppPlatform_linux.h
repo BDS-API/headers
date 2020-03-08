@@ -6,7 +6,7 @@
 class AppPlatform_linux : AppPlatform {
 
 public:
-    AppPlatform_linux::~AppPlatform_linux()
+    virtual AppPlatform_linux::~AppPlatform_linux()
     virtual void getPackagePath()const;
     virtual void getCurrentStoragePath()const;
     virtual void getExternalStoragePath()const;

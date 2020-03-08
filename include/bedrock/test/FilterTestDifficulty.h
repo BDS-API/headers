@@ -6,7 +6,7 @@
 class FilterTestDifficulty : SimpleIntFilterTest {
 
 public:
-    FilterTestDifficulty::~FilterTestDifficulty()
+    virtual FilterTestDifficulty::~FilterTestDifficulty()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

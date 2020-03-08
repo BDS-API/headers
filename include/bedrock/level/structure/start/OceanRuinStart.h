@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../biome/Biome"
-#include "../../../../unmapped/BoundingBox"
 #include "../../../util/Random"
-#include "../../../../unmapped/Dimension"
 #include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/Dimension"
+#include "../../biome/Biome"
 #include "../../chunksource/OverworldGenerator"
+#include "../../../../unmapped/BoundingBox"
 
 
 class OceanRuinStart : StructureStart {
 
 public:
-    OceanRuinStart::~OceanRuinStart()
+    virtual OceanRuinStart::~OceanRuinStart()
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void getType()const;
 

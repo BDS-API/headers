@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class DisconnectPacket : Packet {
 
 public:
-    DisconnectPacket::~DisconnectPacket()
+    virtual DisconnectPacket::~DisconnectPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

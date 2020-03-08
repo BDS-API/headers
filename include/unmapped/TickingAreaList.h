@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
 #include "../bedrock/level/LevelChunk"
+#include "../bedrock/util/Vec3"
 
 
 class TickingAreaList {

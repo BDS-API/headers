@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../Actor"
 #include "../Mob"
+#include "../Actor"
 
 
 class DelayedAttackGoal : MeleeAttackGoal {
 
 public:
-    DelayedAttackGoal::~DelayedAttackGoal()
+    virtual DelayedAttackGoal::~DelayedAttackGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

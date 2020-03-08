@@ -7,7 +7,7 @@ class TrailDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    TrailDescription::~TrailDescription()
+    virtual TrailDescription::~TrailDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

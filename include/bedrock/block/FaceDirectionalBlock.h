@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../actor/Actor"
-#include "../util/Vec3"
+#include "../../unmapped/Material"
 #include "../util/BlockPos"
 #include "../../unmapped/Block"
-#include "../../unmapped/Material"
+#include "../util/Vec3"
 
 
 class FaceDirectionalBlock : BlockLegacy {
 
 public:
-    FaceDirectionalBlock::~FaceDirectionalBlock()
+    virtual FaceDirectionalBlock::~FaceDirectionalBlock()
     virtual bool isValidAuxValue(int)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual void getMappedFace(unsigned char, Block const&)const;

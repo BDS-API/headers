@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../util/BlockPos"
 #include "../util/Vec3"
 #include "../../json/Value"
+#include "../util/BlockPos"
 
 
 class CommandPropertyBag {
 
 public:
-    CommandPropertyBag::~CommandPropertyBag()
+    virtual CommandPropertyBag::~CommandPropertyBag()
 
     CommandPropertyBag(void);
     CommandPropertyBag(Json::Value const&);

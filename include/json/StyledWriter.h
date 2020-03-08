@@ -7,7 +7,7 @@ using namespace Json;
 class StyledWriter : Json::Writer {
 
 public:
-    Json::StyledWriter::~StyledWriter()
+    virtual Json::StyledWriter::~StyledWriter()
     virtual void write(Json::Value const&);
 
     StyledWriter(void);

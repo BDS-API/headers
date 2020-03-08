@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../../../unmapped/MobSpawnRules"
+#include "../../../json/Value"
 #include "../../pack/ResourcePackManager"
 
 
 class ActorSpawnRuleBase {
 
 public:
-    ActorSpawnRuleBase::~ActorSpawnRuleBase()
+    virtual ActorSpawnRuleBase::~ActorSpawnRuleBase()
 
     ActorSpawnRuleBase(void);
     void _registerSpawnRules(std::function<void ()(std::string const&, int, BiomeFilterGroup &, MobSpawnRules &)>, MobSpawnRules const&, Json::Value &, std::string const&);

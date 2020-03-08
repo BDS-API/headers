@@ -7,7 +7,7 @@
 class OreBlock : BlockLegacy {
 
 public:
-    OreBlock::~OreBlock()
+    virtual OreBlock::~OreBlock()
     virtual bool canBeOriginalSurface()const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;

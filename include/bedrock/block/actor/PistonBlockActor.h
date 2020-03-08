@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/Vec3"
-#include "../../util/BlockPos"
-#include "../../util/AABB"
 #include "../unmapped/BlockSource"
-#include "../../../unmapped/Block"
+#include "../../actor/Actor"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../util/Vec3"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/AABB"
 
 
 class PistonBlockActor : BlockActor {
@@ -16,7 +16,7 @@ class PistonBlockActor : BlockActor {
 public:
     static long ARM_ANIMATION_SPEED;
 
-    PistonBlockActor::~PistonBlockActor()
+    virtual PistonBlockActor::~PistonBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

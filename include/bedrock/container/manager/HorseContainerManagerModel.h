@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../actor/unmapped/ActorUniqueID"
 #include "../../../unmapped/ContainerItemStack"
 #include "../../actor/Player"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../item/ItemStack"
 
 
 class HorseContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    HorseContainerManagerModel::~HorseContainerManagerModel()
+    virtual HorseContainerManagerModel::~HorseContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

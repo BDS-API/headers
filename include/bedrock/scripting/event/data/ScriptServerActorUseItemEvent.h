@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../unmapped/ScriptEngine"
-#include "../../../actor/unmapped/ActorUniqueID"
 #include "../../ScriptObjectHandle"
 #include "../../../item/ItemInstance"
+#include "../../../actor/unmapped/ActorUniqueID"
+#include "../../unmapped/ScriptEngine"
 
 
 class ScriptServerActorUseItemEvent : ScriptEventData {
@@ -11,7 +11,7 @@ class ScriptServerActorUseItemEvent : ScriptEventData {
 public:
     static long mHash;
 
-    ScriptServerActorUseItemEvent::~ScriptServerActorUseItemEvent()
+    virtual ScriptServerActorUseItemEvent::~ScriptServerActorUseItemEvent()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
     void getHash();

@@ -7,7 +7,7 @@ class IsShakingDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    IsShakingDescription::~IsShakingDescription()
+    virtual IsShakingDescription::~IsShakingDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

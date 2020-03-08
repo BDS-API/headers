@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 
 
 class ConcretePowderBlock : HeavyBlock {
 
 public:
-    ConcretePowderBlock::~ConcretePowderBlock()
+    virtual ConcretePowderBlock::~ConcretePowderBlock()
     virtual bool isValidAuxValue(int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;

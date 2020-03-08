@@ -1,17 +1,17 @@
 #pragma once
 
+#include "../../util/Random"
+#include "../../../unmapped/LootTableContext"
+#include "../ItemInstance"
+#include "../condition/LootItemCondition"
 #include "../ItemStack"
 #include "../../../json/Value"
-#include "../condition/LootItemCondition"
-#include "../../../unmapped/LootTableContext"
-#include "../../util/Random"
-#include "../ItemInstance"
 
 
 class SetDataFromColorIndexFunction : LootItemFunction {
 
 public:
-    SetDataFromColorIndexFunction::~SetDataFromColorIndexFunction()
+    virtual SetDataFromColorIndexFunction::~SetDataFromColorIndexFunction()
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
 

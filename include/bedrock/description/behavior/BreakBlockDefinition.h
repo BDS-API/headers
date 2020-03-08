@@ -7,7 +7,7 @@
 class BreakBlockDefinition : BehaviorDefinition {
 
 public:
-    BreakBlockDefinition::~BreakBlockDefinition()
+    virtual BreakBlockDefinition::~BreakBlockDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     BreakBlockDefinition(void);

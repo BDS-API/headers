@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorUniqueID"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 
 
 class MingleComponent {

@@ -6,7 +6,7 @@
 class BurnsInDaylightSystem : ITickingSystem {
 
 public:
-    BurnsInDaylightSystem::~BurnsInDaylightSystem()
+    virtual BurnsInDaylightSystem::~BurnsInDaylightSystem()
     virtual void tick(EntityRegistry &);
 
     BurnsInDaylightSystem(void);

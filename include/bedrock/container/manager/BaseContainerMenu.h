@@ -1,17 +1,17 @@
 #pragma once
 
+#include "../../../unmapped/ContainerContentChangeListener"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
 #include "../../item/ItemStack"
 #include "../Container"
-#include "../../util/BlockPos"
-#include "../../../unmapped/ContainerContentChangeListener"
-#include "../../actor/Player"
 
 
 class BaseContainerMenu : ContainerContentChangeListener, IContainerManager {
 
 public:
     virtual void containerContentChanged(int);
-    BaseContainerMenu::~BaseContainerMenu()
+    virtual BaseContainerMenu::~BaseContainerMenu()
     virtual bool isSlotDirty(int);
     virtual bool isResultSlot(int);
     virtual void setData(int, int);

@@ -5,7 +5,7 @@
 class CrossbowEnchant : Enchant {
 
 public:
-    CrossbowEnchant::~CrossbowEnchant()
+    virtual CrossbowEnchant::~CrossbowEnchant()
     virtual bool isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

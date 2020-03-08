@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../actor/Player"
 #include "../nbt/CompoundTag"
 #include "../../unmapped/PageContent"
+#include "../actor/Player"
 
 
 class WritableBookItem : Item {
 
 public:
-    WritableBookItem::~WritableBookItem()
+    virtual WritableBookItem::~WritableBookItem()
     virtual bool requiresInteract()const;
     virtual void use(ItemStack &, Player &)const;
     virtual void getInteractText(Player const&)const;

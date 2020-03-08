@@ -6,7 +6,7 @@
 class BreakDoorAnnotationSystem : ITickingSystem {
 
 public:
-    BreakDoorAnnotationSystem::~BreakDoorAnnotationSystem()
+    virtual BreakDoorAnnotationSystem::~BreakDoorAnnotationSystem()
     virtual void tick(EntityRegistry &);
 
     BreakDoorAnnotationSystem(void);

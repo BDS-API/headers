@@ -6,7 +6,7 @@
 class AgentCommandExecutionGoal : Goal {
 
 public:
-    AgentCommandExecutionGoal::~AgentCommandExecutionGoal()
+    virtual AgentCommandExecutionGoal::~AgentCommandExecutionGoal()
     virtual bool canUse();
     virtual bool canBeInterrupted();
     virtual void start();

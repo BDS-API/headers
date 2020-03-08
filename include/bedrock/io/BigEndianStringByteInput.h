@@ -5,7 +5,7 @@
 class BigEndianStringByteInput : StringByteInput {
 
 public:
-    BigEndianStringByteInput::~BigEndianStringByteInput()
+    virtual BigEndianStringByteInput::~BigEndianStringByteInput()
     virtual void readFloat();
     virtual void readDouble();
     virtual void readShort();

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
+#include "unmapped/ActorDefinitionGroup"
 #include "../item/Item"
+#include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/Block"
+#include "unmapped/ActorDefinitionIdentifier"
 
 
 class Horse : Animal {
@@ -16,7 +16,7 @@ public:
     static long DONKEY_CHEST_COUNT;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    Horse::~Horse()
+    virtual Horse::~Horse()
     virtual void getInterpolatedRidingOffset(float)const;
     virtual void normalTick();
     virtual void positionRider(Actor &, float);

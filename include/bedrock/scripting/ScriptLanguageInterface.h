@@ -7,7 +7,7 @@ using namespace ScriptApi;
 class ScriptLanguageInterface {
 
 public:
-    ScriptApi::ScriptLanguageInterface::~ScriptLanguageInterface()
+    virtual ScriptApi::ScriptLanguageInterface::~ScriptLanguageInterface()
 
     ScriptLanguageInterface(void);
 };

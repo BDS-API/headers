@@ -7,7 +7,7 @@ using namespace RakNet;
 class RakPeerInterface {
 
 public:
-    RakNet::RakPeerInterface::~RakPeerInterface()
+    virtual RakNet::RakPeerInterface::~RakPeerInterface()
 
     void GetInstance();
     void DestroyInstance(RakNet::RakPeerInterface*);

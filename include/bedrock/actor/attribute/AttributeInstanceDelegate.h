@@ -5,7 +5,7 @@
 class AttributeInstanceDelegate {
 
 public:
-    AttributeInstanceDelegate::~AttributeInstanceDelegate()
+    virtual AttributeInstanceDelegate::~AttributeInstanceDelegate()
     virtual void tick();
     virtual void notify(long);
     virtual void change(float, float, AttributeBuffInfo);

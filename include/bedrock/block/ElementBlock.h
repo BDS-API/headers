@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../../unmapped/BaseGameVersion"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 #include "../item/ItemInstance"
+#include "../../unmapped/BaseGameVersion"
+#include "../item/ItemStack"
 
 
 class ElementBlock : BlockLegacy {
@@ -13,7 +13,7 @@ class ElementBlock : BlockLegacy {
 public:
     static long mElements;
 
-    ElementBlock::~ElementBlock()
+    virtual ElementBlock::~ElementBlock()
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual void buildDescriptionId(Block const&)const;

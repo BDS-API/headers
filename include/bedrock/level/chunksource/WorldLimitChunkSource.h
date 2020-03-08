@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../util/ChunkPos"
 #include "../../util/BlockPos"
+#include "../../util/ChunkPos"
 
 
 class WorldLimitChunkSource : ChunkSource {
 
 public:
-    WorldLimitChunkSource::~WorldLimitChunkSource()
+    virtual WorldLimitChunkSource::~WorldLimitChunkSource()
     virtual void shutdown();
     virtual void getExistingChunk(ChunkPos const&);
     virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);

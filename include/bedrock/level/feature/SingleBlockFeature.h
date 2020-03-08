@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../util/BlockPos"
 #include "../../util/Random"
 #include "../../../unmapped/IBlockPlacementTarget"
+#include "../../util/BlockPos"
 
 
 class SingleBlockFeature : IFeature {
 
 public:
-    SingleBlockFeature::~SingleBlockFeature()
+    virtual SingleBlockFeature::~SingleBlockFeature()
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
 
     SingleBlockFeature(void);

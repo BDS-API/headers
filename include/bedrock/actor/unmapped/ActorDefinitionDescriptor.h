@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../../unmapped/VariantParameterList"
 #include "../Actor"
 #include "../../definition/DefinitionTrigger"
 #include "../../../unmapped/HashString"
+#include "../../../unmapped/VariantParameterList"
 
 
 class ActorDefinitionDescriptor {

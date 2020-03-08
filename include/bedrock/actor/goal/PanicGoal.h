@@ -7,7 +7,7 @@
 class PanicGoal : Goal {
 
 public:
-    PanicGoal::~PanicGoal()
+    virtual PanicGoal::~PanicGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

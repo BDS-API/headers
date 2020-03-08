@@ -7,7 +7,7 @@
 class ServerFileChunkUploader : IFileChunkUploader, std::enable_shared_from_this<ServerFileChunkUploader> {
 
 public:
-    ServerFileChunkUploader::~ServerFileChunkUploader()
+    virtual ServerFileChunkUploader::~ServerFileChunkUploader()
     virtual void update();
     virtual void initFileUploader(std::string const&, FileInfo const&, int, Json::Value const&, std::function<void ()(bool)>);
     virtual void getServerMissingChunks(FileInfo const&, std::function<void ()(std::vector<FileChunkInfo, std::allocator<FileChunkInfo>>)>)const;

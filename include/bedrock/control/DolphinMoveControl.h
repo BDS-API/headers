@@ -7,7 +7,7 @@
 class DolphinMoveControl : MoveControl {
 
 public:
-    DolphinMoveControl::~DolphinMoveControl()
+    virtual DolphinMoveControl::~DolphinMoveControl()
     virtual void tick(MoveControlComponent &, Mob &);
 
     DolphinMoveControl(void);

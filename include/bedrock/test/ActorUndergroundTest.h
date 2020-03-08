@@ -6,7 +6,7 @@
 class ActorUndergroundTest : SimpleBoolFilterTest {
 
 public:
-    ActorUndergroundTest::~ActorUndergroundTest()
+    virtual ActorUndergroundTest::~ActorUndergroundTest()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

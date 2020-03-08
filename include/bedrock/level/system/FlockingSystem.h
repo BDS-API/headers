@@ -6,7 +6,7 @@
 class FlockingSystem : ITickingSystem {
 
 public:
-    FlockingSystem::~FlockingSystem()
+    virtual FlockingSystem::~FlockingSystem()
     virtual void tick(EntityRegistry &);
 
     FlockingSystem(void);

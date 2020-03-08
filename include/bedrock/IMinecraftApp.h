@@ -5,7 +5,7 @@
 class IMinecraftApp {
 
 public:
-    IMinecraftApp::~IMinecraftApp()
+    virtual IMinecraftApp::~IMinecraftApp()
 
     IMinecraftApp(void);
 };

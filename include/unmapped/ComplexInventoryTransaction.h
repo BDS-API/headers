@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/io/ReadOnlyBinaryStream"
 #include "../bedrock/io/BinaryStream"
 #include "../bedrock/actor/Player"
+#include "../bedrock/io/ReadOnlyBinaryStream"
 
 
 class ComplexInventoryTransaction {
 
 public:
-    ComplexInventoryTransaction::~ComplexInventoryTransaction()
+    virtual ComplexInventoryTransaction::~ComplexInventoryTransaction()
     virtual void read(ReadOnlyBinaryStream &);
     virtual void write(BinaryStream &)const;
     virtual void handle(Player &, bool)const;

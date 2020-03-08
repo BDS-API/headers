@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/command/CommandFlag"
 #include "../bedrock/command/Symbol"
+#include "../bedrock/command/CommandFlag"
 
 
 using namespace CommandRegistry;

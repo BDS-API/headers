@@ -10,7 +10,7 @@ public:
     static long SITTING_ATTACK_VIEW_RANGE;
     static long SITTING_CHARGE_VIEW_RANGE;
 
-    DragonScanningGoal::~DragonScanningGoal()
+    virtual DragonScanningGoal::~DragonScanningGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

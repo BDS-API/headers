@@ -7,7 +7,7 @@ using namespace Core;
 class FileImpl {
 
 public:
-    Core::FileImpl::~FileImpl()
+    virtual Core::FileImpl::~FileImpl()
 
     void getNumFiles();
     FileImpl(Core::FileSystemImpl *, Core::FileOpenMode);

@@ -7,7 +7,7 @@
 class EndCrystalItem : Item {
 
 public:
-    EndCrystalItem::~EndCrystalItem()
+    virtual EndCrystalItem::~EndCrystalItem()
     virtual bool isGlint(ItemStackBase const&)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 

@@ -7,7 +7,7 @@ class IsChargedDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    IsChargedDescription::~IsChargedDescription()
+    virtual IsChargedDescription::~IsChargedDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

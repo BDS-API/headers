@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../item/ItemStack"
-#include "unmapped/BlockSource"
-#include "../container/Container"
-#include "../util/BlockPos"
 #include "../actor/Player"
-#include "../../unmapped/Block"
-#include "../actor/Actor"
+#include "../container/Container"
 #include "../util/Random"
-#include "../util/AABB"
+#include "unmapped/BlockSource"
 #include "../level/Level"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../util/AABB"
+#include "../actor/Actor"
 
 
 class ComposterBlock : BlockLegacy {
@@ -17,7 +17,7 @@ class ComposterBlock : BlockLegacy {
 public:
     static long PARTICLE_OFFSET;
 
-    ComposterBlock::~ComposterBlock()
+    virtual ComposterBlock::~ComposterBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;

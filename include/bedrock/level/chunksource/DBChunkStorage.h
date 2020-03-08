@@ -1,12 +1,12 @@
 #pragma once
 
+#include "../LevelChunkFinalDeleter"
+#include "../../block/unmapped/BlockSource"
 #include "../LevelChunk"
 #include "../../../unmapped/DBStorageWriteBatch"
-#include "../storage/DBStorage"
 #include "../../../unmapped/DBChunkStorageKey"
-#include "../LevelChunkFinalDeleter"
 #include "../../Scheduler"
-#include "../../block/unmapped/BlockSource"
+#include "../storage/DBStorage"
 
 
 class DBChunkStorage : ChunkSource {
@@ -15,7 +15,7 @@ public:
     static long threadBatch;
     static long threadBuffer[abi:cxx11];
 
-    DBChunkStorage::~DBChunkStorage()
+    virtual DBChunkStorage::~DBChunkStorage()
     virtual void shutdown();
     virtual bool isShutdownDone();
     virtual void postProcess(ChunkViewSource &);

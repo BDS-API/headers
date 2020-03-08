@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
 
 
 class ComparatorBlock : ActorBlock {
 
 public:
-    ComparatorBlock::~ComparatorBlock()
+    virtual ComparatorBlock::~ComparatorBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isInteractiveBlock()const;
     virtual bool isSignalSource()const;

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
 #include "../bedrock/actor/Actor"
-#include "../bedrock/actor/unmapped/ActorInteraction"
 #include "../bedrock/actor/Player"
+#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "../bedrock/item/ItemStack"
 
 
 class TameableComponent {

@@ -7,7 +7,7 @@ class IsHiddenWhenInvisibleDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    IsHiddenWhenInvisibleDescription::~IsHiddenWhenInvisibleDescription()
+    virtual IsHiddenWhenInvisibleDescription::~IsHiddenWhenInvisibleDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

@@ -6,7 +6,7 @@
 class SitGoal : Goal {
 
 public:
-    SitGoal::~SitGoal()
+    virtual SitGoal::~SitGoal()
     virtual bool canUse();
     virtual void start();
     virtual void stop();

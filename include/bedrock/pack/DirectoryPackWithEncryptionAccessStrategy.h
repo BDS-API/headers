@@ -1,14 +1,14 @@
 #pragma once
 
+#include "../../unmapped/ResourceLocation"
 #include "../../unmapped/IContentKeyProvider"
 #include "../../core/Path"
-#include "../../unmapped/ResourceLocation"
 
 
 class DirectoryPackWithEncryptionAccessStrategy : PackAccessStrategy {
 
 public:
-    DirectoryPackWithEncryptionAccessStrategy::~DirectoryPackWithEncryptionAccessStrategy()
+    virtual DirectoryPackWithEncryptionAccessStrategy::~DirectoryPackWithEncryptionAccessStrategy()
     virtual void getPackSize()const;
     virtual void getPackLocation()const;
     virtual void getPackName()const;

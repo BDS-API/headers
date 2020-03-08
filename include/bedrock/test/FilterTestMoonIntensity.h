@@ -6,7 +6,7 @@
 class FilterTestMoonIntensity : SimpleFloatFilterTest {
 
 public:
-    FilterTestMoonIntensity::~FilterTestMoonIntensity()
+    virtual FilterTestMoonIntensity::~FilterTestMoonIntensity()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

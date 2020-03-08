@@ -7,7 +7,7 @@ class PushThroughDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    PushThroughDescription::~PushThroughDescription()
+    virtual PushThroughDescription::~PushThroughDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

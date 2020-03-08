@@ -5,7 +5,7 @@
 class ScriptBinderPureEcsTemplate : ScriptBinderTemplate {
 
 public:
-    ScriptBinderPureEcsTemplate::~ScriptBinderPureEcsTemplate()
+    virtual ScriptBinderPureEcsTemplate::~ScriptBinderPureEcsTemplate()
     virtual void getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
 

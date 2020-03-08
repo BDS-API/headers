@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../block/unmapped/BlockSource"
-#include "../container/Container"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../actor/unmapped/ActorInfoRegistry"
-#include "../actor/Actor"
 #include "../actor/Agent"
-#include "../nbt/CompoundTag"
-#include "unmapped/ItemDescriptor"
 #include "../util/Vec3"
+#include "../nbt/CompoundTag"
+#include "../actor/Player"
+#include "../container/Container"
+#include "../block/unmapped/BlockSource"
+#include "../actor/unmapped/ActorInfoRegistry"
+#include "../util/BlockPos"
+#include "../actor/Actor"
+#include "unmapped/ItemDescriptor"
 
 
 class MobPlacerItem : Item {
 
 public:
-    MobPlacerItem::~MobPlacerItem()
+    virtual MobPlacerItem::~MobPlacerItem()
     virtual void tearDown();
     virtual bool isExperimental(ItemDescriptor const*)const;
     virtual bool isLiquidClipItem(int)const;

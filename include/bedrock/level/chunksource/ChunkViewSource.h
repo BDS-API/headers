@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/Bounds"
-#include "../../util/ChunkPos"
 #include "../../util/Random"
 #include "../LevelChunkFinalDeleter"
-#include "../../util/BlockPos"
 #include "../LevelChunk"
+#include "../../../unmapped/Bounds"
+#include "../../util/BlockPos"
+#include "../../util/ChunkPos"
 
 
 class ChunkViewSource : ChunkSource {
 
 public:
-    ChunkViewSource::~ChunkViewSource()
+    virtual ChunkViewSource::~ChunkViewSource()
     virtual void getExistingChunk(ChunkPos const&);
     virtual void getRandomChunk(Random &);
     virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);

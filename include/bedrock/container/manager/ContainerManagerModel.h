@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../model/ContainerModel"
 #include "../../actor/Player"
+#include "../model/ContainerModel"
 
 
 class ContainerManagerModel : IContainerManager {
 
 public:
-    ContainerManagerModel::~ContainerManagerModel()
+    virtual ContainerManagerModel::~ContainerManagerModel()
     virtual void getContainerId()const;
     virtual void setContainerId(ContainerID);
     virtual void getContainerType()const;

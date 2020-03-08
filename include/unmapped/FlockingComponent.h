@@ -1,9 +1,9 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
 #include "../bedrock/actor/Mob"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 
 
 class FlockingComponent {

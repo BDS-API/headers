@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
 #include "../../nbt/CompoundTag"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class StructureTemplateDataResponsePacket : Packet {
 
 public:
-    StructureTemplateDataResponsePacket::~StructureTemplateDataResponsePacket()
+    virtual StructureTemplateDataResponsePacket::~StructureTemplateDataResponsePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

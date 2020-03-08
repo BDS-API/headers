@@ -1,8 +1,8 @@
 #pragma once
 
+#include "unmapped/BlockSource"
 #include "../actor/Actor"
 #include "../util/BlockPos"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
 #include "../util/AABB"
 
@@ -10,7 +10,7 @@
 class StructureVoid : BlockLegacy {
 
 public:
-    StructureVoid::~StructureVoid()
+    virtual StructureVoid::~StructureVoid()
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual bool isObstructingChests(BlockSource &, BlockPos const&)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;

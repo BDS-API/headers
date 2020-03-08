@@ -6,7 +6,7 @@
 class SilverfishMergeWithStoneGoal : RandomStrollGoal {
 
 public:
-    SilverfishMergeWithStoneGoal::~SilverfishMergeWithStoneGoal()
+    virtual SilverfishMergeWithStoneGoal::~SilverfishMergeWithStoneGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

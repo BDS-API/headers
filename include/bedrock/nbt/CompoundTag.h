@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../io/IDataOutput"
 #include "../../unmapped/TagMemoryChunk"
+#include "../io/IDataOutput"
 #include "../io/IDataInput"
 
 
 class CompoundTag : Tag {
 
 public:
-    CompoundTag::~CompoundTag()
+    virtual CompoundTag::~CompoundTag()
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
     virtual void toString()const;

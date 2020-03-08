@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/Mob"
 #include "../bedrock/control/JumpControl"
 #include "../bedrock/description/component/JumpControlDescription"
-#include "../bedrock/actor/Mob"
 
 
 class JumpControlComponent {

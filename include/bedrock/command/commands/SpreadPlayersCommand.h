@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
-#include "../../actor/Actor"
-#include "../../util/Vec2"
 #include "../../util/Random"
-#include "../CommandOutput"
 #include "../../block/unmapped/BlockSource"
-#include "../Command"
 #include "../CommandRegistry"
+#include "../Command"
+#include "../../actor/Actor"
+#include "../CommandOutput"
+#include "../orgin/CommandOrigin"
+#include "../../util/Vec2"
 
 
 class SpreadPlayersCommand : Command {
 
 public:
-    SpreadPlayersCommand::~SpreadPlayersCommand()
+    virtual SpreadPlayersCommand::~SpreadPlayersCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

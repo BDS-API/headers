@@ -6,7 +6,7 @@
 class AvoidMobGoal : Goal {
 
 public:
-    AvoidMobGoal::~AvoidMobGoal()
+    virtual AvoidMobGoal::~AvoidMobGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -6,7 +6,7 @@
 class FlushableStorageAreaEnv : FlushableEnv {
 
 public:
-    FlushableStorageAreaEnv::~FlushableStorageAreaEnv()
+    virtual FlushableStorageAreaEnv::~FlushableStorageAreaEnv()
     virtual void flushToPermanentStorage();
 
     FlushableStorageAreaEnv(leveldb::Env *, std::shared_ptr<Core::FileStorageArea>);

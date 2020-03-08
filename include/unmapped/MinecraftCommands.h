@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/command/orgin/CommandOrigin"
+#include "../bedrock/command/CommandOutput"
 #include "../bedrock/command/CommandOutputSender"
 #include "../bedrock/Minecraft"
-#include "../bedrock/command/CommandOutput"
+#include "../bedrock/command/orgin/CommandOrigin"
 #include "../bedrock/command/CommandContext"
 
 

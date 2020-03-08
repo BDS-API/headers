@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../definition/BlockDefinition"
 #include "../../block/BlockLegacy"
 #include "../../nbt/CompoundTag"
+#include "../../definition/BlockDefinition"
 
 
 class BlockComponentDescription {
 
 public:
-    BlockComponentDescription::~BlockComponentDescription()
+    virtual BlockComponentDescription::~BlockComponentDescription()
     virtual void getName()const;
     virtual void initializeComponent(BlockLegacy &)const;
     virtual void buildSchema(JsonUtil::JsonSchemaObjectNode<JsonUtil::JsonParseState<JsonUtil::EmptyClass, BlockDefinition>, BlockDefinition> &)const;

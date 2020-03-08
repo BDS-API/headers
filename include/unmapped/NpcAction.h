@@ -13,7 +13,7 @@ public:
     static long TEXT_KEY[abi:cxx11];
     static long BUTTON_NAME_KEY[abi:cxx11];
 
-    NpcAction::~NpcAction()
+    virtual NpcAction::~NpcAction()
     virtual void fromJson(Json::Value const&);
 
     NpcAction(NpcActionType);

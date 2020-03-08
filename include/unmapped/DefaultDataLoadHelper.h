@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/util/Vec3"
 #include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 
 
 class DefaultDataLoadHelper : DataLoadHelper {
 
 public:
-    DefaultDataLoadHelper::~DefaultDataLoadHelper()
+    virtual DefaultDataLoadHelper::~DefaultDataLoadHelper()
     virtual void loadPosition(Vec3 const&);
     virtual void loadBlockPosition(BlockPos const&);
     virtual void loadBlockPositionOffset(BlockPos const&);

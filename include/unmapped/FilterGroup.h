@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../json/Value"
-#include "../bedrock/definition/Definition"
 #include "../bedrock/test/FilterTest"
+#include "../bedrock/definition/Definition"
+#include "../json/Value"
 
 
 class FilterGroup {
 
 public:
-    FilterGroup::~FilterGroup()
+    virtual FilterGroup::~FilterGroup()
     virtual void _setupContext(FilterTest const&, FilterContext &)const;
     virtual void _handleUnknownMember(std::string const&, Json::Value const&);
 

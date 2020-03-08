@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../unmapped/Material"
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../../unmapped/Material"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
 class ButtonBlock : BlockLegacy {
 
 public:
-    ButtonBlock::~ButtonBlock()
+    virtual ButtonBlock::~ButtonBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual bool isInteractiveBlock()const;

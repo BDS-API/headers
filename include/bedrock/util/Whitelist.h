@@ -2,14 +2,14 @@
 
 #include "../../mce/UUID"
 #include "../../unmapped/WhitelistEntry"
-#include "../../json/Value"
 #include "../../unmapped/IJsonSerializable"
+#include "../../json/Value"
 
 
 class Whitelist : IJsonSerializable {
 
 public:
-    Whitelist::~Whitelist()
+    virtual Whitelist::~Whitelist()
     virtual void serialize(Json::Value &);
     virtual void deserialize(Json::Value &);
 

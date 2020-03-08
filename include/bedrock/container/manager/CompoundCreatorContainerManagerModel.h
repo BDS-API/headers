@@ -8,7 +8,7 @@
 class CompoundCreatorContainerManagerModel : ContainerManagerModel {
 
 public:
-    CompoundCreatorContainerManagerModel::~CompoundCreatorContainerManagerModel()
+    virtual CompoundCreatorContainerManagerModel::~CompoundCreatorContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

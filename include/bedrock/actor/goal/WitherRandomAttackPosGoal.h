@@ -6,7 +6,7 @@
 class WitherRandomAttackPosGoal : RandomStrollGoal {
 
 public:
-    WitherRandomAttackPosGoal::~WitherRandomAttackPosGoal()
+    virtual WitherRandomAttackPosGoal::~WitherRandomAttackPosGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

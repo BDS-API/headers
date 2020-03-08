@@ -11,7 +11,7 @@ public:
     static long mEnchants;
     static long mAllowExperimental;
 
-    Enchant::~Enchant()
+    virtual Enchant::~Enchant()
     virtual bool isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

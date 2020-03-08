@@ -7,7 +7,7 @@
 class Blaze : Monster {
 
 public:
-    Blaze::~Blaze()
+    virtual Blaze::~Blaze()
     virtual void normalTick();
     virtual void getBrightness(float)const;
     virtual bool isOnFire()const;

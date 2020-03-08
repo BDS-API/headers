@@ -1,15 +1,15 @@
 #pragma once
 
-#include "unmapped/Tier"
-#include "../level/Level"
 #include "../actor/Actor"
+#include "../level/Level"
 #include "../../unmapped/Block"
+#include "unmapped/Tier"
 
 
 class DiggerItem : Item {
 
 public:
-    DiggerItem::~DiggerItem()
+    virtual DiggerItem::~DiggerItem()
     virtual void getAttackDamage()const;
     virtual bool isHandEquipped()const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;

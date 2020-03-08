@@ -5,7 +5,7 @@
 class StopwatchNLast : Stopwatch {
 
 public:
-    StopwatchNLast::~StopwatchNLast()
+    virtual StopwatchNLast::~StopwatchNLast()
     virtual void stop();
     virtual void print(std::string const&);
 

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/level/structure/piece/EndCityPiece"
 #include "../bedrock/util/Random"
+#include "../bedrock/level/structure/piece/EndCityPiece"
 #include "../bedrock/level/structure/piece/StructurePiece"
+#include "../bedrock/util/BlockPos"
 
 
 class EndCityPieces {

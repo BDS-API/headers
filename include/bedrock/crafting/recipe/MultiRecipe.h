@@ -6,7 +6,7 @@
 class MultiRecipe : Recipe {
 
 public:
-    MultiRecipe::~MultiRecipe()
+    virtual MultiRecipe::~MultiRecipe()
     virtual bool isShapeless()const;
     virtual bool isMultiRecipe()const;
 

@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../unmapped/JigsawBlockInfo"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../../unmapped/JigsawBlockInfo"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class JigsawBlock : FaceDirectionalActorBlock {
 
 public:
-    JigsawBlock::~JigsawBlock()
+    virtual JigsawBlock::~JigsawBlock()
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getFaceFlip(unsigned char, Block const&)const;

@@ -5,7 +5,7 @@
 class StructurePoolActorPredicateActorMatch : IStructurePoolActorPredicate {
 
 public:
-    StructurePoolActorPredicateActorMatch::~StructurePoolActorPredicateActorMatch()
+    virtual StructurePoolActorPredicateActorMatch::~StructurePoolActorPredicateActorMatch()
     virtual void test(std::string const&)const;
 
     StructurePoolActorPredicateActorMatch(std::string);

@@ -6,7 +6,7 @@
 class DanceSystem : ITickingSystem {
 
 public:
-    DanceSystem::~DanceSystem()
+    virtual DanceSystem::~DanceSystem()
     virtual void tick(EntityRegistry &);
 
     DanceSystem(void);

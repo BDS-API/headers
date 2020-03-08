@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../actor/Actor"
-#include "../../unmapped/DataLoadHelper"
 #include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class CommandBlockComponent {

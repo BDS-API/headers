@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../actor/Player"
 #include "../../level/Level"
+#include "../../actor/Player"
+#include "../../actor/unmapped/ActorUniqueID"
 
 
 class PlayerCommandOrigin : CommandOrigin {
 
 public:
-    PlayerCommandOrigin::~PlayerCommandOrigin()
+    virtual PlayerCommandOrigin::~PlayerCommandOrigin()
     virtual void getRequestId()const;
     virtual void getName()const;
     virtual void getBlockPosition()const;

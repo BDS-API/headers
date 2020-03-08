@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/actor/Actor"
 #include "../bedrock/level/Level"
+#include "../bedrock/util/BlockPos"
 
 
 class WanderingTraderScheduler {

@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../actor/unmapped/ActorBlockSyncMessage"
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../../unmapped/Material"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../actor/unmapped/ActorBlockSyncMessage"
+#include "../../unmapped/Material"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
 #include "../util/AABB"
 
 
 class AirBlock : BlockLegacy {
 
 public:
-    AirBlock::~AirBlock()
+    virtual AirBlock::~AirBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual bool isObstructingChests(BlockSource &, BlockPos const&)const;

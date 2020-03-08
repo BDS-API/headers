@@ -5,7 +5,7 @@
 class DiggingEnchant : Enchant {
 
 public:
-    DiggingEnchant::~DiggingEnchant()
+    virtual DiggingEnchant::~DiggingEnchant()
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMaxLevel()const;

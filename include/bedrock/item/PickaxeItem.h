@@ -1,13 +1,13 @@
 #pragma once
 
-#include "unmapped/Tier"
 #include "../../unmapped/Block"
+#include "unmapped/Tier"
 
 
 class PickaxeItem : DiggerItem {
 
 public:
-    PickaxeItem::~PickaxeItem()
+    virtual PickaxeItem::~PickaxeItem()
     virtual bool canDestroySpecial(Block const&)const;
     virtual void getEnchantSlot()const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;

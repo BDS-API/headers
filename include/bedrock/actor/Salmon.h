@@ -7,7 +7,7 @@
 class Salmon : Fish {
 
 public:
-    Salmon::~Salmon()
+    virtual Salmon::~Salmon()
     virtual void playerTouch(Player &);
     virtual void createAIGoals();
 

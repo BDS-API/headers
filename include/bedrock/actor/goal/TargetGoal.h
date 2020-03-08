@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/MobDescriptor"
-#include "../Actor"
 #include "../Mob"
+#include "../Actor"
+#include "../../../unmapped/MobDescriptor"
 
 
 class TargetGoal : Goal {
 
 public:
-    TargetGoal::~TargetGoal()
+    virtual TargetGoal::~TargetGoal()
     virtual bool canContinueToUse();
     virtual void start();
     virtual void stop();

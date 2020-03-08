@@ -6,7 +6,7 @@
 class GuardianAttackGoal : Goal {
 
 public:
-    GuardianAttackGoal::~GuardianAttackGoal()
+    virtual GuardianAttackGoal::~GuardianAttackGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

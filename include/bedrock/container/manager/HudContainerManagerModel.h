@@ -7,7 +7,7 @@
 class HudContainerManagerModel : ContainerManagerModel {
 
 public:
-    HudContainerManagerModel::~HudContainerManagerModel()
+    virtual HudContainerManagerModel::~HudContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

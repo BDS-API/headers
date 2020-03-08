@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/util/Random"
 #include "../bedrock/util/BlockPos"
+#include "../json/Value"
 
 
 class ScatterParams {

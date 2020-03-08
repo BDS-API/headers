@@ -6,7 +6,7 @@
 class ActorIsRidingTest : SimpleBoolFilterTest {
 
 public:
-    ActorIsRidingTest::~ActorIsRidingTest()
+    virtual ActorIsRidingTest::~ActorIsRidingTest()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

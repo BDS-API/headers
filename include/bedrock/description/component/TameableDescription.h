@@ -7,7 +7,7 @@ class TameableDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    TameableDescription::~TameableDescription()
+    virtual TameableDescription::~TameableDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

@@ -7,7 +7,7 @@
 class CompositePackSource : PackSource {
 
 public:
-    CompositePackSource::~CompositePackSource()
+    virtual CompositePackSource::~CompositePackSource()
     virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
     virtual void forEachPack(std::function<void ()(Pack &)>);
     virtual void load(PackManifestFactory &, IContentKeyProvider const&);

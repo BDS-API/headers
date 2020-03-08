@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../item/unmapped/ItemTransferAmount"
 #include "../../../unmapped/ContainerItemStack"
+#include "../../item/unmapped/ItemTransferAmount"
+#include "../../item/ItemInstance"
 #include "../model/ContainerModel"
 #include "../../../unmapped/Recipes"
-#include "../../item/ItemInstance"
 
 
 class ContainerController {
 
 public:
-    ContainerController::~ContainerController()
+    virtual ContainerController::~ContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
     virtual bool isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual bool isItemFiltered(Recipes const&, ContainerItemStack const&)const;

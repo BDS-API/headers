@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../unmapped/FilterInputs"
 #include "../../unmapped/FilterContext"
 #include "../definition/Definition"
+#include "../../unmapped/FilterInputs"
 
 
 class ActorHasEquipmentTest : FilterTest {
 
 public:
-    ActorHasEquipmentTest::~ActorHasEquipmentTest()
+    virtual ActorHasEquipmentTest::~ActorHasEquipmentTest()
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;

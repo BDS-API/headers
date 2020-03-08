@@ -5,7 +5,7 @@
 class RapidFertilizerItem : FertilizerItem {
 
 public:
-    RapidFertilizerItem::~RapidFertilizerItem()
+    virtual RapidFertilizerItem::~RapidFertilizerItem()
     virtual void fixupOnLoad(ItemStackBase &)const;
 
 };

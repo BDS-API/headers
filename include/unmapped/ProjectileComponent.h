@@ -2,10 +2,10 @@
 
 #include "../bedrock/actor/damagesource/ActorDamageSource"
 #include "../bedrock/actor/Actor"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 
 
 class ProjectileComponent {

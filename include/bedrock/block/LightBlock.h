@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/unmapped/ActorBlockSyncMessage"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
-#include "../../unmapped/Block"
+#include "../actor/Actor"
+#include "../actor/unmapped/ActorBlockSyncMessage"
 #include "../../unmapped/Material"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../util/Vec3"
 
 
 class LightBlock : AirBlock {
 
 public:
-    LightBlock::~LightBlock()
+    virtual LightBlock::~LightBlock()
     virtual void getLightEmission(Block const&)const;
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;

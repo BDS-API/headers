@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../util/BlockPos"
-#include "../actor/Actor"
 #include "../util/Random"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
 
 
 class BambooSapling : Sapling {
 
 public:
-    BambooSapling::~BambooSapling()
+    virtual BambooSapling::~BambooSapling()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual bool isValidAuxValue(int)const;

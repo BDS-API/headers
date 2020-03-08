@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 #include "../util/AABB"
 
@@ -11,7 +11,7 @@
 class WoolCarpetBlock : BlockLegacy {
 
 public:
-    WoolCarpetBlock::~WoolCarpetBlock()
+    virtual WoolCarpetBlock::~WoolCarpetBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void waterSpreadCausesSpawn()const;

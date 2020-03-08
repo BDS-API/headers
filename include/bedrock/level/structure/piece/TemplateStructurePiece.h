@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../../unmapped/LegacyStructureTemplate"
-#include "../../../../unmapped/BoundingBox"
 #include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/LegacyStructureTemplate"
 #include "../../../../unmapped/LegacyStructureSettings"
 #include "../../../util/BlockPos"
-#include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/BoundingBox"
 
 
 class TemplateStructurePiece : StructurePiece {
 
 public:
-    TemplateStructurePiece::~TemplateStructurePiece()
+    virtual TemplateStructurePiece::~TemplateStructurePiece()
     virtual void moveBoundingBox(int, int, int);
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
 

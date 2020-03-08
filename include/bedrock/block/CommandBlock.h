@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "actor/CommandBlockActor"
 
 
@@ -15,7 +15,7 @@ class CommandBlock : ActorBlock {
 public:
     static long mCBModeMap;
 
-    CommandBlock::~CommandBlock()
+    virtual CommandBlock::~CommandBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isInteractiveBlock()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

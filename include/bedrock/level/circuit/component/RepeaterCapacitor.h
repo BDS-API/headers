@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../util/BlockPos"
+#include "../../../../unmapped/CircuitTrackingInfo"
 
 
 class RepeaterCapacitor : CapacitorComponent {
 
 public:
-    RepeaterCapacitor::~RepeaterCapacitor()
+    virtual RepeaterCapacitor::~RepeaterCapacitor()
     virtual void getStrength()const;
     virtual void setStrength(int);
     virtual void consumePowerAnyDirection();

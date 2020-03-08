@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../level/Level"
-#include "unmapped/ItemDescriptor"
-#include "../actor/Player"
 #include "../nbt/CompoundTag"
+#include "../level/Level"
+#include "../actor/Player"
+#include "unmapped/ItemDescriptor"
 
 
 class WrittenBookItem : Item {
@@ -23,7 +23,7 @@ public:
     static long TAG_PAGE_PHOTO_NAME;
     static long TAG_ID;
 
-    WrittenBookItem::~WrittenBookItem()
+    virtual WrittenBookItem::~WrittenBookItem()
     virtual bool isGlint(ItemStackBase const&)const;
     virtual bool requiresInteract()const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;

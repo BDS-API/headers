@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
-#include "../../../unmapped/EntityContext"
 #include "../../../unmapped/AreaAttackComponent"
 #include "../../actor/unmapped/ActorComponent"
+#include "../../../unmapped/EntityRegistry"
+#include "../../../unmapped/EntityContext"
 
 
 class AreaAttackSystem : ITickingSystem {
 
 public:
-    AreaAttackSystem::~AreaAttackSystem()
+    virtual AreaAttackSystem::~AreaAttackSystem()
     virtual void tick(EntityRegistry &);
 
     AreaAttackSystem(void);

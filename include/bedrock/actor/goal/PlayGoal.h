@@ -6,7 +6,7 @@
 class PlayGoal : Goal {
 
 public:
-    PlayGoal::~PlayGoal()
+    virtual PlayGoal::~PlayGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

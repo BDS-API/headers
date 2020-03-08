@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../core/Path"
 #include "../../unmapped/ResourceLocation"
+#include "../../core/Path"
 
 
 class DirectoryPackAccessStrategy : PackAccessStrategy {
 
 public:
-    DirectoryPackAccessStrategy::~DirectoryPackAccessStrategy()
+    virtual DirectoryPackAccessStrategy::~DirectoryPackAccessStrategy()
     virtual void getPackSize()const;
     virtual void getPackLocation()const;
     virtual void getPackName()const;

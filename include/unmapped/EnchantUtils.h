@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/item/unmapped/ItemEnchants"
-#include "../bedrock/item/ItemStackBase"
-#include "../bedrock/actor/damagesource/ActorDamageSource"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/Random"
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/actor/Mob"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/ItemStackBase"
+#include "../bedrock/util/Random"
+#include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/item/Item"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/actor/damagesource/ActorDamageSource"
+#include "../bedrock/actor/Mob"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/item/unmapped/ItemEnchants"
 
 
 class EnchantUtils {

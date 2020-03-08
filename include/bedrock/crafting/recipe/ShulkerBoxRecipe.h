@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../container/CraftingContainer"
-#include "../../../unmapped/RecipeIngredient"
 #include "../../nbt/CompoundTag"
+#include "../../container/CraftingContainer"
 #include "../../item/unmapped/ItemDescriptor"
+#include "../../../unmapped/RecipeIngredient"
 
 
 class ShulkerBoxRecipe : ShapelessRecipe {
@@ -11,7 +11,7 @@ class ShulkerBoxRecipe : ShapelessRecipe {
 public:
     static long ID;
 
-    ShulkerBoxRecipe::~ShulkerBoxRecipe()
+    virtual ShulkerBoxRecipe::~ShulkerBoxRecipe()
     virtual void assemble(CraftingContainer &)const;
     virtual bool itemsMatch(ItemDescriptor const&, ItemDescriptor const&)const;
     virtual bool itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;

@@ -1,40 +1,40 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../../unmapped/HashedString"
 #include "../network/packet/UpdateEquipPacket"
-#include "../block/unmapped/BlockSource"
-#include "../description/property/CollisionBoxDescription"
-#include "unmapped/ActorUniqueID"
-#include "../../unmapped/EntityRegistryOwned"
-#include "../../unmapped/Attribute"
-#include "../../unmapped/UIProfanityContext"
-#include "../../unmapped/Dimension"
-#include "../util/BlockPos"
-#include "unmapped/ActorInteraction"
 #include "../description/property/EquipmentTableDescription"
-#include "../../unmapped/Block"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
-#include "../../unmapped/RenderParams"
-#include "../../unmapped/ActionEvent"
-#include "../util/Random"
-#include "../network/packet/UpdateTradePacket"
+#include "../description/property/CollisionBoxDescription"
+#include "../util/Vec3"
+#include "unmapped/ActorUniqueID"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../network/packet/ChangeDimensionPacket"
-#include "effect/MobEffect"
+#include "../item/ItemStack"
+#include "../../unmapped/Dimension"
 #include "../nbt/CompoundTag"
 #include "../../unmapped/MobEffectInstance"
-#include "unmapped/ActorLink"
-#include "unmapped/ActorRuntimeID"
-#include "../util/Vec2"
-#include "../../unmapped/SeatDescription"
-#include "../util/Vec3"
 #include "../../unmapped/HashString"
-#include "../util/AABB"
+#include "unmapped/ActorLink"
+#include "../network/packet/UpdateTradePacket"
+#include "../../unmapped/Attribute"
+#include "unmapped/ActorInteraction"
+#include "effect/MobEffect"
+#include "../util/Vec2"
+#include "../../unmapped/EntityRegistryOwned"
+#include "../util/Random"
+#include "unmapped/ActorRuntimeID"
+#include "../block/unmapped/BlockSource"
+#include "../../unmapped/HashedString"
+#include "unmapped/ActorDefinitionGroup"
 #include "../level/Level"
+#include "../../unmapped/SeatDescription"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../util/AABB"
+#include "../network/packet/ChangeDimensionPacket"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/RenderParams"
+#include "../../unmapped/ActionEvent"
+#include "../../unmapped/UIProfanityContext"
+#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Actor {
@@ -51,7 +51,7 @@ public:
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual bool hasComponent(Util::HashString const&)const;
-    Actor::~Actor()
+    virtual Actor::~Actor()
     virtual void reset();
     virtual void getOnDeathExperience();
     virtual void getOwnerEntityType();

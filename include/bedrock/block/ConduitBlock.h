@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/BlockPos"
 
 
 class ConduitBlock : ActorBlock {
 
 public:
-    ConduitBlock::~ConduitBlock()
+    virtual ConduitBlock::~ConduitBlock()
     virtual bool canContainLiquid()const;
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const;
 

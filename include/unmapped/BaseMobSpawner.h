@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
 #include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
 
 
 class BaseMobSpawner {
 
 public:
-    BaseMobSpawner::~BaseMobSpawner()
+    virtual BaseMobSpawner::~BaseMobSpawner()
     virtual void tick(BlockSource &);
     virtual void load(CompoundTag const&);
     virtual void save(CompoundTag &);

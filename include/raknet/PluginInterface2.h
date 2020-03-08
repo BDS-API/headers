@@ -7,7 +7,7 @@ using namespace RakNet;
 class PluginInterface2 {
 
 public:
-    RakNet::PluginInterface2::~PluginInterface2()
+    virtual RakNet::PluginInterface2::~PluginInterface2()
     virtual void OnAttach();
     virtual void OnDetach();
     virtual void Update();

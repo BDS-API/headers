@@ -6,7 +6,7 @@
 class FindMountGoal : Goal {
 
 public:
-    FindMountGoal::~FindMountGoal()
+    virtual FindMountGoal::~FindMountGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

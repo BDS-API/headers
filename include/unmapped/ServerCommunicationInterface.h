@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../raknet/TCPInterface"
 #include "../json/Value"
 #include "../raknet/SystemAddress"
-#include "../raknet/TCPInterface"
 
 
 class ServerCommunicationInterface {

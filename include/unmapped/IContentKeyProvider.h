@@ -5,7 +5,7 @@
 class IContentKeyProvider {
 
 public:
-    IContentKeyProvider::~IContentKeyProvider()
+    virtual IContentKeyProvider::~IContentKeyProvider()
     virtual void getAlternateContentKey(ContentIdentity const&)const;
 
     IContentKeyProvider(void);

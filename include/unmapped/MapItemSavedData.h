@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/util/Color"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/actor/Player"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/level/storage/LevelStorage"
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Player"
+#include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/level/Level"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/util/Color"
+#include "../bedrock/level/storage/LevelStorage"
 
 
 class MapItemSavedData {

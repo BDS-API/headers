@@ -5,7 +5,7 @@
 class PackSettingsError : PackError {
 
 public:
-    PackSettingsError::~PackSettingsError()
+    virtual PackSettingsError::~PackSettingsError()
     virtual void getLocErrorMessage()const;
     virtual void getLocErrorMessageMap()const;
     virtual void getEventErrorMessageMap()const;

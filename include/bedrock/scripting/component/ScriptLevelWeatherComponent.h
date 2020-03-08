@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../ScriptVersionInfo"
-#include "../../level/Level"
 #include "../../actor/Actor"
-#include "../unmapped/ScriptEngine"
+#include "../../level/Level"
 #include "../ScriptObjectHandle"
 #include "../unmapped/ScriptServerContext"
+#include "../ScriptVersionInfo"
+#include "../unmapped/ScriptEngine"
 
 
 class ScriptLevelWeatherComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
@@ -13,7 +13,7 @@ class ScriptLevelWeatherComponent : ScriptTemplateFactory<ScriptServerContext>::
 public:
     static long mHash;
 
-    ScriptLevelWeatherComponent::~ScriptLevelWeatherComponent()
+    virtual ScriptLevelWeatherComponent::~ScriptLevelWeatherComponent()
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Level &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Level &, ScriptApi::ScriptObjectHandle &)const;

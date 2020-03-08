@@ -1,18 +1,18 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/item/Item"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/actor/Player"
+#include "../bedrock/util/Vec3"
 #include "../bedrock/item/ItemStack"
 #include "../json/Value"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/item/Item"
-#include "../bedrock/actor/Player"
 
 
 class CameraItemComponent {
 
 public:
-    CameraItemComponent::~CameraItemComponent()
+    virtual CameraItemComponent::~CameraItemComponent()
 
     CameraItemComponent(Item &);
     void init(Json::Value &);

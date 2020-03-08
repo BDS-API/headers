@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../level/Level"
 #include "../actor/Actor"
 #include "../nbt/CompoundTag"
+#include "../level/Level"
 #include "unmapped/ItemDescriptor"
 
 
@@ -12,7 +12,7 @@ public:
     static long MAX_ACTIVE_TICKS;
     static long COLORS;
 
-    SparklerItem::~SparklerItem()
+    virtual SparklerItem::~SparklerItem()
     virtual bool isHandEquipped()const;
     virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;

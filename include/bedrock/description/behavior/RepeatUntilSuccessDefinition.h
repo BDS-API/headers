@@ -7,7 +7,7 @@
 class RepeatUntilSuccessDefinition : DecoratorDefinition {
 
 public:
-    RepeatUntilSuccessDefinition::~RepeatUntilSuccessDefinition()
+    virtual RepeatUntilSuccessDefinition::~RepeatUntilSuccessDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     RepeatUntilSuccessDefinition(void);

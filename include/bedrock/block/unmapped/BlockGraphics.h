@@ -1,16 +1,16 @@
 #pragma once
 
+#include "../BlockLegacy"
+#include "../../../unmapped/TextureUVCoordinateSet"
+#include "../../util/Vec3"
+#include "../../util/Random"
+#include "../../../unmapped/Block"
+#include "../../util/BlockPos"
+#include "../../../json/Value"
+#include "../../util/AABB"
+#include "../../pack/ResourcePackManager"
 #include "../../../unmapped/AtlasItemManager"
 #include "../../util/Color"
-#include "../../pack/ResourcePackManager"
-#include "../../../json/Value"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../util/Random"
-#include "../BlockLegacy"
-#include "../../util/Vec3"
-#include "../../../unmapped/TextureUVCoordinateSet"
-#include "../../util/AABB"
 
 
 class BlockGraphics {
@@ -27,7 +27,7 @@ public:
     static long mBlockModelAccess;
     static long mTessellatedModels[abi:cxx11];
 
-    BlockGraphics::~BlockGraphics()
+    virtual BlockGraphics::~BlockGraphics()
     virtual void getIconYOffset()const;
     virtual void getColor(int)const;
     virtual void getColor(BlockSource &, BlockPos const&)const;

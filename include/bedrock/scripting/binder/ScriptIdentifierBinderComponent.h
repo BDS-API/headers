@@ -1,11 +1,11 @@
 #pragma once
 
 #include "../../actor/Actor"
-#include "../unmapped/ScriptEngine"
+#include "../../../unmapped/Block"
 #include "../ScriptObjectHandle"
 #include "../../actor/ItemActor"
-#include "../../../unmapped/Block"
 #include "../../item/ItemInstance"
+#include "../unmapped/ScriptEngine"
 
 
 class ScriptIdentifierBinderComponent : ScriptBinderComponent {
@@ -13,7 +13,7 @@ class ScriptIdentifierBinderComponent : ScriptBinderComponent {
 public:
     static long TAG[abi:cxx11];
 
-    ScriptIdentifierBinderComponent::~ScriptIdentifierBinderComponent()
+    virtual ScriptIdentifierBinderComponent::~ScriptIdentifierBinderComponent()
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 

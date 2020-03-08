@@ -1,14 +1,14 @@
 #pragma once
 
-#include "orgin/CommandOrigin"
 #include "../../unmapped/IFunctionEntry"
+#include "orgin/CommandOrigin"
 #include "../../unmapped/FunctionManager"
 
 
 class CommandFunctionEntry : IFunctionEntry {
 
 public:
-    CommandFunctionEntry::~CommandFunctionEntry()
+    virtual CommandFunctionEntry::~CommandFunctionEntry()
     virtual void execute(FunctionManager &, CommandOrigin const&);
 
     CommandFunctionEntry(void);

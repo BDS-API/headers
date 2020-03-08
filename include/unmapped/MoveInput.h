@@ -6,7 +6,7 @@
 class MoveInput {
 
 public:
-    MoveInput::~MoveInput()
+    virtual MoveInput::~MoveInput()
     virtual void tick(Player &);
     virtual void render(float);
     virtual void setKey(int, bool);

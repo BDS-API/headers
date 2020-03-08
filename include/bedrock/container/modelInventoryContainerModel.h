@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../item/ItemStack"
 #include "../../actor/Player"
+#include "../../item/ItemStack"
 
 
 class InventoryContainerModel : ContainerModel {
 
 public:
     virtual void containerContentChanged(int);
-    InventoryContainerModel::~InventoryContainerModel()
+    virtual InventoryContainerModel::~InventoryContainerModel()
     virtual void postInit();
     virtual void releaseResources();
     virtual bool isValid();

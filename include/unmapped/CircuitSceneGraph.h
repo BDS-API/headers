@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/ChunkPos"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/util/BlockPos"
 #include "../bedrock/level/circuit/component/BaseCircuitComponent"
+#include "../bedrock/util/ChunkPos"
 
 
 class CircuitSceneGraph {

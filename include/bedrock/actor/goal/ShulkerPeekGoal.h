@@ -6,7 +6,7 @@
 class ShulkerPeekGoal : Goal {
 
 public:
-    ShulkerPeekGoal::~ShulkerPeekGoal()
+    virtual ShulkerPeekGoal::~ShulkerPeekGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

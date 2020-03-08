@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../raknet/RakNetGUID"
 #include "../raknet/AddressOrGUID"
 #include "../raknet/SystemAddress"
-#include "../raknet/RakNetGUID"
 
 
 class NetworkIdentifier {

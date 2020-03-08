@@ -7,7 +7,7 @@
 class SubtreeDefinition : BehaviorDefinition {
 
 public:
-    SubtreeDefinition::~SubtreeDefinition()
+    virtual SubtreeDefinition::~SubtreeDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     SubtreeDefinition(void);

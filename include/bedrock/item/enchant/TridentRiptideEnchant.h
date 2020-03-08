@@ -5,7 +5,7 @@
 class TridentRiptideEnchant : Enchant {
 
 public:
-    TridentRiptideEnchant::~TridentRiptideEnchant()
+    virtual TridentRiptideEnchant::~TridentRiptideEnchant()
     virtual bool isCompatibleWith(Enchant::Type)const;
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;

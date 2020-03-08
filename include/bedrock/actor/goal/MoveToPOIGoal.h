@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/Vec3"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../Mob"
+#include "../../util/BlockPos"
+#include "../../util/Vec3"
 
 
 class MoveToPOIGoal : BaseMoveToGoal {
 
 public:
-    MoveToPOIGoal::~MoveToPOIGoal()
+    virtual MoveToPOIGoal::~MoveToPOIGoal()
     virtual bool canUse();
     virtual void stop();
     virtual void tick();

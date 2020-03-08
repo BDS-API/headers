@@ -6,7 +6,7 @@
 class SkeletonHorseTrapGoal : Goal {
 
 public:
-    SkeletonHorseTrapGoal::~SkeletonHorseTrapGoal()
+    virtual SkeletonHorseTrapGoal::~SkeletonHorseTrapGoal()
     virtual bool canUse();
     virtual void start();
     virtual void tick();

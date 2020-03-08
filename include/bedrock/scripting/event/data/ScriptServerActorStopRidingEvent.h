@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../unmapped/ScriptEngine"
-#include "../../../actor/unmapped/ActorUniqueID"
 #include "../../ScriptObjectHandle"
+#include "../../../actor/unmapped/ActorUniqueID"
+#include "../../unmapped/ScriptEngine"
 
 
 class ScriptServerActorStopRidingEvent : ScriptEventData {
@@ -10,7 +10,7 @@ class ScriptServerActorStopRidingEvent : ScriptEventData {
 public:
     static long mHash;
 
-    ScriptServerActorStopRidingEvent::~ScriptServerActorStopRidingEvent()
+    virtual ScriptServerActorStopRidingEvent::~ScriptServerActorStopRidingEvent()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
     void getHash();

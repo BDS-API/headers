@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../unmapped/MoveControlComponent"
 #include "../actor/Mob"
 #include "../description/component/MoveControlDescription"
+#include "../../unmapped/MoveControlComponent"
 
 
 class GenericMoveControl : MoveControl {
 
 public:
-    GenericMoveControl::~GenericMoveControl()
+    virtual GenericMoveControl::~GenericMoveControl()
     virtual void initializeInternal(Mob &, MoveControlDescription *);
     virtual void tick(MoveControlComponent &, Mob &);
 

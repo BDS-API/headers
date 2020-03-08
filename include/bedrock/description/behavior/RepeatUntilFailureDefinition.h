@@ -7,7 +7,7 @@
 class RepeatUntilFailureDefinition : DecoratorDefinition {
 
 public:
-    RepeatUntilFailureDefinition::~RepeatUntilFailureDefinition()
+    virtual RepeatUntilFailureDefinition::~RepeatUntilFailureDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     RepeatUntilFailureDefinition(void);

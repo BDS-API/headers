@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../ScriptVersionInfo"
 #include "../ScriptObjectHandle"
+#include "../ScriptVersionInfo"
 
 
 class ScriptQueries {

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../bedrock/util/Tick"
 #include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/Tick"
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/level/Level"
 #include "../bedrock/util/BlockPos"
 #include "../bedrock/actor/Actor"
 #include "../bedrock/level/storage/LevelStorage"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/level/Level"
 
 
 class TickingAreasManager {

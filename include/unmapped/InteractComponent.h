@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/definition/InteractDefinition"
 #include "../bedrock/actor/Actor"
-#include "../bedrock/actor/unmapped/ActorInteraction"
 #include "../bedrock/actor/Player"
+#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "../bedrock/definition/InteractDefinition"
 
 
 class InteractComponent {

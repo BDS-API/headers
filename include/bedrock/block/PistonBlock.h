@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/Random"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../util/Vec3"
 
 
 class PistonBlock : ActorBlock {
@@ -13,7 +13,7 @@ class PistonBlock : ActorBlock {
 public:
     static long ARM_DIRECTION_OFFSETS;
 
-    PistonBlock::~PistonBlock()
+    virtual PistonBlock::~PistonBlock()
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
     virtual bool isValidAuxValue(int)const;
     virtual bool canContainLiquid()const;

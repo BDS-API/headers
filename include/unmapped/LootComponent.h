@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/block/BlockLegacy"
 #include "../bedrock/description/blockcomponent/LootComponentDescription"
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/BlockLegacy"
 #include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/util/BlockPos"
 
 
 class LootComponent {

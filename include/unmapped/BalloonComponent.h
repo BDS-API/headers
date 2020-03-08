@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/Vec3"
 
 
 class BalloonComponent {

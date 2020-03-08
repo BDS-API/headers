@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
 #include "../util/AABB"
 
 
 class TallGrass : BushBlock {
 
 public:
-    TallGrass::~TallGrass()
+    virtual TallGrass::~TallGrass()
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool canContainLiquid()const;

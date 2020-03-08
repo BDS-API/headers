@@ -6,7 +6,7 @@
 class RailMovementSystem : ITickingSystem {
 
 public:
-    RailMovementSystem::~RailMovementSystem()
+    virtual RailMovementSystem::~RailMovementSystem()
     virtual void tick(EntityRegistry &);
 
 };

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../util/Vec3"
 #include "../../io/BinaryStream"
+#include "../../util/Vec3"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class LevelSoundEventPacketV2 : Packet {
 
 public:
-    LevelSoundEventPacketV2::~LevelSoundEventPacketV2()
+    virtual LevelSoundEventPacketV2::~LevelSoundEventPacketV2()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

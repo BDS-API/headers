@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../actor/Player"
 #include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/BlockPos"
 #include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
+#include "../item/ItemStack"
 
 
 class GameMode {
@@ -22,7 +22,7 @@ public:
     static long PICKRANGE_SURVIVAL_MAXIMUM_SQR;
     static long PICKRANGE_CREATIVE_MAXIMUM_SQR;
 
-    GameMode::~GameMode()
+    virtual GameMode::~GameMode()
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &);
     virtual void destroyBlock(BlockPos const&, unsigned char);
     virtual void continueDestroyBlock(BlockPos const&, unsigned char, bool &);

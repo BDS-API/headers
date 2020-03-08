@@ -6,7 +6,7 @@
 class RepeatUntilSuccessNode : BehaviorNode {
 
 public:
-    RepeatUntilSuccessNode::~RepeatUntilSuccessNode()
+    virtual RepeatUntilSuccessNode::~RepeatUntilSuccessNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

@@ -7,7 +7,7 @@
 class WoodSlabBlockItem : SlabBlockItem {
 
 public:
-    WoodSlabBlockItem::~WoodSlabBlockItem()
+    virtual WoodSlabBlockItem::~WoodSlabBlockItem()
     virtual void getLevelDataForAuxValue(int)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
 

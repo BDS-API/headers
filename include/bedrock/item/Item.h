@@ -1,27 +1,27 @@
 #pragma once
 
-#include "../io/ReadOnlyBinaryStream"
-#include "../../unmapped/AtlasItemManager"
-#include "../block/unmapped/BlockSource"
-#include "../container/Container"
-#include "../../json/Value"
-#include "../io/IDataOutput"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../../unmapped/Block"
-#include "../actor/unmapped/ActorInfoRegistry"
-#include "../actor/Actor"
-#include "../block/unmapped/BlockDefinitionGroup"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/BaseGameVersion"
-#include "../../unmapped/TextureAtlasItem"
-#include "unmapped/ItemDescriptor"
-#include "../actor/Mob"
-#include "../level/LevelData"
-#include "../util/Vec3"
 #include "../../unmapped/TextureUVCoordinateSet"
-#include "../io/IDataInput"
+#include "../util/Vec3"
+#include "../../unmapped/TextureAtlasItem"
+#include "../nbt/CompoundTag"
+#include "../io/IDataOutput"
+#include "../actor/Player"
+#include "../container/Container"
+#include "../block/unmapped/BlockSource"
 #include "../level/Level"
+#include "../io/IDataInput"
+#include "../actor/unmapped/ActorInfoRegistry"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../io/ReadOnlyBinaryStream"
+#include "../../unmapped/BaseGameVersion"
+#include "../level/LevelData"
+#include "../../json/Value"
+#include "../actor/Mob"
+#include "../actor/Actor"
+#include "../../unmapped/AtlasItemManager"
+#include "../block/unmapped/BlockDefinitionGroup"
+#include "unmapped/ItemDescriptor"
 
 
 class Item {
@@ -41,7 +41,7 @@ public:
     static long mAllowExperimental;
     static long mWorldBaseGameVersion;
 
-    Item::~Item()
+    virtual Item::~Item()
     virtual void tearDown();
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;

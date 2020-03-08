@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../LevelChunk"
-#include "../../block/unmapped/BlockVolume"
-#include "../../../unmapped/BiomeSource"
-#include "../../util/ChunkPos"
-#include "../../../unmapped/BoundingBox"
 #include "../../../unmapped/Dimension"
+#include "../LevelChunk"
 #include "../../util/BlockPos"
+#include "../../../unmapped/BoundingBox"
+#include "../../util/ChunkPos"
 #include "../generator/WorldGenerator"
+#include "../../../unmapped/BiomeSource"
+#include "../../block/unmapped/BlockVolume"
 
 
 class NetherGenerator : ChunkSource, WorldGenerator {
 
 public:
-    NetherGenerator::~NetherGenerator()
+    virtual NetherGenerator::~NetherGenerator()
     virtual void postProcess(ChunkViewSource &);
     virtual void loadChunk(LevelChunk &, bool);
     virtual void getFeatureTypeAt(BlockPos const&);

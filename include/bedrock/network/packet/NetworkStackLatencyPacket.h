@@ -9,7 +9,7 @@ class NetworkStackLatencyPacket : Packet {
 public:
     static long DEFAULT_SEND_INTERVAL;
 
-    NetworkStackLatencyPacket::~NetworkStackLatencyPacket()
+    virtual NetworkStackLatencyPacket::~NetworkStackLatencyPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

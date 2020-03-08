@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/ExplodeComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/ExplodeComponent"
 
 
 class ExplodeDefinition {

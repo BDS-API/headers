@@ -7,7 +7,7 @@
 class ServerSettingsRequestPacket : Packet {
 
 public:
-    ServerSettingsRequestPacket::~ServerSettingsRequestPacket()
+    virtual ServerSettingsRequestPacket::~ServerSettingsRequestPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

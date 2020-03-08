@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../LevelChunk"
-#include "../biome/Biome"
-#include "../../util/ChunkPos"
 #include "../LevelChunkFinalDeleter"
+#include "../biome/Biome"
+#include "../LevelChunk"
+#include "../../util/ChunkPos"
 #include "../storage/LevelStorage"
 
 
 class LegacyChunkStorage : ChunkSource {
 
 public:
-    LegacyChunkStorage::~LegacyChunkStorage()
+    virtual LegacyChunkStorage::~LegacyChunkStorage()
     virtual void loadChunk(LevelChunk &, bool);
     virtual void saveLiveChunk(LevelChunk &);
     virtual void acquireDiscarded(std::unique_ptr<LevelChunk, LevelChunkFinalDeleter>);

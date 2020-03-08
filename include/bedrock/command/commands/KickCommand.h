@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
 #include "../CommandOutput"
+#include "../orgin/CommandOrigin"
 #include "../CommandRegistry"
 
 
 class KickCommand : ServerCommand {
 
 public:
-    KickCommand::~KickCommand()
+    virtual KickCommand::~KickCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

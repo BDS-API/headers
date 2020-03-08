@@ -9,7 +9,7 @@ using namespace AgentCommands;
 class GetItemDetailsCommand : AgentCommands::Command {
 
 public:
-    AgentCommands::GetItemDetailsCommand::~GetItemDetailsCommand()
+    virtual AgentCommands::GetItemDetailsCommand::~GetItemDetailsCommand()
     virtual void execute();
     virtual bool isDone();
     virtual void fireCommandDoneEvent();

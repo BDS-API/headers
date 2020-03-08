@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../../unmapped/Block"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
 #include "../actor/Player"
 
 
 class TurtleEggBlock : BlockLegacy {
 
 public:
-    TurtleEggBlock::~TurtleEggBlock()
+    virtual TurtleEggBlock::~TurtleEggBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void waterSpreadCausesSpawn()const;
     virtual bool canContainLiquid()const;

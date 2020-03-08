@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/InsomniaComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/InsomniaComponent"
 
 
 class InsomniaDefinition {

@@ -7,7 +7,7 @@
 class OnHitSubcomponent {
 
 public:
-    OnHitSubcomponent::~OnHitSubcomponent()
+    virtual OnHitSubcomponent::~OnHitSubcomponent()
 
     OnHitSubcomponent(void);
     void _canAttack(Actor *, Actor *)const;

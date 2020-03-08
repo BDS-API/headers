@@ -5,7 +5,7 @@
 class BinaryDataInput : BytesDataInput {
 
 public:
-    BinaryDataInput::~BinaryDataInput()
+    virtual BinaryDataInput::~BinaryDataInput()
     virtual void readString();
     virtual void readLongString();
     virtual void readFloat();

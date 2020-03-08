@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../core/Path"
 #include "../core/FileOpenMode"
+#include "../core/Path"
 
 
 class JournaledFile {

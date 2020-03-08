@@ -7,7 +7,7 @@ using namespace RakNet;
 class RakPeer : RakNet::RakPeerInterface, RakNet::RNS2EventHandler {
 
 public:
-    RakNet::RakPeer::~RakPeer()
+    virtual RakNet::RakPeer::~RakPeer()
     virtual void Startup(unsigned int, RakNet::SocketDescriptor *, unsigned int, int);
     virtual void InitializeSecurity(char const*, char const*, bool);
     virtual void DisableSecurity();

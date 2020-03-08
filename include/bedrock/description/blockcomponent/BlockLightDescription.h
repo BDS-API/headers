@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../definition/BlockDefinition"
 #include "../../block/BlockLegacy"
 #include "../../nbt/CompoundTag"
+#include "../../definition/BlockDefinition"
 
 
 class BlockLightDescription : BlockComponentDescription {
@@ -10,7 +10,7 @@ class BlockLightDescription : BlockComponentDescription {
 public:
     static long NameID[abi:cxx11];
 
-    BlockLightDescription::~BlockLightDescription()
+    virtual BlockLightDescription::~BlockLightDescription()
     virtual void getName()const;
     virtual void initializeComponent(BlockLegacy &)const;
     virtual void buildSchema(JsonUtil::JsonSchemaObjectNode<JsonUtil::JsonParseState<JsonUtil::EmptyClass, BlockDefinition>, BlockDefinition> &)const;

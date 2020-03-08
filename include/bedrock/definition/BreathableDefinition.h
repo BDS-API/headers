@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/BreathableComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/BreathableComponent"
 
 
 class BreathableDefinition {

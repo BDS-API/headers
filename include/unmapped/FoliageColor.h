@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../mce/Image"
 #include "../bedrock/util/Random"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/util/BlockPos"
+#include "../mce/Image"
 
 
 class FoliageColor {

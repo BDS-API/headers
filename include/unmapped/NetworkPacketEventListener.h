@@ -6,7 +6,7 @@
 class NetworkPacketEventListener {
 
 public:
-    NetworkPacketEventListener::~NetworkPacketEventListener()
+    virtual NetworkPacketEventListener::~NetworkPacketEventListener()
     virtual void onPacketReceivedFrom(PacketHeader const&, Packet const&);
 
     NetworkPacketEventListener(void);

@@ -7,7 +7,7 @@
 class WaitDefinition : BehaviorDefinition {
 
 public:
-    WaitDefinition::~WaitDefinition()
+    virtual WaitDefinition::~WaitDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     WaitDefinition(void);

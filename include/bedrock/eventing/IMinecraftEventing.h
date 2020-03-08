@@ -7,7 +7,7 @@
 class IMinecraftEventing : IPackTelemetry, IWebviewTelemetry {
 
 public:
-    IMinecraftEventing::~IMinecraftEventing()
+    virtual IMinecraftEventing::~IMinecraftEventing()
 
     IMinecraftEventing(void);
 };

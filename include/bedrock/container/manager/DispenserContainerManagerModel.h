@@ -7,7 +7,7 @@
 class DispenserContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    DispenserContainerManagerModel::~DispenserContainerManagerModel()
+    virtual DispenserContainerManagerModel::~DispenserContainerManagerModel()
     virtual void init();
 
     DispenserContainerManagerModel(ContainerID, Player &, BlockPos const&);

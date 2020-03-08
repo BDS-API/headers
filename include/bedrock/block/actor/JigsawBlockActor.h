@@ -6,7 +6,7 @@
 class JigsawBlockActor : BlockActor {
 
 public:
-    JigsawBlockActor::~JigsawBlockActor()
+    virtual JigsawBlockActor::~JigsawBlockActor()
 
     JigsawBlockActor(BlockPos const&);
 };

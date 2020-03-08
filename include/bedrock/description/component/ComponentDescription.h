@@ -6,7 +6,7 @@
 class ComponentDescription : Description {
 
 public:
-    ComponentDescription::~ComponentDescription()
+    virtual ComponentDescription::~ComponentDescription()
 
     ComponentDescription(void);
     ComponentDescription(ComponentDescription&&);

@@ -6,7 +6,7 @@
 class RandomStrollGoal : Goal {
 
 public:
-    RandomStrollGoal::~RandomStrollGoal()
+    virtual RandomStrollGoal::~RandomStrollGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../unmapped/AutomationClient"
 #include "../../unmapped/NetworkIdentifier"
+#include "../../unmapped/AutomationClient"
 
 
 class ClassroomModeNetworkHandler : NetEventCallback {
 
 public:
-    ClassroomModeNetworkHandler::~ClassroomModeNetworkHandler()
+    virtual ClassroomModeNetworkHandler::~ClassroomModeNetworkHandler()
     virtual void allowIncomingPacketId(NetworkIdentifier const&, MinecraftPacketIds);
     virtual void onWebsocketRequest(std::string const&, std::string const&, std::function<void ()(void)>);
 

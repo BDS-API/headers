@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorUniqueID"
 #include "../../../unmapped/UniqueId"
 #include "../../io/BinaryStream"
-#include "../../../unmapped/MapDecoration"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../../unmapped/MapItemSavedData"
 #include "../../../unmapped/Dimension"
+#include "../../../unmapped/MapDecoration"
 #include "../../level/Level"
+#include "../../../unmapped/MapItemSavedData"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class ClientboundMapItemDataPacket : Packet {
 
 public:
-    ClientboundMapItemDataPacket::~ClientboundMapItemDataPacket()
+    virtual ClientboundMapItemDataPacket::~ClientboundMapItemDataPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

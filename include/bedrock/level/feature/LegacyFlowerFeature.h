@@ -1,17 +1,17 @@
 #pragma once
 
+#include "../../util/Random"
+#include "../../block/unmapped/BlockSource"
 #include "../biome/Biome"
+#include "../../util/BlockPos"
 #include "../../../unmapped/BiomeRegistry"
 #include "../../../unmapped/PerlinSimplexNoise"
-#include "../../util/Random"
-#include "../../util/BlockPos"
-#include "../../block/unmapped/BlockSource"
 
 
 class LegacyFlowerFeature : Feature {
 
 public:
-    LegacyFlowerFeature::~LegacyFlowerFeature()
+    virtual LegacyFlowerFeature::~LegacyFlowerFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     LegacyFlowerFeature(LegacyFlowerFeature::Type);

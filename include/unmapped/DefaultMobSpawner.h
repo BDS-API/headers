@@ -6,7 +6,7 @@
 class DefaultMobSpawner : BaseMobSpawner {
 
 public:
-    DefaultMobSpawner::~DefaultMobSpawner()
+    virtual DefaultMobSpawner::~DefaultMobSpawner()
     virtual void getPos();
 
     DefaultMobSpawner(MobSpawnerBlockActor *);

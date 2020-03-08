@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
-#include "../actor/Player"
 #include "../../unmapped/Material"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../actor/Player"
 
 
 class BarrelBlock : FaceDirectionalBlock {
 
 public:
-    BarrelBlock::~BarrelBlock()
+    virtual BarrelBlock::~BarrelBlock()
     virtual bool isContainerBlock()const;
     virtual bool isInteractiveBlock()const;
     virtual bool isSignalSource()const;

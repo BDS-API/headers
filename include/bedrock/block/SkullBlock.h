@@ -1,22 +1,22 @@
 #pragma once
 
-#include "../level/Level"
-#include "actor/BlockActor"
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
-#include "../../unmapped/Block"
+#include "../actor/Actor"
+#include "../util/Random"
+#include "../level/Level"
 #include "actor/SkullBlockActor"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "actor/BlockActor"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
 class SkullBlock : ActorBlock {
 
 public:
-    SkullBlock::~SkullBlock()
+    virtual SkullBlock::~SkullBlock()
     virtual void waterSpreadCausesSpawn()const;
     virtual bool canContainLiquid()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

@@ -7,7 +7,7 @@ class NameableDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    NameableDescription::~NameableDescription()
+    virtual NameableDescription::~NameableDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

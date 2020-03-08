@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../unmapped/SubpackInfo"
-#include "../../core/Path"
-#include "../../unmapped/BehaviorPackContents"
 #include "../../unmapped/Pack"
+#include "../../unmapped/SubpackInfo"
+#include "../../unmapped/BehaviorPackContents"
+#include "../../core/Path"
 
 
 class ResourcePack {

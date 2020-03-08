@@ -6,7 +6,7 @@
 class NetherFortressStart : StructureStart {
 
 public:
-    NetherFortressStart::~NetherFortressStart()
+    virtual NetherFortressStart::~NetherFortressStart()
     virtual void getType()const;
 
     NetherFortressStart(void);

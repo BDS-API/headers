@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "../item/ItemStack"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
+#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "../item/ItemStack"
 #include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class ThrownTrident : AbstractArrow {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    ThrownTrident::~ThrownTrident()
+    virtual ThrownTrident::~ThrownTrident()
     virtual void normalTick();
     virtual void playerTouch(Player &);
     virtual bool isEnchanted()const;

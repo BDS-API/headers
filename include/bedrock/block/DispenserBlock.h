@@ -1,20 +1,20 @@
 #pragma once
 
+#include "../util/Random"
+#include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "../item/ItemStack"
 #include "../container/Container"
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/Random"
-#include "../util/BlockPos"
-#include "unmapped/BlockSource"
-#include "../../unmapped/Block"
 
 
 class DispenserBlock : ActorBlock {
 
 public:
-    DispenserBlock::~DispenserBlock()
+    virtual DispenserBlock::~DispenserBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isContainerBlock()const;
     virtual bool isInteractiveBlock()const;

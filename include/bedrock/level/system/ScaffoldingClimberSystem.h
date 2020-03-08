@@ -6,7 +6,7 @@
 class ScaffoldingClimberSystem : ITickingSystem {
 
 public:
-    ScaffoldingClimberSystem::~ScaffoldingClimberSystem()
+    virtual ScaffoldingClimberSystem::~ScaffoldingClimberSystem()
     virtual void tick(EntityRegistry &);
 
     ScaffoldingClimberSystem(void);

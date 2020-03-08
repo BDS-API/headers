@@ -1,10 +1,10 @@
 #pragma once
 
 #include "../../../unmapped/ContainerItemStack"
-#include "../../network/packet/CraftingEventPacket"
 #include "../../util/BlockPos"
 #include "../../actor/Player"
 #include "../../item/ItemInstance"
+#include "../../network/packet/CraftingEventPacket"
 
 
 class AnvilContainerManagerModel : ContainerManagerModel {
@@ -14,7 +14,7 @@ public:
     static long MATERIAL_SLOT;
     static long RESULT_SLOT;
 
-    AnvilContainerManagerModel::~AnvilContainerManagerModel()
+    virtual AnvilContainerManagerModel::~AnvilContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

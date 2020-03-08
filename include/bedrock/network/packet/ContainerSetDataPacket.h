@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class ContainerSetDataPacket : Packet {
 
 public:
-    ContainerSetDataPacket::~ContainerSetDataPacket()
+    virtual ContainerSetDataPacket::~ContainerSetDataPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

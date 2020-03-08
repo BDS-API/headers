@@ -7,7 +7,7 @@
 class PlayStatusPacket : Packet {
 
 public:
-    PlayStatusPacket::~PlayStatusPacket()
+    virtual PlayStatusPacket::~PlayStatusPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

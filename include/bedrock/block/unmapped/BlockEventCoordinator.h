@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../level/Level"
-#include "../../actor/Player"
 #include "../../actor/Actor"
+#include "../../level/Level"
 #include "../../util/BlockPos"
-#include "../../../unmapped/NewBlockID"
 #include "../../../unmapped/Block"
+#include "../../actor/Player"
+#include "../../../unmapped/NewBlockID"
 
 
 class BlockEventCoordinator {

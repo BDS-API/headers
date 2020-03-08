@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../ScriptVersionInfo"
-#include "../../actor/Actor"
-#include "../unmapped/ScriptEngine"
-#include "../../../unmapped/Block"
-#include "../ScriptObjectHandle"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../actor/Actor"
+#include "../../../unmapped/Block"
+#include "../../util/BlockPos"
+#include "../ScriptObjectHandle"
 #include "../unmapped/ScriptServerContext"
+#include "../ScriptVersionInfo"
+#include "../unmapped/ScriptEngine"
 
 
 class ScriptBlockContainerComponent : ScriptContainerComponentBase {
@@ -15,7 +15,7 @@ class ScriptBlockContainerComponent : ScriptContainerComponentBase {
 public:
     static long mHash;
 
-    ScriptBlockContainerComponent::~ScriptBlockContainerComponent()
+    virtual ScriptBlockContainerComponent::~ScriptBlockContainerComponent()
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, ScriptApi::ScriptObjectHandle const&)const;
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, ScriptApi::ScriptObjectHandle &)const;

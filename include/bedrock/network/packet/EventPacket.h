@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../../unmapped/Raid"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../io/BinaryStream"
 #include "../../actor/unmapped/ActorUniqueID"
+#include "../../../unmapped/Raid"
+#include "../../io/BinaryStream"
 #include "../../../unmapped/Dimension"
 #include "../../actor/Player"
 #include "../../../unmapped/Data"
-#include "../../actor/Actor"
+#include "../../io/ReadOnlyBinaryStream"
 #include "../../actor/Mob"
+#include "../../actor/Actor"
 
 
 class EventPacket : Packet {
 
 public:
-    EventPacket::~EventPacket()
+    virtual EventPacket::~EventPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../container/Container"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/BlockPos"
 #include "../block/unmapped/BlockSource"
 #include "../nbt/CompoundTag"
+#include "../actor/Actor"
+#include "../util/BlockPos"
+#include "../util/Vec3"
 #include "unmapped/ItemDescriptor"
+#include "../container/Container"
 
 
 class DyePowderItem : FertilizerItem {
@@ -14,7 +14,7 @@ class DyePowderItem : FertilizerItem {
 public:
     static long mColorMap;
 
-    DyePowderItem::~DyePowderItem()
+    virtual DyePowderItem::~DyePowderItem()
     virtual bool isDye()const;
     virtual bool isFertilizer(int)const;
     virtual bool isValidAuxValue(int)const;

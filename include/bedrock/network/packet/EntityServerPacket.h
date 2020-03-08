@@ -8,7 +8,7 @@
 class EntityServerPacket : Packet {
 
 public:
-    EntityServerPacket::~EntityServerPacket()
+    virtual EntityServerPacket::~EntityServerPacket()
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

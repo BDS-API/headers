@@ -7,7 +7,7 @@ using namespace RakNet;
 class RakNetSocket2 {
 
 public:
-    RakNet::RakNetSocket2::~RakNetSocket2()
+    virtual RakNet::RakNetSocket2::~RakNetSocket2()
     virtual void SetMulticastInterface(int);
 
     RakNetSocket2(void);

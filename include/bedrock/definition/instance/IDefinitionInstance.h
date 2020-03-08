@@ -5,7 +5,7 @@
 class IDefinitionInstance {
 
 public:
-    IDefinitionInstance::~IDefinitionInstance()
+    virtual IDefinitionInstance::~IDefinitionInstance()
 
     IDefinitionInstance(void);
 };

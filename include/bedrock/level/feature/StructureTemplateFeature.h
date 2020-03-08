@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/IBlockPlacementTarget"
 #include "../../util/Random"
 #include "../../util/BlockPos"
+#include "../../../unmapped/IBlockPlacementTarget"
 
 
 class StructureTemplateFeature : IFeature {
 
 public:
-    StructureTemplateFeature::~StructureTemplateFeature()
+    virtual StructureTemplateFeature::~StructureTemplateFeature()
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const;
 
     StructureTemplateFeature(void);

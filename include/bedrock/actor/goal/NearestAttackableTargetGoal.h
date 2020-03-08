@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/MobDescriptor"
 #include "../Mob"
+#include "../../../unmapped/MobDescriptor"
 #include "../Player"
 
 
 class NearestAttackableTargetGoal : TargetGoal {
 
 public:
-    NearestAttackableTargetGoal::~NearestAttackableTargetGoal()
+    virtual NearestAttackableTargetGoal::~NearestAttackableTargetGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

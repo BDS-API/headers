@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
 #include "../bedrock/item/ItemInstance"
+#include "../bedrock/item/ItemStack"
 
 
 class ContainerItemStack {

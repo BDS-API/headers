@@ -5,7 +5,7 @@
 class BinaryStream : ReadOnlyBinaryStream {
 
 public:
-    BinaryStream::~BinaryStream()
+    virtual BinaryStream::~BinaryStream()
 
     BinaryStream(void);
     BinaryStream(std::string &&);

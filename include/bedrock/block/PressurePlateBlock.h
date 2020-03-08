@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
-#include "../../unmapped/Block"
 #include "../../unmapped/Material"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class PressurePlateBlock : BasePressurePlateBlock {
 
 public:
-    PressurePlateBlock::~PressurePlateBlock()
+    virtual PressurePlateBlock::~PressurePlateBlock()
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getSignalStrength(BlockSource &, BlockPos const&)const;
     virtual void getSignalForData(int)const;

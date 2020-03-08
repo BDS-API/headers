@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../util/ChunkPos"
 #include "../../util/Random"
 #include "../LevelChunkFinalDeleter"
 #include "../LevelChunk"
+#include "../../util/ChunkPos"
 
 
 class MainChunkSource : ChunkSource {
 
 public:
-    MainChunkSource::~MainChunkSource()
+    virtual MainChunkSource::~MainChunkSource()
     virtual void getExistingChunk(ChunkPos const&);
     virtual void getRandomChunk(Random &);
     virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);

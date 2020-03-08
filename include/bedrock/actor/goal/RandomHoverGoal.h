@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/IntRange"
 #include "../Mob"
+#include "../../../unmapped/IntRange"
 
 
 class RandomHoverGoal : Goal {
 
 public:
-    RandomHoverGoal::~RandomHoverGoal()
+    virtual RandomHoverGoal::~RandomHoverGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -5,7 +5,7 @@
 class SwimEnchant : Enchant {
 
 public:
-    SwimEnchant::~SwimEnchant()
+    virtual SwimEnchant::~SwimEnchant()
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMaxLevel()const;

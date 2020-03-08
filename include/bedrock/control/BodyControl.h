@@ -8,7 +8,7 @@ class BodyControl : Control {
 public:
     static long MAX_CLAMP_ANGLE;
 
-    BodyControl::~BodyControl()
+    virtual BodyControl::~BodyControl()
     virtual void clientTick(Mob &);
 
     BodyControl(void);

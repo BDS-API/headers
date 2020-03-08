@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/actor/goal/Goal"
 #include "../bedrock/actor/Player"
+#include "../bedrock/actor/goal/Goal"
 
 
 class GoalSelectorComponent {

@@ -7,7 +7,7 @@ class MarkVariantDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    MarkVariantDescription::~MarkVariantDescription()
+    virtual MarkVariantDescription::~MarkVariantDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

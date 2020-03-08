@@ -8,7 +8,7 @@ using namespace AgentCommands;
 class MoveCommand : AgentCommands::Command {
 
 public:
-    AgentCommands::MoveCommand::~MoveCommand()
+    virtual AgentCommands::MoveCommand::~MoveCommand()
     virtual void execute();
     virtual bool isDone();
     virtual void tick();

@@ -6,7 +6,7 @@
 class SwellGoal : Goal {
 
 public:
-    SwellGoal::~SwellGoal()
+    virtual SwellGoal::~SwellGoal()
     virtual bool canUse();
     virtual void start();
     virtual void stop();

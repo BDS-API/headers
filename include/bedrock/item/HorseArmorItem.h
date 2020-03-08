@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../level/Level"
-#include "../container/Container"
-#include "unmapped/ItemDescriptor"
-#include "../util/Color"
-#include "../util/Vec3"
 #include "../block/unmapped/BlockSource"
 #include "../nbt/CompoundTag"
+#include "../level/Level"
+#include "../util/Color"
+#include "../util/Vec3"
+#include "../container/Container"
+#include "unmapped/ItemDescriptor"
 
 
 class HorseArmorItem : Item {
@@ -14,7 +14,7 @@ class HorseArmorItem : Item {
 public:
     static long mHealthPerTier;
 
-    HorseArmorItem::~HorseArmorItem()
+    virtual HorseArmorItem::~HorseArmorItem()
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual void getArmorValue()const;
     virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;

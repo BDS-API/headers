@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class EndPodiumFeature : Feature {
@@ -15,7 +15,7 @@ public:
     static long END_PODIUM_LOCATION;
     static long END_PODIUM_CHUNK_POSITION;
 
-    EndPodiumFeature::~EndPodiumFeature()
+    virtual EndPodiumFeature::~EndPodiumFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     EndPodiumFeature(bool);

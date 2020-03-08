@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
 #include "../actor/Player"
+#include "../item/ItemStack"
 
 
 class JukeboxBlock : ActorBlock {
 
 public:
-    JukeboxBlock::~JukeboxBlock()
+    virtual JukeboxBlock::~JukeboxBlock()
     virtual bool isSignalSource()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

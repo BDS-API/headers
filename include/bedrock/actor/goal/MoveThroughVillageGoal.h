@@ -6,7 +6,7 @@
 class MoveThroughVillageGoal : Goal {
 
 public:
-    MoveThroughVillageGoal::~MoveThroughVillageGoal()
+    virtual MoveThroughVillageGoal::~MoveThroughVillageGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

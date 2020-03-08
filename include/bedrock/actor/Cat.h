@@ -1,7 +1,7 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
 #include "../../unmapped/RenderParams"
+#include "unmapped/ActorDefinitionGroup"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -11,7 +11,7 @@ public:
     static long SNEAK_SPEED_MOD;
     static long SPRINT_SPEED_MOD;
 
-    Cat::~Cat()
+    virtual Cat::~Cat()
     virtual void onTame();
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void getAmbientSound();

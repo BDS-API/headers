@@ -2,8 +2,8 @@
 
 #include "../bedrock/actor/damagesource/ActorDamageSource"
 #include "../bedrock/actor/Actor"
-#include "../bedrock/actor/Player"
 #include "../bedrock/level/Level"
+#include "../bedrock/actor/Player"
 
 
 using namespace LootTableContext;

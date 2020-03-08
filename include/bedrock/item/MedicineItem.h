@@ -1,15 +1,15 @@
 #pragma once
 
-#include "unmapped/ItemDescriptor"
-#include "../actor/Player"
 #include "../nbt/CompoundTag"
 #include "../level/Level"
+#include "../actor/Player"
+#include "unmapped/ItemDescriptor"
 
 
 class MedicineItem : ChemistryItem {
 
 public:
-    MedicineItem::~MedicineItem()
+    virtual MedicineItem::~MedicineItem()
     virtual bool isValidAuxValue(int)const;
     virtual void use(ItemStack &, Player &)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;

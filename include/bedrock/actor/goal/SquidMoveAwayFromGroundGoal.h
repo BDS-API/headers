@@ -6,7 +6,7 @@
 class SquidMoveAwayFromGroundGoal : Goal {
 
 public:
-    SquidMoveAwayFromGroundGoal::~SquidMoveAwayFromGroundGoal()
+    virtual SquidMoveAwayFromGroundGoal::~SquidMoveAwayFromGroundGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

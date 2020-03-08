@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../ItemStack"
-#include "../../../json/Value"
-#include "../condition/LootItemCondition"
-#include "../../../unmapped/LootTableContext"
 #include "../../util/Random"
 #include "../../../unmapped/RandomValueBounds"
+#include "../../../unmapped/LootTableContext"
 #include "../ItemInstance"
+#include "../condition/LootItemCondition"
+#include "../ItemStack"
+#include "../../../json/Value"
 
 
 class RandomBlockStateFunction : LootItemFunction {
 
 public:
-    RandomBlockStateFunction::~RandomBlockStateFunction()
+    virtual RandomBlockStateFunction::~RandomBlockStateFunction()
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
 

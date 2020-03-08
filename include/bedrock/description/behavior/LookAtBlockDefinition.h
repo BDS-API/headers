@@ -7,7 +7,7 @@
 class LookAtBlockDefinition : BehaviorDefinition {
 
 public:
-    LookAtBlockDefinition::~LookAtBlockDefinition()
+    virtual LookAtBlockDefinition::~LookAtBlockDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     LookAtBlockDefinition(void);

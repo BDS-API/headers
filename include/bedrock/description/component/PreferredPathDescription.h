@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../../block/BlockLegacy"
+#include "../../../json/Value"
 
 
 class PreferredPathDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    PreferredPathDescription::~PreferredPathDescription()
+    virtual PreferredPathDescription::~PreferredPathDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

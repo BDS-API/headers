@@ -5,7 +5,7 @@
 class StringByteInput : BytesDataInput {
 
 public:
-    StringByteInput::~StringByteInput()
+    virtual StringByteInput::~StringByteInput()
     virtual void readBytes(void *, unsigned long);
     virtual void numBytesLeft()const;
 

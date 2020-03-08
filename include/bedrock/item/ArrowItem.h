@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../level/Level"
-#include "../container/Container"
-#include "unmapped/ItemDescriptor"
-#include "../actor/Arrow"
-#include "../util/Vec3"
 #include "../block/unmapped/BlockSource"
 #include "../nbt/CompoundTag"
+#include "../actor/Arrow"
+#include "../level/Level"
+#include "../util/Vec3"
+#include "unmapped/ItemDescriptor"
+#include "../container/Container"
 
 
 class ArrowItem : Item {
 
 public:
-    ArrowItem::~ArrowItem()
+    virtual ArrowItem::~ArrowItem()
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual bool isValidAuxValue(int)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;

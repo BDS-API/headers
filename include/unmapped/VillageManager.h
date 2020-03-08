@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../mce/UUID"
-#include "../bedrock/actor/Actor"
 #include "../bedrock/util/Tick"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/util/BlockPos"
+#include "../mce/UUID"
+#include "../bedrock/util/Vec3"
 
 
 class VillageManager {

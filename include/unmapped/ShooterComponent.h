@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/description/component/ShooterDescription"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/description/component/ShooterDescription"
 
 
 class ShooterComponent {

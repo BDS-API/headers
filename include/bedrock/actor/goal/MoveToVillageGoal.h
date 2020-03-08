@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../Mob"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class MoveToVillageGoal : BaseMoveToGoal {
 
 public:
-    MoveToVillageGoal::~MoveToVillageGoal()
+    virtual MoveToVillageGoal::~MoveToVillageGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

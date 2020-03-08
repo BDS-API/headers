@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../text/TextObjectRoot"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../../unmapped/CachedMessageData"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../../unmapped/CachedMessageData"
+#include "../../util/BlockPos"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../text/TextObjectRoot"
 
 
 class SignBlockActor : BlockActor {
 
 public:
-    SignBlockActor::~SignBlockActor()
+    virtual SignBlockActor::~SignBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);

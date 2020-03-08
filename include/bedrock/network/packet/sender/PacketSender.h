@@ -7,7 +7,7 @@
 class PacketSender {
 
 public:
-    PacketSender::~PacketSender()
+    virtual PacketSender::~PacketSender()
 
     void sendToPrimaryClient(NetworkIdentifier const&, Packet const&);
     PacketSender(unsigned char);

@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../../unmapped/StrongholdResult"
-#include "../../../../unmapped/BiomeSource"
-#include "../../../util/ChunkPos"
 #include "../../../util/Random"
 #include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/StrongholdResult"
 #include "../../../util/BlockPos"
+#include "../../../util/ChunkPos"
+#include "../../../../unmapped/BiomeSource"
 
 
 class StrongholdFeature : StructureFeature {
 
 public:
-    StrongholdFeature::~StrongholdFeature()
+    virtual StrongholdFeature::~StrongholdFeature()
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);
     virtual void createStructureStart(Dimension &, BiomeSource &, Random &, ChunkPos const&);

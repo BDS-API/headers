@@ -7,7 +7,7 @@ class FamilyTypeDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    FamilyTypeDescription::~FamilyTypeDescription()
+    virtual FamilyTypeDescription::~FamilyTypeDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

@@ -6,7 +6,7 @@
 class StructurePoolBlockTagPredicateAlwaysTrue : IStructurePoolBlockTagPredicate {
 
 public:
-    StructurePoolBlockTagPredicateAlwaysTrue::~StructurePoolBlockTagPredicateAlwaysTrue()
+    virtual StructurePoolBlockTagPredicateAlwaysTrue::~StructurePoolBlockTagPredicateAlwaysTrue()
     virtual void test(Block const&, CompoundTag const&)const;
 
     StructurePoolBlockTagPredicateAlwaysTrue(void);

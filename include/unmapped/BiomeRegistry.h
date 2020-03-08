@@ -9,7 +9,7 @@ class BiomeRegistry : IEntityRegistryOwner {
 
 public:
     virtual void getEntityRegistry();
-    BiomeRegistry::~BiomeRegistry()
+    virtual BiomeRegistry::~BiomeRegistry()
 
     void setLoadFromPacks(bool);
     BiomeRegistry(void);

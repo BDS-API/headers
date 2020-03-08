@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../../unmapped/MineshaftData"
 #include "../../../util/Random"
 #include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/MineshaftData"
 
 
 class MineshaftPiece : StructurePiece {
 
 public:
-    MineshaftPiece::~MineshaftPiece()
+    virtual MineshaftPiece::~MineshaftPiece()
 
     void createRandomShaftPiece(MineshaftData &, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
     void generateAndAddPiece(StructurePiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);

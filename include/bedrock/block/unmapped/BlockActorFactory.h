@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../util/BlockPos"
 #include "../BlockLegacy"
+#include "../../util/BlockPos"
 
 
 class BlockActorFactory {

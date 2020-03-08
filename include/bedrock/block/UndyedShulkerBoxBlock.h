@@ -6,7 +6,7 @@
 class UndyedShulkerBoxBlock : ShulkerBoxBlock {
 
 public:
-    UndyedShulkerBoxBlock::~UndyedShulkerBoxBlock()
+    virtual UndyedShulkerBoxBlock::~UndyedShulkerBoxBlock()
     virtual void getColor(Block const&)const;
 
     UndyedShulkerBoxBlock(std::string const&, int);

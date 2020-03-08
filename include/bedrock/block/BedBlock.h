@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../actor/Player"
+#include "unmapped/BlockSource"
 #include "../actor/Actor"
 #include "../util/BlockPos"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../actor/Player"
 
 
 class BedBlock : BlockLegacy {
@@ -14,7 +14,7 @@ public:
     static long HEAD_PIECE_DATA;
     static long OCCUPIED_DATA;
 
-    BedBlock::~BedBlock()
+    virtual BedBlock::~BedBlock()
     virtual void getNextBlockPermutation(Block const&)const;
     virtual bool isInteractiveBlock()const;
     virtual bool canFillAtPos(BlockSource &, BlockPos const&, Block const&)const;

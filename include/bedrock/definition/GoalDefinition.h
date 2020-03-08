@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../json/Value"
 #include "../actor/Mob"
+#include "../../json/Value"
 
 
 class GoalDefinition {

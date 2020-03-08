@@ -7,7 +7,7 @@ class DespawnDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    DespawnDescription::~DespawnDescription()
+    virtual DespawnDescription::~DespawnDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

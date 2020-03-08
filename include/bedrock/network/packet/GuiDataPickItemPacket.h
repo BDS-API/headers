@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class GuiDataPickItemPacket : Packet {
 
 public:
-    GuiDataPickItemPacket::~GuiDataPickItemPacket()
+    virtual GuiDataPickItemPacket::~GuiDataPickItemPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

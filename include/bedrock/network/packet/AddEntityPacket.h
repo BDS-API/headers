@@ -6,7 +6,7 @@
 class AddEntityPacket : EntityServerPacket {
 
 public:
-    AddEntityPacket::~AddEntityPacket()
+    virtual AddEntityPacket::~AddEntityPacket()
     virtual void getId()const;
     virtual void getName()const;
 

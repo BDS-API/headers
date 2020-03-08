@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../item/ItemInstance"
-#include "../../../unmapped/HashString"
 #include "../../nbt/CompoundTag"
+#include "../../../unmapped/HashString"
+#include "../../item/ItemInstance"
 #include "../../item/unmapped/ItemDescriptor"
 
 
 class Recipe {
 
 public:
-    Recipe::~Recipe()
+    virtual Recipe::~Recipe()
     virtual void getId()const;
     virtual void getItemPack()const;
     virtual bool isMultiRecipe()const;

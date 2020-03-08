@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../Scheduler"
-#include "../../unmapped/NetworkIdentifier"
 #include "../network/packet/sender/PacketSender"
+#include "../../unmapped/NetworkIdentifier"
+#include "../Scheduler"
 
 
 class ResourcePackTransmissionManager {

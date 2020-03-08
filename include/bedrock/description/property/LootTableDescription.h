@@ -7,7 +7,7 @@ class LootTableDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    LootTableDescription::~LootTableDescription()
+    virtual LootTableDescription::~LootTableDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

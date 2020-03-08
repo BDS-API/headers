@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../actor/Mob"
+#include "../actor/Actor"
+#include "../level/Level"
 #include "../../unmapped/Block"
 #include "../actor/Player"
-#include "../level/Level"
 
 
 class ChemistryStickItem : ChemistryItem {
@@ -18,7 +18,7 @@ public:
     static long DAMAGE_MASK;
     static long ACTIVATION_TIMESTAMP_TAG[abi:cxx11];
 
-    ChemistryStickItem::~ChemistryStickItem()
+    virtual ChemistryStickItem::~ChemistryStickItem()
     virtual void setMaxDamage(int);
     virtual bool showsDurabilityInCreative()const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;

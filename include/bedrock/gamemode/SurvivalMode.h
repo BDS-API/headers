@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../actor/Player"
 #include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/Vec3"
 #include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
+#include "../item/ItemStack"
 
 
 class SurvivalMode : GameMode {
@@ -13,7 +13,7 @@ class SurvivalMode : GameMode {
 public:
     static long mTrialHasEnded;
 
-    SurvivalMode::~SurvivalMode()
+    virtual SurvivalMode::~SurvivalMode()
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &);
     virtual void destroyBlock(BlockPos const&, unsigned char);
     virtual void startBuildBlock(BlockPos const&, unsigned char);

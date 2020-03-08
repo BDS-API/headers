@@ -6,7 +6,7 @@
 class OpenDoorGoal : DoorInteractGoal {
 
 public:
-    OpenDoorGoal::~OpenDoorGoal()
+    virtual OpenDoorGoal::~OpenDoorGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

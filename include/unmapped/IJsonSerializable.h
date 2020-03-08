@@ -5,7 +5,7 @@
 class IJsonSerializable {
 
 public:
-    IJsonSerializable::~IJsonSerializable()
+    virtual IJsonSerializable::~IJsonSerializable()
 
     IJsonSerializable(void);
     IJsonSerializable(IJsonSerializable const&);

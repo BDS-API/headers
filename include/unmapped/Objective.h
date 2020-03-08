@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/level/scoreboard/Scoreboard"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/level/scoreboard/Scoreboard"
 
 
 class Objective {

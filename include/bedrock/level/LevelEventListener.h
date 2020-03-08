@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../actor/Actor"
-#include "../actor/Player"
 #include "../nbt/CompoundTag"
+#include "../actor/Player"
 
 
 class LevelEventListener {
 
 public:
-    LevelEventListener::~LevelEventListener()
+    virtual LevelEventListener::~LevelEventListener()
     virtual void onLevelInitialized(Level &);
     virtual void onLevelSaveData(Level &, CompoundTag &);
     virtual void onLevelAddedPlayer(Level &, Player &);

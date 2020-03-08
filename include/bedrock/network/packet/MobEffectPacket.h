@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
 #include "../../io/BinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class MobEffectPacket : Packet {
 
 public:
-    MobEffectPacket::~MobEffectPacket()
+    virtual MobEffectPacket::~MobEffectPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

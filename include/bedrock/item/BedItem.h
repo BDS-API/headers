@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../nbt/CompoundTag"
 #include "../actor/Actor"
 #include "../util/BlockPos"
-#include "../nbt/CompoundTag"
 #include "unmapped/ItemDescriptor"
 
 
 class BedItem : Item {
 
 public:
-    BedItem::~BedItem()
+    virtual BedItem::~BedItem()
     virtual bool isValidAuxValue(int)const;
     virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;

@@ -5,7 +5,7 @@
 class PrecompiledCommandOrigin : CommandOrigin {
 
 public:
-    PrecompiledCommandOrigin::~PrecompiledCommandOrigin()
+    virtual PrecompiledCommandOrigin::~PrecompiledCommandOrigin()
     virtual void getRequestId()const;
     virtual void getName()const;
     virtual void getBlockPosition()const;

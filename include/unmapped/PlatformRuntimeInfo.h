@@ -7,7 +7,7 @@ using namespace BedrockEngine;
 class PlatformRuntimeInfo {
 
 public:
-    BedrockEngine::PlatformRuntimeInfo::~PlatformRuntimeInfo()
+    virtual BedrockEngine::PlatformRuntimeInfo::~PlatformRuntimeInfo()
 
     PlatformRuntimeInfo(void);
 };

@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID"
 #include "../../actor/Actor"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
-#include "../../io/BinaryStream"
 
 
 class AnimatePacket : Packet {
 
 public:
-    AnimatePacket::~AnimatePacket()
+    virtual AnimatePacket::~AnimatePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

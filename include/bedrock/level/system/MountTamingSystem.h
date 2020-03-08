@@ -6,7 +6,7 @@
 class MountTamingSystem : ITickingSystem {
 
 public:
-    MountTamingSystem::~MountTamingSystem()
+    virtual MountTamingSystem::~MountTamingSystem()
     virtual void tick(EntityRegistry &);
 
     MountTamingSystem(void);

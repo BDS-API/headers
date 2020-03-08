@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../util/BlockPos"
+#include "../../../../unmapped/CircuitTrackingInfo"
 
 
 class ConsumerComponent : BaseCircuitComponent {
 
 public:
-    ConsumerComponent::~ConsumerComponent()
+    virtual ConsumerComponent::~ConsumerComponent()
     virtual bool canConsumerPower();
     virtual void getBaseType()const;
     virtual void getInstanceType()const;

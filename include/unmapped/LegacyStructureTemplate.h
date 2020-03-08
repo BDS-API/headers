@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Vec3"
 
 
 class LegacyStructureTemplate {

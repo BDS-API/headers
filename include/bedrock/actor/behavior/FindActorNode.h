@@ -6,7 +6,7 @@
 class FindActorNode : BehaviorNode {
 
 public:
-    FindActorNode::~FindActorNode()
+    virtual FindActorNode::~FindActorNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

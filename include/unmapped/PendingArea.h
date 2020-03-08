@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../bedrock/nbt/CompoundTag"
 #include "../mce/UUID"
 #include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/nbt/CompoundTag"
 
 
 class PendingArea {

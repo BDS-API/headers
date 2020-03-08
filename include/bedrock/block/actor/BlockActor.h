@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../level/LevelChunk"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/Vec3"
-#include "../../../unmapped/UIProfanityContext"
-#include "../../util/BlockPos"
-#include "../../util/AABB"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../level/LevelChunk"
+#include "../../../unmapped/UIProfanityContext"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../util/Vec3"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/AABB"
 
 
 class BlockActor {
@@ -18,7 +18,7 @@ public:
     static long mIdClassMap[abi:cxx11];
     static long mClassIdMap[abi:cxx11];
 
-    BlockActor::~BlockActor()
+    virtual BlockActor::~BlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);

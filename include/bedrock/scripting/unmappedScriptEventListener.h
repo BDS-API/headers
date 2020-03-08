@@ -5,7 +5,7 @@
 class ScriptEventListener {
 
 public:
-    ScriptEventListener::~ScriptEventListener()
+    virtual ScriptEventListener::~ScriptEventListener()
     virtual void onScriptGetComponent(std::string const&, RegistrationType, bool);
     virtual void onScriptListenForEvent(std::string const&);
     virtual void onScriptBroadcastEvent(std::string const&, RegistrationType, bool);

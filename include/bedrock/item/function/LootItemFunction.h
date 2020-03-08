@@ -1,12 +1,12 @@
 #pragma once
 
+#include "../../util/Random"
+#include "../../../unmapped/LootTableContext"
+#include "../ItemInstance"
+#include "../../../unmapped/Trade"
+#include "../condition/LootItemCondition"
 #include "../ItemStack"
 #include "../../../json/Value"
-#include "../condition/LootItemCondition"
-#include "../../../unmapped/Trade"
-#include "../../../unmapped/LootTableContext"
-#include "../../util/Random"
-#include "../ItemInstance"
 
 
 class LootItemFunction {
@@ -14,7 +14,7 @@ class LootItemFunction {
 public:
     static long mLootingFunctions;
 
-    LootItemFunction::~LootItemFunction()
+    virtual LootItemFunction::~LootItemFunction()
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, Trade const&, LootTableContext &);
 

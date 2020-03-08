@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/attribute/AttributeInstanceHandle"
 #include "../../io/BinaryStream"
+#include "../../actor/Actor"
+#include "../../actor/attribute/AttributeInstanceHandle"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class UpdateAttributesPacket : Packet {
 
 public:
-    UpdateAttributesPacket::~UpdateAttributesPacket()
+    virtual UpdateAttributesPacket::~UpdateAttributesPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

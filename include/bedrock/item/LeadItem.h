@@ -7,7 +7,7 @@
 class LeadItem : Item {
 
 public:
-    LeadItem::~LeadItem()
+    virtual LeadItem::~LeadItem()
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
     LeadItem(std::string const&, int);

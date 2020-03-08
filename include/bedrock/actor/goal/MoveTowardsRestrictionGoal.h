@@ -6,7 +6,7 @@
 class MoveTowardsRestrictionGoal : Goal {
 
 public:
-    MoveTowardsRestrictionGoal::~MoveTowardsRestrictionGoal()
+    virtual MoveTowardsRestrictionGoal::~MoveTowardsRestrictionGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

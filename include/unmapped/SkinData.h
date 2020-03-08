@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/actor/Actor"
+#include "../json/Value"
 
 
 class SkinData {

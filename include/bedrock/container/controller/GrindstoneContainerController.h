@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../item/ItemInstance"
 #include "../model/ContainerModel"
+#include "../../item/ItemInstance"
 
 
 class GrindstoneContainerController : ContainerController {
 
 public:
-    GrindstoneContainerController::~GrindstoneContainerController()
+    virtual GrindstoneContainerController::~GrindstoneContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
 
     GrindstoneContainerController(std::shared_ptr<ContainerModel>);

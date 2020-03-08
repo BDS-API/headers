@@ -7,7 +7,7 @@
 class CraftingInputContainerController : CraftingContainerController {
 
 public:
-    CraftingInputContainerController::~CraftingInputContainerController()
+    virtual CraftingInputContainerController::~CraftingInputContainerController()
     virtual void getBackgroundStyle(int)const;
     virtual void onRecipeSelected(Recipe const*, bool, bool);
     virtual void getRecipeItem(int)const;

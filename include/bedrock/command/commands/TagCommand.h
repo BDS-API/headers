@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
-#include "../../actor/Actor"
-#include "../CommandOutput"
-#include "../Command"
 #include "../CommandRegistry"
+#include "../../actor/Actor"
+#include "../Command"
+#include "../CommandOutput"
+#include "../orgin/CommandOrigin"
 
 
 class TagCommand : Command {
 
 public:
-    TagCommand::~TagCommand()
+    virtual TagCommand::~TagCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

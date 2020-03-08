@@ -6,7 +6,7 @@
 class BreathableSystem : ITickingSystem {
 
 public:
-    BreathableSystem::~BreathableSystem()
+    virtual BreathableSystem::~BreathableSystem()
     virtual void tick(EntityRegistry &);
 
     BreathableSystem(void);

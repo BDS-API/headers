@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../util/Random"
-#include "../../unmapped/Block"
 #include "../../unmapped/Material"
+#include "../../unmapped/Block"
 
 
 class SandStoneBlock : BlockLegacy {
 
 public:
-    SandStoneBlock::~SandStoneBlock()
+    virtual SandStoneBlock::~SandStoneBlock()
     virtual bool canBeOriginalSurface()const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void buildDescriptionId(Block const&)const;

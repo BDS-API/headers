@@ -5,7 +5,7 @@
 class MetalBlock : BlockLegacy {
 
 public:
-    MetalBlock::~MetalBlock()
+    virtual MetalBlock::~MetalBlock()
 
     MetalBlock(std::string const&, int);
 };

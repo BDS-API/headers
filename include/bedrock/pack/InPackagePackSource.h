@@ -8,7 +8,7 @@
 class InPackagePackSource : PackSource {
 
 public:
-    InPackagePackSource::~InPackagePackSource()
+    virtual InPackagePackSource::~InPackagePackSource()
     virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
     virtual void forEachPack(std::function<void ()(Pack &)>);
     virtual void getPackOrigin()const;

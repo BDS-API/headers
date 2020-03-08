@@ -8,7 +8,7 @@
 class BegGoal : Goal {
 
 public:
-    BegGoal::~BegGoal()
+    virtual BegGoal::~BegGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

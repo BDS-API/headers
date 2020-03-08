@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BaseGameVersion"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/PackInstanceId"
 #include "../../io/BinaryStream"
+#include "../../../unmapped/PackInstanceId"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/BaseGameVersion"
 
 
 class ResourcePackStackPacket : Packet {
 
 public:
-    ResourcePackStackPacket::~ResourcePackStackPacket()
+    virtual ResourcePackStackPacket::~ResourcePackStackPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

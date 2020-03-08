@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../core/Path"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../core/Path"
 
 
 class PhotoTransferPacket : Packet {
 
 public:
-    PhotoTransferPacket::~PhotoTransferPacket()
+    virtual PhotoTransferPacket::~PhotoTransferPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

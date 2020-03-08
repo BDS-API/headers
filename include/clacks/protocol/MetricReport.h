@@ -7,7 +7,7 @@ using namespace com::mojang::clacks::protocol;
 class MetricReport : google::protobuf::Message {
 
 public:
-    com::mojang::clacks::protocol::MetricReport::~MetricReport()
+    virtual com::mojang::clacks::protocol::MetricReport::~MetricReport()
     virtual void New()const;
     virtual void New(google::protobuf::Arena *)const;
     virtual void Clear();

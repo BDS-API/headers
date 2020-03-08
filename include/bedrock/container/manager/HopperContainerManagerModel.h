@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID"
 #include "../../util/BlockPos"
 #include "../../actor/Player"
+#include "../../actor/unmapped/ActorUniqueID"
 
 
 class HopperContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    HopperContainerManagerModel::~HopperContainerManagerModel()
+    virtual HopperContainerManagerModel::~HopperContainerManagerModel()
     virtual void init();
 
     HopperContainerManagerModel(ContainerID, Player &, BlockPos const&);

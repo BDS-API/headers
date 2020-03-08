@@ -5,7 +5,7 @@
 class IGameModuleShared {
 
 public:
-    IGameModuleShared::~IGameModuleShared()
+    virtual IGameModuleShared::~IGameModuleShared()
 
     IGameModuleShared(void);
 };

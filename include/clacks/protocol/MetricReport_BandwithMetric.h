@@ -7,7 +7,7 @@ using namespace com::mojang::clacks::protocol;
 class MetricReport_BandwithMetric : google::protobuf::Message {
 
 public:
-    com::mojang::clacks::protocol::MetricReport_BandwithMetric::~MetricReport_BandwithMetric()
+    virtual com::mojang::clacks::protocol::MetricReport_BandwithMetric::~MetricReport_BandwithMetric()
     virtual void New()const;
     virtual void New(google::protobuf::Arena *)const;
     virtual void Clear();

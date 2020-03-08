@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../Actor"
 #include "../Mob"
+#include "../Actor"
 #include "../../util/Vec3"
 
 
 class FindBlockNode : BehaviorNode {
 
 public:
-    FindBlockNode::~FindBlockNode()
+    virtual FindBlockNode::~FindBlockNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

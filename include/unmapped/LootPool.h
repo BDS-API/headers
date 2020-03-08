@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/Random"
 #include "../bedrock/item/ItemStack"
 #include "../json/Value"
-#include "../bedrock/util/Random"
 
 
 class LootPool {

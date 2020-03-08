@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Block"
+#include "../../util/BlockPos"
 
 
 class LakeFeature : Feature {
 
 public:
-    LakeFeature::~LakeFeature()
+    virtual LakeFeature::~LakeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     LakeFeature(Block const&);

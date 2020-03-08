@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/FeatureRegistry"
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../../unmapped/FeatureRegistry"
+#include "../../util/BlockPos"
 
 
 class LegacySmallMushroomsFeature : Feature {
 
 public:
-    LegacySmallMushroomsFeature::~LegacySmallMushroomsFeature()
+    virtual LegacySmallMushroomsFeature::~LegacySmallMushroomsFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     LegacySmallMushroomsFeature(FeatureRegistry const&);

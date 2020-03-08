@@ -10,7 +10,7 @@ public:
     static long COMMAND_LINE_KEY[abi:cxx11];
     static long COMMAND_VERSION_KEY[abi:cxx11];
 
-    NpcCommandAction::~NpcCommandAction()
+    virtual NpcCommandAction::~NpcCommandAction()
     virtual void toJson();
     virtual void fromJson(Json::Value const&);
 

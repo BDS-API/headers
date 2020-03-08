@@ -7,7 +7,7 @@ class NpcDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    NpcDescription::~NpcDescription()
+    virtual NpcDescription::~NpcDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

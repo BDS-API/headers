@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../item/ItemStack"
 #include "../actor/Player"
+#include "../item/ItemStack"
 
 
 class SimpleContainer : Container {
 
 public:
-    SimpleContainer::~SimpleContainer()
+    virtual SimpleContainer::~SimpleContainer()
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void getContainerSize()const;

@@ -7,7 +7,7 @@ class FilteredContainerModel : ExpandoContainerModel {
 
 public:
     virtual void containerContentChanged(int);
-    FilteredContainerModel::~FilteredContainerModel()
+    virtual FilteredContainerModel::~FilteredContainerModel()
     virtual void getContainerSize()const;
     virtual void getFilteredContainerSize()const;
     virtual void getItem(int)const;

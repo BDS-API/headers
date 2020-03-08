@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
 #include "unmapped/ActorDefinitionGroup"
 #include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
 #include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
 
@@ -11,7 +11,7 @@ class EyeOfEnder : Actor {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    EyeOfEnder::~EyeOfEnder()
+    virtual EyeOfEnder::~EyeOfEnder()
     virtual void lerpMotion(Vec3 const&);
     virtual void normalTick();
     virtual void getShadowRadius()const;

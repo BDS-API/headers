@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../item/ItemStack"
 #include "../../actor/Player"
+#include "../../item/ItemStack"
 
 
 class PlayerUIContainerModelBase : ContainerModel {
 
 public:
     virtual void containerContentChanged(int);
-    PlayerUIContainerModelBase::~PlayerUIContainerModelBase()
+    virtual PlayerUIContainerModelBase::~PlayerUIContainerModelBase()
     virtual void postInit();
     virtual void releaseResources();
     virtual bool isValid();

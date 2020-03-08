@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class ConcreteBlock : BlockLegacy {
 
 public:
-    ConcreteBlock::~ConcreteBlock()
+    virtual ConcreteBlock::~ConcreteBlock()
     virtual bool isValidAuxValue(int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;

@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../../core/Path"
+#include "../chunksource/ChunkSource"
 #include "../chunksource/DBChunkStorage"
+#include "../../../core/Path"
 #include "../LevelData"
 #include "../../../unmapped/DBStorageConfig"
-#include "../chunksource/ChunkSource"
 
 
 class DBStorage : LevelStorage {
 
 public:
-    DBStorage::~DBStorage()
+    virtual DBStorage::~DBStorage()
     virtual void addStorageObserver(std::unique_ptr<LevelStorageObserver, std::default_delete<LevelStorageObserver>>);
     virtual void getCompoundTag(std::string const&);
     virtual bool hasKey(gsl::basic_string_span<char const, -1l>)const;

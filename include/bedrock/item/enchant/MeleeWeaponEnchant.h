@@ -6,7 +6,7 @@
 class MeleeWeaponEnchant : Enchant {
 
 public:
-    MeleeWeaponEnchant::~MeleeWeaponEnchant()
+    virtual MeleeWeaponEnchant::~MeleeWeaponEnchant()
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMaxLevel()const;

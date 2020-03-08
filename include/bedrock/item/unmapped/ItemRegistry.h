@@ -1,9 +1,9 @@
 #pragma once
 
 #include "../../block/BlockLegacy"
-#include "../../pack/ResourcePackManager"
 #include "../Item"
 #include "../../../unmapped/Block"
+#include "../../pack/ResourcePackManager"
 
 
 class ItemRegistry {

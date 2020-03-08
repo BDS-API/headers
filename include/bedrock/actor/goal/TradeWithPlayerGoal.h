@@ -6,7 +6,7 @@
 class TradeWithPlayerGoal : Goal {
 
 public:
-    TradeWithPlayerGoal::~TradeWithPlayerGoal()
+    virtual TradeWithPlayerGoal::~TradeWithPlayerGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

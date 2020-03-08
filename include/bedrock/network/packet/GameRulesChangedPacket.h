@@ -7,7 +7,7 @@
 class GameRulesChangedPacket : Packet {
 
 public:
-    GameRulesChangedPacket::~GameRulesChangedPacket()
+    virtual GameRulesChangedPacket::~GameRulesChangedPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

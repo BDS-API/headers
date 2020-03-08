@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../item/ItemStack"
 #include "../../../unmapped/ChemistryIngredient"
 #include "../../item/ItemInstance"
 #include "../../item/unmapped/ItemDescriptor"
+#include "../../item/ItemStack"
 
 
 class BlockReducer {
 
 public:
-    BlockReducer::~BlockReducer()
+    virtual BlockReducer::~BlockReducer()
     virtual void _registerBlock(ItemStack const&, std::vector<ItemStack, std::allocator<ItemStack>> &&);
 
     BlockReducer(void);

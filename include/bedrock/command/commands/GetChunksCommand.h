@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../CommandRegistry"
 #include "../orgin/CommandOrigin"
 #include "../CommandOutput"
 #include "../Command"
-#include "../CommandRegistry"
 
 
 class GetChunksCommand : Command {
 
 public:
-    GetChunksCommand::~GetChunksCommand()
+    virtual GetChunksCommand::~GetChunksCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

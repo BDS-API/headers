@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/level/structure/piece/PoolElementStructurePiece"
 #include "../bedrock/util/BlockPos"
+#include "../bedrock/level/structure/piece/PoolElementStructurePiece"
 
 
 class BeardKernel {

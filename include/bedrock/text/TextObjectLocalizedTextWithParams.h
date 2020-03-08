@@ -5,7 +5,7 @@
 class TextObjectLocalizedTextWithParams : ITextObject {
 
 public:
-    TextObjectLocalizedTextWithParams::~TextObjectLocalizedTextWithParams()
+    virtual TextObjectLocalizedTextWithParams::~TextObjectLocalizedTextWithParams()
     virtual bool asString()const;
     virtual bool asJsonValue()const;
 

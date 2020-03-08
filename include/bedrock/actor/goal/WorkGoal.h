@@ -9,7 +9,7 @@ class WorkGoal : MoveToPOIGoal {
 public:
     static long RAIN_CHECK_MAX_COOLDOWN;
 
-    WorkGoal::~WorkGoal()
+    virtual WorkGoal::~WorkGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

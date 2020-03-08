@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
 #include "../bedrock/actor/Actor"
-#include "../bedrock/actor/ItemActor"
 #include "../bedrock/definition/ShareableDefinition"
+#include "../bedrock/actor/ItemActor"
+#include "../bedrock/item/ItemStack"
 
 
 class ShareableComponent {

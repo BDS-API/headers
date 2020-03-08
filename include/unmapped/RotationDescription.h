@@ -9,7 +9,7 @@ class RotationDescription : Description {
 
 public:
     virtual void getJsonName()const;
-    RotationDescription::~RotationDescription()
+    virtual RotationDescription::~RotationDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

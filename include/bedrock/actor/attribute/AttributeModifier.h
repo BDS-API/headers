@@ -8,7 +8,7 @@ class AttributeModifier {
 public:
     static long mInvalidUUID;
 
-    AttributeModifier::~AttributeModifier()
+    virtual AttributeModifier::~AttributeModifier()
     virtual bool isInstantaneous()const;
 
     AttributeModifier(AttributeModifier const&);

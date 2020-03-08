@@ -6,7 +6,7 @@
 class SilverfishWakeUpFriendsGoal : Goal {
 
 public:
-    SilverfishWakeUpFriendsGoal::~SilverfishWakeUpFriendsGoal()
+    virtual SilverfishWakeUpFriendsGoal::~SilverfishWakeUpFriendsGoal()
     virtual bool canUse();
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;

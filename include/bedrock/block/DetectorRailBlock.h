@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
 #include "../../unmapped/Block"
 
 
 class DetectorRailBlock : BaseRailBlock {
 
 public:
-    DetectorRailBlock::~DetectorRailBlock()
+    virtual DetectorRailBlock::~DetectorRailBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isSignalSource()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;

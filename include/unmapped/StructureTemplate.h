@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockPalette"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/block/unmapped/BlockPalette"
 
 
 class StructureTemplate {

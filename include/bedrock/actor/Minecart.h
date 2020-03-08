@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
+#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/Block"
+#include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
 #include "../util/Vec2"
-#include "../util/Vec3"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Minecart : Actor {
@@ -17,7 +17,7 @@ class Minecart : Actor {
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    Minecart::~Minecart()
+    virtual Minecart::~Minecart()
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void normalTick();
     virtual void getShadowHeightOffs();

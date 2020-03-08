@@ -5,7 +5,7 @@
 class ReadOnlyBinaryStream {
 
 public:
-    ReadOnlyBinaryStream::~ReadOnlyBinaryStream()
+    virtual ReadOnlyBinaryStream::~ReadOnlyBinaryStream()
     virtual void read(void *, unsigned long);
 
     void getUnreadLength()const;

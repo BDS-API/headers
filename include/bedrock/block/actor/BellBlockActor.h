@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
+#include "../../actor/Actor"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class BellBlockActor : BlockActor {
 
 public:
-    BellBlockActor::~BellBlockActor()
+    virtual BellBlockActor::~BellBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

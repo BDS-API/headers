@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/item/unmapped/ItemDescriptor"
-#include "../bedrock/container/SimpleContainer"
 #include "../bedrock/actor/Player"
+#include "../bedrock/item/unmapped/ItemDescriptor"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/container/SimpleContainer"
 
 
 class FullPlayerInventoryWrapper {

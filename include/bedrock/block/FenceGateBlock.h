@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Player"
-#include "../actor/Actor"
-#include "../util/Vec3"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
 class FenceGateBlock : BlockLegacy {
 
 public:
-    FenceGateBlock::~FenceGateBlock()
+    virtual FenceGateBlock::~FenceGateBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const;
     virtual bool canConnect(Block const&, unsigned char, Block const&)const;

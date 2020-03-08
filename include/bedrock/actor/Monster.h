@@ -1,17 +1,17 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
+#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "../util/BlockPos"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Monster : Mob {
 
 public:
-    Monster::~Monster()
+    virtual Monster::~Monster()
     virtual void normalTick();
     virtual bool canExistInPeaceful()const;
     virtual void findAttackTarget();

@@ -5,7 +5,7 @@
 class ExecCtxNext : grpc_core::ExecCtx {
 
 public:
-    ExecCtxNext::~ExecCtxNext()
+    virtual ExecCtxNext::~ExecCtxNext()
     virtual void CheckReadyToFinish();
 
     ExecCtxNext(void *);

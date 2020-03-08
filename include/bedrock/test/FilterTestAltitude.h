@@ -6,7 +6,7 @@
 class FilterTestAltitude : SimpleIntFilterTest {
 
 public:
-    FilterTestAltitude::~FilterTestAltitude()
+    virtual FilterTestAltitude::~FilterTestAltitude()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

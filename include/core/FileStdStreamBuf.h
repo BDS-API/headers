@@ -7,7 +7,7 @@ using namespace Core;
 class FileStdStreamBuf : std::basic_streambuf<char, std::char_traits<char>> {
 
 public:
-    Core::FileStdStreamBuf::~FileStdStreamBuf()
+    virtual Core::FileStdStreamBuf::~FileStdStreamBuf()
 
     void close();
     FileStdStreamBuf(unsigned long);

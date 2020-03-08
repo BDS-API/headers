@@ -9,7 +9,7 @@ class PolarBear : Animal {
 public:
     static long STAND_ANIMATION_TICKS;
 
-    PolarBear::~PolarBear()
+    virtual PolarBear::~PolarBear()
     virtual void normalTick();
 
     PolarBear(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);

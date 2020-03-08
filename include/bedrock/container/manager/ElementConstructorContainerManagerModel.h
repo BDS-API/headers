@@ -8,7 +8,7 @@
 class ElementConstructorContainerManagerModel : ContainerManagerModel {
 
 public:
-    ElementConstructorContainerManagerModel::~ElementConstructorContainerManagerModel()
+    virtual ElementConstructorContainerManagerModel::~ElementConstructorContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

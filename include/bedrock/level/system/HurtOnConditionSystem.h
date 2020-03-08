@@ -6,7 +6,7 @@
 class HurtOnConditionSystem : ITickingSystem {
 
 public:
-    HurtOnConditionSystem::~HurtOnConditionSystem()
+    virtual HurtOnConditionSystem::~HurtOnConditionSystem()
     virtual void tick(EntityRegistry &);
 
     HurtOnConditionSystem(void);

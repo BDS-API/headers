@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
 #include "../../unmapped/RenderParams"
-#include "../../unmapped/DataLoadHelper"
+#include "damagesource/ActorDamageSource"
+#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
 #include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Shulker : Mob {
@@ -18,7 +18,7 @@ public:
     static long COVERED_ARMOR_MODIFIER;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    Shulker::~Shulker()
+    virtual Shulker::~Shulker()
     virtual void setPos(Vec3 const&);
     virtual void normalTick();
     virtual bool isInWall()const;

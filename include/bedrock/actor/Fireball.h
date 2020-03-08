@@ -1,18 +1,18 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/HitResult"
-#include "../../unmapped/DataLoadHelper"
-#include "../util/Vec2"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../util/Vec3"
+#include "../../unmapped/HitResult"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../util/Vec2"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Fireball : Actor {
 
 public:
-    Fireball::~Fireball()
+    virtual Fireball::~Fireball()
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void normalTick();
     virtual void getShadowHeightOffs();

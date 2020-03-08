@@ -5,7 +5,7 @@
 class IStructurePoolActorPredicate {
 
 public:
-    IStructurePoolActorPredicate::~IStructurePoolActorPredicate()
+    virtual IStructurePoolActorPredicate::~IStructurePoolActorPredicate()
 
     IStructurePoolActorPredicate(void);
 };

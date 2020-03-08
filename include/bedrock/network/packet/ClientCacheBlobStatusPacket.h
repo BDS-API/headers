@@ -7,7 +7,7 @@
 class ClientCacheBlobStatusPacket : Packet {
 
 public:
-    ClientCacheBlobStatusPacket::~ClientCacheBlobStatusPacket()
+    virtual ClientCacheBlobStatusPacket::~ClientCacheBlobStatusPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

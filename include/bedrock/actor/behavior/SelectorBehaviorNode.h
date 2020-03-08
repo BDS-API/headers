@@ -6,7 +6,7 @@
 class SelectorBehaviorNode : BehaviorNode {
 
 public:
-    SelectorBehaviorNode::~SelectorBehaviorNode()
+    virtual SelectorBehaviorNode::~SelectorBehaviorNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

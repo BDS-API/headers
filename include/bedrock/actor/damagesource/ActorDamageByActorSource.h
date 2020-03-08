@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../Actor"
 #include "../../block/unmapped/BlockSource"
+#include "../Actor"
 
 
 class ActorDamageByActorSource : ActorDamageSource {
 
 public:
-    ActorDamageByActorSource::~ActorDamageByActorSource()
+    virtual ActorDamageByActorSource::~ActorDamageByActorSource()
     virtual bool isEntitySource()const;
     virtual void getDeathMessage(std::string, Actor *)const;
     virtual void getIsCreative()const;

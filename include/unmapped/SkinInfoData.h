@@ -6,7 +6,7 @@
 class SkinInfoData {
 
 public:
-    SkinInfoData::~SkinInfoData()
+    virtual SkinInfoData::~SkinInfoData()
     virtual void validateAndResizeSkinData(mce::Image &, bool);
 
     bool isValidSize(unsigned long);

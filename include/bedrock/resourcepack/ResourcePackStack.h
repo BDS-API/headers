@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../unmapped/ContentTierInfo"
+#include "../../unmapped/PackInstanceId"
+#include "../pack/ResourcePackMergeStrategy"
+#include "../../unmapped/ResourceLocation"
 #include "../../unmapped/PackInstance"
 #include "../../unmapped/PackReport"
-#include "../../unmapped/PackIdVersion"
 #include "../pack/PackManifest"
-#include "../pack/ResourcePackMergeStrategy"
-#include "../../unmapped/PackInstanceId"
-#include "../../unmapped/ResourceLocation"
+#include "../../unmapped/PackIdVersion"
+#include "../../unmapped/ContentTierInfo"
 
 
 class ResourcePackStack {
 
 public:
-    ResourcePackStack::~ResourcePackStack()
+    virtual ResourcePackStack::~ResourcePackStack()
     virtual void loadAllVersionsOf(ResourceLocation const&)const;
     virtual void loadAllVersionsOf(ResourceLocation const&, ResourcePackMergeStrategy &)const;
 

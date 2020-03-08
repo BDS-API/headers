@@ -1,8 +1,8 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
 #include "../../unmapped/RenderParams"
+#include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionGroup"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
@@ -12,7 +12,7 @@ public:
     static long SPEED_MODIFIER_DRINKING_UUID;
     static long SPEED_MODIFIER_DRINKING;
 
-    Witch::~Witch()
+    virtual Witch::~Witch()
     virtual bool canAttack(Actor *, bool)const;
     virtual void performRangedAttack(Actor &, float);
     virtual void handleEntityEvent(ActorEvent, int);

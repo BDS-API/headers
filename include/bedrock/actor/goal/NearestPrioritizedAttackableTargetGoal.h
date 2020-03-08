@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/MobDescriptor"
 #include "../Mob"
+#include "../../../unmapped/MobDescriptor"
 
 
 class NearestPrioritizedAttackableTargetGoal : NearestAttackableTargetGoal {
 
 public:
-    NearestPrioritizedAttackableTargetGoal::~NearestPrioritizedAttackableTargetGoal()
+    virtual NearestPrioritizedAttackableTargetGoal::~NearestPrioritizedAttackableTargetGoal()
     virtual void appendDebugInfo(std::string &)const;
     virtual void _findTarget(MobDescriptor const**);
 

@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/DataLoadHelper"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../item/Item"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../item/Item"
+#include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class VillagerBase : Mob {
 
 public:
     virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
-    VillagerBase::~VillagerBase()
+    virtual VillagerBase::~VillagerBase()
     virtual void interactPreventDefault();
     virtual void onLightningHit();
     virtual void handleEntityEvent(ActorEvent, int);

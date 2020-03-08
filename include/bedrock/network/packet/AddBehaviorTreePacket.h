@@ -7,7 +7,7 @@
 class AddBehaviorTreePacket : Packet {
 
 public:
-    AddBehaviorTreePacket::~AddBehaviorTreePacket()
+    virtual AddBehaviorTreePacket::~AddBehaviorTreePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

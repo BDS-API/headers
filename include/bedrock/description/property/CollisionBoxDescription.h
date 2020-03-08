@@ -7,7 +7,7 @@ class CollisionBoxDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    CollisionBoxDescription::~CollisionBoxDescription()
+    virtual CollisionBoxDescription::~CollisionBoxDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

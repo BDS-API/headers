@@ -1,9 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Mob"
 #include "../bedrock/actor/Actor"
 #include "../bedrock/actor/Player"
 #include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/actor/Mob"
 #include "../bedrock/util/AABB"
 
 

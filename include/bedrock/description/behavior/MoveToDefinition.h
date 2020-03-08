@@ -7,7 +7,7 @@
 class MoveToDefinition : BehaviorDefinition {
 
 public:
-    MoveToDefinition::~MoveToDefinition()
+    virtual MoveToDefinition::~MoveToDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     MoveToDefinition(void);

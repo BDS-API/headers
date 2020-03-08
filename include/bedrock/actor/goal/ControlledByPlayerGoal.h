@@ -6,7 +6,7 @@
 class ControlledByPlayerGoal : Goal {
 
 public:
-    ControlledByPlayerGoal::~ControlledByPlayerGoal()
+    virtual ControlledByPlayerGoal::~ControlledByPlayerGoal()
     virtual bool canUse();
     virtual void start();
     virtual void stop();

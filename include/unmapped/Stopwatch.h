@@ -5,7 +5,7 @@
 class Stopwatch {
 
 public:
-    Stopwatch::~Stopwatch()
+    virtual Stopwatch::~Stopwatch()
     virtual void stop();
     virtual void stopContinue();
     virtual void print(std::string const&);

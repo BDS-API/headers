@@ -5,7 +5,7 @@
 class FloatOption : Option {
 
 public:
-    FloatOption::~FloatOption()
+    virtual FloatOption::~FloatOption()
     virtual void save(std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> &);
     virtual void load(std::string const&);
 

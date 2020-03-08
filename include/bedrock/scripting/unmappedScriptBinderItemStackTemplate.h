@@ -6,7 +6,7 @@
 class ScriptBinderItemStackTemplate : ScriptBinderTemplate {
 
 public:
-    ScriptBinderItemStackTemplate::~ScriptBinderItemStackTemplate()
+    virtual ScriptBinderItemStackTemplate::~ScriptBinderItemStackTemplate()
     virtual void getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
 

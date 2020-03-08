@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../container/Container"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/Color"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../util/Color"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../container/Container"
 
 
 class CauldronBlockActor : BlockActor, Container {
@@ -16,7 +16,7 @@ class CauldronBlockActor : BlockActor, Container {
 public:
     static long WATER_COLOR;
 
-    CauldronBlockActor::~CauldronBlockActor()
+    virtual CauldronBlockActor::~CauldronBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

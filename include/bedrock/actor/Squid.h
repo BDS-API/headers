@@ -1,15 +1,15 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "damagesource/ActorDamageSource"
 #include "../../unmapped/RenderParams"
+#include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionGroup"
 #include "unmapped/ActorDefinitionIdentifier"
 
 
 class Squid : Mob {
 
 public:
-    Squid::~Squid()
+    virtual Squid::~Squid()
     virtual void handleEntityEvent(ActorEvent, int);
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);

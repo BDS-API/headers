@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../mce/UUID"
-#include "../../unmapped/IContentKeyProvider"
-#include "../../unmapped/PackManifestFactory"
 #include "../../unmapped/Pack"
+#include "../../unmapped/IContentKeyProvider"
+#include "../../mce/UUID"
+#include "../../unmapped/PackManifestFactory"
 
 
 class RealmsUnknownPackSource : PackSource {
 
 public:
-    RealmsUnknownPackSource::~RealmsUnknownPackSource()
+    virtual RealmsUnknownPackSource::~RealmsUnknownPackSource()
     virtual void forEachPackConst(std::function<void ()(Pack const&)>)const;
     virtual void forEachPack(std::function<void ()(Pack &)>);
     virtual void getPackOrigin()const;

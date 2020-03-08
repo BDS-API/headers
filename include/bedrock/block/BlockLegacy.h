@@ -1,24 +1,24 @@
 #pragma once
 
-#include "../actor/unmapped/ActorBlockSyncMessage"
-#include "../util/Brightness"
-#include "../util/Color"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Material"
-#include "../definition/BlockDefinition"
-#include "../container/Container"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../actor/Actor"
+#include "../util/Vec3"
+#include "../../unmapped/SpawnConditions"
 #include "../item/unmapped/ItemState"
+#include "../actor/Player"
+#include "../container/Container"
 #include "../util/Random"
+#include "unmapped/BlockSource"
+#include "../util/Brightness"
+#include "../actor/unmapped/ActorBlockSyncMessage"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../item/ItemInstance"
 #include "../../unmapped/BaseGameVersion"
-#include "../../unmapped/SpawnConditions"
-#include "../actor/Mob"
-#include "../util/Vec3"
+#include "../definition/BlockDefinition"
 #include "../util/AABB"
+#include "../actor/Mob"
+#include "../actor/Actor"
+#include "../util/Color"
 
 
 class BlockLegacy {
@@ -27,7 +27,7 @@ public:
     static long SIZE_OFFSET;
     static long BLOCK_DESCRIPTION_PREFIX[abi:cxx11];
 
-    BlockLegacy::~BlockLegacy()
+    virtual BlockLegacy::~BlockLegacy()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getNextBlockPermutation(Block const&)const;

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../util/BlockPos"
 #include "../actor/Player"
 
 
 class NoteBlock : ActorBlock {
 
 public:
-    NoteBlock::~NoteBlock()
+    virtual NoteBlock::~NoteBlock()
     virtual bool isInteractiveBlock()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;

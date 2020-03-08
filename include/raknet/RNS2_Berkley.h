@@ -7,7 +7,7 @@ using namespace RakNet;
 class RNS2_Berkley : RakNet::IRNS2_Berkley {
 
 public:
-    RakNet::RNS2_Berkley::~RNS2_Berkley()
+    virtual RakNet::RNS2_Berkley::~RNS2_Berkley()
     virtual void SetMulticastInterface(int);
 
     void SetSocketOptions();

@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../Mob"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class PetSleepWithOwnerGoal : BaseMoveToBlockGoal {
@@ -11,7 +11,7 @@ public:
     static long SETTLE_TICKS;
     static long WAIT_TICKS;
 
-    PetSleepWithOwnerGoal::~PetSleepWithOwnerGoal()
+    virtual PetSleepWithOwnerGoal::~PetSleepWithOwnerGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

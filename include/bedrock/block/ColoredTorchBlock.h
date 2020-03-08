@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../unmapped/BaseGameVersion"
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../util/Vec3"
+#include "../../unmapped/BaseGameVersion"
 
 
 class ColoredTorchBlock : TorchBlock {
 
 public:
-    ColoredTorchBlock::~ColoredTorchBlock()
+    virtual ColoredTorchBlock::~ColoredTorchBlock()
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;

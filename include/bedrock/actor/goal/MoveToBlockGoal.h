@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../../unmapped/Path"
 #include "../Mob"
-#include "../../definition/DefinitionTrigger"
-#include "../../util/Vec3"
-#include "../../util/BlockPos"
-#include "../../block/unmapped/BlockSource"
-#include "../../../unmapped/Block"
 #include "../../item/unmapped/ItemDescriptor"
+#include "../../definition/DefinitionTrigger"
+#include "../../block/unmapped/BlockSource"
+#include "../../../unmapped/Path"
+#include "../../util/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../util/Vec3"
 
 
 class MoveToBlockGoal : Goal {
 
 public:
-    MoveToBlockGoal::~MoveToBlockGoal()
+    virtual MoveToBlockGoal::~MoveToBlockGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

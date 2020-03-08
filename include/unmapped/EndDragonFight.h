@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../bedrock/actor/EnderDragon"
 #include "../bedrock/actor/damagesource/ActorDamageSource"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/level/chunksource/ChunkViewSource"
-#include "../bedrock/util/ChunkPos"
-#include "../bedrock/actor/EnderCrystal"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/block/actor/EndGatewayBlockActor"
 #include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/block/actor/EndGatewayBlockActor"
+#include "../bedrock/level/chunksource/ChunkViewSource"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/ChunkPos"
+#include "../bedrock/actor/EnderCrystal"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/actor/EnderDragon"
 
 
 class EndDragonFight {

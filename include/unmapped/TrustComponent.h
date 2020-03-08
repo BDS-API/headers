@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 
 
 class TrustComponent {

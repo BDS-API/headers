@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../model/ContainerModel"
 #include "../../item/ItemInstance"
+#include "../model/ContainerModel"
 
 
 class OutputContainerController : ContainerController {
 
 public:
-    OutputContainerController::~OutputContainerController()
+    virtual OutputContainerController::~OutputContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
 
     OutputContainerController(std::shared_ptr<ContainerModel>, bool);

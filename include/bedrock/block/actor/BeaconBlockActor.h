@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../container/Container"
-#include "../../item/unmapped/ItemDescriptor"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../item/unmapped/ItemDescriptor"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../container/Container"
 
 
 class BeaconBlockActor : BlockActor, Container {
 
 public:
-    BeaconBlockActor::~BeaconBlockActor()
+    virtual BeaconBlockActor::~BeaconBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

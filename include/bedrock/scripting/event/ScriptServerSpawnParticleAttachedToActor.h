@@ -1,9 +1,9 @@
 #pragma once
 
 #include "../ScriptVersionInfo"
-#include "../unmapped/ScriptEngine"
 #include "../ScriptObjectHandle"
 #include "../unmapped/ScriptServerContext"
+#include "../unmapped/ScriptEngine"
 
 
 class ScriptServerSpawnParticleAttachedToActor : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
@@ -11,7 +11,7 @@ class ScriptServerSpawnParticleAttachedToActor : ScriptTemplateFactory<ScriptSer
 public:
     static long mHash;
 
-    ScriptServerSpawnParticleAttachedToActor::~ScriptServerSpawnParticleAttachedToActor()
+    virtual ScriptServerSpawnParticleAttachedToActor::~ScriptServerSpawnParticleAttachedToActor()
     virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);
     virtual void getEventData(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle &);
 

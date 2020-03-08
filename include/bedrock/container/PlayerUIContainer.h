@@ -7,7 +7,7 @@
 class PlayerUIContainer : SimpleContainer {
 
 public:
-    PlayerUIContainer::~PlayerUIContainer()
+    virtual PlayerUIContainer::~PlayerUIContainer()
 
     PlayerUIContainer(std::string const&, bool, int);
     void save();

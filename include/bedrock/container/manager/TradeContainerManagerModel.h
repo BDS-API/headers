@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID"
 #include "../../../unmapped/ContainerItemStack"
 #include "../../actor/Player"
+#include "../../actor/unmapped/ActorUniqueID"
 
 
 class TradeContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    TradeContainerManagerModel::~TradeContainerManagerModel()
+    virtual TradeContainerManagerModel::~TradeContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

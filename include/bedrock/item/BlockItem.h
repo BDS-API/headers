@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../nbt/CompoundTag"
 #include "../actor/Actor"
 #include "../util/BlockPos"
-#include "../nbt/CompoundTag"
 #include "unmapped/ItemDescriptor"
 
 
 class BlockItem : Item {
 
 public:
-    BlockItem::~BlockItem()
+    virtual BlockItem::~BlockItem()
     virtual bool isExperimental(ItemDescriptor const*)const;
     virtual bool isDestructive(int)const;
     virtual bool isValidAuxValue(int)const;

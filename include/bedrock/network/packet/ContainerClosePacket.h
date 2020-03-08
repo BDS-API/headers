@@ -7,7 +7,7 @@
 class ContainerClosePacket : Packet {
 
 public:
-    ContainerClosePacket::~ContainerClosePacket()
+    virtual ContainerClosePacket::~ContainerClosePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

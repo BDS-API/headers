@@ -7,7 +7,7 @@
 class ChunkRadiusUpdatedPacket : Packet {
 
 public:
-    ChunkRadiusUpdatedPacket::~ChunkRadiusUpdatedPacket()
+    virtual ChunkRadiusUpdatedPacket::~ChunkRadiusUpdatedPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

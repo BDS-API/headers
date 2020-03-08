@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../../io/BinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID"
 #include "../../util/BlockPos"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
-#include "../../io/BinaryStream"
 
 
 class PlayerActionPacket : Packet {
 
 public:
-    PlayerActionPacket::~PlayerActionPacket()
+    virtual PlayerActionPacket::~PlayerActionPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

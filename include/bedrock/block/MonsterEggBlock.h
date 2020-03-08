@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 
 
 class MonsterEggBlock : BlockLegacy {
 
 public:
-    MonsterEggBlock::~MonsterEggBlock()
+    virtual MonsterEggBlock::~MonsterEggBlock()
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void buildDescriptionId(Block const&)const;

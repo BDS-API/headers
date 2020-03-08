@@ -7,7 +7,7 @@
 class RandomSwimmingGoal : RandomStrollGoal {
 
 public:
-    RandomSwimmingGoal::~RandomSwimmingGoal()
+    virtual RandomSwimmingGoal::~RandomSwimmingGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void appendDebugInfo(std::string &)const;

@@ -7,7 +7,7 @@ class PersistentDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    PersistentDescription::~PersistentDescription()
+    virtual PersistentDescription::~PersistentDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

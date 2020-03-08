@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../../unmapped/Occupant"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
+#include "../../actor/Actor"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../../unmapped/Occupant"
+#include "../../util/BlockPos"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class BeehiveBlockActor : BlockActor {
@@ -16,7 +16,7 @@ public:
     static long MAX_OCCUPANCY;
     static long TypeString[abi:cxx11];
 
-    BeehiveBlockActor::~BeehiveBlockActor()
+    virtual BeehiveBlockActor::~BeehiveBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

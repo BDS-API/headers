@@ -6,7 +6,7 @@
 class FilterTestTemperatureType : SimpleIntFilterTest {
 
 public:
-    FilterTestTemperatureType::~FilterTestTemperatureType()
+    virtual FilterTestTemperatureType::~FilterTestTemperatureType()
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 

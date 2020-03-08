@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/Vec3"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
 #include "../actor/Player"
+#include "../util/Vec3"
 
 
 class ChestBlock : ActorBlock {
 
 public:
-    ChestBlock::~ChestBlock()
+    virtual ChestBlock::~ChestBlock()
     virtual bool isContainerBlock()const;
     virtual bool isInteractiveBlock()const;
     virtual bool isSignalSource()const;

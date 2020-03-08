@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Block"
+#include "../../util/BlockPos"
 
 
 class CentralSpikedFeature : Feature {
 
 public:
-    CentralSpikedFeature::~CentralSpikedFeature()
+    virtual CentralSpikedFeature::~CentralSpikedFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     CentralSpikedFeature(Block const&);

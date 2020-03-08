@@ -7,7 +7,7 @@
 class WaitTicksDefinition : BehaviorDefinition {
 
 public:
-    WaitTicksDefinition::~WaitTicksDefinition()
+    virtual WaitTicksDefinition::~WaitTicksDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     WaitTicksDefinition(void);

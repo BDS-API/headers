@@ -1,10 +1,10 @@
 #pragma once
 
+#include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
+#include "../../../util/BlockPos"
 #include "../../../../unmapped/StructureManager"
 #include "../../../../unmapped/BoundingBox"
-#include "../../../util/Random"
-#include "../../../util/BlockPos"
-#include "../../../block/unmapped/BlockSource"
 
 
 using namespace EndCityPieces;
@@ -12,7 +12,7 @@ using namespace EndCityPieces;
 class EndCityPiece : TemplateStructurePiece {
 
 public:
-    EndCityPieces::EndCityPiece::~EndCityPiece()
+    virtual EndCityPieces::EndCityPiece::~EndCityPiece()
     virtual void getType()const;
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void _handleDataMarker(std::string const&, BlockPos const&, BlockSource &, Random &, BoundingBox const&);

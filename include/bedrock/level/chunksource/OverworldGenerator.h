@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../block/unmapped/BlockVolume"
-#include "../../block/unmapped/BlockSource"
-#include "../../../unmapped/BiomeSource"
-#include "../../util/ChunkPos"
 #include "../../../unmapped/Dimension"
-#include "../../util/BlockPos"
-#include "../generator/WorldGenerator"
+#include "../../block/unmapped/BlockTickingQueue"
 #include "../../../unmapped/ThreadData"
 #include "../../util/Random"
-#include "../../block/unmapped/BlockTickingQueue"
-#include "../LevelData"
-#include "../../../unmapped/BiomeArea"
-#include "../../../unmapped/BiomeRegistry"
-#include "../../../unmapped/BoundingBox"
+#include "../../block/unmapped/BlockSource"
 #include "../LevelChunk"
+#include "../../util/BlockPos"
+#include "../../../unmapped/BiomeRegistry"
+#include "../../util/ChunkPos"
+#include "../LevelData"
+#include "../../block/unmapped/BlockVolume"
+#include "../../../unmapped/BiomeArea"
+#include "../../../unmapped/BoundingBox"
+#include "../generator/WorldGenerator"
+#include "../../../unmapped/BiomeSource"
 
 
 class OverworldGenerator : ChunkSource, WorldGenerator {
@@ -23,7 +23,7 @@ public:
     static long SNOW_CUTOFF;
     static long SNOW_SCALE;
 
-    OverworldGenerator::~OverworldGenerator()
+    virtual OverworldGenerator::~OverworldGenerator()
     virtual void postProcess(ChunkViewSource &);
     virtual void loadChunk(LevelChunk &, bool);
     virtual void postProcessMobsAt(BlockSource *, int, int, Random &);

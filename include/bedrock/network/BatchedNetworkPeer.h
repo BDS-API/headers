@@ -6,7 +6,7 @@
 class BatchedNetworkPeer : NetworkPeer {
 
 public:
-    BatchedNetworkPeer::~BatchedNetworkPeer()
+    virtual BatchedNetworkPeer::~BatchedNetworkPeer()
     virtual void sendPacket(std::string const&, NetworkPeer::Reliability, int, unsigned short, Compressibility);
     virtual void receivePacket(std::string &);
     virtual void getNetworkStatus();

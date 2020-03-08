@@ -1,17 +1,17 @@
 #pragma once
 
 #include "../../item/ItemStack"
-#include "../../../unmapped/Recipes"
-#include "../unmapped/BlockSource"
-#include "../../container/Container"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../actor/Player"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../item/ItemInstance"
 #include "../../nbt/CompoundTag"
 #include "../../../unmapped/HashString"
+#include "../../actor/Player"
+#include "../../container/Container"
+#include "../unmapped/BlockSource"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../item/ItemInstance"
+#include "../../../unmapped/Recipes"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class FurnaceBlockActor : BlockActor, Container {
@@ -27,7 +27,7 @@ public:
     static long CUSTOM_NAME_KEY[abi:cxx11];
     static long LAST_FUEL_KEY[abi:cxx11];
 
-    FurnaceBlockActor::~FurnaceBlockActor()
+    virtual FurnaceBlockActor::~FurnaceBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void onCustomTagLoadDone(BlockSource &);

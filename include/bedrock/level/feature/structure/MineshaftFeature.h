@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/BiomeSource"
-#include "../../../util/ChunkPos"
 #include "../../../util/Random"
 #include "../../../../unmapped/Dimension"
+#include "../../../util/ChunkPos"
+#include "../../../../unmapped/BiomeSource"
 
 
 class MineshaftFeature : StructureFeature {
 
 public:
-    MineshaftFeature::~MineshaftFeature()
+    virtual MineshaftFeature::~MineshaftFeature()
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);
     virtual void createStructureStart(Dimension &, BiomeSource &, Random &, ChunkPos const&);
 

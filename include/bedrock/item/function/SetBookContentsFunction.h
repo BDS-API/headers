@@ -1,18 +1,18 @@
 #pragma once
 
+#include "../../util/Random"
+#include "../../nbt/CompoundTag"
+#include "../../../unmapped/LootTableContext"
+#include "../ItemInstance"
+#include "../condition/LootItemCondition"
 #include "../ItemStack"
 #include "../../../json/Value"
-#include "../condition/LootItemCondition"
-#include "../../../unmapped/LootTableContext"
-#include "../../util/Random"
-#include "../ItemInstance"
-#include "../../nbt/CompoundTag"
 
 
 class SetBookContentsFunction : LootItemFunction {
 
 public:
-    SetBookContentsFunction::~SetBookContentsFunction()
+    virtual SetBookContentsFunction::~SetBookContentsFunction()
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
 

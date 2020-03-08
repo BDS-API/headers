@@ -1,19 +1,19 @@
 #pragma once
 
 #include "../bedrock/command/CommandRegistry"
-#include "../bedrock/ServerInstance"
-#include "../bedrock/resourcepack/ResourcePackStack"
+#include "../bedrock/level/Level"
 #include "../bedrock/actor/unmapped/ActorFactory"
-#include "../bedrock/pack/ResourcePackManager"
 #include "../bedrock/actor/Player"
 #include "../bedrock/resourcepack/ResourcePackRepository"
-#include "../bedrock/level/Level"
+#include "../bedrock/resourcepack/ResourcePackStack"
+#include "../bedrock/ServerInstance"
+#include "../bedrock/pack/ResourcePackManager"
 
 
 class VanillaGameModuleServer : GameModuleServer {
 
 public:
-    VanillaGameModuleServer::~VanillaGameModuleServer()
+    virtual VanillaGameModuleServer::~VanillaGameModuleServer()
     virtual void init(ServerInstance &, Level &);
     virtual void shutdown();
     virtual void initializeBehaviorStack(GameRules const&, ResourcePackRepository &, ResourcePackStack &, BaseGameVersion const&);

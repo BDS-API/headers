@@ -1,15 +1,15 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/DataLoadHelper"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Endermite : Monster {
 
 public:
-    Endermite::~Endermite()
+    virtual Endermite::~Endermite()
     virtual void normalTick();
     virtual void getRidingHeight();
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);

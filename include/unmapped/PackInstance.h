@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../core/Path"
 #include "../bedrock/resourcepack/ResourcePack"
+#include "../core/Path"
 
 
 class PackInstance {

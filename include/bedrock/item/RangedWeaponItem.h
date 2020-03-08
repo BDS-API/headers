@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../actor/Mob"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
 #include "../actor/Player"
 
@@ -9,7 +9,7 @@
 class RangedWeaponItem : Item {
 
 public:
-    RangedWeaponItem::~RangedWeaponItem()
+    virtual RangedWeaponItem::~RangedWeaponItem()
     virtual void getEnchantValue()const;
     virtual void use(ItemStack &, Player &)const;
     virtual void releaseUsing(ItemStack &, Player *, int)const;

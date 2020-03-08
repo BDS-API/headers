@@ -9,7 +9,7 @@ class EnderChestContainer : FillingContainer {
 public:
     static long ITEMS_SIZE;
 
-    EnderChestContainer::~EnderChestContainer()
+    virtual EnderChestContainer::~EnderChestContainer()
     virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
 

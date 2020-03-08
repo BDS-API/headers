@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../json/Value"
 #include "../../unmapped/LegacyPackIdVersion"
-#include "../../unmapped/ContentIdentity"
-#include "../../unmapped/ResourceMetadata"
-#include "../../unmapped/ResourceInformation"
-#include "../../unmapped/PackIdVersion"
-#include "../../unmapped/BaseGameVersion"
-#include "../../unmapped/SemVersion"
 #include "../../unmapped/ResourceLocation"
+#include "../../unmapped/ResourceInformation"
+#include "../../unmapped/BaseGameVersion"
+#include "../../json/Value"
+#include "../../unmapped/ContentIdentity"
+#include "../../unmapped/SemVersion"
+#include "../../unmapped/PackIdVersion"
+#include "../../unmapped/ResourceMetadata"
 
 
 class PackManifest {
@@ -17,7 +17,7 @@ public:
     static long MarioPackId[abi:cxx11];
     static long STRING_TO_PACK_SCOPE[abi:cxx11];
 
-    PackManifest::~PackManifest()
+    virtual PackManifest::~PackManifest()
     virtual void clone()const;
 
     PackManifest(ManifestType);

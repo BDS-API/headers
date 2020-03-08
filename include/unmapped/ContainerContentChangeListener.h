@@ -5,7 +5,7 @@
 class ContainerContentChangeListener {
 
 public:
-    ContainerContentChangeListener::~ContainerContentChangeListener()
+    virtual ContainerContentChangeListener::~ContainerContentChangeListener()
 
     ContainerContentChangeListener(void);
 };

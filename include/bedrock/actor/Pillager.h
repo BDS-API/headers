@@ -1,17 +1,17 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/DataLoadHelper"
 #include "../../unmapped/RenderParams"
+#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "../util/BlockPos"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Pillager : HumanoidMonster {
 
 public:
-    Pillager::~Pillager()
+    virtual Pillager::~Pillager()
     virtual void normalTick();
     virtual void getRidingHeight();
     virtual void updateEntitySpecificMolangVariables(RenderParams &);

@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class CoralHangFeature : Feature {
 
 public:
-    CoralHangFeature::~CoralHangFeature()
+    virtual CoralHangFeature::~CoralHangFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     CoralHangFeature(void);

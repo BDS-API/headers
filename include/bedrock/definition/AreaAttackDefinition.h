@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/AreaAttackComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/AreaAttackComponent"
 
 
 class AreaAttackDefinition {

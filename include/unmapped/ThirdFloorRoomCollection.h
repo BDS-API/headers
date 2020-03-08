@@ -7,7 +7,7 @@ using namespace WoodlandMansionPieces;
 class ThirdFloorRoomCollection : WoodlandMansionPieces::SecondFloorRoomCollection {
 
 public:
-    WoodlandMansionPieces::ThirdFloorRoomCollection::~ThirdFloorRoomCollection()
+    virtual WoodlandMansionPieces::ThirdFloorRoomCollection::~ThirdFloorRoomCollection()
 
     ThirdFloorRoomCollection(void);
 };

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/ComplexInventoryTransaction"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/ComplexInventoryTransaction"
 
 
 class InventoryTransactionPacket : Packet {
 
 public:
-    InventoryTransactionPacket::~InventoryTransactionPacket()
+    virtual InventoryTransactionPacket::~InventoryTransactionPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

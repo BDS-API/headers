@@ -10,7 +10,7 @@ class LabTableContainerManagerModel : LevelContainerManagerModel {
 public:
     static long INPUT_SLOTS;
 
-    LabTableContainerManagerModel::~LabTableContainerManagerModel()
+    virtual LabTableContainerManagerModel::~LabTableContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

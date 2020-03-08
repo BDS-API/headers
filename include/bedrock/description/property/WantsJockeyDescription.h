@@ -7,7 +7,7 @@ class WantsJockeyDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    WantsJockeyDescription::~WantsJockeyDescription()
+    virtual WantsJockeyDescription::~WantsJockeyDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../unmapped/AgeableComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/AgeableComponent"
 
 
 class AgeableDefinition {

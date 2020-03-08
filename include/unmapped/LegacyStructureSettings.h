@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/Random"
 #include "../bedrock/util/ChunkPos"
 #include "../bedrock/block/unmapped/BlockPalette"
-#include "../bedrock/util/Random"
 
 
 class LegacyStructureSettings {

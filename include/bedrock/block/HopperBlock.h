@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../actor/Player"
+#include "unmapped/BlockSource"
 #include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
 #include "../util/BlockPos"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
 class HopperBlock : ActorBlock {
 
 public:
-    HopperBlock::~HopperBlock()
+    virtual HopperBlock::~HopperBlock()
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;

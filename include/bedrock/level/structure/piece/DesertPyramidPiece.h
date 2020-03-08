@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../../unmapped/BoundingBox"
 #include "../../../util/Random"
 #include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/BoundingBox"
 
 
 class DesertPyramidPiece : ScatteredFeaturePiece {
 
 public:
-    DesertPyramidPiece::~DesertPyramidPiece()
+    virtual DesertPyramidPiece::~DesertPyramidPiece()
     virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
 

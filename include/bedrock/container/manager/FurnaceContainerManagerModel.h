@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../item/ItemInstance"
-#include "../../item/ItemStack"
-#include "../../item/unmapped/ItemDescriptor"
 #include "../../../unmapped/ContainerItemStack"
+#include "../../../unmapped/HashString"
 #include "../../util/BlockPos"
 #include "../../actor/Player"
-#include "../../../unmapped/HashString"
+#include "../../item/ItemInstance"
+#include "../../item/unmapped/ItemDescriptor"
+#include "../../item/ItemStack"
 
 
 class FurnaceContainerManagerModel : ContainerManagerModel {
 
 public:
-    FurnaceContainerManagerModel::~FurnaceContainerManagerModel()
+    virtual FurnaceContainerManagerModel::~FurnaceContainerManagerModel()
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);

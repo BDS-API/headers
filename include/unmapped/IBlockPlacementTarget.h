@@ -5,7 +5,7 @@
 class IBlockPlacementTarget {
 
 public:
-    IBlockPlacementTarget::~IBlockPlacementTarget()
+    virtual IBlockPlacementTarget::~IBlockPlacementTarget()
 
     IBlockPlacementTarget(void);
 };

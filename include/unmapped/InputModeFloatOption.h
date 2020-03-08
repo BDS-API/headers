@@ -5,7 +5,7 @@
 class InputModeFloatOption : Option {
 
 public:
-    InputModeFloatOption::~InputModeFloatOption()
+    virtual InputModeFloatOption::~InputModeFloatOption()
     virtual void save(std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> &);
     virtual void load(std::string const&);
     virtual void load(std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>> &);

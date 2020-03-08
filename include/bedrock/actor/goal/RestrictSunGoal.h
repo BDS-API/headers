@@ -6,7 +6,7 @@
 class RestrictSunGoal : Goal {
 
 public:
-    RestrictSunGoal::~RestrictSunGoal()
+    virtual RestrictSunGoal::~RestrictSunGoal()
     virtual bool canUse();
     virtual void start();
     virtual void stop();

@@ -1,16 +1,16 @@
 #pragma once
 
+#include "../bedrock/command/CommandRegistry"
+#include "../bedrock/command/dispatcher/ICommandDispatcher"
 #include "../bedrock/command/orgin/CommandOrigin"
 #include "../json/Value"
-#include "../bedrock/command/dispatcher/ICommandDispatcher"
 #include "../bedrock/pack/ResourcePackManager"
-#include "../bedrock/command/CommandRegistry"
 
 
 class FunctionManager {
 
 public:
-    FunctionManager::~FunctionManager()
+    virtual FunctionManager::~FunctionManager()
 
     FunctionManager(std::unique_ptr<ICommandDispatcher, std::default_delete<ICommandDispatcher>>, std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, GameRule const*);
     void load(ResourcePackManager &, CommandRegistry &);

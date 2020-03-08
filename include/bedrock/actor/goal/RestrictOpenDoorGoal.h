@@ -6,7 +6,7 @@
 class RestrictOpenDoorGoal : Goal {
 
 public:
-    RestrictOpenDoorGoal::~RestrictOpenDoorGoal()
+    virtual RestrictOpenDoorGoal::~RestrictOpenDoorGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

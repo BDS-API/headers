@@ -7,7 +7,7 @@
 class InverterDefinition : DecoratorDefinition {
 
 public:
-    InverterDefinition::~InverterDefinition()
+    virtual InverterDefinition::~InverterDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     InverterDefinition(void);

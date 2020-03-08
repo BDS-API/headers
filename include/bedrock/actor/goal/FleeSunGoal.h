@@ -6,7 +6,7 @@
 class FleeSunGoal : FindCoverGoal {
 
 public:
-    FleeSunGoal::~FleeSunGoal()
+    virtual FleeSunGoal::~FleeSunGoal()
     virtual bool canUse();
     virtual void appendDebugInfo(std::string &)const;
 

@@ -7,7 +7,7 @@
 class ActorDamageByBlockSource : ActorDamageSource {
 
 public:
-    ActorDamageByBlockSource::~ActorDamageByBlockSource()
+    virtual ActorDamageByBlockSource::~ActorDamageByBlockSource()
     virtual bool isBlockSource()const;
     virtual void getDeathMessage(std::string, Actor *)const;
     virtual void clone()const;

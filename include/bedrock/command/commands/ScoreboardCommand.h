@@ -1,21 +1,21 @@
 #pragma once
 
 #include "../../../unmapped/InitProxy"
-#include "../CommandRegistry"
-#include "../orgin/CommandOrigin"
-#include "../../level/scoreboard/Scoreboard"
-#include "../CommandOutput"
-#include "../Command"
-#include "../../actor/Actor"
 #include "../../../unmapped/ScoreboardId"
-#include "../../../unmapped/SetScoreOutput"
+#include "../Command"
+#include "../CommandRegistry"
+#include "../../level/scoreboard/Scoreboard"
 #include "../../../unmapped/Objective"
+#include "../../actor/Actor"
+#include "../CommandOutput"
+#include "../orgin/CommandOrigin"
+#include "../../../unmapped/SetScoreOutput"
 
 
 class ScoreboardCommand : Command {
 
 public:
-    ScoreboardCommand::~ScoreboardCommand()
+    virtual ScoreboardCommand::~ScoreboardCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &, ScoreboardCommand::InitProxy &&);

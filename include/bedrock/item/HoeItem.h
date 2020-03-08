@@ -1,16 +1,16 @@
 #pragma once
 
-#include "unmapped/Tier"
-#include "../actor/Actor"
 #include "../actor/Mob"
-#include "../util/BlockPos"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "unmapped/Tier"
 
 
 class HoeItem : Item {
 
 public:
-    HoeItem::~HoeItem()
+    virtual HoeItem::~HoeItem()
     virtual bool isHandEquipped()const;
     virtual void getEnchantSlot()const;
     virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;

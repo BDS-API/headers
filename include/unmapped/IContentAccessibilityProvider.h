@@ -5,7 +5,7 @@
 class IContentAccessibilityProvider : IContentKeyProvider {
 
 public:
-    IContentAccessibilityProvider::~IContentAccessibilityProvider()
+    virtual IContentAccessibilityProvider::~IContentAccessibilityProvider()
 
     IContentAccessibilityProvider(void);
 };

@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../util/AABB"
 
 
 class RedStoneWireBlock : BlockLegacy {
 
 public:
-    RedStoneWireBlock::~RedStoneWireBlock()
+    virtual RedStoneWireBlock::~RedStoneWireBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void waterSpreadCausesSpawn()const;

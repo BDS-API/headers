@@ -5,7 +5,7 @@
 class SavedData {
 
 public:
-    SavedData::~SavedData()
+    virtual SavedData::~SavedData()
 
     SavedData(std::string const&);
     void setDirty(bool);

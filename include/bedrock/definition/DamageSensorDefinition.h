@@ -1,9 +1,9 @@
 #pragma once
 
+#include "../../unmapped/DamageSensorTrigger"
+#include "../../unmapped/DamageSensorComponent"
 #include "../../json/Value"
 #include "../../unmapped/EntityContext"
-#include "../../unmapped/DamageSensorComponent"
-#include "../../unmapped/DamageSensorTrigger"
 
 
 class DamageSensorDefinition {

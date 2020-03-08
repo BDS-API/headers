@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class SetDisplayObjectivePacket : Packet {
 
 public:
-    SetDisplayObjectivePacket::~SetDisplayObjectivePacket()
+    virtual SetDisplayObjectivePacket::~SetDisplayObjectivePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

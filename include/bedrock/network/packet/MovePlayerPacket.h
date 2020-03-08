@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../util/Vec3"
 #include "../../io/BinaryStream"
 #include "../../actor/Player"
+#include "../../util/Vec3"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class MovePlayerPacket : Packet {
 
 public:
-    MovePlayerPacket::~MovePlayerPacket()
+    virtual MovePlayerPacket::~MovePlayerPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

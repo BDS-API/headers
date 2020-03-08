@@ -7,7 +7,7 @@
 class ComplexItem : Item {
 
 public:
-    ComplexItem::~ComplexItem()
+    virtual ComplexItem::~ComplexItem()
     virtual bool isComplex()const;
     virtual void getUpdatePacket(ItemStack const&, Level &, Actor &)const;
 

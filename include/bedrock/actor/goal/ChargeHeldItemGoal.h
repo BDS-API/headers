@@ -7,7 +7,7 @@
 class ChargeHeldItemGoal : Goal {
 
 public:
-    ChargeHeldItemGoal::~ChargeHeldItemGoal()
+    virtual ChargeHeldItemGoal::~ChargeHeldItemGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

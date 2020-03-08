@@ -7,7 +7,7 @@ class TagsDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    TagsDescription::~TagsDescription()
+    virtual TagsDescription::~TagsDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

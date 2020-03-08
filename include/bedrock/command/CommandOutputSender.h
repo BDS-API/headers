@@ -1,13 +1,13 @@
 #pragma once
 
-#include "orgin/CommandOrigin"
 #include "../../unmapped/AutomationClient"
+#include "orgin/CommandOrigin"
 
 
 class CommandOutputSender {
 
 public:
-    CommandOutputSender::~CommandOutputSender()
+    virtual CommandOutputSender::~CommandOutputSender()
     virtual void send(CommandOrigin const&, CommandOutput const&);
     virtual void registerOutputCallback(std::function<void ()(AutomationCmdOutput &)> const&);
 

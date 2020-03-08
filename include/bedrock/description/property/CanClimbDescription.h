@@ -7,7 +7,7 @@ class CanClimbDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    CanClimbDescription::~CanClimbDescription()
+    virtual CanClimbDescription::~CanClimbDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

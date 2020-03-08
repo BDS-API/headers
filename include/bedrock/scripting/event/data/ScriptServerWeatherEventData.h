@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../unmapped/ScriptEngine"
 #include "../../ScriptObjectHandle"
+#include "../../unmapped/ScriptEngine"
 
 
 class ScriptServerWeatherEventData : ScriptEventData {
@@ -9,7 +9,7 @@ class ScriptServerWeatherEventData : ScriptEventData {
 public:
     static long mHash;
 
-    ScriptServerWeatherEventData::~ScriptServerWeatherEventData()
+    virtual ScriptServerWeatherEventData::~ScriptServerWeatherEventData()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
     void getHash();

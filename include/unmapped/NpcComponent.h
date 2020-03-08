@@ -1,11 +1,11 @@
 #pragma once
 
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Player"
+#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "../bedrock/actor/Actor"
 #include "../bedrock/command/orgin/CommandOrigin"
 #include "../bedrock/network/packet/NpcRequestPacket"
-#include "../bedrock/actor/unmapped/ActorInteraction"
-#include "../bedrock/actor/Player"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
 
 
 class NpcComponent {

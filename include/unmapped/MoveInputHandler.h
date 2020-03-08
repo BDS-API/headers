@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../bedrock/network/packet/PlayerAuthInputPacket"
-#include "../bedrock/util/Vec3"
 #include "../bedrock/actor/Player"
+#include "../bedrock/util/Vec3"
 
 
 class MoveInputHandler : MoveInput {
 
 public:
-    MoveInputHandler::~MoveInputHandler()
+    virtual MoveInputHandler::~MoveInputHandler()
     virtual void tick(Player &);
     virtual void clearInputState();
     virtual bool isChangeHeight()const;

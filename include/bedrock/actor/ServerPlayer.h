@@ -1,36 +1,36 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../text/TextObjectRoot"
-#include "../util/Tick"
-#include "../network/packet/Packet"
-#include "../../unmapped/ComplexInventoryTransaction"
-#include "../../unmapped/Certificate"
-#include "../../unmapped/InventoryTransaction"
-#include "../level/Level"
-#include "unmapped/ActorUniqueID"
-#include "../../unmapped/Dimension"
-#include "../util/BlockPos"
-#include "../../unmapped/NetworkIdentifier"
-#include "../../unmapped/VariantParameterList"
-#include "../../mce/UUID"
-#include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
-#include "../../unmapped/ActiveTransfersManager"
-#include "../nbt/CompoundTag"
-#include "../network/packet/sender/PacketSender"
-#include "../../unmapped/MobEffectInstance"
+#include "../level/chunksource/ChunkSource"
 #include "../container/manager/IContainerManager"
 #include "../../unmapped/NetworkHandler"
 #include "../util/Vec3"
-#include "../level/chunksource/ChunkSource"
+#include "unmapped/ActorUniqueID"
+#include "../../unmapped/ActiveTransfersManager"
+#include "../item/ItemStack"
+#include "../util/Tick"
+#include "../../unmapped/Dimension"
+#include "../../unmapped/NetworkIdentifier"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/InventoryTransaction"
+#include "../../mce/UUID"
+#include "../../unmapped/Certificate"
+#include "../text/TextObjectRoot"
+#include "../network/packet/sender/PacketSender"
+#include "../level/Level"
+#include "../util/BlockPos"
+#include "damagesource/ActorDamageSource"
+#include "../network/packet/Packet"
+#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/DataLoadHelper"
+#include "../../unmapped/ComplexInventoryTransaction"
 
 
 class ServerPlayer : Player {
 
 public:
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    ServerPlayer::~ServerPlayer()
+    virtual ServerPlayer::~ServerPlayer()
     virtual void normalTick();
     virtual bool isValidTarget(Actor *)const;
     virtual void handleEntityEvent(ActorEvent, int);

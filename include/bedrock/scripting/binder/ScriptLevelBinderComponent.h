@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../ScriptObjectHandle"
 #include "../unmapped/ScriptEngine"
+#include "../ScriptObjectHandle"
 
 
 class ScriptLevelBinderComponent : ScriptBinderComponent {
@@ -9,7 +9,7 @@ class ScriptLevelBinderComponent : ScriptBinderComponent {
 public:
     static long TAG[abi:cxx11];
 
-    ScriptLevelBinderComponent::~ScriptLevelBinderComponent()
+    virtual ScriptLevelBinderComponent::~ScriptLevelBinderComponent()
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 

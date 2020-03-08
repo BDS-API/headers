@@ -7,7 +7,7 @@ using namespace com::mojang::clacks::protocol;
 class PlayerInfo : google::protobuf::Message {
 
 public:
-    com::mojang::clacks::protocol::PlayerInfo::~PlayerInfo()
+    virtual com::mojang::clacks::protocol::PlayerInfo::~PlayerInfo()
     virtual void New()const;
     virtual void New(google::protobuf::Arena *)const;
     virtual void Clear();

@@ -7,7 +7,7 @@ class DyeableDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    DyeableDescription::~DyeableDescription()
+    virtual DyeableDescription::~DyeableDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

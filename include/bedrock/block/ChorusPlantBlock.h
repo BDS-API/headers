@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../actor/Actor"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
 #include "../util/AABB"
 
 
@@ -15,7 +15,7 @@ public:
     static long PLANT_HEIGHT;
     static long PLANT_ITEM_DIMENSION;
 
-    ChorusPlantBlock::~ChorusPlantBlock()
+    virtual ChorusPlantBlock::~ChorusPlantBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;

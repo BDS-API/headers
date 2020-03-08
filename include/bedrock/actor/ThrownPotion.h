@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/DataLoadHelper"
-#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class ThrownPotion : Throwable {
@@ -13,7 +13,7 @@ public:
     static long SPLASH_RANGE;
 
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    ThrownPotion::~ThrownPotion()
+    virtual ThrownPotion::~ThrownPotion()
     virtual void queryEntityRenderer()const;
     virtual void setAuxValue(int);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);

@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/actor/unmapped/ActorSpawnRuleBase"
+#include "../json/Value"
 #include "../bedrock/pack/ResourcePackManager"
 
 
 class SpawnGroupRegistry : ActorSpawnRuleBase {
 
 public:
-    SpawnGroupRegistry::~SpawnGroupRegistry()
+    virtual SpawnGroupRegistry::~SpawnGroupRegistry()
     virtual void getRootKey();
     virtual void getFileType();
     virtual bool processPopulationControl(std::string const&, Json::Value &);

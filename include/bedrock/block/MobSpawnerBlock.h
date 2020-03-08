@@ -7,7 +7,7 @@
 class MobSpawnerBlock : ActorBlock {
 
 public:
-    MobSpawnerBlock::~MobSpawnerBlock()
+    virtual MobSpawnerBlock::~MobSpawnerBlock()
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
     virtual bool isInteractiveBlock()const;
     virtual bool canContainLiquid()const;

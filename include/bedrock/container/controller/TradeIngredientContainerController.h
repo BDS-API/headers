@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../model/ContainerModel"
 #include "../../item/ItemInstance"
+#include "../model/ContainerModel"
+#include "../../item/ItemStack"
 
 
 class TradeIngredientContainerController : ContainerController {
 
 public:
-    TradeIngredientContainerController::~TradeIngredientContainerController()
+    virtual TradeIngredientContainerController::~TradeIngredientContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
 
     TradeIngredientContainerController(std::shared_ptr<ContainerModel>);

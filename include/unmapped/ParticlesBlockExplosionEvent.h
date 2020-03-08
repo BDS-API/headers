@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class ParticlesBlockExplosionEvent {

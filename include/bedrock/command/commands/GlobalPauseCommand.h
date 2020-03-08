@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
 #include "../CommandOutput"
+#include "../orgin/CommandOrigin"
 #include "../CommandRegistry"
 
 
 class GlobalPauseCommand : ServerCommand {
 
 public:
-    GlobalPauseCommand::~GlobalPauseCommand()
+    virtual GlobalPauseCommand::~GlobalPauseCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

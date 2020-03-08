@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/control/MoveControl"
-#include "../bedrock/description/component/MoveControlDescription"
 #include "../bedrock/actor/Mob"
+#include "../bedrock/control/MoveControl"
 #include "../bedrock/util/Vec3"
+#include "../bedrock/description/component/MoveControlDescription"
 
 
 class MoveControlComponent {

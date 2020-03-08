@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../core/Path"
 #include "../../unmapped/ResourceLocation"
 #include "../file/access/IFileAccess"
+#include "../../core/Path"
 
 
 class ZipPackAccessStrategy : PackAccessStrategy {
 
 public:
-    ZipPackAccessStrategy::~ZipPackAccessStrategy()
+    virtual ZipPackAccessStrategy::~ZipPackAccessStrategy()
     virtual void getPackSize()const;
     virtual void getPackLocation()const;
     virtual void getPackName()const;

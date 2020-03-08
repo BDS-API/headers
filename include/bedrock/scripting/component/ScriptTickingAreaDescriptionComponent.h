@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../ScriptVersionInfo"
 #include "../../actor/Actor"
-#include "../unmapped/ScriptEngine"
-#include "../ScriptObjectHandle"
 #include "../../level/tickingarea/ITickingArea"
+#include "../ScriptObjectHandle"
 #include "../unmapped/ScriptServerContext"
+#include "../ScriptVersionInfo"
+#include "../unmapped/ScriptEngine"
 
 
 class ScriptTickingAreaDescriptionComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
@@ -13,7 +13,7 @@ class ScriptTickingAreaDescriptionComponent : ScriptTemplateFactory<ScriptServer
 public:
     static long mHash;
 
-    ScriptTickingAreaDescriptionComponent::~ScriptTickingAreaDescriptionComponent()
+    virtual ScriptTickingAreaDescriptionComponent::~ScriptTickingAreaDescriptionComponent()
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

@@ -1,24 +1,24 @@
 #pragma once
 
-#include "../../../block/unmapped/BlockVolume"
-#include "../../../../unmapped/JigsawBlockInfo"
-#include "../../../block/unmapped/BlockSource"
-#include "../../../util/ChunkPos"
-#include "../../../../unmapped/JigsawStructureRegistry"
 #include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/StructurePoolElement"
+#include "../../../../unmapped/JigsawJunction"
+#include "../../../../unmapped/JigsawStructureRegistry"
+#include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
+#include "../../../../unmapped/JigsawBlockInfo"
 #include "../../../util/BlockPos"
 #include "../../../../unmapped/Block"
+#include "../../../util/ChunkPos"
+#include "../../../block/unmapped/BlockVolume"
 #include "../../../../unmapped/StructureTemplatePool"
-#include "../../../../unmapped/JigsawJunction"
-#include "../../../util/Random"
-#include "../../../../unmapped/StructurePoolElement"
 #include "../../../../unmapped/BoundingBox"
 
 
 class PoolElementStructurePiece : StructurePiece {
 
 public:
-    PoolElementStructurePiece::~PoolElementStructurePiece()
+    virtual PoolElementStructurePiece::~PoolElementStructurePiece()
     virtual void moveBoundingBox(int, int, int);
     virtual bool asPoolElement();
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);

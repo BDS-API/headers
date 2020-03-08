@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../util/BlockPos"
+#include "../../../../unmapped/CircuitTrackingInfo"
 
 
 class PulseCapacitor : CapacitorComponent {
 
 public:
-    PulseCapacitor::~PulseCapacitor()
+    virtual PulseCapacitor::~PulseCapacitor()
     virtual void getStrength()const;
     virtual void setStrength(int);
     virtual void consumePowerAnyDirection();

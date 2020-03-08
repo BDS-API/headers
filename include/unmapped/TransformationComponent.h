@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
 #include "../bedrock/description/component/TransformationDescription"
+#include "../bedrock/actor/Actor"
 #include "../bedrock/level/Level"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 
 
 class TransformationComponent {

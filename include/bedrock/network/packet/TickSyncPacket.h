@@ -7,7 +7,7 @@
 class TickSyncPacket : Packet {
 
 public:
-    TickSyncPacket::~TickSyncPacket()
+    virtual TickSyncPacket::~TickSyncPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

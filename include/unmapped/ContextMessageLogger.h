@@ -5,7 +5,7 @@
 class ContextMessageLogger {
 
 public:
-    ContextMessageLogger::~ContextMessageLogger()
+    virtual ContextMessageLogger::~ContextMessageLogger()
 
     ContextMessageLogger(ContextMessageLoggerOptions const&);
     void shouldOutputAllMessagesOnDestruction();

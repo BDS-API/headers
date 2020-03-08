@@ -9,7 +9,7 @@ class PlanksBlock : BlockLegacy {
 public:
     static long WOOD_NAMES[abi:cxx11];
 
-    PlanksBlock::~PlanksBlock()
+    virtual PlanksBlock::~PlanksBlock()
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void buildDescriptionId(Block const&)const;
     virtual bool isAuxValueRelevantForPicking()const;

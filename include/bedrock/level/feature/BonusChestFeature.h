@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class BonusChestFeature : Feature {
 
 public:
-    BonusChestFeature::~BonusChestFeature()
+    virtual BonusChestFeature::~BonusChestFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     BonusChestFeature(void);

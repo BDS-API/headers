@@ -5,7 +5,7 @@
 class DataItem {
 
 public:
-    DataItem::~DataItem()
+    virtual DataItem::~DataItem()
     virtual bool isDataEqual(DataItem const&)const;
 
     DataItem(DataItemType, unsigned short);

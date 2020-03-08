@@ -7,7 +7,7 @@ class BackgroundWorker : ITaskExecutionContext {
 public:
     static long gLocalWorkerMappingSingleton;
 
-    BackgroundWorker::~BackgroundWorker()
+    virtual BackgroundWorker::~BackgroundWorker()
     virtual bool isAsync()const;
     virtual bool canTaskRunAgain()const;
 

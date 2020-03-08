@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
 #include "../CommandOutput"
+#include "../orgin/CommandOrigin"
 #include "../CommandRegistry"
 
 
 class OpCommand : ServerCommand {
 
 public:
-    OpCommand::~OpCommand()
+    virtual OpCommand::~OpCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

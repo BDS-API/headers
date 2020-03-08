@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../Mob"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class InspectBookshelfGoal : BaseMoveToBlockGoal {
 
 public:
-    InspectBookshelfGoal::~InspectBookshelfGoal()
+    virtual InspectBookshelfGoal::~InspectBookshelfGoal()
     virtual bool canContinueToUse();
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;

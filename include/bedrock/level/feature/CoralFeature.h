@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
-#include "../../../unmapped/Block"
 #include "../../../unmapped/Material"
+#include "../../util/BlockPos"
+#include "../../../unmapped/Block"
 
 
 class CoralFeature : Feature {
 
 public:
-    CoralFeature::~CoralFeature()
+    virtual CoralFeature::~CoralFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     CoralFeature(void);

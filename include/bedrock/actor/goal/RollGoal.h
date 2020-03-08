@@ -7,7 +7,7 @@
 class RollGoal : Goal {
 
 public:
-    RollGoal::~RollGoal()
+    virtual RollGoal::~RollGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual bool canBeInterrupted();

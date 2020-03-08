@@ -5,7 +5,7 @@
 class IFileChunkUploader {
 
 public:
-    IFileChunkUploader::~IFileChunkUploader()
+    virtual IFileChunkUploader::~IFileChunkUploader()
     virtual void update();
     virtual void getServerMissingChunks(FileInfo const&, std::function<void ()(std::vector<FileChunkInfo, std::allocator<FileChunkInfo>>)>)const;
     virtual void confirmChunkReceived(FileInfo const&, FileChunkInfo const&);

@@ -6,7 +6,7 @@
 class NBStartPiece : NBBridgeCrossing {
 
 public:
-    NBStartPiece::~NBStartPiece()
+    virtual NBStartPiece::~NBStartPiece()
     virtual void getType()const;
 
     NBStartPiece(void);

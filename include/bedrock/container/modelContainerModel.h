@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../item/ItemStack"
 #include "../../../unmapped/ContainerItemStack"
-#include "../../../unmapped/SlotData"
 #include "../../../unmapped/ContainerContentChangeListener"
+#include "../../../unmapped/SlotData"
 #include "../../item/unmapped/ItemDescriptor"
+#include "../../item/ItemStack"
 
 
 class ContainerModel : ContainerContentChangeListener {
 
 public:
     virtual void containerContentChanged(int);
-    ContainerModel::~ContainerModel()
+    virtual ContainerModel::~ContainerModel()
     virtual void postInit();
     virtual void releaseResources();
     virtual void getContainerSize()const;

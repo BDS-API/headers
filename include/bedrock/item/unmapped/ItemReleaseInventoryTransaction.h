@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../../unmapped/ComplexInventoryTransaction"
-#include "../ItemStack"
-#include "../../../unmapped/InventoryTransaction"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../util/Vec3"
 #include "../../io/BinaryStream"
 #include "../../actor/Player"
+#include "../../../unmapped/InventoryTransaction"
+#include "../../util/Vec3"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../ItemStack"
+#include "../../../unmapped/ComplexInventoryTransaction"
 
 
 class ItemReleaseInventoryTransaction : ComplexInventoryTransaction {
 
 public:
-    ItemReleaseInventoryTransaction::~ItemReleaseInventoryTransaction()
+    virtual ItemReleaseInventoryTransaction::~ItemReleaseInventoryTransaction()
     virtual void read(ReadOnlyBinaryStream &);
     virtual void write(BinaryStream &)const;
     virtual void handle(Player &, bool)const;

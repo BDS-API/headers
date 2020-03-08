@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../mce/UUID"
 #include "../bedrock/actor/Actor"
 #include "../bedrock/actor/Player"
+#include "../mce/UUID"
 
 
 class BossComponent {

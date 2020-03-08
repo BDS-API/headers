@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class MonsterRoomFeature : Feature {
 
 public:
-    MonsterRoomFeature::~MonsterRoomFeature()
+    virtual MonsterRoomFeature::~MonsterRoomFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     MonsterRoomFeature(void);

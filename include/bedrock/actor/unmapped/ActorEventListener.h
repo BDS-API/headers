@@ -1,18 +1,18 @@
 #pragma once
 
+#include "../../util/Vec3"
+#include "../../../unmapped/HitResult"
 #include "../../item/ItemStack"
 #include "../../util/BlockPos"
-#include "../damagesource/ActorDamageSource"
-#include "../../../unmapped/HitResult"
-#include "../Actor"
 #include "../../item/ItemInstance"
-#include "../../util/Vec3"
+#include "../damagesource/ActorDamageSource"
+#include "../Actor"
 
 
 class ActorEventListener {
 
 public:
-    ActorEventListener::~ActorEventListener()
+    virtual ActorEventListener::~ActorEventListener()
     virtual void onActorAttack(Actor &, Actor &);
     virtual void onActorHurt(Actor &, ActorDamageSource const&, int, int);
     virtual void onActorMove(Actor &, Vec3 const&);

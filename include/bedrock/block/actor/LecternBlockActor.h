@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../container/Container"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../container/Container"
 
 
 class LecternBlockActor : BlockActor, Container {
 
 public:
-    LecternBlockActor::~LecternBlockActor()
+    virtual LecternBlockActor::~LecternBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);

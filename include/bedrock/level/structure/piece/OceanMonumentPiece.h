@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../../../unmapped/Block"
-#include "../../../definition/RoomDefinition"
-#include "../../../../unmapped/BoundingBox"
 #include "../../../util/Random"
 #include "../../../block/unmapped/BlockSource"
 #include "../../LevelChunk"
+#include "../../../../unmapped/Block"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../definition/RoomDefinition"
 
 
 class OceanMonumentPiece : StructurePiece {
@@ -19,7 +19,7 @@ public:
     static long mGridroomLeftWingConnectIndex;
     static long mGridroomRightWingConnectIndex;
 
-    OceanMonumentPiece::~OceanMonumentPiece()
+    virtual OceanMonumentPiece::~OceanMonumentPiece()
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void getWorldX(int, int);
     virtual void getWorldZ(int, int);

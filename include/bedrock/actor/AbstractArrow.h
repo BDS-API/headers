@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
+#include "../nbt/CompoundTag"
 #include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/DataLoadHelper"
-#include "../util/Vec2"
+#include "../../unmapped/VariantParameterList"
 #include "../util/Vec3"
 #include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
+#include "../util/Vec2"
+#include "../../unmapped/DataLoadHelper"
 
 
 class AbstractArrow : Actor {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    AbstractArrow::~AbstractArrow()
+    virtual AbstractArrow::~AbstractArrow()
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void lerpMotion(Vec3 const&);
     virtual void normalTick();

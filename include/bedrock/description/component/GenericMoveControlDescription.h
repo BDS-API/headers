@@ -6,7 +6,7 @@ class GenericMoveControlDescription : MoveControlDescription {
 
 public:
     virtual void getJsonName()const;
-    GenericMoveControlDescription::~GenericMoveControlDescription()
+    virtual GenericMoveControlDescription::~GenericMoveControlDescription()
 
     GenericMoveControlDescription(void);
 };

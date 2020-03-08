@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
 #include "../CommandOutput"
+#include "../orgin/CommandOrigin"
 #include "../CommandRegistry"
 
 
 class SetMaxPlayersCommand : ServerCommand {
 
 public:
-    SetMaxPlayersCommand::~SetMaxPlayersCommand()
+    virtual SetMaxPlayersCommand::~SetMaxPlayersCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

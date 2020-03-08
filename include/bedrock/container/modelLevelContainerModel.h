@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../actor/unmapped/ActorUniqueID"
 #include "../../util/BlockPos"
 #include "../../actor/Player"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../item/ItemStack"
 
 
 class LevelContainerModel : ContainerModel {
 
 public:
     virtual void containerContentChanged(int);
-    LevelContainerModel::~LevelContainerModel()
+    virtual LevelContainerModel::~LevelContainerModel()
     virtual void postInit();
     virtual void releaseResources();
     virtual bool isValid();

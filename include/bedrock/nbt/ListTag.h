@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../io/IDataOutput"
 #include "../io/IDataInput"
+#include "../io/IDataOutput"
 
 
 class ListTag : Tag {
 
 public:
-    ListTag::~ListTag()
+    virtual ListTag::~ListTag()
     virtual void deleteChildren();
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);

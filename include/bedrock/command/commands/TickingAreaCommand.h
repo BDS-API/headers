@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
 #include "../../../unmapped/Dimension"
-#include "../CommandOutput"
-#include "../Command"
 #include "../CommandRegistry"
+#include "../Command"
 #include "../../level/Level"
+#include "../CommandOutput"
+#include "../orgin/CommandOrigin"
 
 
 class TickingAreaCommand : Command {
 
 public:
-    TickingAreaCommand::~TickingAreaCommand()
+    virtual TickingAreaCommand::~TickingAreaCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

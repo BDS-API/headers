@@ -7,7 +7,7 @@
 class SetLastHurtByPacket : Packet {
 
 public:
-    SetLastHurtByPacket::~SetLastHurtByPacket()
+    virtual SetLastHurtByPacket::~SetLastHurtByPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

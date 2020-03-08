@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
-#include "../util/BlockPos"
 #include "unmapped/BlockSource"
+#include "../actor/Actor"
 #include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "../util/Vec3"
 #include "../util/AABB"
 
 
 class PortalBlock : BlockLegacy {
 
 public:
-    PortalBlock::~PortalBlock()
+    virtual PortalBlock::~PortalBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool isWaterBlocking()const;

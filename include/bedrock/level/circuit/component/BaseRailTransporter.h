@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../util/BlockPos"
+#include "../../../../unmapped/CircuitTrackingInfo"
 
 
 class BaseRailTransporter : BaseCircuitComponent {
 
 public:
-    BaseRailTransporter::~BaseRailTransporter()
+    virtual BaseRailTransporter::~BaseRailTransporter()
     virtual void getBaseType()const;
     virtual void getInstanceType()const;
     virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);

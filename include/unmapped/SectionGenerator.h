@@ -7,7 +7,7 @@ using namespace EndCityPieces;
 class SectionGenerator {
 
 public:
-    EndCityPieces::SectionGenerator::~SectionGenerator()
+    virtual EndCityPieces::SectionGenerator::~SectionGenerator()
 
     SectionGenerator(void);
 };

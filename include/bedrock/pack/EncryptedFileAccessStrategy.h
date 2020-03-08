@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../core/Path"
-#include "../../unmapped/IContentKeyProvider"
-#include "../../unmapped/ContentIdentity"
-#include "../../core/InputFileStream"
 #include "../../unmapped/ResourceLocation"
+#include "../../unmapped/ContentIdentity"
+#include "../../unmapped/IContentKeyProvider"
+#include "../../core/InputFileStream"
+#include "../../core/Path"
 
 
 class EncryptedFileAccessStrategy : DirectoryPackAccessStrategy {
 
 public:
-    EncryptedFileAccessStrategy::~EncryptedFileAccessStrategy()
+    virtual EncryptedFileAccessStrategy::~EncryptedFileAccessStrategy()
     virtual bool isWritable()const;
     virtual bool isTrusted()const;
     virtual bool hasAsset(Core::Path const&, bool)const;

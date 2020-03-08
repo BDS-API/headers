@@ -5,7 +5,7 @@
 class KeyManager {
 
 public:
-    KeyManager::~KeyManager()
+    virtual KeyManager::~KeyManager()
     virtual bool isValid()const;
 
     void getSystemType()const;

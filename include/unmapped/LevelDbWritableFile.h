@@ -6,7 +6,7 @@
 class LevelDbWritableFile : leveldb::WritableFile {
 
 public:
-    LevelDbWritableFile::~LevelDbWritableFile()
+    virtual LevelDbWritableFile::~LevelDbWritableFile()
     virtual void Append(leveldb::Slice const&);
     virtual void Close();
     virtual void Flush();

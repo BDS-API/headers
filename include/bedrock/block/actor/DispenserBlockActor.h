@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../../unmapped/DataLoadHelper"
 
 
 class DispenserBlockActor : RandomizableBlockActorContainer {
 
 public:
-    DispenserBlockActor::~DispenserBlockActor()
+    virtual DispenserBlockActor::~DispenserBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void getUpdatePacket(BlockSource &);

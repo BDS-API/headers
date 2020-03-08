@@ -11,7 +11,7 @@ public:
     static long SITTING_FLAME_ATTACK_COUNT;
     static long WARMUP_TIME;
 
-    DragonFlamingGoal::~DragonFlamingGoal()
+    virtual DragonFlamingGoal::~DragonFlamingGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

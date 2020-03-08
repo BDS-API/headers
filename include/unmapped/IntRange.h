@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/util/Random"
+#include "../json/Value"
 
 
 class IntRange {

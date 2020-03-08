@@ -1,15 +1,15 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Block"
+#include "../../util/BlockPos"
 
 
 class IceSpikeFeature : Feature {
 
 public:
-    IceSpikeFeature::~IceSpikeFeature()
+    virtual IceSpikeFeature::~IceSpikeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     IceSpikeFeature(void);

@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/DataLoadHelper"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../util/ChunkPos"
-#include "../util/BlockPos"
 #include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
+#include "../util/BlockPos"
+#include "../../unmapped/VariantParameterList"
+#include "../util/ChunkPos"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Slime : Monster {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    Slime::~Slime()
+    virtual Slime::~Slime()
     virtual void remove();
     virtual void normalTick();
     virtual void getShadowRadius()const;

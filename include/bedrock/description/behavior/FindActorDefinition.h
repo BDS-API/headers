@@ -7,7 +7,7 @@
 class FindActorDefinition : BehaviorDefinition {
 
 public:
-    FindActorDefinition::~FindActorDefinition()
+    virtual FindActorDefinition::~FindActorDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     FindActorDefinition(void);

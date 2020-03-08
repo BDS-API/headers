@@ -8,7 +8,7 @@ using namespace AgentCommands;
 class InspectDataCommand : AgentCommands::Command {
 
 public:
-    AgentCommands::InspectDataCommand::~InspectDataCommand()
+    virtual AgentCommands::InspectDataCommand::~InspectDataCommand()
     virtual void execute();
     virtual bool isDone();
     virtual void fireCommandDoneEvent();

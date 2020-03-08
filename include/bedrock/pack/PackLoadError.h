@@ -5,7 +5,7 @@
 class PackLoadError : PackError {
 
 public:
-    PackLoadError::~PackLoadError()
+    virtual PackLoadError::~PackLoadError()
     virtual void getLocErrorMessageMap()const;
     virtual void getEventErrorMessageMap()const;
 

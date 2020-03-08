@@ -7,7 +7,7 @@
 class ClientToServerHandshakePacket : Packet {
 
 public:
-    ClientToServerHandshakePacket::~ClientToServerHandshakePacket()
+    virtual ClientToServerHandshakePacket::~ClientToServerHandshakePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

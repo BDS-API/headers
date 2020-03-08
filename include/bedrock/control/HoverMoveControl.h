@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../unmapped/MoveControlComponent"
 #include "../actor/Mob"
+#include "../../unmapped/MoveControlComponent"
 
 
 class HoverMoveControl : MoveControl {
 
 public:
-    HoverMoveControl::~HoverMoveControl()
+    virtual HoverMoveControl::~HoverMoveControl()
     virtual void tick(MoveControlComponent &, Mob &);
 
     HoverMoveControl(void);

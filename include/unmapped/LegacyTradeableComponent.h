@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
 #include "../bedrock/actor/Actor"
-#include "../bedrock/actor/unmapped/ActorInteraction"
-#include "../bedrock/network/packet/UpdateTradePacket"
-#include "../bedrock/actor/Player"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Player"
+#include "../bedrock/item/ItemStack"
+#include "../bedrock/network/packet/UpdateTradePacket"
+#include "../bedrock/actor/unmapped/ActorInteraction"
 
 
 class LegacyTradeableComponent {

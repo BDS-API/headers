@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../block/unmapped/BlockDefinitionGroup"
 #include "../actor/unmapped/ActorInfoRegistry"
+#include "../block/unmapped/BlockDefinitionGroup"
 
 
 class VanillaItems {

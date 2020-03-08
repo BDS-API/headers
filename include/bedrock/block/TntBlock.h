@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../container/Container"
-#include "../actor/Player"
+#include "unmapped/BlockSource"
 #include "../actor/Actor"
-#include "../util/Vec3"
 #include "../util/Random"
 #include "../util/BlockPos"
-#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../util/Vec3"
+#include "../container/Container"
 
 
 class TntBlock : BlockLegacy {
 
 public:
-    TntBlock::~TntBlock()
+    virtual TntBlock::~TntBlock()
     virtual void shouldDispense(BlockSource &, Container &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

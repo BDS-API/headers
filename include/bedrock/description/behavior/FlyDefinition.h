@@ -7,7 +7,7 @@
 class FlyDefinition : BehaviorDefinition {
 
 public:
-    FlyDefinition::~FlyDefinition()
+    virtual FlyDefinition::~FlyDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     FlyDefinition(void);

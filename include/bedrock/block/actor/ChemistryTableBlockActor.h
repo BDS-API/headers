@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../container/Container"
-#include "../../network/packet/LabTablePacket"
-#include "../../../unmapped/DataLoadHelper"
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
+#include "../../network/packet/LabTablePacket"
 #include "../../level/Level"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
+#include "../../item/ItemStack"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../container/Container"
 
 
 class ChemistryTableBlockActor : BlockActor, Container {
 
 public:
-    ChemistryTableBlockActor::~ChemistryTableBlockActor()
+    virtual ChemistryTableBlockActor::~ChemistryTableBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

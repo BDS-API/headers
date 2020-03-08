@@ -1,15 +1,15 @@
 #pragma once
 
+#include "../CommandRegistry"
 #include "../orgin/CommandOrigin"
 #include "../CommandOutput"
 #include "../Command"
-#include "../CommandRegistry"
 
 
 class HelpCommand : Command {
 
 public:
-    HelpCommand::~HelpCommand()
+    virtual HelpCommand::~HelpCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

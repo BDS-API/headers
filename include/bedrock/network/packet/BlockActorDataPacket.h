@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../util/BlockPos"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
 #include "../../nbt/CompoundTag"
+#include "../../util/BlockPos"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class BlockActorDataPacket : Packet {
 
 public:
-    BlockActorDataPacket::~BlockActorDataPacket()
+    virtual BlockActorDataPacket::~BlockActorDataPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

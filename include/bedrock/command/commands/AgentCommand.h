@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
-#include "../../actor/Player"
+#include "../CommandRegistry"
+#include "../Command"
 #include "../../actor/Agent"
 #include "../CommandOutput"
-#include "../Command"
-#include "../CommandRegistry"
+#include "../../actor/Player"
+#include "../orgin/CommandOrigin"
 
 
 class AgentCommand : Command {
 
 public:
-    AgentCommand::~AgentCommand()
+    virtual AgentCommand::~AgentCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

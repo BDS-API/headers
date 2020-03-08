@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/MobDescriptor"
-#include "../Actor"
 #include "../Mob"
+#include "../Actor"
 #include "../WitherBoss"
+#include "../../../unmapped/MobDescriptor"
 
 
 class WitherTargetHighestDamage : TargetGoal {
 
 public:
-    WitherTargetHighestDamage::~WitherTargetHighestDamage()
+    virtual WitherTargetHighestDamage::~WitherTargetHighestDamage()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

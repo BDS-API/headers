@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../util/Random"
-#include "../../util/BlockPos"
 #include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class ClayFeature : Feature {
 
 public:
-    ClayFeature::~ClayFeature()
+    virtual ClayFeature::~ClayFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     ClayFeature(int);

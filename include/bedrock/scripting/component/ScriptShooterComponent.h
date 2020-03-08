@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../ScriptVersionInfo"
 #include "../../actor/Actor"
-#include "../unmapped/ScriptEngine"
 #include "../ScriptObjectHandle"
 #include "../unmapped/ScriptServerContext"
+#include "../ScriptVersionInfo"
+#include "../unmapped/ScriptEngine"
 
 
 class ScriptShooterComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
@@ -12,7 +12,7 @@ class ScriptShooterComponent : ScriptTemplateFactory<ScriptServerContext>::Compo
 public:
     static long mHash;
 
-    ScriptShooterComponent::~ScriptShooterComponent()
+    virtual ScriptShooterComponent::~ScriptShooterComponent()
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;

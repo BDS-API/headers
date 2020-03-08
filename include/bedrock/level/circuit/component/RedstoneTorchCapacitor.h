@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../util/BlockPos"
+#include "../../../../unmapped/CircuitTrackingInfo"
 
 
 class RedstoneTorchCapacitor : CapacitorComponent {
 
 public:
-    RedstoneTorchCapacitor::~RedstoneTorchCapacitor()
+    virtual RedstoneTorchCapacitor::~RedstoneTorchCapacitor()
     virtual void getStrength()const;
     virtual void getInstanceType()const;
     virtual void removeSource(BlockPos const&, BaseCircuitComponent const*);

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/util/BlockPos"
 
 
 class RailMovementComponent {

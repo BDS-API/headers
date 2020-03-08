@@ -7,7 +7,7 @@
 class ExperiencePotion : Throwable {
 
 public:
-    ExperiencePotion::~ExperiencePotion()
+    virtual ExperiencePotion::~ExperiencePotion()
     virtual void getThrowPower();
     virtual void getThrowUpAngleOffset();
     virtual void getGravity();

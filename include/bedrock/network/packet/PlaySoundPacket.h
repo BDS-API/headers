@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../util/Vec3"
 #include "../../io/BinaryStream"
+#include "../../util/Vec3"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class PlaySoundPacket : Packet {
 
 public:
-    PlaySoundPacket::~PlaySoundPacket()
+    virtual PlaySoundPacket::~PlaySoundPacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

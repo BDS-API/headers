@@ -1,24 +1,24 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../nbt/ListTag"
 #include "../definition/GoalDefinition"
+#include "../nbt/ListTag"
+#include "../util/Vec3"
 #include "unmapped/ActorUniqueID"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../item/ItemStack"
 #include "../../unmapped/Dimension"
+#include "../nbt/CompoundTag"
+#include "../../unmapped/HashString"
+#include "../../mce/UUID"
+#include "../util/Vec2"
+#include "unmapped/ActorDefinitionGroup"
+#include "../level/Level"
 #include "../util/BlockPos"
 #include "../../unmapped/Block"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../mce/UUID"
-#include "damagesource/ActorDamageSource"
-#include "../../unmapped/DataLoadHelper"
 #include "../../unmapped/RenderParams"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../nbt/CompoundTag"
-#include "../util/Vec2"
-#include "../util/Vec3"
-#include "../../unmapped/HashString"
-#include "../level/Level"
+#include "damagesource/ActorDamageSource"
+#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/DataLoadHelper"
 
 
 class Mob : Actor {
@@ -41,7 +41,7 @@ public:
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
     virtual bool hasComponent(Util::HashString const&)const;
-    Mob::~Mob()
+    virtual Mob::~Mob()
     virtual void getInterpolatedBodyRot(float)const;
     virtual void getInterpolatedHeadRot(float)const;
     virtual void getInterpolatedBodyYaw(float)const;

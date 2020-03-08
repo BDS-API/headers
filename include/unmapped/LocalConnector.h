@@ -7,7 +7,7 @@ class LocalConnector : Connector {
 public:
     static long sLocalConnectivitySystem;
 
-    LocalConnector::~LocalConnector()
+    virtual LocalConnector::~LocalConnector()
     virtual void onAppResumed();
     virtual void onAppSuspended();
     virtual void getLocalIps()const;

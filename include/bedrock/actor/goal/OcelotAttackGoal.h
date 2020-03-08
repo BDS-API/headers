@@ -6,7 +6,7 @@
 class OcelotAttackGoal : Goal {
 
 public:
-    OcelotAttackGoal::~OcelotAttackGoal()
+    virtual OcelotAttackGoal::~OcelotAttackGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void stop();

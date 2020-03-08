@@ -6,7 +6,7 @@
 class SequenceBehaviorNode : BehaviorNode {
 
 public:
-    SequenceBehaviorNode::~SequenceBehaviorNode()
+    virtual SequenceBehaviorNode::~SequenceBehaviorNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

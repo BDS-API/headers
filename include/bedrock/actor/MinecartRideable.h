@@ -7,7 +7,7 @@
 class MinecartRideable : Minecart {
 
 public:
-    MinecartRideable::~MinecartRideable()
+    virtual MinecartRideable::~MinecartRideable()
     virtual void getType();
 
     MinecartRideable(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);

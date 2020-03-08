@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../text/TextObjectRoot"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../text/TextObjectRoot"
 
 
 class SetTitlePacket : Packet {
 
 public:
-    SetTitlePacket::~SetTitlePacket()
+    virtual SetTitlePacket::~SetTitlePacket()
     virtual void getId()const;
     virtual void getName()const;
     virtual void write(BinaryStream &)const;

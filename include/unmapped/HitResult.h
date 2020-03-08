@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
 #include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Vec3"
 
 
 class HitResult {

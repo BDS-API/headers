@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/Path"
 #include "../Mob"
+#include "../../../unmapped/Path"
 #include "../../util/BlockPos"
 
 
 class DoorInteractGoal : Goal {
 
 public:
-    DoorInteractGoal::~DoorInteractGoal()
+    virtual DoorInteractGoal::~DoorInteractGoal()
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();
