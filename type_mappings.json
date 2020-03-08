@@ -1,17 +1,17 @@
 {
   "ServerInstance": {
     "getMinecraft": {
-      "type": "Minecraft*"
+      "type": "Minecraft *"
     }
   },
   "Minecraft": {
     "getLevel": {
-      "type": "GameSession*"
+      "type": "GameSession *"
     }
   },
   "GameSession": {
     "getLevel": {
-      "type": "Level*"
+      "type": "Level *"
     },
     "setLevel": {
       "args": [
@@ -24,7 +24,7 @@
   },
   "Level": {
     "getActivePlayers": {
-      "type": "std::vector<Player *>*"
+      "type": "std::vector<Player *> *"
     },
     "getActivePlayerCount": {
       "type": "unsigned int"
