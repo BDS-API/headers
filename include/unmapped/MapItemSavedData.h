@@ -1,35 +1,40 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
 #include "../bedrock/item/ItemStack"
+#include "../bedrock/util/Color"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/BlockPos"
 #include "../bedrock/actor/Player"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/level/Level"
+#include "../bedrock/actor/Actor"
 #include "../bedrock/level/storage/LevelStorage"
+#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/level/Level"
 
 
 class MapItemSavedData {
 
 public:
 
-    void getScale(void)const;
-    void getDimensionId(void)const;
+    void getScale()const;
+    void getDimensionId()const;
     void _setPreviewIncomplete(bool);
-    void getOrigin(void)const;
-    void getId(void)const;
-    bool isPreviewIncomplete(void)const;
+    void getOrigin()const;
+    void getId()const;
+    bool isPreviewIncomplete()const;
     MapItemSavedData(ActorUniqueID);
     void setOrigin(Vec3, int, AutomaticID<Dimension, int>, bool, bool, BlockPos const&);
     void _clampOriginWithinLimitedWorld(BlockPos &, Vec3 const&, int)const;
-    void setDirty(void);
+    void setDirty();
     void setScale(int);
     void setDimensionId(AutomaticID<Dimension, int>);
-    void enableUnlimitedTracking(void);
+    void enableUnlimitedTracking();
     void deserialize(CompoundTag const&);
     void _deserializeData(CompoundTag const&);
     void serialize(CompoundTag &)const;
     void save(LevelStorage &);
-    void getMapId(void)const;
+    void getMapId()const;
     void trySave(LevelStorage &);
     void tickCarriedBy(Actor &, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&);
     void _updateTrackedEntityDecorations(BlockSource &);
@@ -59,18 +64,18 @@ public:
     void addDecoration(MapItemTrackedActor::UniqueId, std::shared_ptr<MapDecoration>);
     void replaceDecorations(std::vector<std::shared_ptr<MapDecoration>, std::allocator<std::shared_ptr<MapDecoration>>>, std::vector<MapItemTrackedActor::UniqueId, std::allocator<MapItemTrackedActor::UniqueId>>);
     void replacePixels(buffer_span<unsigned int>, unsigned int, unsigned int, unsigned int, unsigned int);
-    void getParentMapId(void)const;
+    void getParentMapId()const;
     void setParentMapId(ActorUniqueID);
-    bool hasParentMap(void)const;
+    bool hasParentMap()const;
     bool isAdjacent(MapItemSavedData const&, int)const;
-    bool isFullyExplored(void)const;
-    void getPixels(void)const;
+    bool isFullyExplored()const;
+    void getPixels()const;
     void copyMapData(MapItemSavedData const&);
-    void getFullDataPacket(void)const;
-    void setLocked(void);
-    bool isLocked(void)const;
-    void setAllPixelsDirty(void);
+    void getFullDataPacket()const;
+    void setLocked();
+    bool isLocked()const;
+    void setAllPixelsDirty();
     bool isChunkAllEmpty(MapItemSavedData::ChunkBounds)const;
     void setMapSection(buffer_span<unsigned int>, MapItemSavedData::ChunkBounds);
-    void getDecorations(void)const;
+    void getDecorations()const;
 };

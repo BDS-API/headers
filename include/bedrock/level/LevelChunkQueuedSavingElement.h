@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../../unmapped/Dimension"
-#include "../../unmapped/ChunkPos"
+#include "../util/ChunkPos"
 
 
 using namespace Level;

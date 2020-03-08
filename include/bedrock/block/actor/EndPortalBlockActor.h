@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
+#include "../../util/BlockPos"
 
 
 class EndPortalBlockActor : BlockActor {
 
 public:
-    virtual EndPortalBlockActor::~EndPortalBlockActor();
+    EndPortalBlockActor::~EndPortalBlockActor()
 
     EndPortalBlockActor(BlockPos const&);
 };

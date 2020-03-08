@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../actor/Mob"
 #include "../../json/Value"
+#include "../actor/Mob"
 
 
 class GoalDefinition {
@@ -18,6 +18,6 @@ public:
     void _getPOITypeFromString(std::string);
     void CreateGoal(Mob &, GoalDefinition const&);
     void GoalExists(std::string const&);
-    void init(void);
-    void shutdown(void);
+    void init();
+    void shutdown();
 };

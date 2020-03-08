@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/definition/LookAtDefinition"
 #include "../bedrock/actor/Actor"
 
 
@@ -10,8 +11,8 @@ public:
     LookAtComponent(LookAtComponent&&);
     LookAtComponent(void);
     void initFromDefinition(Actor &, LookAtDefinition const&);
-    void getTarget(void)const;
-    void getSearchRadius(void)const;
-    void getCoolingTime(void);
+    void getTarget()const;
+    void getSearchRadius()const;
+    void getCoolingTime();
     bool isLookingAtMe(Actor &, Actor &);
 };

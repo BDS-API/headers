@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../../../unmapped/ScriptServerContext"
 #include "../ScriptVersionInfo"
+#include "../unmapped/ScriptEngine"
+#include "../ScriptObjectHandle"
+#include "../unmapped/ScriptServerContext"
 
 
 class ScriptServerChatReceived : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
@@ -9,10 +11,10 @@ class ScriptServerChatReceived : ScriptTemplateFactory<ScriptServerContext>::Rec
 public:
     static long mHash;
 
-    virtual ScriptServerChatReceived::~ScriptServerChatReceived();
+    ScriptServerChatReceived::~ScriptServerChatReceived()
     virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);
     virtual void getEventData(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle &);
 
-    void getHash(void);
+    void getHash();
     ScriptServerChatReceived(void);
 };

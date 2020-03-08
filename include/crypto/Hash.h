@@ -9,9 +9,9 @@ class Hash {
 public:
 
     void update(void const*, unsigned int);
-    void getUUID(void);
+    void getUUID();
     Hash(Crypto::Hash::HashType);
     void update(void const*, unsigned int);
-    void getUUID(void);
+    void getUUID();
     Hash(Crypto::Hash::HashType);
 };

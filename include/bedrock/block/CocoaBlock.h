@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class CocoaBlock : BlockLegacy {
 
 public:
-    virtual CocoaBlock::~CocoaBlock();
+    CocoaBlock::~CocoaBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
@@ -20,7 +23,7 @@ public:
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
-    virtual bool canBeSilkTouched(void)const;
+    virtual bool canBeSilkTouched()const;
 
     CocoaBlock(std::string const&, int);
 };

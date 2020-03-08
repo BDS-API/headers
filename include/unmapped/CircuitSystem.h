@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/ChunkPos"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/level/circuit/component/BaseCircuitComponent"
 
 
@@ -12,9 +15,9 @@ public:
     void updateDependencies(BlockSource *);
     void evaluate(BlockSource *);
     void _shouldEvaluate(BlockSource *);
-    void cacheValues(void);
+    void cacheValues();
     void evaluateComponents(bool);
-    void checkLocks(void);
+    void checkLocks();
     void updateBlocks(BlockSource &, BlockPos const&);
     void updateIndividualBlock(BaseCircuitComponent *, BlockPos const&, BlockPos const&, BlockSource &);
     void createComponent(BlockPos const&, unsigned char, std::unique_ptr<BaseCircuitComponent, std::default_delete<BaseCircuitComponent>>);

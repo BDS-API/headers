@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/util/ChunkPos"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/level/circuit/component/BaseCircuitComponent"
 
 
 class CircuitSceneGraph {
@@ -11,22 +15,22 @@ public:
     void getBaseComponent(BlockPos const&);
     void getFromPendingAdd(BlockPos const&, unsigned long);
     void getFromPendingAdd(BlockPos const&);
-    bool processPendingAdds(void);
+    bool processPendingAdds();
     void scheduleRelationshipUpdate(BlockPos const&, BaseCircuitComponent *);
-    void setPendingAddAsNewlyLoaded(void);
+    void setPendingAddAsNewlyLoaded();
     bool isPendingAdd(BlockPos const&);
     void add(BlockPos const&, std::unique_ptr<BaseCircuitComponent, std::default_delete<BaseCircuitComponent>>);
     void remove(BlockPos const&, BaseCircuitComponent *);
     void removeComponent(BlockPos const&);
-    bool processPendingRemoves(void);
+    bool processPendingRemoves();
     void update(BlockSource *);
     bool processPendingUpdates(BlockSource *);
-    void removeStaleRelationships(void);
+    void removeStaleRelationships();
     void findRelationships(BlockPos const&, BaseCircuitComponent *, BlockSource *);
     void addIfPoweredBlockAt(BlockSource &, BlockPos const&);
     void addPositionToReEvaluate(ChunkPos const&, BlockPos const&);
     void invalidatePos(BlockPos const&);
     void preSetupPoweredBlocks(ChunkPos const&);
-    void getComponents_FastLookupByChunkPos(void);
-    void getComponents_FastIterationAcrossActive(void);
+    void getComponents_FastLookupByChunkPos();
+    void getComponents_FastIterationAcrossActive();
 };

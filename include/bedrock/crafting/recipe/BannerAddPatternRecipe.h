@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../../container/CraftingContainer"
 #include "../../../mce/UUID"
+#include "../../container/CraftingContainer"
+#include "../../level/Level"
 
 
 class BannerAddPatternRecipe : MultiRecipe {
@@ -9,14 +10,14 @@ class BannerAddPatternRecipe : MultiRecipe {
 public:
     static long ID;
 
-    virtual BannerAddPatternRecipe::~BannerAddPatternRecipe();
+    BannerAddPatternRecipe::~BannerAddPatternRecipe()
     virtual void assemble(CraftingContainer &)const;
-    virtual void getCraftingSize(void)const;
+    virtual void getCraftingSize()const;
     virtual void getIngredient(int, int)const;
-    virtual void getResultItem(void)const;
+    virtual void getResultItem()const;
     virtual void matches(CraftingContainer &, Level &)const;
-    virtual void size(void)const;
-    virtual bool isExperimental(void)const;
+    virtual void size()const;
+    virtual bool isExperimental()const;
 
     BannerAddPatternRecipe(std::string);
     BannerAddPatternRecipe(std::string, mce::UUID const&);

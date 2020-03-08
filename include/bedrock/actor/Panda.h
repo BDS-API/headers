@@ -1,28 +1,30 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
 
 
 class Panda : Animal {
 
 public:
-    virtual Panda::~Panda();
-    virtual void normalTick(void);
+    Panda::~Panda()
+    virtual void normalTick();
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void _onSizeUpdated(void);
-    virtual void getAmbientSound(void);
+    virtual void _onSizeUpdated();
+    virtual void getAmbientSound();
     virtual void setTransitioningSitting(bool);
 
     Panda(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void updateSitting(void);
+    void updateSitting();
     void getSitAmount(float)const;
-    void updateLaying(void);
-    bool isSneezing(void)const;
-    void updateRollAmount(void);
+    void updateLaying();
+    bool isSneezing()const;
+    void updateRollAmount();
     void getLieOnBackAmount(float)const;
-    void getUnhappyCounter(void)const;
-    void getSneezeCounter(void)const;
+    void getUnhappyCounter()const;
+    void getSneezeCounter()const;
     void getRollAmount(float)const;
-    void getRollCounter(void)const;
+    void getRollCounter()const;
 };

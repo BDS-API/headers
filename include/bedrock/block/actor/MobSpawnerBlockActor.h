@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class MobSpawnerBlockActor : BlockActor {
 
 public:
-    virtual MobSpawnerBlockActor::~MobSpawnerBlockActor();
+    MobSpawnerBlockActor::~MobSpawnerBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
@@ -17,5 +18,5 @@ public:
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     MobSpawnerBlockActor(BlockPos const&);
-    void getSpawner(void);
+    void getSpawner();
 };

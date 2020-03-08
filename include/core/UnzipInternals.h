@@ -10,6 +10,6 @@ public:
 
     UnzipInternals(void *);
     void set(void *);
-    void get(void);
-    void get(void)const;
+    void get();
+    void get()const;
 };

@@ -10,7 +10,7 @@ public:
 
     void CreateGUID(MDGUID *);
     void BytesToUInt32(unsigned char const*);
-    void InitOnce(void);
+    void InitOnce();
     void UInt32ToBytes(unsigned char *, unsigned int);
-    void InitOnceImpl(void);
+    void InitOnceImpl();
 };

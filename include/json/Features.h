@@ -9,6 +9,6 @@ class Features {
 public:
 
     Features(void);
-    void all(void);
-    void strictMode(void);
+    void all();
+    void strictMode();
 };

@@ -1,20 +1,20 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../../unmapped/ActorUniqueID"
+#include "../../actor/unmapped/ActorUniqueID"
 #include "../../io/ReadOnlyBinaryStream"
 
 
 class MapInfoRequestPacket : Packet {
 
 public:
-    virtual MapInfoRequestPacket::~MapInfoRequestPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    MapInfoRequestPacket::~MapInfoRequestPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
     MapInfoRequestPacket(void);
     MapInfoRequestPacket(ActorUniqueID);
-    void getMapId(void)const;
+    void getMapId()const;
 };

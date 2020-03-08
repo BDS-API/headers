@@ -6,7 +6,7 @@
 class RakDataOutput : BytesDataOutput {
 
 public:
-    virtual RakDataOutput::~RakDataOutput();
+    RakDataOutput::~RakDataOutput()
     virtual void writeBytes(void const*, unsigned long);
 
     RakDataOutput(RakNet::BitStream &);

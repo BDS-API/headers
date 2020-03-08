@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../block/unmapped/BlockBreakSensorComponent"
 #include "../../unmapped/EntityContext"
 
 

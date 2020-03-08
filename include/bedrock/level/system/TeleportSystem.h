@@ -6,7 +6,7 @@
 class TeleportSystem : ITickingSystem {
 
 public:
-    virtual TeleportSystem::~TeleportSystem();
+    TeleportSystem::~TeleportSystem()
     virtual void tick(EntityRegistry &);
 
     TeleportSystem(void);

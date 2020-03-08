@@ -6,9 +6,9 @@
 class FilterTestTemperatureValue : SimpleFloatFilterTest {
 
 public:
-    virtual FilterTestTemperatureValue::~FilterTestTemperatureValue();
+    FilterTestTemperatureValue::~FilterTestTemperatureValue()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     FilterTestTemperatureValue(void);
 };

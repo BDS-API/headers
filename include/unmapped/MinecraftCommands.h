@@ -1,8 +1,10 @@
 #pragma once
 
 #include "../bedrock/command/orgin/CommandOrigin"
-#include "../bedrock/command/CommandContext"
 #include "../bedrock/command/CommandOutputSender"
+#include "../bedrock/Minecraft"
+#include "../bedrock/command/CommandOutput"
+#include "../bedrock/command/CommandContext"
 
 
 class MinecraftCommands {
@@ -10,11 +12,11 @@ class MinecraftCommands {
 public:
 
     void setOpPermissionLevel(CommandPermissionLevel);
-    void getOpPermissionLevel(void)const;
+    void getOpPermissionLevel()const;
     MinecraftCommands(Minecraft &, Automation::AutomationClient &);
     void initCoreEnums(bool, BaseGameVersion const&);
-    void getRegistry(void);
-    void getRegistry(void)const;
+    void getRegistry();
+    void getRegistry()const;
     void requestCommandExecution(std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, std::string const&, int, bool)const;
     void getOutputType(CommandOrigin const&);
     void handleOutput(CommandOrigin const&, CommandOutput const&)const;
@@ -23,5 +25,5 @@ public:
     void runCommand(HashedString const&, CommandOrigin &, CurrentCmdVersion);
     void registerChatPermissionsCallback(std::function<bool ()(void)>);
     void setOutputSender(std::unique_ptr<CommandOutputSender, std::default_delete<CommandOutputSender>>);
-    void getOutputSender(void);
+    void getOutputSender();
 };

@@ -8,6 +8,6 @@ class FileInfo {
 public:
 
     FileInfo(Core::Path, int, std::string);
-    void valid(void)const;
+    void valid()const;
     FileInfo(FileInfo&&);
 };

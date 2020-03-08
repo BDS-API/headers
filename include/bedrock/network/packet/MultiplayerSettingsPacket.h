@@ -7,9 +7,9 @@
 class MultiplayerSettingsPacket : Packet {
 
 public:
-    virtual MultiplayerSettingsPacket::~MultiplayerSettingsPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    MultiplayerSettingsPacket::~MultiplayerSettingsPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

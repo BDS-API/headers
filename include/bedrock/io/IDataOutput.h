@@ -5,7 +5,7 @@
 class IDataOutput {
 
 public:
-    virtual IDataOutput::~IDataOutput();
+    IDataOutput::~IDataOutput()
 
     IDataOutput(void);
 };

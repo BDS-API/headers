@@ -1,17 +1,17 @@
 #pragma once
 
+#include "../../actor/unmapped/ActorUniqueID"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/ActorUniqueID"
+#include "../../util/Vec3"
 #include "../../io/BinaryStream"
-#include "../../../unmapped/Vec3"
 
 
 class SpawnParticleEffectPacket : Packet {
 
 public:
-    virtual SpawnParticleEffectPacket::~SpawnParticleEffectPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    SpawnParticleEffectPacket::~SpawnParticleEffectPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

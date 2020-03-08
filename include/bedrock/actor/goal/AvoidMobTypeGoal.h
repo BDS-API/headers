@@ -1,12 +1,13 @@
 #pragma once
 
+#include "../../../unmapped/MobDescriptor"
 #include "../Mob"
 
 
 class AvoidMobTypeGoal : AvoidMobGoal {
 
 public:
-    virtual AvoidMobTypeGoal::~AvoidMobTypeGoal();
+    AvoidMobTypeGoal::~AvoidMobTypeGoal()
     virtual void appendDebugInfo(std::string &)const;
     virtual void findNearestEntityToAvoid(float);
 

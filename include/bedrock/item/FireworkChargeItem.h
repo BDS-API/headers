@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../level/Level"
+#include "unmapped/ItemDescriptor"
 #include "../nbt/CompoundTag"
 
 
@@ -13,10 +15,10 @@ public:
     static long TAG_E_TRAIL[abi:cxx11];
     static long TAG_E_FLICKER[abi:cxx11];
 
-    virtual FireworkChargeItem::~FireworkChargeItem();
+    FireworkChargeItem::~FireworkChargeItem()
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual void getColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&, ItemDescriptor const&)const;
-    virtual bool isTintable(void)const;
+    virtual bool isTintable()const;
     virtual bool isSameItem(ItemStackBase const&, ItemStackBase const&)const;
 
     FireworkChargeItem(std::string const&, int);

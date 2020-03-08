@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/Random"
 
 
 class SeaPickleFeature : Feature {
 
 public:
-    virtual SeaPickleFeature::~SeaPickleFeature();
+    SeaPickleFeature::~SeaPickleFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     SeaPickleFeature(void);

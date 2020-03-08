@@ -1,18 +1,22 @@
 #pragma once
 
-#include "../bedrock/scripting/ScriptObjectHandle"
-#include "../bedrock/scripting/ScriptReportItem"
-#include "../bedrock/ServerInstance"
 #include "../bedrock/scripting/ScriptVersionInfo"
-#include "../bedrock/level/Level"
+#include "../bedrock/network/packet/sender/PacketSender"
+#include "../bedrock/ServerInstance"
+#include "../bedrock/scripting/unmapped/ScriptCommand"
+#include "../bedrock/scripting/ScriptReportItem"
+#include "../bedrock/scripting/ScriptObjectHandle"
 #include "../bedrock/pack/ResourcePackManager"
+#include "../bedrock/Minecraft"
+#include "../bedrock/scripting/unmapped/ScriptServerContext"
+#include "../bedrock/level/Level"
 
 
 class MinecraftServerScriptEngine : ScriptEngineWithContext<ScriptServerContext>, ServerInstanceEventListener {
 
 public:
-    virtual MinecraftServerScriptEngine::~MinecraftServerScriptEngine();
-    virtual void setupInterface(void);
+    MinecraftServerScriptEngine::~MinecraftServerScriptEngine()
+    virtual void setupInterface();
     virtual void onExecuteCommandCalled(ScriptApi::ScriptVersionInfo const&, ScriptCommand &&);
     virtual void executeCommand(ScriptCommand const&);
     virtual void _registerSystemObjects(ScriptApi::ScriptObjectHandle const&);
@@ -24,7 +28,7 @@ public:
     virtual void onServerUpdateEnd(ServerInstance &);
     virtual void onServerThreadStarted(ServerInstance &);
     virtual void onLeaveGameDone(ServerInstance &);
-    virtual void onLevelTick(void);
+    virtual void onLevelTick();
 
     MinecraftServerScriptEngine(ServerInstance &);
     void _queueResourcePackScripts(ResourcePackManager &);

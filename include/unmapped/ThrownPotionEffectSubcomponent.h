@@ -7,10 +7,10 @@
 class ThrownPotionEffectSubcomponent : SplashPotionEffectSubcomponent {
 
 public:
-    virtual ThrownPotionEffectSubcomponent::~ThrownPotionEffectSubcomponent();
+    ThrownPotionEffectSubcomponent::~ThrownPotionEffectSubcomponent()
     virtual void writetoJSON(Json::Value &)const;
     virtual void doOnHitEffect(Actor &, ProjectileComponent &);
 
-    void getSubcomponentName(void);
+    void getSubcomponentName();
     ThrownPotionEffectSubcomponent(void);
 };

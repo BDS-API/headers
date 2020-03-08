@@ -7,11 +7,11 @@ class HudContainerModel : ContainerModel {
 
 public:
     virtual void containerContentChanged(int);
-    virtual HudContainerModel::~HudContainerModel();
-    virtual bool isValid(void);
+    HudContainerModel::~HudContainerModel()
+    virtual bool isValid();
 
     HudContainerModel(ContainerEnumName, Player &);
-    void _init(void);
-    void _refreshContainer(void);
+    void _init();
+    void _refreshContainer();
     void _refreshSlot(int);
 };

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/item/ItemStack"
 #include "../bedrock/actor/Actor"
 #include "../bedrock/actor/Player"
 
@@ -14,15 +15,15 @@ public:
     BoostableComponent(BoostableComponent&&);
     BoostableComponent(void);
     void onItemInteract(Actor &, ItemStack &, Player &);
-    void getIsBoosting(void)const;
+    void getIsBoosting()const;
     void _canUseItem(Actor &, ItemStack &);
     void boost(Actor &, Player &);
     void _useItem(Actor &, ItemStack &, Player &);
     void itemUseText(Player const&, std::string &);
     void setIsBoosting(bool);
     void removeRider(Player &);
-    void getBoostTime(void)const;
+    void getBoostTime()const;
     void setBoostTime(int);
-    void getBoostTimeTotal(void)const;
-    void getSpeedModifierBoosting(void);
+    void getBoostTimeTotal()const;
+    void getSpeedModifierBoosting();
 };

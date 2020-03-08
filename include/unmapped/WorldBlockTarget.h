@@ -1,15 +1,18 @@
 #pragma once
 
 #include "../bedrock/level/feature/Feature"
+#include "../bedrock/util/Random"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class WorldBlockTarget : IBlockPlacementTarget {
 
 public:
-    virtual WorldBlockTarget::~WorldBlockTarget();
+    WorldBlockTarget::~WorldBlockTarget()
     virtual void getBlock(BlockPos const&)const;
     virtual void setBlock(BlockPos const&, Block const&, int);
-    virtual void apply(void)const;
+    virtual void apply()const;
     virtual void placeLegacyStructure(BlockPos const&, LegacyStructureTemplate &, LegacyStructureSettings &);
     virtual void mayPlace(BlockPos const&, Block const&)const;
     virtual bool canSurvive(BlockPos const&, Block const&)const;

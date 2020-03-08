@@ -6,7 +6,7 @@
 class SensingSystem : ITickingSystem {
 
 public:
-    virtual SensingSystem::~SensingSystem();
+    SensingSystem::~SensingSystem()
     virtual void tick(EntityRegistry &);
 
     SensingSystem(void);

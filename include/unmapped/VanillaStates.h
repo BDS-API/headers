@@ -112,7 +112,7 @@ public:
     static long BeehiveHoneyLevel;
 
 
-    void registerStates(void);
-    void unregisterStates(void);
+    void registerStates();
+    void unregisterStates();
     void getState(std::string const&);
 };

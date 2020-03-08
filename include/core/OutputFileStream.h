@@ -7,7 +7,7 @@ using namespace Core;
 class OutputFileStream : Core::FileStream {
 
 public:
-    virtual void Core::OutputFileStream::~OutputFileStream();
+    Core::OutputFileStream::~OutputFileStream()
 
     void open(Core::Path const&, std::_Ios_Openmode);
     OutputFileStream(void);

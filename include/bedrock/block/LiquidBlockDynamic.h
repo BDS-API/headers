@@ -1,12 +1,15 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Material"
 
 
 class LiquidBlockDynamic : LiquidBlock {
 
 public:
-    virtual LiquidBlockDynamic::~LiquidBlockDynamic();
+    LiquidBlockDynamic::~LiquidBlockDynamic()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
 

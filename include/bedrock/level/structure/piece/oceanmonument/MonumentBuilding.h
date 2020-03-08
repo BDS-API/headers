@@ -1,19 +1,20 @@
 #pragma once
 
+#include "../../../../../unmapped/BoundingBox"
+#include "../../../../util/Random"
 #include "../OceanMonumentPiece"
-#include "../../../../../unmapped/BlockSource"
-#include "../../../../../unmapped/Random"
+#include "../../../../block/unmapped/BlockSource"
 
 
 class MonumentBuilding : OceanMonumentPiece {
 
 public:
-    virtual MonumentBuilding::~MonumentBuilding();
-    virtual void getType(void)const;
+    MonumentBuilding::~MonumentBuilding()
+    virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
 
-    void getBiomeRange(void);
+    void getBiomeRange();
     MonumentBuilding(Random &, int, int, int &);
     void generateRoomGraph(Random &);
     MonumentBuilding(void);

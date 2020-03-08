@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/Random"
 
 
 class HellFireFeature : Feature {
 
 public:
-    virtual HellFireFeature::~HellFireFeature();
+    HellFireFeature::~HellFireFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     HellFireFeature(void);

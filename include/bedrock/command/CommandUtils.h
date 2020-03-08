@@ -1,11 +1,16 @@
 #pragma once
 
+#include "../block/unmapped/BlockSource"
 #include "orgin/CommandOrigin"
-#include "../level/LevelData"
-#include "../../unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../item/ItemInstance"
+#include "../../json/Value"
+#include "../actor/unmapped/ActorUniqueID"
+#include "../util/BlockPos"
 #include "../actor/Player"
+#include "../actor/Actor"
+#include "../actor/unmapped/ActorDefinitionIdentifier"
+#include "../item/ItemInstance"
+#include "../level/LevelData"
+#include "../util/Vec3"
 #include "../item/Item"
 
 
@@ -30,7 +35,7 @@ public:
     void getFeetBlockPos(Actor const*);
     void createMapData(Actor &, ItemInstance &, CommandOutput &);
     void clearBlockEntityContents(BlockSource &, BlockPos const&);
-    void getInvalidCommandEntities(void);
+    void getInvalidCommandEntities();
     bool isValidCommandEntity(std::vector<ActorType, std::allocator<ActorType>> const&, ActorType);
     void getOriginPlayer(CommandOrigin const&);
 };

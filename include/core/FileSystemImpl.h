@@ -7,15 +7,15 @@ using namespace Core;
 class FileSystemImpl {
 
 public:
-    virtual void Core::FileSystemImpl::~FileSystemImpl();
+    Core::FileSystemImpl::~FileSystemImpl()
     virtual bool isValidPath(Core::Path const&);
     virtual bool isRelativePath(Core::Path const&);
     virtual void getLastModificationTime(Core::Path const&, long *);
     virtual void copyTimeAndAccessRights(Core::Path const&, Core::Path const&);
     virtual void requestFlush(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> const&);
-    virtual void shouldCommit(void);
-    virtual void getCrossStorageCopyMode(void);
-    virtual void getTransactionWriteSizeLimit(void)const;
+    virtual void shouldCommit();
+    virtual void getCrossStorageCopyMode();
+    virtual void getTransactionWriteSizeLimit()const;
     virtual void _createEmptyFile(Core::Path const&);
     virtual void _copyFile(Core::Path const&, Core::Path const&);
     virtual void _copyFileWithLimit(Core::Path const&, Core::Path const&, unsigned long, unsigned long &, unsigned long &);
@@ -42,19 +42,19 @@ public:
     virtual void _flatFileGetFileSize(Core::Path const&, Core::Path const&, unsigned long *);
     virtual void _isValidPath(Core::Path const&);
     virtual void _isRelativePath(Core::Path const&);
-    virtual void _endTransaction(void);
+    virtual void _endTransaction();
     virtual void _writeOperation(Core::Path const&, Core::Result &&, std::function<void ()(Core::FileStorageArea *)>, unsigned long);
 
-    void getFileStats(void);
-    void getGlobalStats(void);
+    void getFileStats();
+    void getGlobalStats();
     FileSystemImpl(Core::FileAccessType, std::shared_ptr<Core::FileStorageArea>, std::shared_ptr<Core::FlatFileManifestTracker>);
-    void _isTransactionEnded(void)const;
-    void getAccessType(void)const;
-    void getStorageArea(void);
+    void _isTransactionEnded()const;
+    void getAccessType()const;
+    void getStorageArea();
     void setLoggingEnabled(bool);
-    void getLoggingEnabled(void)const;
+    void getLoggingEnabled()const;
     void enumerateFiles(std::function<void ()(Core::FileImpl *)> const&);
-    void commit(void);
+    void commit();
     void openFile(std::unique_ptr<Core::FileImpl, std::default_delete<Core::FileImpl>> &, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode);
     void _flatFileOpenFlatFile(std::unique_ptr<Core::FileImpl, std::default_delete<Core::FileImpl>> &, Core::Path const&, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode);
     void _readWriteOperation(Core::Result &&, std::function<void ()(Core::FileStorageArea *)>, unsigned long, unsigned long);
@@ -86,7 +86,7 @@ public:
     void createFlatFile(Core::Path const&, Core::Path const&);
     bool isDirectoryPathAFlatFile(Core::Path const&);
     void copyFlatFile(Core::Path const&, Core::Path const&, std::vector<Core::ExcludedPath, std::allocator<Core::ExcludedPath>> const&, std::vector<Core::ExcludedPath, std::allocator<Core::ExcludedPath>> const&);
-    void getFlatFileManifestTracker(void)const;
+    void getFlatFileManifestTracker()const;
     void getFileOrDirectorySize(Core::Path const&, unsigned long *);
     void countDirectoryFiles(Core::Path const&, unsigned long *);
     void getEntryType(Core::Path const&, Core::FileType &);

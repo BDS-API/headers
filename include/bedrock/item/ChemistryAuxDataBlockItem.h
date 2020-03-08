@@ -5,7 +5,7 @@
 class ChemistryAuxDataBlockItem : AuxDataBlockItem {
 
 public:
-    virtual ChemistryAuxDataBlockItem::~ChemistryAuxDataBlockItem();
+    ChemistryAuxDataBlockItem::~ChemistryAuxDataBlockItem()
     virtual void fixupOnLoad(ItemStackBase &)const;
 
 };

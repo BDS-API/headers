@@ -8,9 +8,9 @@ using namespace AgentCommands;
 class DetectRedstoneCommand : AgentCommands::Command {
 
 public:
-    virtual void AgentCommands::DetectRedstoneCommand::~DetectRedstoneCommand();
-    virtual void execute(void);
-    virtual bool isDone(void);
+    AgentCommands::DetectRedstoneCommand::~DetectRedstoneCommand()
+    virtual void execute();
+    virtual bool isDone();
 
     DetectRedstoneCommand(Player &, AgentCommands::Direction);
 };

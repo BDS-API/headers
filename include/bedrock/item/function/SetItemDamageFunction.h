@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../ItemInstance"
 #include "../ItemStack"
 #include "../../../json/Value"
 #include "../condition/LootItemCondition"
+#include "../../../unmapped/LootTableContext"
+#include "../../util/Random"
+#include "../../../unmapped/RandomValueBounds"
+#include "../ItemInstance"
 
 
 class SetItemDamageFunction : LootItemFunction {
 
 public:
-    virtual SetItemDamageFunction::~SetItemDamageFunction();
+    SetItemDamageFunction::~SetItemDamageFunction()
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
 

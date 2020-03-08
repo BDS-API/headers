@@ -1,6 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/BlockPos"
 
 
 using namespace MapItemTrackedActor;

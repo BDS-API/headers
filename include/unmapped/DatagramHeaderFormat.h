@@ -10,5 +10,5 @@ public:
     DatagramHeaderFormat(void);
     void Deserialize(RakNet::BitStream *);
     void Serialize(RakNet::BitStream *);
-    void GetDataHeaderByteLength(void);
+    void GetDataHeaderByteLength();
 };

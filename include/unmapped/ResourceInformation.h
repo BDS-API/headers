@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../mce/UUID"
 
 
 class ResourceInformation {

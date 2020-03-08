@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/level/tickingarea/ITickingArea"
 #include "../bedrock/actor/Actor"
 
 
@@ -9,13 +10,13 @@ public:
 
     TickWorldComponent(void);
     TickWorldComponent(TickWorldComponent&&);
-    void removeArea(void);
+    void removeArea();
     void initFromDefinition(Actor &);
-    void getChunkRadius(void)const;
-    void getMaxDistToPlayers(void)const;
-    bool isAlwaysActive(void)const;
-    bool hasTickingArea(void)const;
-    void getTickingArea(void);
+    void getChunkRadius()const;
+    void getMaxDistToPlayers()const;
+    bool isAlwaysActive()const;
+    bool hasTickingArea()const;
+    void getTickingArea();
     void setTickingArea(Actor &, std::shared_ptr<ITickingArea>);
     void updateArea(Actor &);
 };

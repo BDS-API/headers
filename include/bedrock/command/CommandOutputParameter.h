@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
 #include "../actor/Actor"
+#include "../util/Vec3"
+#include "../util/BlockPos"
 #include "../actor/Player"
-#include "../../unmapped/Vec3"
 
 
 class CommandOutputParameter {
@@ -28,5 +28,5 @@ public:
     CommandOutputParameter(CommandSelectorResults<Player> const&);
     CommandOutputParameter(CommandOutputParameter&&);
     CommandOutputParameter(CommandOutputParameter const&);
-    void count(void)const;
+    void count()const;
 };

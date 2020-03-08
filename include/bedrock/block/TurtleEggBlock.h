@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../actor/Player"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../../unmapped/Block"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../actor/Player"
 
 
 class TurtleEggBlock : BlockLegacy {
 
 public:
-    virtual TurtleEggBlock::~TurtleEggBlock();
+    TurtleEggBlock::~TurtleEggBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
-    virtual void waterSpreadCausesSpawn(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual void waterSpreadCausesSpawn()const;
+    virtual bool canContainLiquid()const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void transformOnFall(BlockSource &, BlockPos const&, Actor *, float)const;
@@ -24,9 +25,9 @@ public:
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
-    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
-    virtual bool isAuxValueRelevantForPicking(void)const;
-    virtual bool canBeSilkTouched(void)const;
+    virtual void buildDescriptionId(Block const&)const;
+    virtual bool isAuxValueRelevantForPicking()const;
+    virtual bool canBeSilkTouched()const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
     TurtleEggBlock(std::string const&, int);

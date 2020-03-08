@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../orgin/CommandOrigin"
+#include "../CommandOutput"
 #include "../Command"
 #include "../CommandRegistry"
-#include "../orgin/CommandOrigin"
 
 
 class TestForCommand : Command {
 
 public:
-    virtual TestForCommand::~TestForCommand();
+    TestForCommand::~TestForCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

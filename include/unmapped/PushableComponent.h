@@ -1,6 +1,8 @@
 #pragma once
 
+#include "../bedrock/description/component/PushableDescription"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/util/Vec3"
 
 
 class PushableComponent {
@@ -15,6 +17,6 @@ public:
     void _calculatePushVectorMinecart(Actor &, Actor &, bool);
     void _calculatePushVectorBase(Actor &, Actor &, bool);
     void push(Actor &, Vec3 const&);
-    bool isPushable(void);
-    bool isPushableByPiston(void);
+    bool isPushable();
+    bool isPushableByPiston();
 };

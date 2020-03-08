@@ -6,9 +6,9 @@ class Token {
 
 public:
 
-    bool isNumber(void)const;
+    bool isNumber()const;
     Token(std::string const&);
-    void _parseRandom(void);
+    void _parseRandom();
     void getValue(int)const;
     void compatibleWith(Token::Type)const;
     void getValueAsFloat(float)const;

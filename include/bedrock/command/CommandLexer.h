@@ -10,7 +10,7 @@ public:
     bool isDigit(char);
     bool isSpace(char);
     CommandLexer(std::string const&);
-    void step(void);
-    void next(void)const;
-    void _getSelectors(void)const;
+    void step();
+    void next()const;
+    void _getSelectors()const;
 };

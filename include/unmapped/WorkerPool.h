@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/Scheduler"
 
 
 class WorkerPool {
@@ -9,26 +10,26 @@ public:
     static long sAllPoolsMutex;
 
 
-    void begin(void)const;
-    bool isAsync(void)const;
-    void end(void)const;
-    void getAllPools(void);
+    void begin()const;
+    bool isAsync()const;
+    void end()const;
+    void getAllPools();
     void _registerPool(WorkerPool&);
     void _unregisterPool(WorkerPool&);
     WorkerPool(std::string, unsigned long, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, bool);
     WorkerPool(std::string, Scheduler &);
     void kick(unsigned long);
-    void getBacklogSizeBusyLimit(void)const;
+    void getBacklogSizeBusyLimit()const;
     void queue(std::shared_ptr<BackgroundTask>, bool);
     void tryPop(int);
-    void _checkPendingWork(void);
-    void resortPriorityQueue(void);
-    void size(void)const;
-    void getThreadIds(void)const;
-    void allWorkersIdle(void)const;
+    void _checkPendingWork();
+    void resortPriorityQueue();
+    void size()const;
+    void getThreadIds()const;
+    void allWorkersIdle()const;
     void shiftWorkersPriority(Bedrock::Threading::OSThreadPriority const&);
-    bool hasPendingWork(void)const;
-    void getNextPendingWorkTime(void)const;
-    void getPerformanceInfo(void);
-    bool hasReadyWork(void)const;
+    bool hasPendingWork()const;
+    void getNextPendingWorkTime()const;
+    void getPerformanceInfo();
+    bool hasReadyWork()const;
 };

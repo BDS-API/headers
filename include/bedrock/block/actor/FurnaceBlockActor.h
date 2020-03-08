@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../container/Container"
-#include "../../../unmapped/BlockSource"
-#include "../../actor/Player"
-#include "../../item/ItemInstance"
-#include "../../../unmapped/Recipes"
 #include "../../item/ItemStack"
+#include "../../../unmapped/Recipes"
+#include "../unmapped/BlockSource"
+#include "../../container/Container"
+#include "../../util/BlockPos"
+#include "../../../unmapped/Block"
+#include "../../actor/Player"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../item/ItemInstance"
 #include "../../nbt/CompoundTag"
+#include "../../../unmapped/HashString"
+#include "../../level/Level"
 
 
 class FurnaceBlockActor : BlockActor, Container {
@@ -24,22 +27,22 @@ public:
     static long CUSTOM_NAME_KEY[abi:cxx11];
     static long LAST_FUEL_KEY[abi:cxx11];
 
-    virtual FurnaceBlockActor::~FurnaceBlockActor();
+    FurnaceBlockActor::~FurnaceBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void onCustomTagLoadDone(BlockSource &);
     virtual void tick(BlockSource &);
-    virtual bool isFinished(void);
+    virtual bool isFinished();
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onMove(void);
+    virtual void onMove();
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
-    virtual void getName[abi:cxx11](void)const;
-    virtual void getContainer(void);
+    virtual void getName()const;
+    virtual void getContainer();
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
-    virtual void getMaxStackSize(void)const;
-    virtual void getContainerSize(void)const;
+    virtual void getMaxStackSize()const;
+    virtual void getContainerSize()const;
     virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
     virtual bool canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
@@ -49,10 +52,10 @@ public:
     void getBurnDuration(ItemInstance const&, int);
     FurnaceBlockActor(BlockPos const&);
     FurnaceBlockActor(BlockActorType, BlockPos const&, Util::HashString const&, LevelSoundEvent, ContainerType, int, Block const&, Block const&);
-    void resetBurnProgress(void);
+    void resetBurnProgress();
     void _correctXpValue(short)const;
     void _refreshFurnaceBlockLitState(BlockSource &);
-    bool isLit(void);
+    bool isLit();
     void _tryBroadcastBurnSound(BlockSource &);
     bool canBurn(Recipes const&);
     void checkForAlternativeFuelAchievement(BlockSource &, ItemStack const&);
@@ -63,22 +66,22 @@ public:
     bool isEmptiedByHopper(BlockSource &);
     void _getPositionOfNeighbor(int);
     bool isSlotDirty(int);
-    void resetSlotsDirty(void);
+    void resetSlotsDirty();
     void _resetAuxValueIfInvalid(ItemInstance &)const;
-    void getLitTime(void)const;
+    void getLitTime()const;
     void setLitTime(int);
-    void getLitDuration(void)const;
+    void getLitDuration()const;
     void setLitDuration(int);
-    void getTickCount(void)const;
+    void getTickCount()const;
     void setTickCount(int);
-    void getStoredXP(void)const;
+    void getStoredXP()const;
     void setStoredXP(int);
-    void getLastFuelItem(void)const;
+    void getLastFuelItem()const;
     void getXPRewardFromSmeltingItems(ItemInstance const&, int)const;
     void _roundXPReward(float)const;
     void _getXPRewardMultiplier(ItemInstance const&)const;
     void storeXPRewardForRemovingWithHopper(ItemInstance const&, int);
-    void withdrawStoredXPReward(void);
+    void withdrawStoredXPReward();
     void checkForSmeltEverythingAchievement(BlockSource &);
     void onFurnaceBlockRemoved(BlockSource &);
 };

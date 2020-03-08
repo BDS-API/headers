@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
 
 
 using namespace StructureTemplateFeature;

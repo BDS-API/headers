@@ -1,108 +1,128 @@
 #pragma once
 
-#include "../../unmapped/AABB"
-#include "../../unmapped/ServerPlayerEventCoordinator"
-#include "../../unmapped/BlockEventCoordinator"
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/EntityNetId"
-#include "../../unmapped/ItemEventCoordinator"
-#include "../actor/Actor"
-#include "../../unmapped/_TickPtr"
-#include "../network/NetEventCallback"
-#include "../../unmapped/PlayerEventCoordinator"
-#include "../../unmapped/ActorUniqueID"
-#include "../../unmapped/BlockSource"
+#include "../block/unmapped/BlockSource"
+#include "../../unmapped/TagRegistry"
+#include "../actor/unmapped/ActorEventCoordinator"
+#include "../network/packet/BossEventPacket"
 #include "../../unmapped/ClientPlayerEventCoordinator"
-#include "../../unmapped/ActorRuntimeID"
-#include "../actor/Player"
-#include "../network/packet/sender/PacketSender"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/BlockSourceListener"
-#include "../../unmapped/EducationLevelSettings"
-#include "../block/BlockLegacy"
-#include "../../mce/UUID"
-#include "../../unmapped/ServerLevelEventCoordinator"
+#include "../actor/Actor"
+#include "../../unmapped/PlayerEventCoordinator"
+#include "../eventing/IMinecraftEventing"
+#include "../util/AABB"
+#include "../network/NetEventCallback"
+#include "../util/Color"
+#include "../../unmapped/ServerPlayerEventCoordinator"
+#include "../actor/unmapped/ActorUniqueID"
+#include "../../unmapped/ChangeDimensionRequest"
 #include "../../unmapped/IWorldRegistriesProvider"
+#include "../actor/unmapped/ActorDefinitionIdentifier"
+#include "storage/LevelStorage"
+#include "../util/Vec3"
+#include "../../unmapped/MolangVariableMap"
+#include "../block/unmapped/BlockSourceListener"
+#include "../pack/ResourcePackManager"
+#include "../../unmapped/StructureManager"
+#include "../../unmapped/ServerLevelEventCoordinator"
+#include "../../unmapped/NavigationComponent"
+#include "../../unmapped/IEntityRegistryOwner"
+#include "../block/unmapped/BlockEventCoordinator"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "../../mce/UUID"
+#include "../../unmapped/EntityNetId"
+#include "../../unmapped/Abilities"
+#include "../Scheduler"
+#include "../nbt/CompoundTag"
 #include "../../unmapped/ClientLevelEventCoordinator"
-#include "../../unmapped/Dimension"
-#include "../../unmapped/ActorEventCoordinator"
+#include "../actor/unmapped/ActorRuntimeID"
+#include "../item/unmapped/ItemEventCoordinator"
+#include "../../unmapped/TextureUVCoordinateSet"
 #include "../../unmapped/HashedString"
-#include "../../unmapped/Vec3"
+#include "../command/orgin/CommandOrigin"
+#include "../../unmapped/_TickPtr"
+#include "../../unmapped/Dimension"
+#include "../../unmapped/Block"
+#include "../actor/damagesource/ActorDamageSource"
+#include "../../unmapped/EducationLevelSettings"
+#include "../block/unmapped/BlockComponentFactory"
+#include "../block/unmapped/BlockDefinitionGroup"
+#include "../network/packet/sender/PacketSender"
+#include "../block/BlockLegacy"
 
 
 class Level : BlockSourceListener, IWorldRegistriesProvider {
 
 public:
-    virtual Level::~Level();
+    Level::~Level()
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void initialize(std::string const&, LevelSettings const&, LevelData *, std::string const*);
-    virtual void startLeaveGame(void);
+    virtual void startLeaveGame();
     virtual void addEntity(BlockSource &, std::unique_ptr<Actor, std::default_delete<Actor>>);
     virtual void addGlobalEntity(BlockSource &, std::unique_ptr<Actor, std::default_delete<Actor>>);
     virtual void addAutonomousEntity(BlockSource &, std::unique_ptr<Actor, std::default_delete<Actor>>);
     virtual void addPlayer(std::unique_ptr<Player, std::default_delete<Player>>);
     virtual void takeEntity(ActorUniqueID);
     virtual void borrowEntity(ActorUniqueID, LevelChunk *);
-    virtual void getCurrentServerTick(void)const;
-    virtual void getBiomeRegistry(void)const;
-    virtual void getBiomeRegistry(void);
-    virtual void getBlockPalette(void)const;
-    virtual void getBlockPalette(void);
-    virtual void getFeatureRegistry(void)const;
-    virtual void getFeatureRegistry(void);
-    virtual void getFeatureTypeFactory(void)const;
-    virtual void getFeatureTypeFactory(void);
-    virtual void getJigsawStructureRegistry(void)const;
-    virtual void getJigsawStructureRegistry(void);
-    virtual void getStructureManager(void);
-    virtual void getStructureManager(void)const;
-    virtual void getBiomeComponentFactory(void)const;
-    virtual void getBiomeComponentFactory(void);
-    virtual void getSurfaceBuilderRegistry(void)const;
-    virtual void getSurfaceBuilderRegistry(void);
-    virtual void getDimensionFactory(void)const;
-    virtual void getDimensionFactory(void);
+    virtual void getCurrentServerTick()const;
+    virtual void getBiomeRegistry()const;
+    virtual void getBiomeRegistry();
+    virtual void getBlockPalette()const;
+    virtual void getBlockPalette();
+    virtual void getFeatureRegistry()const;
+    virtual void getFeatureRegistry();
+    virtual void getFeatureTypeFactory()const;
+    virtual void getFeatureTypeFactory();
+    virtual void getJigsawStructureRegistry()const;
+    virtual void getJigsawStructureRegistry();
+    virtual void getStructureManager();
+    virtual void getStructureManager()const;
+    virtual void getBiomeComponentFactory()const;
+    virtual void getBiomeComponentFactory();
+    virtual void getSurfaceBuilderRegistry()const;
+    virtual void getSurfaceBuilderRegistry();
+    virtual void getDimensionFactory()const;
+    virtual void getDimensionFactory();
     virtual void onPlayerDeath(Player &, ActorDamageSource const&);
-    virtual void tick(void);
+    virtual void tick();
     virtual void directTickEntities(BlockSource &);
-    virtual void updateSleepingPlayerList(void);
+    virtual void updateSleepingPlayerList();
     virtual void setDifficulty(Difficulty);
     virtual void setCommandsEnabled(bool);
-    virtual void setWorldTemplateOptionsUnlocked(void);
-    virtual void saveAdditionalData(void);
+    virtual void setWorldTemplateOptionsUnlocked();
+    virtual void saveAdditionalData();
     virtual void onNewChunk(BlockSource &, LevelChunk &);
     virtual void onNewChunkFor(Player &, LevelChunk &);
     virtual void onChunkLoaded(LevelChunk &);
     virtual void queueEntityRemoval(std::unique_ptr<Actor, std::default_delete<Actor>> &&, bool);
     virtual void removeEntityReferences(Actor &, bool);
-    virtual void loadFunctionManager(void);
-    virtual void getClientResourcePackManager(void)const;
-    virtual void getServerResourcePackManager(void)const;
-    virtual void getTradeTables(void);
+    virtual void loadFunctionManager();
+    virtual void getClientResourcePackManager()const;
+    virtual void getServerResourcePackManager()const;
+    virtual void getTradeTables();
     virtual void addEntryToTagCache(std::string const&);
     virtual void dropEntryFromTagCache(std::string const&);
-    virtual void clearTagCache(void);
+    virtual void clearTagCache();
     virtual void decrementTagCache(std::string const&, TagRegistry &);
     virtual void incrementTagCache(std::string const&, TagRegistry &);
     virtual void runCommand(HashedString const&, CommandOrigin &, CommandOriginSystem, CurrentCmdVersion);
-    virtual void getTagRegistry(void);
-    virtual void setFinishedInitializing(void);
+    virtual void getTagRegistry();
+    virtual void setFinishedInitializing();
 
-    void getIOTasksGroup(void);
-    void getEntitySystems(void);
-    void getActorFactory(void);
-    void getActorInfoRegistry(void);
-    void getSimPaused(void);
-    void getEntityRegistryOwner(void);
-    void getClientTickingOffsets(void)const;
-    void getActivePlayers(void)const;
+    void getIOTasksGroup();
+    void getEntitySystems();
+    void getActorFactory();
+    void getActorInfoRegistry();
+    void getSimPaused();
+    void getEntityRegistryOwner();
+    void getClientTickingOffsets()const;
+    std::vector<Player *>* getActivePlayers()const;
     void setSimPaused(bool);
-    void getSoundPlayer(void);
-    void getTickingOffsets(void)const;
-    void getRegisteredBorderBlock(void)const;
-    void getSyncTasksGroup(void);
-    void createRandomSeed(void);
+    void getSoundPlayer();
+    void getTickingOffsets()const;
+    void getRegisteredBorderBlock()const;
+    void getSyncTasksGroup();
+    void createRandomSeed();
     Level(SoundPlayer &, std::unique_ptr<LevelStorage, std::default_delete<LevelStorage>>, IMinecraftEventing &, bool, Scheduler &, StructureManager &, ResourcePackManager &, IEntityRegistryOwner &, std::unique_ptr<BlockComponentFactory, std::default_delete<BlockComponentFactory>>, std::unique_ptr<BlockDefinitionGroup, std::default_delete<BlockDefinitionGroup>>);
     void addListener(LevelListener &);
     void setRemotePlayerEventCoordinator(std::unique_ptr<PlayerEventCoordinator, std::default_delete<PlayerEventCoordinator>> &&);
@@ -114,63 +134,63 @@ public:
     void setBlockEventCoordinator(std::unique_ptr<BlockEventCoordinator, std::default_delete<BlockEventCoordinator>> &&);
     void setItemEventCoordinator(std::unique_ptr<ItemEventCoordinator, std::default_delete<ItemEventCoordinator>> &&);
     void setDefaultGameType(GameType);
-    void _resetBiomeData(void);
-    void _loadBiomeData(void);
-    void getCurrentTick(void)const;
-    void createPhotoStorage(void);
-    void _loadAutonomousEntities(void);
-    void getEventing(void);
-    void saveGameData(void);
-    void saveVillages(void);
-    void saveBiomeData(void);
+    void _resetBiomeData();
+    void _loadBiomeData();
+    Tick* getCurrentTick()const;
+    void createPhotoStorage();
+    void _loadAutonomousEntities();
+    void getEventing();
+    void saveGameData();
+    void saveVillages();
+    void saveBiomeData();
     void setNetEventCallback(NetEventCallback *);
     void setPacketSender(PacketSender *);
-    void _removeAllPlayers(void);
-    bool isLeaveGameDone(void);
+    void _removeAllPlayers();
+    bool isLeaveGameDone();
     void createDimension(AutomaticID<Dimension, int>);
     void getDimension(AutomaticID<Dimension, int>)const;
     void forEachDimension(std::function<bool ()(Dimension &)>);
     void forEachDimension(std::function<bool ()(Dimension const&)>)const;
-    void getChunkTickRange(void)const;
-    void getLevelData(void)const;
-    void getPortalForcer(void);
+    void getChunkTickRange()const;
+    void getLevelData()const;
+    void getPortalForcer();
     void requestPlayerChangeDimension(Player &, std::unique_ptr<ChangeDimensionRequest, std::default_delete<ChangeDimensionRequest>>);
-    void _handleChangeDimensionRequests(void);
+    void _handleChangeDimensionRequests();
     void entityChangeDimension(Actor &, AutomaticID<Dimension, int>);
-    void getDimensionConversionData(void)const;
+    void getDimensionConversionData()const;
     void _playerChangeDimension(Player *, ChangeDimensionRequest &);
     void forceRemoveEntity(Actor &);
-    void getSharedSpawnPos(void);
+    void getSharedSpawnPos();
     void getPlayer(ActorUniqueID)const;
     bool isPlayerSuspended(Player &)const;
-    void _handlePlayerSuspension(void);
+    void _handlePlayerSuspension();
     void _suspendPlayer(mce::UUID const&);
     void _resumePlayer(mce::UUID const&);
     void _fixEntitiesRegion(std::vector<Actor *, std::allocator<Actor *>> &, BlockSource const&, Dimension &);
     void checkAndHandleMaterial(AABB const&, MaterialType, Actor *);
     void checkMaterial(AABB const&, MaterialType, Actor *);
     void _syncTime(int);
-    bool isClientSide(void)const;
-    void _cleanupDisconnectedPlayers(void);
-    void _getServerLevelEventCoordinator(void);
+    bool isClientSide()const;
+    void _cleanupDisconnectedPlayers();
+    void _getServerLevelEventCoordinator();
     void fetchEntity(ActorUniqueID, bool)const;
-    void getGameRules(void);
-    void tickEntities(void);
+    void getGameRules();
+    void tickEntities();
     void setTime(int);
-    void getTime(void)const;
+    void getTime()const;
     void forEachPlayer(std::function<bool ()(Player &)>);
-    void getActivePlayerCount(void)const;
-    void tickEntitySystems(void);
-    void _saveSomeChunks(void);
-    void _isSavingRequired(void)const;
-    void _pollSaveGameStatistics(void);
-    void saveDirtyChunks(void);
+    unsigned int getActivePlayerCount()const;
+    void tickEntitySystems();
+    void _saveSomeChunks();
+    void _isSavingRequired()const;
+    void _pollSaveGameStatistics();
+    void saveDirtyChunks();
     void findPath(Actor &, int, int, int, NavigationComponent &);
     void findPath(Actor &, Actor &, NavigationComponent &);
     void broadcastLevelEvent(LevelEvent, Vec3 const&, int, Player *);
     void broadcastLevelEvent(LevelEvent, CompoundTag const&, Player *);
     void playSound(BlockSource &, LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool);
-    void getPrimaryLocalPlayer(void)const;
+    void getPrimaryLocalPlayer()const;
     void playSound(LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool);
     void playSynchronizedSound(BlockSource &, LevelSoundEvent, Vec3 const&, Block const&, ActorDefinitionIdentifier const&, bool, bool);
     void playSynchronizedSound(BlockSource &, LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool);
@@ -183,27 +203,27 @@ public:
     void handleSoundEvent(LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool);
     void handleSoundEvent(std::string const&, Vec3 const&, float, float);
     void handleStopSoundEvent(std::string const&);
-    void handleStopAllSounds(void);
+    void handleStopAllSounds();
     void addParticle(ParticleType, Vec3 const&, Vec3 const&, int, CompoundTag const*, bool);
     void sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int);
-    void getDifficulty(void)const;
-    void getNextRuntimeID(void);
-    void getActorEventCoordinator(void);
+    void getDifficulty()const;
+    void getNextRuntimeID();
+    void getActorEventCoordinator();
     void _validatePlayerName(Player &);
-    void getNewPlayerId(void)const;
+    void getNewPlayerId()const;
     void suspendPlayer(Player &);
     void resumePlayer(Player &);
     void removeAllNonPlayerEntities(ActorUniqueID);
     void getRuntimeEntity(ActorRuntimeID, bool)const;
     void findPlayer(std::function<bool ()(Player const&)>)const;
-    void getScoreboard(void);
-    void forceFlushRemovedPlayers(void);
+    void getScoreboard();
+    void forceFlushRemovedPlayers();
     void levelCleanupQueueEntityRemoval(std::unique_ptr<Actor, std::default_delete<Actor>> &&, bool);
     void registerTemporaryPointer(_TickPtr &);
     void unregisterTemporaryPointer(_TickPtr &);
     void getMob(ActorUniqueID)const;
     void removeListener(LevelListener &);
-    void _tickTemporaryPointers(void);
+    void _tickTemporaryPointers();
     void _clientHandleAddOwnedEntity(EntityNetId);
     void _clientHandleAddWeakRefEntity(EntityNetId, WeakRefT<EntityRefTraits> const&);
     void _clientHandleRemoveOwnedEntity(EntityNetId);
@@ -214,57 +234,57 @@ public:
     void denyEffect(Vec3 const&);
     void potionSplash(Vec3 const&, Color const&, bool);
     void extinguishFire(BlockSource &, BlockPos const&, unsigned char);
-    void saveLevelData(void);
+    void saveLevelData();
     void setMultiplayerGameIntent(bool);
-    void getMultiplayerGameIntent(void)const;
+    void getMultiplayerGameIntent()const;
     void setMultiplayerGame(bool);
-    bool isMultiplayerGame(void)const;
+    bool isMultiplayerGame()const;
     void setLANBroadcastIntent(bool);
-    void getLANBroadcastIntent(void)const;
+    void getLANBroadcastIntent()const;
     void setLANBroadcast(bool);
-    void getLANBroadcast(void)const;
+    void getLANBroadcast()const;
     void setXBLBroadcastIntent(Social::GamePublishSetting);
-    void getXBLBroadcastIntent(void)const;
-    bool hasXBLBroadcastIntent(void)const;
+    void getXBLBroadcastIntent()const;
+    bool hasXBLBroadcastIntent()const;
     void setXBLBroadcastMode(Social::GamePublishSetting);
-    void getXBLBroadcastMode(void)const;
-    bool hasXBLBroadcast(void)const;
+    void getXBLBroadcastMode()const;
+    bool hasXBLBroadcast()const;
     void setPlatformBroadcastIntent(Social::GamePublishSetting);
-    void getPlatformBroadcastIntent(void)const;
-    bool hasPlatformBroadcastIntent(void)const;
+    void getPlatformBroadcastIntent()const;
+    bool hasPlatformBroadcastIntent()const;
     void setPlatformBroadcastMode(Social::GamePublishSetting);
-    void getPlatformBroadcastMode(void)const;
-    bool hasPlatformBroadcast(void)const;
+    void getPlatformBroadcastMode()const;
+    bool hasPlatformBroadcast()const;
     void setHasLockedBehaviorPack(bool);
     void setHasLockedResourcePack(bool);
     void animateTick(Actor &);
-    void getSeed(void);
+    void getSeed();
     void setDefaultSpawn(BlockPos const&);
-    void getDefaultSpawn(void)const;
-    void getDefaultGameType(void)const;
-    void getRemotePlayerEventCoordinator(void);
-    void getServerPlayerEventCoordinator(void);
-    void getClientPlayerEventCoordinator(void);
-    void getBlockEventCoordinator(void);
-    void _getClientLevelEventCoordinator(void);
-    void getItemEventCoordinator(void);
+    void getDefaultSpawn()const;
+    void getDefaultGameType()const;
+    void getRemotePlayerEventCoordinator();
+    void getServerPlayerEventCoordinator();
+    void getClientPlayerEventCoordinator();
+    void getBlockEventCoordinator();
+    void _getClientLevelEventCoordinator();
+    void getItemEventCoordinator();
     void broadcastEntityEvent(Actor *, ActorEvent, int);
     void addBossEventListener(BossEventListener *);
     void removeBossEventListener(BossEventListener *);
     void broadcastBossEvent(BossEventUpdateType, ActorUniqueID const&, BossEventPacket const&);
     void broadcastBossEvent(BossEventUpdateType);
-    void areBossEventListenersReady(void);
-    bool hasLevelStorage(void)const;
-    void getLevelStorage(void);
-    void getLevelStorage(void)const;
-    void getLevelData(void);
-    void getPhotoStorage(void);
-    void _saveAllMapData(void);
-    void savePlayers(void);
-    void _saveAutonomousEntities(void);
+    void areBossEventListenersReady();
+    bool hasLevelStorage()const;
+    void getLevelStorage();
+    void getLevelStorage()const;
+    void getLevelData();
+    void getPhotoStorage();
+    void _saveAllMapData();
+    void savePlayers();
+    void _saveAutonomousEntities();
     void deferTimedStorageActions(bool);
-    void _checkUserStorage(void);
-    void getTickingAreasMgr(void);
+    void _checkUserStorage();
+    void getTickingAreasMgr();
     void getTickingArea(mce::UUID const&)const;
     void getPlayer(std::string const&)const;
     void getPlayer(mce::UUID const&)const;
@@ -272,78 +292,78 @@ public:
     void getPlayerFromUnknownIdentifier(std::string const&)const;
     void getNextPlayer(ActorUniqueID const&, bool);
     void getPrevPlayer(ActorUniqueID const&, bool);
-    void getNumRemotePlayers(void);
+    void getNumRemotePlayers();
     void getPlatformPlayer(std::string const&)const;
     void getPlayerFromServerId(std::string const&)const;
     void getRuntimePlayer(ActorRuntimeID)const;
-    void getRandomPlayer(void);
-    void getRandom(void)const;
+    void getRandomPlayer();
+    void getRandom()const;
     void getPlayerColor(Player const&)const;
     void onChunkDiscarded(LevelChunk &);
     void removeAutonomousEntity(Actor *, LevelChunk *);
     void forEachPlayer(std::function<bool ()(Player const&)>)const;
-    void getUserCount(void)const;
-    void getUsers(void);
-    void getUsers(void)const;
+    void getUserCount()const;
+    void getUsers();
+    void getUsers()const;
     void _getValidatedPlayerName(std::string const&);
     void destroyBlock(BlockSource &, BlockPos const&, bool);
-    void getSpawner(void)const;
-    void getProjectileFactory(void)const;
-    void getEntityDefinitions(void)const;
-    void getBlockDefinitions(void)const;
-    void getBlockComponentFactory(void);
-    void getBlockComponentFactory(void)const;
-    void getActorAnimationGroup(void)const;
-    void getActorAnimationControllerGroup(void)const;
-    void getSpawnRules(void)const;
-    void getSpawnGroupRegistry(void)const;
-    void getSpawnRulesMutable(void)const;
-    void getBehaviorTreeGroup(void)const;
-    void getBehaviorFactory(void)const;
+    void getSpawner()const;
+    void getProjectileFactory()const;
+    void getEntityDefinitions()const;
+    void getBlockDefinitions()const;
+    void getBlockComponentFactory();
+    void getBlockComponentFactory()const;
+    void getActorAnimationGroup()const;
+    void getActorAnimationControllerGroup()const;
+    void getSpawnRules()const;
+    void getSpawnGroupRegistry()const;
+    void getSpawnRulesMutable()const;
+    void getBehaviorTreeGroup()const;
+    void getBehaviorFactory()const;
     bool isUsableLevel(Level*);
-    void getTearingDown(void)const;
-    void getPlayerList(void);
-    void getPlayerList(void)const;
-    void getGlobalEntities(void);
-    void getAutonomousEntities(void);
+    void getTearingDown()const;
+    void getPlayerList();
+    void getPlayerList()const;
+    void getGlobalEntities();
+    void getAutonomousEntities();
     void getAutonomousActiveEntity(ActorUniqueID)const;
     void getAutonomousInactiveEntity(ActorUniqueID)const;
     void getAutonomousEntity(ActorUniqueID)const;
-    void getAutonomousLoadedEntities(void);
-    void getPacketSender(void)const;
-    void getNetEventCallback(void)const;
-    void getHitResult(void);
-    void getLiquidHitResult(void);
-    void getAdventureSettings(void);
-    void getGameRules(void)const;
-    void getDefaultAbilities(void);
-    void getWireframeQueue(void)const;
-    void getWireframeQueue(void);
-    bool hasStartWithMapEnabled(void)const;
-    void getLootTables(void);
+    void getAutonomousLoadedEntities();
+    void getPacketSender()const;
+    void getNetEventCallback()const;
+    void getHitResult();
+    void getLiquidHitResult();
+    void getAdventureSettings();
+    void getGameRules()const;
+    void getDefaultAbilities();
+    void getWireframeQueue()const;
+    void getWireframeQueue();
+    bool hasStartWithMapEnabled()const;
+    void getLootTables();
     void updateWeather(float, int, float, int);
     void takePicture(cg::ImageBuffer &, Actor *, Actor *, ScreenshotOptions &);
     void upgradeStorageVersion(StorageVersion);
-    void save(void);
-    void suspendAndSave(void);
-    void waitAsyncSuspendWork(void);
+    void save();
+    void suspendAndSave();
+    void waitAsyncSuspendWork();
     void _destroyEffect(BlockPos const&, Block const&, int);
     void addParticleEffect(HashedString const&, Vec3 const&, MolangVariableMap const&);
     void addParticleEffect(HashedString const&, Actor const&, HashedString const&, Vec3 const&, MolangVariableMap const&);
     void addTerrainParticleEffect(BlockPos const&, Block const&, Vec3 const&, float, float, float);
     void addTerrainSlideEffect(BlockPos const&, Block const&, Vec3 const&, float, float, float);
     void addBreakingItemParticleEffect(Vec3 const&, ParticleType, TextureUVCoordinateSet const&, bool);
-    bool hasCommandsEnabled(void)const;
-    bool hasExperimentalGameplayEnabled(void)const;
-    void useMsaGamertagsOnly(void)const;
+    bool hasCommandsEnabled()const;
+    bool hasExperimentalGameplayEnabled()const;
+    void useMsaGamertagsOnly()const;
     void setMsaGamertagsOnly(bool);
     void getSpecialMultiplier(AutomaticID<Dimension, int>);
-    void getNewUniqueID(void);
-    bool isExporting(void)const;
+    void getNewUniqueID();
+    bool isExporting()const;
     void setIsExporting(bool);
-    void getSavedData(void)const;
+    void getSavedData()const;
     void setLevelId(std::string);
-    bool isEdu(void)const;
+    bool isEdu()const;
     void getMapSavedData(ActorUniqueID);
     void _loadMapData(ActorUniqueID const&);
     void getMapSavedData(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&);
@@ -353,27 +373,27 @@ public:
     void _createMapSavedData(ActorUniqueID const&);
     void copyAndLockMap(ActorUniqueID, ActorUniqueID);
     void expandMapByID(ActorUniqueID, bool);
-    void getNetherScale(void)const;
+    void getNetherScale()const;
     void getPlayerAbilities(ActorUniqueID const&);
     void setPlayerAbilities(ActorUniqueID const&, Abilities);
     void sendAllPlayerAbilities(Player const&);
-    void tickedMob(void);
-    void getTickedMobCountPrevious(void)const;
-    void getGlobalBlockPalette(void)const;
-    void getRecipes(void)const;
+    void tickedMob();
+    void getTickedMobCountPrevious()const;
+    void getGlobalBlockPalette()const;
+    void getRecipes()const;
     void registerBorderBlock(BlockLegacy const&);
-    void getEducationLevelSettings(void)const;
+    void getEducationLevelSettings()const;
     void setEducationLevelSettings(EducationLevelSettings);
-    void saveEducationLevelSettings(void);
-    void getServerAuthoritativeMovement(void)const;
+    void saveEducationLevelSettings();
+    void getServerAuthoritativeMovement()const;
     void setServerAuthoritativeMovement(bool);
-    void shouldCorrectPlayerMovement(void)const;
+    void shouldCorrectPlayerMovement()const;
     void setCorrectPlayerMovement(bool);
-    void getPlayerMovementScoreThreshold(void)const;
+    void getPlayerMovementScoreThreshold()const;
     void setPlayerMovementScoreThreshold(float);
-    void getPlayerMovementDistanceThreshold(void)const;
-    void getPlayerMovementDistanceThresholdSqr(void)const;
+    void getPlayerMovementDistanceThreshold()const;
+    void getPlayerMovementDistanceThresholdSqr()const;
     void setPlayerMovementDistanceThreshold(float);
-    void getPlayerMovementDurationThreshold(void)const;
+    void getPlayerMovementDurationThreshold()const;
     void setPlayerMovementDurationThreshold(std::chrono::duration<long, std::ratio<1l, 1000l>>);
 };

@@ -9,8 +9,8 @@ class Asymmetric {
 public:
 
     Asymmetric(Crypto::Asymmetric::System);
-    bool canComputeSecret(void);
-    void getSystemType(void)const;
+    bool canComputeSecret();
+    void getSystemType()const;
     Asymmetric(Crypto::Asymmetric::System);
-    bool canComputeSecret(void);
+    bool canComputeSecret();
 };

@@ -9,19 +9,19 @@ class DirectoryIterationItem {
 public:
 
     DirectoryIterationItem(Core::DirectoryIterationFlags);
-    void getFileSize(void)const;
+    void getFileSize()const;
     void setFileSize(unsigned long);
-    void getFileSizeAllocationOnDisk(void)const;
+    void getFileSizeAllocationOnDisk()const;
     void setFileSizeAllocationOnDisk(unsigned long);
     void setName(Core::PathPart const&);
-    void getName(void)const;
+    void getName()const;
     void setFullPathName(Core::Path);
-    void getType(void)const;
+    void getType()const;
     void setType(Core::FileType);
-    bool isDirectory(void)const;
-    bool isFile(void)const;
-    void getCreateTime(void)const;
+    bool isDirectory()const;
+    bool isFile()const;
+    void getCreateTime()const;
     void setCreateTime(long);
-    void getModifyTime(void)const;
+    void getModifyTime()const;
     void setModifyTime(long);
 };

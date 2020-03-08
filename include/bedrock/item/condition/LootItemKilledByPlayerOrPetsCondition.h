@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/Random"
+#include "../../../unmapped/LootTableContext"
 #include "../../../json/Value"
+#include "../../util/Random"
 
 
 class LootItemKilledByPlayerOrPetsCondition : LootItemCondition {
 
 public:
-    virtual LootItemKilledByPlayerOrPetsCondition::~LootItemKilledByPlayerOrPetsCondition();
+    LootItemKilledByPlayerOrPetsCondition::~LootItemKilledByPlayerOrPetsCondition()
     virtual void applies(Random &, LootTableContext &);
 
     void deserialize(Json::Value);

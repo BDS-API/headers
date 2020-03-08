@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/Random"
 
 
 class StructurePoolBlockRule {

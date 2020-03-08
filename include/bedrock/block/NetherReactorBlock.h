@@ -1,13 +1,16 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../../unmapped/Material"
 
 
 class NetherReactorBlock : ActorBlock {
 
 public:
-    virtual NetherReactorBlock::~NetherReactorBlock();
+    NetherReactorBlock::~NetherReactorBlock()
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
 

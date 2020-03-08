@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/definition/GeneDefinition"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/definition/GeneDefinition"
 #include "../bedrock/nbt/CompoundTag"
 
 
@@ -26,7 +26,7 @@ public:
     void _matchesGeneticVariant(GeneticsComponent::Gene const&, GeneticVariant const&)const;
     bool hasMatchingGeneValues(unsigned long, int, int)const;
     void buildDebugInfo(std::string &)const;
-    void _shouldMutate(void);
+    void _shouldMutate();
     void _createRandomAllele(GeneDefinition const&);
     GeneticsComponent(GeneticsComponent&&);
 };

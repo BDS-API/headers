@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../../unmapped/Amplifier"
-#include "../attribute/AttributeBuff"
 #include "../Actor"
+#include "../../../unmapped/Amplifier"
 #include "../../../unmapped/Attribute"
-#include "../attribute/AttributeModifier"
 #include "../../pack/ResourcePackManager"
+#include "../attribute/AttributeBuff"
+#include "../attribute/AttributeModifier"
 
 
 class MobEffect {
@@ -44,11 +44,11 @@ public:
     static long HERO_OF_THE_VILLAGE;
     static long mMobEffects;
 
-    virtual MobEffect::~MobEffect();
+    MobEffect::~MobEffect()
     virtual void applyEffects(Actor *, int, int)const;
     virtual void removeEffects(Actor *);
     virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const;
-    virtual bool isInstantaneous(void)const;
+    virtual bool isInstantaneous()const;
     virtual void getAttributeModifierValue(int, AttributeModifier const&)const;
 
     void initEffects(ResourcePackManager *);
@@ -56,24 +56,24 @@ public:
     void addAttributeBuff(Attribute const&, std::shared_ptr<AttributeBuff>);
     void setValueAmplifier(std::shared_ptr<Amplifier>);
     void setDurationAmplifier(std::shared_ptr<Amplifier>);
-    void shutdownEffects(void);
+    void shutdownEffects();
     void getByName(std::string const&);
     void getById(int);
-    void getId(void)const;
-    void getComponentName(void)const;
+    void getId()const;
+    void getComponentName()const;
     MobEffect(int, std::string const&, std::string const&, bool, int, int, std::string const&, bool);
     void _createInstantBuff(std::shared_ptr<AttributeBuff> const&, int, float)const;
     void _createTemporalBuff(std::shared_ptr<AttributeBuff> const&, int, int)const;
     void _createAttributeModifer(std::shared_ptr<AttributeModifier> const&, int)const;
-    bool isHarmful(void)const;
-    bool hasIcon(void)const;
-    void getIcon(void)const;
-    void getDurationModifier(void)const;
-    bool isDisabled(void)const;
-    void getColor(void)const;
-    bool isVisible(void)const;
-    void clearAttributeBuffs(void);
-    void clearAttributeModifiers(void);
-    void viewAttributeModifiers(void)const;
+    bool isHarmful()const;
+    bool hasIcon()const;
+    void getIcon()const;
+    void getDurationModifier()const;
+    bool isDisabled()const;
+    void getColor()const;
+    bool isVisible()const;
+    void clearAttributeBuffs();
+    void clearAttributeModifiers();
+    void viewAttributeModifiers()const;
     void _setDurationModifier(float);
 };

@@ -8,7 +8,7 @@ class WebToken {
 public:
 
     WebToken(WebToken const&);
-    void getData(void)const;
+    void getData()const;
     WebToken(std::string);
     void _parse(Json::Value &, std::string const&);
     void _DERToSignature(std::string const&, int);

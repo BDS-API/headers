@@ -1,20 +1,23 @@
 #pragma once
 
+#include "../actor/Actor"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
-#include "../../unmapped/Vec3"
+#include "../util/AABB"
 
 
 class PortalBlock : BlockLegacy {
 
 public:
-    virtual PortalBlock::~PortalBlock();
+    PortalBlock::~PortalBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
-    virtual bool isWaterBlocking(void)const;
-    virtual void waterSpreadCausesSpawn(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool isWaterBlocking()const;
+    virtual void waterSpreadCausesSpawn()const;
+    virtual bool canContainLiquid()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onRemove(BlockSource &, BlockPos const&)const;
     virtual void mayPick(BlockSource &, Block const&, bool)const;

@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
 
 
 class DropperBlock : DispenserBlock {
 
 public:
-    virtual DropperBlock::~DropperBlock();
+    DropperBlock::~DropperBlock()
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getSilkTouchItemInstance(Block const&)const;

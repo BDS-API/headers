@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../mce/Image"
+#include "../bedrock/util/Random"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class FoliageColor {
@@ -32,7 +35,7 @@ public:
     void getMapEvergreenColor(float, float);
     void getBirchColor(float, float);
     void getMapBirchColor(float, float);
-    void getDefaultColor(void);
+    void getDefaultColor();
     void _toRGB(int);
     void calculateMapGrassColorHelper(BlockSource &, BlockPos const&, BlockPos const&, int &, int &, int &);
     void getGrassColor(BlockSource &, BlockPos const&);
@@ -41,5 +44,5 @@ public:
     void setGrassColorPalette(std::string const&, mce::Image &);
     void setFoliageColorPalette(std::string const&, mce::Image &);
     void buildGrassColor(BlockPos const&, BlockPos const&, BlockSource &, Random &);
-    void getGrassNoise(void);
+    void getGrassNoise();
 };

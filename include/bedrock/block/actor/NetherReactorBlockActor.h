@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../level/Level"
-#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class NetherReactorBlockActor : BlockActor {
 
 public:
-    virtual NetherReactorBlockActor::~NetherReactorBlockActor();
+    NetherReactorBlockActor::~NetherReactorBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
 

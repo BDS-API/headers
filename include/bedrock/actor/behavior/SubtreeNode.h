@@ -6,7 +6,7 @@
 class SubtreeNode : BehaviorNode {
 
 public:
-    virtual SubtreeNode::~SubtreeNode();
+    SubtreeNode::~SubtreeNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

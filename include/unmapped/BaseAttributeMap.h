@@ -18,11 +18,11 @@ public:
     void getInstance(HashedString const&)const;
     void registerAttribute(Attribute const&);
     void onAttributeModified(AttributeInstance const&);
-    void getDirtyAttributes(void);
-    void clearDirtyAttributes(void);
-    void getSyncableAttributes(void)const;
-    void begin(void)const;
-    void begin(void);
-    void end(void)const;
-    void end(void);
+    void getDirtyAttributes();
+    void clearDirtyAttributes();
+    void getSyncableAttributes()const;
+    void begin()const;
+    void begin();
+    void end()const;
+    void end();
 };

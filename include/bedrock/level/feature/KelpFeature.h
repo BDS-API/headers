@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/Random"
 
 
 class KelpFeature : Feature {
 
 public:
-    virtual KelpFeature::~KelpFeature();
+    KelpFeature::~KelpFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     KelpFeature(void);

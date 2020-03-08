@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../unmapped/EntityContext"
+#include "../../unmapped/EntitySensorComponent"
 
 
 class EntitySensorDefinition {

@@ -6,10 +6,10 @@
 class ReceiveLoveGoal : Goal {
 
 public:
-    virtual ReceiveLoveGoal::~ReceiveLoveGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void tick(void);
+    ReceiveLoveGoal::~ReceiveLoveGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     ReceiveLoveGoal(VillagerBase &);

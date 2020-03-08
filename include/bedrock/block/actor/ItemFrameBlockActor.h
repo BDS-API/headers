@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
+#include "../../item/ItemInstance"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class ItemFrameBlockActor : BlockActor {
@@ -11,7 +13,7 @@ class ItemFrameBlockActor : BlockActor {
 public:
     static long ROTATION_DEGREES;
 
-    virtual ItemFrameBlockActor::~ItemFrameBlockActor();
+    ItemFrameBlockActor::~ItemFrameBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
@@ -23,12 +25,12 @@ public:
     ItemFrameBlockActor(BlockPos);
     ItemFrameBlockActor(BlockPos, BlockActorType);
     void _updateMapBit(BlockSource &);
-    void updateNameTag(void);
-    void getClockFrame(void);
-    void getCompassFrame(void);
-    void getFramedItem(void);
-    void getRotation(void);
-    void rotateFramedItem(void);
+    void updateNameTag();
+    void getClockFrame();
+    void getCompassFrame();
+    void getFramedItem();
+    void getRotation();
+    void rotateFramedItem();
     void dropFramedItem(BlockSource &, bool);
     void _checkMapRemoval(BlockSource &, ItemInstance &);
     void actuallyDropItem(BlockSource &, bool);

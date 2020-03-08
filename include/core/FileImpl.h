@@ -7,17 +7,17 @@ using namespace Core;
 class FileImpl {
 
 public:
-    virtual void Core::FileImpl::~FileImpl();
+    Core::FileImpl::~FileImpl()
 
-    void getNumFiles(void);
+    void getNumFiles();
     FileImpl(Core::FileSystemImpl *, Core::FileOpenMode);
     void setLoggingEnabled(bool);
-    void getLoggingEnabled(void)const;
-    void getTransaction(void);
-    void getBlockSize(void)const;
-    bool isOpen(void);
-    void getOpenMode(void)const;
-    void close(void);
+    void getLoggingEnabled()const;
+    void getTransaction();
+    void getBlockSize()const;
+    bool isOpen();
+    void getOpenMode()const;
+    void close();
     void read(void *, unsigned long, unsigned long *);
     void _readOperation(Core::Result &&, unsigned long);
     void readExactly(void *, unsigned long);
@@ -27,7 +27,7 @@ public:
     void setPosition(unsigned long);
     void write(void const*, unsigned long);
     void _writeOperation(Core::Result &&, unsigned long);
-    void flush(void);
+    void flush();
     void getSize(unsigned long *);
     void getRemainingSize(unsigned long *);
     void notifyChangeInFileSize(long, long);

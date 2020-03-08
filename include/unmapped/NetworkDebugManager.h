@@ -11,7 +11,7 @@ public:
     static long mNetworkDebugManager;
 
 
-    void initialize(void);
+    void initialize();
     void registerStatisticsSource(NetworkStatistics &);
     void unregisterStatisticsSource(NetworkStatistics &);
     void getNetworkStatistics(TrackerType);
@@ -19,12 +19,12 @@ public:
     void trackReceive(TrackerType, std::string const&, unsigned long);
     void send(TrackerType, std::string const&, unsigned long);
     void receive(TrackerType, std::string const&, unsigned long);
-    void update(void);
+    void update();
     void getStats(TrackerType)const;
     void getGraphBars(TrackerType)const;
     void _getGraphBars(std::string const&, int, std::vector<TrackerStat, std::allocator<TrackerStat>> const&)const;
-    void getMode(void)const;
-    void nextGraph(void);
-    bool previousGraph(void);
-    void resetData(void);
+    void getMode()const;
+    void nextGraph();
+    bool previousGraph();
+    void resetData();
 };

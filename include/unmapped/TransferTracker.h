@@ -11,5 +11,5 @@ public:
     TransferTracker(NetworkIdentifier const&, ClientBlobCache::Server::ActiveTransfersManager&);
     void onAckReceived(unsigned long);
     void updateNetworkConditions(NetworkHandler &);
-    void tryStartTransfer(void)const;
+    void tryStartTransfer()const;
 };

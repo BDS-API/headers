@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../../unmapped/Random"
+#include "../../util/Random"
 
 
 class SmoothStoneSelector : BlockSelector {
 
 public:
-    virtual SmoothStoneSelector::~SmoothStoneSelector();
+    SmoothStoneSelector::~SmoothStoneSelector()
     virtual void next(Random &, int, int, int, bool)const;
 
     SmoothStoneSelector(void);

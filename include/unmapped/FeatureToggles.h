@@ -8,19 +8,19 @@ public:
     static long mFeatureToggles;
 
 
-    void makeDefault(void);
-    void makeFeatureToggles(void);
-    void _registerFeatures(void);
-    void initialize(void);
-    void _initialize(void);
+    void makeDefault();
+    void makeFeatureToggles();
+    void _registerFeatures();
+    void initialize();
+    void _initialize();
     void get(FeatureOptionID);
-    void _load(void);
-    void _setupDependencies(void);
-    void _tearDownDependencies(void);
-    void count(void)const;
+    void _load();
+    void _setupDependencies();
+    void _tearDownDependencies();
+    void count()const;
     void get(FeatureOptionID)const;
     bool isEnabled(FeatureOptionID)const;
-    void _save(void);
+    void _save();
     void _registerFeature(FeatureOptionID, std::string const&, std::string const&, bool, FeatureOptionID, std::function<void ()(Option *)>, std::function<bool ()(void)>);
     void _getEnabledSetupCallback(FeatureOptionID);
     void _getEnabledLockedCallback(FeatureOptionID);

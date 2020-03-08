@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../bedrock/level/Level"
+#include "../bedrock/Scheduler"
+#include "../bedrock/util/Vec3"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/level/Level"
 
 
 class TheEndDimension : Dimension {
@@ -9,28 +11,28 @@ class TheEndDimension : Dimension {
 public:
     static long AMBIENT_MULTIPLIER;
 
-    virtual TheEndDimension::~TheEndDimension();
-    virtual void init(void);
-    virtual void tick(void);
-    virtual void createGenerator(void);
-    virtual bool isNaturalDimension(void)const;
+    TheEndDimension::~TheEndDimension()
+    virtual void init();
+    virtual void tick();
+    virtual void createGenerator();
+    virtual bool isNaturalDimension()const;
     virtual bool isValidSpawn(int, int)const;
     virtual void getFogColor(float)const;
     virtual bool isFoggyAt(int, int)const;
-    virtual void getCloudHeight(void)const;
-    virtual void getDefaultBiome(void)const;
-    virtual void mayRespawn(void)const;
-    virtual bool hasGround(void)const;
-    virtual void getSpawnPos(void)const;
-    virtual void getSpawnYPosition(void)const;
-    virtual bool isDay(void)const;
+    virtual void getCloudHeight()const;
+    virtual void getDefaultBiome()const;
+    virtual void mayRespawn()const;
+    virtual bool hasGround()const;
+    virtual void getSpawnPos()const;
+    virtual void getSpawnYPosition()const;
+    virtual bool isDay()const;
     virtual void getSunIntensity(float, Vec3 const&, float)const;
     virtual void translatePosAcrossDimension(Vec3 const&, AutomaticID<Dimension, int>)const;
     virtual void deserialize(CompoundTag const&);
     virtual void serialize(CompoundTag &)const;
-    virtual void startLeaveGame(void);
+    virtual void startLeaveGame();
     virtual void getTimeOfDay(int, float)const;
 
-    void getDragonFight(void);
+    void getDragonFight();
     TheEndDimension(Level &, Scheduler &);
 };

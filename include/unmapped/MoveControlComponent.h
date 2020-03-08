@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
 #include "../bedrock/control/MoveControl"
+#include "../bedrock/description/component/MoveControlDescription"
+#include "../bedrock/actor/Mob"
+#include "../bedrock/util/Vec3"
 
 
 class MoveControlComponent {
@@ -12,14 +14,14 @@ public:
     MoveControlComponent(void);
     void initializeFromDefinition(Mob &, MoveControlDescription *);
     void setInternalType(std::unique_ptr<MoveControl, std::default_delete<MoveControl>>);
-    void getHasWantedPosition(void)const;
+    void getHasWantedPosition()const;
     void setHasWantedPosition(bool);
-    void getWantedPosition(void);
-    void getShouldBreach(void)const;
+    void getWantedPosition();
+    void getShouldBreach()const;
     void setShouldBreach(bool);
-    void getMaxTurn(void)const;
+    void getMaxTurn()const;
     void setMaxTurn(float);
-    void getSpeedModifier(void)const;
+    void getSpeedModifier()const;
     void setSpeedModifier(float);
     void _setWantedPosition(Vec3 const&);
     void setWantedPosition(Mob &, Vec3 const&, float);

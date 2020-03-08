@@ -11,5 +11,5 @@ public:
 
     WaterMovementComponent(WaterMovementComponent&&);
     void initFromDefinition(Actor &);
-    void getDragFactor(void);
+    void getDragFactor();
 };

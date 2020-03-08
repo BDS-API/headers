@@ -1,7 +1,7 @@
 #pragma once
 
+#include "../../Minecraft"
 #include "../Command"
-#include "../../../unmapped/Minecraft"
 
 
 class ServerCommand : Command {
@@ -9,7 +9,7 @@ class ServerCommand : Command {
 public:
     static long mGame;
 
-    virtual ServerCommand::~ServerCommand();
+    ServerCommand::~ServerCommand()
 
     ServerCommand(void);
     void setup(Minecraft &);

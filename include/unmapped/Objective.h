@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/level/scoreboard/Scoreboard"
 #include "../bedrock/nbt/CompoundTag"
 
 
@@ -10,12 +11,12 @@ public:
     void getPlayerScore(ScoreboardId const&)const;
     Objective(std::string const&, ObjectiveCriteria const&);
     void setDisplayName(std::string const&);
-    void getRenderType(void)const;
-    void getCriteria(void)const;
-    void getPlayers(void)const;
-    void getScores(void)const;
+    void getRenderType()const;
+    void getCriteria()const;
+    void getPlayers()const;
+    void getScores()const;
     void getPlayerScoreRef(ScoreboardId const&, ScoreInfoRef &);
-    bool hasScores(void)const;
+    bool hasScores()const;
     void _modifyPlayerScore(int &, ScoreboardId const&, int, PlayerScoreSetFunction);
     void _loadPlayerScore(ScoreboardIdentityRef &, int);
     bool hasScore(ScoreboardId const&)const;

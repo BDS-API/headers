@@ -6,7 +6,7 @@
 class VanillaOverworldBiomeSource : LayerBiomeSource {
 
 public:
-    virtual VanillaOverworldBiomeSource::~VanillaOverworldBiomeSource();
+    VanillaOverworldBiomeSource::~VanillaOverworldBiomeSource()
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
     virtual bool containsOnly(int, int, int, gsl::span<int const, -1l>)const;
 

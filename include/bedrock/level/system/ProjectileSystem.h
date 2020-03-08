@@ -6,7 +6,7 @@
 class ProjectileSystem : ITickingSystem {
 
 public:
-    virtual ProjectileSystem::~ProjectileSystem();
+    ProjectileSystem::~ProjectileSystem()
     virtual void tick(EntityRegistry &);
 
     ProjectileSystem(void);

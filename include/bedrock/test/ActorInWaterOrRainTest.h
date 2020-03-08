@@ -6,9 +6,9 @@
 class ActorInWaterOrRainTest : SimpleBoolFilterTest {
 
 public:
-    virtual ActorInWaterOrRainTest::~ActorInWaterOrRainTest();
+    ActorInWaterOrRainTest::~ActorInWaterOrRainTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorInWaterOrRainTest(void);
 };

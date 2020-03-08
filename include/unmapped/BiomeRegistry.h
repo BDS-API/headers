@@ -8,14 +8,14 @@
 class BiomeRegistry : IEntityRegistryOwner {
 
 public:
-    virtual void getEntityRegistry(void);
-    virtual BiomeRegistry::~BiomeRegistry();
+    virtual void getEntityRegistry();
+    BiomeRegistry::~BiomeRegistry()
 
     void setLoadFromPacks(bool);
     BiomeRegistry(void);
-    void _initTagRegistry(void);
-    void getTagRegistry(void);
-    void getTagRegistry(void)const;
+    void _initTagRegistry();
+    void getTagRegistry();
+    void getTagRegistry()const;
     void registerBiome(std::string const&);
     void _allocateBiomeId(std::string const&);
     void _register(std::unique_ptr<Biome, std::default_delete<Biome>> &&);
@@ -26,7 +26,7 @@ public:
     void _buildInheritanceTree(ResourcePackManager &);
     void _initServerFromInheritanceTree(InheritanceTree<BiomeRegistry::BiomeParent> &, IWorldRegistriesProvider &);
     void initClientFromPacks(ResourcePackManager &);
-    void registrationFinished(void);
+    void registrationFinished();
     void _loadSingleBiome(ResourcePackManager &, InheritanceTree<BiomeRegistry::BiomeParent> &, std::string const&);
     void _mergeDataInheritance(Json::Value &, InheritanceTree<BiomeRegistry::BiomeParent> &, BiomeRegistry::BiomeParent const&);
     void _addToInheritanceTree(InheritanceTree<BiomeRegistry::BiomeParent> &, std::string const&, Json::Value &&);

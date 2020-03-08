@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/Random"
 
 
 class DesertWellFeature : Feature {
 
 public:
-    virtual DesertWellFeature::~DesertWellFeature();
+    DesertWellFeature::~DesertWellFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     DesertWellFeature(void);

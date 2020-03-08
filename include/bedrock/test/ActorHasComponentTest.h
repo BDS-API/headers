@@ -6,9 +6,9 @@
 class ActorHasComponentTest : SimpleHashStringFilterTest {
 
 public:
-    virtual ActorHasComponentTest::~ActorHasComponentTest();
+    ActorHasComponentTest::~ActorHasComponentTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorHasComponentTest(void);
 };

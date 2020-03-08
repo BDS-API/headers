@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class BreathableComponent {
@@ -12,19 +12,19 @@ public:
     BreathableComponent(void);
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    void getAirSupply(void)const;
+    void getAirSupply()const;
     void setAirSupply(short);
-    void getMaxAirSupply(void)const;
+    void getMaxAirSupply()const;
     void setMaxAirSupply(short);
-    void getSuffocateTime(void)const;
-    void getInhaleTime(void)const;
-    void getAirRegenPerTick(void)const;
+    void getSuffocateTime()const;
+    void getInhaleTime()const;
+    void getAirRegenPerTick()const;
     void updateBreathableState(Actor &);
     bool canBreathe(Actor const&)const;
-    bool canBreatheAir(void)const;
-    bool canBreatheWater(void)const;
-    bool canBreatheLava(void)const;
-    bool canBreathSolids(void)const;
-    bool generatesBubbles(void)const;
-    void getBreathableState(void);
+    bool canBreatheAir()const;
+    bool canBreatheWater()const;
+    bool canBreatheLava()const;
+    bool canBreathSolids()const;
+    bool generatesBubbles()const;
+    void getBreathableState();
 };

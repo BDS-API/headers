@@ -5,7 +5,7 @@
 class AirBlockItem : Item {
 
 public:
-    virtual AirBlockItem::~AirBlockItem();
+    AirBlockItem::~AirBlockItem()
 
     AirBlockItem(std::string const&, int);
 };

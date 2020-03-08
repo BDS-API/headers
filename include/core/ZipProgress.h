@@ -9,5 +9,5 @@ class ZipProgress {
 public:
 
     ZipProgress(void);
-    void clear(void);
+    void clear();
 };

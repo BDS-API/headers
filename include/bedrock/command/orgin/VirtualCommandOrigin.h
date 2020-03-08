@@ -1,32 +1,33 @@
 #pragma once
 
-#include "../../../unmapped/Vec3"
+#include "../../actor/Actor"
+#include "../../util/Vec3"
 
 
 class VirtualCommandOrigin : CommandOrigin {
 
 public:
-    virtual VirtualCommandOrigin::~VirtualCommandOrigin();
-    virtual void getRequestId[abi:cxx11](void)const;
-    virtual void getName[abi:cxx11](void)const;
-    virtual void getBlockPosition(void)const;
-    virtual void getWorldPosition(void)const;
-    virtual void getLevel(void)const;
-    virtual void getDimension(void)const;
-    virtual void getEntity(void)const;
-    virtual void getPermissionsLevel(void)const;
-    virtual void clone(void)const;
-    virtual bool hasChatPerms(void)const;
-    virtual bool hasTellPerms(void)const;
+    VirtualCommandOrigin::~VirtualCommandOrigin()
+    virtual void getRequestId()const;
+    virtual void getName()const;
+    virtual void getBlockPosition()const;
+    virtual void getWorldPosition()const;
+    virtual void getLevel()const;
+    virtual void getDimension()const;
+    virtual void getEntity()const;
+    virtual void getPermissionsLevel()const;
+    virtual void clone()const;
+    virtual bool hasChatPerms()const;
+    virtual bool hasTellPerms()const;
     virtual bool canUseAbility(AbilitiesIndex)const;
-    virtual bool canUseCommandsWithoutCheatsEnabled(void)const;
-    virtual bool isSelectorExpansionAllowed(void)const;
-    virtual void getSourceId(void)const;
-    virtual void getOutputReceiver(void)const;
-    virtual void getOriginType(void)const;
+    virtual bool canUseCommandsWithoutCheatsEnabled()const;
+    virtual bool isSelectorExpansionAllowed()const;
+    virtual void getSourceId()const;
+    virtual void getOutputReceiver()const;
+    virtual void getOriginType()const;
 
     VirtualCommandOrigin(CommandOrigin const&, CommandOrigin const&, Vec3 const&);
-    void _getEncapsulatedOrigin(void)const;
+    void _getEncapsulatedOrigin()const;
     VirtualCommandOrigin(CommandOrigin const&, Actor &, Vec3 const&);
     VirtualCommandOrigin(std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, Vec3 const&);
 };

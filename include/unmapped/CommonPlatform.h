@@ -8,8 +8,8 @@ class CommonPlatform {
 
 public:
 
-    void getPlatformRuntimeInfo(void)const;
-    void accessPlatformRuntimeInfo_Shim(void);
-    void getPlatformBuildInfo(void)const;
-    void accessPlatformBuildInfo_Shim(void);
+    void getPlatformRuntimeInfo()const;
+    void accessPlatformRuntimeInfo_Shim();
+    void getPlatformBuildInfo()const;
+    void accessPlatformBuildInfo_Shim();
 };

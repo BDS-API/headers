@@ -5,19 +5,19 @@
 class AppConfigs {
 
 public:
-    virtual AppConfigs::~AppConfigs();
-    virtual void areResourcePacksAllowed(void)const;
-    virtual bool isPlayScreenAllowed(void)const;
-    virtual bool isGameTabShownInSettings(void)const;
-    virtual void areQuizzesSupported(void)const;
-    virtual bool isLessonProgressionSupported(void)const;
-    virtual void useNormalizedFontSize(void)const;
-    virtual void useFullScreenByDefault(void)const;
-    virtual void muteByDefault(void)const;
-    virtual bool isCoursesCacheEnabled(void)const;
-    virtual void getEducationEditionOffering(void)const;
-    virtual void getConnectionDefinition(void)const;
-    virtual bool supportsChangingMultiplayerDuringPlay(void)const;
+    AppConfigs::~AppConfigs()
+    virtual void areResourcePacksAllowed()const;
+    virtual bool isPlayScreenAllowed()const;
+    virtual bool isGameTabShownInSettings()const;
+    virtual void areQuizzesSupported()const;
+    virtual bool isLessonProgressionSupported()const;
+    virtual void useNormalizedFontSize()const;
+    virtual void useFullScreenByDefault()const;
+    virtual void muteByDefault()const;
+    virtual bool isCoursesCacheEnabled()const;
+    virtual void getEducationEditionOffering()const;
+    virtual void getConnectionDefinition()const;
+    virtual bool supportsChangingMultiplayerDuringPlay()const;
 
     AppConfigs(void);
     void tryLeaveGameOverride(SceneStack &, SceneFactory &);

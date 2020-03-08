@@ -6,11 +6,11 @@
 class SwellGoal : Goal {
 
 public:
-    virtual SwellGoal::~SwellGoal();
-    virtual bool canUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    SwellGoal::~SwellGoal()
+    virtual bool canUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     SwellGoal(Creeper *, float, float);

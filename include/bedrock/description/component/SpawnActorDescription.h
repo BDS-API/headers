@@ -6,8 +6,8 @@
 class SpawnActorDescription : ComponentDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual SpawnActorDescription::~SpawnActorDescription();
+    virtual void getJsonName()const;
+    SpawnActorDescription::~SpawnActorDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

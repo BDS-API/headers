@@ -7,10 +7,10 @@ using namespace RakNet;
 class RakPeerInterface {
 
 public:
-    virtual void RakNet::RakPeerInterface::~RakPeerInterface();
+    RakNet::RakPeerInterface::~RakPeerInterface()
 
-    void GetInstance(void);
+    void GetInstance();
     void DestroyInstance(RakNet::RakPeerInterface*);
-    void Get64BitUniqueRandomNumber(void);
+    void Get64BitUniqueRandomNumber();
     RakPeerInterface(void);
 };

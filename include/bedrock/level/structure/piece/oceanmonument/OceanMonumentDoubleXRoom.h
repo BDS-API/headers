@@ -1,14 +1,17 @@
 #pragma once
 
+#include "../../../../definition/RoomDefinition"
+#include "../../../../../unmapped/BoundingBox"
+#include "../../../../util/Random"
 #include "../OceanMonumentPiece"
-#include "../../../../../unmapped/BlockSource"
+#include "../../../../block/unmapped/BlockSource"
 
 
 class OceanMonumentDoubleXRoom : OceanMonumentPiece {
 
 public:
-    virtual OceanMonumentDoubleXRoom::~OceanMonumentDoubleXRoom();
-    virtual void getType(void)const;
+    OceanMonumentDoubleXRoom::~OceanMonumentDoubleXRoom()
+    virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
 
     OceanMonumentDoubleXRoom(void);

@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../../unmapped/EntityContext"
 #include "../../json/Value"
+#include "../../unmapped/EntityContext"
+#include "../../unmapped/DamageOverTimeComponent"
 
 
 class DamageOverTimeDefinition {

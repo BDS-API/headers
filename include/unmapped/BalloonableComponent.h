@@ -1,6 +1,9 @@
 #pragma once
 
+#include "../bedrock/item/ItemStack"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "../bedrock/actor/Player"
 
 
 class BalloonableComponent {

@@ -1,12 +1,17 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "unmapped/ItemState"
+#include "../util/BlockPos"
+#include "../block/unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../level/Level"
 
 
 class SlabBlockItem : BlockItem {
 
 public:
-    virtual SlabBlockItem::~SlabBlockItem();
+    SlabBlockItem::~SlabBlockItem()
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
     SlabBlockItem(std::string const&, int);

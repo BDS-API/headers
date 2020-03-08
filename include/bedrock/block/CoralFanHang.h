@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
+#include "../util/AABB"
 
 
 class CoralFanHang : CoralFan {
 
 public:
-    virtual CoralFanHang::~CoralFanHang();
+    CoralFanHang::~CoralFanHang()
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
@@ -18,7 +19,7 @@ public:
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
-    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
+    virtual void buildDescriptionId(Block const&)const;
     virtual void getVariant(Block const&)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
     virtual void checkAlive(BlockSource &, BlockPos const&)const;

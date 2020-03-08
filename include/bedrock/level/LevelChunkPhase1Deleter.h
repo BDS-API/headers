@@ -6,5 +6,5 @@ class LevelChunkPhase1Deleter {
 
 public:
 
-    void operator()(LevelChunk *);
+    void operator();
 };

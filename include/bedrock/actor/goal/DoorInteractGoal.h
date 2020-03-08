@@ -1,23 +1,24 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/Path"
 #include "../Mob"
+#include "../../util/BlockPos"
 
 
 class DoorInteractGoal : Goal {
 
 public:
-    virtual DoorInteractGoal::~DoorInteractGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void tick(void);
+    DoorInteractGoal::~DoorInteractGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     DoorInteractGoal(Mob &);
     void _findBlockingDoorAtPos(BlockPos const&, Mob const&, Path *, Direction::Type &, Direction::Type &);
-    void _mobTooBigForDoorway(void)const;
-    void _mobHasExited(void);
-    void _doorBlocksPath(void)const;
-    void _exitComplete(void)const;
+    void _mobTooBigForDoorway()const;
+    void _mobHasExited();
+    void _doorBlocksPath()const;
+    void _exitComplete()const;
 };

@@ -1,12 +1,13 @@
 #pragma once
 
+#include "../json/Value"
 
 
 class Certificate {
 
 public:
 
-    bool isCertificateAuthority(void)const;
+    bool isCertificateAuthority()const;
     void addAuthorityToCertificate(PrivateKeyManager &, long, long, std::string const&, std::unique_ptr<Certificate, std::default_delete<Certificate>>);
     void createWebToken(PrivateKeyManager &, long, long, std::string const&, bool, Json::Value const*);
     void addToEnd(Certificate const&);
@@ -15,11 +16,11 @@ public:
     Certificate(Certificate const&);
     Certificate(UnverifiedCertificate const&, std::unique_ptr<Certificate, std::default_delete<Certificate>>);
     void validate(long);
-    void getNotBeforeDate(void)const;
-    void getExpirationDate(void)const;
+    void getNotBeforeDate()const;
+    void getExpirationDate()const;
     void getData(std::string const&, Json::Value const&)const;
     void getExtraData(std::string const&, Json::Value const&)const;
-    void getParentCertificate(void)const;
-    void getRootParentCertificate(void);
-    bool isValid(void)const;
+    void getParentCertificate()const;
+    void getRootParentCertificate();
+    bool isValid()const;
 };

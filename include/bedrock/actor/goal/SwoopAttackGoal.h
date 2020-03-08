@@ -1,17 +1,18 @@
 #pragma once
 
+#include "../../../unmapped/FloatRange"
 #include "../Mob"
 
 
 class SwoopAttackGoal : Goal {
 
 public:
-    virtual SwoopAttackGoal::~SwoopAttackGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    SwoopAttackGoal::~SwoopAttackGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     SwoopAttackGoal(Mob &, float, FloatRange);

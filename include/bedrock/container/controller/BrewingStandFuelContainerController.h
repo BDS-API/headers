@@ -2,13 +2,13 @@
 
 #include "../model/ContainerModel"
 #include "../../item/ItemInstance"
-#include "../../../unmapped/ItemDescriptor"
+#include "../../item/unmapped/ItemDescriptor"
 
 
 class BrewingStandFuelContainerController : ContainerController {
 
 public:
-    virtual BrewingStandFuelContainerController::~BrewingStandFuelContainerController();
+    BrewingStandFuelContainerController::~BrewingStandFuelContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
 
     BrewingStandFuelContainerController(std::shared_ptr<ContainerModel>);

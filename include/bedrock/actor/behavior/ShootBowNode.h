@@ -6,7 +6,7 @@
 class ShootBowNode : BehaviorNode {
 
 public:
-    virtual ShootBowNode::~ShootBowNode();
+    ShootBowNode::~ShootBowNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

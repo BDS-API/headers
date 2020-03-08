@@ -1,6 +1,8 @@
 #pragma once
 
 #include "../../core/Path"
+#include "../../unmapped/ContentIdentity"
+#include "../../unmapped/GameVersion"
 
 
 class LevelSummary {
@@ -12,15 +14,15 @@ public:
     static long DEFAULT_WORLD_ICON_FILENAME[abi:cxx11];
 
 
-    void getSeed(void)const;
-    void getGameType(void)const;
-    void getGameDifficulty(void)const;
-    void getEduOffer(void)const;
-    bool isEdu(void)const;
-    bool hasConfirmedPlatformLockedContent(void)const;
-    void getLANBroadcastIntent(void)const;
-    void getXBLBroadcastIntent(void)const;
-    bool hasCommandsEnabled(void)const;
+    void getSeed()const;
+    void getGameType()const;
+    void getGameDifficulty()const;
+    void getEduOffer()const;
+    bool isEdu()const;
+    bool hasConfirmedPlatformLockedContent()const;
+    void getLANBroadcastIntent()const;
+    void getXBLBroadcastIntent()const;
+    bool hasCommandsEnabled()const;
     void setId(std::string);
     void setName(std::string);
     void setLastPlayed(long);
@@ -32,9 +34,9 @@ public:
     void _initializeWorldIconPath(Core::Path const&);
     LevelSummary(LevelData const&, Core::Path const&, Core::Path const&);
     void reinitializeWorldSize(Core::Path const&);
-    bool isEditionCompatible(void)const;
-    bool isGameVersionCompatible(void)const;
-    bool isStorageCompatible(void)const;
-    bool isVersionCompatible(void)const;
+    bool isEditionCompatible()const;
+    bool isGameVersionCompatible()const;
+    bool isStorageCompatible()const;
+    bool isVersionCompatible()const;
     void reinitializeWorldIconPath(Core::Path const&);
 };

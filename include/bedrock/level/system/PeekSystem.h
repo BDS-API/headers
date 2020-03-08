@@ -6,7 +6,7 @@
 class PeekSystem : ITickingSystem {
 
 public:
-    virtual PeekSystem::~PeekSystem();
+    PeekSystem::~PeekSystem()
     virtual void tick(EntityRegistry &);
 
     PeekSystem(void);

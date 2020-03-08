@@ -14,6 +14,6 @@ public:
     SlotData(std::string &&, int);
     SlotData(std::string const&, int);
     void set(std::string const&, int);
-    void clear(void);
-    bool isActive(void)const;
+    void clear();
+    bool isActive()const;
 };

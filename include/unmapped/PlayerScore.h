@@ -7,8 +7,8 @@ class PlayerScore {
 public:
 
     PlayerScore(ScoreboardId const&, int);
-    void getId(void)const;
-    void getScore(void)const;
+    void getId()const;
+    void getScore()const;
     PlayerScore(PlayerScore&&);
     PlayerScore(PlayerScore const&);
 };

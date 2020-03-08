@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../../unmapped/FilterInputs"
 #include "../definition/Definition"
 
 
 class SimpleIntFilterTest : FilterTest {
 
 public:
-    virtual SimpleIntFilterTest::~SimpleIntFilterTest();
+    SimpleIntFilterTest::~SimpleIntFilterTest()
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
-    virtual void _serializeValue(void)const;
+    virtual void _serializeValue()const;
 
     SimpleIntFilterTest(void);
 };

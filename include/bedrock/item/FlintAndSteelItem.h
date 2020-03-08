@@ -1,14 +1,19 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../container/Container"
+#include "../actor/Actor"
+#include "../actor/Mob"
+#include "../util/Vec3"
+#include "../block/unmapped/BlockSource"
+#include "../util/BlockPos"
 
 
 class FlintAndSteelItem : Item {
 
 public:
-    virtual FlintAndSteelItem::~FlintAndSteelItem();
+    FlintAndSteelItem::~FlintAndSteelItem()
     virtual bool isDestructive(int)const;
-    virtual void getEnchantSlot(void)const;
+    virtual void getEnchantSlot()const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;

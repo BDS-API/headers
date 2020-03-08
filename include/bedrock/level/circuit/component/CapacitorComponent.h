@@ -5,10 +5,10 @@
 class CapacitorComponent : ProducerComponent {
 
 public:
-    virtual CapacitorComponent::~CapacitorComponent();
-    virtual void getBaseType(void)const;
-    virtual void getInstanceType(void)const;
-    virtual void getPoweroutDirection(void)const;
+    CapacitorComponent::~CapacitorComponent()
+    virtual void getBaseType()const;
+    virtual void getInstanceType()const;
+    virtual void getPoweroutDirection()const;
 
     CapacitorComponent(void);
 };

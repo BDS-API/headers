@@ -8,14 +8,14 @@ class BoneAnimation {
 public:
 
     void setName(std::string const&);
-    void getBoneName(void)const;
+    void getBoneName()const;
     void animate(RenderParams &, BoneOrientation &, float)const;
     void addAnimationChannel(BoneTransformType);
     void setRotationRelativeMode(BoneAnimationRelativeMode);
-    void getAnimationChannels(void)const;
-    void getAnimationChannels(void);
+    void getAnimationChannels()const;
+    void getAnimationChannels();
     void toJson(Json::Value &)const;
-    void getMaxKeyFrameTime(void)const;
+    void getMaxKeyFrameTime()const;
     BoneAnimation(std::string const&);
     BoneAnimation(BoneAnimation const&);
 };

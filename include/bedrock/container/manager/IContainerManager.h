@@ -5,7 +5,7 @@
 class IContainerManager {
 
 public:
-    virtual IContainerManager::~IContainerManager();
+    IContainerManager::~IContainerManager()
 
     IContainerManager(void);
 };

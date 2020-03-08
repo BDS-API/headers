@@ -7,7 +7,7 @@ using namespace Json;
 class Writer {
 
 public:
-    virtual void Json::Writer::~Writer();
+    Json::Writer::~Writer()
 
     Writer(void);
 };

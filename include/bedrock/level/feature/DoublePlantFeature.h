@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class DoublePlantFeature : Feature {
 
 public:
-    virtual DoublePlantFeature::~DoublePlantFeature();
+    DoublePlantFeature::~DoublePlantFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     DoublePlantFeature(void);

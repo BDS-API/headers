@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/BlockPos"
 
 
 class StructureSettings {
@@ -14,23 +17,23 @@ public:
     StructureSettings(void);
     void setPaletteName(std::string);
     void setIgnoreEntities(bool);
-    void getIgnoreEntities(void)const;
-    void getIgnoreBlocks(void)const;
+    void getIgnoreEntities()const;
+    void getIgnoreBlocks()const;
     void setIgnoreBlocks(bool);
-    void getStructureSize(void)const;
+    void getStructureSize()const;
     void setStructureSize(BlockPos const&);
-    void getStructureOffset(void)const;
+    void getStructureOffset()const;
     void setStructureOffset(BlockPos const&);
-    void getPivot(void)const;
+    void getPivot()const;
     void setPivot(Vec3 const&);
-    void getLastTouchedByPlayerID(void)const;
+    void getLastTouchedByPlayerID()const;
     void setLastTouchedByPlayerID(ActorUniqueID);
-    void getRotation(void)const;
+    void getRotation()const;
     void setRotation(Rotation);
-    void getMirror(void)const;
+    void getMirror()const;
     void setMirror(Mirror);
-    void getIntegrityValue(void)const;
+    void getIntegrityValue()const;
     void setIntegrityValue(float);
-    void getIntegritySeed(void)const;
+    void getIntegritySeed()const;
     void setIntegritySeed(unsigned int);
 };

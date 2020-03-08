@@ -9,6 +9,6 @@ public:
 
 
     WSAStartupSingleton(void);
-    void AddRef(void);
-    void Deref(void);
+    void AddRef();
+    void Deref();
 };

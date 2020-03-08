@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../actor/Mob"
-#include "../../unmapped/Block"
-#include "../level/Level"
-#include "../../unmapped/RecipeIngredient"
-#include "../block/BlockLegacy"
-#include "../actor/Actor"
 #include "../actor/Player"
+#include "../actor/Actor"
+#include "../block/BlockLegacy"
+#include "../actor/Mob"
+#include "../../unmapped/RecipeIngredient"
+#include "../../unmapped/Block"
 #include "../nbt/CompoundTag"
+#include "../level/Level"
 
 
 class ItemStack : ItemStackBase {
@@ -15,7 +15,7 @@ class ItemStack : ItemStackBase {
 public:
     static long EMPTY_ITEM;
 
-    virtual ItemStack::~ItemStack();
+    ItemStack::~ItemStack()
     virtual void reinit(Item const&, int, int);
     virtual void reinit(BlockLegacy const&, int);
 
@@ -29,20 +29,20 @@ public:
     ItemStack(ItemInstance const&);
     ItemStack(RecipeIngredient const&);
     ItemStack(ItemStack const&);
-    void getStrippedNetworkItem(void)const;
+    void getStrippedNetworkItem()const;
     void useOn(Actor &, int, int, int, unsigned char, float, float, float);
     void getDestroySpeed(Block const&)const;
     void use(Player &);
     void inventoryTick(Level &, Actor &, int, bool);
-    void useAsFuel(void);
-    void removeEnchants(void);
+    void useAsFuel();
+    void removeEnchants();
     void mineBlock(Block const&, int, int, int, Mob *);
     void sameItemAndAuxAndBlockData(ItemStack const&)const;
-    void clone(void)const;
+    void clone()const;
     void fromTag(CompoundTag const&);
     void fromTag(CompoundTag const&, Level &);
     void releaseUsing(Player *, int);
-    void getMaxUseDuration(void)const;
+    void getMaxUseDuration()const;
     void useTimeDepleted(Level *, Player *);
     void playSoundIncrementally(Mob &)const;
 };

@@ -6,18 +6,18 @@
 class DedicatedServer : IMinecraftApp, BedrockEngine::AppIsland {
 
 public:
-    virtual DedicatedServer::~DedicatedServer();
-    virtual void getPrimaryMinecraft(void);
-    virtual void getAutomationClient(void)const;
-    virtual bool isEduMode(void)const;
-    virtual bool isDedicatedServer(void)const;
+    DedicatedServer::~DedicatedServer()
+    virtual void getPrimaryMinecraft();
+    virtual void getAutomationClient()const;
+    virtual bool isEduMode()const;
+    virtual bool isDedicatedServer()const;
     virtual void onNetworkMaxPlayersChanged(unsigned int);
-    virtual void getGameModule(void);
-    virtual void stop(void);
+    virtual void getGameModule();
+    virtual void stop();
 
     DedicatedServer(void);
-    void initalizeAppConfigs(void);
-    void initializeLogging(void);
+    void initalizeAppConfigs();
+    void initializeLogging();
     void start(std::string const&);
-    void _forceContentLogEnabled(void);
+    void _forceContentLogEnabled();
 };

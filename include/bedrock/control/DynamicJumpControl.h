@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../description/component/JumpControlDescription"
 #include "../actor/Mob"
 #include "../../unmapped/JumpControlComponent"
 
@@ -7,7 +8,7 @@
 class DynamicJumpControl : JumpControl {
 
 public:
-    virtual DynamicJumpControl::~DynamicJumpControl();
+    DynamicJumpControl::~DynamicJumpControl()
     virtual void initializeInternal(Mob &, JumpControlDescription *);
     virtual void tick(JumpControlComponent &, Mob &);
     virtual void getJumpDelay(JumpControlComponent const&, Mob const&)const;

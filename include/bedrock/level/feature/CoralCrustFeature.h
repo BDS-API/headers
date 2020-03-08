@@ -1,13 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
-#include "../../../unmapped/Random"
+#include "../../../unmapped/LegacyStructureTemplate"
+#include "../../util/Random"
+#include "../../../unmapped/LegacyStructureSettings"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class CoralCrustFeature : Feature {
 
 public:
-    virtual CoralCrustFeature::~CoralCrustFeature();
+    CoralCrustFeature::~CoralCrustFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     CoralCrustFeature(void);

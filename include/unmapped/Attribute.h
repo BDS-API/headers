@@ -7,9 +7,9 @@ class Attribute {
 public:
 
     Attribute(HashedString const&, RedefinitionMode, bool);
-    void getName(void)const;
-    void getIDValue(void)const;
-    bool isClientSyncable(void)const;
-    void getRedefinitionMode(void)const;
+    void getName()const;
+    void getIDValue()const;
+    bool isClientSyncable()const;
+    void getRedefinitionMode()const;
     void getByName(HashedString const&);
 };

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../model/ContainerModel"
 #include "../../item/ItemInstance"
+#include "../model/ContainerModel"
 
 
 class LabTableInputContainerController : ContainerController {
 
 public:
-    virtual LabTableInputContainerController::~LabTableInputContainerController();
+    LabTableInputContainerController::~LabTableInputContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
 
     LabTableInputContainerController(std::shared_ptr<ContainerModel>);

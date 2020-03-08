@@ -1,13 +1,13 @@
 #pragma once
 
+#include "../../json/Value"
+#include "../../unmapped/LegacyPackIdVersion"
+#include "../../unmapped/ContentIdentity"
+#include "../../unmapped/ResourceMetadata"
+#include "../../unmapped/ResourceInformation"
 #include "../../unmapped/PackIdVersion"
 #include "../../unmapped/BaseGameVersion"
 #include "../../unmapped/SemVersion"
-#include "../../unmapped/ResourceMetadata"
-#include "../../unmapped/ResourceInformation"
-#include "../../unmapped/LegacyPackIdVersion"
-#include "../../unmapped/ContentIdentity"
-#include "../../json/Value"
 #include "../../unmapped/ResourceLocation"
 
 
@@ -17,79 +17,79 @@ public:
     static long MarioPackId[abi:cxx11];
     static long STRING_TO_PACK_SCOPE[abi:cxx11];
 
-    virtual PackManifest::~PackManifest();
-    virtual void clone(void)const;
+    PackManifest::~PackManifest()
+    virtual void clone()const;
 
     PackManifest(ManifestType);
-    void getLocation(void)const;
+    void getLocation()const;
     void setLocation(ResourceLocation const&);
     void setDescription(std::string const&);
     void setName(std::string const&);
-    bool isUsingPackNameKeyword(void)const;
-    bool isUsingPackDescriptionKeyword(void)const;
-    void getMetaData(void)const;
+    bool isUsingPackNameKeyword()const;
+    bool isUsingPackDescriptionKeyword()const;
+    void getMetaData()const;
     void setMetadata(ResourceMetadata const&);
-    bool hasExpired(void)const;
+    bool hasExpired()const;
     void setExpired(bool);
-    void getPackType(void)const;
+    void getPackType()const;
     void setPackType(PackType);
-    bool hasPlugins(void)const;
+    bool hasPlugins()const;
     void setHasPlugins(bool);
-    bool hasClientData(void)const;
+    bool hasClientData()const;
     void setHasClientData(bool);
-    bool hasEducationMetadata(void)const;
+    bool hasEducationMetadata()const;
     void setHasEducationMetadata(bool);
-    void getPackCategory(void)const;
+    void getPackCategory()const;
     void setPackCategory(PackCategory);
     void addPackCapability(gsl::basic_string_span<char const, -1l>);
     bool hasPackCapability(gsl::basic_string_span<char const, -1l>)const;
-    void setPackCapabilitiesTrusted(void);
+    void setPackCapabilitiesTrusted();
     void StringToPackScope(std::string const&);
-    void getPackOrigin(void)const;
+    void getPackOrigin()const;
     void setPackOrigin(PackOrigin);
-    void getPackSettings(void)const;
+    void getPackSettings()const;
     void setPackSettings(Json::Value const&);
-    void getIdentity(void)const;
+    void getIdentity()const;
     void setIdentity(PackIdVersion const&);
-    void getMinEngineVersion(void)const;
+    void getMinEngineVersion()const;
     void setMinEngineVersion(SemVersion const&);
-    void getRequiredBaseGameVersion(void)const;
-    void getFormatVersion(void)const;
-    bool isPremium(void)const;
+    void getRequiredBaseGameVersion()const;
+    void getFormatVersion()const;
+    bool isPremium()const;
     void setRequiredBaseGameVersion(BaseGameVersion const&);
-    bool isHidden(void)const;
+    bool isHidden()const;
     void setHidden(bool);
     bool isPremiumLocked(IEntitlementManager &)const;
-    bool isRestrictedPack(void)const;
-    void getManifestOrigin(void)const;
+    bool isRestrictedPack()const;
+    void getManifestOrigin()const;
     void setManifestOrigin(ManifestOrigin const&);
-    void getManifestType(void)const;
+    void getManifestType()const;
     void setManifestType(ManifestType const&);
-    void getPackIconLocation(void)const;
+    void getPackIconLocation()const;
     void setPackIconLocation(ResourceLocation const&);
     bool hasModule(PackIdVersion const&)const;
     bool hasModuleType(ResourceInformation::ResourceType)const;
     void addModule(ResourceInformation const&);
-    void getModules(void)const;
-    void clearModules(void);
-    void getDependentPackIdentities(void)const;
+    void getModules()const;
+    void clearModules();
+    void getDependentPackIdentities()const;
     void addPackDependency(PackIdVersion const&);
-    void clearPackDependencies(void);
+    void clearPackDependencies();
     void addLegacyModuleDependency(LegacyPackIdVersion const&);
-    void getLegacyModuleDependencies(void)const;
-    bool hasLegacyModuleDependencies(void)const;
-    void clearLegacyModuleDependencies(void);
-    void getPackSize(void)const;
+    void getLegacyModuleDependencies()const;
+    bool hasLegacyModuleDependencies()const;
+    void clearLegacyModuleDependencies();
+    void getPackSize()const;
     void setPackSize(unsigned long);
-    bool hasValidUUID(void)const;
-    void setInvalidUUID(void);
-    bool isPlatformLocked(void)const;
+    bool hasValidUUID()const;
+    void setInvalidUUID();
+    bool isPlatformLocked()const;
     void setPlatformLocked(bool);
-    bool isTitleLocked(void)const;
+    bool isTitleLocked()const;
     void setTitleLocked(bool);
-    void getOptionLockedState(void)const;
+    void getOptionLockedState()const;
     void setOptionLockedState(TemplateLockState);
-    void getPackScope(void)const;
+    void getPackScope()const;
     void setPackScope(PackScope);
     void serialize(PackManifestFormat, Json::Value &)const;
     void _serializeHeader(Json::Value &)const;
@@ -101,16 +101,16 @@ public:
     void setLastModifiedDate(long);
     void setLastModifiedDate(std::string const&);
     void setFormatVersion(PackManifestFormat);
-    void getOriginalFormatVersion(void)const;
+    void getOriginalFormatVersion()const;
     void setOriginalFormatVersion(PackManifestFormat);
-    void getFileSystemFromOrigin(void)const;
-    void getContentIdentity(void)const;
+    void getFileSystemFromOrigin()const;
+    void getContentIdentity()const;
     void setContentIdentity(ContentIdentity const&);
     void setLanguageCodesForPackKeywords(std::vector<std::string, std::allocator<std::string>>);
     void setLocalizedNameKeywords(std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&);
     void setCanBeRedownloaded(bool);
-    bool canBeRedownloaded(void)const;
-    void getSourceIdentity(void)const;
+    bool canBeRedownloaded()const;
+    void getSourceIdentity()const;
     void setSourceIdentity(ContentIdentity const&);
     PackManifest(PackManifest const&);
 };

@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../bedrock/level/Level"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/level/Level"
 
 
 class PortalForcer : SavedData {
@@ -10,7 +12,7 @@ class PortalForcer : SavedData {
 public:
     static long PORTAL_FILE_ID[abi:cxx11];
 
-    virtual PortalForcer::~PortalForcer();
+    PortalForcer::~PortalForcer()
     virtual void deserialize(CompoundTag const&);
     virtual void serialize(CompoundTag &)const;
 

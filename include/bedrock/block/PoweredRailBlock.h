@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
 
 
 class PoweredRailBlock : BaseRailBlock {
 
 public:
-    virtual PoweredRailBlock::~PoweredRailBlock();
+    PoweredRailBlock::~PoweredRailBlock()
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;
     virtual void getVariant(Block const&)const;
 

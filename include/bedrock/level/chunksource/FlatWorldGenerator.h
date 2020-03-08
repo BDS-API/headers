@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../../../unmapped/BoundingBox"
-#include "../../../unmapped/BlockPos"
-#include "../../../unmapped/BlockVolume"
-#include "../../../unmapped/ChunkPos"
 #include "../LevelChunk"
+#include "../../block/unmapped/BlockVolume"
+#include "../../../json/Value"
+#include "../../util/ChunkPos"
+#include "../../../unmapped/BoundingBox"
 #include "../../../unmapped/FlatWorldGeneratorOptions"
 #include "../../../unmapped/Dimension"
+#include "../../util/BlockPos"
 #include "../generator/WorldGenerator"
 
 
 class FlatWorldGenerator : ChunkSource, WorldGenerator {
 
 public:
-    virtual FlatWorldGenerator::~FlatWorldGenerator();
+    FlatWorldGenerator::~FlatWorldGenerator()
     virtual void postProcess(ChunkViewSource &);
     virtual void loadChunk(LevelChunk &, bool);
     virtual void getFeatureTypeAt(BlockPos const&);
@@ -21,7 +22,7 @@ public:
     virtual void prepareHeights(BlockVolume &, ChunkPos const&, bool);
     virtual void garbageCollectBlueprints(buffer_span<ChunkPos>);
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
-    virtual void findSpawnPosition(void)const;
+    virtual void findSpawnPosition()const;
 
     FlatWorldGenerator(Dimension &, unsigned int, Json::Value const&);
     void _generatePrototypeBlockValues(FlatWorldGeneratorOptions const&);

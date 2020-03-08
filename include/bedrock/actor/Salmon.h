@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "unmapped/ActorDefinitionGroup"
 
 
 class Salmon : Fish {
 
 public:
-    virtual Salmon::~Salmon();
+    Salmon::~Salmon()
     virtual void playerTouch(Player &);
-    virtual void createAIGoals(void);
+    virtual void createAIGoals();
 
     Salmon(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

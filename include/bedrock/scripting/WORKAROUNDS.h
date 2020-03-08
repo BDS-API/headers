@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../../json/Value"
+#include "../actor/Actor"
+#include "../actor/unmapped/ActorUniqueID"
+#include "../level/Level"
 
 
 using namespace ScriptApi;

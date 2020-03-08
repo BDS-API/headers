@@ -6,7 +6,7 @@
 class LookAtBlockNode : BehaviorNode {
 
 public:
-    virtual LookAtBlockNode::~LookAtBlockNode();
+    LookAtBlockNode::~LookAtBlockNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

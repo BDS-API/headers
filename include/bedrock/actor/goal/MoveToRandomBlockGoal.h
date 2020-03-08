@@ -1,18 +1,19 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
 #include "../Mob"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class MoveToRandomBlockGoal : Goal {
 
 public:
-    virtual MoveToRandomBlockGoal::~MoveToRandomBlockGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    MoveToRandomBlockGoal::~MoveToRandomBlockGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     MoveToRandomBlockGoal(Mob &, float, float, float);

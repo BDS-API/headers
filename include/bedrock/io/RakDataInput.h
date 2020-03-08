@@ -6,9 +6,9 @@
 class RakDataInput : BytesDataInput {
 
 public:
-    virtual RakDataInput::~RakDataInput();
+    RakDataInput::~RakDataInput()
     virtual void readBytes(void *, unsigned long);
-    virtual void numBytesLeft(void)const;
+    virtual void numBytesLeft()const;
 
     RakDataInput(RakNet::BitStream &);
 };

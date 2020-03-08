@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/actor/Player"
 #include "../core/Path"
+#include "../bedrock/actor/Player"
 
 
 class PhotoStorage {
@@ -13,7 +13,7 @@ public:
 
 
     PhotoStorage(Core::Path const&);
-    void _readManifest(void);
+    void _readManifest();
     void getBookPath(std::string const&);
     void storeLoosePhoto(Player &, std::string const&, std::string const&);
     void _writeFile(Core::Path, std::string const&);
@@ -29,5 +29,5 @@ public:
     void setValidLoosePhoto(Player &, std::string const&);
     void _addValidFile(Core::Path);
     void getLoosePhotos(Player &, std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &);
-    void _writeManifest(void);
+    void _writeManifest();
 };

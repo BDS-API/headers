@@ -6,9 +6,9 @@
 class ActorIsSkinIDTest : SimpleIntFilterTest {
 
 public:
-    virtual ActorIsSkinIDTest::~ActorIsSkinIDTest();
+    ActorIsSkinIDTest::~ActorIsSkinIDTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorIsSkinIDTest(void);
 };

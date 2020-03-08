@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "unmapped/ActorDefinitionGroup"
 
 
 class WaterAnimal : Mob {
 
 public:
-    virtual WaterAnimal::~WaterAnimal();
-    virtual void aiStep(void);
+    WaterAnimal::~WaterAnimal()
+    virtual void aiStep();
     virtual void checkSpawnRules(bool);
-    virtual void useNewAi(void)const;
+    virtual void useNewAi()const;
 
     WaterAnimal(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

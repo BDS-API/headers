@@ -53,21 +53,21 @@ public:
 
 
     void addPotion(std::shared_ptr<Potion const>);
-    void getPotionCount(void);
+    void getPotionCount();
     Potion(std::string const&);
     Potion(std::string const&, std::string const&);
     Potion(std::string const&, std::string const&, MobEffectInstance const&, Potion::PotionVariant);
     Potion(std::string const&, std::string const&, std::string const&, MobEffectInstance const&, Potion::PotionVariant);
     Potion(std::string const&, std::vector<std::string, std::allocator<std::string>>, std::vector<MobEffectInstance, std::allocator<MobEffectInstance>>, Potion::PotionVariant);
-    void initPotions(void);
-    void shutdownPotions(void);
-    void getPotionId(void)const;
-    void getPotionVariant(void)const;
+    void initPotions();
+    void shutdownPotions();
+    void getPotionId()const;
+    void getPotionVariant()const;
     void appendFormattedPotionText(std::string &, Potion::PotionType, float)const;
     void getPotentencyDescription(Potion::PotionType, float, std::string const&, MobEffectInstance const&)const;
-    void getMobEffectId(void)const;
-    void getMobEffect(void)const;
-    void getMobEffects(void)const;
+    void getMobEffectId()const;
+    void getMobEffect()const;
+    void getMobEffects()const;
     void getPotion(int);
     void getPotion(std::string const&);
     void getBasePotion(int);

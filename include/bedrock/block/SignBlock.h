@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../../unmapped/AABB"
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
+#include "actor/BlockActor"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class SignBlock : ActorBlock {
 
 public:
-    virtual SignBlock::~SignBlock();
+    SignBlock::~SignBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
@@ -20,6 +22,6 @@ public:
 
     SignBlock(std::string const&, int, bool, SignBlockActor::SignType);
     void getShape(int, AABB &)const;
-    void _getItemInstance(void)const;
-    void getSignType(void)const;
+    void _getItemInstance()const;
+    void getSignType()const;
 };

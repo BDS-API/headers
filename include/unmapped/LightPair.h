@@ -8,7 +8,7 @@ class LightPair {
 
 public:
 
-    void toBrightnessPair(void)const;
+    void toBrightnessPair()const;
     LightPair(unsigned char);
-    bool isDarkness(void)const;
+    bool isDarkness()const;
 };

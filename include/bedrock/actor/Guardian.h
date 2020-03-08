@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
-#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
+#include "../../unmapped/DataLoadHelper"
+#include "../util/BlockPos"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../nbt/CompoundTag"
 
 
 class Guardian : Monster {
@@ -15,33 +17,33 @@ public:
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Guardian::~Guardian();
-    virtual bool canSeeInvisible(void)const;
+    Guardian::~Guardian()
+    virtual bool canSeeInvisible()const;
     virtual void setTarget(Actor *);
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void _onSizeUpdated(void);
-    virtual void getAmbientSoundPostponeTicks(void);
-    virtual void aiStep(void);
+    virtual void _onSizeUpdated();
+    virtual void getAmbientSoundPostponeTicks();
+    virtual void aiStep();
     virtual void checkSpawnRules(bool);
-    virtual void getMaxHeadXRot(void);
-    virtual bool isDarkEnoughToSpawn(void)const;
+    virtual void getMaxHeadXRot();
+    virtual bool isDarkEnoughToSpawn()const;
 
     Guardian(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void registerLoopingSounds(void);
-    bool isElder(void)const;
+    void registerLoopingSounds();
+    bool isElder()const;
     void setElder(bool);
-    void getAttackDuration(void);
-    void setElderGhost(void);
-    void makeStepSound(void);
+    void getAttackDuration();
+    void setElderGhost();
+    void makeStepSound();
     void getWalkTargetValue(BlockPos const&);
-    void getTargetEntity(void)const;
+    void getTargetEntity()const;
     void getAttackAnimationScale(float);
     void getTailAnimation(float);
     void getSpikesAnimation(float);
-    bool isElderGhost(void)const;
+    bool isElderGhost()const;
     void setAttackTime(int);
-    void getEyeTarget(void);
-    void getMoveEyeVector(void);
+    void getEyeTarget();
+    void getMoveEyeVector();
 };

@@ -5,7 +5,7 @@
 class IAppPlatform {
 
 public:
-    virtual IAppPlatform::~IAppPlatform();
+    IAppPlatform::~IAppPlatform()
 
     IAppPlatform(void);
 };

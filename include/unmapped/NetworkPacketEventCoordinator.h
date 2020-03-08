@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/network/packet/Packet"
 
 
 class NetworkPacketEventCoordinator {

@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
 #include "../../../unmapped/FeatureRegistry"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class LegacySpringsFeature : Feature {
 
 public:
-    virtual LegacySpringsFeature::~LegacySpringsFeature();
+    LegacySpringsFeature::~LegacySpringsFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     LegacySpringsFeature(FeatureRegistry const&);

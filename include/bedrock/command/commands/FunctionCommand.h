@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../orgin/CommandOrigin"
+#include "../CommandOutput"
 #include "../Command"
 #include "../CommandRegistry"
-#include "../orgin/CommandOrigin"
 
 
 class FunctionCommand : Command {
 
 public:
-    virtual FunctionCommand::~FunctionCommand();
+    FunctionCommand::~FunctionCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     FunctionCommand(void);

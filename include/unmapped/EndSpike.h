@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
 
 
 using namespace SpikeFeature;
@@ -10,10 +11,10 @@ public:
 
     EndSpike(int, int, int, int, bool);
     bool startsInChunk(BlockPos const&)const;
-    void getCenterX(void)const;
-    void getCenterZ(void)const;
-    void getRadius(void)const;
-    void getHeight(void)const;
-    bool isGuarded(void)const;
-    void getTopBoundingBox(void)const;
+    void getCenterX()const;
+    void getCenterZ()const;
+    void getRadius()const;
+    void getHeight()const;
+    bool isGuarded()const;
+    void getTopBoundingBox()const;
 };

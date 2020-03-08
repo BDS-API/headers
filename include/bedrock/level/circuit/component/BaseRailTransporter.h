@@ -2,14 +2,16 @@
 
 #include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
+#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../util/BlockPos"
 
 
 class BaseRailTransporter : BaseCircuitComponent {
 
 public:
-    virtual BaseRailTransporter::~BaseRailTransporter();
-    virtual void getBaseType(void)const;
-    virtual void getInstanceType(void)const;
+    BaseRailTransporter::~BaseRailTransporter()
+    virtual void getBaseType()const;
+    virtual void getInstanceType()const;
     virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
     virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
     virtual void evaluate(CircuitSystem &, BlockPos const&);

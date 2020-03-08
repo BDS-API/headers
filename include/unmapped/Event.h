@@ -12,12 +12,12 @@ public:
     void addProperty(Social::Events::Property const&);
     void setCustomAggregationTime(unsigned int);
     Event(unsigned int, std::string const&, std::unordered_map<std::string, Social::Events::Property, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, Social::Events::Property>>> &&, int);
-    bool hasMeasurements(void);
+    bool hasMeasurements();
     void stampWithRecord(unsigned int);
-    bool propertiesAsJsonValue(void)const;
-    bool measurementsAsJsonValue(void)const;
+    bool propertiesAsJsonValue()const;
+    bool measurementsAsJsonValue()const;
     void updateMeasurements(Social::Events::Event const&);
     bool passesFilter(int)const;
-    void getUserId(void)const;
-    void shouldAggregate(void)const;
+    void getUserId()const;
+    void shouldAggregate()const;
 };

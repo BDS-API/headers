@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID"
 #include "../../io/BinaryStream"
-#include "../../../unmapped/ActorRuntimeID"
 
 
 class NpcRequestPacket : Packet {
 
 public:
-    virtual NpcRequestPacket::~NpcRequestPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    NpcRequestPacket::~NpcRequestPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
@@ -22,5 +22,5 @@ public:
     void requestSetName(ActorRuntimeID, std::string);
     void requestSetSkin(ActorRuntimeID, int);
     void requestSetInteractText(ActorRuntimeID, std::string);
-    void getSkin(void)const;
+    void getSkin()const;
 };

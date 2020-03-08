@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Player"
-#include "../../unmapped/Random"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class ChorusFlowerBlock : BlockLegacy {
@@ -13,12 +14,12 @@ public:
     static long GROW_RATE;
     static long BRANCH_DIRECTIONS;
 
-    virtual ChorusFlowerBlock::~ChorusFlowerBlock();
+    ChorusFlowerBlock::~ChorusFlowerBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
-    virtual bool isWaterBlocking(void)const;
-    virtual void waterSpreadCausesSpawn(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool isWaterBlocking()const;
+    virtual void waterSpreadCausesSpawn()const;
+    virtual bool canContainLiquid()const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;

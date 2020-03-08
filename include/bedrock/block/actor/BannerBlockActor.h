@@ -1,11 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
-#include "../../item/ItemInstance"
 #include "../../item/ItemStack"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
+#include "../../actor/Player"
+#include "../../item/ItemInstance"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class BannerBlockActor : BlockActor {
@@ -18,7 +20,7 @@ public:
     static long TAG_COLOR[abi:cxx11];
     static long TAG_TYPE[abi:cxx11];
 
-    virtual BannerBlockActor::~BannerBlockActor();
+    BannerBlockActor::~BannerBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
@@ -29,11 +31,11 @@ public:
     BannerBlockActor(BlockPos const&);
     void setItemValues(ItemStack const&);
     void getBaseColor(ItemStack const&);
-    void getBaseColor(void)const;
-    void getBaseColorInt(void)const;
-    void getType(void)const;
+    void getBaseColor()const;
+    void getBaseColorInt()const;
+    void getType()const;
     void getPatternCount(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&);
-    void getPatternCount(void)const;
+    void getPatternCount()const;
     void getPattern(int)const;
     void getColor(int)const;
     bool isDefaultBanner(ItemInstance const&);

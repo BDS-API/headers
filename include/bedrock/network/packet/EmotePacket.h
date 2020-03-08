@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID"
 #include "../../io/BinaryStream"
-#include "../../../unmapped/ActorRuntimeID"
 
 
 class EmotePacket : Packet {
 
 public:
-    virtual EmotePacket::~EmotePacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    EmotePacket::~EmotePacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
@@ -18,6 +18,6 @@ public:
     EmotePacket(void);
     EmotePacket(ActorRuntimeID, std::string const&, unsigned char);
     void requestEmote(ActorRuntimeID, std::string const&);
-    void setServerSide(void);
-    bool isServerSide(void)const;
+    void setServerSide();
+    bool isServerSide()const;
 };

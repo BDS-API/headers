@@ -7,8 +7,8 @@ using namespace Json;
 class StyledWriter : Json::Writer {
 
 public:
-    virtual void Json::StyledWriter::~StyledWriter();
-    virtual void write[abi:cxx11](Json::Value const&);
+    Json::StyledWriter::~StyledWriter()
+    virtual void write(Json::Value const&);
 
     StyledWriter(void);
     void writeCommentBeforeValue(Json::Value const&);
@@ -17,10 +17,10 @@ public:
     void pushValue(std::string const&);
     void writeArrayValue(Json::Value const&);
     void writeWithIndent(std::string const&);
-    void indent(void);
-    void unindent(void);
+    void indent();
+    void unindent();
     bool isMultineArray(Json::Value const&);
-    void writeIndent(void);
+    void writeIndent();
     bool hasCommentForValue(Json::Value const&);
     void normalizeEOL(std::string const&);
 };

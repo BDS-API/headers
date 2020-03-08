@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../CommandRegistry"
 #include "../orgin/CommandOrigin"
+#include "../CommandOutput"
+#include "../CommandRegistry"
 
 
 class ChangeSettingCommand : ServerCommand {
 
 public:
-    virtual ChangeSettingCommand::~ChangeSettingCommand();
+    ChangeSettingCommand::~ChangeSettingCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

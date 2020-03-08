@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../json/Value"
+#include "../bedrock/util/Random"
 
 
 class FloatRange {

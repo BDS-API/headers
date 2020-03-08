@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../actor/Painting"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class AddPaintingPacket : Packet {
 
 public:
-    virtual AddPaintingPacket::~AddPaintingPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    AddPaintingPacket::~AddPaintingPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

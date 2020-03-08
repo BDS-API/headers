@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
 #include "../actor/Actor"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Material"
 
 
 class SlimeBlock : BlockLegacy {
 
 public:
-    virtual SlimeBlock::~SlimeBlock();
+    SlimeBlock::~SlimeBlock()
     virtual void onStepOn(Actor &, BlockPos const&)const;
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const;
     virtual void updateEntityAfterFallOn(Actor &)const;
-    virtual bool isBounceBlock(void)const;
-    virtual void getExtraRenderLayers(void)const;
+    virtual bool isBounceBlock()const;
+    virtual void getExtraRenderLayers()const;
 
     SlimeBlock(std::string const&, int, Material const&);
 };

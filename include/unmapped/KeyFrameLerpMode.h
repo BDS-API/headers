@@ -6,11 +6,11 @@ class KeyFrameLerpMode {
 
 public:
 
-    void getLerpStyle(void)const;
-    void setPrecomputedCubicCoeffs(glm::tmat4x4<float, (glm::precision)0> const&);
-    void getPrecomputedCubicCoeffs(void)const;
+    void getLerpStyle()const;
+    void setPrecomputedCubicCoeffs(glm::tmat4x40<float, (glm::precision>);
+    void getPrecomputedCubicCoeffs()const;
     void lerp(float)const;
-    bool isCubic(void)const;
+    bool isCubic()const;
     void setLerpStyle(KeyFrameLerpStyle);
     KeyFrameLerpMode(void);
 };

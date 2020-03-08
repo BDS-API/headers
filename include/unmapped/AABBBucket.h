@@ -6,16 +6,16 @@ class AABBBucket {
 
 public:
 
-    void size(void)const;
+    void size()const;
     void get(unsigned long);
-    void clear(void);
+    void clear();
     void add(RopeAABB const&);
     AABBBucket(AABBBucket&&);
     AABBBucket(void);
-    void clearDirty(void);
-    void mergeAABBs(void);
-    void markDirty(void);
-    bool isDirty(void);
-    bool needsFinalize(void)const;
-    void clearNeedsFinalize(void);
+    void clearDirty();
+    void mergeAABBs();
+    void markDirty();
+    bool isDirty();
+    bool needsFinalize()const;
+    void clearNeedsFinalize();
 };

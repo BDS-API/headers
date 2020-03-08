@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../../../../unmapped/BlockPos"
 #include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
+#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../util/BlockPos"
 
 
 class RepeaterCapacitor : CapacitorComponent {
 
 public:
-    virtual RepeaterCapacitor::~RepeaterCapacitor();
-    virtual void getStrength(void)const;
+    RepeaterCapacitor::~RepeaterCapacitor()
+    virtual void getStrength()const;
     virtual void setStrength(int);
-    virtual void consumePowerAnyDirection(void);
-    virtual bool canConsumerPower(void);
-    virtual void getInstanceType(void)const;
+    virtual void consumePowerAnyDirection();
+    virtual bool canConsumerPower();
+    virtual void getInstanceType()const;
     virtual void removeSource(BlockPos const&, BaseCircuitComponent const*);
     virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
     virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
@@ -21,11 +22,11 @@ public:
     virtual void evaluate(CircuitSystem &, BlockPos const&);
     virtual void cacheValues(CircuitSystem &, BlockPos const&);
     virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
-    virtual void getPoweroutDirection(void)const;
+    virtual void getPoweroutDirection()const;
 
     RepeaterCapacitor(void);
     void setDelay(int);
     void delayPulse(RepeaterCapacitor::States);
-    void alternatePulse(void);
-    void extendPulse(void);
+    void alternatePulse();
+    void extendPulse();
 };

@@ -1,9 +1,15 @@
 #pragma once
 
+#include "../block/unmapped/BlockSource"
+#include "../level/Level"
+#include "../container/Container"
+#include "../util/BlockPos"
+#include "../actor/Player"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Actor"
-#include "../../unmapped/ItemDescriptor"
+#include "../nbt/CompoundTag"
+#include "../util/Vec3"
+#include "unmapped/ItemDescriptor"
 
 
 class BucketItem : Item {
@@ -12,21 +18,21 @@ public:
     static long DRINK_DURATION;
     static long mFillTypeToEntityType;
 
-    virtual BucketItem::~BucketItem();
+    BucketItem::~BucketItem()
     virtual bool isDestructive(int)const;
     virtual bool isLiquidClipItem(int)const;
     virtual bool isValidAuxValue(int)const;
-    virtual void uniqueAuxValues(void)const;
+    virtual void uniqueAuxValues()const;
     virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
     virtual void releaseUsing(ItemStack &, Player *, int)const;
-    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
+    virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void getMaxStackSize(ItemDescriptor const&)const;
     virtual bool isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void setIcon(std::string const&, int);
-    virtual void getAuxValuesDescription[abi:cxx11](void)const;
+    virtual void getAuxValuesDescription()const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
     BucketItem(std::string const&, int);

@@ -5,7 +5,7 @@
 class IStructurePoolBlockPredicate {
 
 public:
-    virtual IStructurePoolBlockPredicate::~IStructurePoolBlockPredicate();
+    IStructurePoolBlockPredicate::~IStructurePoolBlockPredicate()
 
     IStructurePoolBlockPredicate(void);
 };

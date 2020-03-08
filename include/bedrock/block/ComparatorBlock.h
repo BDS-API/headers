@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../actor/Actor"
 #include "../actor/Player"
-#include "../../unmapped/Random"
+#include "../actor/Actor"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class ComparatorBlock : ActorBlock {
 
 public:
-    virtual ComparatorBlock::~ComparatorBlock();
+    ComparatorBlock::~ComparatorBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
-    virtual bool isInteractiveBlock(void)const;
-    virtual bool isSignalSource(void)const;
+    virtual bool isInteractiveBlock()const;
+    virtual bool isSignalSource()const;
     virtual void getDirectSignal(BlockSource &, BlockPos const&, int)const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
@@ -28,7 +30,7 @@ public:
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void triggerEvent(BlockSource &, BlockPos const&, int, int)const;
     virtual void getVariant(Block const&)const;
-    virtual bool canSpawnOn(void)const;
+    virtual bool canSpawnOn()const;
 
     ComparatorBlock(std::string const&, int, bool);
     void _refreshOutputState(BlockSource &, BlockPos const&, int)const;

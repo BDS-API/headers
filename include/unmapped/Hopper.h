@@ -1,6 +1,11 @@
 #pragma once
 
+#include "../bedrock/item/ItemStack"
 #include "../bedrock/container/Container"
+#include "../bedrock/actor/ItemActor"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class Hopper {
@@ -25,7 +30,7 @@ public:
     void _getAttachedContainer(BlockSource &, Vec3 const&, int);
     void _tryPushToComposter(BlockSource &, Container &, BlockPos, int);
     void _getContainerAt(BlockSource &, Vec3 const&);
-    bool isOnCooldown(void);
-    void getCooldownTime(void)const;
+    bool isOnCooldown();
+    void getCooldownTime()const;
     void setMoveItemSpeed(int);
 };

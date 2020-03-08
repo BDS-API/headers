@@ -1,28 +1,31 @@
 #pragma once
 
-#include "../../unmapped/Random"
-#include "../../unmapped/BlockSource"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class FireBlock : BlockLegacy {
 
 public:
-    virtual FireBlock::~FireBlock();
+    FireBlock::~FireBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
-    virtual void waterSpreadCausesSpawn(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual void waterSpreadCausesSpawn()const;
+    virtual bool canContainLiquid()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
-    virtual void mayPick(void)const;
+    virtual void mayPick()const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
-    virtual bool canBeSilkTouched(void)const;
+    virtual bool canBeSilkTouched()const;
 
     FireBlock(std::string const&, int);
-    void registerFlammableBlocks(void);
-    void getTickDelay(void)const;
+    void registerFlammableBlocks();
+    void getTickDelay()const;
     bool isValidFireLocation(BlockSource &, BlockPos const&)const;
     bool canBurn(BlockSource &, BlockPos const&);
     void checkBurn(BlockSource &, BlockPos const&, int, Random &, int)const;

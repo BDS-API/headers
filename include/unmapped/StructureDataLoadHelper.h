@@ -1,11 +1,15 @@
 #pragma once
 
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/level/Level"
 
 
 class StructureDataLoadHelper : DataLoadHelper {
 
 public:
-    virtual StructureDataLoadHelper::~StructureDataLoadHelper();
+    StructureDataLoadHelper::~StructureDataLoadHelper()
     virtual void loadPosition(Vec3 const&);
     virtual void loadBlockPosition(BlockPos const&);
     virtual void loadBlockPositionOffset(BlockPos const&);
@@ -20,15 +24,15 @@ public:
     virtual void loadMirror(Mirror);
     virtual void loadActorUniqueID(ActorUniqueID);
     virtual void loadOwnerID(ActorUniqueID);
-    virtual void getType(void)const;
-    virtual void shouldResetTime(void);
-    virtual void _generateNewID(void);
+    virtual void getType()const;
+    virtual void shouldResetTime();
+    virtual void _generateNewID();
 
     StructureDataLoadHelper(BlockPos const&, BlockPos const&, Vec3 const&, ActorUniqueID, Rotation, Mirror, Level &);
     StructureDataLoadHelper(BlockPos const&, BlockPos const&, Vec3 const&, ActorUniqueID, Rotation, Mirror, Level *);
     void _transformPosition(Vec3)const;
     void _transformBlockPos(BlockPos)const;
-    void _rotationToDegrees(void);
-    void _rotationToRadians(void);
+    void _rotationToDegrees();
+    void _rotationToRadians();
     void _transformDirection(Vec3)const;
 };

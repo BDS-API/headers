@@ -7,6 +7,6 @@ class Semaphore {
 public:
 
     Semaphore(void);
-    void notify(void);
-    void wait(void);
+    void notify();
+    void wait();
 };

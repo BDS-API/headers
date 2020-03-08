@@ -6,9 +6,9 @@
 class ActorHasAbilityTest : SimpleIntFilterTest {
 
 public:
-    virtual ActorHasAbilityTest::~ActorHasAbilityTest();
+    ActorHasAbilityTest::~ActorHasAbilityTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorHasAbilityTest(void);
 };

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/Vec3"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/util/BlockPos"
 
 
 class PortalShape {
@@ -12,13 +15,13 @@ public:
     void _getDistanceUntilEdge(BlockPos const&, Facing::Name, BlockSource const&)const;
     void _calculatePortalHeight(BlockSource const&);
     void setAxis(PortalAxis);
-    void getHeight(void)const;
-    void getWidth(void)const;
-    void getNumberOfPortalBlocks(void)const;
-    bool isValid(void)const;
-    bool isFilled(void)const;
-    void createRecord(void)const;
-    void _getIdentifierBlockPos(void)const;
+    void getHeight()const;
+    void getWidth()const;
+    void getNumberOfPortalBlocks()const;
+    bool isValid()const;
+    bool isFilled()const;
+    void createRecord()const;
+    void _getIdentifierBlockPos()const;
     void createPortalBlocks(WorldChangeTransaction &)const;
     void updateNeighboringBlocks(BlockSource &, Vec3 const&)const;
 };

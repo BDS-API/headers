@@ -6,7 +6,7 @@
 class AgentCommandSystem : ITickingSystem {
 
 public:
-    virtual AgentCommandSystem::~AgentCommandSystem();
+    AgentCommandSystem::~AgentCommandSystem()
     virtual void tick(EntityRegistry &);
 
     AgentCommandSystem(void);

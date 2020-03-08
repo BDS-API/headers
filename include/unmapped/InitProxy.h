@@ -12,5 +12,5 @@ public:
 
     InitProxy(ServerLevel &);
     InitProxy(Scoreboard &);
-    void getScoreboard(void);
+    void getScoreboard();
 };

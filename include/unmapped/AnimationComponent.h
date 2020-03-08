@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorAnimationControllerStatePlayer"
+#include "../bedrock/actor/unmapped/ActorAnimationPlayer"
+#include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr"
 
 
 class AnimationComponent {
@@ -11,24 +14,24 @@ public:
     static long mServerFrameIndex;
 
 
-    void getAnimationResourceDefinitionMap(void)const;
-    void getAnimationComponentInitFunction(void)const;
+    void getAnimationResourceDefinitionMap()const;
+    void getAnimationComponentInitFunction()const;
     void initializeServerAnimationComponent(Actor &, AnimationResourceDefinitionMap &, std::function<void ()(ActorAnimationPlayer &)>);
-    void getRenderParams(void);
-    void initInstanceSpecificAnimationData(void);
+    void getRenderParams();
+    void initInstanceSpecificAnimationData();
     void setupDeltaTimeAndLifeTimeParams(bool);
     void initializeClientAnimationComponent(std::function<void ()(ActorAnimationPlayer &)>);
     void applyAnimations(bool);
-    void _getCurrentFrameIndex(void);
-    void setDefaultPoses(void);
-    void getAllBoneOrientations(void);
-    void setDirty(void);
-    void getAnimationPlayers(void);
-    void forceNextUpdateToApplyAnimations(void);
-    void ensureClientAnimationComponentIsInitialized(void);
+    void _getCurrentFrameIndex();
+    void setDefaultPoses();
+    void getAllBoneOrientations();
+    void setDirty();
+    void getAnimationPlayers();
+    void forceNextUpdateToApplyAnimations();
+    void ensureClientAnimationComponentIsInitialized();
     void setDefaultPose(SkeletalHierarchyIndex);
     void getBoneOrientations(SkeletalHierarchyIndex, bool);
-    bool isInitialized(void);
+    bool isInitialized();
     void serverUpdate(Actor &);
     void prepRenderParamsForActor(Actor &, BaseActorRenderContext *, DataDrivenModel *, float);
     void prepRenderParamsForActorRendering(ActorRenderData &, BaseActorRenderContext *, DataDrivenModel *, float);
@@ -42,22 +45,22 @@ public:
     void tryRegisterAnimation(HashedString const&, ActorSkeletalAnimationPtr);
     void playAnimation(HashedString const&, float, std::string const&, std::string const&, std::string const&);
     void setSingleAnimationPlayer(ActorAnimationPlayer *);
-    void haveInitializedScriptsRun(void)const;
+    void haveInitializedScriptsRun()const;
     void setInitializedScriptsRun(bool);
     void findBoneMapping(SkeletalHierarchyIndex, HashedString const&)const;
     void getBoneOrientations(SkeletalHierarchyIndex, bool)const;
-    void getLocators(void);
+    void getLocators();
     void getLocator(HashedString const&);
-    void getChildAnimationComponents(void);
+    void getChildAnimationComponents();
     void setCurrentAnimationControllerStatePlayer(ActorAnimationControllerStatePlayer const*);
-    void getCurrentAnimationControllerStatePlayer(void)const;
-    void getAllBoneOrientations(void)const;
-    void numSkeletalHierarchies(void)const;
+    void getCurrentAnimationControllerStatePlayer()const;
+    void getAllBoneOrientations()const;
+    void numSkeletalHierarchies()const;
     void getAnimationComponent(AnimationComponentGroup, AnimationComponentID);
-    void _getAnimationComponentMapLock(void);
+    void _getAnimationComponentMapLock();
     void _getAllAnimationComponents(AnimationComponentGroup);
-    void incrementCurrentClientFrameIndex(void);
-    void incrementCurrentServerFrameIndex(void);
+    void incrementCurrentClientFrameIndex();
+    void incrementCurrentServerFrameIndex();
     AnimationComponent(AnimationComponentGroup, AnimationComponentID const&);
     void _removeAnimationComponentFromGlobalMap(AnimationComponentGroup, AnimationComponentID const&);
 };

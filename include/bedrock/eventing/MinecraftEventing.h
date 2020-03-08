@@ -1,27 +1,45 @@
 #pragma once
 
-#include "../../unmapped/ResourcePacksInfoData"
-#include "../../unmapped/NewBlockID"
+#include "../../unmapped/BaseCommandBlock"
+#include "../resourcepack/ResourcePackContents"
 #include "../actor/Actor"
-#include "../block/actor/ChalkboardBlockActor"
-#include "../../unmapped/PackSettings"
-#include "../../unmapped/Option"
-#include "../../unmapped/ResourcePack"
-#include "../level/LevelChunk"
-#include "../../core/Path"
-#include "../actor/Player"
-#include "../../unmapped/Event"
-#include "../../unmapped/ItemDescriptor"
-#include "../../unmapped/PushNotificationMessage"
+#include "../../unmapped/PlayerRespawnTelemetryData"
+#include "../../unmapped/GameRules"
 #include "../../unmapped/StackStats"
 #include "../actor/Mob"
-#include "../../unmapped/Block"
-#include "../level/Level"
-#include "../../unmapped/StructureEditorData"
-#include "../../unmapped/PackInstance"
-#include "../../unmapped/ContentIdentity"
-#include "../pack/PackManifest"
 #include "../actor/ArmorStand"
+#include "../../unmapped/StructureEditorData"
+#include "../../unmapped/ContentIdentity"
+#include "../../unmapped/PackInstance"
+#include "../block/actor/ChalkboardBlockActor"
+#include "../../unmapped/Property"
+#include "../pack/PackManifest"
+#include "../../unmapped/MobEffectInstance"
+#include "../level/Level"
+#include "../level/LevelChunk"
+#include "../pack/ResourcePackManager"
+#include "../resourcepack/ResourcePack"
+#include "../../unmapped/StructureTelemetryClientData"
+#include "../resourcepack/ResourcePacksInfoData"
+#include "../item/unmapped/ItemEnchants"
+#include "../../unmapped/Option"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "../../mce/UUID"
+#include "../../unmapped/PackSettings"
+#include "../level/LevelData"
+#include "../item/unmapped/ItemDescriptor"
+#include "../../unmapped/Event"
+#include "../../unmapped/PushNotificationMessage"
+#include "../../unmapped/NewBlockID"
+#include "../../unmapped/Dimension"
+#include "../../unmapped/Block"
+#include "../actor/damagesource/ActorDamageSource"
+#include "../../core/Path"
+#include "../../unmapped/PackReport"
+#include "../item/ItemInstance"
+#include "../level/LevelSettings"
+#include "../../unmapped/BehaviorPackContents"
 
 
 class MinecraftEventing : IMinecraftEventing {
@@ -31,16 +49,16 @@ public:
     static long mUseMethodMap;
     static long mAcquisitionMethodMap;
 
-    virtual MinecraftEventing::~MinecraftEventing();
+    MinecraftEventing::~MinecraftEventing()
     virtual void fireEventPackUpgradeAttempt(PackManifest const&, PackReport const&);
     virtual void init(Social::IUserManager &);
-    virtual void getPlayerSessionId[abi:cxx11](void);
-    virtual void getShouldHaveAchievementsEnabled(void);
+    virtual void getPlayerSessionId();
+    virtual void getShouldHaveAchievementsEnabled();
     virtual void setShouldHaveAchievementsEnabled(bool);
-    virtual void getAchievementsAlwaysEnabled(void);
-    virtual void getPrimaryLocalUserId(void);
-    virtual void forceSendEvents(void);
-    virtual void getEventManager(void)const;
+    virtual void getAchievementsAlwaysEnabled();
+    virtual void getPrimaryLocalUserId();
+    virtual void forceSendEvents();
+    virtual void getEventManager()const;
     virtual void updatePrimaryLocalUserId(unsigned int const&);
     virtual void updateIsLegacyPlayer(bool);
     virtual void updateIsTrial(bool)const;
@@ -55,7 +73,7 @@ public:
     virtual void fireTextToSpeechToggled(bool, bool);
     virtual void fireEventClientIdCreated(int);
     virtual void fireEventFloatPropertyList(std::string const&, std::vector<std::pair<std::string, float>, std::allocator<std::pair<std::string, float>>> const&);
-    virtual void fireEventHardwareInfo(void);
+    virtual void fireEventHardwareInfo();
     virtual void fireEventOptionsUpdated(std::shared_ptr<Options>, InputMode, bool);
     virtual void fireEventChatSettingsUpdated(Player const*, std::vector<Social::Events::Property, std::allocator<Social::Events::Property>> const&)const;
     virtual void fireEventPerformanceMetrics(ProfilerLiteTelemetry const&);
@@ -66,9 +84,9 @@ public:
     virtual void fireEventSignInToXboxLive(Social::XboxLiveUser const&, bool, IMinecraftEventing::SignInStage);
     virtual void fireEventSignOutOfXboxLive(Social::XboxLiveUser const&);
     virtual void fireEventAppSuspended(bool);
-    virtual void fireEventAppPaused(void);
-    virtual void fireEventAppUnpaused(void);
-    virtual void fireEventAppResumed(void);
+    virtual void fireEventAppPaused();
+    virtual void fireEventAppUnpaused();
+    virtual void fireEventAppResumed();
     virtual void fireEventSplitScreenUpdated(IClientInstance const&);
     virtual void fireEventScreenChanged(unsigned int const&, std::string const&, std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&);
     virtual void fireEventPopupClosed(std::string const&)const;
@@ -93,13 +111,13 @@ public:
     virtual void fireEventRespawn(Player &, int);
     virtual void fireEventServerRespawnSearchTime(Player &, PlayerRespawnTelemetryData const&);
     virtual void firePackSettingsEvent(PackSettings const&, PackManifest const&);
-    virtual void removeTestRunIdTag(void);
-    virtual void removeTestTelemetryTag(void);
+    virtual void removeTestRunIdTag();
+    virtual void removeTestTelemetryTag();
     virtual void setTestRunIdTag(int);
     virtual void setTestTelemetryTag(char const*);
-    virtual void stopDebugEventLoggingForAllListeners(void);
-    virtual void tick(void);
-    virtual void updateEditionType(void);
+    virtual void stopDebugEventLoggingForAllListeners();
+    virtual void tick();
+    virtual void updateEditionType();
     virtual void fireEventMultiplayerConnectionStateChanged(bool, std::string const&, std::string const&, unsigned int, unsigned int, unsigned int, std::string const&);
     virtual void fireEventJoinCanceled(LoadingState);
     virtual void fireClubsEngagementEvent(IMinecraftEventing::ClubsEngagementAction, IMinecraftEventing::ClubsEngagementTargetType, char const*, Realms::RealmId, std::string);
@@ -118,7 +136,7 @@ public:
     virtual void fireEventPurchaseResolved(std::string const&, std::string const&, std::string const&, IMinecraftEventing::StoreType, IMinecraftEventing::PurchaseResult, PurchasePath);
     virtual void fireEventIAPPurchaseFailure(std::string const&, unsigned short, std::string const&, PurchaseInfo const&);
     virtual void fireEventPurchaseFailureDetails(int, std::string const&, std::string const&, std::string const&);
-    virtual void fireEventTreatmentsCleared(void);
+    virtual void fireEventTreatmentsCleared();
     virtual void fireEventTreatmentsSet(std::vector<std::string, std::allocator<std::string>> const&);
     virtual void fireEventSetMultiplayerCorrelationId(Player *, std::string const&);
     virtual void fireEventGameSessionStart(Player *, IClientInstance &, Level &, std::string const&, int, std::string const&, std::string const&, bool);
@@ -146,23 +164,23 @@ public:
     virtual void fireEventDwellerRemoved(Actor &, bool);
     virtual void fireEventScriptLoaded(std::string const&, unsigned long);
     virtual void fireEventScriptRan(std::string const&, unsigned long, bool, bool);
-    virtual void fireEventDevConsoleOpen(void);
+    virtual void fireEventDevConsoleOpen();
     virtual void fireEventDevConsoleCommand(std::string const&);
     virtual void fireEventNpcPropertiesUpdated(Actor &, bool);
     virtual void fireEventBoardTextUpdated(ChalkboardBlockActor &);
     virtual void fireEventCameraUsed(bool);
     virtual void fireEventPortfolioExported(int, int);
-    virtual void fireQuickPlayEvent(void);
+    virtual void fireQuickPlayEvent();
     virtual void fireLibraryButtonPressed(std::string const&, std::string const&, std::string const&);
     virtual void fireCourseButtonPressed(std::string const&, std::string const&);
     virtual void fireLessonActionTaken(std::string const&, std::string const&, std::string const&, IMinecraftEventing::EducationLessonAction);
     virtual void fireInAppCodeBuilderActivated(IMinecraftEventing::OpenCodeMethod);
-    virtual void fireCodeCommandButtonPressed(void);
+    virtual void fireCodeCommandButtonPressed();
     virtual void fireIDESelected(std::string const&)const;
-    virtual void fireEventEduResources(void)const;
+    virtual void fireEventEduResources()const;
     virtual void fireEventEduiOSPurchaseTransaction(TransactionStatus const&)const;
     virtual void fireEventEduOptionSet(Option const&)const;
-    virtual void fireEventCodeBuilderClosed(void)const;
+    virtual void fireEventCodeBuilderClosed()const;
     virtual void fireEventEduServiceStatus(std::string const&, std::string const&, int, buffer_span<std::pair<gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>>>)const;
     virtual void fireEventWebviewDownload(std::string const&, WebviewDownloadInfo const&)const;
     virtual void fireEduServiceRequestFailed(std::string const&, std::string const&, std::string const&, buffer_span<std::pair<gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>>>)const;
@@ -196,7 +214,7 @@ public:
     virtual void fireEventUnknownBlockReceived(NewBlockID const&, unsigned short);
     virtual void fireEventSignInEdu(std::string const&, ADRole, IMinecraftEventing::EduSignInStage, std::string const&, std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> const&);
     virtual void fireEventPopupFiredEdu(std::string const&, std::string const&, std::string const&, std::string const&, ActiveDirectoryAction);
-    virtual void fireEventAppConfigurationChanged(void);
+    virtual void fireEventAppConfigurationChanged();
     virtual void fireEventPurchaseGameAttempt(std::string const&, std::string const&, std::string const&);
     virtual void fireEventTrialDeviceIdCorrelation(long, std::string const&, long, std::string const&);
     virtual void fireEventPushNotificationPermission(bool, std::string const&);
@@ -207,7 +225,7 @@ public:
     virtual void fireEventStorePromotionNotification(std::string const&);
     virtual void fireEventWorldGenerated(std::string const&, LevelSettings const&, bool);
     virtual void fireEventExperimentalGameplay(bool, bool);
-    virtual void fireEventCopyWorldEducationEnabled(void);
+    virtual void fireEventCopyWorldEducationEnabled();
     virtual void fireEventStoreOfferClicked(int, int, std::string const&, std::string const&, bool, std::string const&);
     virtual void fireEventStoreSearch(StoreSearchTelemetryData const&);
     virtual void fireEventSearchItemSelected(int, int, std::string const&, int, int);
@@ -217,19 +235,19 @@ public:
     virtual void fireRealmConnectionEventRealmAPIResponse(IMinecraftEventing::RealmConnectionFlow, int);
     virtual void onUserSignIn(Social::XboxLiveUser &);
     virtual void onUserSignOut(Social::XboxLiveUser &);
-    virtual void getSessionId[abi:cxx11](void);
+    virtual void getSessionId();
     virtual void fireEventChunkLoaded(LevelChunk &);
     virtual void fireEventChunkUnloaded(LevelChunk &);
     virtual void fireEventChunkChanged(LevelChunk &);
     virtual void fireEventMultiplayerSessionUpdate(Level const*, Player const*);
-    virtual void fireEventLevelDestruct(void);
-    virtual void flagEventDeepLink(void);
+    virtual void fireEventLevelDestruct();
+    virtual void flagEventDeepLink();
     virtual void flagEventPlayerGameTypeDefault(bool);
     virtual void fireEventLevelDatLoadFailed(std::string const&, std::string const&, bool);
     virtual void fireEventClientLeftGameDueToUnrecoverableError(std::string const&, bool);
     virtual void fireEventPersonaItemPreviewed(std::string const&, std::string const&, unsigned int, unsigned int, IMinecraftEventing::PromotionType, bool, IMinecraftEventing::StoreType);
     virtual void fireEventPersonaSkinChanged(std::string const&, std::string const&, bool);
-    virtual void fireEventPersonaAvatarUpdated(std::string const&, std::vector<std::string, std::allocator<std::string>> const&, std::vector const&<bool, std::allocator<bool>>, std::vector const&<bool, std::allocator<bool>>, bool, bool, std::string const&, std::string const&, std::string const&, bool);
+    virtual void fireEventPersonaAvatarUpdated(std::string const&, std::vector<std::string, std::allocator<std::string>> const&, std::vector const&, std::allocator<bool>);
     virtual void fireEventPersonaAvatarsListed(std::vector<std::string, std::allocator<std::string>> const&);
     virtual void fireEventPersonaInitalizationEvent(unsigned int, std::string const&, std::string const&);
     virtual void fireEventPersonaGeneralError(std::string const&);
@@ -239,17 +257,17 @@ public:
     virtual void fireEventPersonaXForgeResponses(std::vector<std::string, std::allocator<std::string>> const&, int);
     virtual void fireEventPersonaCategoryInformation(std::string const&);
     virtual void fireEventWorldHistoryPackSourceMissingDuringUpgrade(std::string const&, std::string const&, std::string const&);
-    virtual void fireEventFixedMarketplaceWorldUsingV2VillagersToUseV1(void);
+    virtual void fireEventFixedMarketplaceWorldUsingV2VillagersToUseV1();
     virtual void fireEventAccountTransferStateChanged(std::string const&, TransferState, std::string const&);
     virtual void fireStructureBlockAction(IMinecraftEventing::StructureBlockActionType, StructureEditorData const&, StructureTelemetryClientData const*);
     virtual void fireStructureBlockRedstoneActivated(IMinecraftEventing::StructureBlockActionType, StructureEditorData const&, StructureTelemetryClientData const*);
     virtual void fireStructureBlockLoadedInUnloadedChunks(unsigned int, BlockPos const&, BlockPos const&);
 
     MinecraftEventing(Core::Path const&);
-    void init(void);
-    void unregisterOptionsObserver(void);
+    void init();
+    void unregisterOptionsObserver();
     void fireEventGameTypeChanged(Player *, GameType, GameType);
-    void fireEventHeartbeat(void);
+    void fireEventHeartbeat();
     void fireEventBehaviorErrored(Player *, std::string);
     void fireEventBehaviorFailed(Player *, std::string);
     void fireEventPlayerMovementSettings(Player *);
@@ -312,7 +330,7 @@ public:
     void fireEventSignedBookOpened(Player *, bool);
     void fireEventPatternAdded(Player *, ItemInstance const&);
     void fireEventPatternRemoved(Player *, int, int, int, int, int);
-    void _generateWorldSessionId(void);
+    void _generateWorldSessionId();
     void fireEventWorldUnloaded(Player *, LevelData const&, unsigned int);
     void fireEventAwardAchievement(Player *, MinecraftEventing::AchievementIds);
     void fireEventAwardTrophy(Player const*, unsigned int);
@@ -320,8 +338,8 @@ public:
     void fireEventMultiplayerRoundEnd(Player *, int);
     void fireEventSlashCommandExecuted(Player *, std::string const&, int, int, std::string const&);
     void fireEventCaravanChanged(Player *, int, int);
-    void _getUserManagerConst(void)const;
-    void fireEventFirstTimeClientOpen(void);
+    void _getUserManagerConst()const;
+    void fireEventFirstTimeClientOpen();
     void fireEventGameRulesLoaded(Player *, GameRules const&);
     void fireEventPlayerTransform(Player &);
     void fireEventPlayerJoin(Player &);

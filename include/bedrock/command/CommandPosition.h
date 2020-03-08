@@ -1,7 +1,7 @@
 #pragma once
 
 #include "orgin/CommandOrigin"
-#include "../../unmapped/Vec3"
+#include "../util/Vec3"
 
 
 class CommandPosition {

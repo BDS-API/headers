@@ -10,6 +10,6 @@ public:
 
     MolangQueryFunctionPtr(MolangQueryFunctionPtr const&);
     MolangQueryFunctionPtr(std::function<float ()(RenderParams &, std::vector<float, std::allocator<float>> const&)> const*, HashedString const&);
-    void getQueryFunctionPtr(void)const;
+    void getQueryFunctionPtr()const;
     MolangQueryFunctionPtr(MolangQueryFunctionPtr&&);
 };

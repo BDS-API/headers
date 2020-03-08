@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/level/LevelChunk"
 

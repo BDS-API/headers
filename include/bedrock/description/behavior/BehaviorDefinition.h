@@ -3,15 +3,17 @@
 #include "../../../json/Value"
 #include "../../actor/Actor"
 #include "../../../unmapped/BehaviorFactory"
+#include "../../actor/behavior/BehaviorNode"
+#include "../../../unmapped/BehaviorData"
 
 
 class BehaviorDefinition {
 
 public:
-    virtual BehaviorDefinition::~BehaviorDefinition();
+    BehaviorDefinition::~BehaviorDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
     virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
 
     BehaviorDefinition(void);
-    void getTreeDefinition(void)const;
+    void getTreeDefinition()const;
 };

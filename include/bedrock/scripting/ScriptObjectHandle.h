@@ -8,5 +8,5 @@ class ScriptObjectHandle {
 
 public:
 
-    bool isEmpty(void)const;
+    bool isEmpty()const;
 };

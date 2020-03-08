@@ -6,9 +6,9 @@
 class FilterTestDistanceToNearestPlayer : SimpleFloatFilterTest {
 
 public:
-    virtual FilterTestDistanceToNearestPlayer::~FilterTestDistanceToNearestPlayer();
+    FilterTestDistanceToNearestPlayer::~FilterTestDistanceToNearestPlayer()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     FilterTestDistanceToNearestPlayer(void);
 };

@@ -1,20 +1,21 @@
 #pragma once
 
-#include "../io/BinaryStream"
-#include "../actor/Actor"
-#include "../io/IDataInput"
-#include "../io/IDataOutput"
-#include "../actor/Player"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/Block"
-#include "../level/Level"
-#include "../block/BlockLegacy"
-#include "../../unmapped/ItemEnchants"
 #include "../io/ReadOnlyBinaryStream"
-#include "../../unmapped/RecipeIngredient"
-#include "../../unmapped/Tick"
-#include "../block/actor/BlockActor"
+#include "../util/Tick"
+#include "../io/BinaryStream"
+#include "../block/unmapped/BlockSource"
+#include "unmapped/ItemEnchants"
 #include "../../json/Value"
+#include "../io/IDataOutput"
+#include "../../unmapped/RecipeIngredient"
+#include "../actor/Player"
+#include "../../unmapped/Block"
+#include "../block/actor/BlockActor"
+#include "../actor/Actor"
+#include "../nbt/CompoundTag"
+#include "../block/BlockLegacy"
+#include "../io/IDataInput"
+#include "../level/Level"
 
 
 class ItemStackBase {
@@ -33,19 +34,19 @@ public:
     static long TAG_STORE_CAN_DESTROY[abi:cxx11];
     static long TAG_CHARGED_ITEM[abi:cxx11];
 
-    virtual ItemStackBase::~ItemStackBase();
+    ItemStackBase::~ItemStackBase()
 
-    bool isValid(void)const;
-    bool isItem(void)const;
-    bool isEmptyStack(void)const;
-    void getStackSize(void)const;
-    void getItem(void)const;
+    bool isValid()const;
+    bool isItem()const;
+    bool isEmptyStack()const;
+    void getStackSize()const;
+    void getItem()const;
     void setStackSize(unsigned char);
     void _write(BinaryStream &)const;
     void _read(ReadOnlyBinaryStream &);
     bool isInstance(Item const&)const;
     void sameItem(int, int)const;
-    bool hasFeedingAnimation(void)const;
+    bool hasFeedingAnimation()const;
     void forceSetCount(unsigned char);
     ItemStackBase(void);
     void init(int, int, int);
@@ -59,123 +60,123 @@ public:
     ItemStackBase(Item const&, int, int);
     ItemStackBase(Item const&, int, int, CompoundTag const*);
     ItemStackBase(ItemStackBase const&);
-    void getId(void)const;
-    void _makeChargedItemFromUserData(void);
+    void getId()const;
+    void _makeChargedItemFromUserData();
     void _cloneComponents(ItemStackBase const&);
     ItemStackBase(RecipeIngredient const&);
-    void getDescriptor(void)const;
-    void getDamageValue(void)const;
+    void getDescriptor()const;
+    void getDamageValue()const;
     void _setItem(int);
     void setAuxValue(short);
-    void setNull(void);
-    bool isNull(void)const;
-    void _hasComponents(void)const;
-    void clearChargedItem(void);
-    void _initComponents(void);
+    void setNull();
+    bool isNull()const;
+    void _hasComponents()const;
+    void clearChargedItem();
+    void _initComponents();
     void add(int);
     void set(int);
     void remove(int);
-    void getMaxStackSize(void)const;
-    bool hasUserData(void)const;
-    bool hasCompoundTextUserData(void)const;
-    void getUserData(void)const;
+    void getMaxStackSize()const;
+    bool hasUserData()const;
+    bool hasCompoundTextUserData()const;
+    void getUserData()const;
     bool hasSameUserData(ItemStackBase const&)const;
     bool hasSameUserData(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     bool hasSameAuxValue(ItemStackBase const&)const;
-    void getLegacyBlock(void)const;
-    void getAuxValue(void)const;
-    bool isDamageableItem(void)const;
+    void getLegacyBlock()const;
+    void getAuxValue()const;
+    bool isDamageableItem()const;
     void setUserData(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>);
-    void getNetworkUserData(void)const;
+    void getNetworkUserData()const;
     void addCustomUserData(BlockActor &, BlockSource &);
-    bool isGlint(void)const;
-    bool showsDurabilityInCreative(void)const;
+    bool isGlint()const;
+    bool showsDurabilityInCreative()const;
     void setJustBrewed(bool);
-    bool wasJustBrewed(void)const;
+    bool wasJustBrewed()const;
     void startCoolDown(Player *)const;
     bool isEquivalentArmor(ItemStackBase const&)const;
     void retrieveIDFromIDAux(int);
     void retrieveEnchantFromIDAux(int);
     void retrieveAuxValFromIDAux(int);
     bool isValidAuxValue(int)const;
-    bool isBlock(void)const;
-    bool isThrowable(void)const;
-    bool isExplodable(void)const;
-    bool isPattern(void)const;
+    bool isBlock()const;
+    bool isThrowable()const;
+    bool isExplodable()const;
+    bool isPattern()const;
     void refreshedInContainer(Level &);
-    bool isEnchanted(void)const;
-    void getEnchantsFromUserData(void)const;
-    void getEnchantSlot(void)const;
+    bool isEnchanted()const;
+    void getEnchantsFromUserData()const;
+    void getEnchantSlot()const;
     void saveEnchantsToUserData(ItemEnchants const&);
-    void getEnchantValue(void)const;
-    bool isEnchantingBook(void)const;
-    bool isFullStack(void)const;
-    bool isStackable(void)const;
-    bool isDamaged(void)const;
+    void getEnchantValue()const;
+    bool isEnchantingBook()const;
+    bool isFullStack()const;
+    bool isStackable()const;
+    bool isDamaged()const;
     bool isStackable(ItemStackBase const&)const;
-    bool isStackedByData(void)const;
+    bool isStackedByData()const;
     bool componentsMatch(ItemStackBase const&)const;
     void setDamageValue(short);
-    void getMaxDamage(void)const;
+    void getMaxDamage()const;
     void hurtAndBreak(int, Actor *);
-    void getAttackDamage(void)const;
+    void getAttackDamage()const;
     bool canDestroySpecial(Block const&)const;
     void snap(Player *);
     void sameItem(ItemStackBase const&)const;
     void sameItemAndAux(ItemStackBase const&)const;
-    bool hasCustomHoverName(void)const;
-    void getRendererId(void)const;
+    bool hasCustomHoverName()const;
+    void getRendererId()const;
     bool hasComponent(std::string const&)const;
-    void getBlock(void)const;
+    void getBlock()const;
     void setBlock(Block const*);
-    void getIdAux(void)const;
-    void getIdAuxEnchanted(void)const;
+    void getIdAux()const;
+    void getIdAuxEnchanted()const;
     bool isInstance(BlockLegacy const&)const;
     void matches(ItemStackBase const&)const;
     bool matchesItem(ItemStackBase const&)const;
     bool matchesChargedItem(ItemStackBase const&)const;
-    bool hasChargedItem(void)const;
-    void getChargedItem(void)const;
-    void getColor(void)const;
-    void save(void)const;
+    bool hasChargedItem()const;
+    void getChargedItem()const;
+    void getColor()const;
+    void save()const;
     void _saveComponents(CompoundTag &)const;
     void load(CompoundTag const&);
     void _loadItem(CompoundTag const&);
     void load(CompoundTag const&, Level &);
     void getIcon(int, bool)const;
-    void getUseAnimation(void)const;
-    bool isArmorItem(void)const;
-    bool isHorseArmorItem(void)const;
-    bool isWearableItem(void)const;
-    bool isOffhandItem(void)const;
-    bool isMusicDiscItem(void)const;
-    bool isPotionItem(void)const;
-    bool isLiquidClipItem(void)const;
+    void getUseAnimation()const;
+    bool isArmorItem()const;
+    bool isHorseArmorItem()const;
+    bool isWearableItem()const;
+    bool isOffhandItem()const;
+    bool isMusicDiscItem()const;
+    bool isPotionItem()const;
+    bool isLiquidClipItem()const;
     void setCustomName(std::string const&);
     void setCustomLore(std::vector<std::string, std::allocator<std::string>> const&);
-    void resetHoverName(void);
-    void getBaseRepairCost(void)const;
+    void resetHoverName();
+    void getBaseRepairCost()const;
     void setRepairCost(int);
     bool canPlaceOn(Block const*)const;
     bool canDestroy(Block const*)const;
-    void getBlockingTick(void)const;
+    void getBlockingTick()const;
     void setBlockingTick(Tick);
-    void getPickupPopPercentage(void)const;
-    void getIsValidPickupTime(void)const;
-    void getPickupTime(void)const;
-    void setPickupTime(void);
+    void getPickupPopPercentage()const;
+    void getIsValidPickupTime()const;
+    void getPickupTime()const;
+    void setPickupTime();
     void setPickupTime(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>);
     void setShowPickUp(bool);
     void setChargedItem(ItemInstance const&, bool);
     void _setChargedItem(ItemInstance const&);
-    bool canBeCharged(void)const;
+    bool canBeCharged()const;
     void _loadComponents(CompoundTag const&);
     void addComponents(Json::Value const&, std::string &);
     bool isValidComponent(std::string const&);
     void updateComponent(std::string const&, Json::Value const&);
-    void _updateCompareHashes(void);
+    void _updateCompareHashes();
     void serializeComponents(IDataOutput &)const;
     void deserializeComponents(IDataInput &);
-    bool isExperimental(void)const;
-    void getRequiredBaseGameVersion(void)const;
+    bool isExperimental()const;
+    void getRequiredBaseGameVersion()const;
 };

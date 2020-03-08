@@ -8,7 +8,7 @@ class FlatFileSystemImpl {
 
 public:
 
-    void getFlatFileManifestTracker(void)const;
+    void getFlatFileManifestTracker()const;
     void createFlatFile(Core::Path const&, Core::Path const&);
     void shouldAccessFlatFile(Core::Path const&, Core::PathBuffer<std::string> &, bool);
     bool isDirectoryPathAFlatFile(Core::Path const&);

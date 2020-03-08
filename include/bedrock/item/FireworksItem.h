@@ -1,6 +1,12 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../level/Level"
+#include "../container/Container"
+#include "../actor/Actor"
+#include "../util/Vec3"
+#include "../block/unmapped/BlockSource"
+#include "../util/BlockPos"
+#include "../actor/Player"
 
 
 class FireworksItem : Item {
@@ -10,7 +16,7 @@ public:
     static long TAG_EXPLOSIONS[abi:cxx11];
     static long TAG_E_FLIGHT[abi:cxx11];
 
-    virtual FireworksItem::~FireworksItem();
+    FireworksItem::~FireworksItem()
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;

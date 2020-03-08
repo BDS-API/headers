@@ -5,8 +5,8 @@
 class OnDeathDescription : TriggerDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual OnDeathDescription::~OnDeathDescription();
+    virtual void getJsonName()const;
+    OnDeathDescription::~OnDeathDescription()
 
     OnDeathDescription(void);
 };

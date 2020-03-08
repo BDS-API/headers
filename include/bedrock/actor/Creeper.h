@@ -1,24 +1,25 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionIdentifier"
 
 
 class Creeper : Monster {
 
 public:
-    virtual Creeper::~Creeper();
-    virtual void normalTick(void);
+    Creeper::~Creeper()
+    virtual void normalTick();
     virtual void die(ActorDamageSource const&);
-    virtual void _onSizeUpdated(void);
-    virtual void useNewAi(void)const;
+    virtual void _onSizeUpdated();
+    virtual void useNewAi()const;
 
     Creeper(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void _getSwell(void)const;
+    void _getSwell()const;
     void _setOldSwell(int);
     void _setSwellDir(int);
-    void getSwellDir(void);
+    void getSwellDir();
     void _setSwell(int);
-    void _getOldSwell(void)const;
+    void _getOldSwell()const;
     void getSwelling(float)const;
 };

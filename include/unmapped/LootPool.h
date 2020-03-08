@@ -2,6 +2,7 @@
 
 #include "../bedrock/item/ItemStack"
 #include "../json/Value"
+#include "../bedrock/util/Random"
 
 
 class LootPool {

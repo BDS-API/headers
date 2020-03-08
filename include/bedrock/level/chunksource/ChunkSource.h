@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../LevelChunk"
-#include "../../../unmapped/BlockSource"
-#include "../../../unmapped/Random"
-#include "../LevelChunkFinalDeleter"
-#include "../../../unmapped/ChunkPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/ChunkPos"
 #include "../../../unmapped/Dimension"
+#include "../../util/BlockPos"
+#include "../LevelChunk"
+#include "../../util/Random"
+#include "../LevelChunkFinalDeleter"
 
 
 class ChunkSource {
 
 public:
-    virtual ChunkSource::~ChunkSource();
-    virtual void shutdown(void);
-    virtual bool isShutdownDone(void);
+    ChunkSource::~ChunkSource()
+    virtual void shutdown();
+    virtual bool isShutdownDone();
     virtual void getExistingChunk(ChunkPos const&);
     virtual void getRandomChunk(Random &);
     virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
@@ -24,20 +24,20 @@ public:
     virtual void loadChunk(LevelChunk &, bool);
     virtual void postProcessMobsAt(BlockSource *, int, int, Random &);
     virtual void saveLiveChunk(LevelChunk &);
-    virtual void hintDiscardBatchBegin(void);
-    virtual void hintDiscardBatchEnd(void);
+    virtual void hintDiscardBatchBegin();
+    virtual void hintDiscardBatchEnd();
     virtual void acquireDiscarded(std::unique_ptr<LevelChunk, LevelChunkFinalDeleter>);
-    virtual void compact(void);
-    virtual void flushPendingWrites(void);
+    virtual void compact();
+    virtual void flushPendingWrites();
     virtual bool isWithinWorldLimit(ChunkPos const&)const;
-    virtual void getChunkMap(void);
-    virtual void getStorage(void)const;
-    virtual void clearDeletedEntities(void);
+    virtual void getChunkMap();
+    virtual void getStorage()const;
+    virtual void clearDeletedEntities();
 
     void createEmptyView(ChunkSource::LoadMode, bool, std::function<void ()(buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>);
     void fireChunkLoaded(LevelChunk &);
     void checkAndLaunchChunkGenerationTasks(bool);
-    void _hasTooManyChunksPendingDelete(void)const;
+    void _hasTooManyChunksPendingDelete()const;
     void _spawnChunkGenerationTasks(int, bool);
     void _checkAndDispatchTaskForLevelChunk(ChunkPos const&, bool);
     void _dispatchTaskForLevelChunk(std::shared_ptr<LevelChunk> &, std::shared_ptr<ChunkViewSource>, bool);
@@ -45,9 +45,9 @@ public:
     void _launchPostProcessingTask(std::shared_ptr<LevelChunk> &, std::shared_ptr<ChunkViewSource>, bool);
     void _launchReplacementDataTask(std::shared_ptr<LevelChunk> &, std::shared_ptr<ChunkViewSource>, bool);
     void _launchLightingTask(std::shared_ptr<LevelChunk> &, std::shared_ptr<ChunkViewSource>, bool);
-    void getDimension(void)const;
+    void getDimension()const;
     void _loadChunkTask(LevelChunk &);
-    void _decrementTaskCountAndLaunchNewTasksFromTask(void);
+    void _decrementTaskCountAndLaunchNewTasksFromTask();
     void _checkForUnblockingChunks(LevelChunk &);
     void _postProcessingTask(LevelChunk &, std::shared_ptr<ChunkViewSource>);
     void _checkForReplacementDataTask(LevelChunk &, std::shared_ptr<ChunkViewSource>);
@@ -58,11 +58,11 @@ public:
     void _chunkAtStage(std::weak_ptr<LevelChunk>, ChunkState);
     ChunkSource(Dimension *, int);
     ChunkSource(ChunkSource&);
-    void getChunkSide(void)const;
+    void getChunkSide()const;
     ChunkSource(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>);
-    void getLevel(void)const;
+    void getLevel()const;
     void _freeChunkGenerationGridMap(ChunkPos const&);
-    void getParent(void)const;
+    void getParent()const;
     void getAvailableChunk(ChunkPos const&);
     void getGeneratedChunk(ChunkPos const&);
     void getAvailableChunkAt(BlockPos const&);

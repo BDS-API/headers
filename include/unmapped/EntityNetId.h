@@ -11,7 +11,7 @@ public:
     void serialize(BinaryStream &)const;
     void deserialize(ReadOnlyBinaryStream &);
     EntityNetId(unsigned int);
-    void getHash(void)const;
+    void getHash()const;
     void _serverGetEntityNetId(EntityContext &);
     void _serverTryGetEntity(EntityRegistry &);
 };

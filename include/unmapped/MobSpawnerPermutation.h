@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
 
 
 class MobSpawnerPermutation {
@@ -7,6 +8,6 @@ class MobSpawnerPermutation {
 public:
 
     MobSpawnerPermutation(MobSpawnerPermutation const&);
-    void getIdentifier(void)const;
+    void getIdentifier()const;
     MobSpawnerPermutation(int, ActorDefinitionIdentifier const&);
 };

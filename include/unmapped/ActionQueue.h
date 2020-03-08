@@ -9,6 +9,6 @@ public:
     ActionQueue(void);
     void pushBackActionEvent(ActionEvent);
     void getNextActionEvent(ActionEvent &);
-    void clearQueue(void);
-    bool isEmpty(void)const;
+    void clearQueue();
+    bool isEmpty()const;
 };

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/level/structure/piece/StructurePiece"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Random"
 
 
 class OceanRuinPieces {
@@ -25,6 +28,6 @@ public:
     void _addClusterRuins(StructureManager &, Random &, Rotation const&, BlockPos const&, OceanRuinConfiguration const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &);
     void _allPositions(Random &, int, int, int);
     void _addPiece(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, OceanRuinConfiguration const&, bool, float);
-    void init(void);
+    void init();
     void addPieces(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, OceanRuinConfiguration const&);
 };

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
+#include "../../util/BlockPos"
 
 
 class SmokerBlockActor : FurnaceBlockActor {
 
 public:
-    virtual SmokerBlockActor::~SmokerBlockActor();
-    virtual void getName[abi:cxx11](void)const;
+    SmokerBlockActor::~SmokerBlockActor()
+    virtual void getName()const;
 
     SmokerBlockActor(BlockPos const&);
 };

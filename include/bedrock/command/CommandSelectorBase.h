@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
 #include "orgin/CommandOrigin"
 #include "../actor/Actor"
+#include "../util/BlockPos"
 
 
 class CommandSelectorBase {
@@ -12,12 +12,12 @@ public:
     CommandSelectorBase(bool);
     void setVersion(int);
     void setType(CommandSelectionType);
-    bool isExplicitIdSelector(void)const;
-    void getType(void)const;
+    bool isExplicitIdSelector()const;
+    void getType()const;
     void setOrder(CommandSelectionOrder);
-    void getOrder(void)const;
+    void getOrder()const;
     void addNameFilter(InvertableFilter<std::string> const&);
-    bool hasName(void)const;
+    bool hasName()const;
     void addTypeFilter(InvertableFilter<std::string> const&);
     void addTagFilter(InvertableFilter<std::string> const&);
     void setResultCount(unsigned long);

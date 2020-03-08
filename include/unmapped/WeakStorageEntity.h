@@ -10,6 +10,6 @@ public:
     WeakStorageEntity(OwnerStorageEntity const&);
     WeakStorageEntity(StackResultStorageEntity const&);
     WeakStorageEntity(WeakStorageEntity::VariadicInit, EntityContext const&);
-    void _reset(void);
-    void _isSet(void)const;
+    void _reset();
+    void _isSet()const;
 };

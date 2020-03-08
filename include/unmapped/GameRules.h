@@ -16,14 +16,14 @@ public:
 
     GameRules(GameRules const&);
     GameRules(GameRules&&);
-    void getRules(void)const;
+    void getRules()const;
     void getRule(GameRuleId)const;
     bool hasRule(GameRuleId)const;
     GameRules(void);
-    void _registerRules(void);
-    void _validateRules(void);
-    void _validateMarketplaceGameRuleTypes(void);
-    void createAllGameRulesPacket(void)const;
+    void _registerRules();
+    void _validateRules();
+    void _validateMarketplaceGameRuleTypes();
+    void createAllGameRulesPacket()const;
     void deserializeRules(GameRulesChangedPacketData const&);
     void nameToGameRuleIndex(std::string const&)const;
     void setRule(GameRuleId, bool, bool, bool *, bool *, GameRule::ValidationError *);
@@ -38,7 +38,7 @@ public:
     void getFloat(GameRuleId)const;
     void setTagData(CompoundTag &)const;
     void getTagData(CompoundTag const&);
-    void setMarketplaceOverrides(void);
-    void _getMarketplaceGameRulesDefaultMap(void);
-    void _registerEDURules(void);
+    void setMarketplaceOverrides();
+    void _getMarketplaceGameRulesDefaultMap();
+    void _registerEDURules();
 };

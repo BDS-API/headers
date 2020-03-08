@@ -7,6 +7,6 @@ class ContentTierManager {
 public:
 
     ContentTierManager(void);
-    void _calculateMemoryTier(void);
-    void getContentTierInfo(void)const;
+    void _calculateMemoryTier();
+    void getContentTierInfo()const;
 };

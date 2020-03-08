@@ -1,6 +1,9 @@
 #pragma once
 
-#include "../../unmapped/ItemDescriptor"
+#include "../level/Level"
+#include "../actor/Actor"
+#include "../nbt/CompoundTag"
+#include "unmapped/ItemDescriptor"
 
 
 class SparklerItem : ChemistryStickItem {
@@ -9,9 +12,9 @@ public:
     static long MAX_ACTIVE_TICKS;
     static long COLORS;
 
-    virtual SparklerItem::~SparklerItem();
-    virtual bool isHandEquipped(void)const;
-    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
+    SparklerItem::~SparklerItem()
+    virtual bool isHandEquipped()const;
+    virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
     virtual bool isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;

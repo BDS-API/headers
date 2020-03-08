@@ -10,6 +10,6 @@ public:
     HopperComponent(HopperComponent&&);
     HopperComponent(void);
     void pullInItems(Actor &);
-    void getLastPosition(void)const;
+    void getLastPosition()const;
     HopperComponent(HopperComponent const&);
 };

@@ -9,6 +9,6 @@ class Measurement {
 public:
 
     Measurement(Social::Events::Measurement const&);
-    void getValue(void)const;
+    void getValue()const;
     void updateMeasurement(Social::Events::Measurement const&);
 };

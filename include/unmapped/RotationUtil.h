@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Random"
 
 
 class RotationUtil {

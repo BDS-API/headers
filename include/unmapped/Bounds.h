@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/ChunkPos"
+#include "../bedrock/util/BlockPos"
 
 
 class Bounds {
@@ -12,14 +14,14 @@ public:
     void gridToChunk(BlockPos const&)const;
     void resize(Pos const&, Pos const&);
     void contains(Pos const&)const;
-    void begin(void)const;
-    void end(void)const;
+    void begin()const;
+    void end()const;
     Bounds(Bounds const&);
-    void flatten(void);
+    void flatten();
     Bounds(void);
     void idxFromWorldPos(Pos const&)const;
     void idx(Pos const&)const;
-    void getCenter(void)const;
+    void getCenter()const;
     void contains2D(BlockPos const&)const;
-    void getWorldCenter2D(void)const;
+    void getWorldCenter2D()const;
 };

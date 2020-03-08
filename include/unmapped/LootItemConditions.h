@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../json/Value"
+#include "../bedrock/util/Random"
 #include "../bedrock/item/condition/LootItemCondition"
 
 

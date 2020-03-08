@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../../unmapped/MoveActorAbsoluteData"
+#include "../../io/ReadOnlyBinaryStream"
 
 
 class MoveActorAbsolutePacket : Packet {
 
 public:
-    virtual MoveActorAbsolutePacket::~MoveActorAbsolutePacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    MoveActorAbsolutePacket::~MoveActorAbsolutePacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

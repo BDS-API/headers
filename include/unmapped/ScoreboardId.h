@@ -11,6 +11,6 @@ public:
     ScoreboardId(void);
     ScoreboardId(long);
     ScoreboardId(ScoreboardId const&);
-    void getHash(void)const;
-    void getIdentityDef(void)const;
+    void getHash()const;
+    void getIdentityDef()const;
 };

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../../../item/ItemStack"
 #include "../../../actor/Player"
 
 
@@ -8,9 +9,9 @@ using namespace AgentCommands;
 class PlaceCommand : AgentCommands::Command {
 
 public:
-    virtual void AgentCommands::PlaceCommand::~PlaceCommand();
-    virtual void execute(void);
-    virtual bool isDone(void);
+    AgentCommands::PlaceCommand::~PlaceCommand()
+    virtual void execute();
+    virtual bool isDone();
 
     PlaceCommand(Player &, ItemStack const&, int, AgentCommands::Direction);
 };

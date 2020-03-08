@@ -1,11 +1,15 @@
 #pragma once
 
-#include "../level/Level"
+#include "../block/unmapped/BlockSource"
+#include "../../unmapped/MapItemSavedData"
 #include "../../unmapped/Dimension"
-#include "../../unmapped/BlockSource"
+#include "../util/BlockPos"
+#include "../../unmapped/MapItemTrackedActor"
+#include "../actor/Actor"
 #include "../../unmapped/MapSample"
 #include "../nbt/CompoundTag"
-#include "../../unmapped/ItemDescriptor"
+#include "unmapped/ItemDescriptor"
+#include "../level/Level"
 
 
 class MapItem : ComplexItem {
@@ -18,9 +22,9 @@ public:
     static long TAG_MAP_NAME_INDEX[abi:cxx11];
     static long TAG_MAP_INIT[abi:cxx11];
 
-    virtual MapItem::~MapItem();
+    MapItem::~MapItem()
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
-    virtual void buildDescriptionId[abi:cxx11](ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
+    virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
     virtual void refreshedInContainer(ItemStackBase &, Level &)const;
     virtual void fixupOnLoad(ItemStackBase &, Level &)const;

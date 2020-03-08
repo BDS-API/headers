@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/PageContent"
 #include "../../io/BinaryStream"
+#include "../../../unmapped/PageContent"
 
 
 class BookEditPacket : Packet {
 
 public:
-    virtual BookEditPacket::~BookEditPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    BookEditPacket::~BookEditPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
@@ -25,5 +25,5 @@ public:
     void setToDeletePage(int, int);
     void setToSwapPages(int, int, int);
     void setToFinalize(int, std::string, std::string, std::string);
-    void getPage(void)const;
+    void getPage()const;
 };

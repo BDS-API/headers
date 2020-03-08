@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/Random"
+#include "../../../unmapped/LootTableContext"
 #include "../../../json/Value"
+#include "../../util/Random"
 
 
 class LootItemRandomDifficultyChanceCondition : LootItemCondition {
 
 public:
-    virtual LootItemRandomDifficultyChanceCondition::~LootItemRandomDifficultyChanceCondition();
+    LootItemRandomDifficultyChanceCondition::~LootItemRandomDifficultyChanceCondition()
     virtual void applies(Random &, LootTableContext &);
 
     LootItemRandomDifficultyChanceCondition(Json::Value);

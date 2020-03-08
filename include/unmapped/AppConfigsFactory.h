@@ -6,5 +6,5 @@ class AppConfigsFactory {
 
 public:
 
-    void createAppConfigs(void);
+    void createAppConfigs();
 };

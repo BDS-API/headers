@@ -11,7 +11,7 @@ public:
     static long supportedImageExtensions[abi:cxx11];
 
 
-    void clearLoaders(void);
+    void clearLoaders();
     void registerLoader(ResourceFileSystem, std::unique_ptr<ResourceLoader, std::default_delete<ResourceLoader>>);
     void load(ResourceLocation const&, std::string &);
     void load(ResourceLocation const&, std::string &, std::vector<std::string, std::allocator<std::string>> const&);

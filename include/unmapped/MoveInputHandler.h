@@ -1,30 +1,31 @@
 #pragma once
 
-#include "../bedrock/actor/Player"
 #include "../bedrock/network/packet/PlayerAuthInputPacket"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/actor/Player"
 
 
 class MoveInputHandler : MoveInput {
 
 public:
-    virtual MoveInputHandler::~MoveInputHandler();
+    MoveInputHandler::~MoveInputHandler()
     virtual void tick(Player &);
-    virtual void clearInputState(void);
-    virtual bool isChangeHeight(void)const;
-    virtual bool isPlayerMoving(void)const;
+    virtual void clearInputState();
+    virtual bool isChangeHeight()const;
+    virtual bool isPlayerMoving()const;
     virtual void fillInputPacket(PlayerAuthInputPacket &);
 
     MoveInputHandler(void);
     void _updateXY(bool);
-    bool isMovingForward(void)const;
-    bool isMovingLeft(void)const;
-    bool isMovingRight(void)const;
-    bool wantsMoveForward(void)const;
-    bool isJumpDown(void)const;
+    bool isMovingForward()const;
+    bool isMovingLeft()const;
+    bool isMovingRight()const;
+    bool wantsMoveForward()const;
+    bool isJumpDown()const;
     void setSneakPersistence(bool);
     void setGazeDirection(Vec3 const&);
-    void getGazeDirection(void)const;
-    void _toggleSneak(void);
+    void getGazeDirection()const;
+    void _toggleSneak();
     void _getLookBitmask(MoveInputHandler::LookDirection);
     void _getLookBitmask(MoveInputHandler::LookDirection, MoveInputHandler::LookDirection);
     void _updateGGVector(short, float, float, float);

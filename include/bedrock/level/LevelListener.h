@@ -1,20 +1,24 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/BlockSourceListener"
-#include "../../unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../actor/Player"
-#include "../nbt/CompoundTag"
+#include "../../unmapped/MolangVariableMap"
 #include "../../unmapped/HashedString"
-#include "../../unmapped/Vec3"
+#include "../block/unmapped/BlockSourceListener"
+#include "../block/unmapped/BlockSource"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "../../unmapped/Block"
+#include "../actor/Actor"
+#include "../actor/unmapped/ActorDefinitionIdentifier"
+#include "../nbt/CompoundTag"
+#include "../util/Vec3"
+#include "../../unmapped/TextureUVCoordinateSet"
 
 
 class LevelListener : BlockSourceListener {
 
 public:
-    virtual LevelListener::~LevelListener();
-    virtual void allChanged(void);
+    LevelListener::~LevelListener()
+    virtual void allChanged();
     virtual void addParticle(ParticleType, Vec3 const&, Vec3 const&, int, CompoundTag const*, bool);
     virtual void sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int);
     virtual void addParticleEffect(HashedString const&, Vec3 const&, MolangVariableMap const&);
@@ -36,9 +40,9 @@ public:
     virtual void levelSoundEvent(LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool);
     virtual void levelSoundEvent(std::string const&, Vec3 const&, float, float);
     virtual void stopSoundEvent(std::string const&);
-    virtual void stopAllSounds(void);
+    virtual void stopAllSounds();
     virtual void takePicture(cg::ImageBuffer &, Actor *, Actor *, ScreenshotOptions &);
-    virtual void playerListChanged(void);
+    virtual void playerListChanged();
 
     LevelListener(void);
 };

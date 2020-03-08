@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class TrustComponent {
@@ -12,7 +13,7 @@ public:
     TrustComponent(void);
     void initFromDefinition(Actor &);
     void assignTrustedPlayer(ActorUniqueID);
-    void getTrustedPlayerIDs(void)const;
+    void getTrustedPlayerIDs()const;
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
 };

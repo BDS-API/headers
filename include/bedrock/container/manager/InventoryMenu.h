@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../Container"
 #include "../../../unmapped/ContainerItemStack"
 #include "../../actor/Player"
 
@@ -7,12 +8,12 @@
 class InventoryMenu : BaseContainerMenu {
 
 public:
-    virtual InventoryMenu::~InventoryMenu();
+    InventoryMenu::~InventoryMenu()
     virtual void removeSlot(int, int);
-    virtual void getItems(void);
+    virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
-    virtual void _getContainer(void)const;
+    virtual void _getContainer()const;
 
     InventoryMenu(Player &, Container *);
 };

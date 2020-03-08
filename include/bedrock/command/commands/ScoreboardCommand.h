@@ -1,17 +1,21 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
-#include "../../../unmapped/ScoreboardId"
-#include "../Command"
+#include "../../../unmapped/InitProxy"
 #include "../CommandRegistry"
-#include "../../../unmapped/SetScoreOutput"
+#include "../orgin/CommandOrigin"
 #include "../../level/scoreboard/Scoreboard"
+#include "../CommandOutput"
+#include "../Command"
+#include "../../actor/Actor"
+#include "../../../unmapped/ScoreboardId"
+#include "../../../unmapped/SetScoreOutput"
+#include "../../../unmapped/Objective"
 
 
 class ScoreboardCommand : Command {
 
 public:
-    virtual ScoreboardCommand::~ScoreboardCommand();
+    ScoreboardCommand::~ScoreboardCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &, ScoreboardCommand::InitProxy &&);
@@ -26,13 +30,13 @@ public:
     void _resolveObjectives(Scoreboard &, Objective *&, Objective *&, CommandOutput &)const;
     void _isAction(ScoreboardCommand::Action)const;
     void _getScoreboardIdsForSelector(Scoreboard &, WildcardCommandSelector<Actor> const&, CommandOrigin const&, CommandOutput &, bool)const;
-    void _isMutableAction(void)const;
-    void listPlayers(Scoreboard &, ScoreboardId const&, std::function<std::string const& ()(ActorUniqueID)> const&, CommandOutput &)const;
-    void addPlayerScore(Scoreboard &, PlayerScoreSetFunction, ScoreboardId const&, Objective &, std::function<std::string const& ()(ActorUniqueID)> const&, CommandOutput &, ScoreboardCommand::SetScoreOutput &)const;
-    void resetPlayer(Scoreboard &, ScoreboardId const&, Objective *, std::function<std::string const& ()(ActorUniqueID)> const&, CommandOutput &)const;
-    void testPlayerScore(ScoreboardId const&, Objective &, std::function<std::string const& ()(ActorUniqueID)> const&, CommandOutput &)const;
-    void setPlayerRandomScore(Scoreboard &, ScoreboardId const&, Objective &, std::function<std::string const& ()(ActorUniqueID)> const&, CommandOutput &, ScoreboardCommand::SetScoreOutput &)const;
-    void applyPlayerOperation(Scoreboard &, std::function<std::string const& ()(ActorUniqueID)> const&, ScoreboardId const&, Objective &, Objective &, CommandOrigin const&, CommandOutput &, ScoreboardCommand::SetScoreOutput &)const;
+    void _isMutableAction()const;
+    void listPlayers(Scoreboard &, ScoreboardId const&, std::function<std::string ()(ActorUniqueID)> const&, CommandOutput &)const;
+    void addPlayerScore(Scoreboard &, PlayerScoreSetFunction, ScoreboardId const&, Objective &, std::function<std::string ()(ActorUniqueID)> const&, CommandOutput &, ScoreboardCommand::SetScoreOutput &)const;
+    void resetPlayer(Scoreboard &, ScoreboardId const&, Objective *, std::function<std::string ()(ActorUniqueID)> const&, CommandOutput &)const;
+    void testPlayerScore(ScoreboardId const&, Objective &, std::function<std::string ()(ActorUniqueID)> const&, CommandOutput &)const;
+    void setPlayerRandomScore(Scoreboard &, ScoreboardId const&, Objective &, std::function<std::string ()(ActorUniqueID)> const&, CommandOutput &, ScoreboardCommand::SetScoreOutput &)const;
+    void applyPlayerOperation(Scoreboard &, std::function<std::string ()(ActorUniqueID)> const&, ScoreboardId const&, Objective &, Objective &, CommandOrigin const&, CommandOutput &, ScoreboardCommand::SetScoreOutput &)const;
     void _generateCumulativeOutput(ScoreboardCommand::SetScoreOutput const&, Objective const&, CommandOutput &)const;
     void _getSelectorResultsForObjective(std::vector<ScoreboardId, std::allocator<ScoreboardId>> &, Scoreboard &, WildcardCommandSelector<Actor> const&, Objective &, CommandOrigin const&, CommandOutput &, bool)const;
     void _isOperation(CommandOperator)const;

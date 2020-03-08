@@ -1,21 +1,22 @@
 #pragma once
 
+#include "../../../unmapped/Dimension"
 #include "../Player"
 
 
 class Goal {
 
 public:
-    virtual Goal::~Goal();
-    virtual bool canContinueToUse(void);
-    virtual bool canBeInterrupted(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
-    virtual bool isTargetGoal(void)const;
+    Goal::~Goal()
+    virtual bool canContinueToUse();
+    virtual bool canBeInterrupted();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
+    virtual bool isTargetGoal()const;
     virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
 
     Goal(void);
     void setRequiredControlFlags(int);
-    void getRequiredControlFlags(void)const;
+    void getRequiredControlFlags()const;
 };

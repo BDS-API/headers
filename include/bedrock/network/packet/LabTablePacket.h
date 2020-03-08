@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
+#include "../../util/BlockPos"
 #include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
 
@@ -8,9 +8,9 @@
 class LabTablePacket : Packet {
 
 public:
-    virtual LabTablePacket::~LabTablePacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    LabTablePacket::~LabTablePacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

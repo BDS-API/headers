@@ -1,28 +1,28 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../actor/Actor"
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/Actor"
 
 
 class AddActorPacket : Packet {
 
 public:
-    virtual AddActorPacket::~AddActorPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    AddActorPacket::~AddActorPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
     AddActorPacket(void);
     AddActorPacket(Actor &);
-    void getVelocity(void)const;
-    void getPos(void)const;
-    void getRot(void)const;
-    void getYHeadRotation(void)const;
-    void getType(void)const;
-    void getEntityId(void)const;
-    void getRuntimeId(void)const;
-    void getAttributes(void)const;
-    void getData(void)const;
+    void getVelocity()const;
+    void getPos()const;
+    void getRot()const;
+    void getYHeadRotation()const;
+    void getType()const;
+    void getEntityId()const;
+    void getRuntimeId()const;
+    void getAttributes()const;
+    void getData()const;
 };

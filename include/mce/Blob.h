@@ -8,21 +8,21 @@ class Blob {
 
 public:
 
-    void size(void)const;
-    void cbegin(void)const;
-    void cend(void)const;
-    void begin(void);
-    void get(void);
-    void getSpan(void);
-    void getSpan(void)const;
+    void size()const;
+    void cbegin()const;
+    void cend()const;
+    void begin();
+    void get();
+    void getSpan();
+    void getSpan()const;
     Blob(void);
     Blob(unsigned long);
     Blob(unsigned char const*, unsigned long);
     Blob(mce::Blob&&);
-    void end(void);
+    void end();
     void swap(mce::Blob&);
-    void empty(void)const;
-    void data(void);
-    void data(void)const;
-    void get(void)const;
+    void empty()const;
+    void data();
+    void data()const;
+    void get()const;
 };

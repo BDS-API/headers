@@ -1,12 +1,15 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../actor/Actor"
+#include "../block/unmapped/BlockSource"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
 
 
 class DoorItem : Item {
 
 public:
-    virtual DoorItem::~DoorItem();
+    DoorItem::~DoorItem()
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
     DoorItem(std::string const&, int, DoorBlock::DoorType);

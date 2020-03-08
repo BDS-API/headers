@@ -5,11 +5,11 @@
 class InMemoryWritableFile : leveldb::WritableFile {
 
 public:
-    virtual InMemoryWritableFile::~InMemoryWritableFile();
+    InMemoryWritableFile::~InMemoryWritableFile()
     virtual void Append(leveldb::Slice const&);
-    virtual void Close(void);
-    virtual void Flush(void);
-    virtual void Sync(void);
+    virtual void Close();
+    virtual void Flush();
+    virtual void Sync();
 
     InMemoryWritableFile(std::shared_ptr<InMemoryFile>);
 };

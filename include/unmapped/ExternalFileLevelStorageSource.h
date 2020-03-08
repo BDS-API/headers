@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../bedrock/level/LevelStorageSource"
-#include "../bedrock/level/LevelData"
 #include "../core/Path"
+#include "../bedrock/level/LevelData"
+#include "../bedrock/level/LevelStorageSource"
+#include "../bedrock/Scheduler"
 #include "../core/FilePathManager"
 
 
 class ExternalFileLevelStorageSource : LevelStorageSource {
 
 public:
-    virtual ExternalFileLevelStorageSource::~ExternalFileLevelStorageSource();
-    virtual void getName[abi:cxx11](void)const;
+    ExternalFileLevelStorageSource::~ExternalFileLevelStorageSource()
+    virtual void getName()const;
     virtual void getLevelData(std::string const&)const;
     virtual void getLevelData(std::string const&, LevelData &)const;
     virtual void saveLevelData(std::string const&, LevelData const&);
@@ -26,8 +27,8 @@ public:
     virtual void convertLevel(std::string const&, ProgressListener *);
     virtual bool isLevelMarkedForSync(Core::Path const&)const;
     virtual bool isLevelPartiallyCopied(Core::Path const&)const;
-    virtual void getLevelDatFoundPath[abi:cxx11](Core::Path const&)const;
-    virtual void getBasePath[abi:cxx11](void)const;
+    virtual void getLevelDatFoundPath(Core::Path const&)const;
+    virtual void getBasePath()const;
     virtual void getPathToLevel(std::string const&)const;
     virtual void getPathToLevelInfo(std::string const&, bool)const;
 

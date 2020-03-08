@@ -1,26 +1,26 @@
 #pragma once
 
-#include "../Mob"
 #include "../Actor"
+#include "../Mob"
 
 
 class DelayedAttackGoal : MeleeAttackGoal {
 
 public:
-    virtual DelayedAttackGoal::~DelayedAttackGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    DelayedAttackGoal::~DelayedAttackGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
     virtual void _attemptPathToTarget(Actor *);
     virtual void _attemptAttackTarget(Actor *);
 
     DelayedAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, int, int, LevelSoundEvent);
-    void _isAttackAnimationStillRunning(void)const;
+    void _isAttackAnimationStillRunning()const;
     void _attemptMoveToTargetPosition(Actor *);
-    void _manageAttackTime(void);
+    void _manageAttackTime();
     void _attemptStartAttacking(Actor const*);
     void _isAttackObstructed(Actor const*, int)const;
 };

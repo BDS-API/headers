@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../Mob"
 #include "../Actor"
+#include "../Mob"
+#include "../../definition/DefinitionTrigger"
 
 
 class MeleeAttackGoal : Goal {
@@ -16,14 +17,14 @@ public:
     static long FAR_DISTANCE_RECALC_TIME_INCREASE;
     static long DEFAULT_RECALC_TIME;
 
-    virtual MeleeAttackGoal::~MeleeAttackGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    MeleeAttackGoal::~MeleeAttackGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
-    virtual void _getAttackReachSqr(void);
+    virtual void _getAttackReachSqr();
     virtual void _lookAtTarget(Actor *)const;
     virtual void _mobCanPathToTarget(Actor const*)const;
     virtual void _shouldRecalculatePath(Actor const*);
@@ -33,7 +34,7 @@ public:
     virtual void _attemptAttackTarget(Actor *);
 
     MeleeAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, bool, DefinitionTrigger);
-    void _targetPositionPutsMobInSun(void);
-    void _getAttackReach(void);
+    void _targetPositionPutsMobInSun();
+    void _getAttackReach();
     void _inSunlight(Actor const&)const;
 };

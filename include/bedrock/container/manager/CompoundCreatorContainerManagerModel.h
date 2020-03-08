@@ -1,23 +1,24 @@
 #pragma once
 
 #include "../../../unmapped/ContainerItemStack"
+#include "../../util/BlockPos"
 #include "../../actor/Player"
 
 
 class CompoundCreatorContainerManagerModel : ContainerManagerModel {
 
 public:
-    virtual CompoundCreatorContainerManagerModel::~CompoundCreatorContainerManagerModel();
-    virtual void getItems(void);
+    CompoundCreatorContainerManagerModel::~CompoundCreatorContainerManagerModel()
+    virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
     virtual void setData(int, int);
-    virtual void broadcastChanges(void);
-    virtual void init(void);
+    virtual void broadcastChanges();
+    virtual void init();
     virtual bool isValid(float);
 
     CompoundCreatorContainerManagerModel(ContainerID, Player &, BlockPos const&);
-    void getInputItems(void);
+    void getInputItems();
     void setOutput(ContainerItemStack const&);
-    void getOutput(void);
+    void getOutput();
 };

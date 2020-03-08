@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
 
 
 class SynchedActorData {
@@ -9,11 +10,11 @@ public:
     void _setDirty(unsigned short);
     void markDirty(DataItem &);
     void markDirty(unsigned short);
-    bool isDirty(void)const;
+    bool isDirty()const;
     SynchedActorData(void);
     SynchedActorData(SynchedActorData&&);
-    void packDirty(void);
-    void packAll(void)const;
+    void packDirty();
+    void packAll()const;
     void assignValues(std::vector<std::unique_ptr<DataItem, std::default_delete<DataItem>>, std::allocator<std::unique_ptr<DataItem, std::default_delete<DataItem>>>> const&, Actor *);
     void _find(unsigned short)const;
     void _resizeToContain(unsigned short);

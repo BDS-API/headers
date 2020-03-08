@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../io/BinaryStream"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/Vec3"
+#include "../../util/Vec3"
+#include "../../io/BinaryStream"
 
 
 class SpawnExperienceOrbPacket : Packet {
 
 public:
-    virtual SpawnExperienceOrbPacket::~SpawnExperienceOrbPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    SpawnExperienceOrbPacket::~SpawnExperienceOrbPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

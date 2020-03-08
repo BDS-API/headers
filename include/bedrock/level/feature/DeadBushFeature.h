@@ -1,13 +1,15 @@
 #pragma once
 
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Material"
-#include "../../../unmapped/BlockSource"
 
 
 class DeadBushFeature : Feature {
 
 public:
-    virtual DeadBushFeature::~DeadBushFeature();
+    DeadBushFeature::~DeadBushFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     DeadBushFeature(void);

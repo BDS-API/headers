@@ -7,5 +7,5 @@ class EntityRegistry {
 public:
 
     EntityRegistry(entt::Registry<EntityId> &);
-    void getWeakRef(void);
+    void getWeakRef();
 };

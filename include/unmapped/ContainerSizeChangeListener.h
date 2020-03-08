@@ -5,7 +5,7 @@
 class ContainerSizeChangeListener {
 
 public:
-    virtual ContainerSizeChangeListener::~ContainerSizeChangeListener();
+    ContainerSizeChangeListener::~ContainerSizeChangeListener()
 
     ContainerSizeChangeListener(void);
 };

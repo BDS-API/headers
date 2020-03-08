@@ -8,5 +8,5 @@ public:
 
     AsyncTracker(void);
     void trackNewAsyncOperation(int);
-    bool hasAsyncOperationTimedOut(void);
+    bool hasAsyncOperationTimedOut();
 };

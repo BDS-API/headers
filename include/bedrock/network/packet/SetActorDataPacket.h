@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
 #include "../../../unmapped/SynchedActorData"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID"
 #include "../../io/BinaryStream"
-#include "../../../unmapped/ActorRuntimeID"
 
 
 class SetActorDataPacket : Packet {
 
 public:
-    virtual SetActorDataPacket::~SetActorDataPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    SetActorDataPacket::~SetActorDataPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
     SetActorDataPacket(void);
     SetActorDataPacket(ActorRuntimeID, SynchedActorData &, bool);
-    void getUnpackedData(void)const;
+    void getUnpackedData()const;
 };

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
-#include "../../../unmapped/BlockPos"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
 
 
 class DaylightDetectorBlockActor : BlockActor {
 
 public:
-    virtual DaylightDetectorBlockActor::~DaylightDetectorBlockActor();
+    DaylightDetectorBlockActor::~DaylightDetectorBlockActor()
     virtual void tick(BlockSource &);
 
     DaylightDetectorBlockActor(BlockPos const&);

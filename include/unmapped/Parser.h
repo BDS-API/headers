@@ -1,11 +1,17 @@
 #pragma once
 
-#include "../bedrock/definition/ItemDefinition"
 #include "../bedrock/item/ItemStack"
-#include "../bedrock/item/Item"
-#include "../bedrock/definition/DefinitionTrigger"
-#include "../bedrock/item/ItemInstance"
+#include "../bedrock/util/Color"
 #include "../json/Value"
+#include "../bedrock/actor/unmapped/ActorFilterGroup"
+#include "../bedrock/definition/ItemDefinition"
+#include "../bedrock/definition/DefinitionTrigger"
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/util/Vec2"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/item/Item"
+#include "../bedrock/item/unmapped/ItemDescriptor"
 
 
 class Parser {

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 using namespace BaseRailBlock;
@@ -10,7 +12,7 @@ public:
 
     Rail(BlockSource &, BlockPos const&);
     void updateConnections(int);
-    void removeSoftConnections(void);
+    void removeSoftConnections();
     void getRail(BlockPos const&);
     bool connectsTo(BaseRailBlock::Rail&);
     bool hasConnection(BlockPos const&);

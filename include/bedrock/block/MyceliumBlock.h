@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../../unmapped/Random"
-#include "../../unmapped/BlockSource"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class MyceliumBlock : BlockLegacy {
@@ -9,7 +11,7 @@ class MyceliumBlock : BlockLegacy {
 public:
     static long MIN_BRIGHTNESS;
 
-    virtual MyceliumBlock::~MyceliumBlock();
+    MyceliumBlock::~MyceliumBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;

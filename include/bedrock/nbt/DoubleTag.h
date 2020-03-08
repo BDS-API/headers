@@ -7,14 +7,14 @@
 class DoubleTag : Tag {
 
 public:
-    virtual DoubleTag::~DoubleTag();
+    DoubleTag::~DoubleTag()
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
-    virtual void toString[abi:cxx11](void)const;
-    virtual void getId(void)const;
+    virtual void toString()const;
+    virtual void getId()const;
     virtual void equals(Tag const&)const;
-    virtual void copy(void)const;
-    virtual void hash(void)const;
+    virtual void copy()const;
+    virtual void hash()const;
 
     DoubleTag(DoubleTag&&);
     DoubleTag(void);

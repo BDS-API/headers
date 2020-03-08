@@ -1,19 +1,21 @@
 #pragma once
 
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
-#include "../../unmapped/ActorDefinitionGroup"
 
 
 class Endermite : Monster {
 
 public:
-    virtual Endermite::~Endermite();
-    virtual void normalTick(void);
-    virtual void getRidingHeight(void);
+    Endermite::~Endermite()
+    virtual void normalTick();
+    virtual void getRidingHeight();
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void _onSizeUpdated(void);
-    virtual void aiStep(void);
+    virtual void _onSizeUpdated();
+    virtual void aiStep();
     virtual void checkSpawnRules(bool);
 
     Endermite(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);

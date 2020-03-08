@@ -1,56 +1,57 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../container/Container"
-#include "../../../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../item/ItemStack"
+#include "../../container/Container"
+#include "../../item/unmapped/ItemDescriptor"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
+#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
-#include "../../../unmapped/ItemDescriptor"
+#include "../../level/Level"
 
 
 class BeaconBlockActor : BlockActor, Container {
 
 public:
-    virtual BeaconBlockActor::~BeaconBlockActor();
+    BeaconBlockActor::~BeaconBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual bool hasAlphaLayer(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    virtual bool hasAlphaLayer()const;
+    virtual void getName()const;
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void removeItem(int, int);
-    virtual void getContainerSize(void)const;
-    virtual void getMaxStackSize(void)const;
+    virtual void getContainerSize()const;
+    virtual void getMaxStackSize()const;
     virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
 
-    void getNumLevels(void)const;
-    void getPrimaryEffectTier(void)const;
-    void getSecondaryEffectTier(void)const;
-    void getPrimaryEffect(void)const;
-    void getSecondaryEffect(void)const;
+    void getNumLevels()const;
+    void getPrimaryEffectTier()const;
+    void getSecondaryEffectTier()const;
+    void getPrimaryEffect()const;
+    void getSecondaryEffect()const;
     BeaconBlockActor(BlockPos const&);
-    bool isActive(void)const;
+    bool isActive()const;
     void _checkShape(BlockSource &);
     void _applyEffects(BlockSource &);
-    void getBeaconData(void);
+    void getBeaconData();
     void _saveClientSideState(CompoundTag &)const;
     void _loadClientSideState(Level &, CompoundTag const&, DataLoadHelper &);
-    void getEffects(void)const;
-    void getTierEffects(void)const;
-    void getMaxSelections(void)const;
+    void getEffects()const;
+    void getTierEffects()const;
+    void getMaxSelections()const;
     void setPrimaryEffect(int);
     void _setEffect(int, int &, int &);
     void setSecondaryEffect(int);
     void _isSecondaryEffectValid(int)const;
     bool isEffectAvailable(int)const;
     void _getEffectTier(int)const;
-    bool isSecondaryAvailable(void)const;
+    bool isSecondaryAvailable()const;
     bool isPaymentItem(ItemDescriptor const&);
     void _isEffectValid(int)const;
 };

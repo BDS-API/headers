@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
 
 
@@ -9,10 +11,10 @@ class ShulkerBullet : Actor {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual ShulkerBullet::~ShulkerBullet();
-    virtual void normalTick(void);
-    virtual bool isPickable(void);
-    virtual bool isOnFire(void)const;
+    ShulkerBullet::~ShulkerBullet()
+    virtual void normalTick();
+    virtual bool isPickable();
+    virtual bool isOnFire()const;
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
 

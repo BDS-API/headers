@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../Command"
 #include "../orgin/CommandOrigin"
+#include "../CommandOutput"
+#include "../Command"
 
 
 class MessagingCommand : Command {
 
 public:
-    virtual MessagingCommand::~MessagingCommand();
+    MessagingCommand::~MessagingCommand()
 
     MessagingCommand(bool, bool);
     void checkChatPermissions(CommandOrigin const&, CommandOutput &)const;

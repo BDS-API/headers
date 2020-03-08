@@ -1,16 +1,16 @@
 #pragma once
 
+#include "../../text/TextObjectRoot"
 #include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
-#include "../../text/TextObjectRoot"
 
 
 class TextPacket : Packet {
 
 public:
-    virtual TextPacket::~TextPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    TextPacket::~TextPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

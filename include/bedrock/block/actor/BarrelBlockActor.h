@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
 #include "../../actor/Player"
 
 
 class BarrelBlockActor : ChestBlockActor {
 
 public:
-    virtual BarrelBlockActor::~BarrelBlockActor();
+    BarrelBlockActor::~BarrelBlockActor()
     virtual void onPlace(BlockSource &);
-    virtual void getName[abi:cxx11](void)const;
+    virtual void getName()const;
     virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
     virtual void playOpenSound(BlockSource &);

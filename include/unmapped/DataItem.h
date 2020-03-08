@@ -5,12 +5,12 @@
 class DataItem {
 
 public:
-    virtual DataItem::~DataItem();
+    DataItem::~DataItem()
     virtual bool isDataEqual(DataItem const&)const;
 
     DataItem(DataItemType, unsigned short);
-    void getType(void)const;
+    void getType()const;
     void setDirty(bool);
-    void getId(void)const;
-    bool isDirty(void)const;
+    void getId()const;
+    bool isDirty()const;
 };

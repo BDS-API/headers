@@ -5,7 +5,7 @@
 class IInPackagePacks {
 
 public:
-    virtual IInPackagePacks::~IInPackagePacks();
+    IInPackagePacks::~IInPackagePacks()
 
     IInPackagePacks(void);
 };

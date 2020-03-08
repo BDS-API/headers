@@ -6,9 +6,9 @@
 class ActorOnGroundTest : SimpleBoolFilterTest {
 
 public:
-    virtual ActorOnGroundTest::~ActorOnGroundTest();
+    ActorOnGroundTest::~ActorOnGroundTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorOnGroundTest(void);
 };

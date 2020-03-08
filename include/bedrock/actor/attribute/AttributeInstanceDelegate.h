@@ -5,13 +5,13 @@
 class AttributeInstanceDelegate {
 
 public:
-    virtual AttributeInstanceDelegate::~AttributeInstanceDelegate();
-    virtual void tick(void);
+    AttributeInstanceDelegate::~AttributeInstanceDelegate()
+    virtual void tick();
     virtual void notify(long);
     virtual void change(float, float, AttributeBuffInfo);
     virtual void getBuffValue(AttributeBuff const&)const;
 
     AttributeInstanceDelegate(AttributeInstance const&);
-    void _getInstance(void)const;
-    void _getMutableInstance(void)const;
+    void _getInstance()const;
+    void _getMutableInstance()const;
 };

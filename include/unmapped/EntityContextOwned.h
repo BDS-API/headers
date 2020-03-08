@@ -8,7 +8,7 @@ class EntityContextOwned {
 
 public:
 
-    void destroy(void);
+    void destroy();
     EntityContextOwned(EntityRegistryOwned &);
-    void _ownedRegistry(void)const;
+    void _ownedRegistry()const;
 };

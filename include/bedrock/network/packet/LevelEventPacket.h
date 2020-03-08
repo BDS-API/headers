@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../util/Vec3"
 #include "../../io/BinaryStream"
-#include "../../../unmapped/Vec3"
 
 
 class LevelEventPacket : Packet {
 
 public:
-    virtual LevelEventPacket::~LevelEventPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    LevelEventPacket::~LevelEventPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

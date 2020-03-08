@@ -10,13 +10,13 @@ public:
 
     ScriptReport(void);
     void merge(ScriptApi::ScriptReport&&);
-    void clear(void);
-    void addError(void);
+    void clear();
+    void addError();
     void addError(std::string const&);
     void addError(std::unique_ptr<ScriptApi::JavaScriptErrorHandler, std::default_delete<ScriptApi::JavaScriptErrorHandler>> &&);
-    void addWarning(void);
+    void addWarning();
     void addWarning(std::string const&);
-    bool hasErrors(void)const;
-    bool hasWarnings(void)const;
-    void getReportItems(void)const;
+    bool hasErrors()const;
+    bool hasWarnings()const;
+    void getReportItems()const;
 };

@@ -1,5 +1,12 @@
 #pragma once
 
+#include "../SaveQueryResult"
+#include "../PlayerAndMessage"
+#include "../PlayerList"
+#include "../Settings"
+#include "../Message"
+#include "../SaveStateResult"
+#include "../Empty"
 
 
 using namespace com::mojang::clacks::protocol::Commands;
@@ -7,7 +14,7 @@ using namespace com::mojang::clacks::protocol::Commands;
 class Stub : com::mojang::clacks::protocol::Commands::StubInterface {
 
 public:
-    virtual void com::mojang::clacks::protocol::Commands::Stub::~Stub();
+    com::mojang::clacks::protocol::Commands::Stub::~Stub()
     virtual void listPlayer(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, com::mojang::clacks::protocol::PlayerList *);
     virtual void kick(grpc::ClientContext *, com::mojang::clacks::protocol::PlayerAndMessage const&, com::mojang::clacks::protocol::Empty *);
     virtual void say(grpc::ClientContext *, com::mojang::clacks::protocol::Message const&, com::mojang::clacks::protocol::Empty *);
@@ -21,7 +28,7 @@ public:
     virtual void saveState(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, com::mojang::clacks::protocol::SaveStateResult *);
     virtual void stop(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, com::mojang::clacks::protocol::Empty*);
     virtual void serverStarted(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, com::mojang::clacks::protocol::Empty*);
-    virtual void experimental_async(void);
+    virtual void experimental_async();
     virtual void AsynclistPlayerRaw(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, grpc::CompletionQueue *);
     virtual void PrepareAsynclistPlayerRaw(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const&, grpc::CompletionQueue *);
     virtual void AsynckickRaw(grpc::ClientContext *, com::mojang::clacks::protocol::PlayerAndMessage const&, grpc::CompletionQueue *);

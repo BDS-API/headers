@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/Random"
-#include "../../../unmapped/BlockSource"
 #include "../../actor/Actor"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class MegaTreeFeature : TreeFeature {
 
 public:
-    virtual MegaTreeFeature::~MegaTreeFeature();
+    MegaTreeFeature::~MegaTreeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     MegaTreeFeature(Actor *, int, int, int, int);
@@ -18,8 +19,8 @@ public:
     void _prepareTree(BlockSource &, BlockPos const&, int)const;
     void _placeDoubleTrunkLeaves(BlockSource &, BlockPos const&, int)const;
     void _placeSingleTrunkLeaves(BlockSource &, BlockPos const&, int)const;
-    void _getBaseHeight(void)const;
-    void _getHeightInterval(void)const;
-    void _getTrunkType(void)const;
-    void _getLeafType(void)const;
+    void _getBaseHeight()const;
+    void _getHeightInterval()const;
+    void _getTrunkType()const;
+    void _getLeafType()const;
 };

@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/level/storage/LevelStorage"
+#include "../core/Path"
 #include "../bedrock/pack/ResourcePackManager"
+#include "../bedrock/level/storage/LevelStorage"
 
 
 class StructureManager {
@@ -25,5 +26,5 @@ public:
     void setLevelStorage(LevelStorage *);
     void setPackManager(ResourcePackManager &);
     void createStructureDataExportPacket(std::string const&, StructureTemplateResponseType);
-    void clearLoadedStructures(void);
+    void clearLoadedStructures();
 };

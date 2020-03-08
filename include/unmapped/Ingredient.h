@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance"
 #include "../bedrock/item/Item"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/item/unmapped/ItemDescriptor"
 
 
 using namespace PotionBrewing;
@@ -13,6 +14,6 @@ public:
     Ingredient(Item const&, int);
     Ingredient(ItemInstance const&);
     void equals(ItemDescriptor const&)const;
-    void getItemId(void)const;
-    void getData(void)const;
+    void getItemId()const;
+    void getData()const;
 };

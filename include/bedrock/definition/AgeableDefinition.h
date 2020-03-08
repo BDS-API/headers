@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../../unmapped/EntityContext"
 #include "../../json/Value"
+#include "../../unmapped/EntityContext"
+#include "../../unmapped/AgeableComponent"
 
 
 class AgeableDefinition {
@@ -12,8 +13,8 @@ public:
     void addFeedItemByName(std::string const&);
     void addDropItemByName(std::string const&);
     void initialize(EntityContext &, AgeableComponent &);
-    bool canGrowUp(void)const;
-    void getTicksAsBaby(void)const;
+    bool canGrowUp()const;
+    void getTicksAsBaby()const;
     void deserializeData(Json::Value &);
     void serializeData(Json::Value &)const;
     AgeableDefinition(void);

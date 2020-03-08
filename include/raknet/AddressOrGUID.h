@@ -14,7 +14,7 @@ public:
     void ToInteger(RakNet::AddressOrGUID const&);
     void ToString(bool)const;
     void ToString(bool, char *)const;
-    void IsUndefined(void)const;
+    void IsUndefined()const;
     AddressOrGUID(RakNet::AddressOrGUID const&);
     AddressOrGUID(void);
 };

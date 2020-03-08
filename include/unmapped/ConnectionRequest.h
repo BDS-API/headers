@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../mce/Image"
 
 
 class ConnectionRequest {
@@ -10,31 +11,31 @@ public:
     ConnectionRequest(std::unique_ptr<WebToken, std::default_delete<WebToken>>, std::string const&);
     ConnectionRequest(ConnectionRequest const&);
     void fromString(std::string const&);
-    void getCertificate(void)const;
+    void getCertificate()const;
     void getData(std::string const&)const;
-    void getClientRandomId(void)const;
-    bool isClientThirdPartyNameOnly(void)const;
-    void getSkinData(void)const;
-    void getSkinImageWidth(void)const;
-    void getSkinImageHeight(void)const;
-    void getCapeData(void)const;
-    void getCapeImageWidth(void)const;
-    void getCapeImageHeight(void)const;
-    void getAnimatedImageData(void)const;
-    void getADRole(void)const;
-    bool isEduMode(void)const;
-    void getDeviceOS(void)const;
-    void getDefaultInputMode(void)const;
-    void getCurrentInputMode(void)const;
-    void getUIProfile(void)const;
-    void getGuiScale(void)const;
-    void getClientSubId(void)const;
-    bool isPremiumSkin(void)const;
-    bool isPersonaSkin(void)const;
-    bool isCapeOnClassicSkin(void)const;
+    void getClientRandomId()const;
+    bool isClientThirdPartyNameOnly()const;
+    void getSkinData()const;
+    void getSkinImageWidth()const;
+    void getSkinImageHeight()const;
+    void getCapeData()const;
+    void getCapeImageWidth()const;
+    void getCapeImageHeight()const;
+    void getAnimatedImageData()const;
+    void getADRole()const;
+    bool isEduMode()const;
+    void getDeviceOS()const;
+    void getDefaultInputMode()const;
+    void getCurrentInputMode()const;
+    void getUIProfile()const;
+    void getGuiScale()const;
+    void getClientSubId()const;
+    bool isPremiumSkin()const;
+    bool isPersonaSkin()const;
+    bool isCapeOnClassicSkin()const;
     void verify(std::vector<std::string, std::allocator<std::string>> const&, long);
     void validate(std::unique_ptr<Certificate, std::default_delete<Certificate>>, long)const;
-    void verifySelfSigned(void);
+    void verifySelfSigned();
     void getBinaryData(std::string const&)const;
-    bool isVerified(void)const;
+    bool isVerified()const;
 };

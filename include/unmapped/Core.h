@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../core/FileSystemImpl"
+#include "../core/Path"
 #include "../core/StringSpan"
 
 

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/ChunkPos"
 #include "../bedrock/level/LevelChunk"
 
 
@@ -9,6 +10,6 @@ public:
 
     DBChunkStorageKey(LevelChunk const&);
     DBChunkStorageKey(ChunkPos const&, AutomaticID<Dimension, int>);
-    bool asSpan(void)const;
-    void hashCode(void)const;
+    bool asSpan()const;
+    void hashCode()const;
 };

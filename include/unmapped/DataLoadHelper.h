@@ -5,7 +5,7 @@
 class DataLoadHelper {
 
 public:
-    virtual DataLoadHelper::~DataLoadHelper();
+    DataLoadHelper::~DataLoadHelper()
 
     DataLoadHelper(void);
 };

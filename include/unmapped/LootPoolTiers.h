@@ -7,8 +7,8 @@ class LootPoolTiers {
 
 public:
 
-    void getRange(void);
-    void getBonusRolls(void);
-    void getBonusChance(void);
+    void getRange();
+    void getBonusRolls();
+    void getBonusChance();
     void deserialize(Json::Value);
 };

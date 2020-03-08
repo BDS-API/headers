@@ -1,16 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/EntityContext"
 #include "../../../unmapped/PrioritizedGoal"
-#include "../../../unmapped/ActorComponent"
 #include "../../../unmapped/EntityRegistry"
+#include "../../../unmapped/EntityContext"
 #include "../../../unmapped/GoalSelectorComponent"
+#include "../../actor/unmapped/ActorComponent"
 
 
 class GoalSelectorSystem : ITickingSystem {
 
 public:
-    virtual GoalSelectorSystem::~GoalSelectorSystem();
+    GoalSelectorSystem::~GoalSelectorSystem()
     virtual void tick(EntityRegistry &);
 
     GoalSelectorSystem(void);

@@ -6,7 +6,7 @@
 class AbsorptionMobEffect : MobEffect {
 
 public:
-    virtual AbsorptionMobEffect::~AbsorptionMobEffect();
+    AbsorptionMobEffect::~AbsorptionMobEffect()
     virtual void applyEffects(Actor *, int, int)const;
     virtual void removeEffects(Actor *);
 

@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance"
 #include "../bedrock/item/Item"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/item/unmapped/ItemDescriptor"
 
 
 class PotionBrewing {
@@ -14,12 +15,12 @@ public:
     static long mValidContainers;
 
 
-    void getPotionMixes(void);
-    void getContainerMixes(void);
-    void initPotionBrewing(void);
+    void getPotionMixes();
+    void getContainerMixes();
+    void initPotionBrewing();
     void addContainer(PotionBrewing::Ingredient const&);
     void addChemistryMix(ItemInstance const&, PotionBrewing::Ingredient const&, ItemInstance const&);
-    void shutdown(void);
+    void shutdown();
     bool isFuel(ItemDescriptor const&);
     void getFuelValue(ItemDescriptor const&);
     bool isIngredient(ItemDescriptor const&);

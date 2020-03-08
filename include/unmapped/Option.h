@@ -6,32 +6,32 @@
 class Option {
 
 public:
-    virtual Option::~Option();
+    Option::~Option()
     virtual void load(std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>> &);
     virtual void load(Json::Value const&);
 
     Option(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, OptionType);
     void unregisterObserver(void *);
     void registerTelemetryProperty(std::string const&);
-    void getType(void)const;
-    void getID(void)const;
-    void getOptionOwnerType(void)const;
+    void getType()const;
+    void getID()const;
+    void getOptionOwnerType()const;
     void setOverrideSource(Option*);
     void registerObserver(void *, std::function<void ()(Option*)>, std::function<void ()(Option*, InputMode)>);
-    bool hasOverrideSource(void)const;
+    bool hasOverrideSource()const;
     void registerObserver(void *, std::function<void ()(Option*)>);
     void registerObserver(void *, std::function<void ()(Option*, InputMode)>);
-    void getFloat(void)const;
+    void getFloat()const;
     void getFloat(InputMode)const;
-    void getBool(void)const;
+    void getBool()const;
     void getBool(InputMode)const;
-    void getInt(void)const;
-    void getVec3(void)const;
-    void getValues(void)const;
-    void getFloatMax(void)const;
-    void getFloatMin(void)const;
-    void getIntMax(void)const;
-    void getIntMin(void)const;
+    void getInt()const;
+    void getVec3()const;
+    void getValues()const;
+    void getFloatMax()const;
+    void getFloatMin()const;
+    void getIntMax()const;
+    void getIntMin()const;
     void set(int);
     void set(InputMode, float);
     void set(InputMode, bool);
@@ -40,23 +40,23 @@ public:
     void setCoerceValueCallback(std::function<bool ()(bool)>);
     void setCoerceSaveValueCallback(std::function<int ()(int)>);
     void setRequestSaveCallback(std::function<void ()(bool)>);
-    void toggle(void);
-    void reset(void);
+    void toggle();
+    void reset();
     void reset(InputMode);
-    void getOptionResetFlags(void)const;
+    void getOptionResetFlags()const;
     void notifyOptionValueChanged(bool);
-    void requestSave(void);
+    void requestSave();
     void notifyOptionValueChanged(InputMode, bool);
     bool isType(OptionType)const;
-    bool isDefaultValue(void)const;
+    bool isDefaultValue()const;
     bool isDefaultValue(InputMode)const;
-    bool canModify(void)const;
+    bool canModify()const;
     void registerLock(void *, std::function<bool ()(void)>);
     void unregisterLock(void *);
     void read(std::string const&, float &);
     void read(std::string const&, bool &);
     void read(std::string const&, int &);
-    void read(std::string const&, glm::tvec3<float, (glm::precision)0> &);
+    void read(std::string const&, glm::tvec30<float, (glm::precision>);
     void _updatePropertyVector(std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> &, std::string const&);
     void _setOptionType(OptionType);
 };

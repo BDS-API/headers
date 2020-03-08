@@ -1,34 +1,35 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
 #include "../../../unmapped/Block"
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class MovingBlockActor : BlockActor {
 
 public:
-    virtual MovingBlockActor::~MovingBlockActor();
+    MovingBlockActor::~MovingBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
     virtual void getOwningPiston(BlockSource &);
-    virtual void getDeletionDelayTimeSeconds(void)const;
+    virtual void getDeletionDelayTimeSeconds()const;
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     MovingBlockActor(BlockPos const&);
     void getDrawPos(BlockSource &, float);
     void _validPistonPos(BlockSource &)const;
     void setBlock(Block const&);
-    void getBlock(void);
+    void getBlock();
     void setExtraBlock(Block const&);
-    void getExtraBlock(void);
+    void getExtraBlock();
     void setBlockEntity(std::shared_ptr<BlockActor>);
-    void aquireBlockEntity(void);
-    void getBlockEntity(void);
+    void aquireBlockEntity();
+    void getBlockEntity();
     void registerPiston(BlockSource &, BlockPos const&);
     void moveCollidedEntities(PistonBlockActor &, BlockSource &);
 };

@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../bedrock/level/Level"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/level/Level"
 
 
 class WanderingTraderScheduler {
@@ -16,21 +18,21 @@ public:
 
 
     WanderingTraderScheduler(Level &);
-    void readSaveData(void);
-    void tick(void);
-    void _isTimeToTestIfSpawning(void);
-    void _testIfSpawning(void);
-    void _isTimeToSpawnWanderingTrader(void)const;
-    void _getRandomPlayerInOverworld(void)const;
-    void _doesWanderingTraderExist(void)const;
-    void _canWanderingTraderBeMoved(void)const;
+    void readSaveData();
+    void tick();
+    void _isTimeToTestIfSpawning();
+    void _testIfSpawning();
+    void _isTimeToSpawnWanderingTrader()const;
+    void _getRandomPlayerInOverworld()const;
+    void _doesWanderingTraderExist()const;
+    void _canWanderingTraderBeMoved()const;
     void _getSpawnPosFromNearestVillageToPlayerPos(BlockPos const&, BlockSource &);
-    void _shouldWanderingTraderSpawnInWildernessNow(void)const;
+    void _shouldWanderingTraderSpawnInWildernessNow()const;
     void _getRandomWildernessPosAroundSpecifiedPos(BlockPos const&, BlockSource &);
     void _canSpawnAtPosition(BlockPos const&, BlockSource &)const;
-    void _despawnManagedWanderingTrader(void);
+    void _despawnManagedWanderingTrader();
     void _spawnWanderingTraderAtPos(BlockPos const&, BlockSource &);
-    void writeSaveData(void)const;
+    void writeSaveData()const;
     bool isWanderingTraderCurrentlyManaged(Actor const&);
     void _getSpawnChance(unsigned long)const;
     void _getRandomXZAroundPos(BlockPos const&, int, bool);

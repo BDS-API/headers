@@ -11,6 +11,6 @@ public:
 
     MessageHeader(void);
     MessageHeader(std::string const&, Automation::MessagePurpose, int);
-    void serialize(void)const;
+    void serialize()const;
     void deserialize(Json::Value &, Automation::MessageHeader&);
 };

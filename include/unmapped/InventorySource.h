@@ -6,18 +6,18 @@ class InventorySource {
 
 public:
 
-    void fromCreativeInventory(void);
+    void fromCreativeInventory();
     InventorySource(InventorySourceType, InventorySource::InventorySourceFlags);
-    void getType(void)const;
-    void getContainerId(void)const;
-    void getFlags(void)const;
+    void getType()const;
+    void getContainerId()const;
+    void getFlags()const;
     void fromContainerWindowID(ContainerID);
-    void fromGlobalInventory(void);
+    void fromGlobalInventory();
     void fromWorldInteraction(InventorySource::InventorySourceFlags);
     void fromUntrackedInteractionUI(ContainerID);
     void fromNONIMPLEMENTEDTODO(ContainerID);
-    void fromInvalid(void);
+    void fromInvalid();
     InventorySource(ContainerID);
     InventorySource(InventorySourceType);
-    bool canMixBoth(void)const;
+    bool canMixBoth()const;
 };

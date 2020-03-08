@@ -1,6 +1,11 @@
 #pragma once
 
-#include "../../unmapped/Minecraft"
+#include "../../unmapped/WhitelistFile"
+#include "../DedicatedServer"
+#include "../Minecraft"
+#include "../IMinecraftApp"
+#include "../level/storage/LevelStorage"
+#include "../level/Level"
 
 
 class DedicatedServerCommands {

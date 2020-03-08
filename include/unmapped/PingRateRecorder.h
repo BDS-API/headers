@@ -12,6 +12,6 @@ public:
     void _updateAverage(float);
     void pingStart(unsigned int const&, int);
     void pingEnd(unsigned int const&, int);
-    void getLastPingTime(void)const;
-    void getAverageLatency(void)const;
+    void getLastPingTime()const;
+    void getAverageLatency()const;
 };

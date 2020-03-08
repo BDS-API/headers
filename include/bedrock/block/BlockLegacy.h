@@ -1,20 +1,24 @@
 #pragma once
 
-#include "../../unmapped/AABB"
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/Brightness"
-#include "../actor/Actor"
-#include "../../unmapped/Color"
-#include "../../unmapped/SpawnConditions"
-#include "../../unmapped/BaseGameVersion"
-#include "../../unmapped/ItemState"
-#include "../../unmapped/BlockSource"
-#include "../actor/Player"
-#include "../../unmapped/Random"
-#include "../actor/Mob"
-#include "../../unmapped/Block"
+#include "../actor/unmapped/ActorBlockSyncMessage"
+#include "../util/Brightness"
+#include "../util/Color"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Material"
 #include "../definition/BlockDefinition"
-#include "../../unmapped/Vec3"
+#include "../container/Container"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../actor/Player"
+#include "../actor/Actor"
+#include "../item/unmapped/ItemState"
+#include "../util/Random"
+#include "../item/ItemInstance"
+#include "../../unmapped/BaseGameVersion"
+#include "../../unmapped/SpawnConditions"
+#include "../actor/Mob"
+#include "../util/Vec3"
+#include "../util/AABB"
 
 
 class BlockLegacy {
@@ -23,7 +27,7 @@ public:
     static long SIZE_OFFSET;
     static long BLOCK_DESCRIPTION_PREFIX[abi:cxx11];
 
-    virtual BlockLegacy::~BlockLegacy();
+    BlockLegacy::~BlockLegacy()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getStateFromLegacyData(unsigned short)const;
     virtual void getNextBlockPermutation(Block const&)const;
@@ -37,45 +41,45 @@ public:
     virtual void getOutline(BlockSource &, BlockPos const&, AABB &)const;
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const;
     virtual void onProjectileHit(BlockSource &, BlockPos const&, Actor const&)const;
-    virtual void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block const& ()(BlockPos const&)> const&, BlockPos const&)const;
+    virtual void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block ()(BlockPos const&)> const&, BlockPos const&)const;
     virtual void getLightEmission(Block const&)const;
-    virtual void shouldRandomTick(void)const;
-    virtual bool hasVariableLighting(void)const;
+    virtual void shouldRandomTick()const;
+    virtual bool hasVariableLighting()const;
     virtual bool isStrippable(Block const&)const;
     virtual void getStrippedBlock(Block const&)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
     virtual bool canConnect(Block const&, unsigned char, Block const&)const;
     virtual void getConnectedDirections(Block const&, BlockPos const&, BlockSource &, bool &, bool &, bool &, bool &)const;
-    virtual bool isCropBlock(void)const;
-    virtual bool isStemBlock(void)const;
-    virtual bool isContainerBlock(void)const;
-    virtual bool isCraftingBlock(void)const;
-    virtual bool isInteractiveBlock(void)const;
-    virtual bool isWaterBlocking(void)const;
-    virtual bool isHurtableBlock(void)const;
-    virtual bool isFenceBlock(void)const;
-    virtual bool isFenceGateBlock(void)const;
-    virtual bool isThinFenceBlock(void)const;
-    virtual bool isWallBlock(void)const;
-    virtual bool isStairBlock(void)const;
-    virtual bool isSlabBlock(void)const;
-    virtual bool isDoorBlock(void)const;
-    virtual bool isRailBlock(void)const;
-    virtual bool isButtonBlock(void)const;
-    virtual bool canHurtAndBreakItem(void)const;
-    virtual bool isSignalSource(void)const;
-    virtual bool canBeOriginalSurface(void)const;
+    virtual bool isCropBlock()const;
+    virtual bool isStemBlock()const;
+    virtual bool isContainerBlock()const;
+    virtual bool isCraftingBlock()const;
+    virtual bool isInteractiveBlock()const;
+    virtual bool isWaterBlocking()const;
+    virtual bool isHurtableBlock()const;
+    virtual bool isFenceBlock()const;
+    virtual bool isFenceGateBlock()const;
+    virtual bool isThinFenceBlock()const;
+    virtual bool isWallBlock()const;
+    virtual bool isStairBlock()const;
+    virtual bool isSlabBlock()const;
+    virtual bool isDoorBlock()const;
+    virtual bool isRailBlock()const;
+    virtual bool isButtonBlock()const;
+    virtual bool canHurtAndBreakItem()const;
+    virtual bool isSignalSource()const;
+    virtual bool canBeOriginalSurface()const;
     virtual bool isValidAuxValue(int)const;
     virtual bool canFillAtPos(BlockSource &, BlockPos const&, Block const&)const;
     virtual void sanitizeFillBlock(BlockSource &, BlockPos const&, Block const&)const;
     virtual void onFillBlock(BlockSource &, BlockPos const&, Block const&)const;
     virtual void getDirectSignal(BlockSource &, BlockPos const&, int)const;
-    virtual void waterSpreadCausesSpawn(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual void waterSpreadCausesSpawn()const;
+    virtual bool canContainLiquid()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void handleRain(BlockSource &, BlockPos const&, float)const;
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
-    virtual void getThickness(void)const;
+    virtual void getThickness()const;
     virtual void getFlexibility(BlockSource &, BlockPos const&)const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void shouldDispense(BlockSource &, Container &)const;
@@ -93,11 +97,11 @@ public:
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
     virtual void getRedstoneProperty(BlockSource &, BlockPos const&)const;
     virtual void updateEntityAfterFallOn(Actor &)const;
-    virtual bool isBounceBlock(void)const;
+    virtual bool isBounceBlock()const;
     virtual void ignoreEntitiesOnPistonMove(Block const&)const;
     virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
     virtual void mayConsumeFertilizer(BlockSource &)const;
-    virtual void mayPick(void)const;
+    virtual void mayPick()const;
     virtual void mayPick(BlockSource &, Block const&, bool)const;
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
@@ -132,18 +136,18 @@ public:
     virtual bool hasTag(BlockSource &, BlockPos const&, Block const&, std::string const&)const;
     virtual void getMobToSpawn(SpawnConditions const&, BlockSource &)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
-    virtual void getMapColor(void)const;
+    virtual void getMapColor()const;
     virtual void shouldStopFalling(Actor &)const;
-    virtual bool pushesUpFallingBlocks(void)const;
+    virtual bool pushesUpFallingBlocks()const;
     virtual void calcGroundFriction(Mob &, BlockPos const&)const;
-    virtual bool canHaveExtraData(void)const;
-    virtual bool hasComparatorSignal(void)const;
+    virtual bool canHaveExtraData()const;
+    virtual bool hasComparatorSignal()const;
     virtual void getComparatorSignal(BlockSource &, BlockPos const&, Block const&, unsigned char)const;
     virtual bool canSlide(BlockSource &, BlockPos const&)const;
-    virtual void getIconYOffset(void)const;
-    virtual void getRenderLayer(void)const;
-    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
-    virtual bool isAuxValueRelevantForPicking(void)const;
+    virtual void getIconYOffset()const;
+    virtual void getRenderLayer()const;
+    virtual void buildDescriptionId(Block const&)const;
+    virtual bool isAuxValueRelevantForPicking()const;
     virtual void getColor(Block const&)const;
     virtual void getColorAtPos(BlockSource &, BlockPos const&)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;
@@ -151,18 +155,18 @@ public:
     virtual bool isSeasonTinted(Block const&, BlockSource &, BlockPos const&)const;
     virtual void onGraphicsModeChanged(bool, bool, bool);
     virtual void getRenderLayer(Block const&, BlockSource &, BlockPos const&)const;
-    virtual void getExtraRenderLayers(void)const;
-    virtual void getShadeBrightness(void)const;
+    virtual void getExtraRenderLayers()const;
+    virtual void getShadeBrightness()const;
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void getUIShape(Block const&, AABB &)const;
     virtual void telemetryVariant(BlockSource &, BlockPos const&)const;
     virtual void getVariant(Block const&)const;
-    virtual bool canSpawnOn(void)const;
+    virtual bool canSpawnOn()const;
     virtual void getMappedFace(unsigned char, Block const&)const;
     virtual void getFaceFlip(unsigned char, Block const&)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
-    virtual void init(void);
+    virtual void init();
     virtual void setLightBlock(Brightness);
     virtual void setLightEmission(float);
     virtual void setExplodeable(float);
@@ -173,50 +177,50 @@ public:
     virtual void addState(ItemState const&, unsigned long);
     virtual void setAllowsRunes(bool);
     virtual void setMapColor(Color const&);
-    virtual bool canBeSilkTouched(void)const;
+    virtual bool canBeSilkTouched()const;
     virtual void getSilkTouchItemInstance(Block const&)const;
     virtual void setVisualShape(AABB const&);
     virtual void setVisualShape(Vec3 const&, Vec3 const&);
     virtual void tryLegacyUpgrade(unsigned short)const;
     virtual bool dealsContactDamage(Actor const&, Block const&, bool)const;
 
-    void getBlockID(void)const;
-    void getNumPermutations(void)const;
+    void getBlockID()const;
+    void getNumPermutations()const;
     bool hasState(ItemState const&)const;
-    bool isDoor(void)const;
+    bool isDoor()const;
     bool matchesStates(BlockLegacy const&)const;
-    bool isMobPiece(void)const;
-    bool canBeExtraBlock(void)const;
-    bool canPropagateBrightness(void)const;
-    void shouldRandomTickExtraLayer(void)const;
-    bool canBeBrokenFromFalling(void)const;
+    bool isMobPiece()const;
+    bool canBeExtraBlock()const;
+    bool canPropagateBrightness()const;
+    void shouldRandomTickExtraLayer()const;
+    bool canBeBrokenFromFalling()const;
     void createBlockPermutations(unsigned int);
-    void createWeakPtr(void);
+    void createWeakPtr();
     void setDefaultState(Block const&);
     BlockLegacy(std::string const&, int, Material const&);
     void setSolid(bool);
-    bool canInstatick(void)const;
-    void getCreativeCategory(void)const;
-    void getGravity(void)const;
-    void getMaterial(void)const;
-    void getFriction(void)const;
-    void getDestroySpeed(void)const;
+    bool canInstatick()const;
+    void getCreativeCategory()const;
+    void getGravity()const;
+    void getMaterial()const;
+    void getFriction()const;
+    void getDestroySpeed()const;
     void _tryGetStateFromLegacyDataUncached(unsigned short)const;
-    void getDefaultState(void)const;
+    void getDefaultState()const;
     void tryGetStateFromLegacyData(unsigned short)const;
     void clip(BlockSource &, BlockPos const&, Vec3 const&, Vec3 const&, bool, AABB const&)const;
     void spawnResources(BlockSource &, BlockPos const&, float, int)const;
     void popResource(BlockSource &, BlockPos const&, ItemInstance const&)const;
     void addAABB(AABB const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
-    bool isSolid(void)const;
-    bool pushesOutItems(void)const;
+    bool isSolid()const;
+    bool pushesOutItems()const;
     void setPushesOutItems(bool);
-    void ignoreBlockForInsideCubeRenderer(void)const;
+    void ignoreBlockForInsideCubeRenderer()const;
     void setIgnoreBlockForInsideCubeRenderer(bool);
-    bool isUnbreakable(void)const;
-    bool isHeavy(void)const;
+    bool isUnbreakable()const;
+    bool isHeavy()const;
     bool hasProperty(BlockProperty)const;
-    bool isInteraction(void)const;
+    bool isInteraction()const;
     void setIsInteraction(bool);
     void setNameId(std::string const&);
     void addBlockProperty(BlockProperty);
@@ -224,33 +228,33 @@ public:
     void setFlammable(int, int)const;
     void setRandomTicking(bool)const;
     void setRandomTickingExtraLayer(bool)const;
-    void setExperimental(void);
+    void setExperimental();
     void setMinRequiredBaseGameVersion(BaseGameVersion const&);
     void setCanBeExtraBlock(bool);
     void setCanPropagateBrightness(bool);
-    void getRequiredBaseGameVersion(void)const;
-    void getExperimental(void)const;
-    void getAllowsRunes(void)const;
+    void getRequiredBaseGameVersion()const;
+    void getExperimental()const;
+    void getAllowsRunes()const;
     void setCategory(CreativeItemCategory);
     void DEPRECATEDcallOnGraphicsModeChanged(bool, bool, bool);
-    bool isVanilla(void)const;
+    bool isVanilla()const;
     void setIsVanillaBlock(bool);
-    void getBlockItemId(void)const;
-    bool isAlphaTested(void)const;
-    bool isSolidBlockingBlock(void)const;
-    bool isMotionBlockingBlock(void)const;
-    bool isEmpty(void)const;
-    void getBlockEntityType(void)const;
-    bool hasBlockEntity(void)const;
-    void getProperties(void)const;
+    void getBlockItemId()const;
+    bool isAlphaTested()const;
+    bool isSolidBlockingBlock()const;
+    bool isMotionBlockingBlock()const;
+    bool isEmpty()const;
+    void getBlockEntityType()const;
+    bool hasBlockEntity()const;
+    void getProperties()const;
     void forEachBlockPermutation(std::function<bool ()(Block const&)>)const;
     void forEachItemStateInstance(std::function<bool ()(ItemStateInstance const&)>)const;
     void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&)const;
-    void getParticleQuantityScalar(void)const;
+    void getParticleQuantityScalar()const;
     void getPlacementFacingAll(Actor &, BlockPos const&, float);
     void getPlacementFacingAllExceptAxisY(Actor &, BlockPos const&, float);
-    bool isStandingSign(void)const;
+    bool isStandingSign()const;
     void initFromDefinition(BlockDefinition const*);
-    bool isTrapdoor(void)const;
+    bool isTrapdoor()const;
     void getStateMask(ItemState const&)const;
 };

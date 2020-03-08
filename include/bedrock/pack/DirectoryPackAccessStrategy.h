@@ -7,13 +7,13 @@
 class DirectoryPackAccessStrategy : PackAccessStrategy {
 
 public:
-    virtual DirectoryPackAccessStrategy::~DirectoryPackAccessStrategy();
-    virtual void getPackSize(void)const;
-    virtual void getPackLocation(void)const;
-    virtual void getPackName[abi:cxx11](void)const;
-    virtual bool isWritable(void)const;
+    DirectoryPackAccessStrategy::~DirectoryPackAccessStrategy()
+    virtual void getPackSize()const;
+    virtual void getPackLocation()const;
+    virtual void getPackName()const;
+    virtual bool isWritable()const;
     virtual void setIsTrusted(bool);
-    virtual bool isTrusted(void)const;
+    virtual bool isTrusted()const;
     virtual bool hasAsset(Core::Path const&, bool)const;
     virtual bool hasFolder(Core::Path const&)const;
     virtual void getAsset(Core::Path const&, std::string &, bool)const;
@@ -21,10 +21,10 @@ public:
     virtual void writeAsset(Core::Path const&, std::string const&);
     virtual void forEachIn(Core::Path const&, std::function<void ()(Core::Path const&)>, bool)const;
     virtual void forEachInAssetSet(Core::Path const&, std::function<void ()(Core::Path const&)>)const;
-    virtual void getStrategyType(void)const;
+    virtual void getStrategyType()const;
     virtual void createSubPack(Core::Path const&)const;
-    virtual bool canRecurse(void)const;
-    virtual void unload(void);
+    virtual bool canRecurse()const;
+    virtual void unload();
 
     DirectoryPackAccessStrategy(ResourceLocation const&, bool);
 };

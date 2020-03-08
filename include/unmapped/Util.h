@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../json/Value"
 
 
 class Util {
@@ -45,7 +46,7 @@ public:
     bool isValidIP(gsl::basic_string_span<char const, -1l>, bool, bool);
     bool isValidIPAndPort(std::string const&, int);
     void _recordProfanityLocationInWord(std::string const&, std::string&, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int>>> const&, int, int, std::set<std::pair<int, int>, std::less<std::pair<int, int>>, std::allocator<std::pair<int, int>>> &, std::unordered_map<std::string, int, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, int>>> const&, std::unordered_set<std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::string>> const&);
-    void _breakIntoWordsAndFindProfanity(std::string &, std::string &, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int>>> const&, std::unordered_set<char, std::hash<char>, std::equal_to<char>, std::allocator<char>> const&, std::set<std::pair<int, int>, std::less<std::pair<int, int>>, std::allocator<std::pair<int, int>>> &, std::unordered_map<std::string, int, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, int>>> const&, std::unordered_set const&<std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::string>>);
+    void _breakIntoWordsAndFindProfanity(std::string &, std::string &, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int>>> const&, std::unordered_set<char, std::hash<char>, std::equal_to<char>, std::allocator<char>> const&, std::set<std::pair<int, int>, std::less<std::pair<int, int>>, std::allocator<std::pair<int, int>>> &, std::unordered_map<std::string, int, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, int>>> const&, std::unordered_set const&, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::string>);
     void filterProfanityFromString(std::string const&, std::unordered_map<std::string, int, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, int>>> const&, std::unordered_set<std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::string>> const&);
     bool isNumber(std::string const&);
     bool isNumberStringGreaterThan(std::string const&, std::string const&);
@@ -112,7 +113,7 @@ public:
     void split(std::string const&, char);
     void split(std::string const&, std::function<bool ()(char)>);
     void safeGetline(std::istream &, std::string &);
-    void split(std::string const&, std::vector<std::string, std::allocator<std::string>> const&, bool, bool, std::istream & (*)(std::istream &, std::string&));
-    void splitLines(std::string const&, std::istream & (*)(std::istream &, std::string&));
+    void split(std::string const&, std::vector<std::string, std::allocator<std::string>> const&, bool, bool, std::istream ()((std::istream &, std::string&), );
+    void splitLines(std::string const&, std::istream ()((std::istream &, std::string&), );
     void stripBOM(std::string &);
 };

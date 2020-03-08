@@ -5,8 +5,8 @@
 class OnWakeWithOwnerDescription : TriggerDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual OnWakeWithOwnerDescription::~OnWakeWithOwnerDescription();
+    virtual void getJsonName()const;
+    OnWakeWithOwnerDescription::~OnWakeWithOwnerDescription()
 
     OnWakeWithOwnerDescription(void);
 };

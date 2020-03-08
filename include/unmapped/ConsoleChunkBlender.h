@@ -12,7 +12,7 @@ public:
     ConsoleChunkBlender(void);
     void setInterpolants(int, int, int, int);
     void blendChunkOverworld(LevelChunk &, LevelChunk &);
-    void _prepInterpTable(void);
+    void _prepInterpTable();
     void _findHighestStoneOrBedrockHeight(LevelChunk &, int, int);
     void _findTopMostWaterHeight(LevelChunk &, int, int);
     void _calcAlphaOverworld(float, float);

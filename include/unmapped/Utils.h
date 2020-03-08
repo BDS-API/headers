@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../bedrock/level/biome/Biome"
+#include "../bedrock/block/unmapped/BlockVolume"
+#include "../bedrock/util/Random"
+#include "../bedrock/util/BlockPos"
 
 
 using namespace VanillaSurfaceBuilders;

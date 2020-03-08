@@ -1,20 +1,23 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../item/ItemStack"
+#include "../../unmapped/Block"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../actor/Player"
 
 
 class JukeboxBlock : ActorBlock {
 
 public:
-    virtual JukeboxBlock::~JukeboxBlock();
-    virtual bool isSignalSource(void)const;
+    JukeboxBlock::~JukeboxBlock()
+    virtual bool isSignalSource()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onRemove(BlockSource &, BlockPos const&)const;
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
     virtual void use(Player &, BlockPos const&)const;
-    virtual bool hasComparatorSignal(void)const;
+    virtual bool hasComparatorSignal()const;
     virtual void getComparatorSignal(BlockSource &, BlockPos const&, Block const&, unsigned char)const;
 
     JukeboxBlock(std::string const&, int);

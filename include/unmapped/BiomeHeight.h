@@ -9,5 +9,5 @@ public:
 
 
     BiomeHeight(float, float);
-    void less(void)const;
+    void less()const;
 };

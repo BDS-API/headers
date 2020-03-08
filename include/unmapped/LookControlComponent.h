@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Mob"
+#include "../bedrock/util/Vec3"
 #include "../bedrock/control/LookControl"
 
 
@@ -13,15 +14,15 @@ public:
     LookControlComponent(void);
     void initialize(Mob &);
     void setInternalType(std::unique_ptr<LookControl, std::default_delete<LookControl>>);
-    void getHasWantedPosition(void)const;
+    void getHasWantedPosition()const;
     void setHasWantedPosition(bool);
-    void getHasWantedRotation(void)const;
+    void getHasWantedRotation()const;
     void setHasWantedRotation(bool);
-    void getXMax(void)const;
-    void getYMax(void)const;
+    void getXMax()const;
+    void getYMax()const;
     void setYMax(float);
-    void getWantedPosition(void)const;
-    void getWantedRotation(void)const;
+    void getWantedPosition()const;
+    void getWantedRotation()const;
     void setLookAtPosition(Actor const*, float, float);
     void setLookAtPosition(Vec3 const&, float, float);
     void setLookAtRotation(Vec3 const&, float, float);

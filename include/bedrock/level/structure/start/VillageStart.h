@@ -1,16 +1,19 @@
 #pragma once
 
+#include "../../../../unmapped/BiomeSource"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../util/Random"
 #include "../../../../unmapped/Dimension"
-#include "../../../../unmapped/BlockSource"
+#include "../../../block/unmapped/BlockSource"
 
 
 class VillageStart : StructureStart {
 
 public:
-    virtual VillageStart::~VillageStart();
+    VillageStart::~VillageStart()
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual bool isValid(void)const;
-    virtual void getType(void)const;
+    virtual bool isValid()const;
+    virtual void getType()const;
 
     VillageStart(Dimension &, BiomeSource &, Random &, int, int);
 };

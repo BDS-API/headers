@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/command/CommandVersion"
 #include "../bedrock/command/Symbol"
 
 

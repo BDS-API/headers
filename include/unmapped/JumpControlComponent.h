@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
 #include "../bedrock/control/JumpControl"
+#include "../bedrock/description/component/JumpControlDescription"
+#include "../bedrock/actor/Mob"
 
 
 class JumpControlComponent {
@@ -12,11 +13,11 @@ public:
     JumpControlComponent(void);
     void initializeFromDefinition(Mob &, JumpControlDescription *);
     void setInternalType(std::unique_ptr<JumpControl, std::default_delete<JumpControl>>);
-    void getAnimationDuration(void)const;
+    void getAnimationDuration()const;
     void setAnimationDuration(int);
-    void getDistanceScale(void)const;
+    void getDistanceScale()const;
     void setDistanceScale(float);
-    void getJumping(void)const;
+    void getJumping()const;
     void setJumping(bool);
     void getJumpDelay(Mob const&)const;
     void setJumpDelay(int);
@@ -24,10 +25,10 @@ public:
     void setJumpPower(float);
     void getJumpType(Mob const&)const;
     void setJumpType(Mob &, JumpType);
-    void getSwimming(void)const;
+    void getSwimming()const;
     void setSwimming(bool);
-    void _getDelayInternal(void)const;
-    void _getHeightInternal(void)const;
+    void _getDelayInternal()const;
+    void _getHeightInternal()const;
     void resetSpeedModifier(Mob &);
     void update(Mob &);
 };

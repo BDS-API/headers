@@ -6,11 +6,11 @@
 class WorldGenerator {
 
 public:
-    virtual WorldGenerator::~WorldGenerator();
-    virtual void debugRender(void);
+    WorldGenerator::~WorldGenerator()
+    virtual void debugRender();
     virtual void addHardcodedSpawnAreas(LevelChunk &);
 
-    void getHardcodedSpawns(void)const;
+    void getHardcodedSpawns()const;
     WorldGenerator(void);
     void getFeatureName(StructureFeatureType);
     void getFeatureId(std::string const&);

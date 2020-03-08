@@ -1,8 +1,11 @@
 #pragma once
 
+#include "../../../../unmapped/Block"
+#include "../../../definition/RoomDefinition"
 #include "../../../../unmapped/BoundingBox"
+#include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
 #include "../../LevelChunk"
-#include "../../../../unmapped/BlockSource"
 
 
 class OceanMonumentPiece : StructurePiece {
@@ -16,7 +19,7 @@ public:
     static long mGridroomLeftWingConnectIndex;
     static long mGridroomRightWingConnectIndex;
 
-    virtual OceanMonumentPiece::~OceanMonumentPiece();
+    OceanMonumentPiece::~OceanMonumentPiece()
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void getWorldX(int, int);
     virtual void getWorldZ(int, int);
@@ -32,5 +35,5 @@ public:
     void spawnElder(BlockSource *, BoundingBox const&, int, int, int);
     void chunkIntersects(BoundingBox const&, int, int, int, int);
     void getRoomIndex(int, int, int);
-    void getGridSize(void);
+    void getGridSize();
 };

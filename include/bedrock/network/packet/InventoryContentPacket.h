@@ -1,17 +1,17 @@
 #pragma once
 
+#include "../../item/ItemStack"
 #include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
 #include "../../actor/Player"
-#include "../../item/ItemStack"
 
 
 class InventoryContentPacket : Packet {
 
 public:
-    virtual InventoryContentPacket::~InventoryContentPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    InventoryContentPacket::~InventoryContentPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

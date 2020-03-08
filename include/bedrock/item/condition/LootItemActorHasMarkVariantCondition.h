@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/Random"
 #include "../../../json/Value"
+#include "../../../unmapped/LootTableContext"
+#include "../../util/Random"
 
 
 class LootItemActorHasMarkVariantCondition : LootItemCondition {
 
 public:
-    virtual LootItemActorHasMarkVariantCondition::~LootItemActorHasMarkVariantCondition();
+    LootItemActorHasMarkVariantCondition::~LootItemActorHasMarkVariantCondition()
     virtual void applies(Random &, LootTableContext &);
 
     LootItemActorHasMarkVariantCondition(int);

@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "../bedrock/actor/Player"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class BreedableComponent {
@@ -16,11 +18,11 @@ public:
     void _handlePregnancy(Actor &, Actor &);
     void _handleMate(Actor &, Actor &);
     void setInLove(Actor &, Player const*);
-    void getLoveTimer(void)const;
+    void getLoveTimer()const;
     void setLoveTimer(int);
-    void decrementLoveTimer(void);
-    void getBreedCooldown(void)const;
-    void decrementBreedCooldown(void);
+    void decrementLoveTimer();
+    void getBreedCooldown()const;
+    void decrementBreedCooldown();
     void resetLove(Actor &);
     void getLoveCause(Actor const&)const;
     void addAdditionalSaveData(CompoundTag &);

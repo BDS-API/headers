@@ -6,7 +6,7 @@
 class LookControl : Control {
 
 public:
-    virtual LookControl::~LookControl();
+    LookControl::~LookControl()
     virtual void initializeInternal(Mob &);
     virtual void tick(Mob &);
 

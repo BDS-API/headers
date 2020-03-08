@@ -6,9 +6,9 @@
 class BlockIsNameTest : SimpleHashStringFilterTest {
 
 public:
-    virtual BlockIsNameTest::~BlockIsNameTest();
+    BlockIsNameTest::~BlockIsNameTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     BlockIsNameTest(void);
 };

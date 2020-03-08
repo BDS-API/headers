@@ -1,12 +1,13 @@
 #pragma once
 
 #include "../../unmapped/MoveControlComponent"
+#include "../actor/Mob"
 
 
 class AmphibiousMoveControl : GenericMoveControl {
 
 public:
-    virtual AmphibiousMoveControl::~AmphibiousMoveControl();
+    AmphibiousMoveControl::~AmphibiousMoveControl()
     virtual void tick(MoveControlComponent &, Mob &);
 
     AmphibiousMoveControl(void);

@@ -14,9 +14,9 @@ public:
     void append(leveldb::Slice const&);
     void read(unsigned long, unsigned long, leveldb::Slice *, char *, unsigned long &)const;
     void flushToDisk(leveldb::Env *);
-    void markForDelete(void);
-    bool isSafeToDelete(void)const;
-    bool isOpenForWrite(void)const;
-    bool isMarkedForDelete(void)const;
-    bool isMarkedDirty(void)const;
+    void markForDelete();
+    bool isSafeToDelete()const;
+    bool isOpenForWrite()const;
+    bool isMarkedForDelete()const;
+    bool isMarkedDirty()const;
 };

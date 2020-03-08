@@ -1,9 +1,12 @@
 #pragma once
 
-#include "../LevelChunkFinalDeleter"
 #include "../LevelChunk"
+#include "../../../unmapped/DBStorageWriteBatch"
 #include "../storage/DBStorage"
 #include "../../../unmapped/DBChunkStorageKey"
+#include "../LevelChunkFinalDeleter"
+#include "../../Scheduler"
+#include "../../block/unmapped/BlockSource"
 
 
 class DBChunkStorage : ChunkSource {
@@ -12,20 +15,20 @@ public:
     static long threadBatch;
     static long threadBuffer[abi:cxx11];
 
-    virtual DBChunkStorage::~DBChunkStorage();
-    virtual void shutdown(void);
-    virtual bool isShutdownDone(void);
+    DBChunkStorage::~DBChunkStorage()
+    virtual void shutdown();
+    virtual bool isShutdownDone();
     virtual void postProcess(ChunkViewSource &);
     virtual void checkAndReplaceChunk(ChunkViewSource &, LevelChunk &);
     virtual void loadChunk(LevelChunk &, bool);
     virtual void saveLiveChunk(LevelChunk &);
-    virtual void hintDiscardBatchBegin(void);
-    virtual void hintDiscardBatchEnd(void);
+    virtual void hintDiscardBatchBegin();
+    virtual void hintDiscardBatchEnd();
     virtual void acquireDiscarded(std::unique_ptr<LevelChunk, LevelChunkFinalDeleter>);
-    virtual void flushPendingWrites(void);
+    virtual void flushPendingWrites();
 
     DBChunkStorage(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>, DBStorage &, Scheduler &);
-    void _writeBatch(void);
+    void _writeBatch();
     void _hasChunkUncached(DBChunkStorageKey const&);
     void _hasChunk(DBChunkStorageKey const&);
     void _loadChunkFromDB(LevelChunk &);
@@ -33,7 +36,7 @@ public:
     void _upgradeFix(LevelChunk &, BlockSource &);
     void _loadAndBlendFromDB(LevelChunk &);
     void _serializeChunk(LevelChunk const&, DBStorageWriteBatch &);
-    void _getBuffer(void);
-    void freeCaches(void);
+    void _getBuffer();
+    void freeCaches();
     void registerUpgradeFixHandler(std::function<void ()(LevelChunk &, BlockSource &)>);
 };

@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../actor/Player"
-#include "../../unmapped/Random"
 
 
 class FrostedIceBlock : BlockLegacy {
@@ -11,7 +13,7 @@ public:
     static long MIN_NEIGHBORS;
     static long MAX_AGE;
 
-    virtual FrostedIceBlock::~FrostedIceBlock();
+    FrostedIceBlock::~FrostedIceBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
@@ -19,7 +21,7 @@ public:
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
-    virtual bool canBeSilkTouched(void)const;
+    virtual bool canBeSilkTouched()const;
 
     FrostedIceBlock(std::string const&, int, bool);
     void _countNeighbors(BlockSource &, BlockPos const&)const;

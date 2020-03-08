@@ -5,7 +5,7 @@
 class NullSecureStorage : SecureStorage {
 
 public:
-    virtual NullSecureStorage::~NullSecureStorage();
+    NullSecureStorage::~NullSecureStorage()
     virtual void add(std::string const&, std::string const&);
     virtual void addOrUpdate(std::string const&, std::string const&);
     virtual void remove(std::string const&);

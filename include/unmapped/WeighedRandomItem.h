@@ -10,5 +10,5 @@ public:
 
     WeighedRandomItem(int);
     WeighedRandomItem(void);
-    void getWeight(void)const;
+    void getWeight()const;
 };

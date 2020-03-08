@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Random"
 
 
 class Facing {

@@ -1,12 +1,15 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/Block"
-#include "../../unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
-#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/Vec3"
+#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../util/Vec2"
+#include "../util/Vec3"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../nbt/CompoundTag"
 
 
 class Minecart : Actor {
@@ -14,37 +17,37 @@ class Minecart : Actor {
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Minecart::~Minecart();
+    Minecart::~Minecart()
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
-    virtual void normalTick(void);
-    virtual void getShadowHeightOffs(void);
-    virtual void getShadowRadius(void)const;
-    virtual bool isPickable(void);
+    virtual void normalTick();
+    virtual void getShadowHeightOffs();
+    virtual void getShadowRadius()const;
+    virtual bool isPickable();
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
     virtual void onBounceStarted(BlockPos const&, Block const&);
-    virtual void getControllingPlayer(void)const;
-    virtual void kill(void);
-    virtual bool canMakeStepSound(void)const;
+    virtual void getControllingPlayer()const;
+    virtual void kill();
+    virtual bool canMakeStepSound()const;
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void _onSizeUpdated(void);
+    virtual void _onSizeUpdated();
     virtual void destroy(ActorDamageSource const&, bool);
-    virtual void getDefaultDisplayBlock(void)const;
-    virtual void getDefaultDisplayData(void)const;
-    virtual void getDefaultDisplayOffset(void)const;
-    virtual void applyNaturalSlowdown(void);
-    virtual void lazyInitDisplayBlock(void);
+    virtual void getDefaultDisplayBlock()const;
+    virtual void getDefaultDisplayData()const;
+    virtual void getDefaultDisplayOffset()const;
+    virtual void applyNaturalSlowdown();
+    virtual void lazyInitDisplayBlock();
 
     Minecart(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void _reloadMinecartHardcodedValues(void);
-    void registerLoopingSounds(void);
-    void getDisplayBlock(void)const;
-    bool hasCustomDisplay(void)const;
-    void getDisplayOffset(void)const;
+    void _reloadMinecartHardcodedValues();
+    void registerLoopingSounds();
+    void getDisplayBlock()const;
+    bool hasCustomDisplay()const;
+    void getDisplayOffset()const;
     void setDisplayBlock(Block const&);
     void setCustomDisplay(bool);
     void setDisplayOffset(int);
     void setCustomName(std::string const&);
-    bool hasCustomName(void)const;
+    bool hasCustomName()const;
 };

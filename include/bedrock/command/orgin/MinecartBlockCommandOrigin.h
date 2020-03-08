@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../block/unmapped/BlockSource"
 
 
 class MinecartBlockCommandOrigin : BlockCommandOrigin {
 
 public:
-    virtual MinecartBlockCommandOrigin::~MinecartBlockCommandOrigin();
-    virtual void getBlockPosition(void)const;
-    virtual void getWorldPosition(void)const;
-    virtual void clone(void)const;
-    virtual bool canUseCommandsWithoutCheatsEnabled(void)const;
-    virtual void getOriginType(void)const;
-    virtual void getBlockEntity(void)const;
-    virtual void getBaseCommandBlock(void)const;
+    MinecartBlockCommandOrigin::~MinecartBlockCommandOrigin()
+    virtual void getBlockPosition()const;
+    virtual void getWorldPosition()const;
+    virtual void clone()const;
+    virtual bool canUseCommandsWithoutCheatsEnabled()const;
+    virtual void getOriginType()const;
+    virtual void getBlockEntity()const;
+    virtual void getBaseCommandBlock()const;
 
     MinecartBlockCommandOrigin(BlockSource &, ActorUniqueID const&);
 };

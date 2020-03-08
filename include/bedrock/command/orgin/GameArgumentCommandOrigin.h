@@ -5,19 +5,19 @@
 class GameArgumentCommandOrigin : CommandOrigin {
 
 public:
-    virtual GameArgumentCommandOrigin::~GameArgumentCommandOrigin();
-    virtual void getRequestId[abi:cxx11](void)const;
-    virtual void getName[abi:cxx11](void)const;
-    virtual void getBlockPosition(void)const;
-    virtual void getWorldPosition(void)const;
-    virtual void getLevel(void)const;
-    virtual void getDimension(void)const;
-    virtual void getEntity(void)const;
-    virtual void getPermissionsLevel(void)const;
-    virtual void clone(void)const;
-    virtual bool canUseCommandsWithoutCheatsEnabled(void)const;
-    virtual bool isSelectorExpansionAllowed(void)const;
-    virtual void getOriginType(void)const;
+    GameArgumentCommandOrigin::~GameArgumentCommandOrigin()
+    virtual void getRequestId()const;
+    virtual void getName()const;
+    virtual void getBlockPosition()const;
+    virtual void getWorldPosition()const;
+    virtual void getLevel()const;
+    virtual void getDimension()const;
+    virtual void getEntity()const;
+    virtual void getPermissionsLevel()const;
+    virtual void clone()const;
+    virtual bool canUseCommandsWithoutCheatsEnabled()const;
+    virtual bool isSelectorExpansionAllowed()const;
+    virtual void getOriginType()const;
 
     GameArgumentCommandOrigin(void);
 };

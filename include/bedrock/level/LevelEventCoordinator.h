@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../actor/Actor"
 
 
 class LevelEventCoordinator {
@@ -10,6 +11,6 @@ public:
     void sendLevelInitialized(Level &);
     void sendLevelRemovedActor(Level &, Actor &);
     void sendLevelAddedActor(Level &, Actor &);
-    void sendLevelTick(void);
+    void sendLevelTick();
     void sendLevelWeatherChanged(std::string const&, bool, bool);
 };

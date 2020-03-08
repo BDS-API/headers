@@ -9,5 +9,5 @@ class Degree {
 public:
 
     Degree(mce::Radian);
-    bool asFloat(void)const;
+    bool asFloat()const;
 };

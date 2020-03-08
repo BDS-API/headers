@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/pack/ResourcePackManager"
 
 
 class FeatureRegistry {
@@ -13,6 +14,6 @@ public:
     void reserveFeature(std::string const&);
     void lookupByName(std::string const&)const;
     void lookupByNameDEPRECATED(std::string const&)const;
-    void cleanupFeatures(void);
-    void getFeatureRegistrySize(void)const;
+    void cleanupFeatures();
+    void getFeatureRegistrySize()const;
 };

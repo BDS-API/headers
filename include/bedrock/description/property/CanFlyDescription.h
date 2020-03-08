@@ -6,8 +6,8 @@
 class CanFlyDescription : PropertyDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual CanFlyDescription::~CanFlyDescription();
+    virtual void getJsonName()const;
+    CanFlyDescription::~CanFlyDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

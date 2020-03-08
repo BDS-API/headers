@@ -6,9 +6,9 @@
 class FilterTestBiome : SimpleIntFilterTest {
 
 public:
-    virtual FilterTestBiome::~FilterTestBiome();
+    FilterTestBiome::~FilterTestBiome()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     FilterTestBiome(void);
 };

@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../CommandRegistry"
 #include "../orgin/CommandOrigin"
+#include "../../../unmapped/PermissionsFile"
+#include "../CommandOutput"
+#include "../CommandRegistry"
 
 
 class PermissionCommand : ServerCommand {
@@ -9,7 +11,7 @@ class PermissionCommand : ServerCommand {
 public:
     static long mPermissionsFile;
 
-    virtual PermissionCommand::~PermissionCommand();
+    PermissionCommand::~PermissionCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &, PermissionsFile *);

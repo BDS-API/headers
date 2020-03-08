@@ -7,21 +7,21 @@ class ExpandoContainerModel : ContainerModel {
 
 public:
     virtual void containerContentChanged(int);
-    virtual ExpandoContainerModel::~ExpandoContainerModel();
-    virtual void getContainerSize(void)const;
-    virtual void getFilteredContainerSize(void)const;
+    ExpandoContainerModel::~ExpandoContainerModel()
+    virtual void getContainerSize()const;
+    virtual void getFilteredContainerSize()const;
     virtual void getItem(int)const;
-    virtual void getItems(void)const;
+    virtual void getItems()const;
     virtual void setItem(int, ContainerItemStack const&);
     virtual void getItemExpandStatus(int)const;
-    virtual void getItemGroupName[abi:cxx11](int)const;
+    virtual void getItemGroupName(int)const;
     virtual void switchItemExpando(int);
     virtual void refreshContainer(bool);
 
     ExpandoContainerModel(ContainerEnumName, int, ContainerCategory);
     void getIndexForCreativeItem(ContainerItemStack const&)const;
-    void _init(void);
+    void _init();
     void _refreshContainer(bool);
     void setOnItemExpandedCallback(std::function<void ()(std::string const&, int, int)>);
-    void _generateCurrentItems(void);
+    void _generateCurrentItems();
 };

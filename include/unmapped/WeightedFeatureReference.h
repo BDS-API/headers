@@ -8,7 +8,7 @@ class WeightedFeatureReference {
 
 public:
 
-    void getWeight(void)const;
+    void getWeight()const;
     WeightedFeatureReference(void);
     WeightedFeatureReference(WeightedRandomFeature::WeightedFeatureReference&&);
     WeightedFeatureReference(WeightedRandomFeature::WeightedFeatureReference const&);

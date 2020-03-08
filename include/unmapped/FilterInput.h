@@ -7,13 +7,13 @@ class FilterInput {
 public:
 
     FilterInput(int);
-    void getType(void)const;
+    void getType()const;
     FilterInput(float);
     FilterInput(std::string const&);
     FilterInput(bool);
     FilterInput(FilterInput const&);
     FilterInput(char const*);
-    void getInt(void)const;
-    void getBool(void)const;
-    void getFloat(void)const;
+    void getInt()const;
+    void getBool()const;
+    void getFloat()const;
 };

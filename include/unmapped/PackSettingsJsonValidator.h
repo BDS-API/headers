@@ -6,5 +6,5 @@ class PackSettingsJsonValidator {
 
 public:
 
-    void getValidator(void);
+    void getValidator();
 };

@@ -8,8 +8,8 @@ public:
 
     EnchantmentInstance(void);
     EnchantmentInstance(Enchant::Type, int);
-    void getEnchantType(void)const;
+    void getEnchantType()const;
     void setEnchantType(Enchant::Type);
-    void getEnchantLevel(void)const;
+    void getEnchantLevel()const;
     void setEnchantLevel(int);
 };

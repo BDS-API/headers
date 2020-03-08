@@ -5,8 +5,8 @@
 class OnStartTakeoffDescription : TriggerDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual OnStartTakeoffDescription::~OnStartTakeoffDescription();
+    virtual void getJsonName()const;
+    OnStartTakeoffDescription::~OnStartTakeoffDescription()
 
     OnStartTakeoffDescription(void);
 };

@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../../../../unmapped/BlockPos"
-#include "../../../../unmapped/ScriptEngine"
-#include "../../../../unmapped/ActorUniqueID"
+#include "../../unmapped/ScriptEngine"
+#include "../../../actor/unmapped/ActorUniqueID"
+#include "../../ScriptObjectHandle"
+#include "../../../util/BlockPos"
 
 
 class ScriptServerBlockDestructionStoppedEvent : ScriptEventData {
@@ -10,10 +11,10 @@ class ScriptServerBlockDestructionStoppedEvent : ScriptEventData {
 public:
     static long mHash;
 
-    virtual ScriptServerBlockDestructionStoppedEvent::~ScriptServerBlockDestructionStoppedEvent();
+    ScriptServerBlockDestructionStoppedEvent::~ScriptServerBlockDestructionStoppedEvent()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
-    void getHash(void);
+    void getHash();
     ScriptServerBlockDestructionStoppedEvent(void);
     void setActorId(ActorUniqueID const&);
     void setBlockPos(BlockPos const&);

@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../bedrock/actor/attribute/TemporalAttributeBuff"
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/attribute/AttributeInstance"
+#include "../bedrock/nbt/ListTag"
+#include "../bedrock/actor/attribute/TemporalAttributeBuff"
 #include "../bedrock/actor/attribute/AttributeModifier"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class SharedAttributes {

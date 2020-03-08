@@ -1,13 +1,14 @@
 #pragma once
 
 #include "../../../../json/Value"
-#include "../../../../unmapped/ScriptEngine"
+#include "../../unmapped/ScriptEngine"
+#include "../../ScriptObjectHandle"
 
 
 class CustomScriptEventData : ScriptEventData {
 
 public:
-    virtual CustomScriptEventData::~CustomScriptEventData();
+    CustomScriptEventData::~CustomScriptEventData()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
     CustomScriptEventData(std::string const&);

@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../../../unmapped/ScriptEngine"
+#include "../ScriptObjectHandle"
+#include "../unmapped/ScriptEngine"
 
 
 class ScriptQueryBinderComponent : ScriptBinderComponent {
@@ -8,11 +9,11 @@ class ScriptQueryBinderComponent : ScriptBinderComponent {
 public:
     static long TAG[abi:cxx11];
 
-    virtual ScriptQueryBinderComponent::~ScriptQueryBinderComponent();
+    ScriptQueryBinderComponent::~ScriptQueryBinderComponent()
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 
     ScriptQueryBinderComponent(void);
     ScriptQueryBinderComponent(unsigned int);
-    void getIdentifier(void)const;
+    void getIdentifier()const;
 };

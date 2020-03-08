@@ -1,12 +1,14 @@
 #pragma once
 
+#include "../bedrock/Minecraft"
 #include "../bedrock/ServerInstance"
+#include "../bedrock/level/Level"
 
 
 class ServerInstanceEventListener {
 
 public:
-    virtual ServerInstanceEventListener::~ServerInstanceEventListener();
+    ServerInstanceEventListener::~ServerInstanceEventListener()
     virtual void onServerInitializeStart(ServerInstance &);
     virtual void onServerInitializeEnd(ServerInstance &);
     virtual void onServerMinecraftInitialized(ServerInstance &, Minecraft &);

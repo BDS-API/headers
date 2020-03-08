@@ -1,25 +1,26 @@
 #pragma once
 
+#include "../../item/ItemStack"
+#include "../../item/unmapped/ItemDescriptor"
 #include "../../../unmapped/ContainerItemStack"
+#include "../../util/BlockPos"
 #include "../../actor/Player"
 #include "../../item/ItemInstance"
-#include "../../item/ItemStack"
-#include "../../../unmapped/ItemDescriptor"
 
 
 class BrewingStandContainerManagerModel : ContainerManagerModel {
 
 public:
-    virtual BrewingStandContainerManagerModel::~BrewingStandContainerManagerModel();
-    virtual void getItems(void);
+    BrewingStandContainerManagerModel::~BrewingStandContainerManagerModel()
+    virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
     virtual void setData(int, int);
-    virtual void broadcastChanges(void);
-    virtual void init(void);
+    virtual void broadcastChanges();
+    virtual void init();
 
     BrewingStandContainerManagerModel(ContainerID, Player &, BlockPos const&);
-    void _getBrewingStandEntity(void);
+    void _getBrewingStandEntity();
     bool isStandValid(float);
     void getBrewProgress(int);
     void getBubbleProgress(int);
@@ -27,7 +28,7 @@ public:
     bool isFinished(int &, int &, int);
     void firePotionBrewedEvent(ItemDescriptor const&, int);
     void fireItemAcquiredEvent(ItemInstance const&, int);
-    void getBlockPos(void)const;
+    void getBlockPos()const;
     void _onInputSlotChanged(int, ItemStack const&, ItemStack const&);
     void _onOutputSlotChanged(int, ItemStack const&, ItemStack const&);
     void _onFuelSlotChanged(int, ItemStack const&, ItemStack const&);

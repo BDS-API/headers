@@ -10,6 +10,6 @@ public:
 
     WhitelistEntryMatcher(std::string, std::string);
     WhitelistEntryMatcher(Whitelist::WhitelistEntryMatcher const&);
-    void operator()(WhitelistEntry &);
+    void operator();
     WhitelistEntryMatcher(Whitelist::WhitelistEntryMatcher&&);
 };

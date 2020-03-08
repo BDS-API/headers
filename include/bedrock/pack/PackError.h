@@ -6,13 +6,13 @@
 class PackError {
 
 public:
-    virtual PackError::~PackError();
-    virtual void getLocErrorMessage[abi:cxx11](void)const;
+    PackError::~PackError()
+    virtual void getLocErrorMessage()const;
 
     PackError(PackErrorType, std::vector<std::string, std::allocator<std::string>> const&);
-    void getErrorValue(void)const;
+    void getErrorValue()const;
     void serialize(Json::Value &);
     void deserialize(Json::Value const&);
-    void getPackErrorType(void)const;
+    void getPackErrorType()const;
     PackError(PackError const&);
 };

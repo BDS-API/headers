@@ -1,22 +1,23 @@
 #pragma once
 
+#include "../../../unmapped/FloatRange"
 #include "../Mob"
 
 
 class CircleAroundAnchorGoal : Goal {
 
 public:
-    virtual CircleAroundAnchorGoal::~CircleAroundAnchorGoal();
-    virtual bool canUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    CircleAroundAnchorGoal::~CircleAroundAnchorGoal()
+    virtual bool canUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     CircleAroundAnchorGoal(Mob &, float, FloatRange, int, FloatRange, FloatRange, int, float);
-    void _calculateHeightOffset(void)const;
-    void _setAnchorAboveTarget(void);
-    void _setAnchorAboveGround(void);
-    void _selectNext(void);
-    void _touchingTarget(void)const;
+    void _calculateHeightOffset()const;
+    void _setAnchorAboveTarget();
+    void _setAnchorAboveGround();
+    void _selectNext();
+    void _touchingTarget()const;
 };

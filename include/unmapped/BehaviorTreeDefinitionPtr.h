@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/definition/BehaviorTreeDefinition"
 
 
 class BehaviorTreeDefinitionPtr {
@@ -13,6 +14,6 @@ public:
     BehaviorTreeDefinitionPtr(BehaviorTreeDefinitionPtr&&);
     void _move(BehaviorTreeDefinitionPtr&&);
     BehaviorTreeDefinitionPtr(BehaviorTreeDefinitionPtr const&);
-    void _deref(void);
-    void onGroupDestroyed(void);
+    void _deref();
+    void onGroupDestroyed();
 };

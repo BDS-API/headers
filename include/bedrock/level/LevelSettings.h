@@ -1,6 +1,10 @@
 #pragma once
 
+#include "../../unmapped/Dimension"
+#include "../util/BlockPos"
 #include "../../unmapped/EducationLevelSettings"
+#include "../../unmapped/GameRules"
+#include "../../unmapped/Abilities"
 #include "../../unmapped/BaseGameVersion"
 #include "../../unmapped/PackInstanceId"
 
@@ -16,60 +20,60 @@ public:
     LevelSettings(LevelData const&, AutomaticID<Dimension, int>);
     LevelSettings(unsigned int, GameType, Difficulty, AutomaticID<Dimension, int>, GeneratorType, BlockPos const&, bool, int, EducationEditionOffer, float, float, bool, bool, bool, Social::GamePublishSetting, Social::GamePublishSetting, bool, bool, bool, bool, bool, bool, GameRules, bool, bool, Abilities, unsigned int, bool, bool, bool, BaseGameVersion const&);
     void setEducationFeaturesEnabled(bool);
-    void getDefaultSpawn(void)const;
-    void getSeed(void)const;
-    void getGameType(void)const;
-    void getDimension(void)const;
-    void getGameDifficulty(void)const;
-    void getTime(void)const;
+    void getDefaultSpawn()const;
+    void getSeed()const;
+    void getGameType()const;
+    void getDimension()const;
+    void getGameDifficulty()const;
+    void getTime()const;
     void setForceGameType(bool);
-    void forceGameType(void)const;
-    bool hasAchievementsDisabled(void)const;
-    void getGenerator(void)const;
-    void getRainLevel(void)const;
-    void getLightningLevel(void)const;
-    bool isEducationEditionWorld(void)const;
-    void getEducationEditionOffer(void)const;
+    void forceGameType()const;
+    bool hasAchievementsDisabled()const;
+    void getGenerator()const;
+    void getRainLevel()const;
+    void getLightningLevel()const;
+    bool isEducationEditionWorld()const;
+    void getEducationEditionOffer()const;
     void setEducationEditionOffer(EducationEditionOffer);
-    void educationFeaturesEnabled(void)const;
+    void educationFeaturesEnabled()const;
     void setImmutableWorld(bool);
-    void getImmutableWorld(void)const;
-    void getGameRules(void)const;
-    bool hasConfirmedPlatformLockedContent(void)const;
-    void getMultiplayerGameIntent(void)const;
-    void getLanBroadcastIntent(void)const;
-    bool hasXBLBroadcastIntent(void)const;
-    void getXBLBroadcastIntent(void)const;
-    bool hasPlatformBroadcastIntent(void)const;
-    void getPlatformBroadcastIntent(void)const;
-    bool hasCommandsEnabled(void)const;
-    bool isTexturepacksRequired(void)const;
-    bool hasLockedBehaviorPack(void)const;
-    bool hasLockedResourcePack(void)const;
-    bool isFromLockedTemplate(void)const;
-    void useMsaGamertagsOnly(void)const;
-    bool hasBonusChestEnabled(void)const;
-    bool hasStartWithMapEnabled(void)const;
-    void getServerChunkTickRange(void)const;
-    void getDefaultAbilities(void)const;
+    void getImmutableWorld()const;
+    void getGameRules()const;
+    bool hasConfirmedPlatformLockedContent()const;
+    void getMultiplayerGameIntent()const;
+    void getLanBroadcastIntent()const;
+    bool hasXBLBroadcastIntent()const;
+    void getXBLBroadcastIntent()const;
+    bool hasPlatformBroadcastIntent()const;
+    void getPlatformBroadcastIntent()const;
+    bool hasCommandsEnabled()const;
+    bool isTexturepacksRequired()const;
+    bool hasLockedBehaviorPack()const;
+    bool hasLockedResourcePack()const;
+    bool isFromLockedTemplate()const;
+    void useMsaGamertagsOnly()const;
+    bool hasBonusChestEnabled()const;
+    bool hasStartWithMapEnabled()const;
+    void getServerChunkTickRange()const;
+    void getDefaultAbilities()const;
     void setOverrideSavedSettings(bool);
-    void shouldOverrideSavedSettings(void)const;
+    void shouldOverrideSavedSettings()const;
     void overrideSavedSettings(LevelData &)const;
-    bool achievementsWillBeDisabledOnLoad(void)const;
+    bool achievementsWillBeDisabledOnLoad()const;
     void setNewWorldBehaviorPackIdentities(std::vector<PackInstanceId, std::allocator<PackInstanceId>> const&);
-    void getNewWorldBehaviorPackIdentities(void)const;
+    void getNewWorldBehaviorPackIdentities()const;
     void setNewWorldResourcePackIdentities(std::vector<PackInstanceId, std::allocator<PackInstanceId>> const&);
-    void getNewWorldResourcePackIdentities(void)const;
+    void getNewWorldResourcePackIdentities()const;
     void setForceExperimentalGameplay(bool);
-    void shouldForceExperimentalGameplay(void)const;
-    bool isFromWorldTemplate(void)const;
-    bool isWorldTemplateOptionLocked(void)const;
-    void getOnlySpawnV1Villagers(void)const;
+    void shouldForceExperimentalGameplay()const;
+    bool isFromWorldTemplate()const;
+    bool isWorldTemplateOptionLocked()const;
+    void getOnlySpawnV1Villagers()const;
     void setOnlySpawnV1Villagers(bool);
-    void getBaseGameVersion(void)const;
+    void getBaseGameVersion()const;
     void setBaseGameVersion(BaseGameVersion const&);
     void setEducationLevelSettings(EducationLevelSettings);
-    void getEducationLevelSettings(void)const;
+    void getEducationLevelSettings()const;
     void validateGameDifficulty(Difficulty);
     void parseSeedString(std::string const&, unsigned int);
 };

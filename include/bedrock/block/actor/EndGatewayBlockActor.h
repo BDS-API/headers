@@ -1,11 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
+#include "../unmapped/BlockVolume"
 #include "../../actor/Actor"
-#include "../../nbt/CompoundTag"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
 #include "../../level/generator/WorldGenerator"
+#include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class EndGatewayBlockActor : BlockActor {
@@ -15,22 +17,22 @@ public:
     static long COOLDOWN_TIME;
     static long EVENT_COOLDOWN;
 
-    virtual EndGatewayBlockActor::~EndGatewayBlockActor();
+    EndGatewayBlockActor::~EndGatewayBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
     virtual void triggerEvent(int, int);
-    virtual bool hasAlphaLayer(void)const;
+    virtual bool hasAlphaLayer()const;
 
     EndGatewayBlockActor(BlockPos const&);
     bool canTeleport(Actor *, BlockSource &)const;
-    bool isSpawning(void)const;
-    bool isCoolingDown(void)const;
+    bool isSpawning()const;
+    bool isCoolingDown()const;
     void teleportEntity(Actor &);
-    void getSpawnPercentage(void)const;
-    void getCoolDownPercentage(void)const;
+    void getSpawnPercentage()const;
+    void getCoolDownPercentage()const;
     void triggerCooldown(BlockSource &);
     void _getHighestSection(WorldGenerator &, BlockVolume &, BlockPos const&);
     void findExitPortal(WorldGenerator &, BlockPos const&);
@@ -39,6 +41,6 @@ public:
     void findValidSpawnAround(BlockSource &, BlockPos const&, bool, int);
     void _hasRoomForPlayer(BlockSource &, BlockPos const&);
     void setExitPosition(BlockPos const&);
-    void getExitPosition(void)const;
-    void exitPositionVerified(void)const;
+    void getExitPosition()const;
+    void exitPositionVerified()const;
 };

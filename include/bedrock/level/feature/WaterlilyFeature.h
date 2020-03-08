@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/Random"
 
 
 class WaterlilyFeature : Feature {
 
 public:
-    virtual WaterlilyFeature::~WaterlilyFeature();
+    WaterlilyFeature::~WaterlilyFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     WaterlilyFeature(void);

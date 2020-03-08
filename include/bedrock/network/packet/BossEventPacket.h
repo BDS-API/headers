@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/ActorUniqueID"
-#include "../../io/BinaryStream"
 #include "../../../unmapped/RaidBossComponent"
+#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorUniqueID"
 #include "../../../unmapped/BossComponent"
+#include "../../io/BinaryStream"
 
 
 class BossEventPacket : Packet {
 
 public:
-    virtual BossEventPacket::~BossEventPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    BossEventPacket::~BossEventPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

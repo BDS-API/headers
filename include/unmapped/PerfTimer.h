@@ -19,7 +19,7 @@ public:
     void allocateNodes(std::vector<PerfTimer::Node *, std::allocator<PerfTimer::Node *>> &, int);
     void rawRelease(PerfTimer::Node *, int);
     void push(char const*, char const*, int);
-    void pop(void);
+    void pop();
     void serialize(PerfTimer::Node const*);
     void releaseNodeChildren(PerfTimer::Node *, int);
     void _getMostSignificantBit(int);

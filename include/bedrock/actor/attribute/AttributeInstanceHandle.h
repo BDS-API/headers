@@ -6,6 +6,6 @@ class AttributeInstanceHandle {
 
 public:
 
-    void getInstance(void)const;
-    void getMutableInstance(void)const;
+    void getInstance()const;
+    void getMutableInstance()const;
 };

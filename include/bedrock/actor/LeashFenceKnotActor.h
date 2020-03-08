@@ -1,34 +1,37 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/DataLoadHelper"
+#include "../util/Vec3"
+#include "unmapped/ActorInteraction"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../block/unmapped/BlockSource"
 #include "../nbt/CompoundTag"
-#include "../../unmapped/Vec3"
 
 
 class LeashFenceKnotActor : HangingActor {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual LeashFenceKnotActor::~LeashFenceKnotActor();
-    virtual void remove(void);
+    LeashFenceKnotActor::~LeashFenceKnotActor()
+    virtual void remove();
     virtual void teleportTo(Vec3 const&, bool, int, int);
-    virtual void getShadowRadius(void)const;
-    virtual bool isPickable(void);
+    virtual void getShadowRadius()const;
+    virtual bool isPickable();
     virtual void getInteraction(Player &, ActorInteraction &, Vec3 const&);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void _onSizeUpdated(void);
+    virtual void _onSizeUpdated();
     virtual void setDir(int);
-    virtual void getWidth(void)const;
-    virtual void getHeight(void)const;
-    virtual void dropItem(void);
+    virtual void getWidth()const;
+    virtual void getHeight()const;
+    virtual void dropItem();
     virtual void wouldSurvive(BlockSource &);
 
     LeashFenceKnotActor(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
     void shouldRenderAtSqrDistance(double);
     void removeAnimals(Player *);
-    void numberofAnimalsAttached(void);
-    void recalculateBoundingBox(void);
+    void numberofAnimalsAttached();
+    void recalculateBoundingBox();
 };

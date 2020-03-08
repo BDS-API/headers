@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/pack/PackManifest"
 #include "../bedrock/pack/PackAccessStrategy"
-#include "../json/Value"
 #include "../bedrock/pack/ResourcePackManager"
+#include "../json/Value"
+#include "../bedrock/pack/PackManifest"
 
 
 class I18n {
@@ -25,7 +25,7 @@ public:
     static long mFormatDictionary[abi:cxx11];
 
 
-    void clearLanguages(void);
+    void clearLanguages();
     void _findAvailableLanguages(Json::Value const&, std::vector<std::string, std::allocator<std::string>> &);
     void _findAvailableLanguageNames(Json::Value const&, std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string>>> &);
     void loadLanguages(ResourcePackManager &, ResourceLoadManager &, std::string const&);
@@ -56,8 +56,8 @@ public:
     void getPackKeywordValue(PackManifest const&, std::string const&);
     void getPackKeywordValueForTelemetry(PackManifest const&, std::string const&);
     bool hasPackKeyEntry(PackManifest const&, std::string const&);
-    void getCurrentLanguage(void);
-    void languageSupportsHypenSplitting(void);
+    void getCurrentLanguage();
+    void languageSupportsHypenSplitting();
     void getLocalizedAssetFileWithFallback(std::string const&, std::string const&);
     void _addFormatToDictionary(std::string const&, std::vector<std::string, std::allocator<std::string>> const&);
     void _getKeyExists(std::string const&);

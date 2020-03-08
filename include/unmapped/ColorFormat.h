@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/Color"
 
 
 class ColorFormat {
@@ -36,5 +37,5 @@ public:
     void IsColorCode(char);
     void IsColorCode(std::string const&);
     void setColors(std::array<Color, 17ul> const&);
-    void getCurrentColors(void);
+    void getCurrentColors();
 };

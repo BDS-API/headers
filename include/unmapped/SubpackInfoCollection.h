@@ -7,10 +7,10 @@ class SubpackInfoCollection {
 public:
 
     SubpackInfoCollection(void);
-    bool hasSubpacks(void)const;
+    bool hasSubpacks()const;
     void addSubpackInfo(SubpackInfo &&);
-    void getSubpackInfo(void)const;
-    void getSubpackCount(void)const;
+    void getSubpackInfo()const;
+    void getSubpackCount()const;
     void getDefaultSubpackIndex(ContentTierInfo const&)const;
     void _isValidSubpackIndex(int)const;
     bool isCompatibleSubpack(int, ContentTierInfo const&)const;

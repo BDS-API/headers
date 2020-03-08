@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/level/circuit/component/BaseCircuitComponent"
 
 
 using namespace CircuitSceneGraph;

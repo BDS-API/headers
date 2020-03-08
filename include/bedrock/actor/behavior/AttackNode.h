@@ -6,7 +6,7 @@
 class AttackNode : BehaviorNode {
 
 public:
-    virtual AttackNode::~AttackNode();
+    AttackNode::~AttackNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

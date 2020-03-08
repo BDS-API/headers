@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../json/Value"
+#include "../bedrock/util/Vec3"
 
 
 class KeyFrameTransform {
@@ -16,7 +17,7 @@ public:
     void set(ExpressionNode const&, Vec3 const&);
     void setPre(ExpressionNode const&);
     void setPost(ExpressionNode const&);
-    void preAndPostAreTheSame(void)const;
+    void preAndPostAreTheSame()const;
     void setPre(ExpressionNode const&, ExpressionNode const&, ExpressionNode const&);
     void setPost(ExpressionNode const&, ExpressionNode const&, ExpressionNode const&);
     void setPre(ExpressionNode const&, int);
@@ -26,9 +27,9 @@ public:
     void computeCubicPolynomial(KeyFrameTransform*, KeyFrameTransform&, KeyFrameTransform&, KeyFrameTransform*);
     void toJson(Json::Value &)const;
     void animate(RenderParams &, BoneOrientation &, float, BoneTransformType)const;
-    void getTime(void)const;
-    void getLerpMode(void);
-    void getLerpMode(void)const;
+    void getTime()const;
+    void getLerpMode();
+    void getLerpMode()const;
     KeyFrameTransform(KeyFrameTransform&&);
     KeyFrameTransform(KeyFrameTransform const&);
 };

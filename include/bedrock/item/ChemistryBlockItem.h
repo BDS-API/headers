@@ -5,7 +5,7 @@
 class ChemistryBlockItem : BlockItem {
 
 public:
-    virtual ChemistryBlockItem::~ChemistryBlockItem();
+    ChemistryBlockItem::~ChemistryBlockItem()
     virtual void fixupOnLoad(ItemStackBase &)const;
 
 };

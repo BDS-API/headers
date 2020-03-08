@@ -9,5 +9,5 @@ class Radian {
 public:
 
     Radian(mce::Degree);
-    bool asFloat(void)const;
+    bool asFloat()const;
 };

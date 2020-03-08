@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../../../unmapped/Objective"
 #include "../../io/ReadOnlyBinaryStream"
 #include "../../../unmapped/ScoreboardId"
 #include "../../../unmapped/ScorePacketInfo"
@@ -9,9 +10,9 @@
 class SetScorePacket : Packet {
 
 public:
-    virtual SetScorePacket::~SetScorePacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    SetScorePacket::~SetScorePacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

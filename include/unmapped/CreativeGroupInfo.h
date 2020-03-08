@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/nbt/CompoundTag"
 
 
 class CreativeGroupInfo {

@@ -5,7 +5,7 @@
 class ShiftedValueAmplifier : Amplifier {
 
 public:
-    virtual ShiftedValueAmplifier::~ShiftedValueAmplifier();
+    ShiftedValueAmplifier::~ShiftedValueAmplifier()
     virtual void getAmount(int, float)const;
 
     ShiftedValueAmplifier(int, float);

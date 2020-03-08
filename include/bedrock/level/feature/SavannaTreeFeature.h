@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
 #include "../../actor/Actor"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class SavannaTreeFeature : TreeFeature {
 
 public:
-    virtual SavannaTreeFeature::~SavannaTreeFeature();
+    SavannaTreeFeature::~SavannaTreeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     SavannaTreeFeature(Actor *);

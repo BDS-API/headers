@@ -7,9 +7,9 @@
 class ContainerSetDataPacket : Packet {
 
 public:
-    virtual ContainerSetDataPacket::~ContainerSetDataPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    ContainerSetDataPacket::~ContainerSetDataPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

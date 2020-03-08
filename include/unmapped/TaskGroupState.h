@@ -8,11 +8,11 @@ class TaskGroupState {
 
 public:
 
-    void start(void);
-    void stop(void);
-    void pause(void);
-    void resume(void);
-    void getIsRunning(void)const;
-    void getShouldTaskGroupPause(void)const;
+    void start();
+    void stop();
+    void pause();
+    void resume();
+    void getIsRunning()const;
+    void getShouldTaskGroupPause()const;
     TaskGroupState(void);
 };

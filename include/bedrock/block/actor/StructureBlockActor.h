@@ -1,11 +1,12 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
 #include "../../eventing/IMinecraftEventing"
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
 #include "../../../unmapped/StructureEditorData"
+#include "../unmapped/BlockSource"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class StructureBlockActor : BlockActor {
@@ -16,7 +17,7 @@ public:
     static long Y_AXIS_COLOR;
     static long Z_AXIS_COLOR;
 
-    virtual StructureBlockActor::~StructureBlockActor();
+    StructureBlockActor::~StructureBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);
@@ -29,6 +30,6 @@ public:
     void setPowered(BlockSource &, BlockPos const&, bool, bool);
     void _trigger(BlockSource &, BlockPos const&, bool);
     void _activatedByRedstoneTelemetry(IMinecraftEventing &);
-    void getStructureData(void)const;
+    void getStructureData()const;
     void setStructureData(StructureEditorData const&);
 };

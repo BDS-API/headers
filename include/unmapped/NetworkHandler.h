@@ -1,34 +1,37 @@
 #pragma once
 
 #include "../bedrock/network/NetEventCallback"
+#include "../bedrock/network/NetworkPeer"
+#include "../bedrock/definition/ConnectionDefinition"
+#include "../bedrock/network/packet/Packet"
 #include "../bedrock/actor/Player"
+#include "../bedrock/Scheduler"
 #include "../bedrock/network/packet/sender/PacketSender"
 #include "../bedrock/network/packet/observer/PacketObserver"
-#include "../bedrock/definition/ConnectionDefinition"
 
 
 class NetworkHandler : RakNetInstance::ConnectionCallbacks, RakPeerHelper::IPSupportInterface, LocalConnector::ConnectionCallbacks {
 
 public:
-    virtual NetworkHandler::~NetworkHandler();
+    NetworkHandler::~NetworkHandler()
     virtual void onNewIncomingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onNewOutgoingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onConnectionClosed(NetworkIdentifier const&, std::string const&, bool);
     virtual void onAllConnectionsClosed(std::string const&, bool);
-    virtual void onOutgoingConnectionFailed(void);
+    virtual void onOutgoingConnectionFailed();
     virtual void onWebsocketRequest(std::string const&, std::string const&, std::function<void ()(void)>);
-    virtual void useIPv4Only(void)const;
-    virtual void useIPv6Only(void)const;
-    virtual void getDefaultGamePort(void)const;
-    virtual void getDefaultGamePortv6(void)const;
+    virtual void useIPv4Only()const;
+    virtual void useIPv6Only()const;
+    virtual void getDefaultGamePort()const;
+    virtual void getDefaultGamePortv6()const;
     virtual void onNewIncomingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onNewOutgoingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
 
     NetworkHandler(Scheduler &, NetworkHandler::NetworkStatisticsConfig);
-    void getPrimaryNetworkId(void)const;
+    void getPrimaryNetworkId()const;
     void host(ConnectionDefinition const&);
     void connect(Social::GameConnectionInfo, Social::GameConnectionInfo);
-    void disconnect(void);
+    void disconnect();
     void update(std::vector<Player *, std::allocator<Player *>> const*);
     void runEvents(bool);
     void registerClientInstance(NetEventCallback &, unsigned char);
@@ -42,34 +45,34 @@ public:
     void setDefaultGamePortv6(unsigned short);
     void enableAsyncFlush(NetworkIdentifier const&);
     void getPingTimeForConnection(Social::GameConnectionInfo const&, std::function<void ()(unsigned int)>);
-    void getNetworkStatistics(void)const;
-    void getConnectionInfo(void)const;
+    void getNetworkStatistics()const;
+    void getConnectionInfo()const;
     void getPeerForUser(NetworkIdentifier const&);
     void getEncryptedPeerForUser(NetworkIdentifier const&);
     void getNetworkPacketRecorderForUser(NetworkIdentifier const&);
-    bool isServer(void)const;
+    bool isServer()const;
     bool isLocalConnectionId(NetworkIdentifier const&)const;
     bool isHostingPlayer(NetworkIdentifier const&, unsigned char const&)const;
     void setHostingPlayerIdentity(NetworkIdentifier const&, unsigned char const&);
-    void getServerId(void)const;
-    void resetLocalNetworkId(void);
-    void getLocalNetworkId(void)const;
+    void getServerId()const;
+    void resetLocalNetworkId();
+    void getLocalNetworkId()const;
     void send(NetworkIdentifier const&, Packet const&, unsigned char);
     void _sendInternal(NetworkIdentifier const&, Packet const&, std::string const&);
     void sendToMultiple(std::vector<NetworkIdentifierWithSubId, std::allocator<NetworkIdentifierWithSubId>> const&, Packet const&);
     void flush(NetworkIdentifier const&, std::function<void ()(void)> &&);
-    void getConnections(void)const;
+    void getConnections()const;
     void getResourcePackUploadManager(PacketSender &, NetworkIdentifier const&, std::string const&);
     void getResourcePackDownloadManager(PacketSender &, NetworkIdentifier const&, std::string const&);
     void getResourcePackDownloadManager(std::string const&)const;
-    void getServerLocator(void);
-    void getConnector(void);
-    void getUPnPInterface(void);
+    void getServerLocator();
+    void getConnector();
+    void getUPnPInterface();
     void setCloseConnection(NetworkIdentifier const&);
     void setConnectionChannelPaused(NetworkIdentifier const&, unsigned int, bool);
     void closeConnection(NetworkIdentifier const&, std::string const&);
     void setPacketObserver(PacketObserver *);
-    void getCompressionThresholdBytesize(void);
+    void getCompressionThresholdBytesize();
     void setCompressionThresholdBytesize(unsigned short);
     void registerNetworkPacketEventListener(NetworkPacketEventListener &);
     void unregisterNetworkPacketEventListener(NetworkPacketEventListener &);

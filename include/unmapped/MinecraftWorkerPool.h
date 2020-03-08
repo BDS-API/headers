@@ -16,9 +16,9 @@ public:
 
 
     void loadWorkerConfigurations(unsigned int, unsigned int);
-    void initializeDefaults(void);
-    void configureMainThread(void);
-    void configureServerThread(void);
-    void createSingletons(void);
-    void destroySingletons(void);
+    void initializeDefaults();
+    void configureMainThread();
+    void configureServerThread();
+    void createSingletons();
+    void destroySingletons();
 };

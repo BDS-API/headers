@@ -1,29 +1,30 @@
 #pragma once
 
-#include "../../network/packet/LabTablePacket"
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../container/Container"
-#include "../../../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../item/ItemStack"
-#include "../../../unmapped/Random"
+#include "../../container/Container"
+#include "../../network/packet/LabTablePacket"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
+#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class ChemistryTableBlockActor : BlockActor, Container {
 
 public:
-    virtual ChemistryTableBlockActor::~ChemistryTableBlockActor();
+    ChemistryTableBlockActor::~ChemistryTableBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void onRemoved(BlockSource &);
-    virtual void getContainer(void);
+    virtual void getContainer();
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
-    virtual void getMaxStackSize(void)const;
-    virtual void getContainerSize(void)const;
+    virtual void getMaxStackSize()const;
+    virtual void getContainerSize()const;
     virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
 
@@ -39,7 +40,7 @@ public:
     void playerCloseLabTable(Player &);
     void playerOpenLabTable(Player &);
     void _getOpenedPlayer(BlockSource &);
-    bool isReactionInProgress(void);
-    void setShouldCombine(void);
-    void _getCraftableCompounds(void);
+    bool isReactionInProgress();
+    void setShouldCombine();
+    void _getCraftableCompounds();
 };

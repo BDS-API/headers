@@ -1,37 +1,40 @@
 #pragma once
 
+#include "../../../mce/UUID"
 #include "../LevelChunk"
-#include "../../../unmapped/Dimension"
-#include "../../../unmapped/Tick"
 #include "../../actor/Actor"
-#include "../../../unmapped/Random"
-#include "../../../unmapped/Vec3"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../../unmapped/Bounds"
+#include "../../util/Tick"
+#include "../../util/Vec3"
+#include "../../util/Random"
+#include "../../../unmapped/Dimension"
 
 
 class TickingArea : ITickingArea {
 
 public:
-    virtual TickingArea::~TickingArea();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
-    virtual void getEntityId(void)const;
-    virtual bool isEntityOwned(void)const;
-    virtual void getBlockSource(void);
-    virtual bool isAlwaysActive(void)const;
-    virtual void getMaxDistToPlayers(void)const;
-    virtual void getView(void)const;
-    virtual void getView(void);
-    virtual void getDescription(void)const;
+    TickingArea::~TickingArea()
+    virtual void getId()const;
+    virtual void getName()const;
+    virtual void getEntityId()const;
+    virtual bool isEntityOwned()const;
+    virtual void getBlockSource();
+    virtual bool isAlwaysActive()const;
+    virtual void getMaxDistToPlayers()const;
+    virtual void getView()const;
+    virtual void getView();
+    virtual void getDescription()const;
     virtual void tick(Tick const&, bool);
     virtual void tickSeasons(Random &);
     virtual void updatePosition(Vec3 const&);
-    virtual void center(void);
+    virtual void center();
     virtual void findOwner(unsigned char &);
-    virtual void entityHasBeenFound(void)const;
-    virtual void setEntityFound(void);
+    virtual void entityHasBeenFound()const;
+    virtual void setEntityFound();
     virtual void setRegionForEntity(Actor &);
-    virtual bool isRemoved(void);
-    virtual void remove(void);
+    virtual bool isRemoved();
+    virtual void remove();
     virtual void onComponentChanged(unsigned int, float, bool);
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onChunkDiscarded(LevelChunk &);
@@ -40,5 +43,5 @@ public:
     TickingArea(Dimension &, mce::UUID, std::string const&, ActorUniqueID, Bounds const&, bool, float, bool);
     TickingArea(Dimension &, mce::UUID, Bounds const&, ActorUniqueID);
     TickingArea(Dimension &, mce::UUID, Bounds const&, ActorUniqueID, float);
-    void _save(void);
+    void _save();
 };

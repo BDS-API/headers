@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/resourcepack/KnownPackInfo"
 
 
 using namespace ResourcePackRepository;
@@ -10,8 +11,8 @@ public:
 
     bool hasPack(ResourcePackRepository::KnownPackInfo const&)const;
     void addPack(ResourcePackRepository::KnownPackInfo &&);
-    void getPacks(void);
-    void getPacks(void)const;
+    void getPacks();
+    void getPacks()const;
     void getPack(PackIdVersion const&);
     void getPack(ResourceLocation const&);
     void addPack(ResourcePackRepository::KnownPackInfo const&);

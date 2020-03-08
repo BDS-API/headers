@@ -1,23 +1,24 @@
 #pragma once
 
-#include "../../../../unmapped/Random"
-#include "../../../../unmapped/BlockSource"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../block/unmapped/BlockSource"
+#include "../../../util/Random"
 
 
 class StructureStart {
 
 public:
-    virtual StructureStart::~StructureStart();
+    StructureStart::~StructureStart()
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual bool isValid(void)const;
+    virtual bool isValid()const;
 
-    void getPieces(void)const;
+    void getPieces()const;
     StructureStart(int, int);
-    void getChunkX(void)const;
-    void getChunkZ(void)const;
-    void getBoundingBox(void)const;
+    void getChunkX()const;
+    void getChunkZ()const;
+    void getBoundingBox()const;
     void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
-    void calculateBoundingBox(void);
+    void calculateBoundingBox();
     void moveToLevel(Random &, int);
     void moveInsideHeights(Random *, int, int);
 };

@@ -8,5 +8,5 @@ public:
 
     SpawnGroupData(std::string const&, MobSpawnRules &);
     void addSpawnRules(MobSpawnRules &);
-    void getSpawnRules(void)const;
+    void getSpawnRules()const;
 };

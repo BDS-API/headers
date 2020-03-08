@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../../unmapped/BlockSource"
 #include "../../actor/Actor"
+#include "../../../unmapped/FoliageCoords"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../../unmapped/Block"
 
 
 class FancyTreeFeature : TreeFeature {
 
 public:
-    virtual FancyTreeFeature::~FancyTreeFeature();
+    FancyTreeFeature::~FancyTreeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     FancyTreeFeature(Actor *, bool);

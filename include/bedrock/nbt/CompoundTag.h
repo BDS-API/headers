@@ -8,15 +8,15 @@
 class CompoundTag : Tag {
 
 public:
-    virtual CompoundTag::~CompoundTag();
+    CompoundTag::~CompoundTag()
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
-    virtual void toString[abi:cxx11](void)const;
-    virtual void getId(void)const;
+    virtual void toString()const;
+    virtual void getId()const;
     virtual void equals(Tag const&)const;
     virtual void print(std::string const&, PrintStream &)const;
-    virtual void copy(void)const;
-    virtual void hash(void)const;
+    virtual void copy()const;
+    virtual void hash()const;
 
     CompoundTag(void);
     CompoundTag(CompoundTag&&);
@@ -71,9 +71,9 @@ public:
     void getList(std::string const&)const;
     void getList(std::string const&);
     void getBoolean(std::string const&)const;
-    bool isEmpty(void)const;
-    void clear(void);
-    void clone(void)const;
+    bool isEmpty()const;
+    void clear();
+    void clone()const;
     void deepCopy(CompoundTag const&);
     void rename(std::string const&, std::string);
     void remove(std::string const&);

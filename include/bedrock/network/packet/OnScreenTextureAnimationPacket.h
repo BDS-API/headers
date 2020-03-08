@@ -7,9 +7,9 @@
 class OnScreenTextureAnimationPacket : Packet {
 
 public:
-    virtual OnScreenTextureAnimationPacket::~OnScreenTextureAnimationPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    OnScreenTextureAnimationPacket::~OnScreenTextureAnimationPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

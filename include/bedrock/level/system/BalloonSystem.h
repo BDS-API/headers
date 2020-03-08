@@ -6,7 +6,7 @@
 class BalloonSystem : ITickingSystem {
 
 public:
-    virtual BalloonSystem::~BalloonSystem();
+    BalloonSystem::~BalloonSystem()
     virtual void tick(EntityRegistry &);
 
     BalloonSystem(void);

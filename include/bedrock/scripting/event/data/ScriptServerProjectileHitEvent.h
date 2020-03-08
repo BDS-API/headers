@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../../../../unmapped/ActorUniqueID"
-#include "../../../../unmapped/Vec3"
-#include "../../../../unmapped/ScriptEngine"
+#include "../../unmapped/ScriptEngine"
+#include "../../../actor/unmapped/ActorUniqueID"
+#include "../../ScriptObjectHandle"
+#include "../../../util/Vec3"
 
 
 class ScriptServerProjectileHitEvent : ScriptEventData {
@@ -10,10 +11,10 @@ class ScriptServerProjectileHitEvent : ScriptEventData {
 public:
     static long mHash;
 
-    virtual ScriptServerProjectileHitEvent::~ScriptServerProjectileHitEvent();
+    ScriptServerProjectileHitEvent::~ScriptServerProjectileHitEvent()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
-    void getHash(void);
+    void getHash();
     ScriptServerProjectileHitEvent(void);
     void setProjectileId(ActorUniqueID const&);
     void setOwnerId(ActorUniqueID const&);

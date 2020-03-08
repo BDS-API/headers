@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../orgin/CommandOrigin"
 #include "../CommandOutput"
 #include "../CommandRegistry"
-#include "../orgin/CommandOrigin"
 
 
 class SaveCommand : ServerCommand {
@@ -12,7 +12,7 @@ public:
     static long mSaveAllFileList;
     static long mState;
 
-    virtual SaveCommand::~SaveCommand();
+    SaveCommand::~SaveCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void saveHold(CommandOutput &);

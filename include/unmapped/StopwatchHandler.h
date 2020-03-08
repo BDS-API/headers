@@ -8,7 +8,7 @@ public:
 
     void get(std::string const&);
     void clear(std::string const&);
-    void clearAll(void);
-    void print(void);
+    void clearAll();
+    void print();
     void printEvery(int);
 };

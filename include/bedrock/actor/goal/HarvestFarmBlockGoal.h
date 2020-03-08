@@ -1,21 +1,22 @@
 #pragma once
 
 #include "../Mob"
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class HarvestFarmBlockGoal : BaseMoveToBlockGoal {
 
 public:
-    virtual HarvestFarmBlockGoal::~HarvestFarmBlockGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    HarvestFarmBlockGoal::~HarvestFarmBlockGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
     virtual bool isValidTarget(BlockSource &, BlockPos const&);
 
     HarvestFarmBlockGoal(Mob &, float);
-    void findInventorySlotForFarmSeeds(void);
+    void findInventorySlotForFarmSeeds();
 };

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../model/ContainerModel"
 #include "../../item/ItemInstance"
+#include "../model/ContainerModel"
 
 
 class CartographyInputContainerController : ContainerController {
 
 public:
-    virtual CartographyInputContainerController::~CartographyInputContainerController();
+    CartographyInputContainerController::~CartographyInputContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
 
     CartographyInputContainerController(std::shared_ptr<ContainerModel>);

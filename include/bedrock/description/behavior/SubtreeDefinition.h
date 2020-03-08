@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../../../unmapped/BehaviorFactory"
+#include "../../../json/Value"
 
 
 class SubtreeDefinition : BehaviorDefinition {
 
 public:
-    virtual SubtreeDefinition::~SubtreeDefinition();
+    SubtreeDefinition::~SubtreeDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     SubtreeDefinition(void);

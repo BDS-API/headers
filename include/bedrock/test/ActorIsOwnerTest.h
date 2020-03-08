@@ -6,9 +6,9 @@
 class ActorIsOwnerTest : SimpleBoolFilterTest {
 
 public:
-    virtual ActorIsOwnerTest::~ActorIsOwnerTest();
+    ActorIsOwnerTest::~ActorIsOwnerTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorIsOwnerTest(void);
 };

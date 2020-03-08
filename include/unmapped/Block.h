@@ -1,9 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
-#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/container/Container"
+#include "../bedrock/util/BlockPos"
 #include "../bedrock/actor/Player"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/item/unmapped/ItemState"
+#include "../bedrock/util/Random"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/actor/Mob"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/AABB"
 
 
 class Block {
@@ -12,40 +21,40 @@ public:
     static long SIZE_OFFSET;
     static long BLOCK_DESCRIPTION_PREFIX[abi:cxx11];
 
-    virtual Block::~Block();
-    virtual void getRenderLayer(void)const;
+    Block::~Block()
+    virtual void getRenderLayer()const;
 
-    void getLegacyBlock(void)const;
-    void getDataDEPRECATED(void)const;
+    void getLegacyBlock()const;
+    void getDataDEPRECATED()const;
     void getStateFromLegacyData(unsigned short)const;
-    void getDefaultState(void)const;
+    void getDefaultState()const;
     bool hasState(ItemState const&)const;
-    bool isDoor(void)const;
-    void getLegacyBlockPtr(void)const;
-    bool canContainLiquid(void)const;
+    bool isDoor()const;
+    void getLegacyBlockPtr()const;
+    bool canContainLiquid()const;
     bool matchesStates(BlockLegacy const&)const;
-    void getBurnOdds(void)const;
+    void getBurnOdds()const;
     void setFlammable(int, int)const;
-    void getFlameOdds(void)const;
-    void getLight(void)const;
-    bool isSolid(void)const;
-    void ignoreBlockForInsideCubeRenderer(void)const;
-    bool pushesOutItems(void)const;
-    void shouldRandomTick(void)const;
-    void shouldRandomTickExtraLayer(void)const;
-    void getTranslucency(void)const;
-    void getLightEmission(void)const;
-    bool hasVariableLighting(void)const;
+    void getFlameOdds()const;
+    void getLight()const;
+    bool isSolid()const;
+    void ignoreBlockForInsideCubeRenderer()const;
+    bool pushesOutItems()const;
+    void shouldRandomTick()const;
+    void shouldRandomTickExtraLayer()const;
+    void getTranslucency()const;
+    void getLightEmission()const;
+    bool hasVariableLighting()const;
     Block(unsigned short, WeakPtr<BlockLegacy> &);
     bool canSlide(BlockSource &, BlockPos const&)const;
-    bool canInstatick(void)const;
-    void getCreativeCategory(void)const;
-    void getGravity(void)const;
-    void getMaterial(void)const;
+    bool canInstatick()const;
+    void getCreativeCategory()const;
+    void getGravity()const;
+    void getMaterial()const;
     void getMapColor(BlockSource &, BlockPos const&)const;
-    void getMapColor(void)const;
-    void getFriction(void)const;
-    void getDestroySpeed(void)const;
+    void getMapColor()const;
+    void getFriction()const;
+    void getDestroySpeed()const;
     void tick(BlockSource &, BlockPos const&, Random &)const;
     void animateTick(BlockSource &, BlockPos const&, Random &)const;
     void clip(BlockSource &, BlockPos const&, Vec3 const&, Vec3 const&, bool, AABB const&)const;
@@ -62,59 +71,59 @@ public:
     void addCollisionShapes(BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;
     void addAABBs(BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     void addAABB(AABB const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
-    bool isUnbreakable(void)const;
-    bool isHeavy(void)const;
+    bool isUnbreakable()const;
+    bool isHeavy()const;
     bool isStrippable(Block const&)const;
-    void getStrippedBlock(void)const;
-    bool canBeBrokenFromFalling(void)const;
+    void getStrippedBlock()const;
+    bool canBeBrokenFromFalling()const;
     bool canProvideSupport(unsigned char, BlockSupportType)const;
     bool canConnect(Block const&, unsigned char, Block const&)const;
     void getConnectedDirections(BlockPos const&, BlockSource &, bool &, bool &, bool &, bool &)const;
     void getAABB(BlockSource &, BlockPos const&, AABB &, bool)const;
     void getOutline(BlockSource &, BlockPos const&, AABB &)const;
     void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const;
-    void mayPick(void)const;
+    void mayPick()const;
     void mayPick(BlockSource &, bool)const;
     void getResourceCount(Random &, int)const;
     bool asItemInstance(BlockSource &, BlockPos const&)const;
     void getExplosionResistance(Actor *)const;
-    bool isInteraction(void)const;
+    bool isInteraction()const;
     void use(Player &, BlockPos const&)const;
     void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     void calcVariant(BlockSource &, BlockPos const&)const;
     bool isAttachedTo(BlockSource &, BlockPos const&, BlockPos&)const;
     void attack(Player *, BlockPos const&)const;
     void handleEntityInside(BlockSource &, BlockPos const&, Actor *, Vec3 &)const;
-    bool isAuxValueRelevantForPicking(void)const;
-    void getColor(void)const;
+    bool isAuxValueRelevantForPicking()const;
+    void getColor()const;
     void getColor(BlockSource &, BlockPos const&)const;
     void getColorAtPos(BlockSource &, BlockPos const&)const;
     void getColorForParticle(BlockSource &, BlockPos const&, Block const&)const;
     bool isSeasonTinted(BlockSource &, BlockPos const&)const;
-    bool isSignalSource(void)const;
-    bool canBeOriginalSurface(void)const;
+    bool isSignalSource()const;
+    bool canBeOriginalSurface()const;
     void getDirectSignal(BlockSource &, BlockPos const&, int)const;
     void entityInside(BlockSource &, BlockPos const&, Actor &)const;
-    void getSilkTouchItemInstance(void)const;
+    void getSilkTouchItemInstance()const;
     void playerDestroy(Player &, BlockPos const&)const;
     bool canSurvive(BlockSource &, BlockPos const&)const;
     void getExperienceDrop(Random &)const;
     bool canBeBuiltOver(BlockSource &, BlockPos const&)const;
-    void getSerializationId(void)const;
+    void getSerializationId()const;
     void buildSerializationId(unsigned int);
-    void getRuntimeId(void)const;
-    bool hasRuntimeId(void)const;
+    void getRuntimeId()const;
+    bool hasRuntimeId()const;
     void setRuntimeId(unsigned int const&)const;
     void triggerEvent(BlockSource &, BlockPos const&, int, int)const;
-    void getAllowsRunes(void)const;
+    void getAllowsRunes()const;
     void telemetryVariant(BlockSource &, BlockPos const&)const;
-    void getVariant(void)const;
+    void getVariant()const;
     void getMappedFace(unsigned char)const;
     void mayPlaceOn(BlockSource &, BlockPos const&)const;
     void mayPlace(BlockSource &, BlockPos const&)const;
     void mayPlace(BlockSource &, BlockPos const&, unsigned char)const;
     void tryToPlace(BlockSource &, BlockPos const&, ActorBlockSyncMessage const*)const;
-    bool breaksFallingBlocks(void)const;
+    bool breaksFallingBlocks()const;
     void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     void getSecondPart(BlockSource &, BlockPos const&, BlockPos&)const;
     void DEPRECATEDcallOnGraphicsModeChanged(bool, bool, bool);
@@ -130,40 +139,40 @@ public:
     void transformOnFall(BlockSource &, BlockPos const&, Actor *, float)const;
     void movedByPiston(BlockSource &, BlockPos const&)const;
     void updateEntityAfterFallOn(Actor &)const;
-    void ignoreEntitiesOnPistonMove(void)const;
+    void ignoreEntitiesOnPistonMove()const;
     void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
     void mayConsumeFertilizer(BlockSource &)const;
-    void getIconYOffset(void)const;
-    bool isWaterBlocking(void)const;
-    bool canBeSilkTouched(void)const;
+    void getIconYOffset()const;
+    bool isWaterBlocking()const;
+    bool canBeSilkTouched()const;
     void getMobToSpawn(SpawnConditions const&, BlockSource &)const;
-    bool isBounceBlock(void)const;
-    bool isAlphaTested(void)const;
-    bool isSolidBlockingBlock(void)const;
-    bool isMotionBlockingBlock(void)const;
-    bool isSolidBlockingBlockAndNotSignalSource(void)const;
-    bool isEmpty(void)const;
-    bool isCropBlock(void)const;
-    bool isStemBlock(void)const;
-    bool isContainerBlock(void)const;
-    bool isCraftingBlock(void)const;
-    bool isInteractiveBlock(void)const;
-    bool isHurtableBlock(void)const;
-    bool isFenceBlock(void)const;
-    bool isFenceGateBlock(void)const;
-    bool isThinFenceBlock(void)const;
-    bool isWallBlock(void)const;
-    bool isStairBlock(void)const;
-    bool isDoorBlock(void)const;
-    bool isButtonBlock(void)const;
-    bool isSlabBlock(void)const;
-    bool isRailBlock(void)const;
-    bool canHurtAndBreakItem(void)const;
-    void getBlockEntityType(void)const;
-    bool hasBlockEntity(void)const;
+    bool isBounceBlock()const;
+    bool isAlphaTested()const;
+    bool isSolidBlockingBlock()const;
+    bool isMotionBlockingBlock()const;
+    bool isSolidBlockingBlockAndNotSignalSource()const;
+    bool isEmpty()const;
+    bool isCropBlock()const;
+    bool isStemBlock()const;
+    bool isContainerBlock()const;
+    bool isCraftingBlock()const;
+    bool isInteractiveBlock()const;
+    bool isHurtableBlock()const;
+    bool isFenceBlock()const;
+    bool isFenceGateBlock()const;
+    bool isThinFenceBlock()const;
+    bool isWallBlock()const;
+    bool isStairBlock()const;
+    bool isDoorBlock()const;
+    bool isButtonBlock()const;
+    bool isSlabBlock()const;
+    bool isRailBlock()const;
+    bool canHurtAndBreakItem()const;
+    void getBlockEntityType()const;
+    bool hasBlockEntity()const;
     void getRenderLayer(BlockSource &, BlockPos const&)const;
-    void getExtraRenderLayers(void)const;
-    void getThickness(void)const;
+    void getExtraRenderLayers()const;
+    void getThickness()const;
     void getFlexibility(BlockSource &, BlockPos const&)const;
     bool isObstructingChests(BlockSource &, BlockPos const&)const;
     void getVisualShapeInWorld(BlockSource &, BlockPos const&, AABB &, bool)const;
@@ -171,25 +180,25 @@ public:
     void getUIShape(AABB &)const;
     void getCollisionShape(AABB &, BlockSource &, BlockPos const&, Actor *)const;
     void calcGroundFriction(Mob &, BlockPos const&)const;
-    bool canHaveExtraData(void)const;
-    bool hasComparatorSignal(void)const;
+    bool canHaveExtraData()const;
+    bool hasComparatorSignal()const;
     void getComparatorSignal(BlockSource &, BlockPos const&, unsigned char)const;
     void shouldStopFalling(Actor &)const;
-    bool pushesUpFallingBlocks(void)const;
+    bool pushesUpFallingBlocks()const;
     bool hasProperty(BlockProperty)const;
-    void getProperties(void)const;
+    void getProperties()const;
     void keepState(ItemState const&)const;
     void copyState(Block const&, ItemState const&)const;
-    void getShadeBrightness(void)const;
+    void getShadeBrightness()const;
     void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&)const;
-    void getParticleQuantityScalar(void)const;
-    bool isStandingSign(void)const;
+    void getParticleQuantityScalar()const;
+    bool isStandingSign()const;
     bool dealsContactDamage(Actor const&, bool)const;
     bool hasTag(BlockSource &, BlockPos const&, Block const&, std::string const&)const;
     void getPlacementFacingAll(Actor &, BlockPos const&, float);
     void getPlacementFacingAllExceptAxisY(Actor &, BlockPos const&, float);
-    bool isTrapdoor(void)const;
-    void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block const& ()(BlockPos const&)> const&, BlockPos const&)const;
+    bool isTrapdoor()const;
+    void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block ()(BlockPos const&)> const&, BlockPos const&)const;
     bool detachesOnPistonMove(BlockSource &, BlockPos const&)const;
     void onMove(BlockSource &, BlockPos const&, BlockPos const&)const;
     void handleRain(BlockSource &, BlockPos const&, float)const;
@@ -200,7 +209,7 @@ public:
     bool canFillAtPos(BlockSource &, BlockPos const&)const;
     void sanitizeFillBlock(BlockSource &, BlockPos const&, Block const&)const;
     void onFillBlock(BlockSource &, BlockPos const&, Block const&)const;
-    void waterSpreadCausesSpawn(void)const;
+    void waterSpreadCausesSpawn()const;
     void getStateMask(ItemState const&)const;
     void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
 };

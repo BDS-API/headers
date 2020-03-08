@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/level/LevelChunk"
 
 

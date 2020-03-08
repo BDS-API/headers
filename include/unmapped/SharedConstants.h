@@ -27,6 +27,6 @@ public:
 
 
     bool isVersion(int, int, int, int);
-    void getVersionCode(void);
+    void getVersionCode();
     void getVersionCode(int, int, int, int);
 };

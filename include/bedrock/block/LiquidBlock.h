@@ -1,17 +1,21 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
+#include "../../unmapped/Material"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class LiquidBlock : BlockLegacy {
 
 public:
-    virtual LiquidBlock::~LiquidBlock();
+    LiquidBlock::~LiquidBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool canContainLiquid()const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void mayPick(BlockSource &, Block const&, bool)const;
@@ -22,7 +26,7 @@ public:
     virtual void getColor(Block const&)const;
     virtual void getColorAtPos(BlockSource &, BlockPos const&)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
-    virtual bool canBeSilkTouched(void)const;
+    virtual bool canBeSilkTouched()const;
 
     LiquidBlock(std::string const&, int, Material const&);
     void trySpreadFire(BlockSource &, BlockPos const&, Random &)const;

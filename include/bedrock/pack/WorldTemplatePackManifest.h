@@ -5,12 +5,12 @@
 class WorldTemplatePackManifest : PackManifest {
 
 public:
-    virtual WorldTemplatePackManifest::~WorldTemplatePackManifest();
-    virtual void clone(void)const;
+    WorldTemplatePackManifest::~WorldTemplatePackManifest()
+    virtual void clone()const;
 
     WorldTemplatePackManifest(void);
     WorldTemplatePackManifest(PackManifest &&);
     void setGameType(GameType);
-    void getGameType(void)const;
+    void getGameType()const;
     WorldTemplatePackManifest(WorldTemplatePackManifest const&);
 };

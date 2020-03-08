@@ -10,6 +10,6 @@ public:
 
     MolangTempVariable(MolangTempVariable const&);
     MolangTempVariable(HashedString const&);
-    void getName(void)const;
+    void getName()const;
     MolangTempVariable(MolangTempVariable&&);
 };

@@ -7,6 +7,6 @@ class ReverseableIterator {
 public:
 
     ReverseableIterator(int, int, bool);
-    void begin(void)const;
-    void end(void)const;
+    void begin()const;
+    void end()const;
 };

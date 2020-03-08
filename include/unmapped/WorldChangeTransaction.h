@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class WorldChangeTransaction {
@@ -10,5 +12,5 @@ public:
     void setBlock(BlockPos const&, Block const&, int);
     void setBlock(BlockPos const&, Block const&, Block const&, int);
     void getBlock(BlockPos const&)const;
-    void apply(void)const;
+    void apply()const;
 };

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/Vec3"
 
 
 class BoneOrientation {
@@ -11,29 +12,29 @@ public:
     void add(float, float, float, BoneTransformType);
     void scale(float, float, float, BoneTransformType);
     void applyShortestPathBlend(BoneOrientation const&, BoneOrientation const&, float, float);
-    void getTransform(void)const;
+    void getTransform()const;
     void setDefaultTransform(BoneOrientationTransform const&);
     void setTransform(BoneOrientationTransform const&);
-    void getDefaultTransform(void)const;
-    void getDefaultTransform(void);
+    void getDefaultTransform()const;
+    void getDefaultTransform();
     void setRotationRelativeMode(BoneAnimationRelativeMode);
-    void getRotationRelativeMode(void)const;
+    void getRotationRelativeMode()const;
     void setPivot(Vec3 const&);
-    void getPivot(void)const;
-    void getPivot(void);
+    void getPivot()const;
+    void getPivot();
     void transform3(Vec3 &);
-    void getName(void)const;
+    void getName()const;
     void setMatrix(Matrix const&);
-    void getMatrix(void)const;
-    void shouldOverrideStackMatrix(void)const;
+    void getMatrix()const;
+    void shouldOverrideStackMatrix()const;
     void setOverrideStackMatrix(bool);
-    void updateLocalPreTransformMatrix(void);
-    void shouldApplyLocalPreTransformMatrix(void)const;
+    void updateLocalPreTransformMatrix();
+    void shouldApplyLocalPreTransformMatrix()const;
     void rotateLocalPreTransformMatrix(float, Vec3 const&);
-    void getLocalPreTransformMatrix(void)const;
+    void getLocalPreTransformMatrix()const;
     void copySourceDataFrom(BoneOrientation const&);
-    void getIdentityBoneOrientation(void);
-    void setDefaultPose(void);
+    void getIdentityBoneOrientation();
+    void setDefaultPose();
     BoneOrientation(void);
     BoneOrientation(BoneOrientation const&);
 };

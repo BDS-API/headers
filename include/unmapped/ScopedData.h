@@ -8,5 +8,5 @@ class ScopedData {
 
 public:
 
-    void resetRecursive(void);
+    void resetRecursive();
 };

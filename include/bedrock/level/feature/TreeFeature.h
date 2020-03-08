@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../../unmapped/BlockSource"
 #include "../../actor/Actor"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../../unmapped/Block"
 #include "../../../unmapped/Material"
 
 
 class TreeFeature : Feature {
 
 public:
-    virtual TreeFeature::~TreeFeature();
+    TreeFeature::~TreeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     TreeFeature(Actor *, int, int, bool, bool);
@@ -27,6 +28,6 @@ public:
     void _tryAddBeeHive(BlockSource &, BlockPos const&, Random &, int)const;
     void _addVine(BlockSource &, BlockPos const&, int)const;
     void _isFree(Material const&)const;
-    void _getTrunkType(void)const;
-    void _getLeafType(void)const;
+    void _getTrunkType()const;
+    void _getLeafType()const;
 };

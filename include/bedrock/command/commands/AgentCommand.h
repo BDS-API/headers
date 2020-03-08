@@ -1,23 +1,23 @@
 #pragma once
 
 #include "../orgin/CommandOrigin"
-#include "../CommandOutput"
 #include "../../actor/Player"
+#include "../../actor/Agent"
+#include "../CommandOutput"
 #include "../Command"
 #include "../CommandRegistry"
-#include "../../actor/Agent"
 
 
 class AgentCommand : Command {
 
 public:
-    virtual AgentCommand::~AgentCommand();
+    AgentCommand::~AgentCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);
     AgentCommand(void);
     void validateRange(Agent *, CommandOrigin const&, CommandOutput &);
-    void runAgentCommand(CommandOrigin const&, CommandOutput &, std::function<std::unique_ptr<AgentCommands::Command, std::default_delete<AgentCommands::Command>> ()(Player &)>)const;
+    void runAgentCommand(CommandOrigin const&, CommandOutput &, std::function<std::unique_ptr ()(Player &)>)const;
     void reportSuccess(bool, CommandOutput &)const;
     void createAgent(Player &, CommandOrigin const&, CommandOutput &)const;
     void setAgentOwner(Agent &, Player &)const;

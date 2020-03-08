@@ -1,10 +1,11 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Actor"
-#include "../actor/Player"
 #include "../item/ItemStack"
+#include "../actor/Player"
+#include "../actor/Actor"
+#include "../util/Vec3"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
 
 
 class GameMode {
@@ -21,7 +22,7 @@ public:
     static long PICKRANGE_SURVIVAL_MAXIMUM_SQR;
     static long PICKRANGE_CREATIVE_MAXIMUM_SQR;
 
-    virtual GameMode::~GameMode();
+    GameMode::~GameMode()
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &);
     virtual void destroyBlock(BlockPos const&, unsigned char);
     virtual void continueDestroyBlock(BlockPos const&, unsigned char, bool &);
@@ -29,16 +30,16 @@ public:
     virtual void startBuildBlock(BlockPos const&, unsigned char);
     virtual void buildBlock(BlockPos const&, unsigned char);
     virtual void continueBuildBlock(BlockPos const&, unsigned char);
-    virtual void stopBuildBlock(void);
-    virtual void tick(void);
+    virtual void stopBuildBlock();
+    virtual void tick();
     virtual void getPickRange(InputMode const&, bool);
     virtual void useItem(ItemStack &);
     virtual void useItemOn(ItemStack &, BlockPos const&, unsigned char, Vec3 const&, Block const*);
     virtual void interact(Actor &, Vec3 const&);
     virtual void attack(Actor &);
-    virtual void releaseUsingItem(void);
+    virtual void releaseUsingItem();
     virtual void setTrialMode(bool);
-    virtual bool isInTrialMode(void);
+    virtual bool isInTrialMode();
     virtual void registerUpsellScreenCallback(std::function<void ()(bool)>);
 
     GameMode(Player &);
@@ -47,20 +48,20 @@ public:
     void _destroyBlockInternal(BlockPos const&, unsigned char);
     void getDestroyRate(Block const&);
     void _calculatePlacePos(BlockPos const&, unsigned char &)const;
-    bool isLastBuildBlockSnappable(void)const;
-    bool hasStartedBuilding(void)const;
-    bool hasContinueDirection(void)const;
-    void getContinueFacing(void)const;
-    void getContinueDirection(void)const;
-    void getNextContinuePos(void)const;
-    void getLastBuiltBlockPos(void)const;
+    bool isLastBuildBlockSnappable()const;
+    bool hasStartedBuilding()const;
+    bool hasContinueDirection()const;
+    void getContinueFacing()const;
+    void getContinueDirection()const;
+    void getNextContinuePos()const;
+    void getLastBuiltBlockPos()const;
     void _canUseBlock(Block const&);
     void baseUseItem(ItemStack &);
-    void getMaxPickRange(void);
-    void getMaxPickRangeSqr(void);
-    void getDestroyBlockPos(void);
-    void getOldDestroyProgress(void);
-    void getDestroyProgress(void);
-    void _releaseUsingItemInternal(void);
+    void getMaxPickRange();
+    void getMaxPickRangeSqr();
+    void getDestroyBlockPos();
+    void getOldDestroyProgress();
+    void getDestroyProgress();
+    void _releaseUsingItemInternal();
     void getHitProgress(float);
 };

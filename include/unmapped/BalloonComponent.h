@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class BalloonComponent {
@@ -22,7 +23,7 @@ public:
     void detach(Actor &);
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    void getMaxHeight(void)const;
+    void getMaxHeight()const;
     void getBalloonForActor(Actor const&);
     void shouldPop(Actor &, bool &);
     void integrate(Actor &);

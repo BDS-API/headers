@@ -9,5 +9,5 @@ class NetworkAdapter {
 public:
 
     NetworkAdapter(void);
-    void GetNumberOfAddresses(void);
+    void GetNumberOfAddresses();
 };

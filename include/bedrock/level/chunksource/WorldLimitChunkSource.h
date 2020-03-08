@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../../unmapped/ChunkPos"
+#include "../../util/ChunkPos"
+#include "../../util/BlockPos"
 
 
 class WorldLimitChunkSource : ChunkSource {
 
 public:
-    virtual WorldLimitChunkSource::~WorldLimitChunkSource();
-    virtual void shutdown(void);
+    WorldLimitChunkSource::~WorldLimitChunkSource()
+    virtual void shutdown();
     virtual void getExistingChunk(ChunkPos const&);
     virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
     virtual bool isWithinWorldLimit(ChunkPos const&)const;

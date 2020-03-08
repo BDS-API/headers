@@ -1,37 +1,39 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/Vec3"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../util/Vec3"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
 
 
 class Parrot : Animal {
 
 public:
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Parrot::~Parrot();
+    Parrot::~Parrot()
     virtual void getInterpolatedRidingPosition(float)const;
-    virtual void getShadowRadius(void)const;
+    virtual void getShadowRadius()const;
     virtual void setSitting(bool);
     virtual void rideLanded(Vec3 const&, Vec3 const&);
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
-    virtual bool canBePulledIntoVehicle(void)const;
+    virtual bool canBePulledIntoVehicle()const;
     virtual void _playStepSound(BlockPos const&, Block const&);
-    virtual void _makeFlySound(void)const;
-    virtual void playAmbientSound(void);
-    virtual void getAmbientSound(void);
-    virtual void aiStep(void);
+    virtual void _makeFlySound()const;
+    virtual void playAmbientSound();
+    virtual void getAmbientSound();
+    virtual void aiStep();
     virtual void _getWalkTargetValue(BlockPos const&);
-    virtual void useNewAi(void)const;
+    virtual void useNewAi()const;
 
     Parrot(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void _imitateNearbyMobs(void);
-    void _calculateFlapping(void);
-    void getFlap(void)const;
-    void getOFlap(void)const;
-    void getFlapSpeed(void)const;
-    void getOFlapSpeed(void)const;
+    void _imitateNearbyMobs();
+    void _calculateFlapping();
+    void getFlap()const;
+    void getOFlap()const;
+    void getFlapSpeed()const;
+    void getOFlapSpeed()const;
     void _getImitatedSound(ActorType);
 };

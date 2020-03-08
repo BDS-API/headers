@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../bedrock/network/packet/PlayerAuthInputPacket"
 #include "../bedrock/actor/Player"
+#include "../bedrock/network/packet/PlayerAuthInputPacket"
 
 
 class ServerMoveInputHandler : MoveInputHandler {
 
 public:
-    virtual ServerMoveInputHandler::~ServerMoveInputHandler();
+    ServerMoveInputHandler::~ServerMoveInputHandler()
     virtual void tick(Player &);
     virtual void registerInputHandlers(InputHandler &);
 

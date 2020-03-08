@@ -1,20 +1,20 @@
 #pragma once
 
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/ActorInfo"
 #include "../../io/BinaryStream"
+#include "../../actor/unmapped/ActorInfo"
 
 
 class AvailableActorIdentifiersPacket : Packet {
 
 public:
-    virtual AvailableActorIdentifiersPacket::~AvailableActorIdentifiersPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    AvailableActorIdentifiersPacket::~AvailableActorIdentifiersPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
     AvailableActorIdentifiersPacket(void);
     AvailableActorIdentifiersPacket(std::vector<ActorInfo, std::allocator<ActorInfo>> const&);
-    void getIdentifiers(void)const;
+    void getIdentifiers()const;
 };

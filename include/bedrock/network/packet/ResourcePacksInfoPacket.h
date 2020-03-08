@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../../../unmapped/ResourcePackInfoData"
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../resourcepack/ResourcePackInfoData"
 #include "../../io/BinaryStream"
 
 
 class ResourcePacksInfoPacket : Packet {
 
 public:
-    virtual ResourcePacksInfoPacket::~ResourcePacksInfoPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    ResourcePacksInfoPacket::~ResourcePacksInfoPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
     ResourcePacksInfoPacket(void);
     ResourcePacksInfoPacket(bool, std::vector<ResourcePackInfoData, std::allocator<ResourcePackInfoData>> &, std::vector<ResourcePackInfoData, std::allocator<ResourcePackInfoData>> &);
-    void getResourcePacksInfoData(void)const;
+    void getResourcePacksInfoData()const;
 };

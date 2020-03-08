@@ -6,7 +6,7 @@
 class InteractSystem : ITickingSystem {
 
 public:
-    virtual InteractSystem::~InteractSystem();
+    InteractSystem::~InteractSystem()
     virtual void tick(EntityRegistry &);
 
     InteractSystem(void);

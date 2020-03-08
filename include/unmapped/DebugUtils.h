@@ -17,9 +17,9 @@ public:
 
     void DEFAULT_ASSERT_HANDLER(char const*, char const*, char const*, bool, int, char const*, char const*, bool);
     void REGISTER_ASSERT_TELEMETRY(std::function<void ()(std::string &)>);
-    void UNREGISTER_ASSERT_TELEMETRY(void);
+    void UNREGISTER_ASSERT_TELEMETRY();
     void REGISTER_CRASHED_TELEMETRY(std::function<void ()(std::string const&, std::string const&)>);
-    void UNREGISTER_CRASHED_TELEMETRY(void);
+    void UNREGISTER_CRASHED_TELEMETRY();
     void _fireAssertTelemetry(std::string &);
     void fireCrashedTelemetry(std::string const&, std::string const&);
     void PUBLISH_ASSERT_HANDLER(char const*, char const*, char const*, bool, int, char const*, char const*, bool);

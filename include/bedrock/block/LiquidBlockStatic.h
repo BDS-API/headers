@@ -1,12 +1,15 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Material"
 
 
 class LiquidBlockStatic : LiquidBlock {
 
 public:
-    virtual LiquidBlockStatic::~LiquidBlockStatic();
+    LiquidBlockStatic::~LiquidBlockStatic()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
 

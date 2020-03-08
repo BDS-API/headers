@@ -1,20 +1,21 @@
 #pragma once
 
-#include "../../../../unmapped/ChunkPos"
-#include "../../../../unmapped/Dimension"
 #include "../../../../unmapped/StrongholdResult"
-#include "../../../../unmapped/Random"
 #include "../../../../unmapped/BiomeSource"
+#include "../../../util/ChunkPos"
+#include "../../../util/Random"
+#include "../../../../unmapped/Dimension"
+#include "../../../util/BlockPos"
 
 
 class StrongholdFeature : StructureFeature {
 
 public:
-    virtual StrongholdFeature::~StrongholdFeature();
+    StrongholdFeature::~StrongholdFeature()
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);
     virtual void createStructureStart(Dimension &, BiomeSource &, Random &, ChunkPos const&);
-    virtual void getGuesstimatedFeaturePositions(void);
+    virtual void getGuesstimatedFeaturePositions();
 
     StrongholdFeature(VillageFeature *, unsigned int);
     void generatePositions(Random &, BiomeSource const&, unsigned int);

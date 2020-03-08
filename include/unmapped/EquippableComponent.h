@@ -1,7 +1,9 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
+#include "../bedrock/definition/EquippableDefinition"
 #include "../bedrock/network/packet/UpdateEquipPacket"
+#include "../bedrock/item/Item"
 
 
 class EquippableComponent {
@@ -12,9 +14,9 @@ public:
     EquippableComponent(EquippableComponent&&);
     void initFromDefinition(Actor &, EquippableDefinition const&);
     void onItemChanged(Actor &, unsigned long, Item const*)const;
-    void getSlots(void)const;
+    void getSlots()const;
     void getSlot(int)const;
-    void getSlotCount(void)const;
+    void getSlotCount()const;
     void createDataPacket(Actor &, ContainerID)const;
     void createTag(Actor &)const;
     void setDataFromPacket(UpdateEquipPacket const&);

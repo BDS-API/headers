@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../../../unmapped/MobDescriptor"
 #include "../Mob"
 
 
 class HurtByTargetGoal : TargetGoal {
 
 public:
-    virtual HurtByTargetGoal::~HurtByTargetGoal();
-    virtual bool canUse(void);
-    virtual void start(void);
+    HurtByTargetGoal::~HurtByTargetGoal()
+    virtual bool canUse();
+    virtual void start();
     virtual void appendDebugInfo(std::string &)const;
     virtual void alertOther(Mob *, Mob *);
 

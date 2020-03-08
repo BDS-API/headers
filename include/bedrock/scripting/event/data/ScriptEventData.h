@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../../unmapped/ScriptEngine"
+#include "../../../../unmapped/EventInfo"
+#include "../../ScriptObjectHandle"
+#include "../../unmapped/ScriptEngine"
 
 
 class ScriptEventData {
 
 public:
-    virtual ScriptEventData::~ScriptEventData();
+    ScriptEventData::~ScriptEventData()
 
     ScriptEventData(std::string const&);
     void serialize(ScriptEngine &, EventInfo &, ScriptApi::ScriptObjectHandle &)const;

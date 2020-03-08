@@ -5,8 +5,8 @@
 class OnIgniteDescription : TriggerDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual OnIgniteDescription::~OnIgniteDescription();
+    virtual void getJsonName()const;
+    OnIgniteDescription::~OnIgniteDescription()
 
     OnIgniteDescription(void);
 };

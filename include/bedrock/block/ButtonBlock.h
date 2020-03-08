@@ -1,22 +1,25 @@
 #pragma once
 
-#include "../../unmapped/AABB"
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
+#include "../../unmapped/Material"
 #include "../actor/Player"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class ButtonBlock : BlockLegacy {
 
 public:
-    virtual ButtonBlock::~ButtonBlock();
+    ButtonBlock::~ButtonBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
-    virtual bool isInteractiveBlock(void)const;
-    virtual bool isButtonBlock(void)const;
-    virtual bool isSignalSource(void)const;
+    virtual bool isInteractiveBlock()const;
+    virtual bool isButtonBlock()const;
+    virtual bool isSignalSource()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;
@@ -34,12 +37,12 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void getUIShape(Block const&, AABB &)const;
     virtual void getVariant(Block const&)const;
-    virtual bool canSpawnOn(void)const;
+    virtual bool canSpawnOn()const;
 
     ButtonBlock(std::string const&, int, Material const&, bool);
     void _checkCanSurvive(BlockSource &, BlockPos const&)const;
     void _getShape(AABB &, bool, unsigned char, bool)const;
-    void getTickDelay(void)const;
+    void getTickDelay()const;
     bool canAttachTo(BlockSource &, BlockPos const&, unsigned char);
     void _buttonPressed(BlockSource &, Block const&, Vec3 const&)const;
     void _checkPressed(BlockSource &, BlockPos const&)const;

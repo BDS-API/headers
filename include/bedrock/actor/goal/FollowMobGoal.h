@@ -6,14 +6,14 @@
 class FollowMobGoal : Goal {
 
 public:
-    virtual FollowMobGoal::~FollowMobGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    FollowMobGoal::~FollowMobGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     FollowMobGoal(Mob &, float, float, int);
-    void _setWantedMob(void);
+    void _setWantedMob();
 };

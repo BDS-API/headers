@@ -1,13 +1,16 @@
 #pragma once
 
+#include "../Actor"
 #include "../Mob"
+#include "../../description/component/NavigationDescription"
+#include "../../util/Vec3"
 #include "../../../unmapped/NavigationComponent"
 
 
 class HoverPathNavigation : PathNavigation {
 
 public:
-    virtual HoverPathNavigation::~HoverPathNavigation();
+    HoverPathNavigation::~HoverPathNavigation()
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

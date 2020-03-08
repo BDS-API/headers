@@ -13,6 +13,6 @@ public:
     ScriptReportItem(ScriptApi::ScriptReportItemType, std::string const&);
     ScriptReportItem(std::unique_ptr<ScriptApi::JavaScriptErrorHandler, std::default_delete<ScriptApi::JavaScriptErrorHandler>> &&);
     void setType(ScriptApi::ScriptReportItemType);
-    void getType(void)const;
-    void getErrorHandler(void)const;
+    void getType()const;
+    void getErrorHandler()const;
 };

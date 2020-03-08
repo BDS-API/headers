@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../container/CraftingContainer"
-#include "../../level/Level"
 #include "../../item/ItemInstance"
 #include "../../../mce/UUID"
+#include "../../container/CraftingContainer"
+#include "../../level/Level"
 
 
 class MapExtendingRecipe : MultiRecipe {
@@ -12,14 +12,14 @@ public:
     static long CraftingTableID;
     static long CartographyTableID;
 
-    virtual MapExtendingRecipe::~MapExtendingRecipe();
+    MapExtendingRecipe::~MapExtendingRecipe()
     virtual void assemble(CraftingContainer &)const;
-    virtual void getCraftingSize(void)const;
+    virtual void getCraftingSize()const;
     virtual void getIngredient(int, int)const;
-    virtual void getResultItem(void)const;
+    virtual void getResultItem()const;
     virtual void matches(CraftingContainer &, Level &)const;
-    virtual void size(void)const;
-    virtual bool isExperimental(void)const;
+    virtual void size()const;
+    virtual bool isExperimental()const;
 
     MapExtendingRecipe(std::string);
     MapExtendingRecipe(std::string, mce::UUID const&);

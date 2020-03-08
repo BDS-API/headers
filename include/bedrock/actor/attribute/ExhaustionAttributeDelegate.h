@@ -5,8 +5,8 @@
 class ExhaustionAttributeDelegate : AttributeInstanceDelegate {
 
 public:
-    virtual ExhaustionAttributeDelegate::~ExhaustionAttributeDelegate();
-    virtual void tick(void);
+    ExhaustionAttributeDelegate::~ExhaustionAttributeDelegate()
+    virtual void tick();
 
     ExhaustionAttributeDelegate(AttributeInstance const&);
 };

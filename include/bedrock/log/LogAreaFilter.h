@@ -8,7 +8,7 @@ class LogAreaFilter {
 
 public:
 
-    void resetFilter(void);
+    void resetFilter();
     void setFilter(LogAreaID);
     void testFilter(LogAreaID)const;
     LogAreaFilter(LogAreaID);
@@ -16,5 +16,5 @@ public:
     LogAreaFilter(unsigned long);
     LogAreaFilter(void);
     void toggleFilter(LogAreaID);
-    void anyFilter(void)const;
+    void anyFilter()const;
 };

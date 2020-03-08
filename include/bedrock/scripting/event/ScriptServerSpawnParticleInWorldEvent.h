@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../../../unmapped/ScriptServerContext"
 #include "../ScriptVersionInfo"
+#include "../unmapped/ScriptEngine"
+#include "../ScriptObjectHandle"
+#include "../unmapped/ScriptServerContext"
 
 
 class ScriptServerSpawnParticleInWorldEvent : ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent {
@@ -9,10 +11,10 @@ class ScriptServerSpawnParticleInWorldEvent : ScriptTemplateFactory<ScriptServer
 public:
     static long mHash;
 
-    virtual ScriptServerSpawnParticleInWorldEvent::~ScriptServerSpawnParticleInWorldEvent();
+    ScriptServerSpawnParticleInWorldEvent::~ScriptServerSpawnParticleInWorldEvent()
     virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);
     virtual void getEventData(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle &);
 
-    void getHash(void);
+    void getHash();
     ScriptServerSpawnParticleInWorldEvent(void);
 };

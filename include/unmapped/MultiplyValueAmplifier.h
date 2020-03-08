@@ -5,7 +5,7 @@
 class MultiplyValueAmplifier : Amplifier {
 
 public:
-    virtual MultiplyValueAmplifier::~MultiplyValueAmplifier();
+    MultiplyValueAmplifier::~MultiplyValueAmplifier()
     virtual void getAmount(int, float)const;
 
     MultiplyValueAmplifier(float);

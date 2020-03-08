@@ -1,23 +1,25 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../actor/Actor"
 #include "../actor/Player"
-#include "../../unmapped/Random"
+#include "../actor/Actor"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class BambooBlock : BlockLegacy {
 
 public:
-    virtual BambooBlock::~BambooBlock();
+    BambooBlock::~BambooBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
-    virtual bool isWaterBlocking(void)const;
+    virtual bool isWaterBlocking()const;
     virtual bool isValidAuxValue(int)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool canContainLiquid()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
     virtual void mayConsumeFertilizer(BlockSource &)const;
@@ -29,7 +31,7 @@ public:
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
-    virtual bool canBeSilkTouched(void)const;
+    virtual bool canBeSilkTouched()const;
 
     BambooBlock(std::string const&, int);
     void _getPositionalValue(BlockPos const&);

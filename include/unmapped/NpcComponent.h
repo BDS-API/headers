@@ -1,7 +1,11 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
+#include "../bedrock/command/orgin/CommandOrigin"
+#include "../bedrock/network/packet/NpcRequestPacket"
+#include "../bedrock/actor/unmapped/ActorInteraction"
 #include "../bedrock/actor/Player"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class NpcComponent {
@@ -17,25 +21,25 @@ public:
     NpcComponent(void);
     void initFromDefinition(Actor &);
     void _defineEntityDataString(Actor &, ActorDataIDs);
-    void _deserializeData(void);
+    void _deserializeData();
     void addAdditionalSaveData(Actor &, CompoundTag &)const;
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void loadActions(Actor &);
     void getInteraction(Actor &, Player &, ActorInteraction &);
     bool hasEditPermission(Player &)const;
-    void getCommandPermissionLevel(void)const;
-    void getButtonCounts(void)const;
-    void getActionCount(void)const;
-    void getUrlCount(void)const;
+    void getCommandPermissionLevel()const;
+    void getButtonCounts()const;
+    void getActionCount()const;
+    void getUrlCount()const;
     void _isClientSide(Actor &)const;
-    void getPortraitOffset(void)const;
-    void getPickerOffset(void)const;
+    void getPortraitOffset()const;
+    void getPickerOffset()const;
     void setInteractiveTextFilter(std::function<std::string ()(std::string const&)>, bool);
-    void removeInteractiveTextFilter(void);
-    void getSelectedSkinData(void)const;
+    void removeInteractiveTextFilter();
+    void getSelectedSkinData()const;
     void getSkinData(int)const;
-    void getSkinIndex(void)const;
-    void getSkinCount(void)const;
+    void getSkinIndex()const;
+    void getSkinCount()const;
     void setName(Actor &, std::string const&, bool);
     void _sendNpcRequest(Actor &, NpcRequestPacket)const;
     void setInteractiveText(Actor &, std::string const&, bool);

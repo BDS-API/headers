@@ -2,6 +2,7 @@
 
 #include "../bedrock/actor/Actor"
 #include "../bedrock/description/component/TeleportDescription"
+#include "../bedrock/util/Vec3"
 
 
 class TeleportComponent {
@@ -15,13 +16,13 @@ public:
     void teleport(Actor &, Vec3 const&);
     void randomTeleport(Actor &);
     void teleportTowards(Actor &, Actor const&);
-    void getRandomTeleports(void);
-    void getMinTeleportTime(void);
-    void getMaxTeleportTime(void);
-    void getTargetDistance(void);
-    void getTargetTeleportChance(void);
-    void getLightTeleportChance(void);
-    void getDarkTeleportChance(void);
-    void getTeleportTime(void);
+    void getRandomTeleports();
+    void getMinTeleportTime();
+    void getMaxTeleportTime();
+    void getTargetDistance();
+    void getTargetTeleportChance();
+    void getLightTeleportChance();
+    void getDarkTeleportChance();
+    void getTeleportTime();
     void setTeleportTime(int);
 };

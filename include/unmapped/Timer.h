@@ -7,16 +7,16 @@ class Timer {
 public:
 
     Timer(float, std::function<int ()(void)>);
-    void getTicks(void)const;
-    void getAlpha(void)const;
-    void getTimeScale(void)const;
-    void getTime(void)const;
+    void getTicks()const;
+    void getAlpha()const;
+    void getTimeScale()const;
+    void getTime()const;
     void setTimeScale(float);
     void advanceTime(float);
-    void stepping(void)const;
-    void advanceTimeQuickly(void);
-    void skipTime(void);
+    void stepping()const;
+    void advanceTimeQuickly();
+    void skipTime();
     void stepTick(int);
-    void resetTimePassed(void);
-    void getLastTimestep(void)const;
+    void resetTimePassed();
+    void getLastTimestep()const;
 };

@@ -7,12 +7,12 @@ class JumpInfo {
 public:
 
     JumpInfo(float, float, int, int);
-    void getAnimDuration(void)const;
+    void getAnimDuration()const;
     void setAnimDuration(int);
-    void getJumpDelay(void)const;
+    void getJumpDelay()const;
     void setJumpDelay(int);
-    void getDistanceScale(void)const;
+    void getDistanceScale()const;
     void setDistanceScale(float);
-    void getHeight(void)const;
+    void getHeight()const;
     void setHeight(float);
 };

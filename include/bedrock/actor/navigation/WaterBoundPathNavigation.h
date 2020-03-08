@@ -1,13 +1,14 @@
 #pragma once
 
 #include "../Mob"
+#include "../../description/component/NavigationDescription"
 #include "../../../unmapped/NavigationComponent"
 
 
 class WaterBoundPathNavigation : PathNavigation {
 
 public:
-    virtual WaterBoundPathNavigation::~WaterBoundPathNavigation();
+    WaterBoundPathNavigation::~WaterBoundPathNavigation()
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;
@@ -22,8 +23,8 @@ public:
     void setTerrainAvoidDistance(float);
     void setLookAheadDist(float);
     void setRiverFollow(bool);
-    void getMinDepth(void)const;
-    void getMaxDepth(void)const;
-    void getSteerDampening(void)const;
-    void getTerrainAvoidDistance(void)const;
+    void getMinDepth()const;
+    void getMaxDepth()const;
+    void getSteerDampening()const;
+    void getTerrainAvoidDistance()const;
 };

@@ -8,11 +8,11 @@ class SortedSplittedPackets {
 
 public:
 
-    void PacketId(void);
-    void AllocSize(void);
+    void PacketId();
+    void AllocSize();
     void Get(unsigned int);
     void Preallocate(RakNet::InternalPacket *, char const*, unsigned int);
     void Add(RakNet::InternalPacket *, char const*, unsigned int);
-    void AddedPacketsCount(void);
+    void AddedPacketsCount();
     SortedSplittedPackets(void);
 };

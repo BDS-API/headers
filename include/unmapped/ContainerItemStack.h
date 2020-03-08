@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance"
 #include "../bedrock/item/ItemStack"
+#include "../bedrock/item/ItemInstance"
 
 
 class ContainerItemStack {
@@ -14,36 +14,36 @@ public:
     ContainerItemStack(ItemStack const&);
     ContainerItemStack(ItemInstance const&);
     void operator-(ContainerItemStack const&);
-    bool isEmpty(void)const;
+    bool isEmpty()const;
     void decreaseCount(int);
-    void getCount(void)const;
+    void getCount()const;
     void increaseCount(int);
     void matches(ContainerItemStack const&)const;
-    void getItem(void)const;
-    void getId(void)const;
-    void getAuxValue(void)const;
+    void getItem()const;
+    void getId()const;
+    void getAuxValue()const;
     void setAuxValue(short);
-    void getDamageValue(void)const;
+    void getDamageValue()const;
     void setDamageValue(short);
-    void getIdAux(void)const;
-    void getIdAuxEnchanted(void)const;
-    bool isNull(void)const;
-    void setNull(void);
+    void getIdAux()const;
+    void getIdAuxEnchanted()const;
+    bool isNull()const;
+    void setNull();
     void forceSetCount(int);
-    void getStackSize(void)const;
+    void getStackSize()const;
     void setStackSize(unsigned char);
-    void getMaxStackSize(void)const;
-    void getItemStack(void)const;
-    void getItemInstance(void)const;
+    void getMaxStackSize()const;
+    void getItemStack()const;
+    void getItemInstance()const;
     bool matchesItem(ContainerItemStack const&)const;
-    void getDescriptor(void)const;
-    bool hasUserData(void)const;
-    void getUserData(void)const;
-    void getColor(void)const;
-    void getItemStack(void);
-    void getItemInstance(void);
-    bool asItemStack(void)const;
-    bool asItemInstance(void)const;
+    void getDescriptor()const;
+    bool hasUserData()const;
+    void getUserData()const;
+    void getColor()const;
+    void getItemStack();
+    void getItemInstance();
+    bool asItemStack()const;
+    bool asItemInstance()const;
     ContainerItemStack(ContainerItemStack const&);
     ContainerItemStack(ContainerItemStack&&);
 };

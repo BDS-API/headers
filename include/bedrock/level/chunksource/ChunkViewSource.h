@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../LevelChunkFinalDeleter"
-#include "../../../unmapped/ChunkPos"
-#include "../LevelChunk"
 #include "../../../unmapped/Bounds"
-#include "../../../unmapped/Random"
+#include "../../util/ChunkPos"
+#include "../../util/Random"
+#include "../LevelChunkFinalDeleter"
+#include "../../util/BlockPos"
+#include "../LevelChunk"
 
 
 class ChunkViewSource : ChunkSource {
 
 public:
-    virtual ChunkViewSource::~ChunkViewSource();
+    ChunkViewSource::~ChunkViewSource()
     virtual void getExistingChunk(ChunkPos const&);
     virtual void getRandomChunk(Random &);
     virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
@@ -23,8 +23,8 @@ public:
     void move(Bounds const&, bool, std::function<void ()(buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>);
     void move(BlockPos const&, BlockPos const&, bool, std::function<void ()(buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>);
     void move(BlockPos const&, int, bool, std::function<void ()(buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>);
-    void clear(void);
-    void getArea(void)const;
-    void getArea(void);
-    void enableBlockEntityAccess(void);
+    void clear();
+    void getArea()const;
+    void getArea();
+    void enableBlockEntityAccess();
 };

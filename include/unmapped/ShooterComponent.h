@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/description/component/ShooterDescription"
 #include "../bedrock/actor/Actor"
 
 
@@ -12,5 +13,5 @@ public:
     void initFromDefinition(Actor &);
     void initFromDefinition(Actor &, ShooterDescription const&);
     void onShoot(Actor &);
-    void getAuxValue(void);
+    void getAuxValue();
 };

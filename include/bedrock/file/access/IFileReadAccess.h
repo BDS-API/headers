@@ -5,7 +5,7 @@
 class IFileReadAccess {
 
 public:
-    virtual IFileReadAccess::~IFileReadAccess();
+    IFileReadAccess::~IFileReadAccess()
 
     IFileReadAccess(void);
 };

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../json/Value"
 
 
 using namespace Automation;
@@ -13,5 +14,5 @@ public:
     void slashCommand(std::string const&, Json::Value const&);
     void slashCommandInitiated(std::string const&);
     void createEvent(std::string const&, Json::Value const&, Json::Value const&);
-    void getType(void)const;
+    void getType()const;
 };

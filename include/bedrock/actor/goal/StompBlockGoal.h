@@ -1,24 +1,25 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
+#include "../Mob"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Block"
 #include "../../level/Level"
-#include "../../../unmapped/BlockSource"
 
 
 class StompBlockGoal : BaseMoveToBlockGoal {
 
 public:
-    virtual StompBlockGoal::~StompBlockGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    StompBlockGoal::~StompBlockGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
     virtual bool isValidTarget(BlockSource &, BlockPos const&);
     virtual void _canReach(BlockPos const&);
-    virtual void _moveToBlock(void);
+    virtual void _moveToBlock();
     virtual void _createBreakProgressParticles(Level &, BlockSource &, BlockPos);
     virtual void _createDestroyParticles(Level &, BlockSource &, BlockPos);
     virtual void _playBreakProgressSound(Level &, BlockSource &, BlockPos);

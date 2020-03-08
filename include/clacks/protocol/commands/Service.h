@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../SaveQueryResult"
+#include "../PlayerAndMessage"
+#include "../PlayerList"
+#include "../Settings"
+#include "../Message"
+#include "../SaveStateResult"
+#include "../Empty"
+#include "../MetricReport"
 
 
 using namespace com::mojang::clacks::protocol::Commands;
@@ -7,7 +15,7 @@ using namespace com::mojang::clacks::protocol::Commands;
 class Service : grpc::Service {
 
 public:
-    virtual void com::mojang::clacks::protocol::Commands::Service::~Service();
+    com::mojang::clacks::protocol::Commands::Service::~Service()
     virtual void listPlayer(grpc::ServerContext *, com::mojang::clacks::protocol::Empty const*, com::mojang::clacks::protocol::PlayerList *);
     virtual void kick(grpc::ServerContext *, com::mojang::clacks::protocol::PlayerAndMessage const*, com::mojang::clacks::protocol::Empty *);
     virtual void say(grpc::ServerContext *, com::mojang::clacks::protocol::Message const*, com::mojang::clacks::protocol::Empty *);

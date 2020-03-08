@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/ActorUniqueID"
 #include "../Actor"
+#include "../unmapped/ActorUniqueID"
+#include "../Mob"
 #include "../../../unmapped/MingleComponent"
+#include "../unmapped/ActorDefinitionIdentifier"
 
 
 class MingleGoal : MoveToPOIGoal {
@@ -13,18 +14,18 @@ public:
     static long SPEAK_INTERVAL_TICKS_MIN;
     static long SPEAK_INTERVAL_TICKS_MAX;
 
-    virtual MingleGoal::~MingleGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    MingleGoal::~MingleGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     MingleGoal(Mob &, float, float, float, ActorDefinitionIdentifier, float);
-    void _getMingleComponent(void)const;
+    void _getMingleComponent()const;
     void _validatePartnerState(MingleComponent::MingleState, MingleComponent&, bool);
-    void _pickNewSpeakInterval(void);
+    void _pickNewSpeakInterval();
     void _resetPartnerState(Actor &);
     void _tickUnavailable(MingleComponent &);
     void _tickAvailable(MingleComponent &);
@@ -35,7 +36,7 @@ public:
     void _isWithinInteractRange(Actor &)const;
     void _tryGetMingleComponent(Actor &);
     void _lookAt(Actor *);
-    void _canSearchForPartner(void)const;
+    void _canSearchForPartner()const;
     void _isSuitablePartner(Actor &, ActorUniqueID);
     void _tryPathToPartner(Actor &);
     void _isSuitableAgePartner(Actor const&);

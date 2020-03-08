@@ -5,7 +5,7 @@
 class Connector {
 
 public:
-    virtual Connector::~Connector();
+    Connector::~Connector()
 
     Connector(void);
 };

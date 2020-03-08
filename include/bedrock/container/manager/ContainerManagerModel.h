@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../actor/Player"
 #include "../model/ContainerModel"
+#include "../../actor/Player"
 
 
 class ContainerManagerModel : IContainerManager {
 
 public:
-    virtual ContainerManagerModel::~ContainerManagerModel();
-    virtual void getContainerId(void)const;
+    ContainerManagerModel::~ContainerManagerModel()
+    virtual void getContainerId()const;
     virtual void setContainerId(ContainerID);
-    virtual void getContainerType(void)const;
+    virtual void getContainerType()const;
     virtual void setContainerType(ContainerType);
-    virtual void init(void);
+    virtual void init();
     virtual bool isValid(float);
 
     ContainerManagerModel(ContainerID, Player &);
@@ -20,9 +20,9 @@ public:
     void grantExperience(int);
     void registerInformControllerOfDestructionCallback(std::function<void ()(ContainerManagerModel&)>);
     void debitPlayerXP(int);
-    void getPlayerXP(void)const;
-    bool isCreativeMode(void)const;
-    bool isClientSide(void)const;
-    void getPlayer(void)const;
+    void getPlayerXP()const;
+    bool isCreativeMode()const;
+    bool isClientSide()const;
+    void getPlayer()const;
     void _addContainer(std::shared_ptr<ContainerModel>);
 };

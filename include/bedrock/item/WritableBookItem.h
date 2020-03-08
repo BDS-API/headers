@@ -2,15 +2,16 @@
 
 #include "../actor/Player"
 #include "../nbt/CompoundTag"
+#include "../../unmapped/PageContent"
 
 
 class WritableBookItem : Item {
 
 public:
-    virtual WritableBookItem::~WritableBookItem();
-    virtual bool requiresInteract(void)const;
+    WritableBookItem::~WritableBookItem()
+    virtual bool requiresInteract()const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void getInteractText[abi:cxx11](Player const&)const;
+    virtual void getInteractText(Player const&)const;
 
     WritableBookItem(std::string const&, int);
     void makeSureTagIsValid(CompoundTag const&);

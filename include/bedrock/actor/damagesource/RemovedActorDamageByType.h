@@ -6,10 +6,10 @@
 class RemovedActorDamageByType : ActorDamageSource {
 
 public:
-    virtual RemovedActorDamageByType::~RemovedActorDamageByType();
+    RemovedActorDamageByType::~RemovedActorDamageByType()
     virtual void getDeathMessage(std::string, Actor *)const;
-    virtual void getEntityType(void)const;
-    virtual void clone(void)const;
+    virtual void getEntityType()const;
+    virtual void clone()const;
 
     RemovedActorDamageByType(ActorDamageCause, ActorType);
 };

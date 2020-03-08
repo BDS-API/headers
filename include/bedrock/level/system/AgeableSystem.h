@@ -6,7 +6,7 @@
 class AgeableSystem : ITickingSystem {
 
 public:
-    virtual AgeableSystem::~AgeableSystem();
+    AgeableSystem::~AgeableSystem()
     virtual void tick(EntityRegistry &);
 
     AgeableSystem(void);

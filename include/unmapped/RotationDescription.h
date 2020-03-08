@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../json/Value"
 #include "../bedrock/description/Description"
+#include "../json/Value"
+#include "../bedrock/util/Vec2"
 
 
 class RotationDescription : Description {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual RotationDescription::~RotationDescription();
+    virtual void getJsonName()const;
+    RotationDescription::~RotationDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

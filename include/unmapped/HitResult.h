@@ -1,6 +1,8 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/BlockPos"
 
 
 class HitResult {
@@ -8,20 +10,20 @@ class HitResult {
 public:
 
     HitResult(HitResult const&);
-    bool isHit(void)const;
-    bool isHitLiquid(void)const;
-    void getPos(void)const;
-    bool isEntity(void)const;
-    void getEntity(void)const;
+    bool isHit()const;
+    bool isHitLiquid()const;
+    void getPos()const;
+    bool isEntity()const;
+    void getEntity()const;
     HitResult(HitResult&&);
-    bool isTile(void)const;
-    void getBlock(void)const;
-    void getLiquid(void)const;
-    void getLiquidFacing(void)const;
-    void getLiquidPos(void)const;
+    bool isTile()const;
+    void getBlock()const;
+    void getLiquid()const;
+    void getLiquidFacing()const;
+    void getLiquidPos()const;
     void setIsHitLiquid(bool, HitResult);
-    void resetHitType(void);
-    void resetHitEntity(void);
+    void resetHitType();
+    void resetHitEntity();
     HitResult(Vec3 const&, Vec3 const&, Vec3 const&);
     HitResult(void);
     HitResult(Vec3 const&, Vec3 const&, BlockPos const&, unsigned char, Vec3 const&);
@@ -29,8 +31,8 @@ public:
     HitResult(Vec3 const&, Vec3 const&, HitResult const&);
     HitResult(Vec3 const&, Vec3 const&, Actor &, Vec3 const&);
     void distanceTo(Actor const&)const;
-    void setOutOfRange(void);
-    void getFacing(void)const;
-    void getHitResultType(void);
+    void setOutOfRange();
+    void getFacing()const;
+    void getHitResultType();
     void setFacing(unsigned char);
 };

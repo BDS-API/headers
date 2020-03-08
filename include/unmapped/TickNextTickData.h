@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/Tick"
+#include "../bedrock/util/BlockPos"
 
 
 class TickNextTickData {

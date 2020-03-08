@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../MineshaftPiece"
-#include "../../../../../unmapped/BlockSource"
 #include "../../../../../unmapped/MineshaftData"
+#include "../../../../../unmapped/BoundingBox"
+#include "../../../../util/Random"
+#include "../MineshaftPiece"
+#include "../../../../block/unmapped/BlockSource"
 #include "../StructurePiece"
 
 
 class MineshaftCorridor : MineshaftPiece {
 
 public:
-    virtual MineshaftCorridor::~MineshaftCorridor();
-    virtual void getType(void)const;
+    MineshaftCorridor::~MineshaftCorridor()
+    virtual void getType()const;
     virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);

@@ -1,23 +1,27 @@
 #pragma once
 
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
-#include "../Actor"
-#include "../../../unmapped/ContainerContentChangeListener"
 #include "../../item/ItemStack"
-#include "../../nbt/CompoundTag"
+#include "../../level/Level"
+#include "../Actor"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../description/component/ContainerDescription"
 #include "../ItemActor"
+#include "../../util/Vec3"
+#include "../../../unmapped/ContainerContentChangeListener"
+#include "../../block/unmapped/BlockSource"
+#include "../Player"
+#include "../../nbt/CompoundTag"
 
 
 class ContainerComponent : ContainerContentChangeListener, IEntityComponent {
 
 public:
     virtual void containerContentChanged(int);
-    virtual ContainerComponent::~ContainerComponent();
+    ContainerComponent::~ContainerComponent()
 
     ContainerComponent(void);
     ContainerComponent(ContainerComponent&&);
-    void _getRawContainerPtr(void)const;
+    void _getRawContainerPtr()const;
     void initFromDefinition(Actor &);
     void initFromDefinition(Actor &, ContainerDescription const&);
     void rebuildContainer(Actor &, ContainerType, int, bool, int, bool);
@@ -26,12 +30,12 @@ public:
     bool canOpenContainer(Actor const&, Player &)const;
     void openContainer(Actor &, Player &);
     void _unpackLootTable(Level &);
-    bool canBeSiphonedFrom(void)const;
-    bool isPrivate(void)const;
+    bool canBeSiphonedFrom()const;
+    bool isPrivate()const;
     void setCustomName(std::string const&);
-    bool hasCustomName(void)const;
-    void getContainerType(void)const;
-    void getContainerSize(void)const;
+    bool hasCustomName()const;
+    void getContainerType()const;
+    void getContainerSize()const;
     void _tryMoveInItem(BlockSource &, ItemStack &, int, int, int);
     bool hasRoomForItem(ItemActor const&);
     bool hasRoomForItem(ItemStack const&);
@@ -42,7 +46,7 @@ public:
     void getItem(int)const;
     void removeItem(int, int);
     void countItemsOfType(ItemStack const&)const;
-    void getSlots(void)const;
+    void getSlots()const;
     void removeItemsOfType(ItemStack const&, int);
     void findFirstSlotForItem(ItemStack const&)const;
     void dropContents(BlockSource &, Vec3 const&, bool);

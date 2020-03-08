@@ -7,15 +7,15 @@
 class HudContainerManagerModel : ContainerManagerModel {
 
 public:
-    virtual HudContainerManagerModel::~HudContainerManagerModel();
-    virtual void getItems(void);
+    HudContainerManagerModel::~HudContainerManagerModel()
+    virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
     virtual void setData(int, int);
-    virtual void broadcastChanges(void);
-    virtual void init(void);
+    virtual void broadcastChanges();
+    virtual void init();
 
     HudContainerManagerModel(ContainerID, Player &);
-    void refreshHotbar(void);
-    void getHotbarItems(void);
+    void refreshHotbar();
+    void getHotbarItems();
 };

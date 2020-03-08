@@ -1,21 +1,22 @@
 #pragma once
 
-#include "../../io/BinaryStream"
 #include "../../actor/Actor"
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/attribute/AttributeInstanceHandle"
+#include "../../io/BinaryStream"
 
 
 class UpdateAttributesPacket : Packet {
 
 public:
-    virtual UpdateAttributesPacket::~UpdateAttributesPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    UpdateAttributesPacket::~UpdateAttributesPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
     UpdateAttributesPacket(void);
     UpdateAttributesPacket(Actor const&, std::vector<AttributeInstanceHandle, std::allocator<AttributeInstanceHandle>> const&);
-    void getRuntimeId(void)const;
-    void getAttributeData(void)const;
+    void getRuntimeId()const;
+    void getAttributeData()const;
 };

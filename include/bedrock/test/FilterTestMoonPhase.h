@@ -6,9 +6,9 @@
 class FilterTestMoonPhase : SimpleFloatFilterTest {
 
 public:
-    virtual FilterTestMoonPhase::~FilterTestMoonPhase();
+    FilterTestMoonPhase::~FilterTestMoonPhase()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     FilterTestMoonPhase(void);
 };

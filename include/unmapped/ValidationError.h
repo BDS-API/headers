@@ -11,5 +11,5 @@ public:
     void setSuccess(bool);
     void setDescription(std::string const&);
     ValidationError(void);
-    bool isSuccess(void)const;
+    bool isSuccess()const;
 };

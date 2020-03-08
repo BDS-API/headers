@@ -1,15 +1,20 @@
 #pragma once
 
+#include "../orgin/CommandOrigin"
+#include "../../actor/Actor"
+#include "../../util/BlockPos"
+#include "../../util/Vec3"
+#include "../CommandArea"
+#include "../../../unmapped/Dimension"
+#include "../CommandOutput"
 #include "../Command"
 #include "../CommandRegistry"
-#include "../../actor/Actor"
-#include "../orgin/CommandOrigin"
 
 
 class TeleportCommand : Command {
 
 public:
-    virtual TeleportCommand::~TeleportCommand();
+    TeleportCommand::~TeleportCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

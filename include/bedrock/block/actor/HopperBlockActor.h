@@ -1,42 +1,43 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../container/Container"
-#include "../../../unmapped/BlockSource"
-#include "../../../unmapped/Tick"
-#include "../../actor/Player"
 #include "../../item/ItemStack"
+#include "../../container/Container"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/Tick"
 #include "../../../unmapped/Hopper"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
+#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class HopperBlockActor : BlockActor, Container, Hopper {
 
 public:
-    virtual HopperBlockActor::~HopperBlockActor();
+    HopperBlockActor::~HopperBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onMove(void);
+    virtual void onMove();
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
-    virtual void getName[abi:cxx11](void)const;
-    virtual void getContainer(void);
+    virtual void getName()const;
+    virtual void getContainer();
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
-    virtual void getContainerSize(void)const;
-    virtual void getMaxStackSize(void)const;
+    virtual void getContainerSize()const;
+    virtual void getMaxStackSize()const;
     virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
 
     HopperBlockActor(BlockPos const&);
-    void _initItems(void);
+    void _initItems();
     void _tick(BlockSource &, int);
     void _ensureTickingOrder(BlockSource &, int);
-    void getLevelPos(void);
-    void _countItems(void)const;
+    void getLevelPos();
+    void _countItems()const;
     void checkForSmeltEverythingAchievement(BlockSource &);
     bool isAttachedToChestAndFurnace(BlockSource &);
     void getAttachedFurnace(BlockSource &);

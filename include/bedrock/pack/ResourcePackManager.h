@@ -1,28 +1,32 @@
 #pragma once
 
-#include "../../unmapped/PackIdVersion"
-#include "../../unmapped/ResourcePackStack"
-#include "../../unmapped/ResourcePack"
-#include "../../core/Path"
-#include "../../unmapped/PackReport"
+#include "../../unmapped/IContentKeyProvider"
+#include "../resourcepack/ResourcePack"
+#include "../resourcepack/ResourcePackListener"
 #include "../../unmapped/PackSourceReport"
-#include "../../unmapped/ResourcePackListener"
+#include "../../unmapped/ContentTierManager"
 #include "../../unmapped/PackInstance"
+#include "../../core/Path"
+#include "../../unmapped/PackManifestFactory"
+#include "../../unmapped/PackReport"
+#include "../../unmapped/PackIdVersion"
+#include "../resourcepack/ResourcePackStack"
+#include "../../unmapped/PackSourceFactory"
 #include "../../unmapped/ResourceLocation"
 
 
 class ResourcePackManager : ResourceLoader {
 
 public:
-    virtual ResourcePackManager::~ResourcePackManager();
+    ResourcePackManager::~ResourcePackManager()
     virtual void load(ResourceLocation const&, std::string &)const;
     virtual void load(ResourceLocation const&, std::string &, std::vector<std::string, std::allocator<std::string>> const&)const;
     virtual void loadAllVersionsOf(ResourceLocation const&)const;
     virtual bool isInStreamableLocation(ResourceLocation const&)const;
     virtual bool isInStreamableLocation(ResourceLocation const&, std::vector<std::string, std::allocator<std::string>> const&)const;
-    virtual void getPath[abi:cxx11](ResourceLocation const&)const;
+    virtual void getPath(ResourceLocation const&)const;
     virtual void getPath(ResourceLocation const&, std::vector<std::string, std::allocator<std::string>> const&)const;
-    virtual void getPathContainingResource[abi:cxx11](ResourceLocation const&)const;
+    virtual void getPathContainingResource(ResourceLocation const&)const;
     virtual void getPathContainingResource(ResourceLocation const&, std::vector<std::string, std::allocator<std::string>>)const;
     virtual bool hasCapability(gsl::basic_string_span<char const, -1l>)const;
 
@@ -35,51 +39,51 @@ public:
     bool hasResource(ResourceLocation const&)const;
     void _getPackForResource(Core::Path const&)const;
     void getPackIndexForResource(ResourceLocation const&, std::vector<std::string, std::allocator<std::string>> const&)const;
-    void getStackSize(void)const;
-    void findAllTexturesInUse(void)const;
+    void getStackSize()const;
+    void findAllTexturesInUse()const;
     void findInPacks(ResourceLocation const&);
     void setStack(std::unique_ptr<ResourcePackStack, std::default_delete<ResourcePackStack>>, ResourcePackStackType, bool);
     void _handleComposeStack(bool);
     void clearStack(ResourcePackStackType, bool);
-    void clearPackReports(void);
+    void clearPackReports();
     void mergePackReports(std::vector<PackReport, std::allocator<PackReport>> &);
     void getStack(ResourcePackStackType)const;
-    void _shouldRebuildStack(void)const;
+    void _shouldRebuildStack()const;
     void composeFullStack(ResourcePackStack &, ResourcePackStack const&, ResourcePackStack const&, ResourcePackStack const&)const;
-    void _composeFullStack(void);
-    void _notifyFullStackInvalid(void);
-    void _calculateMinEngineVersionFromFullStack(void);
-    void notifyActiveResourcePackChanged(void);
-    void _updateLanguageSubpacks(void);
-    void getFullStackMinEngineVersion(void)const;
+    void _composeFullStack();
+    void _notifyFullStackInvalid();
+    void _calculateMinEngineVersionFromFullStack();
+    void notifyActiveResourcePackChanged();
+    void _updateLanguageSubpacks();
+    void getFullStackMinEngineVersion()const;
     void registerResourcePackListener(ResourcePackListener &);
     void unRegisterResourcePackListener(ResourcePackListener &);
-    void unRegisterAllResourcePackListener(void);
-    void notifyLanguageSubpacksChanged(void);
+    void unRegisterAllResourcePackListener();
+    void notifyLanguageSubpacksChanged();
     void getResourcesOfGroup(PackInstance const&, std::string const&)const;
     void _getResourcesOfGroup(PackInstance const&, std::string const&, std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &)const;
     void getResourcesOfGroup(std::string const&)const;
-    bool isOnlyBaseGamePacks(void)const;
+    bool isOnlyBaseGamePacks()const;
     void checkHasExtraLocaleResources(std::string const&)const;
-    void onLanguageChanged(void);
-    void onBaseGamePackDownloadComplete(void);
-    void handlePendingStackChanges(void);
-    void forceStackCompose(void);
+    void onLanguageChanged();
+    void onBaseGamePackDownloadComplete();
+    void handlePendingStackChanges();
+    void forceStackCompose();
     void copyPacksToLevel(Core::Path const&, PackType, PackSourceFactory const&, PackManifestFactory &, IContentKeyProvider const&)const;
     void copyPacksToLevel(Core::Path const&, PackType, PackSourceFactory const&, PackManifestFactory &, IContentKeyProvider const&, std::vector<PackInstance, std::allocator<PackInstance>> const&)const;
-    void getPackSourceReport(void)const;
+    void getPackSourceReport()const;
     void setPackSourceReport(PackSourceReport &&);
     void getPackSettings(PackIdVersion const&);
-    void ensureSupportedSubpacks(void);
-    bool canSupportPacks(void);
-    void removeUnsupportedPacks(void);
-    void getIncompatiblePacks(void)const;
+    void ensureSupportedSubpacks();
+    bool canSupportPacks();
+    void removeUnsupportedPacks();
+    void getIncompatiblePacks()const;
     void setCanUseGlobalPackStack(bool);
-    void onLoadingFinished(void);
+    void onLoadingFinished();
     void setExperimentalGameplay(bool);
-    bool isExperimentalGameplay(void)const;
-    void getFullStackAccess(void)const;
+    bool isExperimentalGameplay()const;
+    void getFullStackAccess()const;
     void removePack(ResourcePack *);
-    void getFullStack(void)const;
-    void getFullStack(void);
+    void getFullStack()const;
+    void getFullStack();
 };

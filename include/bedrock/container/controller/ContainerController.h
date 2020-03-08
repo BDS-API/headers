@@ -1,15 +1,16 @@
 #pragma once
 
+#include "../../item/unmapped/ItemTransferAmount"
 #include "../../../unmapped/ContainerItemStack"
+#include "../model/ContainerModel"
 #include "../../../unmapped/Recipes"
 #include "../../item/ItemInstance"
-#include "../model/ContainerModel"
 
 
 class ContainerController {
 
 public:
-    virtual ContainerController::~ContainerController();
+    ContainerController::~ContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
     virtual bool isItemAllowedAtSlot(ContainerItemStack const&, int)const;
     virtual bool isItemFiltered(Recipes const&, ContainerItemStack const&)const;
@@ -22,9 +23,9 @@ public:
 
     ContainerController(std::weak_ptr<ContainerModel>, bool);
     void getItem(int)const;
-    void getContainerSize(void)const;
-    void getContainerModel(void)const;
-    void shouldDrop(void)const;
+    void getContainerSize()const;
+    void getContainerModel()const;
+    void shouldDrop()const;
     void setItem(int, ContainerItemStack &, ItemPlaceType, bool);
     bool canSet(int, ContainerItemStack const&, ItemTransferAmount, bool)const;
     void _canAdd(int, ContainerItemStack const&, ItemTransferAmount)const;
@@ -39,7 +40,7 @@ public:
     void getExpandoStatus(int)const;
     void forEachItem(std::function<void ()(int, ContainerItemStack const&)>);
     bool canRemove(int, int)const;
-    void getContainerCategory(void)const;
+    void getContainerCategory()const;
     void getAvailableAutoPlaceCount(int, ContainerItemStack const&, bool)const;
     void getAvailableAddCount(int, ContainerItemStack const&)const;
 };

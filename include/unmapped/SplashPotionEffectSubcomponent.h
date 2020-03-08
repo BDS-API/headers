@@ -2,12 +2,13 @@
 
 #include "../json/Value"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/effect/MobEffect"
 
 
 class SplashPotionEffectSubcomponent : OnHitSubcomponent {
 
 public:
-    virtual SplashPotionEffectSubcomponent::~SplashPotionEffectSubcomponent();
+    SplashPotionEffectSubcomponent::~SplashPotionEffectSubcomponent()
     virtual void readfromJSON(Json::Value &);
     virtual void writetoJSON(Json::Value &)const;
     virtual void doOnHitEffect(Actor &, ProjectileComponent &);

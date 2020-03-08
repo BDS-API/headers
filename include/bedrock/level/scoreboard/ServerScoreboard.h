@@ -1,23 +1,24 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../../unmapped/Objective"
+#include "../../network/packet/Packet"
+#include "../../../unmapped/PlayerScoreboardId"
+#include "../../../unmapped/DisplayObjective"
 #include "../../actor/Player"
+#include "../../../unmapped/NetworkIdentifier"
+#include "../../actor/Actor"
+#include "../../../unmapped/ScoreboardId"
 #include "../../command/CommandSoftEnumRegistry"
+#include "../storage/LevelStorage"
 #include "../../nbt/CompoundTag"
 #include "../../network/packet/sender/PacketSender"
+#include "../../../unmapped/Objective"
 #include "../../../unmapped/ScoreboardIdentityRef"
-#include "../../network/packet/Packet"
-#include "../../../unmapped/ScoreboardId"
-#include "../../../unmapped/NetworkIdentifier"
-#include "../storage/LevelStorage"
-#include "../../../unmapped/PlayerScoreboardId"
 
 
 class ServerScoreboard : Scoreboard {
 
 public:
-    virtual ServerScoreboard::~ServerScoreboard();
+    ServerScoreboard::~ServerScoreboard()
     virtual void setDisplayObjective(std::string const&, Objective const&, ObjectiveSortOrder);
     virtual void clearDisplayObjective(std::string const&);
     virtual void createScoreboardId(Player const&);
@@ -29,14 +30,14 @@ public:
     virtual void onPlayerScoreRemoved(ScoreboardId const&, Objective const&);
     virtual void onPlayerJoined(Player const&);
     virtual void onPlayerIdentityUpdated(PlayerScoreboardId const&);
-    virtual void tick(void);
+    virtual void tick();
     virtual void setPacketSender(PacketSender *);
-    virtual void writeToLevelStorage(void);
-    virtual bool isClientSide(void)const;
+    virtual void writeToLevelStorage();
+    virtual bool isClientSide()const;
 
     ServerScoreboard(ServerScoreboard::unit_test_ctor_t);
     ServerScoreboard(CommandSoftEnumRegistry, LevelStorage *);
-    void _readFromLevelStorage(void);
+    void _readFromLevelStorage();
     void _setDirty(bool);
     bool isTrackingObjective(Objective const&)const;
     void _notifyClearDisplayObjectiveCallback(std::string const&, DisplayObjective const&);
@@ -49,9 +50,9 @@ public:
     void _startTrackingObjective(Objective const&);
     void _unpackIdentityDefToScorePacket(ScoreboardIdentityRef const&, std::string const&, int);
     void _sendTo(NetworkIdentifier const&, unsigned char, Packet const&);
-    void _isDirty(void)const;
-    void _getNewScoreboardId(void);
-    void serialize(void)const;
+    void _isDirty()const;
+    void _getNewScoreboardId();
+    void serialize()const;
     void deserialize(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>);
     void setScoreChangedCallback(std::function<void ()(ScoreboardId const&)>);
     void setScoreRemovedCallback(std::function<void ()(ScoreboardId const&)>);

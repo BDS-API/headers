@@ -1,18 +1,21 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Player"
 #include "../actor/Actor"
+#include "../util/Vec3"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class LeverBlock : BlockLegacy {
 
 public:
-    virtual LeverBlock::~LeverBlock();
+    LeverBlock::~LeverBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
-    virtual bool isInteractiveBlock(void)const;
-    virtual bool isSignalSource(void)const;
+    virtual bool isInteractiveBlock()const;
+    virtual bool isSignalSource()const;
     virtual void onFillBlock(BlockSource &, BlockPos const&, Block const&)const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
@@ -26,7 +29,7 @@ public:
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual bool isAttachedTo(BlockSource &, BlockPos const&, BlockPos&)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
-    virtual bool canSpawnOn(void)const;
+    virtual bool canSpawnOn()const;
     virtual void updateShape(BlockSource *, BlockPos const&);
 
     LeverBlock(std::string const&, int);

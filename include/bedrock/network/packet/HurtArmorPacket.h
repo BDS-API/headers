@@ -7,9 +7,9 @@
 class HurtArmorPacket : Packet {
 
 public:
-    virtual HurtArmorPacket::~HurtArmorPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    HurtArmorPacket::~HurtArmorPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

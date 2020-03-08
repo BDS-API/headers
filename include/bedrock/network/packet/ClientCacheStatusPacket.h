@@ -7,9 +7,9 @@
 class ClientCacheStatusPacket : Packet {
 
 public:
-    virtual ClientCacheStatusPacket::~ClientCacheStatusPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    ClientCacheStatusPacket::~ClientCacheStatusPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

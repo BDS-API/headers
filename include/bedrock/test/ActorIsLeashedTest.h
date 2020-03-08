@@ -6,9 +6,9 @@
 class ActorIsLeashedTest : SimpleBoolFilterTest {
 
 public:
-    virtual ActorIsLeashedTest::~ActorIsLeashedTest();
+    ActorIsLeashedTest::~ActorIsLeashedTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorIsLeashedTest(void);
 };

@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../io/BinaryStream"
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
 
 
 class ModalFormRequestPacket : Packet {
 
 public:
-    virtual ModalFormRequestPacket::~ModalFormRequestPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    ModalFormRequestPacket::~ModalFormRequestPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

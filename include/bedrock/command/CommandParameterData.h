@@ -1,5 +1,6 @@
 #pragma once
 
+#include "orgin/CommandOrigin"
 
 
 class CommandParameterData {

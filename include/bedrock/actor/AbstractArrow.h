@@ -1,36 +1,39 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/DataLoadHelper"
+#include "../util/Vec2"
+#include "../util/Vec3"
+#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
-#include "../../unmapped/Vec3"
 
 
 class AbstractArrow : Actor {
 
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual AbstractArrow::~AbstractArrow();
+    AbstractArrow::~AbstractArrow()
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void lerpMotion(Vec3 const&);
-    virtual void normalTick(void);
-    virtual void getShadowHeightOffs(void);
-    virtual void getShadowRadius(void)const;
+    virtual void normalTick();
+    virtual void getShadowHeightOffs();
+    virtual void getShadowRadius()const;
     virtual void playerTouch(Player &);
-    virtual void getSourceUniqueID(void)const;
-    virtual bool canChangeDimensions(void)const;
+    virtual void getSourceUniqueID()const;
+    virtual bool canChangeDimensions()const;
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
     virtual void shoot(Vec3 const&, float, float, Vec3 const&);
-    virtual void _playPickupSound(void);
+    virtual void _playPickupSound();
 
     AbstractArrow(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void _defineEntityData(void);
+    void _defineEntityData();
     void _canPickup(Player const&)const;
     void setBaseDamage(float);
-    void getBaseDamage(void);
+    void getBaseDamage();
     void setIsPlayerOwned(bool);
     void setIsCreative(bool);
     void setFavoredSlot(int);
-    void _isPlayerOwned(void)const;
+    void _isPlayerOwned()const;
 };

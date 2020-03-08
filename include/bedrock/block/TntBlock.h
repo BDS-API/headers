@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
+#include "../container/Container"
 #include "../actor/Player"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class TntBlock : BlockLegacy {
 
 public:
-    virtual TntBlock::~TntBlock();
+    TntBlock::~TntBlock()
     virtual void shouldDispense(BlockSource &, Container &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
@@ -21,8 +24,8 @@ public:
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void use(Player &, BlockPos const&)const;
-    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
-    virtual bool isAuxValueRelevantForPicking(void)const;
+    virtual void buildDescriptionId(Block const&)const;
+    virtual bool isAuxValueRelevantForPicking()const;
     virtual void getVariant(Block const&)const;
 
     TntBlock(std::string const&, int);

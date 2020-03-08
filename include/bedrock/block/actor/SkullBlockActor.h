@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class SkullBlockActor : BlockActor {
 
 public:
-    virtual SkullBlockActor::~SkullBlockActor();
+    SkullBlockActor::~SkullBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
@@ -18,10 +19,10 @@ public:
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     SkullBlockActor(BlockPos const&);
-    void getSkullType(void)const;
+    void getSkullType()const;
     void setSkullType(SkullBlockActor::SkullType);
     void setSkullType(int);
-    void getRotation(void)const;
+    void getRotation()const;
     void setRotation(float);
     void getMouthAnimation(float);
 };

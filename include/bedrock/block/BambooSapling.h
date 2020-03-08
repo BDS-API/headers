@@ -1,20 +1,21 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Player"
-#include "../../unmapped/Random"
+#include "../util/BlockPos"
+#include "../actor/Actor"
+#include "../util/Random"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class BambooSapling : Sapling {
 
 public:
-    virtual BambooSapling::~BambooSapling();
+    BambooSapling::~BambooSapling()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual bool isValidAuxValue(int)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool canContainLiquid()const;
     virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
@@ -22,7 +23,7 @@ public:
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
-    virtual bool isAuxValueRelevantForPicking(void)const;
+    virtual bool isAuxValueRelevantForPicking()const;
     virtual void getVariant(Block const&)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 

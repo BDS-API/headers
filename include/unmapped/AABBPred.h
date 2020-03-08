@@ -6,5 +6,5 @@ class AABBPred {
 
 public:
 
-    void operator()(AABB const&, AABB const&)const;
+    void operator()const;
 };

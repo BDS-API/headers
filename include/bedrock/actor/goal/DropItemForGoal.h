@@ -1,8 +1,11 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/BlockSource"
 #include "../Actor"
+#include "../../../unmapped/FloatRange"
+#include "../Mob"
+#include "../../definition/DefinitionTrigger"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class DropItemForGoal : BaseMoveToBlockGoal {
@@ -10,18 +13,18 @@ class DropItemForGoal : BaseMoveToBlockGoal {
 public:
     static long COOLDOWN_TICKS;
 
-    virtual DropItemForGoal::~DropItemForGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    DropItemForGoal::~DropItemForGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
     virtual bool isValidTarget(BlockSource &, BlockPos const&);
-    virtual void findTargetBlock(void);
+    virtual void findTargetBlock();
 
     DropItemForGoal(Mob &, float, int, int, float, DefinitionTrigger const&, float, float, float, std::string, FloatRange);
-    void _getLootTable(void);
+    void _getLootTable();
     void _checkWhereHaveYouBeenAchievement(Actor *);
-    void getFilter(void);
+    void getFilter();
 };

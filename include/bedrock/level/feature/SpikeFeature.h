@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../../unmapped/BlockSource"
+#include "../../actor/Actor"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/EndSpike"
 
 
 class SpikeFeature : Feature {
 
 public:
-    virtual SpikeFeature::~SpikeFeature();
+    SpikeFeature::~SpikeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     SpikeFeature(SpikeFeature::EndSpike const&);

@@ -1,14 +1,19 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/Path"
+#include "../Actor"
 #include "../Mob"
+#include "../../description/component/NavigationDescription"
+#include "../../util/Vec2"
+#include "../../util/Vec3"
+#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/NavigationComponent"
 
 
 class PathNavigation {
 
 public:
-    virtual PathNavigation::~PathNavigation();
+    PathNavigation::~PathNavigation()
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

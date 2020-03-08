@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/Random"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class POIInstance {
@@ -7,31 +10,31 @@ class POIInstance {
 public:
 
     POIInstance(BlockPos const&, bool, std::string, POIType, float, unsigned long, unsigned long, std::string, std::string, std::string);
-    bool isPathable(void)const;
-    void getPosition(void)const;
+    bool isPathable()const;
+    void getPosition()const;
     void setPosition(BlockPos const&);
-    void getVillage(void)const;
+    void getVillage()const;
     void setVillage(Village *);
-    void getType(void)const;
+    void getType()const;
     void setType(POIType);
-    void getRadius(void)const;
+    void getRadius()const;
     void setRadius(float);
-    void useBoundingBox(void)const;
+    void useBoundingBox()const;
     void getSecondBlockFullAABB(BlockSource &);
-    void getWeight(void)const;
+    void getWeight()const;
     void setWeight(unsigned long);
-    void getOwnerCount(void)const;
-    void getOwnerCapacity(void)const;
+    void getOwnerCount()const;
+    void getOwnerCapacity()const;
     void increaseOwnerCount(unsigned long);
     void decreaseOwnerCount(unsigned long);
-    bool isFull(void)const;
-    void getInitEvent(void)const;
+    bool isFull()const;
+    void getInitEvent()const;
     void setInitEvent(std::string const&);
-    void getEndEvent(void)const;
+    void getEndEvent()const;
     void setEndEvent(std::string const&);
-    void getName(void)const;
-    void getSoundEvent(void)const;
-    void incrementArrivalFailureCount(void);
-    void resetArrivalFailureCount(void);
+    void getName()const;
+    void getSoundEvent()const;
+    void incrementArrivalFailureCount();
+    void resetArrivalFailureCount();
     void trySpawnParticles(BlockSource &, Random &, int)const;
 };

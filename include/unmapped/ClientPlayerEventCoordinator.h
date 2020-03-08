@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../bedrock/actor/Actor"
+#include "../bedrock/block/BlockLegacy"
+#include "../bedrock/util/Vec2"
+#include "../bedrock/util/BlockPos"
 #include "../bedrock/actor/Player"
 
 

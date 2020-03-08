@@ -7,13 +7,13 @@
 class ClientCacheBlobStatusPacket : Packet {
 
 public:
-    virtual ClientCacheBlobStatusPacket::~ClientCacheBlobStatusPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    ClientCacheBlobStatusPacket::~ClientCacheBlobStatusPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
     ClientCacheBlobStatusPacket(void);
-    bool isFull(void)const;
-    bool isEmpty(void)const;
+    bool isFull()const;
+    bool isEmpty()const;
 };

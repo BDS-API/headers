@@ -6,7 +6,7 @@
 class BlockBreakSensorSystem : ITickingSystem {
 
 public:
-    virtual BlockBreakSensorSystem::~BlockBreakSensorSystem();
+    BlockBreakSensorSystem::~BlockBreakSensorSystem()
     virtual void tick(EntityRegistry &);
 
     BlockBreakSensorSystem(void);

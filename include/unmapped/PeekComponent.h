@@ -7,8 +7,8 @@ class PeekComponent {
 public:
 
     PeekComponent(PeekComponent&&);
-    void getHadTarget(void)const;
+    void getHadTarget()const;
     void setHadTarget(bool);
-    void getDuration(void);
+    void getDuration();
     PeekComponent(void);
 };

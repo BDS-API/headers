@@ -5,8 +5,8 @@
 class NavigationHoverDescription : NavigationDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual NavigationHoverDescription::~NavigationHoverDescription();
+    virtual void getJsonName()const;
+    NavigationHoverDescription::~NavigationHoverDescription()
 
     NavigationHoverDescription(void);
 };

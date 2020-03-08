@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../../../unmapped/ScriptEngine"
-#include "../../../unmapped/ActorUniqueID"
 #include "../../actor/Actor"
+#include "../unmapped/ScriptEngine"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../ScriptObjectHandle"
 #include "../../actor/ItemActor"
 
 
@@ -11,7 +12,7 @@ class ScriptActorUniqueIdBinderComponent : ScriptBinderComponent {
 public:
     static long TAG[abi:cxx11];
 
-    virtual ScriptActorUniqueIdBinderComponent::~ScriptActorUniqueIdBinderComponent();
+    ScriptActorUniqueIdBinderComponent::~ScriptActorUniqueIdBinderComponent()
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 
@@ -19,5 +20,5 @@ public:
     ScriptActorUniqueIdBinderComponent(ActorUniqueID);
     ScriptActorUniqueIdBinderComponent(Actor const&);
     ScriptActorUniqueIdBinderComponent(ItemActor const&);
-    void getIdentifier(void)const;
+    void getIdentifier()const;
 };

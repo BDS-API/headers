@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../model/ContainerModel"
 #include "../../item/ItemInstance"
+#include "../model/ContainerModel"
 
 
 class ShulkerBoxContainerController : ContainerController {
 
 public:
-    virtual ShulkerBoxContainerController::~ShulkerBoxContainerController();
+    ShulkerBoxContainerController::~ShulkerBoxContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
 
     ShulkerBoxContainerController(std::shared_ptr<ContainerModel>);

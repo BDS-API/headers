@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Mob"
 
 
 class BreakDoorAnnotationComponent {

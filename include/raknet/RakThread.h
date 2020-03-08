@@ -8,5 +8,5 @@ class RakThread {
 
 public:
 
-    void Create(void * (*)(void *), void *, int);
+    void Create(void ()((void *), , void *, int);
 };

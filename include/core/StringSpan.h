@@ -9,7 +9,7 @@ class StringSpan {
 public:
 
     StringSpan(gsl::basic_string_span<char const, -1l>);
-    void size(void)const;
+    void size()const;
     StringSpan(char const*, unsigned long);
     void find(Core::StringSpan)const;
     void find(char const*, unsigned long)const;
@@ -18,6 +18,6 @@ public:
     void find_first_of(char const*)const;
     void substr(unsigned long)const;
     void substr(unsigned long, unsigned long)const;
-    void data(void)const;
-    void length(void)const;
+    void data()const;
+    void length()const;
 };

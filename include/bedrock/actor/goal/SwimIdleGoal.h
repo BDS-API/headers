@@ -6,11 +6,11 @@
 class SwimIdleGoal : Goal {
 
 public:
-    virtual SwimIdleGoal::~SwimIdleGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void tick(void);
+    SwimIdleGoal::~SwimIdleGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     SwimIdleGoal(Mob &);

@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../../../../unmapped/Dimension"
-#include "../../../../unmapped/BiomeSource"
 #include "../../../../unmapped/HardcodedSpawnAreaRegistry"
+#include "../../../../unmapped/BiomeSource"
+#include "../../../util/ChunkPos"
+#include "../../../util/Random"
+#include "../../../../unmapped/Dimension"
+#include "../../../util/BlockPos"
 
 
 class RandomScatteredLargeFeature : StructureFeature {
 
 public:
-    virtual RandomScatteredLargeFeature::~RandomScatteredLargeFeature();
+    RandomScatteredLargeFeature::~RandomScatteredLargeFeature()
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);

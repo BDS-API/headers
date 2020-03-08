@@ -8,10 +8,10 @@ using namespace AgentCommands;
 class InspectCommand : AgentCommands::Command {
 
 public:
-    virtual void AgentCommands::InspectCommand::~InspectCommand();
-    virtual void execute(void);
-    virtual bool isDone(void);
-    virtual void fireCommandDoneEvent(void);
+    AgentCommands::InspectCommand::~InspectCommand()
+    virtual void execute();
+    virtual bool isDone();
+    virtual void fireCommandDoneEvent();
 
     InspectCommand(Player &, AgentCommands::Direction);
 };

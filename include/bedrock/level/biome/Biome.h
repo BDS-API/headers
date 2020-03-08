@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/HashString"
-#include "../../../unmapped/BlockPos"
-#include "../../../unmapped/WellKnownTagID"
-#include "../../../unmapped/BlockSource"
-#include "../LevelChunk"
+#include "../../util/Color"
+#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/TagRegistry"
 #include "../../../json/Value"
-#include "../../../unmapped/BiomeHeight"
 #include "../../../unmapped/EntityRegistryOwned"
-#include "../../../unmapped/Color"
+#include "../../../unmapped/WellKnownTagID"
+#include "../../util/BlockPos"
+#include "../../../unmapped/BiomeHeight"
+#include "../../util/Random"
 #include "../../nbt/CompoundTag"
+#include "../../../unmapped/HashString"
+#include "../LevelChunk"
 
 
 class Biome {
@@ -21,10 +22,10 @@ public:
     static long DEFAULT_WATER_COLOR;
     static long DEFAULT_UNDERWATER_COLOR;
 
-    virtual Biome::~Biome();
+    Biome::~Biome()
 
-    void getEntity(void)const;
-    void getMaxSnowLayers(void)const;
+    void getEntity()const;
+    void getMaxSnowLayers()const;
     void writePacketData(CompoundTag &, TagRegistry &);
     void initFromPacketData(CompoundTag const&, TagRegistry &);
     void setTemperatureAndDownfall(float, float);
@@ -41,19 +42,19 @@ public:
     void setOddColor(int);
     void setWaterColors(Color const&, float, Color const&, float);
     void setFogDist(float);
-    void setNoRain(void);
-    void setSnowCovered(void);
+    void setNoRain();
+    void setSnowCovered();
     void setSnowAccumulation(float, float);
     void setOceanRuinConfig(OceanRuinConfiguration const&);
-    void getSnowAccumulationLayers(void)const;
+    void getSnowAccumulationLayers()const;
     bool hasTag(IDType<TagIDType> const&, TagRegistry const&)const;
     bool hasTag(WellKnownTagID const&)const;
     void getSkyColor(float);
-    void getMobs(void)const;
-    void getMobsMutable(void);
+    void getMobs()const;
+    void getMobsMutable();
     void getFoliageColor(BlockPos const&)const;
-    void getDefaultBiomeTemperature(void)const;
-    void getDownfall(void)const;
+    void getDefaultBiomeTemperature()const;
+    void getDownfall()const;
     void getBirchFoliageColor(BlockPos const&)const;
     void getEvergreenFoliageColor(BlockPos const&)const;
     void getMapFoliageColor(BlockPos const&)const;
@@ -61,23 +62,23 @@ public:
     void getMapEvergreenFoliageColor(BlockPos const&)const;
     void buildWaterColor(BlockPos const&, BlockPos const&, BlockSource &, Random &);
     void getWaterColor(BlockSource &, BlockPos const&);
-    void getWaterNoise(void);
+    void getWaterNoise();
     void getGrassColor(BlockPos const&)const;
     void getMapGrassColor(BlockPos const&)const;
-    void getDebugMapColor(void)const;
-    void getDebugMapOddColor(void)const;
-    void getBiomeInfoNoise(void)const;
-    void getBiomeType(void)const;
-    void getTemperatureCategory(void)const;
-    void getDownfallInt(void);
-    bool isSnowCovered(void)const;
-    bool isHumid(void)const;
+    void getDebugMapColor()const;
+    void getDebugMapOddColor()const;
+    void getBiomeInfoNoise()const;
+    void getBiomeType()const;
+    void getTemperatureCategory()const;
+    void getDownfallInt();
+    bool isSnowCovered()const;
+    bool isHumid()const;
     void getTemperature(BlockSource const&, BlockPos const&)const;
     void getTemperatureWorldGen(BlockPos const&)const;
     void buildCachedTemperatureNoise(LevelChunk &);
     void getFreezingHeight(BlockSource const&, BlockPos const&)const;
     bool canHaveSnowfall(BlockSource const&, BlockPos const&)const;
     void setDebugMapOddColor(int);
-    void getMinSnowLayers(void)const;
-    bool canHaveSnowfall(void)const;
+    void getMinSnowLayers()const;
+    bool canHaveSnowfall()const;
 };

@@ -10,6 +10,6 @@ public:
 
     MolangEntityVariable(MolangEntityVariable const&);
     MolangEntityVariable(HashedString const&);
-    void getName(void)const;
+    void getName()const;
     MolangEntityVariable(MolangEntityVariable&&);
 };

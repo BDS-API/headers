@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/Random"
 
 
 class GlowStoneFeature : Feature {
 
 public:
-    virtual GlowStoneFeature::~GlowStoneFeature();
+    GlowStoneFeature::~GlowStoneFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     GlowStoneFeature(void);

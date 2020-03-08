@@ -1,8 +1,10 @@
 #pragma once
 
+#include "../actor/Actor"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
 #include "../../unmapped/Material"
 
 
@@ -11,10 +13,10 @@ class GrassBlock : BlockLegacy {
 public:
     static long MIN_BRIGHTNESS;
 
-    virtual GrassBlock::~GrassBlock();
+    GrassBlock::~GrassBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
-    virtual bool canBeOriginalSurface(void)const;
-    virtual void waterSpreadCausesSpawn(void)const;
+    virtual bool canBeOriginalSurface()const;
+    virtual void waterSpreadCausesSpawn()const;
     virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;

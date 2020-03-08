@@ -8,5 +8,5 @@ class AsyncResult {
 
 public:
 
-    void done(void);
+    void done();
 };

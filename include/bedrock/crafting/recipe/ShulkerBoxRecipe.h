@@ -2,7 +2,8 @@
 
 #include "../../container/CraftingContainer"
 #include "../../../unmapped/RecipeIngredient"
-#include "../../../unmapped/ItemDescriptor"
+#include "../../nbt/CompoundTag"
+#include "../../item/unmapped/ItemDescriptor"
 
 
 class ShulkerBoxRecipe : ShapelessRecipe {
@@ -10,7 +11,7 @@ class ShulkerBoxRecipe : ShapelessRecipe {
 public:
     static long ID;
 
-    virtual ShulkerBoxRecipe::~ShulkerBoxRecipe();
+    ShulkerBoxRecipe::~ShulkerBoxRecipe()
     virtual void assemble(CraftingContainer &)const;
     virtual bool itemsMatch(ItemDescriptor const&, ItemDescriptor const&)const;
     virtual bool itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;

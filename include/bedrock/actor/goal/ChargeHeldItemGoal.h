@@ -1,19 +1,20 @@
 #pragma once
 
 #include "../Mob"
+#include "../../item/unmapped/ItemDescriptor"
 
 
 class ChargeHeldItemGoal : Goal {
 
 public:
-    virtual ChargeHeldItemGoal::~ChargeHeldItemGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    ChargeHeldItemGoal::~ChargeHeldItemGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     ChargeHeldItemGoal(Mob &, std::vector<ItemDescriptor, std::allocator<ItemDescriptor>> const&);
-    void _isHoldingChargeableItem(void)const;
+    void _isHoldingChargeableItem()const;
 };

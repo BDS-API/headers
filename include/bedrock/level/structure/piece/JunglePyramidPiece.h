@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../../../unmapped/BlockSource"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
 
 
 class JunglePyramidPiece : ScatteredFeaturePiece {
 
 public:
-    virtual JunglePyramidPiece::~JunglePyramidPiece();
-    virtual void getType(void)const;
+    JunglePyramidPiece::~JunglePyramidPiece()
+    virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
 
     JunglePyramidPiece(int, int);

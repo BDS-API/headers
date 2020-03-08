@@ -5,24 +5,24 @@
 class AppPlatformListener {
 
 public:
-    virtual AppPlatformListener::~AppPlatformListener();
-    virtual void onLowMemory(void);
-    virtual void onAppPaused(void);
-    virtual void onAppUnpaused(void);
-    virtual void onAppPreSuspended(void);
-    virtual void onAppSuspended(void);
-    virtual void onAppResumed(void);
-    virtual void onAppFocusLost(void);
-    virtual void onAppFocusGained(void);
-    virtual void onAppTerminated(void);
+    AppPlatformListener::~AppPlatformListener()
+    virtual void onLowMemory();
+    virtual void onAppPaused();
+    virtual void onAppUnpaused();
+    virtual void onAppPreSuspended();
+    virtual void onAppSuspended();
+    virtual void onAppResumed();
+    virtual void onAppFocusLost();
+    virtual void onAppFocusGained();
+    virtual void onAppTerminated();
     virtual void onOperationModeChanged(OperationMode);
     virtual void onPerformanceModeChanged(bool);
     virtual void onPushNotificationReceived(PushNotificationMessage const&);
-    virtual void onResizeBegin(void);
-    virtual void onResizeEnd(void);
+    virtual void onResizeBegin();
+    virtual void onResizeEnd();
 
     AppPlatformListener(void);
     void initListener(float);
     AppPlatformListener(bool);
-    void terminate(void);
+    void terminate();
 };

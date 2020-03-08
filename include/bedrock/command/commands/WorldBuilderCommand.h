@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../orgin/CommandOrigin"
+#include "../CommandOutput"
 #include "../Command"
 #include "../CommandRegistry"
-#include "../orgin/CommandOrigin"
 
 
 class WorldBuilderCommand : Command {
 
 public:
-    virtual WorldBuilderCommand::~WorldBuilderCommand();
+    WorldBuilderCommand::~WorldBuilderCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

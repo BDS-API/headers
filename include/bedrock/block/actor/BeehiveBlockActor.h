@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
 #include "../../actor/Actor"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../../unmapped/Occupant"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class BeehiveBlockActor : BlockActor {
@@ -14,7 +16,7 @@ public:
     static long MAX_OCCUPANCY;
     static long TypeString[abi:cxx11];
 
-    virtual BeehiveBlockActor::~BeehiveBlockActor();
+    BeehiveBlockActor::~BeehiveBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
@@ -23,11 +25,11 @@ public:
     void _trySpawnBees(BlockSource &);
     void saveUserData(CompoundTag &)const;
     void tryAdmit(Actor &);
-    bool isFullyOccupied(void);
+    bool isFullyOccupied();
     void evictAll(BlockSource &, bool);
     void _findFreeDirections(BlockSource &, unsigned char, unsigned long);
     void _revive(BlockSource &, BeehiveBlockActor::Occupant const&, unsigned char);
-    void disableBeeSpawn(void);
-    void getNumberOfOccupants(void)const;
+    void disableBeeSpawn();
+    void getNumberOfOccupants()const;
     void _isUsableAsSpawnBlock(BlockSource &, unsigned char);
 };

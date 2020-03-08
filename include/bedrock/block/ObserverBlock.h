@@ -1,16 +1,20 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Actor"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../level/circuit/component/PulseCapacitor"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class ObserverBlock : FaceDirectionalBlock {
 
 public:
-    virtual ObserverBlock::~ObserverBlock();
+    ObserverBlock::~ObserverBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
-    virtual bool isSignalSource(void)const;
+    virtual bool isSignalSource()const;
     virtual bool isValidAuxValue(int)const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

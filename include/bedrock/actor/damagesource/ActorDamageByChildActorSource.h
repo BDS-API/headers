@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
 #include "../Actor"
+#include "../../block/unmapped/BlockSource"
 
 
 class ActorDamageByChildActorSource : ActorDamageByActorSource {
 
 public:
-    virtual ActorDamageByChildActorSource::~ActorDamageByChildActorSource();
-    virtual bool isChildEntitySource(void)const;
+    ActorDamageByChildActorSource::~ActorDamageByChildActorSource()
+    virtual bool isChildEntitySource()const;
     virtual void getDeathMessage(std::string, Actor *)const;
-    virtual void getDamagingEntityIsCreative(void)const;
-    virtual void getDamagingEntityIsWorldBuilder(void)const;
-    virtual void getDamagingEntityUniqueID(void)const;
-    virtual void getDamagingEntityType(void)const;
-    virtual void getDamagingEntityCategories(void)const;
-    virtual void clone(void)const;
+    virtual void getDamagingEntityIsCreative()const;
+    virtual void getDamagingEntityIsWorldBuilder()const;
+    virtual void getDamagingEntityUniqueID()const;
+    virtual void getDamagingEntityType()const;
+    virtual void getDamagingEntityCategories()const;
+    virtual void clone()const;
 
     ActorDamageByChildActorSource(Actor &, Actor &, ActorDamageCause);
     ActorDamageByChildActorSource(BlockSource &, ActorDamageCause);

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/Vec2"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Random"
 
 
 class PerlinNoise {
@@ -13,5 +16,5 @@ public:
     void getValue(Vec3 const&)const;
     void getRegion(float *, Vec3 const&, int, int, int, Vec3 const&)const;
     void getRegion(float *, Vec2 const&, int, int, Vec2 const&, float)const;
-    void hashCode(void)const;
+    void hashCode()const;
 };

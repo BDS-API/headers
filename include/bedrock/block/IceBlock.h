@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../actor/Player"
-#include "../../unmapped/Random"
 
 
 class IceBlock : BlockLegacy {
 
 public:
-    virtual IceBlock::~IceBlock();
+    IceBlock::~IceBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;

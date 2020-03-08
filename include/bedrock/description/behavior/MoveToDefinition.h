@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../../../unmapped/BehaviorFactory"
+#include "../../../json/Value"
 
 
 class MoveToDefinition : BehaviorDefinition {
 
 public:
-    virtual MoveToDefinition::~MoveToDefinition();
+    MoveToDefinition::~MoveToDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     MoveToDefinition(void);

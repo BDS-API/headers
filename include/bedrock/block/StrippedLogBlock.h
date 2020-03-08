@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
 
 
 class StrippedLogBlock : RotatedPillarBlock {
 
 public:
-    virtual StrippedLogBlock::~StrippedLogBlock();
+    StrippedLogBlock::~StrippedLogBlock()
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;

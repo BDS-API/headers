@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../json/Value"
 
 
 class PackSettings {
@@ -14,6 +15,6 @@ public:
     void registerObserver(std::string const&, void *, std::function<void ()(Json::Value const&)> const&);
     void unregisterObserver(std::string const&, void *);
     void unregisterObserver(void *);
-    void getAllSettings(void)const;
+    void getAllSettings()const;
     PackSettings(void);
 };

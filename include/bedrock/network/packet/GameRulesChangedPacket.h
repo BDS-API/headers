@@ -7,9 +7,9 @@
 class GameRulesChangedPacket : Packet {
 
 public:
-    virtual GameRulesChangedPacket::~GameRulesChangedPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    GameRulesChangedPacket::~GameRulesChangedPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

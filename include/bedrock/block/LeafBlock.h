@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class LeafBlock : BlockLegacy {
 
 public:
-    virtual LeafBlock::~LeafBlock();
+    LeafBlock::~LeafBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool canContainLiquid()const;
     virtual void onRemove(BlockSource &, BlockPos const&)const;
     virtual bool breaksFallingBlocks(Block const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
@@ -31,5 +33,5 @@ public:
     void runDecay(BlockSource &, BlockPos const&, int);
     void getSeasonsColor(BlockSource &, BlockPos const&, int, int)const;
     void die(BlockSource &, BlockPos const&)const;
-    void getSapling(void)const;
+    void getSapling()const;
 };

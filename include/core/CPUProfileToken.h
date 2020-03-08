@@ -10,5 +10,5 @@ public:
 
     CPUProfileToken(void);
     CPUProfileToken(unsigned long, char const*, char const*, unsigned int);
-    bool isValid(void)const;
+    bool isValid()const;
 };

@@ -1,13 +1,15 @@
 #pragma once
 
 #include "../../../../unmapped/BiomeSource"
+#include "../../../util/ChunkPos"
+#include "../../../util/Random"
 
 
 class MineshaftStart : StructureStart {
 
 public:
-    virtual MineshaftStart::~MineshaftStart();
-    virtual void getType(void)const;
+    MineshaftStart::~MineshaftStart()
+    virtual void getType()const;
 
     MineshaftStart(BiomeSource &, Random &, ChunkPos const&, short);
     void _moveToSurface(short);

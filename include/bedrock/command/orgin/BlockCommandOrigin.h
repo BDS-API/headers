@@ -1,26 +1,27 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/BlockPos"
 
 
 class BlockCommandOrigin : CommandOrigin {
 
 public:
-    virtual BlockCommandOrigin::~BlockCommandOrigin();
-    virtual void getRequestId[abi:cxx11](void)const;
-    virtual void getName[abi:cxx11](void)const;
-    virtual void getBlockPosition(void)const;
-    virtual void getWorldPosition(void)const;
-    virtual void getLevel(void)const;
-    virtual void getDimension(void)const;
-    virtual void getEntity(void)const;
-    virtual void getPermissionsLevel(void)const;
-    virtual void clone(void)const;
-    virtual bool canUseCommandsWithoutCheatsEnabled(void)const;
-    virtual bool isSelectorExpansionAllowed(void)const;
-    virtual void getOriginType(void)const;
-    virtual void getBlockEntity(void)const;
-    virtual void getBaseCommandBlock(void)const;
+    BlockCommandOrigin::~BlockCommandOrigin()
+    virtual void getRequestId()const;
+    virtual void getName()const;
+    virtual void getBlockPosition()const;
+    virtual void getWorldPosition()const;
+    virtual void getLevel()const;
+    virtual void getDimension()const;
+    virtual void getEntity()const;
+    virtual void getPermissionsLevel()const;
+    virtual void clone()const;
+    virtual bool canUseCommandsWithoutCheatsEnabled()const;
+    virtual bool isSelectorExpansionAllowed()const;
+    virtual void getOriginType()const;
+    virtual void getBlockEntity()const;
+    virtual void getBaseCommandBlock()const;
 
     BlockCommandOrigin(BlockSource &, BlockPos const&);
 };

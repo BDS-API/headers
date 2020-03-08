@@ -16,8 +16,8 @@ public:
     void restartTimer(Actor &);
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    void getLooping(void)const;
-    void getHasExecuted(void)const;
+    void getLooping()const;
+    void getHasExecuted()const;
     void setHasExecuted(bool);
     void getTimeStamp(Level const&);
     void tryConvertToTimeStamp(Level const&);

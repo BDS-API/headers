@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../../../unmapped/Dimension"
-#include "../../../../unmapped/BiomeSource"
 #include "../../../../unmapped/HardcodedSpawnAreaRegistry"
+#include "../../../../unmapped/BiomeSource"
+#include "../../../util/ChunkPos"
+#include "../../../util/Random"
+#include "../../../../unmapped/Dimension"
 
 
 class NetherFortressFeature : StructureFeature {
 
 public:
-    virtual NetherFortressFeature::~NetherFortressFeature();
+    NetherFortressFeature::~NetherFortressFeature()
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);
     virtual void createStructureStart(Dimension &, BiomeSource &, Random &, ChunkPos const&);
 
     NetherFortressFeature(unsigned int &);
-    void clearCachedBuildings(void);
+    void clearCachedBuildings();
 };

@@ -5,7 +5,7 @@
 class BoolOption : Option {
 
 public:
-    virtual BoolOption::~BoolOption();
+    BoolOption::~BoolOption()
     virtual void save(std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> &);
     virtual void load(std::string const&);
 
@@ -13,9 +13,9 @@ public:
     void _set(bool, bool);
     void set(bool, bool);
     void setDefault(bool);
-    void getDefault(void)const;
-    void getValue(void)const;
+    void getDefault()const;
+    void getValue()const;
     void setCoerceValueCallback(std::function<bool ()(bool)>);
-    void toggle(void);
-    void reset(void);
+    void toggle();
+    void reset();
 };

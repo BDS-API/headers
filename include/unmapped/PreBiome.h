@@ -8,6 +8,6 @@ class PreBiome {
 
 public:
 
-    bool isOcean(void)const;
-    bool isSpecial(void)const;
+    bool isOcean()const;
+    bool isSpecial()const;
 };

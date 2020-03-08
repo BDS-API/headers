@@ -2,36 +2,39 @@
 
 #include "../bedrock/level/LevelData"
 #include "../bedrock/level/LevelListener"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class Weather : LevelListener {
 
 public:
-    virtual Weather::~Weather();
+    Weather::~Weather()
     virtual void levelEvent(LevelEvent, Vec3 const&, int);
 
     Weather(Dimension &);
     void setRainLevel(float);
     void setLightningLevel(float);
     bool isSnowTemperature(BlockSource &, BlockPos const&)const;
-    void tick(void);
-    void serverTick(void);
-    void calcLightningCycleTime(void)const;
+    void tick();
+    void serverTick();
+    void calcLightningCycleTime()const;
     void _notifyWeatherChangedEvent(LevelData const&)const;
-    void calcRainCycleTime(void)const;
-    void calcRainDuration(void)const;
+    void calcRainCycleTime()const;
+    void calcRainDuration()const;
     void getLightningLevel(float)const;
     void getRainLevel(float)const;
-    void getFogLevel(void)const;
+    void getFogLevel()const;
     void setFogLevel(float);
-    bool isLightning(void)const;
-    bool isRaining(void)const;
+    bool isLightning()const;
+    bool isRaining()const;
     bool isPrecipitatingAt(BlockSource &, BlockPos const&)const;
     bool isRainingAt(BlockSource &, BlockPos const&)const;
     bool isSnowingAt(BlockSource &, BlockPos const&)const;
-    void getSkyFlashTime(void)const;
+    void getSkyFlashTime()const;
     void setSkyFlashTime(int);
-    void stop(void);
+    void stop();
     bool canPlaceTopSnow(BlockSource &, BlockPos const&, bool, bool, int *)const;
     void calcSnowBlockDepth(BlockSource &, BlockPos const&, int)const;
     void blockSupportsFallingSnow(Block const&)const;

@@ -1,12 +1,14 @@
 #pragma once
 
 #include "../bedrock/item/ItemStack"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class LabTableReaction {
 
 public:
-    virtual LabTableReaction::~LabTableReaction();
+    LabTableReaction::~LabTableReaction()
 
     LabTableReaction(LabTableReactionType, BlockPos const&, bool, int, int);
     void _setLifetime(int, int);
@@ -16,13 +18,13 @@ public:
     void _onStart(BlockSource &);
     void _onTick(BlockSource &);
     void _onEnd(BlockSource &);
-    void getType(void);
-    void getReactionId(void);
-    void _getIsClientSide(void)const;
-    void _getPercentage(void)const;
-    void _getTableTop(void)const;
-    void _getPos(void)const;
-    void _getRandom(void);
+    void getType();
+    void getReactionId();
+    void _getIsClientSide()const;
+    void _getPercentage()const;
+    void _getTableTop()const;
+    void _getPos()const;
+    void _getRandom();
     void _secsToTicks(float);
     void createReaction(LabTableReactionType, BlockPos const&, bool);
 };

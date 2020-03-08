@@ -5,9 +5,9 @@
 class InstantaneousAttributeBuff : AttributeBuff {
 
 public:
-    virtual InstantaneousAttributeBuff::~InstantaneousAttributeBuff();
-    virtual bool isInstantaneous(void)const;
-    virtual bool isSerializable(void)const;
+    InstantaneousAttributeBuff::~InstantaneousAttributeBuff()
+    virtual bool isInstantaneous()const;
+    virtual bool isSerializable()const;
 
     InstantaneousAttributeBuff(float, AttributeBuffType);
 };

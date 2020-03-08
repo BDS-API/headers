@@ -9,7 +9,7 @@ class SimpleMutex {
 public:
 
     SimpleMutex(void);
-    void Init(void);
-    void Lock(void);
-    void Unlock(void);
+    void Init();
+    void Lock();
+    void Unlock();
 };

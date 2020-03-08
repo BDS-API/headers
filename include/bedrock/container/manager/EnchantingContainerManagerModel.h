@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../../unmapped/ContainerItemStack"
+#include "../../util/BlockPos"
 #include "../../actor/Player"
 #include "../../item/ItemInstance"
 
@@ -10,23 +11,23 @@ class EnchantingContainerManagerModel : ContainerManagerModel {
 public:
     static long NUM_OPTIONS;
 
-    virtual EnchantingContainerManagerModel::~EnchantingContainerManagerModel();
-    virtual void getItems(void);
+    EnchantingContainerManagerModel::~EnchantingContainerManagerModel()
+    virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
     virtual void setData(int, int);
-    virtual void broadcastChanges(void);
-    virtual void init(void);
+    virtual void broadcastChanges();
+    virtual void init();
 
     EnchantingContainerManagerModel(ContainerID, Player &, BlockPos const&);
-    void recalculateOptions(void);
+    void recalculateOptions();
     bool isTableValid(float);
-    void getLapisCount(void);
-    void getNewEnchantmentSeed(void);
-    void clearOptions(void);
+    void getLapisCount();
+    void getNewEnchantmentSeed();
+    void clearOptions();
     void _getEnchantmentCost(ItemInstance const&);
-    void getShouldBookBeOpen(void)const;
+    void getShouldBookBeOpen()const;
     void setShouldBookBeOpen(bool);
-    void getEnchantmentCosts(void)const;
-    void getEnchants(void)const;
+    void getEnchantmentCosts()const;
+    void getEnchants()const;
 };

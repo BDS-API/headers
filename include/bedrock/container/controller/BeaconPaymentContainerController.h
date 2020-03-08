@@ -1,15 +1,16 @@
 #pragma once
 
+#include "../../item/unmapped/ItemTransferAmount"
 #include "../../../unmapped/ContainerItemStack"
+#include "../model/ContainerModel"
 #include "../../../unmapped/Recipes"
 #include "../../item/ItemInstance"
-#include "../model/ContainerModel"
 
 
 class BeaconPaymentContainerController : ContainerController {
 
 public:
-    virtual BeaconPaymentContainerController::~BeaconPaymentContainerController();
+    BeaconPaymentContainerController::~BeaconPaymentContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
     virtual bool isItemFiltered(Recipes const&, ContainerItemStack const&)const;
     virtual void _canSet(int, ContainerItemStack const&, ItemTransferAmount)const;

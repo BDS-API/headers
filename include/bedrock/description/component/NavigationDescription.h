@@ -6,7 +6,7 @@
 class NavigationDescription : ComponentDescription {
 
 public:
-    virtual NavigationDescription::~NavigationDescription();
+    NavigationDescription::~NavigationDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

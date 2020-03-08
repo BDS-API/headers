@@ -1,22 +1,24 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/DataLoadHelper"
 #include "../../unmapped/RenderParams"
-#include "../../unmapped/ActorDefinitionGroup"
+#include "../util/BlockPos"
+#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
 
 
 class Pillager : HumanoidMonster {
 
 public:
-    virtual Pillager::~Pillager();
-    virtual void normalTick(void);
-    virtual void getRidingHeight(void);
+    Pillager::~Pillager()
+    virtual void normalTick();
+    virtual void getRidingHeight();
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void getItemUseDuration(void);
+    virtual void getItemUseDuration();
     virtual void _getWalkTargetValue(BlockPos const&);
-    virtual bool isDarkEnoughToSpawn(void)const;
+    virtual bool isDarkEnoughToSpawn()const;
 
     Pillager(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

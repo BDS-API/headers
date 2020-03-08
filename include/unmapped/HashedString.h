@@ -9,7 +9,7 @@ public:
 
 
     HashedString(void);
-    void getEmptyString(void);
+    void getEmptyString();
     HashedString(HashedString const&);
     HashedString(HashedString&&);
     HashedString(decltype(nullptr));
@@ -19,9 +19,9 @@ public:
     HashedString(std::string const&);
     HashedString(unsigned long, char const*);
     HashedString(unsigned long, std::string);
-    bool isEmpty(void)const;
-    void empty(void)const;
-    void clear(void);
-    void getHash(void)const;
-    void c_str(void)const;
+    bool isEmpty()const;
+    void empty()const;
+    void clear();
+    void getHash()const;
+    void c_str()const;
 };

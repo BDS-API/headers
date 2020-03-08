@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../../item/ItemStack"
 #include "../../io/ReadOnlyBinaryStream"
 #include "../../io/BinaryStream"
 
@@ -7,9 +8,9 @@
 class InventorySlotPacket : Packet {
 
 public:
-    virtual InventorySlotPacket::~InventorySlotPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    InventorySlotPacket::~InventorySlotPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

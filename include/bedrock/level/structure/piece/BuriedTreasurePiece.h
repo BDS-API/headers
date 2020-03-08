@@ -1,13 +1,16 @@
 #pragma once
 
-#include "../../../../unmapped/BlockSource"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../util/Random"
+#include "../../../util/BlockPos"
+#include "../../../block/unmapped/BlockSource"
 
 
 class BuriedTreasurePiece : StructurePiece {
 
 public:
-    virtual BuriedTreasurePiece::~BuriedTreasurePiece();
-    virtual void getType(void)const;
+    BuriedTreasurePiece::~BuriedTreasurePiece()
+    virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
 
     BuriedTreasurePiece(int, int);

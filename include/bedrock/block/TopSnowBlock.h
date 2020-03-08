@@ -1,12 +1,15 @@
 #pragma once
 
-#include "../../unmapped/AABB"
-#include "../actor/Mob"
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../actor/Actor"
+#include "../actor/unmapped/ActorBlockSyncMessage"
 #include "../actor/Player"
-#include "../../unmapped/Random"
+#include "../actor/Actor"
+#include "../actor/Mob"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class TopSnowBlock : HeavyBlock {
@@ -14,13 +17,13 @@ class TopSnowBlock : HeavyBlock {
 public:
     static long MAX_HEIGHT;
 
-    virtual TopSnowBlock::~TopSnowBlock();
+    TopSnowBlock::~TopSnowBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
-    virtual bool isWaterBlocking(void)const;
-    virtual void waterSpreadCausesSpawn(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool isWaterBlocking()const;
+    virtual void waterSpreadCausesSpawn()const;
+    virtual bool canContainLiquid()const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
@@ -35,11 +38,11 @@ public:
     virtual bool canBeBuiltOver(BlockSource &, BlockPos const&)const;
     virtual void shouldStopFalling(Actor &)const;
     virtual void calcGroundFriction(Mob &, BlockPos const&)const;
-    virtual bool canHaveExtraData(void)const;
+    virtual bool canHaveExtraData()const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
-    virtual bool canBeSilkTouched(void)const;
+    virtual bool canBeSilkTouched()const;
     virtual void getDustColor(Block const&)const;
-    virtual void getDustParticleName[abi:cxx11](Block const&)const;
+    virtual void getDustParticleName(Block const&)const;
     virtual bool isFreeToFall(BlockSource &, BlockPos const&)const;
     virtual void startFalling(BlockSource &, BlockPos const&, Block const*, bool)const;
 

@@ -1,21 +1,23 @@
 #pragma once
 
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
+#include "../../unmapped/Material"
 
 
 class SpongeBlock : BlockLegacy {
 
 public:
-    virtual SpongeBlock::~SpongeBlock();
+    SpongeBlock::~SpongeBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isValidAuxValue(int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
-    virtual bool isAuxValueRelevantForPicking(void)const;
+    virtual void buildDescriptionId(Block const&)const;
+    virtual bool isAuxValueRelevantForPicking()const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 

@@ -1,16 +1,22 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../actor/Actor"
+#include "unmapped/BlockSource"
+#include "../container/Container"
+#include "../util/BlockPos"
 #include "../actor/Player"
-#include "../../unmapped/Random"
+#include "../../unmapped/Block"
+#include "../actor/Actor"
+#include "../util/Random"
+#include "../nbt/CompoundTag"
+#include "../util/Vec3"
+#include "../util/AABB"
+#include "../level/Level"
 
 
 class ShulkerBoxBlock : ChestBlock {
 
 public:
-    virtual ShulkerBoxBlock::~ShulkerBoxBlock();
+    ShulkerBoxBlock::~ShulkerBoxBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
@@ -19,7 +25,7 @@ public:
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
-    virtual bool isAuxValueRelevantForPicking(void)const;
+    virtual bool isAuxValueRelevantForPicking()const;
     virtual void getColor(Block const&)const;
     virtual void getColorForParticle(BlockSource &, BlockPos const&, Block const&)const;
 

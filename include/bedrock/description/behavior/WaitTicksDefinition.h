@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../../../unmapped/BehaviorFactory"
+#include "../../../json/Value"
 
 
 class WaitTicksDefinition : BehaviorDefinition {
 
 public:
-    virtual WaitTicksDefinition::~WaitTicksDefinition();
+    WaitTicksDefinition::~WaitTicksDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     WaitTicksDefinition(void);

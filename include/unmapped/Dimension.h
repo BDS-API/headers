@@ -1,11 +1,20 @@
 #pragma once
 
-#include "../bedrock/network/packet/Packet"
-#include "../bedrock/level/LevelChunk"
-#include "../bedrock/level/Level"
-#include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
+#include "../bedrock/util/Brightness"
 #include "../bedrock/level/LevelListener"
+#include "../bedrock/network/packet/Packet"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/ChunkPos"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/actor/Player"
+#include "../bedrock/level/LevelChunk"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/Scheduler"
 #include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/level/Level"
 
 
 class Dimension : LevelListener, SavedData {
@@ -15,98 +24,98 @@ public:
     static long CurrentLimboEntitiesVersion;
     static long STRUCTURE_PRUNE_INTERVAL;
 
-    virtual Dimension::~Dimension();
+    Dimension::~Dimension()
     virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);
     virtual void onBlockEvent(BlockSource &, int, int, int, int, int);
     virtual void onNewChunk(BlockSource &, LevelChunk &);
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onLevelDestruction(std::string const&);
-    virtual void init(void);
-    virtual void tick(void);
-    virtual void tickRedstone(void);
-    virtual void updateLightRamp(void);
-    virtual bool isNaturalDimension(void)const;
+    virtual void init();
+    virtual void tick();
+    virtual void tickRedstone();
+    virtual void updateLightRamp();
+    virtual bool isNaturalDimension()const;
     virtual bool isValidSpawn(int, int)const;
     virtual void getFogColor(float)const;
-    virtual void getMaxFogEnd(void)const;
-    virtual void getMaxFogStart(void)const;
+    virtual void getMaxFogEnd()const;
+    virtual void getMaxFogStart()const;
     virtual bool isFoggyAt(int, int)const;
-    virtual void getCloudHeight(void)const;
-    virtual void getDefaultBiome(void)const;
-    virtual void mayRespawn(void)const;
-    virtual bool hasGround(void)const;
-    virtual void getSpawnPos(void)const;
-    virtual void getSpawnYPosition(void)const;
-    virtual bool hasBedrockFog(void);
-    virtual void getClearColorScale(void);
-    virtual void showSky(void)const;
-    virtual bool isDay(void)const;
+    virtual void getCloudHeight()const;
+    virtual void getDefaultBiome()const;
+    virtual void mayRespawn()const;
+    virtual bool hasGround()const;
+    virtual void getSpawnPos()const;
+    virtual void getSpawnYPosition()const;
+    virtual bool hasBedrockFog();
+    virtual void getClearColorScale();
+    virtual void showSky()const;
+    virtual bool isDay()const;
     virtual void getSunIntensity(float, Vec3 const&, float)const;
     virtual void deserialize(CompoundTag const&);
     virtual void serialize(CompoundTag &)const;
     virtual void sendBroadcast(Packet const&, Player *);
-    virtual void startLeaveGame(void);
+    virtual void startLeaveGame();
     virtual void getTimeOfDay(int, float)const;
 
     void setHasWeather(bool);
-    void getSeaLevel(void)const;
-    void getPostProcessingManager(void);
-    void getHeight(void)const;
-    void getChunkBuildOrderPolicy(void);
-    void getTaskGroup(void);
-    void getDefaultBrightness(void)const;
-    bool hasWeather(void)const;
-    void getLevelChunkBuilderData(void);
-    void getLevelChunkGarbageCollector(void)const;
-    void getLevelChunkGarbageCollector(void);
+    void getSeaLevel()const;
+    void getPostProcessingManager();
+    void getHeight()const;
+    void getChunkBuildOrderPolicy();
+    void getTaskGroup();
+    void getDefaultBrightness()const;
+    bool hasWeather()const;
+    void getLevelChunkBuilderData();
+    void getLevelChunkGarbageCollector()const;
+    void getLevelChunkGarbageCollector();
     Dimension(Level &, AutomaticID<Dimension, int>, short, Scheduler &, std::string);
-    bool isRedstoneTick(void);
+    bool isRedstoneTick();
     void addWither(ActorUniqueID const&);
     void removeWither(ActorUniqueID const&);
     void removeActorByID(ActorUniqueID const&);
-    void getEntityIdMap(void)const;
+    void getEntityIdMap()const;
     void getPopCap(int, bool)const;
     void updateBlockLight(BlockPos const&, Brightness, Brightness, Brightness, Brightness, bool);
-    void backgroundTickSeasons(void);
-    void getLevel(void)const;
+    void backgroundTickSeasons();
+    void getLevel()const;
     void forEachPlayer(std::function<bool ()(Player &)>);
-    bool isLeaveGameDone(void);
-    void getChunkSource(void)const;
-    void getVillageManager(void)const;
-    void forceSaveVillageManager(void);
-    void tryGarbageCollectStructures(void);
-    void getWorldGenerator(void)const;
+    bool isLeaveGameDone();
+    void getChunkSource()const;
+    void getVillageManager()const;
+    void forceSaveVillageManager();
+    void tryGarbageCollectStructures();
+    void getWorldGenerator()const;
     void getOldSkyDarken(float);
-    void _tickEntityChunkMoves(void);
-    void _runChunkGenerationWatchdog(void);
-    void _captureChunkMapDebugDrawData(void);
+    void _tickEntityChunkMoves();
+    void _runChunkGenerationWatchdog();
+    void _captureChunkMapDebugDrawData();
     void transferEntityToUnloadedChunk(Vec3 const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>);
-    void getSeasons(void);
+    void getSeasons();
     void getTimeOfDay(float)const;
     void getSunAngle(float)const;
     void getSunlightDirection(float)const;
-    void getWeather(void)const;
-    void getMoonPhase(void)const;
-    void getMoonBrightness(void)const;
+    void getWeather()const;
+    void getMoonPhase()const;
+    void getMoonBrightness()const;
     void getSkyDarken(float)const;
-    void getSkyDarken(void)const;
-    void getBrightnessRamp(void)const;
+    void getSkyDarken()const;
+    void getBrightnessRamp()const;
     void setBrightnessRamp(unsigned int, float);
     void getSunriseColor(float)const;
     void getSkyColor(Actor const&, float)const;
     void getSkyColor(BlockSource &, BlockPos const&, float)const;
     void getCloudColor(float);
     void getStarBrightness(float);
-    void getId(void)const;
-    void getLevelConst(void)const;
-    void getBlockSourceDEPRECATEDUSEPLAYERREGIONINSTEAD(void)const;
-    void getCircuitSystem(void);
-    void getTickingAreasConst(void)const;
-    void getTickingAreas(void);
+    void getId()const;
+    void getLevelConst()const;
+    void getBlockSourceDEPRECATEDUSEPLAYERREGIONINSTEAD()const;
+    void getCircuitSystem();
+    void getTickingAreasConst()const;
+    void getTickingAreas();
     void _onNewTickingEntity(Actor &);
-    bool processTickingAreaRemoves(void);
-    bool processTickingAreaUpdates(void);
-    void getEntityIdMapConst(void)const;
+    bool processTickingAreaRemoves();
+    bool processTickingAreaUpdates();
+    void getEntityIdMapConst()const;
     void forEachPlayer(std::function<bool ()(Player const&)>)const;
     void findPlayer(std::function<bool ()(Player const&)>)const;
     void fetchNearestPlayer(Actor &, float);
@@ -124,13 +133,13 @@ public:
     void tryAssignNewRegionAt(ChunkPos const&, Actor &);
     void upgradeOldLimboEntity(CompoundTag &, LimboEntitiesVersion);
     void sendPacketForPosition(BlockPos const&, Packet const&, Player const*);
-    bool isUltraWarm(void)const;
+    bool isUltraWarm()const;
     void setUltraWarm(bool);
-    bool hasCeiling(void)const;
+    bool hasCeiling()const;
     void setCeiling(bool);
-    bool hasSkylight(void)const;
+    bool hasSkylight()const;
     void setSkylight(bool);
     void sendPacketForEntity(Actor const&, Packet const&, Player const*);
-    void getBlockEventDispatcher(void);
-    void getBlockEventDispatcherConst(void)const;
+    void getBlockEventDispatcher();
+    void getBlockEventDispatcherConst()const;
 };

@@ -1,8 +1,9 @@
 #pragma once
 
+#include "../../unmapped/InteractComponent"
+#include "../../json/Value"
 #include "../../unmapped/EntityContext"
 #include "../../unmapped/Interaction"
-#include "../../json/Value"
 
 
 class InteractDefinition {

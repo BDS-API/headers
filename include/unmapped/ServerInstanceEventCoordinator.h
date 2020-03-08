@@ -1,6 +1,8 @@
 #pragma once
 
+#include "../bedrock/Minecraft"
 #include "../bedrock/ServerInstance"
+#include "../bedrock/level/Level"
 
 
 class ServerInstanceEventCoordinator {

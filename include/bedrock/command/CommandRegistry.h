@@ -1,7 +1,8 @@
 #pragma once
 
-#include "orgin/CommandOrigin"
 #include "../network/packet/Packet"
+#include "orgin/CommandOrigin"
+#include "../../unmapped/AutoCompleteInformation"
 #include "../network/packet/AvailableCommandsPacket"
 
 
@@ -39,12 +40,12 @@ public:
     void addSoftTerminal(std::string const&);
     void addEnumValues(std::string const&, std::vector<std::string, std::allocator<std::string>> const&);
     void addSoftEnum(std::string const&, std::vector<std::string, std::allocator<std::string>>);
-    void addRule(CommandRegistry::Symbol, std::vector<CommandRegistry::Symbol, std::allocator<CommandRegistry::Symbol>> &&, std::function<CommandRegistry::ParseToken * ()(std::function&, CommandRegistry::Symbol)>, CommandVersion);
+    void addRule(CommandRegistry::Symbol, std::vector<CommandRegistry::Symbol, std::allocator<CommandRegistry::Symbol>> &&, std::function<CommandRegistry::ParseToken ()(std::function&, CommandRegistry::Symbol)>, CommandVersion);
     void findEnumValue(std::string const&)const;
-    void _addFunctionSoftEnum(void);
+    void _addFunctionSoftEnum();
     void addSemanticConstraint(SemanticConstraint);
     void registerCommand(std::string const&, char const*, CommandPermissionLevel, CommandFlag, CommandFlag);
-    void addEnumValuesInternal(std::string const&, std::vector<std::pair<unsigned long, unsigned long>, std::allocator<std::pair<unsigned long, unsigned long>>> const&, typeid_t<CommandRegistry>, bool (CommandRegistry::*)(void *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string&, std::vector&<std::string, std::allocator<std::string>>)const);
+    void addEnumValuesInternal(std::string const&, std::vector<std::pair<unsigned long, unsigned long>, std::allocator<std::pair<unsigned long, unsigned long>>> const&, typeid_t<CommandRegistry>, bool ()(mmandRegistry::*), (void *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string&, std::vector&<std::string, std::allocator<std::string>>);
     void addEnumValueConstraints(std::string const&, std::vector<std::string, std::allocator<std::string>> const&, SemanticConstraint);
     void registerAlias(std::string, std::string);
     void setCommandRegistrationOverride(std::function<void ()(CommandFlag &, std::string const&)>);
@@ -67,7 +68,7 @@ public:
     void buildOverload(CommandRegistry::Overload &);
     bool isValid(CommandRegistry::Symbol)const;
     bool isOptionalChainMatch(CommandRegistry::Symbol const*, CommandRegistry::OptionalParameterChain const*)const;
-    void buildOptionalRuleChain(CommandRegistry::Signature const&, std::vector<CommandParameterData, std::allocator<CommandParameterData>> const&, std::vector const&<CommandRegistry::Symbol, std::allocator<std::vector const>>);
+    void buildOptionalRuleChain(CommandRegistry::Signature const&, std::vector<CommandParameterData, std::allocator<CommandParameterData>> const&, std::vector const&, std::allocator<std::vector const>);
     void addSymbols(std::vector<CommandRegistry::Symbol, std::allocator<CommandRegistry::Symbol>> &, std::vector<CommandRegistry::Symbol, std::allocator<CommandRegistry::Symbol>> const&, bool);
     void buildFirstSet(CommandRegistry::ParseTable &, CommandRegistry::Symbol, unsigned int)const;
     void buildFollowSet(CommandRegistry::ParseTable &, CommandRegistry::Symbol, unsigned int, std::set<CommandRegistry::Symbol, std::less<CommandRegistry::Symbol>, std::allocator<CommandRegistry::Symbol>> &)const;
@@ -75,7 +76,7 @@ public:
     void forEachTerminal(std::function<void ()(CommandRegistry::Symbol)>)const;
     void forEachNonTerminal(std::function<void ()(CommandRegistry::Symbol)>)const;
     void buildParseTable(unsigned int)const;
-    void addEnumValuesInternal(std::string const&, std::vector<std::pair<std::string, unsigned long>, std::allocator<std::pair<std::string, unsigned long>>> const&, typeid_t<CommandRegistry>, bool (CommandRegistry::*)(void *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string&, std::vector&<std::string, std::allocator<std::string>>)const);
+    void addEnumValuesInternal(std::string const&, std::vector<std::pair<std::string, unsigned long>, std::allocator<std::pair<std::string, unsigned long>>> const&, typeid_t<CommandRegistry>, bool ()(mmandRegistry::*), (void *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string&, std::vector&<std::string, std::allocator<std::string>>);
     void addEnumValuesToExisting(unsigned int, std::vector<std::pair<unsigned long, unsigned long>, std::allocator<std::pair<unsigned long, unsigned long>>> const&);
     void _addEnumValueConstraintsInternal(std::vector<std::pair<unsigned long, unsigned int>, std::allocator<std::pair<unsigned long, unsigned int>>> const&, SemanticConstraint);
     void _addEnumValueConstraintsToExisting(unsigned int, SemanticConstraint);
@@ -106,11 +107,11 @@ public:
     void _matchesEnumConstraints(CommandParameterData const&, CommandOrigin const&, CommandRegistry::ParseToken const&)const;
     void _matchesEnumConstraintsSet(CommandRegistry::Symbol const&, CommandOrigin const&, CommandRegistry::Symbol const&, SemanticConstraint)const;
     void getOverloadSyntaxInformation(CommandOrigin const&, std::string const&, unsigned int)const;
-    bool hasCommands(void)const;
-    bool hasState(void);
-    void pushState(void);
-    void popState(void);
-    void serializeAvailableCommands(void)const;
+    bool hasCommands()const;
+    bool hasState();
+    void pushState();
+    void popState();
+    void serializeAvailableCommands()const;
     void loadRemoteCommands(AvailableCommandsPacket const&);
     void setNetworkUpdateCallback(std::function<void ()(Packet const&)>);
     void setScoreCallback(std::function<int ()(bool &, std::string const&, Actor const&)>);

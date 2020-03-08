@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 #include "../bedrock/nbt/CompoundTag"
 
 
@@ -27,7 +30,7 @@ public:
     LegacyStructureTemplate(void);
     void calculateConnectedPosition(LegacyStructureSettings const&, BlockPos const&, LegacyStructureSettings const&, BlockPos const&)const;
     void _calculateRelativePosition(BlockPos, LegacyStructureSettings const&)const;
-    void getJigsawMarkers(void)const;
+    void getJigsawMarkers()const;
     void placeInWorld(BlockSource &, BlockPos const&, LegacyStructureSettings &)const;
     void placeInWorldChunk(BlockSource &, BlockPos const&, LegacyStructureSettings &);
     void save(CompoundTag &);
@@ -39,7 +42,7 @@ public:
     void getSize(Rotation);
     void getZeroPositionWithTransform(BlockPos const&, Mirror, Rotation);
     void getZeroPositionWithTransform(BlockPos const&, Mirror, Rotation, int, int);
-    bool isValid(void)const;
+    bool isValid()const;
     void transform(BlockPos, Mirror, Rotation);
     void _calculateRelativePosition(Vec3, LegacyStructureSettings const&)const;
     void _transform(BlockPos, Mirror, Rotation)const;

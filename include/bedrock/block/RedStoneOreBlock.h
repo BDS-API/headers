@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Player"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class RedStoneOreBlock : BlockLegacy {
 
 public:
-    virtual RedStoneOreBlock::~RedStoneOreBlock();
+    RedStoneOreBlock::~RedStoneOreBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void onStepOn(Actor &, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;

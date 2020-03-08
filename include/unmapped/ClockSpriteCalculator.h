@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/util/Vec3"
 #include "../bedrock/actor/Actor"
 
 
@@ -8,7 +10,7 @@ class ClockSpriteCalculator {
 public:
 
     ClockSpriteCalculator(void);
-    void getFrame(void)const;
+    void getFrame()const;
     void update(Actor &, bool);
     void update(BlockSource const&, Vec3 const&, bool);
     void calculateFrame(Actor const&);

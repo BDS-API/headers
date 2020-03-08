@@ -1,7 +1,7 @@
 #pragma once
 
+#include "../actor/unmapped/ActorDefinitionDescriptor"
 #include "../../json/Value"
-#include "../../unmapped/ActorDefinitionDescriptor"
 
 
 class ActorDefinition {
@@ -12,6 +12,6 @@ public:
     void parseAttributes(Json::Value &, ActorDefinitionDescriptor &);
     void parse(Json::Value, ActorDefinitionDescriptor &);
     void parseEntityDescription(Json::Value &);
-    void initEntityDefinitions(void);
-    void getComponentDefinitionGroup(void)const;
+    void initEntityDefinitions();
+    void getComponentDefinitionGroup()const;
 };

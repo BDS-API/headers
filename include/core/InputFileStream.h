@@ -7,7 +7,7 @@ using namespace Core;
 class InputFileStream : Core::FileStream {
 
 public:
-    virtual void Core::InputFileStream::~InputFileStream();
+    Core::InputFileStream::~InputFileStream()
 
     InputFileStream(Core::Path const&, std::_Ios_Openmode);
     InputFileStream(void);

@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
 #include "../../actor/Actor"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class SpruceFeature : TreeFeature {
 
 public:
-    virtual SpruceFeature::~SpruceFeature();
+    SpruceFeature::~SpruceFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     SpruceFeature(Actor *);

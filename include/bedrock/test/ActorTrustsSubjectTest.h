@@ -6,9 +6,9 @@
 class ActorTrustsSubjectTest : SimpleBoolFilterTest {
 
 public:
-    virtual ActorTrustsSubjectTest::~ActorTrustsSubjectTest();
+    ActorTrustsSubjectTest::~ActorTrustsSubjectTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorTrustsSubjectTest(void);
 };

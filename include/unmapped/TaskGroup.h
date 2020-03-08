@@ -1,18 +1,19 @@
 #pragma once
 
+#include "../bedrock/Scheduler"
 
 
 class TaskGroup : ITaskGroup {
 
 public:
-    virtual TaskGroup::~TaskGroup();
+    TaskGroup::~TaskGroup()
     virtual void taskRegister(std::shared_ptr<BackgroundTask>);
     virtual void requeueTask(std::shared_ptr<BackgroundTask>, bool);
-    virtual void getState(void)const;
-    virtual bool processCoroutines(void);
+    virtual void getState()const;
+    virtual bool processCoroutines();
     virtual void taskComplete(gsl::not_null<BackgroundTask *>);
 
-    void getCurrentTaskGroup(void);
+    void getCurrentTaskGroup();
     void queueChild(gsl::basic_string_span<char const, -1l>, std::function<TaskResult ()(void)> &&, std::function&&<void ()(void)>);
     void queueChild(TaskStartInfo &, std::function<TaskResult ()(void)> &&, std::function&&<void ()(void)>);
     void queue(TaskStartInfo &, std::function<TaskResult ()(void)> &&, std::function&&<void ()(void)>);
@@ -26,17 +27,17 @@ public:
     void _queueInternal(std::shared_ptr<BackgroundTask>);
     void queueSync(gsl::basic_string_span<char const, -1l>, std::function<TaskResult ()(void)> &&);
     void sync_DEPRECATED_ASK_TOMMO(std::function<void ()(void)>);
-    bool isEmpty(void)const;
-    void pause(void);
-    void resume(void);
-    void count(void)const;
-    void getMaxConcurrency(void)const;
-    void disableOwnerThreadChecks(void);
-    void getName(void)const;
-    void getWorkerPool(void);
-    void getScheduler(void);
+    bool isEmpty()const;
+    void pause();
+    void resume();
+    void count()const;
+    void getMaxConcurrency()const;
+    void disableOwnerThreadChecks();
+    void getName()const;
+    void getWorkerPool();
+    void getScheduler();
     void _forAllTasks(std::unique_lock<std::mutex> &, std::function<void ()(std::shared_ptr<BackgroundTask> const&)>);
-    void getOwnerThreadID(void)const;
+    void getOwnerThreadID()const;
     void kick(unsigned int);
-    void _isOwner(void)const;
+    void _isOwner()const;
 };

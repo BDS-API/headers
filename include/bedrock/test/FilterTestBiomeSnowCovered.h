@@ -6,9 +6,9 @@
 class FilterTestBiomeSnowCovered : SimpleBoolFilterTest {
 
 public:
-    virtual FilterTestBiomeSnowCovered::~FilterTestBiomeSnowCovered();
+    FilterTestBiomeSnowCovered::~FilterTestBiomeSnowCovered()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     FilterTestBiomeSnowCovered(void);
 };

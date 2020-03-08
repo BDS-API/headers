@@ -1,6 +1,10 @@
 #pragma once
 
+#include "../bedrock/item/ItemStack"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "../bedrock/network/packet/UpdateTradePacket"
+#include "../bedrock/actor/Player"
 #include "../bedrock/nbt/CompoundTag"
 
 
@@ -20,20 +24,20 @@ public:
     void _refreshTrades(Actor &);
     void setOffers(MerchantRecipeList *);
     void loadOffersFromTag(CompoundTag const*);
-    void getResetLockedOnFirstTrade(void)const;
+    void getResetLockedOnFirstTrade()const;
     void setResetLockedOnFirstTrade(bool);
-    void getTradeTier(void)const;
+    void getTradeTier()const;
     void setTradeTier(int);
-    void getUpdateMerchantTimer(void)const;
-    void getLastPlayerTradeName(void)const;
-    void getAddRecipeOnUpdate(void)const;
+    void getUpdateMerchantTimer()const;
+    void getLastPlayerTradeName()const;
+    void getAddRecipeOnUpdate()const;
     void setAddRecipeOnUpdate(bool);
-    void getRiches(void)const;
+    void getRiches()const;
     void setRiches(int);
-    void getWillingToBreed(void)const;
+    void getWillingToBreed()const;
     void setWillingToBreed(bool);
-    void IncrementTradeTier(void);
-    void DecrementMerchantTimer(void);
+    void IncrementTradeTier();
+    void DecrementMerchantTimer();
     void notifyTrade(Actor &, int);
     void _runOnServerCheckForFirstTimeTrade(int);
     void notifyTradeUpdated(Actor &, ItemStack &, bool);

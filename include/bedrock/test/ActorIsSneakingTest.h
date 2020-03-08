@@ -6,9 +6,9 @@
 class ActorIsSneakingTest : SimpleBoolFilterTest {
 
 public:
-    virtual ActorIsSneakingTest::~ActorIsSneakingTest();
+    ActorIsSneakingTest::~ActorIsSneakingTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorIsSneakingTest(void);
 };

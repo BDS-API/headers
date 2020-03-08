@@ -7,10 +7,10 @@ using namespace ScriptApi;
 class EmptyScriptInterface : ScriptApi::ScriptLanguageInterface {
 
 public:
-    virtual void ScriptApi::EmptyScriptInterface::~EmptyScriptInterface();
-    virtual void initialize(void);
-    virtual void shutdown(void);
-    virtual void initialized(void)const;
+    ScriptApi::EmptyScriptInterface::~EmptyScriptInterface()
+    virtual void initialize();
+    virtual void shutdown();
+    virtual void initialized()const;
     virtual void runScript(std::string const&, std::string const&, ScriptApi::ScriptReport &);
     virtual void createObject(ScriptApi::ScriptObjectHandle &, ScriptApi::ScriptReport &);
     virtual void createArray(ScriptApi::ScriptObjectHandle &, int const&, ScriptApi::ScriptReport &);

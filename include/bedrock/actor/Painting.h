@@ -1,28 +1,30 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/DataLoadHelper"
+#include "../util/Vec3"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../block/unmapped/BlockSource"
 #include "../nbt/CompoundTag"
-#include "../../unmapped/Vec3"
 
 
 class Painting : HangingActor {
 
 public:
-    virtual Painting::~Painting();
-    virtual void remove(void);
+    Painting::~Painting()
+    virtual void remove();
     virtual void setPos(Vec3 const&);
-    virtual void getAddPacket(void);
-    virtual void getShadowRadius(void)const;
-    virtual bool isPickable(void);
+    virtual void getAddPacket();
+    virtual void getShadowRadius()const;
+    virtual bool isPickable();
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void getWidth(void)const;
-    virtual void getHeight(void)const;
-    virtual void dropItem(void);
+    virtual void getWidth()const;
+    virtual void getHeight()const;
+    virtual void dropItem();
     virtual void placeHangingEntity(BlockSource &, int);
 
     Painting(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
     void clientInitialize(int, std::string const&);
-    void getCurrentMotive(void)const;
+    void getCurrentMotive()const;
 };

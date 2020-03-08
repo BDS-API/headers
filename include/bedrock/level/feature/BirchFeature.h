@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
 #include "../../actor/Actor"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class BirchFeature : TreeFeature {
 
 public:
-    virtual BirchFeature::~BirchFeature();
+    BirchFeature::~BirchFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     BirchFeature(Actor *, bool, bool);

@@ -1,35 +1,36 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../../unmapped/BlockSource"
-#include "../../actor/Player"
 #include "../../item/ItemStack"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
+#include "../../actor/Player"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class DispenserBlockActor : RandomizableBlockActorContainer {
 
 public:
-    virtual DispenserBlockActor::~DispenserBlockActor();
+    DispenserBlockActor::~DispenserBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void getUpdatePacket(BlockSource &);
-    virtual void onMove(void);
-    virtual void getName[abi:cxx11](void)const;
-    virtual void getContainer(void);
+    virtual void onMove();
+    virtual void getName()const;
+    virtual void getContainer();
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void startOpen(Player &);
-    virtual void getContainerSize(void)const;
+    virtual void getContainerSize()const;
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
-    virtual void getMaxStackSize(void)const;
-    virtual void getRandomSlot(void);
+    virtual void getMaxStackSize()const;
+    virtual void getRandomSlot();
     virtual void stopOpen(Player &);
 
     DispenserBlockActor(BlockPos);
-    void initItems(void);
+    void initItems();
     DispenserBlockActor(BlockPos, BlockActorType);
     bool isSlotEmpty(int);
-    bool isDispenser(void);
+    bool isDispenser();
 };

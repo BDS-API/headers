@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/command/orgin/CommandOrigin"
+#include "../bedrock/command/ParseToken"
+#include "../bedrock/command/CommandRegistry"
 
 
 using namespace CommandRegistry;

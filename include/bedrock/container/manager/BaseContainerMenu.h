@@ -1,25 +1,25 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../Container"
-#include "../../actor/Player"
-#include "../../../unmapped/ContainerContentChangeListener"
 #include "../../item/ItemStack"
+#include "../Container"
+#include "../../util/BlockPos"
+#include "../../../unmapped/ContainerContentChangeListener"
+#include "../../actor/Player"
 
 
 class BaseContainerMenu : ContainerContentChangeListener, IContainerManager {
 
 public:
     virtual void containerContentChanged(int);
-    virtual BaseContainerMenu::~BaseContainerMenu();
+    BaseContainerMenu::~BaseContainerMenu()
     virtual bool isSlotDirty(int);
     virtual bool isResultSlot(int);
     virtual void setData(int, int);
-    virtual void getContainerId(void)const;
+    virtual void getContainerId()const;
     virtual void setContainerId(ContainerID);
-    virtual void getContainerType(void)const;
+    virtual void getContainerType()const;
     virtual void setContainerType(ContainerType);
-    virtual void broadcastChanges(void);
+    virtual void broadcastChanges();
 
     BaseContainerMenu(Player &, ContainerType);
     void _saveLastSlots(Container *);

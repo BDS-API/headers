@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../../../unmapped/BehaviorFactory"
+#include "../../../json/Value"
 
 
 class BreakBlockDefinition : BehaviorDefinition {
 
 public:
-    virtual BreakBlockDefinition::~BreakBlockDefinition();
+    BreakBlockDefinition::~BreakBlockDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     BreakBlockDefinition(void);

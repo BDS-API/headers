@@ -1,32 +1,32 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../../unmapped/ContainerItemStack"
-#include "../../../unmapped/ActorUniqueID"
-#include "../../actor/Player"
 #include "../../item/ItemStack"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../../unmapped/ContainerItemStack"
+#include "../../util/BlockPos"
+#include "../../actor/Player"
 
 
 class LevelContainerManagerModel : ContainerManagerModel {
 
 public:
-    virtual LevelContainerManagerModel::~LevelContainerManagerModel();
-    virtual void getItems(void);
+    LevelContainerManagerModel::~LevelContainerManagerModel()
+    virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
     virtual void setData(int, int);
-    virtual void broadcastChanges(void);
-    virtual void init(void);
+    virtual void broadcastChanges();
+    virtual void init();
     virtual bool isValid(float);
 
     LevelContainerManagerModel(ContainerID, Player &, BlockPos const&, BlockActorType);
     LevelContainerManagerModel(ContainerID, Player &, ActorUniqueID);
-    void getEntityUniqueID(void)const;
+    void getEntityUniqueID()const;
     void setEntityUniqueID(ActorUniqueID);
-    void getBlockPos(void)const;
+    void getBlockPos()const;
     void setBlockPos(BlockPos const&);
-    void _getBlockEntity(void);
-    void _getEntity(void);
-    void _getContainer(void);
+    void _getBlockEntity();
+    void _getEntity();
+    void _getContainer();
     void _onBlockSlotChanged(int, ItemStack const&, ItemStack const&);
 };

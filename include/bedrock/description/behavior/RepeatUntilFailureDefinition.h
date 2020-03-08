@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../../../unmapped/BehaviorFactory"
+#include "../../../json/Value"
 
 
 class RepeatUntilFailureDefinition : DecoratorDefinition {
 
 public:
-    virtual RepeatUntilFailureDefinition::~RepeatUntilFailureDefinition();
+    RepeatUntilFailureDefinition::~RepeatUntilFailureDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     RepeatUntilFailureDefinition(void);

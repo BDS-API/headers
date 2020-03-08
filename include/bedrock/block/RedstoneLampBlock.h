@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
 
 
 class RedstoneLampBlock : BlockLegacy {
 
 public:
-    virtual RedstoneLampBlock::~RedstoneLampBlock();
+    RedstoneLampBlock::~RedstoneLampBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

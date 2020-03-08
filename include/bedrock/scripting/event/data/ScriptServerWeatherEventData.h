@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../../../../unmapped/ScriptEngine"
+#include "../../unmapped/ScriptEngine"
+#include "../../ScriptObjectHandle"
 
 
 class ScriptServerWeatherEventData : ScriptEventData {
@@ -8,10 +9,10 @@ class ScriptServerWeatherEventData : ScriptEventData {
 public:
     static long mHash;
 
-    virtual ScriptServerWeatherEventData::~ScriptServerWeatherEventData();
+    ScriptServerWeatherEventData::~ScriptServerWeatherEventData()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
-    void getHash(void);
+    void getHash();
     ScriptServerWeatherEventData(void);
     void setDimension(std::string const&);
     void setRaining(bool);

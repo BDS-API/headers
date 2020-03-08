@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/actor/damagesource/ActorDamageSource"
 #include "../bedrock/actor/Actor"
 
 

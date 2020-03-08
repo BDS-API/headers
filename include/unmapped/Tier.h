@@ -8,10 +8,10 @@ class Tier {
 
 public:
 
-    void getUses(void)const;
-    void getAttackDamageBonus(void)const;
-    void getEnchantmentValue(void)const;
-    void getLevel(void)const;
+    void getUses()const;
+    void getAttackDamageBonus()const;
+    void getEnchantmentValue()const;
+    void getLevel()const;
     Tier(int, int, float, int, int);
-    void getSpeed(void)const;
+    void getSpeed()const;
 };

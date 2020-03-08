@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/ChunkPos"
+#include "../bedrock/block/unmapped/BlockPalette"
+#include "../bedrock/util/Random"
 
 
 class LegacyStructureSettings {
@@ -23,26 +26,26 @@ public:
     void setProjection(Projection);
     void setBlockRules(std::vector<std::unique_ptr<StructurePoolBlockRule, std::default_delete<StructurePoolBlockRule>>, std::allocator<std::unique_ptr<StructurePoolBlockRule, std::default_delete<StructurePoolBlockRule>>>> const*);
     void setBlockTagRules(std::vector<std::unique_ptr<StructurePoolBlockTagRule, std::default_delete<StructurePoolBlockTagRule>>, std::allocator<std::unique_ptr<StructurePoolBlockTagRule, std::default_delete<StructurePoolBlockTagRule>>>> const*);
-    void getIgnoreBlock(void)const;
+    void getIgnoreBlock()const;
     void getSwappedBlock(BlockPalette const&, Block const&)const;
     void setChunkPos(ChunkPos const&);
     void setBoundingBox(BoundingBox const&);
-    void getMirror(void)const;
+    void getMirror()const;
     void ignoreStructureBlocks(bool);
     void placeWaterBelowSeaLevel(bool);
-    void getRotation(void)const;
-    void getChunkPos(void)const;
-    bool isIgnoreBlock(void)const;
-    void getBoundingBox(void);
-    void updateBoundingBoxFromChunkPos(void);
-    void getBoundingBoxConst(void)const;
-    bool isIgnoreStructureBlocks(void)const;
-    bool isIgnoreJigsawBlocks(void)const;
-    bool isPlacingWaterBelowSeaLevel(void)const;
+    void getRotation()const;
+    void getChunkPos()const;
+    bool isIgnoreBlock()const;
+    void getBoundingBox();
+    void updateBoundingBoxFromChunkPos();
+    void getBoundingBoxConst()const;
+    bool isIgnoreStructureBlocks()const;
+    bool isIgnoreJigsawBlocks()const;
+    bool isPlacingWaterBelowSeaLevel()const;
     void _calculateBoundingBox(ChunkPos const&);
-    void getSeed(void)const;
-    void getIntegrity(void)const;
-    void getProjection(void)const;
-    void getBlockRules(void)const;
-    void getBlockTagRules(void)const;
+    void getSeed()const;
+    void getIntegrity()const;
+    void getProjection()const;
+    void getBlockRules()const;
+    void getBlockTagRules()const;
 };

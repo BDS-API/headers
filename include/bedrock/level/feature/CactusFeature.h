@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/Random"
 
 
 class CactusFeature : Feature {
 
 public:
-    virtual CactusFeature::~CactusFeature();
+    CactusFeature::~CactusFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     CactusFeature(void);

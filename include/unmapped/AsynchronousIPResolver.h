@@ -8,6 +8,6 @@ public:
 
     AsynchronousIPResolver(AsynchronousIPResolver const&);
     AsynchronousIPResolver(std::string);
-    void _resolve(void);
-    bool isDone(void)const;
+    void _resolve();
+    bool isDone()const;
 };

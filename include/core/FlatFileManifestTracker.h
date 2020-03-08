@@ -14,5 +14,5 @@ public:
     void manifestExists(Core::Path const&)const;
     void loadManifest(Core::Path const&);
     void tryUnloadManifest(Core::Path const&);
-    void unloadAllManifests(void);
+    void unloadAllManifests();
 };

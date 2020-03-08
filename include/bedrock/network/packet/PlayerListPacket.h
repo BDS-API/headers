@@ -1,17 +1,17 @@
 #pragma once
 
+#include "../../../mce/UUID"
 #include "../../io/ReadOnlyBinaryStream"
 #include "../../../unmapped/PlayerListEntry"
 #include "../../io/BinaryStream"
-#include "../../../mce/UUID"
 
 
 class PlayerListPacket : Packet {
 
 public:
-    virtual PlayerListPacket::~PlayerListPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    PlayerListPacket::~PlayerListPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

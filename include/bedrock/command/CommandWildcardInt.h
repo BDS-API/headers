@@ -8,6 +8,6 @@ public:
 
     CommandWildcardInt(void);
     CommandWildcardInt(int);
-    bool isWildcard(void)const;
-    void getValue(void)const;
+    bool isWildcard()const;
+    void getValue()const;
 };

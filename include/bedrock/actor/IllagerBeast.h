@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
+#include "unmapped/ActorDefinitionIdentifier"
 
 
 class IllagerBeast : Monster {
 
 public:
-    virtual IllagerBeast::~IllagerBeast();
+    IllagerBeast::~IllagerBeast()
     virtual void blockedByShield(ActorDamageSource const&, Actor &);
-    virtual void aiStep(void);
+    virtual void aiStep();
 
     IllagerBeast(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

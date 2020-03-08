@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class PathFinder {

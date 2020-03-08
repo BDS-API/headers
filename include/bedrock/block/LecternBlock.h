@@ -1,18 +1,22 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
 #include "../actor/Actor"
+#include "../../unmapped/Block"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../actor/Player"
 
 
 class LecternBlock : ActorBlock {
 
 public:
-    virtual LecternBlock::~LecternBlock();
+    LecternBlock::~LecternBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
-    virtual bool isInteractiveBlock(void)const;
-    virtual bool isSignalSource(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool isInteractiveBlock()const;
+    virtual bool isSignalSource()const;
+    virtual bool canContainLiquid()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
@@ -21,9 +25,9 @@ public:
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual void attack(Player *, BlockPos const&)const;
-    virtual bool hasComparatorSignal(void)const;
+    virtual bool hasComparatorSignal()const;
     virtual void getComparatorSignal(BlockSource &, BlockPos const&, Block const&, unsigned char)const;
-    virtual bool isAuxValueRelevantForPicking(void)const;
+    virtual bool isAuxValueRelevantForPicking()const;
 
     LecternBlock(std::string const&, int);
     void _dropBook(Player &, BlockPos const&)const;

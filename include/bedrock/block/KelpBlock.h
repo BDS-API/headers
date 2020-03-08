@@ -1,18 +1,21 @@
 #pragma once
 
+#include "../actor/Actor"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
+#include "../util/AABB"
 
 
 class KelpBlock : BlockLegacy {
 
 public:
-    virtual KelpBlock::~KelpBlock();
+    KelpBlock::~KelpBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
-    virtual void waterSpreadCausesSpawn(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual void waterSpreadCausesSpawn()const;
+    virtual bool canContainLiquid()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
     virtual void mayConsumeFertilizer(BlockSource &)const;
@@ -23,7 +26,7 @@ public:
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getColor(Block const&)const;
     virtual void onGraphicsModeChanged(bool, bool, bool);
-    virtual bool canBeSilkTouched(void)const;
+    virtual bool canBeSilkTouched()const;
 
     KelpBlock(std::string const&, int);
     void checkAlive(BlockSource &, BlockPos const&)const;

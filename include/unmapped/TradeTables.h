@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/level/Level"
 #include "../bedrock/pack/ResourcePackManager"
+#include "../core/Path"
+#include "../bedrock/level/Level"
 
 
 class TradeTables {

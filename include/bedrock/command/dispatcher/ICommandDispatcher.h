@@ -5,7 +5,7 @@
 class ICommandDispatcher {
 
 public:
-    virtual ICommandDispatcher::~ICommandDispatcher();
+    ICommandDispatcher::~ICommandDispatcher()
 
     ICommandDispatcher(void);
 };

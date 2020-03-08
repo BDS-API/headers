@@ -8,5 +8,5 @@ class CompareLevelChunkQueuedSavingElement {
 
 public:
 
-    void operator()(Level::LevelChunkQueuedSavingElement const&, Level::LevelChunkQueuedSavingElement const&);
+    void operator();
 };

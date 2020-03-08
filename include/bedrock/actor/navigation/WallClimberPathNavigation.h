@@ -1,13 +1,15 @@
 #pragma once
 
+#include "../Actor"
 #include "../Mob"
+#include "../../util/Vec3"
 #include "../../../unmapped/NavigationComponent"
 
 
 class WallClimberPathNavigation : PathNavigation {
 
 public:
-    virtual WallClimberPathNavigation::~WallClimberPathNavigation();
+    WallClimberPathNavigation::~WallClimberPathNavigation()
     virtual void tick(NavigationComponent &, Mob &);
     virtual void createPath(NavigationComponent &, Mob &, Vec3 const&);
     virtual void createPath(NavigationComponent &, Mob &, Actor &);

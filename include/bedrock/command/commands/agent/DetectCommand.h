@@ -8,9 +8,9 @@ using namespace AgentCommands;
 class DetectCommand : AgentCommands::Command {
 
 public:
-    virtual void AgentCommands::DetectCommand::~DetectCommand();
-    virtual void execute(void);
-    virtual bool isDone(void);
+    AgentCommands::DetectCommand::~DetectCommand()
+    virtual void execute();
+    virtual bool isDone();
 
     DetectCommand(Player &, AgentCommands::Direction);
 };

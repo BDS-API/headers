@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
-#include "../../../unmapped/Random"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Block"
 
 
 class BlockPileFeature : Feature {
 
 public:
-    virtual BlockPileFeature::~BlockPileFeature();
+    BlockPileFeature::~BlockPileFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
     virtual void getBlockToPlace(Random &)const;
 

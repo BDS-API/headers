@@ -7,5 +7,5 @@ class PacketUtil {
 public:
 
     bool degreesToByte(float);
-    void byteToDegrees(signed char);
+    void byteToDegrees(signed const);
 };

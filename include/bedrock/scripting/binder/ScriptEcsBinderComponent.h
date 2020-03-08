@@ -1,6 +1,9 @@
 #pragma once
 
-#include "../../../unmapped/ScriptEngine"
+#include "../unmapped/ScriptEngine"
+#include "../../actor/Actor"
+#include "../ScriptObjectHandle"
+#include "../../actor/ItemActor"
 
 
 class ScriptEcsBinderComponent : ScriptBinderComponent {
@@ -8,7 +11,7 @@ class ScriptEcsBinderComponent : ScriptBinderComponent {
 public:
     static long TAG[abi:cxx11];
 
-    virtual ScriptEcsBinderComponent::~ScriptEcsBinderComponent();
+    ScriptEcsBinderComponent::~ScriptEcsBinderComponent()
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 
@@ -16,5 +19,5 @@ public:
     ScriptEcsBinderComponent(unsigned int);
     ScriptEcsBinderComponent(entt::Registry<unsigned int> &, Actor const&);
     ScriptEcsBinderComponent(entt::Registry<unsigned int> &, ItemActor const&);
-    void getIdentifier(void)const;
+    void getIdentifier()const;
 };

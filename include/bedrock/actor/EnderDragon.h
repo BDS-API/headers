@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../unmapped/AABB"
 #include "../../unmapped/PathfinderNode"
 #include "../../unmapped/EndDragonFight"
-#include "../../unmapped/MobEffectInstance"
-#include "../../unmapped/ActorDefinitionGroup"
+#include "../util/BlockPos"
 #include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/Vec3"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/MobEffectInstance"
+#include "../util/Vec3"
+#include "../util/AABB"
 
 
 class EnderDragon : Monster {
@@ -19,49 +21,49 @@ public:
     static long MAX_PATH_RADIUS;
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual EnderDragon::~EnderDragon();
-    virtual void remove(void);
-    virtual bool canExistInPeaceful(void)const;
-    virtual void getShadowRadius(void)const;
+    EnderDragon::~EnderDragon()
+    virtual void remove();
+    virtual bool canExistInPeaceful()const;
+    virtual void getShadowRadius()const;
     virtual void getHeadLookVector(float);
-    virtual bool isImmobile(void)const;
-    virtual bool isFishable(void)const;
+    virtual bool isImmobile()const;
+    virtual bool isFishable()const;
     virtual void setSitting(bool);
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
     virtual void handleEntityEvent(ActorEvent, int);
-    virtual bool canChangeDimensions(void)const;
-    virtual bool canBePulledIntoVehicle(void)const;
+    virtual bool canChangeDimensions()const;
+    virtual bool canBePulledIntoVehicle()const;
     virtual bool canBeAffected(MobEffectInstance const&)const;
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
-    virtual void _onSizeUpdated(void);
-    virtual void aiStep(void);
-    virtual void shouldDespawn(void)const;
-    virtual void tickDeath(void);
+    virtual void _onSizeUpdated();
+    virtual void aiStep();
+    virtual void shouldDespawn()const;
+    virtual void tickDeath();
 
     EnderDragon(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void checkCrystals(void);
+    void checkCrystals();
     void getLatencyPos(int, float)const;
     void knockBack(std::vector<Actor *, std::allocator<Actor *>> const&)const;
     void hurtEntities(std::vector<Actor *, std::allocator<Actor *>> const&)const;
     void getHeadYOffset(float)const;
     void checkWalls(AABB);
-    void getNearestCrystal(void)const;
+    void getNearestCrystal()const;
     void _hurt(AABB *, ActorDamageSource const&, float);
     void reallyHurt(ActorDamageSource const&, float);
-    void dieNaturally(void);
-    void resetFlameCount(void);
-    void findClosestNode(void);
-    bool isPathRegionLoaded(void)const;
+    void dieNaturally();
+    void resetFlameCount();
+    void findClosestNode();
+    bool isPathRegionLoaded()const;
     void findClosestNode(Vec3 const&);
-    void getHeadPos(void)const;
-    void getFlameCount(void)const;
-    void incrementFlameCount(void);
-    void getDragonFight(void)const;
+    void getHeadPos()const;
+    void getFlameCount()const;
+    void incrementFlameCount();
+    void getDragonFight()const;
     void getHeadPartYOffset(int, std::vector<float, std::allocator<float>> const&, std::vector<float, std::allocator<float>> const&)const;
     void onCrystalDestroyed(EnderCrystal const&, BlockPos, ActorDamageSource const&);
     void findPath(int, int, PathfinderNode *);
     void reconstructPath(PathfinderNode &, PathfinderNode &, PathCompletionType);
-    void getTargetPos(void)const;
+    void getTargetPos()const;
     void setTargetPos(Vec3);
     void setTurnSpeed(float);
     void setDragonFight(EndDragonFight *);

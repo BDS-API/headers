@@ -6,7 +6,7 @@ class NetworkAddress {
 
 public:
 
-    bool isValid(void)const;
+    bool isValid()const;
     NetworkAddress(void);
     NetworkAddress(NetworkAddress const&);
 };

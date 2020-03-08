@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/Random"
+#include "../bedrock/util/BlockPos"
 #include "../bedrock/level/structure/piece/StructurePiece"
 
 

@@ -8,5 +8,5 @@ public:
 
     SchedulerComponent(SchedulerComponent&&);
     void setCurrentEventIndex(int);
-    void getCurrentEventIndex(void)const;
+    void getCurrentEventIndex()const;
 };

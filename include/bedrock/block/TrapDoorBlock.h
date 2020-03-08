@@ -1,17 +1,21 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
+#include "../../unmapped/Material"
 #include "../actor/Player"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class TrapDoorBlock : BlockLegacy {
 
 public:
-    virtual TrapDoorBlock::~TrapDoorBlock();
-    virtual bool isInteractiveBlock(void)const;
+    TrapDoorBlock::~TrapDoorBlock()
+    virtual bool isInteractiveBlock()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
@@ -21,7 +25,7 @@ public:
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
-    virtual bool canBeSilkTouched(void)const;
+    virtual bool canBeSilkTouched()const;
 
     TrapDoorBlock(std::string const&, int, Material const&);
     void _toggleOpen(BlockSource &, Actor *, BlockPos const&)const;

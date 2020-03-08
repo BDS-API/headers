@@ -1,7 +1,11 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
 #include "../mce/UUID"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/util/Tick"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class VillageManager {
@@ -12,17 +16,17 @@ public:
 
 
     VillageManager(Dimension &);
-    void _loadPOIBlueprints(void);
+    void _loadPOIBlueprints();
     void tick(Tick const&);
-    void _removeVillages(void);
-    void _processNextUnclusteredPOIQuery(void);
-    void _clusterPOIs(void);
+    void _removeVillages();
+    void _processNextUnclusteredPOIQuery();
+    void _clusterPOIs();
     void tickVillages(Tick const&, Vec3 const&, BlockSource &);
     void submitFindPOIQuery(BlockPos const&);
     void _hasPOIQuery(BlockPos const&)const;
     bool isWanderingTraderManagedByScheduler(Actor const&);
-    void loadAllVillages(void);
-    void saveAllVillages(void);
+    void loadAllVillages();
+    void saveAllVillages();
     void _createOrGetVillage(mce::UUID const&);
     void _unclusterDerelictPOIs(std::vector<std::weak_ptr<POIInstance>, std::allocator<std::weak_ptr<POIInstance>>> &);
     void fetchClosestVillage(BlockPos const&, int, unsigned int);

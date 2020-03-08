@@ -6,5 +6,5 @@ class ClassID {
 
 public:
 
-    void getNextID(void);
+    void getNextID();
 };

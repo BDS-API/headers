@@ -6,7 +6,7 @@
 class OceanMixerLayer : MixerLayer<Biome *, Biome *, BiomeTemperatureCategory> {
 
 public:
-    virtual OceanMixerLayer::~OceanMixerLayer();
+    OceanMixerLayer::~OceanMixerLayer()
     virtual void _fillArea(LayerDetails::WorkingData<Biome *, Biome *> &, int, int, int, int, int, LayerResult<BiomeTemperatureCategory>)const;
     virtual void _getAreaRead(int, int, unsigned int, unsigned int)const;
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Mob"
+#include "../../definition/DefinitionTrigger"
 
 
 class WorkGoal : MoveToPOIGoal {
@@ -8,17 +9,17 @@ class WorkGoal : MoveToPOIGoal {
 public:
     static long RAIN_CHECK_MAX_COOLDOWN;
 
-    virtual WorkGoal::~WorkGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    WorkGoal::~WorkGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     WorkGoal(Mob &, float, int, int, int, int, bool, int, DefinitionTrigger const&);
-    void _updateCooldown(void);
-    void _isInsideOrIsNotRaining(void);
-    void _shouldTestForRainFallingOnPOI(void);
-    void _tryResupplyTrades(void);
+    void _updateCooldown();
+    void _isInsideOrIsNotRaining();
+    void _shouldTestForRainFallingOnPOI();
+    void _tryResupplyTrades();
 };

@@ -1,17 +1,22 @@
 #pragma once
 
+#include "../../../unmapped/Raid"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/ActorUniqueID"
 #include "../../io/BinaryStream"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../../unmapped/Dimension"
 #include "../../actor/Player"
+#include "../../../unmapped/Data"
+#include "../../actor/Actor"
+#include "../../actor/Mob"
 
 
 class EventPacket : Packet {
 
 public:
-    virtual EventPacket::~EventPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    EventPacket::~EventPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
@@ -37,7 +42,7 @@ public:
     EventPacket(Player const*, Raid const&, bool);
     EventPacket(Player const&, float, float);
     EventPacket(Player const&, MovementEventType, float, float, float, float, float);
-    void getEventData(void)const;
-    void getPlayerUniqueId(void)const;
-    void usePlayerID(void)const;
+    void getEventData()const;
+    void getPlayerUniqueId()const;
+    void usePlayerID()const;
 };

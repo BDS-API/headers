@@ -10,12 +10,12 @@ public:
 
 
     ContentIdentity(mce::UUID const&);
-    void _setValidFlag(void);
+    void _setValidFlag();
     ContentIdentity(void);
     ContentIdentity(ContentIdentity const&);
     ContentIdentity(ContentIdentity&&);
-    void getAsUUID(void)const;
+    void getAsUUID()const;
     void setUUID(mce::UUID const&);
-    bool isValid(void)const;
+    bool isValid()const;
     void fromString(std::string const&);
 };

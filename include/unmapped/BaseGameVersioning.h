@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/level/LevelData"
 
 
 class BaseGameVersioning {
@@ -9,6 +10,6 @@ public:
 
 
     void upgradeBaseGameVersionFromWorldTemplate(WorldTemplateManager const&, LevelData &);
-    void getAvailableResourcePackBaseGameVersions(void);
-    void getAvailableBehaviorPackBaseGameVersions(void);
+    void getAvailableResourcePackBaseGameVersions();
+    void getAvailableBehaviorPackBaseGameVersions();
 };

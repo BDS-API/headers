@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../../unmapped/BlockSource"
 #include "../actor/Player"
-#include "../../unmapped/Random"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class StructureBlock : ActorBlock {
 
 public:
-    virtual StructureBlock::~StructureBlock();
-    virtual bool isInteractiveBlock(void)const;
+    StructureBlock::~StructureBlock()
+    virtual bool isInteractiveBlock()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;

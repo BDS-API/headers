@@ -6,9 +6,9 @@
 class SlimeKeepOnJumpingGoal : Goal {
 
 public:
-    virtual SlimeKeepOnJumpingGoal::~SlimeKeepOnJumpingGoal();
-    virtual bool canUse(void);
-    virtual void tick(void);
+    SlimeKeepOnJumpingGoal::~SlimeKeepOnJumpingGoal()
+    virtual bool canUse();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     SlimeKeepOnJumpingGoal(Mob &);

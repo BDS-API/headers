@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../../../unmapped/MobDescriptor"
 #include "../Mob"
 
 
 class OwnerHurtTargetGoal : TargetGoal {
 
 public:
-    virtual OwnerHurtTargetGoal::~OwnerHurtTargetGoal();
-    virtual bool canUse(void);
-    virtual void start(void);
+    OwnerHurtTargetGoal::~OwnerHurtTargetGoal()
+    virtual bool canUse();
+    virtual void start();
 
     OwnerHurtTargetGoal(Mob &, std::vector<MobDescriptor, std::allocator<MobDescriptor>> const&);
 };

@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../ItemInstance"
 #include "../ItemStack"
 #include "../../../json/Value"
 #include "../condition/LootItemCondition"
+#include "../../../unmapped/LootTableContext"
+#include "../../util/Random"
+#include "../../../unmapped/RandomValueBounds"
+#include "../ItemInstance"
 
 
 class EnchantWithLevelsFunction : LootItemFunction {
 
 public:
-    virtual EnchantWithLevelsFunction::~EnchantWithLevelsFunction();
+    EnchantWithLevelsFunction::~EnchantWithLevelsFunction()
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
 

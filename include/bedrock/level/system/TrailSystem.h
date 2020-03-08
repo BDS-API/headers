@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/EntityContext"
 #include "../../../unmapped/EntityRegistry"
+#include "../../../unmapped/EntityContext"
 #include "../../actor/Actor"
+#include "../../util/Vec3"
+#include "../../actor/unmapped/ActorComponent"
+#include "../../../unmapped/TrailComponent"
 
 
 class TrailSystem : ITickingSystem {
 
 public:
-    virtual TrailSystem::~TrailSystem();
+    TrailSystem::~TrailSystem()
     virtual void tick(EntityRegistry &);
 
     TrailSystem(void);

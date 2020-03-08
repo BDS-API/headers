@@ -9,12 +9,12 @@ class EventManager {
 public:
 
     EventManager(void);
-    void setupCommonProperties(void);
+    void setupCommonProperties();
     void addListener(std::unique_ptr<Social::Events::IEventListener, std::default_delete<Social::Events::IEventListener>>);
     void recordEvent(Social::Events::Event &);
-    void tick(void);
+    void tick();
     void sendEvents(bool);
-    void stopDebugEventLoggingForAllListeners(void);
+    void stopDebugEventLoggingForAllListeners();
     void setAcceptNewEvents(bool);
     void getCommonProperty(std::string const&)const;
     void removeCommonProperty(std::string const&);
@@ -27,5 +27,5 @@ public:
     void removePlayerGlobalProperty(unsigned int, std::string const&);
     void buildCommonProperties(std::unordered_map<std::string, Social::Events::Property, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, Social::Events::Property>>> &, unsigned int)const;
     bool hasListeners(int);
-    void getNextSequenceNumber(void);
+    void getNextSequenceNumber();
 };

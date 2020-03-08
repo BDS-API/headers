@@ -12,7 +12,7 @@ public:
     void initFromDefinition(Actor &);
     void runTree(Actor &, BehaviorTreeDefinitionPtr &);
     void reset(Actor &);
-    void resetRoot(void);
-    void getBehaviorData(void);
-    void getRoot(void);
+    void resetRoot();
+    void getBehaviorData();
+    void getRoot();
 };

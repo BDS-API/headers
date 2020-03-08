@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/level/scoreboard/Scoreboard"
 #include "../bedrock/nbt/CompoundTag"
 
 
@@ -9,9 +10,9 @@ public:
 
     DisplayObjective(Objective const&, ObjectiveSortOrder);
     bool isDisplaying(Objective const&)const;
-    bool isValid(void)const;
-    void getObjective(void)const;
-    void getSortOrder(void)const;
+    bool isValid()const;
+    void getObjective()const;
+    void getSortOrder()const;
     void deserialize(CompoundTag const&, Scoreboard const&);
     void serialize(DisplayObjective const&);
     DisplayObjective(void);

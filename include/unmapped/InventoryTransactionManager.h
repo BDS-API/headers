@@ -10,13 +10,13 @@ public:
 
     void _createServerSideAction(ItemStack const&, ItemStack const&);
     InventoryTransactionManager(Player &);
-    void getCurrentTransaction(void)const;
-    void reset(void);
-    void resetExpectedActions(void);
+    void getCurrentTransaction()const;
+    void reset();
+    void resetExpectedActions();
     void addExpectedAction(InventoryAction const&);
     void addAction(InventoryAction const&);
     void checkActionExpected(InventoryAction const&);
-    void getSourceCount(void)const;
-    void forceBalanceTransaction(void);
-    void _logExpectedActions(void)const;
+    void getSourceCount()const;
+    void forceBalanceTransaction();
+    void _logExpectedActions()const;
 };

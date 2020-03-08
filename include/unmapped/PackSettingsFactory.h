@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../bedrock/pack/PackManifest"
+#include "../json/Value"
 
 
 class PackSettingsFactory {

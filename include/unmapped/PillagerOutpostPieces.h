@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Random"
+#include "../bedrock/level/structure/piece/StructurePiece"
 
 
 class PillagerOutpostPieces {

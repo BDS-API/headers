@@ -1,23 +1,25 @@
 #pragma once
 
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
+#include "../util/AABB"
 
 
 class CarrotBlock : CropBlock {
 
 public:
-    virtual CarrotBlock::~CarrotBlock();
+    CarrotBlock::~CarrotBlock()
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void getRenderLayer(void)const;
+    virtual void getRenderLayer()const;
     virtual void getRenderLayer(Block const&, BlockSource &, BlockPos const&)const;
     virtual void getVariant(Block const&)const;
-    virtual void getBaseSeed(void)const;
-    virtual void getBaseCrop(void)const;
+    virtual void getBaseSeed()const;
+    virtual void getBaseCrop()const;
     virtual void getCropNum(Random &, int, int)const;
 
     CarrotBlock(std::string const&, int);
-    void _getRenderLayerImpl(void)const;
+    void _getRenderLayerImpl()const;
 };

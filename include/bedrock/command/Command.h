@@ -8,11 +8,11 @@ class Command {
 public:
     static long WILDCARD_TOKEN[abi:cxx11];
 
-    virtual Command::~Command();
+    Command::~Command()
 
     Command(void);
     bool hasFlag(CommandFlag)const;
-    void getRegistry(void)const;
+    void getRegistry()const;
     void run(CommandOrigin const&, CommandOutput &)const;
     void sendTelemetry(CommandOrigin const&, CommandOutput const&)const;
     void getPlayerFromOrigin(CommandOrigin const&);

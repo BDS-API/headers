@@ -7,13 +7,13 @@ using namespace ScriptApi;
 class ScriptFramework {
 
 public:
-    virtual void ScriptApi::ScriptFramework::~ScriptFramework();
-    virtual void initialize(void);
-    virtual void shutdown(void);
+    ScriptApi::ScriptFramework::~ScriptFramework()
+    virtual void initialize();
+    virtual void shutdown();
 
     ScriptFramework(void);
     void runScript(std::string const&, std::string const&);
-    void getScriptReportQueue(void)const;
+    void getScriptReportQueue()const;
     void createObject(ScriptApi::ScriptObjectHandle &);
     void createArray(ScriptApi::ScriptObjectHandle &, int);
     void cloneObject(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptObjectHandle&);

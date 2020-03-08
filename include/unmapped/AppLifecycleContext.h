@@ -7,10 +7,10 @@ class AppLifecycleContext {
 public:
 
     AppLifecycleContext(void);
-    bool canRender(void)const;
+    bool canRender()const;
     void setHasGraphicsContext(bool);
     void setFocus(bool);
-    void transitionBeginRenderingThisFrame(void);
-    void applyNewState(void);
-    void transitionEndRenderingThisFrame(void);
+    void transitionBeginRenderingThisFrame();
+    void applyNewState();
+    void transitionEndRenderingThisFrame();
 };

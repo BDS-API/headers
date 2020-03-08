@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Block"
-#include "../../../unmapped/BlockSource"
-#include "../../../unmapped/Random"
 
 
 class IcebergFeature : Feature {
 
 public:
-    virtual IcebergFeature::~IcebergFeature();
+    IcebergFeature::~IcebergFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     IcebergFeature(void);

@@ -10,8 +10,8 @@ public:
 
     RakNetRandom(void);
     void SeedMT(unsigned int);
-    void ReloadMT(void);
-    void RandomMT(void);
-    void FrandomMT(void);
+    void ReloadMT();
+    void RandomMT();
+    void FrandomMT();
     void FillBufferMT(void *, unsigned int);
 };

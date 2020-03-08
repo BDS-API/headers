@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../ItemInstance"
 #include "../ItemStack"
 #include "../../../json/Value"
 #include "../condition/LootItemCondition"
+#include "../../../unmapped/Trade"
+#include "../../../unmapped/LootTableContext"
+#include "../../util/Random"
+#include "../ItemInstance"
 
 
 class EnchantBookForTradingFunction : LootItemFunction {
 
 public:
-    virtual EnchantBookForTradingFunction::~EnchantBookForTradingFunction();
+    EnchantBookForTradingFunction::~EnchantBookForTradingFunction()
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);

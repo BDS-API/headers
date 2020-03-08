@@ -8,11 +8,11 @@ using namespace AgentCommands;
 class MoveCommand : AgentCommands::Command {
 
 public:
-    virtual void AgentCommands::MoveCommand::~MoveCommand();
-    virtual void execute(void);
-    virtual bool isDone(void);
-    virtual void tick(void);
+    AgentCommands::MoveCommand::~MoveCommand()
+    virtual void execute();
+    virtual bool isDone();
+    virtual void tick();
 
     MoveCommand(Player &, AgentCommands::Direction);
-    void _reachedPosition(void);
+    void _reachedPosition();
 };

@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../../unmapped/EntityContext"
-#include "../../unmapped/GiveableTrigger"
 #include "../../json/Value"
+#include "../../unmapped/GiveableTrigger"
+#include "../../unmapped/EntityContext"
+#include "../../unmapped/GiveableComponent"
 
 
 class GiveableDefinition {

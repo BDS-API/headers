@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../bedrock/definition/DefinitionInstanceGroup"
+#include "../json/Value"
 
 
 class EntityComponentFactory {

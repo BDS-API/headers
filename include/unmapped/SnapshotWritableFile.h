@@ -5,11 +5,11 @@
 class SnapshotWritableFile : leveldb::WritableFile {
 
 public:
-    virtual SnapshotWritableFile::~SnapshotWritableFile();
+    SnapshotWritableFile::~SnapshotWritableFile()
     virtual void Append(leveldb::Slice const&);
-    virtual void Close(void);
-    virtual void Flush(void);
-    virtual void Sync(void);
+    virtual void Close();
+    virtual void Flush();
+    virtual void Sync();
 
     SnapshotWritableFile(leveldb::WritableFile *&&, std::shared_timed_mutex &);
 };

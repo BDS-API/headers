@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "../bedrock/actor/Player"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class MountTamingComponent {
@@ -9,10 +11,10 @@ class MountTamingComponent {
 public:
 
     MountTamingComponent(MountTamingComponent&&);
-    void getTemper(void);
-    void getCounter(void);
-    void getWaitCount(void)const;
-    void getTemperMod(void)const;
+    void getTemper();
+    void getCounter();
+    void getWaitCount()const;
+    void getTemperMod()const;
     void getInteraction(Actor &, Player &, ActorInteraction &);
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);

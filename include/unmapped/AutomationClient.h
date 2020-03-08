@@ -8,18 +8,18 @@ using namespace Automation;
 class AutomationClient : UriListener {
 
 public:
-    virtual void Automation::AutomationClient::~AutomationClient();
+    Automation::AutomationClient::~AutomationClient()
     virtual void onUri(ActivationUri const&);
 
     AutomationClient(IMinecraftApp &);
-    void getDefaultSession(void);
+    void getDefaultSession();
     void getSessionForCommand(Automation::CommandOrigin const&);
-    void createSession(void);
-    bool isReady(void);
+    void createSession();
+    bool isReady();
     void send(Automation::Response const&);
-    void tick(void);
+    void tick();
     void setMaxQueueSize(unsigned long);
     void setRequireEncryption(bool);
     void setServerRetryTime(float);
-    bool isReadyForInGameCommands(void);
+    bool isReadyForInGameCommands();
 };

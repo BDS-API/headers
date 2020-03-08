@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../../../unmapped/Block"
 #include "../Actor"
+#include "../../../unmapped/Block"
 
 
 class ActorDamageByBlockSource : ActorDamageSource {
 
 public:
-    virtual ActorDamageByBlockSource::~ActorDamageByBlockSource();
-    virtual bool isBlockSource(void)const;
+    ActorDamageByBlockSource::~ActorDamageByBlockSource()
+    virtual bool isBlockSource()const;
     virtual void getDeathMessage(std::string, Actor *)const;
-    virtual void clone(void)const;
+    virtual void clone()const;
 
     ActorDamageByBlockSource(Block const&, ActorDamageCause);
     ActorDamageByBlockSource(ActorDamageCause);
-    void getBlock(void)const;
+    void getBlock()const;
 };

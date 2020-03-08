@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../mce/UUID"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 #include "../bedrock/nbt/CompoundTag"
 
 

@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../unmapped/Random"
-#include "../../unmapped/BlockSource"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class BookshelfBlock : BlockLegacy {
 
 public:
-    virtual BookshelfBlock::~BookshelfBlock();
+    BookshelfBlock::~BookshelfBlock()
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;

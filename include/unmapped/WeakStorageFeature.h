@@ -12,6 +12,6 @@ public:
     WeakStorageFeature(StackResultStorageFeature const&);
     WeakStorageFeature(WeakStorageFeature::VariadicInit, FeatureRegistry &, unsigned long);
     WeakStorageFeature(WeakStorageFeature&&);
-    void _reset(void);
-    void _isSet(void)const;
+    void _reset();
+    void _isSet()const;
 };

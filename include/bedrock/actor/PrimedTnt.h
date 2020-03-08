@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
-#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/Vec3"
+#include "../../unmapped/DataLoadHelper"
+#include "../util/Vec3"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../nbt/CompoundTag"
 
 
 class PrimedTnt : Actor {
@@ -12,14 +14,14 @@ class PrimedTnt : Actor {
 public:
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual PrimedTnt::~PrimedTnt();
-    virtual void getOwnerEntityType(void);
+    PrimedTnt::~PrimedTnt()
+    virtual void getOwnerEntityType();
     virtual void teleportTo(Vec3 const&, bool, int, int);
-    virtual void normalTick(void);
-    virtual void getShadowHeightOffs(void);
-    virtual void getShadowRadius(void)const;
-    virtual bool isPickable(void);
-    virtual void getSourceUniqueID(void)const;
+    virtual void normalTick();
+    virtual void getShadowHeightOffs();
+    virtual void getShadowRadius()const;
+    virtual bool isPickable();
+    virtual void getSourceUniqueID()const;
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);

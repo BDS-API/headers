@@ -6,7 +6,7 @@
 class ConsumeItemNode : BehaviorNode {
 
 public:
-    virtual ConsumeItemNode::~ConsumeItemNode();
+    ConsumeItemNode::~ConsumeItemNode()
     virtual void tick(Actor &);
 
     ConsumeItemNode(void);

@@ -1,17 +1,21 @@
 #pragma once
 
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/MapItemSavedData"
-#include "../../../unmapped/ActorUniqueID"
+#include "../../../unmapped/UniqueId"
 #include "../../io/BinaryStream"
+#include "../../../unmapped/MapDecoration"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../../unmapped/MapItemSavedData"
+#include "../../../unmapped/Dimension"
+#include "../../level/Level"
 
 
 class ClientboundMapItemDataPacket : Packet {
 
 public:
-    virtual ClientboundMapItemDataPacket::~ClientboundMapItemDataPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    ClientboundMapItemDataPacket::~ClientboundMapItemDataPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
@@ -19,11 +23,11 @@ public:
     ClientboundMapItemDataPacket(void);
     ClientboundMapItemDataPacket(MapItemSavedData &, Level &);
     bool isOfType(ClientboundMapItemDataPacket::Type)const;
-    void getMapId(void)const;
-    void getMapIds(void)const;
+    void getMapId()const;
+    void getMapIds()const;
     void applyToMap(MapItemSavedData &)const;
-    bool isTextureUpdate(void)const;
-    void getScale(void)const;
-    void getDimensionId(void)const;
-    bool isLocked(void)const;
+    bool isTextureUpdate()const;
+    void getScale()const;
+    void getDimensionId()const;
+    bool isLocked()const;
 };

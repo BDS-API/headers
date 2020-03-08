@@ -1,13 +1,14 @@
 #pragma once
 
 #include "../orgin/CommandOrigin"
+#include "../CommandOutput"
 #include "../CommandRegistry"
 
 
 class TellCommand : MessagingCommand {
 
 public:
-    virtual TellCommand::~TellCommand();
+    TellCommand::~TellCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

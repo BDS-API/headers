@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/block/unmapped/ModelItem"
 
 
 using namespace BlockGraphics;

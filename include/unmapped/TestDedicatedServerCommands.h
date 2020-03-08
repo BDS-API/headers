@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/Minecraft"
 
 
 class TestDedicatedServerCommands {

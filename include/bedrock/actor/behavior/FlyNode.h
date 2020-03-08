@@ -6,7 +6,7 @@
 class FlyNode : BehaviorNode {
 
 public:
-    virtual FlyNode::~FlyNode();
+    FlyNode::~FlyNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

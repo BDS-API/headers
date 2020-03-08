@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 
 
 class IdentityDictionary {
@@ -19,8 +20,8 @@ public:
     void registerIdentity(ScoreboardId const&, std::string const&);
     void clearIdentity(ScoreboardId const&);
     void getScoreboardIds(IdentityDefinition::Type)const;
-    void getAllScoreboardIds(void)const;
-    void getNumTrackedIdentities(void)const;
+    void getAllScoreboardIds()const;
+    void getNumTrackedIdentities()const;
     void shouldConvertFakePlayer(PlayerScoreboardId const&, std::string const&);
     void convertFakeToReal(ScoreboardId const&, PlayerScoreboardId const&);
     void _trackIdInTargetDict(ScoreboardId const&, PlayerScoreboardId const&);

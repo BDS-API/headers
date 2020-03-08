@@ -2,6 +2,8 @@
 
 #include "../bedrock/block/BlockLegacy"
 #include "../bedrock/description/blockcomponent/LootComponentDescription"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class LootComponent {

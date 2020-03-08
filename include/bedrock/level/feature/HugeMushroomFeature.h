@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 #include "../../../unmapped/Block"
 
 
@@ -10,11 +12,11 @@ public:
     static long mMushroomTypes;
     static long mHugeMushroomTypes;
 
-    virtual HugeMushroomFeature::~HugeMushroomFeature();
+    HugeMushroomFeature::~HugeMushroomFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     HugeMushroomFeature(void);
     HugeMushroomFeature(int);
-    void shutdown(void);
+    void shutdown();
     void _canSurvive(Block const&)const;
 };

@@ -6,9 +6,9 @@
 class ActorIsAvoidingMobsTest : SimpleBoolFilterTest {
 
 public:
-    virtual ActorIsAvoidingMobsTest::~ActorIsAvoidingMobsTest();
+    ActorIsAvoidingMobsTest::~ActorIsAvoidingMobsTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorIsAvoidingMobsTest(void);
 };

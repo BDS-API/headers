@@ -5,9 +5,9 @@
 class TextObjectLocalizedText : ITextObject {
 
 public:
-    virtual TextObjectLocalizedText::~TextObjectLocalizedText();
-    virtual bool asString[abi:cxx11](void)const;
-    virtual bool asJsonValue(void)const;
+    TextObjectLocalizedText::~TextObjectLocalizedText()
+    virtual bool asString()const;
+    virtual bool asJsonValue()const;
 
     TextObjectLocalizedText(std::string);
 };

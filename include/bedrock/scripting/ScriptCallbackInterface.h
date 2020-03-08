@@ -7,7 +7,7 @@ using namespace ScriptApi;
 class ScriptCallbackInterface {
 
 public:
-    virtual void ScriptApi::ScriptCallbackInterface::~ScriptCallbackInterface();
+    ScriptApi::ScriptCallbackInterface::~ScriptCallbackInterface()
 
     ScriptCallbackInterface(void);
 };

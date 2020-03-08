@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/Random"
 
 
 class PodzolAreaFeature : Feature {
 
 public:
-    virtual PodzolAreaFeature::~PodzolAreaFeature();
+    PodzolAreaFeature::~PodzolAreaFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     PodzolAreaFeature(void);

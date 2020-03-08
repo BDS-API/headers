@@ -8,15 +8,15 @@ public:
 
     BasicTimer(double, std::function<double ()(void)>);
     BasicTimer(double, double, std::function<double ()(void)>);
-    void getTimeOverAt(void)const;
-    void getTimeDelay(void)const;
-    bool isFinished(void)const;
-    void resetTime(void);
+    void getTimeOverAt()const;
+    void getTimeDelay()const;
+    bool isFinished()const;
+    void resetTime();
     void resetTime(double);
     void resetTime(double, double);
-    void repeatIfFinished(void);
+    void repeatIfFinished();
     void repeatIfFinished(double);
-    void finishTimer(void);
-    void getStartTime(void);
-    bool hasExpired(void)const;
+    void finishTimer();
+    void getStartTime();
+    bool hasExpired()const;
 };

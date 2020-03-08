@@ -6,7 +6,7 @@
 class InteractActionNode : BehaviorNode {
 
 public:
-    virtual InteractActionNode::~InteractActionNode();
+    InteractActionNode::~InteractActionNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

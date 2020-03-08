@@ -1,25 +1,25 @@
 #pragma once
 
-#include "../actor/Player"
 #include "../item/ItemStack"
+#include "../actor/Player"
 
 
 class Inventory : FillingContainer {
 
 public:
-    virtual Inventory::~Inventory();
-    virtual void init(void);
+    Inventory::~Inventory()
+    virtual void init();
     virtual void add(ItemStack &);
     virtual bool canAdd(ItemStack const&)const;
     virtual void dropAll(bool);
-    virtual void getEmptySlotsCount(void)const;
-    virtual void getFirstEmptySlot(void)const;
+    virtual void getEmptySlotsCount()const;
+    virtual void getFirstEmptySlot()const;
     virtual void setContainerSize(int);
 
     Inventory(Player *);
-    void setupDefault(void);
-    void _getDefaultStartingMapScale(void)const;
+    void setupDefault();
+    void _getDefaultStartingMapScale()const;
     void clearInventoryWithDefault(bool);
     void tick(int);
-    void getComplexItems(void);
+    void getComplexItems();
 };

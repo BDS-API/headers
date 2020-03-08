@@ -1,13 +1,16 @@
 #pragma once
 
+#include "../Actor"
 #include "../Mob"
+#include "../../description/component/NavigationDescription"
+#include "../../util/Vec3"
 #include "../../../unmapped/NavigationComponent"
 
 
 class FlyingPathNavigation : PathNavigation {
 
 public:
-    virtual FlyingPathNavigation::~FlyingPathNavigation();
+    FlyingPathNavigation::~FlyingPathNavigation()
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

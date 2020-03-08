@@ -1,6 +1,10 @@
 #pragma once
 
+#include "../raknet/RakPeer"
+#include "../raknet/BitStream"
 #include "../raknet/SystemAddress"
+#include "../raknet/RakNetSocket2"
+#include "../raknet/SplitPacketChannel"
 
 
 class RakNet {
@@ -12,9 +16,9 @@ public:
     static long UNASSIGNED_SYSTEM_ADDRESS;
 
 
-    void GetTime(void);
-    void GetTimeUS(void);
-    void GetTimeMS(void);
+    void GetTime();
+    void GetTimeUS();
+    void GetTimeMS();
     void GreaterThan(unsigned long, unsigned long);
     void LessThan(unsigned long, unsigned long);
     void _RakMalloc(unsigned long);
@@ -31,8 +35,8 @@ public:
     void ProcessOfflineNetworkPacket(RakNet::SystemAddress, char const*, int, RakNet::RakPeer *, RakNet::RakNetSocket2 *, bool *, unsigned long);
     void ProcessNetworkPacket(RakNet::SystemAddress, char const*, int, RakNet::RakPeer *, unsigned long, RakNet::BitStream &);
     void ProcessNetworkPacket(RakNet::SystemAddress, char const*, int, RakNet::RakPeer *, RakNet::RakNetSocket2 *, unsigned long, RakNet::BitStream &);
-    void SplitPacketChannelComp(unsigned short const&, RakNet::SplitPacketChannel * const&);
-    void StrAndBoolComp(char * const&, StrAndBool const&);
+    void SplitPacketChannelComp(unsigned short const&, RakNet::SplitPacketChannel const*&);
+    void StrAndBoolComp(char const*&, StrAndBool const&);
     void UpdateTCPInterfaceLoop(void *);
     void ConnectionAttemptLoop(void *);
 };

@@ -6,9 +6,9 @@
 class ActorIsImmobileTest : SimpleBoolFilterTest {
 
 public:
-    virtual ActorIsImmobileTest::~ActorIsImmobileTest();
+    ActorIsImmobileTest::~ActorIsImmobileTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorIsImmobileTest(void);
 };

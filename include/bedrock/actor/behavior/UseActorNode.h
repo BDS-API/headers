@@ -6,7 +6,7 @@
 class UseActorNode : BehaviorNode {
 
 public:
-    virtual UseActorNode::~UseActorNode();
+    UseActorNode::~UseActorNode()
     virtual void tick(Actor &);
 
     UseActorNode(void);

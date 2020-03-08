@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/ActorDefinitionIdentifier"
-#include "../../../unmapped/Random"
 #include "../../../json/Value"
+#include "../../../unmapped/LootTableContext"
+#include "../../util/Random"
+#include "../../actor/unmapped/ActorDefinitionIdentifier"
 
 
 class LootItemKilledByActorCondition : LootItemCondition {
 
 public:
-    virtual LootItemKilledByActorCondition::~LootItemKilledByActorCondition();
+    LootItemKilledByActorCondition::~LootItemKilledByActorCondition()
     virtual void applies(Random &, LootTableContext &);
 
     LootItemKilledByActorCondition(ActorDefinitionIdentifier);

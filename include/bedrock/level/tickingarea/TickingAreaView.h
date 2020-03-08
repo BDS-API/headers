@@ -1,27 +1,29 @@
 #pragma once
 
-#include "../../../unmapped/ChunkPos"
-#include "../../../unmapped/Tick"
-#include "../../../unmapped/BlockSource"
+#include "../Level"
 #include "../../../unmapped/Bounds"
+#include "../../util/ChunkPos"
+#include "../../util/Tick"
+#include "../../util/Random"
+#include "../../block/unmapped/BlockSource"
 #include "../chunksource/ChunkSource"
 
 
 class TickingAreaView : ITickingAreaView {
 
 public:
-    virtual TickingAreaView::~TickingAreaView();
+    TickingAreaView::~TickingAreaView()
     virtual void init(Bounds const&, bool);
     virtual void tick(Tick const&, BlockSource &, bool);
     virtual void tickSeasons(BlockSource &, Random &);
-    virtual void getDimensionId(void)const;
-    virtual void getBounds(void)const;
-    virtual bool isCircle(void)const;
-    virtual bool isDoneLoading(void)const;
-    virtual void checkInitialLoadDone(void);
-    virtual void getInitialLoadPercentage(void);
+    virtual void getDimensionId()const;
+    virtual void getBounds()const;
+    virtual bool isCircle()const;
+    virtual bool isDoneLoading()const;
+    virtual void checkInitialLoadDone();
+    virtual void getInitialLoadPercentage();
     virtual void move(Bounds const&);
-    virtual void createChildSource(void);
+    virtual void createChildSource();
     virtual void getAvailableChunk(ChunkPos const&);
 
     TickingAreaView(ChunkSource &);

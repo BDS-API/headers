@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/Vec3"
 
 
 class PlayerRespawnRandomizer {
@@ -9,15 +10,15 @@ public:
     PlayerRespawnRandomizer(void);
     void init(unsigned int, GeneratorType const&);
     void performPrimaryJump(Vec3 const&, bool);
-    void resetSecondary(void);
+    void resetSecondary();
     void getRandomizedPosition(Vec3 &);
-    bool isPrimaryExhausted(void)const;
-    bool isSecondaryExhausted(void)const;
-    bool isCompletelyExhausted(void)const;
-    void getRadius(void)const;
-    void getRadiusSquared(void)const;
-    void getLongJumpCount(void)const;
-    void getShortJumpCount(void)const;
-    void resetPrimary(void);
-    void getPrimaryOffset(void)const;
+    bool isPrimaryExhausted()const;
+    bool isSecondaryExhausted()const;
+    bool isCompletelyExhausted()const;
+    void getRadius()const;
+    void getRadiusSquared()const;
+    void getLongJumpCount()const;
+    void getShortJumpCount()const;
+    void resetPrimary();
+    void getPrimaryOffset()const;
 };

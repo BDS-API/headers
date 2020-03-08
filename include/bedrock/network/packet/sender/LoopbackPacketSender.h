@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../Packet"
-#include "../../../../unmapped/NetworkIdentifier"
-#include "../../../actor/Player"
 #include "../../NetEventCallback"
+#include "../../../../unmapped/NetworkHandler"
+#include "../Packet"
+#include "../../../actor/Player"
+#include "../../../../unmapped/NetworkIdentifier"
 
 
 class LoopbackPacketSender : PacketSender {
 
 public:
-    virtual LoopbackPacketSender::~LoopbackPacketSender();
+    LoopbackPacketSender::~LoopbackPacketSender()
     virtual void send(Packet &);
     virtual void sendToServer(Packet &);
     virtual void sendToClient(NetworkIdentifier const&, Packet const&, unsigned char);

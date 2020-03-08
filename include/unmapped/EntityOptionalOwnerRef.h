@@ -10,8 +10,8 @@ public:
     void setOwnedRef(OwnerPtrT<EntityRefTraits> &&);
     void setWeakRef(WeakRefT<EntityRefTraits> const&);
     void setWeakRef(WeakRefT<EntityRefTraits> &&);
-    void tryGet(void)const;
-    bool isSet(void)const;
-    bool isOwned(void)const;
-    bool isWeak(void)const;
+    void tryGet()const;
+    bool isSet()const;
+    bool isOwned()const;
+    bool isWeak()const;
 };

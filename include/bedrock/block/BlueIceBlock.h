@@ -1,12 +1,13 @@
 #pragma once
 
-#include "../../unmapped/Random"
+#include "../util/Random"
+#include "../../unmapped/Block"
 
 
 class BlueIceBlock : BlockLegacy {
 
 public:
-    virtual BlueIceBlock::~BlueIceBlock();
+    BlueIceBlock::~BlueIceBlock()
     virtual void getResourceCount(Random &, Block const&, int)const;
 
     BlueIceBlock(std::string const&, int);

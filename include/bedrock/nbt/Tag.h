@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../io/IDataOutput"
 #include "../io/IDataInput"
 
 
@@ -8,8 +9,8 @@ class Tag {
 public:
     static long NullString[abi:cxx11];
 
-    virtual Tag::~Tag();
-    virtual void deleteChildren(void);
+    Tag::~Tag()
+    virtual void deleteChildren();
     virtual void equals(Tag const&)const;
     virtual void print(PrintStream &)const;
     virtual void print(std::string const&, PrintStream &)const;

@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../../util/Random"
 
 
 class EndIslandFeature : Feature {
 
 public:
-    virtual EndIslandFeature::~EndIslandFeature();
+    EndIslandFeature::~EndIslandFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     EndIslandFeature(void);

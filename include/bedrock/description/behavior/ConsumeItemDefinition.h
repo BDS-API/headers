@@ -5,7 +5,7 @@
 class ConsumeItemDefinition : BehaviorDefinition {
 
 public:
-    virtual ConsumeItemDefinition::~ConsumeItemDefinition();
+    ConsumeItemDefinition::~ConsumeItemDefinition()
 
     ConsumeItemDefinition(void);
 };

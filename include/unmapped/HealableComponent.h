@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../bedrock/actor/Actor"
+#include "../bedrock/definition/HealableDefinition"
+#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "../bedrock/actor/Player"
 
 
 class HealableComponent {

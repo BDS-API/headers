@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../../unmapped/ActorUniqueID"
+#include "../../actor/unmapped/ActorUniqueID"
 #include "../../io/ReadOnlyBinaryStream"
 
 
 class RemoveActorPacket : Packet {
 
 public:
-    virtual RemoveActorPacket::~RemoveActorPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    RemoveActorPacket::~RemoveActorPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

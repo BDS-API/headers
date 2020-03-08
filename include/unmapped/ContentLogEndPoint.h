@@ -5,7 +5,7 @@
 class ContentLogEndPoint : Bedrock::LogEndPoint {
 
 public:
-    virtual ContentLogEndPoint::~ContentLogEndPoint();
+    ContentLogEndPoint::~ContentLogEndPoint()
     virtual void log(char const*);
 
     ContentLogEndPoint(void);

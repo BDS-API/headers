@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../unmapped/LoadedResourceData"
 #include "../../json/Value"
+#include "../../unmapped/LoadedResourceData"
 
 
 class JsonMergeStrategy : ResourcePackMergeStrategy {
 
 public:
-    virtual JsonMergeStrategy::~JsonMergeStrategy();
+    JsonMergeStrategy::~JsonMergeStrategy()
     virtual void mergeFiles(std::vector<LoadedResourceData, std::allocator<LoadedResourceData>> const&);
     virtual void _preMergeTransform(Json::Value &);
 

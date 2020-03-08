@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../Actor"
 #include "../../../unmapped/BehaviorComponent"
+#include "../Actor"
 
 
 class BehaviorNode {
 
 public:
-    virtual BehaviorNode::~BehaviorNode();
+    BehaviorNode::~BehaviorNode()
     virtual void initializeFromDefinition(Actor &);
 
     BehaviorNode(void);
-    void getStatus(void)const;
-    void getBehaviorTreeDefinition(void);
+    void getStatus()const;
+    void getBehaviorTreeDefinition();
     void setComponent(BehaviorComponent *);
-    void getBehaviorData(void);
+    void getBehaviorData();
 };

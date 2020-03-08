@@ -5,7 +5,7 @@
 class UseActorDefinition : BehaviorDefinition {
 
 public:
-    virtual UseActorDefinition::~UseActorDefinition();
+    UseActorDefinition::~UseActorDefinition()
 
     UseActorDefinition(void);
 };

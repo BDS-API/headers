@@ -9,9 +9,9 @@ public:
     RoomDefinition(void);
     RoomDefinition(int);
     void setConnection(unsigned char const&, std::shared_ptr<RoomDefinition>);
-    void updateOpenings(void);
+    void updateOpenings();
     void findSource(int);
-    bool isSpecial(void);
-    void countOpenings(void);
+    bool isSpecial();
+    void countOpenings();
     RoomDefinition(RoomDefinition const&);
 };

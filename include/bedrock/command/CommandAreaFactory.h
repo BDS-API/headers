@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../../unmapped/Dimension"
-#include "../../unmapped/BlockPos"
+#include "../util/BlockPos"
 #include "../../unmapped/Bounds"
 
 

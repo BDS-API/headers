@@ -6,7 +6,7 @@ class ListTagIntAdder {
 
 public:
 
-    void operator()(int);
+    void operator();
     ListTagIntAdder(int);
-    void done(void);
+    void done();
 };

@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../bedrock/nbt/ListTag"
-#include "../bedrock/container/Inventory"
 #include "../bedrock/item/ItemStack"
+#include "../bedrock/level/Level"
+#include "../bedrock/nbt/ListTag"
+#include "../bedrock/item/unmapped/ItemDescriptor"
+#include "../bedrock/container/Inventory"
 #include "../bedrock/container/manager/HudContainerManagerModel"
 
 
@@ -10,7 +12,7 @@ class PlayerInventoryProxy : ContainerSizeChangeListener, ContainerContentChange
 
 public:
     virtual void containerSizeChanged(int);
-    virtual PlayerInventoryProxy::~PlayerInventoryProxy();
+    PlayerInventoryProxy::~PlayerInventoryProxy()
     virtual void containerContentChanged(int);
     virtual void createTransactionContext(std::function<void ()(Container &, int, ItemStack const&, ItemStack const&)>, std::function<void ()(void)>);
 
@@ -22,15 +24,15 @@ public:
     void add(ItemStack &, bool);
     bool canAdd(ItemStack const&)const;
     void getSlotWithItem(ItemStack const&, bool, bool)const;
-    void getFirstEmptySlot(void)const;
-    void getEmptySlotsCount(void)const;
-    void getSlots(void)const;
+    void getFirstEmptySlot()const;
+    void getEmptySlotsCount()const;
+    void getSlots()const;
     void getComplexItems(ContainerID)const;
     void getSlotCopies(ContainerID)const;
-    void _getHudContainer(void)const;
+    void _getHudContainer()const;
     void setContainerSize(int, ContainerID);
     void getContainerSize(ContainerID)const;
-    void getHotbarSize(void)const;
+    void getHotbarSize()const;
     void getItemCount(ItemDescriptor const&);
     bool hasResource(int);
     void getAndRemoveResource(ItemStack &, bool, bool);
@@ -42,20 +44,20 @@ public:
     void clearInventory(int);
     void clearInventoryWithDefault(bool);
     void load(ListTag const&, SemVersion const&, Level &);
-    void save(void);
+    void save();
     void dropSlot(int, bool, bool, ContainerID, bool);
     void dropAll(bool);
-    void tick(void);
+    void tick();
     void setItem(int, ItemStack const&, ContainerID);
     void setItemWithoutSlotLinking(int, ItemStack const&, ContainerID);
     void getItem(int, ContainerID)const;
     void removeItem(int, int, ContainerID);
-    void _getHudContainerManagerModel(void);
-    void _getInventoryContainer(void);
-    void getSelectedSlot(void)const;
-    void getSelectedContainerId(void);
+    void _getHudContainerManagerModel();
+    void _getInventoryContainer();
+    void getSelectedSlot()const;
+    void getSelectedContainerId();
     void selectSlot(int, ContainerID);
-    void getSelectedItem(void);
+    void getSelectedItem();
     void setSelectedItem(ItemStack const&);
-    void getAllContainerIds(void);
+    void getAllContainerIds();
 };

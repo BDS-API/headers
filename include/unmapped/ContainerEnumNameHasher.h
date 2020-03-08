@@ -6,5 +6,5 @@ class ContainerEnumNameHasher {
 
 public:
 
-    void operator()(ContainerEnumName const&)const;
+    void operator()const;
 };

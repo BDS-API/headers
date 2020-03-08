@@ -1,13 +1,14 @@
 #pragma once
 
+#include "../json/Value"
 #include "../bedrock/network/packet/sender/PacketSender"
 
 
 class ServerFileChunkUploader : IFileChunkUploader, std::enable_shared_from_this<ServerFileChunkUploader> {
 
 public:
-    virtual ServerFileChunkUploader::~ServerFileChunkUploader();
-    virtual void update(void);
+    ServerFileChunkUploader::~ServerFileChunkUploader()
+    virtual void update();
     virtual void initFileUploader(std::string const&, FileInfo const&, int, Json::Value const&, std::function<void ()(bool)>);
     virtual void getServerMissingChunks(FileInfo const&, std::function<void ()(std::vector<FileChunkInfo, std::allocator<FileChunkInfo>>)>)const;
     virtual void confirmChunkReceived(FileInfo const&, FileChunkInfo const&);

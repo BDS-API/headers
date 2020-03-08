@@ -8,9 +8,9 @@ using namespace AgentCommands;
 class DropCommand : AgentCommands::Command {
 
 public:
-    virtual void AgentCommands::DropCommand::~DropCommand();
-    virtual void execute(void);
-    virtual bool isDone(void);
+    AgentCommands::DropCommand::~DropCommand()
+    virtual void execute();
+    virtual bool isDone();
 
     DropCommand(Player &, int, int, AgentCommands::Direction);
 };

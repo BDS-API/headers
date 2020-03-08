@@ -1,16 +1,17 @@
 #pragma once
 
+#include "../../util/BlockPos"
 #include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/BlockPos"
+#include "../../actor/unmapped/ActorUniqueID"
 #include "../../io/BinaryStream"
 
 
 class ContainerOpenPacket : Packet {
 
 public:
-    virtual ContainerOpenPacket::~ContainerOpenPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    ContainerOpenPacket::~ContainerOpenPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

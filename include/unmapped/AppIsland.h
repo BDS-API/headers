@@ -7,13 +7,13 @@ using namespace BedrockEngine;
 class AppIsland : BedrockEngine::IIslandCore {
 
 public:
-    virtual void BedrockEngine::AppIsland::~AppIsland();
-    virtual void getId(void);
-    virtual void start(void);
-    virtual void suspend(void);
-    virtual void resume(void);
-    virtual void stop(void);
-    virtual void mainUpdate(void);
+    BedrockEngine::AppIsland::~AppIsland()
+    virtual void getId();
+    virtual void start();
+    virtual void suspend();
+    virtual void resume();
+    virtual void stop();
+    virtual void mainUpdate();
     virtual bool processActivationArguments(ActivationArguments const&);
 
     AppIsland(void);

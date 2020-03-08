@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/pack/PackAccessStrategy"
 #include "../bedrock/pack/ResourcePackManager"
 
 
@@ -10,7 +11,7 @@ public:
     void getLanguageCode(std::string const&);
     void getRegionCode(std::string const&);
     void getStringIdExists(std::string const&)const;
-    void getCommaSeperator(void)const;
+    void getCommaSeperator()const;
     void loadFromResourcePackManager(ResourcePackManager &, std::vector<std::string, std::allocator<std::string>> const&);
     void _getLangFilePath(std::string const&);
     void appendTranslations(std::string const&, std::vector<std::string, std::allocator<std::string>> const&, std::vector<std::string, std::allocator<std::string>> const&, std::string const&);

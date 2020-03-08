@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/actor/unmapped/ActorUniqueID"
 #include "../bedrock/actor/Actor"
 
 
@@ -7,13 +8,13 @@ class MingleComponent {
 
 public:
 
-    void getMingleState(void)const;
-    void getPreviousPartnerId(void)const;
-    void getPartnerId(void)const;
+    void getMingleState()const;
+    void getPreviousPartnerId()const;
+    void getPartnerId()const;
     MingleComponent(void);
     void setMingleState(MingleComponent::MingleState);
     void setPartnerId(ActorUniqueID);
-    void clearPreviousPartnerId(void);
-    void resetState(void);
+    void clearPreviousPartnerId();
+    void resetState();
     void fetchCurrentPartner(Actor const&)const;
 };

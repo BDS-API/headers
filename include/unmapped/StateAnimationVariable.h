@@ -9,7 +9,7 @@ public:
 
     StateAnimationVariable(HashedString const&);
     void addKeyFrame(float, float);
-    void sort(void);
+    void sort();
     void setVariable(RenderParams &)const;
     void removeVariable(RenderParams &)const;
     void toJson(Json::Value &)const;

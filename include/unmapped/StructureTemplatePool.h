@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/Random"
 
 
 class StructureTemplatePool {
@@ -11,6 +12,6 @@ public:
     void getTemplate(unsigned long)const;
     void getRandomTemplate(Random &)const;
     void getShuffledTemplateIndexes(Random &)const;
-    void size(void)const;
-    bool isValid(void)const;
+    void size()const;
+    bool isValid()const;
 };

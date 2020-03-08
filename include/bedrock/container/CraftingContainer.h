@@ -7,11 +7,11 @@
 class CraftingContainer : Container {
 
 public:
-    virtual CraftingContainer::~CraftingContainer();
+    CraftingContainer::~CraftingContainer()
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
-    virtual void getContainerSize(void)const;
-    virtual void getMaxStackSize(void)const;
+    virtual void getContainerSize()const;
+    virtual void getMaxStackSize()const;
     virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
     virtual void setContainerChanged(int);

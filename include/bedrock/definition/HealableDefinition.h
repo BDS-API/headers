@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../unmapped/FeedItem"
 #include "../../json/Value"
+#include "../../unmapped/FeedItem"
 
 
 class HealableDefinition {

@@ -1,19 +1,20 @@
 #pragma once
 
+#include "../../definition/DefinitionTrigger"
 #include "../Mob"
 
 
 class EatBlockGoal : Goal {
 
 public:
-    virtual EatBlockGoal::~EatBlockGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    EatBlockGoal::~EatBlockGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     EatBlockGoal(Mob &, DefinitionTrigger const&);
-    void getEatAnimationTick(void);
+    void getEatAnimationTick();
 };

@@ -8,6 +8,6 @@ class SemanticInfo {
 
 public:
 
-    void reset(void);
+    void reset();
     SemanticInfo(void);
 };

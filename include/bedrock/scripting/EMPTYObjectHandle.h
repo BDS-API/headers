@@ -8,5 +8,5 @@ class EMPTYObjectHandle {
 
 public:
 
-    void _isEmpty(void)const;
+    void _isEmpty()const;
 };

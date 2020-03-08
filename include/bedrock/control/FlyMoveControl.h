@@ -1,12 +1,13 @@
 #pragma once
 
 #include "../../unmapped/MoveControlComponent"
+#include "../actor/Mob"
 
 
 class FlyMoveControl : MoveControl {
 
 public:
-    virtual FlyMoveControl::~FlyMoveControl();
+    FlyMoveControl::~FlyMoveControl()
     virtual void tick(MoveControlComponent &, Mob &);
 
     FlyMoveControl(void);

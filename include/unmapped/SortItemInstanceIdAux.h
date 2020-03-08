@@ -6,5 +6,5 @@ class SortItemInstanceIdAux {
 
 public:
 
-    void operator()(ItemInstance const&, ItemInstance const&)const;
+    void operator()const;
 };

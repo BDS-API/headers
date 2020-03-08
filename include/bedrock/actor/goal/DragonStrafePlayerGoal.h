@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Actor"
 #include "../EnderDragon"
+#include "../Actor"
 
 
 class DragonStrafePlayerGoal : Goal {
@@ -9,16 +9,16 @@ class DragonStrafePlayerGoal : Goal {
 public:
     static long FIREBALL_CHARGE_AMOUNT;
 
-    virtual DragonStrafePlayerGoal::~DragonStrafePlayerGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    DragonStrafePlayerGoal::~DragonStrafePlayerGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     DragonStrafePlayerGoal(EnderDragon &);
     void setTarget(Actor *);
-    void findNewTarget(void);
-    void navigateToNextPathNode(void);
+    void findNewTarget();
+    void navigateToNextPathNode();
 };

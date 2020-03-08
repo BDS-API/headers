@@ -8,9 +8,9 @@ using namespace AgentCommands;
 class DestroyCommand : AgentCommands::Command {
 
 public:
-    virtual void AgentCommands::DestroyCommand::~DestroyCommand();
-    virtual void execute(void);
-    virtual bool isDone(void);
+    AgentCommands::DestroyCommand::~DestroyCommand()
+    virtual void execute();
+    virtual bool isDone();
 
     DestroyCommand(Player &, AgentCommands::Direction);
 };

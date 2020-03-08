@@ -5,9 +5,9 @@
 class SavedData {
 
 public:
-    virtual SavedData::~SavedData();
+    SavedData::~SavedData()
 
     SavedData(std::string const&);
     void setDirty(bool);
-    bool isDirty(void)const;
+    bool isDirty()const;
 };

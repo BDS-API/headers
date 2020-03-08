@@ -6,7 +6,7 @@ class LocalConnectivitySystem {
 
 public:
 
-    void getHost(void)const;
+    void getHost()const;
     void addHost(LocalConnector &);
     void removeHost(LocalConnector &);
 };

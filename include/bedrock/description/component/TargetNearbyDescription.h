@@ -6,8 +6,8 @@
 class TargetNearbyDescription : ComponentDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual TargetNearbyDescription::~TargetNearbyDescription();
+    virtual void getJsonName()const;
+    TargetNearbyDescription::~TargetNearbyDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

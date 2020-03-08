@@ -1,18 +1,20 @@
 #pragma once
 
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
 #include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../../unmapped/Random"
+#include "../util/AABB"
 
 
 class RedStoneWireBlock : BlockLegacy {
 
 public:
-    virtual RedStoneWireBlock::~RedStoneWireBlock();
+    RedStoneWireBlock::~RedStoneWireBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
-    virtual void waterSpreadCausesSpawn(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual void waterSpreadCausesSpawn()const;
+    virtual bool canContainLiquid()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;
@@ -24,7 +26,7 @@ public:
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getColor(Block const&)const;
     virtual void getColor(BlockSource &, BlockPos const&, Block const&)const;
-    virtual bool canSpawnOn(void)const;
+    virtual bool canSpawnOn()const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 

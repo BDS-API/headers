@@ -8,5 +8,5 @@ class HashBlockTick {
 
 public:
 
-    void operator()(BlockTickingQueue::BlockTick const&)const;
+    void operator()const;
 };

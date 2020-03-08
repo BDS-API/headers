@@ -6,7 +6,7 @@
 class SkinInfoData {
 
 public:
-    virtual SkinInfoData::~SkinInfoData();
+    SkinInfoData::~SkinInfoData()
     virtual void validateAndResizeSkinData(mce::Image &, bool);
 
     bool isValidSize(unsigned long);
@@ -16,10 +16,10 @@ public:
     void setNoAlpha(mce::Image &, int, int, int, int);
     void verifyIsPremiumGeometry(std::string const&);
     bool isValidFullSize(unsigned long);
-    bool isDirty(void)const;
-    void setClean(void);
-    void getGeometryData(void)const;
-    void getSkin(void)const;
-    void getSkinMutable(void);
-    bool isAlphaTest(void)const;
+    bool isDirty()const;
+    void setClean();
+    void getGeometryData()const;
+    void getSkin()const;
+    void getSkinMutable();
+    bool isAlphaTest()const;
 };

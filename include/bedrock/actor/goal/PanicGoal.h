@@ -1,17 +1,17 @@
 #pragma once
 
 #include "../Mob"
-#include "../../../unmapped/Vec3"
+#include "../../util/Vec3"
 
 
 class PanicGoal : Goal {
 
 public:
-    virtual PanicGoal::~PanicGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
+    PanicGoal::~PanicGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
     virtual void appendDebugInfo(std::string &)const;
 
     PanicGoal(Mob &, float, bool, bool, bool);

@@ -5,14 +5,14 @@
 class BinaryStream : ReadOnlyBinaryStream {
 
 public:
-    virtual BinaryStream::~BinaryStream();
+    BinaryStream::~BinaryStream()
 
     BinaryStream(void);
     BinaryStream(std::string &&);
     BinaryStream(std::string &, bool);
     BinaryStream(std::string const&);
     void reserve(unsigned long);
-    void reset(void);
+    void reset();
     void write(void const*, unsigned long);
     void writeBool(bool);
     void writeByte(unsigned char);

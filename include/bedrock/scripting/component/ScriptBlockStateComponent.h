@@ -1,7 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/ScriptServerContext"
 #include "../ScriptVersionInfo"
+#include "../../actor/Actor"
+#include "../unmapped/ScriptEngine"
+#include "../../../unmapped/Block"
+#include "../ScriptObjectHandle"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
+#include "../unmapped/ScriptServerContext"
 
 
 class ScriptBlockStateComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
@@ -9,12 +15,12 @@ class ScriptBlockStateComponent : ScriptTemplateFactory<ScriptServerContext>::Co
 public:
     static long mHash;
 
-    virtual ScriptBlockStateComponent::~ScriptBlockStateComponent();
+    ScriptBlockStateComponent::~ScriptBlockStateComponent()
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, ScriptApi::ScriptObjectHandle const&)const;
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, ScriptApi::ScriptObjectHandle &)const;
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, bool &)const;
 
-    void getHash(void);
+    void getHash();
     ScriptBlockStateComponent(void);
 };

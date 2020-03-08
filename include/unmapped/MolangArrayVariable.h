@@ -10,6 +10,6 @@ public:
 
     MolangArrayVariable(MolangArrayVariable const&);
     MolangArrayVariable(HashedString const&);
-    void getName(void)const;
+    void getName()const;
     MolangArrayVariable(MolangArrayVariable&&);
 };

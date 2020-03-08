@@ -6,7 +6,7 @@
 class BreakBlockNode : BehaviorNode {
 
 public:
-    virtual BreakBlockNode::~BreakBlockNode();
+    BreakBlockNode::~BreakBlockNode()
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 

@@ -6,11 +6,11 @@
 class BaseMoveToBlockGoal : BaseMoveToGoal {
 
 public:
-    virtual BaseMoveToBlockGoal::~BaseMoveToBlockGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void _moveToBlock(void);
-    virtual void findTargetBlock(void);
+    BaseMoveToBlockGoal::~BaseMoveToBlockGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void _moveToBlock();
+    virtual void findTargetBlock();
 
     BaseMoveToBlockGoal(Mob &, float, int, int, int, float, float);
 };

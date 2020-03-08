@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../CommandRegistry"
 #include "../orgin/CommandOrigin"
+#include "../CommandOutput"
+#include "../CommandRegistry"
 
 
 class ListCommand : ServerCommand {
 
 public:
-    virtual ListCommand::~ListCommand();
+    ListCommand::~ListCommand()
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);

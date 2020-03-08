@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Player"
-#include "../../unmapped/Random"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class SmokerBlock : FurnaceBlock {
 
 public:
-    virtual SmokerBlock::~SmokerBlock();
+    SmokerBlock::~SmokerBlock()
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;

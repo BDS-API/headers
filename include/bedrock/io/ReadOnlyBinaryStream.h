@@ -5,33 +5,33 @@
 class ReadOnlyBinaryStream {
 
 public:
-    virtual ReadOnlyBinaryStream::~ReadOnlyBinaryStream();
+    ReadOnlyBinaryStream::~ReadOnlyBinaryStream()
     virtual void read(void *, unsigned long);
 
-    void getUnreadLength(void)const;
-    void getReadPointer(void)const;
+    void getUnreadLength()const;
+    void getReadPointer()const;
     void setReadPointer(unsigned long);
-    void getLength(void)const;
+    void getLength()const;
     void readVectorList(std::vector<unsigned int, std::allocator<unsigned int>> &);
     ReadOnlyBinaryStream(std::string &&);
     ReadOnlyBinaryStream(std::string const&, bool);
-    void getBool(void);
-    void getByte(void);
-    void getSignedShort(void);
-    void getUnsignedShort(void);
-    void getSignedBigEndianInt(void);
-    void getSignedInt(void);
-    void getUnsignedInt(void);
-    void getSignedInt64(void);
-    void getUnsignedInt64(void);
-    void getDouble(void);
-    void getFloat(void);
+    void getBool();
+    void getByte();
+    void getSignedShort();
+    void getUnsignedShort();
+    void getSignedBigEndianInt();
+    void getSignedInt();
+    void getUnsignedInt();
+    void getSignedInt64();
+    void getUnsignedInt64();
+    void getDouble();
+    void getFloat();
     void getFixedFloat(double);
-    void getVarInt64(void);
-    void getNormalizedFloat(void);
-    void getVarInt(void);
-    void getUnsignedVarInt(void);
-    void getUnsignedVarInt64(void);
+    void getVarInt64();
+    void getNormalizedFloat();
+    void getVarInt();
+    void getUnsignedVarInt();
+    void getUnsignedVarInt64();
     void getString(std::string &);
-    void getUnsignedChar(void);
+    void getUnsignedChar();
 };

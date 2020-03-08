@@ -7,9 +7,9 @@
 class RiderJumpPacket : Packet {
 
 public:
-    virtual RiderJumpPacket::~RiderJumpPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    RiderJumpPacket::~RiderJumpPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

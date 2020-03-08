@@ -1,6 +1,8 @@
 #pragma once
 
+#include "../bedrock/definition/ExplodeDefinition"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/util/Vec3"
 #include "../bedrock/nbt/CompoundTag"
 
 
@@ -13,11 +15,11 @@ public:
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void explode(Actor &, Vec3 const&);
-    void getFuseLength(void)const;
+    void getFuseLength()const;
     void setFuseLength(int);
-    void getInitialFuseLength(void)const;
-    void getIsFuseLit(void)const;
+    void getInitialFuseLength()const;
+    void getIsFuseLit()const;
     void setAllowUnderwater(bool);
-    bool isFuseLit(void)const;
+    bool isFuseLit()const;
     ExplodeComponent(void);
 };

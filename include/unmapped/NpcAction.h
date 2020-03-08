@@ -13,12 +13,12 @@ public:
     static long TEXT_KEY[abi:cxx11];
     static long BUTTON_NAME_KEY[abi:cxx11];
 
-    virtual NpcAction::~NpcAction();
+    NpcAction::~NpcAction()
     virtual void fromJson(Json::Value const&);
 
     NpcAction(NpcActionType);
-    void getType(void)const;
-    void getMode(void)const;
+    void getType()const;
+    void getMode()const;
     void setMode(NpcActionMode);
     void setButtonName(std::string const&);
     void setText(std::string const&);

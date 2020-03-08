@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../../unmapped/OverloadSyntaxInformation"
 
 
 class CommandSyntaxInformation {

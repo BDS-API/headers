@@ -6,7 +6,7 @@ class Trade {
 
 public:
 
-    void getWeight(void)const;
+    void getWeight()const;
     Trade(Trade&&);
     Trade(void);
 };

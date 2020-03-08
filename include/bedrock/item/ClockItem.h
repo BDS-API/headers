@@ -6,7 +6,7 @@
 class ClockItem : Item {
 
 public:
-    virtual ClockItem::~ClockItem();
+    ClockItem::~ClockItem()
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
 

@@ -1,14 +1,16 @@
 #pragma once
 
 #include "../../container/Container"
-#include "../../../unmapped/BlockSource"
+#include "../../util/Vec3"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
 #include "../../actor/Player"
 
 
 class RandomizableBlockActorContainer : RandomizableBlockActorContainerBase, Container {
 
 public:
-    virtual RandomizableBlockActorContainer::~RandomizableBlockActorContainer();
+    RandomizableBlockActorContainer::~RandomizableBlockActorContainer()
     virtual void startOpen(Player &);
     virtual void dropContents(BlockSource &, Vec3 const&, bool);
 

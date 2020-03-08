@@ -1,11 +1,15 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../level/Level"
-#include "../../unmapped/BlockSource"
-#include "../actor/Player"
-#include "../../unmapped/Random"
 #include "../item/ItemStack"
+#include "unmapped/BlockSource"
+#include "../util/BlockPos"
+#include "../actor/Player"
+#include "../../unmapped/Block"
+#include "../actor/Actor"
+#include "../util/Random"
+#include "../util/Vec3"
+#include "../util/AABB"
+#include "../level/Level"
 
 
 class CauldronBlock : ActorBlock {
@@ -14,12 +18,12 @@ public:
     static long BASE_WATER_PIXEL;
     static long PIXEL_PER_LEVEL;
 
-    virtual CauldronBlock::~CauldronBlock();
+    CauldronBlock::~CauldronBlock()
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;
     virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
-    virtual bool isInteractiveBlock(void)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool isInteractiveBlock()const;
+    virtual bool canContainLiquid()const;
     virtual void handleRain(BlockSource &, BlockPos const&, float)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
@@ -27,9 +31,9 @@ public:
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void handleEntityInside(BlockSource &, BlockPos const&, Actor *, Vec3 &)const;
-    virtual bool hasComparatorSignal(void)const;
+    virtual bool hasComparatorSignal()const;
     virtual void getComparatorSignal(BlockSource &, BlockPos const&, Block const&, unsigned char)const;
-    virtual void getExtraRenderLayers(void)const;
+    virtual void getExtraRenderLayers()const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 

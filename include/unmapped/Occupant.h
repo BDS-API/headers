@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
 #include "../bedrock/nbt/CompoundTag"
 
 

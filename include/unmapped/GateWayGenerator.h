@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../bedrock/level/chunksource/ChunkViewSource"
+#include "../bedrock/util/BlockPos"
 
 
 using namespace EndDragonFight;

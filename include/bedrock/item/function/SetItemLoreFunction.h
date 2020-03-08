@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../ItemInstance"
 #include "../ItemStack"
 #include "../../../json/Value"
 #include "../condition/LootItemCondition"
+#include "../../../unmapped/LootTableContext"
+#include "../../util/Random"
+#include "../ItemInstance"
 
 
 class SetItemLoreFunction : LootItemFunction {
 
 public:
-    virtual SetItemLoreFunction::~SetItemLoreFunction();
+    SetItemLoreFunction::~SetItemLoreFunction()
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
 

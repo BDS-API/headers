@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
 
 
 class StructureTelemetryServerData {
@@ -7,8 +8,8 @@ class StructureTelemetryServerData {
 public:
 
     StructureTelemetryServerData(void);
-    void setHasBeenActivedByRedstone(void);
-    bool hasBeenActivatedByRedstone(void);
+    void setHasBeenActivedByRedstone();
+    bool hasBeenActivatedByRedstone();
     void setHasLoadedIntoUnloadedChunks(BlockPos const&);
     bool hasBeenLoadedIntoUnloadedChunks(BlockPos const&);
 };

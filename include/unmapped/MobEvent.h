@@ -8,7 +8,7 @@ public:
 
     MobEvent(void);
     MobEvent(std::string, std::string, bool);
-    bool isEnabled(void)const;
+    bool isEnabled()const;
     void setEnabled(bool);
-    bool hasDefaultSet(void)const;
+    bool hasDefaultSet()const;
 };

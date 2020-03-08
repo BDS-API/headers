@@ -7,7 +7,7 @@
 class WhitelistEntry : IJsonSerializable {
 
 public:
-    virtual WhitelistEntry::~WhitelistEntry();
+    WhitelistEntry::~WhitelistEntry()
     virtual void serialize(Json::Value &);
     virtual void deserialize(Json::Value &);
 

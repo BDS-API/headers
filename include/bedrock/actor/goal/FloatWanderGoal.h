@@ -1,15 +1,16 @@
 #pragma once
 
+#include "../../../unmapped/FloatRange"
 #include "../Mob"
-#include "../../../unmapped/Vec3"
+#include "../../util/Vec3"
 
 
 class FloatWanderGoal : Goal {
 
 public:
-    virtual FloatWanderGoal::~FloatWanderGoal();
-    virtual bool canUse(void);
-    virtual void tick(void);
+    FloatWanderGoal::~FloatWanderGoal()
+    virtual bool canUse();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
     FloatWanderGoal(Mob &, float, float, float, bool, bool, FloatRange);

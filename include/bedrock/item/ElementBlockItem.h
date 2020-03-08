@@ -5,7 +5,7 @@
 class ElementBlockItem : ChemistryAuxDataBlockItem {
 
 public:
-    virtual ElementBlockItem::~ElementBlockItem();
+    ElementBlockItem::~ElementBlockItem()
     virtual void fixupOnLoad(ItemStackBase &)const;
 
 };

@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
+#include "unmapped/ActorDefinitionGroup"
+#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier"
 #include "../nbt/CompoundTag"
 
 
@@ -11,15 +13,15 @@ public:
     static long SPLASH_RANGE;
 
     virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual ThrownPotion::~ThrownPotion();
-    virtual void queryEntityRenderer(void)const;
+    ThrownPotion::~ThrownPotion()
+    virtual void queryEntityRenderer()const;
     virtual void setAuxValue(int);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
 
     ThrownPotion(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    bool isLinger(void)const;
+    bool isLinger()const;
     void setLinger(bool);
-    void getPotionId(void)const;
+    void getPotionId()const;
     void init(short);
 };

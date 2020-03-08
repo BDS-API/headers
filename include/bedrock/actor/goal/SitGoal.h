@@ -6,10 +6,10 @@
 class SitGoal : Goal {
 
 public:
-    virtual SitGoal::~SitGoal();
-    virtual bool canUse(void);
-    virtual void start(void);
-    virtual void stop(void);
+    SitGoal::~SitGoal()
+    virtual bool canUse();
+    virtual void start();
+    virtual void stop();
     virtual void appendDebugInfo(std::string &)const;
 
     SitGoal(Mob &);

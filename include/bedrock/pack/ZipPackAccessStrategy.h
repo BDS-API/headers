@@ -1,30 +1,31 @@
 #pragma once
 
-#include "../file/access/IFileAccess"
 #include "../../core/Path"
+#include "../../unmapped/ResourceLocation"
+#include "../file/access/IFileAccess"
 
 
 class ZipPackAccessStrategy : PackAccessStrategy {
 
 public:
-    virtual ZipPackAccessStrategy::~ZipPackAccessStrategy();
-    virtual void getPackSize(void)const;
-    virtual void getPackLocation(void)const;
-    virtual void getPackName[abi:cxx11](void)const;
-    virtual bool isWritable(void)const;
+    ZipPackAccessStrategy::~ZipPackAccessStrategy()
+    virtual void getPackSize()const;
+    virtual void getPackLocation()const;
+    virtual void getPackName()const;
+    virtual bool isWritable()const;
     virtual void setIsTrusted(bool);
-    virtual bool isTrusted(void)const;
+    virtual bool isTrusted()const;
     virtual bool hasAsset(Core::Path const&, bool)const;
     virtual bool hasFolder(Core::Path const&)const;
     virtual void getAsset(Core::Path const&, std::string &, bool)const;
     virtual void deleteAsset(Core::PathBuffer<std::string> const&);
     virtual void writeAsset(Core::Path const&, std::string const&);
     virtual void forEachIn(Core::Path const&, std::function<void ()(Core::Path const&)>, bool)const;
-    virtual void getStrategyType(void)const;
-    virtual void getSubPath[abi:cxx11](void)const;
+    virtual void getStrategyType()const;
+    virtual void getSubPath()const;
     virtual void createSubPack(Core::Path const&)const;
-    virtual void unload(void);
-    virtual void readContentIdentity(void)const;
+    virtual void unload();
+    virtual void readContentIdentity()const;
 
     ZipPackAccessStrategy(IFileAccess &, ResourceLocation const&, Core::Path const&);
     ZipPackAccessStrategy(ZipPackAccessStrategy const&);

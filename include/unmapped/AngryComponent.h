@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Mob"
 
 
 class AngryComponent {
@@ -11,10 +11,10 @@ public:
     AngryComponent(AngryComponent&&);
     AngryComponent(void);
     void initFromDefinition(Actor &);
-    void getHasTicked(void)const;
-    void getBroadcastAnger(void)const;
-    void getBroadcastRange(void)const;
-    void getBroadcastFilter(void)const;
+    void getHasTicked()const;
+    void getBroadcastAnger()const;
+    void getBroadcastRange()const;
+    void getBroadcastFilter()const;
     void setHasTicked(bool);
     void setBroadcastAnger(bool);
     void setBroadcastRange(int);

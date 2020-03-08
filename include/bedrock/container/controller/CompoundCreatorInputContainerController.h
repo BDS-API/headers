@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../model/ContainerModel"
 #include "../../item/ItemInstance"
+#include "../model/ContainerModel"
 
 
 class CompoundCreatorInputContainerController : ContainerController {
 
 public:
-    virtual CompoundCreatorInputContainerController::~CompoundCreatorInputContainerController();
+    CompoundCreatorInputContainerController::~CompoundCreatorInputContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
 
     CompoundCreatorInputContainerController(std::shared_ptr<ContainerModel>);

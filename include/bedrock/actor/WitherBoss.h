@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/ActorUniqueID"
-#include "../../unmapped/MobEffectInstance"
-#include "../../unmapped/ActorDefinitionGroup"
 #include "../../unmapped/VariantParameterList"
-#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
-#include "../../unmapped/Vec3"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorUniqueID"
+#include "../util/Vec3"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/Block"
+#include "../nbt/CompoundTag"
 
 
 class WitherBoss : Monster {
@@ -18,9 +20,9 @@ public:
 
     virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
     virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual WitherBoss::~WitherBoss();
-    virtual void remove(void);
-    virtual void getFiringPos(void)const;
+    WitherBoss::~WitherBoss()
+    virtual void remove();
+    virtual void getFiringPos()const;
     virtual void startRiding(Actor &);
     virtual void makeStuckInBlock(float);
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
@@ -33,37 +35,37 @@ public:
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
     virtual void hurtEffects(ActorDamageSource const&, int, bool, bool);
-    virtual void aiStep(void);
-    virtual void getArmorValue(void);
-    virtual void newServerAiStep(void);
+    virtual void aiStep();
+    virtual void getArmorValue();
+    virtual void newServerAiStep();
 
-    void awardSpawnWitherAchievement(void)const;
+    void awardSpawnWitherAchievement()const;
     bool canDestroy(Block const&);
     WitherBoss(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
     void setAerialAttack(bool);
-    void makeInvulnerable(void);
-    void getAerialAttack(void)const;
+    void makeInvulnerable();
+    void getAerialAttack()const;
     void setInvulnerableTicks(int);
     void getAlternativeTarget(int);
-    bool isPowered(void)const;
+    bool isPowered()const;
     void getHeadPos(int)const;
-    void getInvulnerableTicks(void)const;
-    bool canShoot(void);
+    void getInvulnerableTicks()const;
+    bool canShoot();
     void setAlternativeTarget(int, ActorUniqueID);
     void _performRangedAttack(int, Actor &);
     void _performRangedAttack(int, Vec3 const&, bool);
     void performRangedAttack(Mob &, float);
-    void changePhase(void);
+    void changePhase();
     void getHeadRot(int);
-    bool wantsToMove(void);
+    bool wantsToMove();
     void setWantsToMove(bool);
-    void getPhase(void);
-    bool canSummonSkeleton(void);
-    void addSkeleton(void);
-    void removeSkeleton(void);
-    void getOverlayAlpha(void);
+    void getPhase();
+    bool canSummonSkeleton();
+    void addSkeleton();
+    void removeSkeleton();
+    void getOverlayAlpha();
     void getSwellAmount(float)const;
     void setIsPathing(bool);
-    void getPlayerParty(void)const;
+    void getPlayerParty()const;
     void setShotDelay(int);
 };

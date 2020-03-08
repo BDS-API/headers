@@ -7,7 +7,7 @@ class PieceWeight {
 public:
 
     void doPlace(int);
-    bool isValid(void);
+    bool isValid();
     PieceWeight(std::string const&, int, int, int, bool);
     PieceWeight(PieceWeight&&);
 };

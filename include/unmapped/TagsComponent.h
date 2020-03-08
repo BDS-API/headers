@@ -14,5 +14,5 @@ public:
     void addAdditionalSaveData(CompoundTag &, gsl::span<std::string, -1l> const&);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void setTagSetID(IDType<TagSetIDType>);
-    void getTagSetID(void)const;
+    void getTagSetID()const;
 };

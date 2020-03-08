@@ -8,9 +8,9 @@ public:
 
     EntityContextBase(EntityRegistryBase &, EntityId);
     EntityContextBase(EntityRegistryBase &, unsigned int);
-    bool isValid(void)const;
-    void _assertValid(void)const;
-    void _registry(void)const;
-    void _registry(void);
-    void _getRawId(void)const;
+    bool isValid()const;
+    void _assertValid()const;
+    void _registry()const;
+    void _registry();
+    void _getRawId()const;
 };

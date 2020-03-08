@@ -6,7 +6,7 @@
 class ExplodeSystem : ITickingSystem {
 
 public:
-    virtual ExplodeSystem::~ExplodeSystem();
+    ExplodeSystem::~ExplodeSystem()
     virtual void tick(EntityRegistry &);
 
     ExplodeSystem(void);

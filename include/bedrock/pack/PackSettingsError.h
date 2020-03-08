@@ -5,10 +5,10 @@
 class PackSettingsError : PackError {
 
 public:
-    virtual PackSettingsError::~PackSettingsError();
-    virtual void getLocErrorMessage[abi:cxx11](void)const;
-    virtual void getLocErrorMessageMap[abi:cxx11](void)const;
-    virtual void getEventErrorMessageMap[abi:cxx11](void)const;
+    PackSettingsError::~PackSettingsError()
+    virtual void getLocErrorMessage()const;
+    virtual void getLocErrorMessageMap()const;
+    virtual void getEventErrorMessageMap()const;
 
     PackSettingsError(PackSettingsError const&);
     PackSettingsError(void);

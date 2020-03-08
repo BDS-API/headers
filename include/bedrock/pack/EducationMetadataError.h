@@ -5,9 +5,9 @@
 class EducationMetadataError : PackError {
 
 public:
-    virtual EducationMetadataError::~EducationMetadataError();
-    virtual void getLocErrorMessageMap[abi:cxx11](void)const;
-    virtual void getEventErrorMessageMap[abi:cxx11](void)const;
+    EducationMetadataError::~EducationMetadataError()
+    virtual void getLocErrorMessageMap()const;
+    virtual void getEventErrorMessageMap()const;
 
     EducationMetadataError(EducationMetadataError const&);
     EducationMetadataError(void);

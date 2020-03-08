@@ -8,7 +8,7 @@ class Property {
 
 public:
 
-    void getValue(void)const;
+    void getValue()const;
     Property(Social::Events::Property const&);
     Property(void);
 };

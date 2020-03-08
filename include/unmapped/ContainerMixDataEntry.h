@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/io/ReadOnlyBinaryStream"
 #include "../bedrock/io/BinaryStream"
+#include "../bedrock/io/ReadOnlyBinaryStream"
 
 
 class ContainerMixDataEntry {

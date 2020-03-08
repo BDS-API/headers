@@ -7,9 +7,9 @@ class ScopedAutoreleasePool {
 public:
 
     ScopedAutoreleasePool(void);
-    void _create(void);
-    void _drain(void);
-    void drain(void);
-    void drainNow(void);
-    void reset(void);
+    void _create();
+    void _drain();
+    void drain();
+    void drainNow();
+    void reset();
 };

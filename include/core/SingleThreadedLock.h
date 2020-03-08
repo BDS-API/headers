@@ -8,6 +8,6 @@ class SingleThreadedLock {
 
 public:
 
-    void lock(void);
-    void unlock(void);
+    void lock();
+    void unlock();
 };

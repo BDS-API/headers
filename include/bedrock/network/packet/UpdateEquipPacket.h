@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorUniqueID"
 #include "../../io/BinaryStream"
 #include "../../nbt/CompoundTag"
 
@@ -8,9 +9,9 @@
 class UpdateEquipPacket : Packet {
 
 public:
-    virtual UpdateEquipPacket::~UpdateEquipPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    UpdateEquipPacket::~UpdateEquipPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

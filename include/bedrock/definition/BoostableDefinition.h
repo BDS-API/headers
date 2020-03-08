@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../../unmapped/EntityContext"
+#include "../../unmapped/BoostableComponent"
 #include "../../json/Value"
+#include "../../unmapped/EntityContext"
 
 
 class BoostableDefinition {

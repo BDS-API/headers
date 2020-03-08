@@ -1,10 +1,15 @@
 #pragma once
 
-#include "../bedrock/level/chunksource/ChunkViewSource"
-#include "../bedrock/actor/EnderCrystal"
-#include "../bedrock/block/actor/EndGatewayBlockActor"
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/EnderDragon"
+#include "../bedrock/actor/damagesource/ActorDamageSource"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/level/chunksource/ChunkViewSource"
+#include "../bedrock/util/ChunkPos"
+#include "../bedrock/actor/EnderCrystal"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/actor/EndGatewayBlockActor"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class EndDragonFight {
@@ -24,21 +29,21 @@ public:
     void loadData(CompoundTag const&);
     void _setRespawnStage(RespawnAnimation);
     void saveData(CompoundTag &);
-    void tick(void);
-    void _assignAndExecuteNextGatewayTask(void);
+    void tick();
+    void _assignAndExecuteNextGatewayTask();
     void _canSpawnNewGateway(ChunkViewSource *, BlockPos const&)const;
-    void _placeAndLinkNewGatewayPair(void);
-    void _setEndGatewayExitPositions(void);
-    void _dragonAndPortalChunksLoaded(void)const;
-    void tryRespawn(void);
+    void _placeAndLinkNewGatewayPair();
+    void _setEndGatewayExitPositions();
+    void _dragonAndPortalChunksLoaded()const;
+    void tryRespawn();
     void _tickRespawnAnimation(std::vector<ActorUniqueID, std::allocator<ActorUniqueID>> const&, int);
-    void _createNewDragon(void);
+    void _createNewDragon();
     void _spawnExitPortal(bool);
-    void _updateCrystalCount(void);
-    void _hasExitPortal(void)const;
-    void _findExitPortal(void);
+    void _updateCrystalCount();
+    void _hasExitPortal()const;
+    void _findExitPortal();
     void setDragonKilled(EnderDragon &);
-    void _spawnNewGatewayPair(void);
+    void _spawnNewGatewayPair();
     void spawnNewGatewayChunks(BlockPos const&, bool, bool);
     void _spawnNewGatewayChunksTask(std::tuple<EndDragonFight::GatewayTask, EndDragonFight::GateWayGenerator, EndDragonFight::GateWayGenerator> &);
     void verifyExitPositions(EndGatewayBlockActor &);
@@ -46,9 +51,9 @@ public:
     void _makeEndIslandFeature(BlockSource &, BlockPos);
     void _setEndGatewayBlockActorExitPosition(BlockSource &, BlockSource &, BlockPos const&, BlockPos const&, bool);
     void _areaIsLoaded(ChunkPos const&, ChunkViewSource &, int)const;
-    void getCrystalsAlive(void)const;
+    void getCrystalsAlive()const;
     void onCrystalDestroyed(EnderCrystal const&, ActorDamageSource const&);
-    void resetSpikeCrystals(void)const;
-    bool hasPreviouslyKilledDragon(void);
+    void resetSpikeCrystals()const;
+    bool hasPreviouslyKilledDragon();
     void _respawnDragon(std::vector<ActorUniqueID, std::allocator<ActorUniqueID>> const&);
 };

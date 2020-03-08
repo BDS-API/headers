@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
 #include "../../../mce/UUID"
 #include "../../../json/Value"
+#include "../../../unmapped/NetworkIdentifier"
+#include "../../util/BlockPos"
 #include "../CommandOriginData"
+#include "../../level/Level"
 
 
 class CommandOrigin {
@@ -11,20 +13,20 @@ class CommandOrigin {
 public:
     static long sUnknownSource;
 
-    virtual CommandOrigin::~CommandOrigin();
-    virtual void getCursorHitBlockPos(void)const;
-    virtual void getCursorHitPos(void)const;
-    virtual bool hasChatPerms(void)const;
-    virtual bool hasTellPerms(void)const;
+    CommandOrigin::~CommandOrigin()
+    virtual void getCursorHitBlockPos()const;
+    virtual void getCursorHitPos()const;
+    virtual bool hasChatPerms()const;
+    virtual bool hasTellPerms()const;
     virtual bool canUseAbility(AbilitiesIndex)const;
-    virtual bool isWorldBuilder(void)const;
-    virtual bool canUseCommandsWithoutCheatsEnabled(void)const;
-    virtual bool isSelectorExpansionAllowed(void)const;
-    virtual void getSourceId(void)const;
-    virtual void getSourceSubId(void)const;
-    virtual void getOutputReceiver(void)const;
-    virtual void toCommandOriginData(void)const;
-    virtual void getUUID(void)const;
+    virtual bool isWorldBuilder()const;
+    virtual bool canUseCommandsWithoutCheatsEnabled()const;
+    virtual bool isSelectorExpansionAllowed()const;
+    virtual void getSourceId()const;
+    virtual void getSourceSubId()const;
+    virtual void getOutputReceiver()const;
+    virtual void toCommandOriginData()const;
+    virtual void getUUID()const;
     virtual void handleCommandOutputCallback(Json::Value &&)const;
     virtual void _setUUID(mce::UUID const&);
 

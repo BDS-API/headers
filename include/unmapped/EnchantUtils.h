@@ -1,12 +1,16 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/item/ItemStackBase"
-#include "../bedrock/item/ItemInstance"
 #include "../bedrock/item/ItemStack"
-#include "../bedrock/item/Item"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/item/unmapped/ItemEnchants"
+#include "../bedrock/item/ItemStackBase"
 #include "../bedrock/actor/damagesource/ActorDamageSource"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/util/Random"
+#include "../bedrock/item/ItemInstance"
+#include "../bedrock/actor/Mob"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/item/Item"
 
 
 class EnchantUtils {
@@ -56,7 +60,7 @@ public:
     bool isCompatibleWith(Enchant::Type, Enchant::Type);
     void generateRandomEnchantedItem(Item const&, int, int);
     void generateRandomEnchantedBook(int, int);
-    void generateRandomEnchantedBook(void);
+    void generateRandomEnchantedBook();
     void generateEnchantedBook(EnchantmentInstance const&);
     void generateEnchantedBook(ItemEnchants const&);
     void getBookcaseCount(BlockSource &, Vec3 const&);

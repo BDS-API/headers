@@ -11,8 +11,8 @@ public:
 
 
     Abilities(void);
-    void _initAbilities(void);
-    void _registerAbilities(void);
+    void _initAbilities();
+    void _registerAbilities();
     void setPlayerPermissions(PlayerPermissionLevel);
     Abilities(Abilities const&);
     void addSaveData(CompoundTag &)const;
@@ -20,15 +20,15 @@ public:
     void loadSaveData(CompoundTag const&);
     void forEachAbility(std::function<void ()(Ability &, char const*)> const&, Ability::Options);
     void setAbility(AbilitiesIndex, bool);
-    bool isFlying(void)const;
+    bool isFlying()const;
     void getBool(AbilitiesIndex)const;
-    void getCommandPermissions(void)const;
+    void getCommandPermissions()const;
     void setCommandPermissions(CommandPermissionLevel);
-    bool isOperator(void)const;
-    void getPlayerPermissions(void)const;
+    bool isOperator()const;
+    void getPlayerPermissions()const;
     void _setCustomCachedAbility(AbilitiesIndex);
-    void _resetCustomAbilities(void);
-    void _resetAbilities(void);
+    void _resetCustomAbilities();
+    void _resetAbilities();
     void getAbility(AbilitiesIndex);
     void setAbilityDiff(AbilitiesIndex, bool, bool &);
     void setAbility(AbilitiesIndex, float);
@@ -37,7 +37,7 @@ public:
     void getFloat(AbilitiesIndex)const;
     void getAbilityName(AbilitiesIndex);
     void nameToAbilityIndex(std::string const&);
-    void onSwitchToCustom(void);
+    void onSwitchToCustom();
     void getCustomAbilityFromCache(AbilitiesIndex);
     void getCustomAbilityFromCache(AbilitiesIndex)const;
     void _registerAbility(AbilitiesIndex, Ability const&);

@@ -1,17 +1,17 @@
 #pragma once
 
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../util/Vec3"
 #include "../../../unmapped/Dimension"
 #include "../../io/BinaryStream"
-#include "../../../unmapped/Vec3"
 
 
 class ChangeDimensionPacket : Packet {
 
 public:
-    virtual ChangeDimensionPacket::~ChangeDimensionPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    ChangeDimensionPacket::~ChangeDimensionPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

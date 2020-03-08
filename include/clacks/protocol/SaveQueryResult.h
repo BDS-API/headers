@@ -7,34 +7,34 @@ using namespace com::mojang::clacks::protocol;
 class SaveQueryResult : google::protobuf::Message {
 
 public:
-    virtual void com::mojang::clacks::protocol::SaveQueryResult::~SaveQueryResult();
-    virtual void New(void)const;
+    com::mojang::clacks::protocol::SaveQueryResult::~SaveQueryResult()
+    virtual void New()const;
     virtual void New(google::protobuf::Arena *)const;
-    virtual void Clear(void);
-    virtual void IsInitialized(void)const;
+    virtual void Clear();
+    virtual void IsInitialized()const;
     virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *);
-    virtual void ByteSizeLong(void)const;
+    virtual void ByteSizeLong()const;
     virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const;
-    virtual void GetCachedSize(void)const;
+    virtual void GetCachedSize()const;
     virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
     virtual void CopyFrom(google::protobuf::Message const&);
     virtual void MergeFrom(google::protobuf::Message const&);
     virtual void SetCachedSize(int)const;
-    virtual void GetMetadata(void)const;
+    virtual void GetMetadata()const;
 
-    void add_files(void);
-    void InitAsDefaultInstance(void);
+    void add_files();
+    void InitAsDefaultInstance();
     SaveQueryResult(void);
-    void SharedCtor(void);
+    void SharedCtor();
     SaveQueryResult(com::mojang::clacks::protocol::SaveQueryResult const&);
-    void SharedDtor(void);
-    void descriptor(void);
-    void default_instance(void);
+    void SharedDtor();
+    void descriptor();
+    void default_instance();
     void MergeFrom(com::mojang::clacks::protocol::SaveQueryResult const&);
     void CopyFrom(com::mojang::clacks::protocol::SaveQueryResult const&);
     void Swap(com::mojang::clacks::protocol::SaveQueryResult*);
     void InternalSwap(com::mojang::clacks::protocol::SaveQueryResult*);
-    void internal_default_instance(void);
-    void files_size(void)const;
+    void internal_default_instance();
+    void files_size()const;
     void files(int)const;
 };

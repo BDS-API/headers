@@ -5,8 +5,8 @@
 class NavigationGenericDescription : NavigationDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual NavigationGenericDescription::~NavigationGenericDescription();
+    virtual void getJsonName()const;
+    NavigationGenericDescription::~NavigationGenericDescription()
 
     NavigationGenericDescription(void);
 };

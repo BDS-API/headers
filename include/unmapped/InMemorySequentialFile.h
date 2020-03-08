@@ -5,7 +5,7 @@
 class InMemorySequentialFile : leveldb::SequentialFile {
 
 public:
-    virtual InMemorySequentialFile::~InMemorySequentialFile();
+    InMemorySequentialFile::~InMemorySequentialFile()
     virtual void Read(unsigned long, leveldb::Slice *, char *);
     virtual void Skip(unsigned long);
 

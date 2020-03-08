@@ -7,7 +7,7 @@ class PackSetting {
 
 public:
 
-    void get(void)const;
+    void get()const;
     void set(Json::Value const&);
     void registerObserver(void *, std::function<void ()(Json::Value const&)> const&);
     void unregisterObserver(void *);

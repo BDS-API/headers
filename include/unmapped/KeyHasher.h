@@ -8,5 +8,5 @@ class KeyHasher {
 
 public:
 
-    void operator()(ItemDescriptor const&)const;
+    void operator()const;
 };

@@ -14,6 +14,6 @@ public:
     PageContent(PageContent&&);
     void read(CompoundTag const&);
     void write(PageContent const&, CompoundTag &);
-    void createTag(void)const;
-    void getType(void)const;
+    void createTag()const;
+    void getType()const;
 };

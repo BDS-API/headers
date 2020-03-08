@@ -9,6 +9,6 @@ class AutomationSession {
 public:
 
     void connect(std::string const&);
-    bool isReady(void);
-    bool isConnecting(void);
+    bool isReady();
+    bool isConnecting();
 };

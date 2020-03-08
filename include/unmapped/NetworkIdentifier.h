@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../raknet/AddressOrGUID"
-#include "../raknet/RakNetGUID"
 #include "../raknet/SystemAddress"
+#include "../raknet/RakNetGUID"
 
 
 class NetworkIdentifier {
@@ -11,7 +11,7 @@ public:
 
     bool isType(NetworkIdentifier::Type)const;
     NetworkIdentifier(void);
-    void getRakNetGUID(void)const;
+    void getRakNetGUID()const;
     NetworkIdentifier(RakNet::RakNetGUID const&);
     void _init(RakNet::RakNetGUID const&);
     NetworkIdentifier(RakNet::SystemAddress const&);
@@ -22,10 +22,10 @@ public:
     void _init(sockaddr_in const&);
     NetworkIdentifier(sockaddr_in const&);
     NetworkIdentifier(sockaddr_in6 const&);
-    void getHash(void)const;
-    void getPort(void)const;
+    void getHash()const;
+    void getPort()const;
     bool equalsTypeData(NetworkIdentifier const&)const;
-    void getSocketAddress(void)const;
-    void getSocketAddress6(void)const;
-    bool isUnassigned(void)const;
+    void getSocketAddress()const;
+    void getSocketAddress6()const;
+    bool isUnassigned()const;
 };

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/BlockPos"
 #include "../bedrock/nbt/CompoundTag"
 
 
@@ -20,35 +22,35 @@ public:
     void initStateWithExperimentalFlag(bool);
     StructureEditorData(void);
     void setStructureName(gsl::basic_string_span<char const, -1l>);
-    void getStructureOffset(void)const;
+    void getStructureOffset()const;
     void setStructureOffset(BlockPos const&);
-    void getStructureSize(void)const;
+    void getStructureSize()const;
     void setStructureSize(BlockPos const&);
-    void getPivot(void)const;
-    void getIgnoreBlocks(void)const;
+    void getPivot()const;
+    void getIgnoreBlocks()const;
     void setIgnoreBlocks(bool);
-    void getIncludePlayers(void)const;
+    void getIncludePlayers()const;
     void setIncludePlayers(bool);
-    void getShowBoundingBox(void)const;
+    void getShowBoundingBox()const;
     void setShowBoundingBox(bool);
-    void getRedstoneSaveMode(void)const;
+    void getRedstoneSaveMode()const;
     void setRedstoneSaveMode(StructureRedstoneSaveMode);
-    void getLastTouchedByPlayerID(void)const;
+    void getLastTouchedByPlayerID()const;
     void setLastTouchedByPlayerID(ActorUniqueID);
-    void getStructureBlockType(void)const;
+    void getStructureBlockType()const;
     void setStructureBlockType(StructureBlockType);
-    void getIgnoreEntities(void)const;
+    void getIgnoreEntities()const;
     void setIgnoreEntities(bool);
-    void getRotation(void)const;
+    void getRotation()const;
     void setRotation(Rotation);
-    void getMirror(void)const;
+    void getMirror()const;
     void setMirror(Mirror);
     void setStructureDataField(std::string const&);
-    void getIntegrityValue(void)const;
+    void getIntegrityValue()const;
     void setIntegrityValue(float);
-    void getIntegritySeed(void)const;
+    void getIntegritySeed()const;
     void setIntegritySeed(unsigned int);
-    void getStructureSettings(void)const;
+    void getStructureSettings()const;
     void validateSize(BlockPos const&);
     void validateOffset(BlockPos const&);
     void structureNameIsValid(std::string const&);

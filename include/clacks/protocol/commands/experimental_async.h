@@ -1,5 +1,13 @@
 #pragma once
 
+#include "../SaveQueryResult"
+#include "../PlayerAndMessage"
+#include "../PlayerList"
+#include "../Settings"
+#include "../Message"
+#include "../SaveStateResult"
+#include "../Empty"
+#include "../MetricReport"
 
 
 using namespace com::mojang::clacks::protocol::Commands::Stub;
@@ -7,7 +15,7 @@ using namespace com::mojang::clacks::protocol::Commands::Stub;
 class experimental_async : com::mojang::clacks::protocol::Commands::StubInterface::experimental_async_interface {
 
 public:
-    virtual void com::mojang::clacks::protocol::Commands::Stub::experimental_async::~experimental_async();
+    com::mojang::clacks::protocol::Commands::Stub::experimental_async::~experimental_async()
     virtual void listPlayer(grpc::ClientContext *, com::mojang::clacks::protocol::Empty const*, com::mojang::clacks::protocol::PlayerList *, std::function<void ()(grpc::Status)>);
     virtual void kick(grpc::ClientContext *, com::mojang::clacks::protocol::PlayerAndMessage const*, com::mojang::clacks::protocol::Empty *, std::function<void ()(grpc::Status)>);
     virtual void say(grpc::ClientContext *, com::mojang::clacks::protocol::Message const*, com::mojang::clacks::protocol::Empty *, std::function<void ()(grpc::Status)>);

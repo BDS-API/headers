@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../raknet/SocketDescriptor"
+#include "../bedrock/definition/ConnectionDefinition"
 #include "../raknet/RakPeerInterface"
 
 
@@ -10,15 +11,15 @@ public:
 
     RakPeerHelper(RakPeerHelper::IPSupportInterface &);
     void peerStartup(RakNet::RakPeerInterface *, ConnectionDefinition const&);
-    bool isIPv4Supported(void)const;
-    bool isIPv6Supported(void)const;
+    bool isIPv4Supported()const;
+    bool isIPv6Supported()const;
     void _resetToIPv6Only(RakNet::SocketDescriptor *, int &);
     void _startupInternal(RakNet::RakPeerInterface *, ConnectionDefinition const&, RakNet::SocketDescriptor *, int &, int);
-    void LogIPSupport(void);
-    void getIPv4BoundPort(void)const;
-    void getIPv6BoundPort(void)const;
-    void getResult(void)const;
-    void getIPv4ConnectionIndex(void)const;
-    void getIPv6ConnectionIndex(void)const;
+    void LogIPSupport();
+    void getIPv4BoundPort()const;
+    void getIPv6BoundPort()const;
+    void getResult()const;
+    void getIPv4ConnectionIndex()const;
+    void getIPv6ConnectionIndex()const;
     void getConnectionIndex(Social::GameConnectionInfo const&)const;
 };

@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../Mob"
-#include "../../../unmapped/Vec3"
+#include "../../util/Vec3"
 
 
 class RandomFlyingGoal : RandomStrollGoal {
 
 public:
-    virtual RandomFlyingGoal::~RandomFlyingGoal();
-    virtual bool canUse(void);
+    RandomFlyingGoal::~RandomFlyingGoal()
+    virtual bool canUse();
     virtual void appendDebugInfo(std::string &)const;
-    virtual void _setWantedPosition(void);
+    virtual void _setWantedPosition();
 
     RandomFlyingGoal(Mob &, float, int, int, bool);
     void _getTreePos(Vec3 &)const;

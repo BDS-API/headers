@@ -1,6 +1,8 @@
 #pragma once
 
 #include "../bedrock/level/biome/Biome"
+#include "../json/Value"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class BiomeComponentFactory {
@@ -11,5 +13,5 @@ public:
     BiomeComponentFactory(BiomeComponentFactory::FactoryScope);
     bool processDataComponents(Biome &, IWorldRegistriesProvider &, Json::Value &)const;
     bool processDataComponents(Biome &, IWorldRegistriesProvider &, CompoundTag &)const;
-    void registrationFinished(void);
+    void registrationFinished();
 };

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Random"
 
 
 class ImprovedNoise {
@@ -17,5 +19,5 @@ public:
     void _grad(int, Vec3 const&);
     void _getValue(Vec3 const&)const;
     void _readArea(float *, Vec3 const&, int, int, int, Vec3 const&, float)const;
-    void _hashCode(void)const;
+    void _hashCode()const;
 };

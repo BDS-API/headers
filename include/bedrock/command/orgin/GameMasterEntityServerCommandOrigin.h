@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../../unmapped/ActorUniqueID"
+#include "../../actor/unmapped/ActorUniqueID"
 #include "../../level/Level"
 #include "../../actor/Actor"
 
@@ -8,11 +8,11 @@
 class GameMasterEntityServerCommandOrigin : ActorServerCommandOrigin {
 
 public:
-    virtual GameMasterEntityServerCommandOrigin::~GameMasterEntityServerCommandOrigin();
-    virtual void getPermissionsLevel(void)const;
-    virtual void clone(void)const;
-    virtual bool isSelectorExpansionAllowed(void)const;
-    virtual void getOriginType(void)const;
+    GameMasterEntityServerCommandOrigin::~GameMasterEntityServerCommandOrigin()
+    virtual void getPermissionsLevel()const;
+    virtual void clone()const;
+    virtual bool isSelectorExpansionAllowed()const;
+    virtual void getOriginType()const;
 
     GameMasterEntityServerCommandOrigin(Actor &);
     GameMasterEntityServerCommandOrigin(ActorUniqueID, Level &);

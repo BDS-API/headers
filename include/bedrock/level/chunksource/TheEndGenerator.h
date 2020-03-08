@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../../unmapped/BoundingBox"
-#include "../../../unmapped/BlockPos"
-#include "../../../unmapped/BlockVolume"
-#include "../../../unmapped/ChunkPos"
-#include "../LevelChunk"
+#include "../../block/unmapped/BlockVolume"
+#include "../../block/unmapped/BlockSource"
+#include "../../../unmapped/BiomeSource"
+#include "../../util/ChunkPos"
 #include "../../../unmapped/Dimension"
-#include "../../../unmapped/BlockSource"
+#include "../../util/BlockPos"
 #include "../generator/WorldGenerator"
+#include "../../util/Random"
+#include "../../../unmapped/BoundingBox"
+#include "../LevelChunk"
 
 
 class TheEndGenerator : ChunkSource, WorldGenerator {
 
 public:
-    virtual TheEndGenerator::~TheEndGenerator();
+    TheEndGenerator::~TheEndGenerator()
     virtual void postProcess(ChunkViewSource &);
     virtual void loadChunk(LevelChunk &, bool);
     virtual void postProcessMobsAt(BlockSource *, int, int, Random &);
@@ -22,7 +24,7 @@ public:
     virtual void findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos&);
     virtual void garbageCollectBlueprints(buffer_span<ChunkPos>);
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
-    virtual void findSpawnPosition(void)const;
+    virtual void findSpawnPosition()const;
 
     TheEndGenerator(Dimension &, unsigned int);
     void _prepareStructureBlueprints(ChunkPos const&, BiomeSource &);

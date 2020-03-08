@@ -5,8 +5,8 @@
 class NavigationWalkDescription : NavigationDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual NavigationWalkDescription::~NavigationWalkDescription();
+    virtual void getJsonName()const;
+    NavigationWalkDescription::~NavigationWalkDescription()
 
     NavigationWalkDescription(void);
 };

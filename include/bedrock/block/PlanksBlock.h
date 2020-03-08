@@ -1,7 +1,7 @@
 #pragma once
 
+#include "../util/Random"
 #include "../../unmapped/Block"
-#include "../../unmapped/Random"
 
 
 class PlanksBlock : BlockLegacy {
@@ -9,10 +9,10 @@ class PlanksBlock : BlockLegacy {
 public:
     static long WOOD_NAMES[abi:cxx11];
 
-    virtual PlanksBlock::~PlanksBlock();
+    PlanksBlock::~PlanksBlock()
     virtual void getResourceItem(Random &, Block const&, int)const;
-    virtual void buildDescriptionId[abi:cxx11](Block const&)const;
-    virtual bool isAuxValueRelevantForPicking(void)const;
+    virtual void buildDescriptionId(Block const&)const;
+    virtual bool isAuxValueRelevantForPicking()const;
     virtual void getSilkTouchItemInstance(Block const&)const;
 
     PlanksBlock(std::string const&, int);

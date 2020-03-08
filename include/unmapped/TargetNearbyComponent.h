@@ -10,10 +10,10 @@ public:
     TargetNearbyComponent(TargetNearbyComponent&&);
     TargetNearbyComponent(void);
     void initFromDefinition(Actor &);
-    void getWasSeenLastTick(void)const;
-    void getWasInsideRange(void)const;
-    void getWasOutsideRange(void)const;
-    void getPreviousDistance(void)const;
+    void getWasSeenLastTick()const;
+    void getWasInsideRange()const;
+    void getWasOutsideRange()const;
+    void getPreviousDistance()const;
     void setWasSeenLastTick(bool);
     void setWasInsideRange(bool);
     void setWasOutsideRange(bool);

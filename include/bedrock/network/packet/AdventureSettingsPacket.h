@@ -1,6 +1,8 @@
 #pragma once
 
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../../unmapped/Abilities"
 #include "../../io/BinaryStream"
 #include "../../../unmapped/AdventureSettings"
 
@@ -8,9 +10,9 @@
 class AdventureSettingsPacket : Packet {
 
 public:
-    virtual AdventureSettingsPacket::~AdventureSettingsPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    AdventureSettingsPacket::~AdventureSettingsPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

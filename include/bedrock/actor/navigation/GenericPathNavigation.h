@@ -2,12 +2,13 @@
 
 #include "../Mob"
 #include "../../../unmapped/NavigationComponent"
+#include "../../description/component/NavigationDescription"
 
 
 class GenericPathNavigation : PathNavigation {
 
 public:
-    virtual GenericPathNavigation::~GenericPathNavigation();
+    GenericPathNavigation::~GenericPathNavigation()
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;

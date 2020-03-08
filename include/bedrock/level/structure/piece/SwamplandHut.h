@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../../../../unmapped/BlockSource"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
 #include "../../LevelChunk"
 
 
 class SwamplandHut : ScatteredFeaturePiece {
 
 public:
-    virtual SwamplandHut::~SwamplandHut();
-    virtual void getType(void)const;
+    SwamplandHut::~SwamplandHut()
+    virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void addHardcodedSpawnAreas(LevelChunk &)const;

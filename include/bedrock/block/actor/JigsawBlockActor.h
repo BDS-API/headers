@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
+#include "../../util/BlockPos"
 
 
 class JigsawBlockActor : BlockActor {
 
 public:
-    virtual JigsawBlockActor::~JigsawBlockActor();
+    JigsawBlockActor::~JigsawBlockActor()
 
     JigsawBlockActor(BlockPos const&);
 };

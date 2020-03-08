@@ -7,7 +7,7 @@ using namespace Core;
 class FileSystem_generic : Core::FileSystemImpl {
 
 public:
-    virtual void Core::FileSystem_generic::~FileSystem_generic();
+    Core::FileSystem_generic::~FileSystem_generic()
     virtual void _openFile(std::unique_ptr<Core::FileImpl, std::default_delete<Core::FileImpl>> &, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode);
     virtual void _fileExists(Core::Path const&);
     virtual void _deleteFile(Core::Path const&);

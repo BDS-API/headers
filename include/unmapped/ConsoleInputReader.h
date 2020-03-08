@@ -8,5 +8,5 @@ public:
 
     ConsoleInputReader(void);
     void getLine(std::string &);
-    void unblockReading(void);
+    void unblockReading();
 };

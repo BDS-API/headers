@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../mce/Image"
 
 
 class SubClientConnectionRequest {
@@ -10,25 +11,25 @@ public:
     SubClientConnectionRequest(std::unique_ptr<WebToken, std::default_delete<WebToken>>, std::string const&);
     SubClientConnectionRequest(SubClientConnectionRequest const&);
     void fromString(std::string const&);
-    void getCertificate(void)const;
+    void getCertificate()const;
     void getData(std::string const&)const;
-    void getClientRandomId(void)const;
-    void getSkinData(void)const;
-    void getSkinImageWidth(void)const;
-    void getSkinImageHeight(void)const;
-    void getCapeData(void)const;
-    void getCapeImageWidth(void)const;
-    void getCapeImageHeight(void)const;
-    void getAnimatedImageData(void)const;
-    void getDeviceOS(void)const;
-    bool isPremiumSkin(void)const;
-    bool isPersonaSkin(void)const;
-    bool isCapeOnClassicSkin(void)const;
-    void getCurrentInputMode(void)const;
-    bool isThirdPartyNameOnly(void)const;
+    void getClientRandomId()const;
+    void getSkinData()const;
+    void getSkinImageWidth()const;
+    void getSkinImageHeight()const;
+    void getCapeData()const;
+    void getCapeImageWidth()const;
+    void getCapeImageHeight()const;
+    void getAnimatedImageData()const;
+    void getDeviceOS()const;
+    bool isPremiumSkin()const;
+    bool isPersonaSkin()const;
+    bool isCapeOnClassicSkin()const;
+    void getCurrentInputMode()const;
+    bool isThirdPartyNameOnly()const;
     void verify(std::vector<std::string, std::allocator<std::string>> const&, long);
     void validate(std::unique_ptr<Certificate, std::default_delete<Certificate>>, long)const;
-    void verifySelfSigned(void);
+    void verifySelfSigned();
     void getBinaryData(std::string const&)const;
-    bool isVerified(void)const;
+    bool isVerified()const;
 };

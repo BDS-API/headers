@@ -8,9 +8,9 @@ using namespace AgentCommands;
 class CollectCommand : AgentCommands::Command {
 
 public:
-    virtual void AgentCommands::CollectCommand::~CollectCommand();
-    virtual void execute(void);
-    virtual bool isDone(void);
+    AgentCommands::CollectCommand::~CollectCommand()
+    virtual void execute();
+    virtual bool isDone();
 
     CollectCommand(Player &, int, AgentCommands::CollectCommand::CollectionSpecification);
 };

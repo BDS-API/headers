@@ -8,9 +8,9 @@ using namespace AgentCommands;
 class TillCommand : AgentCommands::Command {
 
 public:
-    virtual void AgentCommands::TillCommand::~TillCommand();
-    virtual void execute(void);
-    virtual bool isDone(void);
+    AgentCommands::TillCommand::~TillCommand()
+    virtual void execute();
+    virtual bool isDone();
 
     TillCommand(Player &, std::string, AgentCommands::Direction);
 };

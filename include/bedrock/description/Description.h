@@ -9,17 +9,17 @@ public:
     static long NAME_TO_ID_MAP[abi:cxx11];
     static long ID_TO_NAME_MAP[abi:cxx11];
 
-    virtual Description::~Description();
+    Description::~Description()
     virtual void deserializeData(Json::Value &);
 
     Description(void);
     Description(Description const&);
     void startParsing(Json::Value &, Json::Value &, char const*);
     void parseDescription(Json::Value &);
-    void registerAttributes(void);
+    void registerAttributes();
     void registerJsonName(std::string const&);
-    void registerProperties(void);
-    void registerTriggers(void);
-    void registerComponents(void);
+    void registerProperties();
+    void registerTriggers();
+    void registerComponents();
     void getId(std::string const&);
 };

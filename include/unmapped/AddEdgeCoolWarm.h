@@ -8,5 +8,5 @@ class AddEdgeCoolWarm {
 
 public:
 
-    void operator()(LayerDetails::NeighborhoodReader<LayerValues::PreBiome, 1u, 1u> &)const;
+    void operator()const;
 };

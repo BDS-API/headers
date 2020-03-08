@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
+#include "../util/BlockPos"
+#include "unmapped/ActorDefinitionIdentifier"
 
 
 class Turtle : Animal {
 
 public:
-    virtual Turtle::~Turtle();
-    virtual void normalTick(void);
-    virtual void getShadowRadius(void)const;
+    Turtle::~Turtle()
+    virtual void normalTick();
+    virtual void getShadowRadius()const;
     virtual void die(ActorDamageSource const&);
     virtual void _getWalkTargetValue(BlockPos const&);
 

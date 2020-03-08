@@ -5,8 +5,8 @@
 class NavigationFloatDescription : NavigationDescription {
 
 public:
-    virtual void getJsonName(void)const;
-    virtual NavigationFloatDescription::~NavigationFloatDescription();
+    virtual void getJsonName()const;
+    NavigationFloatDescription::~NavigationFloatDescription()
 
     NavigationFloatDescription(void);
 };

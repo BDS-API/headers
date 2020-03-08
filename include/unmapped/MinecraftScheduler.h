@@ -8,6 +8,6 @@ public:
     static long mInstance;
 
 
-    void client(void);
-    void destroyClientSingleton(void);
+    void client();
+    void destroyClientSingleton();
 };

@@ -10,5 +10,5 @@ public:
 
     PlayerScoreboardId(void);
     PlayerScoreboardId(long);
-    void getHash(void)const;
+    void getHash()const;
 };

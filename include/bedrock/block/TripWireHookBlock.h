@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../../unmapped/AABB"
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Actor"
-#include "../../unmapped/Random"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class TripWireHookBlock : BlockLegacy {
 
 public:
-    virtual TripWireHookBlock::~TripWireHookBlock();
+    TripWireHookBlock::~TripWireHookBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
@@ -25,11 +27,11 @@ public:
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
-    virtual bool canSpawnOn(void)const;
+    virtual bool canSpawnOn()const;
 
     TripWireHookBlock(std::string const&, int);
     void _getShape(int, AABB &)const;
-    void getTickDelay(void)const;
+    void getTickDelay()const;
     void calculateState(BlockSource &, BlockPos const&, bool, bool, int, Block const&)const;
     void playSound(BlockSource &, BlockPos const&, bool, bool, bool, bool)const;
 };

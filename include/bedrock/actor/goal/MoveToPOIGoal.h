@@ -1,25 +1,26 @@
 #pragma once
 
 #include "../Mob"
-#include "../../../unmapped/BlockSource"
-#include "../../../unmapped/Vec3"
+#include "../../util/Vec3"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class MoveToPOIGoal : BaseMoveToGoal {
 
 public:
-    virtual MoveToPOIGoal::~MoveToPOIGoal();
-    virtual bool canUse(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    MoveToPOIGoal::~MoveToPOIGoal()
+    virtual bool canUse();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
     virtual bool isValidTarget(BlockSource &, BlockPos const&);
-    virtual void _moveToBlock(void);
-    virtual void _getTargetPosition(void)const;
+    virtual void _moveToBlock();
+    virtual void _getTargetPosition()const;
     virtual void getPOI(POIType);
     virtual void _getOwnedPOI(POIType)const;
 
     MoveToPOIGoal(Mob &, float, POIType, float);
     void _canReachPOI(Vec3 const&, float, bool);
-    void _updatePOIBooking(void);
+    void _updatePOIBooking();
 };

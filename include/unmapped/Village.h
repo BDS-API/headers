@@ -1,9 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
+#include "../bedrock/util/Tick"
+#include "../bedrock/block/unmapped/BlockSource"
+#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/BlockPos"
 #include "../bedrock/actor/Player"
+#include "../mce/UUID"
+#include "../bedrock/actor/Actor"
+#include "../bedrock/util/Random"
 #include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/Mob"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/AABB"
+#include "../bedrock/level/Level"
 
 
 class Village {
@@ -39,45 +48,45 @@ public:
 
     void _sendSoundTheAlarmAchievement(Player const&)const;
     void _addPoiToVillage(ActorUniqueID const&, std::weak_ptr<POIInstance>);
-    void _calcPOIDist(void);
+    void _calcPOIDist();
     Village(Dimension &, mce::UUID, BlockPos const&);
     void _setDefaultBoundsAround(BlockPos const&);
-    void getBounds(void)const;
-    void getRaidBounds(void)const;
+    void getBounds()const;
+    void getRaidBounds()const;
     void tick(Tick, BlockSource &);
-    void _updateAggressors(void);
-    void _updateDwellerTimers(void);
+    void _updateAggressors();
+    void _updateDwellerTimers();
     void _updateClaimedPOIs(BlockSource &);
-    void _shouldUpdate(void)const;
+    void _shouldUpdate()const;
     void _updateUnclaimedPOIs(BlockSource &);
-    void _claimUnclaimedPOIs(void);
-    void getBedPOICount(void)const;
-    void getPopulationSize(void)const;
+    void _claimUnclaimedPOIs();
+    void getBedPOICount()const;
+    void getPopulationSize()const;
     void _getDwellerMap(DwellerRole);
     void findRandomSpawnPos(BlockSource &, BlockPos const&, BlockPos const&);
-    void getCenter(void)const;
+    void getCenter()const;
     void addActorToVillage(DwellerRole, ActorUniqueID const&);
     void _spawnPassiveDwellers(BlockSource &, int);
     void _ringBells(BlockSource &, Random &)const;
-    bool isVillageHeroActive(void)const;
+    bool isVillageHeroActive()const;
     void _applyHeroOfTheVillageEffect(BlockSource &, AABB const&);
-    void _shouldSave(void)const;
-    void saveEntireVillage(void);
-    void debugDraw(void);
-    void getUniqueID(void)const;
+    void _shouldSave()const;
+    void saveEntireVillage();
+    void debugDraw();
+    void getUniqueID()const;
     void withinVillageBounds(Vec3 const&, float)const;
     bool canSpawnAt(BlockSource &, BlockPos const&, BlockPos const&);
     bool canSpawnAt(BlockSource &, int, int, int, int, int, int);
-    void getApproximateRadius(void)const;
-    void getPOICount(void)const;
+    void getApproximateRadius()const;
+    void getPOICount()const;
     void getDwellerRoleCount(DwellerRole)const;
-    void getIdealPopulationSize(void)const;
-    void checkNeedMoreVillagers(void)const;
-    bool isBreedTimerOk(void)const;
-    void getUnclaimedPOIs(void)const;
+    void getIdealPopulationSize()const;
+    void checkNeedMoreVillagers()const;
+    bool isBreedTimerOk()const;
+    void getUnclaimedPOIs()const;
     void fetchOwnedPOI(ActorUniqueID const&, POIType);
-    void clearOwnedPOIs(void);
-    void removeVillageSavedData(void);
+    void clearOwnedPOIs();
+    void removeVillageSavedData();
     bool canAddPOI(std::weak_ptr<POIInstance>)const;
     bool hasPOI(std::weak_ptr<POIInstance>)const;
     void addPOI(std::weak_ptr<POIInstance>);
@@ -93,7 +102,7 @@ public:
     void _findWeightedPOI(std::vector<std::weak_ptr<POIInstance>, std::allocator<std::weak_ptr<POIInstance>>> &, Random &, ActorUniqueID);
     void _getType(POIType);
     void _findClosestDweller(Actor *, Actor *&, float &, std::unordered_map<ActorUniqueID, Tick, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<std::pair<ActorUniqueID const, Tick>>> const&)const;
-    void _createRaid(void);
+    void _createRaid();
     void _sendRaidUpdateToPlayersInVillage(bool)const;
     void _findSpawnableRegion(Vec3, int)const;
     void _findSpawnableRegion(Vec3, int, bool &)const;
@@ -111,19 +120,19 @@ public:
     void _loadVillageDwellers(CompoundTag const&);
     void _loadVillagePOIs(CompoundTag const&);
     void _loadVillageRaid(CompoundTag const&);
-    void _saveVillageData(void)const;
-    void _saveVillagePlayerStanding(void)const;
-    void _saveVillageDwellers(void)const;
-    void _saveVillagePOIs(void)const;
-    void _saveVillageRaid(void)const;
+    void _saveVillageData()const;
+    void _saveVillagePlayerStanding()const;
+    void _saveVillageDwellers()const;
+    void _saveVillagePOIs()const;
+    void _saveVillageRaid()const;
     void _helpLocateRaiders(Raid const&);
     void _playSoundFrom(Vec3 const&, LevelSoundEvent);
     void villagerLivesHere(ActorUniqueID const&)const;
-    void onRemovedFromManager(void);
-    bool canRemove(void)const;
+    void onRemovedFromManager();
+    bool canRemove()const;
     void addAggressor(Mob const&);
     void getClosestAggressor(Actor *);
-    bool hasAggressors(void)const;
+    bool hasAggressors()const;
     void getClosestBadStandingPlayer(Actor *);
     bool isVeryBadStanding(ActorUniqueID const&);
     void getClosestPOI(POIType, BlockPos const&);
@@ -135,14 +144,14 @@ public:
     bool isGoodStanding(ActorUniqueID const&);
     bool isBadStanding(ActorUniqueID const&);
     void rewardAllPlayers(int);
-    void resetNoBreedTimer(void);
-    void startVillageHeroTimer(void);
+    void resetNoBreedTimer();
+    void startVillageHeroTimer();
     void resetDwellerTimer(DwellerRole, ActorUniqueID const&);
-    void triggerRaid(void);
-    bool hasRaid(void)const;
-    void getRaid(void)const;
-    void clearRaid(void);
-    void fireSoundTheAlarm(void);
+    void triggerRaid();
+    bool hasRaid()const;
+    void getRaid()const;
+    void clearRaid();
+    void fireSoundTheAlarm();
     bool isVillagePOI(VillageManager const&, Block const&);
     bool isValidBedPOI(Block const&);
     bool isValidRegisteredPOI(BlockSource &, Block const&, BlockPos const&);

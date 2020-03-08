@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionIdentifier"
 #include "../../unmapped/RenderParams"
+#include "unmapped/ActorDefinitionGroup"
 
 
 class WanderingTrader : Mob {
 
 public:
-    virtual WanderingTrader::~WanderingTrader();
-    virtual void interactPreventDefault(void);
-    virtual void getEntityTypeId(void)const;
+    WanderingTrader::~WanderingTrader()
+    virtual void interactPreventDefault();
+    virtual void getEntityTypeId()const;
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
 
     WanderingTrader(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);

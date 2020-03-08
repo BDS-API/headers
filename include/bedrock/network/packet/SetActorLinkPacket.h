@@ -1,16 +1,16 @@
 #pragma once
 
 #include "../../io/BinaryStream"
-#include "../../../unmapped/ActorLink"
+#include "../../actor/unmapped/ActorLink"
 #include "../../io/ReadOnlyBinaryStream"
 
 
 class SetActorLinkPacket : Packet {
 
 public:
-    virtual SetActorLinkPacket::~SetActorLinkPacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    SetActorLinkPacket::~SetActorLinkPacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

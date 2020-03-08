@@ -6,10 +6,10 @@
 class MoveTowardsRestrictionGoal : Goal {
 
 public:
-    virtual MoveTowardsRestrictionGoal::~MoveTowardsRestrictionGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
+    MoveTowardsRestrictionGoal::~MoveTowardsRestrictionGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
     virtual void appendDebugInfo(std::string &)const;
 
     MoveTowardsRestrictionGoal(Mob &, float);

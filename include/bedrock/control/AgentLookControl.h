@@ -8,7 +8,7 @@ class AgentLookControl : LookControl {
 public:
     static long sBaseYMax;
 
-    virtual AgentLookControl::~AgentLookControl();
+    AgentLookControl::~AgentLookControl()
     virtual void initializeInternal(Mob &);
     virtual void tick(Mob &);
 

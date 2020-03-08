@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/Vec3"
 
 
 class DimensionConversionData {
@@ -7,6 +8,6 @@ class DimensionConversionData {
 public:
 
     DimensionConversionData(Vec3 const&, int);
-    void getOverworldSpawnPoint(void)const;
-    void getNetherScale(void)const;
+    void getOverworldSpawnPoint()const;
+    void getNetherScale()const;
 };

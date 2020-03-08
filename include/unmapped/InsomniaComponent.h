@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class InsomniaComponent {
@@ -9,12 +9,12 @@ class InsomniaComponent {
 public:
 
     InsomniaComponent(InsomniaComponent&&);
-    void restartTimer(void);
-    bool hasInsomnia(void)const;
+    void restartTimer();
+    bool hasInsomnia()const;
     void setInsomnia(int);
-    void getInsomniaTimerTicks(void)const;
-    void getTicksUntilInsomnia(void)const;
+    void getInsomniaTimerTicks()const;
+    void getTicksUntilInsomnia()const;
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    void incrementTimeSinceRest(void);
+    void incrementTimeSinceRest();
 };

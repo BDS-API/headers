@@ -6,6 +6,6 @@ class FilterList {
 
 public:
 
-    void initialize(void);
+    void initialize();
     void findFilterDefinition(std::string const&);
 };

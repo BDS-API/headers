@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../Description"
+#include "../../../json/Value"
 
 
 class TriggerDescription : Description {
 
 public:
-    virtual TriggerDescription::~TriggerDescription();
+    TriggerDescription::~TriggerDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

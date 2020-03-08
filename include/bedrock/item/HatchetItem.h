@@ -1,12 +1,16 @@
 #pragma once
 
+#include "unmapped/Tier"
+#include "../actor/Actor"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
 
 
 class HatchetItem : DiggerItem {
 
 public:
-    virtual HatchetItem::~HatchetItem();
-    virtual void getEnchantSlot(void)const;
+    HatchetItem::~HatchetItem()
+    virtual void getEnchantSlot()const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 

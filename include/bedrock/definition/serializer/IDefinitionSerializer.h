@@ -5,7 +5,7 @@
 class IDefinitionSerializer {
 
 public:
-    virtual IDefinitionSerializer::~IDefinitionSerializer();
+    IDefinitionSerializer::~IDefinitionSerializer()
 
     IDefinitionSerializer(void);
 };

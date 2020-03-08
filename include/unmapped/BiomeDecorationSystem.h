@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../bedrock/level/biome/Biome"
+#include "../bedrock/level/LevelChunk"
+#include "../bedrock/util/Random"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class BiomeDecorationSystem {

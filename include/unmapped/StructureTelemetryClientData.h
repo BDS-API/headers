@@ -7,14 +7,14 @@ class StructureTelemetryClientData {
 public:
 
     StructureTelemetryClientData(void);
-    void resetCounts(void);
-    void increaseSizeEditCount(void);
-    void increaseOffsetEditCount(void);
-    void increaseRotationEditCount(void);
-    void increaseMirrorEditCount(void);
-    void getSizeEditCount(void)const;
-    void getOffsetEditCount(void)const;
-    void getRotationEditCount(void)const;
-    void getMirrorEditCount(void)const;
-    bool hasAnyFieldBeenEdited(void)const;
+    void resetCounts();
+    void increaseSizeEditCount();
+    void increaseOffsetEditCount();
+    void increaseRotationEditCount();
+    void increaseMirrorEditCount();
+    void getSizeEditCount()const;
+    void getOffsetEditCount()const;
+    void getRotationEditCount()const;
+    void getMirrorEditCount()const;
+    bool hasAnyFieldBeenEdited()const;
 };

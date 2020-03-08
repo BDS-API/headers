@@ -10,7 +10,7 @@ public:
 
     void clamp(int, int, int);
     void clamp(float, float, float);
-    void initMth(void);
+    void initMth();
     void sqrt(float);
     void fastInvSqrt(float);
     void invSqrt(float);
@@ -23,7 +23,7 @@ public:
     void atan(float);
     void atan2(float, float);
     void safeIncrement(int &);
-    void fastRandom(void);
+    void fastRandom();
     void intFloorDiv(int, int);
     bool absDecrease(float, float, float);
     void wrapRadians(float);

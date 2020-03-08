@@ -5,13 +5,13 @@
 class ContextMessageLogger {
 
 public:
-    virtual ContextMessageLogger::~ContextMessageLogger();
+    ContextMessageLogger::~ContextMessageLogger()
 
     ContextMessageLogger(ContextMessageLoggerOptions const&);
-    void shouldOutputAllMessagesOnDestruction(void);
+    void shouldOutputAllMessagesOnDestruction();
     void log(LogArea, LogLevel, char const*);
-    void didReceiveMessages(void)const;
+    void didReceiveMessages()const;
     void didReceiveMessageOfType(LogLevel)const;
-    void shouldMessagePostToParentMessageLoggers(void);
-    void getMessageArray(void)const;
+    void shouldMessagePostToParentMessageLoggers();
+    void getMessageArray()const;
 };

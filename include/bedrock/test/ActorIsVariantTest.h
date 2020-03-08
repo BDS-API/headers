@@ -6,9 +6,9 @@
 class ActorIsVariantTest : SimpleIntFilterTest {
 
 public:
-    virtual ActorIsVariantTest::~ActorIsVariantTest();
+    ActorIsVariantTest::~ActorIsVariantTest()
     virtual void evaluate(FilterContext const&)const;
-    virtual void getName(void)const;
+    virtual void getName()const;
 
     ActorIsVariantTest(void);
 };

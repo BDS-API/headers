@@ -6,7 +6,7 @@
 class CompassItem : Item {
 
 public:
-    virtual CompassItem::~CompassItem();
+    CompassItem::~CompassItem()
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
 

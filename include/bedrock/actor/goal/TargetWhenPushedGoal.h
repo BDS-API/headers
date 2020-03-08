@@ -1,18 +1,19 @@
 #pragma once
 
-#include "../Mob"
+#include "../../../unmapped/MobDescriptor"
 #include "../Actor"
+#include "../Mob"
 
 
 class TargetWhenPushedGoal : Goal {
 
 public:
-    virtual TargetWhenPushedGoal::~TargetWhenPushedGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual bool canBeInterrupted(void);
-    virtual void start(void);
-    virtual void stop(void);
+    TargetWhenPushedGoal::~TargetWhenPushedGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual bool canBeInterrupted();
+    virtual void start();
+    virtual void stop();
     virtual void appendDebugInfo(std::string &)const;
 
     TargetWhenPushedGoal(Mob &, std::vector<MobDescriptor, std::allocator<MobDescriptor>>, float);

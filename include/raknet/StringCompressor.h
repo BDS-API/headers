@@ -8,9 +8,9 @@ class StringCompressor {
 
 public:
 
-    void AddReference(void);
-    void RemoveReference(void);
-    void Instance(void);
+    void AddReference();
+    void RemoveReference();
+    void Instance();
     StringCompressor(void);
     void GenerateTreeFromStrings(unsigned char *, unsigned int, unsigned char);
     void EncodeString(char const*, int, RakNet::BitStream *, unsigned char);

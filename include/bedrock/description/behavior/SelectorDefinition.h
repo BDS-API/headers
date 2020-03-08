@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../json/Value"
 #include "../../../unmapped/BehaviorFactory"
+#include "../../../json/Value"
 
 
 class SelectorDefinition : CompositeDefinition {
 
 public:
-    virtual SelectorDefinition::~SelectorDefinition();
+    SelectorDefinition::~SelectorDefinition()
     virtual void load(Json::Value, BehaviorFactory const&);
 
     SelectorDefinition(void);

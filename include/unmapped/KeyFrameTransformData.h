@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../json/Value"
+#include "../bedrock/util/Vec3"
 
 
 class KeyFrameTransformData {
@@ -12,8 +13,8 @@ public:
     void addChannelTransform(ExpressionNode const&, Vec3 const&);
     void addChannelTransform(ExpressionNode const&, ExpressionNode const&, ExpressionNode const&);
     void animate(RenderParams &, BoneOrientation &, float, BoneTransformType)const;
-    bool isConstant(void)const;
-    void getSequencedTransformCount(void)const;
+    bool isConstant()const;
+    void getSequencedTransformCount()const;
     void toJson(Json::Value &)const;
     KeyFrameTransformData(void);
     KeyFrameTransformData(KeyFrameTransformData&&);

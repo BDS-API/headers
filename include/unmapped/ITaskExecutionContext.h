@@ -5,7 +5,7 @@
 class ITaskExecutionContext {
 
 public:
-    virtual ITaskExecutionContext::~ITaskExecutionContext();
+    ITaskExecutionContext::~ITaskExecutionContext()
 
     ITaskExecutionContext(void);
 };

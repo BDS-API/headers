@@ -2,7 +2,6 @@
 
 #include "../core/Path"
 #include "../core/FileOpenMode"
-#include "../core/Result"
 
 
 class JournaledFile {
@@ -14,12 +13,12 @@ public:
     bool isOldFile(Core::Path);
     bool isNewFile(Core::Path);
     JournaledFile(std::function<Core::Result ()(Core::Path)> &&);
-    bool isOpen(void)const;
-    void close(void);
+    bool isOpen()const;
+    void close();
     void open(Core::Path, Core::FileOpenMode, Core::FileBufferingMode);
-    void _flushFiles(void);
+    void _flushFiles();
     void write(void const*, unsigned long);
-    void flush(void);
-    void getFile(void);
-    void getFile(void)const;
+    void flush();
+    void getFile();
+    void getFile()const;
 };

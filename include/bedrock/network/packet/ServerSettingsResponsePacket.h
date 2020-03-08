@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../io/BinaryStream"
 #include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream"
 
 
 class ServerSettingsResponsePacket : Packet {
 
 public:
-    virtual ServerSettingsResponsePacket::~ServerSettingsResponsePacket();
-    virtual void getId(void)const;
-    virtual void getName[abi:cxx11](void)const;
+    ServerSettingsResponsePacket::~ServerSettingsResponsePacket()
+    virtual void getId()const;
+    virtual void getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 

@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
 #include "../actor/Actor"
+#include "../util/Vec3"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
 
 
 class DiodeBlock : BlockLegacy {
 
 public:
-    virtual DiodeBlock::~DiodeBlock();
-    virtual bool isSignalSource(void)const;
+    DiodeBlock::~DiodeBlock()
+    virtual bool isSignalSource()const;
     virtual void getDirectSignal(BlockSource &, BlockPos const&, int)const;
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
@@ -17,12 +19,12 @@ public:
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual bool canSurvive(BlockSource &, BlockPos const&)const;
     virtual void getVariant(Block const&)const;
-    virtual bool canSpawnOn(void)const;
+    virtual bool canSpawnOn()const;
     virtual void getSignal(BlockSource &, BlockPos const&, int)const;
     virtual bool isLocked(BlockSource &, BlockPos const&)const;
     virtual bool isSameDiode(Block const&)const;
     virtual void shouldPrioritize(BlockSource &, BlockPos const&)const;
-    virtual bool isOn(void)const;
+    virtual bool isOn()const;
     virtual void shouldTurnOn(BlockSource &, BlockPos const&)const;
     virtual void getInputSignal(BlockSource &, BlockPos const&)const;
     virtual bool isAlternateInput(Block const&)const;

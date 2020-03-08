@@ -5,7 +5,7 @@
 class IFileWriteAccess {
 
 public:
-    virtual IFileWriteAccess::~IFileWriteAccess();
+    IFileWriteAccess::~IFileWriteAccess()
 
     IFileWriteAccess(void);
 };

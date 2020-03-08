@@ -9,6 +9,6 @@ class ChildAnimationComponentInfo {
 
 public:
 
-    void setDirty(void);
+    void setDirty();
     void getAnimationComponent(Actor &, unsigned short, AttachableSlotIndex);
 };

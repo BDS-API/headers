@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
 #include "../../actor/Actor"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class OakFeature : TreeFeature {
 
 public:
-    virtual OakFeature::~OakFeature();
+    OakFeature::~OakFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     OakFeature(Actor *, bool);

@@ -11,12 +11,12 @@ public:
     BoneAnimationChannel(BoneTransformType, ExpressionNode const&);
     BoneAnimationChannel(BoneTransformType, ExpressionNode const&, ExpressionNode const&, ExpressionNode const&);
     void addKeyFrame(float);
-    void getKeyFrames(void)const;
-    void getKeyFrames(void);
-    void sortKeyFrames(void);
+    void getKeyFrames()const;
+    void getKeyFrames();
+    void sortKeyFrames();
     void toJson(Json::Value &)const;
     void animate(RenderParams &, BoneOrientation &, float)const;
-    void getMaxKeyFrameTime(void)const;
+    void getMaxKeyFrameTime()const;
     BoneAnimationChannel(BoneAnimationChannel&&);
     BoneAnimationChannel(BoneAnimationChannel const&);
 };

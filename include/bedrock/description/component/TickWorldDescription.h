@@ -10,8 +10,8 @@ public:
     static long MaxChunkRadius;
     static long MinDistToPlayers;
 
-    virtual void getJsonName(void)const;
-    virtual TickWorldDescription::~TickWorldDescription();
+    virtual void getJsonName()const;
+    TickWorldDescription::~TickWorldDescription()
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 

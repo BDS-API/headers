@@ -8,7 +8,7 @@ public:
 
     MCRESULT(bool, MCCATEGORY, unsigned short);
     MCRESULT(int);
-    bool isSuccess(void)const;
+    bool isSuccess()const;
     bool isSuccess(int);
-    void getFullCode(void)const;
+    void getFullCode()const;
 };

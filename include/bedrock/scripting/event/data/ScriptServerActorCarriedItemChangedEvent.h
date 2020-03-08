@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../../../../unmapped/ScriptEngine"
-#include "../../../../unmapped/ActorUniqueID"
+#include "../../unmapped/ScriptEngine"
+#include "../../../actor/unmapped/ActorUniqueID"
+#include "../../ScriptObjectHandle"
 #include "../../../item/ItemInstance"
 
 
@@ -10,10 +11,10 @@ class ScriptServerActorCarriedItemChangedEvent : ScriptEventData {
 public:
     static long mHash;
 
-    virtual ScriptServerActorCarriedItemChangedEvent::~ScriptServerActorCarriedItemChangedEvent();
+    ScriptServerActorCarriedItemChangedEvent::~ScriptServerActorCarriedItemChangedEvent()
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
-    void getHash(void);
+    void getHash();
     ScriptServerActorCarriedItemChangedEvent(void);
     void setActorId(ActorUniqueID const&);
     void setItems(ItemInstance const&, ItemInstance const&);

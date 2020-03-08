@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/actor/Actor"
+#include "../bedrock/description/component/SpawnActorDescription"
+#include "../bedrock/nbt/CompoundTag"
 
 
 class SpawnActorComponent {
@@ -14,5 +15,5 @@ public:
     void initFromDefinition(Actor &, SpawnActorDescription const&);
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    void getSpawnEntries(void);
+    void getSpawnEntries();
 };

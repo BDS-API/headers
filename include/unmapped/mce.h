@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../mce/Degree"
 #include "../mce/Radian"
+#include "../mce/Degree"
 
 
 class mce {

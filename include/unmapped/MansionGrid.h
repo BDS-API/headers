@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../bedrock/util/Random"
 
 
 using namespace WoodlandMansionPieces;
@@ -15,5 +16,5 @@ public:
     void _recursiveCorridor(WoodlandMansionPieces::SimpleGrid &, int, int, unsigned char, int);
     void _cleanEdges(WoodlandMansionPieces::SimpleGrid &);
     void _identifyRooms(WoodlandMansionPieces::SimpleGrid &, WoodlandMansionPieces::SimpleGrid &);
-    void _setupThirdFloor(void);
+    void _setupThirdFloor();
 };

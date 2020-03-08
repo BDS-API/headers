@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../../unmapped/Random"
+#include "../../../util/Random"
 
 
 class NetherFortressStart : StructureStart {
 
 public:
-    virtual NetherFortressStart::~NetherFortressStart();
-    virtual void getType(void)const;
+    NetherFortressStart::~NetherFortressStart()
+    virtual void getType()const;
 
     NetherFortressStart(void);
     NetherFortressStart(Random &, int, int);

@@ -9,7 +9,7 @@ class HuffmanEncodingTree {
 public:
 
     HuffmanEncodingTree(void);
-    void FreeMemory(void);
+    void FreeMemory();
     void GenerateFromFrequencyTable(unsigned int *);
     void InsertNodeIntoSortedList(HuffmanEncodingTreeNode *, DataStructures::LinkedList<HuffmanEncodingTreeNode *> *)const;
     void EncodeArray(unsigned char *, unsigned long, RakNet::BitStream *);

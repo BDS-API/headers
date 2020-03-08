@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BlockSource"
 #include "../../actor/Actor"
+#include "../../util/Random"
+#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource"
 
 
 class RoofTreeFeature : TreeFeature {
 
 public:
-    virtual RoofTreeFeature::~RoofTreeFeature();
+    RoofTreeFeature::~RoofTreeFeature()
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     RoofTreeFeature(Actor *);

@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../nbt/CompoundTag"
 #include "../actor/Actor"
+#include "../../unmapped/DataLoadHelper"
+#include "../nbt/CompoundTag"
 
 
 class CommandBlockComponent {
@@ -13,16 +14,16 @@ public:
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void initFromDefinition(Actor &);
-    void getTicking(void)const;
+    void getTicking()const;
     void setTicking(bool);
-    void _updateTickCount(void);
-    void getCurrentTickCount(void)const;
-    void decrementTickCount(void);
-    void getBaseCommandBlock(void)const;
-    void getBaseCommandBlock(void);
+    void _updateTickCount();
+    void getCurrentTickCount()const;
+    void decrementTickCount();
+    void getBaseCommandBlock()const;
+    void getBaseCommandBlock();
     void setTrackOutput(Actor &, bool);
     void setName(Actor &, std::string const&);
     void onCommandBlockUpdate(Actor &, std::string const&, bool, std::string, int, bool);
     void setLastOutput(Actor &, std::string const&);
-    void resetCurrentTick(void);
+    void resetCurrentTick();
 };

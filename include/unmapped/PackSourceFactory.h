@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../core/Path"
 #include "../mce/UUID"
+#include "../core/Path"
 
 
 class PackSourceFactory {
@@ -18,6 +18,6 @@ public:
     void getDirectoryPackSourceContaining(PackIdVersion const&)const;
     void createWorldTemplatePackSource(WorldTemplateManager const&, mce::UUID const&, PackType, PackOrigin);
     void getWorldTemplatePackSource(mce::UUID const&, PackType)const;
-    void getRealmsUnknownPackSources(void);
+    void getRealmsUnknownPackSources();
     void removeFromDirectoryPackSource(Core::Path const&);
 };

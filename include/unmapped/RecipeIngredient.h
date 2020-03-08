@@ -2,6 +2,7 @@
 
 #include "../bedrock/block/BlockLegacy"
 #include "../bedrock/item/Item"
+#include "../bedrock/item/unmapped/ItemDescriptor"
 
 
 class RecipeIngredient {

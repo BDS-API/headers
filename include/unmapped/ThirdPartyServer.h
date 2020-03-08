@@ -8,7 +8,7 @@ class ThirdPartyServer {
 public:
 
     ThirdPartyServer(void);
-    void getPort(void)const;
+    void getPort()const;
     void setImagePath(Core::Path const&);
-    bool isXblRequired(void)const;
+    bool isXblRequired()const;
 };

@@ -8,6 +8,6 @@ public:
 
     StackResultStorageFeature(WeakStorageFeature const&);
     StackResultStorageFeature(StackResultStorageFeature&&);
-    void _hasValue(void)const;
-    void _getStackRef(void)const;
+    void _hasValue()const;
+    void _getStackRef()const;
 };

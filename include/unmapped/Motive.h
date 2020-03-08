@@ -38,13 +38,13 @@ public:
     static long mWater;
 
 
-    void getAllMotivesAsList(void);
+    void getAllMotivesAsList();
     void getMotiveByName(std::string const&);
     Motive(std::string, int, int, int, int, bool);
-    void getDefaultImage(void);
-    void getWidth(void)const;
-    void getHeight(void)const;
-    void getUo(void)const;
-    void getVo(void)const;
-    bool isPublic(void)const;
+    void getDefaultImage();
+    void getWidth()const;
+    void getHeight()const;
+    void getUo()const;
+    void getVo()const;
+    bool isPublic()const;
 };

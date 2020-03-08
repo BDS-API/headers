@@ -7,9 +7,9 @@ class CompoundTagVariant {
 
 public:
 
-    void get(void);
-    void copy(void)const;
-    void get(void)const;
+    void get();
+    void copy()const;
+    void get()const;
     CompoundTagVariant(void);
     CompoundTagVariant(CompoundTagVariant&&);
     CompoundTagVariant(Tag &&);

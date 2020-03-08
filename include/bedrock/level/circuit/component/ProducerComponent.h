@@ -2,21 +2,23 @@
 
 #include "../../../../unmapped/CircuitSceneGraph"
 #include "../../../../unmapped/CircuitSystem"
+#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../util/BlockPos"
 
 
 class ProducerComponent : BaseCircuitComponent {
 
 public:
-    virtual ProducerComponent::~ProducerComponent();
+    ProducerComponent::~ProducerComponent()
     virtual void setStrength(int);
-    virtual bool canStopPower(void);
+    virtual bool canStopPower();
     virtual void setStopPower(bool);
-    virtual void getBaseType(void)const;
-    virtual void getInstanceType(void)const;
+    virtual void getBaseType()const;
+    virtual void getInstanceType()const;
     virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
     virtual void evaluate(CircuitSystem &, BlockPos const&);
 
-    bool doesAllowAttachments(void);
+    bool doesAllowAttachments();
     ProducerComponent(void);
     void allowAttachments(bool);
 };

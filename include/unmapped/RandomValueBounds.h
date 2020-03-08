@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../json/Value"
+#include "../bedrock/util/Random"
 
 
 class RandomValueBounds {
@@ -8,8 +9,8 @@ class RandomValueBounds {
 public:
 
     RandomValueBounds(void);
-    void getMin(void)const;
-    void getMax(void)const;
+    void getMin()const;
+    void getMax()const;
     void getInt(Random &)const;
     void getFloat(Random &)const;
     bool matchesValue(int)const;

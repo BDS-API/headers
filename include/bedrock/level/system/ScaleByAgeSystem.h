@@ -6,7 +6,7 @@
 class ScaleByAgeSystem : ITickingSystem {
 
 public:
-    virtual ScaleByAgeSystem::~ScaleByAgeSystem();
+    ScaleByAgeSystem::~ScaleByAgeSystem()
     virtual void tick(EntityRegistry &);
 
     ScaleByAgeSystem(void);

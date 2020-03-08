@@ -8,7 +8,7 @@ public:
 
     MolangVariableMap(void);
     MolangVariableMap(unsigned long);
-    void getVariables(void)const;
+    void getVariables()const;
     void getMolangVariable(HashedString const&)const;
     void getMolangVariable(unsigned long, char const*)const;
     void getOrAddMolangVariable(HashedString const&);
@@ -16,6 +16,6 @@ public:
     void setMolangVariable(HashedString const&, float);
     void setMolangVariable(unsigned long, char const*, float);
     void removeMolangVariable(unsigned long);
-    void clear(void);
-    void size(void)const;
+    void clear();
+    void size()const;
 };

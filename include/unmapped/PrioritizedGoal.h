@@ -9,10 +9,10 @@ public:
 
     PrioritizedGoal(int, std::unique_ptr<Goal, std::default_delete<Goal>>);
     PrioritizedGoal(PrioritizedGoal&&);
-    void getPriority(void)const;
+    void getPriority()const;
     void setPriority(int);
-    void getUsed(void)const;
+    void getUsed()const;
     void setUsed(bool);
-    void getToStart(void)const;
+    void getToStart()const;
     void setToStart(bool);
 };

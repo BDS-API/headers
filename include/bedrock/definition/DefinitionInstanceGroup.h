@@ -9,7 +9,7 @@ public:
 
     void add(std::shared_ptr<IDefinitionInstance> const&);
     void remove(std::shared_ptr<IDefinitionInstance> const&);
-    void clear(void);
+    void clear();
     void combine(DefinitionInstanceGroup const&);
     void subtract(DefinitionInstanceGroup const&);
     void contains(DefinitionInstanceGroup const&)const;

@@ -7,7 +7,7 @@ using namespace LevelStorage;
 class Batch {
 
 public:
-    virtual void LevelStorage::Batch::~Batch();
+    LevelStorage::Batch::~Batch()
 
     Batch(void);
 };

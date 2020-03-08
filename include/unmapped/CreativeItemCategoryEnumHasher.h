@@ -6,5 +6,5 @@ class CreativeItemCategoryEnumHasher {
 
 public:
 
-    void operator()(CreativeItemCategory const&)const;
+    void operator()const;
 };

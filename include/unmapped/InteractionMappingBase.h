@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/actor/Player"
+#include "../bedrock/actor/unmapped/ActorInteraction"
 #include "../bedrock/actor/Actor"
 
 
@@ -8,7 +10,7 @@ using namespace PlayerInteractionSystem;
 class InteractionMappingBase {
 
 public:
-    virtual void PlayerInteractionSystem::InteractionMappingBase::~InteractionMappingBase();
+    PlayerInteractionSystem::InteractionMappingBase::~InteractionMappingBase()
     virtual void getInteraction(Actor &, Player &, ActorInteraction &);
 
     InteractionMappingBase(void);

@@ -10,7 +10,7 @@ public:
     MolangScriptArg(MolangScriptArg const&);
     MolangScriptArg(void);
     MolangScriptArg(float);
-    void clear(void);
+    void clear();
     bool isEqual(MolangScriptArg const&)const;
     void set(Json::Value const&);
 };

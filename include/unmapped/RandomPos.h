@@ -1,5 +1,10 @@
 #pragma once
 
+#include "../bedrock/actor/Mob"
+#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Random"
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/block/unmapped/BlockSource"
 
 
 class RandomPos {

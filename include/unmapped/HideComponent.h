@@ -10,11 +10,11 @@ public:
 
     HideComponent(void);
     void initFromDefinition(Actor &);
-    bool isInRaid(void);
-    bool isReactingToBell(void);
-    void setInRaid(void);
-    void setReactingToBell(void);
-    void setNotHiding(void);
+    bool isInRaid();
+    bool isReactingToBell();
+    void setInRaid();
+    void setReactingToBell();
+    void setNotHiding();
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
 };

@@ -1,19 +1,23 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/BlockSource"
-#include "../actor/Actor"
 #include "../actor/Player"
+#include "../actor/Actor"
+#include "../util/Vec3"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class BellBlock : ActorBlock {
 
 public:
-    virtual BellBlock::~BellBlock();
+    BellBlock::~BellBlock()
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void onProjectileHit(BlockSource &, BlockPos const&, Actor const&)const;
-    virtual bool canContainLiquid(void)const;
+    virtual bool canContainLiquid()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void movedByPiston(BlockSource &, BlockPos const&)const;

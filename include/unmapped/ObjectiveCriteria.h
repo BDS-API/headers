@@ -8,8 +8,8 @@ class ObjectiveCriteria {
 public:
 
     ObjectiveCriteria(std::string const&, bool, ObjectiveRenderType);
-    bool isReadOnly(void)const;
-    void getRenderType(void)const;
+    bool isReadOnly()const;
+    void getRenderType()const;
     void deserialize(CompoundTag const&);
     void serialize(ObjectiveCriteria const&);
 };

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../model/ContainerModel"
 #include "../../item/ItemInstance"
+#include "../model/ContainerModel"
 
 
 class LoomDyeContainerController : ContainerController {
 
 public:
-    virtual LoomDyeContainerController::~LoomDyeContainerController();
+    LoomDyeContainerController::~LoomDyeContainerController()
     virtual bool isItemAllowed(ItemInstance const&)const;
 
     LoomDyeContainerController(std::shared_ptr<ContainerModel>);

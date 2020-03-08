@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/EntityContext"
 #include "../../../unmapped/EntityRegistry"
+#include "../../../unmapped/EntityContext"
+#include "../../../unmapped/EntitySensorComponent"
+#include "../../actor/unmapped/ActorComponent"
 
 
 class EntitySensorSystem : ITickingSystem {
 
 public:
-    virtual EntitySensorSystem::~EntitySensorSystem();
+    EntitySensorSystem::~EntitySensorSystem()
     virtual void tick(EntityRegistry &);
 
     EntitySensorSystem(void);

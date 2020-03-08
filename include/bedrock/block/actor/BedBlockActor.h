@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/BlockPos"
-#include "../../level/Level"
-#include "../../../unmapped/ActorUniqueID"
-#include "../../../unmapped/BlockSource"
+#include "../../../unmapped/DataLoadHelper"
+#include "../../actor/unmapped/ActorUniqueID"
+#include "../../util/BlockPos"
+#include "../unmapped/BlockSource"
 #include "../../nbt/CompoundTag"
+#include "../../level/Level"
 
 
 class BedBlockActor : BlockActor {
 
 public:
-    virtual BedBlockActor::~BedBlockActor();
+    BedBlockActor::~BedBlockActor()
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
@@ -19,12 +20,12 @@ public:
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
-    virtual void getName[abi:cxx11](void)const;
+    virtual void getName()const;
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
-    void getColorIndex(void)const;
+    void getColorIndex()const;
     BedBlockActor(BlockPos const&);
-    void startSleepingOn(void);
+    void startSleepingOn();
     void stopSleepingOn(BlockSource &, bool);
     void claimPetSleepOnBed(ActorUniqueID);
     void setColorIndex(int);

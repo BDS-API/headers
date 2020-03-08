@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../json/Value"
 
 
 class FeatureTypeFactory {

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../bedrock/actor/Player"
+#include "../bedrock/nbt/CompoundTag"
 #include "../bedrock/level/Level"
 
 

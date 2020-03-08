@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../Mob"
 #include "../Actor"
+#include "../Mob"
 
 
 class StompAttackGoal : MeleeAttackGoal {
 
 public:
-    virtual StompAttackGoal::~StompAttackGoal();
-    virtual bool canUse(void);
-    virtual bool canContinueToUse(void);
-    virtual void start(void);
-    virtual void stop(void);
-    virtual void tick(void);
+    StompAttackGoal::~StompAttackGoal()
+    virtual bool canUse();
+    virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
     virtual void _attemptAttackTarget(Actor *);
 

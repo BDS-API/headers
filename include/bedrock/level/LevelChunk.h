@@ -1,23 +1,28 @@
 #pragma once
 
-#include "../../unmapped/BlockPos"
-#include "../../unmapped/AABB"
-#include "../../unmapped/BlockID"
-#include "../actor/Actor"
-#include "../io/IDataInput"
-#include "../../unmapped/ActorUniqueID"
-#include "../../unmapped/ChunkBlockPos"
-#include "../../unmapped/BlockSource"
+#include "../block/unmapped/BlockVolume"
+#include "../block/unmapped/BlockID"
+#include "chunksource/ChunkViewSource"
+#include "../util/Brightness"
+#include "../util/Tick"
+#include "../block/unmapped/BlockSource"
+#include "chunk/SubChunkLightUpdate"
+#include "biome/Biome"
+#include "../actor/unmapped/ActorUniqueID"
 #include "../io/IDataOutput"
 #include "chunksource/ChunkSource"
-#include "../../unmapped/Block"
-#include "../../unmapped/SubChunk"
-#include "biome/Biome"
-#include "../../unmapped/BoundingBox"
-#include "chunksource/ChunkViewSource"
+#include "../util/ChunkPos"
 #include "../../unmapped/Dimension"
+#include "../util/BlockPos"
+#include "../../unmapped/Block"
+#include "../../unmapped/ChunkBlockPos"
 #include "../block/actor/BlockActor"
-#include "../../unmapped/Tick"
+#include "../actor/Actor"
+#include "chunk/SubChunk"
+#include "../actor/unmapped/ActorLink"
+#include "../../unmapped/BoundingBox"
+#include "../io/IDataInput"
+#include "../util/AABB"
 
 
 class LevelChunk {
@@ -26,17 +31,17 @@ public:
     static long UPDATE_MAP_BIT_SHIFT;
 
 
-    bool isOwnedByTickingThread(void)const;
-    void getAllocatedHeight(void)const;
-    void getSubChunks(void)const;
-    void onTickingStarted(void);
-    void onTickingStopped(void);
+    bool isOwnedByTickingThread()const;
+    void getAllocatedHeight()const;
+    void getSubChunks()const;
+    void onTickingStarted();
+    void onTickingStopped();
     void createNew(Dimension &, ChunkPos, bool);
     void createNewNoCustomDeleter(Dimension &, ChunkPos, bool);
     LevelChunk(Dimension &, ChunkPos const&, bool);
     void _reassignSubChunks(buffer_span_mut<SubChunk>);
     void _createSubChunk(unsigned long, bool, SubChunkInitMode);
-    void _assertBlockEntityAccess(void)const;
+    void _assertBlockEntityAccess()const;
     void _placeBlockEntity(std::shared_ptr<BlockActor>);
     void _createBlockEntity(BlockPos const&, BlockSource *, Block const&, Block const&);
     void _setLight(ChunkBlockPos const&, Brightness);
@@ -44,31 +49,31 @@ public:
     void getHeightmap(ChunkBlockPos const&)const;
     void _recalcHeight(ChunkBlockPos const&, BlockSource *);
     void placeCallbacks(ChunkBlockPos const&, Block const&, Block const&, BlockSource *, std::shared_ptr<BlockActor>);
-    void trySetLightingTaskActive(void);
-    void resetLightingTaskActive(void);
+    void trySetLightingTaskActive();
+    void resetLightingTaskActive();
     void _removeCallbacks(ChunkBlockPos const&, Block const&, Block const&, BlockSource *);
     void getBlock(ChunkBlockPos const&)const;
     void setBlock(ChunkBlockPos const&, Block const&, BlockSource *, std::shared_ptr<BlockActor>);
     void setExtraBlock(ChunkBlockPos const&, Block const&, BlockSource *);
     void getExtraBlock(ChunkBlockPos const&)const;
     void fetchBlocks(BlockPos const&, BlockVolume &)const;
-    void getPosition(void)const;
+    void getPosition()const;
     bool isBlockInChunk(BlockPos const&)const;
-    void borderBlocksAreEnabled(void);
+    void borderBlocksAreEnabled();
     void getBorder(ChunkBlockPos const&)const;
     void setBorder(ChunkBlockPos const&, bool);
     void addHardcodedSpawningArea(BoundingBox const&, HardcodedSpawnAreaType);
-    void getMin(void)const;
-    void getMax(void)const;
+    void getMin()const;
+    void getMax()const;
     void removeHardcodedSpawningArea(HardcodedSpawnAreaType);
     void findHardcodedSpawnAt(BlockPos const&);
-    void getSpawningAreas(void)const;
+    void getSpawningAreas()const;
     void getPreWorldGenHeightmap(ChunkBlockPos const&)const;
     void setPreWorldGenHeightMap(std::unique_ptr<std::vector<short, std::allocator<short>>, std::default_delete<std::vector<short, std::allocator<short>>>>);
-    void getTickQueue(void);
-    void getTickQueue(void)const;
-    void getRandomTickQueue(void);
-    void getRandomTickQueue(void)const;
+    void getTickQueue();
+    void getTickQueue()const;
+    void getRandomTickQueue();
+    void getRandomTickQueue()const;
     void getBrightness(ChunkBlockPos const&)const;
     void getBrightness(ChunkBlockPos const&, Brightness)const;
     void getRawBrightness(ChunkBlockPos const&, Brightness)const;
@@ -80,28 +85,28 @@ public:
     void tryChangeState(ChunkState, ChunkState);
     void changeState(ChunkState, ChunkState);
     void _changeTerrainDataState(ChunkTerrainDataState, ChunkTerrainDataState);
-    void _onTickingQueueChanged(void);
-    void _onRandomTickingQueueChanged(void);
+    void _onTickingQueueChanged();
+    void _onRandomTickingQueueChanged();
     void createSubchunk(unsigned long, bool, SubChunkInitMode);
     void getConvertedInterpolantBool(unsigned long, unsigned long)const;
-    void enableBlockEntityAccessForThisThread(void)const;
+    void enableBlockEntityAccessForThisThread()const;
     void getEntities(Actor *, AABB const&, std::vector<Actor *, std::allocator<Actor *>> &)const;
     void getEntities(buffer_span<Actor *>, AABB const&, std::vector<Actor *, std::allocator<Actor *>> &)const;
     void getEntities(ActorType, AABB const&, std::vector<Actor *, std::allocator<Actor *>> &, bool)const;
     void getEntity(ActorUniqueID const&)const;
-    void getEntities(void)const;
-    void getBlockEntities(void)const;
+    void getEntities()const;
+    void getBlockEntities()const;
     void getBlockEntity(ChunkBlockPos const&);
     bool hasBlockEntity(ChunkBlockPos const&);
     void setAllBlocks(buffer_span<Block const*>, short);
     void setAllLegacyBlockIDAndData(buffer_span<BlockID>, buffer_span<NibblePair>);
     void tick(BlockSource &, Tick const&);
     void _deserializeEntity(BlockSource &, IDataInput &, std::vector<ActorLink, std::allocator<ActorLink>> &);
-    void setUnsaved(void);
+    void setUnsaved();
     void tickBlocks(BlockSource &);
     void tickBlockEntities(BlockSource &);
     void tickRedstoneBlocks(BlockSource &);
-    void tickEntitiesDirty(void);
+    void tickEntitiesDirty();
     void findLightningTarget(BlockPos const&, BlockSource &);
     void serialize2DMaps(IDataOutput &)const;
     void serializeBiomes(IDataOutput &)const;
@@ -115,7 +120,7 @@ public:
     void serializeBiomeStates(IDataOutput &)const;
     void serializeEntities(IDataOutput &)const;
     void legacyDeserializeTerrain(IDataInput &);
-    void checkBiomeStates(void);
+    void checkBiomeStates();
     void deserialize2DMaps(IDataInput &);
     void deserializeBiomes(IDataInput &);
     void deserialize2DMapsLegacy(IDataInput &);
@@ -136,57 +141,57 @@ public:
     bool isAABBOverlappingChunk(BlockPos const&, BlockPos const&)const;
     bool isAABBFullyInChunk(BlockPos const&, BlockPos const&)const;
     bool needsSaving(int, int)const;
-    bool isDirty(void)const;
+    bool isDirty()const;
     void getBiome(ChunkBlockPos const&)const;
     void setBiome(Biome const&, ChunkBlockPos const&);
     void setGrassColor(int, ChunkBlockPos const&);
     void setWaterColor(int, ChunkBlockPos const&);
     void getGrassColor(ChunkBlockPos const&);
     void getWaterColor(ChunkBlockPos const&);
-    void setCachedTemperatureNoise(ChunkBlockPos const&, signed char);
+    void setCachedTemperatureNoise(ChunkBlockPos const&, signed const);
     void getCachedTemperatureNoise(ChunkBlockPos const&);
     bool wasTickedThisTick(Tick const&)const;
     void _generateOriginalLightingSubChunk(BlockSource &, unsigned long, bool);
     void generateOriginalLighting(ChunkViewSource &, bool);
-    void getDimension(void)const;
+    void getDimension()const;
     void _generateOriginalLighting(ChunkViewSource &, bool);
     void runtimeRelightSubchunk(BlockSource &, unsigned long, std::vector<SubChunkLightUpdate, std::allocator<SubChunkLightUpdate>> *, std::vector&<BlockPos, std::allocator<std::vector&>>);
     void recomputeHeightMap(bool);
     void getTopRainBlockPos(ChunkBlockPos const&);
-    void clearDeletedEntities(void);
+    void clearDeletedEntities();
     void setPendingEntities(std::string &);
-    bool hasEntitiesToSerialize(void)const;
-    bool hasEntitiesPendingToLoad(void)const;
-    void getState(void)const;
-    void _getTerrainDataState(void)const;
-    void setSaved(void);
-    void onDiscarded(void);
-    void onBlockEntityChanged(void);
+    bool hasEntitiesToSerialize()const;
+    bool hasEntitiesPendingToLoad()const;
+    void getState()const;
+    void _getTerrainDataState()const;
+    void setSaved();
+    void onDiscarded();
+    void onBlockEntityChanged();
     void setupRedstoneCircuit(BlockSource &);
-    bool isRedstoneSetupDone(void)const;
-    bool needsUpgradeFix(void)const;
-    void getLoadedFormat(void)const;
+    bool isRedstoneSetupDone()const;
+    bool needsUpgradeFix()const;
+    void getLoadedFormat()const;
     void applySeasonsPostProcess(BlockSource &);
-    void checkSeasonsPostProcessDirty(void);
-    void key(void)const;
-    void getLastTick(void)const;
-    bool isReadOnly(void)const;
-    void getGenerator(void)const;
+    void checkSeasonsPostProcessDirty();
+    void key()const;
+    void getLastTick()const;
+    bool isReadOnly()const;
+    void getGenerator()const;
     void _setGenerator(ChunkSource *);
-    void getLevel(void)const;
+    void getLevel()const;
     void setFinalized(LevelChunk::Finalization);
-    bool hasAnyBiomeStates(void)const;
+    bool hasAnyBiomeStates()const;
     void updateCachedData(BlockSource &);
-    void _enableBlockEntityAccessForThisThread(void)const;
-    void _disableBlockEntityAccessForThisThread(void)const;
+    void _enableBlockEntityAccessForThisThread()const;
+    void _disableBlockEntityAccessForThisThread()const;
     void _dirtyTicksCounter(LevelChunkDataField);
-    void getSubChunks(void);
-    void getMaxSubChunks(void)const;
-    void getMaxSubChunkCnt(void);
+    void getSubChunks();
+    void getMaxSubChunks()const;
+    void getMaxSubChunkCnt();
     void fillBiomes(BiomeChunkData const&);
     void _setDBChunkSurroundedByNeighbors(bool);
     void setDebugDisplaySavedState(bool);
-    void _getDBChunkSurroundedByNeighbors(void)const;
-    void chunkHasConvertedDataTag(void)const;
+    void _getDBChunkSurroundedByNeighbors()const;
+    void chunkHasConvertedDataTag()const;
     void getDirtyTicksCounter(LevelChunkDataField)const;
 };

@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/Recipes"
+#include "../../../unmapped/ContainerItemStack"
 #include "../model/ContainerModel"
+#include "../../../unmapped/Recipes"
 
 
 class CreativeContainerController : ContainerController {
 
 public:
-    virtual CreativeContainerController::~CreativeContainerController();
+    CreativeContainerController::~CreativeContainerController()
     virtual bool isItemFiltered(Recipes const&, ContainerItemStack const&)const;
     virtual void getBackgroundStyle(int)const;
 

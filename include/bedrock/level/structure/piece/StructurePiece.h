@@ -1,19 +1,22 @@
 #pragma once
 
-#include "../../../../unmapped/ChunkPos"
-#include "../../LevelChunk"
-#include "../../../../unmapped/Block"
 #include "../../../../unmapped/PieceWeight"
-#include "../../../../unmapped/BlockSource"
+#include "../../LevelChunk"
+#include "../../../block/selector/BlockSelector"
+#include "../../../../unmapped/Block"
+#include "../../../util/ChunkPos"
+#include "../../../../unmapped/BoundingBox"
+#include "../../../util/Random"
+#include "../../../block/unmapped/BlockSource"
 
 
 class StructurePiece {
 
 public:
-    virtual StructurePiece::~StructurePiece();
+    StructurePiece::~StructurePiece()
     virtual void moveBoundingBox(int, int, int);
-    virtual bool asPoolElement(void);
-    virtual void getType(void)const;
+    virtual bool asPoolElement();
+    virtual void getType()const;
     virtual void addChildren(StructurePiece*, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void getWorldX(int, int);
@@ -22,14 +25,14 @@ public:
     virtual void generateBox(BlockSource *, BoundingBox const&, int, int, int, int, int, int, Block const&, Block const&, bool);
     virtual void addHardcodedSpawnAreas(LevelChunk &)const;
 
-    void getBoundingBox(void)const;
-    void getGenDepth(void)const;
+    void getBoundingBox()const;
+    void getGenDepth()const;
     StructurePiece(int);
     StructurePiece(StructurePiece const&);
     bool isInChunk(ChunkPos const&)const;
     bool isCloseToChunk(ChunkPos const&, int)const;
     void findCollisionPiece(std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> const&, BoundingBox const&);
-    void getLocatorPosition(void)const;
+    void getLocatorPosition()const;
     bool edgesLiquid(BlockSource *, BoundingBox const&);
     void getWorldY(int);
     void getOrientationData(Block const*, unsigned short);

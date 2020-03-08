@@ -8,6 +8,6 @@ public:
     static long mAir;
 
 
-    void assignBlocks(void);
-    void unassignBlocks(void);
+    void assignBlocks();
+    void unassignBlocks();
 };

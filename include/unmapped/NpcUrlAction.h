@@ -5,8 +5,8 @@
 class NpcUrlAction : NpcAction {
 
 public:
-    virtual NpcUrlAction::~NpcUrlAction();
-    virtual void toJson(void);
+    NpcUrlAction::~NpcUrlAction()
+    virtual void toJson();
 
     NpcUrlAction(void);
 };

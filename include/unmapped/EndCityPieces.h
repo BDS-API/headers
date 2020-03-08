@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../bedrock/util/BlockPos"
+#include "../bedrock/level/structure/piece/EndCityPiece"
+#include "../bedrock/util/Random"
 #include "../bedrock/level/structure/piece/StructurePiece"
 
 
@@ -10,7 +13,7 @@ public:
     static long mInsertSettings;
 
 
-    void init(void);
+    void init();
     void startHouseTower(StructureManager &, BlockPos const&, Rotation, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
     void _addHelper(std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, std::unique_ptr<EndCityPieces::EndCityPiece, std::default_delete<EndCityPieces::EndCityPiece>>);
     void _createPiece(StructureManager &, EndCityPieces::EndCityPiece *, BlockPos const&, std::string const&, Rotation, bool);

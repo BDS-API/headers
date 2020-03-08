@@ -1,16 +1,20 @@
 #pragma once
 
-#include "../../unmapped/AABB"
+#include "../actor/Actor"
 #include "../actor/Mob"
-#include "../../unmapped/Random"
+#include "../util/Random"
+#include "../util/BlockPos"
+#include "unmapped/BlockSource"
+#include "../../unmapped/Block"
+#include "../util/AABB"
 
 
 class SnowBlock : BlockLegacy {
 
 public:
-    virtual SnowBlock::~SnowBlock();
+    SnowBlock::~SnowBlock()
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
-    virtual void waterSpreadCausesSpawn(void)const;
+    virtual void waterSpreadCausesSpawn()const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void calcGroundFriction(Mob &, BlockPos const&)const;

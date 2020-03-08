@@ -7,7 +7,7 @@ class LevelDbEnv : leveldb::Env {
 public:
     static long sSingleton;
 
-    virtual LevelDbEnv::~LevelDbEnv();
+    LevelDbEnv::~LevelDbEnv()
     virtual void NewSequentialFile(std::string const&, leveldb::SequentialFile **);
     virtual void NewRandomAccessFile(std::string const&, leveldb::RandomAccessFile **);
     virtual void NewWritableFile(std::string const&, leveldb::WritableFile **);
@@ -21,17 +21,17 @@ public:
     virtual void RenameFile(std::string const&, std::string const&);
     virtual void LockFile(std::string const&, leveldb::FileLock **);
     virtual void UnlockFile(leveldb::FileLock *);
-    virtual void Schedule(void (*)(void *), void *);
-    virtual void StartThread(void (*)(void *), void *);
+    virtual void Schedule(void ()((void *), , void *);
+    virtual void StartThread(void ()((void *), , void *);
     virtual void GetTestDirectory(std::string *);
     virtual void NewLogger(std::string const&, leveldb::Logger **);
-    virtual void NowMicros(void);
+    virtual void NowMicros();
     virtual void SleepForMicroseconds(int);
 
-    void createInstance(void);
-    void getSingleton(void);
-    void exists(void);
-    void destroyInstance(void);
+    void createInstance();
+    void getSingleton();
+    void exists();
+    void destroyInstance();
     LevelDbEnv(void);
-    void IsComplete(void)const;
+    void IsComplete()const;
 };

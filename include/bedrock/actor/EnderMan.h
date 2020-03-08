@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../../unmapped/Block"
-#include "../../unmapped/MobEffectInstance"
-#include "../../unmapped/ActorDefinitionGroup"
-#include "../nbt/CompoundTag"
+#include "unmapped/ActorDefinitionGroup"
 #include "damagesource/ActorDamageSource"
+#include "../../unmapped/MobEffectInstance"
+#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/Block"
+#include "../nbt/CompoundTag"
 
 
 class EnderMan : Monster {
@@ -15,22 +17,22 @@ public:
     static long SPEED_MODIFIER_ATTACKING_UUID;
     static long SPEED_MODIFIER_ATTACKING;
 
-    virtual EnderMan::~EnderMan();
-    virtual void normalTick(void);
-    virtual void shouldRender(void)const;
+    EnderMan::~EnderMan()
+    virtual void normalTick();
+    virtual void shouldRender()const;
     virtual bool canBeAffectedByArrow(MobEffectInstance const&)const;
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
     virtual void resolveDeathLoot(int, ActorDamageSource const&);
-    virtual void getAmbientSound(void);
+    virtual void getAmbientSound();
     virtual void hurtEffects(ActorDamageSource const&, int, bool, bool);
-    virtual void aiStep(void);
-    virtual void newServerAiStep(void);
+    virtual void aiStep();
+    virtual void newServerAiStep();
 
     EnderMan(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void shutdown(void);
-    void getCarryingBlock(void);
+    void shutdown();
+    void getCarryingBlock();
     void setCarryingBlock(Block const&);
-    void _teleport(void);
+    void _teleport();
 };
