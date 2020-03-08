@@ -104,13 +104,38 @@
     "Command": "bedrock/command/",
     "CommandPlatform": "bedrock/platform/",
     "DedicatedServerCommands": "bedrock/command/",
-    "Description": "bedrock/description/"
+    "Description": "bedrock/description/",
+    "AABB": "bedrock/util/",
+    "BlockPos": "bedrock/util/",
+    "ChunkPos": "bedrock/util/",
+    "Vec3": "bedrock/util/",
+    "Vec2": "bedrock/util/",
+    "Brightness": "bedrock/util/",
+    "Color": "bedrock/util/",
+    "Random": "bedrock/util/",
+    "Whitelist": "bedrock/util/",
+    "StateVectorComponent": "bedrock/util/",
+    "VanillaActors": "bedrock/actor/",
+    "VanillaBiomes": "bedrock/level/biome/",
+    "VanillaBlocks": "bedrock/block/",
+    "VanillaBlockTypes": "bedrock/block/",
+    "VanillaDimensions": "bedrock/level/dimension/",
+    "VanillaItems": "bedrock/item/",
+    "VanillaItemTiers": "bedrock/item/",
+    "VanillaWorldSystems": "bedrock/level/system/",
+    "WorldSystems": "bedrock/level/system/"
   },
   "regex": {
     "^Level(?!Db).*": "bedrock/level/",
     "^.+Definition$": "bedrock/definition/",
     "^Definition.+$": "bedrock/definition/",
     "^Command.+$": "bedrock/command/",
-    "^Attribute.+$": "bedrock/actor/attribute/"
+    "^Attribute.+$": "bedrock/actor/attribute/",
+    "^ResourcePack.*$": "bedrock/resourcepack/",
+    "^Actor.+$": "bedrock/actor/unmapped/",
+    "^Block.+$": "bedrock/block/unmapped/",
+    "^Item.+$": "bedrock/item/unmapped/",
+    "^Script.+$": "bedrock/scripting/unmapped",
+    "^SubChunk.*$": "bedrock/level/chunk/"
   }
 }
