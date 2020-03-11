@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../actor/Mob"
-#include "../actor/unmapped/ActorBlockSyncMessage"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "../actor/Mob.h"
+#include "unmapped/BlockSource.h"
+#include "./HeavyBlock.h"
+#include <string>
+#include "../actor/unmapped/ActorBlockSyncMessage.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/Vec3.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class TopSnowBlock : HeavyBlock {
@@ -17,7 +19,7 @@ class TopSnowBlock : HeavyBlock {
 public:
     static long MAX_HEIGHT;
 
-    virtual TopSnowBlock::~TopSnowBlock()
+    virtual ~TopSnowBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
@@ -42,7 +44,7 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canBeSilkTouched()const;
     virtual void getDustColor(Block const&)const;
-    virtual void getDustParticleName(Block const&)const;
+    virtual std::string getDustParticleName(Block const&)const;
     virtual bool isFreeToFall(BlockSource &, BlockPos const&)const;
     virtual void startFalling(BlockSource &, BlockPos const&, Block const*, bool)const;
 

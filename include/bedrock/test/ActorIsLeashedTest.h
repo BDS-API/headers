@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../unmapped/FilterContext"
+#include "./SimpleBoolFilterTest.h"
+#include "../../unmapped/FilterContext.h"
 
 
 class ActorIsLeashedTest : SimpleBoolFilterTest {
 
 public:
-    virtual ActorIsLeashedTest::~ActorIsLeashedTest()
+    virtual ~ActorIsLeashedTest();
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 
-    ActorIsLeashedTest(void);
+    ActorIsLeashedTest();
 };

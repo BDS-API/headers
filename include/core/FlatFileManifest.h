@@ -1,16 +1,23 @@
 #pragma once
 
-#include "../bedrock/io/BinaryStream"
-#include "../bedrock/io/ReadOnlyBinaryStream"
+#include "./FlatFileManifestInfo.h"
+#include "../bedrock/io/ReadOnlyBinaryStream.h"
+#include <memory>
+#include <vector>
+#include "../bedrock/io/BinaryStream.h"
+#include "./Path.h"
+#include <string>
 
 
-using namespace Core;
+namespace Core {
 
 class FlatFileManifest {
 
 public:
 
-    FlatFileManifest(void);
+    std::string getManifestPath()const;
+    FlatFileManifest();
+    ~FlatFileManifest();
     void _clear();
     void _createFromVector(Core::Path const&, std::vector<Core::FlatFileManifestInfo, std::allocator<Core::FlatFileManifestInfo>> const&, unsigned long, bool);
     void _mergeDuplicateEntries(unsigned long, Core::FlatFileManifestInfo &);
@@ -27,3 +34,5 @@ public:
     void getByIndex(unsigned long)const;
     void getByIndex(unsigned long);
 };
+
+}

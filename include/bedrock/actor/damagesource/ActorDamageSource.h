@@ -1,12 +1,13 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include <string>
 
 
 class ActorDamageSource {
 
 public:
-    virtual ActorDamageSource::~ActorDamageSource()
+    virtual ~ActorDamageSource();
     virtual bool isEntitySource()const;
     virtual bool isChildEntitySource()const;
     virtual bool isBlockSource()const;
@@ -24,8 +25,9 @@ public:
     virtual void clone()const;
 
     void lookupCause(std::string const&);
+//  std::string lookupCauseName(ActorDamageCause); //TODO: incomplete function definition
     ActorDamageSource(std::string const&);
-    ActorDamageSource(ActorDamageCause);
+//  ActorDamageSource(ActorDamageCause); //TODO: incomplete function definition
     void getCause()const;
-    void setCause(ActorDamageCause);
+//  void setCause(ActorDamageCause); //TODO: incomplete function definition
 };

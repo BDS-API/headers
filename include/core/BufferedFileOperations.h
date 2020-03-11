@@ -1,8 +1,10 @@
 #pragma once
 
+#include "./Path.h"
+#include "./FileSystemImpl.h"
 
 
-using namespace Core;
+namespace Core {
 
 class BufferedFileOperations {
 
@@ -15,3 +17,5 @@ public:
     void moveDirectory(Core::FileSystemImpl *, Core::Path const&, Core::FileSystemImpl *, Core::Path const&);
     void moveFileOrDirectory(Core::FileSystemImpl *, Core::Path const&, Core::FileSystemImpl *, Core::Path const&);
 };
+
+}

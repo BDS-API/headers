@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../unmapped/RenderParams"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../../unmapped/RenderParams.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Animal.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
 
 
 class Rabbit : Animal {
 
 public:
-    virtual Rabbit::~Rabbit()
+    virtual ~Rabbit();
     virtual void onSynchedDataUpdate(int);
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);

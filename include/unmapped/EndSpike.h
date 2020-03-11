@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/BlockPos.h"
 
 
-using namespace SpikeFeature;
+namespace SpikeFeature {
 
 class EndSpike {
 
@@ -18,3 +18,5 @@ public:
     bool isGuarded()const;
     void getTopBoundingBox()const;
 };
+
+}

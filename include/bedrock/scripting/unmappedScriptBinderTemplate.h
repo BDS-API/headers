@@ -5,7 +5,7 @@
 class ScriptBinderTemplate {
 
 public:
-    virtual ScriptBinderTemplate::~ScriptBinderTemplate()
+    virtual ~ScriptBinderTemplate();
 
-    ScriptBinderTemplate(void);
+    ScriptBinderTemplate();
 };

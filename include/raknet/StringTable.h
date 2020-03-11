@@ -1,14 +1,16 @@
 #pragma once
 
+#include "./BitStream.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class StringTable {
 
 public:
 
-    StringTable(void);
+    StringTable();
+    ~StringTable();
     void AddReference();
     void RemoveReference();
     void Instance();
@@ -17,3 +19,5 @@ public:
     void LogStringNotFound(char const*);
     void DecodeString(char *, int, RakNet::BitStream *);
 };
+
+}

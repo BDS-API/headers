@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./GiveableTrigger.h"
+#include <string>
 
 
 class GiveableTrigger {
@@ -7,6 +9,7 @@ class GiveableTrigger {
 public:
 
     void addItemByName(std::string const&);
-    GiveableTrigger(void);
+    GiveableTrigger();
+    ~GiveableTrigger();
     GiveableTrigger(GiveableTrigger const&);
 };

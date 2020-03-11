@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include "./BehaviorNode.h"
 
 
 class SubtreeNode : BehaviorNode {
 
 public:
-    virtual SubtreeNode::~SubtreeNode()
+    virtual ~SubtreeNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 
-    SubtreeNode(void);
+    SubtreeNode();
 };

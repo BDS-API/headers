@@ -1,19 +1,20 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "../../unmapped/VariantParameterList"
-#include "../../unmapped/Block"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Animal.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../util/BlockPos.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../../unmapped/Block.h"
 
 
 class Parrot : Animal {
 
 public:
-    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Parrot::~Parrot()
+//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Parrot();
     virtual void getInterpolatedRidingPosition(float)const;
     virtual void getShadowRadius()const;
     virtual void setSitting(bool);
@@ -35,5 +36,5 @@ public:
     void getOFlap()const;
     void getFlapSpeed()const;
     void getOFlapSpeed()const;
-    void _getImitatedSound(ActorType);
+//  void _getImitatedSound(ActorType); //TODO: incomplete function definition
 };

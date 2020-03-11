@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/level/biome/Biome"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/block/unmapped/BlockVolume"
+#include "./SurfaceBuilderRegistry.h"
+#include "../bedrock/util/Random.h"
+#include "./EntityRegistry.h"
+#include "../bedrock/block/unmapped/BlockVolume.h"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/level/biome/Biome.h"
 
 
 class BiomeSurfaceSystem {

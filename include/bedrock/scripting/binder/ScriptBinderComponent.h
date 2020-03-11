@@ -5,7 +5,7 @@
 class ScriptBinderComponent {
 
 public:
-    virtual ScriptBinderComponent::~ScriptBinderComponent()
+    virtual ~ScriptBinderComponent();
 
-    ScriptBinderComponent(void);
+    ScriptBinderComponent();
 };

@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/MoveActorDeltaData"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../../unmapped/MoveActorDeltaData.h"
+#include "./Packet.h"
+#include <string>
 
 
 class MoveActorDeltaPacket : Packet {
 
 public:
-    virtual MoveActorDeltaPacket::~MoveActorDeltaPacket()
+    virtual ~MoveActorDeltaPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    MoveActorDeltaPacket(void);
+    MoveActorDeltaPacket();
     MoveActorDeltaPacket(MoveActorDeltaData const&);
 };

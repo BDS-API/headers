@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/level/Level"
+#include "./DataLoadHelper.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/level/Level.h"
+#include "./TimerComponent.h"
 
 
 class TimerComponent {
 
 public:
 
-    TimerComponent(TimerComponent&&);
-    TimerComponent(void);
+    ~TimerComponent();
+    TimerComponent(TimerComponent &&);
+    TimerComponent();
     void initFromDefinition(Actor &);
     void getRandomTime(Actor &);
     void restartTimer(Actor &);

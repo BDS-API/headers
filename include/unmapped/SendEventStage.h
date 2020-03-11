@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./SendEventStage.h"
 
 
 class SendEventStage {
 
 public:
 
+    ~SendEventStage();
     SendEventStage(SendEventStage const&);
-    SendEventStage(void);
-    SendEventStage(SendEventStage&&);
+    SendEventStage();
+    SendEventStage(SendEventStage &&);
 };

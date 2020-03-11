@@ -1,18 +1,20 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "./BlockLegacy.h"
 
 
 class LeverBlock : BlockLegacy {
 
 public:
-    virtual LeverBlock::~LeverBlock()
+    virtual ~LeverBlock();
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool isInteractiveBlock()const;
     virtual bool isSignalSource()const;
@@ -27,7 +29,7 @@ public:
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
-    virtual bool isAttachedTo(BlockSource &, BlockPos const&, BlockPos&)const;
+    virtual bool isAttachedTo(BlockSource &, BlockPos const&, BlockPos &)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canSpawnOn()const;
     virtual void updateShape(BlockSource *, BlockPos const&);

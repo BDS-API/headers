@@ -6,5 +6,5 @@ class AdventureSettings {
 
 public:
 
-    AdventureSettings(void);
+    AdventureSettings();
 };

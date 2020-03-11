@@ -6,5 +6,5 @@ class PackStats {
 
 public:
 
-    PackStats(void);
+    PackStats();
 };

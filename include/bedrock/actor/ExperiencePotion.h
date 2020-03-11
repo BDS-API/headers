@@ -1,13 +1,14 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier"
-#include "unmapped/ActorDefinitionGroup"
+#include "./Throwable.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 
 
 class ExperiencePotion : Throwable {
 
 public:
-    virtual ExperiencePotion::~ExperiencePotion()
+    virtual ~ExperiencePotion();
     virtual void getThrowPower();
     virtual void getThrowUpAngleOffset();
     virtual void getGravity();

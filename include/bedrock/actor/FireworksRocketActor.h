@@ -1,23 +1,24 @@
 #pragma once
 
-#include "../util/Random"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../level/Level"
-#include "../util/Vec3"
-#include "unmapped/ActorUniqueID"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "unmapped/ActorUniqueID.h"
+#include "../level/Level.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../util/Random.h"
+#include "../nbt/CompoundTag.h"
 
 
 class FireworksRocketActor : Actor {
 
 public:
-    virtual FireworksRocketActor::~FireworksRocketActor()
+    virtual ~FireworksRocketActor();
     virtual void lerpMotion(Vec3 const&);
     virtual void normalTick();
     virtual void getShadowRadius()const;
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void onSynchedDataUpdate(int);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);

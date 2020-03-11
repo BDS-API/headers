@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../Player"
+#include "./Goal.h"
+#include "../Player.h"
+#include "../Mob.h"
+#include <string>
 
 
 class TradeInterestGoal : Goal {
 
 public:
-    virtual TradeInterestGoal::~TradeInterestGoal()
+    virtual ~TradeInterestGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

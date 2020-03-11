@@ -1,24 +1,27 @@
 #pragma once
 
+#include "./MetricReport_LatencyMetric.h"
+#include "./MetricReport.h"
+#include "./MetricReport_BandwithMetric.h"
 
 
-using namespace com::mojang::clacks::protocol;
+namespace com::mojang::clacks::protocol {
 
-class MetricReport : google::protobuf::Message {
+class MetricReport /*google::protobuf::Message*/ { //TODO: incomplete class definition
 
 public:
-    virtual com::mojang::clacks::protocol::MetricReport::~MetricReport()
+    virtual ~MetricReport();
     virtual void New()const;
-    virtual void New(google::protobuf::Arena *)const;
+//  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition
     virtual void Clear();
-    virtual void IsInitialized()const;
-    virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *);
+    virtual bool IsInitialized()const;
+//  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition
     virtual void ByteSizeLong()const;
-    virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const;
+//  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition
     virtual void GetCachedSize()const;
     virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
-    virtual void CopyFrom(google::protobuf::Message const&);
-    virtual void MergeFrom(google::protobuf::Message const&);
+//  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition
+//  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition
     virtual void SetCachedSize(int)const;
     virtual void GetMetadata()const;
 
@@ -30,7 +33,7 @@ public:
     void set_allocated_bandwith(com::mojang::clacks::protocol::MetricReport_BandwithMetric *);
     void clear_metric();
     void set_allocated_latency(com::mojang::clacks::protocol::MetricReport_LatencyMetric *);
-    MetricReport(void);
+    MetricReport();
     void SharedCtor();
     MetricReport(com::mojang::clacks::protocol::MetricReport const&);
     void SharedDtor();
@@ -38,8 +41,8 @@ public:
     void default_instance();
     void MergeFrom(com::mojang::clacks::protocol::MetricReport const&);
     void CopyFrom(com::mojang::clacks::protocol::MetricReport const&);
-    void Swap(com::mojang::clacks::protocol::MetricReport*);
-    void InternalSwap(com::mojang::clacks::protocol::MetricReport*);
+    void Swap(com::mojang::clacks::protocol::MetricReport *);
+    void InternalSwap(com::mojang::clacks::protocol::MetricReport *);
     void GetArenaNoVirtual()const;
     void set_has_bandwith();
     void set_has_latency();
@@ -56,3 +59,5 @@ public:
     void has_latency()const;
     void _internal_latency()const;
 };
+
+}

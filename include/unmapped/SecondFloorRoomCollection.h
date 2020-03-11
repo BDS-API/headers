@@ -1,21 +1,25 @@
 #pragma once
 
-#include "../bedrock/util/Random"
+#include "../bedrock/util/Random.h"
+#include "./FloorRoomCollection.h"
+#include <string>
 
 
-using namespace WoodlandMansionPieces;
+namespace WoodlandMansionPieces {
 
 class SecondFloorRoomCollection : WoodlandMansionPieces::FloorRoomCollection {
 
 public:
-    virtual WoodlandMansionPieces::SecondFloorRoomCollection::~SecondFloorRoomCollection()
-    virtual void get1x1(Random &);
-    virtual void get1x1Secret(Random &);
-    virtual void get1x2SideEntrance(Random &, bool);
-    virtual void get1x2FrontEntrance(Random &, bool);
-    virtual void get1x2Secret(Random &);
-    virtual void get2x2(Random &);
-    virtual void get2x2Secret(Random &);
+    virtual ~SecondFloorRoomCollection();
+    virtual std::string get1x1(Random &);
+    virtual std::string get1x1Secret(Random &);
+    virtual std::string get1x2SideEntrance(Random &, bool);
+    virtual std::string get1x2FrontEntrance(Random &, bool);
+    virtual std::string get1x2Secret(Random &);
+    virtual std::string get2x2(Random &);
+    virtual std::string get2x2Secret(Random &);
 
-    SecondFloorRoomCollection(void);
+    SecondFloorRoomCollection();
 };
+
+}

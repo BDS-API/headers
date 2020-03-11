@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../actor/Mob"
+#include "../actor/Mob.h"
+#include "./BodyControl.h"
 
 
 class AgentBodyControl : BodyControl {
 
 public:
-    virtual AgentBodyControl::~AgentBodyControl()
+    virtual ~AgentBodyControl();
     virtual void clientTick(Mob &);
 
-    AgentBodyControl(void);
+    AgentBodyControl();
 };

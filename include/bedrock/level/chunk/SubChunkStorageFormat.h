@@ -7,5 +7,5 @@ class SubChunkStorageFormat {
 public:
 
     SubChunkStorageFormat(char);
-    SubChunkStorageFormat(SubChunkBlockStorage::Type, bool);
+//  SubChunkStorageFormat(SubChunkBlockStorage::Type, bool); //TODO: incomplete function definition
 };

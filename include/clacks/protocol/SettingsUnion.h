@@ -2,11 +2,13 @@
 
 
 
-using namespace com::mojang::clacks::protocol::Settings;
+namespace com::mojang::clacks::protocol::Settings {
 
 class SettingsUnion {
 
 public:
 
-    SettingsUnion(void);
+    SettingsUnion();
 };
+
+}

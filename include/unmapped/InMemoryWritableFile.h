@@ -1,12 +1,14 @@
 #pragma once
 
+#include <memory>
+#include "./InMemoryFile.h"
 
 
-class InMemoryWritableFile : leveldb::WritableFile {
+class InMemoryWritableFile /*leveldb::WritableFile*/ { //TODO: incomplete class definition
 
 public:
-    virtual InMemoryWritableFile::~InMemoryWritableFile()
-    virtual void Append(leveldb::Slice const&);
+    virtual ~InMemoryWritableFile();
+//  virtual void Append(leveldb::Slice const&); //TODO: incomplete function definition
     virtual void Close();
     virtual void Flush();
     virtual void Sync();

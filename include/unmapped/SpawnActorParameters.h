@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./SpawnActorParameters.h"
 
 
 class SpawnActorParameters {
@@ -7,6 +8,7 @@ class SpawnActorParameters {
 public:
 
     SpawnActorParameters(SpawnActorParameters const&);
-    SpawnActorParameters(void);
-    SpawnActorParameters(SpawnActorParameters&&);
+    ~SpawnActorParameters();
+    SpawnActorParameters();
+    SpawnActorParameters(SpawnActorParameters &&);
 };

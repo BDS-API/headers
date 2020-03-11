@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/level/LevelData"
-#include "../core/Path"
+#include "../core/Path.h"
+#include "../bedrock/level/LevelData.h"
 
 
 class ExternalFileLevelStorageMetadata {

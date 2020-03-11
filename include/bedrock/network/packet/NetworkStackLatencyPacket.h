@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../io/BinaryStream.h"
+#include <string>
 
 
 class NetworkStackLatencyPacket : Packet {
@@ -9,11 +11,11 @@ class NetworkStackLatencyPacket : Packet {
 public:
     static long DEFAULT_SEND_INTERVAL;
 
-    virtual NetworkStackLatencyPacket::~NetworkStackLatencyPacket()
+    virtual ~NetworkStackLatencyPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    NetworkStackLatencyPacket(void);
+    NetworkStackLatencyPacket();
 };

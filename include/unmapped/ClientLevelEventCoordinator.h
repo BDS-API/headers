@@ -6,5 +6,6 @@ class ClientLevelEventCoordinator {
 
 public:
 
-    ClientLevelEventCoordinator(void);
+    ~ClientLevelEventCoordinator();
+    ClientLevelEventCoordinator();
 };

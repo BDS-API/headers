@@ -1,13 +1,17 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/SendEventData"
+#include "../../../unmapped/SendEventData.h"
+#include <memory>
+#include "./Goal.h"
+#include <vector>
+#include "../Mob.h"
+#include <string>
 
 
 class SendEventGoal : Goal {
 
 public:
-    virtual SendEventGoal::~SendEventGoal()
+    virtual ~SendEventGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

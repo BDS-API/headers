@@ -6,11 +6,11 @@ class CommandFlag {
 
 public:
 
-    CommandFlag(void);
-    CommandFlag(CommandVisibilityFlag);
-    CommandFlag(CommandCheatFlag);
-    CommandFlag(CommandTypeFlag);
-    CommandFlag(CommandUsageFlag);
-    CommandFlag(CommandSyncFlag);
-    CommandFlag(CommandExecuteFlag);
+    CommandFlag();
+//  CommandFlag(CommandVisibilityFlag); //TODO: incomplete function definition
+//  CommandFlag(CommandCheatFlag); //TODO: incomplete function definition
+//  CommandFlag(CommandTypeFlag); //TODO: incomplete function definition
+//  CommandFlag(CommandUsageFlag); //TODO: incomplete function definition
+//  CommandFlag(CommandSyncFlag); //TODO: incomplete function definition
+//  CommandFlag(CommandExecuteFlag); //TODO: incomplete function definition
 };

@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/EntityContext"
+#include "./EntityServerPacket.h"
+#include "../../../unmapped/EntityContext.h"
+#include <string>
 
 
 class RemoveEntityPacket : EntityServerPacket {
 
 public:
-    virtual RemoveEntityPacket::~RemoveEntityPacket()
+    virtual ~RemoveEntityPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
 
-    RemoveEntityPacket(void);
+    RemoveEntityPacket();
     RemoveEntityPacket(EntityContext &);
 };

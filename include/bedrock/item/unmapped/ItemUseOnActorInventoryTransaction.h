@@ -1,28 +1,28 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
-#include "../../actor/Player"
-#include "../../../unmapped/InventoryTransaction"
-#include "../../util/Vec3"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../ItemStack"
-#include "../../../unmapped/ComplexInventoryTransaction"
+#include "../../actor/unmapped/ActorRuntimeID.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../util/Vec3.h"
+#include "../../../unmapped/InventoryTransaction.h"
+#include "../../../unmapped/ComplexInventoryTransaction.h"
+#include "../ItemStack.h"
+#include "../../actor/Player.h"
 
 
 class ItemUseOnActorInventoryTransaction : ComplexInventoryTransaction {
 
 public:
-    virtual ItemUseOnActorInventoryTransaction::~ItemUseOnActorInventoryTransaction()
+    virtual ~ItemUseOnActorInventoryTransaction();
     virtual void read(ReadOnlyBinaryStream &);
     virtual void write(BinaryStream &)const;
     virtual void handle(Player &, bool)const;
-    virtual void onTransactionError(Player &, InventoryTransactionError)const;
+//  virtual void onTransactionError(Player &, InventoryTransactionError)const; //TODO: incomplete function definition
 
-    ItemUseOnActorInventoryTransaction(void);
+    ItemUseOnActorInventoryTransaction();
     void setSelectedItem(ItemStack const&);
     void setSelectedSlot(int);
-    void setActionType(ItemUseOnActorInventoryTransaction::ActionType);
+//  void setActionType(ItemUseOnActorInventoryTransaction::ActionType); //TODO: incomplete function definition
     void setEntityRuntimeId(ActorRuntimeID);
     void setFromPosition(Vec3 const&);
     void setHitPosition(Vec3 const&);

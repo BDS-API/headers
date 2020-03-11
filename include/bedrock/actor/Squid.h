@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../unmapped/RenderParams"
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/RenderParams.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Mob.h"
+#include "damagesource/ActorDamageSource.h"
+#include "unmapped/ActorDefinitionGroup.h"
 
 
 class Squid : Mob {
 
 public:
-    virtual Squid::~Squid()
-    virtual void handleEntityEvent(ActorEvent, int);
+    virtual ~Squid();
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void getAmbientSoundPostponeTicks();

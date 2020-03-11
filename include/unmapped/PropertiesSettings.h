@@ -1,14 +1,23 @@
 #pragma once
 
+#include <string>
 
 
 class PropertiesSettings {
 
 public:
 
+    ~PropertiesSettings();
     PropertiesSettings(std::string const&);
     void getDefaultMaxPlayers();
     void parseBoolValue(std::string const&);
+    std::string getLevelSeed()const;
+    std::string getLevelName()const;
+    std::string getLevelType()const;
+    std::string getMotd()const;
+    std::string getServerType()const;
+    std::string getServerId()const;
+    std::string getExtraTrustedKeys()const;
     void getServerPort()const;
     void getServerPortv6()const;
     void getMaxPlayers()const;
@@ -19,6 +28,7 @@ public:
     void getDifficulty()const;
     void parseGameMode(std::string const&);
     void getGameMode()const;
+    std::string getLanguage()const;
     void forceGamemode()const;
     void useWhitelist()const;
     void allowCheats()const;

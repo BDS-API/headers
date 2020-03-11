@@ -1,22 +1,24 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include <string>
 
 
 class Boat : Actor {
 
 public:
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Boat::~Boat()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Boat();
     virtual void remove();
     virtual void normalTick();
     virtual void addRider(Actor &);
-    virtual void getExitTip(std::string const&, InputMode)const;
+//  virtual void getExitTip(std::string const&, InputMode)const; //TODO: incomplete function definition
     virtual void getShadowHeightOffs();
     virtual void getShadowRadius()const;
     virtual void onAboveBubbleColumn(bool);
@@ -33,22 +35,23 @@ public:
     void getBubbleTime();
     void setBubbleTime(int);
     void getWoodID()const;
-    void getRowingTime(Side)const;
-    void getPaddle(Side);
+//  void getRowingTime(Side)const; //TODO: incomplete function definition
+//  void getPaddle(Side); //TODO: incomplete function definition
     void _float();
     void _control();
-    void getPaddle(Side)const;
-    void getRowingTime(Side, float)const;
-    void setRowingTime(Side, float);
-    void setPaddleForce(Side, float);
-    void setPaddleState(Side, bool);
+//  void getPaddle(Side)const; //TODO: incomplete function definition
+//  void getRowingTime(Side, float)const; //TODO: incomplete function definition
+//  void setRowingTime(Side, float); //TODO: incomplete function definition
+//  void setPaddleForce(Side, float); //TODO: incomplete function definition
+//  void setPaddleState(Side, bool); //TODO: incomplete function definition
     void computePaddleForcesBasedOnGaze(Vec3 &, float &, float &, float, float);
     void _computePaddleForce(float &, float &, float, float);
     bool canExitBoat()const;
+    std::string getExitText(bool)const;
     void getBubbleAngle(float);
-    void _calculatePaddleForce(Side)const;
-    void _addPaddleTime(Side, float);
-    void _paddleControl(Side, Vec3 &, Vec3 &);
+//  void _calculatePaddleForce(Side)const; //TODO: incomplete function definition
+//  void _addPaddleTime(Side, float); //TODO: incomplete function definition
+//  void _paddleControl(Side, Vec3 &, Vec3 &); //TODO: incomplete function definition
     void _isInAir()const;
-    void _resetPaddleToRest(Side);
+//  void _resetPaddleToRest(Side); //TODO: incomplete function definition
 };

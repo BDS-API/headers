@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./DrinkPotionData.h"
 
 
 class DrinkPotionData {
 
 public:
 
+    ~DrinkPotionData();
     DrinkPotionData(DrinkPotionData const&);
-    DrinkPotionData(void);
-    DrinkPotionData(DrinkPotionData&&);
+    DrinkPotionData();
+    DrinkPotionData(DrinkPotionData &&);
 };

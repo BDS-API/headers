@@ -1,19 +1,21 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../util/Random"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../item/ItemStack"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../item/ItemStack.h"
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/Vec3.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class BeehiveBlock : ActorBlock {
 
 public:
-    virtual BeehiveBlock::~BeehiveBlock()
+    virtual ~BeehiveBlock();
     virtual void getNextBlockPermutation(Block const&)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;

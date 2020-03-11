@@ -2,12 +2,14 @@
 
 
 
-using namespace Bedrock;
+namespace Bedrock {
 
 class LogEndPoint {
 
 public:
-    virtual Bedrock::LogEndPoint::~LogEndPoint()
+    virtual ~LogEndPoint();
 
-    LogEndPoint(void);
+    LogEndPoint();
 };
+
+}

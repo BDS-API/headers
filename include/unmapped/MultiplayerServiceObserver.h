@@ -1,17 +1,21 @@
 #pragma once
 
-#include "../core/SingleThreadedLock"
-#include "../mce/UUID"
+#include "../mce/UUID.h"
+#include "../core/SingleThreadedLock.h"
+#include "./MultiplayerServiceObserver.h"
+#include <string>
 
 
-using namespace Social;
+namespace Social {
 
-class MultiplayerServiceObserver : Core::Observer<Social::MultiplayerServiceObserver, Core::SingleThreadedLock> {
+class MultiplayerServiceObserver /*Core::Observer<Social::MultiplayerServiceObserver, Core::SingleThreadedLock>*/ { //TODO: incomplete class definition
 
 public:
-    virtual Social::MultiplayerServiceObserver::~MultiplayerServiceObserver()
+    virtual ~MultiplayerServiceObserver();
     virtual void onInvalidPlayerJoinedLobby(mce::UUID const&, std::string const&);
     virtual void onUserDisconnectedBecauseConcurrentLogin(std::string const&);
 
-    MultiplayerServiceObserver(void);
+    MultiplayerServiceObserver();
 };
+
+}

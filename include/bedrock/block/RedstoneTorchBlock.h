@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
+#include "unmapped/BlockSource.h"
+#include "./TorchBlock.h"
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Random.h"
+#include <string>
 
 
 class RedstoneTorchBlock : TorchBlock {
 
 public:
-    virtual RedstoneTorchBlock::~RedstoneTorchBlock()
+    virtual ~RedstoneTorchBlock();
     virtual bool isSignalSource()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

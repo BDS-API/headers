@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../CommandOutput"
-#include "../orgin/CommandOrigin"
-#include "../CommandRegistry"
+#include "../CommandRegistry.h"
+#include "./ServerCommand.h"
+#include "../orgin/CommandOrigin.h"
+#include "../CommandOutput.h"
 
 
 class SetMaxPlayersCommand : ServerCommand {
 
 public:
-    virtual SetMaxPlayersCommand::~SetMaxPlayersCommand()
+    virtual ~SetMaxPlayersCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);
-    SetMaxPlayersCommand(void);
+    SetMaxPlayersCommand();
 };

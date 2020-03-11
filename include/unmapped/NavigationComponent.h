@@ -1,18 +1,22 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/navigation/PathNavigation"
-#include "../bedrock/description/component/NavigationDescription"
+#include "../bedrock/util/Vec3.h"
+#include <memory>
+#include "../bedrock/description/component/NavigationDescription.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/navigation/PathNavigation.h"
+#include "../bedrock/actor/Mob.h"
+#include "./NavigationComponent.h"
+#include "./Path.h"
 
 
 class NavigationComponent {
 
 public:
 
-    NavigationComponent(NavigationComponent&&);
-    NavigationComponent(void);
+    ~NavigationComponent();
+    NavigationComponent(NavigationComponent &&);
+    NavigationComponent();
     void initializeFromDefinition(Mob &, NavigationDescription *);
     void setIsAmphibious(bool);
     void setAvoidSun(bool);

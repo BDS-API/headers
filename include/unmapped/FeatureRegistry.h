@@ -1,13 +1,16 @@
 #pragma once
 
-#include "../bedrock/pack/ResourcePackManager"
+#include "./IWorldRegistriesProvider.h"
+#include "../bedrock/pack/ResourcePackManager.h"
+#include <string>
 
 
 class FeatureRegistry {
 
 public:
 
-    FeatureRegistry(void);
+    FeatureRegistry();
+    ~FeatureRegistry();
     void loadFromDefinitions(IWorldRegistriesProvider &, ResourcePackManager const&, bool);
     void _reverseLookup(unsigned long)const;
     void _setupFeature(IWorldRegistriesProvider &, std::string const&, std::string const&);

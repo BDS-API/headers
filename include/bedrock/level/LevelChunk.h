@@ -1,28 +1,31 @@
 #pragma once
 
-#include "chunksource/ChunkSource"
-#include "chunk/SubChunkLightUpdate"
-#include "chunksource/ChunkViewSource"
-#include "../actor/unmapped/ActorUniqueID"
-#include "../util/Tick"
-#include "../../unmapped/Dimension"
-#include "biome/Biome"
-#include "../block/actor/BlockActor"
-#include "../io/IDataOutput"
-#include "../actor/unmapped/ActorLink"
-#include "chunk/SubChunk"
-#include "../block/unmapped/BlockSource"
-#include "../util/Brightness"
-#include "../block/unmapped/BlockID"
-#include "../io/IDataInput"
-#include "../../unmapped/ChunkBlockPos"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../util/ChunkPos"
-#include "../util/AABB"
-#include "../block/unmapped/BlockVolume"
-#include "../actor/Actor"
-#include "../../unmapped/BoundingBox"
+#include <string>
+#include "../io/IDataInput.h"
+#include "../../unmapped/Dimension.h"
+#include "../actor/unmapped/ActorUniqueID.h"
+#include "biome/Biome.h"
+#include "chunk/SubChunkLightUpdate.h"
+#include "../block/unmapped/BlockVolume.h"
+#include "../io/IDataOutput.h"
+#include "../util/ChunkPos.h"
+#include "chunksource/ChunkSource.h"
+#include "../actor/unmapped/ActorLink.h"
+#include "../util/Brightness.h"
+#include "chunksource/ChunkViewSource.h"
+#include "../../unmapped/BoundingBox.h"
+#include "../block/unmapped/BlockSource.h"
+#include "../util/BlockPos.h"
+#include "../block/unmapped/BlockID.h"
+#include "../../unmapped/ChunkBlockPos.h"
+#include "chunk/SubChunk.h"
+#include "../block/actor/BlockActor.h"
+#include <memory>
+#include "../util/Tick.h"
+#include "../actor/Actor.h"
+#include <vector>
+#include "../util/AABB.h"
+#include "../../unmapped/Block.h"
 
 
 class LevelChunk {
@@ -39,9 +42,10 @@ public:
     void createNew(Dimension &, ChunkPos, bool);
     void createNewNoCustomDeleter(Dimension &, ChunkPos, bool);
     LevelChunk(Dimension &, ChunkPos const&, bool);
-    void _reassignSubChunks(buffer_span_mut<SubChunk>);
-    void _createSubChunk(unsigned long, bool, SubChunkInitMode);
+//  void _reassignSubChunks(buffer_span_mut<SubChunk>); //TODO: incomplete function definition
+//  void _createSubChunk(unsigned long, bool, SubChunkInitMode); //TODO: incomplete function definition
     void _assertBlockEntityAccess()const;
+    ~LevelChunk();
     void _placeBlockEntity(std::shared_ptr<BlockActor>);
     void _createBlockEntity(BlockPos const&, BlockSource *, Block const&, Block const&);
     void _setLight(ChunkBlockPos const&, Brightness);
@@ -62,10 +66,10 @@ public:
     void borderBlocksAreEnabled();
     void getBorder(ChunkBlockPos const&)const;
     void setBorder(ChunkBlockPos const&, bool);
-    void addHardcodedSpawningArea(BoundingBox const&, HardcodedSpawnAreaType);
+//  void addHardcodedSpawningArea(BoundingBox const&, HardcodedSpawnAreaType); //TODO: incomplete function definition
     void getMin()const;
     void getMax()const;
-    void removeHardcodedSpawningArea(HardcodedSpawnAreaType);
+//  void removeHardcodedSpawningArea(HardcodedSpawnAreaType); //TODO: incomplete function definition
     void findHardcodedSpawnAt(BlockPos const&);
     void getSpawningAreas()const;
     void getPreWorldGenHeightmap(ChunkBlockPos const&)const;
@@ -82,24 +86,24 @@ public:
     void removeEntity(Actor &);
     void removeBlockEntity(BlockPos const&);
     bool isSkyLit(ChunkBlockPos const&)const;
-    void tryChangeState(ChunkState, ChunkState);
-    void changeState(ChunkState, ChunkState);
-    void _changeTerrainDataState(ChunkTerrainDataState, ChunkTerrainDataState);
+//  void tryChangeState(ChunkState, ChunkState); //TODO: incomplete function definition
+//  void changeState(ChunkState, ChunkState); //TODO: incomplete function definition
+//  void _changeTerrainDataState(ChunkTerrainDataState, ChunkTerrainDataState); //TODO: incomplete function definition
     void _onTickingQueueChanged();
     void _onRandomTickingQueueChanged();
-    void createSubchunk(unsigned long, bool, SubChunkInitMode);
+//  void createSubchunk(unsigned long, bool, SubChunkInitMode); //TODO: incomplete function definition
     void getConvertedInterpolantBool(unsigned long, unsigned long)const;
     void enableBlockEntityAccessForThisThread()const;
     void getEntities(Actor *, AABB const&, std::vector<Actor *, std::allocator<Actor *>> &)const;
-    void getEntities(buffer_span<Actor *>, AABB const&, std::vector<Actor *, std::allocator<Actor *>> &)const;
-    void getEntities(ActorType, AABB const&, std::vector<Actor *, std::allocator<Actor *>> &, bool)const;
+//  void getEntities(buffer_span<Actor *>, AABB const&, std::vector<Actor *, std::allocator<Actor *>> &)const; //TODO: incomplete function definition
+//  void getEntities(ActorType, AABB const&, std::vector<Actor *, std::allocator<Actor *>> &, bool)const; //TODO: incomplete function definition
     void getEntity(ActorUniqueID const&)const;
     void getEntities()const;
     void getBlockEntities()const;
     void getBlockEntity(ChunkBlockPos const&);
     bool hasBlockEntity(ChunkBlockPos const&);
-    void setAllBlocks(buffer_span<Block const*>, short);
-    void setAllLegacyBlockIDAndData(buffer_span<BlockID>, buffer_span<NibblePair>);
+//  void setAllBlocks(buffer_span<Block const*>, short); //TODO: incomplete function definition
+//  void setAllLegacyBlockIDAndData(buffer_span<BlockID>, buffer_span<NibblePair>); //TODO: incomplete function definition
     void tick(BlockSource &, Tick const&);
     void _deserializeEntity(BlockSource &, IDataInput &, std::vector<ActorLink, std::allocator<ActorLink>> &);
     void setUnsaved();
@@ -135,8 +139,8 @@ public:
     void deserializeConversionData(IDataInput &);
     void deserializeLoadedVersion(IDataInput &);
     void _deserializeVersion(IDataInput &);
-    bool isSubChunkKey(gsl::basic_string_span<char const, -1l>)const;
-    void deserializeKey(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>);
+//  bool isSubChunkKey(gsl::basic_string_span<char const, -1l>)const; //TODO: incomplete function definition
+//  void deserializeKey(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
     void getAboveTopSolidBlock(ChunkBlockPos const&, bool, bool, bool);
     bool isAABBOverlappingChunk(BlockPos const&, BlockPos const&)const;
     bool isAABBFullyInChunk(BlockPos const&, BlockPos const&)const;
@@ -148,14 +152,14 @@ public:
     void setWaterColor(int, ChunkBlockPos const&);
     void getGrassColor(ChunkBlockPos const&);
     void getWaterColor(ChunkBlockPos const&);
-    void setCachedTemperatureNoise(ChunkBlockPos const&, signed const);
+//  void setCachedTemperatureNoise(ChunkBlockPos const&, signed const); //TODO: incomplete function definition
     void getCachedTemperatureNoise(ChunkBlockPos const&);
     bool wasTickedThisTick(Tick const&)const;
     void _generateOriginalLightingSubChunk(BlockSource &, unsigned long, bool);
     void generateOriginalLighting(ChunkViewSource &, bool);
     void getDimension()const;
     void _generateOriginalLighting(ChunkViewSource &, bool);
-    void runtimeRelightSubchunk(BlockSource &, unsigned long, std::vector<SubChunkLightUpdate, std::allocator<SubChunkLightUpdate>> *, std::vector&<BlockPos, std::allocator<std::vector&>>);
+    void runtimeRelightSubchunk(BlockSource &, unsigned long, std::vector<SubChunkLightUpdate, std::allocator<SubChunkLightUpdate>> *, std::vector<BlockPos, std::allocator<std::vector &>> &);
     void recomputeHeightMap(bool);
     void getTopRainBlockPos(ChunkBlockPos const&);
     void clearDeletedEntities();
@@ -179,19 +183,20 @@ public:
     void getGenerator()const;
     void _setGenerator(ChunkSource *);
     void getLevel()const;
-    void setFinalized(LevelChunk::Finalization);
+//  void setFinalized(LevelChunk::Finalization); //TODO: incomplete function definition
     bool hasAnyBiomeStates()const;
     void updateCachedData(BlockSource &);
     void _enableBlockEntityAccessForThisThread()const;
     void _disableBlockEntityAccessForThisThread()const;
-    void _dirtyTicksCounter(LevelChunkDataField);
+//  void _dirtyTicksCounter(LevelChunkDataField); //TODO: incomplete function definition
     void getSubChunks();
     void getMaxSubChunks()const;
     void getMaxSubChunkCnt();
-    void fillBiomes(BiomeChunkData const&);
+//  void fillBiomes(BiomeChunkData const&); //TODO: incomplete function definition
+    std::string getSerializedEntitiesBuffer();
     void _setDBChunkSurroundedByNeighbors(bool);
     void setDebugDisplaySavedState(bool);
     void _getDBChunkSurroundedByNeighbors()const;
     void chunkHasConvertedDataTag()const;
-    void getDirtyTicksCounter(LevelChunkDataField)const;
+//  void getDirtyTicksCounter(LevelChunkDataField)const; //TODO: incomplete function definition
 };

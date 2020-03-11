@@ -1,11 +1,12 @@
 #pragma once
 
+#include <functional>
 
 
 class AppConfigs {
 
 public:
-    virtual AppConfigs::~AppConfigs()
+    virtual ~AppConfigs();
     virtual void areResourcePacksAllowed()const;
     virtual bool isPlayScreenAllowed()const;
     virtual bool isGameTabShownInSettings()const;
@@ -19,7 +20,7 @@ public:
     virtual void getConnectionDefinition()const;
     virtual bool supportsChangingMultiplayerDuringPlay()const;
 
-    AppConfigs(void);
-    void tryLeaveGameOverride(SceneStack &, SceneFactory &);
-    void setLeaveGameOverride(std::function<void ()(SceneStack &, SceneFactory &)>);
+    AppConfigs();
+//  void tryLeaveGameOverride(SceneStack &, SceneFactory &); //TODO: incomplete function definition
+//  void setLeaveGameOverride(std::function<void (SceneStack &, SceneFactory &)>); //TODO: incomplete function definition
 };

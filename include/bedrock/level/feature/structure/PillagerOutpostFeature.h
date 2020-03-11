@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../../unmapped/Dimension"
-#include "../../../../unmapped/BiomeSource"
-#include "../../../util/BlockPos"
-#include "../../../util/ChunkPos"
-#include "../../../../unmapped/HardcodedSpawnAreaRegistry"
+#include "../../../../unmapped/HardcodedSpawnAreaRegistry.h"
+#include "./StructureFeature.h"
+#include "../../../util/BlockPos.h"
+#include "../../../../unmapped/Dimension.h"
+#include "../../../util/Random.h"
+#include "../../../../unmapped/BiomeSource.h"
+#include "../../../util/ChunkPos.h"
 
 
 class PillagerOutpostFeature : StructureFeature {
 
 public:
-    virtual PillagerOutpostFeature::~PillagerOutpostFeature()
+    virtual ~PillagerOutpostFeature();
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &);
-    virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos&);
+    virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos &);
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);
     virtual void createStructureStart(Dimension &, BiomeSource &, Random &, ChunkPos const&);
 

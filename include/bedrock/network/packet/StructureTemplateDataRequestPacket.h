@@ -1,20 +1,22 @@
 #pragma once
 
-#include "../../../unmapped/NetworkBlockPosition"
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/StructureSettings"
+#include "../../../unmapped/StructureSettings.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../../unmapped/NetworkBlockPosition.h"
+#include "./Packet.h"
+#include <string>
 
 
 class StructureTemplateDataRequestPacket : Packet {
 
 public:
-    virtual StructureTemplateDataRequestPacket::~StructureTemplateDataRequestPacket()
+    virtual ~StructureTemplateDataRequestPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    StructureTemplateDataRequestPacket(void);
-    StructureTemplateDataRequestPacket(std::string const&, NetworkBlockPosition const&, StructureSettings const&, StructureTemplateRequestOperation);
+    StructureTemplateDataRequestPacket();
+//  StructureTemplateDataRequestPacket(std::string const&, NetworkBlockPosition const&, StructureSettings const&, StructureTemplateRequestOperation); //TODO: incomplete function definition
 };

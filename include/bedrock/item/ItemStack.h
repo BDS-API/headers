@@ -1,13 +1,17 @@
 #pragma once
 
-#include "../block/BlockLegacy"
-#include "../actor/Mob"
-#include "../actor/Actor"
-#include "../nbt/CompoundTag"
-#include "../level/Level"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../../unmapped/RecipeIngredient"
+#include "../actor/Mob.h"
+#include "./ItemStackBase.h"
+#include "./ItemInstance.h"
+#include "../../unmapped/RecipeIngredient.h"
+#include "./Item.h"
+#include "../level/Level.h"
+#include "../actor/Actor.h"
+#include "../actor/Player.h"
+#include "../block/BlockLegacy.h"
+#include "../nbt/CompoundTag.h"
+#include "./ItemStack.h"
+#include "../../unmapped/Block.h"
 
 
 class ItemStack : ItemStackBase {
@@ -15,11 +19,11 @@ class ItemStack : ItemStackBase {
 public:
     static long EMPTY_ITEM;
 
-    virtual ItemStack::~ItemStack()
+    virtual ~ItemStack();
     virtual void reinit(Item const&, int, int);
     virtual void reinit(BlockLegacy const&, int);
 
-    ItemStack(void);
+    ItemStack();
     ItemStack(BlockLegacy const&, int);
     ItemStack(Block const&, int, CompoundTag const*);
     ItemStack(Item const&);

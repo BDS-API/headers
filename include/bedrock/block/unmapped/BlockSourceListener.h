@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../actor/unmapped/ActorBlockSyncMessage"
-#include "../../../unmapped/Block"
-#include "../../util/BlockPos"
-#include "../actor/BlockActor"
+#include "../actor/BlockActor.h"
+#include "../../../unmapped/Block.h"
+#include "./BlockSource.h"
+#include "../../actor/Actor.h"
+#include "../../actor/unmapped/ActorBlockSyncMessage.h"
+#include <memory>
+#include "../../util/BlockPos.h"
 
 
 class BlockSourceListener {
 
 public:
-    virtual BlockSourceListener::~BlockSourceListener()
+    virtual ~BlockSourceListener();
     virtual void onSourceCreated(BlockSource &);
     virtual void onSourceDestroyed(BlockSource &);
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&);
@@ -21,5 +23,5 @@ public:
     virtual void onEntityChanged(BlockSource &, Actor &);
     virtual void onBlockEvent(BlockSource &, int, int, int, int, int);
 
-    BlockSourceListener(void);
+    BlockSourceListener();
 };

@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../../../unmapped/RenderParams"
-#include "../../../unmapped/ExpressionNode"
-#include "../../../json/Value"
+#include "../../../unmapped/ExpressionNode.h"
+#include <string>
+#include "../../../json/Value.h"
+#include "../../../unmapped/RenderParams.h"
 
 
 class ActorSkeletalAnimation {
@@ -20,7 +21,7 @@ public:
     void getEvents()const;
     void addParticleEffectEvent(float);
     void addSoundEffectEvent(float);
-    void addActorEvent(float, std::string const&, CurrentCmdVersion);
+//  void addActorEvent(float, std::string const&, CurrentCmdVersion); //TODO: incomplete function definition
     void setAnimationLength(float);
     void getAnimationLength()const;
     void getMaxKeyFrameTime()const;
@@ -38,4 +39,6 @@ public:
     void getBlendWeight(RenderParams &)const;
     void setBlendWeight(ExpressionNode const&);
     void setAnimTimeUpdate(ExpressionNode const&);
+    std::string getSourceFilePathWithExtension()const;
+    ~ActorSkeletalAnimation();
 };

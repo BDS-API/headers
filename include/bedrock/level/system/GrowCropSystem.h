@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class GrowCropSystem : ITickingSystem {
 
 public:
-    virtual GrowCropSystem::~GrowCropSystem()
+    virtual ~GrowCropSystem();
     virtual void tick(EntityRegistry &);
 
-    GrowCropSystem(void);
+    GrowCropSystem();
 };

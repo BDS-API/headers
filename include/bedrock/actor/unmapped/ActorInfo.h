@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../nbt/CompoundTag"
+#include "./ActorInfo.h"
+#include "../../nbt/CompoundTag.h"
 
 
 class ActorInfo {
 
 public:
 
-    ActorInfo(void);
+    ~ActorInfo();
+    ActorInfo();
     ActorInfo(ActorInfo const&);
     void save()const;
     void load(CompoundTag const*);

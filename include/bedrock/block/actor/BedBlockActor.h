@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../level/Level.h"
+#include "../../util/BlockPos.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include "../unmapped/BlockSource.h"
+#include <string>
 
 
 class BedBlockActor : BlockActor {
 
 public:
-    virtual BedBlockActor::~BedBlockActor()
+    virtual ~BedBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
@@ -20,7 +22,7 @@ public:
     virtual void getUpdatePacket(BlockSource &);
     virtual void onPlace(BlockSource &);
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     void getColorIndex()const;

@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../../../unmapped/FeatureRegistry"
-#include "../../util/BlockPos"
+#include "../../util/Random.h"
+#include "../../../unmapped/FeatureRegistry.h"
+#include "./Feature.h"
+#include "../../util/BlockPos.h"
+#include "../../block/unmapped/BlockSource.h"
 
 
 class LegacyTreeFeature : Feature {
 
 public:
-    virtual LegacyTreeFeature::~LegacyTreeFeature()
+    virtual ~LegacyTreeFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
-    LegacyTreeFeature(LegacyTreeFeature::Type, FeatureRegistry const&);
+//  LegacyTreeFeature(LegacyTreeFeature::Type, FeatureRegistry const&); //TODO: incomplete function definition
 };

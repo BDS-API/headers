@@ -1,18 +1,23 @@
 #pragma once
 
-#include "../core/Path"
+#include "./Node.h"
+#include "../core/Path.h"
+#include <memory>
+#include <vector>
+#include <string>
 
 
 class PerfTimer {
 
 public:
     static long MultiplyDeBruijnBitPosition;
-    static long mPath[abi:cxx11];
+    static std::string mPath;
     static long test;
     static long mEnabled;
 
 
-    PerfTimer(std::thread::id);
+//  PerfTimer(std::thread::id); //TODO: incomplete function definition
+    ~PerfTimer();
     void allocate(int);
     void _roundToPower2(unsigned int);
     void _getIdleQueue(int);

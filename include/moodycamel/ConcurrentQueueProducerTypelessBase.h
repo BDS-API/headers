@@ -2,11 +2,13 @@
 
 
 
-using namespace moodycamel::details;
+namespace moodycamel::details {
 
 class ConcurrentQueueProducerTypelessBase {
 
 public:
 
-    ConcurrentQueueProducerTypelessBase(void);
+    ConcurrentQueueProducerTypelessBase();
 };
+
+}

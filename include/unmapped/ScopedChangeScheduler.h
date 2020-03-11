@@ -2,11 +2,14 @@
 
 
 
-using namespace Scheduler;
+namespace Scheduler {
 
 class ScopedChangeScheduler {
 
 public:
 
-    ScopedChangeScheduler(void);
+    ScopedChangeScheduler();
+    ~ScopedChangeScheduler();
 };
+
+}

@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../../unmapped/RenderParams"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/RenderParams.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Animal.h"
 
 
 class Cat : Animal {
@@ -11,7 +12,7 @@ public:
     static long SNEAK_SPEED_MOD;
     static long SPRINT_SPEED_MOD;
 
-    virtual Cat::~Cat()
+    virtual ~Cat();
     virtual void onTame();
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void getAmbientSound();

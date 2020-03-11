@@ -1,12 +1,13 @@
 #pragma once
 
-#include "../bedrock/util/Color"
+#include "./Block.h"
+#include "../bedrock/util/Color.h"
 
 
 class MapSample {
 
 public:
 
-    MapSample(void);
+    MapSample();
     MapSample(Color const&, Block const&, short);
 };

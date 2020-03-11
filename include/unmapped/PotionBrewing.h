@@ -1,8 +1,11 @@
 #pragma once
 
-#include "../bedrock/item/Item"
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/item/unmapped/ItemDescriptor"
+#include "./Potion.h"
+#include "../bedrock/item/ItemInstance.h"
+#include "../bedrock/item/unmapped/ItemDescriptor.h"
+#include <memory>
+#include "./Ingredient.h"
+#include "../bedrock/item/Item.h"
 
 
 class PotionBrewing {
@@ -33,7 +36,7 @@ public:
     bool hasPotionMix(std::shared_ptr<Potion const> const&, ItemDescriptor const&);
     void getChemistryMix(ItemDescriptor const&, ItemDescriptor const&);
     void mix(ItemDescriptor const&, ItemInstance const&);
-    void chemistryMixMatches(PotionBrewing::Mix<ItemInstance> const&, ItemDescriptor const&, ItemDescriptor const&);
+//  void chemistryMixMatches(PotionBrewing::Mix<ItemInstance> const&, ItemDescriptor const&, ItemDescriptor const&); //TODO: incomplete function definition
     void addContainerRecipe(Item const&, PotionBrewing::Ingredient const&, Item const&);
     void addPotionMix(std::shared_ptr<Potion const>, PotionBrewing::Ingredient const&, std::shared_ptr<Potion const> const&);
 };

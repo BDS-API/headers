@@ -1,9 +1,12 @@
 #pragma once
 
-#include "../bedrock/resourcepack/KnownPackInfo"
+#include "./KnownPackInfo.h"
+#include "./PackIdVersion.h"
+#include "./ResourceLocation.h"
+#include "./KnownPackContainer.h"
 
 
-using namespace ResourcePackRepository;
+namespace ResourcePackRepository {
 
 class KnownPackContainer {
 
@@ -11,6 +14,7 @@ public:
 
     bool hasPack(ResourcePackRepository::KnownPackInfo const&)const;
     void addPack(ResourcePackRepository::KnownPackInfo &&);
+    void operator!=(ResourcePackRepository::KnownPackContainer const&)const;
     void getPacks();
     void getPacks()const;
     void getPack(PackIdVersion const&);
@@ -18,5 +22,9 @@ public:
     void addPack(ResourcePackRepository::KnownPackInfo const&);
     void getPack(PackIdVersion const&)const;
     void getPack(ResourceLocation const&)const;
-    KnownPackContainer(void);
+    void operator==(ResourcePackRepository::KnownPackContainer const&)const;
+    KnownPackContainer();
+    ~KnownPackContainer();
 };
+
+}

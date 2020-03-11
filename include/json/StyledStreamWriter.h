@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./Value.h"
+#include <ostream>
+#include <string>
 
 
-using namespace Json;
+namespace Json {
 
 class StyledStreamWriter {
 
 public:
 
+    ~StyledStreamWriter();
     StyledStreamWriter(std::string);
     void write(std::ostream &, Json::Value const&);
     void writeCommentBeforeValue(Json::Value const&);
@@ -23,3 +27,5 @@ public:
     bool hasCommentForValue(Json::Value const&);
     void normalizeEOL(std::string const&);
 };
+
+}

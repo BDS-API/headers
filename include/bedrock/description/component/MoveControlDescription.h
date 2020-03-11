@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "../../../json/Value.h"
+#include "./ComponentDescription.h"
 
 
 class MoveControlDescription : ComponentDescription {
 
 public:
-    virtual MoveControlDescription::~MoveControlDescription()
+    virtual ~MoveControlDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    MoveControlDescription(void);
+    MoveControlDescription();
 };

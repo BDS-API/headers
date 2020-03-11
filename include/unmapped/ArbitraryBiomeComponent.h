@@ -6,5 +6,6 @@ class ArbitraryBiomeComponent {
 
 public:
 
-    ArbitraryBiomeComponent(void);
+    ArbitraryBiomeComponent();
+    ~ArbitraryBiomeComponent();
 };

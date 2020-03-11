@@ -1,10 +1,13 @@
 #pragma once
 
-#include "../raknet/SystemAddress"
-#include "../json/Value"
+#include "../raknet/SystemAddress.h"
+#include "../json/Value.h"
+#include "./GameConnectionInfo.h"
+#include "./ThirdPartyInfo.h"
+#include <string>
 
 
-using namespace Social;
+namespace Social {
 
 class GameConnectionInfo {
 
@@ -12,8 +15,10 @@ public:
 
     void getType()const;
     GameConnectionInfo(Social::GameConnectionInfo const&);
+    ~GameConnectionInfo();
+    std::string getHostIpAddress()const;
     void getPort()const;
-    GameConnectionInfo(void);
+    GameConnectionInfo();
     void getThirdPartyServerInfo();
     GameConnectionInfo(RakNet::SystemAddress, ThirdPartyInfo const&);
     void setUnresolvedUrl(std::string const&);
@@ -22,5 +27,7 @@ public:
     void fromJson(Json::Value const&);
     void getStringized();
     void fromStringized(Json::Value const&);
-    GameConnectionInfo(Social::ConnectionType, std::string const&, int, std::string const&);
+//  GameConnectionInfo(Social::ConnectionType, std::string const&, int, std::string const&); //TODO: incomplete function definition
 };
+
+}

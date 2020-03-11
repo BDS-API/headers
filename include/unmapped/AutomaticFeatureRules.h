@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../bedrock/pack/ResourcePackManager"
+#include "./IWorldRegistriesProvider.h"
+#include "../bedrock/pack/ResourcePackManager.h"
 
 
 class AutomaticFeatureRules {

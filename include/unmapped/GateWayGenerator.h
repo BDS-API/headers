@@ -1,16 +1,21 @@
 #pragma once
 
-#include "../bedrock/level/chunksource/ChunkViewSource"
-#include "../bedrock/util/BlockPos"
+#include "./GateWayGenerator.h"
+#include <memory>
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/level/chunksource/ChunkViewSource.h"
 
 
-using namespace EndDragonFight;
+namespace EndDragonFight {
 
 class GateWayGenerator {
 
 public:
 
-    GateWayGenerator(void);
+    GateWayGenerator();
     GateWayGenerator(bool, std::unique_ptr<ChunkViewSource, std::default_delete<ChunkViewSource>>, BlockPos);
-    GateWayGenerator(EndDragonFight::GateWayGenerator&&);
+    ~GateWayGenerator();
+    GateWayGenerator(EndDragonFight::GateWayGenerator &&);
 };
+
+}

@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include "./BehaviorNode.h"
 
 
 class SequenceBehaviorNode : BehaviorNode {
 
 public:
-    virtual SequenceBehaviorNode::~SequenceBehaviorNode()
+    virtual ~SequenceBehaviorNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 
-    SequenceBehaviorNode(void);
+    SequenceBehaviorNode();
     void getCount()const;
 };

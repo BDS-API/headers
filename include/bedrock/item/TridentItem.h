@@ -1,12 +1,16 @@
 #pragma once
 
-#include "../block/unmapped/BlockSource"
-#include "../actor/Mob"
-#include "../actor/Actor"
-#include "../level/Level"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../container/Container"
+#include "../actor/Mob.h"
+#include "../block/unmapped/BlockSource.h"
+#include "./ItemStackBase.h"
+#include "../container/Container.h"
+#include "./Item.h"
+#include "../level/Level.h"
+#include "../actor/Actor.h"
+#include "../util/Vec3.h"
+#include "../actor/Player.h"
+#include "./ItemStack.h"
+#include <string>
 
 
 class TridentItem : Item {
@@ -15,7 +19,7 @@ public:
     static long THROW_THRESHOLD_TIME;
     static long CHARGE_THRESHOLD_TIME;
 
-    virtual TridentItem::~TridentItem()
+    virtual ~TridentItem();
     virtual void getMaxDamage()const;
     virtual void getAttackDamage()const;
     virtual bool canDestroyInCreative()const;

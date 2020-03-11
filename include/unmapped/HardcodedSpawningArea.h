@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../bedrock/level/HardcodedSpawningArea"
+#include "./HardcodedSpawningArea.h"
 
 
-using namespace LevelChunk;
+namespace LevelChunk {
 
 class HardcodedSpawningArea {
 
 public:
 
-    HardcodedSpawningArea(void);
+    HardcodedSpawningArea();
+    void operator==(LevelChunk::HardcodedSpawningArea const&)const;
     HardcodedSpawningArea(LevelChunk::HardcodedSpawningArea const&);
 };
+
+}

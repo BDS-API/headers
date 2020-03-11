@@ -6,5 +6,5 @@ class BlockLayer {
 
 public:
 
-    BlockLayer(void);
+    BlockLayer();
 };

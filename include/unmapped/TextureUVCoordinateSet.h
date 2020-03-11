@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./ResourceLocation.h"
+#include "./TextureUVCoordinateSet.h"
 
 
 class TextureUVCoordinateSet {
@@ -7,8 +9,9 @@ class TextureUVCoordinateSet {
 public:
 
     TextureUVCoordinateSet(TextureUVCoordinateSet const&);
+    ~TextureUVCoordinateSet();
     TextureUVCoordinateSet(float, float, float, float, unsigned short, unsigned short, ResourceLocation, float);
-    TextureUVCoordinateSet(void);
+    TextureUVCoordinateSet();
     void offsetWidth(float, float)const;
     void offsetHeight(float, float)const;
     void offsetWidthPixel(float, float)const;

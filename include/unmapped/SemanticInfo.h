@@ -2,12 +2,15 @@
 
 
 
-using namespace CommandRegistry;
+namespace CommandRegistry {
 
 class SemanticInfo {
 
 public:
 
     void reset();
-    SemanticInfo(void);
+    SemanticInfo();
+    ~SemanticInfo();
 };
+
+}

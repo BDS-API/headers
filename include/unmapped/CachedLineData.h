@@ -2,11 +2,14 @@
 
 
 
-using namespace SignBlockActor;
+namespace SignBlockActor {
 
 class CachedLineData {
 
 public:
 
-    CachedLineData(void);
+    CachedLineData();
+    ~CachedLineData();
 };
+
+}

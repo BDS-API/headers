@@ -1,15 +1,16 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/VariantParameterList.h"
+#include "./Throwable.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 
 
 class ThrownIceBomb : Throwable {
 
 public:
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual ThrownIceBomb::~ThrownIceBomb()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~ThrownIceBomb();
 
     ThrownIceBomb(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

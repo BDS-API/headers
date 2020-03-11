@@ -1,11 +1,12 @@
 #pragma once
 
+#include "./AppConfigs.h"
 
 
 class VanillaAppConfigs : AppConfigs {
 
 public:
-    virtual VanillaAppConfigs::~VanillaAppConfigs()
+    virtual ~VanillaAppConfigs();
 
-    VanillaAppConfigs(void);
+    VanillaAppConfigs();
 };

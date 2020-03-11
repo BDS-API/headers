@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../../unmapped/HashedString"
+#include "../../../unmapped/HashedString.h"
 
 
 class ActorAnimationControllerInfo {
@@ -8,5 +8,6 @@ class ActorAnimationControllerInfo {
 public:
 
     ActorAnimationControllerInfo(HashedString const&);
-    ActorAnimationControllerInfo(void);
+    ActorAnimationControllerInfo();
+    ~ActorAnimationControllerInfo();
 };

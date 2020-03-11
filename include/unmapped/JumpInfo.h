@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./JumpInfo.h"
 
 
 class JumpInfo {
@@ -7,6 +8,8 @@ class JumpInfo {
 public:
 
     JumpInfo(float, float, int, int);
+    void operator==(JumpInfo const&);
+    void operator!=(JumpInfo const&);
     void getAnimDuration()const;
     void setAnimDuration(int);
     void getJumpDelay()const;

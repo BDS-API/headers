@@ -1,14 +1,15 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "damagesource/ActorDamageSource.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Minecart.h"
 
 
 class MinecartHopper : Minecart {
 
 public:
-    virtual MinecartHopper::~MinecartHopper()
+    virtual ~MinecartHopper();
     virtual void destroy(ActorDamageSource const&, bool);
     virtual void getType();
     virtual void getDefaultDisplayBlock()const;

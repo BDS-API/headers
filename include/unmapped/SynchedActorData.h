@@ -1,6 +1,11 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
+#include "./DataItem.h"
+#include <memory>
+#include "../bedrock/actor/Actor.h"
+#include "./SynchedActorData.h"
+#include <vector>
+#include <string>
 
 
 class SynchedActorData {
@@ -11,8 +16,9 @@ public:
     void markDirty(DataItem &);
     void markDirty(unsigned short);
     bool isDirty()const;
-    SynchedActorData(void);
-    SynchedActorData(SynchedActorData&&);
+    SynchedActorData();
+    SynchedActorData(SynchedActorData &&);
+    ~SynchedActorData();
     void packDirty();
     void packAll()const;
     void assignValues(std::vector<std::unique_ptr<DataItem, std::default_delete<DataItem>>, std::allocator<std::unique_ptr<DataItem, std::default_delete<DataItem>>>> const&, Actor *);
@@ -24,6 +30,7 @@ public:
     void getInt(unsigned short)const;
     void getInt64(unsigned short)const;
     void getFloat(unsigned short)const;
+    std::string getString(unsigned short)const;
     void getCompoundTag(unsigned short)const;
     void getPos(unsigned short)const;
     void getVec3(unsigned short)const;

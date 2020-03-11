@@ -1,6 +1,9 @@
 #pragma once
 
-#include "../actor/Actor"
+#include "./Vec3.h"
+#include "./ChunkPos.h"
+#include "../actor/Actor.h"
+#include "./BlockPos.h"
 
 
 class ChunkPos {
@@ -12,8 +15,12 @@ public:
 
 
     ChunkPos(int, int);
-    ChunkPos(void);
+    void operator+(int)const;
+    ChunkPos();
+    void operator==(ChunkPos const&)const;
     void distanceToSqr(ChunkPos const&)const;
+    void operator+(ChunkPos const&)const;
+    void operator!=(ChunkPos const&)const;
     ChunkPos(BlockPos const&);
     ChunkPos(Vec3 const&);
     void distanceToSqr(Actor const&)const;

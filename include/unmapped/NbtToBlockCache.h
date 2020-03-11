@@ -2,11 +2,14 @@
 
 
 
-using namespace BlockSerializationUtils;
+namespace BlockSerializationUtils {
 
 class NbtToBlockCache {
 
 public:
 
-    NbtToBlockCache(void);
+    NbtToBlockCache();
+    ~NbtToBlockCache();
 };
+
+}

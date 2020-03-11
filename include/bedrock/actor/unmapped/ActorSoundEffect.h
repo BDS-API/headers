@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "./ActorSoundEffect.h"
+#include "../../../json/Value.h"
 
 
 class ActorSoundEffect {
@@ -8,7 +9,8 @@ class ActorSoundEffect {
 public:
 
     void toJson(Json::Value &)const;
-    ActorSoundEffect(void);
+    ActorSoundEffect();
+    ~ActorSoundEffect();
     ActorSoundEffect(ActorSoundEffect const&);
-    ActorSoundEffect(ActorSoundEffect&&);
+    ActorSoundEffect(ActorSoundEffect &&);
 };

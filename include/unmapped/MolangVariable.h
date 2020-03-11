@@ -6,5 +6,6 @@ class MolangVariable {
 
 public:
 
-    MolangVariable(void);
+    ~MolangVariable();
+    MolangVariable();
 };

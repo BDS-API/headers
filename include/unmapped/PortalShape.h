@@ -1,20 +1,22 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "./WorldChangeTransaction.h"
+#include "./Block.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class PortalShape {
 
 public:
 
-    PortalShape(BlockSource const&, BlockPos const&, PortalAxis);
+//  PortalShape(BlockSource const&, BlockPos const&, PortalAxis); //TODO: incomplete function definition
     void evaluate(BlockPos const&, BlockSource const&);
     void _isEmptyBlock(Block const&)const;
-    void _getDistanceUntilEdge(BlockPos const&, Facing::Name, BlockSource const&)const;
+//  void _getDistanceUntilEdge(BlockPos const&, Facing::Name, BlockSource const&)const; //TODO: incomplete function definition
     void _calculatePortalHeight(BlockSource const&);
-    void setAxis(PortalAxis);
+//  void setAxis(PortalAxis); //TODO: incomplete function definition
     void getHeight()const;
     void getWidth()const;
     void getNumberOfPortalBlocks()const;

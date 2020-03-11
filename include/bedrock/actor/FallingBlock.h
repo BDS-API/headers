@@ -1,22 +1,23 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../block/unmapped/BlockSource"
-#include "../../unmapped/Block"
-#include "../../unmapped/VariantParameterList"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../block/unmapped/BlockSource.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
+#include "../../unmapped/Block.h"
 
 
 class FallingBlock : Actor {
 
 public:
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual FallingBlock::~FallingBlock()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~FallingBlock();
     virtual void teleportTo(Vec3 const&, bool, int, int);
     virtual void normalTick();
     virtual void getShadowHeightOffs();

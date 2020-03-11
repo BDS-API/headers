@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../bedrock/actor/Player"
+#include "../bedrock/actor/Player.h"
 
 
 class MoveInput {
 
 public:
-    virtual MoveInput::~MoveInput()
+    virtual ~MoveInput();
     virtual void tick(Player &);
     virtual void render(float);
     virtual void setKey(int, bool);
@@ -33,5 +33,5 @@ public:
     bool isSneakDown()const;
     bool isAutoJumpingInWater()const;
     bool isAscendScaffolding()const;
-    MoveInput(void);
+    MoveInput();
 };

@@ -1,15 +1,20 @@
 #pragma once
 
+#include "./DeleteFileEntry.h"
+#include <string>
 
 
-using namespace SnapshotEnv;
+namespace SnapshotEnv {
 
 class DeleteFileEntry {
 
 public:
 
-    DeleteFileEntry(Core::PathBuffer<std::string>, bool);
-    void execute(leveldb::Env *);
-    bool deletesPath(Core::PathBuffer<std::string> const&);
+//  DeleteFileEntry(Core::PathBuffer<std::string>, bool); //TODO: incomplete function definition
+    ~DeleteFileEntry();
+//  void execute(leveldb::Env *); //TODO: incomplete function definition
+//  bool deletesPath(Core::PathBuffer<std::string> const&); //TODO: incomplete function definition
     DeleteFileEntry(SnapshotEnv::DeleteFileEntry const&);
 };
+
+}

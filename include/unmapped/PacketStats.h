@@ -2,7 +2,7 @@
 
 
 
-using namespace NetworkStatistics;
+namespace NetworkStatistics {
 
 class PacketStats {
 
@@ -10,3 +10,5 @@ public:
 
     PacketStats(unsigned int);
 };
+
+}

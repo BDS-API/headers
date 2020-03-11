@@ -1,16 +1,18 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../util/Random"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class FlowerPotBlock : ActorBlock {
 
 public:
-    virtual FlowerPotBlock::~FlowerPotBlock()
+    virtual ~FlowerPotBlock();
     virtual bool isInteractiveBlock()const;
     virtual bool isValidAuxValue(int)const;
     virtual void waterSpreadCausesSpawn()const;

@@ -1,18 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../io/BinaryStream.h"
+#include <string>
 
 
 class AddBehaviorTreePacket : Packet {
 
 public:
-    virtual AddBehaviorTreePacket::~AddBehaviorTreePacket()
+    virtual ~AddBehaviorTreePacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    AddBehaviorTreePacket(void);
+    AddBehaviorTreePacket();
     AddBehaviorTreePacket(std::string const&);
+    std::string getJsonInput()const;
 };

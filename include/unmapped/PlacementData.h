@@ -2,11 +2,14 @@
 
 
 
-using namespace WoodlandMansionPieces;
+namespace WoodlandMansionPieces {
 
 class PlacementData {
 
 public:
 
-    PlacementData(void);
+    PlacementData();
+    ~PlacementData();
 };
+
+}

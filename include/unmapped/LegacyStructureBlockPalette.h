@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./Block.h"
 
 
 class LegacyStructureBlockPalette {
 
 public:
 
-    LegacyStructureBlockPalette(void);
+    ~LegacyStructureBlockPalette();
+    LegacyStructureBlockPalette();
     void clearMap();
     void getSize();
     void addMapping(int, Block const&);

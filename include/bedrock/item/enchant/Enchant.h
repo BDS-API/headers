@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../../actor/damagesource/ActorDamageSource"
-#include "../../actor/Actor"
-#include "../ItemInstance"
+#include "../ItemInstance.h"
+#include "../../actor/damagesource/ActorDamageSource.h"
+#include <string>
+#include "../../actor/Actor.h"
 
 
 class Enchant {
@@ -11,8 +12,8 @@ public:
     static long mEnchants;
     static long mAllowExperimental;
 
-    virtual Enchant::~Enchant()
-    virtual bool isCompatibleWith(Enchant::Type)const;
+    virtual ~Enchant();
+//  virtual bool isCompatibleWith(Enchant::Type)const; //TODO: incomplete function definition
     virtual void getMinCost(int)const;
     virtual void getMaxCost(int)const;
     virtual void getMinLevel()const;
@@ -25,8 +26,8 @@ public:
     virtual bool isProtectionEnchant()const;
     virtual bool isTreasureOnly()const;
 
-    Enchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, int, bool);
-    Enchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, int);
+//  Enchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, int, bool); //TODO: incomplete function definition
+//  Enchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, int); //TODO: incomplete function definition
     void getFrequency()const;
     bool isLootable()const;
     bool isExperimental()const;
@@ -37,6 +38,8 @@ public:
     bool canPrimaryEnchant(int)const;
     bool canSecondaryEnchant(ItemInstance const&)const;
     bool canSecondaryEnchant(int)const;
+    std::string getDescription()const;
+    std::string getDescriptionId()const;
     void getStringId()const;
     void initEnchants(bool);
     void setAllowExperimental(bool);

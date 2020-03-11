@@ -2,12 +2,14 @@
 
 
 
-using namespace ScriptApi;
+namespace ScriptApi {
 
 class ScriptCallbackInterface {
 
 public:
-    virtual ScriptApi::ScriptCallbackInterface::~ScriptCallbackInterface()
+    virtual ~ScriptCallbackInterface();
 
-    ScriptCallbackInterface(void);
+    ScriptCallbackInterface();
 };
+
+}

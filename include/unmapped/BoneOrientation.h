@@ -1,6 +1,10 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "./HashedString.h"
+#include "./BoneOrientationTransform.h"
+#include "./BoneOrientation.h"
+#include "./Matrix.h"
 
 
 class BoneOrientation {
@@ -9,15 +13,15 @@ public:
 
     BoneOrientation(HashedString const&);
     void init(BoneOrientationTransform &);
-    void add(float, float, float, BoneTransformType);
-    void scale(float, float, float, BoneTransformType);
+//  void add(float, float, float, BoneTransformType); //TODO: incomplete function definition
+//  void scale(float, float, float, BoneTransformType); //TODO: incomplete function definition
     void applyShortestPathBlend(BoneOrientation const&, BoneOrientation const&, float, float);
     void getTransform()const;
     void setDefaultTransform(BoneOrientationTransform const&);
     void setTransform(BoneOrientationTransform const&);
     void getDefaultTransform()const;
     void getDefaultTransform();
-    void setRotationRelativeMode(BoneAnimationRelativeMode);
+//  void setRotationRelativeMode(BoneAnimationRelativeMode); //TODO: incomplete function definition
     void getRotationRelativeMode()const;
     void setPivot(Vec3 const&);
     void getPivot()const;
@@ -35,6 +39,7 @@ public:
     void copySourceDataFrom(BoneOrientation const&);
     void getIdentityBoneOrientation();
     void setDefaultPose();
-    BoneOrientation(void);
+    BoneOrientation();
+    ~BoneOrientation();
     BoneOrientation(BoneOrientation const&);
 };

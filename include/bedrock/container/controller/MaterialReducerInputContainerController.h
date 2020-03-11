@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack"
-#include "../../item/unmapped/ItemTransferAmount"
-#include "../../item/ItemInstance"
-#include "../model/ContainerModel"
+#include "../../../unmapped/ContainerItemStack.h"
+#include <memory>
+#include "../../item/unmapped/ItemTransferAmount.h"
+#include "../model/ContainerModel.h"
+#include "../../item/ItemInstance.h"
+#include "./ContainerController.h"
 
 
 class MaterialReducerInputContainerController : ContainerController {
 
 public:
-    virtual MaterialReducerInputContainerController::~MaterialReducerInputContainerController()
+    virtual ~MaterialReducerInputContainerController();
     virtual bool isItemAllowed(ItemInstance const&)const;
     virtual void _canSet(int, ContainerItemStack const&, ItemTransferAmount)const;
     virtual void _getAvailableSetCount(int, ContainerItemStack const&)const;

@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/BlockPos"
-#include "../../util/Vec3"
-#include "../unmapped/ActorFilterGroup"
+#include "../unmapped/ActorFilterGroup.h"
+#include "../../util/Vec3.h"
+#include "../../util/BlockPos.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class StalkAndPounceOnTargetGoal : Goal {
 
 public:
-    virtual StalkAndPounceOnTargetGoal::~StalkAndPounceOnTargetGoal()
+    virtual ~StalkAndPounceOnTargetGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual bool canBeInterrupted();

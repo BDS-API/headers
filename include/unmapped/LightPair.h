@@ -2,7 +2,7 @@
 
 
 
-using namespace SubChunkBrightnessStorage;
+namespace SubChunkBrightnessStorage {
 
 class LightPair {
 
@@ -12,3 +12,5 @@ public:
     LightPair(unsigned char);
     bool isDarkness()const;
 };
+
+}

@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../unmapped/FilterContext"
+#include "./SimpleIntFilterTest.h"
+#include "../../unmapped/FilterContext.h"
 
 
 class ActorIsSkinIDTest : SimpleIntFilterTest {
 
 public:
-    virtual ActorIsSkinIDTest::~ActorIsSkinIDTest()
+    virtual ~ActorIsSkinIDTest();
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 
-    ActorIsSkinIDTest(void);
+    ActorIsSkinIDTest();
 };

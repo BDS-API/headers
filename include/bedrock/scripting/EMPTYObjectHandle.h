@@ -2,7 +2,7 @@
 
 
 
-using namespace ScriptApi;
+namespace ScriptApi {
 
 class EMPTYObjectHandle {
 
@@ -10,3 +10,5 @@ public:
 
     void _isEmpty()const;
 };
+
+}

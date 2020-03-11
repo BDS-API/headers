@@ -1,26 +1,28 @@
 #pragma once
 
-#include "../../../unmapped/Dimension"
-#include "../LevelChunk"
-#include "../../util/BlockPos"
-#include "../../../unmapped/FlatWorldGeneratorOptions"
-#include "../../../unmapped/BoundingBox"
-#include "../../util/ChunkPos"
-#include "../generator/WorldGenerator"
-#include "../../../json/Value"
-#include "../../block/unmapped/BlockVolume"
+#include "../../../unmapped/FlatWorldGeneratorOptions.h"
+#include "./ChunkSource.h"
+#include "../../../unmapped/Dimension.h"
+#include "../../util/BlockPos.h"
+#include "./ChunkViewSource.h"
+#include "../../block/unmapped/BlockVolume.h"
+#include "../../util/ChunkPos.h"
+#include "../../../unmapped/BoundingBox.h"
+#include "../../../json/Value.h"
+#include "../generator/WorldGenerator.h"
+#include "../LevelChunk.h"
 
 
 class FlatWorldGenerator : ChunkSource, WorldGenerator {
 
 public:
-    virtual FlatWorldGenerator::~FlatWorldGenerator()
+    virtual ~FlatWorldGenerator();
     virtual void postProcess(ChunkViewSource &);
     virtual void loadChunk(LevelChunk &, bool);
     virtual void getFeatureTypeAt(BlockPos const&);
-    virtual void findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos&);
+//  virtual void findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos &); //TODO: incomplete function definition
     virtual void prepareHeights(BlockVolume &, ChunkPos const&, bool);
-    virtual void garbageCollectBlueprints(buffer_span<ChunkPos>);
+//  virtual void garbageCollectBlueprints(buffer_span<ChunkPos>); //TODO: incomplete function definition
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
     virtual void findSpawnPosition()const;
 

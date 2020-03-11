@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../json/Value"
+#include "../bedrock/util/Random.h"
+#include "../json/Value.h"
 
 
 class IntRange {
@@ -10,7 +10,7 @@ public:
     static long ZERO;
 
 
-    IntRange(void);
+    IntRange();
     IntRange(int);
     IntRange(int, int);
     void getValue(Random &)const;

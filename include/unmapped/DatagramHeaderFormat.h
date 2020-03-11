@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../raknet/BitStream"
+#include "../raknet/BitStream.h"
 
 
 class DatagramHeaderFormat {
 
 public:
 
-    DatagramHeaderFormat(void);
+    DatagramHeaderFormat();
     void Deserialize(RakNet::BitStream *);
     void Serialize(RakNet::BitStream *);
     void GetDataHeaderByteLength();

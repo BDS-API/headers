@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../util/Vec3"
-#include "../../json/Value"
-#include "../util/BlockPos"
+#include "../util/BlockPos.h"
+#include "../../json/Value.h"
+#include "../util/Vec3.h"
+#include <string>
 
 
 class CommandPropertyBag {
 
 public:
-    virtual CommandPropertyBag::~CommandPropertyBag()
+    virtual ~CommandPropertyBag();
 
-    CommandPropertyBag(void);
+    CommandPropertyBag();
     CommandPropertyBag(Json::Value const&);
     void clone()const;
     void set(std::string const&, Json::Value const&);

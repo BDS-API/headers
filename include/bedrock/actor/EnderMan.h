@@ -1,12 +1,13 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/MobEffectInstance"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/Block"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../../unmapped/MobEffectInstance.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "damagesource/ActorDamageSource.h"
+#include "./Monster.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
+#include "../../unmapped/Block.h"
 
 
 class EnderMan : Monster {
@@ -17,7 +18,7 @@ public:
     static long SPEED_MODIFIER_ATTACKING_UUID;
     static long SPEED_MODIFIER_ATTACKING;
 
-    virtual EnderMan::~EnderMan()
+    virtual ~EnderMan();
     virtual void normalTick();
     virtual void shouldRender()const;
     virtual bool canBeAffectedByArrow(MobEffectInstance const&)const;

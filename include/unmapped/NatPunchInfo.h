@@ -2,11 +2,13 @@
 
 
 
-using namespace Connector;
+namespace Connector {
 
 class NatPunchInfo {
 
 public:
 
-    NatPunchInfo(void);
+    NatPunchInfo();
 };
+
+}

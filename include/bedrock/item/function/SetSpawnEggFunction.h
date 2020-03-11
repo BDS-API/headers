@@ -1,18 +1,21 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../../unmapped/LootTableContext"
-#include "../ItemInstance"
-#include "../condition/LootItemCondition"
-#include "../../actor/unmapped/ActorDefinitionIdentifier"
-#include "../ItemStack"
-#include "../../../json/Value"
+#include "../../util/Random.h"
+#include "../condition/LootItemCondition.h"
+#include "../../../unmapped/LootTableContext.h"
+#include <memory>
+#include "./LootItemFunction.h"
+#include "../../../json/Value.h"
+#include <vector>
+#include "../../actor/unmapped/ActorDefinitionIdentifier.h"
+#include "../ItemStack.h"
+#include "../ItemInstance.h"
 
 
 class SetSpawnEggFunction : LootItemFunction {
 
 public:
-    virtual SetSpawnEggFunction::~SetSpawnEggFunction()
+    virtual ~SetSpawnEggFunction();
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
 

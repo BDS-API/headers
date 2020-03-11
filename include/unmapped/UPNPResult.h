@@ -6,5 +6,5 @@ class UPNPResult {
 
 public:
 
-    UPNPResult(void);
+    UPNPResult();
 };

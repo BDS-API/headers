@@ -2,11 +2,13 @@
 
 
 
-using namespace ServerPlayer;
+namespace ServerPlayer {
 
 class NearbyActor {
 
 public:
 
-    NearbyActor(void);
+    NearbyActor();
 };
+
+}

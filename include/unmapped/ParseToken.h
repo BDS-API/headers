@@ -1,13 +1,19 @@
 #pragma once
 
-#include "../bedrock/command/Symbol"
+#include "./Symbol.h"
+#include "./ParseToken.h"
+#include <string>
 
 
-using namespace CommandRegistry;
+namespace CommandRegistry {
 
 class ParseToken {
 
 public:
 
-    ParseToken(CommandRegistry::Symbol, CommandRegistry::ParseToken*);
+    ~ParseToken();
+    ParseToken(CommandRegistry::Symbol, CommandRegistry::ParseToken *);
+    std::string toString()const;
 };
+
+}

@@ -2,11 +2,13 @@
 
 
 
-using namespace DBStorage;
+namespace DBStorage {
 
 class Options {
 
 public:
 
-    Options(void);
+    Options();
 };
+
+}

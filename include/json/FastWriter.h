@@ -1,16 +1,21 @@
 #pragma once
 
+#include "./Value.h"
+#include "./Writer.h"
+#include <string>
 
 
-using namespace Json;
+namespace Json {
 
 class FastWriter : Json::Writer {
 
 public:
-    virtual Json::FastWriter::~FastWriter()
-    virtual void write(Json::Value const&);
+    virtual ~FastWriter();
+    virtual std::string write(Json::Value const&);
 
-    FastWriter(void);
+    FastWriter();
     void enableYAMLCompatibility();
     void writeValue(Json::Value const&);
 };
+
+}

@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../nbt/CompoundTag"
-#include "../actor/Player"
+#include "../actor/Actor.h"
+#include "./Level.h"
+#include "../actor/Player.h"
+#include "../nbt/CompoundTag.h"
+#include <string>
 
 
 class LevelEventListener {
 
 public:
-    virtual LevelEventListener::~LevelEventListener()
+    virtual ~LevelEventListener();
     virtual void onLevelInitialized(Level &);
     virtual void onLevelSaveData(Level &, CompoundTag &);
     virtual void onLevelAddedPlayer(Level &, Player &);
@@ -18,5 +20,5 @@ public:
     virtual void onLevelTick();
     virtual void onLevelWeatherChange(std::string const&, bool, bool);
 
-    LevelEventListener(void);
+    LevelEventListener();
 };

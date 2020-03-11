@@ -1,35 +1,42 @@
 #pragma once
 
-#include "../../unmapped/TextureUVCoordinateSet"
-#include "../util/Vec3"
-#include "../../unmapped/TextureAtlasItem"
-#include "../nbt/CompoundTag"
-#include "../io/IDataOutput"
-#include "../actor/Player"
-#include "../container/Container"
-#include "../block/unmapped/BlockSource"
-#include "../level/Level"
-#include "../io/IDataInput"
-#include "../actor/unmapped/ActorInfoRegistry"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../io/ReadOnlyBinaryStream"
-#include "../../unmapped/BaseGameVersion"
-#include "../level/LevelData"
-#include "../../json/Value"
-#include "../actor/Mob"
-#include "../actor/Actor"
-#include "../../unmapped/AtlasItemManager"
-#include "../block/unmapped/BlockDefinitionGroup"
-#include "unmapped/ItemDescriptor"
+#include "../actor/Mob.h"
+#include <string>
+#include "../io/IDataInput.h"
+#include "../../unmapped/Block.h"
+#include "./ItemInstance.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/TextureUVCoordinateSet.h"
+#include <functional>
+#include "../../unmapped/BaseGameVersion.h"
+#include "../level/LevelData.h"
+#include "../io/IDataOutput.h"
+#include "../../unmapped/TextureAtlasItem.h"
+#include "../block/unmapped/BlockDefinitionGroup.h"
+#include "../actor/Player.h"
+#include "../block/unmapped/BlockSource.h"
+#include "../io/ReadOnlyBinaryStream.h"
+#include "../util/BlockPos.h"
+#include "../actor/unmapped/ActorInfoRegistry.h"
+#include "../nbt/CompoundTag.h"
+#include "../container/Container.h"
+#include "./ItemStack.h"
+#include "../../json/Value.h"
+#include "../../unmapped/AtlasItemManager.h"
+#include "./ItemStackBase.h"
+#include <memory>
+#include "./Item.h"
+#include "../level/Level.h"
+#include "../actor/Actor.h"
+#include "unmapped/ItemDescriptor.h"
 
 
 class Item {
 
 public:
     static long mGenerateDenyParticleEffect;
-    static long TAG_DAMAGE[abi:cxx11];
-    static long ICON_DESCRIPTION_PREFIX[abi:cxx11];
+    static std::string TAG_DAMAGE;
+    static std::string ICON_DESCRIPTION_PREFIX;
     static long mItemTextureItems;
     static long mCreativeListMutex;
     static long mCreativeList;
@@ -41,17 +48,17 @@ public:
     static long mAllowExperimental;
     static long mWorldBaseGameVersion;
 
-    virtual Item::~Item()
+    virtual ~Item();
     virtual void tearDown();
     virtual void getMaxUseDuration(ItemInstance const*)const;
     virtual void getMaxUseDuration(ItemStack const*)const;
     virtual bool isExperimental(ItemDescriptor const*)const;
     virtual void setMaxStackSize(unsigned char);
-    virtual void setCategory(CreativeItemCategory);
+//  virtual void setCategory(CreativeItemCategory); //TODO: incomplete function definition
     virtual void setStackedByData(bool);
     virtual void setMaxDamage(int);
     virtual void setHandEquipped();
-    virtual void setUseAnimation(UseAnimation);
+//  virtual void setUseAnimation(UseAnimation); //TODO: incomplete function definition
     virtual void setMaxUseDuration(int);
     virtual void setRequiresWorldBuilder(bool);
     virtual void setExplodable(bool);
@@ -104,9 +111,9 @@ public:
     virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void mineBlock(ItemInstance &, Block const&, int, int, int, Actor *)const;
     virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
-    virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
-    virtual void buildEffectDescriptionName(ItemStackBase const&)const;
-    virtual void buildCategoryDescriptionName()const;
+    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
+    virtual std::string buildEffectDescriptionName(ItemStackBase const&)const;
+    virtual std::string buildCategoryDescriptionName()const;
     virtual void readUserData(ItemStackBase &, IDataInput &, ReadOnlyBinaryStream &)const;
     virtual void writeUserData(ItemStackBase const&, IDataOutput &)const;
     virtual void getMaxStackSize(ItemDescriptor const&)const;
@@ -121,7 +128,7 @@ public:
     virtual void getInHandUpdateType(Player const&, ItemInstance const&, ItemInstance const&, bool, bool)const;
     virtual void getInHandUpdateType(Player const&, ItemStack const&, ItemStack const&, bool, bool)const;
     virtual bool isSameItem(ItemStackBase const&, ItemStackBase const&)const;
-    virtual void getInteractText(Player const&)const;
+    virtual std::string getInteractText(Player const&)const;
     virtual void getAnimationFrameFor(Mob *, bool, ItemStack const*, bool)const;
     virtual bool isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
@@ -132,7 +139,7 @@ public:
     virtual bool canBeCharged()const;
     virtual void playSoundIncrementally(ItemInstance const&, Mob &)const;
     virtual void playSoundIncrementally(ItemStack const&, Mob &)const;
-    virtual void getAuxValuesDescription()const;
+    virtual std::string getAuxValuesDescription()const;
     virtual void _checkUseOnPermissions(Actor &, ItemInstance &, unsigned char const&, BlockPos const&)const;
     virtual void _checkUseOnPermissions(Actor &, ItemStack &, unsigned char const&, BlockPos const&)const;
     virtual void _calculatePlacePos(ItemInstance &, Actor &, unsigned char &, BlockPos &)const;
@@ -145,6 +152,8 @@ public:
     void getCreativeCategory()const;
     void shouldDespawn()const;
     void toBlockId(short);
+    std::string getDescriptionId()const;
+    std::string getRawNameId()const;
     void resetId(short);
     void setAtlasItemManager(std::shared_ptr<AtlasItemManager>);
     void initServer(Json::Value &);
@@ -153,18 +162,19 @@ public:
     void beginCreativeGroup(std::string const&, ItemInstance const&);
     void beginCreativeGroup(std::string const&, short, short, CompoundTag const*);
     void beginCreativeGroup(std::string const&, Block const*, CompoundTag const*);
-    void beginCreativeGroup(std::string const&, Item*, short, CompoundTag const*);
+    void beginCreativeGroup(std::string const&, Item *, short, CompoundTag const*);
     void endCreativeGroup();
     void addCreativeItem(short, short);
     void addCreativeItem(ItemInstance const&);
     void addCreativeItem(Block const&);
-    void addCreativeItem(Item*, short);
+    void addCreativeItem(Item *, short);
     void addCreativeItem(ItemStack const&);
     void findCreativeItem(ItemInstance const&);
-    void initCreativeItems(bool, ActorInfoRegistry *, BlockDefinitionGroup *, bool, BaseGameVersion const&, std::function<void ()(ActorInfoRegistry *, BlockDefinitionGroup *, bool)>);
+//  void initCreativeItems(bool, ActorInfoRegistry *, BlockDefinitionGroup *, bool, BaseGameVersion const&, std::function<void (ActorInfoRegistry *, BlockDefinitionGroup *, bool)>); //TODO: incomplete function definition
     void destroySpeedBonus(ItemInstance const&)const;
-    void _helpChangeInventoryItemInPlace(Actor &, ItemStack &, ItemStack &, ItemAcquisitionMethod)const;
+//  void _helpChangeInventoryItemInPlace(Actor &, ItemStack &, ItemStack &, ItemAcquisitionMethod)const; //TODO: incomplete function definition
     Item(std::string const&, short);
+    std::string getNamespace()const;
     void getFood()const;
     void getSeed()const;
     void getCamera()const;
@@ -176,14 +186,18 @@ public:
     bool canUseSeed(Actor &, BlockPos, unsigned char)const;
     void allowOffhand()const;
     void setAllowOffhand(bool);
+    std::string buildDescriptionName(ItemStackBase const&)const;
     void getTextureUVCoordinateSet(std::string const&, int);
     void getIconTextureUVSet(TextureAtlasItem const&, int, int);
     void getTextureItem(std::string const&);
     void _textMatch(std::string const&, std::string const&, bool);
+    std::string getFullItemName()const;
+    std::string getCommandName()const;
     void getRendererId()const;
+    std::string getSerializedName()const;
     void getRequiredBaseGameVersion()const;
     void executeOnResetBAIcallbacks()const;
-    void addOnResetBAIcallback(std::function<void ()(void)> const&);
+//  void addOnResetBAIcallback(std::function<void (void)> const&); //TODO: incomplete function definition
     void setExperimental();
     bool isExplodable()const;
     void getUseAnimation()const;

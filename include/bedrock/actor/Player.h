@@ -1,37 +1,43 @@
 #pragma once
 
-#include "../level/chunksource/ChunkSource"
-#include "../container/manager/IContainerManager"
-#include "../network/packet/EventPacket"
-#include "../util/Vec3"
-#include "unmapped/ActorUniqueID"
-#include "../item/ItemStack"
-#include "../util/Tick"
-#include "../../unmapped/Dimension"
-#include "../../unmapped/NetworkIdentifier"
-#include "../nbt/CompoundTag"
-#include "../item/ShieldItem"
-#include "../block/actor/BlockActor"
-#include "../../mce/UUID"
-#include "../util/Vec2"
-#include "../../unmapped/Certificate"
-#include "../text/TextObjectRoot"
-#include "../network/packet/sender/PacketSender"
-#include "../container/Container"
-#include "../block/unmapped/BlockSource"
-#include "../level/Level"
-#include "../item/Item"
-#include "../item/unmapped/ItemGroup"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../item/ItemInstance"
-#include "../util/AABB"
-#include "damagesource/ActorDamageSource"
-#include "../network/packet/Packet"
-#include "../../unmapped/VariantParameterList"
-#include "../../unmapped/SerializedSkin"
-#include "../block/actor/ChalkboardBlockActor"
-#include "../../unmapped/DataLoadHelper"
+#include <string>
+#include "../../unmapped/Dimension.h"
+#include "../item/ItemStack.h"
+#include "../network/packet/Packet.h"
+#include "./Agent.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../block/actor/ChalkboardBlockActor.h"
+#include "../item/unmapped/ItemGroup.h"
+#include "../util/Vec3.h"
+#include "../network/packet/EventPacket.h"
+#include "../../unmapped/Certificate.h"
+#include "../item/Item.h"
+#include "../../unmapped/NetworkIdentifier.h"
+#include "../util/Vec2.h"
+#include "./Actor.h"
+#include "./Mob.h"
+#include "../network/packet/sender/PacketSender.h"
+#include "../item/ItemInstance.h"
+#include "../item/ShieldItem.h"
+#include "../block/unmapped/BlockSource.h"
+#include "../../unmapped/SerializedSkin.h"
+#include "../util/BlockPos.h"
+#include "../container/manager/IContainerManager.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "../nbt/CompoundTag.h"
+#include "../container/Container.h"
+#include "../../mce/UUID.h"
+#include "../block/actor/BlockActor.h"
+#include "../text/TextObjectRoot.h"
+#include <memory>
+#include "unmapped/ActorUniqueID.h"
+#include "../util/Tick.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../level/Level.h"
+#include <vector>
+#include "../util/AABB.h"
+#include "../level/chunksource/ChunkSource.h"
+#include "../../unmapped/Block.h"
 
 
 class Player : Mob {
@@ -70,18 +76,18 @@ public:
     static long LEVEL;
     static long EXPERIENCE;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Player::~Player()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Player();
     virtual void remove();
-    virtual void getAttachPos(ActorLocation, float)const;
+//  virtual void getAttachPos(ActorLocation, float)const; //TODO: incomplete function definition
     virtual void move(Vec3 const&);
     virtual void teleportTo(Vec3 const&, bool, int, int);
     virtual void getAddPacket();
     virtual void normalTick();
     virtual void rideTick();
     virtual void getRidingHeight();
-    virtual void getFormattedNameTag()const;
+    virtual std::string getFormattedNameTag()const;
     virtual void getAlwaysShowNameTag()const;
     virtual void getCameraOffset()const;
     virtual bool isImmobile()const;
@@ -97,9 +103,9 @@ public:
     virtual void actuallyHurt(int, ActorDamageSource const*, bool);
     virtual void onBounceStarted(BlockPos const&, Block const&);
     virtual void feed(int);
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void awardKillScore(Actor &, int);
-    virtual void setArmor(ArmorSlot, ItemStack const&);
+//  virtual void setArmor(ArmorSlot, ItemStack const&); //TODO: incomplete function definition
     virtual void getCarriedItem()const;
     virtual void setCarriedItem(ItemStack const&);
     virtual void setOffhandSlot(ItemStack const&);
@@ -116,7 +122,7 @@ public:
     virtual void stopSwimming();
     virtual void getCommandPermissionLevel()const;
     virtual void getAnimationComponent();
-    virtual void useItem(ItemStack &, ItemUseMethod, bool);
+//  virtual void useItem(ItemStack &, ItemUseMethod, bool); //TODO: incomplete function definition
     virtual void getMapDecorationRotation()const;
     virtual bool isWorldBuilder();
     virtual bool isCreative()const;
@@ -154,7 +160,7 @@ public:
     virtual void suspendRegion();
     virtual void _fireWillChangeDimension();
     virtual void _fireDimensionChanged();
-    virtual void changeDimensionWithCredits(AutomaticID<Dimension, int>);
+//  virtual void changeDimensionWithCredits(AutomaticID<Dimension, int>); //TODO: incomplete function definition
     virtual void tickWorld(Tick const&);
     virtual void getTickingOffsets()const;
     virtual void moveView();
@@ -169,7 +175,7 @@ public:
     virtual bool isInTrialMode();
     virtual bool hasResource(int);
     virtual void completeUsingItem();
-    virtual void setPermissions(CommandPermissionLevel);
+//  virtual void setPermissions(CommandPermissionLevel); //TODO: incomplete function definition
     virtual void startCrafting(BlockPos const&, bool);
     virtual void startStonecutting(BlockPos const&);
     virtual void startDestroying();
@@ -224,7 +230,7 @@ public:
     virtual void stopLoading();
     virtual void registerTrackedBoss(ActorUniqueID);
     virtual void unRegisterTrackedBoss(ActorUniqueID);
-    virtual void setPlayerGameType(GameType);
+//  virtual void setPlayerGameType(GameType); //TODO: incomplete function definition
     virtual void _crit(Actor &);
     virtual void getEventing()const;
     virtual void getUserId()const;
@@ -234,25 +240,26 @@ public:
     virtual void inventoryChanged(Container &, int, ItemStack const&, ItemStack const&);
     virtual void deleteContainerManager();
     virtual void setFieldOfViewModifier(float);
-    virtual bool isPositionRelevant(AutomaticID<Dimension, int>, BlockPos const&);
+//  virtual bool isPositionRelevant(AutomaticID<Dimension, int>, BlockPos const&); //TODO: incomplete function definition
     virtual bool isEntityRelevant(Actor const&);
     virtual void onSuspension();
     virtual void onLinkedSlotsChanged();
     virtual void startCooldown(Item const*);
-    virtual void getItemCooldownLeft(CooldownType)const;
-    virtual bool isItemInCooldown(CooldownType)const;
+//  virtual void getItemCooldownLeft(CooldownType)const; //TODO: incomplete function definition
+//  virtual bool isItemInCooldown(CooldownType)const; //TODO: incomplete function definition
     virtual void sendNetworkPacket(Packet &)const;
-    virtual void reportMovementTelemetry(MovementEventType);
+//  virtual void reportMovementTelemetry(MovementEventType); //TODO: incomplete function definition
     virtual void onMovePlayerPacketNormal(Vec3 const&, Vec2 const&, float);
 
     void getTransactionManager();
+    std::string getDeviceId()const;
     bool isRespawnReady();
     void getGameMode()const;
     void getR5DataRecoverComplete()const;
     void setR5DataRecoverComplete(bool);
     void getPacketSender();
     void getChunkSource()const;
-    Player(Level &, PacketSender &, GameType, NetworkIdentifier const&, unsigned char, mce::UUID, std::string const&, std::unique_ptr<Certificate, std::default_delete<Certificate>>, std::string const&, std::string const&);
+//  Player(Level &, PacketSender &, GameType, NetworkIdentifier const&, unsigned char, mce::UUID, std::string const&, std::unique_ptr<Certificate, std::default_delete<Certificate>>, std::string const&, std::string const&); //TODO: incomplete function definition
     void registerAttributes();
     void _registerElytraLoopSound();
     void resetPlayerLevel();
@@ -276,7 +283,8 @@ public:
     void getSleepRotation()const;
     void checkBed(BlockSource *, Vec3 const*);
     void getPlatform()const;
-    void setPlatform(BuildPlatform);
+    std::string getPlatformOnlineId()const;
+//  void setPlatform(BuildPlatform); //TODO: incomplete function definition
     void setPlatformOnlineId(std::string const&);
     void onMobStatusChanged(ActorUniqueID);
     void getChunkRadius()const;
@@ -313,7 +321,7 @@ public:
     void updateTrackedBosses();
     void updateInventoryTransactions();
     bool isInCreativeMode()const;
-    bool canUseAbility(AbilitiesIndex)const;
+//  bool canUseAbility(AbilitiesIndex)const; //TODO: incomplete function definition
     void getScore();
     void dropCursorSelectedItem();
     void getDestroySpeed(Block const&)const;
@@ -324,7 +332,7 @@ public:
     void getPlayerPermissionLevel()const;
     bool canUseOperatorBlocks()const;
     void getXpNeededForNextLevel()const;
-    void setPlayerUIItem(PlayerUISlot, ItemStack const&);
+//  void setPlayerUIItem(PlayerUISlot, ItemStack const&); //TODO: incomplete function definition
     void getPlayerLevel()const;
     void getLevelProgress()const;
     void getAgentID()const;
@@ -333,8 +341,9 @@ public:
     bool isHungry()const;
     bool isSpawned()const;
     void _blockUsingShield(ActorDamageSource const&, float);
-    void setLastHurtBy(ActorType);
+//  void setLastHurtBy(ActorType); //TODO: incomplete function definition
     void interact(Actor &, Vec3 const&);
+    std::string getItemInteractText(Item const&)const;
     void recheckSpawnPosition();
     void setBlockRespawnUntilClientMessage(bool);
     void updateTeleportDestPos();
@@ -353,12 +362,13 @@ public:
     void _findFallbackSpawnPosition(Vec3 &, std::vector<BlockSource *, std::allocator<BlockSource *>>, unsigned int);
     void _ensureSafeSpawnPosition(Vec3 &);
     void _setStartedBlockingTimeStamp(long);
-    void handleMovePlayerPacket(Player::PositionMode, Vec3 const&, Vec2 const&, float, int, int);
-    void setRespawnDimension(AutomaticID<Dimension, int>);
+//  void handleMovePlayerPacket(Player::PositionMode, Vec3 const&, Vec2 const&, float, int, int); //TODO: incomplete function definition
+    std::string getPlayerSessionId()const;
+//  void setRespawnDimension(AutomaticID<Dimension, int>); //TODO: incomplete function definition
     bool isHiddenFrom(Mob &)const;
     void getSpawnPosition();
     void setRespawnPosition(BlockPos const&, bool);
-    void setRespawnDimensionId(AutomaticID<Dimension, int>);
+//  void setRespawnDimensionId(AutomaticID<Dimension, int>); //TODO: incomplete function definition
     void crackBlock(BlockPos const&, unsigned char);
     void _addLevels(int);
     void getSelectedItemSlot()const;
@@ -376,13 +386,13 @@ public:
     void getEnchantmentSeed()const;
     void setEnchantmentSeed(int);
     void spawnExperienceOrb(Vec3 const&, int);
-    void _sendShieldUpdatePacket(ShieldItem const*, ItemStack const&, ItemStack const&, ContainerID, int);
+//  void _sendShieldUpdatePacket(ShieldItem const*, ItemStack const&, ItemStack const&, ContainerID, int); //TODO: incomplete function definition
     void getXpNeededForLevelRange(int, int)const;
     bool hasOpenContainer()const;
     void getContainerManager();
     void getHudContainerManagerModel();
     void getLuck();
-    void getPlayerUIItem(PlayerUISlot);
+//  void getPlayerUIItem(PlayerUISlot); //TODO: incomplete function definition
     void setCursorSelectedItem(ItemStack const&);
     void setCursorSelectedItemGroup(ItemGroup const&);
     void startGliding();
@@ -390,7 +400,7 @@ public:
     void getAgent()const;
     void getAgentIfAllowed(bool, ActorUniqueID)const;
     bool isChatAllowed();
-    void fireDimensionChangedEvent(AutomaticID<Dimension, int>);
+//  void fireDimensionChangedEvent(AutomaticID<Dimension, int>); //TODO: incomplete function definition
     void queueOnScreenTextureAnimation(unsigned int);
     void getCurrentOnScreenAnimationEffectID()const;
     void getOnScreenAnimationTicks()const;
@@ -398,10 +408,11 @@ public:
     void getBlockedUsingShieldTimeStamp()const;
     void getBlockedUsingDamagedShieldTimeStamp()const;
     void getDirection()const;
-    void addListener(PlayerListener &);
-    void removeListener(PlayerListener &);
+//  void addListener(PlayerListener &); //TODO: incomplete function definition
+//  void removeListener(PlayerListener &); //TODO: incomplete function definition
     void getMapIndex();
     void setMapIndex(int);
+    std::string getInteractText()const;
     void getLastHurtBy()const;
     void clearCreativeItemList();
     void updateCreativeItemList(std::vector<ItemInstance, std::allocator<ItemInstance>> const&);

@@ -1,16 +1,19 @@
 #pragma once
 
+#include "./RakPeerInterface.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class RakPeerInterface {
 
 public:
-    virtual RakNet::RakPeerInterface::~RakPeerInterface()
+    virtual ~RakPeerInterface();
 
     void GetInstance();
-    void DestroyInstance(RakNet::RakPeerInterface*);
+    void DestroyInstance(RakNet::RakPeerInterface *);
     void Get64BitUniqueRandomNumber();
-    RakPeerInterface(void);
+    RakPeerInterface();
 };
+
+}

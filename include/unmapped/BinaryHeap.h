@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./PathfinderNode.h"
 
 
 class BinaryHeap {
@@ -7,7 +8,8 @@ class BinaryHeap {
 public:
 
     void _init();
-    BinaryHeap(void);
+    BinaryHeap();
+    ~BinaryHeap();
     void insert(PathfinderNode *);
     void upHeap(int);
     void clear();

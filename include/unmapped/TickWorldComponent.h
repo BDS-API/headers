@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../bedrock/level/tickingarea/ITickingArea"
-#include "../bedrock/actor/Actor"
+#include "./TickWorldComponent.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/level/tickingarea/ITickingArea.h"
+#include <memory>
 
 
 class TickWorldComponent {
 
 public:
 
-    TickWorldComponent(void);
-    TickWorldComponent(TickWorldComponent&&);
+    TickWorldComponent();
+    TickWorldComponent(TickWorldComponent &&);
     void removeArea();
+    ~TickWorldComponent();
     void initFromDefinition(Actor &);
     void getChunkRadius()const;
     void getMaxDistToPlayers()const;

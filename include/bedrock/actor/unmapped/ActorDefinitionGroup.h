@@ -1,20 +1,23 @@
 #pragma once
 
-#include "../../definition/ActorDefinition"
-#include "../../../unmapped/PackInstance"
-#include "../../eventing/IMinecraftEventing"
-#include "../../level/Level"
-#include "../../../unmapped/HashString"
-#include "../../../unmapped/SemVersion"
-#include "../../../core/Path"
-#include "../../../json/Value"
-#include "../../pack/ResourcePackManager"
+#include "../../../unmapped/SemVersion.h"
+#include "../../../unmapped/PackInstance.h"
+#include "./ActorComponentFactory.h"
+#include "../../../core/Path.h"
+#include "../../../unmapped/HashString.h"
+#include "../../definition/ActorDefinition.h"
+#include "../../eventing/IMinecraftEventing.h"
+#include "../../level/Level.h"
+#include "../../pack/ResourcePackManager.h"
+#include "../../../json/Value.h"
+#include "./ActorDefinitionPtr.h"
+#include <string>
 
 
 class ActorDefinitionGroup {
 
 public:
-    virtual ActorDefinitionGroup::~ActorDefinitionGroup()
+    virtual ~ActorDefinitionGroup();
 
     ActorDefinitionGroup(Level &, ResourcePackManager &, IMinecraftEventing &, bool);
     void _getResources(Level &);
@@ -33,4 +36,6 @@ public:
     void tryGetDefinitionGroup(std::string const&, std::string const&);
     void _addRef(ActorDefinitionPtr &);
     void _removeRef(ActorDefinitionPtr &);
+    std::string getList()const;
+    std::string getTemplateMap()const;
 };

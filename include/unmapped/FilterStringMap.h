@@ -1,6 +1,10 @@
 #pragma once
 
-#include "../bedrock/definition/FilterInputDefinition"
+#include <utility>
+#include "./FilterStringMap.h"
+#include "../bedrock/definition/FilterInputDefinition.h"
+#include <initializer_list>
+#include <string>
 
 
 class FilterStringMap {
@@ -8,6 +12,7 @@ class FilterStringMap {
 public:
 
     FilterStringMap(std::initializer_list<std::pair<std::string const, FilterInputDefinition>>);
-    FilterStringMap(void);
+    ~FilterStringMap();
+    FilterStringMap();
     FilterStringMap(FilterStringMap const&);
 };

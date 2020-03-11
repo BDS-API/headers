@@ -1,17 +1,23 @@
 #pragma once
 
-#include "../util/Vec3"
-#include "../../unmapped/ArmorMaterial"
-#include "../nbt/CompoundTag"
-#include "../actor/Player"
-#include "../container/Container"
-#include "../block/unmapped/BlockSource"
-#include "../level/Level"
-#include "../../unmapped/Block"
-#include "../actor/Mob"
-#include "../actor/Actor"
-#include "../util/Color"
-#include "unmapped/ItemDescriptor"
+#include "../actor/Mob.h"
+#include "../block/unmapped/BlockSource.h"
+#include <string>
+#include "./ItemStackBase.h"
+#include "../util/Color.h"
+#include "../../unmapped/Block.h"
+#include <memory>
+#include "./ItemInstance.h"
+#include "../container/Container.h"
+#include "./Item.h"
+#include "../level/Level.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../../unmapped/ArmorMaterial.h"
+#include "../actor/Player.h"
+#include "../nbt/CompoundTag.h"
+#include "./ItemStack.h"
+#include "unmapped/ItemDescriptor.h"
 
 
 class ArmorItem : Item {
@@ -26,7 +32,7 @@ public:
     static long ELYTRA;
     static long TURTLE;
 
-    virtual ArmorItem::~ArmorItem()
+    virtual ~ArmorItem();
     virtual bool isArmor()const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
@@ -47,13 +53,13 @@ public:
     bool hasCustomColor(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     void clearColor(ItemStack &)const;
     void setColor(ItemStack &, Color const&)const;
-    ArmorItem(std::string const&, int, ArmorItem::ArmorMaterial const&, int, ArmorSlot);
+//  ArmorItem(std::string const&, int, ArmorItem::ArmorMaterial const&, int, ArmorSlot); //TODO: incomplete function definition
     bool isElytra()const;
-    void getArmorForSlot(ArmorSlot, int);
-    void dispenseArmor(BlockSource &, Container &, int, Vec3 const&, unsigned char, ArmorSlot);
+//  void getArmorForSlot(ArmorSlot, int); //TODO: incomplete function definition
+//  void dispenseArmor(BlockSource &, Container &, int, Vec3 const&, unsigned char, ArmorSlot); //TODO: incomplete function definition
     void getSlotForItem(ItemStack const&);
     bool isElytraBroken(int);
-    void playEquipSound(BlockSource &, ArmorSlot, Player &)const;
+//  void playEquipSound(BlockSource &, ArmorSlot, Player &)const; //TODO: incomplete function definition
     bool isElytra(ItemDescriptor const&);
     bool isFlyEnabled(ItemInstance const&);
     bool isDamageable(ItemDescriptor const&);

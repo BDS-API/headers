@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../mce/UUID"
-#include "../../unmapped/WhitelistEntry"
-#include "../../unmapped/IJsonSerializable"
-#include "../../json/Value"
+#include "../../mce/UUID.h"
+#include "../../unmapped/WhitelistEntry.h"
+#include "../../unmapped/IJsonSerializable.h"
+#include "../../json/Value.h"
+#include <functional>
+#include <string>
 
 
 class Whitelist : IJsonSerializable {
 
 public:
-    virtual Whitelist::~Whitelist()
+    virtual ~Whitelist();
     virtual void serialize(Json::Value &);
     virtual void deserialize(Json::Value &);
 
-    Whitelist(std::function<void ()(void)>);
+//  Whitelist(std::function<void (void)>); //TODO: incomplete function definition
     bool isAllowed(mce::UUID const&, std::string const&)const;
     bool isIgnoringPlayerLimit(mce::UUID const&, std::string const&)const;
     void clear();

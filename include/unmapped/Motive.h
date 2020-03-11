@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 
 
 class Motive {
@@ -42,9 +43,11 @@ public:
     void getMotiveByName(std::string const&);
     Motive(std::string, int, int, int, int, bool);
     void getDefaultImage();
+    std::string getName()const;
     void getWidth()const;
     void getHeight()const;
     void getUo()const;
     void getVo()const;
     bool isPublic()const;
+    ~Motive();
 };

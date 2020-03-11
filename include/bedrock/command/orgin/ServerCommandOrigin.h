@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../../level/ServerLevel"
+#include "./CommandOrigin.h"
+#include "../../level/ServerLevel.h"
+#include <string>
 
 
 class ServerCommandOrigin : CommandOrigin {
 
 public:
-    virtual ServerCommandOrigin::~ServerCommandOrigin()
-    virtual void getRequestId()const;
-    virtual void getName()const;
+    virtual ~ServerCommandOrigin();
+    virtual std::string getRequestId()const;
+    virtual std::string getName()const;
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void getLevel()const;
@@ -20,5 +22,5 @@ public:
     virtual bool isSelectorExpansionAllowed()const;
     virtual void getOriginType()const;
 
-    ServerCommandOrigin(std::string const&, ServerLevel &, CommandPermissionLevel);
+//  ServerCommandOrigin(std::string const&, ServerLevel &, CommandPermissionLevel); //TODO: incomplete function definition
 };

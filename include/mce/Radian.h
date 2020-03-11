@@ -1,8 +1,9 @@
 #pragma once
 
+#include "./Degree.h"
 
 
-using namespace mce;
+namespace mce {
 
 class Radian {
 
@@ -11,3 +12,5 @@ public:
     Radian(mce::Degree);
     bool asFloat()const;
 };
+
+}

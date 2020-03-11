@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../actor/Player"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class ChorusFlowerBlock : BlockLegacy {
@@ -14,9 +16,9 @@ public:
     static long GROW_RATE;
     static long BRANCH_DIRECTIONS;
 
-    virtual ChorusFlowerBlock::~ChorusFlowerBlock()
+    virtual ~ChorusFlowerBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
-    virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
+//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition
     virtual bool isWaterBlocking()const;
     virtual void waterSpreadCausesSpawn()const;
     virtual bool canContainLiquid()const;

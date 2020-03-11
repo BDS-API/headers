@@ -1,8 +1,9 @@
 #pragma once
 
+#include <string>
 
 
-using namespace NetworkDebugManager;
+namespace NetworkDebugManager {
 
 class Tracker {
 
@@ -12,5 +13,8 @@ public:
     void trackReceive(std::string const&, unsigned long);
     void update();
     void getStats()const;
-    Tracker(void);
+    Tracker();
+    ~Tracker();
 };
+
+}

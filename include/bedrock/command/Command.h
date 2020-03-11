@@ -1,16 +1,21 @@
 #pragma once
 
-#include "orgin/CommandOrigin"
+#include "./CommandSelectorBase.h"
+#include "./CommandFlag.h"
+#include "./CommandOutput.h"
+#include "orgin/CommandOrigin.h"
+#include <string>
 
 
 class Command {
 
 public:
-    static long WILDCARD_TOKEN[abi:cxx11];
+    static std::string WILDCARD_TOKEN;
 
-    virtual Command::~Command()
+    virtual ~Command();
 
-    Command(void);
+    Command();
+    std::string getCommandName()const;
     bool hasFlag(CommandFlag)const;
     void getRegistry()const;
     void run(CommandOrigin const&, CommandOutput &)const;

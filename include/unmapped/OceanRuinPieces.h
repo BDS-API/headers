@@ -1,8 +1,12 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/level/structure/piece/StructurePiece"
-#include "../bedrock/util/BlockPos"
+#include "./StructureManager.h"
+#include "../bedrock/util/Random.h"
+#include <memory>
+#include "../bedrock/level/structure/piece/StructurePiece.h"
+#include <vector>
+#include "../bedrock/util/BlockPos.h"
+#include <string>
 
 
 class OceanRuinPieces {
@@ -25,9 +29,11 @@ public:
     static long mSettings;
 
 
-    void _addClusterRuins(StructureManager &, Random &, Rotation const&, BlockPos const&, OceanRuinConfiguration const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &);
+    std::string _getSmallWarmRuin(Random &);
+    std::string _getBigWarmRuin(Random &);
+//  void _addClusterRuins(StructureManager &, Random &, Rotation const&, BlockPos const&, OceanRuinConfiguration const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &); //TODO: incomplete function definition
     void _allPositions(Random &, int, int, int);
-    void _addPiece(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, OceanRuinConfiguration const&, bool, float);
+//  void _addPiece(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, OceanRuinConfiguration const&, bool, float); //TODO: incomplete function definition
     void init();
-    void addPieces(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, OceanRuinConfiguration const&);
+//  void addPieces(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, OceanRuinConfiguration const&); //TODO: incomplete function definition
 };

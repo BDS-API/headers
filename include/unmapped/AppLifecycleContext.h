@@ -6,7 +6,7 @@ class AppLifecycleContext {
 
 public:
 
-    AppLifecycleContext(void);
+    AppLifecycleContext();
     bool canRender()const;
     void setHasGraphicsContext(bool);
     void setFocus(bool);

@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../../util/BlockPos"
+#include "../../util/Random.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "./Feature.h"
+#include "../../util/BlockPos.h"
 
 
 class LegacyEmeraldOreFeature : Feature {
 
 public:
-    virtual LegacyEmeraldOreFeature::~LegacyEmeraldOreFeature()
+    virtual ~LegacyEmeraldOreFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
-    LegacyEmeraldOreFeature(void);
+    LegacyEmeraldOreFeature();
 };

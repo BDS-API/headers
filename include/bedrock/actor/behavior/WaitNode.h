@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include "./BehaviorNode.h"
 
 
 class WaitNode : BehaviorNode {
 
 public:
-    virtual WaitNode::~WaitNode()
+    virtual ~WaitNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 
-    WaitNode(void);
+    WaitNode();
 };

@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "./DefintionDescription.h"
+#include "./IsExperimentalDescription.h"
+#include "../../../json/Value.h"
 
 
 class IsExperimentalDescription : DefintionDescription {
 
 public:
-    virtual IsExperimentalDescription::~IsExperimentalDescription()
+    virtual ~IsExperimentalDescription();
     virtual void getJsonName()const;
 
-    IsExperimentalDescription(void);
-    IsExperimentalDescription(IsExperimentalDescription&&);
+    IsExperimentalDescription();
+    IsExperimentalDescription(IsExperimentalDescription &&);
     void parse(Json::Value &);
 };

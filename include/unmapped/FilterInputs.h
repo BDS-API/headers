@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./FilterInput.h"
 
 
 class FilterInputs {
 
 public:
 
-    FilterInputs(void);
-    FilterInputs(FilterSubject, FilterInput, FilterOperator, FilterInput);
+    FilterInputs();
+    ~FilterInputs();
+//  FilterInputs(FilterSubject, FilterInput, FilterOperator, FilterInput); //TODO: incomplete function definition
 };

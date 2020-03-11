@@ -1,21 +1,22 @@
 #pragma once
 
-#include "../util/Random"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/MobEffectInstance"
-#include "../util/Color"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorUniqueID"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../../unmapped/MobEffectInstance.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../util/Color.h"
+#include "./Actor.h"
+#include "unmapped/ActorUniqueID.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../util/Random.h"
+#include "../nbt/CompoundTag.h"
 
 
 class AreaEffectCloud : Actor {
 
 public:
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual AreaEffectCloud::~AreaEffectCloud()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~AreaEffectCloud();
     virtual void normalTick();
     virtual void getShadowRadius()const;
     virtual void setOwner(ActorUniqueID);
@@ -38,7 +39,7 @@ public:
     void getPotion()const;
     void addEffect(MobEffectInstance);
     void getParticle()const;
-    void setParticle(ParticleType);
+//  void setParticle(ParticleType); //TODO: incomplete function definition
     void setDuration(int);
     void getDuration()const;
     void setRadiusOnUse(float);

@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class JumpControlSystem : ITickingSystem {
 
 public:
-    virtual JumpControlSystem::~JumpControlSystem()
+    virtual ~JumpControlSystem();
     virtual void tick(EntityRegistry &);
 
-    JumpControlSystem(void);
+    JumpControlSystem();
 };

@@ -2,11 +2,14 @@
 
 
 
-using namespace CommandRegistry;
+namespace CommandRegistry {
 
 class ParseTable {
 
 public:
 
-    ParseTable(void);
+    ~ParseTable();
+    ParseTable();
 };
+
+}

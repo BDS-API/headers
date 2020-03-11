@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../json/Value"
+#include "../json/Value.h"
 
 
 class IsotropicFaceData {
 
 public:
 
-    IsotropicFaceData(void);
+    IsotropicFaceData();
     void setTextureIsotropic(unsigned int);
     void setTextureIsotropic(Json::Value const&);
     void setAllFacesIsotropic();

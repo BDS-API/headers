@@ -2,11 +2,14 @@
 
 
 
-using namespace DBStorage;
+namespace DBStorage {
 
 class PendingWrite {
 
 public:
 
-    PendingWrite(void);
+    ~PendingWrite();
+    PendingWrite();
 };
+
+}

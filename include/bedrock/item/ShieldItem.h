@@ -1,11 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../io/IDataInput"
-#include "../level/Level"
-#include "../io/IDataOutput"
-#include "../actor/Player"
-#include "../io/ReadOnlyBinaryStream"
+#include "../io/IDataInput.h"
+#include "./ItemStackBase.h"
+#include "../io/IDataOutput.h"
+#include "../io/ReadOnlyBinaryStream.h"
+#include "./ItemInstance.h"
+#include "./Item.h"
+#include "../level/Level.h"
+#include "../actor/Actor.h"
+#include "../actor/Player.h"
+#include "./ItemStack.h"
+#include <string>
 
 
 class ShieldItem : Item {
@@ -13,9 +18,9 @@ class ShieldItem : Item {
 public:
     static long EFFECTIVE_BLOCK_DELAY;
     static long IN_HAND_BLOCK_DURATION;
-    static long TIMESTAMP_TAG[abi:cxx11];
+    static std::string TIMESTAMP_TAG;
 
-    virtual ShieldItem::~ShieldItem()
+    virtual ~ShieldItem();
     virtual bool isHandEquipped()const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
     virtual void getEnchantSlot()const;

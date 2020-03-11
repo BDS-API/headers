@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../io/BinaryStream.h"
+#include <string>
 
 
 class ClientCacheBlobStatusPacket : Packet {
 
 public:
-    virtual ClientCacheBlobStatusPacket::~ClientCacheBlobStatusPacket()
+    virtual ~ClientCacheBlobStatusPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    ClientCacheBlobStatusPacket(void);
+    ClientCacheBlobStatusPacket();
     bool isFull()const;
     bool isEmpty()const;
 };

@@ -1,23 +1,27 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../block/unmapped/BlockSource"
-#include "../../../util/BlockPos"
-#include "../../../../unmapped/StructureManager"
-#include "../../../../unmapped/BoundingBox"
+#include "./TemplateStructurePiece.h"
+#include <string>
+#include "../../../util/BlockPos.h"
+#include "../../../util/Random.h"
+#include "../../../block/unmapped/BlockSource.h"
+#include "../../../../unmapped/BoundingBox.h"
+#include "../../../../unmapped/StructureManager.h"
 
 
-using namespace EndCityPieces;
+namespace EndCityPieces {
 
 class EndCityPiece : TemplateStructurePiece {
 
 public:
-    virtual EndCityPieces::EndCityPiece::~EndCityPiece()
+    virtual ~EndCityPiece();
     virtual void getType()const;
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void _handleDataMarker(std::string const&, BlockPos const&, BlockSource &, Random &, BoundingBox const&);
 
     EndCityPiece(StructureManager &);
-    EndCityPiece(StructureManager &, std::string, BlockPos const&, Rotation, bool);
+//  EndCityPiece(StructureManager &, std::string, BlockPos const&, Rotation, bool); //TODO: incomplete function definition
     void _loadAndSetup(BlockPos const&);
 };
+
+}

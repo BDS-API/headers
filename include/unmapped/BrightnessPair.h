@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/Brightness"
+#include "../bedrock/util/Brightness.h"
+#include "./BrightnessPair.h"
 
 
 class BrightnessPair {

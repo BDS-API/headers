@@ -6,5 +6,5 @@ class DenySameParentsVariantData {
 
 public:
 
-    DenySameParentsVariantData(void);
+    DenySameParentsVariantData();
 };

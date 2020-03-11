@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemInstance"
-#include "../../item/unmapped/ItemDescriptor"
-#include "../../item/ItemStack"
+#include "../../item/unmapped/ItemDescriptor.h"
+#include "../../../unmapped/ContainerItemStack.h"
+#include "./ContainerManagerModel.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemInstance.h"
+#include "../../item/ItemStack.h"
+#include "../../actor/Player.h"
 
 
 class BrewingStandContainerManagerModel : ContainerManagerModel {
 
 public:
-    virtual BrewingStandContainerManagerModel::~BrewingStandContainerManagerModel()
+    virtual ~BrewingStandContainerManagerModel();
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
@@ -19,7 +20,7 @@ public:
     virtual void broadcastChanges();
     virtual void init();
 
-    BrewingStandContainerManagerModel(ContainerID, Player &, BlockPos const&);
+//  BrewingStandContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
     void _getBrewingStandEntity();
     bool isStandValid(float);
     void getBrewProgress(int);

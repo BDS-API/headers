@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/control/LookControl"
+#include "./LookControlComponent.h"
+#include "../bedrock/util/Vec3.h"
+#include <memory>
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/control/LookControl.h"
+#include "../bedrock/actor/Mob.h"
 
 
 class LookControlComponent {
 
 public:
 
-    LookControlComponent(LookControlComponent&&);
-    LookControlComponent(void);
+    ~LookControlComponent();
+    LookControlComponent(LookControlComponent &&);
+    LookControlComponent();
     void initialize(Mob &);
     void setInternalType(std::unique_ptr<LookControl, std::default_delete<LookControl>>);
     void getHasWantedPosition()const;

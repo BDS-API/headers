@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../../unmapped/InteractComponent"
-#include "../../unmapped/Interaction"
-#include "../../json/Value"
-#include "../../unmapped/EntityContext"
+#include "../../unmapped/Interaction.h"
+#include <memory>
+#include "../../unmapped/EntityContext.h"
+#include "../../unmapped/InteractComponent.h"
+#include "./InteractDefinition.h"
+#include "../../json/Value.h"
 
 
 class InteractDefinition {
 
 public:
 
-    InteractDefinition(void);
-    void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, InteractDefinition>> &);
+    InteractDefinition();
+    ~InteractDefinition();
+//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, InteractDefinition>> &); //TODO: incomplete function definition
     void addInteraction(Interaction const&);
     void initialize(EntityContext &, InteractComponent &)const;
     void deserializeData(Json::Value &);

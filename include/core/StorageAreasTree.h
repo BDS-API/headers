@@ -1,16 +1,22 @@
 #pragma once
 
+#include <functional>
+#include "./FileStorageArea.h"
+#include "./Path.h"
 
 
-using namespace Core;
+namespace Core {
 
 class StorageAreasTree {
 
 public:
 
-    StorageAreasTree(void);
+    StorageAreasTree();
+    ~StorageAreasTree();
     void insertStorageArea(Core::FileStorageArea &);
     void getStorageArea(Core::Path const&)const;
     void removeStorageArea(Core::FileStorageArea &);
-    void forEachStorageArea(std::function<void ()(Core::FileStorageArea &)> &&);
+//  void forEachStorageArea(std::function<void (Core::FileStorageArea &)> &&); //TODO: incomplete function definition
 };
+
+}

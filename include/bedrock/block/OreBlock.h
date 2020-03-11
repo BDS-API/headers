@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../util/Random"
-#include "../../unmapped/Block"
+#include "./BlockLegacy.h"
+#include "../../unmapped/Block.h"
+#include "../util/Random.h"
+#include <string>
 
 
 class OreBlock : BlockLegacy {
 
 public:
-    virtual OreBlock::~OreBlock()
+    virtual ~OreBlock();
     virtual bool canBeOriginalSurface()const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;

@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../item/ItemStack"
+#include "../../../unmapped/ContainerItemStack.h"
+#include "../../actor/Player.h"
+#include "./ContainerManagerModel.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemStack.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include <string>
 
 
 class LevelContainerManagerModel : ContainerManagerModel {
 
 public:
-    virtual LevelContainerManagerModel::~LevelContainerManagerModel()
+    virtual ~LevelContainerManagerModel();
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
@@ -19,9 +21,10 @@ public:
     virtual void init();
     virtual bool isValid(float);
 
-    LevelContainerManagerModel(ContainerID, Player &, BlockPos const&, BlockActorType);
-    LevelContainerManagerModel(ContainerID, Player &, ActorUniqueID);
+//  LevelContainerManagerModel(ContainerID, Player &, BlockPos const&, BlockActorType); //TODO: incomplete function definition
+//  LevelContainerManagerModel(ContainerID, Player &, ActorUniqueID); //TODO: incomplete function definition
     void getEntityUniqueID()const;
+    std::string getEntityName()const;
     void setEntityUniqueID(ActorUniqueID);
     void getBlockPos()const;
     void setBlockPos(BlockPos const&);

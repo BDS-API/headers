@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../../unmapped/RenderParams"
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../item/ItemStack"
-#include "../util/Vec3"
-#include "unmapped/ActorInteraction"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../../unmapped/RenderParams.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "../item/ItemStack.h"
+#include "../nbt/CompoundTag.h"
+#include "./Mob.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorInteraction.h"
+#include "./Player.h"
 
 
 class ArmorStand : Mob {
@@ -29,7 +32,7 @@ public:
     static long POSE_CANCAN_B;
     static long POSE_HERO;
 
-    virtual ArmorStand::~ArmorStand()
+    virtual ~ArmorStand();
     virtual void normalTick();
     virtual void getShadowRadius()const;
     virtual void interactPreventDefault();
@@ -57,8 +60,8 @@ public:
     void _updatePoseFromSynchedData();
     void getNumSlotsFilled()const;
     void _setBit(char &, int, bool);
-    void _trySwapItem(Player &, EquipmentSlot);
-    void _rotateLimb(ArmorSlot);
+//  void _trySwapItem(Player &, EquipmentSlot); //TODO: incomplete function definition
+//  void _rotateLimb(ArmorSlot); //TODO: incomplete function definition
     void _dropItem(ItemStack const&);
     void getHeadPose()const;
     void getBodyPose()const;

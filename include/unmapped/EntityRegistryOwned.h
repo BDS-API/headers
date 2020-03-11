@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./EntityContext.h"
 
 
 class EntityRegistryOwned {
 
 public:
 
-    EntityRegistryOwned(void);
+    EntityRegistryOwned();
+    ~EntityRegistryOwned();
     void createEntity();
     void destroyEntity(EntityContext);
 };

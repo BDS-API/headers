@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/level/Level"
-#include "../bedrock/util/BlockPos"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/level/Level.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class WanderingTraderScheduler {
@@ -19,6 +20,7 @@ public:
 
     WanderingTraderScheduler(Level &);
     void readSaveData();
+    ~WanderingTraderScheduler();
     void tick();
     void _isTimeToTestIfSpawning();
     void _testIfSpawning();

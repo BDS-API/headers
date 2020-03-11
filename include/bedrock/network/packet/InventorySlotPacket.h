@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../item/ItemStack"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../item/ItemStack.h"
+#include <string>
 
 
 class InventorySlotPacket : Packet {
 
 public:
-    virtual InventorySlotPacket::~InventorySlotPacket()
+    virtual ~InventorySlotPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    InventorySlotPacket(void);
-    InventorySlotPacket(ContainerID, unsigned int, ItemStack const&);
+    InventorySlotPacket();
+//  InventorySlotPacket(ContainerID, unsigned int, ItemStack const&); //TODO: incomplete function definition
 };

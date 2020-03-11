@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include <string>
+#include "../../io/BinaryStream.h"
+#include "./Packet.h"
 
 
 class ResourcePackDataInfoPacket : Packet {
 
 public:
-    virtual ResourcePackDataInfoPacket::~ResourcePackDataInfoPacket()
+    virtual ~ResourcePackDataInfoPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    ResourcePackDataInfoPacket(void);
-    ResourcePackDataInfoPacket(std::string const&, unsigned int, int, unsigned long, std::string const&, bool, PackType);
+    ResourcePackDataInfoPacket();
+//  ResourcePackDataInfoPacket(std::string const&, unsigned int, int, unsigned long, std::string const&, bool, PackType); //TODO: incomplete function definition
 };

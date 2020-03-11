@@ -1,11 +1,12 @@
 #pragma once
 
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../util/Vec2"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../util/Vec2.h"
+#include "./Actor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../util/Vec3.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
 
 
 class FishingHook : Actor {
@@ -13,13 +14,13 @@ class FishingHook : Actor {
 public:
     static long BOBBER_SIZE;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual FishingHook::~FishingHook()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~FishingHook();
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void lerpMotion(Vec3 const&);
     virtual void normalTick();
     virtual void getShadowRadius()const;
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void save(CompoundTag &);
     virtual void getSourceUniqueID()const;
 

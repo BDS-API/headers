@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../BlockLegacy"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../../unmapped/Block"
-#include "../../../unmapped/NewBlockID"
+#include "../../../unmapped/Block.h"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockID.h"
+#include "../BlockLegacy.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/NewBlockID.h"
+#include <string>
 
 
 class BlockPalette {
 
 public:
 
-    BlockPalette(BlockPalette::ConstructorToken);
+//  BlockPalette(BlockPalette::ConstructorToken); //TODO: incomplete function definition
     BlockPalette(Level &);
     void initFromBlockDefinitions();
     void assignBlockRuntimeIds();
@@ -25,6 +27,7 @@ public:
     void shouldWarnFor(NewBlockID, unsigned short)const;
     void switchBlock(Block const&, BlockLegacy const&)const;
     void convertLegacyBlock(BlockID, unsigned short)const;
-    void convertLegacyBlocks(buffer_span_mut<Block const*>, buffer_span<BlockID>, buffer_span<NibblePair>, unsigned long)const;
+//  void convertLegacyBlocks(buffer_span_mut<Block const*>, buffer_span<BlockID>, buffer_span<NibblePair>, unsigned long)const; //TODO: incomplete function definition
     void getNumBlockRuntimeIds()const;
+    ~BlockPalette();
 };

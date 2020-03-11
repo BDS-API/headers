@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/level/circuit/component/BaseCircuitComponent"
-#include "../bedrock/util/ChunkPos"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/util/ChunkPos.h"
+#include "../bedrock/level/circuit/component/BaseCircuitComponent.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class CircuitSystem {
@@ -11,7 +12,8 @@ class CircuitSystem {
 public:
 
     void lockGraph(bool);
-    CircuitSystem(void);
+    ~CircuitSystem();
+    CircuitSystem();
     void updateDependencies(BlockSource *);
     void evaluate(BlockSource *);
     void _shouldEvaluate(BlockSource *);

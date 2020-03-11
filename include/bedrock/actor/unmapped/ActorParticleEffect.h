@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./ActorParticleEffect.h"
 
 
 class ActorParticleEffect {
 
 public:
 
-    ActorParticleEffect(void);
+    ActorParticleEffect();
+    ~ActorParticleEffect();
     ActorParticleEffect(ActorParticleEffect const&);
-    ActorParticleEffect(ActorParticleEffect&&);
+    ActorParticleEffect(ActorParticleEffect &&);
 };

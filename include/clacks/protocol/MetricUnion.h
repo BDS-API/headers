@@ -2,11 +2,13 @@
 
 
 
-using namespace com::mojang::clacks::protocol::MetricReport;
+namespace com::mojang::clacks::protocol::MetricReport {
 
 class MetricUnion {
 
 public:
 
-    MetricUnion(void);
+    MetricUnion();
 };
+
+}

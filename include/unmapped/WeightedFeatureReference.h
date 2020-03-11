@@ -1,15 +1,18 @@
 #pragma once
 
+#include "./WeightedFeatureReference.h"
 
 
-using namespace WeightedRandomFeature;
+namespace WeightedRandomFeature {
 
 class WeightedFeatureReference {
 
 public:
 
     void getWeight()const;
-    WeightedFeatureReference(void);
-    WeightedFeatureReference(WeightedRandomFeature::WeightedFeatureReference&&);
+    WeightedFeatureReference();
+    WeightedFeatureReference(WeightedRandomFeature::WeightedFeatureReference &&);
     WeightedFeatureReference(WeightedRandomFeature::WeightedFeatureReference const&);
 };
+
+}

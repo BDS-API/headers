@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "../../../json/Value.h"
+#include "./ComponentDescription.h"
 
 
 class TransformationDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual TransformationDescription::~TransformationDescription()
+    virtual ~TransformationDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    TransformationDescription(void);
+    TransformationDescription();
 };

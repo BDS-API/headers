@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../bedrock/level/LevelData"
+#include "./WorldTemplateManager.h"
+#include "../bedrock/level/LevelData.h"
 
 
 class BaseGameVersioning {

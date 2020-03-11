@@ -2,10 +2,10 @@
 
 
 
-class FlushableEnv : leveldb::EnvWrapper {
+class FlushableEnv /*leveldb::EnvWrapper*/ { //TODO: incomplete class definition
 
 public:
-    virtual FlushableEnv::~FlushableEnv()
+    virtual ~FlushableEnv();
 
-    FlushableEnv(leveldb::Env *);
+//  FlushableEnv(leveldb::Env *); //TODO: incomplete function definition
 };

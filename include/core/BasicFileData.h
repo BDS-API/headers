@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./BasicFileData.h"
 
 
-using namespace Core::FileSystem;
+namespace Core::FileSystem {
 
 class BasicFileData {
 
 public:
 
-    BasicFileData(Core::FileSystem::BasicFileData&&);
+    ~BasicFileData();
+    BasicFileData(Core::FileSystem::BasicFileData &&);
     BasicFileData(Core::FileSystem::BasicFileData const&);
 };
+
+}

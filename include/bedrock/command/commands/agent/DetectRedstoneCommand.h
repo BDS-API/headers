@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../../../actor/Player"
+#include "../../../actor/Player.h"
+#include "../../Command.h"
 
 
-using namespace AgentCommands;
+namespace AgentCommands {
 
 class DetectRedstoneCommand : AgentCommands::Command {
 
 public:
-    virtual AgentCommands::DetectRedstoneCommand::~DetectRedstoneCommand()
+    virtual ~DetectRedstoneCommand();
     virtual void execute();
     virtual bool isDone();
 
-    DetectRedstoneCommand(Player &, AgentCommands::Direction);
+//  DetectRedstoneCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
 };
+
+}

@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./OverloadData.h"
 
 
-using namespace AvailableCommandsPacket;
+namespace AvailableCommandsPacket {
 
 class OverloadData {
 
 public:
 
-    OverloadData(AvailableCommandsPacket::OverloadData&&);
-    OverloadData(void);
+    ~OverloadData();
+    OverloadData(AvailableCommandsPacket::OverloadData &&);
+    OverloadData();
 };
+
+}

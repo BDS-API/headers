@@ -1,7 +1,12 @@
 #pragma once
 
-#include "../core/Path"
-#include "../core/OutputFileStream"
+#include "../core/Path.h"
+#include <ratio>
+#include <memory>
+#include "./ScopedData.h"
+#include "../core/OutputFileStream.h"
+#include <vector>
+#include <string>
 
 
 class ProfilerLite {
@@ -12,7 +17,7 @@ public:
 
 
     void logTimedEvent(std::string const&, double);
-    ProfilerLite(void);
+    ProfilerLite();
     void init(Core::Path const&);
     void reset();
     void createLog(Core::Path const&, Core::OutputFileStream &);
@@ -21,7 +26,7 @@ public:
     void closeLog(Core::OutputFileStream &);
     bool isBenchmarkModeDone();
     void changeCurrentGamestateValue(std::string const&);
-    void setTreatmentService(TreatmentService *);
+//  void setTreatmentService(TreatmentService *); //TODO: incomplete function definition
     void setSecondaryLogFileName(Core::Path const&);
     void setSecondaryScreenLoadLogFileName(Core::Path const&);
     void setSecondaryEventLogFileName(Core::Path const&);
@@ -29,12 +34,12 @@ public:
     void logScreenCreationEvent(std::string const&, double, unsigned char);
     void _shouldLogToSecondaryFile();
     void _writeHeadersIfEmpty(std::string const&, Core::Path, Core::OutputFileStream &);
-    void calculateAndSetServerTickTimes(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>);
+//  void calculateAndSetServerTickTimes(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>); //TODO: incomplete function definition
     void getServerTickTime()const;
     void checkTreatmentsAndEnable(std::vector<std::string, std::allocator<std::string>> const&);
     void moveToEndOfString(char **, unsigned long &)const;
     void openLog(Core::Path const&, Core::OutputFileStream &);
-    void getNetworkStats(ProfilerLite::NetworkStats &, TrackerType);
+//  void getNetworkStats(ProfilerLite::NetworkStats &, TrackerType); //TODO: incomplete function definition
     void getFileStats(unsigned int &, unsigned int &, double);
     void getDiskAccessStats(double &, double &);
     void _calculateRealtimeFrameData();
@@ -42,5 +47,6 @@ public:
     void _getProfileStringRecursive(ProfilerLite::ScopedData &, unsigned long &, unsigned long &, char *&);
     void getProfileString(char *, int);
     void getInstance();
+    ~ProfilerLite();
     void getSecondsPerUpdate();
 };

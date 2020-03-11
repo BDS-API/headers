@@ -1,8 +1,11 @@
 #pragma once
 
+#include "./CPUProfileToken.h"
+#include "./CounterToken.h"
+#include <string>
 
 
-using namespace Core;
+namespace Core {
 
 class Profile {
 
@@ -11,7 +14,7 @@ public:
     void getProfileTimeMS(char const*, char const*);
     void generateCPUProfileToken(char const*, char const*, unsigned int);
     void generateCounterToken(char const*);
-    void generateCounterTokenWithConfig(char const*, Core::Profile::CounterFormat, long, Core::Profile::CounterFlags);
+//  void generateCounterTokenWithConfig(char const*, Core::Profile::CounterFormat, long, Core::Profile::CounterFlags); //TODO: incomplete function definition
     void findCPUProfileToken(char const*, char const*);
     void getLargestFrameTimeMS(Core::Profile::CPUProfileToken);
     void getSmallestFrameTimeMS(Core::Profile::CPUProfileToken);
@@ -29,10 +32,13 @@ public:
     void initializeProfile();
     void shutdownProfile();
     void profileFlip();
-    void dumpFile(char const*, Core::Profile::FileExtension);
+    std::string constructLabel(char const*);
+//  void dumpFile(char const*, Core::Profile::FileExtension); //TODO: incomplete function definition
     void onFileOpenRequest(bool);
     void onFileOpenRetry(bool);
     void onFileOpenRetrySuccess(bool);
     void onFileOpenFailed(bool);
-    void getFileOpenStats(Core::Profile::FileCounters &, Core::Profile::FileCounters &);
+//  void getFileOpenStats(Core::Profile::FileCounters &, Core::Profile::FileCounters &); //TODO: incomplete function definition
 };
+
+}

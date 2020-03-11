@@ -6,5 +6,6 @@ class WireframeQueue {
 
 public:
 
-    WireframeQueue(void);
+    WireframeQueue();
+    ~WireframeQueue();
 };

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../../unmapped/SurfaceBuilderRegistry"
-#include "../../../unmapped/BiomeRegistry"
-#include "../../../unmapped/IWorldRegistriesProvider"
-#include "../../../unmapped/BiomeComponentFactory"
+#include "../../../unmapped/SurfaceBuilderRegistry.h"
+#include "../../../unmapped/IWorldRegistriesProvider.h"
+#include "../../../unmapped/BiomeComponentFactory.h"
+#include "../../../unmapped/BiomeRegistry.h"
 
 
 class VanillaBiomes {

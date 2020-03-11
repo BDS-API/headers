@@ -1,8 +1,11 @@
 #pragma once
 
+#include "./RakString.h"
+#include "./SystemAddress.h"
+#include "./NetworkAdapter.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class SocketLayer {
 
@@ -17,3 +20,5 @@ public:
     void GetSystemAddress_Old(int, RakNet::SystemAddress *);
     void GetFirstBindableIP(char *, int);
 };
+
+}

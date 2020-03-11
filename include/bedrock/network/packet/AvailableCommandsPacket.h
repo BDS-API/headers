@@ -1,25 +1,31 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../../unmapped/CommandData"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/ConstrainedValueData"
-#include "../../../unmapped/SoftEnumData"
-#include "../../../unmapped/EnumData"
+#include "../../../unmapped/ConstrainedValueData.h"
+#include "../../../unmapped/SoftEnumData.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include <memory>
+#include "../../../unmapped/EnumData.h"
+#include "./Packet.h"
+#include <vector>
+#include "../../command/CommandData.h"
+#include <string>
 
 
 class AvailableCommandsPacket : Packet {
 
 public:
-    virtual AvailableCommandsPacket::~AvailableCommandsPacket()
+    virtual ~AvailableCommandsPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    AvailableCommandsPacket(void);
-    AvailableCommandsPacket(std::vector<std::string, std::allocator<std::string>> const&, std::vector<std::string, std::allocator<std::string>> const&, std::vector&&<AvailableCommandsPacket::EnumData, std::allocator<std::vector&>>, std::vector&&<AvailableCommandsPacket::ConstrainedValueData, std::allocator<std::vector&&<AvailableCommandsPacket::EnumData, std::allocator<std::vector&>>>>, std::vector&&<AvailableCommandsPacket::CommandData, std::allocator<std::allocator<std::vector&&<AvailableCommandsPacket::EnumData, std::allocator<std::vector&>>>>>, std::vector&&<AvailableCommandsPacket::SoftEnumData, std::allocator<AvailableCommandsPacket::CommandData>>);
+    AvailableCommandsPacket();
+    AvailableCommandsPacket(std::vector<std::string, std::allocator<std::string>> const&, std::vector<std::string, std::allocator<std::string>> const&, std::vector<AvailableCommandsPacket::EnumData, std::allocator<std::vector &>> &&, std::vector<AvailableCommandsPacket::ConstrainedValueData, std::allocator<std::vector<AvailableCommandsPacket::EnumData, std::allocator<std::vector &>> &&>> &&, std::vector<AvailableCommandsPacket::CommandData, std::allocator<std::allocator<std::vector<AvailableCommandsPacket::EnumData, std::allocator<std::vector &>> &&>>> &&, std::vector<AvailableCommandsPacket::SoftEnumData, std::allocator<AvailableCommandsPacket::CommandData>> &&);
+    std::string getEnumValues()const;
     void getSoftEnums()const;
+    std::string getPostfixes()const;
     void getEnums()const;
     void getCommands()const;
     void getConstraints()const;

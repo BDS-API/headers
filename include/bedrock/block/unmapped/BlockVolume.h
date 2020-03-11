@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../../unmapped/Pos"
-#include "../../../unmapped/ChunkBlockPos"
-#include "../../../unmapped/Block"
+#include "../../../unmapped/Block.h"
+#include "../../../unmapped/Pos.h"
+#include "../../../unmapped/ChunkBlockPos.h"
 
 
 class BlockVolume {
@@ -11,7 +11,7 @@ public:
 
     void block(unsigned int);
     void block(ChunkBlockPos const&);
-    BlockVolume(buffer_span_mut<long>, int, int, int, Block const&);
+//  BlockVolume(buffer_span_mut<long>, int, int, int, Block const&); //TODO: incomplete function definition
     void getVolume()const;
     void getWidth()const;
     void getHeight()const;

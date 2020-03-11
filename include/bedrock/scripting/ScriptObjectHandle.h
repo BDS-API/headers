@@ -2,7 +2,7 @@
 
 
 
-using namespace ScriptApi;
+namespace ScriptApi {
 
 class ScriptObjectHandle {
 
@@ -10,3 +10,5 @@ public:
 
     bool isEmpty()const;
 };
+
+}

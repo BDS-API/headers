@@ -2,11 +2,14 @@
 
 
 
-using namespace BedrockLog;
+namespace BedrockLog {
 
 class CategoryLogs {
 
 public:
 
-    CategoryLogs(void);
+    CategoryLogs();
+    ~CategoryLogs();
 };
+
+}

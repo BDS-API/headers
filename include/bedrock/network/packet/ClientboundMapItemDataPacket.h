@@ -1,28 +1,33 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../../unmapped/UniqueId"
-#include "../../io/BinaryStream"
-#include "../../../unmapped/Dimension"
-#include "../../../unmapped/MapDecoration"
-#include "../../level/Level"
-#include "../../../unmapped/MapItemSavedData"
-#include "../../io/ReadOnlyBinaryStream"
+#include <utility>
+#include "../../io/BinaryStream.h"
+#include "../../../unmapped/MapItemSavedData.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../../unmapped/MapDecoration.h"
+#include "../../../unmapped/UniqueId.h"
+#include <memory>
+#include "../../../unmapped/Dimension.h"
+#include "../../level/Level.h"
+#include "./Packet.h"
+#include <vector>
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include <string>
 
 
 class ClientboundMapItemDataPacket : Packet {
 
 public:
-    virtual ClientboundMapItemDataPacket::~ClientboundMapItemDataPacket()
+    virtual ~ClientboundMapItemDataPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    ClientboundMapItemDataPacket(ActorUniqueID, signed char, std::vector<std::pair<MapItemTrackedActor::UniqueId, std::shared_ptr<MapDecoration>>, std::allocator<std::pair<MapItemTrackedActor::UniqueId, std::shared_ptr<MapDecoration>>>> const&, buffer_span<unsigned int>, int, int, int, int, AutomaticID<Dimension, int>, bool);
-    ClientboundMapItemDataPacket(void);
+//  ClientboundMapItemDataPacket(ActorUniqueID, signed const, std::vector<std::pair<MapItemTrackedActor::UniqueId, std::shared_ptr<MapDecoration>>, std::allocator<std::pair<MapItemTrackedActor::UniqueId, std::shared_ptr<MapDecoration>>>> const&, buffer_span<unsigned int>, int, int, int, int, AutomaticID<Dimension, int>, bool); //TODO: incomplete function definition
+    ClientboundMapItemDataPacket();
     ClientboundMapItemDataPacket(MapItemSavedData &, Level &);
-    bool isOfType(ClientboundMapItemDataPacket::Type)const;
+//  bool isOfType(ClientboundMapItemDataPacket::Type)const; //TODO: incomplete function definition
     void getMapId()const;
     void getMapIds()const;
     void applyToMap(MapItemSavedData &)const;

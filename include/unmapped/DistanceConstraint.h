@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
 
 
 class DistanceConstraint {
 
 public:
 
-    DistanceConstraint(void);
+    DistanceConstraint();
     DistanceConstraint(float, float, float);
     void init(float, float, float);
     void _computeConstraintMass();

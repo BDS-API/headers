@@ -1,17 +1,21 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include <memory>
+#include "../util/BlockPos.h"
+#include <vector>
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class BubbleColumnBlock : BlockLegacy {
 
 public:
-    virtual BubbleColumnBlock::~BubbleColumnBlock()
+    virtual ~BubbleColumnBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;

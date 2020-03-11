@@ -1,13 +1,18 @@
 #pragma once
 
-#include "../bedrock/command/CommandRegistry"
+#include "./Symbol.h"
+#include "../bedrock/command/CommandRegistry.h"
 
 
-using namespace CommandRegistry;
+namespace CommandRegistry {
 
 class LexicalToken {
 
 public:
 
     LexicalToken(CommandRegistry const&);
+    void operator==(CommandRegistry::Symbol const&)const;
+    void operator!=(CommandRegistry::Symbol const&)const;
 };
+
+}

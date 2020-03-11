@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../item/ItemStack"
-#include "../actor/Player"
+#include "../item/ItemStack.h"
+#include "../actor/Player.h"
+#include "./Container.h"
 
 
 class CraftingContainer : Container {
 
 public:
-    virtual CraftingContainer::~CraftingContainer()
+    virtual ~CraftingContainer();
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void getContainerSize()const;

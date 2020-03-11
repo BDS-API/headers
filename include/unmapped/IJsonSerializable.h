@@ -1,12 +1,13 @@
 #pragma once
 
+#include "./IJsonSerializable.h"
 
 
 class IJsonSerializable {
 
 public:
-    virtual IJsonSerializable::~IJsonSerializable()
+    virtual ~IJsonSerializable();
 
-    IJsonSerializable(void);
+    IJsonSerializable();
     IJsonSerializable(IJsonSerializable const&);
 };

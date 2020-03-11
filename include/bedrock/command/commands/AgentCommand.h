@@ -1,24 +1,29 @@
 #pragma once
 
-#include "../CommandRegistry"
-#include "../Command"
-#include "../../actor/Agent"
-#include "../CommandOutput"
-#include "../../actor/Player"
-#include "../orgin/CommandOrigin"
+#include "../CommandRegistry.h"
+#include <string>
+#include "../../actor/Agent.h"
+#include "../CommandOutput.h"
+#include <memory>
+#include "../orgin/CommandOrigin.h"
+#include <functional>
+#include "../Command.h"
+#include "../../actor/Player.h"
 
 
 class AgentCommand : Command {
 
 public:
-    virtual AgentCommand::~AgentCommand()
+    virtual ~AgentCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);
-    AgentCommand(void);
+    AgentCommand();
     void validateRange(Agent *, CommandOrigin const&, CommandOutput &);
-    void runAgentCommand(CommandOrigin const&, CommandOutput &, std::function<std::unique_ptr ()(Player &)>)const;
+    void runAgentCommand(CommandOrigin const&, CommandOutput &, std::function<std::unique_ptr<AgentCommands::Command, std::default_delete<AgentCommands::Command>> (Player &)>)const;
     void reportSuccess(bool, CommandOutput &)const;
+    std::string successName()const;
+    std::string errorName()const;
     void createAgent(Player &, CommandOrigin const&, CommandOutput &)const;
     void setAgentOwner(Agent &, Player &)const;
     void createAgentOutputSuccess(CommandOutput &, bool)const;

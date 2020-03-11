@@ -5,7 +5,7 @@
 class ITickingAreaView {
 
 public:
-    virtual ITickingAreaView::~ITickingAreaView()
+    virtual ~ITickingAreaView();
 
-    ITickingAreaView(void);
+    ITickingAreaView();
 };

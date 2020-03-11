@@ -1,11 +1,19 @@
 #pragma once
 
+#include <utility>
+#include "./ActorDefinitionGroup.h"
+#include <memory>
+#include "./ActorDefinitionPtr.h"
+#include <vector>
+#include <functional>
+#include <string>
 
 
 class ActorDefinitionDiffList {
 
 public:
 
+    ~ActorDefinitionDiffList();
     ActorDefinitionDiffList(ActorDefinitionGroup &);
     void addDefinition(std::string const&);
     void addDefinition(ActorDefinitionPtr &);
@@ -25,7 +33,8 @@ public:
     void getRemovedDefinitionGroup()const;
     bool hasChanged()const;
     void size()const;
+    std::string definitionListToString()const;
     void definitionListToString(std::string const&)const;
-    void forEachComponentGroup(std::function<bool ()(bool, ActorDefinitionPtr)>);
+    void forEachComponentGroup(std::function<bool (bool, ActorDefinitionPtr)>);
     void buildDescriptionFrom(unsigned long, unsigned long);
 };

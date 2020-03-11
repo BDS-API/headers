@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/Vec3.h"
+#include "./StructureSettings.h"
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include "../bedrock/util/BlockPos.h"
+#include <string>
 
 
 class StructureSettings {
@@ -13,9 +15,13 @@ public:
 
 
     StructureSettings(StructureSettings const&);
-    StructureSettings(StructureSettings&&);
-    StructureSettings(void);
+    ~StructureSettings();
+    StructureSettings(StructureSettings &&);
+    StructureSettings();
+    void operator==(StructureSettings const&)const;
+    void operator!=(StructureSettings const&)const;
     void setPaletteName(std::string);
+    std::string getPaletteName()const;
     void setIgnoreEntities(bool);
     void getIgnoreEntities()const;
     void getIgnoreBlocks()const;
@@ -29,9 +35,9 @@ public:
     void getLastTouchedByPlayerID()const;
     void setLastTouchedByPlayerID(ActorUniqueID);
     void getRotation()const;
-    void setRotation(Rotation);
+//  void setRotation(Rotation); //TODO: incomplete function definition
     void getMirror()const;
-    void setMirror(Mirror);
+//  void setMirror(Mirror); //TODO: incomplete function definition
     void getIntegrityValue()const;
     void setIntegrityValue(float);
     void getIntegritySeed()const;

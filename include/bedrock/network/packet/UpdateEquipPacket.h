@@ -1,20 +1,22 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../nbt/CompoundTag"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/unmapped/ActorUniqueID"
+#include "../../nbt/CompoundTag.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include <string>
 
 
 class UpdateEquipPacket : Packet {
 
 public:
-    virtual UpdateEquipPacket::~UpdateEquipPacket()
+    virtual ~UpdateEquipPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    UpdateEquipPacket(void);
-    UpdateEquipPacket(ContainerID, ContainerType, int, CompoundTag &&, ActorUniqueID const&);
+    UpdateEquipPacket();
+//  UpdateEquipPacket(ContainerID, ContainerType, int, CompoundTag &&, ActorUniqueID const&); //TODO: incomplete function definition
 };

@@ -1,20 +1,22 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
-#include "../../util/Vec3"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../util/Vec3.h"
+#include "./Packet.h"
+#include <string>
 
 
 class InteractPacket : Packet {
 
 public:
-    virtual InteractPacket::~InteractPacket()
+    virtual ~InteractPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    InteractPacket(void);
-    InteractPacket(InteractPacket::Action, ActorRuntimeID, Vec3 const&);
+    InteractPacket();
+//  InteractPacket(InteractPacket::Action, ActorRuntimeID, Vec3 const&); //TODO: incomplete function definition
 };

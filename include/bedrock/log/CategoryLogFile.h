@@ -2,12 +2,15 @@
 
 
 
-using namespace BedrockLog;
+namespace BedrockLog {
 
 class CategoryLogFile {
 
 public:
 
-    void AddChannel(BedrockLog::LogChannel);
-    CategoryLogFile(void);
+//  void AddChannel(BedrockLog::LogChannel); //TODO: incomplete function definition
+    CategoryLogFile();
+    ~CategoryLogFile();
 };
+
+}

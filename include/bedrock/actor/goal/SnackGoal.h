@@ -1,8 +1,12 @@
 #pragma once
 
-#include "../Mob"
-#include "../../item/unmapped/ItemDescriptor"
-#include "../../item/ItemStack"
+#include "../../item/unmapped/ItemDescriptor.h"
+#include <memory>
+#include "./Goal.h"
+#include "../../item/ItemStack.h"
+#include <vector>
+#include "../Mob.h"
+#include <string>
 
 
 class SnackGoal : Goal {
@@ -16,7 +20,7 @@ public:
     static long SEARCH_SIZE;
     static long STOP_DIST_SQRD;
 
-    virtual SnackGoal::~SnackGoal()
+    virtual ~SnackGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

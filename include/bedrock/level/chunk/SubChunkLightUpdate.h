@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../../util/Brightness"
+#include "../../util/Brightness.h"
+#include "./SubChunkBlockPos.h"
+#include "./SubChunkLightUpdate.h"
 
 
 class SubChunkLightUpdate {

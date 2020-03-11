@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../util/BlockPos"
-#include "../actor/Player"
+#include "../util/BlockPos.h"
+#include "../actor/Player.h"
+#include "./BlockLegacy.h"
+#include <string>
 
 
 class CartographyTableBlock : BlockLegacy {
 
 public:
-    virtual CartographyTableBlock::~CartographyTableBlock()
+    virtual ~CartographyTableBlock();
     virtual bool isCraftingBlock()const;
     virtual void use(Player &, BlockPos const&)const;
 

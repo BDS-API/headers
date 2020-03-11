@@ -1,16 +1,23 @@
 #pragma once
 
-#include "../json/Value"
-#include "../core/Path"
+#include "./IFileChunkUploader.h"
+#include "../core/Path.h"
+#include "../json/Value.h"
+#include <memory>
+#include "./FileArchiver.h"
+#include "./FileChunkInfo.h"
+#include "./TaskGroup.h"
+#include <functional>
+#include <string>
 
 
 class FileUploadManager {
 
 public:
     static long CHUNK_UPLOAD_SIZE;
-    static long BOUNDARY[abi:cxx11];
+    static std::string BOUNDARY;
 
-    virtual FileUploadManager::~FileUploadManager()
+    virtual ~FileUploadManager();
     virtual void getUploadProgress()const;
 
     FileUploadManager(TaskGroup &, std::shared_ptr<IFileChunkUploader>);
@@ -31,7 +38,7 @@ public:
     void setUploadAllAtOnce(bool);
     void setContinueOnReception(bool);
     void setUseStream(bool);
-    void addCallbackQueue(std::function<void ()(void)>);
+//  void addCallbackQueue(std::function<void (void)>); //TODO: incomplete function definition
     void setFailed();
     void _resumeUpload();
     void _generateMultiPartHelper();

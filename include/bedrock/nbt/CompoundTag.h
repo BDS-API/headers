@@ -1,25 +1,30 @@
 #pragma once
 
-#include "../../unmapped/TagMemoryChunk"
-#include "../io/IDataOutput"
-#include "../io/IDataInput"
+#include "../io/IDataInput.h"
+#include "./CompoundTag.h"
+#include "../io/IDataOutput.h"
+#include <memory>
+#include "./Tag.h"
+#include <vector>
+#include "../../unmapped/TagMemoryChunk.h"
+#include <string>
 
 
 class CompoundTag : Tag {
 
 public:
-    virtual CompoundTag::~CompoundTag()
+    virtual ~CompoundTag();
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
-    virtual void toString()const;
+    virtual std::string toString()const;
     virtual void getId()const;
     virtual void equals(Tag const&)const;
-    virtual void print(std::string const&, PrintStream &)const;
+//  virtual void print(std::string const&, PrintStream &)const; //TODO: incomplete function definition
     virtual void copy()const;
     virtual void hash()const;
 
-    CompoundTag(void);
-    CompoundTag(CompoundTag&&);
+    CompoundTag();
+    CompoundTag(CompoundTag &&);
     void put(std::string, std::unique_ptr<Tag, std::default_delete<Tag>>);
     void getAllTags(std::vector<Tag *, std::allocator<Tag *>> &);
     void put(std::string, Tag &&);
@@ -37,7 +42,7 @@ public:
     void append(CompoundTag const&);
     void contains(std::string const&)const;
     void get(std::string const&)const;
-    void contains(std::string const&, Tag::Type)const;
+//  void contains(std::string const&, Tag::Type)const; //TODO: incomplete function definition
     void get(std::string const&);
     void getByteTag(std::string const&)const;
     void getByteTag(std::string const&);
@@ -75,6 +80,9 @@ public:
     void clear();
     void clone()const;
     void deepCopy(CompoundTag const&);
+    std::string rawView()const;
     void rename(std::string const&, std::string);
     void remove(std::string const&);
+    std::string begin()const;
+    std::string end()const;
 };

@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/definition/ExplodeDefinition"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "./DataLoadHelper.h"
+#include "../bedrock/definition/ExplodeDefinition.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/actor/Actor.h"
+#include "./ExplodeComponent.h"
 
 
 class ExplodeComponent {
 
 public:
 
-    ExplodeComponent(ExplodeComponent&&);
+    ExplodeComponent(ExplodeComponent &&);
     void initFromDefinition(Actor &, ExplodeDefinition const&);
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
@@ -21,5 +23,5 @@ public:
     void getIsFuseLit()const;
     void setAllowUnderwater(bool);
     bool isFuseLit()const;
-    ExplodeComponent(void);
+    ExplodeComponent();
 };

@@ -6,5 +6,5 @@ class CreativeItemCategoryEnumHasher {
 
 public:
 
-    void operator()const;
+//  void operator()(CreativeItemCategory const&)const; //TODO: incomplete function definition
 };

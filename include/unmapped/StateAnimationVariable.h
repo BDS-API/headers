@@ -1,6 +1,9 @@
 #pragma once
 
-#include "../json/Value"
+#include "./StateAnimationVariable.h"
+#include "./RenderParams.h"
+#include "./HashedString.h"
+#include "../json/Value.h"
 
 
 class StateAnimationVariable {
@@ -14,4 +17,5 @@ public:
     void removeVariable(RenderParams &)const;
     void toJson(Json::Value &)const;
     StateAnimationVariable(StateAnimationVariable const&);
+    ~StateAnimationVariable();
 };

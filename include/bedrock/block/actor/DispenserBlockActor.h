@@ -1,23 +1,25 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemStack"
-#include "../../../unmapped/DataLoadHelper"
+#include <string>
+#include "../../nbt/CompoundTag.h"
+#include "./RandomizableBlockActorContainer.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../level/Level.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemStack.h"
+#include "../unmapped/BlockSource.h"
+#include "../../actor/Player.h"
 
 
 class DispenserBlockActor : RandomizableBlockActorContainer {
 
 public:
-    virtual DispenserBlockActor::~DispenserBlockActor()
+    virtual ~DispenserBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void getUpdatePacket(BlockSource &);
     virtual void onMove();
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void getContainer();
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void startOpen(Player &);
@@ -30,7 +32,7 @@ public:
 
     DispenserBlockActor(BlockPos);
     void initItems();
-    DispenserBlockActor(BlockPos, BlockActorType);
+//  DispenserBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition
     bool isSlotEmpty(int);
     bool isDispenser();
 };

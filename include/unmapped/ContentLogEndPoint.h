@@ -1,12 +1,13 @@
 #pragma once
 
+#include "./LogEndPoint.h"
 
 
 class ContentLogEndPoint : Bedrock::LogEndPoint {
 
 public:
-    virtual ContentLogEndPoint::~ContentLogEndPoint()
+    virtual ~ContentLogEndPoint();
     virtual void log(char const*);
 
-    ContentLogEndPoint(void);
+    ContentLogEndPoint();
 };

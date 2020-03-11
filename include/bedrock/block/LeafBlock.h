@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/Vec3"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class LeafBlock : BlockLegacy {
 
 public:
-    virtual LeafBlock::~LeafBlock()
+    virtual ~LeafBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
-    virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
+//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition
     virtual bool canContainLiquid()const;
     virtual void onRemove(BlockSource &, BlockPos const&)const;
     virtual bool breaksFallingBlocks(Block const&)const;
@@ -29,7 +31,7 @@ public:
 
     bool isDeepLeafBlock(BlockSource &, BlockPos const&);
     void shouldStopSnowfall(Block const&);
-    LeafBlock(std::string const&, int, WeakPtr<BlockLegacy>);
+//  LeafBlock(std::string const&, int, WeakPtr<BlockLegacy>); //TODO: incomplete function definition
     void runDecay(BlockSource &, BlockPos const&, int);
     void getSeasonsColor(BlockSource &, BlockPos const&, int, int)const;
     void die(BlockSource &, BlockPos const&)const;

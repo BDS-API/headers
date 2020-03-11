@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../../../unmapped/RenderParams"
-#include "../../../unmapped/ExpressionNode"
-#include "../../../unmapped/HashedString"
-#include "../../../json/Value"
+#include "./ActorAnimationController.h"
+#include "../../../unmapped/RenderParams.h"
+#include "../../../unmapped/HashedString.h"
+#include "../../../unmapped/ExpressionNode.h"
+#include "../../../json/Value.h"
+#include <string>
 
 
 class ActorAnimationControllerState {
@@ -22,7 +24,8 @@ public:
     void getNextState(RenderParams &)const;
     void addParticleEffect();
     void addSoundEffect();
-    void addEntryActorEvent(float, std::string const&, CurrentCmdVersion);
-    void addExitActorEvent(float, std::string const&, CurrentCmdVersion);
+//  void addEntryActorEvent(float, std::string const&, CurrentCmdVersion); //TODO: incomplete function definition
+//  void addExitActorEvent(float, std::string const&, CurrentCmdVersion); //TODO: incomplete function definition
     void toJson(Json::Value &, ActorAnimationController const&)const;
+    ~ActorAnimationControllerState();
 };

@@ -1,19 +1,24 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/level/scoreboard/Scoreboard"
+#include "./ScoreboardId.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./Objective.h"
+#include "./DisplayObjective.h"
+#include "../bedrock/level/scoreboard/Scoreboard.h"
+#include <string>
 
 
 class DisplayObjective {
 
 public:
 
-    DisplayObjective(Objective const&, ObjectiveSortOrder);
+//  DisplayObjective(Objective const&, ObjectiveSortOrder); //TODO: incomplete function definition
     bool isDisplaying(Objective const&)const;
     bool isValid()const;
     void getObjective()const;
     void getSortOrder()const;
+    std::string getBelowNameStringForId(ScoreboardId const&)const;
     void deserialize(CompoundTag const&, Scoreboard const&);
     void serialize(DisplayObjective const&);
-    DisplayObjective(void);
+    DisplayObjective();
 };

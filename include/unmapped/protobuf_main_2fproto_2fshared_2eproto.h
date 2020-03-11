@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 
 
 class protobuf_main_2fproto_2fshared_2eproto {

@@ -1,21 +1,26 @@
 #pragma once
 
+#include <string>
 
 
-using namespace Crypto::Symmetric;
+namespace Crypto::Symmetric {
 
 class Symmetric {
 
 public:
 
-    Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode);
+//  Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode); //TODO: incomplete function definition
     void getBlockSize()const;
     void init(std::string const&, std::string const&);
-    void decrypt(std::string const&, std::string&);
+    ~Symmetric();
+    void decrypt(std::string const&, std::string &);
     void getKeySize()const;
-    Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode);
+//  Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode); //TODO: incomplete function definition
     void getBlockSize()const;
     void init(std::string const&, std::string const&);
-    void decrypt(std::string const&, std::string&);
+    ~Symmetric();
+    void decrypt(std::string const&, std::string &);
     void getKeySize()const;
 };
+
+}

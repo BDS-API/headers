@@ -1,13 +1,14 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier"
-#include "unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Minecart.h"
 
 
 class MinecartRideable : Minecart {
 
 public:
-    virtual MinecartRideable::~MinecartRideable()
+    virtual ~MinecartRideable();
     virtual void getType();
 
     MinecartRideable(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);

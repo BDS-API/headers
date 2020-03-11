@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
-#include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Actor.h"
+#include "./BreakDoorAnnotationComponent.h"
+#include "../bedrock/actor/Mob.h"
+#include "./EntityContext.h"
+#include "./Path.h"
 
 
 class BreakDoorAnnotationComponent {
 
 public:
 
-    BreakDoorAnnotationComponent(BreakDoorAnnotationComponent&&);
-    BreakDoorAnnotationComponent(void);
+    BreakDoorAnnotationComponent(BreakDoorAnnotationComponent &&);
+    BreakDoorAnnotationComponent();
     void initFromDefinition(Actor &);
     void onComponentRemoved(EntityContext &);
     void _cleanUp(Mob &);

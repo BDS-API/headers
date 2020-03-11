@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../../unmapped/FilterInput"
+#include "../../unmapped/FilterInput.h"
+#include "./FilterInputDefinition.h"
+#include <string>
 
 
 class FilterInputDefinition {
@@ -8,6 +10,7 @@ class FilterInputDefinition {
 public:
 
     FilterInputDefinition(FilterInput, std::string const&);
+    ~FilterInputDefinition();
     FilterInputDefinition(int);
     FilterInputDefinition(FilterInputDefinition const&);
 };

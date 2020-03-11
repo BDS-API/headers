@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../util/Random"
+#include "../../util/Random.h"
+#include "./BlockSelector.h"
 
 
 class MossStoneSelector : BlockSelector {
 
 public:
-    virtual MossStoneSelector::~MossStoneSelector()
+    virtual ~MossStoneSelector();
     virtual void next(Random &, int, int, int, bool)const;
 
-    MossStoneSelector(void);
+    MossStoneSelector();
 };

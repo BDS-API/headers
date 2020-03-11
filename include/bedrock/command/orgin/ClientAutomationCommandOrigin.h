@@ -1,13 +1,15 @@
 #pragma once
 
+#include "./CommandOrigin.h"
+#include <string>
 
 
 class ClientAutomationCommandOrigin : CommandOrigin {
 
 public:
-    virtual ClientAutomationCommandOrigin::~ClientAutomationCommandOrigin()
-    virtual void getRequestId()const;
-    virtual void getName()const;
+    virtual ~ClientAutomationCommandOrigin();
+    virtual std::string getRequestId()const;
+    virtual std::string getName()const;
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void getLevel()const;

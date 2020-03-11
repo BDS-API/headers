@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../unmapped/RenderParams"
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/RenderParams.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Mob.h"
+#include "damagesource/ActorDamageSource.h"
+#include "unmapped/ActorDefinitionGroup.h"
 
 
 class Ghast : Mob {
 
 public:
-    virtual Ghast::~Ghast()
+    virtual ~Ghast();
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void getAmbientSoundPostponeTicks();

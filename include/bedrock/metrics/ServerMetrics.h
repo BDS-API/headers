@@ -5,7 +5,7 @@
 class ServerMetrics {
 
 public:
-    virtual ServerMetrics::~ServerMetrics()
+    virtual ~ServerMetrics();
 
-    ServerMetrics(void);
+    ServerMetrics();
 };

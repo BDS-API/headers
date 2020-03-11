@@ -1,8 +1,11 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/item/condition/LootItemCondition"
-#include "../json/Value"
+#include "./LootTableContext.h"
+#include "../json/Value.h"
+#include "../bedrock/util/Random.h"
+#include <memory>
+#include <vector>
+#include "../bedrock/item/condition/LootItemCondition.h"
 
 
 class LootItemConditions {

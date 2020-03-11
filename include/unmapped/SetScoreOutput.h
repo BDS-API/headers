@@ -2,11 +2,14 @@
 
 
 
-using namespace ScoreboardCommand;
+namespace ScoreboardCommand {
 
 class SetScoreOutput {
 
 public:
 
-    SetScoreOutput(void);
+    SetScoreOutput();
+    ~SetScoreOutput();
 };
+
+}

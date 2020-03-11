@@ -1,23 +1,24 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../ScriptObjectHandle"
-#include "../../actor/ItemActor"
-#include "../unmapped/ScriptEngine"
+#include "./ScriptBinderComponent.h"
+#include "../../actor/ItemActor.h"
+#include "../unmapped/ScriptEngine.h"
+#include "../../actor/Actor.h"
+#include "../ScriptObjectHandle.h"
 
 
 class ScriptEcsBinderComponent : ScriptBinderComponent {
 
 public:
-    static long TAG[abi:cxx11];
+    static std::string TAG;
 
-    virtual ScriptEcsBinderComponent::~ScriptEcsBinderComponent()
+    virtual ~ScriptEcsBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 
-    ScriptEcsBinderComponent(void);
+    ScriptEcsBinderComponent();
     ScriptEcsBinderComponent(unsigned int);
-    ScriptEcsBinderComponent(entt::Registry<unsigned int> &, Actor const&);
-    ScriptEcsBinderComponent(entt::Registry<unsigned int> &, ItemActor const&);
+//  ScriptEcsBinderComponent(entt::Registry<unsigned int> &, Actor const&); //TODO: incomplete function definition
+//  ScriptEcsBinderComponent(entt::Registry<unsigned int> &, ItemActor const&); //TODO: incomplete function definition
     void getIdentifier()const;
 };

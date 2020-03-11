@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../../block/BlockLegacy"
-#include "../Item"
-#include "../../../unmapped/Block"
+#include "../../../unmapped/Block.h"
+#include "./ItemDescriptor.h"
+#include "../Item.h"
+#include "./ItemDescriptorCount.h"
+#include "../../block/BlockLegacy.h"
 
 
 class ItemDescriptorCount {
 
 public:
 
+    ~ItemDescriptorCount();
     ItemDescriptorCount(ItemDescriptorCount const&);
-    ItemDescriptorCount(ItemDescriptorCount&&);
-    ItemDescriptorCount(void);
+    ItemDescriptorCount(ItemDescriptorCount &&);
+    ItemDescriptorCount();
     ItemDescriptorCount(ItemDescriptor const&, unsigned short);
     ItemDescriptorCount(Block const&, unsigned short);
     ItemDescriptorCount(BlockLegacy const&, unsigned short);

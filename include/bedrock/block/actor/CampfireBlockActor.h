@@ -1,11 +1,12 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../item/ItemInstance"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../util/BlockPos.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../level/Level.h"
+#include "../../item/ItemInstance.h"
+#include "../unmapped/BlockSource.h"
 
 
 class CampfireBlockActor : BlockActor {
@@ -14,7 +15,7 @@ public:
     static long MIN_SMOKE_THRESHOLD_COUNTER;
     static long MAX_SMOKE_THRESHOLD_COUNTER;
 
-    virtual CampfireBlockActor::~CampfireBlockActor()
+    virtual ~CampfireBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

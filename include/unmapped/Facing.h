@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/util/Random.h"
 
 
 class Facing {
@@ -33,8 +33,8 @@ public:
     void getClockWise(unsigned char);
     void getCounterClockWise(unsigned char);
     void getOpposite(unsigned char);
-    void rotateFace(unsigned char, Facing::Rotation);
+//  void rotateFace(unsigned char, Facing::Rotation); //TODO: incomplete function definition
     void fromVec3(Vec3 const&);
-    void convertWeirdoDirectionToFacingDirection(WeirdoDirection);
+//  void convertWeirdoDirectionToFacingDirection(WeirdoDirection); //TODO: incomplete function definition
     void convertYRotationToFacingDirection(float);
 };

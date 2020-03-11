@@ -2,12 +2,14 @@
 
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class NetworkAdapter {
 
 public:
 
-    NetworkAdapter(void);
+    NetworkAdapter();
     void GetNumberOfAddresses();
 };
+
+}

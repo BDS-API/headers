@@ -6,7 +6,7 @@ class StructureTelemetryClientData {
 
 public:
 
-    StructureTelemetryClientData(void);
+    StructureTelemetryClientData();
     void resetCounts();
     void increaseSizeEditCount();
     void increaseOffsetEditCount();

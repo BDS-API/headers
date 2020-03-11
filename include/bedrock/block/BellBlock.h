@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/Vec3.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class BellBlock : ActorBlock {
 
 public:
-    virtual BellBlock::~BellBlock()
+    virtual ~BellBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void onProjectileHit(BlockSource &, BlockPos const&, Actor const&)const;

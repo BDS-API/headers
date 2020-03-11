@@ -1,15 +1,19 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/level/feature/Feature"
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/util/Random.h"
+#include "./LegacyStructureTemplate.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "./IBlockPlacementTarget.h"
+#include "./LegacyStructureSettings.h"
+#include "./Block.h"
+#include "../bedrock/level/feature/Feature.h"
 
 
 class WorldBlockTarget : IBlockPlacementTarget {
 
 public:
-    virtual WorldBlockTarget::~WorldBlockTarget()
+    virtual ~WorldBlockTarget();
     virtual void getBlock(BlockPos const&)const;
     virtual void setBlock(BlockPos const&, Block const&, int);
     virtual void apply()const;

@@ -1,20 +1,24 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../actor/unmapped/ActorBlockSyncMessage"
-#include "../../unmapped/Material"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Material.h"
+#include "../../unmapped/Block.h"
+#include <memory>
+#include "../actor/unmapped/ActorBlockSyncMessage.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include <vector>
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class AirBlock : BlockLegacy {
 
 public:
-    virtual AirBlock::~AirBlock()
+    virtual ~AirBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual bool isObstructingChests(BlockSource &, BlockPos const&)const;

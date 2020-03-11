@@ -1,15 +1,18 @@
 #pragma once
 
+#include <functional>
+#include "./Result.h"
+#include <string>
 
 
-using namespace Core;
+namespace Core {
 
 class Result {
 
 public:
 
-    Result(bool, std::function<char const* ()(std::string *)>);
-    Result(Core::Result&&);
+    Result(bool, std::function<char const* (std::string *)>);
+    Result(Core::Result &&);
     Result(Core::Result const&);
     void peekFailed()const;
     void peekSucceeded()const;
@@ -27,9 +30,12 @@ public:
     void makeSuccess();
     void makeFailure();
     void makeFailure(std::string &&);
-    void makeFailure(std::function<char ()(std::string *)> &&);
+    void makeFailure(std::function<char const* (std::string *)> &&);
     void makeFailureWithStringLiteral(char const*);
     void makeFailureNotImplemented();
-    void merge(Core::Result&&, Core::Result&);
-    void either(Core::Result&&, Core::Result&);
+    ~Result();
+    void merge(Core::Result &&, Core::Result &);
+    void either(Core::Result &&, Core::Result &);
 };
+
+}

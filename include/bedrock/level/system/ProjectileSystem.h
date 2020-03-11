@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class ProjectileSystem : ITickingSystem {
 
 public:
-    virtual ProjectileSystem::~ProjectileSystem()
+    virtual ~ProjectileSystem();
     virtual void tick(EntityRegistry &);
 
-    ProjectileSystem(void);
+    ProjectileSystem();
 };

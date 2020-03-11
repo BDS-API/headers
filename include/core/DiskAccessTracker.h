@@ -1,14 +1,16 @@
 #pragma once
 
+#include <ratio>
+#include "./Path.h"
 
 
-using namespace Core;
+namespace Core {
 
 class DiskAccessTracker {
 
 public:
 
-    DiskAccessTracker(std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>);
+//  DiskAccessTracker(std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>); //TODO: incomplete function definition
     void getDiskAccessTracker();
     void trackWriteOperation(Core::Path const&);
     void _ignoreWrite(Core::Path const&)const;
@@ -19,4 +21,7 @@ public:
     void addIgnoredPath(Core::Path const&);
     void removeIgnoredPath(Core::Path const&);
     void update();
+    ~DiskAccessTracker();
 };
+
+}

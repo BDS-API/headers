@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Squid"
+#include "./Goal.h"
+#include "../Squid.h"
+#include <string>
 
 
 class SquidFleeGoal : Goal {
 
 public:
-    virtual SquidFleeGoal::~SquidFleeGoal()
+    virtual ~SquidFleeGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -6,5 +6,5 @@ class SkinAdjustments {
 
 public:
 
-    SkinAdjustments(void);
+    SkinAdjustments();
 };

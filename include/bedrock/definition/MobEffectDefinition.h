@@ -1,16 +1,20 @@
 #pragma once
 
-#include "../../unmapped/MobEffectComponent"
-#include "../../json/Value"
-#include "../../unmapped/EntityContext"
+#include "./MobEffectDefinition.h"
+#include <memory>
+#include "../../unmapped/EntityContext.h"
+#include "../../unmapped/MobEffectComponent.h"
+#include "../../json/Value.h"
+#include <string>
 
 
 class MobEffectDefinition {
 
 public:
 
-    MobEffectDefinition(void);
-    void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, MobEffectDefinition>> &);
+    MobEffectDefinition();
+    ~MobEffectDefinition();
+//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, MobEffectDefinition>> &); //TODO: incomplete function definition
     void setMobEffectByName(std::string const&);
     void setEffectTimeInTicks(int const&);
     void initialize(EntityContext &, MobEffectComponent &);

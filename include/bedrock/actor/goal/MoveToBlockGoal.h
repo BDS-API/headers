@@ -1,19 +1,23 @@
 #pragma once
 
-#include "../Mob"
-#include "../../item/unmapped/ItemDescriptor"
-#include "../../definition/DefinitionTrigger"
-#include "../../block/unmapped/BlockSource"
-#include "../../../unmapped/Path"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../util/Vec3"
+#include "../../item/unmapped/ItemDescriptor.h"
+#include "../../../unmapped/Block.h"
+#include "../../definition/DefinitionTrigger.h"
+#include "../../util/Vec3.h"
+#include <memory>
+#include "../../../unmapped/Path.h"
+#include "../../util/BlockPos.h"
+#include "./Goal.h"
+#include "../../block/unmapped/BlockSource.h"
+#include <vector>
+#include "../Mob.h"
+#include <string>
 
 
 class MoveToBlockGoal : Goal {
 
 public:
-    virtual MoveToBlockGoal::~MoveToBlockGoal()
+    virtual ~MoveToBlockGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();
@@ -21,7 +25,7 @@ public:
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
-    MoveToBlockGoal(Mob &, float, int, int, int, int, float, Vec3, float, TargetSelectionMethod, std::vector<DefinitionTrigger, std::allocator<DefinitionTrigger>>, std::vector<DefinitionTrigger, std::allocator<DefinitionTrigger>>, std::vector<ItemDescriptor, std::allocator<ItemDescriptor>>);
+//  MoveToBlockGoal(Mob &, float, int, int, int, int, float, Vec3, float, TargetSelectionMethod, std::vector<DefinitionTrigger, std::allocator<DefinitionTrigger>>, std::vector<DefinitionTrigger, std::allocator<DefinitionTrigger>>, std::vector<ItemDescriptor, std::allocator<ItemDescriptor>>); //TODO: incomplete function definition
     void _isCooldownActive()const;
     void _tickCooldown();
     void _nextStartTick();

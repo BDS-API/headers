@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../definition/DefinitionTrigger"
+#include "./Goal.h"
+#include "../../definition/DefinitionTrigger.h"
+#include "../Mob.h"
+#include <string>
 
 
 class HoldGroundGoal : Goal {
 
 public:
-    virtual HoldGroundGoal::~HoldGroundGoal()
+    virtual ~HoldGroundGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

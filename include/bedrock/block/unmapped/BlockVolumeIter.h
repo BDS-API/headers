@@ -1,12 +1,18 @@
 #pragma once
 
+#include "./BlockVolumeIter.h"
 
 
-using namespace BlockVolume;
+namespace BlockVolume {
 
 class BlockVolumeIter {
 
 public:
 
     void _incrementPos();
+    void operator!=(BlockVolume::BlockVolumeIter const&)const;
+    void operator==(BlockVolume::BlockVolumeIter const&)const;
+    void operator*();
 };
+
+}

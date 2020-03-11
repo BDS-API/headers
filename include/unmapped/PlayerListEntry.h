@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../bedrock/io/BinaryStream"
-#include "../bedrock/actor/Player"
-#include "../mce/UUID"
-#include "../bedrock/io/ReadOnlyBinaryStream"
+#include "../mce/UUID.h"
+#include "../bedrock/io/ReadOnlyBinaryStream.h"
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/io/BinaryStream.h"
+#include "./PlayerListEntry.h"
 
 
 class PlayerListEntry {
@@ -11,8 +12,9 @@ class PlayerListEntry {
 public:
 
     PlayerListEntry(Player const&);
-    PlayerListEntry(void);
+    PlayerListEntry();
     PlayerListEntry(mce::UUID);
+    ~PlayerListEntry();
     void readRemove(ReadOnlyBinaryStream &);
     void writeRemove(BinaryStream &)const;
     void read(ReadOnlyBinaryStream &);

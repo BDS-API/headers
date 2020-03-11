@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./ActorDefinitionAttribute.h"
 
 
 class ActorDefinitionAttribute {
 
 public:
 
-    ActorDefinitionAttribute(void);
+    ~ActorDefinitionAttribute();
+    ActorDefinitionAttribute();
     ActorDefinitionAttribute(ActorDefinitionAttribute const&);
-    ActorDefinitionAttribute(ActorDefinitionAttribute&&);
+    ActorDefinitionAttribute(ActorDefinitionAttribute &&);
 };

@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../util/Vec3"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/Vec3.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class FurnaceBlock : ActorBlock {
 
 public:
-    virtual FurnaceBlock::~FurnaceBlock()
+    virtual ~FurnaceBlock();
     virtual bool isContainerBlock()const;
     virtual bool isCraftingBlock()const;
     virtual bool isInteractiveBlock()const;
@@ -29,5 +31,5 @@ public:
     virtual void getSilkTouchItemInstance(Block const&)const;
 
     FurnaceBlock(std::string const&, int, bool);
-    void setLit(bool, BlockSource &, BlockPos const&, BlockActorType, Block const&, Block const&);
+//  void setLit(bool, BlockSource &, BlockPos const&, BlockActorType, Block const&, Block const&); //TODO: incomplete function definition
 };

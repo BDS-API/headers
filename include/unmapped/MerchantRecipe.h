@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/item/ItemInstance"
+#include "./MerchantRecipe.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/item/ItemInstance.h"
 
 
 class MerchantRecipe {
 
 public:
 
+    ~MerchantRecipe();
     MerchantRecipe(MerchantRecipe const&);
     MerchantRecipe(CompoundTag const*);
     void load(CompoundTag const*);
@@ -18,8 +20,8 @@ public:
     void getBuyBItem()const;
     void getSellItem()const;
     bool hasSecondaryBuyItem()const;
-    bool isSame(MerchantRecipe&)const;
-    bool isSameButBetter(MerchantRecipe&)const;
+    bool isSame(MerchantRecipe &)const;
+    bool isSameButBetter(MerchantRecipe &)const;
     void getUses()const;
     void getMaxUses()const;
     void getTier()const;
@@ -41,5 +43,5 @@ public:
     void setPriceMultiplierB(float);
     void calculateDemandPrices(int);
     void createTag()const;
-    MerchantRecipe(MerchantRecipe&&);
+    MerchantRecipe(MerchantRecipe &&);
 };

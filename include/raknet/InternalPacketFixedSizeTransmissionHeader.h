@@ -2,11 +2,13 @@
 
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class InternalPacketFixedSizeTransmissionHeader {
 
 public:
 
-    InternalPacketFixedSizeTransmissionHeader(void);
+    InternalPacketFixedSizeTransmissionHeader();
 };
+
+}

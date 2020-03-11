@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../../unmapped/IFunctionEntry"
-#include "orgin/CommandOrigin"
-#include "../../unmapped/FunctionManager"
+#include "../../unmapped/FunctionManager.h"
+#include <memory>
+#include "../../unmapped/IFunctionEntry.h"
+#include "orgin/CommandOrigin.h"
+#include "./Command.h"
 
 
 class CommandFunctionEntry : IFunctionEntry {
 
 public:
-    virtual CommandFunctionEntry::~CommandFunctionEntry()
+    virtual ~CommandFunctionEntry();
     virtual void execute(FunctionManager &, CommandOrigin const&);
 
-    CommandFunctionEntry(void);
+    CommandFunctionEntry();
     CommandFunctionEntry(std::unique_ptr<Command, std::default_delete<Command>>);
 };

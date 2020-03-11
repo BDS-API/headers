@@ -2,13 +2,15 @@
 
 
 
-using namespace WeighedRandom;
+namespace WeighedRandom {
 
 class WeighedRandomItem {
 
 public:
 
     WeighedRandomItem(int);
-    WeighedRandomItem(void);
+    WeighedRandomItem();
     void getWeight()const;
 };
+
+}

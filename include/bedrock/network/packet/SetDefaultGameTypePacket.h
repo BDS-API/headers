@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include <string>
+#include "../../io/BinaryStream.h"
+#include "./Packet.h"
 
 
 class SetDefaultGameTypePacket : Packet {
 
 public:
-    virtual SetDefaultGameTypePacket::~SetDefaultGameTypePacket()
+    virtual ~SetDefaultGameTypePacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    SetDefaultGameTypePacket(void);
-    SetDefaultGameTypePacket(GameType);
+    SetDefaultGameTypePacket();
+//  SetDefaultGameTypePacket(GameType); //TODO: incomplete function definition
 };

@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../bedrock/level/system/ITickingSystem"
+#include "../bedrock/level/system/ITickingSystem.h"
+#include <memory>
+#include "./EntityRegistry.h"
 
 
 class EntitySystems {
 
 public:
 
-    EntitySystems(void);
+    EntitySystems();
     void _registerSystems();
+    ~EntitySystems();
     void _unregisterSystems();
     void tick(EntityRegistry &);
     void registerTickingSystem(std::unique_ptr<ITickingSystem, std::default_delete<ITickingSystem>>);

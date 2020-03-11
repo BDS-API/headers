@@ -1,11 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/actor/Player"
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/network/packet/UpdateTradePacket"
-#include "../bedrock/actor/unmapped/ActorInteraction"
+#include <string>
+#include "./DataLoadHelper.h"
+#include "./LegacyTradeableComponent.h"
+#include "./Trade.h"
+#include <memory>
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./MerchantRecipeList.h"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
+#include <vector>
+#include "../bedrock/actor/unmapped/ActorInteraction.h"
+#include "../bedrock/network/packet/UpdateTradePacket.h"
 
 
 class LegacyTradeableComponent {
@@ -24,6 +31,8 @@ public:
     void _refreshTrades(Actor &);
     void setOffers(MerchantRecipeList *);
     void loadOffersFromTag(CompoundTag const*);
+    std::string getDisplayName()const;
+    std::string loadDisplayName(Actor &);
     void getResetLockedOnFirstTrade()const;
     void setResetLockedOnFirstTrade(bool);
     void getTradeTier()const;
@@ -41,12 +50,13 @@ public:
     void notifyTrade(Actor &, int);
     void _runOnServerCheckForFirstTimeTrade(int);
     void notifyTradeUpdated(Actor &, ItemStack &, bool);
-    void createDataPacket(Actor &, ContainerID);
+//  void createDataPacket(Actor &, ContainerID); //TODO: incomplete function definition
     void setDataFromPacket(Actor &, UpdateTradePacket const&);
     void restockAllRecipes(Actor &);
     void shouldPersistTrades(Actor &)const;
     void shouldConvertTrades(Actor &)const;
     void _rearrangeTradeList(Actor &, std::vector<Trade, std::allocator<Trade>> &, unsigned long);
-    LegacyTradeableComponent(LegacyTradeableComponent&&);
-    LegacyTradeableComponent(void);
+    ~LegacyTradeableComponent();
+    LegacyTradeableComponent(LegacyTradeableComponent &&);
+    LegacyTradeableComponent();
 };

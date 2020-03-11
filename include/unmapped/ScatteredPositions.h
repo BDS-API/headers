@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../bedrock/util/Random"
+#include "./ScatterParams.h"
+#include "./RenderParams.h"
+#include "../bedrock/util/Random.h"
 
 
-using namespace ScatterParams;
+namespace ScatterParams {
 
 class ScatteredPositions {
 
@@ -14,3 +16,5 @@ public:
     void size();
     void empty();
 };
+
+}

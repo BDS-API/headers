@@ -6,5 +6,5 @@ class ActorDefinitionFeedItem {
 
 public:
 
-    ActorDefinitionFeedItem(void);
+    ActorDefinitionFeedItem();
 };

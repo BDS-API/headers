@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../util/BlockPos.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../level/Level.h"
+#include "../unmapped/BlockSource.h"
 
 
 class MobSpawnerBlockActor : BlockActor {
 
 public:
-    virtual MobSpawnerBlockActor::~MobSpawnerBlockActor()
+    virtual ~MobSpawnerBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

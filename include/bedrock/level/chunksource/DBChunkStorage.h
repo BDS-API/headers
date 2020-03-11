@@ -1,21 +1,25 @@
 #pragma once
 
-#include "../LevelChunkFinalDeleter"
-#include "../../block/unmapped/BlockSource"
-#include "../LevelChunk"
-#include "../../../unmapped/DBStorageWriteBatch"
-#include "../../../unmapped/DBChunkStorageKey"
-#include "../../Scheduler"
-#include "../storage/DBStorage"
+#include "../storage/DBStorage.h"
+#include <memory>
+#include "./ChunkSource.h"
+#include "./ChunkViewSource.h"
+#include "../../Scheduler.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../../../unmapped/DBChunkStorageKey.h"
+#include "../LevelChunkFinalDeleter.h"
+#include "../../../unmapped/DBStorageWriteBatch.h"
+#include "../LevelChunk.h"
+#include <functional>
 
 
 class DBChunkStorage : ChunkSource {
 
 public:
     static long threadBatch;
-    static long threadBuffer[abi:cxx11];
+    static std::string threadBuffer;
 
-    virtual DBChunkStorage::~DBChunkStorage()
+    virtual ~DBChunkStorage();
     virtual void shutdown();
     virtual bool isShutdownDone();
     virtual void postProcess(ChunkViewSource &);
@@ -38,5 +42,5 @@ public:
     void _serializeChunk(LevelChunk const&, DBStorageWriteBatch &);
     void _getBuffer();
     void freeCaches();
-    void registerUpgradeFixHandler(std::function<void ()(LevelChunk &, BlockSource &)>);
+//  void registerUpgradeFixHandler(std::function<void (LevelChunk &, BlockSource &)>); //TODO: incomplete function definition
 };

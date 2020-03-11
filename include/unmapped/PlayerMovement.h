@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/Player"
+#include "../bedrock/util/Vec3.h"
+#include "./MoveInputHandler.h"
+#include "../bedrock/actor/Player.h"
 
 
 class PlayerMovement {

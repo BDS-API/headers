@@ -6,7 +6,8 @@ class ScriptLoggerConfig {
 
 public:
 
-    ScriptLoggerConfig(void);
-    void set(ScriptLogType, bool);
-    void get(ScriptLogType)const;
+    ScriptLoggerConfig();
+//  void set(ScriptLogType, bool); //TODO: incomplete function definition
+    ~ScriptLoggerConfig();
+//  void get(ScriptLogType)const; //TODO: incomplete function definition
 };

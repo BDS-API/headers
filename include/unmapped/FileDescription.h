@@ -1,12 +1,16 @@
 #pragma once
 
+#include "./FileDescription.h"
 
 
-using namespace FilePickerSettings;
+namespace FilePickerSettings {
 
 class FileDescription {
 
 public:
 
-    FileDescription(FilePickerSettings::FileDescription&&);
+    ~FileDescription();
+    FileDescription(FilePickerSettings::FileDescription &&);
 };
+
+}

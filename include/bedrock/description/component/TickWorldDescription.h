@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "../../../json/Value.h"
+#include "./ComponentDescription.h"
 
 
 class TickWorldDescription : ComponentDescription {
@@ -11,9 +12,9 @@ public:
     static long MinDistToPlayers;
 
     virtual void getJsonName()const;
-    virtual TickWorldDescription::~TickWorldDescription()
+    virtual ~TickWorldDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    TickWorldDescription(void);
+    TickWorldDescription();
 };

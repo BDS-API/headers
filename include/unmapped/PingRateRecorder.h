@@ -2,7 +2,7 @@
 
 
 
-using namespace RakNetServerLocator;
+namespace RakNetServerLocator {
 
 class PingRateRecorder {
 
@@ -14,4 +14,7 @@ public:
     void pingEnd(unsigned int const&, int);
     void getLastPingTime()const;
     void getAverageLatency()const;
+    ~PingRateRecorder();
 };
+
+}

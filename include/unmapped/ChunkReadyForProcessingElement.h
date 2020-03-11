@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/ChunkPos"
+#include "../bedrock/util/ChunkPos.h"
 
 
-using namespace LevelChunkBuilderData;
+namespace LevelChunkBuilderData {
 
 class ChunkReadyForProcessingElement {
 
@@ -11,3 +11,5 @@ public:
 
     ChunkReadyForProcessingElement(ChunkPos const&, int);
 };
+
+}

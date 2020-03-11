@@ -2,12 +2,14 @@
 
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class SocketDescriptor {
 
 public:
 
-    SocketDescriptor(void);
+    SocketDescriptor();
     SocketDescriptor(unsigned short, char const*);
 };
+
+}

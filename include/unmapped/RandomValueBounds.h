@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../json/Value"
+#include "../bedrock/util/Random.h"
+#include "../json/Value.h"
 
 
 class RandomValueBounds {
 
 public:
 
-    RandomValueBounds(void);
+    RandomValueBounds();
     void getMin()const;
     void getMax()const;
     void getInt(Random &)const;

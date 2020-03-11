@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/FloatRange"
+#include "./Goal.h"
+#include "../Mob.h"
+#include "../../../unmapped/FloatRange.h"
+#include <string>
 
 
 class CircleAroundAnchorGoal : Goal {
 
 public:
-    virtual CircleAroundAnchorGoal::~CircleAroundAnchorGoal()
+    virtual ~CircleAroundAnchorGoal();
     virtual bool canUse();
     virtual void start();
     virtual void stop();

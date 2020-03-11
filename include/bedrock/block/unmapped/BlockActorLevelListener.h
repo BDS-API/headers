@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../level/LevelChunk"
-#include "../../level/LevelListener"
+#include "../../level/LevelChunk.h"
+#include "../../level/LevelListener.h"
 
 
 class BlockActorLevelListener : LevelListener {
 
 public:
-    virtual BlockActorLevelListener::~BlockActorLevelListener()
+    virtual ~BlockActorLevelListener();
     virtual void onChunkLoaded(LevelChunk &);
     virtual void onChunkUnloaded(LevelChunk &);
 
-    BlockActorLevelListener(void);
+    BlockActorLevelListener();
 };

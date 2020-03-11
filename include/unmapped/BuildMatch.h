@@ -1,11 +1,12 @@
 #pragma once
 
+#include "./BuildMatch.h"
 
 
 class BuildMatch {
 
 public:
 
-    BuildMatch(void);
+    BuildMatch();
     BuildMatch(BuildMatch const&);
 };

@@ -1,17 +1,21 @@
 #pragma once
 
+#include <memory>
+#include <vector>
+#include <string>
 
 
 class ReadOnlyBinaryStream {
 
 public:
-    virtual ReadOnlyBinaryStream::~ReadOnlyBinaryStream()
-    virtual void read(void *, unsigned long);
+    virtual ~ReadOnlyBinaryStream();
+//  virtual void read(void *, unsigned long); //TODO: incomplete function definition
 
     void getUnreadLength()const;
     void getReadPointer()const;
     void setReadPointer(unsigned long);
     void getLength()const;
+    std::string getData()const;
     void readVectorList(std::vector<unsigned int, std::allocator<unsigned int>> &);
     ReadOnlyBinaryStream(std::string &&);
     ReadOnlyBinaryStream(std::string const&, bool);
@@ -33,5 +37,6 @@ public:
     void getUnsignedVarInt();
     void getUnsignedVarInt64();
     void getString(std::string &);
+    std::string getString();
     void getUnsignedChar();
 };

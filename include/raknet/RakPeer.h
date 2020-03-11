@@ -1,49 +1,61 @@
 #pragma once
 
+#include "./SystemAddress.h"
+#include "./RakNetSocket2.h"
+#include "./PluginInterface2.h"
+#include "./RNS2RecvStruct.h"
+#include "./RemoteSystemStruct.h"
+#include "./SocketDescriptor.h"
+#include "./Packet.h"
+#include "./RakNetGUID.h"
+#include "./BitStream.h"
+#include "./RakPeerInterface.h"
+#include "./AddressOrGUID.h"
+#include "./RNS2EventHandler.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class RakPeer : RakNet::RakPeerInterface, RakNet::RNS2EventHandler {
 
 public:
-    virtual RakNet::RakPeer::~RakPeer()
+    virtual ~RakPeer();
     virtual void Startup(unsigned int, RakNet::SocketDescriptor *, unsigned int, int);
     virtual void InitializeSecurity(char const*, char const*, bool);
     virtual void DisableSecurity();
     virtual void AddToSecurityExceptionList(char const*);
     virtual void RemoveFromSecurityExceptionList(char const*);
-    virtual void IsInSecurityExceptionList(char const*);
+    virtual bool IsInSecurityExceptionList(char const*);
     virtual void SetMaximumIncomingConnections(unsigned short);
     virtual void GetMaximumIncomingConnections()const;
     virtual void NumberOfConnections()const;
     virtual void SetIncomingPassword(char const*, int);
     virtual void GetIncomingPassword(char *, int *);
-    virtual void Connect(char const*, unsigned short, char const*, int, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int, unsigned int);
-    virtual void ConnectWithSocket(char const*, unsigned short, char const*, int, RakNet::RakNetSocket2 *, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int);
-    virtual void Shutdown(unsigned int, unsigned char, PacketPriority);
-    virtual void IsActive()const;
+//  virtual void Connect(char const*, unsigned short, char const*, int, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int, unsigned int); //TODO: incomplete function definition
+//  virtual void ConnectWithSocket(char const*, unsigned short, char const*, int, RakNet::RakNetSocket2 *, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int); //TODO: incomplete function definition
+//  virtual void Shutdown(unsigned int, unsigned char, PacketPriority); //TODO: incomplete function definition
+    virtual bool IsActive()const;
     virtual void GetConnectionList(RakNet::SystemAddress *, unsigned short *)const;
     virtual void GetNextSendReceipt();
     virtual void IncrementNextSendReceipt();
-    virtual void Send(char const*, int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, unsigned int);
+//  virtual void Send(char const*, int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, unsigned int); //TODO: incomplete function definition
     virtual void SendLoopback(char const*, int);
-    virtual void Send(RakNet::BitStream const*, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, unsigned int);
-    virtual void SendList(char const**, int const*, int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, unsigned int);
+//  virtual void Send(RakNet::BitStream const*, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, unsigned int); //TODO: incomplete function definition
+//  virtual void SendList(char const**, int const*, int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, unsigned int); //TODO: incomplete function definition
     virtual void Receive();
     virtual void DeallocatePacket(RakNet::Packet *);
     virtual void GetMaximumNumberOfPeers()const;
-    virtual void CloseConnection(RakNet::AddressOrGUID, bool, unsigned char, PacketPriority);
+//  virtual void CloseConnection(RakNet::AddressOrGUID, bool, unsigned char, PacketPriority); //TODO: incomplete function definition
     virtual void GetConnectionState(RakNet::AddressOrGUID);
     virtual void CancelConnectionAttempt(RakNet::SystemAddress);
     virtual void GetIndexFromSystemAddress(RakNet::SystemAddress)const;
     virtual void GetSystemAddressFromIndex(unsigned int);
     virtual void GetGUIDFromIndex(unsigned int);
-    virtual void GetSystemList(DataStructures::List<RakNet::SystemAddress> &, DataStructures::List<RakNet::RakNetGUID> &)const;
+//  virtual void GetSystemList(DataStructures::List<RakNet::SystemAddress> &, DataStructures::List<RakNet::RakNetGUID> &)const; //TODO: incomplete function definition
     virtual void AddToBanList(char const*, unsigned int);
     virtual void RemoveFromBanList(char const*);
     virtual void ClearBanList();
-    virtual void IsBanned(char const*);
+    virtual bool IsBanned(char const*);
     virtual void SetLimitIPConnectionFrequency(bool);
     virtual void Ping(RakNet::SystemAddress);
     virtual void Ping(char const*, unsigned short, bool, unsigned int);
@@ -71,7 +83,7 @@ public:
     virtual void GetLocalAdapter(unsigned int);
     virtual void GetNumberOfAddresses();
     virtual void GetLocalIP(unsigned int);
-    virtual void IsLocalIP(char const*);
+    virtual bool IsLocalIP(char const*);
     virtual void AllowConnectionResponseIPMigration(bool);
     virtual void AdvertiseSystem(char const*, unsigned short, char const*, int, unsigned int);
     virtual void SetSplitMessageProgressInterval(int);
@@ -84,17 +96,17 @@ public:
     virtual void ChangeSystemAddress(RakNet::RakNetGUID, RakNet::SystemAddress const&);
     virtual void AllocatePacket(unsigned int);
     virtual void GetSocket(RakNet::SystemAddress);
-    virtual void GetSockets(DataStructures::List<RakNet::RakNetSocket2 *> &);
-    virtual void ReleaseSockets(DataStructures::List<RakNet::RakNetSocket2 *> &);
+//  virtual void GetSockets(DataStructures::List<RakNet::RakNetSocket2 *> &); //TODO: incomplete function definition
+//  virtual void ReleaseSockets(DataStructures::List<RakNet::RakNetSocket2 *> &); //TODO: incomplete function definition
     virtual void WriteOutOfBandHeader(RakNet::BitStream *);
-    virtual void SetUserUpdateThread(void ()((RakNet::RakPeerInterface *, void *), , void *);
-    virtual void SetIncomingDatagramEventHandler(bool ()((RakNet::RNS2RecvStruct *), );
+//  virtual void SetUserUpdateThread(void ((RakNet::RakPeerInterface *, void *), , void *); //TODO: incomplete function definition
+//  virtual void SetIncomingDatagramEventHandler(bool ((RakNet::RNS2RecvStruct *), ); //TODO: incomplete function definition
     virtual void ApplyNetworkSimulator(float, unsigned short, unsigned short);
     virtual void SetPerConnectionOutgoingBandwidthLimit(unsigned int);
-    virtual void IsNetworkSimulatorActive();
-    virtual void GetStatistics(RakNet::SystemAddress, RakNet::RakNetStatistics *);
-    virtual void GetStatistics(unsigned int, RakNet::RakNetStatistics *);
-    virtual void GetStatisticsList(DataStructures::List<RakNet::SystemAddress> &, DataStructures::List<RakNet::RakNetGUID> &, DataStructures::List<RakNet::RakNetStatistics> &);
+    virtual bool IsNetworkSimulatorActive();
+//  virtual void GetStatistics(RakNet::SystemAddress, RakNet::RakNetStatistics *); //TODO: incomplete function definition
+//  virtual void GetStatistics(unsigned int, RakNet::RakNetStatistics *); //TODO: incomplete function definition
+//  virtual void GetStatisticsList(DataStructures::List<RakNet::SystemAddress> &, DataStructures::List<RakNet::RakNetGUID> &, DataStructures::List<RakNet::RakNetStatistics> &); //TODO: incomplete function definition
     virtual void GetReceiveBufferSize();
     virtual void RunUpdateCycle(RakNet::BitStream &);
     virtual void SendOutOfBand(char const*, unsigned short, char const*, unsigned int, unsigned int);
@@ -104,7 +116,7 @@ public:
 
     void AllocPacket(unsigned int, char const*, unsigned int);
     void AllocPacket(unsigned int, unsigned char *, char const*, unsigned int);
-    RakPeer(void);
+    RakPeer();
     void GenerateGUID();
     void ResetSendReceipt();
     void FillIPList();
@@ -115,21 +127,21 @@ public:
     void ClearBufferedPackets();
     void ClearSocketQueryOutput();
     void GetRakNetSocketFromUserConnectionSocketIndex(unsigned int)const;
-    void SendConnectionRequest(char const*, unsigned short, char const*, int, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
-    void SendConnectionRequest(char const*, unsigned short, char const*, int, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, RakNet::RakNetSocket2 *);
-    void NotifyAndFlagForShutdown(RakNet::SystemAddress, bool, unsigned char, PacketPriority);
+//  void SendConnectionRequest(char const*, unsigned short, char const*, int, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int); //TODO: incomplete function definition
+//  void SendConnectionRequest(char const*, unsigned short, char const*, int, RakNet::PublicKey *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, RakNet::RakNetSocket2 *); //TODO: incomplete function definition
+//  void NotifyAndFlagForShutdown(RakNet::SystemAddress, bool, unsigned char, PacketPriority); //TODO: incomplete function definition
     void ClearRequestedConnectionList();
     void ClearRemoteSystemLookup();
-    void IsLoopbackAddress(RakNet::AddressOrGUID const&, bool)const;
-    void SendBuffered(char const*, unsigned int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, RakNet::RakPeer::RemoteSystemStruct::ConnectMode, unsigned int);
+    bool IsLoopbackAddress(RakNet::AddressOrGUID const&, bool)const;
+//  void SendBuffered(char const*, unsigned int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, RakNet::RakPeer::RemoteSystemStruct::ConnectMode, unsigned int); //TODO: incomplete function definition
     void GetLoopbackAddress()const;
-    void SendBufferedList(char const**, int const*, int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, RakNet::RakPeer::RemoteSystemStruct::ConnectMode, unsigned int);
+//  void SendBufferedList(char const**, int const*, int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, RakNet::RakPeer::RemoteSystemStruct::ConnectMode, unsigned int); //TODO: incomplete function definition
     void ShiftIncomingTimestamp(unsigned char *, RakNet::SystemAddress const&)const;
-    void CallPluginCallbacks(DataStructures::List<RakNet::PluginInterface2 *> &, RakNet::Packet *);
-    void CloseConnectionInternal(RakNet::AddressOrGUID const&, bool, bool, unsigned char, PacketPriority);
+//  void CallPluginCallbacks(DataStructures::List<RakNet::PluginInterface2 *> &, RakNet::Packet *); //TODO: incomplete function definition
+//  void CloseConnectionInternal(RakNet::AddressOrGUID const&, bool, bool, unsigned char, PacketPriority); //TODO: incomplete function definition
     void GetIndexFromSystemAddress(RakNet::SystemAddress, bool)const;
     void GetIndexFromGuid(RakNet::RakNetGUID);
-    void PingInternal(RakNet::SystemAddress, bool, PacketReliability);
+//  void PingInternal(RakNet::SystemAddress, bool, PacketReliability); //TODO: incomplete function definition
     void GetRemoteSystem(RakNet::AddressOrGUID, bool, bool)const;
     void GetClockDifferentialInt(RakNet::RakPeer::RemoteSystemStruct *)const;
     void GetRemoteSystemFromSystemAddress(RakNet::SystemAddress, bool, bool)const;
@@ -138,10 +150,10 @@ public:
     void ValidateRemoteSystemLookup()const;
     void GetRemoteSystemFromGUID(RakNet::RakNetGUID, bool)const;
     void ParseConnectionRequestPacket(RakNet::RakPeer::RemoteSystemStruct *, RakNet::SystemAddress const&, char const*, int);
-    void SendImmediate(char *, unsigned int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, bool, unsigned long, unsigned int);
+//  void SendImmediate(char *, unsigned int, PacketPriority, PacketReliability, char, RakNet::AddressOrGUID, bool, bool, unsigned long, unsigned int); //TODO: incomplete function definition
     void OnConnectionRequest(RakNet::RakPeer::RemoteSystemStruct *, unsigned long);
     void GetNumberOfRemoteInitiatedConnections()const;
-    void AssignSystemAddressToRemoteSystemList(RakNet::SystemAddress, RakNet::RakPeer::RemoteSystemStruct::ConnectMode, RakNet::RakNetSocket2 *, bool *, RakNet::SystemAddress, int, RakNet::RakNetGUID, bool);
+//  void AssignSystemAddressToRemoteSystemList(RakNet::SystemAddress, RakNet::RakPeer::RemoteSystemStruct::ConnectMode, RakNet::RakNetSocket2 *, bool *, RakNet::SystemAddress, int, RakNet::RakNetGUID, bool); //TODO: incomplete function definition
     void ReferenceRemoteSystem(RakNet::SystemAddress const&, unsigned int);
     void AddToActiveSystemList(unsigned int);
     void GetBestClockDifferential(RakNet::SystemAddress)const;
@@ -156,3 +168,5 @@ public:
     void OnConnectedPong(unsigned long, unsigned long, RakNet::RakPeer::RemoteSystemStruct *);
     void AddPacketToProducer(RakNet::Packet *);
 };
+
+}

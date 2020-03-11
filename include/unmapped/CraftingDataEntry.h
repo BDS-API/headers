@@ -1,18 +1,22 @@
 #pragma once
 
-#include "../bedrock/io/BinaryStream"
-#include "../bedrock/crafting/recipe/Recipe"
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/io/ReadOnlyBinaryStream"
-#include "../bedrock/crafting/recipe/MultiRecipe"
+#include "./HashString.h"
+#include "../bedrock/item/ItemInstance.h"
+#include "../bedrock/crafting/recipe/MultiRecipe.h"
+#include "../bedrock/crafting/recipe/Recipe.h"
+#include "../bedrock/io/ReadOnlyBinaryStream.h"
+#include "./Recipes.h"
+#include "./CraftingDataEntry.h"
+#include "../bedrock/io/BinaryStream.h"
 
 
 class CraftingDataEntry {
 
 public:
 
-    CraftingDataEntry(void);
-    CraftingDataEntry(CraftingDataEntry&&);
+    ~CraftingDataEntry();
+    CraftingDataEntry();
+    CraftingDataEntry(CraftingDataEntry &&);
     void write(BinaryStream &)const;
     void read(ReadOnlyBinaryStream &);
     void fillFromFurnaceRecipe(int, ItemInstance const&, Util::HashString const&);

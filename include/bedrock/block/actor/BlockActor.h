@@ -1,24 +1,28 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../level/LevelChunk"
-#include "../../../unmapped/UIProfanityContext"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../util/Vec3"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../util/AABB"
+#include "../../util/AABB.h"
+#include <string>
+#include "./BlockActor.h"
+#include "../../nbt/CompoundTag.h"
+#include "../../util/Vec3.h"
+#include "../../level/LevelChunk.h"
+#include <memory>
+#include "../../../unmapped/UIProfanityContext.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include <vector>
+#include "../unmapped/BlockSource.h"
+#include "../../actor/Player.h"
 
 
 class BlockActor {
 
 public:
-    static long mIdClassMap[abi:cxx11];
-    static long mClassIdMap[abi:cxx11];
+    static std::string mIdClassMap;
+    static std::string mClassIdMap;
 
-    virtual BlockActor::~BlockActor()
+    virtual ~BlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
@@ -41,10 +45,10 @@ public:
     virtual bool hasAlphaLayer()const;
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
     virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&);
-    virtual void getCustomName()const;
-    virtual void getFilteredCustomName(UIProfanityContext const&);
-    virtual void getName()const;
-    virtual void getImmersiveReaderText(BlockSource &);
+    virtual std::string getCustomName()const;
+    virtual std::string getFilteredCustomName(UIProfanityContext const&);
+    virtual std::string getName()const;
+    virtual std::string getImmersiveReaderText(BlockSource &);
     virtual void getRepairCost()const;
     virtual void getOwningPiston(BlockSource &);
     virtual void getContainer();
@@ -54,10 +58,10 @@ public:
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void _playerCanUpdate(Player const&)const;
 
-    void setId(BlockActorType, std::string const&);
+//  void setId(BlockActorType, std::string const&); //TODO: incomplete function definition
     void initBlockEntities();
     void shutdown();
-    BlockActor(BlockActorType, BlockPos const&, std::string const&);
+//  BlockActor(BlockActorType, BlockPos const&, std::string const&); //TODO: incomplete function definition
     void _resetAABB();
     void setCustomName(std::string const&);
     void assignBlockIfNotAssigned(BlockSource &);
@@ -67,8 +71,8 @@ public:
     void setCustomNameSaved(bool);
     void distanceToSqr(Vec3 const&);
     void onUpdatePacket(CompoundTag const&, BlockSource &, Player const*);
-    bool isType(BlockActorType)const;
-    bool isType(BlockActor&, BlockActorType);
+//  bool isType(BlockActorType)const; //TODO: incomplete function definition
+//  bool isType(BlockActor &, BlockActorType); //TODO: incomplete function definition
     bool isInWorld()const;
     void stopDestroy();
     void getAABB()const;
@@ -79,8 +83,9 @@ public:
     bool isClientSideOnly()const;
     void setClientSideOnly(bool);
     void getRendererId()const;
-    void setRendererId(BlockActorRendererId);
+//  void setRendererId(BlockActorRendererId); //TODO: incomplete function definition
     bool canRenderCustomName()const;
+    std::string getDisplayName()const;
     void getBlock()const;
     void getEntityTerrainInterlockData();
     void getEntityTerrainInterlockDataConst()const;

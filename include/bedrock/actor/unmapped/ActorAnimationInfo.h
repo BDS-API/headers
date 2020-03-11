@@ -6,5 +6,6 @@ class ActorAnimationInfo {
 
 public:
 
-    ActorAnimationInfo(void);
+    ActorAnimationInfo();
+    ~ActorAnimationInfo();
 };

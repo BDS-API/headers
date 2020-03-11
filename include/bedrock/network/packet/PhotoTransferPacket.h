@@ -1,21 +1,24 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../core/Path"
+#include "../../io/BinaryStream.h"
+#include "./PhotoTransferPacket.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../../core/Path.h"
+#include "./Packet.h"
+#include <string>
 
 
 class PhotoTransferPacket : Packet {
 
 public:
-    virtual PhotoTransferPacket::~PhotoTransferPacket()
+    virtual ~PhotoTransferPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    PhotoTransferPacket(void);
+    PhotoTransferPacket();
     PhotoTransferPacket(std::string const&);
-    PhotoTransferPacket(std::string const&, std::string&);
-    void fromDisk(Core::Path, PhotoTransferPacket&);
+    PhotoTransferPacket(std::string const&, std::string &);
+    void fromDisk(Core::Path, PhotoTransferPacket &);
 };

@@ -1,24 +1,30 @@
 #pragma once
 
-#include "../definition/GoalDefinition"
-#include "../nbt/ListTag"
-#include "../util/Vec3"
-#include "unmapped/ActorUniqueID"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../item/ItemStack"
-#include "../../unmapped/Dimension"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/HashString"
-#include "../../mce/UUID"
-#include "../util/Vec2"
-#include "unmapped/ActorDefinitionGroup"
-#include "../level/Level"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../../unmapped/RenderParams"
-#include "damagesource/ActorDamageSource"
-#include "../../unmapped/VariantParameterList"
-#include "../../unmapped/DataLoadHelper"
+#include "../../unmapped/Dimension.h"
+#include "../../unmapped/Block.h"
+#include "../item/ItemStack.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../util/Vec2.h"
+#include "./Actor.h"
+#include "./Mob.h"
+#include "../nbt/ListTag.h"
+#include "../util/BlockPos.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "../nbt/CompoundTag.h"
+#include "../../unmapped/RenderParams.h"
+#include "../../mce/UUID.h"
+#include "../../unmapped/HashString.h"
+#include <memory>
+#include "unmapped/ActorUniqueID.h"
+#include "../definition/GoalDefinition.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../level/Level.h"
+#include <vector>
+#include "./Player.h"
+#include <string>
 
 
 class Mob : Actor {
@@ -37,11 +43,11 @@ public:
     static long LADDER_CLIMB_SPEED;
     static long SCAFFOLDING_CLIMB_SPEED;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
     virtual bool hasComponent(Util::HashString const&)const;
-    virtual Mob::~Mob()
+    virtual ~Mob();
     virtual void getInterpolatedBodyRot(float)const;
     virtual void getInterpolatedHeadRot(float)const;
     virtual void getInterpolatedBodyYaw(float)const;
@@ -69,12 +75,12 @@ public:
     virtual void actuallyHurt(int, ActorDamageSource const*, bool);
     virtual void animateHurt();
     virtual void doFireHurt(int);
-    virtual void handleEntityEvent(ActorEvent, int);
-    virtual void getArmorMaterialTypeInSlot(ArmorSlot)const;
-    virtual void getArmorMaterialTextureTypeInSlot(ArmorSlot)const;
-    virtual void getArmorColorInSlot(ArmorSlot, int)const;
-    virtual void setEquippedSlot(ArmorSlot, int, int);
-    virtual void setEquippedSlot(ArmorSlot, ItemStack const&);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
+//  virtual void getArmorMaterialTypeInSlot(ArmorSlot)const; //TODO: incomplete function definition
+//  virtual void getArmorMaterialTextureTypeInSlot(ArmorSlot)const; //TODO: incomplete function definition
+//  virtual void getArmorColorInSlot(ArmorSlot, int)const; //TODO: incomplete function definition
+//  virtual void setEquippedSlot(ArmorSlot, int, int); //TODO: incomplete function definition
+//  virtual void setEquippedSlot(ArmorSlot, ItemStack const&); //TODO: incomplete function definition
     virtual void setOnFire(int);
     virtual void causeFallDamage(float);
     virtual bool canBePulledIntoVehicle()const;
@@ -84,7 +90,7 @@ public:
     virtual void getDeathTime()const;
     virtual void swing();
     virtual void getYHeadRot()const;
-    virtual void renderDebugServerState(Options const&);
+//  virtual void renderDebugServerState(Options const&); //TODO: incomplete function definition
     virtual void kill();
     virtual void die(ActorDamageSource const&);
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
@@ -109,7 +115,7 @@ public:
     virtual void setSpeed(float);
     virtual void getJumpPower()const;
     virtual void hurtEffects(ActorDamageSource const&, int, bool, bool);
-    virtual void getMeleeWeaponDamageBonus(Mob*);
+    virtual void getMeleeWeaponDamageBonus(Mob *);
     virtual void getMeleeKnockbackBonus();
     virtual void travel(float, float, float);
     virtual void applyFinalFriction(float, bool);
@@ -130,16 +136,16 @@ public:
     virtual void ate();
     virtual void getMaxHeadXRot();
     virtual void getLastHurtByMob();
-    virtual void setLastHurtByMob(Mob*);
+    virtual void setLastHurtByMob(Mob *);
     virtual void getLastHurtByPlayer();
     virtual void setLastHurtByPlayer(Player *);
     virtual void getLastHurtMob();
     virtual void setLastHurtMob(Actor *);
-    virtual bool isAlliedTo(Mob*);
+    virtual bool isAlliedTo(Mob *);
     virtual void doHurtTarget(Actor *);
     virtual bool canBeControlledByRider();
     virtual void leaveCaravan();
-    virtual void joinCaravan(Mob*);
+    virtual void joinCaravan(Mob *);
     virtual bool hasCaravanTail()const;
     virtual void getCaravanHead()const;
     virtual void getArmorValue();
@@ -158,7 +164,7 @@ public:
     virtual void getDamageAfterMagicAbsorb(ActorDamageSource const&, int);
     virtual void createAIGoals();
     virtual void onBorn(Actor &, Actor &);
-    virtual void setItemSlot(EquipmentSlot, ItemStack const&);
+//  virtual void setItemSlot(EquipmentSlot, ItemStack const&); //TODO: incomplete function definition
     virtual void goDownInWater();
     virtual void setTransitioningSitting(bool);
     virtual void attackAnimation(Actor *, float);
@@ -198,7 +204,7 @@ public:
     void getAmbientSoundPostponeTicksRange();
     void _isHeadInWater();
     void _isFloorDamaging(BlockPos const&);
-    void _isNewEntityAttack(ActorDamageCause)const;
+//  void _isNewEntityAttack(ActorDamageCause)const; //TODO: incomplete function definition
     void _tryApplyingLevitation(Vec3 &)const;
     void checkTotemDeathProtection(ActorDamageSource const&);
     bool hasBoundOrigin()const;
@@ -215,7 +221,7 @@ public:
     void lerpToRotation(Vec2 const&, int);
     bool isGliding()const;
     void getTravelType();
-    void calcMoveRelativeSpeed(Mob::TravelType);
+//  void calcMoveRelativeSpeed(Mob::TravelType); //TODO: incomplete function definition
     void getXxa()const;
     void getYya()const;
     void getZza()const;
@@ -258,14 +264,14 @@ public:
     void _doSprintParticleEffect();
     void getCurrentSwingDuration();
     void _getDamageAfterAbsorb(int, int);
-    void getItemSlot(EquipmentSlot)const;
+//  void getItemSlot(EquipmentSlot)const; //TODO: incomplete function definition
     void getFirstCaravanHead();
     void getCaravanSize()const;
     void _updateMobId(ActorUniqueID &);
     void getLastHurtMobTimestamp();
     void getLastHurtByMobTimestamp();
     void getNoActionTime()const;
-    void setSpawnMethod(MobSpawnMethod);
+//  void setSpawnMethod(MobSpawnMethod); //TODO: incomplete function definition
     void getSpawnMethod();
     void onPlayerJump(int);
     void setXxa(float);
@@ -281,7 +287,7 @@ public:
     void _removeSpeedBonus(mce::UUID const&);
     void getFlightSpeed();
     void setFlightSpeed(float);
-    void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>);
+//  void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>); //TODO: incomplete function definition
     void getVillageLegacy()const;
     bool isLayingEgg()const;
     void setIsLayingEgg(bool);

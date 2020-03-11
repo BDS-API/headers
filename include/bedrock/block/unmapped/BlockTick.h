@@ -1,17 +1,23 @@
 #pragma once
 
-#include "../../util/Tick"
-#include "../../../unmapped/Block"
-#include "../../util/BlockPos"
+#include "../../../unmapped/Block.h"
+#include "../../util/Tick.h"
+#include "./BlockTick.h"
+#include "../../util/BlockPos.h"
 
 
-using namespace BlockTickingQueue;
+namespace BlockTickingQueue {
 
 class BlockTick {
 
 public:
 
     BlockTick(BlockPos const&, Block const&, Tick const&, int);
+    void operator==(BlockTickingQueue::BlockTick const&)const;
+    void operator<(BlockTickingQueue::BlockTick const&)const;
+    void operator>(BlockTickingQueue::BlockTick const&)const;
     BlockTick(BlockTickingQueue::BlockTick const&);
-    BlockTick(BlockTickingQueue::BlockTick&&);
+    BlockTick(BlockTickingQueue::BlockTick &&);
 };
+
+}

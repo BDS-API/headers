@@ -1,22 +1,26 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/Random"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include <memory>
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include <vector>
+#include "../util/Vec3.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class HopperBlock : ActorBlock {
 
 public:
-    virtual HopperBlock::~HopperBlock()
+    virtual ~HopperBlock();
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;
-    virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
+//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition
     virtual bool isContainerBlock()const;
     virtual bool isInteractiveBlock()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

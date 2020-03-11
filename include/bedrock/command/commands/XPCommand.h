@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../CommandRegistry"
-#include "../orgin/CommandOrigin"
-#include "../CommandOutput"
-#include "../Command"
+#include "../CommandRegistry.h"
+#include "../Command.h"
+#include "../orgin/CommandOrigin.h"
+#include "../CommandOutput.h"
 
 
 class XPCommand : Command {
 
 public:
-    virtual XPCommand::~XPCommand()
+    virtual ~XPCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);
-    XPCommand(void);
+    XPCommand();
 };

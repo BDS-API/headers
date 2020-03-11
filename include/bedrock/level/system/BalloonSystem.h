@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class BalloonSystem : ITickingSystem {
 
 public:
-    virtual BalloonSystem::~BalloonSystem()
+    virtual ~BalloonSystem();
     virtual void tick(EntityRegistry &);
 
-    BalloonSystem(void);
+    BalloonSystem();
 };

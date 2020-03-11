@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../bedrock/Minecraft"
+#include "../bedrock/Minecraft.h"
 
 
 class TestDedicatedServerCommands {

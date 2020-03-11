@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
-#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
+#include "./SpawnData.h"
+#include "../bedrock/nbt/CompoundTag.h"
 
 
 class SpawnData {
 
 public:
-    virtual SpawnData::~SpawnData()
+    virtual ~SpawnData();
 
-    SpawnData(void);
+    SpawnData();
     SpawnData(CompoundTag const&);
     SpawnData(int, ActorDefinitionIdentifier);
     SpawnData(SpawnData const&);

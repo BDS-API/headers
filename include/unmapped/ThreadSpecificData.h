@@ -6,5 +6,6 @@ class ThreadSpecificData {
 
 public:
 
-    ThreadSpecificData(void);
+    ThreadSpecificData();
+    ~ThreadSpecificData();
 };

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../Minecraft"
-#include "../Command"
+#include "../../Minecraft.h"
+#include "../Command.h"
 
 
 class ServerCommand : Command {
@@ -9,8 +9,8 @@ class ServerCommand : Command {
 public:
     static long mGame;
 
-    virtual ServerCommand::~ServerCommand()
+    virtual ~ServerCommand();
 
-    ServerCommand(void);
+    ServerCommand();
     void setup(Minecraft &);
 };

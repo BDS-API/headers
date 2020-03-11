@@ -1,13 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/BlockPos"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "./SlabBlockItem.h"
+#include "./ItemStack.h"
+#include <string>
 
 
 class StoneSlabBlockItem : SlabBlockItem {
 
 public:
-    virtual StoneSlabBlockItem::~StoneSlabBlockItem()
+    virtual ~StoneSlabBlockItem();
     virtual void getLevelDataForAuxValue(int)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
 

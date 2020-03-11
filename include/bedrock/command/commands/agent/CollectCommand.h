@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../../../actor/Player"
+#include "../../../actor/Player.h"
+#include "../../Command.h"
 
 
-using namespace AgentCommands;
+namespace AgentCommands {
 
 class CollectCommand : AgentCommands::Command {
 
 public:
-    virtual AgentCommands::CollectCommand::~CollectCommand()
+    virtual ~CollectCommand();
     virtual void execute();
     virtual bool isDone();
 
-    CollectCommand(Player &, int, AgentCommands::CollectCommand::CollectionSpecification);
+//  CollectCommand(Player &, int, AgentCommands::CollectCommand::CollectionSpecification); //TODO: incomplete function definition
 };
+
+}

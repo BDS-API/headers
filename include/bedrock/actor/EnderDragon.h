@@ -1,15 +1,20 @@
 #pragma once
 
-#include "../util/Vec3"
-#include "../../unmapped/EndDragonFight"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/PathfinderNode"
-#include "../../unmapped/MobEffectInstance"
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "../util/AABB"
-#include "damagesource/ActorDamageSource"
-#include "../../unmapped/VariantParameterList"
+#include "../../unmapped/MobEffectInstance.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include <memory>
+#include "../util/AABB.h"
+#include "../../unmapped/PathfinderNode.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../util/BlockPos.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../../unmapped/EndDragonFight.h"
+#include <vector>
+#include "./EnderCrystal.h"
+#include "./Monster.h"
+#include "../util/Vec3.h"
+#include "unmapped/ActorDefinitionGroup.h"
 
 
 class EnderDragon : Monster {
@@ -20,8 +25,8 @@ public:
     static long SITTING_ALLOWED_DAMAGE_PERCENTAGE;
     static long MAX_PATH_RADIUS;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual EnderDragon::~EnderDragon()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~EnderDragon();
     virtual void remove();
     virtual bool canExistInPeaceful()const;
     virtual void getShadowRadius()const;
@@ -30,7 +35,7 @@ public:
     virtual bool isFishable()const;
     virtual void setSitting(bool);
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual bool canChangeDimensions()const;
     virtual bool canBePulledIntoVehicle()const;
     virtual bool canBeAffected(MobEffectInstance const&)const;
@@ -62,7 +67,7 @@ public:
     void getHeadPartYOffset(int, std::vector<float, std::allocator<float>> const&, std::vector<float, std::allocator<float>> const&)const;
     void onCrystalDestroyed(EnderCrystal const&, BlockPos, ActorDamageSource const&);
     void findPath(int, int, PathfinderNode *);
-    void reconstructPath(PathfinderNode &, PathfinderNode &, PathCompletionType);
+//  void reconstructPath(PathfinderNode &, PathfinderNode &, PathCompletionType); //TODO: incomplete function definition
     void getTargetPos()const;
     void setTargetPos(Vec3);
     void setTurnSpeed(float);

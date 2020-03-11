@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../../util/Tick"
-#include "../Mob"
-#include "../unmapped/ActorFilterGroup"
+#include "../unmapped/ActorFilterGroup.h"
+#include "./Goal.h"
+#include "../../util/Tick.h"
+#include "../Mob.h"
+#include <string>
 
 
 class NapGoal : Goal {
@@ -10,7 +12,7 @@ class NapGoal : Goal {
 public:
     static long MOB_DETECT_TIME;
 
-    virtual NapGoal::~NapGoal()
+    virtual ~NapGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

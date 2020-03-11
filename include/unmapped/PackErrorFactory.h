@@ -6,5 +6,5 @@ class PackErrorFactory {
 
 public:
 
-    void createPackError(PackErrorType);
+//  void createPackError(PackErrorType); //TODO: incomplete function definition
 };

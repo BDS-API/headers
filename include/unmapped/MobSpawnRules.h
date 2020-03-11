@@ -1,8 +1,12 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
+#include "./SpawnConditions.h"
+#include "../bedrock/util/Random.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
+#include "./MobSpawnHerdInfo.h"
+#include "./MobSpawnRules.h"
+#include <string>
 
 
 class MobSpawnRules {
@@ -14,14 +18,15 @@ public:
     static long MAX_WORLD_AGE;
 
 
+    ~MobSpawnRules();
     MobSpawnRules(MobSpawnRules const&);
     void getMaxSpawnDistance()const;
     void getMinSpawnDistance()const;
-    MobSpawnRules(void);
+    MobSpawnRules();
     void setBrightnessRange(int, int, bool);
     void setMoonBrightnessRange(float, float);
     void setHeightRange(int, int);
-    void setDifficultyRange(Difficulty, Difficulty);
+//  void setDifficultyRange(Difficulty, Difficulty); //TODO: incomplete function definition
     void setSurfaceSpawner();
     void setUndergroundSpawner();
     void setUnderwaterSpawner();
@@ -53,6 +58,7 @@ public:
     void getPopulationCap(SpawnConditions const&)const;
     void getSpawnOnBlockListMutable();
     void getSpawnOnBlockList()const;
+    std::string getMobToDelayId()const;
     void getDelayRange()const;
-    MobSpawnRules(MobSpawnRules&&);
+    MobSpawnRules(MobSpawnRules &&);
 };

@@ -1,14 +1,15 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "../block/unmapped/BlockSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "../../unmapped/VariantParameterList"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../block/unmapped/BlockSource.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../util/BlockPos.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
 
 
 class HangingActor : Actor {
@@ -16,9 +17,9 @@ class HangingActor : Actor {
 public:
     static long HANGING_OFFSET;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual HangingActor::~HangingActor()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~HangingActor();
     virtual void move(Vec3 const&);
     virtual void normalTick();
     virtual void getBrightness(float)const;

@@ -1,20 +1,22 @@
 #pragma once
 
-#include "../block/unmapped/BlockSource"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "../util/Vec3"
-#include "unmapped/ActorInteraction"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../block/unmapped/BlockSource.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./HangingActor.h"
+#include "../nbt/CompoundTag.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorInteraction.h"
+#include "./Player.h"
 
 
 class LeashFenceKnotActor : HangingActor {
 
 public:
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual LeashFenceKnotActor::~LeashFenceKnotActor()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~LeashFenceKnotActor();
     virtual void remove();
     virtual void teleportTo(Vec3 const&, bool, int, int);
     virtual void getShadowRadius()const;

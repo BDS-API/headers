@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../bedrock/util/ChunkPos"
+#include "./ChunkBuildOrderPolicyBase.h"
+#include "../bedrock/util/ChunkPos.h"
 
 
 class ChunkBuildOrderPolicy : ChunkBuildOrderPolicyBase {
 
 public:
-    virtual ChunkBuildOrderPolicy::~ChunkBuildOrderPolicy()
+    virtual ~ChunkBuildOrderPolicy();
     virtual void getChunkRebuildPriority(ChunkPos const&)const;
     virtual void registerForPositionUpdates();
     virtual void updatePosition(unsigned int, ChunkPos &);
     virtual void unregisterForPositionUpdates(unsigned int);
 
-    ChunkBuildOrderPolicy(void);
+    ChunkBuildOrderPolicy();
 };

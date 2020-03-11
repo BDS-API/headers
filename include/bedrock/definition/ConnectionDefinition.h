@@ -6,5 +6,5 @@ class ConnectionDefinition {
 
 public:
 
-    ConnectionDefinition(void);
+    ConnectionDefinition();
 };

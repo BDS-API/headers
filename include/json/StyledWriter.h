@@ -1,16 +1,19 @@
 #pragma once
 
+#include "./Value.h"
+#include "./Writer.h"
+#include <string>
 
 
-using namespace Json;
+namespace Json {
 
 class StyledWriter : Json::Writer {
 
 public:
-    virtual Json::StyledWriter::~StyledWriter()
-    virtual void write(Json::Value const&);
+    virtual ~StyledWriter();
+    virtual std::string write(Json::Value const&);
 
-    StyledWriter(void);
+    StyledWriter();
     void writeCommentBeforeValue(Json::Value const&);
     void writeValue(Json::Value const&);
     void writeCommentAfterValueOnSameLine(Json::Value const&);
@@ -24,3 +27,5 @@ public:
     bool hasCommentForValue(Json::Value const&);
     void normalizeEOL(std::string const&);
 };
+
+}

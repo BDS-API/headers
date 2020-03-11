@@ -1,17 +1,19 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/Vec3"
-#include "../container/Container"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../container/Container.h"
+#include "./BlockLegacy.h"
 
 
 class PumpkinBlock : BlockLegacy {
 
 public:
-    virtual PumpkinBlock::~PumpkinBlock()
+    virtual ~PumpkinBlock();
     virtual bool canConnect(Block const&, unsigned char, Block const&)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;

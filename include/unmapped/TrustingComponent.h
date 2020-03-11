@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/actor/Player"
-#include "../bedrock/actor/unmapped/ActorInteraction"
-#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/actor/Actor.h"
+#include "./TrustingComponent.h"
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/actor/unmapped/ActorInteraction.h"
 
 
 class TrustingComponent {
 
 public:
 
-    TrustingComponent(TrustingComponent&&);
-    TrustingComponent(void);
+    ~TrustingComponent();
+    TrustingComponent(TrustingComponent &&);
+    TrustingComponent();
     void initFromDefinition(Actor &);
     void _canTrust(ItemStack const&)const;
     void _sendTrustEvents(Actor &, Player &)const;

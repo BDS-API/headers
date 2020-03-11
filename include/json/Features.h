@@ -2,13 +2,15 @@
 
 
 
-using namespace Json;
+namespace Json {
 
 class Features {
 
 public:
 
-    Features(void);
+    Features();
     void all();
     void strictMode();
 };
+
+}

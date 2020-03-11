@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../bedrock/level/chunk/SubChunkBlockStorage"
+#include "../bedrock/level/chunk/SubChunkBlockStorage.h"
 
 
 class ISubChunkBlockStoragePaletted : SubChunkBlockStorage {
 
 public:
-    virtual ISubChunkBlockStoragePaletted::~ISubChunkBlockStoragePaletted()
+    virtual ~ISubChunkBlockStoragePaletted();
 
-    ISubChunkBlockStoragePaletted(void);
+    ISubChunkBlockStoragePaletted();
 };

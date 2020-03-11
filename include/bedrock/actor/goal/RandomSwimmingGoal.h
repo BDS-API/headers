@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/BlockPos"
+#include "./RandomStrollGoal.h"
+#include "../Mob.h"
+#include "../../util/BlockPos.h"
+#include <string>
 
 
 class RandomSwimmingGoal : RandomStrollGoal {
 
 public:
-    virtual RandomSwimmingGoal::~RandomSwimmingGoal()
+    virtual ~RandomSwimmingGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void appendDebugInfo(std::string &)const;

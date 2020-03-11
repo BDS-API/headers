@@ -1,8 +1,9 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "damagesource/ActorDamageSource.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Minecart.h"
 
 
 class MinecartChest : Minecart {
@@ -10,7 +11,7 @@ class MinecartChest : Minecart {
 public:
     static long ITEMS_SIZE;
 
-    virtual MinecartChest::~MinecartChest()
+    virtual ~MinecartChest();
     virtual void destroy(ActorDamageSource const&, bool);
     virtual void getType();
     virtual void getDefaultDisplayBlock()const;

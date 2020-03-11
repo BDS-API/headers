@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../io/BinaryStream.h"
+#include <string>
 
 
 class CompletedUsingItemPacket : Packet {
 
 public:
-    virtual CompletedUsingItemPacket::~CompletedUsingItemPacket()
+    virtual ~CompletedUsingItemPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    CompletedUsingItemPacket(void);
+    CompletedUsingItemPacket();
     CompletedUsingItemPacket(short, int);
 };

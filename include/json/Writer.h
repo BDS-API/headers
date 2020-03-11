@@ -2,12 +2,14 @@
 
 
 
-using namespace Json;
+namespace Json {
 
 class Writer {
 
 public:
-    virtual Json::Writer::~Writer()
+    virtual ~Writer();
 
-    Writer(void);
+    Writer();
 };
+
+}

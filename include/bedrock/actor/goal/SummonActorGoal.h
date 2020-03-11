@@ -1,15 +1,19 @@
 #pragma once
 
-#include "../Mob"
-#include "../Actor"
-#include "../unmapped/ActorDefinitionIdentifier"
-#include "../../../unmapped/SummonSpellData"
+#include "../Actor.h"
+#include "../../../unmapped/SummonSpellData.h"
+#include <memory>
+#include "./Goal.h"
+#include <vector>
+#include "../unmapped/ActorDefinitionIdentifier.h"
+#include "../Mob.h"
+#include <string>
 
 
 class SummonActorGoal : Goal {
 
 public:
-    virtual SummonActorGoal::~SummonActorGoal()
+    virtual ~SummonActorGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

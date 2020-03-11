@@ -1,12 +1,16 @@
 #pragma once
 
+#include "./FeatureToggle.h"
 
 
-using namespace FeatureToggles;
+namespace FeatureToggles {
 
 class FeatureToggle {
 
 public:
 
-    FeatureToggle(FeatureToggles::FeatureToggle&&);
+    ~FeatureToggle();
+    FeatureToggle(FeatureToggles::FeatureToggle &&);
 };
+
+}

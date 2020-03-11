@@ -2,12 +2,15 @@
 
 
 
-using namespace Core::ZipUtils;
+namespace Core::ZipUtils {
 
 class ZipProgress {
 
 public:
 
-    ZipProgress(void);
+    ZipProgress();
     void clear();
+    ~ZipProgress();
 };
+
+}

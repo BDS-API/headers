@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BehaviorFactory"
-#include "../../../json/Value"
+#include "../../../unmapped/BehaviorFactory.h"
+#include "./BehaviorDefinition.h"
+#include "../../../json/Value.h"
 
 
 class LookAtActorDefinition : BehaviorDefinition {
 
 public:
-    virtual LookAtActorDefinition::~LookAtActorDefinition()
+    virtual ~LookAtActorDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
 
-    LookAtActorDefinition(void);
+    LookAtActorDefinition();
 };

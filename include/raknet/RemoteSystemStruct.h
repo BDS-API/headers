@@ -2,11 +2,14 @@
 
 
 
-using namespace RakNet::RakPeer;
+namespace RakNet::RakPeer {
 
 class RemoteSystemStruct {
 
 public:
 
-    RemoteSystemStruct(void);
+    RemoteSystemStruct();
+    ~RemoteSystemStruct();
 };
+
+}

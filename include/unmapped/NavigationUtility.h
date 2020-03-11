@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/actor/Mob.h"
+#include "./Block.h"
+#include "./Path.h"
 
 
 class NavigationUtility {

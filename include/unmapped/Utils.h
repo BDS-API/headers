@@ -1,12 +1,13 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/level/biome/Biome"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/block/unmapped/BlockVolume"
+#include "./SurfaceMaterialAttributes.h"
+#include "../bedrock/util/Random.h"
+#include "../bedrock/block/unmapped/BlockVolume.h"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/level/biome/Biome.h"
 
 
-using namespace VanillaSurfaceBuilders;
+namespace VanillaSurfaceBuilders {
 
 class Utils {
 
@@ -16,3 +17,5 @@ public:
     void buildOverworldSurface(Biome const&, Random &, BlockVolume &, SurfaceMaterialAttributes const&, BlockPos const&, float, short);
     void ensureValidSurfaceMaterials(SurfaceMaterialAttributes &);
 };
+
+}

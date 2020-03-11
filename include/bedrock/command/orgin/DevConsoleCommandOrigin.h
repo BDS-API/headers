@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../../../unmapped/NetworkIdentifier"
-#include "../../level/Level"
-#include "../../actor/Player"
-#include "../../actor/unmapped/ActorUniqueID"
+#include "../../actor/Player.h"
+#include "../../level/Level.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include "../../../unmapped/NetworkIdentifier.h"
+#include "./CommandOrigin.h"
+#include <string>
 
 
 class DevConsoleCommandOrigin : CommandOrigin {
 
 public:
-    virtual DevConsoleCommandOrigin::~DevConsoleCommandOrigin()
-    virtual void getRequestId()const;
-    virtual void getName()const;
+    virtual ~DevConsoleCommandOrigin();
+    virtual std::string getRequestId()const;
+    virtual std::string getName()const;
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void getLevel()const;

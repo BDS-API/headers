@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include "./HeavyBlock.h"
+#include <string>
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class ScaffoldingBlock : HeavyBlock {
@@ -14,7 +16,7 @@ class ScaffoldingBlock : HeavyBlock {
 public:
     static long MAX_STABILITY;
 
-    virtual ScaffoldingBlock::~ScaffoldingBlock()
+    virtual ~ScaffoldingBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
@@ -31,7 +33,7 @@ public:
     virtual bool canSlide(BlockSource &, BlockPos const&)const;
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getDustColor(Block const&)const;
-    virtual void getDustParticleName(Block const&)const;
+    virtual std::string getDustParticleName(Block const&)const;
 
     ScaffoldingBlock(std::string const&, int);
     void _updateBlockStability(BlockSource &, BlockPos const&)const;

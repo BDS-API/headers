@@ -1,18 +1,20 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../util/Random"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class LadderBlock : BlockLegacy {
 
 public:
-    virtual LadderBlock::~LadderBlock()
+    virtual ~LadderBlock();
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const;
     virtual bool isWaterBlocking()const;

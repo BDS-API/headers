@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../bedrock/level/Level"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/Scheduler"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/Scheduler.h"
+#include "./Dimension.h"
+#include "../bedrock/level/Level.h"
 
 
 class NetherDimension : Dimension {
 
 public:
-    virtual NetherDimension::~NetherDimension()
+    virtual ~NetherDimension();
     virtual void init();
     virtual void createGenerator();
     virtual void updateLightRamp();
@@ -20,7 +21,7 @@ public:
     virtual bool isFoggyAt(int, int)const;
     virtual void mayRespawn()const;
     virtual void showSky()const;
-    virtual void translatePosAcrossDimension(Vec3 const&, AutomaticID<Dimension, int>)const;
+//  virtual void translatePosAcrossDimension(Vec3 const&, AutomaticID<Dimension, int>)const; //TODO: incomplete function definition
     virtual void getTimeOfDay(int, float)const;
 
     NetherDimension(Level &, Scheduler &);

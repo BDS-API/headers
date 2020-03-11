@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../../level/ServerLevel"
-#include "../../../json/Value"
-#include "../../scripting/unmapped/ScriptEngine"
+#include "../../scripting/unmapped/ScriptEngine.h"
+#include "../../level/ServerLevel.h"
+#include "../../../json/Value.h"
+#include "./CommandOrigin.h"
+#include <string>
 
 
 class ScriptCommandOrigin : CommandOrigin {
 
 public:
-    virtual ScriptCommandOrigin::~ScriptCommandOrigin()
-    virtual void getRequestId()const;
-    virtual void getName()const;
+    virtual ~ScriptCommandOrigin();
+    virtual std::string getRequestId()const;
+    virtual std::string getName()const;
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void getLevel()const;

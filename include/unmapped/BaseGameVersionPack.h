@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./BaseGameVersionPack.h"
 
 
-using namespace BaseGamePackSlices;
+namespace BaseGamePackSlices {
 
 class BaseGameVersionPack {
 
 public:
 
-    BaseGameVersionPack(BaseGamePackSlices::BaseGameVersionPack&&);
+    ~BaseGameVersionPack();
+    BaseGameVersionPack(BaseGamePackSlices::BaseGameVersionPack &&);
     BaseGameVersionPack(BaseGamePackSlices::BaseGameVersionPack const&);
 };
+
+}

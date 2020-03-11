@@ -1,12 +1,15 @@
 #pragma once
 
+#include "../bedrock/block/unmapped/BlockTick.h"
 
 
-using namespace BlockTickingQueue;
+namespace BlockTickingQueue {
 
 class HashBlockTick {
 
 public:
 
-    void operator()const;
+    void operator()(BlockTickingQueue::BlockTick const&)const;
 };
+
+}

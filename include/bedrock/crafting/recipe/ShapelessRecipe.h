@@ -1,15 +1,20 @@
 #pragma once
 
-#include "../../level/Level"
-#include "../../container/CraftingContainer"
-#include "../../../mce/UUID"
-#include "../../../unmapped/RecipeIngredient"
+#include "../../../mce/UUID.h"
+#include "./Recipe.h"
+#include <memory>
+#include "../../container/CraftingContainer.h"
+#include "../../level/Level.h"
+#include "./ShapelessRecipe.h"
+#include "../../../unmapped/RecipeIngredient.h"
+#include <vector>
+#include <string>
 
 
 class ShapelessRecipe : Recipe {
 
 public:
-    virtual ShapelessRecipe::~ShapelessRecipe()
+    virtual ~ShapelessRecipe();
     virtual void assemble(CraftingContainer &)const;
     virtual void getCraftingSize()const;
     virtual void getIngredient(int, int)const;
@@ -19,10 +24,10 @@ public:
     virtual void size()const;
     virtual bool isExperimental()const;
 
-    ShapelessRecipe(std::string, std::vector<RecipeIngredient, std::allocator<RecipeIngredient>> const&, std::vector const&<ItemInstance, std::allocator<std::vector const>>, Util::HashString, int, mce::UUID const*);
+    ShapelessRecipe(std::string, std::vector<RecipeIngredient, std::allocator<RecipeIngredient>> const&, std::vector const&, std::allocator<std::vector const>);
     void generateUUID();
     void setId(mce::UUID const&);
-    ShapelessRecipe(ShapelessRecipe&&);
+    ShapelessRecipe(ShapelessRecipe &&);
     void getIngredients()const;
     void getWidth()const;
     void getHeight()const;

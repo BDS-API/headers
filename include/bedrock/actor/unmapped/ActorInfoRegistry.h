@@ -1,5 +1,9 @@
 #pragma once
 
+#include "./ActorInfo.h"
+#include <memory>
+#include <vector>
+#include <string>
 
 
 class ActorInfoRegistry {
@@ -13,5 +17,6 @@ public:
     void getActorInfoList()const;
     void setSpawnEggAvailable(std::string, bool);
     bool isSpawnEggAvailable(std::string);
-    ActorInfoRegistry(void);
+    ActorInfoRegistry();
+    ~ActorInfoRegistry();
 };

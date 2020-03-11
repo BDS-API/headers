@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class CommandBlockSystem : ITickingSystem {
 
 public:
-    virtual CommandBlockSystem::~CommandBlockSystem()
+    virtual ~CommandBlockSystem();
     virtual void tick(EntityRegistry &);
 
-    CommandBlockSystem(void);
+    CommandBlockSystem();
 };

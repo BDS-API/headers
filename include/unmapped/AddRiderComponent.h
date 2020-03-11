@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
+#include "./AddRiderComponent.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class AddRiderComponent {
@@ -8,6 +9,7 @@ class AddRiderComponent {
 public:
 
     void reloadComponent(Actor &);
-    AddRiderComponent(AddRiderComponent&&);
-    AddRiderComponent(void);
+    ~AddRiderComponent();
+    AddRiderComponent(AddRiderComponent &&);
+    AddRiderComponent();
 };

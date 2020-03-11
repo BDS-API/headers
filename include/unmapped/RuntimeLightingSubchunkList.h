@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./RuntimeLightingSubchunkList.h"
 
 
-using namespace RuntimeLightingManager;
+namespace RuntimeLightingManager {
 
 class RuntimeLightingSubchunkList {
 
 public:
 
-    RuntimeLightingSubchunkList(void);
-    RuntimeLightingSubchunkList(RuntimeLightingManager::RuntimeLightingSubchunkList&&);
+    ~RuntimeLightingSubchunkList();
+    RuntimeLightingSubchunkList();
+    RuntimeLightingSubchunkList(RuntimeLightingManager::RuntimeLightingSubchunkList &&);
 };
+
+}

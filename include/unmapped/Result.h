@@ -1,14 +1,18 @@
 #pragma once
 
+#include "./Result.h"
 
 
-using namespace FileArchiver;
+namespace FileArchiver {
 
 class Result {
 
 public:
 
     Result(FileArchiver::Result const&);
-    Result(FileArchiver::Result&&);
-    Result(void);
+    Result(FileArchiver::Result &&);
+    ~Result();
+    Result();
 };
+
+}

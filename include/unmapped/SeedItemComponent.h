@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/item/Item"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/item/ItemStack"
-#include "../json/Value"
+#include "../bedrock/util/Vec3.h"
+#include <string>
+#include "../json/Value.h"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/actor/Actor.h"
+#include "./Block.h"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/item/Item.h"
 
 
 class SeedItemComponent {
 
 public:
 
+    ~SeedItemComponent();
     SeedItemComponent(Item &);
     void init(Json::Value &);
     void _parsePlantingBlocks(Json::Value const&, std::string &);

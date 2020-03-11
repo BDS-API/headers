@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class HoverGoal : Goal {
 
 public:
-    virtual HoverGoal::~HoverGoal()
+    virtual ~HoverGoal();
     virtual bool canUse();
     virtual void start();
     virtual void stop();

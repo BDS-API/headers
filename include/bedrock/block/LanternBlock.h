@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class LanternBlock : BlockLegacy {
 
 public:
-    virtual LanternBlock::~LanternBlock()
+    virtual ~LanternBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isWaterBlocking()const;
     virtual void waterSpreadCausesSpawn()const;

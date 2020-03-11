@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/Vec3"
+#include "../../util/Vec3.h"
+#include "./RandomStrollGoal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class RandomFlyingGoal : RandomStrollGoal {
 
 public:
-    virtual RandomFlyingGoal::~RandomFlyingGoal()
+    virtual ~RandomFlyingGoal();
     virtual bool canUse();
     virtual void appendDebugInfo(std::string &)const;
     virtual void _setWantedPosition();

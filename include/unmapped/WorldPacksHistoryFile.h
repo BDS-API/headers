@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../mce/UUID"
-#include "../json/Value"
+#include "../mce/UUID.h"
+#include "./PackIdVersion.h"
+#include "./WorldPackHistory.h"
+#include "../json/Value.h"
 
 
 class WorldPacksHistoryFile {
 
 public:
 
-    WorldPacksHistoryFile(void);
+    ~WorldPacksHistoryFile();
+    WorldPacksHistoryFile();
     void initializeFromJson(Json::Value const&);
     void getPacks()const;
     void addPack(WorldPackHistory const&);

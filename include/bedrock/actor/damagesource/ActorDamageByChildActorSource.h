@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../block/unmapped/BlockSource"
-#include "../Actor"
+#include "../../block/unmapped/BlockSource.h"
+#include "./ActorDamageByActorSource.h"
+#include "../Actor.h"
+#include <string>
 
 
 class ActorDamageByChildActorSource : ActorDamageByActorSource {
 
 public:
-    virtual ActorDamageByChildActorSource::~ActorDamageByChildActorSource()
+    virtual ~ActorDamageByChildActorSource();
     virtual bool isChildEntitySource()const;
     virtual void getDeathMessage(std::string, Actor *)const;
     virtual void getDamagingEntityIsCreative()const;
@@ -17,6 +19,6 @@ public:
     virtual void getDamagingEntityCategories()const;
     virtual void clone()const;
 
-    ActorDamageByChildActorSource(Actor &, Actor &, ActorDamageCause);
-    ActorDamageByChildActorSource(BlockSource &, ActorDamageCause);
+//  ActorDamageByChildActorSource(Actor &, Actor &, ActorDamageCause); //TODO: incomplete function definition
+//  ActorDamageByChildActorSource(BlockSource &, ActorDamageCause); //TODO: incomplete function definition
 };

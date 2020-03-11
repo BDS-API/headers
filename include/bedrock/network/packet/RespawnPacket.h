@@ -1,21 +1,23 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
-#include "../../util/Vec3"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../util/Vec3.h"
+#include "./Packet.h"
+#include <string>
 
 
 class RespawnPacket : Packet {
 
 public:
-    virtual RespawnPacket::~RespawnPacket()
+    virtual ~RespawnPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    RespawnPacket(void);
-    RespawnPacket(Vec3 const&, PlayerRespawnState const&);
-    RespawnPacket(Vec3 const&, PlayerRespawnState const&, ActorRuntimeID);
+    RespawnPacket();
+//  RespawnPacket(Vec3 const&, PlayerRespawnState const&); //TODO: incomplete function definition
+//  RespawnPacket(Vec3 const&, PlayerRespawnState const&, ActorRuntimeID); //TODO: incomplete function definition
 };

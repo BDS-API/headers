@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemInstance"
-#include "../../item/ItemStack"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../nbt/CompoundTag.h"
+#include "./RandomizableBlockActorContainer.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemInstance.h"
+#include "../../item/ItemStack.h"
+#include "../unmapped/BlockSource.h"
+#include "../../actor/Player.h"
 
 
 class JukeboxBlockActor : RandomizableBlockActorContainer {
 
 public:
-    virtual JukeboxBlockActor::~JukeboxBlockActor()
+    virtual ~JukeboxBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

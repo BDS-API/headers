@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../block/unmapped/BlockSource"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../container/Container"
+#include "../block/unmapped/BlockSource.h"
+#include "./Item.h"
+#include "../util/Vec3.h"
+#include "../actor/Player.h"
+#include "./ItemStack.h"
+#include "../container/Container.h"
+#include <string>
 
 
 class EggItem : Item {
 
 public:
-    virtual EggItem::~EggItem()
+    virtual ~EggItem();
     virtual bool isThrowable()const;
     virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;

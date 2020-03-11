@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../VillagerBase"
+#include "./Goal.h"
+#include "../VillagerBase.h"
+#include <string>
 
 
 class ReceiveLoveGoal : Goal {
 
 public:
-    virtual ReceiveLoveGoal::~ReceiveLoveGoal()
+    virtual ~ReceiveLoveGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void tick();

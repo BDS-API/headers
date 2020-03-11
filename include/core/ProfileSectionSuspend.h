@@ -1,12 +1,16 @@
 #pragma once
 
+#include "./ProfileMultiSectionCPU.h"
 
 
-using namespace Core::Profile::ProfileMultiSectionCPU;
+namespace Core::Profile::ProfileMultiSectionCPU {
 
 class ProfileSectionSuspend {
 
 public:
 
-    ProfileSectionSuspend(Core::Profile::ProfileMultiSectionCPU&);
+    ProfileSectionSuspend(Core::Profile::ProfileMultiSectionCPU &);
+    ~ProfileSectionSuspend();
 };
+
+}

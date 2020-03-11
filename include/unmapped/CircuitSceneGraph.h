@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/level/circuit/component/BaseCircuitComponent"
-#include "../bedrock/util/ChunkPos"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/util/ChunkPos.h"
+#include "../bedrock/level/circuit/component/BaseCircuitComponent.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class CircuitSceneGraph {
 
 public:
 
-    CircuitSceneGraph(void);
+    CircuitSceneGraph();
+    ~CircuitSceneGraph();
     void getComponent(BlockPos const&, unsigned long);
     void getBaseComponent(BlockPos const&);
     void getFromPendingAdd(BlockPos const&, unsigned long);

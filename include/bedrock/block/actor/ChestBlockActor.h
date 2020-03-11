@@ -1,20 +1,26 @@
 #pragma once
 
-#include "../../../unmapped/ContainerContentChangeListener"
-#include "../../item/ItemStack"
-#include "../../nbt/CompoundTag"
-#include "../../actor/Player"
-#include "../unmapped/BlockSource"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../item/ItemInstance"
-#include "../../../unmapped/DataLoadHelper"
+#include <string>
+#include "./BlockActor.h"
+#include "../../nbt/CompoundTag.h"
+#include "./RandomizableBlockActorFillingContainer.h"
+#include "./ChestBlockActor.h"
+#include <memory>
+#include "../../level/Level.h"
+#include "../../../unmapped/ContainerContentChangeListener.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemInstance.h"
+#include "../../item/ItemStack.h"
+#include <vector>
+#include "../unmapped/BlockSource.h"
+#include "../../actor/Player.h"
 
 
 class ChestBlockActor : RandomizableBlockActorFillingContainer {
 
 public:
-    virtual ChestBlockActor::~ChestBlockActor()
+    virtual ~ChestBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void saveItemInstanceData(CompoundTag &);
@@ -29,7 +35,7 @@ public:
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
     virtual void getCrackEntity(BlockSource &, BlockPos const&);
     virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &, BlockPos const&);
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void getContainer();
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void startOpen(Player &);
@@ -52,7 +58,7 @@ public:
     virtual void getObstructionAABB()const;
     virtual void _detectEntityObstruction(BlockSource &)const;
 
-    ChestBlockActor(BlockActorType, std::string const&, BlockActorRendererId, BlockPos const&, bool);
+//  ChestBlockActor(BlockActorType, std::string const&, BlockActorRendererId, BlockPos const&, bool); //TODO: incomplete function definition
     void createChestBlockEntity(BlockPos const&);
     void createTrappedChestBlockEntity(BlockPos const&);
     bool isLargeChest()const;
@@ -60,7 +66,7 @@ public:
     void _unpair();
     void _saveClientSideState(CompoundTag &)const;
     bool canPairWith(BlockActor *, BlockSource &);
-    void pairWith(ChestBlockActor*, bool);
+    void pairWith(ChestBlockActor *, bool);
     void _validatePairedChest(BlockSource &);
     void _tickOpenLid(BlockSource &);
     void _getCenter(float &, float &, float &);

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../bedrock/item/Item"
-#include "../bedrock/item/unmapped/ItemDescriptor"
-#include "../bedrock/item/ItemInstance"
+#include "../bedrock/item/unmapped/ItemDescriptor.h"
+#include "../bedrock/item/ItemInstance.h"
+#include "../bedrock/item/Item.h"
 
 
-using namespace PotionBrewing;
+namespace PotionBrewing {
 
 class Ingredient {
 
@@ -17,3 +17,5 @@ public:
     void getItemId()const;
     void getData()const;
 };
+
+}

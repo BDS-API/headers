@@ -1,21 +1,22 @@
 #pragma once
 
-#include "../../level/tickingarea/ITickingArea"
-#include "../ScriptObjectHandle"
-#include "../../../mce/UUID"
-#include "../unmapped/ScriptEngine"
+#include "./ScriptBinderComponent.h"
+#include "../../../mce/UUID.h"
+#include "../unmapped/ScriptEngine.h"
+#include "../ScriptObjectHandle.h"
+#include "../../level/tickingarea/ITickingArea.h"
 
 
 class ScriptLevelAreaBinderComponent : ScriptBinderComponent {
 
 public:
-    static long TAG[abi:cxx11];
+    static std::string TAG;
 
-    virtual ScriptLevelAreaBinderComponent::~ScriptLevelAreaBinderComponent()
+    virtual ~ScriptLevelAreaBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 
-    ScriptLevelAreaBinderComponent(void);
+    ScriptLevelAreaBinderComponent();
     ScriptLevelAreaBinderComponent(mce::UUID const&);
     ScriptLevelAreaBinderComponent(ITickingArea const&);
     void getIdentifier()const;

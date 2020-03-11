@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/ModelItem"
+#include "./ModelItem.h"
 
 
-using namespace BlockGraphics;
+namespace BlockGraphics {
 
 class ModelItem {
 
 public:
 
-    ModelItem(void);
+    ModelItem();
+    ~ModelItem();
     ModelItem(BlockGraphics::ModelItem const&);
-    ModelItem(BlockGraphics::ModelItem&&);
+    ModelItem(BlockGraphics::ModelItem &&);
 };
+
+}

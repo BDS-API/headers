@@ -6,5 +6,5 @@ class TrackerStat {
 
 public:
 
-    TrackerStat(void);
+    TrackerStat();
 };

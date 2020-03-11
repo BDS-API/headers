@@ -1,21 +1,23 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../../unmapped/ScoreboardId"
-#include "../../../unmapped/PlayerScoreboardId"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../../unmapped/PlayerScoreboardId.h"
+#include "./Packet.h"
+#include "../../../unmapped/ScoreboardId.h"
+#include <string>
 
 
 class SetScoreboardIdentityPacket : Packet {
 
 public:
-    virtual SetScoreboardIdentityPacket::~SetScoreboardIdentityPacket()
+    virtual ~SetScoreboardIdentityPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    SetScoreboardIdentityPacket(void);
+    SetScoreboardIdentityPacket();
     SetScoreboardIdentityPacket(ScoreboardId const&);
     SetScoreboardIdentityPacket(ScoreboardId const&, PlayerScoreboardId const&);
     void remove(ScoreboardId const&);

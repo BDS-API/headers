@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../actor/Actor"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../level/generator/WorldGenerator"
-#include "../../../unmapped/DataLoadHelper"
-#include "../unmapped/BlockVolume"
+#include "../../level/generator/WorldGenerator.h"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../actor/Actor.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../unmapped/BlockVolume.h"
+#include "../../util/BlockPos.h"
+#include "../unmapped/BlockSource.h"
 
 
 class EndGatewayBlockActor : BlockActor {
@@ -17,7 +18,7 @@ public:
     static long COOLDOWN_TIME;
     static long EVENT_COOLDOWN;
 
-    virtual EndGatewayBlockActor::~EndGatewayBlockActor()
+    virtual ~EndGatewayBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

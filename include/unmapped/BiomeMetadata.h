@@ -6,5 +6,6 @@ class BiomeMetadata {
 
 public:
 
-    BiomeMetadata(void);
+    BiomeMetadata();
+    ~BiomeMetadata();
 };

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../raknet/BitStream"
-#include "../core/Path"
+#include "../core/Path.h"
+#include "../raknet/BitStream.h"
 
 
 class RegionFile {
 
 public:
-    virtual RegionFile::~RegionFile()
+    virtual ~RegionFile();
 
     RegionFile(Core::Path const&);
     void _close();

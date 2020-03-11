@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class BreakBlocksSystem : ITickingSystem {
 
 public:
-    virtual BreakBlocksSystem::~BreakBlocksSystem()
+    virtual ~BreakBlocksSystem();
     virtual void tick(EntityRegistry &);
 
-    BreakBlocksSystem(void);
+    BreakBlocksSystem();
 };

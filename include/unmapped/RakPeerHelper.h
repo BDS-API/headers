@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../raknet/SocketDescriptor"
-#include "../raknet/RakPeerInterface"
-#include "../bedrock/definition/ConnectionDefinition"
+#include "../bedrock/definition/ConnectionDefinition.h"
+#include "../raknet/RakPeerInterface.h"
+#include "./GameConnectionInfo.h"
+#include "../raknet/SocketDescriptor.h"
+#include "./IPSupportInterface.h"
 
 
 class RakPeerHelper {

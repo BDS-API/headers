@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include <string>
+#include "../../io/BinaryStream.h"
+#include "./Packet.h"
 
 
 class PlayStatusPacket : Packet {
 
 public:
-    virtual PlayStatusPacket::~PlayStatusPacket()
+    virtual ~PlayStatusPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    PlayStatusPacket(void);
-    PlayStatusPacket(PlayStatus);
+    PlayStatusPacket();
+//  PlayStatusPacket(PlayStatus); //TODO: incomplete function definition
 };

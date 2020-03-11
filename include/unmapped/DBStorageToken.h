@@ -1,14 +1,19 @@
 #pragma once
 
+#include "./DBStorageToken.h"
+#include <atomic>
 
 
-using namespace DBStorage;
+namespace DBStorage {
 
 class DBStorageToken {
 
 public:
 
     DBStorageToken(std::atomic<int> &);
-    DBStorageToken(DBStorage::DBStorageToken&&);
+    DBStorageToken(DBStorage::DBStorageToken &&);
+    ~DBStorageToken();
     DBStorageToken(DBStorage::DBStorageToken const&);
 };
+
+}

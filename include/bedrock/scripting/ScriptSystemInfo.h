@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./ScriptSystemInfo.h"
 
 
-using namespace ScriptApi;
+namespace ScriptApi {
 
 class ScriptSystemInfo {
 
 public:
 
-    ScriptSystemInfo(void);
-    ScriptSystemInfo(ScriptApi::ScriptSystemInfo&&);
+    ScriptSystemInfo();
+    ~ScriptSystemInfo();
+    ScriptSystemInfo(ScriptApi::ScriptSystemInfo &&);
 };
+
+}

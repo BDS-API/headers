@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../../block/unmapped/BlockSource"
-#include "../../util/BlockPos"
+#include "../../block/unmapped/BlockSource.h"
+#include "./CommandOrigin.h"
+#include "../../util/BlockPos.h"
+#include <string>
 
 
 class BlockCommandOrigin : CommandOrigin {
 
 public:
-    virtual BlockCommandOrigin::~BlockCommandOrigin()
-    virtual void getRequestId()const;
-    virtual void getName()const;
+    virtual ~BlockCommandOrigin();
+    virtual std::string getRequestId()const;
+    virtual std::string getName()const;
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void getLevel()const;

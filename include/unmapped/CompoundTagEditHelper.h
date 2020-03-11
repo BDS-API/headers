@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../bedrock/nbt/Tag"
+#include <memory>
+#include "../bedrock/nbt/Tag.h"
+#include <string>
 
 
 class CompoundTagEditHelper {
@@ -13,4 +15,5 @@ public:
     void popChild();
     bool canPopChild();
     void getParent()const;
+    ~CompoundTagEditHelper();
 };

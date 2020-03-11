@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../util/BlockPos"
+#include "unmapped/BlockSource.h"
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../util/Random.h"
+#include <string>
 
 
 class ObsidianBlock : BlockLegacy {
 
 public:
-    virtual ObsidianBlock::~ObsidianBlock()
+    virtual ~ObsidianBlock();
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
 
     ObsidianBlock(std::string const&, int, bool);

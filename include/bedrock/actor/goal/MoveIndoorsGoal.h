@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/BlockPos"
+#include "./Goal.h"
+#include "../Mob.h"
+#include "../../util/BlockPos.h"
+#include <string>
 
 
 class MoveIndoorsGoal : Goal {
 
 public:
-    virtual MoveIndoorsGoal::~MoveIndoorsGoal()
+    virtual ~MoveIndoorsGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

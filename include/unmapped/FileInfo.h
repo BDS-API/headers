@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../core/Path"
+#include "../core/Path.h"
+#include "./FileInfo.h"
+#include <string>
 
 
 class FileInfo {
@@ -8,6 +10,7 @@ class FileInfo {
 public:
 
     FileInfo(Core::Path, int, std::string);
+    ~FileInfo();
     void valid()const;
-    FileInfo(FileInfo&&);
+    FileInfo(FileInfo &&);
 };

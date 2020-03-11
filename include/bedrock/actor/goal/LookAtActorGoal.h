@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../Actor"
+#include "./Goal.h"
+#include "../Mob.h"
+#include "../Actor.h"
+#include <string>
 
 
 class LookAtActorGoal : Goal {
 
 public:
-    virtual LookAtActorGoal::~LookAtActorGoal()
+    virtual ~LookAtActorGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../block/unmapped/BlockSource"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../block/unmapped/BlockSource.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./HangingActor.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
+#include <string>
 
 
 class Painting : HangingActor {
 
 public:
-    virtual Painting::~Painting()
+    virtual ~Painting();
     virtual void remove();
     virtual void setPos(Vec3 const&);
     virtual void getAddPacket();

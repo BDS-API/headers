@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BehaviorFactory"
-#include "../../../json/Value"
+#include "../../../unmapped/BehaviorFactory.h"
+#include "./BehaviorDefinition.h"
+#include "../../../json/Value.h"
 
 
 class AttackDefinition : BehaviorDefinition {
 
 public:
-    virtual AttackDefinition::~AttackDefinition()
+    virtual ~AttackDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
 
-    AttackDefinition(void);
+    AttackDefinition();
 };

@@ -1,15 +1,17 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "../block/unmapped/BlockSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "../../unmapped/VariantParameterList"
-#include "../../unmapped/Block"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../block/unmapped/BlockSource.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../util/BlockPos.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
+#include "./Player.h"
+#include "../../unmapped/Block.h"
 
 
 class ExperienceOrb : Actor {
@@ -17,8 +19,8 @@ class ExperienceOrb : Actor {
 public:
     static long LIFETIME;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual ExperienceOrb::~ExperienceOrb()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~ExperienceOrb();
     virtual void normalTick();
     virtual void getShadowRadius()const;
     virtual void playerTouch(Player &);
@@ -35,8 +37,8 @@ public:
     void handleMending(Player &);
     void getIconIndex()const;
     void truncateExperienceAmount(int);
-    void spawnOrbs(BlockSource &, Vec3 const&, int, int, ExperienceOrb::DropType, Player *);
-    void spawnOrbs(BlockSource &, Vec3 const&, int, ExperienceOrb::DropType, Player *);
+//  void spawnOrbs(BlockSource &, Vec3 const&, int, int, ExperienceOrb::DropType, Player *); //TODO: incomplete function definition
+//  void spawnOrbs(BlockSource &, Vec3 const&, int, ExperienceOrb::DropType, Player *); //TODO: incomplete function definition
     void durabilityToXP(int);
     void xpToDurability(int);
 };

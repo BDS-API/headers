@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./ParamData.h"
 
 
-using namespace AvailableCommandsPacket;
+namespace AvailableCommandsPacket {
 
 class ParamData {
 
 public:
 
-    ParamData(AvailableCommandsPacket::ParamData&&);
-    ParamData(void);
+    ~ParamData();
+    ParamData(AvailableCommandsPacket::ParamData &&);
+    ParamData();
 };
+
+}

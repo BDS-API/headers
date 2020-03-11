@@ -1,27 +1,35 @@
 #pragma once
 
-#include "../json/Value"
+#include "../json/Value.h"
+#include <string>
+#include "./NpcAction.h"
 
 
 class NpcAction {
 
 public:
     static long MAX_BUTTON_NAME_LENGTH;
-    static long TYPE_KEY[abi:cxx11];
-    static long DATA_KEY[abi:cxx11];
-    static long MODE_KEY[abi:cxx11];
-    static long TEXT_KEY[abi:cxx11];
-    static long BUTTON_NAME_KEY[abi:cxx11];
+    static std::string TYPE_KEY;
+    static std::string DATA_KEY;
+    static std::string MODE_KEY;
+    static std::string TEXT_KEY;
+    static std::string BUTTON_NAME_KEY;
 
-    virtual NpcAction::~NpcAction()
+    virtual ~NpcAction();
     virtual void fromJson(Json::Value const&);
 
-    NpcAction(NpcActionType);
+//  NpcAction(NpcActionType); //TODO: incomplete function definition
     void getType()const;
     void getMode()const;
-    void setMode(NpcActionMode);
+//  void setMode(NpcActionMode); //TODO: incomplete function definition
     void setButtonName(std::string const&);
+    std::string getButtonName()const;
+    std::string getButtonRawTextName()const;
+    std::string getText()const;
+    std::string getRawText()const;
     void setText(std::string const&);
     void toJsonBase(Json::Value &);
+    void operator==(NpcAction const&)const;
+    void operator!=(NpcAction const&)const;
     void read(Json::Value const&);
 };

@@ -1,11 +1,12 @@
 #pragma once
 
+#include "./Amplifier.h"
 
 
 class ShiftedValueAmplifier : Amplifier {
 
 public:
-    virtual ShiftedValueAmplifier::~ShiftedValueAmplifier()
+    virtual ~ShiftedValueAmplifier();
     virtual void getAmount(int, float)const;
 
     ShiftedValueAmplifier(int, float);

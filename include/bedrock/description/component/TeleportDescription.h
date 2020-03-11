@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "../../../json/Value.h"
+#include "./ComponentDescription.h"
 
 
 class TeleportDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual TeleportDescription::~TeleportDescription()
+    virtual ~TeleportDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    TeleportDescription(void);
+    TeleportDescription();
 };

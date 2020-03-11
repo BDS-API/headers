@@ -1,14 +1,17 @@
 #pragma once
 
+#include "./IFileWriteAccess.h"
 
 
-using namespace MemoryMappedFileAccess;
+namespace MemoryMappedFileAccess {
 
 class MemoryMappedFileWriteAccess : IFileWriteAccess {
 
 public:
-    virtual MemoryMappedFileAccess::MemoryMappedFileWriteAccess::~MemoryMappedFileWriteAccess()
-    virtual void fwrite(void const*, unsigned long, unsigned long, void *);
+    virtual ~MemoryMappedFileWriteAccess();
+//  virtual void fwrite(void const*, unsigned long, unsigned long, void *); //TODO: incomplete function definition
 
-    MemoryMappedFileWriteAccess(void);
+    MemoryMappedFileWriteAccess();
 };
+
+}

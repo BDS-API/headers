@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitSceneGraph"
-#include "../../../util/BlockPos"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph.h"
+#include "../../../util/BlockPos.h"
+#include "../../../../unmapped/CircuitSystem.h"
+#include "./CapacitorComponent.h"
+#include "../../../../unmapped/CircuitTrackingInfo.h"
+#include "./RedstoneTorchCapacitor.h"
+#include "./BaseCircuitComponent.h"
 
 
 class RedstoneTorchCapacitor : CapacitorComponent {
 
 public:
-    virtual RedstoneTorchCapacitor::~RedstoneTorchCapacitor()
+    virtual ~RedstoneTorchCapacitor();
     virtual void getStrength()const;
     virtual void getInstanceType()const;
     virtual void removeSource(BlockPos const&, BaseCircuitComponent const*);
@@ -22,11 +25,11 @@ public:
     virtual void getPoweroutDirection()const;
 
     void getSelfPowerCount();
-    RedstoneTorchCapacitor(void);
+    RedstoneTorchCapacitor();
     void FindStrongestStrength(BlockPos const&, CircuitSystem &, bool &);
     void _canIncrementSelfPower();
     void setOn(bool);
     void resetBurnOutCount();
     void setSelfPowerCount(int);
-    void setNextInQueue(RedstoneTorchCapacitor*);
+    void setNextInQueue(RedstoneTorchCapacitor *);
 };

@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Actor.h"
+#include "./DataLoadHelper.h"
+#include "../bedrock/nbt/CompoundTag.h"
 
 
 class HideComponent {
 
 public:
 
-    HideComponent(void);
+    HideComponent();
     void initFromDefinition(Actor &);
     bool isInRaid();
     bool isReactingToBell();

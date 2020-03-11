@@ -1,40 +1,52 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/actor/Player"
-#include "../bedrock/actor/unmapped/ActorInteraction"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/command/orgin/CommandOrigin"
-#include "../bedrock/network/packet/NpcRequestPacket"
+#include "./NpcComponent.h"
+#include <string>
+#include "./DataLoadHelper.h"
+#include <memory>
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/command/orgin/CommandOrigin.h"
+#include "../bedrock/actor/Player.h"
+#include <vector>
+#include "../bedrock/actor/unmapped/ActorInteraction.h"
+#include <functional>
+#include "../bedrock/network/packet/NpcRequestPacket.h"
+#include "./NpcAction.h"
 
 
 class NpcComponent {
 
 public:
     static long MAX_NPC_NAME_LENGTH;
-    static long NAME_RAW_TEXT_TAG[abi:cxx11];
-    static long INTERACTIVE_TAG[abi:cxx11];
-    static long ACTIONS_TAG[abi:cxx11];
-    static long URL_TAG[abi:cxx11];
+    static std::string NAME_RAW_TEXT_TAG;
+    static std::string INTERACTIVE_TAG;
+    static std::string ACTIONS_TAG;
+    static std::string URL_TAG;
 
 
-    NpcComponent(void);
+    NpcComponent();
     void initFromDefinition(Actor &);
-    void _defineEntityDataString(Actor &, ActorDataIDs);
+//  void _defineEntityDataString(Actor &, ActorDataIDs); //TODO: incomplete function definition
     void _deserializeData();
     void addAdditionalSaveData(Actor &, CompoundTag &)const;
+    std::string getNameRawText(Actor const&)const;
+    std::string getInteractiveRawText(Actor const&)const;
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void loadActions(Actor &);
+    std::string _serializeActions()const;
     void getInteraction(Actor &, Player &, ActorInteraction &);
     bool hasEditPermission(Player &)const;
     void getCommandPermissionLevel()const;
     void getButtonCounts()const;
     void getActionCount()const;
     void getUrlCount()const;
+    std::string getName(Actor const&)const;
+    std::string getInteractiveText(Actor &)const;
     void _isClientSide(Actor &)const;
     void getPortraitOffset()const;
     void getPickerOffset()const;
-    void setInteractiveTextFilter(std::function<std::string ()(std::string const&)>, bool);
+    void setInteractiveTextFilter(std::function<std::string (std::string const&)>, bool);
     void removeInteractiveTextFilter();
     void getSelectedSkinData()const;
     void getSkinData(int)const;
@@ -65,8 +77,9 @@ public:
     void getActionAt(unsigned long)const;
     void getUpdatedActions(std::string const&, std::vector<std::unique_ptr<NpcAction, std::default_delete<NpcAction>>, std::allocator<std::unique_ptr<NpcAction, std::default_delete<NpcAction>>>> &, bool &, bool &);
     void _getCommands(Actor &);
-    void _defineEntityDataInt(Actor &, ActorDataIDs);
+//  void _defineEntityDataInt(Actor &, ActorDataIDs); //TODO: incomplete function definition
     void loadNameRawText(Actor &);
     void loadInteractiveRawText(Actor &);
-    NpcComponent(NpcComponent&&);
+    ~NpcComponent();
+    NpcComponent(NpcComponent &&);
 };

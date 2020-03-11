@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/Scheduler"
-#include "../core/Path"
+#include "../core/Path.h"
+#include "../bedrock/Scheduler.h"
+#include "./DBStorageConfig.h"
 
 
 class DBStorageConfig {
@@ -9,5 +10,6 @@ class DBStorageConfig {
 public:
 
     DBStorageConfig(Scheduler &, Core::Path const&);
-    DBStorageConfig(DBStorageConfig&&);
+    ~DBStorageConfig();
+    DBStorageConfig(DBStorageConfig &&);
 };

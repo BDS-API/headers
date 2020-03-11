@@ -1,16 +1,18 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include "../../unmapped/Block.h"
+#include "../util/AABB.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "./BushBlock.h"
+#include <string>
 
 
 class WaterlilyBlock : BushBlock {
 
 public:
-    virtual WaterlilyBlock::~WaterlilyBlock()
+    virtual ~WaterlilyBlock();
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool canContainLiquid()const;
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const;

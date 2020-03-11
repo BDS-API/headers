@@ -1,14 +1,15 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "./Monster.h"
+#include "damagesource/ActorDamageSource.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 
 
 class Creeper : Monster {
 
 public:
-    virtual Creeper::~Creeper()
+    virtual ~Creeper();
     virtual void normalTick();
     virtual void die(ActorDamageSource const&);
     virtual void _onSizeUpdated();

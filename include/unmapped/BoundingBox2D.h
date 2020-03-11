@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/BlockPos.h"
 
 
-using namespace StructureTemplateFeature;
+namespace StructureTemplateFeature {
 
 class BoundingBox2D {
 
@@ -12,3 +12,5 @@ public:
     BoundingBox2D(int, int, int, int);
     bool isInside(BlockPos const&)const;
 };
+
+}

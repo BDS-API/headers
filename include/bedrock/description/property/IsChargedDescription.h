@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "./PropertyDescription.h"
+#include "../../../json/Value.h"
 
 
 class IsChargedDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual IsChargedDescription::~IsChargedDescription()
+    virtual ~IsChargedDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    IsChargedDescription(void);
+    IsChargedDescription();
 };

@@ -1,12 +1,13 @@
 #pragma once
 
-#include "../Mob"
+#include "./RandomStrollGoal.h"
+#include "../Mob.h"
 
 
 class WitherRandomAttackPosGoal : RandomStrollGoal {
 
 public:
-    virtual WitherRandomAttackPosGoal::~WitherRandomAttackPosGoal()
+    virtual ~WitherRandomAttackPosGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

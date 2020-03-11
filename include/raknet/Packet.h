@@ -2,11 +2,13 @@
 
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class Packet {
 
 public:
 
-    Packet(void);
+    Packet();
 };
+
+}

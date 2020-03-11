@@ -1,30 +1,36 @@
 #pragma once
 
-#include "../../level/chunksource/ChunkSource"
-#include "../BlockLegacy"
-#include "../../util/Vec3"
-#include "../../actor/unmapped/ActorDefinitionIdentifier"
-#include "../../item/ItemStack"
-#include "../../util/Tick"
-#include "../../../unmapped/Dimension"
-#include "../actor/BlockActor"
-#include "../../util/Brightness"
-#include "../../actor/unmapped/ActorBlockSyncMessage"
-#include "../../level/Level"
-#include "../../level/LevelChunk"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../util/ChunkPos"
-#include "../../util/AABB"
-#include "../../actor/Actor"
-#include "../../../unmapped/Bounds"
-#include "../../../unmapped/BoundingBox"
+#include "../actor/BlockActor.h"
+#include "./BlockVolume.h"
+#include "../../level/chunksource/ChunkSource.h"
+#include "../../actor/Actor.h"
+#include "../../level/LevelChunk.h"
+#include "../../level/Level.h"
+#include <functional>
+#include "../../../unmapped/Block.h"
+#include "../../../unmapped/Bounds.h"
+#include "../../util/AABB.h"
+#include "./BlockSourceListener.h"
+#include "../../../unmapped/Dimension.h"
+#include "../../util/BlockPos.h"
+#include "../../util/ChunkPos.h"
+#include "../../item/ItemStack.h"
+#include "../../../unmapped/BoundingBox.h"
+#include "./BlockTickingQueue.h"
+#include "../../actor/unmapped/ActorBlockSyncMessage.h"
+#include "../../util/Brightness.h"
+#include "../../util/Vec3.h"
+#include <memory>
+#include "../BlockLegacy.h"
+#include "../../util/Tick.h"
+#include <vector>
+#include "../../actor/unmapped/ActorDefinitionIdentifier.h"
 
 
 class BlockSource {
 
 public:
-    virtual BlockSource::~BlockSource()
+    virtual ~BlockSource();
 
     void getMaxHeight()const;
     BlockSource(Level &, Dimension &, ChunkSource &, bool, bool);
@@ -47,20 +53,20 @@ public:
     void getChunk(int, int)const;
     void getChunk(ChunkPos const&)const;
     void addToTickingQueue(BlockPos const&, Block const&, int, int);
-    void _addToTickingQueue(BlockPos const&, Block const&, int, int, TickingQueueType);
+//  void _addToTickingQueue(BlockPos const&, Block const&, int, int, TickingQueueType); //TODO: incomplete function definition
     void addToRandomTickingQueuePercentChance(BlockPos const&, Block const&, float, int);
     void addToRandomTickingQueue(BlockPos const&, Block const&, int, int);
     void removeFromTickingQueue(BlockPos const&, Block const&);
-    void _removeFromTickingQueue(BlockPos const&, Block const&, TickingQueueType);
+//  void _removeFromTickingQueue(BlockPos const&, Block const&, TickingQueueType); //TODO: incomplete function definition
     void removeFromRandomTickingQueue(BlockPos const&, Block const&);
     bool isInstaticking(BlockPos const&)const;
-    void _getTickingQueue(BlockPos const&, TickingQueueType)const;
+//  void _getTickingQueue(BlockPos const&, TickingQueueType)const; //TODO: incomplete function definition
     bool hasTickInCurrentTick(BlockPos const&)const;
-    bool hasTickInCurrentTick(BlockPos const&, TickingQueueType)const;
+//  bool hasTickInCurrentTick(BlockPos const&, TickingQueueType)const; //TODO: incomplete function definition
     bool hasTickInPendingTicks(BlockPos const&)const;
-    bool hasTickInPendingTicks(BlockPos const&, TickingQueueType)const;
-    void getNextTickUpdateForPos(BlockPos const&, TickingQueueType, Tick &)const;
-    bool ticksFromNow(BlockPos const&, TickingQueueType, int)const;
+//  bool hasTickInPendingTicks(BlockPos const&, TickingQueueType)const; //TODO: incomplete function definition
+//  void getNextTickUpdateForPos(BlockPos const&, TickingQueueType, Tick &)const; //TODO: incomplete function definition
+//  bool ticksFromNow(BlockPos const&, TickingQueueType, int)const; //TODO: incomplete function definition
     void setTickingQueue(BlockTickingQueue &);
     void setRandomTickingQueue(BlockTickingQueue &);
     void getWritableChunk(ChunkPos const&);
@@ -123,18 +129,18 @@ public:
     void fireBlockEvent(int, int, int, int, int);
     void blockEvent(BlockPos const&, int, int);
     void fetchEntities(Actor *, AABB const&);
-    void fetchEntities(buffer_span<Actor *>, AABB const&);
-    void fetchEntities(ActorType, AABB const&, Actor *);
+//  void fetchEntities(buffer_span<Actor *>, AABB const&); //TODO: incomplete function definition
+//  void fetchEntities(ActorType, AABB const&, Actor *); //TODO: incomplete function definition
     void fetchActors(ActorDefinitionIdentifier const&, AABB const&);
     void fetchBlockEntities(AABB const&, std::vector<BlockActor *, std::allocator<BlockActor *>> &);
     void fetchBlockEntities(AABB const&);
     void fetchBlocks(BlockPos const&, BlockVolume &)const;
     void areAllChunksLoaded(BlockPos const&, BlockVolume &)const;
-    void fetchEntities2(ActorType, AABB const&, bool);
-    void fetchNearestEntityOfType(Actor *, AABB const&, ActorType);
-    void fetchNearestEntityOfType(Actor *, Vec3 const&, float, ActorType);
-    void fetchNearestEntityNotOfType(Actor *, Vec3 const&, float, ActorType);
-    bool isUnobstructedByEntities(AABB const&, buffer_span<Actor *>);
+//  void fetchEntities2(ActorType, AABB const&, bool); //TODO: incomplete function definition
+//  void fetchNearestEntityOfType(Actor *, AABB const&, ActorType); //TODO: incomplete function definition
+//  void fetchNearestEntityOfType(Actor *, Vec3 const&, float, ActorType); //TODO: incomplete function definition
+//  void fetchNearestEntityNotOfType(Actor *, Vec3 const&, float, ActorType); //TODO: incomplete function definition
+//  bool isUnobstructedByEntities(AABB const&, buffer_span<Actor *>); //TODO: incomplete function definition
     void fetchAABBs(AABB const&, bool);
     void addUnloadedChunksAABBs(AABB const&);
     void addVoidFloor(AABB const&);
@@ -148,16 +154,16 @@ public:
     bool containsFireBlock(AABB const&);
     void getMaterial(int, int, int)const;
     bool isOnTopOfBlock(AABB const&, BlockLegacy const&);
-    bool isOnTopOfBlock(AABB const&, std::function<bool ()(Block const&)>);
-    bool containsMaterial(AABB const&, MaterialType);
-    bool containsLiquid(AABB const&, MaterialType);
+    bool isOnTopOfBlock(AABB const&, std::function<bool (Block const&)>);
+//  bool containsMaterial(AABB const&, MaterialType); //TODO: incomplete function definition
+//  bool containsLiquid(AABB const&, MaterialType); //TODO: incomplete function definition
     void clip(Vec3 const&, Vec3 const&, bool, bool, int, bool, bool);
     void getSeenPercent(Vec3 const&, AABB const&);
-    bool canProvideSupport(BlockPos const&, unsigned char, BlockSupportType)const;
+//  bool canProvideSupport(BlockPos const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition
     bool isInWall(Vec3 const&);
     bool isUnderWater(BlockPos const&)const;
     bool isUnderWater(Vec3 const&, Block const&)const;
-    bool isTouchingMaterial(BlockPos const&, MaterialType)const;
+//  bool isTouchingMaterial(BlockPos const&, MaterialType)const; //TODO: incomplete function definition
     void onChunkDiscarded(LevelChunk &);
     void clearCachedLastChunk();
     void fireAreaChanged(BlockPos const&, BlockPos const&);
@@ -177,10 +183,10 @@ public:
     void setWaterColor(int, BlockPos const&, int);
     void getGrassColor(BlockPos const&)const;
     void getWaterColor(BlockPos const&)const;
-    void getHardcodedEntitySpawn(BlockPos const&, ActorType)const;
+//  void getHardcodedEntitySpawn(BlockPos const&, ActorType)const; //TODO: incomplete function definition
     void findNextTopSolidBlockUnder(BlockPos &);
     void findNextTopSolidBlockAbove(BlockPos &);
-    void findNextSpawnBlockUnder(BlockPos &, MaterialType);
+//  void findNextSpawnBlockUnder(BlockPos &, MaterialType); //TODO: incomplete function definition
     bool canSeeSkyFromBelowWater(BlockPos const&);
     void getRawBrightness(int, int, int, bool);
     void getAboveTopSolidBlock(int, int, bool, bool);
@@ -188,13 +194,13 @@ public:
     void getHeightmap(int, int);
     void getBlockEntity(int, int, int);
     bool isOwnerThread()const;
-    void _getLiquidHeight(BlockPos const&, MaterialType, bool);
+//  void _getLiquidHeight(BlockPos const&, MaterialType, bool); //TODO: incomplete function definition
     void getVisualLiquidHeight(Vec3 const&);
-    void fetchBlocksInCylinder(BlockPos const&, unsigned int, unsigned int, std::function<bool ()(Block const&)>);
-    void fetchBlocksInCylinderSorted(BlockPos const&, unsigned int, unsigned int, std::function<bool ()(Block const&)>);
-    void fetchBlocksInBox(BoundingBox const&, std::function<bool ()(Block const&)>);
-    void fetchBlocksInBoxSorted(BoundingBox const&, std::function<bool ()(Block const&)>);
-    bool isPositionUnderLiquid(Vec3 const&, MaterialType);
+    void fetchBlocksInCylinder(BlockPos const&, unsigned int, unsigned int, std::function<bool (Block const&)>);
+    void fetchBlocksInCylinderSorted(BlockPos const&, unsigned int, unsigned int, std::function<bool (Block const&)>);
+    void fetchBlocksInBox(BoundingBox const&, std::function<bool (Block const&)>);
+    void fetchBlocksInBoxSorted(BoundingBox const&, std::function<bool (Block const&)>);
+//  bool isPositionUnderLiquid(Vec3 const&, MaterialType); //TODO: incomplete function definition
     void getPublicSource()const;
     bool isNearUnloadedChunks(ChunkPos const&);
     void generateUnloadedChunkAABB(ChunkPos const&);

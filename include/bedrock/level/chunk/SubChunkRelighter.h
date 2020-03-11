@@ -1,11 +1,14 @@
 #pragma once
 
-#include "../../block/unmapped/BlockSource"
-#include "../../util/Brightness"
-#include "../../../unmapped/Pos"
-#include "../../../unmapped/Block"
-#include "../../util/BlockPos"
-#include "../../util/ChunkPos"
+#include "../../../unmapped/Block.h"
+#include "./SubChunkLightIndex.h"
+#include <memory>
+#include "../../util/BlockPos.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../../../unmapped/Pos.h"
+#include "../../util/ChunkPos.h"
+#include <vector>
+#include "../../util/Brightness.h"
 
 
 class SubChunkRelighter {
@@ -43,7 +46,7 @@ public:
     void _propagateSubtractiveBlockLight();
     void _propagateBlockLight();
     void _propagateSubtractiveSkyLight(SubChunkLightIndex, unsigned char);
-    void _resetToDo(SubChunkRelighter::SubChunkToDoBitsClearMode);
+//  void _resetToDo(SubChunkRelighter::SubChunkToDoBitsClearMode); //TODO: incomplete function definition
     void _getLight(SubChunkLightIndex);
     void _propagateSubtractiveBlockLight(SubChunkLightIndex, unsigned char);
     void _dirtySubChunk(SubChunkLightIndex, unsigned int &);
@@ -54,6 +57,7 @@ public:
     void getFullyLitSubChunk();
     void getFullyDarkSubChunk();
     SubChunkRelighter(BlockSource &, unsigned long, ChunkPos const&, bool, bool);
+    ~SubChunkRelighter();
     void getCentralSubchunkOrigin();
     void _createSubChunk(unsigned int, unsigned int, unsigned int);
     void _getBlock(SubChunkLightIndex, Block const*&, Block const*&, unsigned int &, unsigned int &, unsigned int &, unsigned int &);

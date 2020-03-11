@@ -2,14 +2,16 @@
 
 
 
-using namespace GameRule;
+namespace GameRule {
 
 class Value {
 
 public:
 
-    Value(void);
+    Value();
     Value(bool);
     Value(int);
     Value(float);
 };
+
+}

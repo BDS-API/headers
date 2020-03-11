@@ -1,43 +1,50 @@
 #pragma once
 
-#include "../level/chunksource/ChunkSource"
-#include "../container/manager/IContainerManager"
-#include "../../unmapped/NetworkHandler"
-#include "../util/Vec3"
-#include "unmapped/ActorUniqueID"
-#include "../../unmapped/ActiveTransfersManager"
-#include "../item/ItemStack"
-#include "../util/Tick"
-#include "../../unmapped/Dimension"
-#include "../../unmapped/NetworkIdentifier"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/MobEffectInstance"
-#include "../../unmapped/InventoryTransaction"
-#include "../../mce/UUID"
-#include "../../unmapped/Certificate"
-#include "../text/TextObjectRoot"
-#include "../network/packet/sender/PacketSender"
-#include "../level/Level"
-#include "../util/BlockPos"
-#include "damagesource/ActorDamageSource"
-#include "../network/packet/Packet"
-#include "../../unmapped/VariantParameterList"
-#include "../../unmapped/DataLoadHelper"
-#include "../../unmapped/ComplexInventoryTransaction"
+#include "../../unmapped/Dimension.h"
+#include "../item/ItemStack.h"
+#include "../network/packet/Packet.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/Certificate.h"
+#include <functional>
+#include "../../unmapped/NetworkIdentifier.h"
+#include "./Actor.h"
+#include "../../unmapped/InventoryTransaction.h"
+#include "../network/packet/sender/PacketSender.h"
+#include "../../unmapped/MobEffectInstance.h"
+#include "./ServerPlayer.h"
+#include "../util/BlockPos.h"
+#include "../../unmapped/NetworkHandler.h"
+#include "../container/manager/IContainerManager.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "../nbt/CompoundTag.h"
+#include "../../mce/UUID.h"
+#include "../text/TextObjectRoot.h"
+#include <memory>
+#include "unmapped/ActorUniqueID.h"
+#include "../../unmapped/ComplexInventoryTransaction.h"
+#include "../util/Tick.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../level/Level.h"
+#include "../../unmapped/ActiveTransfersManager.h"
+#include <vector>
+#include "../level/chunksource/ChunkSource.h"
+#include "./Player.h"
+#include <string>
 
 
 class ServerPlayer : Player {
 
 public:
-    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual ServerPlayer::~ServerPlayer()
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~ServerPlayer();
     virtual void normalTick();
     virtual bool isValidTarget(Actor *)const;
-    virtual void handleEntityEvent(ActorEvent, int);
-    virtual void setArmor(ArmorSlot, ItemStack const&);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
+//  virtual void setArmor(ArmorSlot, ItemStack const&); //TODO: incomplete function definition
     virtual void load(CompoundTag const&, DataLoadHelper &);
     virtual bool canChangeDimensions()const;
-    virtual void changeDimension(AutomaticID<Dimension, int>, bool);
+//  virtual void changeDimension(AutomaticID<Dimension, int>, bool); //TODO: incomplete function definition
     virtual void getControllingPlayer()const;
     virtual void checkFallDamage(float, bool);
     virtual void handleFallDistanceOnServer(float, bool);
@@ -52,11 +59,11 @@ public:
     virtual void prepareRegion(ChunkSource &);
     virtual void destroyRegion();
     virtual void suspendRegion();
-    virtual void changeDimensionWithCredits(AutomaticID<Dimension, int>);
+//  virtual void changeDimensionWithCredits(AutomaticID<Dimension, int>); //TODO: incomplete function definition
     virtual void tickWorld(Tick const&);
-    virtual void frameUpdate(FrameUpdateContextBase &);
+//  virtual void frameUpdate(FrameUpdateContextBase &); //TODO: incomplete function definition
     virtual void checkMovementStats(Vec3 const&);
-    virtual void setPermissions(CommandPermissionLevel);
+//  virtual void setPermissions(CommandPermissionLevel); //TODO: incomplete function definition
     virtual void openContainer(BlockPos const&);
     virtual void openContainer(ActorUniqueID const&);
     virtual void openFurnace(BlockPos const&);
@@ -89,12 +96,12 @@ public:
     virtual bool isHostingPlayer()const;
     virtual bool isLoading()const;
     virtual bool isPlayerInitialized()const;
-    virtual void setPlayerGameType(GameType);
+//  virtual void setPlayerGameType(GameType); //TODO: incomplete function definition
     virtual void setContainerData(IContainerManager &, int, int);
     virtual void slotChanged(IContainerManager &, int, ItemStack const&, ItemStack const&, bool);
     virtual void refreshContainer(IContainerManager &);
     virtual void deleteContainerManager();
-    virtual bool isPositionRelevant(AutomaticID<Dimension, int>, BlockPos const&);
+//  virtual bool isPositionRelevant(AutomaticID<Dimension, int>, BlockPos const&); //TODO: incomplete function definition
     virtual bool isEntityRelevant(Actor const&);
     virtual bool isTeacher()const;
     virtual void onSuspension();
@@ -106,9 +113,9 @@ public:
     virtual void getMoveInputHandler();
     virtual void getInputMode()const;
     virtual void getPlayMode()const;
-    virtual void reportMovementTelemetry(MovementEventType);
+//  virtual void reportMovementTelemetry(MovementEventType); //TODO: incomplete function definition
 
-    ServerPlayer(Level &, PacketSender &, NetworkHandler &, ClientBlobCache::Server::ActiveTransfersManager &, GameType, NetworkIdentifier const&, unsigned char, std::function<void ()(ServerPlayer&)>, mce::UUID, std::string const&, std::unique_ptr<Certificate, std::default_delete<Certificate>>, int);
+//  ServerPlayer(Level &, PacketSender &, NetworkHandler &, ClientBlobCache::Server::ActiveTransfersManager &, GameType, NetworkIdentifier const&, unsigned char, std::function<void (ServerPlayer &)>, mce::UUID, std::string const&, std::unique_ptr<Certificate, std::default_delete<Certificate>>, int); //TODO: incomplete function definition
     void updateChunkPublisherView(Vec3 const&, float);
     void _updateNearbyActors();
     void _getReadOnlyChunkCount();
@@ -131,7 +138,7 @@ public:
     void setLocalPlayerAsInitialized();
     void setLostDataTag(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>>);
     void getServerMoveInputHandler();
-    void setInputMode(InputMode const&);
-    void setPlayMode(ClientPlayMode const&);
+//  void setInputMode(InputMode const&); //TODO: incomplete function definition
+//  void setPlayMode(ClientPlayMode const&); //TODO: incomplete function definition
     void checkCheating(Vec3 const&);
 };

@@ -1,71 +1,24 @@
 {
   "ServerInstance": {
-    "getMinecraft": {
-      "type": "Minecraft *"
-    }
+    "getMinecraft": "Minecraft *"
   },
   "Minecraft": {
-    "getLevel": {
-      "type": "GameSession *"
-    }
+    "getLevel": "GameSession *"
   },
   "GameSession": {
-    "getLevel": {
-      "type": "Level *"
-    },
-    "setLevel": {
-      "args": [
-        [
-          "level",
-          "std::unique_ptr"
-        ]
-      ]
-    }
+    "getLevel": "Level *",
+    "setLevel": ["void", "level", "std::unique_ptr"]
   },
   "Level": {
-    "getActivePlayers": {
-      "type": "std::vector<Player *> *"
-    },
-    "getActivePlayerCount": {
-      "type": "unsigned int"
-    },
-    "getCurrentTick": {
-      "type": "Tick*"
-    }
-  },
-  "Player": {
-    "displayClientMessage": {
-      "args": [
-        [
-          "message",
-          "std::string"
-        ]
-      ]
-    },
-    "displayLocalizableMessage": {
-      "args": [
-        [
-          "message",
-          "std::string"
-        ],
-        [
-          "translations",
-          "std::vector"
-        ]
-      ]
-    }
+    "getActivePlayers": "std::vector<Player *> *",
+    "getActivePlayerCount": "unsigned int",
+    "getCurrentTick": "Tick*"
   },
   "Tick": {
-    "Tick": {
-      "args": [
-        [
-          "tick",
-          "unsigned int"
-        ]
-      ]
-    },
-    "getTimeStamp": {
-      "type": "unsigned long"
-    }
+    "getTimeStamp": "unsigned long"
+  },
+  "Player": {
+    "displayClientMessage": ["void", "message"],
+    "displayLocalizableMessage": ["void", "message", "translations"]
   }
 }

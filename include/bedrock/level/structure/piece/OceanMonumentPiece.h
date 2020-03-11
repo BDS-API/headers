@@ -1,11 +1,13 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../block/unmapped/BlockSource"
-#include "../../LevelChunk"
-#include "../../../../unmapped/Block"
-#include "../../../../unmapped/BoundingBox"
-#include "../../../definition/RoomDefinition"
+#include "../../LevelChunk.h"
+#include "../../../../unmapped/Block.h"
+#include <memory>
+#include "../../../util/Random.h"
+#include "../../../definition/RoomDefinition.h"
+#include "./StructurePiece.h"
+#include "../../../block/unmapped/BlockSource.h"
+#include "../../../../unmapped/BoundingBox.h"
 
 
 class OceanMonumentPiece : StructurePiece {
@@ -19,13 +21,13 @@ public:
     static long mGridroomLeftWingConnectIndex;
     static long mGridroomRightWingConnectIndex;
 
-    virtual OceanMonumentPiece::~OceanMonumentPiece()
+    virtual ~OceanMonumentPiece();
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void getWorldX(int, int);
     virtual void getWorldZ(int, int);
     virtual void addHardcodedSpawnAreas(LevelChunk &)const;
 
-    OceanMonumentPiece(void);
+    OceanMonumentPiece();
     OceanMonumentPiece(int);
     OceanMonumentPiece(int &, BoundingBox &);
     OceanMonumentPiece(int, int &, std::shared_ptr<RoomDefinition> &, int, int, int);

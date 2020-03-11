@@ -1,16 +1,21 @@
 #pragma once
 
+#include <memory>
+#include <functional>
+#include "./Path.h"
+#include "./FileStorageArea.h"
 
 
-using namespace Core;
+namespace Core {
 
 class StorageAreaState {
 
 public:
 
     StorageAreaState(Core::Path);
-    void addListener(Core::StorageAreaStateListener *);
-    void removeListener(Core::StorageAreaStateListener *);
+    ~StorageAreaState();
+//  void addListener(Core::StorageAreaStateListener *); //TODO: incomplete function definition
+//  void removeListener(Core::StorageAreaStateListener *); //TODO: incomplete function definition
     bool isExtendDiskSpaceEvent()const;
     bool isLowDiskSpaceWarning()const;
     bool isOutOfDiskSpaceError()const;
@@ -22,9 +27,11 @@ public:
     void _notifyLowDiskSpaceWarning();
     void _clearLowDiskSpaceWarning();
     void _clearOutOfSpaceError();
-    void notifyCriticalDiskError(Core::LevelStorageState const&);
-    void _fireExtendDiskSpaceEvent(bool, std::weak_ptr<Core::FileStorageArea> &, unsigned long const&, std::function<void ()(void)>);
+//  void notifyCriticalDiskError(Core::LevelStorageState const&); //TODO: incomplete function definition
+//  void _fireExtendDiskSpaceEvent(bool, std::weak_ptr<Core::FileStorageArea> &, unsigned long const&, std::function<void (void)>); //TODO: incomplete function definition
     void _fireLowDiskSpaceWarning(bool);
     void _fireOutOfDiskSpaceError(bool);
-    void _fireCriticalDiskError(bool, Core::LevelStorageState const&);
+//  void _fireCriticalDiskError(bool, Core::LevelStorageState const&); //TODO: incomplete function definition
 };
+
+}

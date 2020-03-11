@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack"
-#include "../../actor/Player"
-#include "../Container"
+#include "../../../unmapped/ContainerItemStack.h"
+#include "../Container.h"
+#include "./BaseContainerMenu.h"
+#include "../../actor/Player.h"
 
 
 class InventoryMenu : BaseContainerMenu {
 
 public:
-    virtual InventoryMenu::~InventoryMenu()
+    virtual ~InventoryMenu();
     virtual void removeSlot(int, int);
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);

@@ -6,5 +6,6 @@ class LevelChunkBuilderData {
 
 public:
 
-    LevelChunkBuilderData(void);
+    LevelChunkBuilderData();
+    ~LevelChunkBuilderData();
 };

@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../../unmapped/AppPlatformListener"
-#include "../../unmapped/SecureStorageKey"
-#include "../../core/Path"
-#include "../../unmapped/CommonPlatform"
+#include "../../unmapped/CommonPlatform.h"
+#include "./IAppPlatform.h"
+#include "../../core/Path.h"
+#include "../../unmapped/AppPlatformListener.h"
+#include "../../unmapped/SecureStorageKey.h"
+#include <string>
 
 
 class AppPlatform : IAppPlatform {
@@ -15,9 +17,9 @@ public:
     static long SHADERCACHE_PATH;
     static long mIsInitialized;
 
-    virtual AppPlatform::~AppPlatform()
+    virtual ~AppPlatform();
     virtual void restartRequested();
-    virtual void getLoggingPath()const;
+    virtual std::string getLoggingPath()const;
     virtual bool isLowMemoryDevice()const;
     virtual void initializeScreenDependentResources();
     virtual void getHighPerformanceThreadsCount()const;
@@ -29,28 +31,28 @@ public:
     virtual bool supportsInPackageRecursion()const;
     virtual bool supportsXboxLiveAchievements()const;
     virtual void hideSplashScreen();
-    virtual void getFeedbackHelpLink()const;
-    virtual void getModalErrorMessageProc();
+    virtual std::string getFeedbackHelpLink()const;
+    virtual std::string getModalErrorMessageProc();
     virtual void updateLocalization(std::string const&);
     virtual void setSleepEnabled(bool);
-    virtual void getInternalPackStoragePath()const;
-    virtual void getSettingsPath();
-    virtual void getPackagedShaderCachePath();
-    virtual void getShaderCachePath();
-    virtual void getUserdataPathForLevels()const;
-    virtual void getCacheStoragePath();
-    virtual void getOnDiskScratchPath();
-    virtual void getOnDiskPackScratchPath();
-    virtual void getLevelInfoCachePath()const;
-    virtual void getCatalogSearchScratchPath();
+    virtual std::string getInternalPackStoragePath()const;
+    virtual std::string getSettingsPath();
+    virtual std::string getPackagedShaderCachePath();
+    virtual std::string getShaderCachePath();
+    virtual std::string getUserdataPathForLevels()const;
+    virtual std::string getCacheStoragePath();
+    virtual std::string getOnDiskScratchPath();
+    virtual std::string getOnDiskPackScratchPath();
+    virtual std::string getLevelInfoCachePath()const;
+    virtual std::string getCatalogSearchScratchPath();
     virtual bool hasSeparatedStorageAreasForContentAcquisition()const;
     virtual void getOptimalLDBSize();
     virtual void showDialog(int);
     virtual void createUserInput();
     virtual void getUserInputStatus();
-    virtual void getUserInput();
-    virtual void getFileAccess(ResourceFileSystem);
-    virtual void copyImportFileToTempFolder(Core::Path const&);
+    virtual std::string getUserInput();
+//  virtual void getFileAccess(ResourceFileSystem); //TODO: incomplete function definition
+    virtual std::string copyImportFileToTempFolder(Core::Path const&);
     virtual void registerFileForCollectionWithCrashDump(Core::Path const&);
     virtual void getScreenWidth();
     virtual void getScreenHeight();
@@ -65,10 +67,10 @@ public:
     virtual bool canManageLegacyData()const;
     virtual bool supportsDayOneExperience()const;
     virtual bool hasBroadcastPermission();
-    virtual bool hasAppInstalled(ExternalApp)const;
-    virtual void navigateToStoreForApp(ExternalApp)const;
-    virtual void launchApp(ExternalApp)const;
-    virtual bool canSupportApp(ExternalApp)const;
+//  virtual bool hasAppInstalled(ExternalApp)const; //TODO: incomplete function definition
+//  virtual void navigateToStoreForApp(ExternalApp)const; //TODO: incomplete function definition
+//  virtual void launchApp(ExternalApp)const; //TODO: incomplete function definition
+//  virtual bool canSupportApp(ExternalApp)const; //TODO: incomplete function definition
     virtual void startBroadcast();
     virtual bool isContentAutoUpdateAllowed()const;
     virtual void getMaxSimultaneousDownloads()const;
@@ -80,11 +82,11 @@ public:
     virtual bool isKeyboardVisible();
     virtual bool supportsVibration();
     virtual void vibrate(int);
-    virtual void getAssetFileFullPath(Core::Path const&);
-    virtual void readAssetFile(Core::Path const&);
+    virtual std::string getAssetFileFullPath(Core::Path const&);
+    virtual std::string readAssetFile(Core::Path const&);
     virtual void listAssetFilesIn(Core::Path const&, std::string const&)const;
     virtual bool supportsClientUpdate()const;
-    virtual void getClientUpdateUrl()const;
+    virtual std::string getClientUpdateUrl()const;
     virtual void checkLicense();
     virtual bool hasBuyButtonWhenInvalidLicense();
     virtual bool isNetworkAvailable();
@@ -106,23 +108,23 @@ public:
     virtual void useXboxControlHelpers()const;
     virtual void getPlatformType()const;
     virtual bool isCentennial()const;
-    virtual void getPackageFamilyName()const;
+    virtual std::string getPackageFamilyName()const;
     virtual void getBuildPlatform()const;
-    virtual void setARVRPlatform(ARVRPlatform);
+//  virtual void setARVRPlatform(ARVRPlatform); //TODO: incomplete function definition
     virtual void getARVRPlatform()const;
     virtual void getNumberOfParticleFramesToInterpolate()const;
-    virtual void setVRControllerType(VRControllerType);
+//  virtual void setVRControllerType(VRControllerType); //TODO: incomplete function definition
     virtual void getVRControllerType()const;
     virtual bool hasIDEProfiler();
-    virtual void getPlatformStringVar(int);
+    virtual std::string getPlatformStringVar(int);
     virtual void getMaximumUsedMemory();
     virtual void getMaxSimRadiusInChunks()const;
-    virtual void getBroadcastAddresses();
-    virtual void getIPAddresses();
+    virtual std::string getBroadcastAddresses();
+    virtual std::string getIPAddresses();
     virtual void useAppPlatformForTelemetryIPAddress();
-    virtual void getModelName();
+    virtual std::string getModelName();
     virtual bool usesHDRBrightness()const;
-    virtual void setFullscreenMode(FullscreenMode);
+//  virtual void setFullscreenMode(FullscreenMode); //TODO: incomplete function definition
     virtual bool isNetworkThrottled();
     virtual bool isLANAllowed()const;
     virtual bool doesLANRequireMultiplayerRestrictions()const;
@@ -133,7 +135,7 @@ public:
     virtual void sendBrazeToastClick();
     virtual void sendBrazeDialogButtonClick(int);
     virtual void collectGraphicsHardwareDetails();
-    virtual void getEdition()const;
+    virtual std::string getEdition()const;
     virtual void getOSVersion()const;
     virtual bool isBrazeEnabled()const;
     virtual bool isFireTV()const;
@@ -180,12 +182,12 @@ public:
     virtual void maxFileDataRequestConcurrency()const;
     virtual void goToExternalConsumablesStoreListing()const;
     virtual void getStoreNetworkFailureTimeout()const;
-    virtual void createLoggingStorageArea(Core::FileAccessType, Core::Path const&);
+//  virtual void createLoggingStorageArea(Core::FileAccessType, Core::Path const&); //TODO: incomplete function definition
     virtual void handlePlatformSpecificSPIErrors(std::string const&);
     virtual void useNativeStoreForRealmsPurchase();
     virtual void importAsFlatFile()const;
     virtual bool isWebviewSupported()const;
-    virtual void createWebview(Webview::PlatformArguments &&)const;
+//  virtual void createWebview(Webview::PlatformArguments &&)const; //TODO: incomplete function definition
     virtual void createXboxLiveSignInHandler()const;
     virtual void getPlatformTTSExists()const;
     virtual void getPlatformTTSEnabled()const;
@@ -201,7 +203,7 @@ public:
     virtual void _onInitialize();
     virtual void _onTeardown();
 
-    AppPlatform(void);
+    AppPlatform();
     void initialize();
     void _initializeLoadProfiler();
     void calculateIfLowMemoryDevice();
@@ -211,20 +213,21 @@ public:
     void getDpi()const;
     void setDpi(int);
     void getUIScalingRules()const;
-    void setUIScalingRules(UIScalingRules);
+//  void setUIScalingRules(UIScalingRules); //TODO: incomplete function definition
     void getPlatformRuntimeInformation()const;
     void accessPlatformRuntimeInformation_Shim();
     void getPlatformBuildInformation()const;
     void accessPlatformBuildInformation_Shim();
     void getAppLifecycleContext();
     void getFocusState();
+    std::string getScratchPath();
     void createUserInput(int);
-    void StringizeUIScalingRules(UIScalingRules);
+//  void StringizeUIScalingRules(UIScalingRules); //TODO: incomplete function definition
     void addListener(AppPlatformListener *, float);
     void notifyTerminate();
     bool isTerminating()const;
     void removeListener(AppPlatformListener *);
-    void addNetworkChangeObserver(NetworkChangeObserver &);
+//  void addNetworkChangeObserver(NetworkChangeObserver &); //TODO: incomplete function definition
     void getDefaultUIProfile()const;
     void setMockMultiplayerActive(bool);
     bool isInitialized();

@@ -5,7 +5,7 @@
 class IFeature {
 
 public:
-    virtual IFeature::~IFeature()
+    virtual ~IFeature();
 
-    IFeature(void);
+    IFeature();
 };

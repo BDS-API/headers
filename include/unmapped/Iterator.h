@@ -1,12 +1,17 @@
 #pragma once
 
+#include "./Iterator.h"
 
 
-using namespace ReverseableIterator;
+namespace ReverseableIterator {
 
 class Iterator {
 
 public:
 
+    void operator!=(ReverseableIterator::Iterator const&)const;
+    void operator*()const;
     Iterator(int, bool);
 };
+
+}

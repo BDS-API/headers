@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Actor.h"
+#include "./DataLoadHelper.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./InsomniaComponent.h"
 
 
 class InsomniaComponent {
 
 public:
 
-    InsomniaComponent(InsomniaComponent&&);
+    InsomniaComponent(InsomniaComponent &&);
     void restartTimer();
     bool hasInsomnia()const;
     void setInsomnia(int);

@@ -1,16 +1,18 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../util/Random"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/AABB"
+#include <string>
+#include "unmapped/BlockSource.h"
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class GrassPathBlock : BlockLegacy {
 
 public:
-    virtual GrassPathBlock::~GrassPathBlock()
+    virtual ~GrassPathBlock();
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool canBeOriginalSurface()const;
     virtual bool canContainLiquid()const;

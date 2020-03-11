@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../../../../util/Random"
-#include "../OceanMonumentPiece"
-#include "../../../../block/unmapped/BlockSource"
-#include "../../../../../unmapped/BoundingBox"
+#include "../../../../block/unmapped/BlockSource.h"
+#include "../../../../../unmapped/BoundingBox.h"
+#include "../OceanMonumentPiece.h"
+#include "../../../../util/Random.h"
 
 
 class OceanMonumentPenthouse : OceanMonumentPiece {
 
 public:
-    virtual OceanMonumentPenthouse::~OceanMonumentPenthouse()
+    virtual ~OceanMonumentPenthouse();
     virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
 
-    OceanMonumentPenthouse(void);
+    OceanMonumentPenthouse();
     OceanMonumentPenthouse(int &, BoundingBox &);
 };

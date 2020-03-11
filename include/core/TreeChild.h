@@ -1,14 +1,20 @@
 #pragma once
 
-#include "../unmapped/HashedString"
+#include <memory>
+#include "../unmapped/HashedString.h"
+#include "./TreeChild.h"
+#include "./TreeNode.h"
 
 
-using namespace Core::StorageAreasTree;
+namespace Core::StorageAreasTree {
 
 class TreeChild {
 
 public:
 
+    ~TreeChild();
     TreeChild(HashedString, std::unique_ptr<Core::StorageAreasTree::TreeNode, std::default_delete<Core::StorageAreasTree::TreeNode>>);
-    TreeChild(Core::StorageAreasTree::TreeChild&&);
+    TreeChild(Core::StorageAreasTree::TreeChild &&);
 };
+
+}

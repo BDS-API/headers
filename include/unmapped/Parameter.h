@@ -2,11 +2,13 @@
 
 
 
-using namespace VariantParameterList;
+namespace VariantParameterList {
 
 class Parameter {
 
 public:
 
-    Parameter(void);
+    Parameter();
 };
+
+}

@@ -2,11 +2,13 @@
 
 
 
-using namespace MoveActorDeltaData;
+namespace MoveActorDeltaData {
 
 class Header {
 
 public:
 
-    Header(void);
+    Header();
 };
+
+}

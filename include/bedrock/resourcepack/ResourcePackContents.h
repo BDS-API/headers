@@ -6,5 +6,5 @@ class ResourcePackContents {
 
 public:
 
-    ResourcePackContents(void);
+    ResourcePackContents();
 };

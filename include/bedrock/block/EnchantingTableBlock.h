@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../actor/Player"
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../actor/Player.h"
+#include <string>
 
 
 class EnchantingTableBlock : ActorBlock {
 
 public:
-    virtual EnchantingTableBlock::~EnchantingTableBlock()
+    virtual ~EnchantingTableBlock();
     virtual bool isCraftingBlock()const;
     virtual bool isInteractiveBlock()const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;

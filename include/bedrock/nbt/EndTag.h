@@ -1,21 +1,24 @@
 #pragma once
 
-#include "../io/IDataOutput"
-#include "../io/IDataInput"
+#include "../io/IDataInput.h"
+#include "../io/IDataOutput.h"
+#include "./Tag.h"
+#include "./EndTag.h"
+#include <string>
 
 
 class EndTag : Tag {
 
 public:
-    virtual EndTag::~EndTag()
+    virtual ~EndTag();
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
-    virtual void toString()const;
+    virtual std::string toString()const;
     virtual void getId()const;
     virtual void equals(Tag const&)const;
     virtual void copy()const;
     virtual void hash()const;
 
-    EndTag(EndTag&&);
-    EndTag(void);
+    EndTag(EndTag &&);
+    EndTag();
 };

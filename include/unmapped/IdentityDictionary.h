@@ -1,13 +1,17 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "./ScoreboardId.h"
+#include "./PlayerScoreboardId.h"
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include <string>
 
 
 class IdentityDictionary {
 
 public:
 
-    IdentityDictionary(void);
+    IdentityDictionary();
+    ~IdentityDictionary();
     bool isTracked(PlayerScoreboardId const&)const;
     bool isTracked(ActorUniqueID const&)const;
     bool isTracked(std::string const&)const;
@@ -19,7 +23,7 @@ public:
     void registerIdentity(ScoreboardId const&, ActorUniqueID const&);
     void registerIdentity(ScoreboardId const&, std::string const&);
     void clearIdentity(ScoreboardId const&);
-    void getScoreboardIds(IdentityDefinition::Type)const;
+//  void getScoreboardIds(IdentityDefinition::Type)const; //TODO: incomplete function definition
     void getAllScoreboardIds()const;
     void getNumTrackedIdentities()const;
     void shouldConvertFakePlayer(PlayerScoreboardId const&, std::string const&);

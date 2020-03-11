@@ -1,14 +1,15 @@
 #pragma once
 
+#include "./FileOpenMode.h"
 
 
-using namespace Core;
+namespace Core {
 
 class FileOpenMode {
 
 public:
 
-    FileOpenMode(void);
+    FileOpenMode();
     void readExisting();
     void writeCreateOrTruncate();
     void writeCreateOrAppend();
@@ -23,10 +24,11 @@ public:
     void wPlus();
     void rbPlus();
     void wbPlus();
-    FileOpenMode(std::_Ios_Openmode);
+//  FileOpenMode(std::_Ios_Openmode); //TODO: incomplete function definition
     FileOpenMode(char const*);
     void cMode();
     void cModeWide();
+    void operator==(Core::FileOpenMode const&)const;
     bool isRead()const;
     bool isWrite()const;
     bool isTruncate()const;
@@ -35,3 +37,5 @@ public:
     bool isBinary()const;
     bool isReadOnly()const;
 };
+
+}

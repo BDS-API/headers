@@ -1,26 +1,29 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../../unmapped/Block"
-#include "../ScriptObjectHandle"
-#include "../../actor/ItemActor"
-#include "../../item/ItemInstance"
-#include "../unmapped/ScriptEngine"
+#include "../../../unmapped/Block.h"
+#include "./ScriptBinderComponent.h"
+#include "../../actor/ItemActor.h"
+#include "../unmapped/ScriptEngine.h"
+#include "../../actor/Actor.h"
+#include "../ScriptObjectHandle.h"
+#include "../../item/ItemInstance.h"
+#include <string>
 
 
 class ScriptIdentifierBinderComponent : ScriptBinderComponent {
 
 public:
-    static long TAG[abi:cxx11];
+    static std::string TAG;
 
-    virtual ScriptIdentifierBinderComponent::~ScriptIdentifierBinderComponent()
+    virtual ~ScriptIdentifierBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 
-    ScriptIdentifierBinderComponent(void);
+    ScriptIdentifierBinderComponent();
     ScriptIdentifierBinderComponent(std::string const&);
     ScriptIdentifierBinderComponent(Actor const&);
     ScriptIdentifierBinderComponent(ItemActor const&);
     ScriptIdentifierBinderComponent(ItemInstance const&);
     ScriptIdentifierBinderComponent(Block const&);
+    std::string getIdentifier()const;
 };

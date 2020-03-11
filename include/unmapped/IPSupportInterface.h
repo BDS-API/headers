@@ -2,12 +2,14 @@
 
 
 
-using namespace RakPeerHelper;
+namespace RakPeerHelper {
 
 class IPSupportInterface {
 
 public:
-    virtual RakPeerHelper::IPSupportInterface::~IPSupportInterface()
+    virtual ~IPSupportInterface();
 
-    IPSupportInterface(void);
+    IPSupportInterface();
 };
+
+}

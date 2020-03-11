@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/util/Vec2"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/util/Vec2.h"
 
 
 class MovementInterpolator {
 
 public:
 
-    MovementInterpolator(void);
+    MovementInterpolator();
     void lerpTo(Vec3 const&, Vec2 const&, int);
     void lerpToRotation(Vec2 const&, int);
     void reset();

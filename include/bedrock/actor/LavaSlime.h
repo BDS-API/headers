@@ -1,15 +1,16 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/VariantParameterList.h"
+#include "./Slime.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 
 
 class LavaSlime : Slime {
 
 public:
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual LavaSlime::~LavaSlime()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~LavaSlime();
     virtual bool isInLava()const;
     virtual void getBrightness(float)const;
     virtual bool isOnFire()const;

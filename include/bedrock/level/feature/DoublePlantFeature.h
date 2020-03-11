@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../../util/BlockPos"
+#include "../../util/Random.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "./Feature.h"
+#include "../../util/BlockPos.h"
 
 
 class DoublePlantFeature : Feature {
 
 public:
-    virtual DoublePlantFeature::~DoublePlantFeature()
+    virtual ~DoublePlantFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
-    DoublePlantFeature(void);
-    void place(BlockSource &, BlockPos const&, Random &, DoublePlantType)const;
+    DoublePlantFeature();
+//  void place(BlockSource &, BlockPos const&, Random &, DoublePlantType)const; //TODO: incomplete function definition
 };

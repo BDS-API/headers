@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../unmapped/Material"
+#include "./BlockLegacy.h"
+#include "../../unmapped/Material.h"
+#include <string>
 
 
 class HoneycombBlock : BlockLegacy {
 
 public:
-    virtual HoneycombBlock::~HoneycombBlock()
+    virtual ~HoneycombBlock();
 
     HoneycombBlock(std::string const&, int, Material const&);
 };

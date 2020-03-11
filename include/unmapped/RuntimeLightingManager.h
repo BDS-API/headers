@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../bedrock/util/Brightness"
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/Brightness.h"
+#include "./Dimension.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class RuntimeLightingManager {
 
 public:
 
+    ~RuntimeLightingManager();
     RuntimeLightingManager(Dimension &);
     void updateBlockLight(BlockPos const&, Brightness, Brightness, Brightness, Brightness, bool);
     void _checkForRelightingTask();

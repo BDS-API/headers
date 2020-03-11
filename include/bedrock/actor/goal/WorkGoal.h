@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../Mob"
-#include "../../definition/DefinitionTrigger"
+#include "./MoveToPOIGoal.h"
+#include "../Mob.h"
+#include "../../definition/DefinitionTrigger.h"
+#include <string>
 
 
 class WorkGoal : MoveToPOIGoal {
@@ -9,7 +11,7 @@ class WorkGoal : MoveToPOIGoal {
 public:
     static long RAIN_CHECK_MAX_COOLDOWN;
 
-    virtual WorkGoal::~WorkGoal()
+    virtual ~WorkGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

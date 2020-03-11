@@ -6,10 +6,10 @@ class EnchantmentInstance {
 
 public:
 
-    EnchantmentInstance(void);
-    EnchantmentInstance(Enchant::Type, int);
+    EnchantmentInstance();
+//  EnchantmentInstance(Enchant::Type, int); //TODO: incomplete function definition
     void getEnchantType()const;
-    void setEnchantType(Enchant::Type);
+//  void setEnchantType(Enchant::Type); //TODO: incomplete function definition
     void getEnchantLevel()const;
     void setEnchantLevel(int);
 };

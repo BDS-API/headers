@@ -1,21 +1,27 @@
 #pragma once
 
-#include "../bedrock/actor/damagesource/ActorDamageSource"
-#include "../bedrock/actor/Mob"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
-#include "../mce/UUID"
+#include "../mce/UUID.h"
+#include "../bedrock/actor/damagesource/ActorDamageSource.h"
+#include "./DataLoadHelper.h"
+#include "./HashedString.h"
+#include "./Village.h"
+#include "./DwellerComponent.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Mob.h"
+#include <string>
 
 
 class DwellerComponent {
 
 public:
-    static long DWELLING_TYPES[abi:cxx11];
-    static long DWELLING_ROLES[abi:cxx11];
+    static std::string DWELLING_TYPES;
+    static std::string DWELLING_ROLES;
 
 
-    DwellerComponent(DwellerComponent&&);
-    DwellerComponent(void);
+    ~DwellerComponent();
+    DwellerComponent(DwellerComponent &&);
+    DwellerComponent();
     void initFromDefinition(Actor &);
     void _getType(std::string const&)const;
     void _getRole(std::string const&)const;

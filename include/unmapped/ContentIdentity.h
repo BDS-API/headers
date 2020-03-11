@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../mce/UUID"
+#include "../mce/UUID.h"
+#include "./ContentIdentity.h"
+#include <string>
 
 
 class ContentIdentity {
@@ -11,11 +13,15 @@ public:
 
     ContentIdentity(mce::UUID const&);
     void _setValidFlag();
-    ContentIdentity(void);
+    ContentIdentity();
     ContentIdentity(ContentIdentity const&);
-    ContentIdentity(ContentIdentity&&);
+    ContentIdentity(ContentIdentity &&);
     void getAsUUID()const;
     void setUUID(mce::UUID const&);
+    std::string asString()const;
     bool isValid()const;
+    void operator==(ContentIdentity const&)const;
+    void operator!=(ContentIdentity const&)const;
+    void operator<(ContentIdentity const&)const;
     void fromString(std::string const&);
 };

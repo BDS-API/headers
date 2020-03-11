@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/Minecraft"
-#include "../bedrock/ServerInstance"
-#include "../bedrock/level/Level"
+#include "../bedrock/ServerInstance.h"
+#include "../bedrock/Minecraft.h"
+#include "../bedrock/level/Level.h"
 
 
 class ServerInstanceEventListener {
 
 public:
-    virtual ServerInstanceEventListener::~ServerInstanceEventListener()
+    virtual ~ServerInstanceEventListener();
     virtual void onServerInitializeStart(ServerInstance &);
     virtual void onServerInitializeEnd(ServerInstance &);
     virtual void onServerMinecraftInitialized(ServerInstance &, Minecraft &);
@@ -22,5 +22,5 @@ public:
     virtual void onStartLeaveGame(ServerInstance &);
     virtual void onLeaveGameDone(ServerInstance &);
 
-    ServerInstanceEventListener(void);
+    ServerInstanceEventListener();
 };

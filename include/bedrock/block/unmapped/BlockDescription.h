@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./BlockDescription.h"
 
 
 class BlockDescription {
 
 public:
 
-    BlockDescription(void);
+    BlockDescription();
     BlockDescription(BlockDescription const&);
+    ~BlockDescription();
 };

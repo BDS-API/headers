@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../block/unmapped/BlockSource"
-#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/BoundingBox.h"
+#include "../../../block/unmapped/BlockSource.h"
+#include "./StructurePiece.h"
+#include "../../../util/Random.h"
 
 
 class ShipwreckPiece : StructurePiece {
 
 public:
-    static long STRUCTURE_SHIPWRECK_TYPES[abi:cxx11];
+    static std::string STRUCTURE_SHIPWRECK_TYPES;
 
-    virtual ShipwreckPiece::~ShipwreckPiece()
+    virtual ~ShipwreckPiece();
     virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
 

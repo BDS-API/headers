@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./FeatureRegistry.h"
+#include "./FeatureTypeFactory.h"
 
 
 class VanillaFeatures {

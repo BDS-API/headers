@@ -1,21 +1,21 @@
 #pragma once
 
-#include "../CommandRegistry"
-#include "../../nbt/CompoundTag"
-#include "../Command"
-#include "../CommandOutput"
-#include "../../block/actor/BlockActor"
-#include "../../util/BlockPos"
-#include "../orgin/CommandOrigin"
+#include "../CommandRegistry.h"
+#include "../../nbt/CompoundTag.h"
+#include "../CommandOutput.h"
+#include "../../block/actor/BlockActor.h"
+#include "../orgin/CommandOrigin.h"
+#include "../../util/BlockPos.h"
+#include "../Command.h"
 
 
 class CloneCommand : Command {
 
 public:
-    virtual CloneCommand::~CloneCommand()
+    virtual ~CloneCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);
-    CloneCommand(void);
+    CloneCommand();
     void convertClonedTag(CompoundTag &, BlockActor *, BlockPos const&);
 };

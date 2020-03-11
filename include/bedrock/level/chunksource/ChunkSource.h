@@ -1,24 +1,28 @@
 #pragma once
 
-#include "../LevelChunkFinalDeleter"
-#include "../../../unmapped/Dimension"
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../LevelChunk"
-#include "../../util/BlockPos"
-#include "../../util/ChunkPos"
+#include "../../util/Random.h"
+#include <memory>
+#include "../../../unmapped/Dimension.h"
+#include "./ChunkSource.h"
+#include "../../util/BlockPos.h"
+#include "./ChunkViewSource.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../../util/ChunkPos.h"
+#include "../LevelChunkFinalDeleter.h"
+#include "../LevelChunk.h"
+#include <functional>
 
 
 class ChunkSource {
 
 public:
-    virtual ChunkSource::~ChunkSource()
+    virtual ~ChunkSource();
     virtual void shutdown();
     virtual bool isShutdownDone();
     virtual void getExistingChunk(ChunkPos const&);
     virtual void getRandomChunk(Random &);
-    virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode);
-    virtual void getOrLoadChunk(ChunkPos const&, ChunkSource::LoadMode);
+//  virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode); //TODO: incomplete function definition
+//  virtual void getOrLoadChunk(ChunkPos const&, ChunkSource::LoadMode); //TODO: incomplete function definition
     virtual void postProcess(ChunkViewSource &);
     virtual void checkAndReplaceChunk(ChunkViewSource &, LevelChunk &);
     virtual void loadChunk(LevelChunk &, bool);
@@ -34,7 +38,7 @@ public:
     virtual void getStorage()const;
     virtual void clearDeletedEntities();
 
-    void createEmptyView(ChunkSource::LoadMode, bool, std::function<void ()(buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>);
+//  void createEmptyView(ChunkSource::LoadMode, bool, std::function<void (buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>); //TODO: incomplete function definition
     void fireChunkLoaded(LevelChunk &);
     void checkAndLaunchChunkGenerationTasks(bool);
     void _hasTooManyChunksPendingDelete()const;
@@ -52,12 +56,12 @@ public:
     void _postProcessingTask(LevelChunk &, std::shared_ptr<ChunkViewSource>);
     void _checkForReplacementDataTask(LevelChunk &, std::shared_ptr<ChunkViewSource>);
     void _lightingTask(std::shared_ptr<LevelChunk>, std::shared_ptr<ChunkViewSource>);
-    void _checkSpecificLevelChunkForUnblocking(std::shared_ptr<LevelChunk>, std::shared_ptr<LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>>>);
-    void _checkLevelChunkForPostProcessing(std::shared_ptr<LevelChunk>, std::shared_ptr<LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>>>);
-    void _checkLevelChunkForNextStage(std::shared_ptr<LevelChunk>, std::shared_ptr<LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>>>, ChunkState);
-    void _chunkAtStage(std::weak_ptr<LevelChunk>, ChunkState);
+//  void _checkSpecificLevelChunkForUnblocking(std::shared_ptr<LevelChunk>, std::shared_ptr<LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>>>); //TODO: incomplete function definition
+//  void _checkLevelChunkForPostProcessing(std::shared_ptr<LevelChunk>, std::shared_ptr<LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>>>); //TODO: incomplete function definition
+//  void _checkLevelChunkForNextStage(std::shared_ptr<LevelChunk>, std::shared_ptr<LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>>>, ChunkState); //TODO: incomplete function definition
+//  void _chunkAtStage(std::weak_ptr<LevelChunk>, ChunkState); //TODO: incomplete function definition
     ChunkSource(Dimension *, int);
-    ChunkSource(ChunkSource&);
+    ChunkSource(ChunkSource &);
     void getChunkSide()const;
     ChunkSource(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>);
     void getLevel()const;

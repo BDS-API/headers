@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../unmapped/MobEffectInstance"
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/MobEffectInstance.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../util/BlockPos.h"
+#include "./Monster.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../../unmapped/Block.h"
 
 
 class Spider : Monster {
 
 public:
-    virtual Spider::~Spider()
+    virtual ~Spider();
     virtual void normalTick();
     virtual void makeStuckInBlock(float);
     virtual void getShadowRadius()const;

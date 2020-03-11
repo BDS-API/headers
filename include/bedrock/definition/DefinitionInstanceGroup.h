@@ -1,6 +1,9 @@
 #pragma once
 
-#include "instance/IDefinitionInstance"
+#include "instance/IDefinitionInstance.h"
+#include <memory>
+#include "./DefinitionInstanceGroup.h"
+#include <string>
 
 
 class DefinitionInstanceGroup {
@@ -14,6 +17,8 @@ public:
     void subtract(DefinitionInstanceGroup const&);
     void contains(DefinitionInstanceGroup const&)const;
     void overlaps(DefinitionInstanceGroup const&)const;
-    DefinitionInstanceGroup(void);
-    DefinitionInstanceGroup(DefinitionInstanceGroup&&);
+    std::string _getDefinitionNameFromTypeId(unsigned short const&);
+    ~DefinitionInstanceGroup();
+    DefinitionInstanceGroup();
+    DefinitionInstanceGroup(DefinitionInstanceGroup &&);
 };

@@ -1,14 +1,15 @@
 #pragma once
 
+#include "./StringSpan.h"
 
 
-using namespace Core;
+namespace Core {
 
 class StringSpan {
 
 public:
 
-    StringSpan(gsl::basic_string_span<char const, -1l>);
+//  StringSpan(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
     void size()const;
     StringSpan(char const*, unsigned long);
     void find(Core::StringSpan)const;
@@ -21,3 +22,5 @@ public:
     void data()const;
     void length()const;
 };
+
+}

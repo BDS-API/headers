@@ -1,12 +1,16 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "../item/Item"
-#include "../util/BlockPos"
-#include "../../unmapped/VariantParameterList"
-#include "../../unmapped/Block"
-#include "unmapped/ActorDefinitionIdentifier"
+#include <string>
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Animal.h"
+#include "./Actor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../util/BlockPos.h"
+#include "damagesource/ActorDamageSource.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../item/Item.h"
+#include "./Player.h"
+#include "../../unmapped/Block.h"
 
 
 class Horse : Animal {
@@ -15,8 +19,8 @@ public:
     static long DATA_AGE;
     static long DONKEY_CHEST_COUNT;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Horse::~Horse()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Horse();
     virtual void getInterpolatedRidingOffset(float)const;
     virtual void normalTick();
     virtual void positionRider(Actor &, float);
@@ -57,11 +61,11 @@ public:
     virtual void nameYOffset();
     virtual void tameToPlayer(Player *, bool);
     virtual void getClosestMommy(Actor *, float);
-    virtual void getMadSound();
+    virtual std::string getMadSound();
 
     Horse(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void getHorseFlag(HorseFlags)const;
-    void setHorseFlag(HorseFlags, bool);
+//  void getHorseFlag(HorseFlags)const; //TODO: incomplete function definition
+//  void setHorseFlag(HorseFlags, bool); //TODO: incomplete function definition
     void openMouth();
     void createInventory();
     void doPlayerRide(Player *);

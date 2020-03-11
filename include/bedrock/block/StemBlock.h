@@ -1,21 +1,24 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./BushBlock.h"
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class StemBlock : BushBlock {
 
 public:
-    virtual StemBlock::~StemBlock()
+    virtual ~StemBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isStemBlock()const;
     virtual bool canContainLiquid()const;
-    virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
+//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getResourceItem(Random &, Block const&, int)const;

@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../../util/BlockPos"
+#include "../../util/Random.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "./Feature.h"
+#include "../../util/BlockPos.h"
 
 
 class MonsterRoomFeature : Feature {
 
 public:
-    virtual MonsterRoomFeature::~MonsterRoomFeature()
+    virtual ~MonsterRoomFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
-    MonsterRoomFeature(void);
+    MonsterRoomFeature();
     void _getFacingDataId(BlockSource &, BlockPos const&, int, int)const;
     void _getRandomEntityId(Random &)const;
 };

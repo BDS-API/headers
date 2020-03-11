@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Actor.h"
 
 
 class ManagedWanderingTraderComponent {

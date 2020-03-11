@@ -1,23 +1,25 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../util/BlockPos"
-#include "../../util/Vec3"
-#include "../../item/ItemStack"
-#include "../../container/Container"
+#include "../../container/Container.h"
+#include "../../nbt/CompoundTag.h"
+#include "../../util/Vec3.h"
+#include "./DispenserBlockActor.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemStack.h"
+#include "../unmapped/BlockSource.h"
+#include <string>
 
 
 class DropperBlockActor : DispenserBlockActor {
 
 public:
-    virtual DropperBlockActor::~DropperBlockActor()
+    virtual ~DropperBlockActor();
     virtual void getUpdatePacket(BlockSource &);
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     DropperBlockActor(BlockPos);
-    DropperBlockActor(BlockPos, BlockActorType);
+//  DropperBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition
     void pushOutItems(BlockSource &);
     void getAttachedContainer(BlockSource &);
     void _tryPushToComposter(BlockSource &, int);

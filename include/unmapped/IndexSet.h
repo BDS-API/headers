@@ -1,16 +1,21 @@
 #pragma once
 
+#include <memory>
+#include "./IndexSet.h"
+#include <vector>
 
 
 class IndexSet {
 
 public:
 
-    IndexSet(void);
+    IndexSet();
     IndexSet(unsigned long, unsigned long);
     IndexSet(IndexSet const&);
-    IndexSet(IndexSet&&);
+    IndexSet(IndexSet &&);
+    ~IndexSet();
     IndexSet(std::vector<unsigned long, std::allocator<unsigned long>>, std::vector<unsigned long, std::allocator<unsigned long>>);
+    void operator==(IndexSet const&)const;
     void sameSetAs(IndexSet const&)const;
     void size()const;
     void subsetOf(IndexSet const&)const;

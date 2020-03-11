@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./FilterInput.h"
+#include <string>
 
 
 class FilterInput {
@@ -7,7 +9,9 @@ class FilterInput {
 public:
 
     FilterInput(int);
+    ~FilterInput();
     void getType()const;
+    std::string getString()const;
     FilterInput(float);
     FilterInput(std::string const&);
     FilterInput(bool);

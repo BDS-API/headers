@@ -2,11 +2,13 @@
 
 
 
-using namespace Core::FileSystem;
+namespace Core::FileSystem {
 
 class FileTransferProgress {
 
 public:
 
-    FileTransferProgress(void);
+    FileTransferProgress();
 };
+
+}

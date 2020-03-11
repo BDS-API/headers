@@ -6,5 +6,5 @@ class AABBContactPoint {
 
 public:
 
-    AABBContactPoint(void);
+    AABBContactPoint();
 };

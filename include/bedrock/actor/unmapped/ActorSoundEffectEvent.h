@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./ActorSoundEffectEvent.h"
 
 
 class ActorSoundEffectEvent {
@@ -7,6 +8,8 @@ class ActorSoundEffectEvent {
 public:
 
     ActorSoundEffectEvent(float);
+    void operator<(ActorSoundEffectEvent const&)const;
+    ~ActorSoundEffectEvent();
     ActorSoundEffectEvent(ActorSoundEffectEvent const&);
-    ActorSoundEffectEvent(ActorSoundEffectEvent&&);
+    ActorSoundEffectEvent(ActorSoundEffectEvent &&);
 };

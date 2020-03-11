@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
 
 
-using namespace ArmorStand;
+namespace ArmorStand {
 
 class Pose {
 
 public:
 
-    Pose(void);
+    Pose();
     Pose(Vec3 const&, Vec3 const&, Vec3 const&, Vec3 const&, Vec3 const&, Vec3 const&, Vec3 const&);
 };
+
+}

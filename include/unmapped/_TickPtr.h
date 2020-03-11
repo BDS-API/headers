@@ -5,7 +5,7 @@
 class _TickPtr {
 
 public:
-    virtual _TickPtr::~_TickPtr()
+    virtual ~_TickPtr();
 
-    _TickPtr(void);
+    _TickPtr();
 };

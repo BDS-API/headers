@@ -1,13 +1,16 @@
 #pragma once
 
+#include <string>
 
 
-using namespace BehaviorData;
+namespace BehaviorData {
 
 class DataProxy {
 
 public:
-    virtual BehaviorData::DataProxy::~DataProxy()
+    virtual ~DataProxy();
 
-    DataProxy(std::string const&, BehaviorData::DataType);
+//  DataProxy(std::string const&, BehaviorData::DataType); //TODO: incomplete function definition
 };
+
+}

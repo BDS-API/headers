@@ -1,6 +1,13 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
+#include "./ValidationError.h"
+#include "./GameRuleId.h"
+#include "./GameRules.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./GameRulesChangedPacketData.h"
+#include "./Value.h"
+#include "./GameRule.h"
+#include <string>
 
 
 class GameRules {
@@ -14,12 +21,13 @@ public:
     static long MAX_PLAYER_SPAWN_RADIUS;
 
 
+    ~GameRules();
     GameRules(GameRules const&);
-    GameRules(GameRules&&);
+    GameRules(GameRules &&);
     void getRules()const;
     void getRule(GameRuleId)const;
     bool hasRule(GameRuleId)const;
-    GameRules(void);
+    GameRules();
     void _registerRules();
     void _validateRules();
     void _validateMarketplaceGameRuleTypes();
@@ -30,7 +38,7 @@ public:
     void setRule(GameRuleId, int, bool, bool *, bool *, GameRule::ValidationError *);
     void setRule(GameRuleId, float, bool, bool *, bool *, GameRule::ValidationError *);
     void _registerRule(std::string const&, GameRuleId);
-    void _setRule(GameRuleId, GameRule::Value, GameRule::Type, bool, bool *, bool *, GameRule::ValidationError *);
+//  void _setRule(GameRuleId, GameRule::Value, GameRule::Type, bool, bool *, bool *, GameRule::ValidationError *); //TODO: incomplete function definition
     void _getRule(GameRuleId);
     void _createPacket(GameRule const&);
     void getBool(GameRuleId)const;

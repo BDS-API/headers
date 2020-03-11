@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../../unmapped/RenderParams"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/RenderParams.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "./WaterAnimal.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "./Player.h"
 
 
 class Fish : WaterAnimal {
 
 public:
-    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Fish::~Fish()
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Fish();
     virtual void normalTick();
     virtual void startRiding(Actor &);
     virtual void playerTouch(Player &);

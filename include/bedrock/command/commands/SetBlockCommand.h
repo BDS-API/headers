@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../CommandRegistry"
-#include "../orgin/CommandOrigin"
-#include "../CommandOutput"
-#include "../Command"
+#include "../CommandRegistry.h"
+#include "../Command.h"
+#include "../orgin/CommandOrigin.h"
+#include "../CommandOutput.h"
 
 
 class SetBlockCommand : Command {
 
 public:
-    virtual SetBlockCommand::~SetBlockCommand()
+    virtual ~SetBlockCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);
-    SetBlockCommand(void);
+    SetBlockCommand();
 };

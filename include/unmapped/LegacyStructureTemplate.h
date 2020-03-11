@@ -1,9 +1,13 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./LegacyStructureSettings.h"
+#include "./Block.h"
+#include "../bedrock/util/BlockPos.h"
+#include <string>
 
 
 class LegacyStructureTemplate {
@@ -11,42 +15,44 @@ class LegacyStructureTemplate {
 public:
     static long STRUCTURE_VERSION;
     static long CHUNK_SIZE;
-    static long SIZE_TAG[abi:cxx11];
-    static long AUTHOR_TAG[abi:cxx11];
-    static long VERSION_TAG[abi:cxx11];
-    static long PALETTE_TAG[abi:cxx11];
-    static long BLOCKS_TAG[abi:cxx11];
-    static long BLOCK_TAG_POS[abi:cxx11];
-    static long BLOCK_TAG_STATE[abi:cxx11];
-    static long BLOCK_TAG_NBT[abi:cxx11];
-    static long ENTITIES_TAG[abi:cxx11];
-    static long ENTITY_TAG_POS[abi:cxx11];
-    static long ENTITY_TAG_BLOCKPOS[abi:cxx11];
-    static long ENTITY_TAG_NBT[abi:cxx11];
-    static long MINECRAFT_PREFIX[abi:cxx11];
+    static std::string SIZE_TAG;
+    static std::string AUTHOR_TAG;
+    static std::string VERSION_TAG;
+    static std::string PALETTE_TAG;
+    static std::string BLOCKS_TAG;
+    static std::string BLOCK_TAG_POS;
+    static std::string BLOCK_TAG_STATE;
+    static std::string BLOCK_TAG_NBT;
+    static std::string ENTITIES_TAG;
+    static std::string ENTITY_TAG_POS;
+    static std::string ENTITY_TAG_BLOCKPOS;
+    static std::string ENTITY_TAG_NBT;
+    static std::string MINECRAFT_PREFIX;
     static long defaultSettings;
 
 
-    LegacyStructureTemplate(void);
+    LegacyStructureTemplate();
     void calculateConnectedPosition(LegacyStructureSettings const&, BlockPos const&, LegacyStructureSettings const&, BlockPos const&)const;
     void _calculateRelativePosition(BlockPos, LegacyStructureSettings const&)const;
+    std::string getMarkers(BlockPos const&, LegacyStructureSettings &)const;
     void getJigsawMarkers()const;
     void placeInWorld(BlockSource &, BlockPos const&, LegacyStructureSettings &)const;
     void placeInWorldChunk(BlockSource &, BlockPos const&, LegacyStructureSettings &);
     void save(CompoundTag &);
     void load(CompoundTag &);
     void fillFromWorld(BlockSource &, BlockPos const&, BlockPos const&, bool);
-    void fillEntityList(BlockSource &, BlockPos const&, BlockPos&);
+    void fillEntityList(BlockSource &, BlockPos const&, BlockPos &);
     void setAuthor(std::string);
     void getBlockAtPos(BlockPos const&)const;
-    void getSize(Rotation);
-    void getZeroPositionWithTransform(BlockPos const&, Mirror, Rotation);
-    void getZeroPositionWithTransform(BlockPos const&, Mirror, Rotation, int, int);
+//  void getSize(Rotation); //TODO: incomplete function definition
+//  void getZeroPositionWithTransform(BlockPos const&, Mirror, Rotation); //TODO: incomplete function definition
+//  void getZeroPositionWithTransform(BlockPos const&, Mirror, Rotation, int, int); //TODO: incomplete function definition
     bool isValid()const;
-    void transform(BlockPos, Mirror, Rotation);
+//  void transform(BlockPos, Mirror, Rotation); //TODO: incomplete function definition
     void _calculateRelativePosition(Vec3, LegacyStructureSettings const&)const;
-    void _transform(BlockPos, Mirror, Rotation)const;
-    void _transform(Vec3, Mirror, Rotation)const;
+//  void _transform(BlockPos, Mirror, Rotation)const; //TODO: incomplete function definition
+//  void _transform(Vec3, Mirror, Rotation)const; //TODO: incomplete function definition
+    ~LegacyStructureTemplate();
     void _mapToData(Block const&, LegacyStructureSettings const&);
     void _mapPropertyToExtraBlock(std::string const&, std::string const&);
     void _mapToProperty(std::string const&, std::string const&, Block const&);

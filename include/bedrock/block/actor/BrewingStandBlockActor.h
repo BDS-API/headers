@@ -1,29 +1,31 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../item/Item"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemStack"
-#include "../../item/ItemInstance"
-#include "../../item/unmapped/ItemDescriptor"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../container/Container"
+#include "../../item/unmapped/ItemDescriptor.h"
+#include "../../container/Container.h"
+#include "../../item/Item.h"
+#include "./BlockActor.h"
+#include <string>
+#include "../../nbt/CompoundTag.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemInstance.h"
+#include "../../item/ItemStack.h"
+#include "../unmapped/BlockSource.h"
+#include "../../actor/Player.h"
 
 
 class BrewingStandBlockActor : BlockActor, Container {
 
 public:
-    virtual BrewingStandBlockActor::~BrewingStandBlockActor()
+    virtual ~BrewingStandBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual bool isFinished();
     virtual void onChanged(BlockSource &);
     virtual void onMove();
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void getContainer();
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);

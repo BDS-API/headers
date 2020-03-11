@@ -1,14 +1,20 @@
 #pragma once
 
+#include "./HashString.h"
+#include "./FurnaceRecipeKey.h"
 
 
-using namespace Recipes;
+namespace Recipes {
 
 class FurnaceRecipeKey {
 
 public:
 
     FurnaceRecipeKey(Recipes::FurnaceRecipeKey const&);
+    ~FurnaceRecipeKey();
     FurnaceRecipeKey(int, Util::HashString const&);
-    FurnaceRecipeKey(Recipes::FurnaceRecipeKey&&);
+    FurnaceRecipeKey(Recipes::FurnaceRecipeKey &&);
+    void operator<(Recipes::FurnaceRecipeKey const&)const;
 };
+
+}

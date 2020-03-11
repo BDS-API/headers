@@ -5,7 +5,7 @@
 class IFilePicker {
 
 public:
-    virtual IFilePicker::~IFilePicker()
+    virtual ~IFilePicker();
 
-    IFilePicker(void);
+    IFilePicker();
 };

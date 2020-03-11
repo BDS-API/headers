@@ -1,23 +1,27 @@
 #pragma once
 
-#include "../util/Vec3"
-#include "../actor/unmapped/ActorUniqueID"
-#include "../actor/unmapped/ActorDefinitionIdentifier"
-#include "../actor/Player"
-#include "../block/unmapped/BlockSource"
-#include "../item/Item"
-#include "../util/BlockPos"
-#include "../item/ItemInstance"
-#include "../level/LevelData"
-#include "../../json/Value"
-#include "../actor/Actor"
-#include "orgin/CommandOrigin"
+#include "../block/unmapped/BlockSource.h"
+#include <string>
+#include "../item/ItemInstance.h"
+#include "../level/LevelData.h"
+#include "../actor/unmapped/ActorDefinitionIdentifier.h"
+#include <memory>
+#include "../util/BlockPos.h"
+#include "../actor/unmapped/ActorUniqueID.h"
+#include "../actor/Actor.h"
+#include <vector>
+#include "./CommandOutput.h"
+#include "../util/Vec3.h"
+#include "../actor/Player.h"
+#include "orgin/CommandOrigin.h"
+#include "../item/Item.h"
+#include "../../json/Value.h"
 
 
 class CommandUtils {
 
 public:
-    static long CMD_INPUT_UNICODE_TRANSLATE_MAP[abi:cxx11];
+    static std::string CMD_INPUT_UNICODE_TRANSLATE_MAP;
 
 
     void createItemInstance(Item const*, int, int);
@@ -28,7 +32,7 @@ public:
     void addtoCSVList(std::string &, std::string const&);
     void displayLocalizableMessage(bool, Player &, std::string const&, std::vector<std::string, std::allocator<std::string>> const&);
     void spawnEntityAt(BlockSource &, Vec3 const&, ActorDefinitionIdentifier const&, ActorUniqueID &, Actor *);
-    void alterSpawnableEntities(LevelData &, ActorDefinitionIdentifier const&, ActorDefinitionIdentifier&);
+    void alterSpawnableEntities(LevelData &, ActorDefinitionIdentifier const&, ActorDefinitionIdentifier &);
     bool isPlayerSpawnedMob(Actor *, Actor *);
     void toJsonResult(std::string const&, Json::Value const&);
     void getFeetPos(Actor const*);
@@ -36,6 +40,6 @@ public:
     void createMapData(Actor &, ItemInstance &, CommandOutput &);
     void clearBlockEntityContents(BlockSource &, BlockPos const&);
     void getInvalidCommandEntities();
-    bool isValidCommandEntity(std::vector<ActorType, std::allocator<ActorType>> const&, ActorType);
+//  bool isValidCommandEntity(std::vector<ActorType, std::allocator<ActorType>> const&, ActorType); //TODO: incomplete function definition
     void getOriginPlayer(CommandOrigin const&);
 };

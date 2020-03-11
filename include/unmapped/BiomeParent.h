@@ -2,11 +2,14 @@
 
 
 
-using namespace BiomeRegistry;
+namespace BiomeRegistry {
 
 class BiomeParent {
 
 public:
 
-    BiomeParent(void);
+    ~BiomeParent();
+    BiomeParent();
 };
+
+}

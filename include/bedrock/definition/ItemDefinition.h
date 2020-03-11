@@ -6,5 +6,5 @@ class ItemDefinition {
 
 public:
 
-    ItemDefinition(void);
+    ItemDefinition();
 };

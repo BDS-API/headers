@@ -6,5 +6,6 @@ class AutoCompleteInformation {
 
 public:
 
-    AutoCompleteInformation(void);
+    AutoCompleteInformation();
+    ~AutoCompleteInformation();
 };

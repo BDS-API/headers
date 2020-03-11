@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../../../unmapped/FeatureRegistry"
-#include "../../util/BlockPos"
+#include "../../util/Random.h"
+#include "../../../unmapped/FeatureRegistry.h"
+#include "./Feature.h"
+#include "../../util/BlockPos.h"
+#include "../../block/unmapped/BlockSource.h"
 
 
 class LegacyIceFeature : Feature {
 
 public:
-    virtual LegacyIceFeature::~LegacyIceFeature()
+    virtual ~LegacyIceFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     LegacyIceFeature(FeatureRegistry const&);

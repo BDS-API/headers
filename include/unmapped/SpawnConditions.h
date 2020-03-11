@@ -1,11 +1,12 @@
 #pragma once
 
+#include "./SpawnConditions.h"
 
 
 class SpawnConditions {
 
 public:
 
-    SpawnConditions(void);
+    SpawnConditions();
     SpawnConditions(SpawnConditions const&);
 };

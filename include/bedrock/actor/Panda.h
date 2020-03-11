@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Animal.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
 
 
 class Panda : Animal {
 
 public:
-    virtual Panda::~Panda()
+    virtual ~Panda();
     virtual void normalTick();
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void _onSizeUpdated();

@@ -2,7 +2,7 @@
 
 
 
-using namespace Item;
+namespace Item {
 
 class Tier {
 
@@ -15,3 +15,5 @@ public:
     Tier(int, int, float, int, int);
     void getSpeed()const;
 };
+
+}

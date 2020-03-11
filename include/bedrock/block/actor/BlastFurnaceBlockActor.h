@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../../util/BlockPos"
+#include "./FurnaceBlockActor.h"
+#include "../../util/BlockPos.h"
+#include <string>
 
 
 class BlastFurnaceBlockActor : FurnaceBlockActor {
 
 public:
-    virtual BlastFurnaceBlockActor::~BlastFurnaceBlockActor()
-    virtual void getName()const;
+    virtual ~BlastFurnaceBlockActor();
+    virtual std::string getName()const;
 
     BlastFurnaceBlockActor(BlockPos const&);
 };

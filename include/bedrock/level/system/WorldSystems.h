@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../pack/ResourcePackManager"
+#include "../../pack/ResourcePackManager.h"
 
 
 class WorldSystems {

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../unmapped/ScriptServerContext"
+#include "../unmapped/ScriptServerContext.h"
 
 
-class ScriptContainerComponentBase : ScriptTemplateFactory<ScriptServerContext>::Component {
+class ScriptContainerComponentBase /*ScriptTemplateFactory<ScriptServerContext>::Component*/ { //TODO: incomplete class definition
 
 public:
-    virtual ScriptContainerComponentBase::~ScriptContainerComponentBase()
+    virtual ~ScriptContainerComponentBase();
 
-    ScriptContainerComponentBase(void);
+    ScriptContainerComponentBase();
 };

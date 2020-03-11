@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../util/BlockPos"
-#include "../../actor/Player"
+#include "./FurnaceContainerManagerModel.h"
+#include "../../util/BlockPos.h"
+#include "../../actor/Player.h"
 
 
 class BlastFurnaceContainerManagerModel : FurnaceContainerManagerModel {
 
 public:
-    virtual BlastFurnaceContainerManagerModel::~BlastFurnaceContainerManagerModel()
+    virtual ~BlastFurnaceContainerManagerModel();
 
-    BlastFurnaceContainerManagerModel(ContainerID, Player &, BlockPos const&);
+//  BlastFurnaceContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
 };

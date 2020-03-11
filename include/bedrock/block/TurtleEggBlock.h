@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class TurtleEggBlock : BlockLegacy {
 
 public:
-    virtual TurtleEggBlock::~TurtleEggBlock()
+    virtual ~TurtleEggBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void waterSpreadCausesSpawn()const;
     virtual bool canContainLiquid()const;
@@ -25,7 +27,7 @@ public:
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
-    virtual void buildDescriptionId(Block const&)const;
+    virtual std::string buildDescriptionId(Block const&)const;
     virtual bool isAuxValueRelevantForPicking()const;
     virtual bool canBeSilkTouched()const;
     virtual void getSilkTouchItemInstance(Block const&)const;

@@ -2,11 +2,11 @@
 
 
 
-class ExecCtxNext : grpc_core::ExecCtx {
+class ExecCtxNext /*grpc_core::ExecCtx*/ { //TODO: incomplete class definition
 
 public:
-    virtual ExecCtxNext::~ExecCtxNext()
+    virtual ~ExecCtxNext();
     virtual void CheckReadyToFinish();
 
-    ExecCtxNext(void *);
+//  ExecCtxNext(void *); //TODO: incomplete function definition
 };

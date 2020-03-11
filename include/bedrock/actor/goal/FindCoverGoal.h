@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/Vec3"
+#include "../../util/Vec3.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class FindCoverGoal : Goal {
 
 public:
-    virtual FindCoverGoal::~FindCoverGoal()
+    virtual ~FindCoverGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

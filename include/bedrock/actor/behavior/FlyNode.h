@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include "./BehaviorNode.h"
 
 
 class FlyNode : BehaviorNode {
 
 public:
-    virtual FlyNode::~FlyNode()
+    virtual ~FlyNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 
-    FlyNode(void);
+    FlyNode();
 };

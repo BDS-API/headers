@@ -1,32 +1,42 @@
 #pragma once
 
-#include "../bedrock/block/BlockLegacy"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/item/unmapped/ItemState"
-#include "../bedrock/actor/Player"
-#include "../bedrock/container/Container"
-#include "../bedrock/util/Random"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/util/AABB"
-#include "../bedrock/actor/Mob"
-#include "../bedrock/actor/Actor"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/item/ItemInstance.h"
+#include "../bedrock/util/AABB.h"
+#include "../bedrock/actor/Actor.h"
+#include <functional>
+#include "../bedrock/util/Random.h"
+#include "../bedrock/container/Container.h"
+#include "../bedrock/block/BlockLegacy.h"
+#include "./Block.h"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/item/unmapped/ItemState.h"
+#include "../bedrock/actor/unmapped/ActorBlockSyncMessage.h"
+#include "./SpawnConditions.h"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/actor/Mob.h"
+#include "../bedrock/actor/Player.h"
+#include <vector>
+#include <string>
 
 
 class Block {
 
 public:
     static long SIZE_OFFSET;
-    static long BLOCK_DESCRIPTION_PREFIX[abi:cxx11];
+    static std::string BLOCK_DESCRIPTION_PREFIX;
 
-    virtual Block::~Block()
+    virtual ~Block();
     virtual void getRenderLayer()const;
 
     void getLegacyBlock()const;
+    std::string getRawNameId()const;
     void getDataDEPRECATED()const;
     void getStateFromLegacyData(unsigned short)const;
+    std::string getFullName()const;
+    void operator==(Block const&)const;
+    void operator!=(Block const&)const;
     void getDefaultState()const;
     bool hasState(ItemState const&)const;
     bool isDoor()const;
@@ -45,7 +55,7 @@ public:
     void getTranslucency()const;
     void getLightEmission()const;
     bool hasVariableLighting()const;
-    Block(unsigned short, WeakPtr<BlockLegacy> &);
+//  Block(unsigned short, WeakPtr<BlockLegacy> &); //TODO: incomplete function definition
     bool canSlide(BlockSource &, BlockPos const&)const;
     bool canInstatick()const;
     void getCreativeCategory()const;
@@ -76,7 +86,7 @@ public:
     bool isStrippable(Block const&)const;
     void getStrippedBlock()const;
     bool canBeBrokenFromFalling()const;
-    bool canProvideSupport(unsigned char, BlockSupportType)const;
+//  bool canProvideSupport(unsigned char, BlockSupportType)const; //TODO: incomplete function definition
     bool canConnect(Block const&, unsigned char, Block const&)const;
     void getConnectedDirections(BlockPos const&, BlockSource &, bool &, bool &, bool &, bool &)const;
     void getAABB(BlockSource &, BlockPos const&, AABB &, bool)const;
@@ -91,7 +101,7 @@ public:
     void use(Player &, BlockPos const&)const;
     void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     void calcVariant(BlockSource &, BlockPos const&)const;
-    bool isAttachedTo(BlockSource &, BlockPos const&, BlockPos&)const;
+    bool isAttachedTo(BlockSource &, BlockPos const&, BlockPos &)const;
     void attack(Player *, BlockPos const&)const;
     void handleEntityInside(BlockSource &, BlockPos const&, Actor *, Vec3 &)const;
     bool isAuxValueRelevantForPicking()const;
@@ -109,10 +119,14 @@ public:
     bool canSurvive(BlockSource &, BlockPos const&)const;
     void getExperienceDrop(Random &)const;
     bool canBeBuiltOver(BlockSource &, BlockPos const&)const;
+    std::string getDescriptionId()const;
+    std::string buildDescriptionName()const;
+    std::string buildDescriptionId()const;
     void getSerializationId()const;
     void buildSerializationId(unsigned int);
     void getRuntimeId()const;
     bool hasRuntimeId()const;
+    std::string toDebugString()const;
     void setRuntimeId(unsigned int const&)const;
     void triggerEvent(BlockSource &, BlockPos const&, int, int)const;
     void getAllowsRunes()const;
@@ -125,7 +139,7 @@ public:
     void tryToPlace(BlockSource &, BlockPos const&, ActorBlockSyncMessage const*)const;
     bool breaksFallingBlocks()const;
     void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
-    void getSecondPart(BlockSource &, BlockPos const&, BlockPos&)const;
+    void getSecondPart(BlockSource &, BlockPos const&, BlockPos &)const;
     void DEPRECATEDcallOnGraphicsModeChanged(bool, bool, bool);
     void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     void shouldDispense(BlockSource &, Container &)const;
@@ -140,7 +154,7 @@ public:
     void movedByPiston(BlockSource &, BlockPos const&)const;
     void updateEntityAfterFallOn(Actor &)const;
     void ignoreEntitiesOnPistonMove()const;
-    void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
+//  void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition
     void mayConsumeFertilizer(BlockSource &)const;
     void getIconYOffset()const;
     bool isWaterBlocking()const;
@@ -185,7 +199,7 @@ public:
     void getComparatorSignal(BlockSource &, BlockPos const&, unsigned char)const;
     void shouldStopFalling(Actor &)const;
     bool pushesUpFallingBlocks()const;
-    bool hasProperty(BlockProperty)const;
+//  bool hasProperty(BlockProperty)const; //TODO: incomplete function definition
     void getProperties()const;
     void keepState(ItemState const&)const;
     void copyState(Block const&, ItemState const&)const;
@@ -198,7 +212,7 @@ public:
     void getPlacementFacingAll(Actor &, BlockPos const&, float);
     void getPlacementFacingAllExceptAxisY(Actor &, BlockPos const&, float);
     bool isTrapdoor()const;
-    void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block ()(BlockPos const&)> const&, BlockPos const&)const;
+    void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block const& (BlockPos const&)> const&, BlockPos const&)const;
     bool detachesOnPistonMove(BlockSource &, BlockPos const&)const;
     void onMove(BlockSource &, BlockPos const&, BlockPos const&)const;
     void handleRain(BlockSource &, BlockPos const&, float)const;

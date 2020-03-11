@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./EntityContext.h"
 
 
 class SurfaceBuilderRegistry {
 
 public:
 
-    SurfaceBuilderRegistry(void);
+    SurfaceBuilderRegistry();
+    ~SurfaceBuilderRegistry();
     void lookupForEntity(EntityContext &)const;
 };

@@ -1,23 +1,24 @@
 #pragma once
 
-#include "../ScriptObjectHandle"
-#include "../../item/ItemInstance"
-#include "../unmapped/ScriptEngine"
+#include "../unmapped/ScriptEngine.h"
+#include "../ScriptObjectHandle.h"
+#include "./ScriptBinderComponent.h"
+#include "../../item/ItemInstance.h"
 
 
 class ScriptItemStackBinderComponent : ScriptBinderComponent {
 
 public:
-    static long TAG[abi:cxx11];
-    static long COUNT[abi:cxx11];
-    static long ITEM[abi:cxx11];
-    static long UNDEFINED[abi:cxx11];
+    static std::string TAG;
+    static std::string COUNT;
+    static std::string ITEM;
+    static std::string UNDEFINED;
 
-    virtual ScriptItemStackBinderComponent::~ScriptItemStackBinderComponent()
+    virtual ~ScriptItemStackBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 
-    ScriptItemStackBinderComponent(void);
-    ScriptItemStackBinderComponent(entt::Registry<unsigned int> &, ItemInstance const&);
+    ScriptItemStackBinderComponent();
+//  ScriptItemStackBinderComponent(entt::Registry<unsigned int> &, ItemInstance const&); //TODO: incomplete function definition
     void getIdentifier()const;
 };

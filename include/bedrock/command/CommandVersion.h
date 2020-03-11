@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../../unmapped/SemVersion"
+#include "./CommandVersion.h"
+#include "../../unmapped/SemVersion.h"
 
 
 class CommandVersion {

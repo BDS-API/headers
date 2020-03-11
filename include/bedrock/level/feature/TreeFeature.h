@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../../actor/Actor"
-#include "../../../unmapped/Material"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
+#include "../../util/Random.h"
+#include "../../../unmapped/Block.h"
+#include "../../actor/Actor.h"
+#include "./Feature.h"
+#include "../../util/BlockPos.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../../../unmapped/Material.h"
 
 
 class TreeFeature : Feature {
 
 public:
-    virtual TreeFeature::~TreeFeature()
+    virtual ~TreeFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
     TreeFeature(Actor *, int, int, bool, bool);

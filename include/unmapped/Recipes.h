@@ -1,13 +1,20 @@
 #pragma once
 
-#include "../bedrock/crafting/recipe/ShapedRecipe"
-#include "../bedrock/crafting/recipe/Recipe"
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/crafting/recipe/MultiRecipe"
-#include "../json/Value"
-#include "../bedrock/pack/ResourcePackManager"
-#include "../bedrock/crafting/recipe/RepairItemRecipe"
-#include "../bedrock/crafting/recipe/ShapelessRecipe"
+#include "./RecipeIngredient.h"
+#include "../bedrock/pack/ResourcePackManager.h"
+#include "./HashString.h"
+#include "../json/Value.h"
+#include "../bedrock/item/ItemInstance.h"
+#include "../bedrock/crafting/recipe/MultiRecipe.h"
+#include "../bedrock/crafting/recipe/ShapedRecipe.h"
+#include <memory>
+#include "../bedrock/crafting/recipe/Recipe.h"
+#include "../bedrock/crafting/recipe/ShapelessRecipe.h"
+#include <vector>
+#include "../bedrock/crafting/recipe/RepairItemRecipe.h"
+#include <functional>
+#include "./Type.h"
+#include <string>
 
 
 class Recipes {
@@ -39,11 +46,14 @@ public:
     void _addItemRecipe(std::unique_ptr<Recipe, std::default_delete<Recipe>>);
     void addMultiRecipe(std::unique_ptr<MultiRecipe, std::default_delete<MultiRecipe>>);
     void addDirectShapelessRecipe(std::unique_ptr<ShapelessRecipe, std::default_delete<ShapelessRecipe>>);
+    ~Recipes();
     void getRecipeFor(ItemInstance const&, Util::HashString const&)const;
     void getAllRecipesFor(ItemInstance const&, Util::HashString const&)const;
     void addRepairItemRecipe(std::unique_ptr<RepairItemRecipe, std::default_delete<RepairItemRecipe>>);
-    void addRecipeListener(std::weak_ptr<bool>, std::function<void ()(void)>);
+    std::string getRecipes(Util::HashString const&)const;
+    std::string getRecipesAllTags()const;
+//  void addRecipeListener(std::weak_ptr<bool>, std::function<void (void)>); //TODO: incomplete function definition
     void removeRecipeListener(std::weak_ptr<bool>);
     void notifyRecipeListeners();
-    Recipes(void);
+    Recipes();
 };

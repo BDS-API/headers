@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../io/BinaryStream.h"
+#include <string>
 
 
 class SetCommandsEnabledPacket : Packet {
 
 public:
-    virtual SetCommandsEnabledPacket::~SetCommandsEnabledPacket()
+    virtual ~SetCommandsEnabledPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    SetCommandsEnabledPacket(void);
+    SetCommandsEnabledPacket();
     SetCommandsEnabledPacket(bool);
     bool hasCommandsEnabled()const;
 };

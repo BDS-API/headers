@@ -2,7 +2,7 @@
 
 
 
-using namespace commands;
+namespace commands {
 
 class SoftEnum {
 
@@ -10,3 +10,5 @@ public:
 
     SoftEnum(char const*);
 };
+
+}

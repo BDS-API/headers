@@ -1,22 +1,24 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
-#include "../../actor/Actor"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID.h"
+#include "../../io/BinaryStream.h"
+#include "../../actor/Actor.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include <string>
 
 
 class AnimatePacket : Packet {
 
 public:
-    virtual AnimatePacket::~AnimatePacket()
+    virtual ~AnimatePacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    AnimatePacket(void);
-    AnimatePacket(AnimatePacket::Action, ActorRuntimeID);
-    AnimatePacket(AnimatePacket::Action, ActorRuntimeID, float);
-    AnimatePacket(AnimatePacket::Action, Actor &);
+    AnimatePacket();
+//  AnimatePacket(AnimatePacket::Action, ActorRuntimeID); //TODO: incomplete function definition
+//  AnimatePacket(AnimatePacket::Action, ActorRuntimeID, float); //TODO: incomplete function definition
+//  AnimatePacket(AnimatePacket::Action, Actor &); //TODO: incomplete function definition
 };

@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include <string>
+#include "../../io/BinaryStream.h"
+#include "./Packet.h"
 
 
 class MultiplayerSettingsPacket : Packet {
 
 public:
-    virtual MultiplayerSettingsPacket::~MultiplayerSettingsPacket()
+    virtual ~MultiplayerSettingsPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    MultiplayerSettingsPacket(void);
-    MultiplayerSettingsPacket(MultiplayerSettingsPacketType);
+    MultiplayerSettingsPacket();
+//  MultiplayerSettingsPacket(MultiplayerSettingsPacketType); //TODO: incomplete function definition
 };

@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class VexRandomMoveGoal : Goal {
 
 public:
-    virtual VexRandomMoveGoal::~VexRandomMoveGoal()
+    virtual ~VexRandomMoveGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void tick();

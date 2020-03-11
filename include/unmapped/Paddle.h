@@ -2,11 +2,13 @@
 
 
 
-using namespace Boat;
+namespace Boat {
 
 class Paddle {
 
 public:
 
-    Paddle(void);
+    Paddle();
 };
+
+}

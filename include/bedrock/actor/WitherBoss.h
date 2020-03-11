@@ -1,15 +1,18 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/MobEffectInstance"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/Block"
-#include "../../unmapped/VariantParameterList"
-#include "../util/Vec3"
-#include "unmapped/ActorUniqueID"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../../unmapped/MobEffectInstance.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "unmapped/ActorUniqueID.h"
+#include "./Mob.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "./Monster.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
+#include "../../unmapped/Block.h"
 
 
 class WitherBoss : Monster {
@@ -18,15 +21,15 @@ public:
     static long TIME_BEFORE_MOVING;
     static long MAX_HEALTH_CAP_UUID;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual WitherBoss::~WitherBoss()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~WitherBoss();
     virtual void remove();
     virtual void getFiringPos()const;
     virtual void startRiding(Actor &);
     virtual void makeStuckInBlock(float);
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void causeFallDamage(float);
     virtual bool canBeAffected(MobEffectInstance const&)const;
     virtual bool canBeAffectedByArrow(MobEffectInstance const&)const;

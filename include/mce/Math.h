@@ -1,8 +1,10 @@
 #pragma once
 
+#include "./Degree.h"
+#include "./Radian.h"
 
 
-using namespace mce;
+namespace mce {
 
 class Math {
 
@@ -43,8 +45,8 @@ public:
     void signum(float);
     void wrap(float, float);
     void snapRotationToCardinal(float);
-    void calculatePSNRForRGB(gsl::span<unsigned char, -1l>, gsl::span<unsigned char, -1l>, unsigned int, unsigned int, unsigned int, optional_ref<int>, optional_ref<int>, optional_ref<int>);
-    void calculatePSNRForRGBA(gsl::span<unsigned char, -1l>, gsl::span<unsigned char, -1l>, unsigned int, unsigned int, unsigned int, optional_ref<int>, optional_ref<int>, optional_ref<int>, optional_ref<int>);
+//  void calculatePSNRForRGB(gsl::span<unsigned char, -1l>, gsl::span<unsigned char, -1l>, unsigned int, unsigned int, unsigned int, optional_ref<int>, optional_ref<int>, optional_ref<int>); //TODO: incomplete function definition
+//  void calculatePSNRForRGBA(gsl::span<unsigned char, -1l>, gsl::span<unsigned char, -1l>, unsigned int, unsigned int, unsigned int, optional_ref<int>, optional_ref<int>, optional_ref<int>, optional_ref<int>); //TODO: incomplete function definition
     void remainder(float, float);
     void hermiteBlend(float);
     void log2(float);
@@ -55,3 +57,5 @@ public:
     void approachDegrees(float, float, float);
     void acos_approx(float);
 };
+
+}

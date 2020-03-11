@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./Random.h"
 
 
 class Random {
@@ -16,14 +17,14 @@ public:
     Random(unsigned int);
     void setSeed(unsigned int);
     void nextInt();
-    Random(void);
+    Random();
     void nextInt(int, int);
     void nextGaussianInt(int);
     void getSeed()const;
     void nextGaussianFloat();
     void max();
     void min();
-    void operator();
+    void operator()();
     void nextFloat(float, float);
     void nextGaussianVec3();
     void nextGaussian();
@@ -31,7 +32,7 @@ public:
     void getThreadLocal();
     void nextUnsignedInt(unsigned int);
     void nextIntInclusive(int, int);
-    void operator();
+    void operator()(int);
     void nextDouble();
     void nextUnsignedChar();
 };

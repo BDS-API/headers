@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class TorchBlock : BlockLegacy {
@@ -15,7 +17,7 @@ public:
     static long DATA_FROM_FACING;
     static long FACING_FROM_DATA;
 
-    virtual TorchBlock::~TorchBlock()
+    virtual ~TorchBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void waterSpreadCausesSpawn()const;
@@ -31,8 +33,8 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool canBeSilkTouched()const;
 
-    TorchBlock(std::string const&, int, MaterialType);
+//  TorchBlock(std::string const&, int, MaterialType); //TODO: incomplete function definition
     bool canBePlacedOn(BlockSource &, BlockPos const&, unsigned char)const;
     void _checkDoPop(BlockSource &, BlockPos const&)const;
-    void _flameParticlePos(BlockPos const&, TorchFacing)const;
+//  void _flameParticlePos(BlockPos const&, TorchFacing)const; //TODO: incomplete function definition
 };

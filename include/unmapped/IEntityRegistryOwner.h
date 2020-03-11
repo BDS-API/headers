@@ -6,5 +6,5 @@ class IEntityRegistryOwner {
 
 public:
 
-    IEntityRegistryOwner(void);
+    IEntityRegistryOwner();
 };

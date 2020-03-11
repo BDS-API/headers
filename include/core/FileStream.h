@@ -1,24 +1,28 @@
 #pragma once
 
+#include <istream>
+#include "./Path.h"
 
 
-using namespace Core;
+namespace Core {
 
 class FileStream : std::iostream {
 
 public:
-    virtual Core::FileStream::~FileStream()
+    virtual ~FileStream();
 
     void is_open()const;
     void close();
-    FileStream(void);
-    FileStream(void);
+    FileStream();
+    FileStream();
     FileStream(unsigned long);
     FileStream(unsigned long);
-    FileStream(Core::Path const&, std::_Ios_Openmode);
-    void open(Core::Path const&, std::_Ios_Openmode);
-    FileStream(Core::Path const&, std::_Ios_Openmode);
-    FileStream(unsigned long, Core::Path const&, std::_Ios_Openmode);
-    FileStream(unsigned long, Core::Path const&, std::_Ios_Openmode);
+//  FileStream(Core::Path const&, std::_Ios_Openmode); //TODO: incomplete function definition
+//  void open(Core::Path const&, std::_Ios_Openmode); //TODO: incomplete function definition
+//  FileStream(Core::Path const&, std::_Ios_Openmode); //TODO: incomplete function definition
+//  FileStream(unsigned long, Core::Path const&, std::_Ios_Openmode); //TODO: incomplete function definition
+//  FileStream(unsigned long, Core::Path const&, std::_Ios_Openmode); //TODO: incomplete function definition
     void setLoggingEnabled(bool);
 };
+
+}

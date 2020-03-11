@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./TCPInterface.h"
+#include "./SystemAddress.h"
+#include "./PluginInterface2.h"
+#include "./Packet.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class TCPInterface {
 
 public:
-    virtual RakNet::TCPInterface::~TCPInterface()
+    virtual ~TCPInterface();
     virtual void Send(char const*, unsigned int, RakNet::SystemAddress const&, bool);
     virtual void SendList(char const**, unsigned int const*, int, RakNet::SystemAddress const&, bool);
     virtual void ReceiveHasPackets();
@@ -15,8 +19,8 @@ public:
     virtual void PushBackPacket(RakNet::Packet *, bool);
 
     void GetInstance();
-    void DestroyInstance(RakNet::TCPInterface*);
-    TCPInterface(void);
+    void DestroyInstance(RakNet::TCPInterface *);
+    TCPInterface();
     void Stop();
     void CreateListenSocket(unsigned short, unsigned short, unsigned short, char const*);
     void _removeFromBlockingSocketList(int const&);
@@ -32,12 +36,14 @@ public:
     void DetachPlugin(RakNet::PluginInterface2 *);
     void CloseConnection(RakNet::SystemAddress);
     void AllocatePacket(unsigned int);
-    void WasStarted()const;
-    void HasCompletedConnectionAttempt();
-    void HasFailedConnectionAttempt();
-    void HasNewIncomingConnection();
-    void HasLostConnection();
+    bool WasStarted()const;
+    bool HasCompletedConnectionAttempt();
+    bool HasFailedConnectionAttempt();
+    bool HasNewIncomingConnection();
+    bool HasLostConnection();
     void GetConnectionList(RakNet::SystemAddress *, unsigned short *)const;
     void GetConnectionCount()const;
     void GetOutgoingDataBufferSize(RakNet::SystemAddress)const;
 };
+
+}

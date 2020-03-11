@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Vec3"
+#include "./HitResult.h"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class HitResult {
@@ -15,7 +16,7 @@ public:
     void getPos()const;
     bool isEntity()const;
     void getEntity()const;
-    HitResult(HitResult&&);
+    HitResult(HitResult &&);
     bool isTile()const;
     void getBlock()const;
     void getLiquid()const;
@@ -25,7 +26,7 @@ public:
     void resetHitType();
     void resetHitEntity();
     HitResult(Vec3 const&, Vec3 const&, Vec3 const&);
-    HitResult(void);
+    HitResult();
     HitResult(Vec3 const&, Vec3 const&, BlockPos const&, unsigned char, Vec3 const&);
     HitResult(Vec3 const&, Vec3 const&, Actor &);
     HitResult(Vec3 const&, Vec3 const&, HitResult const&);

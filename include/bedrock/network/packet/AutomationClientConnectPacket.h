@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/WebSocketPacketData"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../../unmapped/WebSocketPacketData.h"
+#include <string>
 
 
 class AutomationClientConnectPacket : Packet {
 
 public:
-    virtual AutomationClientConnectPacket::~AutomationClientConnectPacket()
+    virtual ~AutomationClientConnectPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    AutomationClientConnectPacket(void);
+    AutomationClientConnectPacket();
     AutomationClientConnectPacket(WebSocketPacketData);
 };

@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../actor/Player"
-#include "../../item/ItemStack"
+#include "./ContainerModel.h"
+#include "../../item/ItemStack.h"
+#include "../../actor/Player.h"
 
 
 class PlayerUIContainerModelBase : ContainerModel {
 
 public:
     virtual void containerContentChanged(int);
-    virtual PlayerUIContainerModelBase::~PlayerUIContainerModelBase()
+    virtual ~PlayerUIContainerModelBase();
     virtual void postInit();
     virtual void releaseResources();
     virtual bool isValid();
@@ -16,7 +17,7 @@ public:
     virtual void _onItemChanged(int, ItemStack const&, ItemStack const&);
     virtual void _getContainer()const;
 
-    PlayerUIContainerModelBase(ContainerEnumName, Player &, int, ContainerCategory);
+//  PlayerUIContainerModelBase(ContainerEnumName, Player &, int, ContainerCategory); //TODO: incomplete function definition
     void _refreshContainer();
     void _refreshSlot(int);
 };

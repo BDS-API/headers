@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
-#include "../bedrock/level/Level"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
-#include "../json/Value"
+#include "../bedrock/util/Vec3.h"
+#include "../json/Value.h"
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
+#include "../bedrock/actor/Mob.h"
+#include "../bedrock/level/Level.h"
+#include <string>
 
 
 class ProjectileFactory {
 
 public:
-    static long mSubcomponentMap[abi:cxx11];
+    static std::string mSubcomponentMap;
 
 
     ProjectileFactory(Level &);

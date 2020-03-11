@@ -6,5 +6,5 @@ class BoneOrientationTransform {
 
 public:
 
-    BoneOrientationTransform(void);
+    BoneOrientationTransform();
 };

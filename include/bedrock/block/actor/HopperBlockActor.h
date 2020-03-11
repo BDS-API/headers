@@ -1,28 +1,30 @@
 #pragma once
 
-#include "../../util/Tick"
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemStack"
-#include "../../../unmapped/Hopper"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../container/Container"
+#include "../../container/Container.h"
+#include <string>
+#include "./BlockActor.h"
+#include "../../nbt/CompoundTag.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "../../util/Tick.h"
+#include "../../item/ItemStack.h"
+#include "../unmapped/BlockSource.h"
+#include "../../../unmapped/Hopper.h"
+#include "../../actor/Player.h"
 
 
 class HopperBlockActor : BlockActor, Container, Hopper {
 
 public:
-    virtual HopperBlockActor::~HopperBlockActor()
+    virtual ~HopperBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
     virtual void onMove();
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void getContainer();
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getItem(int)const;
@@ -41,7 +43,7 @@ public:
     void checkForSmeltEverythingAchievement(BlockSource &);
     bool isAttachedToChestAndFurnace(BlockSource &);
     void getAttachedFurnace(BlockSource &);
-    bool isAttachedToContainerType(BlockSource &, ContainerType);
-    bool isSourceOfContainerType(BlockSource &, ContainerType);
+//  bool isAttachedToContainerType(BlockSource &, ContainerType); //TODO: incomplete function definition
+//  bool isSourceOfContainerType(BlockSource &, ContainerType); //TODO: incomplete function definition
     void updateCooldownAfterMove(Tick const&, int);
 };

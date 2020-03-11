@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/actor/Mob"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/Vec3.h"
+#include "./FlockingComponent.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Mob.h"
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
 
 
 class FlockingComponent {
@@ -13,7 +14,8 @@ public:
     void getIsEnabled()const;
     void getInWater()const;
     void getIsLeader()const;
-    FlockingComponent(FlockingComponent&&);
+    ~FlockingComponent();
+    FlockingComponent(FlockingComponent &&);
     void setGoalHeading(Vec3 const&);
     void setHasGoalTarget(bool);
     void setUsingDirection(bool);
@@ -42,7 +44,7 @@ public:
     void getFlockLimit()const;
     void getMinHeight()const;
     void getMaxHeight()const;
-    FlockingComponent(void);
+    FlockingComponent();
     void getGoalHeading()const;
     bool hasGoalTarget()const;
     void getUsingDirection()const;

@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../../block/unmapped/BlockSource"
-#include "../Mob"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
+#include "../../../unmapped/Block.h"
+#include "./BaseMoveToBlockGoal.h"
+#include "../../level/Level.h"
+#include "../../util/BlockPos.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../Mob.h"
+#include <string>
 
 
 class StompBlockGoal : BaseMoveToBlockGoal {
 
 public:
-    virtual StompBlockGoal::~StompBlockGoal()
+    virtual ~StompBlockGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/Tick"
-#include "../bedrock/util/BlockPos"
+#include "./Block.h"
+#include "../bedrock/util/Tick.h"
+#include "./TickNextTickData.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class TickNextTickData {
@@ -9,6 +11,9 @@ class TickNextTickData {
 public:
 
     TickNextTickData(TickNextTickData const&);
-    TickNextTickData(TickNextTickData&&);
+    TickNextTickData(TickNextTickData &&);
     TickNextTickData(BlockPos const&, Block const&, Tick const&, int);
+    void operator==(TickNextTickData const&)const;
+    void operator<(TickNextTickData const&)const;
+    void operator>(TickNextTickData const&)const;
 };

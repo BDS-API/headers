@@ -1,11 +1,14 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../item/ItemStack"
+#include <string>
+#include "../item/ItemStack.h"
+#include "../util/BlockPos.h"
+#include "./GameMode.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../actor/Player.h"
+#include <functional>
+#include "../../unmapped/Block.h"
 
 
 class SurvivalMode : GameMode {
@@ -13,7 +16,7 @@ class SurvivalMode : GameMode {
 public:
     static long mTrialHasEnded;
 
-    virtual SurvivalMode::~SurvivalMode()
+    virtual ~SurvivalMode();
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &);
     virtual void destroyBlock(BlockPos const&, unsigned char);
     virtual void startBuildBlock(BlockPos const&, unsigned char);
@@ -25,7 +28,7 @@ public:
     virtual void attack(Actor &);
     virtual void setTrialMode(bool);
     virtual bool isInTrialMode();
-    virtual void registerUpsellScreenCallback(std::function<void ()(bool)>);
+//  virtual void registerUpsellScreenCallback(std::function<void (bool)>); //TODO: incomplete function definition
 
     SurvivalMode(Player &);
     void _showTrialReminder(bool);

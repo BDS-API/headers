@@ -1,16 +1,17 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Mob.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
 
 
 class Bat : Mob {
 
 public:
-    virtual Bat::~Bat()
+    virtual ~Bat();
     virtual void normalTick();
     virtual void checkFallDamage(float, bool);
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);

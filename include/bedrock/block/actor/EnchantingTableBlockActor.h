@@ -1,21 +1,23 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../level/Level.h"
+#include "../../util/BlockPos.h"
+#include "../unmapped/BlockSource.h"
+#include <string>
 
 
 class EnchantingTableBlockActor : BlockActor {
 
 public:
-    virtual EnchantingTableBlockActor::~EnchantingTableBlockActor()
+    virtual ~EnchantingTableBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     EnchantingTableBlockActor(BlockPos const&);

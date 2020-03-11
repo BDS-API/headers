@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "../../../json/Value.h"
+#include "./ComponentDescription.h"
 
 
 class TrustingDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual TrustingDescription::~TrustingDescription()
+    virtual ~TrustingDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    TrustingDescription(void);
+    TrustingDescription();
 };

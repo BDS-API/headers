@@ -1,14 +1,18 @@
 #pragma once
 
+#include "./NetworkIdentifier.h"
+#include "./NetworkHandler.h"
+#include <string>
 
 
-using namespace ClientBlobCache::Server;
+namespace ClientBlobCache::Server {
 
 class ActiveTransfersManager {
 
 public:
 
-    ActiveTransfersManager(void);
+    ActiveTransfersManager();
+    ~ActiveTransfersManager();
     void enableCacheFor(NetworkIdentifier const&);
     bool isCacheEnabledFor(NetworkIdentifier const&)const;
     void onPeerDisconnected(NetworkIdentifier const&);
@@ -18,3 +22,5 @@ public:
     void dropBlobFor(NetworkIdentifier const&, unsigned long);
     void updateNetworkConditions(NetworkHandler &);
 };
+
+}

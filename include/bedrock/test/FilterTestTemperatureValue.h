@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../unmapped/FilterContext"
+#include "./SimpleFloatFilterTest.h"
+#include "../../unmapped/FilterContext.h"
 
 
 class FilterTestTemperatureValue : SimpleFloatFilterTest {
 
 public:
-    virtual FilterTestTemperatureValue::~FilterTestTemperatureValue()
+    virtual ~FilterTestTemperatureValue();
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 
-    FilterTestTemperatureValue(void);
+    FilterTestTemperatureValue();
 };

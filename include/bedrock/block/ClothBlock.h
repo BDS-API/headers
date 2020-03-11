@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
+#include <string>
+#include "unmapped/BlockSource.h"
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class ClothBlock : BlockLegacy {
 
 public:
-    virtual ClothBlock::~ClothBlock()
+    virtual ~ClothBlock();
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual bool isAuxValueRelevantForPicking()const;

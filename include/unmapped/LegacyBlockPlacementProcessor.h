@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/BlockPos.h"
+#include "./Block.h"
+#include "./LegacyStructureSettings.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
 
 
 class LegacyBlockPlacementProcessor {

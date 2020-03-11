@@ -2,11 +2,13 @@
 
 
 
-using namespace RakNet::RakPeer;
+namespace RakNet::RakPeer {
 
 class RequestedConnectionStruct {
 
 public:
 
-    RequestedConnectionStruct(void);
+    RequestedConnectionStruct();
 };
+
+}

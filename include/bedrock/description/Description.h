@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../json/Value"
+#include "../../json/Value.h"
+#include "./Description.h"
+#include <string>
 
 
 class Description {
 
 public:
-    static long NAME_TO_ID_MAP[abi:cxx11];
-    static long ID_TO_NAME_MAP[abi:cxx11];
+    static std::string NAME_TO_ID_MAP;
+    static std::string ID_TO_NAME_MAP;
 
-    virtual Description::~Description()
+    virtual ~Description();
     virtual void deserializeData(Json::Value &);
 
-    Description(void);
+    Description();
     Description(Description const&);
     void startParsing(Json::Value &, Json::Value &, char const*);
     void parseDescription(Json::Value &);
@@ -21,5 +23,6 @@ public:
     void registerProperties();
     void registerTriggers();
     void registerComponents();
+    std::string getName(int);
     void getId(std::string const&);
 };

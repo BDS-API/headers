@@ -1,14 +1,17 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "../block/unmapped/BlockSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "../item/ItemStack"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../block/unmapped/BlockSource.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "../item/ItemStack.h"
+#include "./ItemActor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
+#include "./Player.h"
 
 
 class ItemActor : Actor {
@@ -16,13 +19,13 @@ class ItemActor : Actor {
 public:
     static long LIFETIME;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual ItemActor::~ItemActor()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~ItemActor();
     virtual void getAddPacket();
     virtual void normalTick();
     virtual void playerTouch(Player &);
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void getSourceUniqueID()const;
     virtual void getHandleWaterAABB()const;
     virtual bool canSynchronizeNewEntity()const;
@@ -45,5 +48,5 @@ public:
     void _mergeWithNeighbours();
     void _defineEntityData();
     void setSourceEntity(Actor const*);
-    void _merge(ItemActor*);
+    void _merge(ItemActor *);
 };

@@ -1,15 +1,22 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../level/Level"
-#include "../../unmapped/Block"
-#include "unmapped/Tier"
+#include <string>
+#include "./ItemStackBase.h"
+#include "../../unmapped/Tier.h"
+#include <memory>
+#include "./ItemInstance.h"
+#include "./Item.h"
+#include "../level/Level.h"
+#include "../actor/Actor.h"
+#include <vector>
+#include "./ItemStack.h"
+#include "../../unmapped/Block.h"
 
 
 class DiggerItem : Item {
 
 public:
-    virtual DiggerItem::~DiggerItem()
+    virtual ~DiggerItem();
     virtual void getAttackDamage()const;
     virtual bool isHandEquipped()const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;

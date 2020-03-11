@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../util/Vec2"
-#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../util/Vec2.h"
+#include "./Actor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
+#include "./Player.h"
 
 
 class AbstractArrow : Actor {
 
 public:
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual AbstractArrow::~AbstractArrow()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~AbstractArrow();
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void lerpMotion(Vec3 const&);
     virtual void normalTick();

@@ -1,17 +1,22 @@
 #pragma once
 
+#include <string>
 
 
-using namespace Crypto::Hash;
+namespace Crypto::Hash {
 
 class HMAC {
 
 public:
 
     void resultSize()const;
-    void signAndAppend(std::string const&, std::string&, unsigned long);
-    HMAC(Crypto::Hash::HashType, std::string const&, int);
+    void signAndAppend(std::string const&, std::string &, unsigned long);
+    ~HMAC();
+//  HMAC(Crypto::Hash::HashType, std::string const&, int); //TODO: incomplete function definition
     void resultSize()const;
-    void signAndAppend(std::string const&, std::string&, unsigned long);
-    HMAC(Crypto::Hash::HashType, std::string const&, int);
+    void signAndAppend(std::string const&, std::string &, unsigned long);
+    ~HMAC();
+//  HMAC(Crypto::Hash::HashType, std::string const&, int); //TODO: incomplete function definition
 };
+
+}

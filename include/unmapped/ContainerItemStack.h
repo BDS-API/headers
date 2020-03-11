@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/ItemStack.h"
+#include "./ContainerItemStack.h"
+#include "../bedrock/item/ItemInstance.h"
 
 
 class ContainerItemStack {
@@ -10,15 +11,23 @@ public:
     static long EMPTY_ITEM;
 
 
-    ContainerItemStack(void);
+    ~ContainerItemStack();
+    ContainerItemStack();
     ContainerItemStack(ItemStack const&);
     ContainerItemStack(ItemInstance const&);
     void operator-(ContainerItemStack const&);
     bool isEmpty()const;
     void decreaseCount(int);
     void getCount()const;
+    void operator+(ContainerItemStack const&);
     void increaseCount(int);
+    void operator==(ContainerItemStack const&)const;
     void matches(ContainerItemStack const&)const;
+    void operator!=(ContainerItemStack const&)const;
+    void operator==(ItemStack const&)const;
+    void operator!=(ItemStack const&)const;
+    void operator==(ItemInstance const&)const;
+    void operator!=(ItemInstance const&)const;
     void getItem()const;
     void getId()const;
     void getAuxValue()const;
@@ -45,5 +54,5 @@ public:
     bool asItemStack()const;
     bool asItemInstance()const;
     ContainerItemStack(ContainerItemStack const&);
-    ContainerItemStack(ContainerItemStack&&);
+    ContainerItemStack(ContainerItemStack &&);
 };

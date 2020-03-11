@@ -1,15 +1,23 @@
 #pragma once
 
+#include <utility>
+#include "./ValueIterator.h"
+#include "./CZString.h"
+#include "./ValueConstIterator.h"
+#include "./Value.h"
 
 
-using namespace Json;
+namespace Json {
 
 class ValueIterator {
 
 public:
 
-    ValueIterator(void);
-    ValueIterator(std::_Rb_tree_iterator<std::pair<Json::Value::CZString const, Json::Value>> const&);
+    void operator*()const;
+    ValueIterator();
+//  ValueIterator(std::_Rb_tree_iterator<std::pair<Json::Value::CZString const, Json::Value>> const&); //TODO: incomplete function definition
     ValueIterator(Json::ValueConstIterator const&);
     ValueIterator(Json::ValueIterator const&);
 };
+
+}

@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../unmapped/AppIsland"
+#include "./IMinecraftApp.h"
+#include "../unmapped/AppIsland.h"
+#include <string>
 
 
 class DedicatedServer : IMinecraftApp, BedrockEngine::AppIsland {
 
 public:
-    virtual DedicatedServer::~DedicatedServer()
+    virtual ~DedicatedServer();
     virtual void getPrimaryMinecraft();
     virtual void getAutomationClient()const;
     virtual bool isEduMode()const;
@@ -15,7 +17,7 @@ public:
     virtual void getGameModule();
     virtual void stop();
 
-    DedicatedServer(void);
+    DedicatedServer();
     void initalizeAppConfigs();
     void initializeLogging();
     void start(std::string const&);

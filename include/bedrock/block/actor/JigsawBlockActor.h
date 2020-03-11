@@ -1,12 +1,13 @@
 #pragma once
 
-#include "../../util/BlockPos"
+#include "./BlockActor.h"
+#include "../../util/BlockPos.h"
 
 
 class JigsawBlockActor : BlockActor {
 
 public:
-    virtual JigsawBlockActor::~JigsawBlockActor()
+    virtual ~JigsawBlockActor();
 
     JigsawBlockActor(BlockPos const&);
 };

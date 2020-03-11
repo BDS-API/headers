@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/level/Level"
-#include "../bedrock/item/Item"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/actor/Player"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/item/ItemStack"
-#include "../json/Value"
+#include "../bedrock/util/Vec3.h"
+#include <string>
+#include "../json/Value.h"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/level/Level.h"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/item/Item.h"
 
 
 class FoodItemComponent {
@@ -30,4 +31,5 @@ public:
     void _applyOnUseAction(ItemStack const&, Actor &, Level &);
     void getCoolDownType()const;
     void getCoolDownTime()const;
+    ~FoodItemComponent();
 };

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./Tick.h"
 
 
 class Tick {
@@ -8,8 +9,15 @@ public:
     static long MAX;
 
 
-    Tick(void);
+    Tick();
     Tick(unsigned long);
     Tick(Tick const&);
-    unsigned long getTimeStamp()const;
+    void getTimeStamp()const;
+    void operator!=(Tick const&)const;
+    void operator<(Tick const&)const;
+    void operator+(int)const;
+    void operator>(Tick const&)const;
+    void operator>=(Tick const&)const;
+    void operator<=(Tick const&)const;
+    void operator==(Tick const&)const;
 };

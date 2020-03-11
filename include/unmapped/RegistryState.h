@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../bedrock/command/RegistryState"
+#include "./RegistryState.h"
 
 
-using namespace CommandRegistry;
+namespace CommandRegistry {
 
 class RegistryState {
 
 public:
 
-    RegistryState(void);
+    RegistryState();
+    ~RegistryState();
     RegistryState(CommandRegistry::RegistryState const&);
-    RegistryState(CommandRegistry::RegistryState&&);
+    RegistryState(CommandRegistry::RegistryState &&);
 };
+
+}

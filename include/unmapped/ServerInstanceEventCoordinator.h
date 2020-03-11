@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../bedrock/Minecraft"
-#include "../bedrock/ServerInstance"
-#include "../bedrock/level/Level"
+#include "../bedrock/ServerInstance.h"
+#include "../bedrock/Minecraft.h"
+#include "../bedrock/level/Level.h"
 
 
 class ServerInstanceEventCoordinator {
 
 public:
 
-    ServerInstanceEventCoordinator(void);
+    ~ServerInstanceEventCoordinator();
+    ServerInstanceEventCoordinator();
     void sendServerInitializeStart(ServerInstance &);
     void sendServerInitializeEnd(ServerInstance &);
     void sendServerMinecraftInitialized(ServerInstance &, Minecraft &);

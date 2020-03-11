@@ -1,24 +1,27 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../../unmapped/MobEffectInstance"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/MobEffectInstance.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "./Mob.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "damagesource/ActorDamageSource.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include <string>
 
 
 class Npc : Mob {
 
 public:
-    static long SKIN_ID_TAG[abi:cxx11];
-    static long Skins[abi:cxx11];
+    static std::string SKIN_ID_TAG;
+    static std::string Skins;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Npc::~Npc()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Npc();
     virtual bool breaksFallingBlocks()const;
     virtual bool canShowNameTag()const;
-    virtual void getFormattedNameTag()const;
+    virtual std::string getFormattedNameTag()const;
     virtual void interactPreventDefault();
     virtual bool isFishable()const;
     virtual bool isTargetable()const;

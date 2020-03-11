@@ -6,5 +6,5 @@ class StackStats {
 
 public:
 
-    StackStats(void);
+    StackStats();
 };

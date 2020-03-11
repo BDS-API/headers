@@ -1,14 +1,18 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/MobDescriptor"
-#include "../Actor"
+#include "../Actor.h"
+#include <memory>
+#include "../../../unmapped/MobDescriptor.h"
+#include "./Goal.h"
+#include <vector>
+#include "../Mob.h"
+#include <string>
 
 
 class SwimWithMobGoal : Goal {
 
 public:
-    virtual SwimWithMobGoal::~SwimWithMobGoal()
+    virtual ~SwimWithMobGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual bool canBeInterrupted();

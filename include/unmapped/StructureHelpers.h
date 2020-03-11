@@ -1,8 +1,11 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/level/structure/piece/StructurePiece"
+#include "../bedrock/util/Random.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/level/structure/piece/StructurePiece.h"
+#include "./BoundingBox.h"
+#include "./Block.h"
+#include <string>
 
 
 class StructureHelpers {

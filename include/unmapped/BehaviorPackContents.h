@@ -6,5 +6,5 @@ class BehaviorPackContents {
 
 public:
 
-    BehaviorPackContents(void);
+    BehaviorPackContents();
 };

@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include "./BehaviorNode.h"
+#include <string>
 
 
 class GetInteractionPositionForBlockNode : BehaviorNode {
 
 public:
-    virtual GetInteractionPositionForBlockNode::~GetInteractionPositionForBlockNode()
+    virtual ~GetInteractionPositionForBlockNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 
-    GetInteractionPositionForBlockNode(void);
+    GetInteractionPositionForBlockNode();
     void parseFacingNameFromString(std::string);
 };

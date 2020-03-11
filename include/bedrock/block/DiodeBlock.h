@@ -1,16 +1,18 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../util/Vec3"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../../unmapped/Block.h"
 
 
 class DiodeBlock : BlockLegacy {
 
 public:
-    virtual DiodeBlock::~DiodeBlock()
+    virtual ~DiodeBlock();
     virtual bool isSignalSource()const;
     virtual void getDirectSignal(BlockSource &, BlockPos const&, int)const;
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const;

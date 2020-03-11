@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/BlockPos.h"
 
 
 class StructureTelemetryServerData {
 
 public:
 
-    StructureTelemetryServerData(void);
+    StructureTelemetryServerData();
     void setHasBeenActivedByRedstone();
     bool hasBeenActivatedByRedstone();
     void setHasLoadedIntoUnloadedChunks(BlockPos const&);

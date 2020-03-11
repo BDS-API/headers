@@ -1,12 +1,16 @@
 #pragma once
 
+#include "./SoftEnumData.h"
 
 
-using namespace AvailableCommandsPacket;
+namespace AvailableCommandsPacket {
 
 class SoftEnumData {
 
 public:
 
-    SoftEnumData(AvailableCommandsPacket::SoftEnumData&&);
+    ~SoftEnumData();
+    SoftEnumData(AvailableCommandsPacket::SoftEnumData &&);
 };
+
+}

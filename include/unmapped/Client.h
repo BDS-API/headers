@@ -1,8 +1,11 @@
 #pragma once
 
+#include "./ConnectionRequest.h"
+#include <memory>
+#include "./SubClientConnectionRequest.h"
 
 
-using namespace ServerNetworkHandler;
+namespace ServerNetworkHandler {
 
 class Client {
 
@@ -13,4 +16,7 @@ public:
     void getPrimaryRequest()const;
     void getSubClientRequests()const;
     Client(std::unique_ptr<ConnectionRequest, std::default_delete<ConnectionRequest>>);
+    ~Client();
 };
+
+}

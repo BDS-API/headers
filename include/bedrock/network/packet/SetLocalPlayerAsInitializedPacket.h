@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
+#include "../../actor/unmapped/ActorRuntimeID.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include <string>
 
 
 class SetLocalPlayerAsInitializedPacket : Packet {
 
 public:
-    virtual SetLocalPlayerAsInitializedPacket::~SetLocalPlayerAsInitializedPacket()
+    virtual ~SetLocalPlayerAsInitializedPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    SetLocalPlayerAsInitializedPacket(void);
+    SetLocalPlayerAsInitializedPacket();
     SetLocalPlayerAsInitializedPacket(ActorRuntimeID);
 };

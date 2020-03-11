@@ -6,7 +6,7 @@ class ScriptServerContext {
 
 public:
 
-    ScriptServerContext(void);
+    ScriptServerContext();
     bool isValid()const;
     void reset();
     void validate();

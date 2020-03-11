@@ -5,7 +5,7 @@
 class ServerLocator {
 
 public:
-    virtual ServerLocator::~ServerLocator()
+    virtual ~ServerLocator();
 
-    ServerLocator(void);
+    ServerLocator();
 };

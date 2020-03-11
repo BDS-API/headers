@@ -1,9 +1,15 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr"
-#include "../bedrock/actor/unmapped/ActorAnimationControllerStatePlayer"
-#include "../bedrock/actor/unmapped/ActorAnimationPlayer"
+#include "./ExpressionNode.h"
+#include "./AnimationComponentID.h"
+#include "./AnimationResourceDefinitionMap.h"
+#include "./HashedString.h"
+#include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr.h"
+#include "../bedrock/actor/unmapped/ActorAnimationPlayer.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/unmapped/ActorAnimationControllerStatePlayer.h"
+#include <functional>
+#include <string>
 
 
 class AnimationComponent {
@@ -16,11 +22,11 @@ public:
 
     void getAnimationResourceDefinitionMap()const;
     void getAnimationComponentInitFunction()const;
-    void initializeServerAnimationComponent(Actor &, AnimationResourceDefinitionMap &, std::function<void ()(ActorAnimationPlayer &)>);
+//  void initializeServerAnimationComponent(Actor &, AnimationResourceDefinitionMap &, std::function<void (ActorAnimationPlayer &)>); //TODO: incomplete function definition
     void getRenderParams();
     void initInstanceSpecificAnimationData();
     void setupDeltaTimeAndLifeTimeParams(bool);
-    void initializeClientAnimationComponent(std::function<void ()(ActorAnimationPlayer &)>);
+//  void initializeClientAnimationComponent(std::function<void (ActorAnimationPlayer &)>); //TODO: incomplete function definition
     void applyAnimations(bool);
     void _getCurrentFrameIndex();
     void setDefaultPoses();
@@ -29,12 +35,12 @@ public:
     void getAnimationPlayers();
     void forceNextUpdateToApplyAnimations();
     void ensureClientAnimationComponentIsInitialized();
-    void setDefaultPose(SkeletalHierarchyIndex);
-    void getBoneOrientations(SkeletalHierarchyIndex, bool);
+//  void setDefaultPose(SkeletalHierarchyIndex); //TODO: incomplete function definition
+//  void getBoneOrientations(SkeletalHierarchyIndex, bool); //TODO: incomplete function definition
     bool isInitialized();
     void serverUpdate(Actor &);
-    void prepRenderParamsForActor(Actor &, BaseActorRenderContext *, DataDrivenModel *, float);
-    void prepRenderParamsForActorRendering(ActorRenderData &, BaseActorRenderContext *, DataDrivenModel *, float);
+//  void prepRenderParamsForActor(Actor &, BaseActorRenderContext *, DataDrivenModel *, float); //TODO: incomplete function definition
+//  void prepRenderParamsForActorRendering(ActorRenderData &, BaseActorRenderContext *, DataDrivenModel *, float); //TODO: incomplete function definition
     void createAnimationPlayer(HashedString const&, ExpressionNode const&);
     void findAnimation(HashedString const&);
     void getAnimationControllerPlayer(HashedString const&, bool);
@@ -47,8 +53,8 @@ public:
     void setSingleAnimationPlayer(ActorAnimationPlayer *);
     void haveInitializedScriptsRun()const;
     void setInitializedScriptsRun(bool);
-    void findBoneMapping(SkeletalHierarchyIndex, HashedString const&)const;
-    void getBoneOrientations(SkeletalHierarchyIndex, bool)const;
+//  void findBoneMapping(SkeletalHierarchyIndex, HashedString const&)const; //TODO: incomplete function definition
+//  void getBoneOrientations(SkeletalHierarchyIndex, bool)const; //TODO: incomplete function definition
     void getLocators();
     void getLocator(HashedString const&);
     void getChildAnimationComponents();
@@ -56,11 +62,12 @@ public:
     void getCurrentAnimationControllerStatePlayer()const;
     void getAllBoneOrientations()const;
     void numSkeletalHierarchies()const;
-    void getAnimationComponent(AnimationComponentGroup, AnimationComponentID);
+//  void getAnimationComponent(AnimationComponentGroup, AnimationComponentID); //TODO: incomplete function definition
     void _getAnimationComponentMapLock();
-    void _getAllAnimationComponents(AnimationComponentGroup);
+//  void _getAllAnimationComponents(AnimationComponentGroup); //TODO: incomplete function definition
     void incrementCurrentClientFrameIndex();
     void incrementCurrentServerFrameIndex();
-    AnimationComponent(AnimationComponentGroup, AnimationComponentID const&);
-    void _removeAnimationComponentFromGlobalMap(AnimationComponentGroup, AnimationComponentID const&);
+//  AnimationComponent(AnimationComponentGroup, AnimationComponentID const&); //TODO: incomplete function definition
+    ~AnimationComponent();
+//  void _removeAnimationComponentFromGlobalMap(AnimationComponentGroup, AnimationComponentID const&); //TODO: incomplete function definition
 };

@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "../Mob.h"
+#include <string>
+#include "./MoveToVillageGoal.h"
 
 
 class StrollTowardsVillageGoal : MoveToVillageGoal {
 
 public:
-    virtual StrollTowardsVillageGoal::~StrollTowardsVillageGoal()
+    virtual ~StrollTowardsVillageGoal();
     virtual bool canUse();
     virtual void appendDebugInfo(std::string &)const;
     virtual void _selectRandomPosInVillage();

@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../Actor"
+#include "./MeleeAttackGoal.h"
+#include "../Actor.h"
+#include "../Mob.h"
+#include <string>
 
 
 class DelayedAttackGoal : MeleeAttackGoal {
 
 public:
-    virtual DelayedAttackGoal::~DelayedAttackGoal()
+    virtual ~DelayedAttackGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();
@@ -17,7 +19,7 @@ public:
     virtual void _attemptPathToTarget(Actor *);
     virtual void _attemptAttackTarget(Actor *);
 
-    DelayedAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, int, int, LevelSoundEvent);
+//  DelayedAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, int, int, LevelSoundEvent); //TODO: incomplete function definition
     void _isAttackAnimationStillRunning()const;
     void _attemptMoveToTargetPosition(Actor *);
     void _manageAttackTime();

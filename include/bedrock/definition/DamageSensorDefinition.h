@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../../unmapped/DamageSensorTrigger"
-#include "../../unmapped/DamageSensorComponent"
-#include "../../json/Value"
-#include "../../unmapped/EntityContext"
+#include "../../unmapped/DamageSensorTrigger.h"
+#include <memory>
+#include "../../unmapped/EntityContext.h"
+#include "../../unmapped/DamageSensorComponent.h"
+#include "./DamageSensorDefinition.h"
+#include "../../json/Value.h"
 
 
 class DamageSensorDefinition {
 
 public:
 
-    DamageSensorDefinition(void);
-    void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, DamageSensorDefinition>> &);
+    DamageSensorDefinition();
+    ~DamageSensorDefinition();
+//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, DamageSensorDefinition>> &); //TODO: incomplete function definition
     void addDamageSensorTrigger(DamageSensorTrigger const&);
     void initialize(EntityContext &, DamageSensorComponent &)const;
     void uninitialize(EntityContext &, DamageSensorComponent &)const;

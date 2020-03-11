@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../block/unmapped/BlockSource"
-#include "../../../../unmapped/Dimension"
-#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/Dimension.h"
+#include "./StructureStart.h"
+#include "../../../util/Random.h"
+#include "../../../block/unmapped/BlockSource.h"
+#include "../../../../unmapped/BoundingBox.h"
 
 
 class OceanMonumentStart : StructureStart {
 
 public:
-    virtual OceanMonumentStart::~OceanMonumentStart()
+    virtual ~OceanMonumentStart();
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void getType()const;
 
-    OceanMonumentStart(void);
+    OceanMonumentStart();
     void createMonument(Dimension &, Random &, int, int);
     OceanMonumentStart(Dimension &, Random &, int, int);
 };

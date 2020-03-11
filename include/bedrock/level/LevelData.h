@@ -1,13 +1,16 @@
 #pragma once
 
-#include "../util/Tick"
-#include "../nbt/CompoundTag"
-#include "../../raknet/BitStream"
-#include "../../unmapped/GameRuleId"
-#include "../util/BlockPos"
-#include "../../unmapped/BaseGameVersion"
-#include "../../unmapped/ContentIdentity"
-#include "../../unmapped/PackIdVersion"
+#include "./LevelSettings.h"
+#include "../../unmapped/ContentIdentity.h"
+#include "./LevelData.h"
+#include "../../unmapped/BaseGameVersion.h"
+#include "../../unmapped/PackIdVersion.h"
+#include "../nbt/CompoundTag.h"
+#include "../util/Tick.h"
+#include "../../unmapped/GameRuleId.h"
+#include "../util/BlockPos.h"
+#include "../../raknet/BitStream.h"
+#include <string>
 
 
 class LevelData {
@@ -16,18 +19,19 @@ public:
 
     bool hasSpawnPos()const;
     void getLastLoadedWithVersion()const;
-    LevelData(void);
-    LevelData(LevelSettings const&, std::string const&, GeneratorType, BlockPos const&, bool, EducationEditionOffer, float, float);
+    LevelData();
+//  LevelData(LevelSettings const&, std::string const&, GeneratorType, BlockPos const&, bool, EducationEditionOffer, float, float); //TODO: incomplete function definition
     void setSpawnPos(BlockPos const&);
     LevelData(CompoundTag const&);
     void getTagData(CompoundTag const&);
-    LevelData(LevelData&&);
-    void v1_read(RakNet::BitStream &, StorageVersion);
+    LevelData(LevelData &&);
+    ~LevelData();
+//  void v1_read(RakNet::BitStream &, StorageVersion); //TODO: incomplete function definition
     void createTag()const;
     void setTagData(CompoundTag &)const;
     void getFlatWorldGeneratorOptions()const;
     bool isEducationEditionLevel()const;
-    void setGameType(GameType);
+//  void setGameType(GameType); //TODO: incomplete function definition
     void _setGameRulesBasedOnPremiumContentIdentity();
     void getPremiumTemplateContentIdentity()const;
     void getSeed()const;
@@ -43,9 +47,10 @@ public:
     void _updateLimitedWorldOrigin(BlockPos const&);
     void setTime(int);
     void clearLoadedPlayerTag();
+    std::string getLevelName()const;
     void setLevelName(std::string const&);
     void getGenerator()const;
-    void setGenerator(GeneratorType);
+//  void setGenerator(GeneratorType); //TODO: incomplete function definition
     void touchLastLoadedWithVersion();
     void getLastPlayed()const;
     void updateLastTimePlayed()const;
@@ -61,7 +66,7 @@ public:
     void setRainTime(int);
     void getGameType()const;
     void getGameDifficulty()const;
-    void setGameDifficulty(Difficulty);
+//  void setGameDifficulty(Difficulty); //TODO: incomplete function definition
     void getForceGameType()const;
     void setForceGameType(bool);
     void getSpawnMobs()const;
@@ -77,7 +82,7 @@ public:
     void getWorldCenter()const;
     void getWorldStartCount()const;
     void getStorageVersion()const;
-    void setStorageVersion(StorageVersion);
+//  void setStorageVersion(StorageVersion); //TODO: incomplete function definition
     void getMinCompatibleClientVersion()const;
     void getNetworkVersion()const;
     void setNetworkVersion(int);
@@ -95,7 +100,7 @@ public:
     void getDefaultAbilities()const;
     void getDefaultAbilities();
     void getEducationEditionOffer()const;
-    void setEducationEditionOffer(EducationEditionOffer);
+//  void setEducationEditionOffer(EducationEditionOffer); //TODO: incomplete function definition
     void educationFeaturesEnabled()const;
     void setEducationFeaturesEnabled(bool);
     bool hasConfirmedPlatformLockedContent()const;
@@ -109,13 +114,13 @@ public:
     void getLANBroadcast()const;
     void setLANBroadcast(bool);
     void getXBLBroadcastIntent()const;
-    void setXBLBroadcastIntent(Social::GamePublishSetting);
+//  void setXBLBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition
     void getXBLBroadcastMode()const;
-    void setXBLBroadcastMode(Social::GamePublishSetting);
+//  void setXBLBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition
     void getPlatformBroadcastIntent()const;
-    void setPlatformBroadcastIntent(Social::GamePublishSetting);
+//  void setPlatformBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition
     void getPlatformBroadcastMode()const;
-    void setPlatformBroadcastMode(Social::GamePublishSetting);
+//  void setPlatformBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition
     void setCommandsEnabled(bool);
     bool hasExperimentalGameplayEnabled()const;
     bool isTexturepacksRequired()const;
@@ -130,7 +135,9 @@ public:
     void setFromWorldTemplate(bool);
     bool isWorldTemplateOptionLocked()const;
     void setWorldTemplateOptionLocked(bool);
+    std::string getEducationOid()const;
     void setEducationOid(std::string const&);
+    std::string getEducationProductId()const;
     void setEducationProductId(std::string const&);
     bool hasBonusChestEnabled()const;
     void getBonusChestSpawned()const;

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./TagRegistry.h"
+#include <string>
 
 
 class WellKnownTagID {
@@ -7,5 +9,5 @@ class WellKnownTagID {
 public:
 
     void init(TagRegistry &, std::string const&);
-    WellKnownTagID(void);
+    WellKnownTagID();
 };

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../bedrock/actor/damagesource/ActorDamageSource"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/level/Level"
-#include "../bedrock/actor/Player"
+#include "../bedrock/actor/damagesource/ActorDamageSource.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/level/Level.h"
 
 
-using namespace LootTableContext;
+namespace LootTableContext {
 
 class Builder {
 
@@ -20,3 +20,5 @@ public:
     void withExplosionRadius(float);
     void create()const;
 };
+
+}

@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../Mob"
-#include "../Actor"
-#include "../../../unmapped/NavigationComponent"
-#include "../../util/Vec3"
-#include "../../description/component/NavigationDescription"
+#include "../Actor.h"
+#include "./PathNavigation.h"
+#include "../../util/Vec3.h"
+#include "../../description/component/NavigationDescription.h"
+#include "../../../unmapped/NavigationComponent.h"
+#include "../Mob.h"
 
 
 class HoverPathNavigation : PathNavigation {
 
 public:
-    virtual HoverPathNavigation::~HoverPathNavigation()
+    virtual ~HoverPathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;
@@ -20,5 +21,5 @@ public:
     virtual bool canUpdatePath(Mob const&)const;
     virtual void updatePath(NavigationComponent &, Mob &);
 
-    HoverPathNavigation(void);
+    HoverPathNavigation();
 };

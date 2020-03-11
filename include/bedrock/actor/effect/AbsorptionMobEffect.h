@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Actor"
+#include "./MobEffect.h"
+#include "../Actor.h"
+#include <string>
 
 
 class AbsorptionMobEffect : MobEffect {
 
 public:
-    virtual AbsorptionMobEffect::~AbsorptionMobEffect()
+    virtual ~AbsorptionMobEffect();
     virtual void applyEffects(Actor *, int, int)const;
     virtual void removeEffects(Actor *);
 

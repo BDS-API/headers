@@ -1,22 +1,27 @@
 #pragma once
 
+#include <memory>
+#include "./ScriptObjectHandle.h"
+#include <vector>
+#include "./ScriptCallbackInterface.h"
+#include <string>
 
 
-using namespace ScriptApi;
+namespace ScriptApi {
 
 class ScriptFramework {
 
 public:
-    virtual ScriptApi::ScriptFramework::~ScriptFramework()
+    virtual ~ScriptFramework();
     virtual void initialize();
     virtual void shutdown();
 
-    ScriptFramework(void);
+    ScriptFramework();
     void runScript(std::string const&, std::string const&);
     void getScriptReportQueue()const;
     void createObject(ScriptApi::ScriptObjectHandle &);
     void createArray(ScriptApi::ScriptObjectHandle &, int);
-    void cloneObject(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptObjectHandle&);
+    void cloneObject(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptObjectHandle &);
     bool hasMember(ScriptApi::ScriptObjectHandle const&, std::string const&, bool &);
     bool hasMember(ScriptApi::ScriptObjectHandle const&, int const&, bool &);
     void setMember(ScriptApi::ScriptObjectHandle const&, std::string const&, ScriptApi::ScriptObjectHandle const&);
@@ -31,8 +36,8 @@ public:
     void setValue(ScriptApi::ScriptObjectHandle &, bool);
     void setMember(ScriptApi::ScriptObjectHandle const&, std::string const&, std::string const&);
     void setValue(ScriptApi::ScriptObjectHandle &, std::string const&);
-    void getMember(ScriptApi::ScriptObjectHandle const&, std::string const&, ScriptApi::ScriptObjectHandle&);
-    void getMember(ScriptApi::ScriptObjectHandle const&, int const&, ScriptApi::ScriptObjectHandle&);
+    void getMember(ScriptApi::ScriptObjectHandle const&, std::string const&, ScriptApi::ScriptObjectHandle &);
+    void getMember(ScriptApi::ScriptObjectHandle const&, int const&, ScriptApi::ScriptObjectHandle &);
     void getMember(ScriptApi::ScriptObjectHandle const&, std::string const&, int &);
     void getValue(ScriptApi::ScriptObjectHandle const&, int &);
     void getMember(ScriptApi::ScriptObjectHandle const&, std::string const&, long &);
@@ -41,9 +46,9 @@ public:
     void getValue(ScriptApi::ScriptObjectHandle const&, double &);
     void getMember(ScriptApi::ScriptObjectHandle const&, std::string const&, bool &);
     void getValue(ScriptApi::ScriptObjectHandle const&, bool &);
-    void getMember(ScriptApi::ScriptObjectHandle const&, std::string const&, std::string&);
+    void getMember(ScriptApi::ScriptObjectHandle const&, std::string const&, std::string &);
     void getValue(ScriptApi::ScriptObjectHandle const&, std::string &);
-    void getHandleType(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptObjectType &);
+//  void getHandleType(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptObjectType &); //TODO: incomplete function definition
     void getArrayLength(ScriptApi::ScriptObjectHandle const&, int &);
     void getMemberNames(ScriptApi::ScriptObjectHandle const&, std::vector<std::string, std::allocator<std::string>> &);
     void getGlobalObject(ScriptApi::ScriptObjectHandle &);
@@ -52,3 +57,5 @@ public:
     void registerGlobalAPI(std::string const&, ScriptApi::ScriptCallbackInterface &, ScriptApi::ScriptObjectHandle &);
     void registerConsole(ScriptApi::ScriptCallbackInterface &);
 };
+
+}

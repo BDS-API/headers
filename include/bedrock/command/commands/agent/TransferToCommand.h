@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../../../actor/Player"
+#include "../../../actor/Player.h"
+#include "../../Command.h"
 
 
-using namespace AgentCommands;
+namespace AgentCommands {
 
 class TransferToCommand : AgentCommands::Command {
 
 public:
-    virtual AgentCommands::TransferToCommand::~TransferToCommand()
+    virtual ~TransferToCommand();
     virtual void execute();
     virtual bool isDone();
 
     TransferToCommand(Player &, int, int, int);
 };
+
+}

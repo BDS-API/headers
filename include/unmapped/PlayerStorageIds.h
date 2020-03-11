@@ -6,5 +6,6 @@ class PlayerStorageIds {
 
 public:
 
-    PlayerStorageIds(void);
+    PlayerStorageIds();
+    ~PlayerStorageIds();
 };

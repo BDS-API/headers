@@ -1,21 +1,25 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "actor/BlockActor"
-#include "../util/Vec3"
-#include "../../unmapped/MapItemSavedData"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/MapItemSavedData.h"
+#include "actor/BlockActor.h"
+#include <memory>
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include <vector>
+#include "../util/Vec3.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class ItemFrameBlock : ActorBlock {
 
 public:
-    virtual ItemFrameBlock::~ItemFrameBlock()
+    virtual ~ItemFrameBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool isInteractiveBlock()const;

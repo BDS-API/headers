@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../bedrock/util/Random"
+#include "../bedrock/util/Random.h"
+#include "./SimpleGrid.h"
 
 
-using namespace WoodlandMansionPieces;
+namespace WoodlandMansionPieces {
 
 class MansionGrid {
 
@@ -17,4 +18,7 @@ public:
     void _cleanEdges(WoodlandMansionPieces::SimpleGrid &);
     void _identifyRooms(WoodlandMansionPieces::SimpleGrid &, WoodlandMansionPieces::SimpleGrid &);
     void _setupThirdFloor();
+    ~MansionGrid();
 };
+
+}

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/network/NetEventCallback"
+#include "../bedrock/network/NetEventCallback.h"
 
 
-using namespace NetworkHandler;
+namespace NetworkHandler {
 
 class IncomingPacketQueue {
 
@@ -11,3 +11,5 @@ public:
 
     IncomingPacketQueue(NetEventCallback &);
 };
+
+}

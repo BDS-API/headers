@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./StreamDetails.h"
 
 
-using namespace MemoryMappedFileAccess;
+namespace MemoryMappedFileAccess {
 
 class StreamDetails {
 
 public:
 
-    StreamDetails(void);
-    StreamDetails(MemoryMappedFileAccess::StreamDetails&&);
+    StreamDetails();
+    ~StreamDetails();
+    StreamDetails(MemoryMappedFileAccess::StreamDetails &&);
 };
+
+}

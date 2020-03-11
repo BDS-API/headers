@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitSceneGraph"
-#include "../../../util/BlockPos"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph.h"
+#include "../../../util/BlockPos.h"
+#include "../../../../unmapped/CircuitSystem.h"
+#include "./CapacitorComponent.h"
+#include "../../../../unmapped/CircuitTrackingInfo.h"
+#include "./BaseCircuitComponent.h"
 
 
 class ComparatorCapacitor : CapacitorComponent {
 
 public:
-    virtual ComparatorCapacitor::~ComparatorCapacitor()
+    virtual ~ComparatorCapacitor();
     virtual void consumePowerAnyDirection();
     virtual bool canConsumerPower();
     virtual void getInstanceType()const;
@@ -21,10 +23,10 @@ public:
     virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
     virtual void getPoweroutDirection()const;
 
-    ComparatorCapacitor(void);
+    ComparatorCapacitor();
     void getOldStrength();
     bool isSubtractMode();
-    void setMode(ComparatorCapacitor::Mode);
+//  void setMode(ComparatorCapacitor::Mode); //TODO: incomplete function definition
     void clearAnalogStrength(unsigned char);
     void setAnalogStrength(int, unsigned char);
     void GetRearStrength();

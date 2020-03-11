@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../../unmapped/Objective"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../../unmapped/Objective.h"
+#include <string>
 
 
 class RemoveObjectivePacket : Packet {
 
 public:
-    virtual RemoveObjectivePacket::~RemoveObjectivePacket()
+    virtual ~RemoveObjectivePacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    RemoveObjectivePacket(void);
+    RemoveObjectivePacket();
     RemoveObjectivePacket(Objective const&);
 };

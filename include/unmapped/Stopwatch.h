@@ -1,16 +1,17 @@
 #pragma once
 
+#include <string>
 
 
 class Stopwatch {
 
 public:
-    virtual Stopwatch::~Stopwatch()
+    virtual ~Stopwatch();
     virtual void stop();
     virtual void stopContinue();
     virtual void print(std::string const&);
 
-    Stopwatch(void);
+    Stopwatch();
     void getLast();
     void getMax();
     void reset();

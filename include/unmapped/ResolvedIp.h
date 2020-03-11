@@ -2,11 +2,14 @@
 
 
 
-using namespace AsynchronousIPResolver;
+namespace AsynchronousIPResolver {
 
 class ResolvedIp {
 
 public:
 
-    ResolvedIp(void);
+    ResolvedIp();
+    ~ResolvedIp();
 };
+
+}

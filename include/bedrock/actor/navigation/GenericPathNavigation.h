@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/NavigationComponent"
-#include "../../description/component/NavigationDescription"
+#include "./PathNavigation.h"
+#include "../Mob.h"
+#include "../../../unmapped/NavigationComponent.h"
+#include "../../description/component/NavigationDescription.h"
 
 
 class GenericPathNavigation : PathNavigation {
 
 public:
-    virtual GenericPathNavigation::~GenericPathNavigation()
+    virtual ~GenericPathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;
     virtual void stop(NavigationComponent &, Mob &);
     virtual void updatePath(NavigationComponent &, Mob &);
 
-    GenericPathNavigation(void);
+    GenericPathNavigation();
 };

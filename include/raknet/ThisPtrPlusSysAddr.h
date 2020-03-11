@@ -2,11 +2,13 @@
 
 
 
-using namespace RakNet::TCPInterface;
+namespace RakNet::TCPInterface {
 
 class ThisPtrPlusSysAddr {
 
 public:
 
-    ThisPtrPlusSysAddr(void);
+    ThisPtrPlusSysAddr();
 };
+
+}

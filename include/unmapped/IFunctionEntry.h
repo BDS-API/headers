@@ -5,7 +5,7 @@
 class IFunctionEntry {
 
 public:
-    virtual IFunctionEntry::~IFunctionEntry()
+    virtual ~IFunctionEntry();
 
-    IFunctionEntry(void);
+    IFunctionEntry();
 };

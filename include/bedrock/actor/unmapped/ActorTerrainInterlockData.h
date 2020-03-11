@@ -6,7 +6,7 @@ class ActorTerrainInterlockData {
 
 public:
 
-    ActorTerrainInterlockData(void);
-    void setRenderVisibilityState(ActorTerrainInterlockData::VisibilityState);
+    ActorTerrainInterlockData();
+//  void setRenderVisibilityState(ActorTerrainInterlockData::VisibilityState); //TODO: incomplete function definition
     void setCreationTime();
 };

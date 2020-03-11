@@ -2,12 +2,14 @@
 
 
 
-using namespace WoodlandMansionPieces;
+namespace WoodlandMansionPieces {
 
 class FloorRoomCollection {
 
 public:
-    virtual WoodlandMansionPieces::FloorRoomCollection::~FloorRoomCollection()
+    virtual ~FloorRoomCollection();
 
-    FloorRoomCollection(void);
+    FloorRoomCollection();
 };
+
+}

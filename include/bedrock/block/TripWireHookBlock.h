@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class TripWireHookBlock : BlockLegacy {
 
 public:
-    virtual TripWireHookBlock::~TripWireHookBlock()
+    virtual ~TripWireHookBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;

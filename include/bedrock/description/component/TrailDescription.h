@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "../../../json/Value.h"
+#include "./ComponentDescription.h"
 
 
 class TrailDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual TrailDescription::~TrailDescription()
+    virtual ~TrailDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    TrailDescription(void);
+    TrailDescription();
 };

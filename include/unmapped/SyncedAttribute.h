@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./SyncedAttribute.h"
 
 
 class SyncedAttribute {
 
 public:
 
-    SyncedAttribute(SyncedAttribute&&);
-    SyncedAttribute(void);
+    ~SyncedAttribute();
+    SyncedAttribute(SyncedAttribute &&);
+    SyncedAttribute();
 };

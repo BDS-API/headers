@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include <string>
 
 
 class ActorEventPacket : Packet {
 
 public:
-    virtual ActorEventPacket::~ActorEventPacket()
+    virtual ~ActorEventPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    ActorEventPacket(void);
-    ActorEventPacket(ActorRuntimeID, ActorEvent, int);
+    ActorEventPacket();
+//  ActorEventPacket(ActorRuntimeID, ActorEvent, int); //TODO: incomplete function definition
 };

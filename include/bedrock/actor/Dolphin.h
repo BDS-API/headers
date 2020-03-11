@@ -1,16 +1,17 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../util/BlockPos.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "./WaterAnimal.h"
+#include "unmapped/ActorDefinitionGroup.h"
 
 
 class Dolphin : WaterAnimal {
 
 public:
-    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Dolphin::~Dolphin()
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Dolphin();
     virtual bool canBePulledIntoVehicle()const;
     virtual void aiStep();
     virtual void createAIGoals();

@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "actor/BlockActor"
-#include "actor/BannerBlockActor"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "actor/BlockActor.h"
+#include "actor/BannerBlockActor.h"
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class BannerBlock : ActorBlock {
@@ -20,7 +22,7 @@ public:
     static long EAST_AABB;
     static long WEST_AABB;
 
-    virtual BannerBlock::~BannerBlock()
+    virtual ~BannerBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;

@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../actor/Mob"
+#include "../actor/Mob.h"
+#include "./BodyControl.h"
 
 
 class LegacyBodyControl : BodyControl {
 
 public:
-    virtual LegacyBodyControl::~LegacyBodyControl()
+    virtual ~LegacyBodyControl();
     virtual void clientTick(Mob &);
 
-    LegacyBodyControl(void);
+    LegacyBodyControl();
 };

@@ -2,11 +2,13 @@
 
 
 
-using namespace RakNetInstance;
+namespace RakNetInstance {
 
 class NatConnectionInfo {
 
 public:
 
-    NatConnectionInfo(void);
+    NatConnectionInfo();
 };
+
+}

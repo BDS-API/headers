@@ -2,11 +2,13 @@
 
 
 
-using namespace CommandRegistry;
+namespace CommandRegistry {
 
 class ParamSymbols {
 
 public:
 
-    ParamSymbols(void);
+    ParamSymbols();
 };
+
+}

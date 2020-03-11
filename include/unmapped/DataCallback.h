@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./DataCallback.h"
 
 
-using namespace BatchedNetworkPeer;
+namespace BatchedNetworkPeer {
 
 class DataCallback {
 
 public:
 
-    DataCallback(BatchedNetworkPeer::DataCallback&&);
-    DataCallback(void);
+    ~DataCallback();
+    DataCallback(BatchedNetworkPeer::DataCallback &&);
+    DataCallback();
 };
+
+}

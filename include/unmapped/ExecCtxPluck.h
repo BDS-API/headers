@@ -2,11 +2,11 @@
 
 
 
-class ExecCtxPluck : grpc_core::ExecCtx {
+class ExecCtxPluck /*grpc_core::ExecCtx*/ { //TODO: incomplete class definition
 
 public:
-    virtual ExecCtxPluck::~ExecCtxPluck()
+    virtual ~ExecCtxPluck();
     virtual void CheckReadyToFinish();
 
-    ExecCtxPluck(void *);
+//  ExecCtxPluck(void *); //TODO: incomplete function definition
 };

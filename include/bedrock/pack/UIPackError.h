@@ -1,14 +1,18 @@
 #pragma once
 
+#include "./PackError.h"
+#include <memory>
+#include <vector>
+#include <string>
 
 
 class UIPackError : PackError {
 
 public:
-    virtual UIPackError::~UIPackError()
-    virtual void getLocErrorMessageMap()const;
-    virtual void getEventErrorMessageMap()const;
+    virtual ~UIPackError();
+    virtual std::string getLocErrorMessageMap()const;
+    virtual std::string getEventErrorMessageMap()const;
 
-    UIPackError(void);
-    UIPackError(UIPackErrorType, std::vector<std::string, std::allocator<std::string>> const&);
+    UIPackError();
+//  UIPackError(UIPackErrorType, std::vector<std::string, std::allocator<std::string>> const&); //TODO: incomplete function definition
 };

@@ -1,21 +1,22 @@
 #pragma once
 
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../item/Item"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Mob.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../item/Item.h"
+#include "../nbt/CompoundTag.h"
 
 
 class VillagerBase : Mob {
 
 public:
-    virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual VillagerBase::~VillagerBase()
+//  virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~VillagerBase();
     virtual void interactPreventDefault();
     virtual void onLightningHit();
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
     virtual void _onSizeUpdated();
@@ -29,7 +30,7 @@ public:
     void getBreedingStackIndex()const;
     void setWillingToBreed(bool);
     void consumeLoveFood();
-    void _addParticlesAroundSelf(ParticleType);
+//  void _addParticlesAroundSelf(ParticleType); //TODO: incomplete function definition
     void _wantsItem(Item const&);
     void stopGoals();
 };

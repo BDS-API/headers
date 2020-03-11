@@ -1,14 +1,18 @@
 #pragma once
 
+#include "./Effect.h"
 
 
-using namespace FeedItem;
+namespace FeedItem {
 
 class Effect {
 
 public:
 
+    ~Effect();
     Effect(FeedItem::Effect const&);
-    Effect(FeedItem::Effect&&);
-    Effect(void);
+    Effect(FeedItem::Effect &&);
+    Effect();
 };
+
+}

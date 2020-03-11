@@ -1,108 +1,115 @@
 #pragma once
 
-#include "packet/SettingsCommandPacket"
-#include "packet/CommandRequestPacket"
-#include "../../unmapped/MinecraftCommands"
-#include "packet/SpawnExperienceOrbPacket"
-#include "packet/MapCreateLockedCopyPacket"
-#include "packet/CraftingEventPacket"
-#include "packet/ModalFormResponsePacket"
-#include "../../unmapped/NetworkIdentifier"
-#include "packet/CommandBlockUpdatePacket"
-#include "../../mce/UUID"
-#include "../../unmapped/PrivateKeyManager"
-#include "packet/sender/PacketSender"
-#include "packet/StructureBlockUpdatePacket"
-#include "packet/ShowCreditsPacket"
-#include "packet/TextPacket"
-#include "packet/ItemFrameDropItemPacket"
-#include "packet/AdventureSettingsPacket"
-#include "packet/AnimatePacket"
-#include "../../unmapped/SubClientConnectionRequest"
-#include "packet/ResourcePackClientResponsePacket"
-#include "packet/MobEquipmentPacket"
-#include "../IMinecraftApp"
-#include "../../unmapped/NetworkHandler"
-#include "packet/BlockActorDataPacket"
-#include "packet/MoveActorAbsolutePacket"
-#include "packet/TickSyncPacket"
-#include "../util/Vec3"
-#include "packet/BookEditPacket"
-#include "packet/AnvilDamagePacket"
-#include "packet/SetDifficultyPacket"
-#include "packet/ActorEventPacket"
-#include "packet/LevelSoundEventPacketV2"
-#include "packet/NetworkStackLatencyPacket"
-#include "../actor/ServerPlayer"
-#include "../../unmapped/XboxLiveUserObserver"
-#include "packet/LecternUpdatePacket"
-#include "../../unmapped/PermissionsFile"
-#include "packet/ResourcePackChunkRequestPacket"
-#include "packet/PlayerAuthInputPacket"
-#include "packet/ClientToServerHandshakePacket"
-#include "packet/InventoryTransactionPacket"
-#include "../../unmapped/ServerLocator"
-#include "packet/NpcRequestPacket"
-#include "../level/LevelListener"
-#include "packet/MovePlayerPacket"
-#include "packet/InteractPacket"
-#include "packet/BlockPickRequestPacket"
-#include "../actor/unmapped/ActorUniqueID"
-#include "../../unmapped/AutomationClient"
-#include "../actor/Player"
-#include "packet/PhotoTransferPacket"
-#include "../metrics/ServerMetrics"
-#include "../../unmapped/Certificate"
-#include "../actor/unmapped/ActorRuntimeID"
-#include "packet/PlayerSkinPacket"
-#include "packet/LevelSoundEventPacketV1"
-#include "packet/CompletedUsingItemPacket"
-#include "packet/PlayerInputPacket"
-#include "packet/ContainerClosePacket"
-#include "packet/EmotePacket"
-#include "packet/MapInfoRequestPacket"
-#include "../Scheduler"
-#include "../../unmapped/PackIdVersion"
-#include "packet/RiderJumpPacket"
-#include "packet/EntityClientPacket"
-#include "packet/SetPlayerGameTypePacket"
-#include "../../unmapped/ConnectionRequest"
-#include "../util/Whitelist"
-#include "packet/RespawnPacket"
-#include "packet/DisconnectPacket"
-#include "packet/ActorPickRequestPacket"
-#include "packet/LoginPacket"
-#include "packet/LevelSoundEventPacket"
-#include "../../unmapped/GameCallbacks"
-#include "packet/MultiplayerSettingsPacket"
-#include "packet/SubClientLoginPacket"
-#include "packet/MobArmorEquipmentPacket"
-#include "packet/SetLocalPlayerAsInitializedPacket"
-#include "packet/LabTablePacket"
-#include "packet/BossEventPacket"
-#include "../level/Level"
-#include "packet/RequestChunkRadiusPacket"
-#include "packet/ClientCacheStatusPacket"
-#include "packet/StructureTemplateDataRequestPacket"
-#include "packet/ClientCacheBlobStatusPacket"
-#include "packet/PlayerActionPacket"
-#include "packet/ActorFallPacket"
-#include "packet/PurchaseReceiptPacket"
-#include "packet/SetDefaultGameTypePacket"
-#include "packet/SimpleEventPacket"
-#include "../../unmapped/MultiplayerServiceObserver"
-#include "packet/PlayerHotbarPacket"
+#include "../level/LevelListener.h"
+#include "../actor/unmapped/ActorUniqueID.h"
+#include "packet/EmotePacket.h"
+#include "packet/ShowCreditsPacket.h"
+#include "../../unmapped/GameCallbacks.h"
+#include "../actor/Player.h"
+#include "../metrics/ServerMetrics.h"
+#include "packet/ActorFallPacket.h"
+#include "../actor/ServerPlayer.h"
+#include "packet/ItemFrameDropItemPacket.h"
+#include "../util/Whitelist.h"
+#include "../../unmapped/PrivateKeyManager.h"
+#include "packet/SetDifficultyPacket.h"
+#include "packet/CommandBlockUpdatePacket.h"
+#include "packet/BlockActorDataPacket.h"
+#include "../../unmapped/SubClientConnectionRequest.h"
+#include "packet/LabTablePacket.h"
+#include <memory>
+#include "../IMinecraftApp.h"
+#include "packet/SimpleEventPacket.h"
+#include "packet/SpawnExperienceOrbPacket.h"
+#include "packet/LevelSoundEventPacketV1.h"
+#include <unordered_map>
+#include "packet/ActorPickRequestPacket.h"
+#include "../../unmapped/MultiplayerServiceObserver.h"
+#include "packet/NpcRequestPacket.h"
+#include "../../unmapped/Certificate.h"
+#include "packet/SetPlayerGameTypePacket.h"
+#include "packet/PlayerHotbarPacket.h"
+#include "packet/MultiplayerSettingsPacket.h"
+#include "packet/StructureTemplateDataRequestPacket.h"
+#include "packet/SetDefaultGameTypePacket.h"
+#include "packet/LevelSoundEventPacket.h"
+#include "../../unmapped/ConnectionRequest.h"
+#include "packet/BossEventPacket.h"
+#include "../../unmapped/NetworkHandler.h"
+#include "packet/InventoryTransactionPacket.h"
+#include "packet/CommandRequestPacket.h"
+#include "packet/InteractPacket.h"
+#include "packet/LevelSoundEventPacketV2.h"
+#include "packet/AdventureSettingsPacket.h"
+#include "../../unmapped/PermissionsFile.h"
+#include "packet/RiderJumpPacket.h"
+#include <string>
+#include "packet/PlayerInputPacket.h"
+#include "packet/ClientCacheBlobStatusPacket.h"
+#include "../../unmapped/PackIdVersion.h"
+#include "packet/RequestChunkRadiusPacket.h"
+#include <functional>
+#include "../../unmapped/AutomationClient.h"
+#include "packet/SetLocalPlayerAsInitializedPacket.h"
+#include "packet/SubClientLoginPacket.h"
+#include "packet/CompletedUsingItemPacket.h"
+#include "packet/TickSyncPacket.h"
+#include "packet/ActorEventPacket.h"
+#include "packet/PlayerActionPacket.h"
+#include "packet/ResourcePackChunkRequestPacket.h"
+#include "packet/MoveActorAbsolutePacket.h"
+#include "packet/ContainerClosePacket.h"
+#include <utility>
+#include "../../mce/UUID.h"
+#include "packet/BlockPickRequestPacket.h"
+#include "packet/RespawnPacket.h"
+#include "packet/PurchaseReceiptPacket.h"
+#include "packet/ResourcePackClientResponsePacket.h"
+#include "../actor/unmapped/ActorRuntimeID.h"
+#include "../level/Level.h"
+#include <vector>
+#include "packet/PhotoTransferPacket.h"
+#include "packet/CraftingEventPacket.h"
+#include "packet/AnvilDamagePacket.h"
+#include "packet/LoginPacket.h"
+#include "../util/Vec3.h"
+#include "../Scheduler.h"
+#include "packet/PlayerAuthInputPacket.h"
+#include "packet/ClientToServerHandshakePacket.h"
+#include "packet/EntityClientPacket.h"
+#include "../../unmapped/NetworkIdentifier.h"
+#include "packet/MobEquipmentPacket.h"
+#include "packet/LecternUpdatePacket.h"
+#include "../../unmapped/ServerLocator.h"
+#include "packet/MapInfoRequestPacket.h"
+#include "packet/AnimatePacket.h"
+#include "packet/MovePlayerPacket.h"
+#include "packet/StructureBlockUpdatePacket.h"
+#include "packet/MapCreateLockedCopyPacket.h"
+#include "packet/TextPacket.h"
+#include "packet/PlayerSkinPacket.h"
+#include "packet/MobArmorEquipmentPacket.h"
+#include "./NetEventCallback.h"
+#include "packet/ModalFormResponsePacket.h"
+#include "packet/BookEditPacket.h"
+#include "../../unmapped/MinecraftCommands.h"
+#include "../../unmapped/XboxLiveUserObserver.h"
+#include "packet/SettingsCommandPacket.h"
+#include "packet/ClientCacheStatusPacket.h"
+#include "packet/NetworkStackLatencyPacket.h"
+#include "packet/sender/PacketSender.h"
+#include "packet/DisconnectPacket.h"
 
 
 class ServerNetworkHandler : NetEventCallback, LevelListener, Social::MultiplayerServiceObserver, Social::XboxLiveUserObserver {
 
 public:
     virtual void onPlayerReady(Player &);
-    virtual ServerNetworkHandler::~ServerNetworkHandler()
+    virtual ~ServerNetworkHandler();
     virtual void onTick();
     virtual void onDisconnect(NetworkIdentifier const&, std::string const&, bool, std::string const&);
-    virtual void allowIncomingPacketId(NetworkIdentifier const&, MinecraftPacketIds);
-    virtual void onWebsocketRequest(std::string const&, std::string const&, std::function<void ()(void)>);
+//  virtual void allowIncomingPacketId(NetworkIdentifier const&, MinecraftPacketIds); //TODO: incomplete function definition
+//  virtual void onWebsocketRequest(std::string const&, std::string const&, std::function<void (void)>); //TODO: incomplete function definition
     virtual void onTransferRequest(NetworkIdentifier const&, std::string const&, int);
     virtual void handle(NetworkIdentifier const&, DisconnectPacket const&);
     virtual void handle(NetworkIdentifier const&, EmotePacket const&);
@@ -171,9 +178,9 @@ public:
     virtual void onInvalidPlayerJoinedLobby(mce::UUID const&, std::string const&);
     virtual void onXboxUserBlocked(std::string const&);
     virtual void onXboxUserUnblocked(std::string const&);
-    virtual void sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int);
+//  virtual void sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int); //TODO: incomplete function definition
 
-    ServerNetworkHandler(GameCallbacks &, Level &, NetworkHandler &, PrivateKeyManager &, ServerLocator &, PacketSender &, Whitelist &, PermissionsFile *, mce::UUID const&, int, bool, std::vector<std::string, std::allocator<std::string>> const&, std::string, int, MinecraftCommands &, IMinecraftApp &, std::unordered_map<PackIdVersion, std::string, std::hash<PackIdVersion>, std::equal_to<PackIdVersion>, std::allocator<std::pair<PackIdVersion const, std::string>>> const&, Scheduler &, TextFilteringProcessor *, ServerMetrics *);
+//  ServerNetworkHandler(GameCallbacks &, Level &, NetworkHandler &, PrivateKeyManager &, ServerLocator &, PacketSender &, Whitelist &, PermissionsFile *, mce::UUID const&, int, bool, std::vector<std::string, std::allocator<std::string>> const&, std::string, int, MinecraftCommands &, IMinecraftApp &, std::unordered_map<PackIdVersion, std::string, std::hash<PackIdVersion>, std::equal_to<PackIdVersion>, std::allocator<std::pair<PackIdVersion const, std::string>>> const&, Scheduler &, TextFilteringProcessor *, ServerMetrics *); //TODO: incomplete function definition
     void disallowIncomingConnections();
     void _displayGameMessage(Player const&, std::string const&);
     void disconnectClient(NetworkIdentifier const&, std::string const&, bool);
@@ -192,7 +199,7 @@ public:
     void onReady_ClientGeneration(Player &, NetworkIdentifier const&);
     void activateWhitelist();
     void addToBlacklist(mce::UUID const&, std::string const&);
-    void addToBlacklist(mce::UUID const&, std::string const&, std::string const&, Blacklist::Duration const&);
+//  void addToBlacklist(mce::UUID const&, std::string const&, std::string const&, Blacklist::Duration const&); //TODO: incomplete function definition
     void setIsTrial(bool);
     void _getPlayer(NetworkIdentifier const&, unsigned char, ActorUniqueID const&);
     void _tryGetEntity(EntityClientPacket const&);
@@ -209,6 +216,7 @@ public:
     void setAutomationClient(Automation::AutomationClient *);
     void setTenantId(std::string const&);
     void setShareableIdentityToken(std::string const&);
-    void setPermission(Player const&, PlayerPermissionLevel);
+//  void setPermission(Player const&, PlayerPermissionLevel); //TODO: incomplete function definition
     void getMaxNumPlayers()const;
+    std::string getGlobalMultiplayerCorrelationId()const;
 };

@@ -6,5 +6,5 @@ class AgentRenderData {
 
 public:
 
-    AgentRenderData(void);
+    AgentRenderData();
 };

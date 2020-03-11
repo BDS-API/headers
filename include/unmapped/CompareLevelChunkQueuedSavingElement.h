@@ -1,12 +1,15 @@
 #pragma once
 
+#include "../bedrock/level/LevelChunkQueuedSavingElement.h"
 
 
-using namespace Level;
+namespace Level {
 
 class CompareLevelChunkQueuedSavingElement {
 
 public:
 
-    void operator();
+    void operator()(Level::LevelChunkQueuedSavingElement const&, Level::LevelChunkQueuedSavingElement const&);
 };
+
+}

@@ -1,14 +1,18 @@
 #pragma once
 
+#include "./BlockPositionData.h"
 
 
-using namespace StructureBlockPalette;
+namespace StructureBlockPalette {
 
 class BlockPositionData {
 
 public:
 
-    BlockPositionData(void);
-    BlockPositionData(StructureBlockPalette::BlockPositionData&&);
+    BlockPositionData();
+    BlockPositionData(StructureBlockPalette::BlockPositionData &&);
+    ~BlockPositionData();
     bool isValid()const;
 };
+
+}

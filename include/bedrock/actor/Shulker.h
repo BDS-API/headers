@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../../unmapped/RenderParams"
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "../../unmapped/VariantParameterList"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "../../unmapped/RenderParams.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "./Mob.h"
+#include "../util/BlockPos.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
 
 
 class Shulker : Mob {
@@ -17,8 +19,8 @@ public:
     static long COVERED_ARMOR_MODIFIER_UUID;
     static long COVERED_ARMOR_MODIFIER;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Shulker::~Shulker()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Shulker();
     virtual void setPos(Vec3 const&);
     virtual void normalTick();
     virtual bool isInWall()const;

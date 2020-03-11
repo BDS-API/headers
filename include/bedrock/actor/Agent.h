@@ -1,30 +1,34 @@
 #pragma once
 
-#include "../../unmapped/RenderParams"
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/VariantParameterList"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../item/ItemStack"
+#include "../../unmapped/RenderParams.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include "../item/ItemStack.h"
+#include "./Mob.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "./Player.h"
+#include <string>
 
 
 class Agent : Mob {
 
 public:
-    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Agent::~Agent()
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Agent();
     virtual bool breaksFallingBlocks()const;
     virtual void teleportTo(Vec3 const&, bool, int, int);
     virtual void normalTick();
     virtual bool isInvisible()const;
     virtual bool canShowNameTag()const;
-    virtual void getFormattedNameTag()const;
+    virtual std::string getFormattedNameTag()const;
     virtual void getAlwaysShowNameTag()const;
     virtual void interactPreventDefault();
     virtual bool isPickable();
     virtual bool isTargetable()const;
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void setCarriedItem(ItemStack const&);
     virtual bool canBePulledIntoVehicle()const;
     virtual bool isWorldBuilder();

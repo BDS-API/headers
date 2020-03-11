@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./WeakStorageFeature.h"
+#include "./StackResultStorageFeature.h"
 
 
 class StackResultStorageFeature {
@@ -7,7 +9,7 @@ class StackResultStorageFeature {
 public:
 
     StackResultStorageFeature(WeakStorageFeature const&);
-    StackResultStorageFeature(StackResultStorageFeature&&);
+    StackResultStorageFeature(StackResultStorageFeature &&);
     void _hasValue()const;
     void _getStackRef()const;
 };

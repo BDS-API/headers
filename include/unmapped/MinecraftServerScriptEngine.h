@@ -1,21 +1,23 @@
 #pragma once
 
-#include "../bedrock/scripting/unmapped/ScriptCommand"
-#include "../bedrock/network/packet/sender/PacketSender"
-#include "../bedrock/scripting/ScriptReportItem"
-#include "../bedrock/level/Level"
-#include "../bedrock/scripting/ScriptObjectHandle"
-#include "../bedrock/Minecraft"
-#include "../bedrock/ServerInstance"
-#include "../bedrock/scripting/unmapped/ScriptServerContext"
-#include "../bedrock/scripting/ScriptVersionInfo"
-#include "../bedrock/pack/ResourcePackManager"
+#include "./ServerInstanceEventListener.h"
+#include "../bedrock/pack/ResourcePackManager.h"
+#include "./NetworkHandler.h"
+#include "../bedrock/scripting/ScriptVersionInfo.h"
+#include "../bedrock/scripting/ScriptReportItem.h"
+#include "../bedrock/ServerInstance.h"
+#include "../bedrock/network/packet/sender/PacketSender.h"
+#include "../bedrock/scripting/unmapped/ScriptCommand.h"
+#include "../bedrock/Minecraft.h"
+#include "../bedrock/level/Level.h"
+#include "../bedrock/scripting/unmapped/ScriptServerContext.h"
+#include "../bedrock/scripting/ScriptObjectHandle.h"
 
 
-class MinecraftServerScriptEngine : ScriptEngineWithContext<ScriptServerContext>, ServerInstanceEventListener {
+class MinecraftServerScriptEngine : ServerInstanceEventListener /*ScriptEngineWithContext<ScriptServerContext>*/ { //TODO: incomplete class definition
 
 public:
-    virtual MinecraftServerScriptEngine::~MinecraftServerScriptEngine()
+    virtual ~MinecraftServerScriptEngine();
     virtual void setupInterface();
     virtual void onExecuteCommandCalled(ScriptApi::ScriptVersionInfo const&, ScriptCommand &&);
     virtual void executeCommand(ScriptCommand const&);
@@ -32,7 +34,7 @@ public:
 
     MinecraftServerScriptEngine(ServerInstance &);
     void _queueResourcePackScripts(ResourcePackManager &);
-    void _setupContext(Minecraft &, PacketSender &, entt::Registry<unsigned int> &);
+//  void _setupContext(Minecraft &, PacketSender &, entt::Registry<unsigned int> &); //TODO: incomplete function definition
     void _initializeServer(Level &, NetworkHandler &);
     void _unregisterEventListeners(Level *, NetworkHandler &);
     void _registerEventListeners(Level &, NetworkHandler &);

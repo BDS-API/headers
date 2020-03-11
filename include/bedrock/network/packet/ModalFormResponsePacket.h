@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../io/BinaryStream.h"
+#include <string>
 
 
 class ModalFormResponsePacket : Packet {
 
 public:
-    virtual ModalFormResponsePacket::~ModalFormResponsePacket()
+    virtual ~ModalFormResponsePacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    ModalFormResponsePacket(void);
+    ModalFormResponsePacket();
     ModalFormResponsePacket(unsigned int, std::string const&);
 };

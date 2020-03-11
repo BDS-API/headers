@@ -1,26 +1,32 @@
 #pragma once
 
-#include "../../util/Tick"
-#include "../../nbt/CompoundTag"
-#include "../BlockLegacy"
-#include "../../level/LevelChunk"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../nbt/ListTag"
-#include "../../../unmapped/BoundingBox"
+#include "../../../unmapped/Block.h"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockSource.h"
+#include "../../level/LevelChunk.h"
+#include "../../../unmapped/TickNextTickData.h"
+#include "../BlockLegacy.h"
+#include "../../util/BlockPos.h"
+#include "../../nbt/ListTag.h"
+#include "./BlockPalette.h"
+#include "../../util/Tick.h"
+#include "../../../unmapped/BoundingBox.h"
+#include "../../../unmapped/TickDataSet.h"
+#include <functional>
 
 
 class BlockTickingQueue {
 
 public:
 
-    BlockTickingQueue(TickingQueueType);
-    BlockTickingQueue(Tick, TickingQueueType);
+//  BlockTickingQueue(TickingQueueType); //TODO: incomplete function definition
+    ~BlockTickingQueue();
+//  BlockTickingQueue(Tick, TickingQueueType); //TODO: incomplete function definition
     void setOwningChunk(LevelChunk *);
     void add(BlockSource &, BlockPos const&, Block const&, int, int);
     void _onQueueChanged()const;
     void remove(BlockPos const&, Block const&);
-    void remove(std::function<bool ()(TickNextTickData const&)> &&);
+    void remove(std::function<bool (TickNextTickData const&)> &&);
     void tickPendingTicks(BlockSource &, Tick const&, int, bool);
     void tickAllPendingTicks(BlockSource &);
     bool isInstaticking()const;
@@ -34,5 +40,5 @@ public:
     bool ticksFromNow(int)const;
     void getNextUpdateForPos(BlockPos const&, Tick &)const;
     void eliminateDuplicatesOf(BlockLegacy const&);
-    BlockTickingQueue(LevelChunk &, TickingQueueType);
+//  BlockTickingQueue(LevelChunk &, TickingQueueType); //TODO: incomplete function definition
 };

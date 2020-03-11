@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/NavigationComponent"
+#include "./PathNavigation.h"
+#include "../Mob.h"
+#include "../../../unmapped/NavigationComponent.h"
 
 
 class FloatNavigation : PathNavigation {
 
 public:
-    virtual FloatNavigation::~FloatNavigation()
+    virtual ~FloatNavigation();
     virtual void travel(NavigationComponent &, Mob &, float &, float &, float &);
 
-    FloatNavigation(void);
+    FloatNavigation();
 };

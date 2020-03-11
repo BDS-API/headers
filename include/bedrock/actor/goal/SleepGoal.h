@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/Vec3"
+#include "./MoveToPOIGoal.h"
+#include "../Mob.h"
+#include "../../util/Vec3.h"
+#include <string>
 
 
 class SleepGoal : MoveToPOIGoal {
 
 public:
-    virtual SleepGoal::~SleepGoal()
+    virtual ~SleepGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

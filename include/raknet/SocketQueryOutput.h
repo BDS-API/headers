@@ -2,11 +2,14 @@
 
 
 
-using namespace RakNet::RakPeer;
+namespace RakNet::RakPeer {
 
 class SocketQueryOutput {
 
 public:
 
-    SocketQueryOutput(void);
+    ~SocketQueryOutput();
+    SocketQueryOutput();
 };
+
+}

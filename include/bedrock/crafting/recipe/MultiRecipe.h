@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/HashString"
+#include "./Recipe.h"
+#include "../../../unmapped/HashString.h"
+#include <string>
 
 
 class MultiRecipe : Recipe {
 
 public:
-    virtual MultiRecipe::~MultiRecipe()
+    virtual ~MultiRecipe();
     virtual bool isShapeless()const;
     virtual bool isMultiRecipe()const;
 

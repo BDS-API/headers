@@ -1,21 +1,28 @@
 #pragma once
 
-#include "../block/BlockLegacy"
-#include "../util/Tick"
-#include "../io/BinaryStream"
-#include "../nbt/CompoundTag"
-#include "../block/actor/BlockActor"
-#include "../io/IDataOutput"
-#include "../actor/Player"
-#include "../block/unmapped/BlockSource"
-#include "../level/Level"
-#include "../io/IDataInput"
-#include "../../unmapped/Block"
-#include "../io/ReadOnlyBinaryStream"
-#include "../../unmapped/RecipeIngredient"
-#include "../../json/Value"
-#include "../actor/Actor"
-#include "unmapped/ItemEnchants"
+#include <string>
+#include "../io/IDataInput.h"
+#include <ratio>
+#include "./ItemInstance.h"
+#include "unmapped/ItemEnchants.h"
+#include "../block/BlockLegacy.h"
+#include "../../unmapped/RecipeIngredient.h"
+#include "../io/IDataOutput.h"
+#include "../actor/Player.h"
+#include "../block/unmapped/BlockSource.h"
+#include "../io/BinaryStream.h"
+#include "../io/ReadOnlyBinaryStream.h"
+#include "../nbt/CompoundTag.h"
+#include "../../json/Value.h"
+#include "./ItemStackBase.h"
+#include "../block/actor/BlockActor.h"
+#include <memory>
+#include "../util/Tick.h"
+#include "./Item.h"
+#include "../level/Level.h"
+#include "../actor/Actor.h"
+#include <vector>
+#include "../../unmapped/Block.h"
 
 
 class ItemStackBase {
@@ -23,18 +30,18 @@ class ItemStackBase {
 public:
     static long MAX_STACK_SIZE;
     static long sPickupPopDuration;
-    static long TAG_DISPLAY[abi:cxx11];
-    static long TAG_DISPLAY_NAME[abi:cxx11];
-    static long TAG_LORE[abi:cxx11];
-    static long TAG_REPAIR_COST[abi:cxx11];
-    static long TAG_ENCHANTS[abi:cxx11];
-    static long TAG_CAN_PLACE_ON[abi:cxx11];
-    static long TAG_CAN_DESTROY[abi:cxx11];
-    static long TAG_STORE_CAN_PLACE_ON[abi:cxx11];
-    static long TAG_STORE_CAN_DESTROY[abi:cxx11];
-    static long TAG_CHARGED_ITEM[abi:cxx11];
+    static std::string TAG_DISPLAY;
+    static std::string TAG_DISPLAY_NAME;
+    static std::string TAG_LORE;
+    static std::string TAG_REPAIR_COST;
+    static std::string TAG_ENCHANTS;
+    static std::string TAG_CAN_PLACE_ON;
+    static std::string TAG_CAN_DESTROY;
+    static std::string TAG_STORE_CAN_PLACE_ON;
+    static std::string TAG_STORE_CAN_DESTROY;
+    static std::string TAG_CHARGED_ITEM;
 
-    virtual ItemStackBase::~ItemStackBase()
+    virtual ~ItemStackBase();
 
     bool isValid()const;
     bool isItem()const;
@@ -48,7 +55,7 @@ public:
     void sameItem(int, int)const;
     bool hasFeedingAnimation()const;
     void forceSetCount(unsigned char);
-    ItemStackBase(void);
+    ItemStackBase();
     void init(int, int, int);
     ItemStackBase(BlockLegacy const&, int);
     void init(BlockLegacy const&, int);
@@ -124,14 +131,22 @@ public:
     void snap(Player *);
     void sameItem(ItemStackBase const&)const;
     void sameItemAndAux(ItemStackBase const&)const;
+    std::string getDescriptionId()const;
+    std::string getCategoryName()const;
+    std::string getName()const;
     bool hasCustomHoverName()const;
+    std::string getCustomName()const;
+    std::string getRawNameId()const;
     void getRendererId()const;
+    std::string getEffectName()const;
+    std::string getFormattedHovertext(Level &, bool)const;
     bool hasComponent(std::string const&)const;
     void getBlock()const;
     void setBlock(Block const*);
     void getIdAux()const;
     void getIdAuxEnchanted()const;
     bool isInstance(BlockLegacy const&)const;
+    std::string toString()const;
     void matches(ItemStackBase const&)const;
     bool matchesItem(ItemStackBase const&)const;
     bool matchesChargedItem(ItemStackBase const&)const;
@@ -143,6 +158,8 @@ public:
     void load(CompoundTag const&);
     void _loadItem(CompoundTag const&);
     void load(CompoundTag const&, Level &);
+    void operator!=(ItemStackBase const&)const;
+    void operator==(ItemStackBase const&)const;
     void getIcon(int, bool)const;
     void getUseAnimation()const;
     bool isArmorItem()const;
@@ -152,7 +169,10 @@ public:
     bool isMusicDiscItem()const;
     bool isPotionItem()const;
     bool isLiquidClipItem()const;
+    std::string _getHoverFormattingPrefix()const;
+    std::string getHoverName()const;
     void setCustomName(std::string const&);
+    std::string getCustomLore()const;
     void setCustomLore(std::vector<std::string, std::allocator<std::string>> const&);
     void resetHoverName();
     void getBaseRepairCost()const;
@@ -165,7 +185,7 @@ public:
     void getIsValidPickupTime()const;
     void getPickupTime()const;
     void setPickupTime();
-    void setPickupTime(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>);
+//  void setPickupTime(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>); //TODO: incomplete function definition
     void setShowPickUp(bool);
     void setChargedItem(ItemInstance const&, bool);
     void _setChargedItem(ItemInstance const&);

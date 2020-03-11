@@ -2,11 +2,14 @@
 
 
 
-using namespace WorldChangeTransaction;
+namespace WorldChangeTransaction {
 
 class Data {
 
 public:
 
-    Data(void);
+    Data();
+    ~Data();
 };
+
+}

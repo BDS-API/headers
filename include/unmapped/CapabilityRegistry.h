@@ -1,14 +1,20 @@
 #pragma once
 
+#include <string>
 
 
-using namespace PackManifest;
+namespace PackManifest {
 
 class CapabilityRegistry {
 
 public:
 
+    std::string getCapabilities();
     void _get();
-    void registerCapability(gsl::basic_string_span<char const, -1l>, bool);
-    CapabilityRegistry(void);
+    std::string getTrustedCapabilities();
+//  void registerCapability(gsl::basic_string_span<char const, -1l>, bool); //TODO: incomplete function definition
+    CapabilityRegistry();
+    ~CapabilityRegistry();
 };
+
+}

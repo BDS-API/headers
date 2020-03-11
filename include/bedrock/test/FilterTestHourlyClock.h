@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../definition/Definition"
-#include "../../unmapped/FilterContext"
-#include "../../unmapped/FilterInputs"
+#include "./SimpleIntFilterTest.h"
+#include "../../unmapped/FilterInputs.h"
+#include "../../unmapped/Definition.h"
+#include "../../unmapped/FilterContext.h"
 
 
 class FilterTestHourlyClock : SimpleIntFilterTest {
 
 public:
-    virtual FilterTestHourlyClock::~FilterTestHourlyClock()
+    virtual ~FilterTestHourlyClock();
     virtual void setup(FilterTest::Definition const&, FilterInputs const&);
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 
-    FilterTestHourlyClock(void);
+    FilterTestHourlyClock();
 };

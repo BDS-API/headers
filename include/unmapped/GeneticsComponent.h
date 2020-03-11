@@ -1,21 +1,26 @@
 #pragma once
 
-#include "../bedrock/definition/GeneDefinition"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
+#include "./GeneticVariant.h"
+#include "./DataLoadHelper.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/definition/GeneDefinition.h"
+#include "../bedrock/actor/Actor.h"
+#include "./Gene.h"
+#include "./GeneticsComponent.h"
+#include <string>
 
 
 class GeneticsComponent {
 
 public:
     static long INVALID_ALLELE_VALUE;
-    static long GENE_ARRAY[abi:cxx11];
-    static long MAIN_ALLELE[abi:cxx11];
-    static long HIDDEN_ALLELE[abi:cxx11];
+    static std::string GENE_ARRAY;
+    static std::string MAIN_ALLELE;
+    static std::string HIDDEN_ALLELE;
 
 
     void _createRandomGene(GeneDefinition const&);
-    GeneticsComponent(void);
+    GeneticsComponent();
     void addAdditionalSaveData(CompoundTag &)const;
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     bool isCompatible(GeneticsComponent::Gene const&, GeneDefinition const&)const;
@@ -28,5 +33,6 @@ public:
     void buildDebugInfo(std::string &)const;
     void _shouldMutate();
     void _createRandomAllele(GeneDefinition const&);
-    GeneticsComponent(GeneticsComponent&&);
+    ~GeneticsComponent();
+    GeneticsComponent(GeneticsComponent &&);
 };

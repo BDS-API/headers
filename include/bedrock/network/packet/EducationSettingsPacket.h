@@ -1,20 +1,22 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/EducationLevelSettings"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../../unmapped/EducationLevelSettings.h"
+#include <string>
 
 
 class EducationSettingsPacket : Packet {
 
 public:
-    virtual EducationSettingsPacket::~EducationSettingsPacket()
+    virtual ~EducationSettingsPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    EducationSettingsPacket(void);
+    EducationSettingsPacket();
     EducationSettingsPacket(EducationLevelSettings);
     void getEducationLevelSettings()const;
 };

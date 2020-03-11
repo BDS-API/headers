@@ -2,12 +2,14 @@
 
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class RNS2EventHandler {
 
 public:
-    virtual RakNet::RNS2EventHandler::~RNS2EventHandler()
+    virtual ~RNS2EventHandler();
 
-    RNS2EventHandler(void);
+    RNS2EventHandler();
 };
+
+}

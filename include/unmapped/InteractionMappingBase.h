@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorInteraction"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/actor/Player"
+#include "../bedrock/actor/unmapped/ActorInteraction.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
 
 
-using namespace PlayerInteractionSystem;
+namespace PlayerInteractionSystem {
 
 class InteractionMappingBase {
 
 public:
-    virtual PlayerInteractionSystem::InteractionMappingBase::~InteractionMappingBase()
+    virtual ~InteractionMappingBase();
     virtual void getInteraction(Actor &, Player &, ActorInteraction &);
 
-    InteractionMappingBase(void);
+    InteractionMappingBase();
 };
+
+}

@@ -1,19 +1,22 @@
 #pragma once
 
-#include "../bedrock/command/Symbol"
+#include "./Symbol.h"
 
 
-using namespace CommandRegistry;
+namespace CommandRegistry {
 
 class Symbol {
 
 public:
 
-    Symbol(void);
+    Symbol();
     Symbol(unsigned long);
-    Symbol(CommandLexer::TokenType);
-    Symbol(CommandRegistry::HardNonTerminal);
+//  Symbol(CommandLexer::TokenType); //TODO: incomplete function definition
+//  Symbol(CommandRegistry::HardNonTerminal); //TODO: incomplete function definition
     Symbol(CommandRegistry::Symbol const&);
+    void operator==(CommandRegistry::Symbol const&)const;
+    void operator!=(CommandRegistry::Symbol const&)const;
+    void operator<(CommandRegistry::Symbol const&)const;
     void fromEnumIndex(unsigned long);
     void fromOptionalIndex(unsigned long);
     void fromFactorizationIndex(unsigned long);
@@ -30,3 +33,5 @@ public:
     bool isEnumValue()const;
     bool isSoftEnum()const;
 };
+
+}

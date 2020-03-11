@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../Mob"
-#include "../../item/Item"
-#include "../../item/ItemStack"
+#include "../../item/Item.h"
+#include "./Goal.h"
+#include "../../item/ItemStack.h"
+#include "../Mob.h"
+#include <string>
 
 
 class EatCarriedItemGoal : Goal {
@@ -11,7 +13,7 @@ public:
     static long EATING_TIME;
     static long CHEW_CHANCE;
 
-    virtual EatCarriedItemGoal::~EatCarriedItemGoal()
+    virtual ~EatCarriedItemGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

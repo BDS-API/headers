@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "../../../json/Value.h"
+#include "./ComponentDescription.h"
 
 
 class SpawnActorDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual SpawnActorDescription::~SpawnActorDescription()
+    virtual ~SpawnActorDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    SpawnActorDescription(void);
+    SpawnActorDescription();
     void _parseSpawnEntry(Json::Value &);
 };

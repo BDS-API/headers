@@ -6,5 +6,5 @@ class AttributeBuffInfo {
 
 public:
 
-    AttributeBuffInfo(AttributeBuffType);
+//  AttributeBuffInfo(AttributeBuffType); //TODO: incomplete function definition
 };

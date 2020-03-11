@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class TargetNearbySystem : ITickingSystem {
 
 public:
-    virtual TargetNearbySystem::~TargetNearbySystem()
+    virtual ~TargetNearbySystem();
     virtual void tick(EntityRegistry &);
 
-    TargetNearbySystem(void);
+    TargetNearbySystem();
 };

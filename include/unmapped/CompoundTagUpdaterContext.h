@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
+#include <memory>
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./CompoundTagUpdater.h"
 
 
 class CompoundTagUpdaterContext {
@@ -8,7 +10,8 @@ class CompoundTagUpdaterContext {
 public:
 
     void latestVersion()const;
-    CompoundTagUpdaterContext(void);
+    ~CompoundTagUpdaterContext();
+    CompoundTagUpdaterContext();
     void addUpdater(unsigned char, unsigned char, unsigned char);
     void comparisonPredicate(std::unique_ptr<CompoundTagUpdater, std::default_delete<CompoundTagUpdater>> const&, std::unique_ptr<CompoundTagUpdater, std::default_delete<CompoundTagUpdater>> const&);
     void update(CompoundTag &, unsigned int);

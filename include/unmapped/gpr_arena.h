@@ -7,4 +7,5 @@ class gpr_arena {
 public:
 
     gpr_arena(unsigned long);
+    ~gpr_arena();
 };

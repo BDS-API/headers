@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../bedrock/description/component/TransformationDescription"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/level/Level"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/description/component/TransformationDescription.h"
+#include "../bedrock/actor/Actor.h"
+#include "./TransformationComponent.h"
+#include "../bedrock/level/Level.h"
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
 
 
 class TransformationComponent {
 
 public:
 
-    TransformationComponent(TransformationComponent&&);
-    TransformationComponent(void);
+    TransformationComponent(TransformationComponent &&);
+    TransformationComponent();
     void initFromDefinition(Actor &);
     void initFromDefinition(Actor &, TransformationDescription const&);
     void reloadComponent(Actor &);

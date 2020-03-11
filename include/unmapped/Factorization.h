@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../bedrock/command/Symbol"
+#include "./Factorization.h"
+#include "./Symbol.h"
 
 
-using namespace CommandRegistry;
+namespace CommandRegistry {
 
 class Factorization {
 
 public:
 
     Factorization(CommandRegistry::Symbol);
-    Factorization(CommandRegistry::Factorization&&);
+    Factorization(CommandRegistry::Factorization &&);
 };
+
+}

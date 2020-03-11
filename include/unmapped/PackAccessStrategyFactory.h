@@ -1,5 +1,9 @@
 #pragma once
 
+#include "./PackReport.h"
+#include "./IContentKeyProvider.h"
+#include "./ResourceLocation.h"
+#include "./ContentIdentity.h"
 
 
 class PackAccessStrategyFactory {

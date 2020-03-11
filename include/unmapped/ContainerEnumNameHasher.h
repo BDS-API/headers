@@ -6,5 +6,5 @@ class ContainerEnumNameHasher {
 
 public:
 
-    void operator()const;
+//  void operator()(ContainerEnumName const&)const; //TODO: incomplete function definition
 };

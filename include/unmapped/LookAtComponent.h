@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/definition/LookAtDefinition"
+#include "../bedrock/actor/Actor.h"
+#include "./LookAtComponent.h"
+#include "../bedrock/definition/LookAtDefinition.h"
 
 
 class LookAtComponent {
 
 public:
 
-    LookAtComponent(LookAtComponent&&);
-    LookAtComponent(void);
+    LookAtComponent(LookAtComponent &&);
+    LookAtComponent();
     void initFromDefinition(Actor &, LookAtDefinition const&);
     void getTarget()const;
     void getSearchRadius()const;

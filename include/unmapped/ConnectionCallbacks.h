@@ -2,12 +2,14 @@
 
 
 
-using namespace RakNetInstance;
+namespace RakNetInstance {
 
 class ConnectionCallbacks {
 
 public:
-    virtual RakNetInstance::ConnectionCallbacks::~ConnectionCallbacks()
+    virtual ~ConnectionCallbacks();
 
-    ConnectionCallbacks(void);
+    ConnectionCallbacks();
 };
+
+}

@@ -6,5 +6,5 @@ class ContentTierInfo {
 
 public:
 
-    ContentTierInfo(void);
+    ContentTierInfo();
 };

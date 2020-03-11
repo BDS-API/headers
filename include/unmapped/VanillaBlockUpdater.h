@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./CompoundTagUpdaterContext.h"
+#include <string>
 
 
 class VanillaBlockUpdater {

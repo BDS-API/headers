@@ -1,18 +1,30 @@
 #pragma once
 
+#include <functional>
+#include "./FlatFileManifestTracker.h"
+#include "./ExcludedPath.h"
+#include "./FileOpenMode.h"
+#include <memory>
+#include "./FileImpl.h"
+#include "./FileStorageArea.h"
+#include "./DirectoryIterationItem.h"
+#include <vector>
+#include "./Result.h"
+#include "./Path.h"
+#include <string>
 
 
-using namespace Core;
+namespace Core {
 
 class FileSystemImpl {
 
 public:
-    virtual Core::FileSystemImpl::~FileSystemImpl()
+    virtual ~FileSystemImpl();
     virtual bool isValidPath(Core::Path const&);
     virtual bool isRelativePath(Core::Path const&);
     virtual void getLastModificationTime(Core::Path const&, long *);
     virtual void copyTimeAndAccessRights(Core::Path const&, Core::Path const&);
-    virtual void requestFlush(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> const&);
+//  virtual void requestFlush(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> const&); //TODO: incomplete function definition
     virtual void shouldCommit();
     virtual void getCrossStorageCopyMode();
     virtual void getTransactionWriteSizeLimit()const;
@@ -24,9 +36,9 @@ public:
     virtual void _createDirectoryRecursively(Core::Path const&);
     virtual void _deleteDirectoryAndContentsRecursively(Core::Path const&);
     virtual void _deleteDirectoryContentsRecursively(Core::Path const&);
-    virtual void _deleteRecursively(Core::Path const&, Core::FileType);
-    virtual void _getDirectoryFiles(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&);
-    virtual void _getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&);
+//  virtual void _deleteRecursively(Core::Path const&, Core::FileType); //TODO: incomplete function definition
+//  virtual void _getDirectoryFiles(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&); //TODO: incomplete function definition
+//  virtual void _getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&); //TODO: incomplete function definition
     virtual void _getDirectoryFilesSizeRecursively(unsigned long &, Core::Path const&);
     virtual void _getDirectoryFilesAllocatedSizeRecursively(unsigned long &, unsigned long &, Core::Path const&);
     virtual void _copyDirectoryAndContentsRecursively(Core::Path const&, Core::Path const&);
@@ -35,7 +47,7 @@ public:
     virtual void _createFlatFile(Core::Path const&, Core::Path const&);
     virtual void _flatFileFileExists(Core::Path const&, Core::Path const&);
     virtual void _flatFileDirectoryExists(Core::Path const&, Core::Path const&);
-    virtual void _flatFileIterateOverDirectory(Core::Path const&, Core::Path const&, Core::DirectoryIterationFlags, std::function<Core::Result ()(Core::DirectoryIterationItem const&)>);
+//  virtual void _flatFileIterateOverDirectory(Core::Path const&, Core::Path const&, Core::DirectoryIterationFlags, std::function<Core::Result (Core::DirectoryIterationItem const&)>); //TODO: incomplete function definition
     virtual void _isDirectoryPathAFlatFile(Core::Path const&);
     virtual void _copyFlatFile(Core::Path const&, Core::Path const&, std::vector<Core::ExcludedPath, std::allocator<Core::ExcludedPath>> const&, std::vector<Core::ExcludedPath, std::allocator<Core::ExcludedPath>> const&);
     virtual void _flatFileDeleteFileOrDirectory(Core::Path const&, Core::Path const&, bool, bool);
@@ -43,21 +55,21 @@ public:
     virtual void _isValidPath(Core::Path const&);
     virtual void _isRelativePath(Core::Path const&);
     virtual void _endTransaction();
-    virtual void _writeOperation(Core::Path const&, Core::Result &&, std::function<void ()(Core::FileStorageArea *)>, unsigned long);
+//  virtual void _writeOperation(Core::Path const&, Core::Result &&, std::function<void (Core::FileStorageArea *)>, unsigned long); //TODO: incomplete function definition
 
     void getFileStats();
     void getGlobalStats();
-    FileSystemImpl(Core::FileAccessType, std::shared_ptr<Core::FileStorageArea>, std::shared_ptr<Core::FlatFileManifestTracker>);
+//  FileSystemImpl(Core::FileAccessType, std::shared_ptr<Core::FileStorageArea>, std::shared_ptr<Core::FlatFileManifestTracker>); //TODO: incomplete function definition
     void _isTransactionEnded()const;
     void getAccessType()const;
     void getStorageArea();
     void setLoggingEnabled(bool);
     void getLoggingEnabled()const;
-    void enumerateFiles(std::function<void ()(Core::FileImpl *)> const&);
+//  void enumerateFiles(std::function<void (Core::FileImpl *)> const&); //TODO: incomplete function definition
     void commit();
-    void openFile(std::unique_ptr<Core::FileImpl, std::default_delete<Core::FileImpl>> &, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode);
-    void _flatFileOpenFlatFile(std::unique_ptr<Core::FileImpl, std::default_delete<Core::FileImpl>> &, Core::Path const&, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode);
-    void _readWriteOperation(Core::Result &&, std::function<void ()(Core::FileStorageArea *)>, unsigned long, unsigned long);
+//  void openFile(std::unique_ptr<Core::FileImpl, std::default_delete<Core::FileImpl>> &, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode); //TODO: incomplete function definition
+//  void _flatFileOpenFlatFile(std::unique_ptr<Core::FileImpl, std::default_delete<Core::FileImpl>> &, Core::Path const&, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode); //TODO: incomplete function definition
+//  void _readWriteOperation(Core::Result &&, std::function<void (Core::FileStorageArea *)>, unsigned long, unsigned long); //TODO: incomplete function definition
     void _readOperation(Core::Result &&, unsigned long);
     void fileExists(Core::Path const&);
     void deleteFile(Core::Path const&);
@@ -75,9 +87,9 @@ public:
     void deleteDirectoryAndContentsRecursively(Core::Path const&);
     void deleteDirectoryContentsRecursively(Core::Path const&);
     void renameDirectory(Core::Path const&, Core::Path const&);
-    void iterateOverDirectory(Core::Path const&, Core::DirectoryIterationFlags, std::function<Core::Result ()(Core::DirectoryIterationItem const&)>);
-    void getDirectoryFiles(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&);
-    void getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&);
+//  void iterateOverDirectory(Core::Path const&, Core::DirectoryIterationFlags, std::function<Core::Result (Core::DirectoryIterationItem const&)>); //TODO: incomplete function definition
+//  void getDirectoryFiles(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&); //TODO: incomplete function definition
+//  void getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::string>, std::allocator<Core::PathBuffer<std::string>>> &, Core::Path const&); //TODO: incomplete function definition
     void getDirectoryFilesSizeRecursively(unsigned long &, Core::Path const&);
     void getDirectoryFilesAllocatedSizeRecursively(unsigned long &, unsigned long &, Core::Path const&);
     void copyDirectoryAndContentsRecursively(Core::Path const&, Core::Path const&);
@@ -89,8 +101,10 @@ public:
     void getFlatFileManifestTracker()const;
     void getFileOrDirectorySize(Core::Path const&, unsigned long *);
     void countDirectoryFiles(Core::Path const&, unsigned long *);
-    void getEntryType(Core::Path const&, Core::FileType &);
+//  void getEntryType(Core::Path const&, Core::FileType &); //TODO: incomplete function definition
     void _addFile(Core::FileImpl *);
     void _removeFile(Core::FileImpl *);
     void notifyChangeInFileSize(long, long);
 };
+
+}

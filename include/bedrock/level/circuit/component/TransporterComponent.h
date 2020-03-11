@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitSceneGraph"
-#include "../../../util/BlockPos"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../util/BlockPos.h"
+#include "../../../../unmapped/CircuitSceneGraph.h"
+#include "../../../../unmapped/CircuitSystem.h"
+#include "../../../../unmapped/CircuitTrackingInfo.h"
+#include "./BaseCircuitComponent.h"
 
 
 class TransporterComponent : BaseCircuitComponent {
 
 public:
-    virtual TransporterComponent::~TransporterComponent()
+    virtual ~TransporterComponent();
     virtual bool canConsumerPower();
     virtual void getBaseType()const;
     virtual void getInstanceType()const;
@@ -18,5 +19,5 @@ public:
     virtual void evaluate(CircuitSystem &, BlockPos const&);
     virtual void cacheValues(CircuitSystem &, BlockPos const&);
 
-    TransporterComponent(void);
+    TransporterComponent();
 };

@@ -1,21 +1,24 @@
 #pragma once
 
-#include "../block/unmapped/BlockSource"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/ContainerSizeChangeListener"
-#include "../../unmapped/ContainerContentChangeListener"
-#include "../item/ItemInstance"
-#include "../util/Vec3"
-#include "../item/unmapped/ItemDescriptor"
-#include "../item/ItemStack"
+#include "../block/unmapped/BlockSource.h"
+#include "./Container.h"
+#include "../item/unmapped/ItemDescriptor.h"
+#include "../item/ItemStack.h"
+#include "../../unmapped/ContainerSizeChangeListener.h"
+#include "../../unmapped/ContainerContentChangeListener.h"
+#include "../util/Vec3.h"
+#include "../item/ItemInstance.h"
+#include <functional>
+#include "../nbt/CompoundTag.h"
+#include <string>
 
 
 class Container {
 
 public:
-    static long containerTypeMap[abi:cxx11];
+    static std::string containerTypeMap;
 
-    virtual Container::~Container()
+    virtual ~Container();
     virtual void init();
     virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void removeContentChangeListener(ContainerContentChangeListener *);
@@ -38,15 +41,16 @@ public:
     virtual bool hasCustomName()const;
     virtual void readAdditionalSaveData(CompoundTag const&);
     virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void createTransactionContext(std::function<void ()(Container&, int, ItemStack const&, ItemStack const&)>, std::function<void ()(void)>);
+//  virtual void createTransactionContext(std::function<void (Container &, int, ItemStack const&, ItemStack const&)>, std::function<void (void)>); //TODO: incomplete function definition
     virtual void triggerTransactionChange(int, ItemStack const&, ItemStack const&);
 
-    Container(ContainerType);
-    Container(ContainerType, std::string const&, bool);
+//  Container(ContainerType); //TODO: incomplete function definition
+//  Container(ContainerType, std::string const&, bool); //TODO: incomplete function definition
     void addSizeChangeListener(ContainerSizeChangeListener *);
     void removeSizeChangeListener(ContainerSizeChangeListener *);
     void getContainerType();
     void getRedstoneSignalFromContainer();
     void setSizeChanged(int);
+//  std::string getContainerTypeName(ContainerType); //TODO: incomplete function definition
     void getContainerTypeId(std::string const&);
 };

@@ -2,7 +2,7 @@
 
 
 
-using namespace Bedrock::Threading;
+namespace Bedrock::Threading {
 
 class AsyncResult {
 
@@ -10,3 +10,5 @@ public:
 
     void done();
 };
+
+}

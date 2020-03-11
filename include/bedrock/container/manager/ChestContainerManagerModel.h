@@ -1,20 +1,21 @@
 #pragma once
 
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemInstance"
-#include "../../actor/unmapped/ActorUniqueID"
+#include "../../util/BlockPos.h"
+#include "./LevelContainerManagerModel.h"
+#include "../../item/ItemInstance.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include "../../actor/Player.h"
 
 
 class ChestContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    virtual ChestContainerManagerModel::~ChestContainerManagerModel()
+    virtual ~ChestContainerManagerModel();
     virtual void init();
     virtual bool isValid(float);
 
-    ChestContainerManagerModel(ContainerID, Player &, BlockPos const&, BlockActorType);
-    ChestContainerManagerModel(ContainerID, Player &, ActorUniqueID);
+//  ChestContainerManagerModel(ContainerID, Player &, BlockPos const&, BlockActorType); //TODO: incomplete function definition
+//  ChestContainerManagerModel(ContainerID, Player &, ActorUniqueID); //TODO: incomplete function definition
     void closeContainer();
     void fireFullCobbleStoneEvent();
     void fireItemAcquiredEvent(ItemInstance const&, int);

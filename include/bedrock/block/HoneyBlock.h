@@ -1,17 +1,19 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Material"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Material.h"
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../../unmapped/Block.h"
 
 
 class HoneyBlock : BlockLegacy {
 
 public:
-    virtual HoneyBlock::~HoneyBlock()
+    virtual ~HoneyBlock();
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual void onStepOn(Actor &, BlockPos const&)const;
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const;

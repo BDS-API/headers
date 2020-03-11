@@ -1,23 +1,26 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../block/unmapped/BlockSource"
-#include "../../LevelChunk"
-#include "../../../../unmapped/Block"
-#include "../../../../unmapped/BoundingBox"
-#include "../../../util/ChunkPos"
-#include "../../../block/selector/BlockSelector"
-#include "../../../../unmapped/PieceWeight"
+#include "../../../block/selector/BlockSelector.h"
+#include "../../LevelChunk.h"
+#include "../../../../unmapped/Block.h"
+#include <memory>
+#include "../../../util/Random.h"
+#include "../../../../unmapped/PieceWeight.h"
+#include "./StructurePiece.h"
+#include "../../../block/unmapped/BlockSource.h"
+#include <vector>
+#include "../../../../unmapped/BoundingBox.h"
+#include "../../../util/ChunkPos.h"
 
 
 class StructurePiece {
 
 public:
-    virtual StructurePiece::~StructurePiece()
+    virtual ~StructurePiece();
     virtual void moveBoundingBox(int, int, int);
     virtual bool asPoolElement();
     virtual void getType()const;
-    virtual void addChildren(StructurePiece*, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
+    virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void getWorldX(int, int);
     virtual void getWorldZ(int, int);

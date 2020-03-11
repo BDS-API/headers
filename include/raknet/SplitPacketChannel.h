@@ -2,11 +2,14 @@
 
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class SplitPacketChannel {
 
 public:
 
-    SplitPacketChannel(void);
+    ~SplitPacketChannel();
+    SplitPacketChannel();
 };
+
+}

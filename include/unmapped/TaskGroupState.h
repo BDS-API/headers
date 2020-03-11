@@ -2,7 +2,7 @@
 
 
 
-using namespace ResourceLoadManager;
+namespace ResourceLoadManager {
 
 class TaskGroupState {
 
@@ -14,5 +14,7 @@ public:
     void resume();
     void getIsRunning()const;
     void getShouldTaskGroupPause()const;
-    TaskGroupState(void);
+    TaskGroupState();
 };
+
+}

@@ -1,20 +1,23 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../../unmapped/DataLoadHelper"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Animal.h"
+#include "./Actor.h"
+#include "./Mob.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
 
 
 class Wolf : Animal {
 
 public:
-    virtual Wolf::~Wolf()
+    virtual ~Wolf();
     virtual void normalTick();
     virtual void addRider(Actor &);
     virtual void setSitting(bool);
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void load(CompoundTag const&, DataLoadHelper &);
     virtual void onSynchedDataUpdate(int);
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);

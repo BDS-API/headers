@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../nbt/CompoundTag"
-#include "../../../unmapped/Block"
+#include "../../../unmapped/Block.h"
+#include "../../nbt/CompoundTag.h"
+#include "../../../unmapped/NbtToBlockCache.h"
 
 
 class BlockSerializationUtils {
 
 public:
-    static long BLOCK_REPLACE_DATA_MAP[abi:cxx11];
+    static std::string BLOCK_REPLACE_DATA_MAP;
 
 
     void findInCache(BlockSerializationUtils::NbtToBlockCache &, unsigned long);

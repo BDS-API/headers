@@ -2,7 +2,7 @@
 
 
 
-using namespace BedrockEngine;
+namespace BedrockEngine {
 
 class CommonPlatform {
 
@@ -13,3 +13,5 @@ public:
     void getPlatformBuildInfo()const;
     void accessPlatformBuildInfo_Shim();
 };
+
+}

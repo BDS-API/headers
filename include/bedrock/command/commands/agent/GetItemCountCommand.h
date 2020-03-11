@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../../../actor/Player"
+#include "../../../actor/Player.h"
+#include "../../Command.h"
 
 
-using namespace AgentCommands;
+namespace AgentCommands {
 
 class GetItemCountCommand : AgentCommands::Command {
 
 public:
-    virtual AgentCommands::GetItemCountCommand::~GetItemCountCommand()
+    virtual ~GetItemCountCommand();
     virtual void execute();
     virtual bool isDone();
     virtual void fireCommandDoneEvent();
 
     GetItemCountCommand(Player &, int);
 };
+
+}

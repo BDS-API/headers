@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class IceBlock : BlockLegacy {
 
 public:
-    virtual IceBlock::~IceBlock()
+    virtual ~IceBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;

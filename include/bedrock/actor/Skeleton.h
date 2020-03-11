@@ -1,9 +1,15 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../../unmapped/MobEffectInstance"
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../../unmapped/MobEffectInstance.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Actor.h"
+#include <memory>
+#include "damagesource/ActorDamageSource.h"
+#include "./WitherBoss.h"
+#include "./HumanoidMonster.h"
+#include <vector>
+#include "unmapped/ActorDefinitionGroup.h"
+#include <string>
 
 
 class Skeleton : HumanoidMonster {
@@ -11,7 +17,7 @@ class Skeleton : HumanoidMonster {
 public:
     static long SPEED_MODIFIER_ATTACK_UUID;
 
-    virtual Skeleton::~Skeleton()
+    virtual ~Skeleton();
     virtual void normalTick();
     virtual void rideTick();
     virtual void getRidingHeight();
@@ -23,7 +29,7 @@ public:
     virtual void useNewAi()const;
 
     Skeleton(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void setSkeletonType(Skeleton::SkeletonType);
+//  void setSkeletonType(Skeleton::SkeletonType); //TODO: incomplete function definition
     void getSkeletonType()const;
     void setWitherParent(WitherBoss *);
 };

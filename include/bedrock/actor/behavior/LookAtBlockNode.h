@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include "./BehaviorNode.h"
 
 
 class LookAtBlockNode : BehaviorNode {
 
 public:
-    virtual LookAtBlockNode::~LookAtBlockNode()
+    virtual ~LookAtBlockNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 
-    LookAtBlockNode(void);
+    LookAtBlockNode();
 };

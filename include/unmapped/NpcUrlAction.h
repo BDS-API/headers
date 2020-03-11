@@ -1,12 +1,13 @@
 #pragma once
 
+#include "./NpcAction.h"
 
 
 class NpcUrlAction : NpcAction {
 
 public:
-    virtual NpcUrlAction::~NpcUrlAction()
+    virtual ~NpcUrlAction();
     virtual void toJson();
 
-    NpcUrlAction(void);
+    NpcUrlAction();
 };

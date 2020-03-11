@@ -1,22 +1,29 @@
 #pragma once
 
-#include "../block/unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../level/Level"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../container/Container"
+#include "../block/unmapped/BlockSource.h"
+#include "./ItemStackBase.h"
+#include <memory>
+#include "./ItemInstance.h"
+#include "../util/BlockPos.h"
+#include "../container/Container.h"
+#include "./Item.h"
+#include "../level/Level.h"
+#include "../actor/Actor.h"
+#include <vector>
+#include "../util/Vec3.h"
+#include "../actor/Player.h"
+#include "./ItemStack.h"
+#include <string>
 
 
 class FireworksItem : Item {
 
 public:
-    static long TAG_FIREWORKS[abi:cxx11];
-    static long TAG_EXPLOSIONS[abi:cxx11];
-    static long TAG_E_FLIGHT[abi:cxx11];
+    static std::string TAG_FIREWORKS;
+    static std::string TAG_EXPLOSIONS;
+    static std::string TAG_E_FLIGHT;
 
-    virtual FireworksItem::~FireworksItem()
+    virtual ~FireworksItem();
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual void use(ItemStack &, Player &)const;
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const;

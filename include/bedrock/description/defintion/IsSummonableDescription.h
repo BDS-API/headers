@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "./DefintionDescription.h"
+#include "../../../json/Value.h"
+#include "./IsSummonableDescription.h"
 
 
 class IsSummonableDescription : DefintionDescription {
 
 public:
-    virtual IsSummonableDescription::~IsSummonableDescription()
+    virtual ~IsSummonableDescription();
     virtual void getJsonName()const;
 
-    IsSummonableDescription(void);
-    IsSummonableDescription(IsSummonableDescription&&);
+    IsSummonableDescription();
+    IsSummonableDescription(IsSummonableDescription &&);
     void parse(Json::Value &);
 };

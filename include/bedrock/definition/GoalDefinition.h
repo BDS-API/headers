@@ -1,18 +1,21 @@
 #pragma once
 
-#include "../actor/Mob"
-#include "../../json/Value"
+#include "../actor/Mob.h"
+#include "./GoalDefinition.h"
+#include "../../json/Value.h"
+#include <string>
 
 
 class GoalDefinition {
 
 public:
-    static long mGoalMap[abi:cxx11];
+    static std::string mGoalMap;
 
 
-    GoalDefinition(void);
+    ~GoalDefinition();
+    GoalDefinition();
     GoalDefinition(GoalDefinition const&);
-    GoalDefinition(GoalDefinition&&);
+    GoalDefinition(GoalDefinition &&);
     void parse(Json::Value &, int);
     void _getTargetSelectionMethodFromString(std::string const&);
     void _getPOITypeFromString(std::string);

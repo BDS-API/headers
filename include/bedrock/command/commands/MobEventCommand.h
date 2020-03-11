@@ -1,18 +1,18 @@
 #pragma once
 
-#include "../CommandRegistry"
-#include "../../../unmapped/InitProxy"
-#include "../Command"
-#include "../CommandOutput"
-#include "../orgin/CommandOrigin"
+#include "../CommandRegistry.h"
+#include "../../../unmapped/InitProxy.h"
+#include "../CommandOutput.h"
+#include "../orgin/CommandOrigin.h"
+#include "../Command.h"
 
 
 class MobEventCommand : Command {
 
 public:
-    virtual MobEventCommand::~MobEventCommand()
+    virtual ~MobEventCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
-    MobEventCommand(void);
+    MobEventCommand();
     void setup(CommandRegistry &, MobEventCommand::InitProxy &&);
 };

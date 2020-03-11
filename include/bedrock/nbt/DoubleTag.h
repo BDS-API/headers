@@ -1,22 +1,25 @@
 #pragma once
 
-#include "../io/IDataInput"
-#include "../io/IDataOutput"
+#include "./DoubleTag.h"
+#include "../io/IDataInput.h"
+#include "../io/IDataOutput.h"
+#include "./Tag.h"
+#include <string>
 
 
 class DoubleTag : Tag {
 
 public:
-    virtual DoubleTag::~DoubleTag()
+    virtual ~DoubleTag();
     virtual void write(IDataOutput &)const;
     virtual void load(IDataInput &);
-    virtual void toString()const;
+    virtual std::string toString()const;
     virtual void getId()const;
     virtual void equals(Tag const&)const;
     virtual void copy()const;
     virtual void hash()const;
 
-    DoubleTag(DoubleTag&&);
-    DoubleTag(void);
+    DoubleTag(DoubleTag &&);
+    DoubleTag();
     DoubleTag(double);
 };

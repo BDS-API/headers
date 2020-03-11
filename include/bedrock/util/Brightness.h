@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./Brightness.h"
 
 
 class Brightness {
@@ -12,5 +13,5 @@ public:
 
     Brightness(unsigned char const&);
     Brightness(Brightness const&);
-    Brightness(void);
+    Brightness();
 };

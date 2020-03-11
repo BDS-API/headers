@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../actor/Player"
-#include "../../item/ItemStack"
+#include "./ContainerModel.h"
+#include "../../item/ItemStack.h"
+#include "../../actor/Player.h"
 
 
 class InventoryContainerModel : ContainerModel {
 
 public:
     virtual void containerContentChanged(int);
-    virtual InventoryContainerModel::~InventoryContainerModel()
+    virtual ~InventoryContainerModel();
     virtual void postInit();
     virtual void releaseResources();
     virtual bool isValid();
@@ -16,7 +17,7 @@ public:
     virtual void _onItemChanged(int, ItemStack const&, ItemStack const&);
     virtual void _getContainer()const;
 
-    InventoryContainerModel(ContainerEnumName, int, Player &);
+//  InventoryContainerModel(ContainerEnumName, int, Player &); //TODO: incomplete function definition
     void _refreshSlot(int);
     void _refreshContainer();
 };

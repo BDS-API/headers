@@ -1,14 +1,19 @@
 #pragma once
 
-#include "../bedrock/resourcepack/KnownPackInfo"
+#include "./KnownPackInfo.h"
 
 
-using namespace ResourcePackRepository;
+namespace ResourcePackRepository {
 
 class KnownPackInfo {
 
 public:
 
-    KnownPackInfo(void);
+    void operator==(ResourcePackRepository::KnownPackInfo const&)const;
+    void operator!=(ResourcePackRepository::KnownPackInfo const&)const;
+    KnownPackInfo();
+    ~KnownPackInfo();
     KnownPackInfo(ResourcePackRepository::KnownPackInfo const&);
 };
+
+}

@@ -1,20 +1,22 @@
 #pragma once
 
-#include "../../../unmapped/NetworkBlockPosition"
-#include "../../io/BinaryStream"
-#include "../../../unmapped/StructureEditorData"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../../unmapped/NetworkBlockPosition.h"
+#include "../../../unmapped/StructureEditorData.h"
+#include "./Packet.h"
+#include <string>
 
 
 class StructureBlockUpdatePacket : Packet {
 
 public:
-    virtual StructureBlockUpdatePacket::~StructureBlockUpdatePacket()
+    virtual ~StructureBlockUpdatePacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    StructureBlockUpdatePacket(void);
+    StructureBlockUpdatePacket();
     StructureBlockUpdatePacket(NetworkBlockPosition, StructureEditorData const&, bool);
 };

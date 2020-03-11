@@ -1,18 +1,21 @@
 #pragma once
 
-#include "../../../unmapped/Block"
-#include "../../util/BlockPos"
-#include "../../../unmapped/BuildMatch"
+#include "../../../unmapped/Block.h"
+#include "./BlockSource.h"
+#include "../../util/BlockPos.h"
+#include "../../../unmapped/BuildMatch.h"
+#include <functional>
 
 
 class BlockPatternBuilder {
 
 public:
 
+    ~BlockPatternBuilder();
     void start(BlockSource &);
     BlockPatternBuilder(BlockSource &);
-    void aisle(int, ...);
-    void define(char, Block const&, std::function<bool ()(BlockSource &, BlockPos const&, Block const&)>);
+//  void aisle(int, ...); //TODO: incomplete function definition
+    void define(char, Block const&, std::function<bool (BlockSource &, BlockPos const&, Block const&)>);
     void build();
     void _allCharactersMatched();
     void match(BlockPos const&);

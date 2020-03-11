@@ -1,8 +1,9 @@
 #pragma once
 
+#include "./EntityRegistryOwned.h"
 
 
-using namespace OwnerStorageEntity;
+namespace OwnerStorageEntity {
 
 class EntityContextOwned {
 
@@ -12,3 +13,5 @@ public:
     EntityContextOwned(EntityRegistryOwned &);
     void _ownedRegistry()const;
 };
+
+}

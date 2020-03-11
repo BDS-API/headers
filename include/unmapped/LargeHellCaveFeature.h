@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/level/LevelChunk"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/block/unmapped/BlockVolume"
+#include "../bedrock/block/unmapped/BlockVolume.h"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/util/Random.h"
+#include "../bedrock/level/LevelChunk.h"
 
 
 class LargeHellCaveFeature {

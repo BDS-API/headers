@@ -2,12 +2,14 @@
 
 
 
-using namespace LevelStorage;
+namespace LevelStorage {
 
 class Batch {
 
 public:
-    virtual LevelStorage::Batch::~Batch()
+    virtual ~Batch();
 
-    Batch(void);
+    Batch();
 };
+
+}

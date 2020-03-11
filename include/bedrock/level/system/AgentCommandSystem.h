@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class AgentCommandSystem : ITickingSystem {
 
 public:
-    virtual AgentCommandSystem::~AgentCommandSystem()
+    virtual ~AgentCommandSystem();
     virtual void tick(EntityRegistry &);
 
-    AgentCommandSystem(void);
+    AgentCommandSystem();
 };

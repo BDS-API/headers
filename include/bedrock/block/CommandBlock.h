@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "actor/CommandBlockActor"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "actor/CommandBlockActor.h"
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/Vec3.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class CommandBlock : ActorBlock {
@@ -15,7 +17,7 @@ class CommandBlock : ActorBlock {
 public:
     static long mCBModeMap;
 
-    virtual CommandBlock::~CommandBlock()
+    virtual ~CommandBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isInteractiveBlock()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
@@ -30,8 +32,8 @@ public:
     virtual void getVariant(Block const&)const;
     virtual void getMappedFace(unsigned char, Block const&)const;
 
-    CommandBlock(std::string const&, int, CommandBlockMode);
-    void updateBlock(BlockSource &, BlockPos const&, CommandBlockMode, bool)const;
+//  CommandBlock(std::string const&, int, CommandBlockMode); //TODO: incomplete function definition
+//  void updateBlock(BlockSource &, BlockPos const&, CommandBlockMode, bool)const; //TODO: incomplete function definition
     void getMode()const;
     bool isCommandBlockType(Block const&)const;
     void _installCircuit(BlockSource &, BlockPos const&, bool)const;

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./ThirdPartyInfo.h"
+#include <string>
 
 
 class ThirdPartyInfo {
@@ -7,7 +9,10 @@ class ThirdPartyInfo {
 public:
 
     ThirdPartyInfo(ThirdPartyInfo const&);
-    ThirdPartyInfo(void);
+    ~ThirdPartyInfo();
+    ThirdPartyInfo();
+    std::string getCreatorId()const;
+    std::string getCreatorName()const;
     bool isEligible(std::string const&)const;
     bool isValid()const;
     bool isXblRequired()const;

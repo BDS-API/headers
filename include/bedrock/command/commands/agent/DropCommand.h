@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../../../actor/Player"
+#include "../../../actor/Player.h"
+#include "../../Command.h"
 
 
-using namespace AgentCommands;
+namespace AgentCommands {
 
 class DropCommand : AgentCommands::Command {
 
 public:
-    virtual AgentCommands::DropCommand::~DropCommand()
+    virtual ~DropCommand();
     virtual void execute();
     virtual bool isDone();
 
-    DropCommand(Player &, int, int, AgentCommands::Direction);
+//  DropCommand(Player &, int, int, AgentCommands::Direction); //TODO: incomplete function definition
 };
+
+}

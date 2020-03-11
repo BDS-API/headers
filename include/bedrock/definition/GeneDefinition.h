@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../../unmapped/GeneticVariant"
+#include "./GeneDefinition.h"
+#include "../../unmapped/GeneticVariant.h"
 
 
 class GeneDefinition {
@@ -8,7 +9,8 @@ class GeneDefinition {
 public:
 
     void addGeneticVariant(GeneticVariant const&);
-    GeneDefinition(void);
+    GeneDefinition();
+    ~GeneDefinition();
     GeneDefinition(GeneDefinition const&);
-    GeneDefinition(GeneDefinition&&);
+    GeneDefinition(GeneDefinition &&);
 };

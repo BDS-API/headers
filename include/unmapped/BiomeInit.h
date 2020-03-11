@@ -1,14 +1,19 @@
 #pragma once
 
-#include "../bedrock/level/biome/Biome"
+#include "./BiomeRegistry.h"
+#include "./PreBiome.h"
+#include "../bedrock/level/biome/Biome.h"
 
 
-using namespace LayerFilters;
+namespace LayerFilters {
 
 class BiomeInit {
 
 public:
 
-    BiomeInit(BiomeRegistry const&, Biome &, Biome &, GeneratorType);
-    void operator()const;
+    ~BiomeInit();
+//  BiomeInit(BiomeRegistry const&, Biome &, Biome &, GeneratorType); //TODO: incomplete function definition
+//  void operator()(LayerDetails::NeighborhoodReader<LayerValues::PreBiome, 0u, 0u> &, LayerDetails::RandomProviderTconst::{lambda(long<LayerDetails::LayerBase::initRandom(long, long> &, unsigned int)const; //TODO: incomplete function definition
 };
+
+}

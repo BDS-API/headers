@@ -1,20 +1,23 @@
 #pragma once
 
-#include "../../../unmapped/Dimension"
-#include "../../block/unmapped/BlockTickingQueue"
-#include "../../../unmapped/ThreadData"
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../LevelChunk"
-#include "../../util/BlockPos"
-#include "../../../unmapped/BiomeRegistry"
-#include "../../util/ChunkPos"
-#include "../LevelData"
-#include "../../block/unmapped/BlockVolume"
-#include "../../../unmapped/BiomeArea"
-#include "../../../unmapped/BoundingBox"
-#include "../generator/WorldGenerator"
-#include "../../../unmapped/BiomeSource"
+#include "../../util/Random.h"
+#include "../../../unmapped/BiomeSource.h"
+#include "../../block/unmapped/BlockTickingQueue.h"
+#include "../../../unmapped/BiomeRegistry.h"
+#include "../LevelData.h"
+#include "../../../unmapped/Dimension.h"
+#include "./ChunkSource.h"
+#include "../../../unmapped/BiomeArea.h"
+#include "./ChunkViewSource.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../../block/unmapped/BlockVolume.h"
+#include "../../util/BlockPos.h"
+#include "../../../unmapped/BoundingBox.h"
+#include "../generator/WorldGenerator.h"
+#include "../../util/ChunkPos.h"
+#include "../LevelChunk.h"
+#include "../../../unmapped/ThreadData.h"
+#include <string>
 
 
 class OverworldGenerator : ChunkSource, WorldGenerator {
@@ -23,7 +26,7 @@ public:
     static long SNOW_CUTOFF;
     static long SNOW_SCALE;
 
-    virtual OverworldGenerator::~OverworldGenerator()
+    virtual ~OverworldGenerator();
     virtual void postProcess(ChunkViewSource &);
     virtual void loadChunk(LevelChunk &, bool);
     virtual void postProcessMobsAt(BlockSource *, int, int, Random &);
@@ -32,8 +35,8 @@ public:
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
     virtual void findSpawnPosition()const;
     virtual void getFeatureTypeAt(BlockPos const&);
-    virtual void findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos&);
-    virtual void garbageCollectBlueprints(buffer_span<ChunkPos>);
+//  virtual void findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos &); //TODO: incomplete function definition
+//  virtual void garbageCollectBlueprints(buffer_span<ChunkPos>); //TODO: incomplete function definition
     virtual void addHardcodedSpawnAreas(LevelChunk &);
 
     OverworldGenerator(Dimension &, unsigned int, bool);
@@ -43,4 +46,5 @@ public:
     void buildSurfaces(OverworldGenerator::ThreadData &, BlockVolume &, LevelChunk &, ChunkPos const&);
     void _prepareStructureBlueprints(ChunkPos const&, BiomeSource &);
     void _fixWaterAlongEdges(LevelChunk &, BlockSource &, BlockTickingQueue &);
+    std::string gatherStats();
 };

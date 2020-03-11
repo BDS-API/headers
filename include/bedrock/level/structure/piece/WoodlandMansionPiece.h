@@ -1,25 +1,29 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../block/unmapped/BlockSource"
-#include "../../../util/BlockPos"
-#include "../../../../unmapped/StructureManager"
-#include "../../../../unmapped/BoundingBox"
+#include "./TemplateStructurePiece.h"
+#include <string>
+#include "../../../util/BlockPos.h"
+#include "../../../util/Random.h"
+#include "../../../block/unmapped/BlockSource.h"
+#include "../../../../unmapped/BoundingBox.h"
+#include "../../../../unmapped/StructureManager.h"
 
 
-using namespace WoodlandMansionPieces;
+namespace WoodlandMansionPieces {
 
 class WoodlandMansionPiece : TemplateStructurePiece {
 
 public:
-    virtual WoodlandMansionPieces::WoodlandMansionPiece::~WoodlandMansionPiece()
+    virtual ~WoodlandMansionPiece();
     virtual void getType()const;
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
     virtual void _handleDataMarker(std::string const&, BlockPos const&, BlockSource &, Random &, BoundingBox const&);
 
-    WoodlandMansionPiece(StructureManager &, std::string const&, BlockPos const&, Rotation);
-    WoodlandMansionPiece(StructureManager &, std::string const&, BlockPos const&, Rotation, Mirror);
+//  WoodlandMansionPiece(StructureManager &, std::string const&, BlockPos const&, Rotation); //TODO: incomplete function definition
+//  WoodlandMansionPiece(StructureManager &, std::string const&, BlockPos const&, Rotation, Mirror); //TODO: incomplete function definition
     void _loadTemplate();
     WoodlandMansionPiece(StructureManager &);
     void _addChest(std::string const&, BlockPos const&, BlockSource &, Random &, BoundingBox const&);
 };
+
+}

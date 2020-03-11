@@ -1,11 +1,12 @@
 #pragma once
 
+#include "./ThreadConfiguration.h"
 
 
 class ThreadConfiguration {
 
 public:
 
-    ThreadConfiguration(void);
+    ThreadConfiguration();
     ThreadConfiguration(ThreadConfiguration const&);
 };

@@ -2,11 +2,13 @@
 
 
 
-using namespace SurfaceMaterialAdjustmentAttributes;
+namespace SurfaceMaterialAdjustmentAttributes {
 
 class Element {
 
 public:
 
-    Element(void);
+    Element();
 };
+
+}

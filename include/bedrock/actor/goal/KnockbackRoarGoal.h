@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../Mob"
-#include "../../definition/DefinitionTrigger"
-#include "../unmapped/ActorFilterGroup"
+#include "../../definition/DefinitionTrigger.h"
+#include "../unmapped/ActorFilterGroup.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class KnockbackRoarGoal : Goal {
 
 public:
-    virtual KnockbackRoarGoal::~KnockbackRoarGoal()
+    virtual ~KnockbackRoarGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

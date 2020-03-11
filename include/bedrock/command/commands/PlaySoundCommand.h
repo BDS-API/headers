@@ -1,17 +1,17 @@
 #pragma once
 
-#include "../CommandRegistry"
-#include "../orgin/CommandOrigin"
-#include "../CommandOutput"
-#include "../Command"
+#include "../CommandRegistry.h"
+#include "../Command.h"
+#include "../orgin/CommandOrigin.h"
+#include "../CommandOutput.h"
 
 
 class PlaySoundCommand : Command {
 
 public:
-    virtual PlaySoundCommand::~PlaySoundCommand()
+    virtual ~PlaySoundCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);
-    PlaySoundCommand(void);
+    PlaySoundCommand();
 };

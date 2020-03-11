@@ -1,12 +1,13 @@
 #pragma once
 
+#include "./DefintionDescription.h"
 
 
 class DefintionDescription {
 
 public:
-    virtual DefintionDescription::~DefintionDescription()
+    virtual ~DefintionDescription();
 
-    DefintionDescription(void);
+    DefintionDescription();
     DefintionDescription(DefintionDescription const&);
 };

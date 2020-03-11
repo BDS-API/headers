@@ -1,12 +1,13 @@
 #pragma once
 
+#include "./FileChunk.h"
 
 
 class FileChunkManager {
 
 public:
 
-    FileChunkManager(void);
+    FileChunkManager();
     FileChunkManager(unsigned long, unsigned int);
     void _generateChunkInfo();
     void reset();
@@ -24,4 +25,5 @@ public:
     void getDownloadedBytes()const;
     void getProgress()const;
     void getChunkInfo(int)const;
+    ~FileChunkManager();
 };

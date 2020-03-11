@@ -2,11 +2,14 @@
 
 
 
-using namespace ClacksServer;
+namespace ClacksServer {
 
 class ExecutionAndResult {
 
 public:
 
-    ExecutionAndResult(void);
+    ExecutionAndResult();
+    ~ExecutionAndResult();
 };
+
+}

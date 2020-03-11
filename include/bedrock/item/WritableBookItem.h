@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../nbt/CompoundTag"
-#include "../../unmapped/PageContent"
-#include "../actor/Player"
+#include "../../unmapped/PageContent.h"
+#include "./Item.h"
+#include "../actor/Player.h"
+#include "../nbt/CompoundTag.h"
+#include "./ItemStack.h"
+#include <string>
 
 
 class WritableBookItem : Item {
 
 public:
-    virtual WritableBookItem::~WritableBookItem()
+    virtual ~WritableBookItem();
     virtual bool requiresInteract()const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void getInteractText(Player const&)const;
+    virtual std::string getInteractText(Player const&)const;
 
     WritableBookItem(std::string const&, int);
     void makeSureTagIsValid(CompoundTag const&);

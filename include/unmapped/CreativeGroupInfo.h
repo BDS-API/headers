@@ -1,13 +1,16 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
+#include "./CreativeGroupInfo.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include <string>
 
 
 class CreativeGroupInfo {
 
 public:
 
-    CreativeGroupInfo(void);
+    CreativeGroupInfo();
     CreativeGroupInfo(std::string const&, short, short, CompoundTag const*);
-    CreativeGroupInfo(CreativeGroupInfo&&);
+    ~CreativeGroupInfo();
+    CreativeGroupInfo(CreativeGroupInfo &&);
 };

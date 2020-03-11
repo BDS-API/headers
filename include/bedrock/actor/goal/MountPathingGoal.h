@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class MountPathingGoal : Goal {
 
 public:
-    virtual MountPathingGoal::~MountPathingGoal()
+    virtual ~MountPathingGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

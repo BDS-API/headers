@@ -6,5 +6,5 @@ class zone {
 
 public:
 
-    zone(void);
+    zone();
 };

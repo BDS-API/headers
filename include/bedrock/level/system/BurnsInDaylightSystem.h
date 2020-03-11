@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class BurnsInDaylightSystem : ITickingSystem {
 
 public:
-    virtual BurnsInDaylightSystem::~BurnsInDaylightSystem()
+    virtual ~BurnsInDaylightSystem();
     virtual void tick(EntityRegistry &);
 
-    BurnsInDaylightSystem(void);
+    BurnsInDaylightSystem();
 };

@@ -1,8 +1,14 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/Vec3.h"
+#include "./AABBBucket.h"
+#include "./RopeNode.h"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "./RopeSystem.h"
+#include "./RopeParams.h"
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include "./RopeAABB.h"
 
 
 class RopeSystem {
@@ -13,7 +19,8 @@ public:
     static long sEnabled;
 
 
-    RopeSystem(void);
+    RopeSystem();
+    ~RopeSystem();
     void initialize(RopeParams const&);
     void _initializePins();
     void _initializePins(Vec3 const&, Vec3 const&);
@@ -39,7 +46,7 @@ public:
     void _startNewBucket(unsigned long, float);
     void _solveDistanceConstraintBlock(Vec3 &, Vec3 &, Vec3 &, Vec3 &, float);
     void _solveDistanceConstraint(Vec3 &, Vec3 &, float);
-    void _propagateDistanceConstraint(Vec3 const&, Vec3&, float);
+    void _propagateDistanceConstraint(Vec3 const&, Vec3 &, float);
     void _solveStartBlocks();
     void _solveEndBlocks();
     void _finalizeBucket(AABBBucket &);
@@ -52,5 +59,5 @@ public:
     void getPins(Vec3 &, Vec3 &)const;
     void storeEndPinEntity(ActorUniqueID const&);
     void getEndPinEntity()const;
-    void addWave(RopeWave);
+//  void addWave(RopeWave); //TODO: incomplete function definition
 };

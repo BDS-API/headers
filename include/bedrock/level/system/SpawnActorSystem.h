@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class SpawnActorSystem : ITickingSystem {
 
 public:
-    virtual SpawnActorSystem::~SpawnActorSystem()
+    virtual ~SpawnActorSystem();
     virtual void tick(EntityRegistry &);
 
-    SpawnActorSystem(void);
+    SpawnActorSystem();
 };

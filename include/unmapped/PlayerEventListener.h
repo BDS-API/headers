@@ -1,40 +1,45 @@
 #pragma once
 
-#include "../bedrock/block/BlockLegacy"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/actor/Player"
-#include "../bedrock/util/Vec2"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/actor/damagesource/ActorDamageSource"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/item/unmapped/ItemDescriptor"
-#include "../bedrock/item/unmapped/ItemEnchants"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/item/unmapped/ItemEnchants.h"
+#include "../bedrock/actor/damagesource/ActorDamageSource.h"
+#include "../bedrock/util/Vec2.h"
+#include "../bedrock/block/BlockLegacy.h"
+#include "../bedrock/item/ItemInstance.h"
+#include "../bedrock/util/BlockPos.h"
+#include <memory>
+#include "./Dimension.h"
+#include "../bedrock/item/unmapped/ItemDescriptor.h"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
+#include <vector>
+#include "./MoveInputHandler.h"
+#include <string>
 
 
 class PlayerEventListener {
 
 public:
-    virtual PlayerEventListener::~PlayerEventListener()
-    virtual void onPlayerAwardAchievement(Player &, MinecraftEventing::AchievementIds);
-    virtual void onPlayerPortalBuilt(Player &, AutomaticID<Dimension, int>);
-    virtual void onPlayerPortalUsed(Player &, AutomaticID<Dimension, int>, AutomaticID<Dimension, int>);
+    virtual ~PlayerEventListener();
+//  virtual void onPlayerAwardAchievement(Player &, MinecraftEventing::AchievementIds); //TODO: incomplete function definition
+//  virtual void onPlayerPortalBuilt(Player &, AutomaticID<Dimension, int>); //TODO: incomplete function definition
+//  virtual void onPlayerPortalUsed(Player &, AutomaticID<Dimension, int>, AutomaticID<Dimension, int>); //TODO: incomplete function definition
     virtual void onPlayerCaravanChanged(Actor const&, int);
     virtual void onPlayerSaved(Player &);
     virtual void onPlayerInput(Player &, MoveInputHandler &);
     virtual void onPlayerTurn(Player &, Vec2 &);
     virtual void onStartDestroyBlock(Player &, BlockPos const&, unsigned char &);
-    virtual void onPlayerAction(Player &, PlayerActionType, BlockPos const&, int);
+//  virtual void onPlayerAction(Player &, PlayerActionType, BlockPos const&, int); //TODO: incomplete function definition
     virtual void onPlayerHurt(Player &, ActorDamageSource &);
-    virtual void onLocalPlayerDeath(IClientInstance &, LocalPlayer &);
-    virtual void onLocalPlayerRespawn(IClientInstance &, LocalPlayer &);
+//  virtual void onLocalPlayerDeath(IClientInstance &, LocalPlayer &); //TODO: incomplete function definition
+//  virtual void onLocalPlayerRespawn(IClientInstance &, LocalPlayer &); //TODO: incomplete function definition
     virtual void onPlayerMove(Player &);
     virtual void onPlayerSlide(Player &);
     virtual void onPlayerTick(Player &);
     virtual void onPlayerStartRiding(Player &, Actor &);
     virtual void onPlayerStopRiding(Player &, bool, bool, bool);
-    virtual void onPlayerCreated(LocalPlayer &, std::string const&, std::string const&, bool);
+//  virtual void onPlayerCreated(LocalPlayer &, std::string const&, std::string const&, bool); //TODO: incomplete function definition
     virtual void onPlayerTeleported(Player &);
     virtual void onPlayerAttackedActor(Player &, Actor &);
     virtual void onPlayerMovementCorrected(Player &, Vec3 const&, float, float);
@@ -50,5 +55,5 @@ public:
     virtual void onPlayerCraftedItem(Player &, ItemInstance const&, bool, bool, bool, int, int, int, bool, bool, std::vector<short, std::allocator<short>> const&);
     virtual void onPlayerItemEquipped(Player &, ItemInstance const&, int);
 
-    PlayerEventListener(void);
+    PlayerEventListener();
 };

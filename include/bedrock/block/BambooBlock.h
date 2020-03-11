@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class BambooBlock : BlockLegacy {
 
 public:
-    virtual BambooBlock::~BambooBlock()
+    virtual ~BambooBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void randomlyModifyPosition(BlockPos const&)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
@@ -21,7 +23,7 @@ public:
     virtual bool isValidAuxValue(int)const;
     virtual bool canContainLiquid()const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
-    virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
+//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition
     virtual void mayConsumeFertilizer(BlockSource &)const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;

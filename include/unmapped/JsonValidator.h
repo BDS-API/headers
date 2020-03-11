@@ -1,6 +1,10 @@
 #pragma once
 
-#include "../json/Value"
+#include "../json/Value.h"
+#include "./Property.h"
+#include <memory>
+#include <vector>
+#include <string>
 
 
 class JsonValidator {

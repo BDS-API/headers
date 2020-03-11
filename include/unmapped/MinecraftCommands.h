@@ -1,17 +1,24 @@
 #pragma once
 
-#include "../bedrock/command/CommandOutput"
-#include "../bedrock/command/CommandOutputSender"
-#include "../bedrock/Minecraft"
-#include "../bedrock/command/orgin/CommandOrigin"
-#include "../bedrock/command/CommandContext"
+#include "../bedrock/command/CommandContext.h"
+#include "../bedrock/network/packet/Packet.h"
+#include "./HashedString.h"
+#include "../bedrock/command/CommandOutput.h"
+#include <memory>
+#include "../bedrock/command/orgin/CommandOrigin.h"
+#include "../bedrock/Minecraft.h"
+#include "./BaseGameVersion.h"
+#include "./AutomationClient.h"
+#include <functional>
+#include "../bedrock/command/CommandOutputSender.h"
+#include <string>
 
 
 class MinecraftCommands {
 
 public:
 
-    void setOpPermissionLevel(CommandPermissionLevel);
+//  void setOpPermissionLevel(CommandPermissionLevel); //TODO: incomplete function definition
     void getOpPermissionLevel()const;
     MinecraftCommands(Minecraft &, Automation::AutomationClient &);
     void initCoreEnums(bool, BaseGameVersion const&);
@@ -21,9 +28,10 @@ public:
     void getOutputType(CommandOrigin const&);
     void handleOutput(CommandOrigin const&, CommandOutput const&)const;
     void executeCommand(std::shared_ptr<CommandContext>, bool)const;
-    void setRegistryNetworkUpdateCallback(std::function<void ()(Packet const&)>)const;
-    void runCommand(HashedString const&, CommandOrigin &, CurrentCmdVersion);
-    void registerChatPermissionsCallback(std::function<bool ()(void)>);
+//  void setRegistryNetworkUpdateCallback(std::function<void (Packet const&)>)const; //TODO: incomplete function definition
+//  void runCommand(HashedString const&, CommandOrigin &, CurrentCmdVersion); //TODO: incomplete function definition
+//  void registerChatPermissionsCallback(std::function<bool (void)>); //TODO: incomplete function definition
     void setOutputSender(std::unique_ptr<CommandOutputSender, std::default_delete<CommandOutputSender>>);
     void getOutputSender();
+    ~MinecraftCommands();
 };

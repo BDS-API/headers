@@ -8,7 +8,8 @@ public:
     static long refCount;
 
 
-    WSAStartupSingleton(void);
+    WSAStartupSingleton();
+    ~WSAStartupSingleton();
     void AddRef();
     void Deref();
 };

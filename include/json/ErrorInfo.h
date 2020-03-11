@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./ErrorInfo.h"
 
 
-using namespace Json::Reader;
+namespace Json::Reader {
 
 class ErrorInfo {
 
 public:
 
-    ErrorInfo(void);
+    ErrorInfo();
+    ~ErrorInfo();
     ErrorInfo(Json::Reader::ErrorInfo const&);
 };
+
+}

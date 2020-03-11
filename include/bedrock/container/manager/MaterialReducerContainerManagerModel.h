@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemStack"
+#include "../../../unmapped/ContainerItemStack.h"
+#include "./ContainerManagerModel.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemStack.h"
+#include "../../actor/Player.h"
 
 
 class MaterialReducerContainerManagerModel : ContainerManagerModel {
@@ -11,7 +12,7 @@ class MaterialReducerContainerManagerModel : ContainerManagerModel {
 public:
     static long OUTPUT_SLOTS;
 
-    virtual MaterialReducerContainerManagerModel::~MaterialReducerContainerManagerModel()
+    virtual ~MaterialReducerContainerManagerModel();
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
@@ -20,7 +21,7 @@ public:
     virtual void init();
     virtual bool isValid(float);
 
-    MaterialReducerContainerManagerModel(ContainerID, Player &, BlockPos const&);
+//  MaterialReducerContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
     void setInput(ItemStack const&);
     void getInput();
     void setOutput(int, ContainerItemStack const&);

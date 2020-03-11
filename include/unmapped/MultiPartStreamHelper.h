@@ -2,11 +2,14 @@
 
 
 
-using namespace FileUploadManager;
+namespace FileUploadManager {
 
 class MultiPartStreamHelper {
 
 public:
 
-    MultiPartStreamHelper(void);
+    MultiPartStreamHelper();
+    ~MultiPartStreamHelper();
 };
+
+}

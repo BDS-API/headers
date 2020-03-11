@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorInteraction"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/actor/Player"
+#include "../bedrock/actor/unmapped/ActorInteraction.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
 
 
 class PlayerInteractionSystem {
 
 public:
 
+    ~PlayerInteractionSystem();
     void unregisterAllComponents();
-    PlayerInteractionSystem(void);
+    PlayerInteractionSystem();
     void getInteraction(Actor &, Player &, ActorInteraction &);
 };

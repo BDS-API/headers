@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../bedrock/level/biome/Biome"
+#include "../bedrock/level/biome/Biome.h"
 
 
-using namespace LayerFilters;
+namespace LayerFilters {
 
 class RareBiomeSpot {
 
 public:
 
     RareBiomeSpot(unsigned int, Biome &, Biome &);
-    void operator()const;
+//  void operator()(LayerDetails::NeighborhoodReader<Biome *, 0u, 0u> &, LayerDetails::RandomProviderTconst::{lambda(long<LayerDetails::LayerBase::initRandom(long, long> &, unsigned int)const; //TODO: incomplete function definition
 };
+
+}

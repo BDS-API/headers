@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./EntityId.h"
 
 
 class EntityId {
@@ -7,4 +8,6 @@ class EntityId {
 public:
 
     EntityId(unsigned long);
+    void operator==(EntityId const&)const;
+    void operator!=(EntityId const&)const;
 };

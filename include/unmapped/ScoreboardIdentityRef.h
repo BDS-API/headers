@@ -1,6 +1,12 @@
 #pragma once
 
-#include "../bedrock/level/scoreboard/Scoreboard"
+#include "./ScoreboardId.h"
+#include "../bedrock/level/scoreboard/Scoreboard.h"
+#include "./Objective.h"
+#include "./ScoreboardIdentityRef.h"
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include <functional>
+#include <string>
 
 
 class ScoreboardIdentityRef {
@@ -10,12 +16,13 @@ public:
 
 
     ScoreboardIdentityRef(ScoreboardIdentityRef const&);
-    ScoreboardIdentityRef(void);
+    ScoreboardIdentityRef();
     ScoreboardIdentityRef(ScoreboardId const&);
     void getScoreboardId()const;
     void getPlayerId()const;
     void getEntityId()const;
-    void getName(std::function<std::string ()(ActorUniqueID)> const&)const;
+    std::string getFakePlayerName()const;
+    void getName(std::function<std::string const& (ActorUniqueID)> const&)const;
     void getNumReferences()const;
     bool isCurrentlyReferenced()const;
     void getIdentityType()const;
@@ -25,6 +32,6 @@ public:
     bool isHiddenFakePlayer()const;
     bool hasScoreInObjective(Objective const&)const;
     void removeFromObjective(Scoreboard &, Objective &);
-    void modifyScoreInObjective(int &, Objective &, int, PlayerScoreSetFunction);
+//  void modifyScoreInObjective(int &, Objective &, int, PlayerScoreSetFunction); //TODO: incomplete function definition
     void serialize(ScoreboardIdentityRef const&);
 };

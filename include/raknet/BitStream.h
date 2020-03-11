@@ -1,8 +1,9 @@
 #pragma once
 
+#include "./BitStream.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class BitStream {
 
@@ -10,28 +11,29 @@ public:
 
     void SetReadOffset(unsigned int);
     void DoEndianSwap();
-    void IsNetworkOrder();
+    bool IsNetworkOrder();
     void GetData()const;
     void GetNumberOfBytesUsed()const;
     void GetNumberOfUnreadBits()const;
     void GetInstance();
-    void DestroyInstance(RakNet::BitStream*);
-    BitStream(void);
+    void DestroyInstance(RakNet::BitStream *);
+    BitStream();
     BitStream(unsigned int);
     BitStream(unsigned char *, unsigned int, bool);
     void SetNumberOfBitsAllocated(unsigned int);
+    ~BitStream();
     void Reset();
     void Write(char const*, unsigned int);
     void AddBitsAndReallocate(unsigned int);
     void WriteBits(unsigned char const*, unsigned int, bool);
-    void Write(RakNet::BitStream*);
-    void Write(RakNet::BitStream*, unsigned int);
-    void Write(RakNet::BitStream&, unsigned int);
-    void Write(RakNet::BitStream&);
-    void Read(RakNet::BitStream*, unsigned int);
-    void Read(RakNet::BitStream*);
-    void Read(RakNet::BitStream&, unsigned int);
-    void Read(RakNet::BitStream&);
+    void Write(RakNet::BitStream *);
+    void Write(RakNet::BitStream *, unsigned int);
+    void Write(RakNet::BitStream &, unsigned int);
+    void Write(RakNet::BitStream &);
+    void Read(RakNet::BitStream *, unsigned int);
+    void Read(RakNet::BitStream *);
+    void Read(RakNet::BitStream &, unsigned int);
+    void Read(RakNet::BitStream &);
     void Read(char *, unsigned int);
     void ReadBits(unsigned char *, unsigned int, bool);
     void ResetReadPointer();
@@ -53,7 +55,7 @@ public:
     void ReadCompressed(unsigned char *, unsigned int, bool);
     void GetNumberOfBitsAllocated()const;
     void PadWithZeroToByteLength(unsigned int);
-    void NumberOfLeadingZeroes(signed const);
+//  void NumberOfLeadingZeroes(signed const); //TODO: incomplete function definition
     void NumberOfLeadingZeroes(unsigned char);
     void NumberOfLeadingZeroes(short);
     void NumberOfLeadingZeroes(unsigned short);
@@ -71,7 +73,7 @@ public:
     void IgnoreBytes(unsigned int);
     void SetWriteOffset(unsigned int);
     void AssertCopyData();
-    void IsNetworkOrderInternal();
+    bool IsNetworkOrderInternal();
     void ReverseBytes(unsigned char *, unsigned char *, unsigned int);
     void Read(char *);
     void Read(unsigned char *);
@@ -89,5 +91,7 @@ public:
     void AlignWriteToByteBoundary();
     void AlignReadToByteBoundary();
     void GetWriteOffset()const;
-    void IsBigEndian();
+    bool IsBigEndian();
 };
+
+}

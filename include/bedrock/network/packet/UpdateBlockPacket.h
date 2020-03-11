@@ -1,22 +1,24 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/Block.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../level/Level.h"
+#include "./Packet.h"
+#include "../../util/BlockPos.h"
+#include <string>
 
 
 class UpdateBlockPacket : Packet {
 
 public:
-    virtual UpdateBlockPacket::~UpdateBlockPacket()
+    virtual ~UpdateBlockPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    UpdateBlockPacket(void);
+    UpdateBlockPacket();
     UpdateBlockPacket(BlockPos const&, unsigned int, Block const&, unsigned char);
     void getBlock(Level const&)const;
 };

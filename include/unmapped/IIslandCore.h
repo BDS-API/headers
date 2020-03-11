@@ -2,12 +2,14 @@
 
 
 
-using namespace BedrockEngine;
+namespace BedrockEngine {
 
 class IIslandCore {
 
 public:
-    virtual BedrockEngine::IIslandCore::~IIslandCore()
+    virtual ~IIslandCore();
 
-    IIslandCore(void);
+    IIslandCore();
 };
+
+}

@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../bedrock/level/biome/Biome"
+#include "../bedrock/level/biome/Biome.h"
 
 
-using namespace LayerFilters;
+namespace LayerFilters {
 
 class PromoteCenter {
 
 public:
 
     PromoteCenter(Biome &, Biome &);
-    void operator()const;
+//  void operator()(LayerDetails::NeighborhoodReader<Biome *, 1u, 1u> &)const; //TODO: incomplete function definition
 };
+
+}

@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../bedrock/util/Color"
+#include <memory>
+#include "../bedrock/util/Color.h"
+#include "./Material.h"
 
 
 class Material {
@@ -11,12 +13,15 @@ public:
 
 
     void getType()const;
+    void operator==(Material const&)const;
+    void operator!=(Material const&)const;
     void initMaterials();
     void teardownMaterials();
     void _setupSurfaceMaterials();
-    Material(MaterialType, Material::Settings, float);
+//  Material(MaterialType, Material::Settings, float); //TODO: incomplete function definition
     void _setReplaceable();
-    bool isType(MaterialType)const;
+    ~Material();
+//  bool isType(MaterialType)const; //TODO: incomplete function definition
     bool isSolidBlocking()const;
     void getBlocksMotion()const;
     bool isFlammable()const;
@@ -30,7 +35,7 @@ public:
     void getColor()const;
     bool isSuperHot()const;
     bool isTopSolid(bool, bool)const;
-    void getMaterial(MaterialType);
+//  void getMaterial(MaterialType); //TODO: incomplete function definition
     void addMaterial(std::unique_ptr<Material, std::default_delete<Material>>);
     void _setFlammable();
     void _setNotAlwaysDestroyable();

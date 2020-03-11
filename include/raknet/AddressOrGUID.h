@@ -1,8 +1,12 @@
 #pragma once
 
+#include "./AddressOrGUID.h"
+#include "./RakNetGUID.h"
+#include "./SystemAddress.h"
+#include "./Packet.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class AddressOrGUID {
 
@@ -14,7 +18,9 @@ public:
     void ToInteger(RakNet::AddressOrGUID const&);
     void ToString(bool)const;
     void ToString(bool, char *)const;
-    void IsUndefined()const;
+    bool IsUndefined()const;
     AddressOrGUID(RakNet::AddressOrGUID const&);
-    AddressOrGUID(void);
+    AddressOrGUID();
 };
+
+}

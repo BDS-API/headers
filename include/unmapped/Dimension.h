@@ -1,20 +1,26 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/actor/Player"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/Brightness"
-#include "../bedrock/actor/unmapped/ActorBlockSyncMessage"
-#include "../bedrock/level/Level"
-#include "../bedrock/level/LevelChunk"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/ChunkPos"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/network/packet/Packet"
-#include "../bedrock/Scheduler"
-#include "../bedrock/level/LevelListener"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/network/packet/Packet.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include <functional>
+#include "./SavedData.h"
+#include "./Dimension.h"
+#include "../bedrock/util/ChunkPos.h"
+#include "../bedrock/level/LevelListener.h"
+#include "../bedrock/util/Brightness.h"
+#include "../bedrock/Scheduler.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/level/Level.h"
+#include "./Block.h"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/actor/unmapped/ActorBlockSyncMessage.h"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/level/LevelChunk.h"
+#include <string>
 
 
 class Dimension : LevelListener, SavedData {
@@ -24,7 +30,7 @@ public:
     static long CurrentLimboEntitiesVersion;
     static long STRUCTURE_PRUNE_INTERVAL;
 
-    virtual Dimension::~Dimension()
+    virtual ~Dimension();
     virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*);
     virtual void onBlockEvent(BlockSource &, int, int, int, int, int);
     virtual void onNewChunk(BlockSource &, LevelChunk &);
@@ -65,10 +71,11 @@ public:
     void getTaskGroup();
     void getDefaultBrightness()const;
     bool hasWeather()const;
+    std::string getName()const;
     void getLevelChunkBuilderData();
     void getLevelChunkGarbageCollector()const;
     void getLevelChunkGarbageCollector();
-    Dimension(Level &, AutomaticID<Dimension, int>, short, Scheduler &, std::string);
+//  Dimension(Level &, AutomaticID<Dimension, int>, short, Scheduler &, std::string); //TODO: incomplete function definition
     bool isRedstoneTick();
     void addWither(ActorUniqueID const&);
     void removeWither(ActorUniqueID const&);
@@ -78,7 +85,7 @@ public:
     void updateBlockLight(BlockPos const&, Brightness, Brightness, Brightness, Brightness, bool);
     void backgroundTickSeasons();
     void getLevel()const;
-    void forEachPlayer(std::function<bool ()(Player &)>);
+    void forEachPlayer(std::function<bool (Player &)>);
     bool isLeaveGameDone();
     void getChunkSource()const;
     void getVillageManager()const;
@@ -116,8 +123,8 @@ public:
     bool processTickingAreaRemoves();
     bool processTickingAreaUpdates();
     void getEntityIdMapConst()const;
-    void forEachPlayer(std::function<bool ()(Player const&)>)const;
-    void findPlayer(std::function<bool ()(Player const&)>)const;
+    void forEachPlayer(std::function<bool (Player const&)>)const;
+    void findPlayer(std::function<bool (Player const&)>)const;
     void fetchNearestPlayer(Actor &, float);
     void fetchNearestPlayer(float, float, float, float, bool);
     void fetchNearestAttackablePlayer(BlockPos, float, Actor *);
@@ -131,7 +138,7 @@ public:
     void _completeEntityTransfer(BlockSource &, std::unique_ptr<Actor, std::default_delete<Actor>>);
     void onChunkDiscarded(LevelChunk &);
     void tryAssignNewRegionAt(ChunkPos const&, Actor &);
-    void upgradeOldLimboEntity(CompoundTag &, LimboEntitiesVersion);
+//  void upgradeOldLimboEntity(CompoundTag &, LimboEntitiesVersion); //TODO: incomplete function definition
     void sendPacketForPosition(BlockPos const&, Packet const&, Player const*);
     bool isUltraWarm()const;
     void setUltraWarm(bool);
@@ -142,4 +149,5 @@ public:
     void sendPacketForEntity(Actor const&, Packet const&, Player const*);
     void getBlockEventDispatcher();
     void getBlockEventDispatcherConst()const;
+    void operator==(Dimension const&)const;
 };

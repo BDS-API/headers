@@ -1,13 +1,16 @@
 #pragma once
 
+#include "./HashString.h"
 
 
-using namespace Util::HashString;
+namespace Util::HashString {
 
 class HashFunc {
 
 public:
 
-    void operator()const;
-    void operator()const;
+    void operator()(Util::HashString const&, Util::HashString const&)const;
+    void operator()(Util::HashString const&)const;
 };
+
+}

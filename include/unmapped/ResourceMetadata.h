@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./ResourceMetadata.h"
 
 
 class ResourceMetadata {
 
 public:
 
-    ResourceMetadata(void);
+    ResourceMetadata();
+    ~ResourceMetadata();
     ResourceMetadata(ResourceMetadata const&);
 };

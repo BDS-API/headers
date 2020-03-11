@@ -1,18 +1,19 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../util/BlockPos.h"
+#include "./Monster.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../../unmapped/Block.h"
 
 
 class Silverfish : Monster {
 
 public:
-    virtual Silverfish::~Silverfish()
+    virtual ~Silverfish();
     virtual void normalTick();
     virtual void findAttackTarget();
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void _playStepSound(BlockPos const&, Block const&);
     virtual void spawnAnim();
     virtual void aiStep();

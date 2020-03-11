@@ -5,7 +5,7 @@
 class UriListener {
 
 public:
-    virtual UriListener::~UriListener()
+    virtual ~UriListener();
 
-    UriListener(void);
+    UriListener();
 };

@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../Mob"
-#include "../Actor"
-#include "../../definition/DefinitionTrigger"
+#include "../../definition/DefinitionTrigger.h"
+#include "../Actor.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class MeleeAttackGoal : Goal {
@@ -17,7 +19,7 @@ public:
     static long FAR_DISTANCE_RECALC_TIME_INCREASE;
     static long DEFAULT_RECALC_TIME;
 
-    virtual MeleeAttackGoal::~MeleeAttackGoal()
+    virtual ~MeleeAttackGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();
@@ -33,7 +35,7 @@ public:
     virtual void _attemptPathToTarget(Actor *);
     virtual void _attemptAttackTarget(Actor *);
 
-    MeleeAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, bool, DefinitionTrigger);
+//  MeleeAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, bool, DefinitionTrigger); //TODO: incomplete function definition
     void _targetPositionPutsMobInSun();
     void _getAttackReach();
     void _inSunlight(Actor const&)const;

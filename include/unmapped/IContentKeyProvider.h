@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./ContentIdentity.h"
+#include <string>
 
 
 class IContentKeyProvider {
 
 public:
-    virtual IContentKeyProvider::~IContentKeyProvider()
-    virtual void getAlternateContentKey(ContentIdentity const&)const;
+    virtual ~IContentKeyProvider();
+    virtual std::string getAlternateContentKey(ContentIdentity const&)const;
 
-    IContentKeyProvider(void);
+    IContentKeyProvider();
 };

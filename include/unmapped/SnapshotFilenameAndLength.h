@@ -1,11 +1,15 @@
 #pragma once
 
+#include "./SnapshotFilenameAndLength.h"
+#include <string>
 
 
 class SnapshotFilenameAndLength {
 
 public:
 
-    SnapshotFilenameAndLength(SnapshotFilenameAndLength&&);
+    std::string toString();
+    ~SnapshotFilenameAndLength();
+    SnapshotFilenameAndLength(SnapshotFilenameAndLength &&);
     SnapshotFilenameAndLength(std::string, unsigned long);
 };

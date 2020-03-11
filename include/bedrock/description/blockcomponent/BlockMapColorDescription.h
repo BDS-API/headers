@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../block/BlockLegacy"
-#include "../../definition/BlockDefinition"
+#include "../../block/BlockLegacy.h"
+#include "../../definition/BlockDefinition.h"
+#include "./BlockComponentDescription.h"
+#include <string>
 
 
 class BlockMapColorDescription : BlockComponentDescription {
 
 public:
-    static long NameID[abi:cxx11];
+    static std::string NameID;
 
-    virtual BlockMapColorDescription::~BlockMapColorDescription()
-    virtual void getName()const;
+    virtual ~BlockMapColorDescription();
+    virtual std::string getName()const;
     virtual void initializeComponent(BlockLegacy &)const;
-    virtual void buildSchema(JsonUtil::JsonSchemaObjectNode<JsonUtil::JsonParseState<JsonUtil::EmptyClass, BlockDefinition>, BlockDefinition> &)const;
+//  virtual void buildSchema(JsonUtil::JsonSchemaObjectNode<JsonUtil::JsonParseState<JsonUtil::EmptyClass, BlockDefinition>, BlockDefinition> &)const; //TODO: incomplete function definition
 
-    BlockMapColorDescription(void);
+    BlockMapColorDescription();
 };

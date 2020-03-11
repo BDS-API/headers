@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../Mob"
-#include "../../block/unmapped/BlockSource"
-#include "../../definition/DefinitionTrigger"
-#include "../../util/BlockPos"
+#include "../../definition/DefinitionTrigger.h"
+#include "../../util/BlockPos.h"
+#include "./BaseMoveToBlockGoal.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../Mob.h"
+#include <string>
 
 
 class LayEggGoal : BaseMoveToBlockGoal {
 
 public:
-    virtual LayEggGoal::~LayEggGoal()
+    virtual ~LayEggGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

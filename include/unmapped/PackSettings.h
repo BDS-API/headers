@@ -1,6 +1,9 @@
 #pragma once
 
-#include "../json/Value"
+#include <string>
+#include "./PackIdVersion.h"
+#include <functional>
+#include "../json/Value.h"
 
 
 class PackSettings {
@@ -12,9 +15,10 @@ public:
     void loadPackSettings(PackIdVersion const&, Json::Value const&);
     void _initPackSetting(std::string const&, Json::Value const&);
     void savePackSettings(PackIdVersion const&);
-    void registerObserver(std::string const&, void *, std::function<void ()(Json::Value const&)> const&);
-    void unregisterObserver(std::string const&, void *);
-    void unregisterObserver(void *);
+//  void registerObserver(std::string const&, void *, std::function<void (Json::Value const&)> const&); //TODO: incomplete function definition
+//  void unregisterObserver(std::string const&, void *); //TODO: incomplete function definition
+//  void unregisterObserver(void *); //TODO: incomplete function definition
     void getAllSettings()const;
-    PackSettings(void);
+    PackSettings();
+    ~PackSettings();
 };

@@ -1,13 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
+#include "./Level.h"
+#include "../actor/Actor.h"
+#include <string>
 
 
 class LevelEventCoordinator {
 
 public:
 
-    LevelEventCoordinator(void);
+    ~LevelEventCoordinator();
+    LevelEventCoordinator();
     void sendLevelInitialized(Level &);
     void sendLevelRemovedActor(Level &, Actor &);
     void sendLevelAddedActor(Level &, Actor &);

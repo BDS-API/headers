@@ -1,13 +1,16 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../../unmapped/Block"
+#include "../../unmapped/Block.h"
+#include "./Item.h"
+#include "../actor/Actor.h"
+#include "./ItemStack.h"
+#include <string>
 
 
 class CarrotOnAStickItem : Item {
 
 public:
-    virtual CarrotOnAStickItem::~CarrotOnAStickItem()
+    virtual ~CarrotOnAStickItem();
     virtual bool isHandEquipped()const;
     virtual bool requiresInteract()const;
     virtual void getEnchantSlot()const;

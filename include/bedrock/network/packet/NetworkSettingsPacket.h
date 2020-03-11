@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include <string>
+#include "../../io/BinaryStream.h"
+#include "./Packet.h"
 
 
 class NetworkSettingsPacket : Packet {
 
 public:
-    virtual NetworkSettingsPacket::~NetworkSettingsPacket()
+    virtual ~NetworkSettingsPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    NetworkSettingsPacket(void);
-    NetworkSettingsPacket(NetworkSettingOptions const&);
+    NetworkSettingsPacket();
+//  NetworkSettingsPacket(NetworkSettingOptions const&); //TODO: incomplete function definition
 };

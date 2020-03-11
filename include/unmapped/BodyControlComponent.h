@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./BodyControlComponent.h"
 
 
 class BodyControlComponent {
 
 public:
 
-    BodyControlComponent(BodyControlComponent&&);
-    BodyControlComponent(void);
+    ~BodyControlComponent();
+    BodyControlComponent(BodyControlComponent &&);
+    BodyControlComponent();
 };

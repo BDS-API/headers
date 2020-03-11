@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./EnumData.h"
 
 
-using namespace AvailableCommandsPacket;
+namespace AvailableCommandsPacket {
 
 class EnumData {
 
 public:
 
-    EnumData(AvailableCommandsPacket::EnumData&&);
-    EnumData(void);
+    ~EnumData();
+    EnumData(AvailableCommandsPacket::EnumData &&);
+    EnumData();
 };
+
+}

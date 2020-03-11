@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../bedrock/definition/DefinitionInstanceGroup"
-#include "../json/Value"
+#include "../bedrock/definition/DefinitionInstanceGroup.h"
+#include "../json/Value.h"
+#include "./EntityContext.h"
+#include <string>
 
 
 class EntityComponentFactory {
 
 public:
 
-    EntityComponentFactory(void);
+    EntityComponentFactory();
+    ~EntityComponentFactory();
     void tryGetDefinitionSerializer(std::string const&);
     void serializeComponentDefinitions(DefinitionInstanceGroup &, Json::Value const&, bool);
     void addComponents(EntityContext &, DefinitionInstanceGroup const&);

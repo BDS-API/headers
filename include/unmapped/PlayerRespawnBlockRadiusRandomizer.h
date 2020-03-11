@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/util/Random.h"
 
 
 class PlayerRespawnBlockRadiusRandomizer {
 
 public:
 
-    PlayerRespawnBlockRadiusRandomizer(void);
+    PlayerRespawnBlockRadiusRandomizer();
     void init(unsigned int, Random &);
     void _getLargestPrime(unsigned int)const;
     void getRadius()const;

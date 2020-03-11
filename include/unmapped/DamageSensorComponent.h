@@ -1,18 +1,21 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/definition/DamageSensorDefinition"
+#include "../bedrock/definition/DamageSensorDefinition.h"
+#include "../bedrock/actor/Actor.h"
+#include "./DamageSensorComponent.h"
+#include "./VariantParameterList.h"
 
 
 class DamageSensorComponent {
 
 public:
 
-    DamageSensorComponent(void);
+    DamageSensorComponent();
     void initFromDefinition(Actor &, DamageSensorDefinition const&);
     void getCause()const;
     bool isFatal()const;
     void getDamageMultipler();
-    void recordDamage(Actor &, Actor*, ActorDamageCause, int, bool, VariantParameterList);
-    DamageSensorComponent(DamageSensorComponent&&);
+//  void recordDamage(Actor &, Actor *, ActorDamageCause, int, bool, VariantParameterList); //TODO: incomplete function definition
+    ~DamageSensorComponent();
+    DamageSensorComponent(DamageSensorComponent &&);
 };

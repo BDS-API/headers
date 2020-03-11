@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./ActionEvent.h"
 
 
 class ActionQueue {
 
 public:
 
-    ActionQueue(void);
+    ~ActionQueue();
+    ActionQueue();
     void pushBackActionEvent(ActionEvent);
     void getNextActionEvent(ActionEvent &);
     void clearQueue();

@@ -1,14 +1,19 @@
 #pragma once
 
-#include "../../../core/Path"
+#include "../../../core/Path.h"
+#include "./ScriptQueueData.h"
+#include <string>
 
 
-using namespace ScriptEngine;
+namespace ScriptEngine {
 
 class ScriptQueueData {
 
 public:
 
     ScriptQueueData(Core::Path const&, std::string const&, std::string const&, std::string const&);
+    ~ScriptQueueData();
     ScriptQueueData(ScriptEngine::ScriptQueueData const&);
 };
+
+}

@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../../../unmapped/RenderParams"
-#include "../../../json/Value"
+#include <string>
+#include "../../../unmapped/RenderParams.h"
+#include "../../../json/Value.h"
+#include "./ActorAnimationControllerStateTransition.h"
 
 
 class ActorAnimationControllerStateTransition {
@@ -12,4 +14,5 @@ public:
     void shouldTransition(RenderParams &)const;
     void toJson(Json::Value &)const;
     ActorAnimationControllerStateTransition(ActorAnimationControllerStateTransition const&);
+    ~ActorAnimationControllerStateTransition();
 };

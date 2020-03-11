@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../../ScriptObjectHandle"
-#include "../../../actor/unmapped/ActorUniqueID"
-#include "../../unmapped/ScriptEngine"
+#include "../../unmapped/ScriptEngine.h"
+#include "./ScriptEventData.h"
+#include "../../../actor/unmapped/ActorUniqueID.h"
+#include "../../ScriptObjectHandle.h"
+#include <string>
 
 
 class ScriptServerActorSneakChangedEvent : ScriptEventData {
@@ -10,11 +12,12 @@ class ScriptServerActorSneakChangedEvent : ScriptEventData {
 public:
     static long mHash;
 
-    virtual ScriptServerActorSneakChangedEvent::~ScriptServerActorSneakChangedEvent()
+    virtual ~ScriptServerActorSneakChangedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
     void getHash();
-    ScriptServerActorSneakChangedEvent(void);
+    ScriptServerActorSneakChangedEvent();
     void setActorId(ActorUniqueID const&);
     void setIsSneaking(bool);
+    std::string getName();
 };

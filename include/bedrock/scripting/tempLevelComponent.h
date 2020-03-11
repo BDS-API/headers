@@ -2,11 +2,13 @@
 
 
 
-using namespace ScriptApi::WORKAROUNDS;
+namespace ScriptApi::WORKAROUNDS {
 
 class tempLevelComponent {
 
 public:
 
-    tempLevelComponent(void);
+    tempLevelComponent();
 };
+
+}

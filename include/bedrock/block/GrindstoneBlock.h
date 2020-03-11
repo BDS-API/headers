@@ -1,18 +1,20 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "./BlockLegacy.h"
 
 
 class GrindstoneBlock : BlockLegacy {
 
 public:
-    virtual GrindstoneBlock::~GrindstoneBlock()
+    virtual ~GrindstoneBlock();
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool isInteractiveBlock()const;
     virtual bool canContainLiquid()const;

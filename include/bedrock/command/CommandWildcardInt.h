@@ -6,7 +6,7 @@ class CommandWildcardInt {
 
 public:
 
-    CommandWildcardInt(void);
+    CommandWildcardInt();
     CommandWildcardInt(int);
     bool isWildcard()const;
     void getValue()const;

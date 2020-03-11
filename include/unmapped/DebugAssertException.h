@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./DebugAssertException.h"
+#include <exception>
 
 
 class DebugAssertException : std::exception {
@@ -7,13 +9,13 @@ class DebugAssertException : std::exception {
 public:
     static long WHAT;
 
-    virtual DebugAssertException::~DebugAssertException()
+    virtual ~DebugAssertException();
     virtual void what()const;
 
     void enable();
     void disable();
     bool isEnabled();
-    DebugAssertException(void);
+    DebugAssertException();
     DebugAssertException(char const*, char const*, char const*, int, char const*, char const*);
     DebugAssertException(DebugAssertException const&);
     void clear();

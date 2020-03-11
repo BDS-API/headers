@@ -2,11 +2,14 @@
 
 
 
-using namespace ProfilerLite;
+namespace ProfilerLite {
 
 class ScopedData {
 
 public:
 
+    ~ScopedData();
     void resetRecursive();
 };
+
+}

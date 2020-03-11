@@ -6,5 +6,5 @@ class SecureStorageKey {
 
 public:
 
-    SecureStorageKey(void);
+    SecureStorageKey();
 };

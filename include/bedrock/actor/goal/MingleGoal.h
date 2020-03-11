@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../Mob"
-#include "../Actor"
-#include "../unmapped/ActorUniqueID"
-#include "../unmapped/ActorDefinitionIdentifier"
-#include "../../../unmapped/MingleComponent"
+#include "../Actor.h"
+#include "./MoveToPOIGoal.h"
+#include "../unmapped/ActorUniqueID.h"
+#include "../../../unmapped/MingleComponent.h"
+#include "../unmapped/ActorDefinitionIdentifier.h"
+#include "../Mob.h"
+#include <string>
 
 
 class MingleGoal : MoveToPOIGoal {
@@ -14,7 +16,7 @@ public:
     static long SPEAK_INTERVAL_TICKS_MIN;
     static long SPEAK_INTERVAL_TICKS_MAX;
 
-    virtual MingleGoal::~MingleGoal()
+    virtual ~MingleGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();
@@ -24,7 +26,7 @@ public:
 
     MingleGoal(Mob &, float, float, float, ActorDefinitionIdentifier, float);
     void _getMingleComponent()const;
-    void _validatePartnerState(MingleComponent::MingleState, MingleComponent&, bool);
+//  void _validatePartnerState(MingleComponent::MingleState, MingleComponent &, bool); //TODO: incomplete function definition
     void _pickNewSpeakInterval();
     void _resetPartnerState(Actor &);
     void _tickUnavailable(MingleComponent &);

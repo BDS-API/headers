@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./BlockEventDispatcherToken.h"
+#include "./BlockEventDispatcher.h"
 
 
 class BlockEventDispatcherToken {
@@ -7,10 +9,11 @@ class BlockEventDispatcherToken {
 public:
 
     bool isValid()const;
-    BlockEventDispatcherToken(BlockEventDispatcherToken&&);
+    BlockEventDispatcherToken(BlockEventDispatcherToken &&);
+    ~BlockEventDispatcherToken();
     void unregister();
     void getDispatcher();
     void getHandle();
-    BlockEventDispatcherToken(void);
+    BlockEventDispatcherToken();
     BlockEventDispatcherToken(BlockEventDispatcher &, int);
 };

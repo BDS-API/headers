@@ -1,6 +1,11 @@
 #pragma once
 
-#include "../bedrock/Scheduler"
+#include "../bedrock/Scheduler.h"
+#include <memory>
+#include "./BackgroundTask.h"
+#include "./WorkerPool.h"
+#include <optional>
+#include <string>
 
 
 class WorkerPool {
@@ -14,10 +19,11 @@ public:
     bool isAsync()const;
     void end()const;
     void getAllPools();
-    void _registerPool(WorkerPool&);
-    void _unregisterPool(WorkerPool&);
-    WorkerPool(std::string, unsigned long, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, bool);
+    void _registerPool(WorkerPool &);
+    void _unregisterPool(WorkerPool &);
+//  WorkerPool(std::string, unsigned long, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, bool); //TODO: incomplete function definition
     WorkerPool(std::string, Scheduler &);
+    ~WorkerPool();
     void kick(unsigned long);
     void getBacklogSizeBusyLimit()const;
     void queue(std::shared_ptr<BackgroundTask>, bool);
@@ -27,7 +33,7 @@ public:
     void size()const;
     void getThreadIds()const;
     void allWorkersIdle()const;
-    void shiftWorkersPriority(Bedrock::Threading::OSThreadPriority const&);
+//  void shiftWorkersPriority(Bedrock::Threading::OSThreadPriority const&); //TODO: incomplete function definition
     bool hasPendingWork()const;
     void getNextPendingWorkTime()const;
     void getPerformanceInfo();

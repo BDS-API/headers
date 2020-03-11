@@ -2,11 +2,13 @@
 
 
 
-using namespace StrongholdFeature;
+namespace StrongholdFeature {
 
 class StrongholdResult {
 
 public:
 
-    StrongholdResult(void);
+    StrongholdResult();
 };
+
+}

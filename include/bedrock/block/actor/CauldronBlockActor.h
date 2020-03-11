@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemStack"
-#include "../../util/Color"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../container/Container"
+#include "../../container/Container.h"
+#include <string>
+#include "./BlockActor.h"
+#include "../../nbt/CompoundTag.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemStack.h"
+#include "../unmapped/BlockSource.h"
+#include "../../util/Color.h"
+#include "../../actor/Player.h"
 
 
 class CauldronBlockActor : BlockActor, Container {
@@ -16,14 +18,14 @@ class CauldronBlockActor : BlockActor, Container {
 public:
     static long WATER_COLOR;
 
-    virtual CauldronBlockActor::~CauldronBlockActor()
+    virtual ~CauldronBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
     virtual bool isFinished();
     virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);

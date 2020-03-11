@@ -1,19 +1,26 @@
 #pragma once
 
-#include "../../../mce/UUID"
-#include "../../../unmapped/Attribute"
-#include "../../../unmapped/BaseAttributeMap"
+#include "./AttributeBuff.h"
+#include "../../../mce/UUID.h"
+#include "../../../unmapped/BaseAttributeMap.h"
+#include <memory>
+#include "./AttributeInstance.h"
+#include "../../../unmapped/Attribute.h"
+#include <vector>
+#include "./AttributeInstanceDelegate.h"
+#include "./AttributeModifier.h"
+#include <string>
 
 
 class AttributeInstance {
 
 public:
-    virtual AttributeInstance::~AttributeInstance()
+    virtual ~AttributeInstance();
     virtual void tick();
 
     AttributeInstance(AttributeInstance const&);
     AttributeInstance(BaseAttributeMap *, Attribute const*);
-    AttributeInstance(void);
+    AttributeInstance();
     void getAttribute()const;
     void getModifiers(int)const;
     void getModifiers()const;

@@ -6,6 +6,6 @@ class RelativeFloat {
 
 public:
 
-    RelativeFloat(void);
+    RelativeFloat();
     void getValue(float)const;
 };

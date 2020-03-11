@@ -1,13 +1,15 @@
 #pragma once
 
+#include "./IDataInput.h"
+#include <string>
 
 
 class BytesDataInput : IDataInput {
 
 public:
-    virtual BytesDataInput::~BytesDataInput()
-    virtual void readString();
-    virtual void readLongString();
+    virtual ~BytesDataInput();
+    virtual std::string readString();
+    virtual std::string readLongString();
     virtual void readFloat();
     virtual void readDouble();
     virtual void readByte();
@@ -15,5 +17,5 @@ public:
     virtual void readInt();
     virtual void readLongLong();
 
-    BytesDataInput(void);
+    BytesDataInput();
 };

@@ -7,7 +7,7 @@ class DirtyTicksCounter {
 public:
 
     void max();
-    DirtyTicksCounter(void);
+    DirtyTicksCounter();
     void reset();
     void touch();
     void getTicksSinceLastChange()const;

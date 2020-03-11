@@ -6,5 +6,5 @@ class batch_control {
 
 public:
 
-    batch_control(void);
+    batch_control();
 };

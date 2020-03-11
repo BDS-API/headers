@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../item/ItemStack"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include "../../item/ItemStack.h"
+#include <string>
 
 
 class ItemFrameDropItemPacket : Packet {
 
 public:
-    virtual ItemFrameDropItemPacket::~ItemFrameDropItemPacket()
+    virtual ~ItemFrameDropItemPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    ItemFrameDropItemPacket(void);
+    ItemFrameDropItemPacket();
     ItemFrameDropItemPacket(ItemStack const&);
 };

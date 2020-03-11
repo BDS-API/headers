@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
 
 
 class PlayerRespawnRandomizer {
 
 public:
 
-    PlayerRespawnRandomizer(void);
-    void init(unsigned int, GeneratorType const&);
+    PlayerRespawnRandomizer();
+//  void init(unsigned int, GeneratorType const&); //TODO: incomplete function definition
     void performPrimaryJump(Vec3 const&, bool);
     void resetSecondary();
     void getRandomizedPosition(Vec3 &);

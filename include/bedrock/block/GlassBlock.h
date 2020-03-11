@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../util/Random"
-#include "../../unmapped/Material"
-#include "../../unmapped/Block"
-#include "../../unmapped/BaseGameVersion"
+#include <string>
+#include "../../unmapped/Material.h"
+#include "../../unmapped/BaseGameVersion.h"
+#include "./BlockLegacy.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class GlassBlock : BlockLegacy {
 
 public:
-    virtual GlassBlock::~GlassBlock()
+    virtual ~GlassBlock();
     virtual bool canConnect(Block const&, unsigned char, Block const&)const;
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;
     virtual void getResourceCount(Random &, Block const&, int)const;

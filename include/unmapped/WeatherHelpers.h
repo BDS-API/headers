@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../bedrock/level/LevelChunk"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/level/LevelChunk.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
 
 
 class WeatherHelpers {

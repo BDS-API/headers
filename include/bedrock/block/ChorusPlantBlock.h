@@ -1,11 +1,13 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class ChorusPlantBlock : BlockLegacy {
@@ -15,10 +17,10 @@ public:
     static long PLANT_HEIGHT;
     static long PLANT_ITEM_DIMENSION;
 
-    virtual ChorusPlantBlock::~ChorusPlantBlock()
+    virtual ~ChorusPlantBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
-    virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const;
+//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition
     virtual bool isWaterBlocking()const;
     virtual void waterSpreadCausesSpawn()const;
     virtual bool canContainLiquid()const;

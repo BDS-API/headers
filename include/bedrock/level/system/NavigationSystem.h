@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class NavigationSystem : ITickingSystem {
 
 public:
-    virtual NavigationSystem::~NavigationSystem()
+    virtual ~NavigationSystem();
     virtual void tick(EntityRegistry &);
 
-    NavigationSystem(void);
+    NavigationSystem();
 };

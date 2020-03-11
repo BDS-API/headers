@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../bedrock/util/ChunkPos"
+#include "../bedrock/util/ChunkPos.h"
 
 
 class PostprocessingManager {
 
 public:
 
-    PostprocessingManager(void);
+    PostprocessingManager();
+    ~PostprocessingManager();
     void tryLock(ChunkPos const&);
     void _release(ChunkPos const&);
 };

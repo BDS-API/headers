@@ -1,12 +1,16 @@
 #pragma once
 
+#include "./OriginMapping.h"
 
 
-using namespace FunctionManager;
+namespace FunctionManager {
 
 class OriginMapping {
 
 public:
 
-    OriginMapping(FunctionManager::OriginMapping&&);
+    ~OriginMapping();
+    OriginMapping(FunctionManager::OriginMapping &&);
 };
+
+}

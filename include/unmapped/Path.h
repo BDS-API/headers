@@ -1,7 +1,11 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "./Node.h"
+#include <memory>
+#include "../bedrock/actor/Actor.h"
+#include <vector>
+#include "./Path.h"
 
 
 class Path {
@@ -9,8 +13,9 @@ class Path {
 public:
 
     Path(Path const&);
-    Path(void);
-    void buildFromNodes(std::vector<Path::Node, std::allocator<Path::Node>> &&, PathCompletionType);
+    Path();
+    ~Path();
+//  void buildFromNodes(std::vector<Path::Node, std::allocator<Path::Node>> &&, PathCompletionType); //TODO: incomplete function definition
     void next();
     bool isDone();
     bool isValid()const;
@@ -28,7 +33,7 @@ public:
     void getNodeType(unsigned long)const;
     void getEndPos()const;
     void getLastPos()const;
-    void sameAs(Path*)const;
+    void sameAs(Path *)const;
     bool endsInXZ(Vec3 const&);
     void makeCopy()const;
 };

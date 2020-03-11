@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../../../actor/Player"
+#include "../../../actor/Player.h"
+#include "../../Command.h"
 
 
-using namespace AgentCommands;
+namespace AgentCommands {
 
 class InspectDataCommand : AgentCommands::Command {
 
 public:
-    virtual AgentCommands::InspectDataCommand::~InspectDataCommand()
+    virtual ~InspectDataCommand();
     virtual void execute();
     virtual bool isDone();
     virtual void fireCommandDoneEvent();
 
-    InspectDataCommand(Player &, AgentCommands::Direction);
+//  InspectDataCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
 };
+
+}

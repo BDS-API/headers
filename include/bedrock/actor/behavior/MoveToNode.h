@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../Mob"
-#include "../Actor"
-#include "../../util/Vec3"
+#include "../../util/Vec3.h"
+#include "../Mob.h"
+#include "./BehaviorNode.h"
+#include "../Actor.h"
 
 
 class MoveToNode : BehaviorNode {
 
 public:
-    virtual MoveToNode::~MoveToNode()
+    virtual ~MoveToNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 
-    MoveToNode(void);
+    MoveToNode();
     void lookAt(Mob &, Vec3 const&, float, float);
 };

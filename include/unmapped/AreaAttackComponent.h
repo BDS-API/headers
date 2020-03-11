@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./AreaAttackComponent.h"
 
 
 class AreaAttackComponent {
 
 public:
 
-    AreaAttackComponent(AreaAttackComponent&&);
-    AreaAttackComponent(void);
+    ~AreaAttackComponent();
+    AreaAttackComponent(AreaAttackComponent &&);
+    AreaAttackComponent();
 };

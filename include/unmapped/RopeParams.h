@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
 
 
 class RopeParams {
 
 public:
 
-    RopeParams(void);
+    RopeParams();
     RopeParams(Vec3 const&, Vec3 const&, float);
     void leadInit();
 };

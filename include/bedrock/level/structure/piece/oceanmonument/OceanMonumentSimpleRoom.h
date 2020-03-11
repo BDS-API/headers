@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../../../../util/Random"
-#include "../OceanMonumentPiece"
-#include "../../../../block/unmapped/BlockSource"
-#include "../../../../../unmapped/BoundingBox"
-#include "../../../../definition/RoomDefinition"
+#include "../../../../../unmapped/BoundingBox.h"
+#include "../OceanMonumentPiece.h"
+#include "../../../../util/Random.h"
+#include "../../../../definition/RoomDefinition.h"
+#include <memory>
+#include "../../../../block/unmapped/BlockSource.h"
 
 
 class OceanMonumentSimpleRoom : OceanMonumentPiece {
 
 public:
-    virtual OceanMonumentSimpleRoom::~OceanMonumentSimpleRoom()
+    virtual ~OceanMonumentSimpleRoom();
     virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
 
-    OceanMonumentSimpleRoom(void);
+    OceanMonumentSimpleRoom();
     OceanMonumentSimpleRoom(int &, std::shared_ptr<RoomDefinition> &, Random &);
 };

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../bedrock/io/IDataInput"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/io/IDataOutput"
+#include "../bedrock/io/IDataOutput.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/io/IDataInput.h"
 
 
 class NbtIo {

@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/actor/Player"
-#include "../bedrock/item/ItemStack"
+#include "./BoostableComponent.h"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
+#include <string>
 
 
 class BoostableComponent {
@@ -12,8 +14,8 @@ public:
     static long SPEED_MODIFIER_BOOSTING;
 
 
-    BoostableComponent(BoostableComponent&&);
-    BoostableComponent(void);
+    BoostableComponent(BoostableComponent &&);
+    BoostableComponent();
     void onItemInteract(Actor &, ItemStack &, Player &);
     void getIsBoosting()const;
     void _canUseItem(Actor &, ItemStack &);

@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/item/ItemStack"
+#include "./LabTableReactionComponent.h"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class LabTableReaction {
 
 public:
-    virtual LabTableReaction::~LabTableReaction()
+    virtual ~LabTableReaction();
 
-    LabTableReaction(LabTableReactionType, BlockPos const&, bool, int, int);
+//  LabTableReaction(LabTableReactionType, BlockPos const&, bool, int, int); //TODO: incomplete function definition
     void _setLifetime(int, int);
     void addResultItem(ItemStack const&);
     void addComponent(std::unique_ptr<LabTableReactionComponent, std::default_delete<LabTableReactionComponent>>);
@@ -26,5 +28,5 @@ public:
     void _getPos()const;
     void _getRandom();
     void _secsToTicks(float);
-    void createReaction(LabTableReactionType, BlockPos const&, bool);
+//  void createReaction(LabTableReactionType, BlockPos const&, bool); //TODO: incomplete function definition
 };

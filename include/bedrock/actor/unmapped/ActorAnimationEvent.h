@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../../../unmapped/RenderParams"
-#include "../Actor"
-#include "../../../json/Value"
+#include "../Actor.h"
+#include "../../../unmapped/RenderParams.h"
+#include "./ActorAnimationEvent.h"
+#include "../../../json/Value.h"
+#include <string>
 
 
 class ActorAnimationEvent {
@@ -10,8 +12,10 @@ class ActorAnimationEvent {
 public:
 
     void fire(RenderParams &, Actor &)const;
-    ActorAnimationEvent(float, std::string const&, CurrentCmdVersion);
+    void operator<(ActorAnimationEvent const&)const;
+//  ActorAnimationEvent(float, std::string const&, CurrentCmdVersion); //TODO: incomplete function definition
     void toJson(Json::Value &)const;
+    ~ActorAnimationEvent();
     ActorAnimationEvent(ActorAnimationEvent const&);
-    ActorAnimationEvent(ActorAnimationEvent&&);
+    ActorAnimationEvent(ActorAnimationEvent &&);
 };

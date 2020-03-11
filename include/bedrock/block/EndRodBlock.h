@@ -1,18 +1,22 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/Random"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Block.h"
+#include <memory>
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include <vector>
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class EndRodBlock : BlockLegacy {
 
 public:
-    virtual EndRodBlock::~EndRodBlock()
+    virtual ~EndRodBlock();
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const;
     virtual void mayPlace(BlockSource &, BlockPos const&)const;

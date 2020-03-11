@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./ColorPaletteAttributes.h"
 
 
 class ColorPaletteAttributes {
 
 public:
 
-    ColorPaletteAttributes(ColorPaletteAttributes&&);
-    ColorPaletteAttributes(void);
+    ~ColorPaletteAttributes();
+    ColorPaletteAttributes(ColorPaletteAttributes &&);
+    ColorPaletteAttributes();
 };

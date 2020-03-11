@@ -1,14 +1,21 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr"
-#include "../bedrock/actor/unmapped/ActorAnimationControllerPtr"
+#include "./ExpressionNode.h"
+#include <utility>
+#include "./HashedString.h"
+#include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr.h"
+#include <memory>
+#include "../bedrock/actor/unmapped/ActorAnimationControllerPtr.h"
+#include <vector>
+#include <string>
 
 
 class AnimationResourceDefinitionMap {
 
 public:
 
-    AnimationResourceDefinitionMap(void);
+    AnimationResourceDefinitionMap();
+    ~AnimationResourceDefinitionMap();
     bool isAnimationResourceDefinitionMapEmpty()const;
     void getAnimations();
     void getAnimations()const;

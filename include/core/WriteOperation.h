@@ -2,11 +2,13 @@
 
 
 
-using namespace Core::DiskAccessTracker;
+namespace Core::DiskAccessTracker {
 
 class WriteOperation {
 
 public:
 
-    WriteOperation(void);
+    WriteOperation();
 };
+
+}

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../../unmapped/NetworkIdentifier"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../mce/UUID"
-#include "../CommandOriginData"
-#include "../../../json/Value"
+#include "../../../mce/UUID.h"
+#include "../../level/Level.h"
+#include "../../util/BlockPos.h"
+#include "../CommandOriginData.h"
+#include "../../../json/Value.h"
+#include "../../../unmapped/NetworkIdentifier.h"
 
 
 class CommandOrigin {
@@ -13,12 +13,12 @@ class CommandOrigin {
 public:
     static long sUnknownSource;
 
-    virtual CommandOrigin::~CommandOrigin()
+    virtual ~CommandOrigin();
     virtual void getCursorHitBlockPos()const;
     virtual void getCursorHitPos()const;
     virtual bool hasChatPerms()const;
     virtual bool hasTellPerms()const;
-    virtual bool canUseAbility(AbilitiesIndex)const;
+//  virtual bool canUseAbility(AbilitiesIndex)const; //TODO: incomplete function definition
     virtual bool isWorldBuilder()const;
     virtual bool canUseCommandsWithoutCheatsEnabled()const;
     virtual bool isSelectorExpansionAllowed()const;
@@ -31,7 +31,7 @@ public:
     virtual void _setUUID(mce::UUID const&);
 
     void _toCommandOriginData(CommandOriginData &)const;
-    CommandOrigin(void);
+    CommandOrigin();
     void fromCommandOriginData(CommandOriginData const&, Level &, NetworkIdentifier const&, unsigned char);
     void getAreaAt(BlockPos const&)const;
     void getAreaAtWithBuffer(BlockPos const&)const;

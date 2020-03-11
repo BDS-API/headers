@@ -2,11 +2,14 @@
 
 
 
-using namespace ActorDefinitionGroup;
+namespace ActorDefinitionGroup {
 
 class EDLWrapper {
 
 public:
 
-    EDLWrapper(void);
+    ~EDLWrapper();
+    EDLWrapper();
 };
+
+}

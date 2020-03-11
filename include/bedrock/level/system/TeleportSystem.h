@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class TeleportSystem : ITickingSystem {
 
 public:
-    virtual TeleportSystem::~TeleportSystem()
+    virtual ~TeleportSystem();
     virtual void tick(EntityRegistry &);
 
-    TeleportSystem(void);
+    TeleportSystem();
 };

@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
+#include "./PageContent.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include <string>
 
 
 class PageContent {
@@ -9,9 +11,10 @@ public:
     static long BLANK_PAGE;
 
 
+    ~PageContent();
     PageContent(std::string);
-    PageContent(void);
-    PageContent(PageContent&&);
+    PageContent();
+    PageContent(PageContent &&);
     void read(CompoundTag const&);
     void write(PageContent const&, CompoundTag &);
     void createTag()const;

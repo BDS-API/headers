@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../bedrock/actor/Player"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/level/Level"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/level/Level.h"
 
 
 class ServerLevelEventCoordinator {
 
 public:
 
-    ServerLevelEventCoordinator(void);
+    ~ServerLevelEventCoordinator();
+    ServerLevelEventCoordinator();
     void sendLevelSaveData(Level &, CompoundTag &);
     void sendLevelAddedPlayer(Level &, Player &);
     void sendLevelRemovedPlayer(Level &, Player &);

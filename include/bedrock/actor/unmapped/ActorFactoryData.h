@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./ActorFactoryData.h"
 
 
 class ActorFactoryData {
 
 public:
 
-    ActorFactoryData(void);
+    ActorFactoryData();
+    ~ActorFactoryData();
     ActorFactoryData(ActorFactoryData const&);
 };

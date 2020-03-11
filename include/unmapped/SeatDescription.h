@@ -6,5 +6,5 @@ class SeatDescription {
 
 public:
 
-    SeatDescription(void);
+    SeatDescription();
 };

@@ -1,16 +1,24 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/actor/Player"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/level/Level"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/Color"
-#include "../bedrock/level/storage/LevelStorage"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/level/storage/LevelStorage.h"
+#include "./UniqueId.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include "./MapItemTrackedActor.h"
+#include "./Dimension.h"
+#include "./MapDecoration.h"
+#include "../bedrock/util/Color.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/level/Level.h"
+#include "../bedrock/util/BlockPos.h"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "./MapItemSavedData.h"
+#include "../bedrock/actor/Player.h"
+#include <vector>
+#include <string>
 
 
 class MapItemSavedData {
@@ -23,12 +31,14 @@ public:
     void getOrigin()const;
     void getId()const;
     bool isPreviewIncomplete()const;
+    ~MapItemSavedData();
+    std::string getSerializationKey(ActorUniqueID);
     MapItemSavedData(ActorUniqueID);
-    void setOrigin(Vec3, int, AutomaticID<Dimension, int>, bool, bool, BlockPos const&);
+//  void setOrigin(Vec3, int, AutomaticID<Dimension, int>, bool, bool, BlockPos const&); //TODO: incomplete function definition
     void _clampOriginWithinLimitedWorld(BlockPos &, Vec3 const&, int)const;
     void setDirty();
     void setScale(int);
-    void setDimensionId(AutomaticID<Dimension, int>);
+//  void setDimensionId(AutomaticID<Dimension, int>); //TODO: incomplete function definition
     void enableUnlimitedTracking();
     void deserialize(CompoundTag const&);
     void _deserializeData(CompoundTag const&);
@@ -38,18 +48,18 @@ public:
     void trySave(LevelStorage &);
     void tickCarriedBy(Actor &, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&);
     void _updateTrackedEntityDecorations(BlockSource &);
-    void _addDecoration(MapDecoration::Type, Level &, MapItemTrackedActor::UniqueId const&, Vec3 const&, std::string const&, Color const&);
+//  void _addDecoration(MapDecoration::Type, Level &, MapItemTrackedActor::UniqueId const&, Vec3 const&, std::string const&, Color const&); //TODO: incomplete function definition
     void tickByBlock(BlockPos const&, BlockSource &);
     void _findTrackedMapEntity(BlockPos const&)const;
-    void addTrackedMapEntity(BlockPos const&, BlockSource &, MapDecoration::Type);
+//  void addTrackedMapEntity(BlockPos const&, BlockSource &, MapDecoration::Type); //TODO: incomplete function definition
     void _updateTrackedEntityDecoration(BlockSource &, std::shared_ptr<MapItemTrackedActor>);
     void _removeDecoration(MapItemTrackedActor::UniqueId const&);
-    void _getColorByDimension(AutomaticID<Dimension, int>);
-    void _updateTrackedPlayerDecorations(BlockSource &, Player &, Vec3 &, std::string &, Color &, AutomaticID<Dimension, int>, MapDecoration::Type &);
+//  void _getColorByDimension(AutomaticID<Dimension, int>); //TODO: incomplete function definition
+//  void _updateTrackedPlayerDecorations(BlockSource &, Player &, Vec3 &, std::string &, Color &, AutomaticID<Dimension, int>, MapDecoration::Type &); //TODO: incomplete function definition
     void _isPlayerHoldingMap(Player &);
     void _setDirtyForDecoration(MapDecoration const&);
-    void addTrackedMapEntity(Actor &, MapDecoration::Type);
-    void _addTrackedMapEntity(MapItemTrackedActor::UniqueId const&, BlockSource &, MapDecoration::Type);
+//  void addTrackedMapEntity(Actor &, MapDecoration::Type); //TODO: incomplete function definition
+//  void _addTrackedMapEntity(MapItemTrackedActor::UniqueId const&, BlockSource &, MapDecoration::Type); //TODO: incomplete function definition
     void _removeTrackedMapEntity(MapItemTrackedActor::UniqueId const&);
     void removeTrackedMapEntity(Actor &);
     void removeTrackedMapEntity(BlockPos const&);
@@ -63,7 +73,7 @@ public:
     void pointInMapBounds(float, float);
     void addDecoration(MapItemTrackedActor::UniqueId, std::shared_ptr<MapDecoration>);
     void replaceDecorations(std::vector<std::shared_ptr<MapDecoration>, std::allocator<std::shared_ptr<MapDecoration>>>, std::vector<MapItemTrackedActor::UniqueId, std::allocator<MapItemTrackedActor::UniqueId>>);
-    void replacePixels(buffer_span<unsigned int>, unsigned int, unsigned int, unsigned int, unsigned int);
+//  void replacePixels(buffer_span<unsigned int>, unsigned int, unsigned int, unsigned int, unsigned int); //TODO: incomplete function definition
     void getParentMapId()const;
     void setParentMapId(ActorUniqueID);
     bool hasParentMap()const;
@@ -75,7 +85,7 @@ public:
     void setLocked();
     bool isLocked()const;
     void setAllPixelsDirty();
-    bool isChunkAllEmpty(MapItemSavedData::ChunkBounds)const;
-    void setMapSection(buffer_span<unsigned int>, MapItemSavedData::ChunkBounds);
+//  bool isChunkAllEmpty(MapItemSavedData::ChunkBounds)const; //TODO: incomplete function definition
+//  void setMapSection(buffer_span<unsigned int>, MapItemSavedData::ChunkBounds); //TODO: incomplete function definition
     void getDecorations()const;
 };

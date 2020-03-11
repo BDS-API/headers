@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../../unmapped/Block.h"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../level/Level.h"
+#include "../../util/BlockPos.h"
+#include "../unmapped/BlockSource.h"
 
 
 class FlowerPotBlockActor : BlockActor {
 
 public:
-    virtual FlowerPotBlockActor::~FlowerPotBlockActor()
+    virtual ~FlowerPotBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);

@@ -1,11 +1,12 @@
 #pragma once
 
+#include "./IContentKeyProvider.h"
 
 
 class IContentAccessibilityProvider : IContentKeyProvider {
 
 public:
-    virtual IContentAccessibilityProvider::~IContentAccessibilityProvider()
+    virtual ~IContentAccessibilityProvider();
 
-    IContentAccessibilityProvider(void);
+    IContentAccessibilityProvider();
 };

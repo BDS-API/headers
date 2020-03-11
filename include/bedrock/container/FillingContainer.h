@@ -1,18 +1,21 @@
 #pragma once
 
-#include "../nbt/CompoundTag"
-#include "../level/Level"
-#include "../actor/Player"
-#include "../nbt/ListTag"
-#include "../../unmapped/SemVersion"
-#include "../item/unmapped/ItemDescriptor"
-#include "../item/ItemStack"
+#include "../item/unmapped/ItemDescriptor.h"
+#include "../../unmapped/SemVersion.h"
+#include "../item/ItemStack.h"
+#include "../nbt/ListTag.h"
+#include <memory>
+#include "../level/Level.h"
+#include <vector>
+#include "../actor/Player.h"
+#include "./Container.h"
+#include "../nbt/CompoundTag.h"
 
 
 class FillingContainer : Container {
 
 public:
-    virtual FillingContainer::~FillingContainer()
+    virtual ~FillingContainer();
     virtual void getItem(int)const;
     virtual void setItem(int, ItemStack const&);
     virtual void removeItem(int, int);
@@ -30,7 +33,7 @@ public:
     virtual void doDrop(ItemStack &, bool);
     virtual void getEmptySlotsCount()const;
 
-    FillingContainer(Player *, int, ContainerType);
+//  FillingContainer(Player *, int, ContainerType); //TODO: incomplete function definition
     void _isCreative()const;
     void _getEmptySlotsCount(int, int)const;
     void _trySetInSlot(ItemStack &, int const&, int const&, int &);

@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack"
-#include "../../../unmapped/HashString"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemInstance"
-#include "../../item/unmapped/ItemDescriptor"
-#include "../../item/ItemStack"
+#include "../../item/unmapped/ItemDescriptor.h"
+#include <string>
+#include "../../../unmapped/ContainerItemStack.h"
+#include "../../../unmapped/HashString.h"
+#include "./ContainerManagerModel.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemInstance.h"
+#include "../../item/ItemStack.h"
+#include "../../actor/Player.h"
 
 
 class FurnaceContainerManagerModel : ContainerManagerModel {
 
 public:
-    virtual FurnaceContainerManagerModel::~FurnaceContainerManagerModel()
+    virtual ~FurnaceContainerManagerModel();
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
@@ -20,8 +22,8 @@ public:
     virtual void broadcastChanges();
     virtual void init();
 
-    FurnaceContainerManagerModel(ContainerID, Player &, BlockPos const&);
-    FurnaceContainerManagerModel(Util::HashString const&, ContainerType, BlockActorType, ContainerID, Player &, BlockPos const&);
+//  FurnaceContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
+//  FurnaceContainerManagerModel(Util::HashString const&, ContainerType, BlockActorType, ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
     void _getIngredientNameFromType(Util::HashString const&);
     void _getFurnaceEntity();
     void _updateResultSlotInfo();
@@ -32,6 +34,7 @@ public:
     void grantExperienceForSmelting(ItemInstance const&, int);
     void fireItemSmeltedEvent(ItemDescriptor const&);
     void fireItemAcquiredEvent(ItemInstance const&, int);
+    std::string getOutputName()const;
     void getOutputId()const;
     void getBlockPos()const;
     void getBlockActorType()const;

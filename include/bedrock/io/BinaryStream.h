@@ -1,19 +1,23 @@
 #pragma once
 
+#include "./BinaryStream.h"
+#include "./ReadOnlyBinaryStream.h"
+#include <string>
 
 
 class BinaryStream : ReadOnlyBinaryStream {
 
 public:
-    virtual BinaryStream::~BinaryStream()
+    virtual ~BinaryStream();
 
-    BinaryStream(void);
+    BinaryStream();
     BinaryStream(std::string &&);
     BinaryStream(std::string &, bool);
     BinaryStream(std::string const&);
     void reserve(unsigned long);
     void reset();
-    void write(void const*, unsigned long);
+    std::string getAndReleaseData();
+//  void write(void const*, unsigned long); //TODO: incomplete function definition
     void writeBool(bool);
     void writeByte(unsigned char);
     void writeSignedShort(short);
@@ -31,7 +35,7 @@ public:
     void writeVarInt(int);
     void writeUnsignedVarInt(unsigned int);
     void writeUnsignedVarInt64(unsigned long);
-    void writeString(gsl::basic_string_span<char const, -1l>);
-    void writeStream(BinaryStream&);
+//  void writeString(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
+    void writeStream(BinaryStream &);
     void writeUnsignedChar(unsigned char);
 };

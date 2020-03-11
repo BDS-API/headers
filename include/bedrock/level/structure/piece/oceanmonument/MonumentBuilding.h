@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../../../../util/Random"
-#include "../OceanMonumentPiece"
-#include "../../../../block/unmapped/BlockSource"
-#include "../../../../../unmapped/BoundingBox"
+#include "../../../../block/unmapped/BlockSource.h"
+#include "../../../../../unmapped/BoundingBox.h"
+#include "../OceanMonumentPiece.h"
+#include "../../../../util/Random.h"
 
 
 class MonumentBuilding : OceanMonumentPiece {
 
 public:
-    virtual MonumentBuilding::~MonumentBuilding()
+    virtual ~MonumentBuilding();
     virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
@@ -17,7 +17,7 @@ public:
     void getBiomeRange();
     MonumentBuilding(Random &, int, int, int &);
     void generateRoomGraph(Random &);
-    MonumentBuilding(void);
+    MonumentBuilding();
     void generateWing(bool, int, BlockSource *, Random &, BoundingBox const&);
     void generateEntranceArchs(BlockSource *, Random &, BoundingBox const&);
     void generateEntranceWall(BlockSource *, Random &, BoundingBox const&);

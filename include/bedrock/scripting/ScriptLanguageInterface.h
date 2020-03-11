@@ -2,12 +2,14 @@
 
 
 
-using namespace ScriptApi;
+namespace ScriptApi {
 
 class ScriptLanguageInterface {
 
 public:
-    virtual ScriptApi::ScriptLanguageInterface::~ScriptLanguageInterface()
+    virtual ~ScriptLanguageInterface();
 
-    ScriptLanguageInterface(void);
+    ScriptLanguageInterface();
 };
+
+}

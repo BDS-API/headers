@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../mce/UUID"
+#include "../mce/UUID.h"
 
 
 class PlayerSuspension {
 
 public:
 
-    PlayerSuspension(mce::UUID const&, PlayerSuspension::State);
+//  PlayerSuspension(mce::UUID const&, PlayerSuspension::State); //TODO: incomplete function definition
 };

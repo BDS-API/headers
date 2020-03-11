@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BehaviorFactory"
-#include "../../../json/Value"
+#include "../../../unmapped/BehaviorFactory.h"
+#include "./BehaviorDefinition.h"
+#include "../../../json/Value.h"
 
 
 class GetInteractionPositionForBlockDefinition : BehaviorDefinition {
 
 public:
-    virtual GetInteractionPositionForBlockDefinition::~GetInteractionPositionForBlockDefinition()
+    virtual ~GetInteractionPositionForBlockDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
 
-    GetInteractionPositionForBlockDefinition(void);
+    GetInteractionPositionForBlockDefinition();
 };

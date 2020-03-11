@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./TradeTier.h"
 
 
 class TradeTier {
 
 public:
 
-    TradeTier(void);
-    TradeTier(TradeTier&&);
+    ~TradeTier();
+    TradeTier();
+    TradeTier(TradeTier &&);
 };

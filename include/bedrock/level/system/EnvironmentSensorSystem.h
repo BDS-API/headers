@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class EnvironmentSensorSystem : ITickingSystem {
 
 public:
-    virtual EnvironmentSensorSystem::~EnvironmentSensorSystem()
+    virtual ~EnvironmentSensorSystem();
     virtual void tick(EntityRegistry &);
 
-    EnvironmentSensorSystem(void);
+    EnvironmentSensorSystem();
 };

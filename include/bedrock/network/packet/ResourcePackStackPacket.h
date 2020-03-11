@@ -1,21 +1,25 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../../unmapped/PackInstanceId"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/BaseGameVersion"
+#include "../../../unmapped/PackInstanceId.h"
+#include "../../../unmapped/BaseGameVersion.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include <memory>
+#include "./Packet.h"
+#include <vector>
+#include <string>
 
 
 class ResourcePackStackPacket : Packet {
 
 public:
-    virtual ResourcePackStackPacket::~ResourcePackStackPacket()
+    virtual ~ResourcePackStackPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    ResourcePackStackPacket(void);
+    ResourcePackStackPacket();
     ResourcePackStackPacket(std::vector<PackInstanceId, std::allocator<PackInstanceId>>, std::vector<PackInstanceId, std::allocator<PackInstanceId>>, BaseGameVersion const&, bool, bool);
     void getAddOnIdsAndVersions()const;
     void getTexturePackIdsAndVersions()const;

@@ -1,13 +1,19 @@
 #pragma once
 
-#include "../../block/unmapped/BlockSource"
-#include "../Actor"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../util/Vec3"
-#include "../../util/Vec2"
-#include "../../../unmapped/DataLoadHelper"
+#include "./ActorInfo.h"
+#include "./ActorDefinitionIdentifier.h"
+#include "../Actor.h"
+#include "./ActorDefinitionGroup.h"
+#include "../../nbt/CompoundTag.h"
+#include "../../util/Vec3.h"
+#include "../../util/Vec2.h"
+#include <memory>
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "../../block/unmapped/BlockSource.h"
+#include <vector>
+#include <string>
 
 
 class ActorFactory {
@@ -28,7 +34,10 @@ public:
     void createTransformedEntity(ActorDefinitionIdentifier const&, Actor *);
     void _createDummySpawnedEntity(ActorDefinitionIdentifier const&, Actor *, Vec3 const&, Vec2 const&);
     void createBornEntity(ActorDefinitionIdentifier const&, BlockPos const&);
+    std::string buildSummonEntityTypeEnum(bool);
     void lookupEntityType(ActorDefinitionIdentifier const&);
+    std::string generateActorIdentifierList()const;
     void _digestIdentifierListFromServer(std::vector<ActorInfo, std::allocator<ActorInfo>> const&);
-    void setEntityInitializer(std::shared_ptr<IEntityInitializer>);
+//  void setEntityInitializer(std::shared_ptr<IEntityInitializer>); //TODO: incomplete function definition
+    ~ActorFactory();
 };

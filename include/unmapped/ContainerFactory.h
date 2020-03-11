@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../bedrock/container/manager/IContainerManager"
-#include "../bedrock/container/model/ContainerModel"
-#include "../bedrock/actor/Player"
+#include "../bedrock/container/model/ContainerModel.h"
+#include <memory>
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/container/manager/IContainerManager.h"
 
 
 class ContainerFactory {

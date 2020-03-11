@@ -2,12 +2,14 @@
 
 
 
-using namespace Social;
+namespace Social {
 
 class XboxLiveSignInHandler {
 
 public:
-    virtual Social::XboxLiveSignInHandler::~XboxLiveSignInHandler()
+    virtual ~XboxLiveSignInHandler();
 
-    XboxLiveSignInHandler(void);
+    XboxLiveSignInHandler();
 };
+
+}

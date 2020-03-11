@@ -1,20 +1,21 @@
 #pragma once
 
-#include "../unmapped/ScriptEngine"
-#include "../../util/BlockPos"
-#include "../ScriptObjectHandle"
+#include "../unmapped/ScriptEngine.h"
+#include "../ScriptObjectHandle.h"
+#include "./ScriptBinderComponent.h"
+#include "../../util/BlockPos.h"
 
 
 class ScriptBlockPositionBinderComponent : ScriptBinderComponent {
 
 public:
-    static long TAG[abi:cxx11];
+    static std::string TAG;
 
-    virtual ScriptBlockPositionBinderComponent::~ScriptBlockPositionBinderComponent()
+    virtual ~ScriptBlockPositionBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 
-    ScriptBlockPositionBinderComponent(void);
+    ScriptBlockPositionBinderComponent();
     ScriptBlockPositionBinderComponent(BlockPos const&);
     void getPosition()const;
 };

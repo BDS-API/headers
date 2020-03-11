@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../../unmapped/Material"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Material.h"
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class HeavyBlock : BlockLegacy {
 
 public:
-    virtual HeavyBlock::~HeavyBlock()
+    virtual ~HeavyBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;

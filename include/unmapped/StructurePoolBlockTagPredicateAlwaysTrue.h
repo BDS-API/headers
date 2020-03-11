@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
+#include "./Block.h"
+#include "./IStructurePoolBlockTagPredicate.h"
+#include "../bedrock/nbt/CompoundTag.h"
 
 
 class StructurePoolBlockTagPredicateAlwaysTrue : IStructurePoolBlockTagPredicate {
 
 public:
-    virtual StructurePoolBlockTagPredicateAlwaysTrue::~StructurePoolBlockTagPredicateAlwaysTrue()
+    virtual ~StructurePoolBlockTagPredicateAlwaysTrue();
     virtual void test(Block const&, CompoundTag const&)const;
 
-    StructurePoolBlockTagPredicateAlwaysTrue(void);
+    StructurePoolBlockTagPredicateAlwaysTrue();
 };

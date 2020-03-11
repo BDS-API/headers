@@ -1,14 +1,15 @@
 #pragma once
 
+#include "./PackRenderCapabilitiesBitSet.h"
 
 
 class PackRenderCapabilitiesBitSet {
 
 public:
 
-    PackRenderCapabilitiesBitSet(void);
-    void setFlag(RenderCapability);
-    void getFlag(RenderCapability)const;
+    PackRenderCapabilitiesBitSet();
+//  void setFlag(RenderCapability); //TODO: incomplete function definition
+//  void getFlag(RenderCapability)const; //TODO: incomplete function definition
     void combineWithSet(PackRenderCapabilitiesBitSet const&);
     void reduceToNonTrusted();
 };

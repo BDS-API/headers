@@ -2,11 +2,14 @@
 
 
 
-using namespace Bedrock::Threading;
+namespace Bedrock::Threading {
 
 class AsyncBase {
 
 public:
 
-    AsyncBase(void);
+    AsyncBase();
+    ~AsyncBase();
 };
+
+}

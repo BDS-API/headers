@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../Mob"
-#include "../Actor"
-#include "../../util/Vec3"
+#include "../../util/Vec3.h"
+#include "../Mob.h"
+#include "./BehaviorNode.h"
+#include "../Actor.h"
 
 
 class FindBlockNode : BehaviorNode {
 
 public:
-    virtual FindBlockNode::~FindBlockNode()
+    virtual ~FindBlockNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 
-    FindBlockNode(void);
+    FindBlockNode();
     void lookAt(Mob &, Vec3 const&, float, float);
 };

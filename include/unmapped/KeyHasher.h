@@ -1,12 +1,15 @@
 #pragma once
 
+#include "../bedrock/item/unmapped/ItemDescriptor.h"
 
 
-using namespace ItemPack;
+namespace ItemPack {
 
 class KeyHasher {
 
 public:
 
-    void operator()const;
+    void operator()(ItemDescriptor const&)const;
 };
+
+}

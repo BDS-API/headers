@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class BreakDoorAnnotationSystem : ITickingSystem {
 
 public:
-    virtual BreakDoorAnnotationSystem::~BreakDoorAnnotationSystem()
+    virtual ~BreakDoorAnnotationSystem();
     virtual void tick(EntityRegistry &);
 
-    BreakDoorAnnotationSystem(void);
+    BreakDoorAnnotationSystem();
 };

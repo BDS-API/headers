@@ -1,13 +1,15 @@
 #pragma once
 
+#include "./CommandOrigin.h"
+#include <string>
 
 
 class GameArgumentCommandOrigin : CommandOrigin {
 
 public:
-    virtual GameArgumentCommandOrigin::~GameArgumentCommandOrigin()
-    virtual void getRequestId()const;
-    virtual void getName()const;
+    virtual ~GameArgumentCommandOrigin();
+    virtual std::string getRequestId()const;
+    virtual std::string getName()const;
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void getLevel()const;
@@ -19,5 +21,5 @@ public:
     virtual bool isSelectorExpansionAllowed()const;
     virtual void getOriginType()const;
 
-    GameArgumentCommandOrigin(void);
+    GameArgumentCommandOrigin();
 };

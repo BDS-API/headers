@@ -1,14 +1,17 @@
 #pragma once
 
+#include "./IFileReadAccess.h"
 
 
-using namespace FileSystemFileAccess;
+namespace FileSystemFileAccess {
 
 class FileSystemFileReadAccess : IFileReadAccess {
 
 public:
-    virtual FileSystemFileAccess::FileSystemFileReadAccess::~FileSystemFileReadAccess()
-    virtual void fread(void *, unsigned long, unsigned long, void *)const;
+    virtual ~FileSystemFileReadAccess();
+//  virtual void fread(void *, unsigned long, unsigned long, void *)const; //TODO: incomplete function definition
 
-    FileSystemFileReadAccess(void);
+    FileSystemFileReadAccess();
 };
+
+}

@@ -1,25 +1,36 @@
 #pragma once
 
-#include "../bedrock/network/NetEventCallback"
-#include "../bedrock/network/NetworkPeer"
-#include "../bedrock/actor/Player"
-#include "../bedrock/network/packet/sender/PacketSender"
-#include "../bedrock/definition/ConnectionDefinition"
-#include "../bedrock/network/packet/observer/PacketObserver"
-#include "../bedrock/network/packet/Packet"
-#include "../bedrock/Scheduler"
+#include "../bedrock/network/packet/Packet.h"
+#include "./ConnectionCallbacks.h"
+#include <ratio>
+#include <functional>
+#include "./NetworkPacketEventListener.h"
+#include "../bedrock/definition/ConnectionDefinition.h"
+#include "../bedrock/Scheduler.h"
+#include "../bedrock/network/packet/sender/PacketSender.h"
+#include "../bedrock/network/packet/observer/PacketObserver.h"
+#include "./IPSupportInterface.h"
+#include "./NetworkIdentifier.h"
+#include "../bedrock/network/NetworkPeer.h"
+#include <memory>
+#include "./GameConnectionInfo.h"
+#include "../bedrock/network/NetEventCallback.h"
+#include "./Connection.h"
+#include "../bedrock/actor/Player.h"
+#include <vector>
+#include <string>
 
 
 class NetworkHandler : RakNetInstance::ConnectionCallbacks, RakPeerHelper::IPSupportInterface, LocalConnector::ConnectionCallbacks {
 
 public:
-    virtual NetworkHandler::~NetworkHandler()
+    virtual ~NetworkHandler();
     virtual void onNewIncomingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onNewOutgoingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onConnectionClosed(NetworkIdentifier const&, std::string const&, bool);
     virtual void onAllConnectionsClosed(std::string const&, bool);
     virtual void onOutgoingConnectionFailed();
-    virtual void onWebsocketRequest(std::string const&, std::string const&, std::function<void ()(void)>);
+//  virtual void onWebsocketRequest(std::string const&, std::string const&, std::function<void (void)>); //TODO: incomplete function definition
     virtual void useIPv4Only()const;
     virtual void useIPv6Only()const;
     virtual void getDefaultGamePort()const;
@@ -27,7 +38,7 @@ public:
     virtual void onNewIncomingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
     virtual void onNewOutgoingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>);
 
-    NetworkHandler(Scheduler &, NetworkHandler::NetworkStatisticsConfig);
+//  NetworkHandler(Scheduler &, NetworkHandler::NetworkStatisticsConfig); //TODO: incomplete function definition
     void getPrimaryNetworkId()const;
     void host(ConnectionDefinition const&);
     void connect(Social::GameConnectionInfo, Social::GameConnectionInfo);
@@ -38,13 +49,13 @@ public:
     void registerServerInstance(NetEventCallback &);
     void unregisterClientOrServerInstance(unsigned char const&);
     void _getConnectionFromId(NetworkIdentifier const&)const;
-    void _sortAndPacketizeEvents(NetworkHandler::Connection &, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>);
+//  void _sortAndPacketizeEvents(NetworkHandler::Connection &, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>); //TODO: incomplete function definition
     void cleanupResourcePackManager(NetworkIdentifier const&);
     void setUseIPv6Only(bool);
     void setDefaultGamePort(unsigned short);
     void setDefaultGamePortv6(unsigned short);
     void enableAsyncFlush(NetworkIdentifier const&);
-    void getPingTimeForConnection(Social::GameConnectionInfo const&, std::function<void ()(unsigned int)>);
+//  void getPingTimeForConnection(Social::GameConnectionInfo const&, std::function<void (unsigned int)>); //TODO: incomplete function definition
     void getNetworkStatistics()const;
     void getConnectionInfo()const;
     void getPeerForUser(NetworkIdentifier const&);
@@ -59,8 +70,8 @@ public:
     void getLocalNetworkId()const;
     void send(NetworkIdentifier const&, Packet const&, unsigned char);
     void _sendInternal(NetworkIdentifier const&, Packet const&, std::string const&);
-    void sendToMultiple(std::vector<NetworkIdentifierWithSubId, std::allocator<NetworkIdentifierWithSubId>> const&, Packet const&);
-    void flush(NetworkIdentifier const&, std::function<void ()(void)> &&);
+//  void sendToMultiple(std::vector<NetworkIdentifierWithSubId, std::allocator<NetworkIdentifierWithSubId>> const&, Packet const&); //TODO: incomplete function definition
+//  void flush(NetworkIdentifier const&, std::function<void (void)> &&); //TODO: incomplete function definition
     void getConnections()const;
     void getResourcePackUploadManager(PacketSender &, NetworkIdentifier const&, std::string const&);
     void getResourcePackDownloadManager(PacketSender &, NetworkIdentifier const&, std::string const&);

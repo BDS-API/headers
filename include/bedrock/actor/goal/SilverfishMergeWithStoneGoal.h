@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Silverfish"
+#include "../Silverfish.h"
+#include "./RandomStrollGoal.h"
+#include <string>
 
 
 class SilverfishMergeWithStoneGoal : RandomStrollGoal {
 
 public:
-    virtual SilverfishMergeWithStoneGoal::~SilverfishMergeWithStoneGoal()
+    virtual ~SilverfishMergeWithStoneGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

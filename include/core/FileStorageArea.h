@@ -1,13 +1,19 @@
 #pragma once
 
+#include <memory>
+#include "./FileStorageArea.h"
+#include "./FileSystemImpl.h"
+#include <functional>
+#include "./Path.h"
+#include <string>
 
 
-using namespace Core;
+namespace Core {
 
 class FileStorageArea {
 
 public:
-    virtual Core::FileStorageArea::~FileStorageArea()
+    virtual ~FileStorageArea();
     virtual void notifyChangeInFileSize(long, long);
     virtual bool handlesPendingWrites()const;
     virtual void informPendingWriteSize(unsigned long const&, bool);
@@ -16,8 +22,8 @@ public:
     virtual bool canExtendSize()const;
     virtual void resetCanAttemptExtendSize();
     virtual void getExtendSizeThreshold(unsigned long &)const;
-    virtual void attemptExtendSize(long const&, std::function<void ()(void)>);
-    virtual void preemptiveExtendSize(unsigned long, std::function<void ()(void)>, std::function<void ()(void)>);
+//  virtual void attemptExtendSize(long const&, std::function<void (void)>); //TODO: incomplete function definition
+//  virtual void preemptiveExtendSize(unsigned long, std::function<void (void)>, std::function<void (void)>); //TODO: incomplete function definition
     virtual void unloadFlatFileManifests(bool);
     virtual bool canFlushToDisk()const;
     virtual bool needsTick()const;
@@ -33,13 +39,14 @@ public:
     virtual void _onTeardown();
 
     bool isOutOfDiskSpaceError()const;
-    void notifyCriticalDiskError(Core::LevelStorageState const&);
+//  void notifyCriticalDiskError(Core::LevelStorageState const&); //TODO: incomplete function definition
     void _getFlatFileManifestTracker();
     void getStorageAreaForPath(std::shared_ptr<Core::FileStorageArea> &, Core::Path const&);
     void _getStorageAreaForPathImpl(std::shared_ptr<Core::FileStorageArea> &, Core::Path const&);
     void unloadAllStorageAreaFlatFileManifests(bool);
     void teardown();
-    FileStorageArea(Core::FileAccessType, Core::Path const&, bool, bool, std::shared_ptr<Core::FileStorageArea>);
+//  FileStorageArea(Core::FileAccessType, Core::Path const&, bool, bool, std::shared_ptr<Core::FileStorageArea>); //TODO: incomplete function definition
+    std::string getRootPath()const;
     void setLoggingEnabled(bool);
     void getAccessType()const;
     void _notifyBeginWrite();
@@ -59,6 +66,8 @@ public:
     void checkUserStorage();
     void getTotalBytesWrittenAndReadFromAllStorageAreas(unsigned long &, unsigned long &);
     void updateFlatFileManifests();
-    void addObserver(Core::FileStorageAreaObserver &);
+//  void addObserver(Core::FileStorageAreaObserver &); //TODO: incomplete function definition
     bool canWrite()const;
 };
+
+}

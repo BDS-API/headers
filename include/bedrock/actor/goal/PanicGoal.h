@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/Vec3"
+#include "../../util/Vec3.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class PanicGoal : Goal {
 
 public:
-    virtual PanicGoal::~PanicGoal()
+    virtual ~PanicGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

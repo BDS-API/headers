@@ -1,16 +1,21 @@
 #pragma once
 
+#include "./Value.h"
+#include <utility>
+#include "./ValueIteratorBase.h"
+#include "./CZString.h"
 
 
-using namespace Json;
+namespace Json {
 
 class ValueIteratorBase {
 
 public:
 
-    ValueIteratorBase(void);
+    void operator!=(Json::ValueIteratorBase const&)const;
+    ValueIteratorBase();
     ValueIteratorBase(Json::ValueIteratorBase const&);
-    ValueIteratorBase(std::_Rb_tree_iterator<std::pair<Json::Value::CZString const, Json::Value>> const&);
+//  ValueIteratorBase(std::_Rb_tree_iterator<std::pair<Json::Value::CZString const, Json::Value>> const&); //TODO: incomplete function definition
     void deref()const;
     void increment();
     void decrement();
@@ -21,3 +26,5 @@ public:
     void index()const;
     void memberName()const;
 };
+
+}

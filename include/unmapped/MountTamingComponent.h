@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/actor/Player"
-#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "./MountTamingComponent.h"
+#include "./DataLoadHelper.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/actor/unmapped/ActorInteraction.h"
 
 
 class MountTamingComponent {
 
 public:
 
-    MountTamingComponent(MountTamingComponent&&);
+    MountTamingComponent(MountTamingComponent &&);
     void getTemper();
     void getCounter();
     void getWaitCount()const;

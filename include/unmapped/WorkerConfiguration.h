@@ -1,11 +1,12 @@
 #pragma once
 
+#include "./WorkerConfiguration.h"
 
 
 class WorkerConfiguration {
 
 public:
 
-    WorkerConfiguration(void);
+    WorkerConfiguration();
     WorkerConfiguration(WorkerConfiguration const&);
 };

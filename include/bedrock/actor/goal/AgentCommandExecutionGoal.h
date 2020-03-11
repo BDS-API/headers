@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class AgentCommandExecutionGoal : Goal {
 
 public:
-    virtual AgentCommandExecutionGoal::~AgentCommandExecutionGoal()
+    virtual ~AgentCommandExecutionGoal();
     virtual bool canUse();
     virtual bool canBeInterrupted();
     virtual void start();

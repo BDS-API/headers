@@ -1,8 +1,12 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/DrinkPotionData"
-#include "../../item/ItemStack"
+#include <memory>
+#include "./Goal.h"
+#include "../../item/ItemStack.h"
+#include <vector>
+#include "../Mob.h"
+#include "../../../unmapped/DrinkPotionData.h"
+#include <string>
 
 
 class DrinkPotionGoal : Goal {
@@ -11,7 +15,7 @@ public:
     static long THROTTLE_COOLDOWN;
     static long SPEED_MODIFIER_DRINKING_UUID;
 
-    virtual DrinkPotionGoal::~DrinkPotionGoal()
+    virtual ~DrinkPotionGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

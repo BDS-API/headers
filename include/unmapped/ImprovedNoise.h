@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/util/Random.h"
 
 
 class ImprovedNoise {
 
 public:
 
-    ImprovedNoise(void);
+    ImprovedNoise();
     void _init(Random &);
     ImprovedNoise(Random &);
     void _noise(Vec3 const&)const;

@@ -1,13 +1,17 @@
 #pragma once
 
-#include "../Mob"
-#include "../../item/unmapped/ItemDescriptor"
+#include "../../item/unmapped/ItemDescriptor.h"
+#include <memory>
+#include "./Goal.h"
+#include <vector>
+#include "../Mob.h"
+#include <string>
 
 
 class ChargeHeldItemGoal : Goal {
 
 public:
-    virtual ChargeHeldItemGoal::~ChargeHeldItemGoal()
+    virtual ~ChargeHeldItemGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

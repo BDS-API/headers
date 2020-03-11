@@ -1,22 +1,29 @@
 #pragma once
 
-#include "../json/Value"
-#include "../core/Path"
+#include "../core/Path.h"
+#include <string>
+#include "./ResourceLocation.h"
+#include "../json/Value.h"
 
 
 class ResourceLocation {
 
 public:
 
+    ~ResourceLocation();
     ResourceLocation(ResourceLocation const&);
-    ResourceLocation(ResourceLocation&&);
+    void operator==(ResourceLocation const&)const;
+    ResourceLocation(ResourceLocation &&);
     void hashCode()const;
-    ResourceLocation(void);
+    std::string getFileSystemName()const;
+    ResourceLocation();
     ResourceLocation(Core::Path const&);
     void _computeHashes();
-    ResourceLocation(Core::Path const&, ResourceFileSystem);
+//  ResourceLocation(Core::Path const&, ResourceFileSystem); //TODO: incomplete function definition
     void serialize(Json::Value &)const;
     void deserialize(Json::Value const&);
-    void setRelativePath(Core::PathBuffer<std::string> const&);
+    std::string getFullPath()const;
+    std::string getRelativePath()const;
+//  void setRelativePath(Core::PathBuffer<std::string> const&); //TODO: incomplete function definition
     void getHashedPath()const;
 };

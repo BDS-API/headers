@@ -1,21 +1,24 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../../unmapped/SubClientConnectionRequest"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../../unmapped/SubClientConnectionRequest.h"
+#include "../../io/BinaryStream.h"
+#include "./SubClientLoginPacket.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include <string>
 
 
 class SubClientLoginPacket : Packet {
 
 public:
-    virtual SubClientLoginPacket::~SubClientLoginPacket()
+    virtual ~SubClientLoginPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
     virtual void disallowBatching()const;
 
-    SubClientLoginPacket(void);
+    SubClientLoginPacket();
     SubClientLoginPacket(SubClientConnectionRequest const&);
-    SubClientLoginPacket(SubClientLoginPacket&&);
+    SubClientLoginPacket(SubClientLoginPacket &&);
 };

@@ -1,15 +1,21 @@
 #pragma once
 
+#include "./WhitelistEntryMatcher.h"
+#include "./WhitelistEntry.h"
+#include <string>
 
 
-using namespace Whitelist;
+namespace Whitelist {
 
 class WhitelistEntryMatcher {
 
 public:
 
     WhitelistEntryMatcher(std::string, std::string);
+    ~WhitelistEntryMatcher();
     WhitelistEntryMatcher(Whitelist::WhitelistEntryMatcher const&);
-    void operator();
-    WhitelistEntryMatcher(Whitelist::WhitelistEntryMatcher&&);
+    void operator()(WhitelistEntry &);
+    WhitelistEntryMatcher(Whitelist::WhitelistEntryMatcher &&);
 };
+
+}

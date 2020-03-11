@@ -2,11 +2,13 @@
 
 
 
-using namespace LayerFilters;
+namespace LayerFilters {
 
 class River {
 
 public:
 
-    void operator()const;
+//  void operator()(LayerDetails::NeighborhoodReader<int, 1u, 1u> &)const; //TODO: incomplete function definition
 };
+
+}

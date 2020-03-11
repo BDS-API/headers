@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class AgeableSystem : ITickingSystem {
 
 public:
-    virtual AgeableSystem::~AgeableSystem()
+    virtual ~AgeableSystem();
     virtual void tick(EntityRegistry &);
 
-    AgeableSystem(void);
+    AgeableSystem();
 };

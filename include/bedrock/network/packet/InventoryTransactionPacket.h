@@ -1,19 +1,22 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../../unmapped/ComplexInventoryTransaction"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include <memory>
+#include "./Packet.h"
+#include "../../../unmapped/ComplexInventoryTransaction.h"
+#include <string>
 
 
 class InventoryTransactionPacket : Packet {
 
 public:
-    virtual InventoryTransactionPacket::~InventoryTransactionPacket()
+    virtual ~InventoryTransactionPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    InventoryTransactionPacket(void);
+    InventoryTransactionPacket();
     InventoryTransactionPacket(std::unique_ptr<ComplexInventoryTransaction, std::default_delete<ComplexInventoryTransaction>>);
 };

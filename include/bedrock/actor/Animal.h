@@ -1,15 +1,16 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Mob.h"
+#include "../util/BlockPos.h"
+#include "damagesource/ActorDamageSource.h"
+#include "unmapped/ActorDefinitionGroup.h"
 
 
 class Animal : Mob {
 
 public:
-    virtual Animal::~Animal()
+    virtual ~Animal();
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void _onSizeUpdated();

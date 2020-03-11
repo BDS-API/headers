@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../unmapped/Pack"
-#include "../../unmapped/PackIdVersion"
-#include "../../unmapped/IContentKeyProvider"
+#include "../../unmapped/IContentKeyProvider.h"
+#include "../../unmapped/PackIdVersion.h"
+#include "../../unmapped/Pack.h"
 
 
 class PackSource {
@@ -11,7 +11,9 @@ public:
     virtual void getPackOrigin()const;
     virtual void getPackType()const;
 
+    ~PackSource();
+    ~PackSource();
     void resolveUpgradeDependencies(Pack &, IContentKeyProvider const&);
     void fetchPack(PackIdVersion const&);
-    PackSource(void);
+    PackSource();
 };

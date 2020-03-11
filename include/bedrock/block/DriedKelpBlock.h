@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../../unmapped/Material"
+#include "./BlockLegacy.h"
+#include "../../unmapped/Material.h"
+#include <string>
 
 
 class DriedKelpBlock : BlockLegacy {
 
 public:
-    virtual DriedKelpBlock::~DriedKelpBlock()
+    virtual ~DriedKelpBlock();
 
     DriedKelpBlock(std::string const&, int, Material const&);
 };

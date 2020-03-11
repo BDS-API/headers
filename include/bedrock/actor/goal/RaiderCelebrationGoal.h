@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../Mob"
-#include "../../definition/DefinitionTrigger"
-#include "../../../unmapped/FloatRange"
+#include "../../definition/DefinitionTrigger.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include "../../../unmapped/FloatRange.h"
+#include <string>
 
 
 class RaiderCelebrationGoal : Goal {
 
 public:
-    virtual RaiderCelebrationGoal::~RaiderCelebrationGoal()
+    virtual ~RaiderCelebrationGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();
@@ -16,5 +18,5 @@ public:
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
 
-    RaiderCelebrationGoal(Mob &, LevelSoundEvent, FloatRange, FloatRange, float, DefinitionTrigger const&);
+//  RaiderCelebrationGoal(Mob &, LevelSoundEvent, FloatRange, FloatRange, float, DefinitionTrigger const&); //TODO: incomplete function definition
 };

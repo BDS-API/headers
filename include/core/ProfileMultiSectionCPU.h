@@ -1,16 +1,20 @@
 #pragma once
 
+#include "./CPUProfileToken.h"
 
 
-using namespace Core::Profile;
+namespace Core::Profile {
 
 class ProfileMultiSectionCPU {
 
 public:
 
-    ProfileMultiSectionCPU(void);
+    ProfileMultiSectionCPU();
     ProfileMultiSectionCPU(Core::Profile::CPUProfileToken);
+    ~ProfileMultiSectionCPU();
     void begin();
     void end();
     void suspend();
 };
+
+}

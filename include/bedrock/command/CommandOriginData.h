@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./CommandOriginData.h"
 
 
 class CommandOriginData {
 
 public:
 
-    CommandOriginData(void);
+    CommandOriginData();
     CommandOriginData(CommandOriginData const&);
+    ~CommandOriginData();
 };

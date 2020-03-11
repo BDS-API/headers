@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "../Mob.h"
+#include "./RandomLookAroundGoal.h"
+#include <string>
 
 
 class RandomLookAroundAndSitGoal : RandomLookAroundGoal {
 
 public:
-    virtual RandomLookAroundAndSitGoal::~RandomLookAroundAndSitGoal()
+    virtual ~RandomLookAroundAndSitGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

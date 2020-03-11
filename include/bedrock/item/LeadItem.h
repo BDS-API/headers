@@ -1,13 +1,17 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/BlockPos"
+#include "./ItemInstance.h"
+#include "../util/BlockPos.h"
+#include "./Item.h"
+#include "../actor/Actor.h"
+#include "./ItemStack.h"
+#include <string>
 
 
 class LeadItem : Item {
 
 public:
-    virtual LeadItem::~LeadItem()
+    virtual ~LeadItem();
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 
     LeadItem(std::string const&, int);

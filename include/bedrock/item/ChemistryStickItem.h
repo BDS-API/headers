@@ -1,10 +1,15 @@
 #pragma once
 
-#include "../actor/Mob"
-#include "../actor/Actor"
-#include "../level/Level"
-#include "../../unmapped/Block"
-#include "../actor/Player"
+#include "../actor/Mob.h"
+#include <string>
+#include "./ChemistryItem.h"
+#include "./ItemStackBase.h"
+#include "./ItemInstance.h"
+#include "../level/Level.h"
+#include "../actor/Actor.h"
+#include "../actor/Player.h"
+#include "./ItemStack.h"
+#include "../../unmapped/Block.h"
 
 
 class ChemistryStickItem : ChemistryItem {
@@ -16,9 +21,9 @@ public:
     static long DAMAGE_START_BIT;
     static long DAMAGE_BITS;
     static long DAMAGE_MASK;
-    static long ACTIVATION_TIMESTAMP_TAG[abi:cxx11];
+    static std::string ACTIVATION_TIMESTAMP_TAG;
 
-    virtual ChemistryStickItem::~ChemistryStickItem()
+    virtual ~ChemistryStickItem();
     virtual void setMaxDamage(int);
     virtual bool showsDurabilityInCreative()const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
@@ -34,6 +39,7 @@ public:
     bool isActive(int);
     void getColorType(int);
     bool isChemistryStick(ItemInstance const&);
+    std::string _getColorName(int)const;
     void _activateItem(ItemStack &, unsigned long)const;
     void _tick(ItemStack &, unsigned long)const;
     void _storeActivationTimestamp(ItemStack &, unsigned long, int)const;

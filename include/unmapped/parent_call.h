@@ -6,5 +6,6 @@ class parent_call {
 
 public:
 
-    parent_call(void);
+    parent_call();
+    ~parent_call();
 };

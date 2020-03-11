@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../bedrock/level/LevelChunk"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/nbt/ListTag.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/level/LevelChunk.h"
+#include <string>
 
 
 class VanillaLevelChunkUpgrade {
@@ -17,6 +19,8 @@ public:
     void convertVillagerV2TagToV1(CompoundTag &);
     void convertZombieVillagerV2TagToV1(CompoundTag &);
     void convertVillagerV1TagToV2(CompoundTag &);
+    std::string getV1BehaviorFromDefinitionsList(ListTag const*);
+    std::string getV1CareerFromDefinitionsList(ListTag const*);
     void addBiomeSpecificVillageSkins(CompoundTag &, BlockSource &);
     void convertZombieVillagerV1TagToV2(CompoundTag &);
 };

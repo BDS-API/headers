@@ -1,14 +1,20 @@
 #pragma once
 
+#include "./ActiveTransfersManager.h"
+#include "./NetworkIdentifier.h"
+#include <string>
 
 
-using namespace ClientBlobCache::Server;
+namespace ClientBlobCache::Server {
 
 class TransferBuilder {
 
 public:
 
-    TransferBuilder(void);
+    TransferBuilder();
     TransferBuilder(ClientBlobCache::Server::ActiveTransfersManager &, NetworkIdentifier const&);
     void add(unsigned long, std::string &);
+    ~TransferBuilder();
 };
+
+}

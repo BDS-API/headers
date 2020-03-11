@@ -1,10 +1,13 @@
 #pragma once
 
+#include <string>
 
 
 class CommandRawText {
 
 public:
 
-    CommandRawText(void);
+    std::string getText()const;
+    CommandRawText();
+    ~CommandRawText();
 };

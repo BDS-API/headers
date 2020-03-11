@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
+#include "../bedrock/actor/Actor.h"
+#include "./TargetNearbyComponent.h"
 
 
 class TargetNearbyComponent {
 
 public:
 
-    TargetNearbyComponent(TargetNearbyComponent&&);
-    TargetNearbyComponent(void);
+    TargetNearbyComponent(TargetNearbyComponent &&);
+    TargetNearbyComponent();
     void initFromDefinition(Actor &);
     void getWasSeenLastTick()const;
     void getWasInsideRange()const;

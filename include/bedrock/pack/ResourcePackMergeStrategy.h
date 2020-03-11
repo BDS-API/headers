@@ -5,7 +5,7 @@
 class ResourcePackMergeStrategy {
 
 public:
-    virtual ResourcePackMergeStrategy::~ResourcePackMergeStrategy()
+    virtual ~ResourcePackMergeStrategy();
 
-    ResourcePackMergeStrategy(void);
+    ResourcePackMergeStrategy();
 };

@@ -2,11 +2,13 @@
 
 
 
-using namespace OverworldGenerator;
+namespace OverworldGenerator {
 
 class ThreadData {
 
 public:
 
-    ThreadData(void);
+    ThreadData();
 };
+
+}

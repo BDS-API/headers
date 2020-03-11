@@ -1,14 +1,17 @@
 #pragma once
 
+#include "./IFileWriteAccess.h"
 
 
-using namespace FileSystemFileAccess;
+namespace FileSystemFileAccess {
 
 class FileSystemFileWriteAccess : IFileWriteAccess {
 
 public:
-    virtual FileSystemFileAccess::FileSystemFileWriteAccess::~FileSystemFileWriteAccess()
-    virtual void fwrite(void const*, unsigned long, unsigned long, void *);
+    virtual ~FileSystemFileWriteAccess();
+//  virtual void fwrite(void const*, unsigned long, unsigned long, void *); //TODO: incomplete function definition
 
-    FileSystemFileWriteAccess(void);
+    FileSystemFileWriteAccess();
 };
+
+}

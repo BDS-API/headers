@@ -2,11 +2,13 @@
 
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class RNS2RecvStruct {
 
 public:
 
-    RNS2RecvStruct(void);
+    RNS2RecvStruct();
 };
+
+}

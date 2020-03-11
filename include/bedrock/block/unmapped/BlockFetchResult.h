@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
+#include "../../../unmapped/Block.h"
+#include "../../util/BlockPos.h"
+#include "./BlockFetchResult.h"
 
 
 class BlockFetchResult {
@@ -12,6 +13,6 @@ public:
     void getBlock()const;
     void getBlockPos()const;
     void getDistanceSquared()const;
-    BlockFetchResult(BlockFetchResult&&);
+    BlockFetchResult(BlockFetchResult &&);
     BlockFetchResult(BlockFetchResult const&);
 };

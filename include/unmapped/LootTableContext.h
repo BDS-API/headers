@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../bedrock/actor/damagesource/ActorDamageSource"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/level/Level"
-#include "../bedrock/actor/Player"
+#include "./LootTable.h"
+#include "../bedrock/actor/damagesource/ActorDamageSource.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/level/Level.h"
 
 
 class LootTableContext {
 
 public:
 
+    ~LootTableContext();
     LootTableContext(float, Level *, Actor *, Player *, ActorDamageSource const*, float);
     void getThisEntity()const;
     void getKillerPlayer()const;
@@ -20,6 +22,6 @@ public:
     void addVisitedTable(LootTable const*);
     void removeVisitedTable(LootTable const*);
     void getLuck()const;
-    void getEntity(ActorTarget)const;
+//  void getEntity(ActorTarget)const; //TODO: incomplete function definition
     void getExplosionRadius()const;
 };

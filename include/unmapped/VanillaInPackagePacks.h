@@ -1,12 +1,13 @@
 #pragma once
 
+#include "./IInPackagePacks.h"
 
 
 class VanillaInPackagePacks : IInPackagePacks {
 
 public:
-    virtual VanillaInPackagePacks::~VanillaInPackagePacks()
-    virtual void getPacks(PackType)const;
+    virtual ~VanillaInPackagePacks();
+//  virtual void getPacks(PackType)const; //TODO: incomplete function definition
 
-    VanillaInPackagePacks(void);
+    VanillaInPackagePacks();
 };

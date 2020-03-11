@@ -2,13 +2,14 @@
 
 
 
-using namespace DataStructures;
+namespace DataStructures {
 
 class ByteQueue {
 
 public:
 
-    ByteQueue(void);
+    ByteQueue();
+    ~ByteQueue();
     void Clear(char const*, unsigned int);
     void WriteBytes(char const*, unsigned int, char const*, unsigned int);
     void GetBytesWritten()const;
@@ -18,3 +19,5 @@ public:
     void DecrementReadOffset(unsigned int);
     void Print();
 };
+
+}

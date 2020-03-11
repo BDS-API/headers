@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./EventInfo.h"
 
 
 class EventInfo {
 
 public:
 
-    EventInfo(void);
+    EventInfo();
+    ~EventInfo();
     EventInfo(EventInfo const&);
 };

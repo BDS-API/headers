@@ -2,11 +2,14 @@
 
 
 
-using namespace Core::Profile;
+namespace Core::Profile {
 
 class ProfileThread {
 
 public:
 
     ProfileThread(char const*);
+    ~ProfileThread();
 };
+
+}

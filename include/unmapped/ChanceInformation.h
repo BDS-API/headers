@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./ChanceInformation.h"
 
 
-using namespace ScatterParams;
+namespace ScatterParams {
 
 class ChanceInformation {
 
 public:
 
-    ChanceInformation(void);
+    ~ChanceInformation();
+    ChanceInformation();
     ChanceInformation(ScatterParams::ChanceInformation const&);
 };
+
+}

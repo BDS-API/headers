@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "./PropertyDescription.h"
+#include "../../../json/Value.h"
 
 
 class GroundOffsetDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual GroundOffsetDescription::~GroundOffsetDescription()
+    virtual ~GroundOffsetDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    GroundOffsetDescription(void);
+    GroundOffsetDescription();
 };

@@ -1,15 +1,19 @@
 #pragma once
 
+#include "./FileStream.h"
+#include "./Path.h"
 
 
-using namespace Core;
+namespace Core {
 
 class InputFileStream : Core::FileStream {
 
 public:
-    virtual Core::InputFileStream::~InputFileStream()
+    virtual ~InputFileStream();
 
-    InputFileStream(Core::Path const&, std::_Ios_Openmode);
-    InputFileStream(void);
-    void open(Core::Path const&, std::_Ios_Openmode);
+//  InputFileStream(Core::Path const&, std::_Ios_Openmode); //TODO: incomplete function definition
+    InputFileStream();
+//  void open(Core::Path const&, std::_Ios_Openmode); //TODO: incomplete function definition
 };
+
+}

@@ -1,15 +1,20 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/block/unmapped/BlockPalette"
+#include <memory>
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/block/unmapped/BlockPositionData.h"
+#include "../bedrock/block/unmapped/BlockPalette.h"
+#include "./StructureBlockPalette.h"
+#include <string>
 
 
 class StructureBlockPalette {
 
 public:
 
-    StructureBlockPalette(void);
-    StructureBlockPalette(StructureBlockPalette&&);
+    StructureBlockPalette();
+    StructureBlockPalette(StructureBlockPalette &&);
+    ~StructureBlockPalette();
     void load(CompoundTag const&, int);
     void _parseBlockPalette(CompoundTag const&);
     void _parseBlockPositionDataList(CompoundTag const&);

@@ -1,14 +1,17 @@
 #pragma once
 
+#include "./BiomeFilterGroup.h"
+#include "./FilterGroup.h"
+#include "./IWorldRegistriesProvider.h"
 
 
 class BiomeFilterGroup : FilterGroup {
 
 public:
-    virtual BiomeFilterGroup::~BiomeFilterGroup()
-    virtual void _createSubgroup(FilterGroup::CollectionType)const;
+    virtual ~BiomeFilterGroup();
+//  virtual void _createSubgroup(FilterGroup::CollectionType)const; //TODO: incomplete function definition
 
     BiomeFilterGroup(BiomeFilterGroup const&);
-    BiomeFilterGroup(FilterGroup::CollectionType);
+//  BiomeFilterGroup(FilterGroup::CollectionType); //TODO: incomplete function definition
     void finalizeParsedValue(IWorldRegistriesProvider &);
 };

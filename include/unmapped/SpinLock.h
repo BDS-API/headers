@@ -6,7 +6,8 @@ class SpinLock {
 
 public:
 
-    SpinLock(void);
+    SpinLock();
+    ~SpinLock();
     void try_lock();
     void _try_lock(unsigned long);
     void _getThreadId();

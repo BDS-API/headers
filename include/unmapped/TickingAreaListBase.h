@@ -1,18 +1,22 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/util/Tick"
-#include "../bedrock/level/tickingarea/ITickingArea"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/util/Tick.h"
+#include "../bedrock/level/tickingarea/ITickingArea.h"
+#include "../bedrock/util/Random.h"
+#include <memory>
+#include <vector>
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include "../bedrock/util/BlockPos.h"
+#include <string>
 
 
 class TickingAreaListBase {
 
 public:
 
-    TickingAreaListBase(void);
+    TickingAreaListBase();
+    ~TickingAreaListBase();
     void tick(Tick const&);
     void tickSeasons(Random &);
     void getAreas()const;
@@ -25,6 +29,7 @@ public:
     void removeAllAreas();
     void getTickingAreasDescription()const;
     void countStandaloneTickingAreas()const;
+    std::string findUsableDefaultName()const;
     void destroyAreas();
     bool processRemoves();
     bool processUpdates();

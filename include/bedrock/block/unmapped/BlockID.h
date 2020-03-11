@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./BlockID.h"
 
 
 class BlockID {
@@ -7,6 +8,6 @@ class BlockID {
 public:
 
     BlockID(BlockID const&);
-    BlockID(void);
+    BlockID();
     BlockID(unsigned char const&);
 };

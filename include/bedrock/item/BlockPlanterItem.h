@@ -1,14 +1,18 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
+#include "../../unmapped/Block.h"
+#include "./ItemInstance.h"
+#include "../util/BlockPos.h"
+#include "./Item.h"
+#include "../actor/Actor.h"
+#include "./ItemStack.h"
+#include <string>
 
 
 class BlockPlanterItem : Item {
 
 public:
-    virtual BlockPlanterItem::~BlockPlanterItem()
+    virtual ~BlockPlanterItem();
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
 

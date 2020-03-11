@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "./AttributeDescription.h"
+#include "../../../json/Value.h"
 
 
 class StrengthDescription : AttributeDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual StrengthDescription::~StrengthDescription()
+    virtual ~StrengthDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    StrengthDescription(void);
+    StrengthDescription();
 };

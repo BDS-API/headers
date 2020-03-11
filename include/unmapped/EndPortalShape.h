@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
 
 
 class EndPortalShape {
 
 public:
 
+    ~EndPortalShape();
     EndPortalShape(BlockSource &, BlockPos);
     void getDistanceUntilEdge(BlockPos const&, int, int);
     bool isValid(BlockSource &);

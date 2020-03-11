@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../actor/Mob"
+#include "../actor/Mob.h"
+#include "./LookControl.h"
 
 
 class AgentLookControl : LookControl {
@@ -8,9 +9,9 @@ class AgentLookControl : LookControl {
 public:
     static long sBaseYMax;
 
-    virtual AgentLookControl::~AgentLookControl()
+    virtual ~AgentLookControl();
     virtual void initializeInternal(Mob &);
     virtual void tick(Mob &);
 
-    AgentLookControl(void);
+    AgentLookControl();
 };

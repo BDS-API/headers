@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/level/LevelListener"
-#include "../bedrock/level/LevelData"
+#include "../bedrock/util/Vec3.h"
+#include "./Dimension.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/level/LevelListener.h"
+#include "./Block.h"
+#include "../bedrock/level/LevelData.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class Weather : LevelListener {
 
 public:
-    virtual Weather::~Weather()
-    virtual void levelEvent(LevelEvent, Vec3 const&, int);
+    virtual ~Weather();
+//  virtual void levelEvent(LevelEvent, Vec3 const&, int); //TODO: incomplete function definition
 
     Weather(Dimension &);
     void setRainLevel(float);

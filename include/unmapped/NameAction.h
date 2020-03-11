@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./NameAction.h"
 
 
 class NameAction {
 
 public:
 
-    NameAction(void);
+    ~NameAction();
+    NameAction();
     NameAction(NameAction const&);
 };

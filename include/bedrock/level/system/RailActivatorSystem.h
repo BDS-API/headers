@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/EntityRegistry"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/EntityRegistry.h"
 
 
 class RailActivatorSystem : ITickingSystem {
 
 public:
-    virtual RailActivatorSystem::~RailActivatorSystem()
+    virtual ~RailActivatorSystem();
     virtual void tick(EntityRegistry &);
 
-    RailActivatorSystem(void);
+    RailActivatorSystem();
 };

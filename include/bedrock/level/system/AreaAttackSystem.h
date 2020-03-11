@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../../../unmapped/AreaAttackComponent"
-#include "../../actor/unmapped/ActorComponent"
-#include "../../../unmapped/EntityRegistry"
-#include "../../../unmapped/EntityContext"
+#include "./ITickingSystem.h"
+#include "../../actor/unmapped/ActorComponent.h"
+#include "../../../unmapped/AreaAttackComponent.h"
+#include "../../../unmapped/EntityRegistry.h"
+#include "../../../unmapped/EntityContext.h"
 
 
 class AreaAttackSystem : ITickingSystem {
 
 public:
-    virtual AreaAttackSystem::~AreaAttackSystem()
+    virtual ~AreaAttackSystem();
     virtual void tick(EntityRegistry &);
 
-    AreaAttackSystem(void);
-    void _tickComponent(ViewedEntityContextT<EntityContext, FlagComponent<ActorTickedFlag>, ActorComponent, AreaAttackComponent> &);
+    AreaAttackSystem();
+//  void _tickComponent(ViewedEntityContextT<EntityContext, FlagComponent<ActorTickedFlag>, ActorComponent, AreaAttackComponent> &); //TODO: incomplete function definition
 };

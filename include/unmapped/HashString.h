@@ -1,14 +1,23 @@
 #pragma once
 
+#include "./HashString.h"
+#include <string>
 
 
-using namespace Util;
+namespace Util {
 
 class HashString {
 
 public:
 
+    ~HashString();
     HashString(Util::HashString const&);
-    HashString(void);
+    HashString();
     HashString(std::string const&);
+    void operator==(Util::HashString const&)const;
+    void operator!=(Util::HashString const&)const;
+    void operator<(Util::HashString const&)const;
+    std::string getString()const;
 };
+
+}

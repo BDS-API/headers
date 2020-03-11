@@ -1,22 +1,25 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../util/Random"
-#include "../actor/Actor"
-#include "../util/AABB"
-#include "../../unmapped/Material"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../util/Vec3"
-#include "../../unmapped/SpawnConditions"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Material.h"
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../../unmapped/SpawnConditions.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include <functional>
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class SlabBlock : BlockLegacy {
 
 public:
-    virtual SlabBlock::~SlabBlock()
+    virtual ~SlabBlock();
     virtual bool isObstructingChests(BlockSource &, BlockPos const&)const;
-    virtual void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block ()(BlockPos const&)> const&, BlockPos const&)const;
+    virtual void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block const& (BlockPos const&)> const&, BlockPos const&)const;
     virtual bool isSlabBlock()const;
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const;
     virtual void getRedstoneProperty(BlockSource &, BlockPos const&)const;
@@ -28,6 +31,6 @@ public:
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual bool canBeSilkTouched()const;
 
-    SlabBlock(std::string const&, int, bool, Material const&, WeakPtr<BlockLegacy>);
+//  SlabBlock(std::string const&, int, bool, Material const&, WeakPtr<BlockLegacy>); //TODO: incomplete function definition
     void getBaseSlab()const;
 };

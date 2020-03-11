@@ -1,11 +1,14 @@
 #pragma once
 
-#include "../bedrock/actor/damagesource/ActorDamageSource"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorUniqueID"
+#include "./HitResult.h"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/actor/damagesource/ActorDamageSource.h"
+#include "./DataLoadHelper.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./ProjectileComponent.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class ProjectileComponent {
@@ -47,7 +50,8 @@ public:
     void setFoundApex(bool);
     void getDelayedFrame();
     void setFrameDelayed();
-    ProjectileComponent(ProjectileComponent&&);
+    ~ProjectileComponent();
+    ProjectileComponent(ProjectileComponent &&);
     void getOwnerID()const;
     ProjectileComponent(ProjectileComponent const&);
     void getOnFireTime()const;
@@ -55,11 +59,11 @@ public:
     void setEnchantPower(int);
     void getEnchantPower()const;
     void getOnGroundTime()const;
-    ProjectileComponent(void);
+    ProjectileComponent();
     void initFromDefinition(Actor &);
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    void getUncertainty(Difficulty)const;
+//  void getUncertainty(Difficulty)const; //TODO: incomplete function definition
     void getUncertaintyBase()const;
     void getUncertaintyMultiplier()const;
     void getThrowUpAngleOffset()const;
@@ -99,10 +103,10 @@ public:
     void setSplashRange(float);
     void getShooterAngle(Actor &)const;
     void shoot(Actor &, Actor &);
-    void shoot(Actor &, Vec3 const&, float, float, Vec3 const&, Actor*);
+    void shoot(Actor &, Vec3 const&, float, float, Vec3 const&, Actor *);
     void getThrowPower()const;
-    void _selectNextMoveDirection(Actor &, ProjectileComponent::EAxis);
-    void setActiveTarget(Actor &, Actor*);
+//  void _selectNextMoveDirection(Actor &, ProjectileComponent::EAxis); //TODO: incomplete function definition
+    void setActiveTarget(Actor &, Actor *);
     void handleMovementGravity(Actor &);
     void handleMovementHoming(Actor &);
     void lerpMotion(Actor &, Vec3 const&);

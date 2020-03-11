@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../bedrock/level/ServerLevel"
-#include "../bedrock/level/scoreboard/Scoreboard"
+#include "../bedrock/level/scoreboard/Scoreboard.h"
+#include "../bedrock/level/ServerLevel.h"
 
 
-using namespace ScoreboardCommand;
+namespace ScoreboardCommand {
 
 class InitProxy {
 
@@ -14,3 +14,5 @@ public:
     InitProxy(Scoreboard &);
     void getScoreboard();
 };
+
+}

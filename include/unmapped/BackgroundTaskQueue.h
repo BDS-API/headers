@@ -1,12 +1,15 @@
 #pragma once
 
+#include <memory>
+#include "./BackgroundTask.h"
 
 
 class BackgroundTaskQueue {
 
 public:
 
-    BackgroundTaskQueue(void);
+    BackgroundTaskQueue();
+    ~BackgroundTaskQueue();
     void flush();
     void queue(std::shared_ptr<BackgroundTask>, bool);
     void getApproximateTaskCount()const;

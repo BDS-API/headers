@@ -1,18 +1,20 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
+#include <string>
+#include "unmapped/BlockSource.h"
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class MonsterEggBlock : BlockLegacy {
 
 public:
-    virtual MonsterEggBlock::~MonsterEggBlock()
+    virtual ~MonsterEggBlock();
     virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
-    virtual void buildDescriptionId(Block const&)const;
+    virtual std::string buildDescriptionId(Block const&)const;
     virtual bool isAuxValueRelevantForPicking()const;
     virtual void getVariant(Block const&)const;
     virtual void getSilkTouchItemInstance(Block const&)const;

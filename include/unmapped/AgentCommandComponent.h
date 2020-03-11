@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/command/commands/agent/Command"
+#include "../bedrock/command/Command.h"
+#include "../bedrock/actor/Actor.h"
+#include <memory>
+#include "./AgentCommandComponent.h"
 
 
 class AgentCommandComponent {
 
 public:
 
-    AgentCommandComponent(AgentCommandComponent&&);
-    AgentCommandComponent(void);
+    ~AgentCommandComponent();
+    AgentCommandComponent(AgentCommandComponent &&);
+    AgentCommandComponent();
     void initFromDefinition(Actor &);
     void getCurrentCommand()const;
     void getWaitForNextCommandTicks();

@@ -2,10 +2,10 @@
 
 
 
-class LevelDbFileLock : leveldb::FileLock {
+class LevelDbFileLock /*leveldb::FileLock*/ { //TODO: incomplete class definition
 
 public:
-    virtual LevelDbFileLock::~LevelDbFileLock()
+    virtual ~LevelDbFileLock();
 
-    LevelDbFileLock(void);
+    LevelDbFileLock();
 };

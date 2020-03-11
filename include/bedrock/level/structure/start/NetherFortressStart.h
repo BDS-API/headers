@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../util/Random"
+#include "./StructureStart.h"
+#include "../../../util/Random.h"
 
 
 class NetherFortressStart : StructureStart {
 
 public:
-    virtual NetherFortressStart::~NetherFortressStart()
+    virtual ~NetherFortressStart();
     virtual void getType()const;
 
-    NetherFortressStart(void);
+    NetherFortressStart();
     NetherFortressStart(Random &, int, int);
 };

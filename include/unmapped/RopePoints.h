@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
 
 
 class RopePoints {
 
 public:
 
-    RopePoints(void);
+    RopePoints();
+    ~RopePoints();
     void size()const;
     void beginRope();
     void endRope();

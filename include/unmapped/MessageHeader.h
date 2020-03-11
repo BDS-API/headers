@@ -1,16 +1,21 @@
 #pragma once
 
-#include "../json/Value"
+#include "../json/Value.h"
+#include "./MessageHeader.h"
+#include <string>
 
 
-using namespace Automation;
+namespace Automation {
 
 class MessageHeader {
 
 public:
 
-    MessageHeader(void);
-    MessageHeader(std::string const&, Automation::MessagePurpose, int);
+    ~MessageHeader();
+    MessageHeader();
+//  MessageHeader(std::string const&, Automation::MessagePurpose, int); //TODO: incomplete function definition
     void serialize()const;
-    void deserialize(Json::Value &, Automation::MessageHeader&);
+    void deserialize(Json::Value &, Automation::MessageHeader &);
 };
+
+}

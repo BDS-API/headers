@@ -1,14 +1,18 @@
 #pragma once
 
-#include "../bedrock/util/ChunkPos"
+#include "./PostprocessingManager.h"
+#include "../bedrock/util/ChunkPos.h"
 
 
-using namespace PostprocessingManager;
+namespace PostprocessingManager {
 
 class Owns {
 
 public:
 
-    Owns(ChunkPos const&, PostprocessingManager&);
-    Owns(PostprocessingManager&);
+    Owns(ChunkPos const&, PostprocessingManager &);
+    Owns(PostprocessingManager &);
+    ~Owns();
 };
+
+}

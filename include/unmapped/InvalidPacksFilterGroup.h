@@ -6,6 +6,6 @@ class InvalidPacksFilterGroup {
 
 public:
 
-    InvalidPacksFilterGroup(void);
-    void addFilter(PackType);
+    InvalidPacksFilterGroup();
+//  void addFilter(PackType); //TODO: incomplete function definition
 };

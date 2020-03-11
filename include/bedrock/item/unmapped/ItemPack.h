@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/RecipeIngredient"
+#include "./ItemPack.h"
+#include "../../../unmapped/RecipeIngredient.h"
 
 
 class ItemPack {
 
 public:
 
-    ItemPack(void);
-    ItemPack(ItemPack&&);
+    ~ItemPack();
+    ItemPack();
+    ItemPack(ItemPack &&);
     void add(RecipeIngredient const&, int);
     void remove(RecipeIngredient const&, int);
     void getIngredients()const;

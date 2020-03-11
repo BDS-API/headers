@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance"
+#include "./ChemistryIngredient.h"
+#include "../bedrock/item/ItemInstance.h"
 
 
 class ChemistryIngredient {
 
 public:
 
+    ~ChemistryIngredient();
     ChemistryIngredient(ChemistryIngredient const&);
-    ChemistryIngredient(ElementType, int);
-    ChemistryIngredient(CompoundType, int);
+//  ChemistryIngredient(ElementType, int); //TODO: incomplete function definition
+//  ChemistryIngredient(CompoundType, int); //TODO: incomplete function definition
     ChemistryIngredient(ItemInstance const&);
 };

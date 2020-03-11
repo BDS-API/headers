@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Horse"
+#include "./Goal.h"
+#include "../Horse.h"
+#include <string>
 
 
 class SkeletonHorseTrapGoal : Goal {
 
 public:
-    virtual SkeletonHorseTrapGoal::~SkeletonHorseTrapGoal()
+    virtual ~SkeletonHorseTrapGoal();
     virtual bool canUse();
     virtual void start();
     virtual void tick();
@@ -14,6 +16,6 @@ public:
 
     SkeletonHorseTrapGoal(Horse &, int, float);
     void _getClosestPlayer()const;
-    void _createHorse(Difficulty const&);
-    void _createSkeleton(Difficulty const&, Horse const&);
+//  void _createHorse(Difficulty const&); //TODO: incomplete function definition
+//  void _createSkeleton(Difficulty const&, Horse const&); //TODO: incomplete function definition
 };

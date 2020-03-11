@@ -2,11 +2,13 @@
 
 
 
-using namespace ScriptApi;
+namespace ScriptApi {
 
 class ScriptVersionInfo {
 
 public:
 
-    ScriptVersionInfo(void);
+    ScriptVersionInfo();
 };
+
+}

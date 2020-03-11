@@ -1,16 +1,23 @@
 #pragma once
 
-#include "../BlockLegacy"
-#include "../../../unmapped/TextureUVCoordinateSet"
-#include "../../util/Vec3"
-#include "../../util/Random"
-#include "../../../unmapped/Block"
-#include "../../util/BlockPos"
-#include "../../../json/Value"
-#include "../../util/AABB"
-#include "../../pack/ResourcePackManager"
-#include "../../../unmapped/AtlasItemManager"
-#include "../../util/Color"
+#include "../../util/Random.h"
+#include "../../../unmapped/Block.h"
+#include "../../util/AABB.h"
+#include "../../../unmapped/Model.h"
+#include "./BlockSource.h"
+#include "../../util/Vec3.h"
+#include <memory>
+#include "../BlockLegacy.h"
+#include "../../util/BlockPos.h"
+#include "../../pack/ResourcePackManager.h"
+#include "../../../unmapped/AtlasItemManager.h"
+#include "./BlockPalette.h"
+#include "../../../json/Value.h"
+#include <vector>
+#include "../../../unmapped/TextureUVCoordinateSet.h"
+#include "./BlockGraphics.h"
+#include "../../util/Color.h"
+#include <string>
 
 
 class BlockGraphics {
@@ -21,13 +28,13 @@ public:
     static long mBlocks;
     static long mTerrainTextureAtlas;
     static long mOwnedBlocks;
-    static long mBlockLookupMap[abi:cxx11];
+    static std::string mBlockLookupMap;
     static long mDummyBlock;
-    static long mModels[abi:cxx11];
+    static std::string mModels;
     static long mBlockModelAccess;
-    static long mTessellatedModels[abi:cxx11];
+    static std::string mTessellatedModels;
 
-    virtual BlockGraphics::~BlockGraphics()
+    virtual ~BlockGraphics();
     virtual void getIconYOffset()const;
     virtual void getColor(int)const;
     virtual void getColor(BlockSource &, BlockPos const&)const;
@@ -49,20 +56,20 @@ public:
     void getForBlock(BlockLegacy const&);
     void getBlocks();
     void setAtlasItemManager(std::shared_ptr<AtlasItemManager>);
-    void setTextures(BlockGraphics&, Json::Value const&);
+    void setTextures(BlockGraphics &, Json::Value const&);
     void setTextureItem(std::string const&);
     void setTextureItem(std::string const&, std::string const&, std::string const&);
     void setTextureItem(std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&);
-    void setCarriedTextures(BlockGraphics&, Json::Value const&);
+    void setCarriedTextures(BlockGraphics &, Json::Value const&);
     void setCarriedTextureItem(std::string const&);
     void setCarriedTextureItem(std::string const&, std::string const&, std::string const&);
     void setCarriedTextureItem(std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&);
-    void setBlockShape(BlockGraphics&, Json::Value const&);
+    void setBlockShape(BlockGraphics &, Json::Value const&);
     void getBlockShape()const;
-    void setBlockShape(BlockShape);
-    void setBrightnessGamma(BlockGraphics&, Json::Value const&);
-    void setSoundType(BlockGraphics&, Json::Value const&);
-    void setSoundType(BlockSoundType);
+//  void setBlockShape(BlockShape); //TODO: incomplete function definition
+    void setBrightnessGamma(BlockGraphics &, Json::Value const&);
+    void setSoundType(BlockGraphics &, Json::Value const&);
+//  void setSoundType(BlockSoundType); //TODO: incomplete function definition
     bool isInitialized();
     void useBlockModel()const;
     void useTessellatedModel()const;
@@ -76,7 +83,7 @@ public:
     void findBlockModel(std::string const&);
     void findOrTessellateModel(std::string const&, BlockGeometry::Model const*);
     void loadCustomBlockShapeModels(Json::Value const&);
-    void registerBlockGraphics(std::vector<Json::Value, std::allocator<Json::Value>> &, std::string const&, BlockShape);
+//  void registerBlockGraphics(std::vector<Json::Value, std::allocator<Json::Value>> &, std::string const&, BlockShape); //TODO: incomplete function definition
     void getBlock()const;
     void texturePaletteSize()const;
     void setDefaultCarriedTextures();
@@ -87,7 +94,7 @@ public:
     void enableAllowSame();
     void teardownBlocks();
     BlockGraphics(std::string const&);
-    BlockGraphics(Block const&, BlockGraphics::ConstructorToken);
+//  BlockGraphics(Block const&, BlockGraphics::ConstructorToken); //TODO: incomplete function definition
     void getMapColor()const;
     void getIconTexture(int)const;
     void getTextureCarriedVariations(unsigned long, int)const;

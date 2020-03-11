@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/actor/Player"
-#include "../bedrock/actor/unmapped/ActorInteraction"
+#include "./DataLoadHelper.h"
+#include "./BreedableComponent.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
+#include "../bedrock/actor/unmapped/ActorInteraction.h"
 
 
 class BreedableComponent {
 
 public:
 
-    BreedableComponent(BreedableComponent&&);
+    BreedableComponent(BreedableComponent &&);
     void getInteraction(Actor &, Player &, ActorInteraction &);
     void _meetsEnvironmentRequirements(Actor &);
     bool canMate(Actor const&, Actor const&)const;
@@ -27,5 +29,5 @@ public:
     void getLoveCause(Actor const&)const;
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    BreedableComponent(void);
+    BreedableComponent();
 };

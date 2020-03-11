@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../unmapped/BehaviorFactory"
-#include "../../../json/Value"
+#include "../../../unmapped/BehaviorFactory.h"
+#include "./BehaviorDefinition.h"
+#include "../../../json/Value.h"
 
 
 class ShootBowDefinition : BehaviorDefinition {
 
 public:
-    virtual ShootBowDefinition::~ShootBowDefinition()
+    virtual ~ShootBowDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
 
-    ShootBowDefinition(void);
+    ShootBowDefinition();
 };

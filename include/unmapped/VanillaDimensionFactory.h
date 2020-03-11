@@ -1,12 +1,13 @@
 #pragma once
 
-#include "../bedrock/Scheduler"
-#include "../bedrock/level/Level"
+#include "../bedrock/Scheduler.h"
+#include "./Dimension.h"
+#include "../bedrock/level/Level.h"
 
 
 class VanillaDimensionFactory {
 
 public:
 
-    void registerDimensionTypes(Factory<Dimension, Level &, Scheduler &> &);
+//  void registerDimensionTypes(Factory<Dimension, Level &, Scheduler &> &); //TODO: incomplete function definition
 };

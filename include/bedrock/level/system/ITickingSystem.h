@@ -5,7 +5,7 @@
 class ITickingSystem {
 
 public:
-    virtual ITickingSystem::~ITickingSystem()
+    virtual ~ITickingSystem();
 
-    ITickingSystem(void);
+    ITickingSystem();
 };

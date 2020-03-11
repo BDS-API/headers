@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Actor.h"
+#include "./DataLoadHelper.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./DamageOverTimeComponent.h"
 
 
 class DamageOverTimeComponent {
 
 public:
 
-    DamageOverTimeComponent(DamageOverTimeComponent&&);
+    DamageOverTimeComponent(DamageOverTimeComponent &&);
     void addAdditionalSaveData(CompoundTag &)const;
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void getHurtValue()const;

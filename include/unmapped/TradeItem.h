@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./TradeItem.h"
 
 
 class TradeItem {
 
 public:
 
-    TradeItem(void);
-    TradeItem(TradeItem&&);
+    ~TradeItem();
+    TradeItem();
+    TradeItem(TradeItem &&);
 };

@@ -5,7 +5,7 @@
 class PacketObserver {
 
 public:
-    virtual PacketObserver::~PacketObserver()
+    virtual ~PacketObserver();
 
-    PacketObserver(void);
+    PacketObserver();
 };

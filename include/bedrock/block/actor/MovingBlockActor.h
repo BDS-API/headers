@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../../unmapped/Block.h"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include <memory>
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "./PistonBlockActor.h"
+#include "../unmapped/BlockSource.h"
 
 
 class MovingBlockActor : BlockActor {
 
 public:
-    virtual MovingBlockActor::~MovingBlockActor()
+    virtual ~MovingBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);

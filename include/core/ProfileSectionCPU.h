@@ -1,12 +1,16 @@
 #pragma once
 
+#include "./CPUProfileToken.h"
 
 
-using namespace Core::Profile;
+namespace Core::Profile {
 
 class ProfileSectionCPU {
 
 public:
 
     ProfileSectionCPU(Core::Profile::CPUProfileToken const&);
+    ~ProfileSectionCPU();
 };
+
+}

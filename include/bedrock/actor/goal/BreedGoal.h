@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/Vec3"
-#include "../../util/Vec2"
+#include "../../util/Vec3.h"
+#include "../../util/Vec2.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class BreedGoal : Goal {
 
 public:
-    virtual BreedGoal::~BreedGoal()
+    virtual ~BreedGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void stop();

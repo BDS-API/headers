@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
-#include "../bedrock/control/JumpControl"
-#include "../bedrock/description/component/JumpControlDescription"
+#include "../bedrock/control/JumpControl.h"
+#include "./JumpControlComponent.h"
+#include <memory>
+#include "../bedrock/actor/Mob.h"
+#include "../bedrock/description/component/JumpControlDescription.h"
 
 
 class JumpControlComponent {
 
 public:
 
-    JumpControlComponent(JumpControlComponent&&);
-    JumpControlComponent(void);
+    ~JumpControlComponent();
+    JumpControlComponent(JumpControlComponent &&);
+    JumpControlComponent();
     void initializeFromDefinition(Mob &, JumpControlDescription *);
     void setInternalType(std::unique_ptr<JumpControl, std::default_delete<JumpControl>>);
     void getAnimationDuration()const;
@@ -24,7 +27,7 @@ public:
     void getJumpPower(Mob const&)const;
     void setJumpPower(float);
     void getJumpType(Mob const&)const;
-    void setJumpType(Mob &, JumpType);
+//  void setJumpType(Mob &, JumpType); //TODO: incomplete function definition
     void getSwimming()const;
     void setSwimming(bool);
     void _getDelayInternal()const;

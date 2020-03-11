@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "./PropertyDescription.h"
+#include "../../../json/Value.h"
 
 
 class DefaultLookAngleDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual DefaultLookAngleDescription::~DefaultLookAngleDescription()
+    virtual ~DefaultLookAngleDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    DefaultLookAngleDescription(void);
+    DefaultLookAngleDescription();
 };

@@ -2,11 +2,14 @@
 
 
 
-using namespace BedrockEngine;
+namespace BedrockEngine {
 
 class PlatformBuildInfo {
 
 public:
 
-    PlatformBuildInfo(void);
+    PlatformBuildInfo();
+    ~PlatformBuildInfo();
 };
+
+}

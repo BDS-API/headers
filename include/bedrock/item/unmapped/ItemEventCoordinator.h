@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../ItemInstance"
-#include "../../actor/Player"
-#include "../ItemStack"
+#include "./ItemDescriptor.h"
+#include "../../actor/Actor.h"
+#include "../../actor/Player.h"
+#include "../ItemInstance.h"
+#include "../ItemStack.h"
+#include <string>
 
 
 class ItemEventCoordinator {
@@ -23,5 +25,6 @@ public:
     void onItemModifiedActor(ItemInstance const&, Actor const&);
     void onItemSelectedSlot(int);
     void onItemSelected(ItemInstance const&);
-    ItemEventCoordinator(void);
+    ~ItemEventCoordinator();
+    ItemEventCoordinator();
 };

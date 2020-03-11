@@ -1,18 +1,19 @@
 #pragma once
 
-#include "../../util/Tick"
-#include "../../block/unmapped/BlockSource"
-#include "../../util/Random"
-#include "../chunksource/ChunkSource"
-#include "../Level"
-#include "../../../unmapped/Bounds"
-#include "../../util/ChunkPos"
+#include "../../util/Random.h"
+#include "../../../unmapped/Bounds.h"
+#include "../Level.h"
+#include "./ITickingAreaView.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../../util/Tick.h"
+#include "../../util/ChunkPos.h"
+#include "../chunksource/ChunkSource.h"
 
 
 class TickingAreaView : ITickingAreaView {
 
 public:
-    virtual TickingAreaView::~TickingAreaView()
+    virtual ~TickingAreaView();
     virtual void init(Bounds const&, bool);
     virtual void tick(Tick const&, BlockSource &, bool);
     virtual void tickSeasons(BlockSource &, Random &);

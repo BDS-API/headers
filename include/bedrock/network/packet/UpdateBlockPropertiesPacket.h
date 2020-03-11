@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../block/unmapped/BlockDefinitionGroup"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../block/unmapped/BlockDefinitionGroup.h"
+#include "./Packet.h"
+#include <string>
 
 
 class UpdateBlockPropertiesPacket : Packet {
 
 public:
-    virtual UpdateBlockPropertiesPacket::~UpdateBlockPropertiesPacket()
+    virtual ~UpdateBlockPropertiesPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    UpdateBlockPropertiesPacket(void);
+    UpdateBlockPropertiesPacket();
     UpdateBlockPropertiesPacket(BlockDefinitionGroup const&);
 };

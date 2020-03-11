@@ -2,11 +2,13 @@
 
 
 
-using namespace TrailSystem;
+namespace TrailSystem {
 
 class BlockPositions {
 
 public:
 
-    BlockPositions(void);
+    BlockPositions();
 };
+
+}

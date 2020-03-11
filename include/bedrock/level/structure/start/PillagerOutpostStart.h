@@ -1,21 +1,22 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../block/unmapped/BlockSource"
-#include "../../../../unmapped/Dimension"
-#include "../../../util/BlockPos"
-#include "../../../../unmapped/Block"
-#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/Block.h"
+#include "../../../util/BlockPos.h"
+#include "../../../../unmapped/Dimension.h"
+#include "./StructureStart.h"
+#include "../../../util/Random.h"
+#include "../../../block/unmapped/BlockSource.h"
+#include "../../../../unmapped/BoundingBox.h"
 
 
 class PillagerOutpostStart : StructureStart {
 
 public:
-    virtual PillagerOutpostStart::~PillagerOutpostStart()
+    virtual ~PillagerOutpostStart();
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void getType()const;
 
-    PillagerOutpostStart(void);
+    PillagerOutpostStart();
     void _fillWithSupportBlock(BlockPos const&, BlockSource *, BoundingBox const&, Block const&);
     PillagerOutpostStart(Dimension &, Random &, int, int);
     void createOutpost(Dimension &, Random &, int, int);

@@ -6,5 +6,5 @@ class ActorLink {
 
 public:
 
-    ActorLink(void);
+    ActorLink();
 };

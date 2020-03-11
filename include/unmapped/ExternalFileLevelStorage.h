@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../bedrock/level/LevelSummary"
-#include "../bedrock/level/LevelData"
-#include "../core/Path"
+#include "../core/Path.h"
+#include "../bedrock/level/LevelSummary.h"
+#include "./TaskGroup.h"
+#include "../bedrock/level/LevelData.h"
+#include <string>
 
 
 class ExternalFileLevelStorage {
@@ -18,6 +20,7 @@ public:
     void readLevelDataFromData(std::string const&, LevelData &);
     void _readLevelDataFromFile(Core::Path const&, std::string const&, LevelData &);
     void readLevelDataFromFile(Core::Path const&, LevelData &);
+    std::string getLevelIDFromPath(Core::Path const&);
     void readShallowLevelSummaryFromSyncFile(Core::Path const&, LevelSummary &);
     void readSyncFileData(Core::Path const&, std::string &, long &, long &, bool &);
     void markLevelForSync(Core::Path const&, std::string const&, unsigned long, long, bool);
@@ -27,4 +30,5 @@ public:
     bool isLevelCloudSave(Core::Path const&);
     void copyLevelInfoToDiskCache(Core::Path const&, bool);
     void getLevelModifiedTimestamp(Core::Path const&);
+    std::string getImportantFiles();
 };

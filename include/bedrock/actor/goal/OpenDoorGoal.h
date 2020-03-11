@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "../Mob.h"
+#include "./DoorInteractGoal.h"
+#include <string>
 
 
 class OpenDoorGoal : DoorInteractGoal {
 
 public:
-    virtual OpenDoorGoal::~OpenDoorGoal()
+    virtual ~OpenDoorGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

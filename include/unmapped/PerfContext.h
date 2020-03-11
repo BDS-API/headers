@@ -2,7 +2,7 @@
 
 
 
-using namespace DBStorageWriteBatch;
+namespace DBStorageWriteBatch {
 
 class PerfContext {
 
@@ -10,3 +10,5 @@ public:
 
     void log(unsigned long)const;
 };
+
+}

@@ -1,11 +1,12 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../item/ItemInstance"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../util/BlockPos.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../level/Level.h"
+#include "../../item/ItemInstance.h"
+#include "../unmapped/BlockSource.h"
 
 
 class ItemFrameBlockActor : BlockActor {
@@ -13,7 +14,7 @@ class ItemFrameBlockActor : BlockActor {
 public:
     static long ROTATION_DEGREES;
 
-    virtual ItemFrameBlockActor::~ItemFrameBlockActor()
+    virtual ~ItemFrameBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
@@ -23,7 +24,7 @@ public:
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     ItemFrameBlockActor(BlockPos);
-    ItemFrameBlockActor(BlockPos, BlockActorType);
+//  ItemFrameBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition
     void _updateMapBit(BlockSource &);
     void updateNameTag();
     void getClockFrame();

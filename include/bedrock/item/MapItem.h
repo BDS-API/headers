@@ -1,30 +1,37 @@
 #pragma once
 
-#include "../../unmapped/Dimension"
-#include "../nbt/CompoundTag"
-#include "../block/unmapped/BlockSource"
-#include "../level/Level"
-#include "../util/BlockPos"
-#include "../../unmapped/MapItemSavedData"
-#include "../../unmapped/MapSample"
-#include "../actor/Actor"
-#include "../../unmapped/MapItemTrackedActor"
-#include "unmapped/ItemDescriptor"
+#include "../block/unmapped/BlockSource.h"
+#include <string>
+#include "./ItemStackBase.h"
+#include "../../unmapped/Dimension.h"
+#include "../../unmapped/MapItemSavedData.h"
+#include <memory>
+#include "../../unmapped/MapItemTrackedActor.h"
+#include "./ItemInstance.h"
+#include "../util/BlockPos.h"
+#include "../../unmapped/MapSample.h"
+#include "../level/Level.h"
+#include "../actor/Actor.h"
+#include "./ComplexItem.h"
+#include <vector>
+#include "../nbt/CompoundTag.h"
+#include "./ItemStack.h"
+#include "unmapped/ItemDescriptor.h"
 
 
 class MapItem : ComplexItem {
 
 public:
-    static long TAG_MAP_SCALING[abi:cxx11];
-    static long TAG_MAP_SCALE[abi:cxx11];
-    static long TAG_MAP_PLAYER_DISPLAY[abi:cxx11];
-    static long TAG_MAP_UUID[abi:cxx11];
-    static long TAG_MAP_NAME_INDEX[abi:cxx11];
-    static long TAG_MAP_INIT[abi:cxx11];
+    static std::string TAG_MAP_SCALING;
+    static std::string TAG_MAP_SCALE;
+    static std::string TAG_MAP_PLAYER_DISPLAY;
+    static std::string TAG_MAP_UUID;
+    static std::string TAG_MAP_NAME_INDEX;
+    static std::string TAG_MAP_INIT;
 
-    virtual MapItem::~MapItem()
+    virtual ~MapItem();
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
-    virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
+    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
     virtual void refreshedInContainer(ItemStackBase &, Level &)const;
     virtual void fixupOnLoad(ItemStackBase &, Level &)const;
@@ -45,6 +52,6 @@ public:
     void setItemInstanceInfo(ItemInstance &, MapItemSavedData &);
     void setMapNameIndex(ItemStack &, int);
     void serializeMapData(std::vector<MapSample, std::allocator<MapSample>> const&, std::string &);
-    void _scheduleMapChunkRendering(Dimension &, MapItemSavedData const&, MapItemSavedData::ChunkBounds, std::shared_ptr<bool>);
+//  void _scheduleMapChunkRendering(Dimension &, MapItemSavedData const&, MapItemSavedData::ChunkBounds, std::shared_ptr<bool>); //TODO: incomplete function definition
     void renderBiomePreviewMap(Dimension &, MapItemSavedData &);
 };

@@ -1,22 +1,24 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../ScriptObjectHandle"
-#include "../unmapped/ScriptServerContext"
-#include "../ScriptVersionInfo"
-#include "../unmapped/ScriptEngine"
+#include "../../actor/Actor.h"
+#include "../unmapped/ScriptEngine.h"
+#include "../ScriptObjectHandle.h"
+#include "../ScriptVersionInfo.h"
+#include "../unmapped/ScriptServerContext.h"
+#include <string>
 
 
-class ScriptTeleportComponent : ScriptTemplateFactory<ScriptServerContext>::Component {
+class ScriptTeleportComponent /*ScriptTemplateFactory<ScriptServerContext>::Component*/ { //TODO: incomplete class definition
 
 public:
     static long mHash;
 
-    virtual ScriptTeleportComponent::~ScriptTeleportComponent()
+    virtual ~ScriptTeleportComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;
 
     void getHash();
-    ScriptTeleportComponent(void);
+    ScriptTeleportComponent();
+    std::string getName();
 };

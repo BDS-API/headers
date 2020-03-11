@@ -6,6 +6,6 @@ class SubChunkBrightnessStorage {
 
 public:
 
-    SubChunkBrightnessStorage(void);
+    SubChunkBrightnessStorage();
     void reset(bool, bool);
 };

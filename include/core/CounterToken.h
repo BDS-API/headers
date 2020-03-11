@@ -2,12 +2,14 @@
 
 
 
-using namespace Core::Profile;
+namespace Core::Profile {
 
 class CounterToken {
 
 public:
 
-    CounterToken(void);
+    CounterToken();
     CounterToken(unsigned long);
 };
+
+}

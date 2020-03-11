@@ -6,5 +6,5 @@ class SurfaceBuilderComponent {
 
 public:
 
-    SurfaceBuilderComponent(void);
+    SurfaceBuilderComponent();
 };

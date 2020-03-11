@@ -1,21 +1,26 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/block/unmapped/BlockVolume"
-#include "../bedrock/level/biome/Biome"
-#include "../bedrock/util/BlockPos"
+#include "./PerlinSimplexNoise.h"
+#include "./ISurfaceBuilder.h"
+#include "../bedrock/util/Random.h"
+#include "../bedrock/block/unmapped/BlockVolume.h"
+#include "./EntityContext.h"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/level/biome/Biome.h"
 
 
-using namespace VanillaSurfaceBuilders;
+namespace VanillaSurfaceBuilders {
 
 class MesaSurfaceBuilder : ISurfaceBuilder {
 
 public:
-    virtual VanillaSurfaceBuilders::MesaSurfaceBuilder::~MesaSurfaceBuilder()
+    virtual ~MesaSurfaceBuilder();
     virtual void init(EntityContext &, unsigned int);
     virtual void buildSurfaceAt(Biome &, Random &, BlockVolume &, BlockPos const&, float, short);
 
-    MesaSurfaceBuilder(void);
+    MesaSurfaceBuilder();
     void getBand(int, int, int, PerlinSimplexNoise const&)const;
     void generateBands(Random &);
 };
+
+}

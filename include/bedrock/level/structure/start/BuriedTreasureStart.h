@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../../unmapped/Dimension"
+#include "../../../../unmapped/Dimension.h"
+#include "./StructureStart.h"
+#include "../../../util/Random.h"
 
 
 class BuriedTreasureStart : StructureStart {
 
 public:
-    virtual BuriedTreasureStart::~BuriedTreasureStart()
+    virtual ~BuriedTreasureStart();
     virtual void getType()const;
 
-    BuriedTreasureStart(void);
+    BuriedTreasureStart();
     BuriedTreasureStart(Dimension &, Random &, int, int);
 };

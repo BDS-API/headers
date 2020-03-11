@@ -1,19 +1,24 @@
 #pragma once
 
-#include "../nbt/CompoundTag"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "unmapped/ItemDescriptor"
+#include <string>
+#include "./ItemStackBase.h"
+#include <memory>
+#include "../util/BlockPos.h"
+#include "./Item.h"
+#include "../actor/Actor.h"
+#include "../nbt/CompoundTag.h"
+#include "./ItemStack.h"
+#include "unmapped/ItemDescriptor.h"
 
 
 class BlockItem : Item {
 
 public:
-    virtual BlockItem::~BlockItem()
+    virtual ~BlockItem();
     virtual bool isExperimental(ItemDescriptor const*)const;
     virtual bool isDestructive(int)const;
     virtual bool isValidAuxValue(int)const;
-    virtual void buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
+    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual bool isEmissive(int)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
     virtual void getIconYOffset()const;

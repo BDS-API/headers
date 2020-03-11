@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitSceneGraph"
-#include "../../../util/BlockPos"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../util/BlockPos.h"
+#include "../../../../unmapped/CircuitSceneGraph.h"
+#include "../../../../unmapped/CircuitSystem.h"
+#include "../../../../unmapped/CircuitTrackingInfo.h"
+#include "./BaseCircuitComponent.h"
 
 
 class ProducerComponent : BaseCircuitComponent {
 
 public:
-    virtual ProducerComponent::~ProducerComponent()
+    virtual ~ProducerComponent();
     virtual void setStrength(int);
     virtual bool canStopPower();
     virtual void setStopPower(bool);
@@ -19,6 +20,6 @@ public:
     virtual void evaluate(CircuitSystem &, BlockPos const&);
 
     bool doesAllowAttachments();
-    ProducerComponent(void);
+    ProducerComponent();
     void allowAttachments(bool);
 };

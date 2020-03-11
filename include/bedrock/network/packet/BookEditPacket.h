@@ -1,22 +1,25 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../../unmapped/PageContent"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./BookEditPacket.h"
+#include "./Packet.h"
+#include "../../../unmapped/PageContent.h"
+#include <string>
 
 
 class BookEditPacket : Packet {
 
 public:
-    virtual BookEditPacket::~BookEditPacket()
+    virtual ~BookEditPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
     BookEditPacket(BookEditPacket const&);
-    BookEditPacket(BookEditPacket&&);
-    BookEditPacket(void);
+    BookEditPacket(BookEditPacket &&);
+    BookEditPacket();
     void _writePage(BinaryStream &)const;
     void _readPage(ReadOnlyBinaryStream &);
     void setToReplacePage(int, int, PageContent const&);

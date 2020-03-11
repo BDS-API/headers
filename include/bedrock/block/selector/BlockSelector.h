@@ -5,7 +5,7 @@
 class BlockSelector {
 
 public:
-    virtual BlockSelector::~BlockSelector()
+    virtual ~BlockSelector();
 
-    BlockSelector(void);
+    BlockSelector();
 };

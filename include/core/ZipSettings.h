@@ -2,12 +2,15 @@
 
 
 
-using namespace Core::ZipUtils;
+namespace Core::ZipUtils {
 
 class ZipSettings {
 
 public:
 
-    ZipSettings(void);
-    ZipSettings(Core::ZipUtils::ZipCompressionLevel);
+    ZipSettings();
+//  ZipSettings(Core::ZipUtils::ZipCompressionLevel); //TODO: incomplete function definition
+    ~ZipSettings();
 };
+
+}

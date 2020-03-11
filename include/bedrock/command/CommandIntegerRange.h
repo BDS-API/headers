@@ -6,7 +6,7 @@ class CommandIntegerRange {
 
 public:
 
-    CommandIntegerRange(void);
+    CommandIntegerRange();
     CommandIntegerRange(int, int, bool);
     bool isWithinRange(int)const;
     void getMinValue()const;

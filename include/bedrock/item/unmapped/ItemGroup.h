@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../ItemInstance"
+#include "../ItemInstance.h"
+#include "./ItemGroup.h"
 
 
 class ItemGroup {
 
 public:
 
-    ItemGroup(void);
-    ItemGroup(ItemGroup&&);
+    ItemGroup();
+    ~ItemGroup();
+    ItemGroup(ItemGroup &&);
     ItemGroup(ItemGroup const&);
     ItemGroup(ItemInstance const&);
     void setCount(int);

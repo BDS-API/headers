@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include "./BehaviorNode.h"
 
 
 class PlaceBlockNode : BehaviorNode {
 
 public:
-    virtual PlaceBlockNode::~PlaceBlockNode()
+    virtual ~PlaceBlockNode();
     virtual void tick(Actor &);
 
-    PlaceBlockNode(void);
+    PlaceBlockNode();
 };

@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/Vec3"
+#include "../../util/Vec3.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class RollGoal : Goal {
 
 public:
-    virtual RollGoal::~RollGoal()
+    virtual ~RollGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual bool canBeInterrupted();

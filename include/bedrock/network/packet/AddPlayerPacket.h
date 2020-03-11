@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
-#include "../../actor/Player"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../actor/Player.h"
+#include "./Packet.h"
+#include <string>
 
 
 class AddPlayerPacket : Packet {
 
 public:
-    virtual AddPlayerPacket::~AddPlayerPacket()
+    virtual ~AddPlayerPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    AddPlayerPacket(void);
+    AddPlayerPacket();
     AddPlayerPacket(Player &);
 };

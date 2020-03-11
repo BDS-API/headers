@@ -1,14 +1,20 @@
 #pragma once
 
-#include "../bedrock/command/CommandVersion"
+#include "../bedrock/command/Command.h"
+#include "./Overload.h"
+#include <memory>
+#include "../bedrock/command/CommandVersion.h"
 
 
-using namespace CommandRegistry;
+namespace CommandRegistry {
 
 class Overload {
 
 public:
 
-    Overload(CommandRegistry::Overload&&);
-    Overload(CommandVersion, std::unique_ptr<Command, std::default_delete<Command>> (*)(void));
+    Overload(CommandRegistry::Overload &&);
+    ~Overload();
+//  Overload(CommandVersion, std::unique_ptr<Command, std::default_delete<Command>> ((void), ); //TODO: incomplete function definition
 };
+
+}

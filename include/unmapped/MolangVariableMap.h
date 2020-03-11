@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./HashedString.h"
 
 
 class MolangVariableMap {
 
 public:
 
-    MolangVariableMap(void);
+    MolangVariableMap();
+    ~MolangVariableMap();
     MolangVariableMap(unsigned long);
     void getVariables()const;
     void getMolangVariable(HashedString const&)const;

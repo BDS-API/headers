@@ -1,16 +1,19 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/DataLoadHelper"
+#include "./CommandBlockComponent.h"
+#include "../actor/Actor.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "../nbt/CompoundTag.h"
+#include <string>
 
 
 class CommandBlockComponent {
 
 public:
 
-    CommandBlockComponent(CommandBlockComponent&&);
-    CommandBlockComponent(void);
+    ~CommandBlockComponent();
+    CommandBlockComponent(CommandBlockComponent &&);
+    CommandBlockComponent();
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void initFromDefinition(Actor &);

@@ -2,13 +2,13 @@
 
 
 
-using namespace Core;
+namespace Core {
 
 class FileStats {
 
 public:
 
-    FileStats(void);
+    FileStats();
     void clear();
     void getNumSuccessfulWriteOperations()const;
     void getNumFailedWriteOperations()const;
@@ -24,3 +24,5 @@ public:
     void getUsedFileSystemSize()const;
     void getAllocatedUsedFileSystemSize()const;
 };
+
+}

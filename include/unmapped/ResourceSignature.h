@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../bedrock/pack/PackAccessStrategy"
-#include "../core/Path"
+#include "../core/Path.h"
+#include "../bedrock/pack/PackAccessStrategy.h"
 
 
 class ResourceSignature {
 
 public:
 
-    ResourceSignature(void);
+    ResourceSignature();
+    ~ResourceSignature();
     void areKnownFilesValid(PackAccessStrategy const&);
     void _areKnownFilesValid(PackAccessStrategy const&, bool);
     void areKnownFilesValidRequireSignatureExists(PackAccessStrategy const&);

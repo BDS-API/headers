@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./DefinitionModifier.h"
 
 
 class DefinitionModifier {
 
 public:
 
-    DefinitionModifier(void);
+    ~DefinitionModifier();
+    DefinitionModifier();
     DefinitionModifier(DefinitionModifier const&);
-    DefinitionModifier(DefinitionModifier&&);
+    DefinitionModifier(DefinitionModifier &&);
 };

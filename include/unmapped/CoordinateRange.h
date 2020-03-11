@@ -1,15 +1,20 @@
 #pragma once
 
-#include "../bedrock/util/Random"
+#include "../bedrock/util/Random.h"
+#include "./RenderParams.h"
+#include "./CoordinateRange.h"
 
 
-using namespace ScatterParams;
+namespace ScatterParams {
 
 class CoordinateRange {
 
 public:
 
-    CoordinateRange(void);
+    ~CoordinateRange();
+    CoordinateRange();
     CoordinateRange(ScatterParams::CoordinateRange const&);
     void eval(unsigned int &, Random &, RenderParams &)const;
 };
+
+}

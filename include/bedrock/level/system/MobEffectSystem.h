@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../../../unmapped/MobEffectComponent"
-#include "../../actor/unmapped/ActorComponent"
-#include "../../../unmapped/EntityRegistry"
-#include "../../../unmapped/EntityContext"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/MobEffectComponent.h"
+#include "../../actor/unmapped/ActorComponent.h"
+#include "../../../unmapped/EntityRegistry.h"
+#include "../../../unmapped/EntityContext.h"
 
 
 class MobEffectSystem : ITickingSystem {
 
 public:
-    virtual MobEffectSystem::~MobEffectSystem()
+    virtual ~MobEffectSystem();
     virtual void tick(EntityRegistry &);
 
-    MobEffectSystem(void);
-    void _tickComponent(EntityContext &, FlagComponent<ActorTickedFlag> &, ActorComponent &, MobEffectComponent &);
+    MobEffectSystem();
+//  void _tickComponent(EntityContext &, FlagComponent<ActorTickedFlag> &, ActorComponent &, MobEffectComponent &); //TODO: incomplete function definition
 };

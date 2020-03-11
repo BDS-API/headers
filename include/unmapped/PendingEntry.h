@@ -1,16 +1,21 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/level/circuit/component/BaseCircuitComponent"
+#include <memory>
+#include "./PendingEntry.h"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/level/circuit/component/BaseCircuitComponent.h"
 
 
-using namespace CircuitSceneGraph;
+namespace CircuitSceneGraph {
 
 class PendingEntry {
 
 public:
 
-    PendingEntry(CircuitSceneGraph::PendingEntry&&);
+    PendingEntry(CircuitSceneGraph::PendingEntry &&);
     PendingEntry(BlockPos const&, std::unique_ptr<BaseCircuitComponent, std::default_delete<BaseCircuitComponent>>);
     PendingEntry(BlockPos const&, BaseCircuitComponent *);
+    ~PendingEntry();
 };
+
+}

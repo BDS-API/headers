@@ -1,18 +1,21 @@
 #pragma once
 
-#include "../../../item/ItemStack"
-#include "../../../actor/Player"
+#include "../../../actor/Player.h"
+#include "../../../item/ItemStack.h"
+#include "../../Command.h"
 
 
-using namespace AgentCommands;
+namespace AgentCommands {
 
 class GetItemDetailsCommand : AgentCommands::Command {
 
 public:
-    virtual AgentCommands::GetItemDetailsCommand::~GetItemDetailsCommand()
+    virtual ~GetItemDetailsCommand();
     virtual void execute();
     virtual bool isDone();
     virtual void fireCommandDoneEvent();
 
     GetItemDetailsCommand(Player &, ItemStack const&);
 };
+
+}

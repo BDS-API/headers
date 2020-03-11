@@ -1,14 +1,18 @@
 #pragma once
 
-#include "../core/Path"
+#include "../core/Path.h"
+#include "./MetaData.h"
 
 
-using namespace IInPackagePacks;
+namespace IInPackagePacks {
 
 class MetaData {
 
 public:
 
+    ~MetaData();
     MetaData(IInPackagePacks::MetaData const&);
-    MetaData(Core::Path const&, bool, PackCategory);
+//  MetaData(Core::Path const&, bool, PackCategory); //TODO: incomplete function definition
 };
+
+}

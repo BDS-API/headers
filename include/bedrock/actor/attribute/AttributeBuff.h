@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../Actor"
-#include "../../../unmapped/Amplifier"
+#include "./AttributeBuff.h"
+#include <memory>
+#include "../../../unmapped/Amplifier.h"
+#include "../Actor.h"
 
 
 class AttributeBuff {
 
 public:
-    virtual AttributeBuff::~AttributeBuff()
+    virtual ~AttributeBuff();
     virtual void setDurationAmplifier(std::shared_ptr<Amplifier>);
 
     AttributeBuff(AttributeBuff const&);
-    AttributeBuff(float, int, AttributeBuffType);
+//  AttributeBuff(float, int, AttributeBuffType); //TODO: incomplete function definition
     void getAmount()const;
     void getType()const;
     void getInfo()const;
@@ -22,5 +24,6 @@ public:
     void setId(unsigned long);
     void getOperand()const;
     void setOperand(int);
-    void buffTypeToDamageCause(AttributeBuffType);
+    void operator==(AttributeBuff const&)const;
+//  void buffTypeToDamageCause(AttributeBuffType); //TODO: incomplete function definition
 };

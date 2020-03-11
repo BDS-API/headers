@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../nbt/CompoundTag"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../nbt/CompoundTag.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "./Packet.h"
+#include <string>
 
 
 class LevelEventGenericPacket : Packet {
 
 public:
-    virtual LevelEventGenericPacket::~LevelEventGenericPacket()
+    virtual ~LevelEventGenericPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    LevelEventGenericPacket(LevelEvent, CompoundTag const&);
-    LevelEventGenericPacket(void);
+//  LevelEventGenericPacket(LevelEvent, CompoundTag const&); //TODO: incomplete function definition
+    LevelEventGenericPacket();
 };

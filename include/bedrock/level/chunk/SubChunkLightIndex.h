@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../../../unmapped/Pos"
+#include "./SubChunkLightIndex.h"
+#include "../../../unmapped/Pos.h"
 
 
 class SubChunkLightIndex {

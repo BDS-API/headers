@@ -1,13 +1,14 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier"
-#include "unmapped/ActorDefinitionGroup"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Fireball.h"
 
 
 class LargeFireball : Fireball {
 
 public:
-    virtual LargeFireball::~LargeFireball()
+    virtual ~LargeFireball();
 
     LargeFireball(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
     void setExplosionPower(int);

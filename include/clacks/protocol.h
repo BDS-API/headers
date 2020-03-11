@@ -2,7 +2,7 @@
 
 
 
-using namespace com::mojang::clacks;
+namespace com::mojang::clacks {
 
 class protocol {
 
@@ -17,3 +17,5 @@ public:
     void SaveState_descriptor();
     void SaveState_IsValid(int);
 };
+
+}

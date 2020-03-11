@@ -1,5 +1,6 @@
 #pragma once
 
+#include "./JigsawStructureRegistry.h"
 
 
 class VanillaVillageJigsawStructureBlockTagRules {

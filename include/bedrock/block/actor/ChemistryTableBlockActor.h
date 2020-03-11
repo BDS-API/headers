@@ -1,21 +1,22 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../unmapped/BlockSource"
-#include "../../nbt/CompoundTag"
-#include "../../network/packet/LabTablePacket"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../item/ItemStack"
-#include "../../../unmapped/DataLoadHelper"
-#include "../../container/Container"
+#include "../../util/Random.h"
+#include "../../container/Container.h"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../network/packet/LabTablePacket.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemStack.h"
+#include "../unmapped/BlockSource.h"
+#include "../../actor/Player.h"
 
 
 class ChemistryTableBlockActor : BlockActor, Container {
 
 public:
-    virtual ChemistryTableBlockActor::~ChemistryTableBlockActor()
+    virtual ~ChemistryTableBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
@@ -33,7 +34,7 @@ public:
     void _popPendingReactionOutput(BlockSource &);
     void reset(BlockSource &);
     void _updateType(BlockSource &);
-    bool isSameType(ChemistryTableType)const;
+//  bool isSameType(ChemistryTableType)const; //TODO: incomplete function definition
     void clientLabTablePacket(LabTablePacket const&, BlockSource &);
     void serverLabTablePacket(LabTablePacket const&, BlockSource &);
     void _createReaction(Random &);

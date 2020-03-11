@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../../../unmapped/TagRegistry"
-#include "../../nbt/CompoundTag"
-#include "../../../unmapped/HashString"
-#include "../../../unmapped/EntityRegistryOwned"
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../LevelChunk"
-#include "../../util/BlockPos"
-#include "../../../json/Value"
-#include "../../../unmapped/WellKnownTagID"
-#include "../../util/Color"
-#include "../../../unmapped/BiomeHeight"
+#include "../../util/Random.h"
+#include <string>
+#include "../../../unmapped/WellKnownTagID.h"
+#include "../../nbt/CompoundTag.h"
+#include "../../../unmapped/BiomeHeight.h"
+#include "../../../unmapped/HashString.h"
+#include "../../util/BlockPos.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../../../json/Value.h"
+#include "../LevelChunk.h"
+#include "./Biome.h"
+#include "../../util/Color.h"
+#include "../../../unmapped/TagRegistry.h"
+#include "../../../unmapped/EntityRegistryOwned.h"
 
 
 class Biome {
@@ -22,9 +24,11 @@ public:
     static long DEFAULT_WATER_COLOR;
     static long DEFAULT_UNDERWATER_COLOR;
 
-    virtual Biome::~Biome()
+    virtual ~Biome();
 
     void getEntity()const;
+    void operator!=(Biome const&)const;
+    std::string getName()const;
     void getMaxSnowLayers()const;
     void writePacketData(CompoundTag &, TagRegistry &);
     void initFromPacketData(CompoundTag const&, TagRegistry &);
@@ -45,9 +49,9 @@ public:
     void setNoRain();
     void setSnowCovered();
     void setSnowAccumulation(float, float);
-    void setOceanRuinConfig(OceanRuinConfiguration const&);
+//  void setOceanRuinConfig(OceanRuinConfiguration const&); //TODO: incomplete function definition
     void getSnowAccumulationLayers()const;
-    bool hasTag(IDType<TagIDType> const&, TagRegistry const&)const;
+//  bool hasTag(IDType<TagIDType> const&, TagRegistry const&)const; //TODO: incomplete function definition
     bool hasTag(WellKnownTagID const&)const;
     void getSkyColor(float);
     void getMobs()const;
@@ -79,6 +83,7 @@ public:
     void getFreezingHeight(BlockSource const&, BlockPos const&)const;
     bool canHaveSnowfall(BlockSource const&, BlockPos const&)const;
     void setDebugMapOddColor(int);
+    void operator==(Biome const&)const;
     void getMinSnowLayers()const;
     bool canHaveSnowfall()const;
 };

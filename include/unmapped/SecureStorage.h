@@ -5,7 +5,7 @@
 class SecureStorage {
 
 public:
-    virtual SecureStorage::~SecureStorage()
+    virtual ~SecureStorage();
 
-    SecureStorage(void);
+    SecureStorage();
 };

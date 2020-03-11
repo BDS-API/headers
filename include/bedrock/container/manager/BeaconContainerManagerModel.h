@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack"
-#include "../../util/BlockPos"
-#include "../../actor/Player"
-#include "../../block/actor/BeaconBlockActor"
+#include "../../../unmapped/ContainerItemStack.h"
+#include "../../actor/Player.h"
+#include "../../util/BlockPos.h"
+#include "./LevelContainerManagerModel.h"
+#include "../../block/actor/BeaconBlockActor.h"
+#include <string>
 
 
 class BeaconContainerManagerModel : LevelContainerManagerModel {
@@ -11,13 +13,13 @@ class BeaconContainerManagerModel : LevelContainerManagerModel {
 public:
     static long PAYMENT_SLOT;
 
-    virtual BeaconContainerManagerModel::~BeaconContainerManagerModel()
+    virtual ~BeaconContainerManagerModel();
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
     virtual void init();
 
-    BeaconContainerManagerModel(ContainerID, Player &, BlockPos const&);
+//  BeaconContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
     void _getBeaconBlockEntity();
     void _resetSelectionState();
     bool isPaymentAvailable()const;
@@ -32,6 +34,7 @@ public:
     void cancelTransaction();
     void getEffectId(int);
     void selectEffect(int, bool);
+    std::string getEffectHoverName(int, bool);
     bool isSelected(int, bool);
     bool isSecondaryEffect(int);
     bool isActive();

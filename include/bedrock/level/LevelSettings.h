@@ -1,12 +1,18 @@
 #pragma once
 
-#include "../../unmapped/PackInstanceId"
-#include "../../unmapped/Dimension"
-#include "../../unmapped/EducationLevelSettings"
-#include "../util/BlockPos"
-#include "../../unmapped/BaseGameVersion"
-#include "../../unmapped/GameRules"
-#include "../../unmapped/Abilities"
+#include "./LevelSettings.h"
+#include "./LevelData.h"
+#include "./LevelSummary.h"
+#include "../../unmapped/Dimension.h"
+#include "../../unmapped/Abilities.h"
+#include "../../unmapped/PackInstanceId.h"
+#include "../../unmapped/BaseGameVersion.h"
+#include <memory>
+#include "../util/BlockPos.h"
+#include <vector>
+#include "../../unmapped/GameRules.h"
+#include "../../unmapped/EducationLevelSettings.h"
+#include <string>
 
 
 class LevelSettings {
@@ -14,11 +20,12 @@ class LevelSettings {
 public:
 
     LevelSettings(LevelSettings const&);
-    LevelSettings(LevelSettings&&);
-    LevelSettings(void);
+    ~LevelSettings();
+    LevelSettings(LevelSettings &&);
+    LevelSettings();
     LevelSettings(LevelSummary const&);
-    LevelSettings(LevelData const&, AutomaticID<Dimension, int>);
-    LevelSettings(unsigned int, GameType, Difficulty, AutomaticID<Dimension, int>, GeneratorType, BlockPos const&, bool, int, EducationEditionOffer, float, float, bool, bool, bool, Social::GamePublishSetting, Social::GamePublishSetting, bool, bool, bool, bool, bool, bool, GameRules, bool, bool, Abilities, unsigned int, bool, bool, bool, BaseGameVersion const&);
+//  LevelSettings(LevelData const&, AutomaticID<Dimension, int>); //TODO: incomplete function definition
+//  LevelSettings(unsigned int, GameType, Difficulty, AutomaticID<Dimension, int>, GeneratorType, BlockPos const&, bool, int, EducationEditionOffer, float, float, bool, bool, bool, Social::GamePublishSetting, Social::GamePublishSetting, bool, bool, bool, bool, bool, bool, GameRules, bool, bool, Abilities, unsigned int, bool, bool, bool, BaseGameVersion const&); //TODO: incomplete function definition
     void setEducationFeaturesEnabled(bool);
     void getDefaultSpawn()const;
     void getSeed()const;
@@ -34,7 +41,7 @@ public:
     void getLightningLevel()const;
     bool isEducationEditionWorld()const;
     void getEducationEditionOffer()const;
-    void setEducationEditionOffer(EducationEditionOffer);
+//  void setEducationEditionOffer(EducationEditionOffer); //TODO: incomplete function definition
     void educationFeaturesEnabled()const;
     void setImmutableWorld(bool);
     void getImmutableWorld()const;
@@ -74,6 +81,7 @@ public:
     void setBaseGameVersion(BaseGameVersion const&);
     void setEducationLevelSettings(EducationLevelSettings);
     void getEducationLevelSettings()const;
-    void validateGameDifficulty(Difficulty);
+//  void validateGameDifficulty(Difficulty); //TODO: incomplete function definition
+//  std::string generatorTypeToString(GeneratorType); //TODO: incomplete function definition
     void parseSeedString(std::string const&, unsigned int);
 };

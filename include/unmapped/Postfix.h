@@ -2,7 +2,7 @@
 
 
 
-using namespace commands;
+namespace commands {
 
 class Postfix {
 
@@ -10,3 +10,5 @@ public:
 
     Postfix(char const*);
 };
+
+}

@@ -1,23 +1,31 @@
 #pragma once
 
-#include "../../../unmapped/StringKey"
-#include "../../../unmapped/AnimationComponent"
-#include "../../../unmapped/HashedString"
-#include "../../../unmapped/BoneOrientation"
-#include "../../../unmapped/RenderParams"
-#include "../../../unmapped/ExpressionNode"
-#include "../Actor"
+#include <utility>
+#include <unordered_map>
+#include "../Actor.h"
+#include "../../../unmapped/RenderParams.h"
+#include "../../../unmapped/HashedString.h"
+#include "../../../unmapped/BoneOrientation.h"
+#include <memory>
+#include "../../../unmapped/ExpressionNode.h"
+#include "../../../unmapped/AnimationComponent.h"
+#include "./ActorSkeletalAnimationPtr.h"
+#include <vector>
+#include "../../../unmapped/StringKey.h"
+#include <functional>
+#include "./ActorAnimationPlayer.h"
+#include <string>
 
 
 class ActorSkeletalAnimationPlayer : ActorAnimationPlayer {
 
 public:
-    virtual ActorSkeletalAnimationPlayer::~ActorSkeletalAnimationPlayer()
-    virtual void applyToPose(RenderParams &, std::unordered_map<SkeletalHierarchyIndex, std::vector<BoneOrientation, std::allocator<BoneOrientation>>, std::hash<SkeletalHierarchyIndex>, std::equal_to<SkeletalHierarchyIndex>, std::allocator<std::pair<SkeletalHierarchyIndex const, std::vector<BoneOrientation, std::allocator<BoneOrientation>>>>> &, float);
+    virtual ~ActorSkeletalAnimationPlayer();
+//  virtual void applyToPose(RenderParams &, std::unordered_map<SkeletalHierarchyIndex, std::vector<BoneOrientation, std::allocator<BoneOrientation>>, std::hash<SkeletalHierarchyIndex>, std::equal_to<SkeletalHierarchyIndex>, std::allocator<std::pair<SkeletalHierarchyIndex const, std::vector<BoneOrientation, std::allocator<BoneOrientation>>>>> &, float); //TODO: incomplete function definition
     virtual void resetAnimation();
     virtual void buildBoneToPartMapping(AnimationComponent &);
-    virtual void bindParticleEffects(std::unordered_map<StringKey, ParticleEffectPtr, std::hash<StringKey>, std::equal_to<StringKey>, std::allocator<std::pair<StringKey const, ParticleEffectPtr>>> const&);
-    virtual void bindSoundEffects(std::unordered_map<StringKey, std::string, std::hash<StringKey>, std::equal_to<StringKey>, std::allocator<std::pair<StringKey const, std::string>>> const&);
+//  virtual void bindParticleEffects(std::unordered_map<StringKey, ParticleEffectPtr, std::hash<StringKey>, std::equal_to<StringKey>, std::allocator<std::pair<StringKey const, ParticleEffectPtr>>> const&); //TODO: incomplete function definition
+//  virtual void bindSoundEffects(std::unordered_map<StringKey, std::string, std::hash<StringKey>, std::equal_to<StringKey>, std::allocator<std::pair<StringKey const, std::string>>> const&); //TODO: incomplete function definition
     virtual bool hasAnimationFinished()const;
     virtual void findAnimation(HashedString const&);
     virtual void getAnimationType()const;

@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../util/BlockPos"
-#include "../../actor/Player"
+#include "./LevelContainerManagerModel.h"
+#include "../../util/BlockPos.h"
+#include "../../actor/Player.h"
 
 
 class DispenserContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    virtual DispenserContainerManagerModel::~DispenserContainerManagerModel()
+    virtual ~DispenserContainerManagerModel();
     virtual void init();
 
-    DispenserContainerManagerModel(ContainerID, Player &, BlockPos const&);
+//  DispenserContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
 };

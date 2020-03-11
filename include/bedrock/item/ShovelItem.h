@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "unmapped/Tier"
+#include "./DiggerItem.h"
+#include <string>
+#include "../../unmapped/Tier.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "./ItemStack.h"
+#include "../../unmapped/Block.h"
 
 
 class ShovelItem : DiggerItem {
 
 public:
-    virtual ShovelItem::~ShovelItem()
+    virtual ~ShovelItem();
     virtual bool canDestroySpecial(Block const&)const;
     virtual void getEnchantSlot()const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;

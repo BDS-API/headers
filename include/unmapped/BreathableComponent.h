@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/Actor.h"
+#include "./DataLoadHelper.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./BreathableComponent.h"
 
 
 class BreathableComponent {
 
 public:
 
-    BreathableComponent(BreathableComponent&&);
-    BreathableComponent(void);
+    ~BreathableComponent();
+    BreathableComponent(BreathableComponent &&);
+    BreathableComponent();
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void getAirSupply()const;

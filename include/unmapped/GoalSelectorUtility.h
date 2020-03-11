@@ -1,5 +1,8 @@
 #pragma once
 
+#include "./PrioritizedGoal.h"
+#include <memory>
+#include <vector>
 
 
 class GoalSelectorUtility {

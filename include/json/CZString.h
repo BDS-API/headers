@@ -1,8 +1,9 @@
 #pragma once
 
+#include "./CZString.h"
 
 
-using namespace Json::Value;
+namespace Json::Value {
 
 class CZString {
 
@@ -12,7 +13,12 @@ public:
     bool isStaticString()const;
     void index()const;
     CZString(unsigned int);
-    CZString(char const*, Json::Value::CZString::DuplicationPolicy);
+//  CZString(char const*, Json::Value::CZString::DuplicationPolicy); //TODO: incomplete function definition
     CZString(Json::Value::CZString const&);
-    void swap(Json::Value::CZString&);
+    ~CZString();
+    void swap(Json::Value::CZString &);
+    void operator<(Json::Value::CZString const&)const;
+    void operator==(Json::Value::CZString const&)const;
 };
+
+}

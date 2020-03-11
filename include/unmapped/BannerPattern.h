@@ -1,7 +1,10 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/item/ItemStack"
+#include "../bedrock/item/ItemInstance.h"
+#include <memory>
+#include "../bedrock/item/ItemStack.h"
+#include <vector>
+#include <string>
 
 
 class BannerPattern {
@@ -50,6 +53,7 @@ public:
 
 
     void getPatternIndexFromNameID(std::string const&);
+    std::string getNameID()const;
     BannerPattern(std::string const&, std::string const&);
     BannerPattern(std::string const&, std::string const&, std::vector<std::string, std::allocator<std::string>> const&);
     BannerPattern(std::string const&, std::string const&, std::string const&, std::string const&, std::string const&);
@@ -59,8 +63,11 @@ public:
     bool hasPattern()const;
     bool requiresIngredientItem()const;
     void getIngredientItem()const;
+    std::string getPattern()const;
+    std::string getName()const;
     void getIgnoreAux()const;
     bool requiresPatternItem()const;
     bool matchesPatternItem(ItemInstance const&)const;
     void getPatternItemType()const;
+    ~BannerPattern();
 };

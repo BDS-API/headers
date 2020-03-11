@@ -6,5 +6,6 @@ class EvalParams {
 
 public:
 
-    EvalParams(void);
+    EvalParams();
+    ~EvalParams();
 };

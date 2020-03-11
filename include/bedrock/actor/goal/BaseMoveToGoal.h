@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../util/BlockPos"
-#include "../../util/Vec3"
+#include "../../util/Vec3.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include "../../util/BlockPos.h"
 
 
 class BaseMoveToGoal : Goal {
 
 public:
-    virtual BaseMoveToGoal::~BaseMoveToGoal()
+    virtual ~BaseMoveToGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

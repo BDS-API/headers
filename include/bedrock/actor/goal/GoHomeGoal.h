@@ -1,7 +1,11 @@
 #pragma once
 
-#include "../Mob"
-#include "../../definition/DefinitionTrigger"
+#include "../../definition/DefinitionTrigger.h"
+#include <memory>
+#include "./Goal.h"
+#include <vector>
+#include "../Mob.h"
+#include <string>
 
 
 class GoHomeGoal : Goal {
@@ -9,7 +13,7 @@ class GoHomeGoal : Goal {
 public:
     static long GIVE_UP_TICKS;
 
-    virtual GoHomeGoal::~GoHomeGoal()
+    virtual ~GoHomeGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

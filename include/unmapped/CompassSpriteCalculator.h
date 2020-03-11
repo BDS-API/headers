@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
 
 
 class CompassSpriteCalculator {
 
 public:
 
-    CompassSpriteCalculator(void);
+    CompassSpriteCalculator();
     void getFrame()const;
     void update(Actor &, bool);
     void updateFromPosition(BlockSource const&, float, float, float, bool, bool);

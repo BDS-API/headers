@@ -1,15 +1,17 @@
 #pragma once
 
+#include "./uint24_t.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class CCRakNetSlidingWindow {
 
 public:
 
     void GetIsInSlowStart()const;
-    CCRakNetSlidingWindow(void);
+    CCRakNetSlidingWindow();
+    ~CCRakNetSlidingWindow();
     void Init(unsigned long, unsigned int);
     void Update(unsigned long, bool);
     void GetRetransmissionBandwidth(unsigned long, unsigned long, unsigned int, bool);
@@ -25,7 +27,7 @@ public:
     void OnResend(unsigned long, unsigned long);
     void OnNAK(unsigned long, RakNet::uint24_t);
     void OnAck(unsigned long, unsigned long, bool, double, double, double, bool, RakNet::uint24_t);
-    void IsInSlowStart()const;
+    bool IsInSlowStart()const;
     void OnDuplicateAck(unsigned long, RakNet::uint24_t);
     void OnSendAckGetBAndAS(unsigned long, bool *, double *, double *);
     void OnSendAck(unsigned long, unsigned int);
@@ -35,6 +37,8 @@ public:
     void GetMTU()const;
     void GetLocalReceiveRate(unsigned long)const;
     void GetRTT()const;
-    void LessThan(RakNet::uint24_t, RakNet::uint24_t);
+    bool LessThan(RakNet::uint24_t, RakNet::uint24_t);
     void GetBytesPerSecondLimitByCongestionControl()const;
 };
+
+}

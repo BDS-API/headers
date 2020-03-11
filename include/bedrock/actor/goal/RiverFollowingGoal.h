@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class RiverFollowingGoal : Goal {
 
 public:
-    virtual RiverFollowingGoal::~RiverFollowingGoal()
+    virtual ~RiverFollowingGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

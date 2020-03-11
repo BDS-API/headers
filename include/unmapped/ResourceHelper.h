@@ -1,6 +1,9 @@
 #pragma once
 
-#include "../json/Value"
+#include "./PackInstanceId.h"
+#include "../json/Value.h"
+#include "./PackIdVersion.h"
+#include <string>
 
 
 class ResourceHelper {

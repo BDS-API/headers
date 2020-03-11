@@ -1,11 +1,16 @@
 #pragma once
 
-#include "../bedrock/util/Tick"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/BlockPos"
-#include "../mce/UUID"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "./POIInstance.h"
+#include "../bedrock/util/Tick.h"
+#include "../mce/UUID.h"
+#include <memory>
+#include "./Dimension.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/actor/Actor.h"
+#include <vector>
+#include "./Block.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class VillageManager {
@@ -17,6 +22,7 @@ public:
 
     VillageManager(Dimension &);
     void _loadPOIBlueprints();
+    ~VillageManager();
     void tick(Tick const&);
     void _removeVillages();
     void _processNextUnclusteredPOIQuery();
@@ -39,7 +45,7 @@ public:
     void _assignPOIOnly(std::shared_ptr<POIInstance> &&);
     void getPOI(BlockPos const&)const;
     void _createPOI(BlockPos const&, Block const&);
-    bool hasPOI(BlockPos const&, POIType)const;
+//  bool hasPOI(BlockPos const&, POIType)const; //TODO: incomplete function definition
     void getPOIBlueprint(Block const&);
     void removePOI(std::weak_ptr<POIInstance>);
     bool isRegisteredPOI(Block const&)const;

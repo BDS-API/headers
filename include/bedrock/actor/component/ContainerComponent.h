@@ -1,30 +1,33 @@
 #pragma once
 
-#include "../../block/unmapped/BlockSource"
-#include "../Actor"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../../unmapped/ContainerContentChangeListener"
-#include "../../description/component/ContainerDescription"
-#include "../Player"
-#include "../../item/ItemStack"
-#include "../ItemActor"
-#include "../../util/Vec3"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../description/component/ContainerDescription.h"
+#include "../Actor.h"
+#include "../../nbt/CompoundTag.h"
+#include "../ItemActor.h"
+#include "../../util/Vec3.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/ContainerContentChangeListener.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../Player.h"
+#include "./IEntityComponent.h"
+#include "../../item/ItemStack.h"
+#include "./ContainerComponent.h"
+#include <string>
 
 
 class ContainerComponent : ContainerContentChangeListener, IEntityComponent {
 
 public:
     virtual void containerContentChanged(int);
-    virtual ContainerComponent::~ContainerComponent()
+    virtual ~ContainerComponent();
 
-    ContainerComponent(void);
-    ContainerComponent(ContainerComponent&&);
+    ContainerComponent();
+    ContainerComponent(ContainerComponent &&);
     void _getRawContainerPtr()const;
     void initFromDefinition(Actor &);
     void initFromDefinition(Actor &, ContainerDescription const&);
-    void rebuildContainer(Actor &, ContainerType, int, bool, int, bool);
+//  void rebuildContainer(Actor &, ContainerType, int, bool, int, bool); //TODO: incomplete function definition
     void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     bool canOpenContainer(Actor const&, Player &)const;

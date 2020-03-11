@@ -1,18 +1,22 @@
 #pragma once
 
+#include "./BitStream.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class HuffmanEncodingTree {
 
 public:
 
-    HuffmanEncodingTree(void);
+    HuffmanEncodingTree();
+    ~HuffmanEncodingTree();
     void FreeMemory();
     void GenerateFromFrequencyTable(unsigned int *);
-    void InsertNodeIntoSortedList(HuffmanEncodingTreeNode *, DataStructures::LinkedList<HuffmanEncodingTreeNode *> *)const;
+//  void InsertNodeIntoSortedList(HuffmanEncodingTreeNode *, DataStructures::LinkedList<HuffmanEncodingTreeNode *> *)const; //TODO: incomplete function definition
     void EncodeArray(unsigned char *, unsigned long, RakNet::BitStream *);
     void DecodeArray(RakNet::BitStream *, unsigned int, unsigned long, unsigned char *);
     void DecodeArray(unsigned char *, unsigned int, RakNet::BitStream *);
 };
+
+}

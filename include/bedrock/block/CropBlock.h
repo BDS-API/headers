@@ -1,22 +1,24 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./BushBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class CropBlock : BushBlock {
 
 public:
-    virtual CropBlock::~CropBlock()
+    virtual ~CropBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool isCropBlock()const;
     virtual bool canContainLiquid()const;
-    virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const;
+//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const;
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;

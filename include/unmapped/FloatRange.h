@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../json/Value"
+#include "../bedrock/util/Random.h"
+#include "../json/Value.h"
 
 
 class FloatRange {
 
 public:
 
-    FloatRange(void);
+    FloatRange();
     void getValue(Random &)const;
     void parseJson(Json::Value const&, float, float);
 };

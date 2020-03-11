@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../Actor"
-#include "../../definition/DefinitionTrigger"
-#include "../../../unmapped/HashString"
-#include "../../../unmapped/VariantParameterList"
+#include "../../definition/DefinitionTrigger.h"
+#include "../Actor.h"
+#include "../../../unmapped/VariantParameterList.h"
+#include "../../../unmapped/HashString.h"
+#include "./ActorDefinitionDescriptor.h"
+#include <string>
 
 
 class ActorDefinitionDescriptor {
 
 public:
 
+    ~ActorDefinitionDescriptor();
     void combine(ActorDefinitionDescriptor const&);
     void subtract(ActorDefinitionDescriptor const&);
     void contains(ActorDefinitionDescriptor const&)const;
@@ -19,6 +22,6 @@ public:
     void executeEvent(Actor &, std::string const&, VariantParameterList const&);
     void executeTrigger(Actor &, DefinitionTrigger const&, VariantParameterList const&);
     void forceExecuteTrigger(Actor &, DefinitionTrigger const&, VariantParameterList const&);
-    ActorDefinitionDescriptor(void);
-    ActorDefinitionDescriptor(ActorDefinitionDescriptor&&);
+    ActorDefinitionDescriptor();
+    ActorDefinitionDescriptor(ActorDefinitionDescriptor &&);
 };

@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitSceneGraph"
-#include "../../../util/BlockPos"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../../unmapped/CircuitSceneGraph.h"
+#include "../../../util/BlockPos.h"
+#include "../../../../unmapped/CircuitSystem.h"
+#include "./CapacitorComponent.h"
+#include "../../../../unmapped/CircuitTrackingInfo.h"
+#include "./BaseCircuitComponent.h"
 
 
 class RepeaterCapacitor : CapacitorComponent {
 
 public:
-    virtual RepeaterCapacitor::~RepeaterCapacitor()
+    virtual ~RepeaterCapacitor();
     virtual void getStrength()const;
     virtual void setStrength(int);
     virtual void consumePowerAnyDirection();
@@ -24,9 +26,9 @@ public:
     virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
     virtual void getPoweroutDirection()const;
 
-    RepeaterCapacitor(void);
+    RepeaterCapacitor();
     void setDelay(int);
-    void delayPulse(RepeaterCapacitor::States);
+//  void delayPulse(RepeaterCapacitor::States); //TODO: incomplete function definition
     void alternatePulse();
     void extendPulse();
 };

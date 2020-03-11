@@ -2,12 +2,12 @@
 
 
 
-using namespace LayerDetails;
+namespace LayerDetails {
 
 class LayerBase {
 
 public:
-    virtual LayerDetails::LayerBase::~LayerBase()
+    virtual ~LayerBase();
     virtual void init(long);
 
     LayerBase(unsigned int);
@@ -15,3 +15,5 @@ public:
     void initRandom(long, long)const;
     void _nextRandom(long &, unsigned int, long);
 };
+
+}

@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../actor/unmapped/ActorUniqueID"
-#include "../../level/Level"
+#include "../../actor/Actor.h"
+#include "../../level/Level.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include "./CommandOrigin.h"
+#include <string>
 
 
 class ActorCommandOrigin : CommandOrigin {
 
 public:
-    virtual ActorCommandOrigin::~ActorCommandOrigin()
-    virtual void getRequestId()const;
-    virtual void getName()const;
+    virtual ~ActorCommandOrigin();
+    virtual std::string getRequestId()const;
+    virtual std::string getName()const;
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void getLevel()const;

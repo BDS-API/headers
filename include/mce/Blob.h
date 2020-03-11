@@ -1,8 +1,9 @@
 #pragma once
 
+#include "./Blob.h"
 
 
-using namespace mce;
+namespace mce {
 
 class Blob {
 
@@ -15,14 +16,17 @@ public:
     void get();
     void getSpan();
     void getSpan()const;
-    Blob(void);
+    Blob();
     Blob(unsigned long);
     Blob(unsigned char const*, unsigned long);
-    Blob(mce::Blob&&);
+    ~Blob();
+    Blob(mce::Blob &&);
     void end();
-    void swap(mce::Blob&);
+    void swap(mce::Blob &);
     void empty()const;
     void data();
     void data()const;
     void get()const;
 };
+
+}

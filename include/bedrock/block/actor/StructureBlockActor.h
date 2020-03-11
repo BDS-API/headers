@@ -1,12 +1,13 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../eventing/IMinecraftEventing"
-#include "../../nbt/CompoundTag"
-#include "../../../unmapped/StructureEditorData"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../eventing/IMinecraftEventing.h"
+#include "../../../unmapped/StructureEditorData.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "../unmapped/BlockSource.h"
 
 
 class StructureBlockActor : BlockActor {
@@ -17,7 +18,7 @@ public:
     static long Y_AXIS_COLOR;
     static long Z_AXIS_COLOR;
 
-    virtual StructureBlockActor::~StructureBlockActor()
+    virtual ~StructureBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void onChanged(BlockSource &);

@@ -1,17 +1,24 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/actor/Player"
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/network/packet/UpdateTradePacket"
-#include "../bedrock/actor/unmapped/ActorInteraction"
+#include <string>
+#include "./DataLoadHelper.h"
+#include "./Trade.h"
+#include <memory>
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./MerchantRecipeList.h"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Player.h"
+#include <vector>
+#include "../bedrock/actor/unmapped/ActorInteraction.h"
+#include "../bedrock/network/packet/UpdateTradePacket.h"
 
 
 class EconomyTradeableComponent {
 
 public:
 
+    ~EconomyTradeableComponent();
     EconomyTradeableComponent(Actor &);
     void initFromDefinition();
     void reloadComponent();
@@ -37,11 +44,13 @@ public:
     void matchExpAndTier();
     void _generateTrades();
     void setOffers(MerchantRecipeList *);
+    std::string getDisplayName()const;
+    std::string loadDisplayName();
     bool isMaxLevel()const;
     void getTradeExpRequirements()const;
     void getTradeExpForCurrentLevel()const;
     void getTradeExpToNextLevel()const;
-    void createDataPacket(ContainerID);
+//  void createDataPacket(ContainerID); //TODO: incomplete function definition
     void setDataFromPacket(UpdateTradePacket const&);
     void resupplyTrades();
     bool hasSupplyRemaining()const;

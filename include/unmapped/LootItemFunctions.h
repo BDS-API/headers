@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../json/Value"
+#include "../json/Value.h"
 
 
 class LootItemFunctions {

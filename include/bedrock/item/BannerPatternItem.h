@@ -1,12 +1,15 @@
 #pragma once
 
-#include "../level/Level"
+#include "./Item.h"
+#include "../level/Level.h"
+#include "./ItemStackBase.h"
+#include <string>
 
 
 class BannerPatternItem : Item {
 
 public:
-    virtual BannerPatternItem::~BannerPatternItem()
+    virtual ~BannerPatternItem();
     virtual bool isPattern()const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
 

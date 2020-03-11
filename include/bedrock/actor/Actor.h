@@ -1,40 +1,48 @@
 #pragma once
 
-#include "../network/packet/UpdateEquipPacket"
-#include "../description/property/EquipmentTableDescription"
-#include "../description/property/CollisionBoxDescription"
-#include "../util/Vec3"
-#include "unmapped/ActorUniqueID"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../item/ItemStack"
-#include "../../unmapped/Dimension"
-#include "../nbt/CompoundTag"
-#include "../../unmapped/MobEffectInstance"
-#include "../../unmapped/HashString"
-#include "unmapped/ActorLink"
-#include "../network/packet/UpdateTradePacket"
-#include "../../unmapped/Attribute"
-#include "unmapped/ActorInteraction"
-#include "effect/MobEffect"
-#include "../util/Vec2"
-#include "../../unmapped/EntityRegistryOwned"
-#include "../util/Random"
-#include "unmapped/ActorRuntimeID"
-#include "../block/unmapped/BlockSource"
-#include "../../unmapped/HashedString"
-#include "unmapped/ActorDefinitionGroup"
-#include "../level/Level"
-#include "../../unmapped/SeatDescription"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../util/AABB"
-#include "../network/packet/ChangeDimensionPacket"
-#include "damagesource/ActorDamageSource"
-#include "../../unmapped/RenderParams"
-#include "../../unmapped/ActionEvent"
-#include "../../unmapped/UIProfanityContext"
-#include "../../unmapped/VariantParameterList"
-#include "../../unmapped/DataLoadHelper"
+#include <string>
+#include "../../unmapped/Dimension.h"
+#include "../../unmapped/SeatDescription.h"
+#include "../item/ItemStack.h"
+#include "../../unmapped/UIProfanityContext.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "effect/MobEffect.h"
+#include <functional>
+#include "../util/Random.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../description/property/CollisionBoxDescription.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../util/Vec2.h"
+#include "./Actor.h"
+#include "./ItemActor.h"
+#include "./Mob.h"
+#include "../../unmapped/HashedString.h"
+#include "../description/property/EquipmentTableDescription.h"
+#include "../../unmapped/MobEffectInstance.h"
+#include "../block/unmapped/BlockSource.h"
+#include "../util/BlockPos.h"
+#include "../../unmapped/EntityRegistryOwned.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "../nbt/CompoundTag.h"
+#include "unmapped/ActorLink.h"
+#include "../../unmapped/ActionEvent.h"
+#include "../../unmapped/RenderParams.h"
+#include "../../unmapped/Attribute.h"
+#include "../../unmapped/HashString.h"
+#include <memory>
+#include "unmapped/ActorUniqueID.h"
+#include "../network/packet/UpdateTradePacket.h"
+#include "unmapped/ActorRuntimeID.h"
+#include "../network/packet/ChangeDimensionPacket.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../level/Level.h"
+#include <vector>
+#include "../network/packet/UpdateEquipPacket.h"
+#include "../util/AABB.h"
+#include "unmapped/ActorInteraction.h"
+#include "./Player.h"
+#include "../../unmapped/Block.h"
 
 
 class Actor {
@@ -44,14 +52,14 @@ public:
     static long DAMAGE_NEARBY_MOBS_DURATION;
     static long DEFAULT_AMBIENT_SOUND_INTERVAL;
     static long DEFAULT_AMBIENT_SOUND_INTERVAL_RANGE;
-    static long RIDING_TAG[abi:cxx11];
+    static std::string RIDING_TAG;
 
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&);
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
     virtual bool hasComponent(Util::HashString const&)const;
-    virtual Actor::~Actor()
+    virtual ~Actor();
     virtual void reset();
     virtual void getOnDeathExperience();
     virtual void getOwnerEntityType();
@@ -60,7 +68,7 @@ public:
     virtual void getPos()const;
     virtual void getPosOld()const;
     virtual void getPosExtrapolated(float)const;
-    virtual void getAttachPos(ActorLocation, float)const;
+//  virtual void getAttachPos(ActorLocation, float)const; //TODO: incomplete function definition
     virtual void getFiringPos()const;
     virtual void setRot(Vec2 const&);
     virtual void move(Vec3 const&);
@@ -74,7 +82,7 @@ public:
     virtual void checkBlockCollisions(AABB const&);
     virtual void checkBlockCollisions();
     virtual bool breaksFallingBlocks()const;
-    virtual void blockedByShield(ActorDamageSource const&, Actor&);
+    virtual void blockedByShield(ActorDamageSource const&, Actor &);
     virtual void moveRelative(float, float, float, float);
     virtual void teleportTo(Vec3 const&, bool, int, int);
     virtual void tryTeleportTo(Vec3 const&, bool, bool, int, int);
@@ -85,12 +93,12 @@ public:
     virtual void normalTick();
     virtual void baseTick();
     virtual void rideTick();
-    virtual void positionRider(Actor&, float);
+    virtual void positionRider(Actor &, float);
     virtual void getRidingHeight();
-    virtual void startRiding(Actor&);
-    virtual void addRider(Actor&);
-    virtual void flagRiderToRemove(Actor&);
-    virtual void getExitTip(std::string const&, InputMode)const;
+    virtual void startRiding(Actor &);
+    virtual void addRider(Actor &);
+    virtual void flagRiderToRemove(Actor &);
+//  virtual void getExitTip(std::string const&, InputMode)const; //TODO: incomplete function definition
     virtual void intersects(Vec3 const&, Vec3 const&)const;
     virtual bool isFree(Vec3 const&, float);
     virtual bool isFree(Vec3 const&);
@@ -99,20 +107,20 @@ public:
     virtual bool canShowNameTag()const;
     virtual bool canExistInPeaceful()const;
     virtual void setNameTagVisible(bool);
-    virtual void getNameTag()const;
+    virtual std::string getNameTag()const;
     virtual void getNameTagAsHash()const;
-    virtual void getFormattedNameTag()const;
+    virtual std::string getFormattedNameTag()const;
     virtual void filterFormattedNameTag(UIProfanityContext const&);
     virtual void setNameTag(std::string const&);
     virtual void getAlwaysShowNameTag()const;
     virtual void setScoreTag(std::string const&);
-    virtual void getScoreTag()const;
+    virtual std::string getScoreTag()const;
     virtual bool isInWater()const;
     virtual bool hasEnteredWater()const;
     virtual bool isImmersedInWater()const;
     virtual bool isInWaterOrRain()const;
     virtual bool isInLava()const;
-    virtual bool isUnderLiquid(MaterialType)const;
+//  virtual bool isUnderLiquid(MaterialType)const; //TODO: incomplete function definition
     virtual bool isOverWater()const;
     virtual void makeStuckInBlock(float);
     virtual void getCameraOffset()const;
@@ -144,12 +152,12 @@ public:
     virtual bool isCreativeModeAllowed();
     virtual bool isSurfaceMob()const;
     virtual bool isTargetable()const;
-    virtual bool canAttack(Actor*, bool)const;
-    virtual void setTarget(Actor*);
+    virtual bool canAttack(Actor *, bool)const;
+    virtual void setTarget(Actor *);
     virtual void findAttackTarget();
-    virtual bool isValidTarget(Actor*)const;
-    virtual void attack(Actor&);
-    virtual void performRangedAttack(Actor&, float);
+    virtual bool isValidTarget(Actor *)const;
+    virtual void attack(Actor &);
+    virtual void performRangedAttack(Actor &, float);
     virtual void adjustDamageAmount(int &)const;
     virtual void getEquipmentCount()const;
     virtual void setOwner(ActorUniqueID);
@@ -174,7 +182,7 @@ public:
     virtual void onLightningHit();
     virtual void onBounceStarted(BlockPos const&, Block const&);
     virtual void feed(int);
-    virtual void handleEntityEvent(ActorEvent, int);
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void getPickRadius();
     virtual void spawnAtLocation(int, int);
     virtual void spawnAtLocation(int, int, float);
@@ -182,15 +190,15 @@ public:
     virtual void spawnAtLocation(Block const&, int, float);
     virtual void spawnAtLocation(ItemStack const&, float);
     virtual void despawn();
-    virtual void killed(Actor&);
-    virtual void awardKillScore(Actor&, int);
-    virtual void setArmor(ArmorSlot, ItemStack const&);
-    virtual void getArmor(ArmorSlot)const;
-    virtual void getArmorMaterialTypeInSlot(ArmorSlot)const;
-    virtual void getArmorMaterialTextureTypeInSlot(ArmorSlot)const;
-    virtual void getArmorColorInSlot(ArmorSlot, int)const;
-    virtual void setEquippedSlot(ArmorSlot, int, int);
-    virtual void setEquippedSlot(ArmorSlot, ItemStack const&);
+    virtual void killed(Actor &);
+    virtual void awardKillScore(Actor &, int);
+//  virtual void setArmor(ArmorSlot, ItemStack const&); //TODO: incomplete function definition
+//  virtual void getArmor(ArmorSlot)const; //TODO: incomplete function definition
+//  virtual void getArmorMaterialTypeInSlot(ArmorSlot)const; //TODO: incomplete function definition
+//  virtual void getArmorMaterialTextureTypeInSlot(ArmorSlot)const; //TODO: incomplete function definition
+//  virtual void getArmorColorInSlot(ArmorSlot, int)const; //TODO: incomplete function definition
+//  virtual void setEquippedSlot(ArmorSlot, int, int); //TODO: incomplete function definition
+//  virtual void setEquippedSlot(ArmorSlot, ItemStack const&); //TODO: incomplete function definition
     virtual void getCarriedItem()const;
     virtual void setCarriedItem(ItemStack const&);
     virtual void setOffhandSlot(ItemStack const&);
@@ -210,16 +218,16 @@ public:
     virtual void getPortalWaitTime()const;
     virtual void getDimensionId()const;
     virtual bool canChangeDimensions()const;
-    virtual void changeDimension(AutomaticID<Dimension, int>, bool);
+//  virtual void changeDimension(AutomaticID<Dimension, int>, bool); //TODO: incomplete function definition
     virtual void changeDimension(ChangeDimensionPacket const&);
     virtual void getControllingPlayer()const;
     virtual void checkFallDamage(float, bool);
     virtual void causeFallDamage(float);
     virtual void handleFallDistanceOnServer(float, bool);
-    virtual void playSynchronizedSound(LevelSoundEvent, Vec3 const&, Block const&, bool);
-    virtual void playSynchronizedSound(LevelSoundEvent, Vec3 const&, int, bool);
+//  virtual void playSynchronizedSound(LevelSoundEvent, Vec3 const&, Block const&, bool); //TODO: incomplete function definition
+//  virtual void playSynchronizedSound(LevelSoundEvent, Vec3 const&, int, bool); //TODO: incomplete function definition
     virtual void onSynchedDataUpdate(int);
-    virtual bool canAddRider(Actor&)const;
+    virtual bool canAddRider(Actor &)const;
     virtual bool canBePulledIntoVehicle()const;
     virtual void inCaravan()const;
     virtual bool isLeashableType();
@@ -245,7 +253,7 @@ public:
     virtual void getAnimationComponent();
     virtual void openContainerComponent(Player &);
     virtual void swing();
-    virtual void useItem(ItemStack &, ItemUseMethod, bool);
+//  virtual void useItem(ItemStack &, ItemUseMethod, bool); //TODO: incomplete function definition
     virtual bool hasOutputSignal(unsigned char)const;
     virtual void getOutputSignal()const;
     virtual void getDebugText(std::vector<std::string, std::allocator<std::string>> &);
@@ -268,7 +276,7 @@ public:
     virtual void startSpinAttack();
     virtual void stopSpinAttack();
     virtual void setDamageNearbyMobs(bool);
-    virtual void renderDebugServerState(Options const&);
+//  virtual void renderDebugServerState(Options const&); //TODO: incomplete function definition
     virtual void reloadLootTable();
     virtual void reloadLootTable(EquipmentTableDescription const*);
     virtual void getDeletionDelayTimeSeconds()const;
@@ -295,7 +303,7 @@ public:
     virtual void getDefaultLootTable();
     virtual void _removeRider(ActorUniqueID const&, bool, bool);
     virtual void _onSizeUpdated();
-    virtual void _doAutoAttackOnTouch(Actor&);
+    virtual void _doAutoAttackOnTouch(Actor &);
 
     void getEntity();
     bool hasEntity()const;
@@ -310,11 +318,11 @@ public:
     void updateDescription();
     void getLevel();
     void _setupServerAnimationComponent();
-    bool hasCategory(ActorCategory)const;
+//  bool hasCategory(ActorCategory)const; //TODO: incomplete function definition
     void requireReload();
     void reloadIfRequired();
     void sendActorDefinitionEventTriggered(std::string const&);
-    bool hasType(ActorType)const;
+//  bool hasType(ActorType)const; //TODO: incomplete function definition
     void executeEvent(std::string const&, VariantParameterList const&);
     void getInitializationMethod();
     void setLeashHolder(ActorUniqueID);
@@ -325,10 +333,10 @@ public:
     void setVariant(int);
     void setMarkVariant(int);
     void setSkinID(int);
-    void setColor(PaletteColor);
-    void setColor2(PaletteColor);
-    void setStatusFlag(ActorFlags, bool);
-    void getStatusFlag(ActorFlags)const;
+//  void setColor(PaletteColor); //TODO: incomplete function definition
+//  void setColor2(PaletteColor); //TODO: incomplete function definition
+//  void setStatusFlag(ActorFlags, bool); //TODO: incomplete function definition
+//  void getStatusFlag(ActorFlags)const; //TODO: incomplete function definition
     bool isBaby()const;
     void updateBBFromDescription();
     void setCanClimb(bool);
@@ -345,6 +353,7 @@ public:
     bool hasTag(std::string const&)const;
     void addTag(std::string const&);
     void removeTag(std::string const&);
+    std::string getTags()const;
     void deregisterTagsFromLevelCache();
     bool hasUniqueID()const;
     bool hasRuntimeID()const;
@@ -370,7 +379,7 @@ public:
     void getLevel()const;
     void getTargetId();
     void initParams(VariantParameterList &);
-    void calculateAttackDamage(Actor&);
+    void calculateAttackDamage(Actor &);
     bool hasEffect(MobEffect const&)const;
     void getEffect(MobEffect const&)const;
     void setBlockTarget(BlockPos const&);
@@ -400,8 +409,8 @@ public:
     void setCollidableMobNear(bool);
     void _playMovementSound(bool);
     bool isInScaffolding()const;
-    void playSound(LevelSoundEvent, Vec3 const&, Block const&);
-    void playSound(LevelSoundEvent, Vec3 const&, int);
+//  void playSound(LevelSoundEvent, Vec3 const&, Block const&); //TODO: incomplete function definition
+//  void playSound(LevelSoundEvent, Vec3 const&, int); //TODO: incomplete function definition
     void onOnewayCollision(BlockPos);
     void onOnewayCollision(AABB const&);
     void _updateOnewayCollisions(BlockSource &);
@@ -423,6 +432,7 @@ public:
     void getInterpolatedPosition(float)const;
     void getViewVector(float)const;
     void getViewVector2(float)const;
+    void operator==(Actor &);
     void setEnforceRiderRotationLimit(bool);
     void getSpeedInMetersPerSecond()const;
     void getVerticalSpeedInMetersPerSecond()const;
@@ -564,7 +574,7 @@ public:
     void getActorIdentifier()const;
     void setChanged();
     void getEntityData()const;
-    void _setActorTypeId(ActorType);
+//  void _setActorTypeId(ActorType); //TODO: incomplete function definition
     void getSpatialNetworkData()const;
     void getSpatialNetworkData();
     bool isDebugging()const;
@@ -572,17 +582,17 @@ public:
     bool isInsideBorderBlock(float)const;
     bool hasPlayerRider()const;
     bool isRider(Actor const&)const;
-    void getRiderIndex(Actor&)const;
-    void getFirstAvailableSeatPos(Actor&, Vec3 &)const;
+    void getRiderIndex(Actor &)const;
+    void getFirstAvailableSeatPos(Actor &, Vec3 &)const;
     void getShakeTime()const;
     void setShakeTime(int);
-    void pullInEntity(Actor&);
-    bool isRiding(Actor*)const;
+    void pullInEntity(Actor &);
+    bool isRiding(Actor *)const;
     bool isLeashed()const;
     void getRenderLeashHolder();
     void _initializeLeashRopeSystem();
     void dropLeash(bool, bool);
-    void forEachLeashedActor(std::function<void ()(Actor*)>);
+//  void forEachLeashedActor(std::function<void (Actor *)>); //TODO: incomplete function definition
     void getAirSupply()const;
     void getTotalAirSupply()const;
     bool isAutoSendEnabled()const;
@@ -599,11 +609,11 @@ public:
     void _setDimension(Dimension &);
     void buildForward()const;
     void getPortalEntranceAxis()const;
-    void _setNetherPortalData(AutomaticID<Dimension, int>, AutomaticID<Dimension, int>, int);
+//  void _setNetherPortalData(AutomaticID<Dimension, int>, AutomaticID<Dimension, int>, int); //TODO: incomplete function definition
     void _setLevelPtr(Level *);
     void getRandom()const;
     bool isClient()const;
-    bool hasAttributeBuff(AttributeBuffType)const;
+//  bool hasAttributeBuff(AttributeBuffType)const; //TODO: incomplete function definition
     void getMaxHealth()const;
     void serializationSetHealth(int);
     void healEffects(int);
@@ -639,7 +649,7 @@ public:
     void clearRestriction();
     void dropTowards(ItemStack const&, Vec3);
     void lovePartnerId()const;
-    void setInLove(Actor*);
+    void setInLove(Actor *);
     void calcCenterPos()const;
     bool hasEnoughFoodToBreed();
     void _countFood(int);
@@ -675,7 +685,7 @@ public:
     void setHurtDir(int);
     void getHurtDir()const;
     bool isSafeToSleepNear()const;
-    void fetchNearbyActorsSorted(Vec3 const&, ActorType);
+//  void fetchNearbyActorsSorted(Vec3 const&, ActorType); //TODO: incomplete function definition
     void getMolangVariables();
     void updateMolangVariables(RenderParams &);
     void cacheComponentData();

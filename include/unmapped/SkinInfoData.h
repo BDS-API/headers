@@ -1,12 +1,13 @@
 #pragma once
 
-#include "../mce/Image"
+#include "../mce/Image.h"
+#include <string>
 
 
 class SkinInfoData {
 
 public:
-    virtual SkinInfoData::~SkinInfoData()
+    virtual ~SkinInfoData();
     virtual void validateAndResizeSkinData(mce::Image &, bool);
 
     bool isValidSize(unsigned long);

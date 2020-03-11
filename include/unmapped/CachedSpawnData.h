@@ -2,11 +2,13 @@
 
 
 
-using namespace Player;
+namespace Player {
 
 class CachedSpawnData {
 
 public:
 
-    CachedSpawnData(void);
+    CachedSpawnData();
 };
+
+}

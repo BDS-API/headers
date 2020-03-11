@@ -1,8 +1,9 @@
 #pragma once
 
+#include <string>
 
 
-using namespace Automation;
+namespace Automation {
 
 class AutomationSession {
 
@@ -12,3 +13,5 @@ public:
     bool isReady();
     bool isConnecting();
 };
+
+}

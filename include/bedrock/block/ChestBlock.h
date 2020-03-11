@@ -1,17 +1,19 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../util/Vec3"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./ActorBlock.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../actor/Player.h"
+#include "../../unmapped/Block.h"
 
 
 class ChestBlock : ActorBlock {
 
 public:
-    virtual ChestBlock::~ChestBlock()
+    virtual ~ChestBlock();
     virtual bool isContainerBlock()const;
     virtual bool isInteractiveBlock()const;
     virtual bool isSignalSource()const;
@@ -21,7 +23,7 @@ public:
     virtual void onMove(BlockSource &, BlockPos const&, BlockPos const&)const;
     virtual bool detachesOnPistonMove(BlockSource &, BlockPos const&)const;
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const;
-    virtual void getSecondPart(BlockSource &, BlockPos const&, BlockPos&)const;
+    virtual void getSecondPart(BlockSource &, BlockPos const&, BlockPos &)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
     virtual bool hasComparatorSignal()const;
@@ -29,6 +31,6 @@ public:
     virtual void getMappedFace(unsigned char, Block const&)const;
     virtual void init();
 
-    ChestBlock(std::string const&, int, ChestBlock::ChestType, MaterialType);
+//  ChestBlock(std::string const&, int, ChestBlock::ChestType, MaterialType); //TODO: incomplete function definition
     void updateSignalStrength(BlockSource &, BlockPos const&, int)const;
 };

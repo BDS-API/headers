@@ -1,14 +1,19 @@
 #pragma once
 
-#include "../../../unmapped/MobDescriptor"
-#include "../Mob"
-#include "../../item/ItemStack"
+#include <utility>
+#include <memory>
+#include "../../../unmapped/MobDescriptor.h"
+#include "./Goal.h"
+#include "../../item/ItemStack.h"
+#include <vector>
+#include "../Mob.h"
+#include <string>
 
 
 class ShareItemsGoal : Goal {
 
 public:
-    virtual ShareItemsGoal::~ShareItemsGoal()
+    virtual ~ShareItemsGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

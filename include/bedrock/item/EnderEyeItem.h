@@ -1,12 +1,15 @@
 #pragma once
 
-#include "../actor/Player"
+#include "./Item.h"
+#include "../actor/Player.h"
+#include "./ItemStack.h"
+#include <string>
 
 
 class EnderEyeItem : Item {
 
 public:
-    virtual EnderEyeItem::~EnderEyeItem()
+    virtual ~EnderEyeItem();
     virtual bool isThrowable()const;
     virtual void use(ItemStack &, Player &)const;
 

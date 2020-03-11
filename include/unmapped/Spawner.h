@@ -1,17 +1,26 @@
 #pragma once
 
-#include "../bedrock/level/HardcodedSpawningArea"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/util/Random"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/level/Level"
-#include "../bedrock/level/LevelChunk"
-#include "../bedrock/util/BlockPos"
-#include "../bedrock/util/ChunkPos"
-#include "../bedrock/actor/Mob"
-#include "../bedrock/actor/Actor"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/actor/Actor.h"
+#include <functional>
+#include "../bedrock/util/Random.h"
+#include "./Dimension.h"
+#include "../bedrock/util/ChunkPos.h"
+#include "./MobSpawnHerdInfo.h"
+#include "./MobSpawnerData.h"
+#include "./MobSpawnRules.h"
+#include "../bedrock/item/ItemStack.h"
+#include "../bedrock/level/Level.h"
+#include "./HardcodedSpawningArea.h"
+#include "../bedrock/util/BlockPos.h"
+#include "./SpawnConditions.h"
+#include <memory>
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
+#include "../bedrock/actor/Mob.h"
+#include <vector>
+#include "../bedrock/level/LevelChunk.h"
+#include <string>
 
 
 class Spawner {
@@ -20,12 +29,13 @@ public:
     static long SPAWN_RING_OFFSETS;
 
 
+    ~Spawner();
     void spawnMob(BlockSource &, ActorDefinitionIdentifier const&, Actor *, Vec3 const&, bool, bool, bool);
     void spawnItem(BlockSource &, ItemStack const&, Actor *, Vec3 const&, int);
     void spawnProjectile(BlockSource &, ActorDefinitionIdentifier const&, Actor *, Vec3 const&, Vec3 const&);
     Spawner(Level &);
     void popCapAllows(Dimension const&, MobSpawnerData const&, bool, bool)const;
-    void spawnMobGroup(BlockSource &, std::string const&, Vec3 const&, bool, std::function<void ()(Mob &)> &&);
+//  void spawnMobGroup(BlockSource &, std::string const&, Vec3 const&, bool, std::function<void (Mob &)> &&); //TODO: incomplete function definition
     bool isSpawnPositionOk(MobSpawnRules const&, BlockSource &, BlockPos const&);
     void _permuteId(ActorDefinitionIdentifier &, MobSpawnRules const&, Random &)const;
     void _updateMobCounts(BlockSource &, ActorDefinitionIdentifier const&, SpawnConditions const&);

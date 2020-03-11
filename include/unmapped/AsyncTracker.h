@@ -6,7 +6,7 @@ class AsyncTracker {
 
 public:
 
-    AsyncTracker(void);
+    AsyncTracker();
     void trackNewAsyncOperation(int);
     bool hasAsyncOperationTimedOut();
 };

@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../unmapped/FilterContext"
+#include "./SimpleFloatFilterTest.h"
+#include "../../unmapped/FilterContext.h"
 
 
 class FilterTestDistanceToNearestPlayer : SimpleFloatFilterTest {
 
 public:
-    virtual FilterTestDistanceToNearestPlayer::~FilterTestDistanceToNearestPlayer()
+    virtual ~FilterTestDistanceToNearestPlayer();
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 
-    FilterTestDistanceToNearestPlayer(void);
+    FilterTestDistanceToNearestPlayer();
 };

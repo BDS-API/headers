@@ -2,11 +2,13 @@
 
 
 
-using namespace LayerFilters;
+namespace LayerFilters {
 
 class AddIsland {
 
 public:
 
-    void operator()const;
+//  void operator()(LayerDetails::NeighborhoodReader<LayerValues::Terrain, 1u, 1u> &, LayerDetails::RandomProviderTconst::{lambda(long<LayerDetails::LayerBase::initRandom(long, long> &, unsigned int)const; //TODO: incomplete function definition
 };
+
+}

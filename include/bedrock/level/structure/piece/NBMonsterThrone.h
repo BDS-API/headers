@@ -1,18 +1,22 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../block/unmapped/BlockSource"
-#include "../../../../unmapped/BoundingBox"
+#include <memory>
+#include "../../../util/Random.h"
+#include "./StructurePiece.h"
+#include "./NetherFortressPiece.h"
+#include "../../../block/unmapped/BlockSource.h"
+#include <vector>
+#include "../../../../unmapped/BoundingBox.h"
 
 
 class NBMonsterThrone : NetherFortressPiece {
 
 public:
-    virtual NBMonsterThrone::~NBMonsterThrone()
+    virtual ~NBMonsterThrone();
     virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
 
     void createPiece(std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
-    NBMonsterThrone(void);
+    NBMonsterThrone();
     NBMonsterThrone(int, BoundingBox const&, int);
 };

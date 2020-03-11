@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../bedrock/command/CommandRegistry"
+#include "../bedrock/command/CommandRegistry.h"
 
 
 class VanillaServerCommands {

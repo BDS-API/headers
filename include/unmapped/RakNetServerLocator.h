@@ -1,14 +1,22 @@
 #pragma once
 
-#include "../raknet/RakNetGUID"
-#include "../raknet/Packet"
+#include "../raknet/Packet.h"
+#include "./ServerLocator.h"
+#include "./RakNetInstance.h"
+#include <memory>
+#include "./AsynchronousIPResolver.h"
+#include <vector>
+#include "./IPSupportInterface.h"
+#include "../raknet/RakNetGUID.h"
+#include <functional>
+#include <string>
 
 
 class RakNetServerLocator : ServerLocator {
 
 public:
-    virtual RakNetServerLocator::~RakNetServerLocator()
-    virtual void announceServer(std::string const&, std::string const&, GameType, int, int, bool);
+    virtual ~RakNetServerLocator();
+//  virtual void announceServer(std::string const&, std::string const&, GameType, int, int, bool); //TODO: incomplete function definition
     virtual void stopAnnouncingServer();
     virtual void findServers(int, int);
     virtual void addCustomServer(AsynchronousIPResolver const&, int);
@@ -18,9 +26,9 @@ public:
     virtual void clearServerList();
     virtual bool isIPv4Supported()const;
     virtual bool isIPv6Supported()const;
-    virtual void setHostGUID(std::function<RakNet::RakNetGUID ()(void)>);
+//  virtual void setHostGUID(std::function<RakNet::RakNetGUID (void)>); //TODO: incomplete function definition
     virtual void getPingTimeForGUID(std::string const&);
-    virtual void checkCanConnectToCustomServerAsync(std::string, int, std::function<void ()(bool)>);
+//  virtual void checkCanConnectToCustomServerAsync(std::string, int, std::function<void (bool)>); //TODO: incomplete function definition
 
     RakNetServerLocator(RakNetInstance &, RakPeerHelper::IPSupportInterface &, bool);
     void _updateQueuedPings();

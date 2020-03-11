@@ -6,5 +6,5 @@ class CustomSkyColorAttributes {
 
 public:
 
-    CustomSkyColorAttributes(void);
+    CustomSkyColorAttributes();
 };

@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../unmapped/BlockSource"
-#include "../../actor/Actor"
-#include "../../nbt/CompoundTag"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../nbt/CompoundTag.h"
+#include "./BlockActor.h"
+#include "../../actor/Actor.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../level/Level.h"
+#include "../../util/BlockPos.h"
+#include "../unmapped/BlockSource.h"
 
 
 class BellBlockActor : BlockActor {
 
 public:
-    virtual BellBlockActor::~BellBlockActor()
+    virtual ~BellBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
@@ -19,7 +20,7 @@ public:
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
 
     BellBlockActor(BlockPos const&);
-    void ring(Direction::Type, BlockSource &, bool);
+//  void ring(Direction::Type, BlockSource &, bool); //TODO: incomplete function definition
     void ejectItem(BlockPos const&, Actor &)const;
     bool isRinging()const;
 };

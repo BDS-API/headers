@@ -1,13 +1,14 @@
 #pragma once
 
+#include "./IGameModuleShared.h"
 
 
 class VanillaGameModuleDedicatedServer : IGameModuleShared {
 
 public:
-    virtual VanillaGameModuleDedicatedServer::~VanillaGameModuleDedicatedServer()
+    virtual ~VanillaGameModuleDedicatedServer();
     virtual void createGameModuleServer();
     virtual void createInPackagePacks();
 
-    VanillaGameModuleDedicatedServer(void);
+    VanillaGameModuleDedicatedServer();
 };

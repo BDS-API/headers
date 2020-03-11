@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../Description"
+#include "../Description.h"
 
 
 class AttributeDescription : Description {
 
 public:
-    virtual AttributeDescription::~AttributeDescription()
+    virtual ~AttributeDescription();
 
-    AttributeDescription(void);
+    AttributeDescription();
 };

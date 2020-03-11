@@ -1,17 +1,18 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "unmapped/ActorDefinitionGroup"
-#include "../../unmapped/Block"
-#include "../../unmapped/VariantParameterList"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "damagesource/ActorDamageSource.h"
+#include "./Fireball.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../../unmapped/Block.h"
 
 
 class WitherSkull : Fireball {
 
 public:
-    virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&);
-    virtual WitherSkull::~WitherSkull()
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~WitherSkull();
     virtual bool isPickable();
     virtual bool isOnFire()const;
     virtual bool canDestroyBlock(Block const&)const;

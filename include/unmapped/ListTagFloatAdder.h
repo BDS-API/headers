@@ -6,7 +6,8 @@ class ListTagFloatAdder {
 
 public:
 
-    void operator();
+    void operator()(float);
     ListTagFloatAdder(float);
     void done();
+    ~ListTagFloatAdder();
 };

@@ -1,12 +1,16 @@
 #pragma once
 
-#include "../../unmapped/OverloadSyntaxInformation"
+#include <memory>
+#include "../../unmapped/OverloadSyntaxInformation.h"
+#include <vector>
+#include <string>
 
 
 class CommandSyntaxInformation {
 
 public:
 
-    CommandSyntaxInformation(void);
+    ~CommandSyntaxInformation();
+    CommandSyntaxInformation();
     CommandSyntaxInformation(bool, std::string const&, std::vector<OverloadSyntaxInformation, std::allocator<OverloadSyntaxInformation>> &&);
 };

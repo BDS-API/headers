@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../unmapped/ScriptEngine"
-#include "../ScriptObjectHandle"
+#include "../unmapped/ScriptEngine.h"
+#include "../ScriptObjectHandle.h"
+#include "./ScriptBinderComponent.h"
 
 
 class ScriptEventDataBinderComponent : ScriptBinderComponent {
 
 public:
-    static long TAG[abi:cxx11];
+    static std::string TAG;
 
-    virtual ScriptEventDataBinderComponent::~ScriptEventDataBinderComponent()
+    virtual ~ScriptEventDataBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
 
-    ScriptEventDataBinderComponent(void);
+    ScriptEventDataBinderComponent();
     ScriptEventDataBinderComponent(ScriptApi::ScriptObjectHandle &&);
     void getData()const;
 };

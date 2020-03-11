@@ -2,12 +2,14 @@
 
 
 
-using namespace LevelChunkPacket;
+namespace LevelChunkPacket {
 
 class SubChunkMetadata {
 
 public:
 
-    SubChunkMetadata(void);
+    SubChunkMetadata();
     SubChunkMetadata(unsigned long);
 };
+
+}

@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorRuntimeID"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/network/packet/Packet"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/util/Vec2"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/network/packet/Packet.h"
+#include "../bedrock/actor/unmapped/ActorRuntimeID.h"
+#include "../bedrock/util/Vec2.h"
+#include "../bedrock/actor/Actor.h"
+#include "./MoveActorAbsoluteData.h"
+#include "./MoveActorDeltaData.h"
 
 
 class SpatialActorNetworkData {

@@ -5,7 +5,7 @@
 class ITaskGroup {
 
 public:
-    virtual ITaskGroup::~ITaskGroup()
+    virtual ~ITaskGroup();
 
-    ITaskGroup(void);
+    ITaskGroup();
 };

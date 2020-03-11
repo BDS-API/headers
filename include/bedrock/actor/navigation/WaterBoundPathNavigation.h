@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/NavigationComponent"
-#include "../../description/component/NavigationDescription"
+#include "./PathNavigation.h"
+#include "../Mob.h"
+#include "../../../unmapped/NavigationComponent.h"
+#include "../../description/component/NavigationDescription.h"
 
 
 class WaterBoundPathNavigation : PathNavigation {
 
 public:
-    virtual WaterBoundPathNavigation::~WaterBoundPathNavigation()
+    virtual ~WaterBoundPathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
     virtual void tick(NavigationComponent &, Mob &);
     virtual void getTempMobPos(Mob const&)const;
@@ -16,7 +17,7 @@ public:
     virtual bool canUpdatePath(Mob const&)const;
     virtual void updatePath(NavigationComponent &, Mob &);
 
-    WaterBoundPathNavigation(void);
+    WaterBoundPathNavigation();
     void setSteerDampening(float);
     void setMinDepth(float);
     void setMaxDepth(float);

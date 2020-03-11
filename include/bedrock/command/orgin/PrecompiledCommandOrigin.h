@@ -1,13 +1,15 @@
 #pragma once
 
+#include "./CommandOrigin.h"
+#include <string>
 
 
 class PrecompiledCommandOrigin : CommandOrigin {
 
 public:
-    virtual PrecompiledCommandOrigin::~PrecompiledCommandOrigin()
-    virtual void getRequestId()const;
-    virtual void getName()const;
+    virtual ~PrecompiledCommandOrigin();
+    virtual std::string getRequestId()const;
+    virtual std::string getName()const;
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void getLevel()const;
@@ -17,11 +19,11 @@ public:
     virtual void clone()const;
     virtual bool hasChatPerms()const;
     virtual bool hasTellPerms()const;
-    virtual bool canUseAbility(AbilitiesIndex)const;
+//  virtual bool canUseAbility(AbilitiesIndex)const; //TODO: incomplete function definition
     virtual bool isWorldBuilder()const;
     virtual bool canUseCommandsWithoutCheatsEnabled()const;
     virtual bool isSelectorExpansionAllowed()const;
     virtual void getOriginType()const;
 
-    PrecompiledCommandOrigin(void);
+    PrecompiledCommandOrigin();
 };

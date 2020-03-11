@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../unmapped/IWebviewTelemetry"
-#include "../../unmapped/IPackTelemetry"
+#include "../../unmapped/IPackTelemetry.h"
+#include "../../unmapped/IWebviewTelemetry.h"
 
 
 class IMinecraftEventing : IPackTelemetry, IWebviewTelemetry {
 
 public:
-    virtual IMinecraftEventing::~IMinecraftEventing()
+    virtual ~IMinecraftEventing();
 
-    IMinecraftEventing(void);
+    IMinecraftEventing();
 };

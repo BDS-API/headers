@@ -1,14 +1,19 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
+#include "./WorldTemplateLevelData.h"
+#include "./ContentIdentity.h"
+#include "./PackIdVersion.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "./BaseGameVersion.h"
 
 
 class WorldTemplateLevelData {
 
 public:
 
-    WorldTemplateLevelData(WorldTemplateLevelData&&);
-    WorldTemplateLevelData(void);
+    ~WorldTemplateLevelData();
+    WorldTemplateLevelData(WorldTemplateLevelData &&);
+    WorldTemplateLevelData();
     WorldTemplateLevelData(bool, bool, BaseGameVersion const&);
     void getTagData(CompoundTag const&);
     void _getTagData(CompoundTag const&);

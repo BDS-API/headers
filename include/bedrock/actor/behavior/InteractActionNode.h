@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include "./BehaviorNode.h"
 
 
 class InteractActionNode : BehaviorNode {
 
 public:
-    virtual InteractActionNode::~InteractActionNode()
+    virtual ~InteractActionNode();
     virtual void tick(Actor &);
     virtual void initializeFromDefinition(Actor &);
 
-    InteractActionNode(void);
+    InteractActionNode();
 };

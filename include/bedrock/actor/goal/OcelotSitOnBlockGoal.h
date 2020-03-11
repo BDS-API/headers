@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../Mob"
-#include "../../block/unmapped/BlockSource"
-#include "../../util/BlockPos"
+#include "../../util/BlockPos.h"
+#include "./BaseMoveToBlockGoal.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "../Mob.h"
+#include <string>
 
 
 class OcelotSitOnBlockGoal : BaseMoveToBlockGoal {
 
 public:
-    virtual OcelotSitOnBlockGoal::~OcelotSitOnBlockGoal()
+    virtual ~OcelotSitOnBlockGoal();
     virtual bool canUse();
     virtual void start();
     virtual void stop();

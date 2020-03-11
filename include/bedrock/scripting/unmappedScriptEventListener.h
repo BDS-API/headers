@@ -1,14 +1,15 @@
 #pragma once
 
+#include <string>
 
 
 class ScriptEventListener {
 
 public:
-    virtual ScriptEventListener::~ScriptEventListener()
-    virtual void onScriptGetComponent(std::string const&, RegistrationType, bool);
+    virtual ~ScriptEventListener();
+//  virtual void onScriptGetComponent(std::string const&, RegistrationType, bool); //TODO: incomplete function definition
     virtual void onScriptListenForEvent(std::string const&);
-    virtual void onScriptBroadcastEvent(std::string const&, RegistrationType, bool);
+//  virtual void onScriptBroadcastEvent(std::string const&, RegistrationType, bool); //TODO: incomplete function definition
     virtual void onScriptRegisterView();
     virtual void onScriptRegisterSpatialView(std::string const&);
     virtual void onScriptAddFilterToView(std::string const&);
@@ -17,5 +18,5 @@ public:
     virtual void onScriptError(std::string const&, std::string const&);
     virtual void onScriptInternalError(std::string const&);
 
-    ScriptEventListener(void);
+    ScriptEventListener();
 };

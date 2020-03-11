@@ -1,14 +1,17 @@
 #pragma once
 
+#include "./Event.h"
+#include <string>
 
 
 class PlayerRespawnTelemetryData {
 
 public:
-    static long mEventName[abi:cxx11];
+    static std::string mEventName;
 
 
-    PlayerRespawnTelemetryData(void);
+    std::string getEventName()const;
+    PlayerRespawnTelemetryData();
     void WriteEventData(Social::Events::Event &)const;
     void setSearchTime(double);
     void setSearchTime(unsigned int);

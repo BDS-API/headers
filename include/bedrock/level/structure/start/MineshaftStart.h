@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../util/ChunkPos"
-#include "../../../../unmapped/BiomeSource"
+#include "./StructureStart.h"
+#include "../../../util/Random.h"
+#include "../../../../unmapped/BiomeSource.h"
+#include "../../../util/ChunkPos.h"
 
 
 class MineshaftStart : StructureStart {
 
 public:
-    virtual MineshaftStart::~MineshaftStart()
+    virtual ~MineshaftStart();
     virtual void getType()const;
 
     MineshaftStart(BiomeSource &, Random &, ChunkPos const&, short);

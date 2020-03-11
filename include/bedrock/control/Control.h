@@ -5,7 +5,7 @@
 class Control {
 
 public:
-    virtual Control::~Control()
+    virtual ~Control();
 
-    Control(void);
+    Control();
 };

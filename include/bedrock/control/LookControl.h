@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../actor/Mob"
+#include "../actor/Mob.h"
+#include "./Control.h"
 
 
 class LookControl : Control {
 
 public:
-    virtual LookControl::~LookControl()
+    virtual ~LookControl();
     virtual void initializeInternal(Mob &);
     virtual void tick(Mob &);
 
-    LookControl(void);
+    LookControl();
 };

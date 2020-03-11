@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
+#include <memory>
+#include "./SpawnData.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
 
 
 class BaseMobSpawner {
 
 public:
-    virtual BaseMobSpawner::~BaseMobSpawner()
+    virtual ~BaseMobSpawner();
     virtual void tick(BlockSource &);
     virtual void load(CompoundTag const&);
     virtual void save(CompoundTag &);

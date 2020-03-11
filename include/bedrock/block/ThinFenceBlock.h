@@ -1,19 +1,23 @@
 #pragma once
 
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../util/Random"
-#include "../../unmapped/Material"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../../unmapped/BaseGameVersion"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Material.h"
+#include "../../unmapped/Block.h"
+#include "../../unmapped/BaseGameVersion.h"
+#include <memory>
+#include "../util/BlockPos.h"
+#include <vector>
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class ThinFenceBlock : BlockLegacy {
 
 public:
-    virtual ThinFenceBlock::~ThinFenceBlock()
+    virtual ~ThinFenceBlock();
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB, std::allocator<AABB>> &, Actor *)const;

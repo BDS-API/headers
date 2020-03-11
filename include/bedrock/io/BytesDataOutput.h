@@ -1,13 +1,14 @@
 #pragma once
 
+#include "./IDataOutput.h"
 
 
 class BytesDataOutput : IDataOutput {
 
 public:
-    virtual BytesDataOutput::~BytesDataOutput()
-    virtual void writeString(gsl::basic_string_span<char const, -1l>);
-    virtual void writeLongString(gsl::basic_string_span<char const, -1l>);
+    virtual ~BytesDataOutput();
+//  virtual void writeString(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
+//  virtual void writeLongString(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
     virtual void writeFloat(float);
     virtual void writeDouble(double);
     virtual void writeByte(char);
@@ -15,5 +16,5 @@ public:
     virtual void writeInt(int);
     virtual void writeLongLong(long);
 
-    BytesDataOutput(void);
+    BytesDataOutput();
 };

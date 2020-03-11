@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/actor/Actor"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/block/unmapped/BlockSource.h"
 
 
 class Explosion {
 
 public:
 
+    ~Explosion();
     Explosion(BlockSource &, Actor *, Vec3 const&, float);
     void explode();
     void finalizeExplosion();

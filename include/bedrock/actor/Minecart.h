@@ -1,23 +1,25 @@
 #pragma once
 
-#include "damagesource/ActorDamageSource"
-#include "../nbt/CompoundTag"
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "../../unmapped/VariantParameterList"
-#include "../../unmapped/Block"
-#include "../util/Vec3"
-#include "unmapped/ActorDefinitionIdentifier"
-#include "../util/Vec2"
-#include "../../unmapped/DataLoadHelper"
+#include <string>
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "../util/Vec2.h"
+#include "./Actor.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "../util/BlockPos.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../util/Vec3.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "../nbt/CompoundTag.h"
+#include "../../unmapped/Block.h"
 
 
 class Minecart : Actor {
 
 public:
-    virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&);
-    virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&);
-    virtual Minecart::~Minecart()
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual ~Minecart();
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
     virtual void normalTick();
     virtual void getShadowHeightOffs();
@@ -49,5 +51,7 @@ public:
     void setCustomDisplay(bool);
     void setDisplayOffset(int);
     void setCustomName(std::string const&);
+    std::string getAName();
     bool hasCustomName()const;
+    std::string getCustomName()const;
 };

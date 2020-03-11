@@ -1,5 +1,7 @@
 #pragma once
 
+#include "./NetworkAddress.h"
+#include <string>
 
 
 class NetworkAddress {
@@ -7,6 +9,8 @@ class NetworkAddress {
 public:
 
     bool isValid()const;
-    NetworkAddress(void);
+    ~NetworkAddress();
+    NetworkAddress();
     NetworkAddress(NetworkAddress const&);
+    std::string getAddressString()const;
 };

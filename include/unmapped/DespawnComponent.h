@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
+#include "./DespawnComponent.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class DespawnComponent {
 
 public:
 
-    DespawnComponent(DespawnComponent&&);
+    DespawnComponent(DespawnComponent &&);
     void initFromDefinition(Actor &);
     void getDescription(Actor &)const;
     void tick(Actor &);

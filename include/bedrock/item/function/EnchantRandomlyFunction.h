@@ -1,18 +1,21 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../../unmapped/LootTableContext"
-#include "../../../unmapped/EnchantmentInstance"
-#include "../ItemInstance"
-#include "../condition/LootItemCondition"
-#include "../ItemStack"
-#include "../../../json/Value"
+#include "../../util/Random.h"
+#include "../../../unmapped/EnchantmentInstance.h"
+#include "../condition/LootItemCondition.h"
+#include "../../../unmapped/LootTableContext.h"
+#include <memory>
+#include "./LootItemFunction.h"
+#include "../../../json/Value.h"
+#include <vector>
+#include "../ItemInstance.h"
+#include "../ItemStack.h"
 
 
 class EnchantRandomlyFunction : LootItemFunction {
 
 public:
-    virtual EnchantRandomlyFunction::~EnchantRandomlyFunction()
+    virtual ~EnchantRandomlyFunction();
     virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
 

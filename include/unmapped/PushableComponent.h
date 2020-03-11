@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/description/component/PushableDescription"
-#include "../bedrock/util/Vec3"
+#include "../bedrock/util/Vec3.h"
+#include "./PushableComponent.h"
+#include "../bedrock/description/component/PushableDescription.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class PushableComponent {
 
 public:
 
-    PushableComponent(PushableComponent&&);
+    PushableComponent(PushableComponent &&);
     void initFromDefinition(Actor &);
     void initFromDefinition(Actor &, PushableDescription &);
     void push(Actor &, Actor &, bool);

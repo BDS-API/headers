@@ -1,12 +1,16 @@
 #pragma once
 
+#include "./StructureTemplatePool.h"
+#include <memory>
+#include <string>
 
 
 class JigsawStructureRegistry {
 
 public:
 
-    JigsawStructureRegistry(void);
+    JigsawStructureRegistry();
+    ~JigsawStructureRegistry();
     void clear();
     void registerPool(std::unique_ptr<StructureTemplatePool, std::default_delete<StructureTemplatePool>> &&);
     void lookupByName(std::string)const;

@@ -1,13 +1,17 @@
 #pragma once
 
+#include "./ConstrainedValueData.h"
 
 
-using namespace AvailableCommandsPacket;
+namespace AvailableCommandsPacket {
 
 class ConstrainedValueData {
 
 public:
 
-    ConstrainedValueData(AvailableCommandsPacket::ConstrainedValueData&&);
-    ConstrainedValueData(void);
+    ~ConstrainedValueData();
+    ConstrainedValueData(AvailableCommandsPacket::ConstrainedValueData &&);
+    ConstrainedValueData();
 };
+
+}

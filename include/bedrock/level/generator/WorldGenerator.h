@@ -1,17 +1,18 @@
 #pragma once
 
-#include "../LevelChunk"
+#include "../LevelChunk.h"
+#include <string>
 
 
 class WorldGenerator {
 
 public:
-    virtual WorldGenerator::~WorldGenerator()
+    virtual ~WorldGenerator();
     virtual void debugRender();
     virtual void addHardcodedSpawnAreas(LevelChunk &);
 
     void getHardcodedSpawns()const;
-    WorldGenerator(void);
-    void getFeatureName(StructureFeatureType);
+    WorldGenerator();
+//  void getFeatureName(StructureFeatureType); //TODO: incomplete function definition
     void getFeatureId(std::string const&);
 };

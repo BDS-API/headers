@@ -1,16 +1,22 @@
 #pragma once
 
+#include <memory>
+#include "./FlatFileManifest.h"
+#include "./FlatFileManifestInfo.h"
 
 
-using namespace Core;
+namespace Core {
 
 class FlatFileSearchResult {
 
 public:
 
-    FlatFileSearchResult(void);
+    FlatFileSearchResult();
     FlatFileSearchResult(std::shared_ptr<Core::FlatFileManifest const>, Core::FlatFileManifestInfo const*);
     void getManifest()const;
     void getEntry()const;
     bool isEntryFound()const;
+    ~FlatFileSearchResult();
 };
+
+}

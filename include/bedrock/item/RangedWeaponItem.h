@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../actor/Mob"
-#include "../actor/Actor"
-#include "../../unmapped/Block"
-#include "../actor/Player"
+#include "../actor/Mob.h"
+#include <string>
+#include "./Item.h"
+#include "../actor/Actor.h"
+#include "../actor/Player.h"
+#include "./ItemStack.h"
+#include "../../unmapped/Block.h"
 
 
 class RangedWeaponItem : Item {
 
 public:
-    virtual RangedWeaponItem::~RangedWeaponItem()
+    virtual ~RangedWeaponItem();
     virtual void getEnchantValue()const;
     virtual void use(ItemStack &, Player &)const;
     virtual void releaseUsing(ItemStack &, Player *, int)const;

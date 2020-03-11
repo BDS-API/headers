@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../network/packet/sender/PacketSender"
-#include "../../unmapped/NetworkIdentifier"
-#include "../Scheduler"
+#include "../network/packet/sender/PacketSender.h"
+#include "../Scheduler.h"
+#include "../../unmapped/NetworkIdentifier.h"
+#include <string>
 
 
 class ResourcePackTransmissionManager {
@@ -10,6 +11,7 @@ class ResourcePackTransmissionManager {
 public:
 
     ResourcePackTransmissionManager(Scheduler &);
+    ~ResourcePackTransmissionManager();
     void update();
     void getResourcePackUploadManager(PacketSender &, NetworkIdentifier const&, std::string const&);
     void getResourcePackDownloadManager(PacketSender &, NetworkIdentifier const&, std::string const&);

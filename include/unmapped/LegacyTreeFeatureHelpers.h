@@ -1,8 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/block/unmapped/BlockSource"
-#include "../bedrock/util/BlockPos"
+#include "../bedrock/util/BlockPos.h"
+#include "../bedrock/util/Random.h"
+#include <functional>
+#include "../bedrock/block/unmapped/BlockSource.h"
 
 
 class LegacyTreeFeatureHelpers {
@@ -10,6 +11,6 @@ class LegacyTreeFeatureHelpers {
 public:
 
     void _setupForestCount(BlockPos const&, Random &, float, int &);
-    void _placeTrees(BlockSource &, BlockPos const&, Random &, int, WeakRefT<FeatureRefTraits>, std::function<WeakRefT ()(Random &)> const&);
+//  void _placeTrees(BlockSource &, BlockPos const&, Random &, int, WeakRefT<FeatureRefTraits>, std::function<WeakRefT<FeatureRefTraits> (Random &)> const&); //TODO: incomplete function definition
     void _getRandomTreePosition(BlockSource &, BlockPos const&, Random &);
 };

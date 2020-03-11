@@ -2,12 +2,14 @@
 
 
 
-using namespace RakNet::ReliabilityLayer;
+namespace RakNet::ReliabilityLayer {
 
 class DatagramHistoryNode {
 
 public:
 
-    DatagramHistoryNode(RakNet::ReliabilityLayer::MessageNumberNode *, unsigned long);
-    DatagramHistoryNode(void);
+//  DatagramHistoryNode(RakNet::ReliabilityLayer::MessageNumberNode *, unsigned long); //TODO: incomplete function definition
+    DatagramHistoryNode();
 };
+
+}

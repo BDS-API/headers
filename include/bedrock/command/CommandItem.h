@@ -1,12 +1,13 @@
 #pragma once
 
+#include "./CommandOutput.h"
 
 
 class CommandItem {
 
 public:
 
-    CommandItem(void);
+    CommandItem();
     CommandItem(int);
     CommandItem(unsigned long);
     void getId()const;

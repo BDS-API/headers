@@ -1,13 +1,14 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier"
-#include "unmapped/ActorDefinitionGroup"
+#include "./Monster.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 
 
 class Blaze : Monster {
 
 public:
-    virtual Blaze::~Blaze()
+    virtual ~Blaze();
     virtual void normalTick();
     virtual void getBrightness(float)const;
     virtual bool isOnFire()const;

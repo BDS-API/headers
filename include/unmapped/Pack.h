@@ -1,18 +1,30 @@
 #pragma once
 
-#include "../bedrock/pack/PackManifest"
-#include "../bedrock/pack/PackAccessStrategy"
+#include "./SubpackInfoCollection.h"
+#include "../bedrock/pack/PackManifest.h"
+#include "./PackSourceReport.h"
+#include "./PackManifestFactory.h"
+#include <memory>
+#include "./ResourceLocation.h"
+#include "./Pack.h"
+#include "./IContentKeyProvider.h"
+#include "./PackMetadata.h"
+#include "./ContentTierInfo.h"
+#include "./PackReport.h"
+#include <functional>
+#include "../bedrock/pack/PackAccessStrategy.h"
 
 
 class Pack {
 
 public:
-    static long EDUCATION_METADATA_FILE[abi:cxx11];
+    static std::string EDUCATION_METADATA_FILE;
 
 
     Pack(std::unique_ptr<PackManifest, std::default_delete<PackManifest>>, std::unique_ptr<PackAccessStrategy, std::default_delete<PackAccessStrategy>>, std::unique_ptr<SubpackInfoCollection, std::default_delete<SubpackInfoCollection>>, std::unique_ptr<PackMetadata, std::default_delete<PackMetadata>>);
     void _loadLocalizationFiles();
-    void move(Pack&&);
+    ~Pack();
+    void move(Pack &&);
     void getAccessStrategy();
     void getManifest()const;
     void getManifest();
@@ -20,10 +32,10 @@ public:
     void getManifestPtr();
     void getMetadata()const;
     void getMetadata();
-    void registerPackUpdatedCallback(void *, std::function<void ()(Pack&)>);
-    void unregisterPackUpdatedCallback(void *);
-    void registerPackDeletedCallback(void *, std::function<void ()(Pack&)>);
-    void unregisterPackDeletedCallback(void *);
+//  void registerPackUpdatedCallback(void *, std::function<void (Pack &)>); //TODO: incomplete function definition
+//  void unregisterPackUpdatedCallback(void *); //TODO: incomplete function definition
+//  void registerPackDeletedCallback(void *, std::function<void (Pack &)>); //TODO: incomplete function definition
+//  void unregisterPackDeletedCallback(void *); //TODO: incomplete function definition
     void getAccessStrategy()const;
     void getSubpackInfoStack()const;
     void getSubpackInfoStack();
@@ -35,6 +47,6 @@ public:
     void _validSignature()const;
     bool isTrusted()const;
     void generateWorldPackHistoryInfo()const;
-    void createPack(ResourceLocation const&, PackType, PackOrigin, PackManifestFactory &, IContentKeyProvider const&, PackSourceReport *);
-    void createPackMetadata(PackType, PackManifest &, PackAccessStrategy const&, PackReport &);
+//  void createPack(ResourceLocation const&, PackType, PackOrigin, PackManifestFactory &, IContentKeyProvider const&, PackSourceReport *); //TODO: incomplete function definition
+//  void createPackMetadata(PackType, PackManifest &, PackAccessStrategy const&, PackReport &); //TODO: incomplete function definition
 };

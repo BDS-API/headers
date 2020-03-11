@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../../block/BlockLegacy"
-#include "../Item"
-#include "../../../unmapped/Block"
-#include "../../pack/ResourcePackManager"
+#include "../../../unmapped/Block.h"
+#include "../../pack/ResourcePackManager.h"
+#include "../Item.h"
+#include "../../block/BlockLegacy.h"
+#include <string>
 
 
 class ItemRegistry {
@@ -11,8 +12,8 @@ class ItemRegistry {
 public:
     static long mItemRegistry;
     static long mIdToItemMap;
-    static long mNameToItemMap[abi:cxx11];
-    static long mItemAliasLookupMap[abi:cxx11];
+    static std::string mNameToItemMap;
+    static std::string mItemAliasLookupMap;
     static long mMaxItemID;
 
 
@@ -20,9 +21,10 @@ public:
     void getItem(std::string const&);
     void getItem(Block const&);
     void getItem(BlockLegacy const&);
+    std::string getNameToItemMap();
     void getItemCount();
     void getMaxItemID();
-    void registerItem(SharedPtr<Item>);
+//  void registerItem(SharedPtr<Item>); //TODO: incomplete function definition
     void unregisterItem(std::string const&);
     void lookupByName(std::string const&);
     void reassignOrCreateItem(std::string const&, short);

@@ -1,13 +1,15 @@
 #pragma once
 
-#include "../Mob"
-#include "../../../unmapped/FloatRange"
+#include "./Goal.h"
+#include "../Mob.h"
+#include "../../../unmapped/FloatRange.h"
+#include <string>
 
 
 class SwoopAttackGoal : Goal {
 
 public:
-    virtual SwoopAttackGoal::~SwoopAttackGoal()
+    virtual ~SwoopAttackGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

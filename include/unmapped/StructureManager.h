@@ -1,8 +1,11 @@
 #pragma once
 
-#include "../bedrock/pack/ResourcePackManager"
-#include "../bedrock/level/storage/LevelStorage"
-#include "../core/Path"
+#include "../core/Path.h"
+#include "../bedrock/pack/ResourcePackManager.h"
+#include "./StructureTemplate.h"
+#include "../bedrock/level/storage/LevelStorage.h"
+#include "./LegacyStructureTemplate.h"
+#include <string>
 
 
 class StructureManager {
@@ -12,7 +15,8 @@ public:
     static long BEHAVIOR_PACK_STRUCTURES_FOLDER;
 
 
-    StructureManager(void);
+    StructureManager();
+    ~StructureManager();
     void getOrCreateLegacy(std::string const&);
     void _getLegacy(std::string const&);
     void _createAndLoadStructure(std::string const&);
@@ -25,6 +29,6 @@ public:
     void exportStructure(StructureTemplate const&, Core::Path const&);
     void setLevelStorage(LevelStorage *);
     void setPackManager(ResourcePackManager &);
-    void createStructureDataExportPacket(std::string const&, StructureTemplateResponseType);
+//  void createStructureDataExportPacket(std::string const&, StructureTemplateResponseType); //TODO: incomplete function definition
     void clearLoadedStructures();
 };

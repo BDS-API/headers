@@ -1,14 +1,16 @@
 #pragma once
 
-#include "../Mob"
-#include "../Actor"
-#include "../../util/Vec3"
+#include "../Actor.h"
+#include "../../util/Vec3.h"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class RangedAttackGoal : Goal {
 
 public:
-    virtual RangedAttackGoal::~RangedAttackGoal()
+    virtual ~RangedAttackGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

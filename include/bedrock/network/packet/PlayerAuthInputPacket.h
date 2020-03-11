@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include <string>
+#include "../../io/BinaryStream.h"
+#include "./Packet.h"
 
 
 class PlayerAuthInputPacket : Packet {
 
 public:
-    virtual PlayerAuthInputPacket::~PlayerAuthInputPacket()
+    virtual ~PlayerAuthInputPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    PlayerAuthInputPacket(void);
-    void getInput(PlayerAuthInputPacket::InputData)const;
-    void setInput(PlayerAuthInputPacket::InputData, bool);
+    PlayerAuthInputPacket();
+//  void getInput(PlayerAuthInputPacket::InputData)const; //TODO: incomplete function definition
+//  void setInput(PlayerAuthInputPacket::InputData, bool); //TODO: incomplete function definition
 };

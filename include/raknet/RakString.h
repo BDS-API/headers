@@ -1,37 +1,51 @@
 #pragma once
 
+#include "./RakString.h"
+#include "./BitStream.h"
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class RakString {
 
 public:
 
     void C_String()const;
-    RakStringComp(RakNet::RakString const&, RakNet::RakString const&);
+    void RakStringComp(RakNet::RakString const&, RakNet::RakString const&);
     void StrCmp(RakNet::RakString const&)const;
-    RakString(void);
-    RakString(RakNet::RakString::SharedString *);
+    RakString();
+//  RakString(RakNet::RakString::SharedString *); //TODO: incomplete function definition
     RakString(char);
     void Assign(char const*);
     RakString(unsigned char);
-    RakString(unsigned char const*, ...);
-    void Assign(char const*, __va_list_tag *);
-    RakString(char const*, ...);
+//  RakString(unsigned char const*, ...); //TODO: incomplete function definition
+//  void Assign(char const*, __va_list_tag *); //TODO: incomplete function definition
+//  RakString(char const*, ...); //TODO: incomplete function definition
     RakString(RakNet::RakString const&);
+    ~RakString();
     void Free();
-    void Realloc(RakNet::RakString::SharedString *, unsigned long);
-    void IsEmpty()const;
+//  void Realloc(RakNet::RakString::SharedString *, unsigned long); //TODO: incomplete function definition
+    bool IsEmpty()const;
     void Clone();
     void GetLength()const;
+    void operator[](unsigned int)const;
+    void operator==(RakNet::RakString const&)const;
+    void operator==(char const*)const;
+    void operator==(char *)const;
+    void operator<(RakNet::RakString const&)const;
+    void operator<=(RakNet::RakString const&)const;
+    void operator>(RakNet::RakString const&)const;
+    void operator>=(RakNet::RakString const&)const;
+    void operator!=(RakNet::RakString const&)const;
+    void operator!=(char const*)const;
+    void operator!=(char *)const;
     void LockMutex();
     void UnlockMutex();
     void ToLower();
     void ToLower(unsigned char);
     void ToUpper();
     void ToUpper(unsigned char);
-    void Set(char const*, ...);
+//  void Set(char const*, ...); //TODO: incomplete function definition
     void Clear();
     void GetLengthUTF8()const;
     void Replace(unsigned int, unsigned int, unsigned char);
@@ -52,13 +66,13 @@ public:
     void StrNCmp(RakNet::RakString const&, unsigned long)const;
     void StrICmp(RakNet::RakString const&)const;
     void Printf();
-    void FPrintf(_IO_FILE *);
+//  void FPrintf(_IO_FILE *); //TODO: incomplete function definition
     void IPAddressMatch(char const*);
-    void ContainsNonprintableExceptSpaces()const;
-    void IsEmailAddress()const;
+    bool ContainsNonprintableExceptSpaces()const;
+    bool IsEmailAddress()const;
     void URLEncode();
     void URLDecode();
-    void SplitURI(RakNet::RakString&, RakNet::RakString&, RakNet::RakString&);
+    void SplitURI(RakNet::RakString &, RakNet::RakString &, RakNet::RakString &);
     void SQLEscape();
     void FormatForPUTOrPost(char const*, char const*, char const*, char const*, char const*);
     void FormatForPOST(char const*, char const*, char const*, char const*);
@@ -86,3 +100,5 @@ public:
     void AppendBytes(char const*, unsigned int);
     void GetSizeToAllocate(unsigned long);
 };
+
+}

@@ -2,11 +2,14 @@
 
 
 
-using namespace Core::ZipUtils;
+namespace Core::ZipUtils {
 
 class UnzipSettings {
 
 public:
 
-    UnzipSettings(void);
+    UnzipSettings();
+    ~UnzipSettings();
 };
+
+}

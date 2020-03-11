@@ -1,19 +1,21 @@
 #pragma once
 
-#include "../bedrock/IMinecraftApp"
+#include "../bedrock/IMinecraftApp.h"
+#include "./UriListener.h"
+#include "./Response.h"
 
 
-using namespace Automation;
+namespace Automation {
 
 class AutomationClient : UriListener {
 
 public:
-    virtual Automation::AutomationClient::~AutomationClient()
-    virtual void onUri(ActivationUri const&);
+    virtual ~AutomationClient();
+//  virtual void onUri(ActivationUri const&); //TODO: incomplete function definition
 
     AutomationClient(IMinecraftApp &);
     void getDefaultSession();
-    void getSessionForCommand(Automation::CommandOrigin const&);
+//  void getSessionForCommand(Automation::CommandOrigin const&); //TODO: incomplete function definition
     void createSession();
     bool isReady();
     void send(Automation::Response const&);
@@ -23,3 +25,5 @@ public:
     void setServerRetryTime(float);
     bool isReadyForInGameCommands();
 };
+
+}

@@ -1,20 +1,22 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../actor/Actor"
-#include "../../unmapped/Material"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
-#include "../util/Vec3"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "../../unmapped/Material.h"
+#include "../../unmapped/Block.h"
+#include "../util/BlockPos.h"
+#include "../util/Vec3.h"
+#include "../actor/Actor.h"
+#include "../util/AABB.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "./BlockLegacy.h"
 
 
 class ButtonBlock : BlockLegacy {
 
 public:
-    virtual ButtonBlock::~ButtonBlock()
+    virtual ~ButtonBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const;
     virtual bool isInteractiveBlock()const;
@@ -32,7 +34,7 @@ public:
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const;
     virtual void use(Player &, BlockPos const&)const;
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const;
-    virtual bool isAttachedTo(BlockSource &, BlockPos const&, BlockPos&)const;
+    virtual bool isAttachedTo(BlockSource &, BlockPos const&, BlockPos &)const;
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const;
     virtual void getVisualShape(Block const&, AABB &, bool)const;
     virtual void getUIShape(Block const&, AABB &)const;

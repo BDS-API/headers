@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/level/Level"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/Scheduler"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/Scheduler.h"
+#include "./Dimension.h"
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/level/Level.h"
 
 
 class TheEndDimension : Dimension {
@@ -11,7 +12,7 @@ class TheEndDimension : Dimension {
 public:
     static long AMBIENT_MULTIPLIER;
 
-    virtual TheEndDimension::~TheEndDimension()
+    virtual ~TheEndDimension();
     virtual void init();
     virtual void tick();
     virtual void createGenerator();
@@ -27,7 +28,7 @@ public:
     virtual void getSpawnYPosition()const;
     virtual bool isDay()const;
     virtual void getSunIntensity(float, Vec3 const&, float)const;
-    virtual void translatePosAcrossDimension(Vec3 const&, AutomaticID<Dimension, int>)const;
+//  virtual void translatePosAcrossDimension(Vec3 const&, AutomaticID<Dimension, int>)const; //TODO: incomplete function definition
     virtual void deserialize(CompoundTag const&);
     virtual void serialize(CompoundTag &)const;
     virtual void startLeaveGame();

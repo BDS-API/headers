@@ -1,20 +1,22 @@
 #pragma once
 
-#include "../Mob"
+#include "./MoveToPOIGoal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class HideGoal : MoveToPOIGoal {
 
 public:
-    virtual HideGoal::~HideGoal()
+    virtual ~HideGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();
     virtual void stop();
     virtual void appendDebugInfo(std::string &)const;
     virtual void _getRepathTime()const;
-    virtual void _getOwnedPOI(POIType)const;
+//  virtual void _getOwnedPOI(POIType)const; //TODO: incomplete function definition
 
-    HideGoal(Mob &, float, float, float, POIType);
+//  HideGoal(Mob &, float, float, float, POIType); //TODO: incomplete function definition
     void _sendSoundTheAlarmAchievement()const;
 };

@@ -2,12 +2,14 @@
 
 
 
-using namespace EndCityPieces;
+namespace EndCityPieces {
 
 class SectionGenerator {
 
 public:
-    virtual EndCityPieces::SectionGenerator::~SectionGenerator()
+    virtual ~SectionGenerator();
 
-    SectionGenerator(void);
+    SectionGenerator();
 };
+
+}

@@ -2,11 +2,14 @@
 
 
 
-using namespace Core::StorageAreasTree;
+namespace Core::StorageAreasTree {
 
 class TreeNode {
 
 public:
 
-    TreeNode(void);
+    TreeNode();
+    ~TreeNode();
 };
+
+}

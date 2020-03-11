@@ -2,11 +2,13 @@
 
 
 
-using namespace GeneticsComponent;
+namespace GeneticsComponent {
 
 class Gene {
 
 public:
 
-    Gene(void);
+    Gene();
 };
+
+}

@@ -23,6 +23,6 @@ public:
     static long BLACK;
 
 
-    void getColor(PaletteColor);
+//  void getColor(PaletteColor); //TODO: incomplete function definition
     void fromByte(unsigned char);
 };

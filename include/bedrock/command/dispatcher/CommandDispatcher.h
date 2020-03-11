@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../orgin/CommandOrigin"
-#include "../Command"
+#include "./ICommandDispatcher.h"
+#include "../orgin/CommandOrigin.h"
+#include "../Command.h"
 
 
 class CommandDispatcher : ICommandDispatcher {
 
 public:
-    virtual CommandDispatcher::~CommandDispatcher()
+    virtual ~CommandDispatcher();
     virtual void performCommand(CommandOrigin const&, Command &);
 
-    CommandDispatcher(void);
+    CommandDispatcher();
 };

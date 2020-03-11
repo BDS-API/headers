@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./BlockLegacy.h"
+#include "../util/BlockPos.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class FrostedIceBlock : BlockLegacy {
@@ -13,7 +15,7 @@ public:
     static long MIN_NEIGHBORS;
     static long MAX_AGE;
 
-    virtual FrostedIceBlock::~FrostedIceBlock()
+    virtual ~FrostedIceBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void onPlace(BlockSource &, BlockPos const&)const;
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const;

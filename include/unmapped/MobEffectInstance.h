@@ -1,7 +1,11 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../bedrock/nbt/CompoundTag"
+#include <memory>
+#include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/actor/Actor.h"
+#include <vector>
+#include "./MobEffectInstance.h"
+#include <string>
 
 
 class MobEffectInstance {
@@ -11,7 +15,7 @@ public:
     static long NO_EFFECT;
 
 
-    MobEffectInstance(void);
+    MobEffectInstance();
     MobEffectInstance(unsigned int);
     void _setVisibility();
     MobEffectInstance(unsigned int, int);
@@ -33,14 +37,20 @@ public:
     void _tickDownDuration();
     void applyEffects(Actor *)const;
     void removeEffects(Actor *)const;
+    std::string getDescriptionId()const;
+    std::string getDisplayName()const;
     void getComponentName()const;
+    std::string toString()const;
+    void operator==(MobEffectInstance const&)const;
+    void operator!=(MobEffectInstance const&)const;
+    void operator<(MobEffectInstance const&)const;
     void save()const;
-    void getDifficulityDuration(Difficulty)const;
+//  void getDifficulityDuration(Difficulty)const; //TODO: incomplete function definition
     void load(CompoundTag *);
     void setNoCounter(bool);
     bool isNoCounter()const;
     void getColorValue(std::vector<MobEffectInstance, std::allocator<MobEffectInstance>> const&);
     void areAllEffectsAmbient(std::vector<MobEffectInstance, std::allocator<MobEffectInstance>> const&);
-    bool hasDifficulityDuration(Difficulty)const;
-    void setDifficulityDuration(Difficulty, int);
+//  bool hasDifficulityDuration(Difficulty)const; //TODO: incomplete function definition
+//  void setDifficulityDuration(Difficulty, int); //TODO: incomplete function definition
 };

@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/actor/Player"
+#include "../bedrock/item/ItemStack.h"
+#include "./InventoryAction.h"
+#include "../bedrock/actor/Player.h"
 
 
 class InventoryTransactionManager {
@@ -10,6 +11,7 @@ public:
 
     void _createServerSideAction(ItemStack const&, ItemStack const&);
     InventoryTransactionManager(Player &);
+    ~InventoryTransactionManager();
     void getCurrentTransaction()const;
     void reset();
     void resetExpectedActions();

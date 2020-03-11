@@ -2,11 +2,13 @@
 
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class RNS2_SendParameters {
 
 public:
 
-    RNS2_SendParameters(void);
+    RNS2_SendParameters();
 };
+
+}

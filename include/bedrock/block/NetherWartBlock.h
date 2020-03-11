@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../../unmapped/Block"
-#include "../util/BlockPos"
-#include "../util/AABB"
+#include "unmapped/BlockSource.h"
+#include "../../unmapped/Block.h"
+#include "./BushBlock.h"
+#include "../util/BlockPos.h"
+#include "../util/AABB.h"
+#include "../util/Random.h"
+#include <string>
 
 
 class NetherWartBlock : BushBlock {
@@ -12,7 +14,7 @@ class NetherWartBlock : BushBlock {
 public:
     static long MAX_AGE;
 
-    virtual NetherWartBlock::~NetherWartBlock()
+    virtual ~NetherWartBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const;
     virtual bool canContainLiquid()const;

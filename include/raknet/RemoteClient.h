@@ -2,7 +2,7 @@
 
 
 
-using namespace RakNet;
+namespace RakNet {
 
 class RemoteClient {
 
@@ -13,5 +13,8 @@ public:
     void Recv(char *, int);
     void Send(char const*, unsigned int);
     void Reset();
-    RemoteClient(void);
+    ~RemoteClient();
+    RemoteClient();
 };
+
+}

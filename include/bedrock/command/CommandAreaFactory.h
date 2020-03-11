@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../unmapped/Bounds"
-#include "../../unmapped/Dimension"
-#include "../util/BlockPos"
+#include "../util/BlockPos.h"
+#include "../../unmapped/Bounds.h"
+#include "../../unmapped/Dimension.h"
 
 
 class CommandAreaFactory {

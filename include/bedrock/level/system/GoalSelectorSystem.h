@@ -1,19 +1,22 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorComponent"
-#include "../../../unmapped/PrioritizedGoal"
-#include "../../../unmapped/GoalSelectorComponent"
-#include "../../../unmapped/EntityRegistry"
-#include "../../../unmapped/EntityContext"
+#include "./ITickingSystem.h"
+#include "../../../unmapped/PrioritizedGoal.h"
+#include "../../../unmapped/GoalSelectorComponent.h"
+#include "../../actor/unmapped/ActorComponent.h"
+#include <memory>
+#include "../../../unmapped/EntityRegistry.h"
+#include "../../../unmapped/EntityContext.h"
+#include <vector>
 
 
 class GoalSelectorSystem : ITickingSystem {
 
 public:
-    virtual GoalSelectorSystem::~GoalSelectorSystem()
+    virtual ~GoalSelectorSystem();
     virtual void tick(EntityRegistry &);
 
-    GoalSelectorSystem(void);
-    void _tickGoalSelectorComponent(ViewedEntityContextT<EntityContext, FlagComponent<ActorTickedFlag>, ActorComponent, GoalSelectorComponent> &);
+    GoalSelectorSystem();
+//  void _tickGoalSelectorComponent(ViewedEntityContextT<EntityContext, FlagComponent<ActorTickedFlag>, ActorComponent, GoalSelectorComponent> &); //TODO: incomplete function definition
     void _tickGoal(std::vector<PrioritizedGoal, std::allocator<PrioritizedGoal>> &);
 };

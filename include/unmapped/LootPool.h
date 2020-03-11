@@ -1,15 +1,19 @@
 #pragma once
 
-#include "../bedrock/util/Random"
-#include "../bedrock/item/ItemStack"
-#include "../json/Value"
+#include "./LootTableContext.h"
+#include "../json/Value.h"
+#include "../bedrock/util/Random.h"
+#include <memory>
+#include "../bedrock/item/ItemStack.h"
+#include <vector>
 
 
 class LootPool {
 
 public:
 
-    LootPool(void);
+    ~LootPool();
+    LootPool();
     void addRandomItem(std::vector<ItemStack, std::allocator<ItemStack>> &, Random &, LootTableContext &);
     void addTier(std::vector<ItemStack, std::allocator<ItemStack>> &, Random &, LootTableContext &, int);
     void addRandomItems(std::vector<ItemStack, std::allocator<ItemStack>> &, Random &, LootTableContext &);

@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack"
-#include "../../item/unmapped/ItemTransferAmount"
-#include "../../item/ItemInstance"
-#include "../model/ContainerModel"
-#include "../../item/unmapped/ItemDescriptor"
-#include "../../../unmapped/Recipes"
+#include "../../item/unmapped/ItemDescriptor.h"
+#include "../../../unmapped/Recipes.h"
+#include "../../../unmapped/ContainerItemStack.h"
+#include <memory>
+#include "../../item/unmapped/ItemTransferAmount.h"
+#include "../model/ContainerModel.h"
+#include "../../item/ItemInstance.h"
+#include "./ContainerController.h"
 
 
 class EnchantingInputContainerController : ContainerController {
 
 public:
-    virtual EnchantingInputContainerController::~EnchantingInputContainerController()
+    virtual ~EnchantingInputContainerController();
     virtual bool isItemAllowed(ItemInstance const&)const;
     virtual bool isItemFiltered(Recipes const&, ContainerItemStack const&)const;
     virtual void _canSet(int, ContainerItemStack const&, ItemTransferAmount)const;

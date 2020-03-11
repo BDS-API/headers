@@ -1,10 +1,11 @@
 #pragma once
 
+#include "../bedrock/util/AABB.h"
 
 
 class AABBPred {
 
 public:
 
-    void operator()const;
+    void operator()(AABB const&, AABB const&)const;
 };

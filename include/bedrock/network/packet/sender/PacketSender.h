@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../Packet"
-#include "../../../../unmapped/NetworkIdentifier"
+#include "../../../../unmapped/NetworkIdentifier.h"
+#include "../Packet.h"
 
 
 class PacketSender {
 
 public:
-    virtual PacketSender::~PacketSender()
+    virtual ~PacketSender();
 
     void sendToPrimaryClient(NetworkIdentifier const&, Packet const&);
     PacketSender(unsigned char);

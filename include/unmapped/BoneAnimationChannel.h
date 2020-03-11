@@ -1,15 +1,19 @@
 #pragma once
 
-#include "../json/Value"
+#include "./ExpressionNode.h"
+#include "../json/Value.h"
+#include "./BoneOrientation.h"
+#include "./RenderParams.h"
+#include "./BoneAnimationChannel.h"
 
 
 class BoneAnimationChannel {
 
 public:
 
-    BoneAnimationChannel(BoneTransformType);
-    BoneAnimationChannel(BoneTransformType, ExpressionNode const&);
-    BoneAnimationChannel(BoneTransformType, ExpressionNode const&, ExpressionNode const&, ExpressionNode const&);
+//  BoneAnimationChannel(BoneTransformType); //TODO: incomplete function definition
+//  BoneAnimationChannel(BoneTransformType, ExpressionNode const&); //TODO: incomplete function definition
+//  BoneAnimationChannel(BoneTransformType, ExpressionNode const&, ExpressionNode const&, ExpressionNode const&); //TODO: incomplete function definition
     void addKeyFrame(float);
     void getKeyFrames()const;
     void getKeyFrames();
@@ -17,6 +21,7 @@ public:
     void toJson(Json::Value &)const;
     void animate(RenderParams &, BoneOrientation &, float)const;
     void getMaxKeyFrameTime()const;
-    BoneAnimationChannel(BoneAnimationChannel&&);
+    BoneAnimationChannel(BoneAnimationChannel &&);
+    ~BoneAnimationChannel();
     BoneAnimationChannel(BoneAnimationChannel const&);
 };

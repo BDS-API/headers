@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../../ScriptObjectHandle"
-#include "../../../item/ItemInstance"
-#include "../../../actor/unmapped/ActorUniqueID"
-#include "../../unmapped/ScriptEngine"
+#include "../../../item/ItemInstance.h"
+#include "../../unmapped/ScriptEngine.h"
+#include "./ScriptEventData.h"
+#include "../../../actor/unmapped/ActorUniqueID.h"
+#include "../../ScriptObjectHandle.h"
+#include <string>
 
 
 class ScriptServerActorCarriedItemChangedEvent : ScriptEventData {
@@ -11,12 +13,13 @@ class ScriptServerActorCarriedItemChangedEvent : ScriptEventData {
 public:
     static long mHash;
 
-    virtual ScriptServerActorCarriedItemChangedEvent::~ScriptServerActorCarriedItemChangedEvent()
+    virtual ~ScriptServerActorCarriedItemChangedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
 
     void getHash();
-    ScriptServerActorCarriedItemChangedEvent(void);
+    ScriptServerActorCarriedItemChangedEvent();
     void setActorId(ActorUniqueID const&);
     void setItems(ItemInstance const&, ItemInstance const&);
-    void setHand(HandSlot);
+//  void setHand(HandSlot); //TODO: incomplete function definition
+    std::string getName();
 };

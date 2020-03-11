@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../Actor"
+#include "../Actor.h"
+#include "./BehaviorNode.h"
 
 
 class ConsumeItemNode : BehaviorNode {
 
 public:
-    virtual ConsumeItemNode::~ConsumeItemNode()
+    virtual ~ConsumeItemNode();
     virtual void tick(Actor &);
 
-    ConsumeItemNode(void);
+    ConsumeItemNode();
 };

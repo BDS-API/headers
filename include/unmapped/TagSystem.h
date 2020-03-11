@@ -1,6 +1,9 @@
 #pragma once
 
-#include "../bedrock/level/Level"
+#include <string>
+#include "./TagsComponent.h"
+#include "./TagRegistry.h"
+#include "../bedrock/level/Level.h"
 
 
 class TagSystem {
@@ -13,7 +16,8 @@ public:
     void deregisterTagsFromLevelCache(TagsComponent &, Level &);
     void synchLevelTagCache(Level &, TagRegistry &);
     bool hasTag(TagsComponent const&, std::string const&, TagRegistry const&);
-    bool hasTag(TagsComponent const&, IDType<TagIDType> const&, TagRegistry const&);
+//  bool hasTag(TagsComponent const&, IDType<TagIDType> const&, TagRegistry const&); //TODO: incomplete function definition
+    std::string getTags(TagsComponent const&, TagRegistry &);
     void removeTrackedTag(TagsComponent &, std::string const&, Level &);
     void addTrackedTag(TagsComponent &, std::string const&, Level &);
 };

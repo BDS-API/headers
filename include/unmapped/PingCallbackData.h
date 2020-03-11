@@ -1,12 +1,16 @@
 #pragma once
 
+#include "./PingCallbackData.h"
 
 
-using namespace RakNetInstance;
+namespace RakNetInstance {
 
 class PingCallbackData {
 
 public:
 
-    PingCallbackData(RakNetInstance::PingCallbackData&&);
+    ~PingCallbackData();
+    PingCallbackData(RakNetInstance::PingCallbackData &&);
 };
+
+}

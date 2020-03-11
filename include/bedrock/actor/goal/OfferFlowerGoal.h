@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../IronGolem"
+#include "../IronGolem.h"
+#include "./Goal.h"
+#include <string>
 
 
 class OfferFlowerGoal : Goal {
 
 public:
-    virtual OfferFlowerGoal::~OfferFlowerGoal()
+    virtual ~OfferFlowerGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();

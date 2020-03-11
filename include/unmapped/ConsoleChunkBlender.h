@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../bedrock/level/LevelChunk"
+#include "../bedrock/level/LevelChunk.h"
 
 
 class ConsoleChunkBlender {
@@ -9,7 +9,8 @@ public:
     static long sConversionBlendNoise;
 
 
-    ConsoleChunkBlender(void);
+    ConsoleChunkBlender();
+    ~ConsoleChunkBlender();
     void setInterpolants(int, int, int, int);
     void blendChunkOverworld(LevelChunk &, LevelChunk &);
     void _prepInterpTable();

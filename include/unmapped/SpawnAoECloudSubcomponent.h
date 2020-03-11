@@ -1,17 +1,19 @@
 #pragma once
 
-#include "../bedrock/actor/Actor"
-#include "../json/Value"
+#include "./ProjectileComponent.h"
+#include "../bedrock/actor/Actor.h"
+#include "../json/Value.h"
+#include "./OnHitSubcomponent.h"
 
 
 class SpawnAoECloudSubcomponent : OnHitSubcomponent {
 
 public:
-    virtual SpawnAoECloudSubcomponent::~SpawnAoECloudSubcomponent()
+    virtual ~SpawnAoECloudSubcomponent();
     virtual void readfromJSON(Json::Value &);
     virtual void writetoJSON(Json::Value &)const;
     virtual void doOnHitEffect(Actor &, ProjectileComponent &);
 
     void getSubcomponentName();
-    SpawnAoECloudSubcomponent(void);
+    SpawnAoECloudSubcomponent();
 };

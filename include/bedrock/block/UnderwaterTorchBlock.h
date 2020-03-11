@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../util/BlockPos"
-#include "../../unmapped/BaseGameVersion"
+#include "unmapped/BlockSource.h"
+#include "./TorchBlock.h"
+#include "../../unmapped/BaseGameVersion.h"
+#include "../util/BlockPos.h"
+#include "../util/Random.h"
+#include <string>
 
 
 class UnderwaterTorchBlock : TorchBlock {
 
 public:
-    virtual UnderwaterTorchBlock::~UnderwaterTorchBlock()
+    virtual ~UnderwaterTorchBlock();
     virtual bool isWaterBlocking()const;
     virtual bool canContainLiquid()const;
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const;

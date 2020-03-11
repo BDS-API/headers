@@ -1,15 +1,21 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
+#include "./Block.h"
+#include "./TickNextTickData.h"
+#include <functional>
+#include "../bedrock/util/BlockPos.h"
 
 
-using namespace BlockTickingQueue;
+namespace BlockTickingQueue {
 
 class TickDataSet {
 
 public:
 
-    TickDataSet(void);
+    TickDataSet();
+    ~TickDataSet();
     void remove(BlockPos const&, Block const&);
-    void remove(std::function<bool ()(TickNextTickData const&)> &&);
+    void remove(std::function<bool (TickNextTickData const&)> &&);
 };
+
+}

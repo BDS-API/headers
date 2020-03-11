@@ -1,16 +1,18 @@
 #pragma once
 
-#include "../../../unmapped/Block"
-#include "../../util/BlockPos"
-#include "../../util/Vec3"
+#include "../../util/Vec3.h"
+#include "../../../unmapped/Block.h"
+#include <functional>
+#include "../../util/BlockPos.h"
 
 
 class BlockEventDispatcher {
 
 public:
 
-    BlockEventDispatcher(void);
-    void registerListener(Vec3 const&, float, std::function<void ()(Block const&)>);
+    ~BlockEventDispatcher();
+    BlockEventDispatcher();
+//  void registerListener(Vec3 const&, float, std::function<void (Block const&)>); //TODO: incomplete function definition
     void dispatchEvent(BlockPos const&, Block const&, Block const&);
     void removeListener(int);
     void updatePosition(int, Vec3 const&);

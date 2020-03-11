@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../bedrock/actor/Mob"
-#include "../bedrock/control/MoveControl"
-#include "../bedrock/util/Vec3"
-#include "../bedrock/description/component/MoveControlDescription"
+#include "../bedrock/util/Vec3.h"
+#include <memory>
+#include "../bedrock/control/MoveControl.h"
+#include "../bedrock/description/component/MoveControlDescription.h"
+#include "../bedrock/actor/Mob.h"
+#include "./MoveControlComponent.h"
 
 
 class MoveControlComponent {
 
 public:
 
-    MoveControlComponent(MoveControlComponent&&);
-    MoveControlComponent(void);
+    ~MoveControlComponent();
+    MoveControlComponent(MoveControlComponent &&);
+    MoveControlComponent();
     void initializeFromDefinition(Mob &, MoveControlDescription *);
     void setInternalType(std::unique_ptr<MoveControl, std::default_delete<MoveControl>>);
     void getHasWantedPosition()const;

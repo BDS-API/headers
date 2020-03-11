@@ -1,5 +1,8 @@
 #pragma once
 
+#include "./Vec3.h"
+#include "./AABB.h"
+#include <string>
 
 
 class AABB {
@@ -12,7 +15,7 @@ public:
     bool containsX(Vec3 const&)const;
     bool containsY(Vec3 const&)const;
     bool containsZ(Vec3 const&)const;
-    AABB(void);
+    AABB();
     AABB(float, float, float, float, float, float);
     AABB(Vec3 const&, Vec3 const&);
     AABB(Vec3 const&, float);
@@ -37,7 +40,7 @@ public:
     void distanceTo(AABB const&)const;
     void distanceToSqr(AABB const&)const;
     void intersects(Vec3 const&, Vec3 const&)const;
-    void intersectSegment(Vec3 const&, Vec3 const&, Vec3&, Vec3&)const;
+    void intersectSegment(Vec3 const&, Vec3 const&, Vec3 &, Vec3 &)const;
     void move(Vec3 const&);
     void move(float, float, float);
     void centerAt(Vec3 const&);
@@ -53,8 +56,11 @@ public:
     bool isEmpty()const;
     void set(AABB const&);
     void set(float, float, float, float, float, float);
+    std::string toString()const;
     bool isValid()const;
     void flooredCopy(float, float)const;
     void flooredCeiledCopy()const;
     bool isNan()const;
+    void operator==(AABB const&)const;
+    void operator!=(AABB const&)const;
 };

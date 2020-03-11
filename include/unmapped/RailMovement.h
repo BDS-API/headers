@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/Actor"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class RailMovement {

@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../unmapped/FilterContext"
+#include "./SimpleFloatFilterTest.h"
+#include "../../unmapped/FilterContext.h"
 
 
 class FilterTestClock : SimpleFloatFilterTest {
 
 public:
-    virtual FilterTestClock::~FilterTestClock()
+    virtual ~FilterTestClock();
     virtual void evaluate(FilterContext const&)const;
     virtual void getName()const;
 
-    FilterTestClock(void);
+    FilterTestClock();
 };

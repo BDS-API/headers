@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../../json/Value"
+#include "../../../json/Value.h"
 
 
 class LootItemCondition {
 
 public:
-    virtual LootItemCondition::~LootItemCondition()
+    virtual ~LootItemCondition();
 
     void deserialize(Json::Value);
-    LootItemCondition(void);
+    LootItemCondition();
 };

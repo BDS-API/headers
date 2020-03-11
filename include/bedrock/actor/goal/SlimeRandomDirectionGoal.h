@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class SlimeRandomDirectionGoal : Goal {
 
 public:
-    virtual SlimeRandomDirectionGoal::~SlimeRandomDirectionGoal()
+    virtual ~SlimeRandomDirectionGoal();
     virtual bool canUse();
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;

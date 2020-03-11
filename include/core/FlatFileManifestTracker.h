@@ -1,14 +1,18 @@
 #pragma once
 
+#include <memory>
+#include "./FlatFileManifest.h"
+#include "./Path.h"
 
 
-using namespace Core;
+namespace Core {
 
 class FlatFileManifestTracker {
 
 public:
 
-    FlatFileManifestTracker(void);
+    FlatFileManifestTracker();
+    ~FlatFileManifestTracker();
     void updateManifests(Core::Path const&);
     void updateManifest(std::shared_ptr<Core::FlatFileManifest>, bool);
     void manifestExists(Core::Path const&)const;
@@ -16,3 +20,5 @@ public:
     void tryUnloadManifest(Core::Path const&);
     void unloadAllManifests();
 };
+
+}

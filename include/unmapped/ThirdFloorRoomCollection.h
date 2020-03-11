@@ -1,13 +1,16 @@
 #pragma once
 
+#include "./SecondFloorRoomCollection.h"
 
 
-using namespace WoodlandMansionPieces;
+namespace WoodlandMansionPieces {
 
 class ThirdFloorRoomCollection : WoodlandMansionPieces::SecondFloorRoomCollection {
 
 public:
-    virtual WoodlandMansionPieces::ThirdFloorRoomCollection::~ThirdFloorRoomCollection()
+    virtual ~ThirdFloorRoomCollection();
 
-    ThirdFloorRoomCollection(void);
+    ThirdFloorRoomCollection();
 };
+
+}

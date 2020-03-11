@@ -1,17 +1,30 @@
 #pragma once
 
-#include "../bedrock/util/Vec3"
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
-#include "../bedrock/item/ItemStack"
-#include "../bedrock/definition/DefinitionTrigger"
-#include "../bedrock/util/Vec2"
-#include "../bedrock/item/Item"
-#include "../bedrock/item/ItemInstance"
-#include "../bedrock/definition/ItemDefinition"
-#include "../json/Value"
-#include "../bedrock/util/Color"
-#include "../bedrock/item/unmapped/ItemDescriptor"
-#include "../bedrock/actor/unmapped/ActorFilterGroup"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/util/Vec2.h"
+#include "../bedrock/item/ItemInstance.h"
+#include "../bedrock/actor/unmapped/ActorFilterGroup.h"
+#include "./GameVersion.h"
+#include "./FilterGroup.h"
+#include "./IntRange.h"
+#include "../bedrock/definition/DefinitionTrigger.h"
+#include "./FloatRange.h"
+#include "./HashFunc.h"
+#include <set>
+#include "../bedrock/util/Color.h"
+#include "../json/Value.h"
+#include "../bedrock/item/unmapped/ItemDescriptor.h"
+#include "../bedrock/item/ItemStack.h"
+#include "./MobEffectInstance.h"
+#include "./Block.h"
+#include "./SlotDropChance.h"
+#include "../bedrock/item/Item.h"
+#include "../bedrock/definition/ItemDefinition.h"
+#include "./HashString.h"
+#include <memory>
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
+#include <vector>
+#include <string>
 
 
 class Parser {
@@ -29,22 +42,22 @@ public:
     void parse(Json::Value const&, Vec3 &, char const*, Vec3 const&);
     void parse(Json::Value const&, bool &, char const*, bool);
     void parse(Json::Value const&, Color &, char const*, Color const&);
-    void parse(Json::Value const&, ParticleType &, char const*, char const*);
-    void parse(Json::Value const&, Difficulty &, char const*, char const*);
+//  void parse(Json::Value const&, ParticleType &, char const*, char const*); //TODO: incomplete function definition
+//  void parse(Json::Value const&, Difficulty &, char const*, char const*); //TODO: incomplete function definition
     void parse(Json::Value const&, std::string &, char const*, char const*);
     void parse(Json::Value const&, Util::HashString &, char const*, char const*);
-    void parse(Json::Value const&, ActorDamageCause &, char const*, char const*);
+//  void parse(Json::Value const&, ActorDamageCause &, char const*, char const*); //TODO: incomplete function definition
     void parse(Json::Value const&, ActorDefinitionIdentifier &, char const*, char const*);
-    void parse(Json::Value const&, ActorType &, char const*, char const*);
-    void parse(Json::Value const&, Json::Value&, char const*);
-    void parse(Json::Value const&, std::set<Item const*, std::less<Item const*>, std::allocator<Item const*>> &, char const*);
-    void parse(Json::Value const&, std::set<Block const*, std::less<Block const*>, std::allocator<Block const*>> &, char const*);
-    void parse(Json::Value const&, std::set<std::string, std::less<std::string>, std::allocator<std::string>> &, char const*);
+//  void parse(Json::Value const&, ActorType &, char const*, char const*); //TODO: incomplete function definition
+    void parse(Json::Value const&, Json::Value &, char const*);
+//  void parse(Json::Value const&, std::set<Item const*, std::less<Item const*>, std::allocator<Item const*>> &, char const*); //TODO: incomplete function definition
+//  void parse(Json::Value const&, std::set<Block const*, std::less<Block const*>, std::allocator<Block const*>> &, char const*); //TODO: incomplete function definition
+//  void parse(Json::Value const&, std::set<std::string, std::less<std::string>, std::allocator<std::string>> &, char const*); //TODO: incomplete function definition
     void parse(Json::Value const&, std::set<Util::HashString, Util::HashString::HashFunc, std::allocator<Util::HashString>> &, char const*);
     void parse(Json::Value const&, std::vector<std::string, std::allocator<std::string>> &, char const*);
     void parse(Json::Value const&, std::vector<Util::HashString, std::allocator<Util::HashString>> &, char const*);
     void parse(Json::Value const&, std::vector<ActorDefinitionIdentifier, std::allocator<ActorDefinitionIdentifier>> &, char const*, char const*);
-    void parse(Json::Value const&, std::vector<LevelSoundEvent, std::allocator<LevelSoundEvent>> &, char const*, char const*);
+//  void parse(Json::Value const&, std::vector<LevelSoundEvent, std::allocator<LevelSoundEvent>> &, char const*, char const*); //TODO: incomplete function definition
     void parse(Json::Value const&, Item const*&, char const*, char const*);
     void parse(Json::Value const&, ItemDefinition &, char const*, char const*);
     void parse(Json::Value const&, ItemDescriptor &);
@@ -56,7 +69,7 @@ public:
     void parse(Json::Value const&, std::vector<SlotDropChance, std::allocator<SlotDropChance>> &, char const*);
     void parse(Json::Value const&, std::vector<ItemDescriptor, std::allocator<ItemDescriptor>> &, char const*);
     void parse(Json::Value const&, Block const*&, char const*);
-    void parse(Json::Value &, WeightedChoices<DefinitionTrigger> &, char const*);
+//  void parse(Json::Value &, WeightedChoices<DefinitionTrigger> &, char const*); //TODO: incomplete function definition
     void parse(Json::Value const&, std::vector<DefinitionTrigger, std::allocator<DefinitionTrigger>> &);
     void serialize(Item const*, Json::Value &, char const*);
     void serialize(ItemDefinition const&, Json::Value &, char const*);
@@ -66,21 +79,21 @@ public:
     void serialize(IntRange const&, Json::Value &, char const*);
     void serialize(Vec2 const&, Json::Value &, char const*);
     void serialize(Vec3 const&, Json::Value &, char const*);
-    void serialize(ParticleType const&, Json::Value &, char const*);
-    void serialize(Difficulty const&, Json::Value &, char const*);
+//  void serialize(ParticleType const&, Json::Value &, char const*); //TODO: incomplete function definition
+//  void serialize(Difficulty const&, Json::Value &, char const*); //TODO: incomplete function definition
     void serialize(Util::HashString const&, Json::Value &, char const*);
-    void serialize(ActorDamageCause const&, Json::Value &, char const*);
+//  void serialize(ActorDamageCause const&, Json::Value &, char const*); //TODO: incomplete function definition
     void serialize(ActorDefinitionIdentifier const&, Json::Value &, char const*);
     void serialize(ActorFilterGroup const&, Json::Value &, char const*);
-    void serialize(ActorType const&, Json::Value &, char const*);
-    void serialize(std::set<Item const*, std::less<Item const*>, std::allocator<Item const*>> const&, Json::Value &, char const*);
-    void serialize(std::set<Block const*, std::less<Block const*>, std::allocator<Block const*>> const&, Json::Value &, char const*);
-    void serialize(std::set<std::string, std::less<std::string>, std::allocator<std::string>> const&, Json::Value &, char const*);
+//  void serialize(ActorType const&, Json::Value &, char const*); //TODO: incomplete function definition
+//  void serialize(std::set<Item const*, std::less<Item const*>, std::allocator<Item const*>> const&, Json::Value &, char const*); //TODO: incomplete function definition
+//  void serialize(std::set<Block const*, std::less<Block const*>, std::allocator<Block const*>> const&, Json::Value &, char const*); //TODO: incomplete function definition
+//  void serialize(std::set<std::string, std::less<std::string>, std::allocator<std::string>> const&, Json::Value &, char const*); //TODO: incomplete function definition
     void serialize(std::set<Util::HashString, Util::HashString::HashFunc, std::allocator<Util::HashString>> const&, Json::Value &, char const*);
     void serialize(std::vector<std::string, std::allocator<std::string>> const&, Json::Value &, char const*);
     void serialize(std::vector<Util::HashString, std::allocator<Util::HashString>> const&, Json::Value &, char const*);
     void serialize(std::vector<ActorDefinitionIdentifier, std::allocator<ActorDefinitionIdentifier>> const&, Json::Value &, char const*);
-    void serialize(std::vector<LevelSoundEvent, std::allocator<LevelSoundEvent>> const&, Json::Value &, char const*);
+//  void serialize(std::vector<LevelSoundEvent, std::allocator<LevelSoundEvent>> const&, Json::Value &, char const*); //TODO: incomplete function definition
     void serialize(std::vector<SlotDropChance, std::allocator<SlotDropChance>> const&, Json::Value &, char const*);
     void serialize(std::vector<ItemInstance, std::allocator<ItemInstance>> const&, Json::Value &, char const*);
     void serialize(std::vector<ItemStack, std::allocator<ItemStack>> const&, Json::Value &, char const*);

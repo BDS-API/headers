@@ -1,7 +1,8 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Animal.h"
 
 
 class Sheep : Animal {
@@ -9,8 +10,8 @@ class Sheep : Animal {
 public:
     static long EAT_ANIMATION_TICKS;
 
-    virtual Sheep::~Sheep()
-    virtual void handleEntityEvent(ActorEvent, int);
+    virtual ~Sheep();
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void getLootTable();
     virtual void getDefaultLootTable();
     virtual void aiStep();

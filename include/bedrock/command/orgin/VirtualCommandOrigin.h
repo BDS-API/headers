@@ -1,15 +1,18 @@
 #pragma once
 
-#include "../../actor/Actor"
-#include "../../util/Vec3"
+#include "../../actor/Actor.h"
+#include "../../util/Vec3.h"
+#include <memory>
+#include "./CommandOrigin.h"
+#include <string>
 
 
 class VirtualCommandOrigin : CommandOrigin {
 
 public:
-    virtual VirtualCommandOrigin::~VirtualCommandOrigin()
-    virtual void getRequestId()const;
-    virtual void getName()const;
+    virtual ~VirtualCommandOrigin();
+    virtual std::string getRequestId()const;
+    virtual std::string getName()const;
     virtual void getBlockPosition()const;
     virtual void getWorldPosition()const;
     virtual void getLevel()const;
@@ -19,7 +22,7 @@ public:
     virtual void clone()const;
     virtual bool hasChatPerms()const;
     virtual bool hasTellPerms()const;
-    virtual bool canUseAbility(AbilitiesIndex)const;
+//  virtual bool canUseAbility(AbilitiesIndex)const; //TODO: incomplete function definition
     virtual bool canUseCommandsWithoutCheatsEnabled()const;
     virtual bool isSelectorExpansionAllowed()const;
     virtual void getSourceId()const;

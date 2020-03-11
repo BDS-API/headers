@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos"
+#include "./BoundingBox.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class BoundingBox {
@@ -16,7 +17,7 @@ public:
     void getUnknownBox();
     void intersects(BoundingBox const&)const;
     void getYSpan()const;
-    BoundingBox(void);
+    BoundingBox();
     void move(int, int, int);
     BoundingBox(BlockPos const&, BlockPos const&);
     BoundingBox(BoundingBox const&);
@@ -25,7 +26,8 @@ public:
     BoundingBox(int, int, int, int);
     bool isInside(BlockPos const&)const;
     void createProper(int, int, int, int, int, int);
-    void getIntersection(BoundingBox const&, BoundingBox&)const;
+    void getIntersection(BoundingBox const&, BoundingBox &)const;
+    void operator==(BoundingBox const&)const;
     void getCenter()const;
     void getYCenter()const;
     void intersects(int, int, int, int)const;

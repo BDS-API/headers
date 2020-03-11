@@ -6,5 +6,5 @@ class SlotDropChance {
 
 public:
 
-    SlotDropChance(void);
+    SlotDropChance();
 };

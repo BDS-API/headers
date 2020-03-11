@@ -1,18 +1,19 @@
 #pragma once
 
-#include "../../block/BlockLegacy"
-#include "../../../json/Value"
+#include "../../block/BlockLegacy.h"
+#include "../../../json/Value.h"
+#include "./ComponentDescription.h"
 
 
 class PreferredPathDescription : ComponentDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual PreferredPathDescription::~PreferredPathDescription()
+    virtual ~PreferredPathDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
 
-    PreferredPathDescription(void);
+    PreferredPathDescription();
     PreferredPathDescription(float, float, int);
     bool isBlockAlreadyInSet(BlockLegacy const*)const;
 };

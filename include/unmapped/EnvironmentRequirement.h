@@ -1,12 +1,14 @@
 #pragma once
 
+#include "./EnvironmentRequirement.h"
 
 
 class EnvironmentRequirement {
 
 public:
 
-    EnvironmentRequirement(void);
+    EnvironmentRequirement();
+    ~EnvironmentRequirement();
     EnvironmentRequirement(EnvironmentRequirement const&);
-    EnvironmentRequirement(EnvironmentRequirement&&);
+    EnvironmentRequirement(EnvironmentRequirement &&);
 };

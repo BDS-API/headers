@@ -1,16 +1,17 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../block/unmapped/BlockSource"
-#include "../../util/BlockPos"
+#include "../../util/Random.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "./Feature.h"
+#include "../../util/BlockPos.h"
 
 
 class SeagrassFeature : Feature {
 
 public:
-    virtual SeagrassFeature::~SeagrassFeature()
+    virtual ~SeagrassFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
 
-    SeagrassFeature(void);
+    SeagrassFeature();
     void _isNotIce(BlockSource &, BlockPos const&)const;
 };

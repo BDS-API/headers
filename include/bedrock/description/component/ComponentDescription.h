@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../Description"
+#include "../Description.h"
+#include "./ComponentDescription.h"
 
 
 class ComponentDescription : Description {
 
 public:
-    virtual ComponentDescription::~ComponentDescription()
+    virtual ~ComponentDescription();
 
-    ComponentDescription(void);
-    ComponentDescription(ComponentDescription&&);
+    ComponentDescription();
+    ComponentDescription(ComponentDescription &&);
 };

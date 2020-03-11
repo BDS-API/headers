@@ -1,12 +1,15 @@
 #pragma once
 
-#include "../json/Value"
+#include "../json/Value.h"
+#include "./IWorldRegistriesProvider.h"
+#include <string>
 
 
 class FeatureTypeFactory {
 
 public:
 
-    FeatureTypeFactory(void);
+    ~FeatureTypeFactory();
+    FeatureTypeFactory();
     bool processFeature(IWorldRegistriesProvider &, std::string const&, Json::Value &)const;
 };

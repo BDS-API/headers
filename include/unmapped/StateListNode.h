@@ -1,12 +1,16 @@
 #pragma once
 
+#include "../bedrock/item/unmapped/ItemState.h"
 
 
-using namespace ItemState;
+namespace ItemState {
 
 class StateListNode {
 
 public:
 
-    StateListNode(ItemState*);
+    StateListNode(ItemState *);
+    ~StateListNode();
 };
+
+}

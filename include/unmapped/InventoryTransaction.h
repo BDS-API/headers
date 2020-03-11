@@ -1,17 +1,23 @@
 #pragma once
 
-#include "../bedrock/actor/Player"
-#include "../bedrock/item/ItemStack"
+#include "./InventoryAction.h"
+#include <memory>
+#include "../bedrock/item/ItemStack.h"
+#include "./InventorySource.h"
+#include "../bedrock/actor/Player.h"
+#include <vector>
+#include "./InventoryTransaction.h"
 
 
 class InventoryTransaction {
 
 public:
 
+    ~InventoryTransaction();
     void getAllActions()const;
     InventoryTransaction(InventoryTransaction const&);
     InventoryTransaction(std::vector<InventoryAction, std::allocator<InventoryAction>> const&);
-    InventoryTransaction(void);
+    InventoryTransaction();
     void recalculateBalance();
     void addActionToContent(InventoryAction const&);
     void verifyBalance()const;

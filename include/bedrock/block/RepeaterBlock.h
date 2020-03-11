@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../util/Random"
-#include "unmapped/BlockSource"
-#include "../util/BlockPos"
-#include "../../unmapped/Block"
-#include "../actor/Player"
+#include "unmapped/BlockSource.h"
+#include <string>
+#include "./DiodeBlock.h"
+#include "../util/BlockPos.h"
+#include "../actor/Player.h"
+#include "../util/Random.h"
+#include "../../unmapped/Block.h"
 
 
 class RepeaterBlock : DiodeBlock {
@@ -13,7 +15,7 @@ public:
     static long DELAY_RENDER_OFFSETS;
     static long DELAYS;
 
-    virtual RepeaterBlock::~RepeaterBlock()
+    virtual ~RepeaterBlock();
     virtual void tick(BlockSource &, BlockPos const&, Random &)const;
     virtual bool isInteractiveBlock()const;
     virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const;

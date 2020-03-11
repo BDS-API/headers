@@ -6,5 +6,5 @@ class MutationFactorData {
 
 public:
 
-    MutationFactorData(void);
+    MutationFactorData();
 };

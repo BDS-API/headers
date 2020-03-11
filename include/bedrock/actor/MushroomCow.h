@@ -1,14 +1,15 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup"
-#include "../util/BlockPos"
-#include "unmapped/ActorDefinitionIdentifier"
+#include "../util/BlockPos.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
+#include "./Animal.h"
 
 
 class MushroomCow : Animal {
 
 public:
-    virtual MushroomCow::~MushroomCow()
+    virtual ~MushroomCow();
     virtual void checkSpawnRules(bool);
 
     MushroomCow(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);

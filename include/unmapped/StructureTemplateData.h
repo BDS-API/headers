@@ -1,17 +1,21 @@
 #pragma once
 
-#include "../bedrock/nbt/CompoundTag"
-#include "../bedrock/util/BlockPos"
+#include <memory>
+#include "../bedrock/nbt/CompoundTag.h"
+#include <vector>
+#include "./StructureBlockPalette.h"
+#include "../bedrock/util/BlockPos.h"
+#include <string>
 
 
 class StructureTemplateData {
 
 public:
-    static long DEFAULT_PALETTE_NAME[abi:cxx11];
+    static std::string DEFAULT_PALETTE_NAME;
 
-    virtual StructureTemplateData::~StructureTemplateData()
+    virtual ~StructureTemplateData();
 
-    StructureTemplateData(void);
+    StructureTemplateData();
     void load(CompoundTag const&);
     void _parseFormatVersion(CompoundTag const&);
     void _parseSize(CompoundTag const&);

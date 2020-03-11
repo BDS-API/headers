@@ -1,15 +1,19 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier"
-#include "../bedrock/nbt/CompoundTag"
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
+#include "./Occupant.h"
+#include "../bedrock/nbt/CompoundTag.h"
 
 
-using namespace BeehiveBlockActor;
+namespace BeehiveBlockActor {
 
 class Occupant {
 
 public:
 
     Occupant(ActorDefinitionIdentifier, CompoundTag, unsigned int);
-    Occupant(BeehiveBlockActor::Occupant&&);
+    ~Occupant();
+    Occupant(BeehiveBlockActor::Occupant &&);
 };
+
+}

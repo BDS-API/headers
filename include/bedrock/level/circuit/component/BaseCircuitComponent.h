@@ -1,15 +1,16 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitSystem"
-#include "../../../../unmapped/CircuitSceneGraph"
-#include "../../../util/BlockPos"
-#include "../../../../unmapped/CircuitTrackingInfo"
+#include "../../../util/BlockPos.h"
+#include "../../../../unmapped/CircuitSceneGraph.h"
+#include "../../../../unmapped/CircuitSystem.h"
+#include "../../../../unmapped/CircuitTrackingInfo.h"
+#include "./BaseCircuitComponent.h"
 
 
 class BaseCircuitComponent {
 
 public:
-    virtual BaseCircuitComponent::~BaseCircuitComponent()
+    virtual ~BaseCircuitComponent();
     virtual void getStrength()const;
     virtual void getDirection()const;
     virtual void setStrength(int);
@@ -29,14 +30,14 @@ public:
     virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
     virtual void allowIndirect();
     virtual bool isHalfPulse();
-    virtual bool hasSource(BaseCircuitComponent&);
+    virtual bool hasSource(BaseCircuitComponent &);
     virtual bool hasChildrenSource();
     virtual bool isSecondaryPowered();
 
     void clearFirstTimeFlag();
     bool canAllowPowerUp();
     void setAllowPowerUp(bool);
-    BaseCircuitComponent(void);
+    BaseCircuitComponent();
     bool hasDirectPower();
     void trackPowerSource(CircuitTrackingInfo const&, int, bool, int);
     void trackPowerSourceDuplicates(CircuitTrackingInfo const&, int, bool);

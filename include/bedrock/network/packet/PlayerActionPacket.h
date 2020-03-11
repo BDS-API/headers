@@ -1,24 +1,26 @@
 #pragma once
 
-#include "../../io/BinaryStream"
-#include "../../actor/unmapped/ActorRuntimeID"
-#include "../../util/BlockPos"
-#include "../../io/ReadOnlyBinaryStream"
+#include "../../actor/unmapped/ActorRuntimeID.h"
+#include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../util/BlockPos.h"
+#include "./Packet.h"
+#include <string>
 
 
 class PlayerActionPacket : Packet {
 
 public:
-    virtual PlayerActionPacket::~PlayerActionPacket()
+    virtual ~PlayerActionPacket();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
 
-    PlayerActionPacket(void);
-    PlayerActionPacket(PlayerActionType, BlockPos const&, int, ActorRuntimeID);
-    PlayerActionPacket(PlayerActionType, int, ActorRuntimeID);
-    PlayerActionPacket(PlayerActionType, BlockPos const&, ActorRuntimeID);
-    PlayerActionPacket(PlayerActionType, ActorRuntimeID);
-    PlayerActionPacket(PlayerActionType, BlockPos const&, unsigned char, ActorRuntimeID);
+    PlayerActionPacket();
+//  PlayerActionPacket(PlayerActionType, BlockPos const&, int, ActorRuntimeID); //TODO: incomplete function definition
+//  PlayerActionPacket(PlayerActionType, int, ActorRuntimeID); //TODO: incomplete function definition
+//  PlayerActionPacket(PlayerActionType, BlockPos const&, ActorRuntimeID); //TODO: incomplete function definition
+//  PlayerActionPacket(PlayerActionType, ActorRuntimeID); //TODO: incomplete function definition
+//  PlayerActionPacket(PlayerActionType, BlockPos const&, unsigned char, ActorRuntimeID); //TODO: incomplete function definition
 };

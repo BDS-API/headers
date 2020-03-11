@@ -1,19 +1,20 @@
 #pragma once
 
-#include "../../../util/Random"
-#include "../../../block/unmapped/BlockSource"
-#include "../../../../unmapped/BoundingBox"
+#include "../../../../unmapped/BoundingBox.h"
+#include "../../../block/unmapped/BlockSource.h"
+#include "../../../util/Random.h"
+#include "./ScatteredFeaturePiece.h"
 
 
 class Igloo : ScatteredFeaturePiece {
 
 public:
-    static long STRUCTURE_LOCATION_IGLOO_TRAPDOOR[abi:cxx11];
-    static long STRUCTURE_LOCATION_IGLOO_NO_TRAPDOOR[abi:cxx11];
-    static long STRUCTURE_LOCATION_LADDER[abi:cxx11];
-    static long STRUCTURE_LOCATION_LABORATORY[abi:cxx11];
+    static std::string STRUCTURE_LOCATION_IGLOO_TRAPDOOR;
+    static std::string STRUCTURE_LOCATION_IGLOO_NO_TRAPDOOR;
+    static std::string STRUCTURE_LOCATION_LADDER;
+    static std::string STRUCTURE_LOCATION_LABORATORY;
 
-    virtual Igloo::~Igloo()
+    virtual ~Igloo();
     virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);

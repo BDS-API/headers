@@ -1,12 +1,14 @@
 #pragma once
 
-#include "../Mob"
+#include "./Goal.h"
+#include "../Mob.h"
+#include <string>
 
 
 class FollowFlockGoal : Goal {
 
 public:
-    virtual FollowFlockGoal::~FollowFlockGoal()
+    virtual ~FollowFlockGoal();
     virtual bool canUse();
     virtual bool canContinueToUse();
     virtual bool canBeInterrupted();

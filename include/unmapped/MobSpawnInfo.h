@@ -6,5 +6,5 @@ class MobSpawnInfo {
 
 public:
 
-    void categoryID(ActorType);
+//  void categoryID(ActorType); //TODO: incomplete function definition
 };

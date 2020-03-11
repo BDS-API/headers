@@ -1,15 +1,17 @@
 #pragma once
 
-#include "../core/Path"
-#include "../bedrock/pack/ResourcePackManager"
-#include "../bedrock/level/Level"
+#include "../core/Path.h"
+#include <string>
+#include "../bedrock/pack/ResourcePackManager.h"
+#include "../bedrock/level/Level.h"
 
 
 class TradeTables {
 
 public:
 
-    TradeTables(void);
+    TradeTables();
+    ~TradeTables();
     void reload(Level &);
     void _parseAndStoreTradeTable(ResourcePackManager *, Core::Path const&);
     void fetchTable(std::string const&);

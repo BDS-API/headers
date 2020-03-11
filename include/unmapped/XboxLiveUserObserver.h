@@ -1,14 +1,17 @@
 #pragma once
 
-#include "../core/SingleThreadedLock"
+#include "../core/SingleThreadedLock.h"
+#include "./XboxLiveUserObserver.h"
 
 
-using namespace Social;
+namespace Social {
 
-class XboxLiveUserObserver : Core::Observer<Social::XboxLiveUserObserver, Core::SingleThreadedLock> {
+class XboxLiveUserObserver /*Core::Observer<Social::XboxLiveUserObserver, Core::SingleThreadedLock>*/ { //TODO: incomplete class definition
 
 public:
-    virtual Social::XboxLiveUserObserver::~XboxLiveUserObserver()
+    virtual ~XboxLiveUserObserver();
 
-    XboxLiveUserObserver(void);
+    XboxLiveUserObserver();
 };
+
+}

@@ -1,14 +1,17 @@
 #pragma once
 
+#include "./IFileReadAccess.h"
 
 
-using namespace MemoryMappedFileAccess;
+namespace MemoryMappedFileAccess {
 
 class MemoryMappedFileReadAccess : IFileReadAccess {
 
 public:
-    virtual MemoryMappedFileAccess::MemoryMappedFileReadAccess::~MemoryMappedFileReadAccess()
-    virtual void fread(void *, unsigned long, unsigned long, void *)const;
+    virtual ~MemoryMappedFileReadAccess();
+//  virtual void fread(void *, unsigned long, unsigned long, void *)const; //TODO: incomplete function definition
 
-    MemoryMappedFileReadAccess(void);
+    MemoryMappedFileReadAccess();
 };
+
+}

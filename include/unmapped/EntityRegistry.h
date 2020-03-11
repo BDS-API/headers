@@ -1,11 +1,13 @@
 #pragma once
 
+#include "./EntityId.h"
 
 
 class EntityRegistry {
 
 public:
 
-    EntityRegistry(entt::Registry<EntityId> &);
+    ~EntityRegistry();
+//  EntityRegistry(entt::Registry<EntityId> &); //TODO: incomplete function definition
     void getWeakRef();
 };

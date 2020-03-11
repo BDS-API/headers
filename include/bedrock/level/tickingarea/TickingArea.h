@@ -1,22 +1,24 @@
 #pragma once
 
-#include "../../util/Random"
-#include "../../util/Tick"
-#include "../../actor/Actor"
-#include "../../../unmapped/Dimension"
-#include "../LevelChunk"
-#include "../../../unmapped/Bounds"
-#include "../../../mce/UUID"
-#include "../../util/Vec3"
-#include "../../actor/unmapped/ActorUniqueID"
+#include "../../util/Random.h"
+#include "../../../unmapped/Bounds.h"
+#include "../../../mce/UUID.h"
+#include "../../actor/Actor.h"
+#include "../../util/Vec3.h"
+#include "./ITickingArea.h"
+#include "../../../unmapped/Dimension.h"
+#include "../../util/Tick.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include "../LevelChunk.h"
+#include <string>
 
 
 class TickingArea : ITickingArea {
 
 public:
-    virtual TickingArea::~TickingArea()
+    virtual ~TickingArea();
     virtual void getId()const;
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void getEntityId()const;
     virtual bool isEntityOwned()const;
     virtual void getBlockSource();

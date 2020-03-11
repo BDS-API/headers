@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../CommandRegistry"
-#include "../orgin/CommandOrigin"
-#include "../CommandOutput"
-#include "../Command"
+#include "../CommandRegistry.h"
+#include "../Command.h"
+#include "../orgin/CommandOrigin.h"
+#include "../CommandOutput.h"
 
 
 class HelpCommand : Command {
 
 public:
-    virtual HelpCommand::~HelpCommand()
+    virtual ~HelpCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
 
     void setup(CommandRegistry &);
-    HelpCommand(void);
+    HelpCommand();
     void getCommandHelp(CommandRegistry const&, CommandOrigin const&, CommandOutput &)const;
     void getHelpPage(CommandRegistry const&, CommandOrigin const&, CommandOutput &)const;
 };

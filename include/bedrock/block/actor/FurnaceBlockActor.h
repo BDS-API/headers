@@ -1,33 +1,35 @@
 #pragma once
 
-#include "../../item/ItemStack"
-#include "../../nbt/CompoundTag"
-#include "../../../unmapped/HashString"
-#include "../../actor/Player"
-#include "../../container/Container"
-#include "../unmapped/BlockSource"
-#include "../../level/Level"
-#include "../../util/BlockPos"
-#include "../../../unmapped/Block"
-#include "../../item/ItemInstance"
-#include "../../../unmapped/Recipes"
-#include "../../../unmapped/DataLoadHelper"
+#include "../../../unmapped/Recipes.h"
+#include "../../container/Container.h"
+#include "../../../unmapped/Block.h"
+#include <string>
+#include "./BlockActor.h"
+#include "../../nbt/CompoundTag.h"
+#include "../../../unmapped/HashString.h"
+#include "../../level/Level.h"
+#include "../../../unmapped/DataLoadHelper.h"
+#include "../../util/BlockPos.h"
+#include "../../item/ItemInstance.h"
+#include "../../item/ItemStack.h"
+#include "../unmapped/BlockSource.h"
+#include "../../actor/Player.h"
 
 
 class FurnaceBlockActor : BlockActor, Container {
 
 public:
-    static long ITEMS_LIST_KEY[abi:cxx11];
-    static long SLOT_KEY[abi:cxx11];
-    static long BURN_TIME_KEY[abi:cxx11];
-    static long COOK_TIME_KEY[abi:cxx11];
-    static long BURN_DURATION_KEY[abi:cxx11];
-    static long STORED_XP_DEPRECATED_KEY[abi:cxx11];
-    static long STORED_XP_KEY[abi:cxx11];
-    static long CUSTOM_NAME_KEY[abi:cxx11];
-    static long LAST_FUEL_KEY[abi:cxx11];
+    static std::string ITEMS_LIST_KEY;
+    static std::string SLOT_KEY;
+    static std::string BURN_TIME_KEY;
+    static std::string COOK_TIME_KEY;
+    static std::string BURN_DURATION_KEY;
+    static std::string STORED_XP_DEPRECATED_KEY;
+    static std::string STORED_XP_KEY;
+    static std::string CUSTOM_NAME_KEY;
+    static std::string LAST_FUEL_KEY;
 
-    virtual FurnaceBlockActor::~FurnaceBlockActor()
+    virtual ~FurnaceBlockActor();
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
     virtual void onCustomTagLoadDone(BlockSource &);
@@ -36,7 +38,7 @@ public:
     virtual void getUpdatePacket(BlockSource &);
     virtual void onMove();
     virtual void onNeighborChanged(BlockSource &, BlockPos const&);
-    virtual void getName()const;
+    virtual std::string getName()const;
     virtual void getContainer();
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual void getItem(int)const;
@@ -51,7 +53,7 @@ public:
     bool isFuel(ItemInstance const&);
     void getBurnDuration(ItemInstance const&, int);
     FurnaceBlockActor(BlockPos const&);
-    FurnaceBlockActor(BlockActorType, BlockPos const&, Util::HashString const&, LevelSoundEvent, ContainerType, int, Block const&, Block const&);
+//  FurnaceBlockActor(BlockActorType, BlockPos const&, Util::HashString const&, LevelSoundEvent, ContainerType, int, Block const&, Block const&); //TODO: incomplete function definition
     void resetBurnProgress();
     void _correctXpValue(short)const;
     void _refreshFurnaceBlockLitState(BlockSource &);
