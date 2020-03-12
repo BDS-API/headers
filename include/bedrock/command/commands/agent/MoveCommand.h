@@ -6,16 +6,14 @@
 
 namespace AgentCommands {
 
-class MoveCommand : AgentCommands::Command {
+    class MoveCommand : AgentCommands::Command {
 
-public:
-    virtual ~MoveCommand();
-    virtual void execute();
-    virtual bool isDone();
-    virtual void tick();
-
-//  MoveCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
-    void _reachedPosition();
-};
-
+    public:
+        virtual void execute();
+        virtual void tick();
+        virtual bool isDone();
+        ~MoveCommand();
+        void _reachedPosition();
+//      MoveCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
+    };
 }

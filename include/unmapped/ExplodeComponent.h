@@ -1,27 +1,25 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
-#include "./DataLoadHelper.h"
-#include "../bedrock/definition/ExplodeDefinition.h"
 #include "../bedrock/nbt/CompoundTag.h"
+#include "../bedrock/util/Vec3.h"
+#include "../bedrock/definition/ExplodeDefinition.h"
 #include "../bedrock/actor/Actor.h"
-#include "./ExplodeComponent.h"
+#include "DataLoadHelper.h"
 
 
 class ExplodeComponent {
 
 public:
-
-    ExplodeComponent(ExplodeComponent &&);
+    void setFuseLength(int);
+    void setAllowUnderwater(bool);
+    void explode(Actor &, Vec3 const&);
+    bool isFuseLit()const;
+    void getFuseLength()const;
+    void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void initFromDefinition(Actor &, ExplodeDefinition const&);
     void addAdditionalSaveData(CompoundTag &);
-    void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    void explode(Actor &, Vec3 const&);
-    void getFuseLength()const;
-    void setFuseLength(int);
     void getInitialFuseLength()const;
+    ExplodeComponent(ExplodeComponent &&);
     void getIsFuseLit()const;
-    void setAllowUnderwater(bool);
-    bool isFuseLit()const;
     ExplodeComponent();
 };

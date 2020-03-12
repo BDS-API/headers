@@ -1,6 +1,5 @@
 #pragma once
 
-#include "./EntitySensorComponent.h"
 
 
 class EntitySensorComponent {
@@ -8,8 +7,7 @@ class EntitySensorComponent {
 public:
     static long NO_MAX_COUNT;
 
-
-    ~EntitySensorComponent();
     EntitySensorComponent(EntitySensorComponent &&);
     EntitySensorComponent();
+    ~EntitySensorComponent();
 };

@@ -1,17 +1,16 @@
 #pragma once
 
+#include "../origin/CommandOrigin.h"
 #include "../CommandRegistry.h"
 #include "../Command.h"
-#include "../orgin/CommandOrigin.h"
 #include "../CommandOutput.h"
 
 
 class KillCommand : Command {
 
 public:
-    virtual ~KillCommand();
+    ~KillCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-
     void setup(CommandRegistry &);
     KillCommand();
 };

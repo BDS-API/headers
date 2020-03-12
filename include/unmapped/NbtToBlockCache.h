@@ -4,12 +4,10 @@
 
 namespace BlockSerializationUtils {
 
-class NbtToBlockCache {
+    class NbtToBlockCache {
 
-public:
-
-    NbtToBlockCache();
-    ~NbtToBlockCache();
-};
-
+    public:
+        NbtToBlockCache();
+        ~NbtToBlockCache();
+    };
 }

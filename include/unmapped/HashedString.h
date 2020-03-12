@@ -1,6 +1,5 @@
 #pragma once
 
-#include "./HashedString.h"
 #include <string>
 
 
@@ -9,26 +8,25 @@ class HashedString {
 public:
     static long defaultErrorValue;
 
-
-    ~HashedString();
-    HashedString();
-    void getEmptyString();
-    void operator==(HashedString const&)const;
-    void operator!=(HashedString const&)const;
-    void operator<(HashedString const&)const;
-    HashedString(HashedString const&);
-    HashedString(HashedString &&);
-//  HashedString(decltype(nullptr); //TODO: incomplete function definition
-    void computeHash(char const*);
-    void computeHash(std::string const&);
-    HashedString(char const*);
-    HashedString(std::string const&);
     HashedString(unsigned long, char const*);
     HashedString(unsigned long, std::string);
-    bool isEmpty()const;
-    void empty()const;
+//  HashedString(decltype(nullptr); //TODO: incomplete function definition
+    ~HashedString();
     void clear();
+    HashedString(char const*);
+    HashedString(HashedString &&);
+    HashedString();
+    void computeHash(std::string const&);
+    void operator==(HashedString const&)const;
     void getHash()const;
+    HashedString(std::string const&);
     std::string getString()const;
+    HashedString(HashedString const&);
+    void empty()const;
+    void operator<(HashedString const&)const;
+    bool isEmpty()const;
+    void getEmptyString();
+    void operator!=(HashedString const&)const;
     void c_str()const;
+    void computeHash(char const*);
 };

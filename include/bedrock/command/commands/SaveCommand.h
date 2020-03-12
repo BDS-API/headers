@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../origin/CommandOrigin.h"
 #include "../CommandRegistry.h"
-#include "./ServerCommand.h"
-#include "../orgin/CommandOrigin.h"
+#include "ServerCommand.h"
 #include "../CommandOutput.h"
 
 
@@ -13,12 +13,11 @@ public:
     static long mSaveAllFileList;
     static long mState;
 
-    virtual ~SaveCommand();
+    ~SaveCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-
     void saveHold(CommandOutput &);
-    void saveResume(CommandOutput &);
-    void saveState(CommandOutput &);
     void setup(CommandRegistry &);
+    void saveState(CommandOutput &);
+    void saveResume(CommandOutput &);
     SaveCommand();
 };

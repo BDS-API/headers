@@ -1,31 +1,30 @@
 #pragma once
 
-#include "./PathNavigation.h"
-#include "../Mob.h"
 #include "../../../unmapped/NavigationComponent.h"
+#include "PathNavigation.h"
+#include "../Mob.h"
 #include "../../description/component/NavigationDescription.h"
 
 
 class WaterBoundPathNavigation : PathNavigation {
 
 public:
-    virtual ~WaterBoundPathNavigation();
     virtual void initializeInternal(Mob &, NavigationDescription *);
-    virtual void tick(NavigationComponent &, Mob &);
+    virtual bool canUpdatePath(Mob const&)const;
     virtual void getTempMobPos(Mob const&)const;
     virtual void travel(NavigationComponent &, Mob &, float &, float &, float &);
-    virtual bool canUpdatePath(Mob const&)const;
+    ~WaterBoundPathNavigation();
     virtual void updatePath(NavigationComponent &, Mob &);
-
-    WaterBoundPathNavigation();
+    virtual void tick(NavigationComponent &, Mob &);
+    void getSteerDampening()const;
+    void getMaxDepth()const;
     void setSteerDampening(float);
-    void setMinDepth(float);
     void setMaxDepth(float);
-    void setTerrainAvoidDistance(float);
-    void setLookAheadDist(float);
     void setRiverFollow(bool);
     void getMinDepth()const;
-    void getMaxDepth()const;
-    void getSteerDampening()const;
+    void setLookAheadDist(float);
+    void setMinDepth(float);
     void getTerrainAvoidDistance()const;
+    WaterBoundPathNavigation();
+    void setTerrainAvoidDistance(float);
 };

@@ -4,11 +4,9 @@
 
 namespace RakNet {
 
-class RNS2RecvStruct {
+    class RNS2RecvStruct {
 
-public:
-
-    RNS2RecvStruct();
-};
-
+    public:
+        RNS2RecvStruct();
+    };
 }

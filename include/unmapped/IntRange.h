@@ -9,12 +9,11 @@ class IntRange {
 public:
     static long ZERO;
 
-
-    IntRange();
     IntRange(int);
-    IntRange(int, int);
-    void getValue(Random &)const;
-    bool isInRangeInclusive(int)const;
     bool isInRangeExclusive(int)const;
+    IntRange(int, int);
     void parseJson(Json::Value, int, int);
+    void getValue(Random &)const;
+    IntRange();
+    bool isInRangeInclusive(int)const;
 };

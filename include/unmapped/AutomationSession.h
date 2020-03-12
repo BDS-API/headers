@@ -5,13 +5,10 @@
 
 namespace Automation {
 
-class AutomationSession {
+    namespace AutomationSession {
 
-public:
-
-    void connect(std::string const&);
-    bool isReady();
-    bool isConnecting();
-};
-
+        bool isReady();
+        void connect(std::string const&);
+        bool isConnecting();
+    };
 }

@@ -1,17 +1,15 @@
 #pragma once
 
-#include "./ScriptBinderTemplate.h"
-#include "./ScriptObjectBinder.h"
-#include <string>
+#include "ScriptObjectBinder.h"
+#include "ScriptBinderTemplate.h"
 
 
 class ScriptBinderLevelTemplate : ScriptBinderTemplate {
 
 public:
-    virtual ~ScriptBinderLevelTemplate();
-    virtual std::string getTemplateIdentifier()const;
+    ~ScriptBinderLevelTemplate();
     virtual void applyTemplate(ScriptObjectBinder &)const;
-
-//  void build(entt::Registry<unsigned int> &, unsigned int); //TODO: incomplete function definition
+    virtual std::string getTemplateIdentifier()const;
     ScriptBinderLevelTemplate();
+//  void build(entt::Registry<unsigned int> &, unsigned int); //TODO: incomplete function definition
 };

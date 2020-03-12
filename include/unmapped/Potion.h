@@ -1,10 +1,9 @@
 #pragma once
 
-#include "./Potion.h"
-#include <memory>
+#include "MobEffectInstance.h"
 #include <vector>
-#include "./MobEffectInstance.h"
 #include <string>
+#include <memory>
 
 
 class Potion {
@@ -56,35 +55,34 @@ public:
     static long LongSlowFalling;
     static long mLastId;
 
-
+    void getMobEffect()const;
+    std::string effectPotencyToString(MobEffectInstance const&)const;
+    void getPotionCount();
     void addPotion(std::shared_ptr<Potion const>);
     std::string getNameId()const;
-    void getPotionCount();
-    Potion(std::string const&);
-    Potion(std::string const&, std::string const&);
-//  Potion(std::string const&, std::string const&, MobEffectInstance const&, Potion::PotionVariant); //TODO: incomplete function definition
-//  Potion(std::string const&, std::string const&, std::string const&, MobEffectInstance const&, Potion::PotionVariant); //TODO: incomplete function definition
-//  Potion(std::string const&, std::vector<std::string, std::allocator<std::string>>, std::vector<MobEffectInstance, std::allocator<MobEffectInstance>>, Potion::PotionVariant); //TODO: incomplete function definition
-    void initPotions();
-    void shutdownPotions();
-    void getPotionId()const;
-    void getPotionVariant()const;
+    Potion(Potion const&);
 //  std::string getName(Potion::PotionType)const; //TODO: incomplete function definition
-//  std::string getDescriptionId(Potion::PotionType)const; //TODO: incomplete function definition
+//  void appendFormattedPotionText(std::string &, Potion::PotionType, float)const; //TODO: incomplete function definition
+    void initPotions();
+    ~Potion();
+    void getBasePotion(int);
+//  Potion(std::string const&, std::string const&, std::string const&, MobEffectInstance const&, Potion::PotionVariant); //TODO: incomplete function definition
+//  Potion(std::string const&, std::vector<std::string>, std::vector<MobEffectInstance>, Potion::PotionVariant); //TODO: incomplete function definition
     std::string getDescriptionId()const;
     std::string getPrefix()const;
-//  void appendFormattedPotionText(std::string &, Potion::PotionType, float)const; //TODO: incomplete function definition
-//  void getPotentencyDescription(Potion::PotionType, float, std::string const&, MobEffectInstance const&)const; //TODO: incomplete function definition
-//  std::string getPotentencyDescription(Potion::PotionType, float)const; //TODO: incomplete function definition
-    std::string effectPotencyToString(MobEffectInstance const&)const;
+//  std::string getDescriptionId(Potion::PotionType)const; //TODO: incomplete function definition
+    void getPotionId()const;
 //  std::string effectDurationToString(Potion::PotionType, float)const; //TODO: incomplete function definition
-//  std::string effectDurationToString(Potion::PotionType, float, MobEffectInstance const&)const; //TODO: incomplete function definition
+    Potion(std::string const&, std::string const&);
     void getMobEffectId()const;
-    void getMobEffect()const;
-    void getMobEffects()const;
+//  void getPotentencyDescription(Potion::PotionType, float, std::string const&, MobEffectInstance const&)const; //TODO: incomplete function definition
     void getPotion(int);
+    Potion(std::string const&);
+    void shutdownPotions();
+//  std::string effectDurationToString(Potion::PotionType, float, MobEffectInstance const&)const; //TODO: incomplete function definition
+//  Potion(std::string const&, std::string const&, MobEffectInstance const&, Potion::PotionVariant); //TODO: incomplete function definition
     void getPotion(std::string const&);
-    void getBasePotion(int);
-    ~Potion();
-    Potion(Potion const&);
+    void getPotionVariant()const;
+    void getMobEffects()const;
+//  std::string getPotentencyDescription(Potion::PotionType, float)const; //TODO: incomplete function definition
 };

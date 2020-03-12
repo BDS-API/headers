@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../CommandRegistry.h"
-#include "../CommandOutput.h"
-#include "../orgin/CommandOrigin.h"
 #include "../../../unmapped/WhitelistFile.h"
+#include "../origin/CommandOrigin.h"
+#include "../CommandRegistry.h"
 #include "../Command.h"
+#include "../CommandOutput.h"
 
 
 class WhitelistCommand : Command {
@@ -12,9 +12,8 @@ class WhitelistCommand : Command {
 public:
     static long mWhitelistFile;
 
-    virtual ~WhitelistCommand();
+    ~WhitelistCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-
     void setup(CommandRegistry &, WhitelistFile &);
     WhitelistCommand();
 };

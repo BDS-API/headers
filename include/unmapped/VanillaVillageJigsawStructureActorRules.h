@@ -1,11 +1,9 @@
 #pragma once
 
-#include "./JigsawStructureRegistry.h"
+#include "JigsawStructureRegistry.h"
 
 
-class VanillaVillageJigsawStructureActorRules {
-
-public:
+namespace VanillaVillageJigsawStructureActorRules {
 
     void initialize(JigsawStructureRegistry &);
 };

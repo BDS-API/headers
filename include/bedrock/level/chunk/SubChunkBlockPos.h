@@ -1,18 +1,17 @@
 #pragma once
 
-#include "../../../unmapped/ChunkBlockPos.h"
 #include "../../util/BlockPos.h"
+#include "../../../unmapped/ChunkBlockPos.h"
 
 
 class SubChunkBlockPos {
 
 public:
-
-    SubChunkBlockPos(ChunkBlockPos const&);
-    void index()const;
+    SubChunkBlockPos();
+    SubChunkBlockPos(unsigned char, unsigned char, unsigned char);
     void fromIndex(unsigned short);
     void operator+(BlockPos const&)const;
-    SubChunkBlockPos();
+    void index()const;
+    SubChunkBlockPos(ChunkBlockPos const&);
     SubChunkBlockPos(unsigned char);
-    SubChunkBlockPos(unsigned char, unsigned char, unsigned char);
 };

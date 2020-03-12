@@ -2,11 +2,9 @@
 
 
 
-class BedrockBlockTypes {
+namespace BedrockBlockTypes {
 
-public:
     static long mAir;
-
 
     void registerBlocks();
     void unregisterBlocks();

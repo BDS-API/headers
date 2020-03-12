@@ -1,21 +1,19 @@
 #pragma once
 
-#include "../../nbt/CompoundTag.h"
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
-#include <string>
+#include "../../nbt/CompoundTag.h"
+#include "Packet.h"
 
 
 class BiomeDefinitionListPacket : Packet {
 
 public:
-    virtual ~BiomeDefinitionListPacket();
     virtual void getId()const;
+    ~BiomeDefinitionListPacket();
     virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    BiomeDefinitionListPacket();
+    virtual void write(BinaryStream &)const;
     BiomeDefinitionListPacket(CompoundTag);
+    BiomeDefinitionListPacket();
 };

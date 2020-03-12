@@ -1,11 +1,8 @@
 #pragma once
 
-#include <string>
 
 
-class PackUploadContent {
-
-public:
+namespace PackUploadContent {
 
     std::string getClientDataPaths();
 };

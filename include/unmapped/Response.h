@@ -1,26 +1,24 @@
 #pragma once
 
-#include "./MCRESULT.h"
-#include "../json/Value.h"
+#include "MCRESULT.h"
 #include <string>
+#include "../json/Value.h"
 
 
 namespace Automation {
 
-class Response {
+    class Response {
 
-public:
-
-    ~Response();
-//  Response(Automation::Response::Type, std::string &&, std::string const&); //TODO: incomplete function definition
-    std::string toString()const;
-    void requestError(std::string const&, MCRESULT const&, std::string);
-    void slashCommand(std::string const&, Json::Value const&);
-    void slashCommandInitiated(std::string const&);
-    void createEvent(std::string const&, Json::Value const&, Json::Value const&);
-    std::string getRequestId()const;
-    std::string getEventName()const;
-    void getType()const;
-};
-
+    public:
+        void requestError(std::string const&, MCRESULT const&, std::string);
+        void createEvent(std::string const&, Json::Value const&, Json::Value const&);
+        std::string toString()const;
+        void getType()const;
+        std::string getRequestId()const;
+        ~Response();
+//      Response(Automation::Response::Type, std::string &&, std::string const&); //TODO: incomplete function definition
+        void slashCommandInitiated(std::string const&);
+        void slashCommand(std::string const&, Json::Value const&);
+        std::string getEventName()const;
+    };
 }

@@ -1,21 +1,19 @@
 #pragma once
 
-#include "./IDataInput.h"
-#include <string>
+#include "IDataInput.h"
 
 
 class BytesDataInput : IDataInput {
 
 public:
-    virtual ~BytesDataInput();
-    virtual std::string readString();
-    virtual std::string readLongString();
-    virtual void readFloat();
-    virtual void readDouble();
     virtual void readByte();
-    virtual void readShort();
-    virtual void readInt();
+    virtual void readDouble();
+    virtual std::string readLongString();
     virtual void readLongLong();
-
+    virtual void readShort();
+    virtual std::string readString();
+    virtual void readInt();
+    virtual void readFloat();
+    ~BytesDataInput();
     BytesDataInput();
 };

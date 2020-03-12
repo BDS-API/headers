@@ -1,29 +1,28 @@
 #pragma once
 
-#include "stronghold/SHStartPiece.h"
-#include <memory>
-#include "../../../util/Random.h"
-#include "./StructurePiece.h"
 #include "../../../block/unmapped/BlockSource.h"
-#include <vector>
-#include "../../../../unmapped/BoundingBox.h"
+#include "stronghold/SHStartPiece.h"
 #include <string>
+#include "StructurePiece.h"
+#include "../../../../unmapped/BoundingBox.h"
+#include "../../../util/Random.h"
+#include <vector>
+#include <memory>
 
 
 class StrongholdPiece : StructurePiece {
 
 public:
-    virtual ~StrongholdPiece();
-
-    void findAndCreatePieceFactory(std::string const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
-    void generatePieceFromSmallDoor(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random const&, int, int, int, int, int);
-    void generateAndAddPiece(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
+    ~StrongholdPiece();
 //  void generateSmallDoor(BlockSource *, Random &, BoundingBox const&, StrongholdPiece::SmallDoorType, int, int, int); //TODO: incomplete function definition
-    void generateSmallDoorChildForward(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int);
-    void generateSmallDoorChildLeft(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int);
-    void generateSmallDoorChildRight(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int);
-    void randomSmallDoor(Random &);
+    void generateSmallDoorChildRight(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &, int, int);
     StrongholdPiece();
+    void generatePieceFromSmallDoor(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random const&, int, int, int, int, int);
+    void generateSmallDoorChildForward(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &, int, int);
+    void generateSmallDoorChildLeft(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &, int, int);
+    void generateAndAddPiece(SHStartPiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &, int, int, int, int, int);
     StrongholdPiece(int);
+    void randomSmallDoor(Random &);
     bool isOkBox(BoundingBox const&);
+    void findAndCreatePieceFactory(std::string const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, int, int, int, int, int);
 };

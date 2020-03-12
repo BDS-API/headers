@@ -1,11 +1,10 @@
 #pragma once
 
-#include "../../unmapped/ContentIdentity.h"
-#include "./LevelData.h"
-#include "./LevelSummary.h"
 #include "../../core/Path.h"
-#include "../../unmapped/GameVersion.h"
 #include <string>
+#include "../../unmapped/ContentIdentity.h"
+#include "../../unmapped/GameVersion.h"
+#include "LevelData.h"
 
 
 class LevelSummary {
@@ -16,35 +15,34 @@ public:
     static std::string WORLD_ICON_FILENAME;
     static std::string DEFAULT_WORLD_ICON_FILENAME;
 
-
-    void getSeed()const;
-    void getGameType()const;
-    void getGameDifficulty()const;
-    void getEduOffer()const;
-    bool isEdu()const;
-    bool hasConfirmedPlatformLockedContent()const;
-    void getLANBroadcastIntent()const;
-    void getXBLBroadcastIntent()const;
-    bool hasCommandsEnabled()const;
-    void setId(std::string);
-    void setName(std::string);
-    void setLastPlayed(long);
 //  void setGameType(GameType); //TODO: incomplete function definition
-//  void setGameDifficulty(Difficulty); //TODO: incomplete function definition
-    void setSizeOnDisk(unsigned long);
-    std::string buildCustomIconPath(Core::Path const&);
+    bool isVersionCompatible()const;
+    void setLastPlayed(long);
     std::string buildWorldIconPath(Core::Path const&);
+    void getSeed()const;
+    void operator<(LevelSummary const&)const;
+    std::string buildCustomIconPath(Core::Path const&);
     LevelSummary();
-//  LevelSummary(std::string const&, std::string const&, long, GameType, Difficulty, int, int, unsigned long, bool, bool, Social::GamePublishSetting, bool, EducationEditionOffer, GameVersion const&, GameVersion const&, StorageVersion, Core::Path const&, ContentIdentity const&); //TODO: incomplete function definition
+    void reinitializeWorldSize(Core::Path const&);
+    void operator!=(LevelSummary const&)const;
+//  void setGameDifficulty(Difficulty); //TODO: incomplete function definition
+    void getXBLBroadcastIntent()const;
+    void getGameDifficulty()const;
+    void getGameType()const;
+    bool isEdu()const;
+    bool isGameVersionCompatible()const;
+    void setName(std::string);
+    void getEduOffer()const;
+    bool hasConfirmedPlatformLockedContent()const;
+    bool isStorageCompatible()const;
     void _initializeWorldIconPath(Core::Path const&);
     LevelSummary(LevelData const&, Core::Path const&, Core::Path const&);
-    void reinitializeWorldSize(Core::Path const&);
-    void operator<(LevelSummary const&)const;
     bool isEditionCompatible()const;
-    bool isGameVersionCompatible()const;
-    bool isStorageCompatible()const;
-    bool isVersionCompatible()const;
-    void reinitializeWorldIconPath(Core::Path const&);
+    bool hasCommandsEnabled()const;
+    void setSizeOnDisk(unsigned long);
     void operator==(LevelSummary const&)const;
-    void operator!=(LevelSummary const&)const;
+    void reinitializeWorldIconPath(Core::Path const&);
+    void setId(std::string);
+//  LevelSummary(std::string const&, std::string const&, long, GameType, Difficulty, int, int, unsigned long, bool, bool, Social::GamePublishSetting, bool, EducationEditionOffer, GameVersion const&, GameVersion const&, StorageVersion, Core::Path const&, ContentIdentity const&); //TODO: incomplete function definition
+    void getLANBroadcastIntent()const;
 };

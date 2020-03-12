@@ -1,21 +1,20 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
-#include "./DataLoadHelper.h"
 #include "../bedrock/nbt/CompoundTag.h"
+#include "DataLoadHelper.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class HideComponent {
 
 public:
-
-    HideComponent();
     void initFromDefinition(Actor &);
-    bool isInRaid();
-    bool isReactingToBell();
-    void setInRaid();
-    void setReactingToBell();
     void setNotHiding();
-    void addAdditionalSaveData(CompoundTag &);
+    void setReactingToBell();
+    bool isReactingToBell();
+    HideComponent();
     void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+    bool isInRaid();
+    void addAdditionalSaveData(CompoundTag &);
+    void setInRaid();
 };

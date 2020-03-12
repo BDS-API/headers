@@ -7,12 +7,11 @@
 class WorldGenerator {
 
 public:
-    virtual ~WorldGenerator();
     virtual void debugRender();
+    ~WorldGenerator();
     virtual void addHardcodedSpawnAreas(LevelChunk &);
-
-    void getHardcodedSpawns()const;
     WorldGenerator();
 //  void getFeatureName(StructureFeatureType); //TODO: incomplete function definition
     void getFeatureId(std::string const&);
+    void getHardcodedSpawns()const;
 };

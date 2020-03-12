@@ -1,22 +1,29 @@
 #pragma once
 
-#include "./Ability.h"
 
 
 class Ability {
 
 public:
+    class Value;
 
-    Ability();
 //  Ability(bool, Ability::Options); //TODO: incomplete function definition
+    void setBool(bool);
 //  Ability(float, Ability::Options); //TODO: incomplete function definition
-    void operator==(Ability const&)const;
-    void operator!=(Ability const&)const;
+//  bool hasOption(Ability::Options)const; //TODO: incomplete function definition
+    void getFloat()const;
     void getType()const;
     void getBool()const;
-    void setBool(bool);
-//  void reset(Ability::Type); //TODO: incomplete function definition
-    void getFloat()const;
+    void operator==(Ability const&)const;
     void setFloat(float);
-//  bool hasOption(Ability::Options)const; //TODO: incomplete function definition
+    void operator!=(Ability const&)const;
+//  void reset(Ability::Type); //TODO: incomplete function definition
+    Ability();
+    class Value {
+
+    public:
+        Value(bool);
+        Value();
+        Value(float);
+    };
 };

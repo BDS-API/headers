@@ -1,13 +1,19 @@
 #pragma once
 
-#include "./MoveActorAbsoluteData.h"
+#include "MoveActorAbsoluteData.h"
 
 
 class MoveActorDeltaData {
 
 public:
+    class Header;
 
     MoveActorDeltaData();
-    void parseDeltas(MoveActorAbsoluteData const&)const;
     void applyIntDelta(float, int);
+    void parseDeltas(MoveActorAbsoluteData const&)const;
+    class Header {
+
+    public:
+        Header();
+    };
 };

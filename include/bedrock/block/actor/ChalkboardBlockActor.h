@@ -1,63 +1,75 @@
 #pragma once
 
+#include "BlockActor.h"
 #include <string>
-#include "./BlockActor.h"
-#include "../../nbt/CompoundTag.h"
-#include "../../actor/Actor.h"
-#include <memory>
-#include "../../level/Level.h"
 #include "../../../unmapped/DataLoadHelper.h"
-#include "../../util/BlockPos.h"
-#include "../../../unmapped/CachedMessageData.h"
-#include "../../actor/unmapped/ActorUniqueID.h"
-#include "../unmapped/BlockSource.h"
-#include <vector>
 #include "../../text/TextObjectRoot.h"
+#include "../../level/Level.h"
+#include "../../nbt/CompoundTag.h"
+#include "../unmapped/BlockSource.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include "../../actor/Actor.h"
+#include <vector>
+#include "../../util/BlockPos.h"
 #include "../../actor/Player.h"
 
 
 class ChalkboardBlockActor : BlockActor {
 
 public:
-    virtual ~ChalkboardBlockActor();
+    class CachedLineData;
+    class CachedMessageData;
+
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void save(CompoundTag &)const;
-    virtual void onChanged(BlockSource &);
     virtual void getUpdatePacket(BlockSource &);
+    virtual void onChanged(BlockSource &);
+    virtual void save(CompoundTag &)const;
     virtual void getShadowRadius(BlockSource &)const;
     virtual std::string getImmersiveReaderText(BlockSource &);
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
-
+    ~ChalkboardBlockActor();
+    void convertFromEntity(BlockSource &, CompoundTag const&);
     ChalkboardBlockActor(BlockPos const&);
-    bool isBaseChalkboard()const;
-    void setText(std::string const&, TextObjectRoot &&);
-    void setText(std::string const&);
-    std::string getText()const;
-    std::string getUnfilteredText()const;
-    void _flagCachedMessageAsDirty();
-    void getRotation(BlockSource &)const;
     void setOnGround(bool);
-    bool isOnGround()const;
-//  void setChalkboardSize(ChalkboardSize); //TODO: incomplete function definition
+//  void calculateAllBlocks(BlockPos const&, ChalkboardSize, int); //TODO: incomplete function definition
+    void getRotation(BlockSource &)const;
+    void setText(std::string const&);
+    void getCachedMessage()const;
+    void _flagCachedMessageAsDirty();
+//  bool canCreateChalkboard(Actor *, BlockSource &, BlockPos const&, ChalkboardSize, int, std::vector<BlockPos> &); //TODO: incomplete function definition
+    void getTextCharCount()const;
     void getChalkboardSize()const;
     void getBaseChalkboard(BlockSource &)const;
-    void setBasePos(BlockPos const&);
     void setOwnerId(ActorUniqueID);
-    void getOwnerId()const;
-//  void calculateAllBlocks(BlockPos const&, ChalkboardSize, int); //TODO: incomplete function definition
     void setLocked(bool);
-    void getLocked()const;
-    void getTextCharCount()const;
+//  void setChalkboardSize(ChalkboardSize); //TODO: incomplete function definition
+    void setBasePos(BlockPos const&);
     void _isBaseEntity()const;
-    void getWidth()const;
+    std::string getText()const;
     void getHeight()const;
-    void convertFromEntity(BlockSource &, CompoundTag const&);
-//  void createChalkboard(Actor *, BlockSource &, BlockPos const&, ChalkboardSize, int, bool, std::string); //TODO: incomplete function definition
-//  bool canCreateChalkboard(Actor *, BlockSource &, BlockPos const&, ChalkboardSize, int, std::vector<BlockPos, std::allocator<BlockPos>> &); //TODO: incomplete function definition
-    void playerMayEdit(Player &)const;
-    void _isOwner(Player &)const;
     void playerMayToggleLock(Player &)const;
+    void playerMayEdit(Player &)const;
     void playerMayDestroy(Player &)const;
-    void getCachedMessage()const;
+    void getLocked()const;
+    bool isOnGround()const;
+    void _isOwner(Player &)const;
     void setCachedMessage(ChalkboardBlockActor::CachedMessageData);
+    void getWidth()const;
+    std::string getUnfilteredText()const;
+//  void createChalkboard(Actor *, BlockSource &, BlockPos const&, ChalkboardSize, int, bool, std::string); //TODO: incomplete function definition
+    void setText(std::string const&, TextObjectRoot &&);
+    bool isBaseChalkboard()const;
+    void getOwnerId()const;
+    class CachedLineData {
+
+    public:
+        ~CachedLineData();
+        CachedLineData();
+    };
+    class CachedMessageData {
+
+    public:
+        ~CachedMessageData();
+        CachedMessageData();
+    };
 };

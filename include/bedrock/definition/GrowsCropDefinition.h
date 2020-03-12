@@ -1,18 +1,16 @@
 #pragma once
 
-#include "../../unmapped/GrowsCropComponent.h"
-#include "./GrowsCropDefinition.h"
-#include <memory>
 #include "../../unmapped/EntityContext.h"
+#include "../../unmapped/GrowsCropComponent.h"
 #include "../../json/Value.h"
+#include <memory>
 
 
 class GrowsCropDefinition {
 
 public:
-
-//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, GrowsCropDefinition>> &); //TODO: incomplete function definition
     void initialize(EntityContext &, GrowsCropComponent &);
-    void deserializeData(Json::Value &);
     void serializeData(Json::Value &)const;
+    void deserializeData(Json::Value &);
+//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, GrowsCropDefinition>> &); //TODO: incomplete function definition
 };

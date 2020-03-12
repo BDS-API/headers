@@ -1,27 +1,25 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack.h"
-#include "../../actor/Player.h"
-#include "./LevelContainerManagerModel.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
-#include <string>
+#include "LevelContainerManagerModel.h"
+#include "../../actor/Player.h"
+#include "../../../unmapped/ContainerItemStack.h"
 
 
 class TradeContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    virtual ~TradeContainerManagerModel();
+    ~TradeContainerManagerModel();
+    virtual void getSlot(int);
     virtual void getItems();
     virtual void setSlot(int, ContainerItemStack const&, bool);
-    virtual void getSlot(int);
     virtual void init();
-
-//  TradeContainerManagerModel(ContainerID, Player &, ActorUniqueID const&); //TODO: incomplete function definition
-    void getEntity()const;
-    std::string getDisplayName();
-    void getCurrentRecipe(int);
-    void getAvailableRecipeListSize();
     bool isTradeValid(float);
     void setCurrentRecipeIndex(int);
+    void getEntity()const;
+    void getAvailableRecipeListSize();
     void recipeChanged();
+    std::string getDisplayName();
+//  TradeContainerManagerModel(ContainerID, Player &, ActorUniqueID const&); //TODO: incomplete function definition
+    void getCurrentRecipe(int);
 };

@@ -1,21 +1,20 @@
 #pragma once
 
-#include "./Property.h"
-#include <string>
 
 
-namespace Social::Events {
+namespace Social {
 
-class Property {
+    namespace Events {
 
-public:
+        class Property {
 
-    ~Property();
-    void getValue()const;
-    std::string getName()const;
-    Property(Social::Events::Property const&);
-    Property();
-    void operator==(Social::Events::Property const&)const;
-};
-
+        public:
+            std::string getName()const;
+            void getValue()const;
+            Property(Social::Events::Property const&);
+            void operator==(Social::Events::Property const&)const;
+            ~Property();
+            Property();
+        };
+    }
 }

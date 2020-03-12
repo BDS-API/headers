@@ -2,20 +2,19 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "../../util/Vec3.h"
-#include "./Packet.h"
 #include <string>
+#include "../../util/Vec3.h"
+#include "Packet.h"
 
 
 class PlaySoundPacket : Packet {
 
 public:
-    virtual ~PlaySoundPacket();
-    virtual void getId()const;
     virtual std::string getName()const;
+    virtual void getId()const;
+    ~PlaySoundPacket();
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
     PlaySoundPacket();
     PlaySoundPacket(std::string, Vec3 const&, float, float);
 };

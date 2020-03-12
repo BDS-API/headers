@@ -1,16 +1,14 @@
 #pragma once
 
-#include "./PackInstanceId.h"
-#include "../json/Value.h"
-#include "./PackIdVersion.h"
 #include <string>
+#include "PackIdVersion.h"
+#include "PackInstanceId.h"
+#include "../json/Value.h"
 
 
-class ResourceHelper {
+namespace ResourceHelper {
 
-public:
-
+    void toPackIdAnyVersion(PackIdVersion const&);
     void deserializePackStackEntry(Json::Value const&, PackInstanceId &, std::string const&);
     void serializePackStackEntry(PackInstanceId const&, Json::Value &);
-    void toPackIdAnyVersion(PackIdVersion const&);
 };

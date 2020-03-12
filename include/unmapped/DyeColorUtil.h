@@ -2,9 +2,7 @@
 
 
 
-class DyeColorUtil {
-
-public:
+namespace DyeColorUtil {
 
     void getItemColor(int);
 };

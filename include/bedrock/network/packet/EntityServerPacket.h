@@ -1,19 +1,18 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream.h"
 #include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
 #include "../../../unmapped/EntityContext.h"
-#include "./Packet.h"
+#include "Packet.h"
 
 
 class EntityServerPacket : Packet {
 
 public:
-    virtual ~EntityServerPacket();
-    virtual void write(BinaryStream &)const;
+    ~EntityServerPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
-    EntityServerPacket();
+    virtual void write(BinaryStream &)const;
     EntityServerPacket(EntityContext &);
+    EntityServerPacket();
     void getEntityNetId()const;
 };

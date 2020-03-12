@@ -4,12 +4,10 @@
 
 namespace Json {
 
-class StaticString {
+    class StaticString {
 
-public:
-
-    StaticString(char const*);
-    void c_str()const;
-};
-
+    public:
+        void c_str()const;
+        StaticString(char const*);
+    };
 }

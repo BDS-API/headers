@@ -1,6 +1,5 @@
 #pragma once
 
-#include "./Color.h"
 #include <string>
 
 
@@ -25,30 +24,29 @@ public:
     static long SHADE_WEST_EAST;
     static long MINECOIN_GOLD;
 
-
-    Color(float, float, float, float);
-    void fromARGB(int);
+    void toARGB()const;
+    void fromHexString(std::string const&);
+    void brighter(float)const;
+    void operator==(Color const&)const;
+    void redFromARGB(int);
     Color();
-    void fromRGB(int);
-    void operator/(float)const;
-    void clamped()const;
+    void operator[](int);
+    Color(float, float, float, float);
+    void lerp(Color const&, Color const&, float);
+    void operator*(Color const&)const;
     void clamp();
+    void fromRGB(int);
+    void fromARGB(int);
+    void clamped()const;
+    void greenFromARGB(int);
+    std::string toHexString()const;
+    void toABGR()const;
+    void fromIntensity(float, float);
+    bool isNil()const;
+    void fromHSB(float, float, float);
     void operator!=(Color const&)const;
     void operator*(float)const;
-    void brighter(float)const;
-    void operator*(Color const&)const;
-    bool isNil()const;
-    void fromHexString(std::string const&);
-    void operator[](int);
-    void lerp(Color const&, Color const&, float);
-    void redFromARGB(int);
-    void greenFromARGB(int);
-    void blueFromARGB(int);
-    void fromIntensity(float, float);
     void distanceFrom(Color const&)const;
-    void fromHSB(float, float, float);
-    void toARGB()const;
-    void toABGR()const;
-    std::string toHexString()const;
-    void operator==(Color const&)const;
+    void operator/(float)const;
+    void blueFromARGB(int);
 };

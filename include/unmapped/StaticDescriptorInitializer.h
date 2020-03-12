@@ -4,11 +4,9 @@
 
 namespace protobuf_main_2fproto_2fshared_2eproto {
 
-class StaticDescriptorInitializer {
+    class StaticDescriptorInitializer {
 
-public:
-
-    StaticDescriptorInitializer();
-};
-
+    public:
+        StaticDescriptorInitializer();
+    };
 }

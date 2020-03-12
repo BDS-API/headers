@@ -1,17 +1,16 @@
 #pragma once
 
 #include "../../../json/Value.h"
-#include "./ComponentDescription.h"
+#include "ComponentDescription.h"
 
 
 class ProjectileDescription : ComponentDescription {
 
 public:
-    virtual void getJsonName()const;
-    virtual ~ProjectileDescription();
+    ~ProjectileDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
-
-    ProjectileDescription();
+    virtual void getJsonName()const;
 //  void parseProjectileAnchor(Json::Value &, ProjectileAnchor &, char const*, ProjectileAnchor, char const*); //TODO: incomplete function definition
+    ProjectileDescription();
 };

@@ -1,21 +1,19 @@
 #pragma once
 
-#include "./OwnerStorageFeature.h"
-#include "./FeatureRegistry.h"
-#include "./WeakStorageFeature.h"
-#include "./StackResultStorageFeature.h"
+#include "StackResultStorageFeature.h"
+#include "FeatureRegistry.h"
+#include "OwnerStorageFeature.h"
 
 
 class WeakStorageFeature {
 
 public:
-
-    WeakStorageFeature(WeakStorageFeature const&);
 //  WeakStorageFeature(WeakStorageFeature::EmptyInit); //TODO: incomplete function definition
-    WeakStorageFeature(OwnerStorageFeature const&);
-    WeakStorageFeature(StackResultStorageFeature const&);
-//  WeakStorageFeature(WeakStorageFeature::VariadicInit, FeatureRegistry &, unsigned long); //TODO: incomplete function definition
+    WeakStorageFeature(WeakStorageFeature const&);
     WeakStorageFeature(WeakStorageFeature &&);
-    void _reset();
     void _isSet()const;
+    WeakStorageFeature(StackResultStorageFeature const&);
+    WeakStorageFeature(OwnerStorageFeature const&);
+    void _reset();
+//  WeakStorageFeature(WeakStorageFeature::VariadicInit, FeatureRegistry &, unsigned long); //TODO: incomplete function definition
 };

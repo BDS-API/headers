@@ -1,7 +1,6 @@
 #pragma once
 
-#include "./MolangGeometryVariable.h"
-#include "./HashedString.h"
+#include "HashedString.h"
 
 
 class MolangGeometryVariable {
@@ -9,10 +8,9 @@ class MolangGeometryVariable {
 public:
     static long defaultErrorValue;
 
-
+    MolangGeometryVariable(MolangGeometryVariable &&);
     ~MolangGeometryVariable();
     MolangGeometryVariable(MolangGeometryVariable const&);
-    MolangGeometryVariable(HashedString const&);
-    MolangGeometryVariable(MolangGeometryVariable &&);
     void operator==(MolangGeometryVariable const&)const;
+    MolangGeometryVariable(HashedString const&);
 };

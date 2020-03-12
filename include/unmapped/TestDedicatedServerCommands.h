@@ -3,9 +3,7 @@
 #include "../bedrock/Minecraft.h"
 
 
-class TestDedicatedServerCommands {
-
-public:
+namespace TestDedicatedServerCommands {
 
     void setupStandaloneServer(Minecraft &);
 };

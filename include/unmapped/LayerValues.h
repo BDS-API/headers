@@ -1,12 +1,10 @@
 #pragma once
 
-#include "./PreBiome.h"
+#include "PreBiome.h"
 
 
-class LayerValues {
+namespace LayerValues {
 
-public:
-
-    void operator==(LayerValues::PreBiome const&, LayerValues::PreBiome const&);
     void operator!=(LayerValues::PreBiome const&, LayerValues::PreBiome const&);
+    void operator==(LayerValues::PreBiome const&, LayerValues::PreBiome const&);
 };

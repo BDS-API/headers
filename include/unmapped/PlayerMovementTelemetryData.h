@@ -5,8 +5,7 @@
 class PlayerMovementTelemetryData {
 
 public:
-
-    PlayerMovementTelemetryData();
-    void reset();
     void getAverage()const;
+    void reset();
+    PlayerMovementTelemetryData();
 };

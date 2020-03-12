@@ -5,7 +5,6 @@
 class WireframeQueue {
 
 public:
-
     WireframeQueue();
     ~WireframeQueue();
 };

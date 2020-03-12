@@ -1,13 +1,12 @@
 #pragma once
 
+#include <string>
 #include <array>
 #include "../bedrock/util/Color.h"
-#include <string>
 
 
-class ColorFormat {
+namespace ColorFormat {
 
-public:
     static std::string ESCAPE;
     static std::string BLACK;
     static std::string DARK_BLUE;
@@ -31,14 +30,13 @@ public:
     static std::string ITALIC;
     static std::string RESET;
 
-
     void FromString(std::string const&);
-    void NameFromFormatCode(std::string const&);
-    void ColorFromChar(char);
-    void ColorFromColorCode(std::string const&);
-    bool IsColorCode(char);
     bool IsColorCode(std::string const&);
+    void ColorFromColorCode(std::string const&);
+    void ColorFromChar(char);
+    void getCurrentColors();
+    void NameFromFormatCode(std::string const&);
+    bool IsColorCode(char);
     std::string ColorCodeFromColor(Color const&);
 //  void setColors(std::array<Color, 17ul> const&); //TODO: incomplete function definition
-    void getCurrentColors();
 };

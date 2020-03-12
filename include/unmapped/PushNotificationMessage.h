@@ -5,6 +5,5 @@
 class PushNotificationMessage {
 
 public:
-
     void getType()const;
 };

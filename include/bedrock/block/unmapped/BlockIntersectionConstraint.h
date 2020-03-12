@@ -1,16 +1,15 @@
 #pragma once
 
-#include "../../util/BlockPos.h"
-#include "../../../unmapped/IStructureConstraint.h"
 #include "../../../unmapped/IBlockPlacementTarget.h"
 #include "../../../unmapped/LegacyStructureTemplate.h"
+#include "../../../unmapped/IStructureConstraint.h"
+#include "../../util/BlockPos.h"
 
 
 class BlockIntersectionConstraint : IStructureConstraint {
 
 public:
-    virtual ~BlockIntersectionConstraint();
+    ~BlockIntersectionConstraint();
 //  virtual bool isSatisfied(IBlockPlacementTarget const&, BlockPos const&, Rotation const&)const; //TODO: incomplete function definition
-
     BlockIntersectionConstraint(LegacyStructureTemplate &);
 };

@@ -2,9 +2,8 @@
 
 
 
-class VanillaBlockTypes {
+namespace VanillaBlockTypes {
 
-public:
     static long mStone;
     static long mGrass;
     static long mDirt;
@@ -477,7 +476,6 @@ public:
     static long mBeehive;
     static long mHoneyBlock;
     static long mHoneycombBlock;
-
 
     void unregisterBlocks();
     void registerBlocks();

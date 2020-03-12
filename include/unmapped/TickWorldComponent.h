@@ -1,25 +1,23 @@
 #pragma once
 
-#include "./TickWorldComponent.h"
-#include "../bedrock/actor/Actor.h"
 #include "../bedrock/level/tickingarea/ITickingArea.h"
+#include "../bedrock/actor/Actor.h"
 #include <memory>
 
 
 class TickWorldComponent {
 
 public:
-
-    TickWorldComponent();
-    TickWorldComponent(TickWorldComponent &&);
-    void removeArea();
-    ~TickWorldComponent();
+    void setTickingArea(Actor &, std::shared_ptr<ITickingArea>);
     void initFromDefinition(Actor &);
     void getChunkRadius()const;
-    void getMaxDistToPlayers()const;
-    bool isAlwaysActive()const;
+    ~TickWorldComponent();
+    TickWorldComponent();
     bool hasTickingArea()const;
+    bool isAlwaysActive()const;
     void getTickingArea();
-    void setTickingArea(Actor &, std::shared_ptr<ITickingArea>);
+    TickWorldComponent(TickWorldComponent &&);
+    void removeArea();
+    void getMaxDistToPlayers()const;
     void updateArea(Actor &);
 };

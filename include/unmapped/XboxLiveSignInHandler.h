@@ -4,12 +4,10 @@
 
 namespace Social {
 
-class XboxLiveSignInHandler {
+    class XboxLiveSignInHandler {
 
-public:
-    virtual ~XboxLiveSignInHandler();
-
-    XboxLiveSignInHandler();
-};
-
+    public:
+        ~XboxLiveSignInHandler();
+        XboxLiveSignInHandler();
+    };
 }

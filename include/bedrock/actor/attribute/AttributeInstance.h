@@ -1,72 +1,70 @@
 #pragma once
 
-#include "./AttributeBuff.h"
+#include "AttributeInstanceDelegate.h"
+#include <string>
 #include "../../../mce/UUID.h"
 #include "../../../unmapped/BaseAttributeMap.h"
-#include <memory>
-#include "./AttributeInstance.h"
+#include "AttributeModifier.h"
+#include "AttributeBuff.h"
 #include "../../../unmapped/Attribute.h"
+#include <memory>
 #include <vector>
-#include "./AttributeInstanceDelegate.h"
-#include "./AttributeModifier.h"
-#include <string>
 
 
 class AttributeInstance {
 
 public:
-    virtual ~AttributeInstance();
     virtual void tick();
-
-    AttributeInstance(AttributeInstance const&);
-    AttributeInstance(BaseAttributeMap *, Attribute const*);
-    AttributeInstance();
-    void getAttribute()const;
-    void getModifiers(int)const;
-    void getModifiers()const;
-    void getModifier(mce::UUID const&)const;
-    bool hasModifier(std::shared_ptr<AttributeModifier>)const;
-    bool hasModifier(AttributeModifier const&)const;
-    void addModifiers(std::vector<std::shared_ptr<AttributeModifier>, std::allocator<std::shared_ptr<AttributeModifier>>> *);
-    void addModifier(AttributeModifier const&);
-    void addModifier(std::shared_ptr<AttributeModifier>);
-    void _calculateValue();
+    ~AttributeInstance();
     void _setDirty();
-    void removeModifier(std::shared_ptr<AttributeModifier>);
-    void removeModifier(AttributeModifier const&);
+    void removeBuff(std::shared_ptr<AttributeBuff>);
+    AttributeInstance();
+    void removeBuff(AttributeBuff const&);
     void getModifiers(std::string const&)const;
+    void getListeners()const;
+    void resetToDefaultValue();
+    void removeBuffs();
+    bool hasTemporalBuffs()const;
+    void setDelegate(std::shared_ptr<AttributeInstanceDelegate>);
+    void recalculateModifiers();
+    void getMinValue()const;
+    void addBuff(std::shared_ptr<AttributeBuff>);
+    void notify(long);
+    void getCurrentValue()const;
+    void setMinValue(float);
+    void removeModifiers();
+    void setRange(float, float, float);
+    void addModifier(std::shared_ptr<AttributeModifier>);
+    void setDefaultValueOnly(float);
+    void addBuff(AttributeBuff const&);
+    void getModifiers()const;
+    void _sanitizeValue(float);
     void removeModifiers(std::string const&);
     void removeModifier(mce::UUID const&);
-    void removeModifiers();
-    void getCurrentValue()const;
-    void recalculateModifiers();
-    void _getAppliedModifiers(int);
-    void _sanitizeValue(float);
     void _calculateValue(AttributeBuff const&);
-    void getMinValue()const;
-    void getDefaultValue(int)const;
-    void getMaxValue()const;
-    void resetToMinValue();
-    void resetToDefaultValue();
-    void resetToMaxValue();
-    void setDefaultValue(float, int);
-    void setDefaultValueOnly(float);
-    void setRange(float, float, float);
     void serializationSetRange(float, float, float);
-    void serializationSetValue(float, int, float);
-    void addBuff(AttributeBuff const&);
-    void addBuff(std::shared_ptr<AttributeBuff>);
-    bool hasTemporalBuffs()const;
-    void getBuffs()const;
-    void removeBuffs();
+    void addModifiers(std::vector<std::shared_ptr<AttributeModifier>> *);
     void setMaxValue(float);
-    void setMinValue(float);
-    void registerListener(AttributeInstance const&);
+    void getMaxValue()const;
+    void getAttribute()const;
+    void resetToMaxValue();
     void getHandle()const;
-    void notify(long);
-    void setDelegate(std::shared_ptr<AttributeInstanceDelegate>);
-    void removeBuff(std::shared_ptr<AttributeBuff>);
-    void removeBuff(AttributeBuff const&);
-    void getListeners()const;
+    void _calculateValue();
+    void getBuffs()const;
+    void getModifier(mce::UUID const&)const;
+    void getModifiers(int)const;
+    bool hasModifier(std::shared_ptr<AttributeModifier>)const;
+    AttributeInstance(BaseAttributeMap *, Attribute const*);
     bool isValid()const;
+    void addModifier(AttributeModifier const&);
+    bool hasModifier(AttributeModifier const&)const;
+    AttributeInstance(AttributeInstance const&);
+    void _getAppliedModifiers(int);
+    void removeModifier(std::shared_ptr<AttributeModifier>);
+    void getDefaultValue(int)const;
+    void resetToMinValue();
+    void removeModifier(AttributeModifier const&);
+    void serializationSetValue(float, int, float);
+    void setDefaultValue(float, int);
+    void registerListener(AttributeInstance const&);
 };

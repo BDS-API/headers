@@ -4,20 +4,18 @@
 
 namespace DataStructures {
 
-class ByteQueue {
+    class ByteQueue {
 
-public:
-
-    ByteQueue();
-    ~ByteQueue();
-    void Clear(char const*, unsigned int);
-    void WriteBytes(char const*, unsigned int, char const*, unsigned int);
-    void GetBytesWritten()const;
-    void ReadBytes(char *, unsigned int, bool);
-    void IncrementReadOffset(unsigned int);
-    void PeekContiguousBytes(unsigned int *)const;
-    void DecrementReadOffset(unsigned int);
-    void Print();
-};
-
+    public:
+        ByteQueue();
+        void Print();
+        void IncrementReadOffset(unsigned int);
+        void ReadBytes(char *, unsigned int, bool);
+        ~ByteQueue();
+        void PeekContiguousBytes(unsigned int *)const;
+        void WriteBytes(char const*, unsigned int, char const*, unsigned int);
+        void DecrementReadOffset(unsigned int);
+        void GetBytesWritten()const;
+        void Clear(char const*, unsigned int);
+    };
 }

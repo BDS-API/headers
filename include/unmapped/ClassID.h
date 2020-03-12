@@ -2,9 +2,7 @@
 
 
 
-class ClassID {
-
-public:
+namespace ClassID {
 
     void getNextID();
 };

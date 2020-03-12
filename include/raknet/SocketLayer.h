@@ -1,24 +1,21 @@
 #pragma once
 
-#include "./RakString.h"
-#include "./SystemAddress.h"
-#include "./NetworkAdapter.h"
+#include "SystemAddress.h"
+#include "RakString.h"
+#include "NetworkAdapter.h"
 
 
 namespace RakNet {
 
-class SocketLayer {
+    namespace SocketLayer {
 
-public:
-
-    void SetSocketOptions(int, bool, bool);
-    void GetSubNetForSocketAndIp(RakNet::RakString);
-    void GetMyAdapters(RakNet::NetworkAdapter *);
-    void GetMyIP(RakNet::SystemAddress *);
-    void GetLocalPort(int);
-    void GetSystemAddress(int, RakNet::SystemAddress *);
-    void GetSystemAddress_Old(int, RakNet::SystemAddress *);
-    void GetFirstBindableIP(char *, int);
-};
-
+        void GetMyAdapters(RakNet::NetworkAdapter *);
+        void GetLocalPort(int);
+        void GetMyIP(RakNet::SystemAddress *);
+        void GetSubNetForSocketAndIp(RakNet::RakString);
+        void GetSystemAddress_Old(int, RakNet::SystemAddress *);
+        void GetSystemAddress(int, RakNet::SystemAddress *);
+        void SetSocketOptions(int, bool, bool);
+        void GetFirstBindableIP(char *, int);
+    };
 }

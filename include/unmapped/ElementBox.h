@@ -4,11 +4,9 @@
 
 namespace BlockGeometry {
 
-class ElementBox {
+    class ElementBox {
 
-public:
-
-    ~ElementBox();
-};
-
+    public:
+        ~ElementBox();
+    };
 }

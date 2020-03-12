@@ -6,8 +6,7 @@
 class ITickingArea {
 
 public:
-    virtual ~ITickingArea();
-
-    ITickingArea();
+    ~ITickingArea();
 //  void serialize(AutomaticID<Dimension, int>)const; //TODO: incomplete function definition
+    ITickingArea();
 };

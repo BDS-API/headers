@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../../nbt/CompoundTag.h"
-#include "./BlockActor.h"
-#include "../../util/BlockPos.h"
+#include "BlockActor.h"
+#include "../../item/ItemInstance.h"
 #include "../../../unmapped/DataLoadHelper.h"
 #include "../../level/Level.h"
-#include "../../item/ItemInstance.h"
+#include "../../nbt/CompoundTag.h"
 #include "../unmapped/BlockSource.h"
+#include "../../util/BlockPos.h"
 
 
 class ItemFrameBlockActor : BlockActor {
@@ -14,26 +14,25 @@ class ItemFrameBlockActor : BlockActor {
 public:
     static long ROTATION_DEGREES;
 
-    virtual ~ItemFrameBlockActor();
-    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void save(CompoundTag &)const;
-    virtual void tick(BlockSource &);
-    virtual void onChanged(BlockSource &);
-    virtual void getUpdatePacket(BlockSource &);
     virtual void getShadowRadius(BlockSource &)const;
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
-
-    ItemFrameBlockActor(BlockPos);
-//  ItemFrameBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition
-    void _updateMapBit(BlockSource &);
-    void updateNameTag();
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void getUpdatePacket(BlockSource &);
+    ~ItemFrameBlockActor();
+    virtual void tick(BlockSource &);
+    virtual void onChanged(BlockSource &);
+    virtual void save(CompoundTag &)const;
     void getClockFrame();
-    void getCompassFrame();
+//  ItemFrameBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition
     void getFramedItem();
     void getRotation();
+    void getCompassFrame();
     void rotateFramedItem();
-    void dropFramedItem(BlockSource &, bool);
-    void _checkMapRemoval(BlockSource &, ItemInstance &);
-    void actuallyDropItem(BlockSource &, bool);
     void setItem(BlockSource &, ItemInstance const&);
+    void _checkMapRemoval(BlockSource &, ItemInstance &);
+    void _updateMapBit(BlockSource &);
+    void actuallyDropItem(BlockSource &, bool);
+    ItemFrameBlockActor(BlockPos);
+    void dropFramedItem(BlockSource &, bool);
+    void updateNameTag();
 };

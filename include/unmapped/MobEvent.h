@@ -6,13 +6,12 @@
 class MobEvent {
 
 public:
-
-    MobEvent();
-    MobEvent(std::string, std::string, bool);
-    bool isEnabled()const;
-    void setEnabled(bool);
     bool hasDefaultSet()const;
-    std::string getName()const;
-    std::string getLocalizableName()const;
     ~MobEvent();
+    MobEvent();
+    void setEnabled(bool);
+    std::string getLocalizableName()const;
+    MobEvent(std::string, std::string, bool);
+    std::string getName()const;
+    bool isEnabled()const;
 };

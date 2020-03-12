@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../actor/Actor.h"
-#include "../unmapped/ScriptEngine.h"
 #include "../ScriptObjectHandle.h"
-#include "../ScriptVersionInfo.h"
-#include "./ScriptContainerComponentBase.h"
+#include "ScriptContainerComponentBase.h"
+#include "../unmapped/ScriptEngine.h"
 #include "../unmapped/ScriptServerContext.h"
+#include "../../actor/Actor.h"
+#include "../ScriptVersionInfo.h"
 
 
 class ScriptHandContainerComponent : ScriptContainerComponentBase {
@@ -13,11 +13,10 @@ class ScriptHandContainerComponent : ScriptContainerComponentBase {
 public:
     static long mHash;
 
-    virtual ~ScriptHandContainerComponent();
-    virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
-    virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;
-
+    virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
+    virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
+    ~ScriptHandContainerComponent();
     void getHash();
     ScriptHandContainerComponent();
 };

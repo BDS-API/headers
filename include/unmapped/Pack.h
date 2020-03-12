@@ -1,18 +1,18 @@
 #pragma once
 
-#include "./SubpackInfoCollection.h"
-#include "../bedrock/pack/PackManifest.h"
-#include "./PackSourceReport.h"
-#include "./PackManifestFactory.h"
-#include <memory>
-#include "./ResourceLocation.h"
-#include "./Pack.h"
-#include "./IContentKeyProvider.h"
-#include "./PackMetadata.h"
-#include "./ContentTierInfo.h"
-#include "./PackReport.h"
-#include <functional>
 #include "../bedrock/pack/PackAccessStrategy.h"
+#include "PackManifestFactory.h"
+#include "../bedrock/pack/PackManifest.h"
+#include "ContentTierInfo.h"
+#include "PackSourceReport.h"
+#include "IContentKeyProvider.h"
+#include <string>
+#include "PackReport.h"
+#include "SubpackInfoCollection.h"
+#include <functional>
+#include <memory>
+#include "ResourceLocation.h"
+#include "PackMetadata.h"
 
 
 class Pack {
@@ -20,33 +20,32 @@ class Pack {
 public:
     static std::string EDUCATION_METADATA_FILE;
 
-
-    Pack(std::unique_ptr<PackManifest, std::default_delete<PackManifest>>, std::unique_ptr<PackAccessStrategy, std::default_delete<PackAccessStrategy>>, std::unique_ptr<SubpackInfoCollection, std::default_delete<SubpackInfoCollection>>, std::unique_ptr<PackMetadata, std::default_delete<PackMetadata>>);
-    void _loadLocalizationFiles();
-    ~Pack();
-    void move(Pack &&);
-    void getAccessStrategy();
-    void getManifest()const;
-    void getManifest();
-    void getManifestPtr()const;
+    void unregisterPackDeletedCallback(void *);
     void getManifestPtr();
     void getMetadata()const;
-    void getMetadata();
-//  void registerPackUpdatedCallback(void *, std::function<void (Pack &)>); //TODO: incomplete function definition
-//  void unregisterPackUpdatedCallback(void *); //TODO: incomplete function definition
-//  void registerPackDeletedCallback(void *, std::function<void (Pack &)>); //TODO: incomplete function definition
-//  void unregisterPackDeletedCallback(void *); //TODO: incomplete function definition
     void getAccessStrategy()const;
     void getSubpackInfoStack()const;
-    void getSubpackInfoStack();
-    bool isCompatiblePack(ContentTierInfo const&)const;
-    bool hasSubpacks()const;
-    void notifyUpdated();
-    void notifyDeleted();
-    bool isSignedProperly();
     void _validSignature()const;
+    Pack(std::unique_ptr<PackManifest>, std::unique_ptr<PackAccessStrategy>, std::unique_ptr<SubpackInfoCollection>, std::unique_ptr<PackMetadata>);
+//  void createPack(ResourceLocation const&, PackType, PackOrigin, PackManifestFactory &, IContentKeyProvider const&, PackSourceReport *); //TODO: incomplete function definition
+    void unregisterPackUpdatedCallback(void *);
     bool isTrusted()const;
     void generateWorldPackHistoryInfo()const;
-//  void createPack(ResourceLocation const&, PackType, PackOrigin, PackManifestFactory &, IContentKeyProvider const&, PackSourceReport *); //TODO: incomplete function definition
+    void registerPackDeletedCallback(void *, std::function<void (Pack &)>);
+    void getManifestPtr()const;
+    ~Pack();
+    void _loadLocalizationFiles();
+    void getMetadata();
 //  void createPackMetadata(PackType, PackManifest &, PackAccessStrategy const&, PackReport &); //TODO: incomplete function definition
+    void getManifest();
+    bool isCompatiblePack(ContentTierInfo const&)const;
+    void move(Pack &&);
+    bool hasSubpacks()const;
+    void getAccessStrategy();
+    void notifyUpdated();
+    void registerPackUpdatedCallback(void *, std::function<void (Pack &)>);
+    bool isSignedProperly();
+    void getManifest()const;
+    void notifyDeleted();
+    void getSubpackInfoStack();
 };

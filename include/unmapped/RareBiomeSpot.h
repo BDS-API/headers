@@ -5,12 +5,10 @@
 
 namespace LayerFilters {
 
-class RareBiomeSpot {
+    class RareBiomeSpot {
 
-public:
-
-    RareBiomeSpot(unsigned int, Biome &, Biome &);
-//  void operator()(LayerDetails::NeighborhoodReader<Biome *, 0u, 0u> &, LayerDetails::RandomProviderTconst::{lambda(long<LayerDetails::LayerBase::initRandom(long, long> &, unsigned int)const; //TODO: incomplete function definition
-};
-
+    public:
+        RareBiomeSpot(unsigned int, Biome &, Biome &);
+//      void operator()(LayerDetails::NeighborhoodReader<Biome *, 0u, 0u> &, LayerDetails::RandomProviderTconst::{lambda(long<LayerDetails::LayerBase::initRandom(long, long> &, unsigned int)const; //TODO: incomplete function definition
+    };
 }

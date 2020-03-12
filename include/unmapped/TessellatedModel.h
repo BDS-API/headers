@@ -4,11 +4,9 @@
 
 namespace BlockGeometry {
 
-class TessellatedModel {
+    class TessellatedModel {
 
-public:
-
-    ~TessellatedModel();
-};
-
+    public:
+        ~TessellatedModel();
+    };
 }

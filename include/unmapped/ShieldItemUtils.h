@@ -3,11 +3,9 @@
 #include "../bedrock/actor/damagesource/ActorDamageSource.h"
 
 
-class ShieldItemUtils {
+namespace ShieldItemUtils {
 
-public:
     static long mAlwaysBlockableDamageCauses;
-
 
     bool isBlockedDamageCause(ActorDamageSource const&);
 };

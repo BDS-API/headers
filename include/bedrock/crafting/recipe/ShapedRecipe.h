@@ -1,33 +1,31 @@
 #pragma once
 
-#include "./ShapedRecipe.h"
+#include "../../../unmapped/RecipeIngredient.h"
+#include <string>
 #include "../../../mce/UUID.h"
-#include "./Recipe.h"
+#include "Recipe.h"
+#include "../../level/Level.h"
+#include <vector>
 #include <memory>
 #include "../../container/CraftingContainer.h"
-#include "../../level/Level.h"
-#include "../../../unmapped/RecipeIngredient.h"
-#include <vector>
-#include <string>
 
 
 class ShapedRecipe : Recipe {
 
 public:
-    virtual ~ShapedRecipe();
-    virtual void assemble(CraftingContainer &)const;
+    virtual bool isExperimental()const;
+    virtual void size()const;
     virtual void getCraftingSize()const;
     virtual void getIngredient(int, int)const;
+    virtual void assemble(CraftingContainer &)const;
     virtual void getResultItem()const;
-    virtual bool isShapeless()const;
+    ~ShapedRecipe();
     virtual void matches(CraftingContainer &, Level &)const;
-    virtual void size()const;
-    virtual bool isExperimental()const;
-
-    ShapedRecipe(std::string, int, int, std::vector<RecipeIngredient, std::allocator<RecipeIngredient>> const&, std::vector const&, std::allocator<std::vector const>);
-    void generateUUID();
-    void setId(mce::UUID const&);
+    virtual bool isShapeless()const;
     ShapedRecipe(ShapedRecipe &&);
-    void matches(CraftingContainer &, int, int, bool)const;
+    ShapedRecipe(std::string, int, int, std::vector<RecipeIngredient> const&, std::vector const&, std::allocator<std::vector const>);
+    void setId(mce::UUID const&);
     void getIngredients()const;
+    void matches(CraftingContainer &, int, int, bool)const;
+    void generateUUID();
 };

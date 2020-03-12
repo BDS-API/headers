@@ -1,8 +1,7 @@
 #pragma once
 
-#include "../bedrock/item/ItemStack.h"
-#include "./ContainerItemStack.h"
 #include "../bedrock/item/ItemInstance.h"
+#include "../bedrock/item/ItemStack.h"
 
 
 class ContainerItemStack {
@@ -10,49 +9,48 @@ class ContainerItemStack {
 public:
     static long EMPTY_ITEM;
 
-
-    ~ContainerItemStack();
-    ContainerItemStack();
-    ContainerItemStack(ItemStack const&);
-    ContainerItemStack(ItemInstance const&);
-    void operator-(ContainerItemStack const&);
-    bool isEmpty()const;
-    void decreaseCount(int);
-    void getCount()const;
-    void operator+(ContainerItemStack const&);
-    void increaseCount(int);
-    void operator==(ContainerItemStack const&)const;
-    void matches(ContainerItemStack const&)const;
-    void operator!=(ContainerItemStack const&)const;
-    void operator==(ItemStack const&)const;
-    void operator!=(ItemStack const&)const;
+    void getItemStack()const;
     void operator==(ItemInstance const&)const;
     void operator!=(ItemInstance const&)const;
-    void getItem()const;
-    void getId()const;
-    void getAuxValue()const;
-    void setAuxValue(short);
     void getDamageValue()const;
-    void setDamageValue(short);
-    void getIdAux()const;
-    void getIdAuxEnchanted()const;
     bool isNull()const;
-    void setNull();
+    bool asItemStack()const;
+    void operator!=(ContainerItemStack const&)const;
     void forceSetCount(int);
-    void getStackSize()const;
+    void operator==(ItemStack const&)const;
+    void decreaseCount(int);
+    bool isEmpty()const;
+    bool hasUserData()const;
+    void getDescriptor()const;
+    void operator+(ContainerItemStack const&);
+    ContainerItemStack(ContainerItemStack &&);
+    ContainerItemStack(ItemInstance const&);
+    void getItem()const;
+    void operator==(ContainerItemStack const&)const;
+    void setDamageValue(short);
+    void getId()const;
+    ContainerItemStack(ItemStack const&);
+    void setAuxValue(short);
+    void matches(ContainerItemStack const&)const;
+    void getColor()const;
+    void operator!=(ItemStack const&)const;
+    ContainerItemStack(ContainerItemStack const&);
+    void getItemInstance();
+    bool matchesItem(ContainerItemStack const&)const;
+    void operator-(ContainerItemStack const&);
+    void setNull();
+    void getAuxValue()const;
+    void getItemStack();
+    void getCount()const;
+    ~ContainerItemStack();
+    void getItemInstance()const;
+    void getUserData()const;
     void setStackSize(unsigned char);
     void getMaxStackSize()const;
-    void getItemStack()const;
-    void getItemInstance()const;
-    bool matchesItem(ContainerItemStack const&)const;
-    void getDescriptor()const;
-    bool hasUserData()const;
-    void getUserData()const;
-    void getColor()const;
-    void getItemStack();
-    void getItemInstance();
-    bool asItemStack()const;
+    void getIdAuxEnchanted()const;
+    void increaseCount(int);
+    ContainerItemStack();
     bool asItemInstance()const;
-    ContainerItemStack(ContainerItemStack const&);
-    ContainerItemStack(ContainerItemStack &&);
+    void getStackSize()const;
+    void getIdAux()const;
 };

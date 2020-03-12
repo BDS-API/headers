@@ -5,12 +5,11 @@
 class SpinLock {
 
 public:
-
-    SpinLock();
-    ~SpinLock();
-    void try_lock();
     void _try_lock(unsigned long);
     void _getThreadId();
+    SpinLock();
     void lock();
     void unlock();
+    void try_lock();
+    ~SpinLock();
 };

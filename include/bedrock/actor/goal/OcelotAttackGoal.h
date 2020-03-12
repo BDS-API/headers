@@ -1,6 +1,6 @@
 #pragma once
 
-#include "./Goal.h"
+#include "Goal.h"
 #include "../Mob.h"
 #include <string>
 
@@ -8,12 +8,11 @@
 class OcelotAttackGoal : Goal {
 
 public:
-    virtual ~OcelotAttackGoal();
-    virtual bool canUse();
+    ~OcelotAttackGoal();
     virtual bool canContinueToUse();
+    virtual bool canUse();
+    virtual void appendDebugInfo(std::string &)const;
     virtual void stop();
     virtual void tick();
-    virtual void appendDebugInfo(std::string &)const;
-
     OcelotAttackGoal(Mob &, float, float, float);
 };

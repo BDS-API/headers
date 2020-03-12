@@ -1,22 +1,20 @@
 #pragma once
 
-#include "../bedrock/command/Command.h"
 #include "../bedrock/actor/Actor.h"
+#include "../bedrock/command/Command.h"
 #include <memory>
-#include "./AgentCommandComponent.h"
 
 
 class AgentCommandComponent {
 
 public:
-
-    ~AgentCommandComponent();
-    AgentCommandComponent(AgentCommandComponent &&);
-    AgentCommandComponent();
-    void initFromDefinition(Actor &);
-    void getCurrentCommand()const;
     void getWaitForNextCommandTicks();
-    void setCurrentCommand(std::unique_ptr<AgentCommands::Command, std::default_delete<AgentCommands::Command>>);
+    void getCurrentCommand()const;
+    void initFromDefinition(Actor &);
+    void addCommand(std::unique_ptr<AgentCommands::Command>);
+    AgentCommandComponent(AgentCommandComponent &&);
     bool hasCommand();
-    void addCommand(std::unique_ptr<AgentCommands::Command, std::default_delete<AgentCommands::Command>>);
+    AgentCommandComponent();
+    void setCurrentCommand(std::unique_ptr<AgentCommands::Command>);
+    ~AgentCommandComponent();
 };

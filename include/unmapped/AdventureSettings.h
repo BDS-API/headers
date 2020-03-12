@@ -5,6 +5,5 @@
 class AdventureSettings {
 
 public:
-
     AdventureSettings();
 };

@@ -1,25 +1,24 @@
 #pragma once
 
-#include "../../unmapped/RenderParams.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Animal.h"
-#include "../util/BlockPos.h"
 #include "unmapped/ActorDefinitionGroup.h"
+#include "../util/BlockPos.h"
+#include "../../unmapped/RenderParams.h"
+#include "Animal.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../../unmapped/Block.h"
 
 
 class Chicken : Animal {
 
 public:
-    virtual ~Chicken();
-    virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void _playStepSound(BlockPos const&, Block const&);
-    virtual void aiStep();
+    ~Chicken();
     virtual void useNewAi()const;
-
+    virtual void updateEntitySpecificMolangVariables(RenderParams &);
+    virtual void aiStep();
     Chicken(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    void getOFlapSpeed()const;
     void getFlap()const;
     void getOFlap()const;
     void getFlapSpeed()const;
-    void getOFlapSpeed()const;
 };

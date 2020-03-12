@@ -7,7 +7,6 @@
 class PendingRemovalInfo {
 
 public:
-
-    PendingRemovalInfo(std::unique_ptr<Actor, std::default_delete<Actor>>, int);
     ~PendingRemovalInfo();
+    PendingRemovalInfo(std::unique_ptr<Actor>, int);
 };

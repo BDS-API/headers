@@ -1,21 +1,19 @@
 #pragma once
 
-#include "../../../unmapped/BehaviorFactory.h"
-#include "../../actor/Actor.h"
 #include "../../../unmapped/BehaviorData.h"
-#include "../../actor/behavior/BehaviorNode.h"
+#include "../../actor/Actor.h"
 #include "../../../json/Value.h"
-#include <string>
+#include "../../actor/behavior/BehaviorNode.h"
+#include "../../../unmapped/BehaviorFactory.h"
 
 
 class BehaviorDefinition {
 
 public:
-    virtual ~BehaviorDefinition();
-    virtual void load(Json::Value, BehaviorFactory const&);
+    ~BehaviorDefinition();
     virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const;
-
+    virtual void load(Json::Value, BehaviorFactory const&);
+    void getTreeDefinition()const;
     BehaviorDefinition();
     std::string getName()const;
-    void getTreeDefinition()const;
 };

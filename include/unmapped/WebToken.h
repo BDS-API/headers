@@ -1,30 +1,27 @@
 #pragma once
 
-#include "../json/Value.h"
-#include <memory>
-#include "./PrivateKeyManager.h"
+#include "PrivateKeyManager.h"
 #include <vector>
-#include "./WebToken.h"
 #include <string>
+#include "../json/Value.h"
 
 
 class WebToken {
 
 public:
-
-    WebToken(WebToken const&);
-    ~WebToken();
     void getData()const;
-    WebToken(std::string);
-    void _parse(Json::Value &, std::string const&);
-    std::string _signatureToDER()const;
-    void _DERToSignature(std::string const&, int);
-    void _DERToBinary(std::string const&, int);
-    void verifyWithIncludedKey(std::vector<std::string, std::allocator<std::string>> const&)const;
-    void verifyWithExternalKey(std::string const&)const;
-    void createFromData(Json::Value const&, PrivateKeyManager const&);
-    std::string getSignerPublicKey()const;
-    std::string getSigningCertificateThumbprint()const;
+    ~WebToken();
     std::string toString()const;
     WebToken();
+    void createFromData(Json::Value const&, PrivateKeyManager const&);
+    void verifyWithExternalKey(std::string const&)const;
+    WebToken(WebToken const&);
+    void _parse(Json::Value &, std::string const&);
+    void _DERToBinary(std::string const&, int);
+    std::string getSigningCertificateThumbprint()const;
+    std::string _signatureToDER()const;
+    void _DERToSignature(std::string const&, int);
+    void verifyWithIncludedKey(std::vector<std::string> const&)const;
+    WebToken(std::string);
+    std::string getSignerPublicKey()const;
 };

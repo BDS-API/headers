@@ -1,25 +1,23 @@
 #pragma once
 
-#include "../../item/unmapped/ItemDescriptor.h"
-#include <memory>
-#include "./Goal.h"
-#include "../Player.h"
-#include <vector>
-#include "../Mob.h"
 #include <string>
+#include "../Player.h"
+#include "../Mob.h"
+#include <vector>
+#include "Goal.h"
+#include "../../item/unmapped/ItemDescriptor.h"
 
 
 class BegGoal : Goal {
 
 public:
-    virtual ~BegGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
-    virtual void start();
     virtual void stop();
     virtual void tick();
+    virtual void start();
+    virtual bool canContinueToUse();
+    ~BegGoal();
     virtual void appendDebugInfo(std::string &)const;
-
-    BegGoal(Mob &, std::vector<ItemDescriptor, std::allocator<ItemDescriptor>> const&, float, int, int);
+    virtual bool canUse();
     void _playerHoldingInteresting(Player *);
+    BegGoal(Mob &, std::vector<ItemDescriptor> const&, float, int, int);
 };

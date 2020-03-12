@@ -1,22 +1,20 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
-#include "./DataLoadHelper.h"
 #include "../bedrock/nbt/CompoundTag.h"
-#include "./InsomniaComponent.h"
+#include "DataLoadHelper.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class InsomniaComponent {
 
 public:
-
-    InsomniaComponent(InsomniaComponent &&);
-    void restartTimer();
-    bool hasInsomnia()const;
-    void setInsomnia(int);
-    void getInsomniaTimerTicks()const;
-    void getTicksUntilInsomnia()const;
-    void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
+    void getInsomniaTimerTicks()const;
+    bool hasInsomnia()const;
+    void getTicksUntilInsomnia()const;
+    void restartTimer();
+    void addAdditionalSaveData(CompoundTag &);
     void incrementTimeSinceRest();
+    void setInsomnia(int);
+    InsomniaComponent(InsomniaComponent &&);
 };

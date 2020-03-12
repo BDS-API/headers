@@ -5,6 +5,5 @@
 class MesaSurfaceAttributes {
 
 public:
-
     MesaSurfaceAttributes();
 };

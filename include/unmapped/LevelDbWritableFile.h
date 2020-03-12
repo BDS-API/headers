@@ -7,12 +7,11 @@
 class LevelDbWritableFile /*leveldb::WritableFile*/ { //TODO: incomplete class definition
 
 public:
-    virtual ~LevelDbWritableFile();
-//  virtual void Append(leveldb::Slice const&); //TODO: incomplete function definition
     virtual void Close();
-    virtual void Flush();
+//  virtual void Append(leveldb::Slice const&); //TODO: incomplete function definition
     virtual void Sync();
-
-    LevelDbWritableFile(std::string, Core::File &&);
+    virtual void Flush();
+    ~LevelDbWritableFile();
     void SyncDirIfManifest();
+    LevelDbWritableFile(std::string, Core::File &&);
 };

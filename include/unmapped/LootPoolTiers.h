@@ -3,12 +3,10 @@
 #include "../json/Value.h"
 
 
-class LootPoolTiers {
+namespace LootPoolTiers {
 
-public:
-
-    void getRange();
+    void deserialize(Json::Value);
     void getBonusRolls();
     void getBonusChance();
-    void deserialize(Json::Value);
+    void getRange();
 };

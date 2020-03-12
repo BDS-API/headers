@@ -4,12 +4,10 @@
 
 namespace WoodlandMansionPieces {
 
-class FloorRoomCollection {
+    class FloorRoomCollection {
 
-public:
-    virtual ~FloorRoomCollection();
-
-    FloorRoomCollection();
-};
-
+    public:
+        ~FloorRoomCollection();
+        FloorRoomCollection();
+    };
 }

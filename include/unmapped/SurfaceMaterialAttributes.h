@@ -5,6 +5,5 @@
 class SurfaceMaterialAttributes {
 
 public:
-
     SurfaceMaterialAttributes();
 };

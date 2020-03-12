@@ -1,14 +1,13 @@
 #pragma once
 
-#include "../../../unmapped/SurfaceBuilderRegistry.h"
-#include "../../../unmapped/IWorldRegistriesProvider.h"
-#include "../../../unmapped/BiomeComponentFactory.h"
 #include "../../../unmapped/BiomeRegistry.h"
+#include "../../../unmapped/SurfaceBuilderRegistry.h"
+#include "../../../unmapped/BiomeComponentFactory.h"
+#include "../../../unmapped/IWorldRegistriesProvider.h"
 
 
-class VanillaBiomes {
+namespace VanillaBiomes {
 
-public:
     static long SWAMP_WATER_COLOR;
     static long WATER_FOG_COLOR_SWAMP;
     static long HEIGHTS_RIVER;
@@ -81,13 +80,12 @@ public:
     static long mSavannaRockMutated;
     static long mRoofedForestMutated;
 
-
-    void initBiomes(BiomeRegistry &);
     void initBiomeComponents(BiomeComponentFactory &);
+    void initBiomes(BiomeRegistry &);
+    bool isValidSpawn(int);
+    void initVanillaBiomeTypeComponent(BiomeRegistry &);
     void initSurfaceBuilders(SurfaceBuilderRegistry &);
     void initDefaultWorldGenComponents(IWorldRegistriesProvider &);
     void initClientOnlyComponents(BiomeRegistry &);
-    void initVanillaBiomeTypeComponent(BiomeRegistry &);
     void shutdownBiomes();
-    bool isValidSpawn(int);
 };

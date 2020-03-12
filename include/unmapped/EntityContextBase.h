@@ -1,21 +1,19 @@
 #pragma once
 
-#include "./EntityRegistryBase.h"
-#include "./EntityId.h"
-#include "./EntityContextBase.h"
+#include "EntityId.h"
+#include "EntityRegistryBase.h"
 
 
 class EntityContextBase {
 
 public:
-
     EntityContextBase(EntityRegistryBase &, EntityId);
-    EntityContextBase(EntityRegistryBase &, unsigned int);
     void operator==(EntityContextBase const&)const;
-    void operator!=(EntityContextBase const&)const;
     bool isValid()const;
-    void _assertValid()const;
-    void _registry()const;
-    void _registry();
     void _getRawId()const;
+    void _registry();
+    void _registry()const;
+    void _assertValid()const;
+    void operator!=(EntityContextBase const&)const;
+    EntityContextBase(EntityRegistryBase &, unsigned int);
 };

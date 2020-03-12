@@ -2,21 +2,19 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
-#include <string>
+#include "Packet.h"
 
 
 class MapInfoRequestPacket : Packet {
 
 public:
-    virtual ~MapInfoRequestPacket();
     virtual void getId()const;
     virtual std::string getName()const;
+    ~MapInfoRequestPacket();
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    MapInfoRequestPacket();
-    MapInfoRequestPacket(ActorUniqueID);
     void getMapId()const;
+    MapInfoRequestPacket(ActorUniqueID);
+    MapInfoRequestPacket();
 };

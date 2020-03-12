@@ -1,28 +1,27 @@
 #pragma once
 
-#include <string>
-#include "./ItemStackBase.h"
-#include <memory>
 #include "../util/BlockPos.h"
-#include "./Item.h"
-#include "../level/Level.h"
+#include "ItemStack.h"
+#include <string>
 #include "../actor/Actor.h"
-#include <vector>
 #include "../nbt/CompoundTag.h"
-#include "./ItemStack.h"
+#include <vector>
+#include "ItemStackBase.h"
+#include <memory>
+#include "Item.h"
+#include "../level/Level.h"
 #include "unmapped/ItemDescriptor.h"
 
 
 class BannerItem : Item {
 
 public:
-    virtual ~BannerItem();
-    virtual bool isWearableThroughLootTable(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
-    virtual bool isValidAuxValue(int)const;
-    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
+    ~BannerItem();
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
-
+    virtual bool isValidAuxValue(int)const;
+    virtual bool isWearableThroughLootTable(std::unique_ptr<CompoundTag> const&)const;
+    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const;
+    void appendHoverTextFromBannerEntityTag(ItemStack const&, std::vector<std::string> &);
     BannerItem(std::string const&, int);
-    void appendHoverTextFromBannerEntityTag(ItemStack const&, std::vector<std::string, std::allocator<std::string>> &);
 };

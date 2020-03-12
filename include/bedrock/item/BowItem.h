@@ -1,17 +1,16 @@
 #pragma once
 
-#include "./RangedWeaponItem.h"
-#include "./ItemStackBase.h"
+#include "RangedWeaponItem.h"
 #include <string>
+#include "ItemStackBase.h"
 
 
 class BowItem : RangedWeaponItem {
 
 public:
-    virtual ~BowItem();
-    virtual void getEnchantSlot()const;
+    ~BowItem();
     virtual void getIcon(ItemStackBase const&, int, bool)const;
+    virtual void getEnchantSlot()const;
     virtual void setIcon(std::string const&, int);
-
     BowItem(std::string const&, int);
 };

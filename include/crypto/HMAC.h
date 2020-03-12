@@ -3,20 +3,17 @@
 #include <string>
 
 
-namespace Crypto::Hash {
+namespace Crypto {
 
-class HMAC {
+    namespace Hash {
 
-public:
+        class HMAC {
 
-    void resultSize()const;
-    void signAndAppend(std::string const&, std::string &, unsigned long);
-    ~HMAC();
-//  HMAC(Crypto::Hash::HashType, std::string const&, int); //TODO: incomplete function definition
-    void resultSize()const;
-    void signAndAppend(std::string const&, std::string &, unsigned long);
-    ~HMAC();
-//  HMAC(Crypto::Hash::HashType, std::string const&, int); //TODO: incomplete function definition
-};
-
+        public:
+//          HMAC(Crypto::Hash::HashType, std::string const&, int); //TODO: incomplete function definition
+            ~HMAC();
+            void signAndAppend(std::string const&, std::string &, unsigned long);
+            void resultSize()const;
+        };
+    }
 }

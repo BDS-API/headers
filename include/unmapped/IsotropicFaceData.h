@@ -6,14 +6,13 @@
 class IsotropicFaceData {
 
 public:
-
-    IsotropicFaceData();
-    void setTextureIsotropic(unsigned int);
-    void setTextureIsotropic(Json::Value const&);
-    void setAllFacesIsotropic();
-    void setNoFacesIsotropic();
-    bool isTextureIsotropic(unsigned char)const;
     bool isFaceIsotropicEnabled(unsigned char)const;
-    void getFaceTextureIsotropic();
+    void setTextureIsotropic(Json::Value const&);
+    void setTextureIsotropic(unsigned int);
     void setAllFacesEnabled();
+    IsotropicFaceData();
+    void setAllFacesIsotropic();
+    void getFaceTextureIsotropic();
+    bool isTextureIsotropic(unsigned char)const;
+    void setNoFacesIsotropic();
 };

@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../io/BinaryStream.h"
-#include <string>
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "Packet.h"
 
 
 class LecternUpdatePacket : Packet {
 
 public:
-    virtual ~LecternUpdatePacket();
+    virtual void write(BinaryStream &)const;
+    ~LecternUpdatePacket();
     virtual void getId()const;
     virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
     LecternUpdatePacket();
 };

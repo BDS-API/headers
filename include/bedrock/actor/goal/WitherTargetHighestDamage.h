@@ -1,25 +1,23 @@
 #pragma once
 
-#include "../Actor.h"
-#include <memory>
-#include "./TargetGoal.h"
 #include "../WitherBoss.h"
-#include "../../../unmapped/MobDescriptor.h"
-#include <vector>
-#include "../Mob.h"
 #include <string>
+#include "../Actor.h"
+#include "../Mob.h"
+#include <vector>
+#include "TargetGoal.h"
+#include "../../../unmapped/MobDescriptor.h"
 
 
 class WitherTargetHighestDamage : TargetGoal {
 
 public:
-    virtual ~WitherTargetHighestDamage();
-    virtual bool canUse();
     virtual bool canContinueToUse();
+    ~WitherTargetHighestDamage();
+    virtual bool canUse();
     virtual void start();
     virtual void appendDebugInfo(std::string &)const;
     virtual void _canAttack(Mob *, Actor *, bool, bool, MobDescriptor const**);
-
-    WitherTargetHighestDamage(WitherBoss &, std::vector<MobDescriptor, std::allocator<MobDescriptor>> const&);
     void getHighestDamageTarget();
+    WitherTargetHighestDamage(WitherBoss &, std::vector<MobDescriptor> const&);
 };

@@ -1,25 +1,24 @@
 #pragma once
 
-#include "../../definition/DefinitionTrigger.h"
-#include "../../util/BlockPos.h"
-#include "./BaseMoveToBlockGoal.h"
+#include <string>
 #include "../../block/unmapped/BlockSource.h"
 #include "../Mob.h"
-#include <string>
+#include "BaseMoveToBlockGoal.h"
+#include "../../util/BlockPos.h"
+#include "../../definition/DefinitionTrigger.h"
 
 
 class LayEggGoal : BaseMoveToBlockGoal {
 
 public:
-    virtual ~LayEggGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
+    virtual bool isValidTarget(BlockSource &, BlockPos const&);
+    ~LayEggGoal();
+    virtual void appendDebugInfo(std::string &)const;
     virtual void start();
     virtual void tick();
-    virtual void appendDebugInfo(std::string &)const;
-    virtual bool isValidTarget(BlockSource &, BlockPos const&);
+    virtual bool canUse();
     virtual void _moveToBlock();
-
-    LayEggGoal(Mob &, float, int, int, int, float, DefinitionTrigger const&);
+    virtual bool canContinueToUse();
     void _layEgg(BlockPos const&);
+    LayEggGoal(Mob &, float, int, int, int, float, DefinitionTrigger const&);
 };

@@ -5,7 +5,6 @@
 class BackwardsCompatTextureGroup {
 
 public:
-
-    BackwardsCompatTextureGroup();
     ~BackwardsCompatTextureGroup();
+    BackwardsCompatTextureGroup();
 };

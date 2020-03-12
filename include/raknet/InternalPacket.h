@@ -4,11 +4,9 @@
 
 namespace RakNet {
 
-class InternalPacket {
+    class InternalPacket {
 
-public:
-
-    InternalPacket();
-};
-
+    public:
+        InternalPacket();
+    };
 }

@@ -1,38 +1,36 @@
 #pragma once
 
-#include <utility>
 #include "../../io/BinaryStream.h"
-#include "../../../unmapped/MapItemSavedData.h"
-#include "../../io/ReadOnlyBinaryStream.h"
 #include "../../../unmapped/MapDecoration.h"
-#include "../../../unmapped/UniqueId.h"
-#include <memory>
-#include "../../../unmapped/Dimension.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "../../../unmapped/MapItemSavedData.h"
 #include "../../level/Level.h"
-#include "./Packet.h"
-#include <vector>
 #include "../../actor/unmapped/ActorUniqueID.h"
-#include <string>
+#include <vector>
+#include <memory>
+#include "../../../unmapped/MapItemTrackedActor.h"
+#include "../../../unmapped/Dimension.h"
+#include "Packet.h"
+#include <utility>
 
 
 class ClientboundMapItemDataPacket : Packet {
 
 public:
-    virtual ~ClientboundMapItemDataPacket();
     virtual void getId()const;
     virtual std::string getName()const;
+    ~ClientboundMapItemDataPacket();
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
-//  ClientboundMapItemDataPacket(ActorUniqueID, signed const, std::vector<std::pair<MapItemTrackedActor::UniqueId, std::shared_ptr<MapDecoration>>, std::allocator<std::pair<MapItemTrackedActor::UniqueId, std::shared_ptr<MapDecoration>>>> const&, buffer_span<unsigned int>, int, int, int, int, AutomaticID<Dimension, int>, bool); //TODO: incomplete function definition
-    ClientboundMapItemDataPacket();
+    void getScale()const;
+//  ClientboundMapItemDataPacket(ActorUniqueID, signed const, std::vector<std::pair<MapItemTrackedActor::UniqueId, std::shared_ptr<MapDecoration>>> const&, buffer_span<unsigned int>, int, int, int, int, AutomaticID<Dimension, int>, bool); //TODO: incomplete function definition
     ClientboundMapItemDataPacket(MapItemSavedData &, Level &);
-//  bool isOfType(ClientboundMapItemDataPacket::Type)const; //TODO: incomplete function definition
     void getMapId()const;
     void getMapIds()const;
-    void applyToMap(MapItemSavedData &)const;
-    bool isTextureUpdate()const;
-    void getScale()const;
     void getDimensionId()const;
+    void applyToMap(MapItemSavedData &)const;
+    ClientboundMapItemDataPacket();
+//  bool isOfType(ClientboundMapItemDataPacket::Type)const; //TODO: incomplete function definition
     bool isLocked()const;
+    bool isTextureUpdate()const;
 };

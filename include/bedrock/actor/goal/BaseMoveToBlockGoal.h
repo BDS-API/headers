@@ -1,17 +1,16 @@
 #pragma once
 
+#include "BaseMoveToGoal.h"
 #include "../Mob.h"
-#include "./BaseMoveToGoal.h"
 
 
 class BaseMoveToBlockGoal : BaseMoveToGoal {
 
 public:
-    virtual ~BaseMoveToBlockGoal();
-    virtual bool canUse();
     virtual bool canContinueToUse();
-    virtual void _moveToBlock();
     virtual void findTargetBlock();
-
+    virtual void _moveToBlock();
+    virtual bool canUse();
+    ~BaseMoveToBlockGoal();
     BaseMoveToBlockGoal(Mob &, float, int, int, int, float, float);
 };

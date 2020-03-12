@@ -1,12 +1,11 @@
 #pragma once
 
-#include "./ScoreboardId.h"
+#include "Objective.h"
+#include <string>
 #include "../bedrock/level/scoreboard/Scoreboard.h"
-#include "./Objective.h"
-#include "./ScoreboardIdentityRef.h"
 #include "../bedrock/actor/unmapped/ActorUniqueID.h"
 #include <functional>
-#include <string>
+#include "ScoreboardId.h"
 
 
 class ScoreboardIdentityRef {
@@ -14,24 +13,23 @@ class ScoreboardIdentityRef {
 public:
     static long Undefined;
 
-
-    ScoreboardIdentityRef(ScoreboardIdentityRef const&);
-    ScoreboardIdentityRef();
-    ScoreboardIdentityRef(ScoreboardId const&);
-    void getScoreboardId()const;
-    void getPlayerId()const;
-    void getEntityId()const;
-    std::string getFakePlayerName()const;
-    void getName(std::function<std::string const& (ActorUniqueID)> const&)const;
-    void getNumReferences()const;
-    bool isCurrentlyReferenced()const;
-    void getIdentityType()const;
-    bool isPlayerType()const;
-    bool isEntityType()const;
     bool isFakeType()const;
-    bool isHiddenFakePlayer()const;
-    bool hasScoreInObjective(Objective const&)const;
-    void removeFromObjective(Scoreboard &, Objective &);
-//  void modifyScoreInObjective(int &, Objective &, int, PlayerScoreSetFunction); //TODO: incomplete function definition
     void serialize(ScoreboardIdentityRef const&);
+    bool hasScoreInObjective(Objective const&)const;
+    bool isPlayerType()const;
+    bool isHiddenFakePlayer()const;
+    void getScoreboardId()const;
+    ScoreboardIdentityRef(ScoreboardId const&);
+    std::string getFakePlayerName()const;
+    ScoreboardIdentityRef();
+    bool isCurrentlyReferenced()const;
+    void getNumReferences()const;
+    ScoreboardIdentityRef(ScoreboardIdentityRef const&);
+    void removeFromObjective(Scoreboard &, Objective &);
+    void getIdentityType()const;
+    void getEntityId()const;
+    void getName(std::function<std::string const& (ActorUniqueID)> const&)const;
+    void getPlayerId()const;
+//  void modifyScoreInObjective(int &, Objective &, int, PlayerScoreSetFunction); //TODO: incomplete function definition
+    bool isEntityType()const;
 };

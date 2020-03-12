@@ -1,12 +1,11 @@
 #pragma once
 
-#include "../../item/unmapped/ItemDescriptor.h"
-#include <memory>
-#include "./Goal.h"
 #include "../../item/ItemStack.h"
-#include <vector>
-#include "../Mob.h"
 #include <string>
+#include "../Mob.h"
+#include <vector>
+#include "Goal.h"
+#include "../../item/unmapped/ItemDescriptor.h"
 
 
 class SnackGoal : Goal {
@@ -20,16 +19,15 @@ public:
     static long SEARCH_SIZE;
     static long STOP_DIST_SQRD;
 
-    virtual ~SnackGoal();
     virtual bool canUse();
+    virtual void tick();
     virtual bool canContinueToUse();
     virtual void start();
-    virtual void stop();
-    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
-
-    SnackGoal(Mob &, std::vector<ItemDescriptor, std::allocator<ItemDescriptor>> const&, float, float, float);
+    virtual void stop();
+    ~SnackGoal();
     void _hasSnackableItems();
-    void _updateHand(ItemStack const&);
     void _isSnackableItem(ItemStack const&)const;
+    void _updateHand(ItemStack const&);
+    SnackGoal(Mob &, std::vector<ItemDescriptor> const&, float, float, float);
 };

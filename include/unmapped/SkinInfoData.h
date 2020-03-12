@@ -1,26 +1,25 @@
 #pragma once
 
-#include "../mce/Image.h"
 #include <string>
+#include "../mce/Image.h"
 
 
 class SkinInfoData {
 
 public:
-    virtual ~SkinInfoData();
     virtual void validateAndResizeSkinData(mce::Image &, bool);
-
-    bool isValidSize(unsigned long);
-    void copySkinPart(mce::Image &, int, int, int, int, int, int, int, int);
-    void validateAlpha(mce::Image &, int, int, int, int, float, bool);
-    void setForceAlpha(mce::Image &, int, int, int, int);
-    void setNoAlpha(mce::Image &, int, int, int, int);
-    void verifyIsPremiumGeometry(std::string const&);
-    bool isValidFullSize(unsigned long);
-    bool isDirty()const;
+    ~SkinInfoData();
     void setClean();
+    void setForceAlpha(mce::Image &, int, int, int, int);
     void getGeometryData()const;
-    void getSkin()const;
     void getSkinMutable();
+    void copySkinPart(mce::Image &, int, int, int, int, int, int, int, int);
     bool isAlphaTest()const;
+    void verifyIsPremiumGeometry(std::string const&);
+    bool isDirty()const;
+    void validateAlpha(mce::Image &, int, int, int, int, float, bool);
+    void getSkin()const;
+    void setNoAlpha(mce::Image &, int, int, int, int);
+    bool isValidSize(unsigned long);
+    bool isValidFullSize(unsigned long);
 };

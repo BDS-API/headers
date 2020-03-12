@@ -1,26 +1,38 @@
 #pragma once
 
-#include "./NetworkIdentifier.h"
-#include "./NetworkHandler.h"
+#include "NetworkHandler.h"
+#include "NetworkIdentifier.h"
 #include <string>
 
 
-namespace ClientBlobCache::Server {
+namespace ClientBlobCache {
 
-class ActiveTransfersManager {
+    namespace Server {
 
-public:
+        class ActiveTransfersManager {
 
-    ActiveTransfersManager();
-    ~ActiveTransfersManager();
-    void enableCacheFor(NetworkIdentifier const&);
-    bool isCacheEnabledFor(NetworkIdentifier const&)const;
-    void onPeerDisconnected(NetworkIdentifier const&);
-    void tryStartTransfer(NetworkIdentifier const&)const;
-    void getTrackerFor(NetworkIdentifier const&)const;
-    void rememberBlob(unsigned long, std::string &);
-    void dropBlobFor(NetworkIdentifier const&, unsigned long);
-    void updateNetworkConditions(NetworkHandler &);
-};
+        public:
+            class TransferTracker;
 
+            void tryStartTransfer(NetworkIdentifier const&)const;
+            void onPeerDisconnected(NetworkIdentifier const&);
+            void updateNetworkConditions(NetworkHandler &);
+            void enableCacheFor(NetworkIdentifier const&);
+            ~ActiveTransfersManager();
+            bool isCacheEnabledFor(NetworkIdentifier const&)const;
+            void dropBlobFor(NetworkIdentifier const&, unsigned long);
+            void rememberBlob(unsigned long, std::string &);
+            void getTrackerFor(NetworkIdentifier const&)const;
+            ActiveTransfersManager();
+            class TransferTracker {
+
+            public:
+                void tryStartTransfer()const;
+                TransferTracker(NetworkIdentifier const&, ClientBlobCache::Server::ActiveTransfersManager &);
+                void updateNetworkConditions(NetworkHandler &);
+                ~TransferTracker();
+                void onAckReceived(unsigned long);
+            };
+        };
+    }
 }

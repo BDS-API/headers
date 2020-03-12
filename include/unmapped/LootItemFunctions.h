@@ -3,9 +3,7 @@
 #include "../json/Value.h"
 
 
-class LootItemFunctions {
-
-public:
+namespace LootItemFunctions {
 
     void deserialize(Json::Value);
 };

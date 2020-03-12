@@ -1,13 +1,12 @@
 #pragma once
 
-#include "./ShapedRecipe.h"
-#include "./ShapedChemistryRecipe.h"
+#include "../../../unmapped/RecipeIngredient.h"
+#include "ShapedRecipe.h"
+#include <string>
+#include "../../level/Level.h"
+#include <vector>
 #include <memory>
 #include "../../container/CraftingContainer.h"
-#include "../../level/Level.h"
-#include "../../../unmapped/RecipeIngredient.h"
-#include <vector>
-#include <string>
 
 
 class ShapedChemistryRecipe : ShapedRecipe {
@@ -15,10 +14,9 @@ class ShapedChemistryRecipe : ShapedRecipe {
 public:
     static long ID;
 
-    virtual ~ShapedChemistryRecipe();
     virtual void matches(CraftingContainer &, Level &)const;
+    ~ShapedChemistryRecipe();
     virtual void getId()const;
-
     ShapedChemistryRecipe(ShapedChemistryRecipe &&);
-    void construct(std::string, int, int, std::vector<RecipeIngredient, std::allocator<RecipeIngredient>> const&, std::vector const&, std::allocator<std::vector const>);
+    void construct(std::string, int, int, std::vector<RecipeIngredient> const&, std::vector const&, std::allocator<std::vector const>);
 };

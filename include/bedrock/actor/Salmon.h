@@ -1,17 +1,16 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup.h"
+#include "Player.h"
 #include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Player.h"
-#include "./Fish.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "Fish.h"
 
 
 class Salmon : Fish {
 
 public:
-    virtual ~Salmon();
+    ~Salmon();
     virtual void playerTouch(Player &);
     virtual void createAIGoals();
-
     Salmon(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

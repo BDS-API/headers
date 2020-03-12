@@ -1,16 +1,15 @@
 #pragma once
 
-#include "./PropertyDescription.h"
 #include "../../../json/Value.h"
+#include "PropertyDescription.h"
 
 
 class IsHiddenWhenInvisibleDescription : PropertyDescription {
 
 public:
     virtual void getJsonName()const;
-    virtual ~IsHiddenWhenInvisibleDescription();
-    virtual void deserializeData(Json::Value &);
+    ~IsHiddenWhenInvisibleDescription();
     virtual void serializeData(Json::Value &)const;
-
+    virtual void deserializeData(Json::Value &);
     IsHiddenWhenInvisibleDescription();
 };

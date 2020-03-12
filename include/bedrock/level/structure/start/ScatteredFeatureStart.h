@@ -1,16 +1,15 @@
 #pragma once
 
-#include "./StructureStart.h"
 #include "../../../../unmapped/BiomeSource.h"
+#include "StructureStart.h"
 
 
 class ScatteredFeatureStart : StructureStart {
 
 public:
-    virtual ~ScatteredFeatureStart();
+    ~ScatteredFeatureStart();
     virtual void getType()const;
-
-    ScatteredFeatureStart();
     ScatteredFeatureStart(int, int);
     ScatteredFeatureStart(BiomeSource &, int, int);
+    ScatteredFeatureStart();
 };

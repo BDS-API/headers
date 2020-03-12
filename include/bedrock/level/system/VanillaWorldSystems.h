@@ -4,9 +4,7 @@
 #include "../../block/unmapped/BlockDefinitionGroup.h"
 
 
-class VanillaWorldSystems {
-
-public:
+namespace VanillaWorldSystems {
 
     void init(ResourcePackManager *, BlockDefinitionGroup *);
     void shutdown();

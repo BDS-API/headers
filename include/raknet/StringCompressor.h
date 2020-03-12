@@ -1,25 +1,23 @@
 #pragma once
 
-#include "./RakString.h"
-#include "./BitStream.h"
+#include "RakString.h"
+#include "BitStream.h"
 
 
 namespace RakNet {
 
-class StringCompressor {
+    class StringCompressor {
 
-public:
-
-    void AddReference();
-    void RemoveReference();
-    void Instance();
-    StringCompressor();
-    void GenerateTreeFromStrings(unsigned char *, unsigned int, unsigned char);
-    ~StringCompressor();
-    void EncodeString(char const*, int, RakNet::BitStream *, unsigned char);
-    void DecodeString(char *, int, RakNet::BitStream *, unsigned char);
-    void EncodeString(RakNet::RakString const*, int, RakNet::BitStream *, unsigned char);
-    void DecodeString(RakNet::RakString *, int, RakNet::BitStream *, unsigned char);
-};
-
+    public:
+        void EncodeString(RakNet::RakString const*, int, RakNet::BitStream *, unsigned char);
+        void GenerateTreeFromStrings(unsigned char *, unsigned int, unsigned char);
+        ~StringCompressor();
+        void DecodeString(char *, int, RakNet::BitStream *, unsigned char);
+        StringCompressor();
+        void EncodeString(char const*, int, RakNet::BitStream *, unsigned char);
+        void AddReference();
+        void DecodeString(RakNet::RakString *, int, RakNet::BitStream *, unsigned char);
+        void Instance();
+        void RemoveReference();
+    };
 }

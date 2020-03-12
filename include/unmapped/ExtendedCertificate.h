@@ -1,12 +1,9 @@
 #pragma once
 
-#include "./Certificate.h"
-#include <string>
+#include "Certificate.h"
 
 
-class ExtendedCertificate {
-
-public:
+namespace ExtendedCertificate {
 
     std::string getXuid(Certificate const&);
     std::string getIdentityName(Certificate const&);

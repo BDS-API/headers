@@ -6,7 +6,6 @@
 class NpcGUIOffset {
 
 public:
-
-    NpcGUIOffset();
     NpcGUIOffset(Json::Value const&);
+    NpcGUIOffset();
 };

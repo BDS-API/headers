@@ -1,16 +1,14 @@
 #pragma once
 
-#include "./SubtractiveLightInfo.h"
-#include "../bedrock/level/chunk/SubChunkLightIndex.h"
 #include "../bedrock/util/Brightness.h"
+#include "../bedrock/level/chunk/SubChunkLightIndex.h"
 
 
 class SubtractiveLightInfo {
 
 public:
-
-    SubtractiveLightInfo();
     SubtractiveLightInfo(SubChunkLightIndex, Brightness);
     SubtractiveLightInfo(SubtractiveLightInfo const&);
+    SubtractiveLightInfo();
     void operator<(SubtractiveLightInfo const&);
 };

@@ -8,17 +8,16 @@ class ConsoleChunkBlender {
 public:
     static long sConversionBlendNoise;
 
-
-    ConsoleChunkBlender();
-    ~ConsoleChunkBlender();
-    void setInterpolants(int, int, int, int);
-    void blendChunkOverworld(LevelChunk &, LevelChunk &);
     void _prepInterpTable();
+    void _calcAlphaOverworld(float, float);
+    void _copyColumnFromGenerated(LevelChunk &, LevelChunk &, int, int);
     void _findHighestStoneOrBedrockHeight(LevelChunk &, int, int);
     void _findTopMostWaterHeight(LevelChunk &, int, int);
-    void _calcAlphaOverworld(float, float);
-    void _shiftColumnBySetBlocks(LevelChunk &, int, int, int, int);
-    void _copyColumnFromGenerated(LevelChunk &, LevelChunk &, int, int);
-    void blendChunkNether(LevelChunk &, LevelChunk &);
+    ConsoleChunkBlender();
+    void setInterpolants(int, int, int, int);
     void blendChunkEnd(LevelChunk &, LevelChunk &);
+    void _shiftColumnBySetBlocks(LevelChunk &, int, int, int, int);
+    ~ConsoleChunkBlender();
+    void blendChunkNether(LevelChunk &, LevelChunk &);
+    void blendChunkOverworld(LevelChunk &, LevelChunk &);
 };

@@ -1,18 +1,17 @@
 #pragma once
 
-#include "../util/BlockPos.h"
-#include "../actor/Player.h"
-#include "./ActorBlock.h"
 #include <string>
+#include "../actor/Player.h"
+#include "ActorBlock.h"
+#include "../util/BlockPos.h"
 
 
 class BeaconBlock : ActorBlock {
 
 public:
-    virtual ~BeaconBlock();
-    virtual bool isInteractiveBlock()const;
-    virtual bool canContainLiquid()const;
     virtual void use(Player &, BlockPos const&)const;
-
+    virtual bool canContainLiquid()const;
+    ~BeaconBlock();
+    virtual bool isInteractiveBlock()const;
     BeaconBlock(std::string const&, int);
 };

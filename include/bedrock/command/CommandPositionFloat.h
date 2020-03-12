@@ -5,6 +5,5 @@
 class CommandPositionFloat {
 
 public:
-
     CommandPositionFloat();
 };

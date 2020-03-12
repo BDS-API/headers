@@ -5,7 +5,6 @@
 class ArbitraryBiomeComponent {
 
 public:
-
-    ArbitraryBiomeComponent();
     ~ArbitraryBiomeComponent();
+    ArbitraryBiomeComponent();
 };

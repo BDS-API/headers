@@ -1,20 +1,18 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream.h"
-#include <string>
 #include "../../io/BinaryStream.h"
-#include "./Packet.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "Packet.h"
 
 
 class ContainerSetDataPacket : Packet {
 
 public:
-    virtual ~ContainerSetDataPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
+    ~ContainerSetDataPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
-//  ContainerSetDataPacket(ContainerID, int, int); //TODO: incomplete function definition
+    virtual void getId()const;
+    virtual void write(BinaryStream &)const;
+    virtual std::string getName()const;
     ContainerSetDataPacket();
+//  ContainerSetDataPacket(ContainerID, int, int); //TODO: incomplete function definition
 };

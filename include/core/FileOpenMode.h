@@ -1,41 +1,38 @@
 #pragma once
 
-#include "./FileOpenMode.h"
 
 
 namespace Core {
 
-class FileOpenMode {
+    class FileOpenMode {
 
-public:
-
-    FileOpenMode();
-    void readExisting();
-    void writeCreateOrTruncate();
-    void writeCreateOrAppend();
-    void binary();
-    void read();
-    void write();
-    void create();
-    void truncate();
-    void append();
-    void wb();
-    void rb();
-    void wPlus();
-    void rbPlus();
-    void wbPlus();
-//  FileOpenMode(std::_Ios_Openmode); //TODO: incomplete function definition
-    FileOpenMode(char const*);
-    void cMode();
-    void cModeWide();
-    void operator==(Core::FileOpenMode const&)const;
-    bool isRead()const;
-    bool isWrite()const;
-    bool isTruncate()const;
-    bool isCreate()const;
-    bool isAppend()const;
-    bool isBinary()const;
-    bool isReadOnly()const;
-};
-
+    public:
+        void read();
+        bool isCreate()const;
+        void cMode();
+        void rbPlus();
+        void readExisting();
+        void create();
+        void append();
+        void truncate();
+        FileOpenMode();
+        void wbPlus();
+        void wb();
+        bool isBinary()const;
+        void binary();
+        void writeCreateOrAppend();
+        void cModeWide();
+        bool isWrite()const;
+        bool isTruncate()const;
+        bool isReadOnly()const;
+        FileOpenMode(char const*);
+        void operator==(Core::FileOpenMode const&)const;
+        bool isRead()const;
+        bool isAppend()const;
+//      FileOpenMode(std::_Ios_Openmode); //TODO: incomplete function definition
+        void wPlus();
+        void writeCreateOrTruncate();
+        void write();
+        void rb();
+    };
 }

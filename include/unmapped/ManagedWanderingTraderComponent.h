@@ -3,9 +3,7 @@
 #include "../bedrock/actor/Actor.h"
 
 
-class ManagedWanderingTraderComponent {
-
-public:
+namespace ManagedWanderingTraderComponent {
 
     void initFromDefinition(Actor &);
     void reloadComponent(Actor &);

@@ -1,11 +1,8 @@
 #pragma once
 
-#include <string>
 
 
-class LinuxStackTrace {
-
-public:
+namespace LinuxStackTrace {
 
     std::string getStackTrace();
 };

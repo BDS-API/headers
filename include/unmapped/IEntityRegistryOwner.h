@@ -5,6 +5,5 @@
 class IEntityRegistryOwner {
 
 public:
-
     IEntityRegistryOwner();
 };

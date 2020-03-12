@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../CommandRegistry.h"
 #include "../../IMinecraftApp.h"
-#include "../CommandOutput.h"
-#include "../orgin/CommandOrigin.h"
+#include "../origin/CommandOrigin.h"
+#include "../CommandRegistry.h"
 #include "../Command.h"
+#include "../CommandOutput.h"
 
 
 class DedicatedWSServerCommand : Command {
@@ -12,9 +12,8 @@ class DedicatedWSServerCommand : Command {
 public:
     static long mApp;
 
-    virtual ~DedicatedWSServerCommand();
+    ~DedicatedWSServerCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-
-    void setup(CommandRegistry &, IMinecraftApp &);
     DedicatedWSServerCommand();
+    void setup(CommandRegistry &, IMinecraftApp &);
 };

@@ -1,15 +1,13 @@
 #pragma once
 
-#include "./DamageSensorTrigger.h"
 #include <string>
 
 
 class DamageSensorTrigger {
 
 public:
-
-    ~DamageSensorTrigger();
-    void setCause(std::string const&);
     DamageSensorTrigger();
+    ~DamageSensorTrigger();
     DamageSensorTrigger(DamageSensorTrigger const&);
+    void setCause(std::string const&);
 };

@@ -1,20 +1,18 @@
 #pragma once
 
-#include <functional>
 #include "../BlockLegacy.h"
+#include <functional>
 #include <string>
 
 
-class BlockTypeRegistry {
+namespace BlockTypeRegistry {
 
-public:
     static std::string mBlockLookupMap;
 
-
-    void unregisterBlock(std::string const&);
-    void prepareBlocks(unsigned int);
-    void unregisterBlocks();
     void forEachBlock(std::function<bool (BlockLegacy const&)>);
     void forEachBlockDEPRECATED(std::function<bool (BlockLegacy &)>);
+    void unregisterBlock(std::string const&);
+    void unregisterBlocks();
     void lookupByName(std::string const&);
+    void prepareBlocks(unsigned int);
 };

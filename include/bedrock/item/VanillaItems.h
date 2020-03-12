@@ -1,12 +1,11 @@
 #pragma once
 
-#include "../block/unmapped/BlockDefinitionGroup.h"
 #include "../actor/unmapped/ActorInfoRegistry.h"
+#include "../block/unmapped/BlockDefinitionGroup.h"
 
 
-class VanillaItems {
+namespace VanillaItems {
 
-public:
     static long mShovel_iron;
     static long mPickAxe_iron;
     static long mHatchet_iron;
@@ -244,10 +243,9 @@ public:
     static long mHoneycomb;
     static long mHoneyBottle;
 
-
-    void registerItems(bool);
-    void unregisterItems();
-    void initClientData();
-    void initCreativeCategories();
     void initCreativeItemsCallback(ActorInfoRegistry *, BlockDefinitionGroup *, bool);
+    void unregisterItems();
+    void initCreativeCategories();
+    void registerItems(bool);
+    void initClientData();
 };

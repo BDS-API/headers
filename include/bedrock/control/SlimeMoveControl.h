@@ -1,16 +1,15 @@
 #pragma once
 
-#include "../actor/Mob.h"
 #include "../../unmapped/MoveControlComponent.h"
-#include "./MoveControl.h"
+#include "MoveControl.h"
+#include "../actor/Mob.h"
 
 
 class SlimeMoveControl : MoveControl {
 
 public:
-    virtual ~SlimeMoveControl();
     virtual void tick(MoveControlComponent &, Mob &);
-
-    SlimeMoveControl();
+    ~SlimeMoveControl();
     void _getJumpDelay(Mob &)const;
+    SlimeMoveControl();
 };

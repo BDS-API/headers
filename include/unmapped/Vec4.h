@@ -2,9 +2,7 @@
 
 
 
-class Vec4 {
-
-public:
+namespace Vec4 {
 
     void operator[](int);
 };

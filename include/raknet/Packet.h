@@ -4,11 +4,9 @@
 
 namespace RakNet {
 
-class Packet {
+    class Packet {
 
-public:
-
-    Packet();
-};
-
+    public:
+        Packet();
+    };
 }

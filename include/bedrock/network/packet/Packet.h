@@ -2,28 +2,26 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include <memory>
-#include "./Packet.h"
 #include "../NetEventCallback.h"
+#include <memory>
 #include "../../../unmapped/NetworkIdentifier.h"
 
 
 class Packet {
 
 public:
-    virtual ~Packet();
+    ~Packet();
     virtual void disallowBatching()const;
-
-    void getReliability()const;
-    void getCompressible()const;
     void writeWithHeader(unsigned char, BinaryStream &)const;
-    void readNoHeader(ReadOnlyBinaryStream &, unsigned char const&);
-    void handle(NetworkIdentifier const&, NetEventCallback &, std::shared_ptr<Packet> &);
-    Packet();
-    void getClientSubId()const;
     Packet(Packet const&);
-    void setClientSubId(unsigned char);
-//  Packet(Compressibility); //TODO: incomplete function definition
-    void setReliable();
+    void getReliability()const;
     void setReliableOrdered();
+//  Packet(Compressibility); //TODO: incomplete function definition
+    void setClientSubId(unsigned char);
+    void setReliable();
+    Packet();
+    void readNoHeader(ReadOnlyBinaryStream &, unsigned char const&);
+    void getCompressible()const;
+    void handle(NetworkIdentifier const&, NetEventCallback &, std::shared_ptr<Packet> &);
+    void getClientSubId()const;
 };

@@ -3,9 +3,7 @@
 #include "../bedrock/actor/Actor.h"
 
 
-class RailActivatorComponent {
-
-public:
+namespace RailActivatorComponent {
 
     void initFromDefinition(Actor &);
     void ejectAllRiders(Actor &);

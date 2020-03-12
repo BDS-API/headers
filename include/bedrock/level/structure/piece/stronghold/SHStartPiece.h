@@ -1,15 +1,14 @@
 #pragma once
 
-#include "./SHStairsDown.h"
 #include "../../../../util/Random.h"
+#include "SHStairsDown.h"
 
 
 class SHStartPiece : SHStairsDown {
 
 public:
-    virtual ~SHStartPiece();
     virtual void getType()const;
-
-    SHStartPiece();
+    ~SHStartPiece();
     SHStartPiece(int, Random &, int, int);
+    SHStartPiece();
 };

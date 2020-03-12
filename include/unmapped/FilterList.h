@@ -3,9 +3,7 @@
 #include <string>
 
 
-class FilterList {
-
-public:
+namespace FilterList {
 
     void initialize();
     void findFilterDefinition(std::string const&);

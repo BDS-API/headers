@@ -1,7 +1,6 @@
 #pragma once
 
-#include "./MolangTextureVariable.h"
-#include "./HashedString.h"
+#include "HashedString.h"
 
 
 class MolangTextureVariable {
@@ -9,10 +8,9 @@ class MolangTextureVariable {
 public:
     static long defaultErrorValue;
 
-
-    ~MolangTextureVariable();
-    MolangTextureVariable(MolangTextureVariable const&);
-    MolangTextureVariable(HashedString const&);
     MolangTextureVariable(MolangTextureVariable &&);
+    MolangTextureVariable(HashedString const&);
+    MolangTextureVariable(MolangTextureVariable const&);
+    ~MolangTextureVariable();
     void operator==(MolangTextureVariable const&)const;
 };

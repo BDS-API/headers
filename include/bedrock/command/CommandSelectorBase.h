@@ -1,45 +1,44 @@
 #pragma once
 
-#include "./CommandPosition.h"
-#include "../util/BlockPos.h"
-#include "../actor/Actor.h"
-#include <functional>
-#include "orgin/CommandOrigin.h"
 #include <string>
+#include "../util/BlockPos.h"
+#include "CommandPosition.h"
+#include "../actor/Actor.h"
+#include "origin/CommandOrigin.h"
+#include <functional>
 
 
 class CommandSelectorBase {
 
 public:
-
-    ~CommandSelectorBase();
-    CommandSelectorBase(bool);
-    void setVersion(int);
-//  void setType(CommandSelectionType); //TODO: incomplete function definition
-    bool isExplicitIdSelector()const;
-    void getType()const;
-//  void setOrder(CommandSelectionOrder); //TODO: incomplete function definition
-    void getOrder()const;
-//  void addNameFilter(InvertableFilter<std::string> const&); //TODO: incomplete function definition
-    bool hasName()const;
-    std::string getName()const;
-//  void addTypeFilter(InvertableFilter<std::string> const&); //TODO: incomplete function definition
-//  void addTagFilter(InvertableFilter<std::string> const&); //TODO: incomplete function definition
-    void setResultCount(unsigned long);
-    void setPosition(CommandPosition);
-    void setBox(BlockPos);
-    void setRadiusMin(float);
-    void setRadiusMax(float);
-    void setIncludeDeadPlayers(bool);
     void addFilter(std::function<bool (CommandOrigin const&, Actor const&)>);
-    void setExplicitIdSelector(std::string const&);
-    void compile(CommandOrigin const&, std::string &);
+    void getOrder()const;
     bool isExpansionAllowed(CommandOrigin const&)const;
-    void matchName(Actor const&)const;
-    void matchType(Actor const&)const;
-    void matchTag(Actor const&)const;
-    void newResults(CommandOrigin const&)const;
-    void filter(CommandOrigin const&, Actor &, float)const;
-    bool isInDimension(CommandOrigin const&, Actor &)const;
+    void setResultCount(unsigned long);
+    void setIncludeDeadPlayers(bool);
+    CommandSelectorBase(bool);
+    void getType()const;
+    bool isExplicitIdSelector()const;
+    void setBox(BlockPos);
+    ~CommandSelectorBase();
+    void setExplicitIdSelector(std::string const&);
     std::string getExplicitPlayerName()const;
+//  void addNameFilter(InvertableFilter<std::string> const&); //TODO: incomplete function definition
+//  void setType(CommandSelectionType); //TODO: incomplete function definition
+    void setRadiusMin(float);
+//  void addTypeFilter(InvertableFilter<std::string> const&); //TODO: incomplete function definition
+    bool isInDimension(CommandOrigin const&, Actor &)const;
+    void setPosition(CommandPosition);
+    void setRadiusMax(float);
+//  void setOrder(CommandSelectionOrder); //TODO: incomplete function definition
+    void compile(CommandOrigin const&, std::string &);
+//  void addTagFilter(InvertableFilter<std::string> const&); //TODO: incomplete function definition
+    std::string getName()const;
+    void matchName(Actor const&)const;
+    void setVersion(int);
+    void newResults(CommandOrigin const&)const;
+    void matchTag(Actor const&)const;
+    void filter(CommandOrigin const&, Actor &, float)const;
+    bool hasName()const;
+    void matchType(Actor const&)const;
 };

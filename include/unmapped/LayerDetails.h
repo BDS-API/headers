@@ -1,11 +1,9 @@
 #pragma once
 
-#include "./Storage.h"
+#include "Storage.h"
 
 
-class LayerDetails {
-
-public:
+namespace LayerDetails {
 
     void bufferFlip(LayerDetails::Storage &&, unsigned long);
 };

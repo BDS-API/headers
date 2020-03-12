@@ -1,17 +1,15 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
-#include "./MoveInputHandler.h"
 #include "../bedrock/actor/Player.h"
+#include "MoveInputHandler.h"
+#include "../bedrock/util/Vec3.h"
 
 
-class PlayerMovement {
+namespace PlayerMovement {
 
-public:
-
+    void updatePlayerOnInput(Player &, MoveInputHandler &, Vec3 &);
     bool isGamepadOrMotionController(Player &);
     bool isHoloRealityMode(Player &);
-    void updatePlayerOnInput(Player &, MoveInputHandler &, Vec3 &);
     void updateSwimTravel(Player &, MoveInputHandler &, Vec3 &);
     void updatePlayerRiding(Player &, MoveInputHandler &);
 };

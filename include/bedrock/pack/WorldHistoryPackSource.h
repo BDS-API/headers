@@ -1,35 +1,33 @@
 #pragma once
 
-#include "../../mce/UUID.h"
-#include "./PackSource.h"
-#include "../../unmapped/WorldPackHistory.h"
 #include "../../core/Path.h"
-#include "../../unmapped/PackIdVersion.h"
-#include "../../unmapped/IContentKeyProvider.h"
 #include "../../unmapped/PackManifestFactory.h"
-#include "../../unmapped/Pack.h"
+#include "../../mce/UUID.h"
+#include "../../unmapped/IContentKeyProvider.h"
 #include <functional>
-#include <string>
+#include "../../unmapped/WorldPackHistory.h"
+#include "../../unmapped/Pack.h"
+#include "../../unmapped/PackIdVersion.h"
+#include "PackSource.h"
 
 
 class WorldHistoryPackSource : PackSource {
 
 public:
-    virtual ~WorldHistoryPackSource();
-//  virtual void forEachPackConst(std::function<void (Pack const&)>)const; //TODO: incomplete function definition
-//  virtual void forEachPack(std::function<void (Pack &)>); //TODO: incomplete function definition
-    virtual void getPackOrigin()const;
     virtual void getPackType()const;
+    virtual void forEachPack(std::function<void (Pack &)>);
+    virtual void forEachPackConst(std::function<void (Pack const&)>)const;
+    virtual void getPackOrigin()const;
     virtual void load(PackManifestFactory &, IContentKeyProvider const&);
-
-//  WorldHistoryPackSource(Core::Path const&, PackType); //TODO: incomplete function definition
-//  std::string generateHistoryFilePath(Core::Path const&, PackType); //TODO: incomplete function definition
-    void _readWorldHistoryFile();
-    void _addPackFromHistoryPack(WorldPackHistory const&);
-    std::string getPathToWorld()const;
-    void trackNewPackIfNotTracked(WorldPackHistory const&);
-    bool needsSaving()const;
-    void saveHistoryFile();
-    void setSourceUUIDForPackHistory(PackIdVersion const&, mce::UUID const&);
+    ~WorldHistoryPackSource();
     void _createPackFromHistoryPack(WorldPackHistory const&);
+    std::string getPathToWorld()const;
+    void setSourceUUIDForPackHistory(PackIdVersion const&, mce::UUID const&);
+//  std::string generateHistoryFilePath(Core::Path const&, PackType); //TODO: incomplete function definition
+    void _addPackFromHistoryPack(WorldPackHistory const&);
+//  WorldHistoryPackSource(Core::Path const&, PackType); //TODO: incomplete function definition
+    bool needsSaving()const;
+    void _readWorldHistoryFile();
+    void trackNewPackIfNotTracked(WorldPackHistory const&);
+    void saveHistoryFile();
 };

@@ -1,20 +1,18 @@
 #pragma once
 
-#include "../../util/Vec3.h"
-#include "./BlockBreakSensorComponent.h"
 #include "../../actor/Actor.h"
+#include "../../util/Vec3.h"
 
 
 class BlockBreakSensorComponent {
 
 public:
-
-    bool hasValidListener()const;
-    ~BlockBreakSensorComponent();
+    void updateSensorPos(Vec3 const&);
     BlockBreakSensorComponent(BlockBreakSensorComponent &&);
     void initialize(Actor &);
-    void updateSensorPos(Vec3 const&);
     void updateRadius(float);
     void getBlockSets()const;
     BlockBreakSensorComponent();
+    ~BlockBreakSensorComponent();
+    bool hasValidListener()const;
 };

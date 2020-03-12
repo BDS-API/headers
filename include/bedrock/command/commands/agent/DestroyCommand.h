@@ -6,14 +6,12 @@
 
 namespace AgentCommands {
 
-class DestroyCommand : AgentCommands::Command {
+    class DestroyCommand : AgentCommands::Command {
 
-public:
-    virtual ~DestroyCommand();
-    virtual void execute();
-    virtual bool isDone();
-
-//  DestroyCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
-};
-
+    public:
+        virtual void execute();
+        virtual bool isDone();
+        ~DestroyCommand();
+//      DestroyCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
+    };
 }

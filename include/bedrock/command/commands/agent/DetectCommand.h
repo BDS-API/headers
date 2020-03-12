@@ -6,14 +6,12 @@
 
 namespace AgentCommands {
 
-class DetectCommand : AgentCommands::Command {
+    class DetectCommand : AgentCommands::Command {
 
-public:
-    virtual ~DetectCommand();
-    virtual void execute();
-    virtual bool isDone();
-
-//  DetectCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
-};
-
+    public:
+        ~DetectCommand();
+        virtual bool isDone();
+        virtual void execute();
+//      DetectCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
+    };
 }

@@ -1,11 +1,10 @@
 #pragma once
 
-#include "../../actor/Actor.h"
-#include "../unmapped/ScriptEngine.h"
 #include "../ScriptObjectHandle.h"
-#include "../ScriptVersionInfo.h"
+#include "../unmapped/ScriptEngine.h"
 #include "../unmapped/ScriptServerContext.h"
-#include <string>
+#include "../../actor/Actor.h"
+#include "../ScriptVersionInfo.h"
 
 
 class ScriptSpawnActorComponent /*ScriptTemplateFactory<ScriptServerContext>::Component*/ { //TODO: incomplete class definition
@@ -13,12 +12,11 @@ class ScriptSpawnActorComponent /*ScriptTemplateFactory<ScriptServerContext>::Co
 public:
     static long mHash;
 
-    virtual ~ScriptSpawnActorComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
-    virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;
-
+    virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
+    ~ScriptSpawnActorComponent();
+    std::string getName();
     void getHash();
     ScriptSpawnActorComponent();
-    std::string getName();
 };

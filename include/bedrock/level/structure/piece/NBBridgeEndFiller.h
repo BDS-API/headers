@@ -1,22 +1,21 @@
 #pragma once
 
-#include <memory>
-#include "../../../util/Random.h"
-#include "./StructurePiece.h"
-#include "./NetherFortressPiece.h"
 #include "../../../block/unmapped/BlockSource.h"
-#include <vector>
+#include "StructurePiece.h"
 #include "../../../../unmapped/BoundingBox.h"
+#include "../../../util/Random.h"
+#include <vector>
+#include <memory>
+#include "NetherFortressPiece.h"
 
 
 class NBBridgeEndFiller : NetherFortressPiece {
 
 public:
-    virtual ~NBBridgeEndFiller();
-    virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-
-    void createPiece(std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
-    NBBridgeEndFiller();
+    virtual void getType()const;
+    ~NBBridgeEndFiller();
+    void createPiece(std::vector<std::unique_ptr<StructurePiece>> &, Random &, int, int, int, int, int);
     NBBridgeEndFiller(int, Random &, BoundingBox const&, int);
+    NBBridgeEndFiller();
 };

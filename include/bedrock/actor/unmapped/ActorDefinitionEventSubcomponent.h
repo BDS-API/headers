@@ -1,19 +1,18 @@
 #pragma once
 
-#include "../../../unmapped/OnHitSubcomponent.h"
-#include "../../../unmapped/ProjectileComponent.h"
 #include "../../../json/Value.h"
+#include "../../../unmapped/OnHitSubcomponent.h"
 #include "../Actor.h"
+#include "../../../unmapped/ProjectileComponent.h"
 
 
 class ActorDefinitionEventSubcomponent : OnHitSubcomponent {
 
 public:
-    virtual ~ActorDefinitionEventSubcomponent();
     virtual void readfromJSON(Json::Value &);
-    virtual void writetoJSON(Json::Value &)const;
+    ~ActorDefinitionEventSubcomponent();
     virtual void doOnHitEffect(Actor &, ProjectileComponent &);
-
-    void getSubcomponentName();
+    virtual void writetoJSON(Json::Value &)const;
     ActorDefinitionEventSubcomponent();
+    void getSubcomponentName();
 };

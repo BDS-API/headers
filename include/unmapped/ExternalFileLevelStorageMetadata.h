@@ -4,9 +4,7 @@
 #include "../bedrock/level/LevelData.h"
 
 
-class ExternalFileLevelStorageMetadata {
-
-public:
+namespace ExternalFileLevelStorageMetadata {
 
     void saveLevelMetadata(Core::Path const&, LevelData const&);
 };

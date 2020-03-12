@@ -2,14 +2,15 @@
 
 
 
-namespace Core::ZipUtils {
+namespace Core {
 
-class UnzipSettings {
+    namespace ZipUtils {
 
-public:
+        class UnzipSettings {
 
-    UnzipSettings();
-    ~UnzipSettings();
-};
-
+        public:
+            ~UnzipSettings();
+            UnzipSettings();
+        };
+    }
 }

@@ -2,23 +2,20 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include <memory>
-#include "./Packet.h"
 #include "../../resourcepack/ResourcePackInfoData.h"
 #include <vector>
-#include <string>
+#include "Packet.h"
 
 
 class ResourcePacksInfoPacket : Packet {
 
 public:
-    virtual ~ResourcePacksInfoPacket();
-    virtual void getId()const;
     virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
+    virtual void write(BinaryStream &)const;
+    virtual void getId()const;
+    ~ResourcePacksInfoPacket();
     ResourcePacksInfoPacket();
-    ResourcePacksInfoPacket(bool, std::vector<ResourcePackInfoData, std::allocator<ResourcePackInfoData>> &, std::vector<ResourcePackInfoData, std::allocator<ResourcePackInfoData>> &);
+    ResourcePacksInfoPacket(bool, std::vector<ResourcePackInfoData> &, std::vector<ResourcePackInfoData> &);
     void getResourcePacksInfoData()const;
 };

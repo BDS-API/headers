@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BehaviorFactory.h"
-#include "./CompositeDefinition.h"
+#include "CompositeDefinition.h"
 #include "../../../json/Value.h"
+#include "../../../unmapped/BehaviorFactory.h"
 
 
 class SequenceDefinition : CompositeDefinition {
 
 public:
-    virtual ~SequenceDefinition();
+    ~SequenceDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
-
     SequenceDefinition();
 };

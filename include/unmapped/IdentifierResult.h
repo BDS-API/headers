@@ -5,7 +5,6 @@
 class IdentifierResult {
 
 public:
-
     ~IdentifierResult();
     IdentifierResult();
 };

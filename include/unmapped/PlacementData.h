@@ -4,12 +4,10 @@
 
 namespace WoodlandMansionPieces {
 
-class PlacementData {
+    class PlacementData {
 
-public:
-
-    PlacementData();
-    ~PlacementData();
-};
-
+    public:
+        PlacementData();
+        ~PlacementData();
+    };
 }

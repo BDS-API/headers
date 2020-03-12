@@ -5,6 +5,5 @@
 class PackStats {
 
 public:
-
     PackStats();
 };

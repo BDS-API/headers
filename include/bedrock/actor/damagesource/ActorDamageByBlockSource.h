@@ -1,20 +1,19 @@
 #pragma once
 
-#include "../../../unmapped/Block.h"
 #include "../Actor.h"
-#include "./ActorDamageSource.h"
+#include "../../../unmapped/Block.h"
+#include "ActorDamageSource.h"
 #include <string>
 
 
 class ActorDamageByBlockSource : ActorDamageSource {
 
 public:
-    virtual ~ActorDamageByBlockSource();
-    virtual bool isBlockSource()const;
-    virtual void getDeathMessage(std::string, Actor *)const;
     virtual void clone()const;
-
-//  ActorDamageByBlockSource(Block const&, ActorDamageCause); //TODO: incomplete function definition
-//  ActorDamageByBlockSource(ActorDamageCause); //TODO: incomplete function definition
+    virtual void getDeathMessage(std::string, Actor *)const;
+    ~ActorDamageByBlockSource();
+    virtual bool isBlockSource()const;
     void getBlock()const;
+//  ActorDamageByBlockSource(ActorDamageCause); //TODO: incomplete function definition
+//  ActorDamageByBlockSource(Block const&, ActorDamageCause); //TODO: incomplete function definition
 };

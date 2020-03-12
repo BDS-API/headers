@@ -5,6 +5,5 @@
 class FilterContext {
 
 public:
-
     FilterContext();
 };

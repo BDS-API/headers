@@ -5,9 +5,8 @@
 class Semaphore {
 
 public:
-
     ~Semaphore();
-    Semaphore();
     void notify();
     void wait();
+    Semaphore();
 };

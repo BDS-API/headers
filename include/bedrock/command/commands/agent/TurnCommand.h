@@ -6,15 +6,13 @@
 
 namespace AgentCommands {
 
-class TurnCommand : AgentCommands::Command {
+    class TurnCommand : AgentCommands::Command {
 
-public:
-    virtual ~TurnCommand();
-    virtual void execute();
-    virtual bool isDone();
-    virtual void tick();
-
-//  TurnCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
-};
-
+    public:
+        ~TurnCommand();
+        virtual bool isDone();
+        virtual void tick();
+        virtual void execute();
+//      TurnCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
+    };
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "./Goal.h"
+#include "Goal.h"
 #include "../Mob.h"
 #include <string>
 
@@ -8,11 +8,10 @@
 class MoveTowardsRestrictionGoal : Goal {
 
 public:
-    virtual ~MoveTowardsRestrictionGoal();
     virtual bool canUse();
-    virtual bool canContinueToUse();
-    virtual void start();
     virtual void appendDebugInfo(std::string &)const;
-
+    virtual bool canContinueToUse();
+    ~MoveTowardsRestrictionGoal();
+    virtual void start();
     MoveTowardsRestrictionGoal(Mob &, float);
 };

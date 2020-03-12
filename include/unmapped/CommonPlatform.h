@@ -4,14 +4,12 @@
 
 namespace BedrockEngine {
 
-class CommonPlatform {
+    class CommonPlatform {
 
-public:
-
-    void getPlatformRuntimeInfo()const;
-    void accessPlatformRuntimeInfo_Shim();
-    void getPlatformBuildInfo()const;
-    void accessPlatformBuildInfo_Shim();
-};
-
+    public:
+        void accessPlatformBuildInfo_Shim();
+        void getPlatformBuildInfo()const;
+        void accessPlatformRuntimeInfo_Shim();
+        void getPlatformRuntimeInfo()const;
+    };
 }

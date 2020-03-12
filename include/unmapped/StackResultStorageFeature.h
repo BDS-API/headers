@@ -1,15 +1,13 @@
 #pragma once
 
-#include "./WeakStorageFeature.h"
-#include "./StackResultStorageFeature.h"
+#include "WeakStorageFeature.h"
 
 
 class StackResultStorageFeature {
 
 public:
-
-    StackResultStorageFeature(WeakStorageFeature const&);
     StackResultStorageFeature(StackResultStorageFeature &&);
-    void _hasValue()const;
     void _getStackRef()const;
+    StackResultStorageFeature(WeakStorageFeature const&);
+    void _hasValue()const;
 };

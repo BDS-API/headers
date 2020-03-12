@@ -6,14 +6,12 @@
 
 namespace AgentCommands {
 
-class AttackCommand : AgentCommands::Command {
+    class AttackCommand : AgentCommands::Command {
 
-public:
-    virtual ~AttackCommand();
-    virtual void execute();
-    virtual bool isDone();
-
-//  AttackCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
-};
-
+    public:
+        ~AttackCommand();
+        virtual void execute();
+        virtual bool isDone();
+//      AttackCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
+    };
 }

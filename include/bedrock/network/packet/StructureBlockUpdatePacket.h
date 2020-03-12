@@ -2,21 +2,19 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "../../../unmapped/NetworkBlockPosition.h"
 #include "../../../unmapped/StructureEditorData.h"
-#include "./Packet.h"
-#include <string>
+#include "../../../unmapped/NetworkBlockPosition.h"
+#include "Packet.h"
 
 
 class StructureBlockUpdatePacket : Packet {
 
 public:
-    virtual ~StructureBlockUpdatePacket();
+    ~StructureBlockUpdatePacket();
+    virtual void read(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
     virtual void getId()const;
     virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
-    virtual void read(ReadOnlyBinaryStream &);
-
-    StructureBlockUpdatePacket();
     StructureBlockUpdatePacket(NetworkBlockPosition, StructureEditorData const&, bool);
+    StructureBlockUpdatePacket();
 };

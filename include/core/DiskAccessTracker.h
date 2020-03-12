@@ -1,27 +1,32 @@
 #pragma once
 
 #include <ratio>
-#include "./Path.h"
+#include "Path.h"
 
 
 namespace Core {
 
-class DiskAccessTracker {
+    class DiskAccessTracker {
 
-public:
+    public:
+        class WriteOperation;
 
-//  DiskAccessTracker(std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>); //TODO: incomplete function definition
-    void getDiskAccessTracker();
-    void trackWriteOperation(Core::Path const&);
-    void _ignoreWrite(Core::Path const&)const;
-    void _addNewWriteOperation(unsigned long);
-    void trackWriteAmount(Core::Path const&, unsigned long);
-    void getAverageBytesWrittenPerSecond()const;
-    void getAverageNumberOfWritesPerSecond()const;
-    void addIgnoredPath(Core::Path const&);
-    void removeIgnoredPath(Core::Path const&);
-    void update();
-    ~DiskAccessTracker();
-};
+        void _addNewWriteOperation(unsigned long);
+        void getAverageNumberOfWritesPerSecond()const;
+        void trackWriteOperation(Core::Path const&);
+        void update();
+        void trackWriteAmount(Core::Path const&, unsigned long);
+//      DiskAccessTracker(std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>); //TODO: incomplete function definition
+        void getAverageBytesWrittenPerSecond()const;
+        void getDiskAccessTracker();
+        void _ignoreWrite(Core::Path const&)const;
+        void removeIgnoredPath(Core::Path const&);
+        void addIgnoredPath(Core::Path const&);
+        ~DiskAccessTracker();
+        class WriteOperation {
 
+        public:
+            WriteOperation();
+        };
+    };
 }

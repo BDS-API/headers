@@ -3,12 +3,10 @@
 #include <string>
 
 
-class ItemAcquisitionMethodMap {
+namespace ItemAcquisitionMethodMap {
 
-public:
     static std::string mMap;
 
-
-    void getItemAcquisitionMethod(std::string const&);
 //  std::string getItemAcquisitionMethodName(ItemAcquisitionMethod); //TODO: incomplete function definition
+    void getItemAcquisitionMethod(std::string const&);
 };

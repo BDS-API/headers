@@ -1,38 +1,35 @@
 #pragma once
 
-#include <memory>
-#include "./ContainerManagerModel.h"
 #include "../../actor/Player.h"
-#include "./IContainerManager.h"
-#include "../../util/BlockPos.h"
-#include "../model/ContainerModel.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
 #include <functional>
-#include <string>
+#include <memory>
+#include "../../util/BlockPos.h"
+#include "../model/ContainerModel.h"
+#include "IContainerManager.h"
 
 
 class ContainerManagerModel : IContainerManager {
 
 public:
-    virtual ~ContainerManagerModel();
-    virtual void getContainerId()const;
-//  virtual void setContainerId(ContainerID); //TODO: incomplete function definition
     virtual void getContainerType()const;
-//  virtual void setContainerType(ContainerType); //TODO: incomplete function definition
-    virtual void init();
     virtual bool isValid(float);
-
-//  ContainerManagerModel(ContainerID, Player &); //TODO: incomplete function definition
-    void tick(int);
-    void grantExperience(int);
-    std::string getBlockName(BlockPos const&)const;
-    std::string getEntityName(ActorUniqueID const&)const;
-//  void registerInformControllerOfDestructionCallback(std::function<void (ContainerManagerModel &)>); //TODO: incomplete function definition
-    void debitPlayerXP(int);
+    ~ContainerManagerModel();
+//  virtual void setContainerId(ContainerID); //TODO: incomplete function definition
+    virtual void getContainerId()const;
+    virtual void init();
+//  virtual void setContainerType(ContainerType); //TODO: incomplete function definition
     void getPlayerXP()const;
     bool isCreativeMode()const;
-    bool isClientSide()const;
+    void registerInformControllerOfDestructionCallback(std::function<void (ContainerManagerModel &)>);
+    std::string getBlockName(BlockPos const&)const;
+//  ContainerManagerModel(ContainerID, Player &); //TODO: incomplete function definition
+    void debitPlayerXP(int);
     std::string getContainers();
-    void getPlayer()const;
+    std::string getEntityName(ActorUniqueID const&)const;
+    bool isClientSide()const;
+    void tick(int);
+    void grantExperience(int);
     void _addContainer(std::shared_ptr<ContainerModel>);
+    void getPlayer()const;
 };

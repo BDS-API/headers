@@ -1,6 +1,6 @@
 #pragma once
 
-#include "./AppPlatformListener.h"
+#include "AppPlatformListener.h"
 
 
 class RandomThreadCheckManager : AppPlatformListener {
@@ -8,10 +8,9 @@ class RandomThreadCheckManager : AppPlatformListener {
 public:
     static long mInstance;
 
-    virtual ~RandomThreadCheckManager();
     virtual void onAppResumed();
-
+    ~RandomThreadCheckManager();
     void invalidateThreadIndex();
-    void _tryCreateInstance();
     RandomThreadCheckManager();
+    void _tryCreateInstance();
 };

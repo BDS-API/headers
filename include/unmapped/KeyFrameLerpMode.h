@@ -5,12 +5,11 @@
 class KeyFrameLerpMode {
 
 public:
-
-    void getLerpStyle()const;
 //  void setPrecomputedCubicCoeffs(glm::tmat4x40<float, (glm::precision>); //TODO: incomplete function definition
+    void getLerpStyle()const;
     void getPrecomputedCubicCoeffs()const;
-    void lerp(float)const;
     bool isCubic()const;
-//  void setLerpStyle(KeyFrameLerpStyle); //TODO: incomplete function definition
     KeyFrameLerpMode();
+    void lerp(float)const;
+//  void setLerpStyle(KeyFrameLerpStyle); //TODO: incomplete function definition
 };

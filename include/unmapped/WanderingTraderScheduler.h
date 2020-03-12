@@ -1,10 +1,10 @@
 #pragma once
 
+#include "../bedrock/level/Level.h"
+#include "../bedrock/util/BlockPos.h"
 #include <memory>
 #include "../bedrock/block/unmapped/BlockSource.h"
 #include "../bedrock/actor/Actor.h"
-#include "../bedrock/level/Level.h"
-#include "../bedrock/util/BlockPos.h"
 
 
 class WanderingTraderScheduler {
@@ -17,29 +17,28 @@ public:
     static long LENGTH_OF_DAY_IN_TICKS;
     static long CHANCE_TO_SPAWN_PER_DAY;
 
-
-    WanderingTraderScheduler(Level &);
-    void readSaveData();
-    ~WanderingTraderScheduler();
+    void _spawnWanderingTraderAtPos(BlockPos const&, BlockSource &);
     void tick();
+    void _despawnManagedWanderingTrader();
     void _isTimeToTestIfSpawning();
+    void _getRandomXZAroundPos(BlockPos const&, int, bool);
+    void _shouldWanderingTraderSpawnInWildernessNow()const;
+    void _getSpawnPosFromNearestVillageToPlayerPos(BlockPos const&, BlockSource &);
+    WanderingTraderScheduler(Level &);
     void _testIfSpawning();
     void _isTimeToSpawnWanderingTrader()const;
-    void _getRandomPlayerInOverworld()const;
-    void _doesWanderingTraderExist()const;
-    void _canWanderingTraderBeMoved()const;
-    void _getSpawnPosFromNearestVillageToPlayerPos(BlockPos const&, BlockSource &);
-    void _shouldWanderingTraderSpawnInWildernessNow()const;
-    void _getRandomWildernessPosAroundSpecifiedPos(BlockPos const&, BlockSource &);
-    void _canSpawnAtPosition(BlockPos const&, BlockSource &)const;
-    void _despawnManagedWanderingTrader();
-    void _spawnWanderingTraderAtPos(BlockPos const&, BlockSource &);
     void writeSaveData()const;
+    void _getRandomPlayerInOverworld()const;
+    ~WanderingTraderScheduler();
+    void _getRandomWildernessPosAroundSpecifiedPos(BlockPos const&, BlockSource &);
     bool isWanderingTraderCurrentlyManaged(Actor const&);
+    void readSaveData();
+    void _addWanderingTraderToLevel(std::unique_ptr<Actor>, BlockSource &);
     void _getSpawnChance(unsigned long)const;
-    void _getRandomXZAroundPos(BlockPos const&, int, bool);
+    void _doesWanderingTraderExist()const;
+    void _createWanderingTrader(BlockPos const&);
+    void _canSpawnAtPosition(BlockPos const&, BlockSource &)const;
     void _findClosestSpawnablePositionInColumn(BlockPos const&, BlockSource &);
     void _isPosSafeForSpawning(BlockPos const&, BlockSource &);
-    void _createWanderingTrader(BlockPos const&);
-    void _addWanderingTraderToLevel(std::unique_ptr<Actor, std::default_delete<Actor>>, BlockSource &);
+    void _canWanderingTraderBeMoved()const;
 };

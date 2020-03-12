@@ -5,6 +5,5 @@
 class BiomeChunkState {
 
 public:
-
     BiomeChunkState(unsigned char);
 };

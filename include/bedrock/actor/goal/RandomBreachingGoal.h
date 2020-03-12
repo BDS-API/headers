@@ -1,6 +1,6 @@
 #pragma once
 
-#include "./RandomStrollGoal.h"
+#include "RandomStrollGoal.h"
 #include "../Mob.h"
 #include <string>
 
@@ -8,14 +8,13 @@
 class RandomBreachingGoal : RandomStrollGoal {
 
 public:
-    virtual ~RandomBreachingGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
-    virtual bool canBeInterrupted();
     virtual void start();
+    virtual void _setWantedPosition();
+    virtual bool canContinueToUse();
     virtual void stop();
     virtual void appendDebugInfo(std::string &)const;
-    virtual void _setWantedPosition();
-
+    virtual bool canUse();
+    ~RandomBreachingGoal();
+    virtual bool canBeInterrupted();
     RandomBreachingGoal(Mob &, float, int, int, int, float);
 };

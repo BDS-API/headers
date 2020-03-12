@@ -1,20 +1,19 @@
 #pragma once
 
-#include "./StringByteInput.h"
 #include <string>
+#include "StringByteInput.h"
 
 
 class BigEndianStringByteInput : StringByteInput {
 
 public:
-    virtual ~BigEndianStringByteInput();
     virtual void readFloat();
-    virtual void readDouble();
-    virtual void readShort();
     virtual void readInt();
     virtual void readLongLong();
-//  virtual void readBytes(void *, unsigned long); //TODO: incomplete function definition
-//  virtual void readBigEndianBytes(void *, unsigned long); //TODO: incomplete function definition
-
+    virtual void readBytes(void *, unsigned long);
+    ~BigEndianStringByteInput();
+    virtual void readBigEndianBytes(void *, unsigned long);
+    virtual void readShort();
+    virtual void readDouble();
     BigEndianStringByteInput(std::string const&);
 };

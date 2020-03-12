@@ -1,24 +1,34 @@
 #pragma once
 
+#include <string>
+#include "../bedrock/command/Command.h"
 #include "../json/Value.h"
-#include <memory>
-#include "./SavedCommand.h"
 #include <vector>
-#include "./NpcAction.h"
+#include <memory>
+#include "NpcAction.h"
 
 
 class NpcCommandAction : NpcAction {
 
 public:
+    class SavedCommand;
+
     static long COMMAND_DELIMITER;
     static std::string COMMAND_LINE_KEY;
     static std::string COMMAND_VERSION_KEY;
 
-    virtual ~NpcCommandAction();
-    virtual void toJson();
     virtual void fromJson(Json::Value const&);
-
+    virtual void toJson();
+    ~NpcCommandAction();
+    void setCommands(std::vector<NpcCommandAction::SavedCommand> &&);
     NpcCommandAction();
     void getCommands();
-    void setCommands(std::vector<NpcCommandAction::SavedCommand, std::allocator<NpcCommandAction::SavedCommand>> &&);
+    class SavedCommand {
+
+    public:
+        SavedCommand(NpcCommandAction::SavedCommand const&);
+        SavedCommand(std::string const&, std::unique_ptr<Command>, int);
+        ~SavedCommand();
+        SavedCommand(NpcCommandAction::SavedCommand &&);
+    };
 };

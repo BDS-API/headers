@@ -1,20 +1,18 @@
 #pragma once
 
-#include "./DefinitionTrigger.h"
-#include <memory>
-#include "./EnvironmentSensorDefinition.h"
 #include "../../json/Value.h"
+#include "DefinitionTrigger.h"
+#include <memory>
 
 
 class EnvironmentSensorDefinition {
 
 public:
-
+    void deserializeData(Json::Value &);
+    void serializeData(Json::Value &)const;
+    void addEnvironmentTrigger(DefinitionTrigger const&);
     EnvironmentSensorDefinition();
+    void parseEnvironment(Json::Value &);
     ~EnvironmentSensorDefinition();
 //  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, EnvironmentSensorDefinition>> &); //TODO: incomplete function definition
-    void addEnvironmentTrigger(DefinitionTrigger const&);
-    void deserializeData(Json::Value &);
-    void parseEnvironment(Json::Value &);
-    void serializeData(Json::Value &)const;
 };

@@ -6,19 +6,18 @@
 class PlayerRespawnRandomizer {
 
 public:
-
     PlayerRespawnRandomizer();
-//  void init(unsigned int, GeneratorType const&); //TODO: incomplete function definition
+    bool isCompletelyExhausted()const;
+    void getLongJumpCount()const;
+    void resetPrimary();
+    void getRadius()const;
+    void getPrimaryOffset()const;
     void performPrimaryJump(Vec3 const&, bool);
+    void getRadiusSquared()const;
     void resetSecondary();
     void getRandomizedPosition(Vec3 &);
-    bool isPrimaryExhausted()const;
     bool isSecondaryExhausted()const;
-    bool isCompletelyExhausted()const;
-    void getRadius()const;
-    void getRadiusSquared()const;
-    void getLongJumpCount()const;
     void getShortJumpCount()const;
-    void resetPrimary();
-    void getPrimaryOffset()const;
+    bool isPrimaryExhausted()const;
+//  void init(unsigned int, GeneratorType const&); //TODO: incomplete function definition
 };

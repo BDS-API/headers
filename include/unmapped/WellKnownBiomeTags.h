@@ -5,6 +5,5 @@
 class WellKnownBiomeTags {
 
 public:
-
     WellKnownBiomeTags();
 };

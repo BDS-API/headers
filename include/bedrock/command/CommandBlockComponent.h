@@ -1,32 +1,30 @@
 #pragma once
 
-#include "./CommandBlockComponent.h"
-#include "../actor/Actor.h"
-#include "../../unmapped/DataLoadHelper.h"
-#include "../nbt/CompoundTag.h"
 #include <string>
+#include "../nbt/CompoundTag.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "../actor/Actor.h"
 
 
 class CommandBlockComponent {
 
 public:
-
+    CommandBlockComponent();
     ~CommandBlockComponent();
     CommandBlockComponent(CommandBlockComponent &&);
-    CommandBlockComponent();
-    void addAdditionalSaveData(CompoundTag &);
-    void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    void initFromDefinition(Actor &);
+    void setName(Actor &, std::string const&);
+    void resetCurrentTick();
     void getTicking()const;
     void setTicking(bool);
-    void _updateTickCount();
-    void getCurrentTickCount()const;
     void decrementTickCount();
-    void getBaseCommandBlock()const;
-    void getBaseCommandBlock();
     void setTrackOutput(Actor &, bool);
-    void setName(Actor &, std::string const&);
-    void onCommandBlockUpdate(Actor &, std::string const&, bool, std::string, int, bool);
+    void getBaseCommandBlock()const;
     void setLastOutput(Actor &, std::string const&);
-    void resetCurrentTick();
+    void initFromDefinition(Actor &);
+    void addAdditionalSaveData(CompoundTag &);
+    void getCurrentTickCount()const;
+    void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
+    void _updateTickCount();
+    void getBaseCommandBlock();
+    void onCommandBlockUpdate(Actor &, std::string const&, bool, std::string, int, bool);
 };

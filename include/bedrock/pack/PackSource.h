@@ -8,12 +8,10 @@
 class PackSource {
 
 public:
-    virtual void getPackOrigin()const;
     virtual void getPackType()const;
-
-    ~PackSource();
-    ~PackSource();
+    virtual void getPackOrigin()const;
     void resolveUpgradeDependencies(Pack &, IContentKeyProvider const&);
+    ~PackSource();
     void fetchPack(PackIdVersion const&);
     PackSource();
 };

@@ -4,20 +4,18 @@
 #include "../../io/ReadOnlyBinaryStream.h"
 #include "../../util/Vec3.h"
 #include "../../actor/Player.h"
-#include "./Packet.h"
-#include <string>
+#include "Packet.h"
 
 
 class MovePlayerPacket : Packet {
 
 public:
-    virtual ~MovePlayerPacket();
-    virtual void getId()const;
     virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
+    ~MovePlayerPacket();
+    virtual void getId()const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    MovePlayerPacket();
-    MovePlayerPacket(Player &, Vec3 const&);
 //  MovePlayerPacket(Player &, Player::PositionMode, int, int); //TODO: incomplete function definition
+    MovePlayerPacket(Player &, Vec3 const&);
+    MovePlayerPacket();
 };

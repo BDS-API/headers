@@ -2,10 +2,9 @@
 
 #include "../../../item/ItemInstance.h"
 #include "../../unmapped/ScriptEngine.h"
-#include "./ScriptEventData.h"
-#include "../../../actor/unmapped/ActorUniqueID.h"
 #include "../../ScriptObjectHandle.h"
-#include <string>
+#include "ScriptEventData.h"
+#include "../../../actor/unmapped/ActorUniqueID.h"
 
 
 class ScriptServerActorUseItemEvent : ScriptEventData {
@@ -13,13 +12,12 @@ class ScriptServerActorUseItemEvent : ScriptEventData {
 public:
     static long mHash;
 
-    virtual ~ScriptServerActorUseItemEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
-
+    ~ScriptServerActorUseItemEvent();
+    void setItemStack(ItemInstance const&);
+    std::string getName();
     void getHash();
+//  void setUseMethod(ItemUseMethod); //TODO: incomplete function definition
     ScriptServerActorUseItemEvent();
     void setActorId(ActorUniqueID const&);
-    void setItemStack(ItemInstance const&);
-//  void setUseMethod(ItemUseMethod); //TODO: incomplete function definition
-    std::string getName();
 };

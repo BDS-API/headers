@@ -3,12 +3,10 @@
 #include <string>
 
 
-class LevelSoundEventMap {
+namespace LevelSoundEventMap {
 
-public:
     static std::string map;
 
-
-    void getId(std::string const&);
 //  std::string getName(LevelSoundEvent); //TODO: incomplete function definition
+    void getId(std::string const&);
 };

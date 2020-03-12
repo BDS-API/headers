@@ -1,44 +1,43 @@
 #pragma once
 
-#include "../../../unmapped/ExpressionNode.h"
-#include <string>
 #include "../../../json/Value.h"
 #include "../../../unmapped/RenderParams.h"
+#include <string>
+#include "../../../unmapped/ExpressionNode.h"
 
 
 class ActorSkeletalAnimation {
 
 public:
-
-    ActorSkeletalAnimation(std::string const&, bool, std::string const&);
-    void addBoneAnimation(std::string const&);
-    void getBoneAnimations()const;
-    void getBoneAnimations();
-    void getParticleEffectEvents()const;
-    void getParticleEffectEvents();
-    void getSoundEffectEvents()const;
     void getSoundEffectEvents();
     void getEvents()const;
-    void addParticleEffectEvent(float);
-    void addSoundEffectEvent(float);
-//  void addActorEvent(float, std::string const&, CurrentCmdVersion); //TODO: incomplete function definition
     void setAnimationLength(float);
     void getAnimationLength()const;
-    void getMaxKeyFrameTime()const;
-    void calculateAnimationLength();
-    void sortParticleEffectEvents();
-    void sortSoundEffectEvents();
-    void sortEvents();
-    void initPrecomputedInterpolation();
-    void toJson(Json::Value &)const;
-    void shouldLoop()const;
-    void setShouldOverridePreviousAnimation(bool);
-    void setShouldLoop(bool);
-    void shouldOverridePreviousAnimation()const;
-    void getAnimTime(RenderParams &)const;
-    void getBlendWeight(RenderParams &)const;
-    void setBlendWeight(ExpressionNode const&);
-    void setAnimTimeUpdate(ExpressionNode const&);
     std::string getSourceFilePathWithExtension()const;
+    void shouldLoop()const;
+//  void addActorEvent(float, std::string const&, CurrentCmdVersion); //TODO: incomplete function definition
+    void setAnimTimeUpdate(ExpressionNode const&);
+    void getSoundEffectEvents()const;
+    void calculateAnimationLength();
+    void getMaxKeyFrameTime()const;
+    void sortParticleEffectEvents();
+    void initPrecomputedInterpolation();
+    void getBlendWeight(RenderParams &)const;
+    void sortEvents();
+    void getBoneAnimations();
+    void getParticleEffectEvents();
+    ActorSkeletalAnimation(std::string const&, bool, std::string const&);
+    void setShouldLoop(bool);
+    void addSoundEffectEvent(float);
+    void getParticleEffectEvents()const;
+    void addParticleEffectEvent(float);
+    void getBoneAnimations()const;
+    void sortSoundEffectEvents();
+    void setBlendWeight(ExpressionNode const&);
     ~ActorSkeletalAnimation();
+    void getAnimTime(RenderParams &)const;
+    void setShouldOverridePreviousAnimation(bool);
+    void shouldOverridePreviousAnimation()const;
+    void toJson(Json::Value &)const;
+    void addBoneAnimation(std::string const&);
 };

@@ -1,11 +1,12 @@
 #pragma once
 
-#include "./ScriptBinderComponent.h"
-#include "../../actor/ItemActor.h"
-#include "../unmapped/ScriptEngine.h"
-#include "../../actor/Actor.h"
 #include "../ScriptObjectHandle.h"
+#include <string>
+#include "../unmapped/ScriptEngine.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
+#include "../../actor/Actor.h"
+#include "../../actor/ItemActor.h"
+#include "ScriptBinderComponent.h"
 
 
 class ScriptActorUniqueIdBinderComponent : ScriptBinderComponent {
@@ -13,13 +14,12 @@ class ScriptActorUniqueIdBinderComponent : ScriptBinderComponent {
 public:
     static std::string TAG;
 
-    virtual ~ScriptActorUniqueIdBinderComponent();
+    ~ScriptActorUniqueIdBinderComponent();
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
-
-    ScriptActorUniqueIdBinderComponent();
     ScriptActorUniqueIdBinderComponent(ActorUniqueID);
+    void getIdentifier()const;
     ScriptActorUniqueIdBinderComponent(Actor const&);
     ScriptActorUniqueIdBinderComponent(ItemActor const&);
-    void getIdentifier()const;
+    ScriptActorUniqueIdBinderComponent();
 };

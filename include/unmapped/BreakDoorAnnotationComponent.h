@@ -1,23 +1,21 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
-#include "./BreakDoorAnnotationComponent.h"
+#include "Path.h"
+#include "EntityContext.h"
 #include "../bedrock/actor/Mob.h"
-#include "./EntityContext.h"
-#include "./Path.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class BreakDoorAnnotationComponent {
 
 public:
-
-    BreakDoorAnnotationComponent(BreakDoorAnnotationComponent &&);
-    BreakDoorAnnotationComponent();
-    void initFromDefinition(Actor &);
-    void onComponentRemoved(EntityContext &);
-    void _cleanUp(Mob &);
-    void obstructionCheck(Mob &);
-    void _shouldBreakDoor(Mob &);
     void clearProgress(Mob &);
+    void obstructionCheck(Mob &);
     bool canMobBreakDoor(Mob &, Path const&)const;
+    void initFromDefinition(Actor &);
+    void _cleanUp(Mob &);
+    void onComponentRemoved(EntityContext &);
+    BreakDoorAnnotationComponent(BreakDoorAnnotationComponent &&);
+    void _shouldBreakDoor(Mob &);
+    BreakDoorAnnotationComponent();
 };

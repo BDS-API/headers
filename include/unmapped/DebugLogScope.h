@@ -6,7 +6,6 @@
 class DebugLogScope {
 
 public:
-
-    DebugLogScope(std::string const&);
     ~DebugLogScope();
+    DebugLogScope(std::string const&);
 };

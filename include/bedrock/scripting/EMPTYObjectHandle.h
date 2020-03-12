@@ -4,11 +4,8 @@
 
 namespace ScriptApi {
 
-class EMPTYObjectHandle {
+    namespace EMPTYObjectHandle {
 
-public:
-
-    void _isEmpty()const;
-};
-
+        void _isEmpty()const;
+    };
 }

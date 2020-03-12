@@ -1,17 +1,15 @@
 #pragma once
 
-#include "./LootTableContext.h"
-#include "../json/Value.h"
-#include "../bedrock/util/Random.h"
-#include <memory>
-#include <vector>
 #include "../bedrock/item/condition/LootItemCondition.h"
+#include "../json/Value.h"
+#include <vector>
+#include <memory>
+#include "../bedrock/util/Random.h"
+#include "LootTableContext.h"
 
 
-class LootItemConditions {
+namespace LootItemConditions {
 
-public:
-
-    void allApply(std::vector<std::unique_ptr<LootItemCondition, std::default_delete<LootItemCondition>>, std::allocator<std::unique_ptr<LootItemCondition, std::default_delete<LootItemCondition>>>> const&, Random &, LootTableContext &);
     void deserialize(Json::Value);
+    void allApply(std::vector<std::unique_ptr<LootItemCondition>> const&, Random &, LootTableContext &);
 };

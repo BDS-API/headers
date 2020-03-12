@@ -6,9 +6,17 @@
 class PostprocessingManager {
 
 public:
+    class Owns;
 
     PostprocessingManager();
-    ~PostprocessingManager();
-    void tryLock(ChunkPos const&);
     void _release(ChunkPos const&);
+    void tryLock(ChunkPos const&);
+    ~PostprocessingManager();
+    class Owns {
+
+    public:
+        Owns(ChunkPos const&, PostprocessingManager &);
+        Owns(PostprocessingManager &);
+        ~Owns();
+    };
 };

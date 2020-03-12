@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../CommandRegistry.h"
-#include "../CommandOutput.h"
-#include "../orgin/CommandOrigin.h"
 #include "../../DedicatedServer.h"
+#include "../origin/CommandOrigin.h"
+#include "../CommandRegistry.h"
 #include "../Command.h"
+#include "../CommandOutput.h"
 
 
 class StopCommand : Command {
@@ -12,9 +12,8 @@ class StopCommand : Command {
 public:
     static long mServer;
 
-    virtual ~StopCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-
+    ~StopCommand();
     void setup(CommandRegistry &, DedicatedServer &);
     StopCommand();
 };

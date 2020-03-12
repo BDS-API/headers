@@ -2,13 +2,13 @@
 
 
 
-namespace Bedrock::Threading {
+namespace Bedrock {
 
-class AsyncResult {
+    namespace Threading {
 
-public:
+        namespace AsyncResult {
 
-    void done();
-};
-
+            void done();
+        };
+    }
 }

@@ -5,7 +5,6 @@
 class PlayerStorageIds {
 
 public:
-
-    PlayerStorageIds();
     ~PlayerStorageIds();
+    PlayerStorageIds();
 };

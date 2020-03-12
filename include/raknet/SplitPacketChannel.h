@@ -4,12 +4,10 @@
 
 namespace RakNet {
 
-class SplitPacketChannel {
+    class SplitPacketChannel {
 
-public:
-
-    ~SplitPacketChannel();
-    SplitPacketChannel();
-};
-
+    public:
+        SplitPacketChannel();
+        ~SplitPacketChannel();
+    };
 }

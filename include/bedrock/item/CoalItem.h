@@ -1,22 +1,21 @@
 #pragma once
 
-#include "./ItemStackBase.h"
-#include <memory>
-#include "./ItemInstance.h"
-#include "./Item.h"
-#include "unmapped/ItemDescriptor.h"
-#include "../nbt/CompoundTag.h"
 #include <string>
+#include "ItemInstance.h"
+#include "../nbt/CompoundTag.h"
+#include "ItemStackBase.h"
+#include <memory>
+#include "Item.h"
+#include "unmapped/ItemDescriptor.h"
 
 
 class CoalItem : Item {
 
 public:
-    virtual ~CoalItem();
-    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
     virtual void getIcon(ItemStackBase const&, int, bool)const;
+    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const;
+    ~CoalItem();
     virtual void setIcon(std::string const&, int);
-
-    CoalItem(std::string const&, int);
     bool isCharcoal(ItemInstance const&);
+    CoalItem(std::string const&, int);
 };

@@ -2,12 +2,10 @@
 
 
 
-class BedrockBlocks {
+namespace BedrockBlocks {
 
-public:
     static long mAir;
 
-
-    void assignBlocks();
     void unassignBlocks();
+    void assignBlocks();
 };

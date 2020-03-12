@@ -1,16 +1,15 @@
 #pragma once
 
 #include "../../../../unmapped/Dimension.h"
-#include "./StructureStart.h"
 #include "../../../util/Random.h"
+#include "StructureStart.h"
 
 
 class StrongholdStart : StructureStart {
 
 public:
-    virtual ~StrongholdStart();
-    virtual bool isValid()const;
     virtual void getType()const;
-
+    virtual bool isValid()const;
+    ~StrongholdStart();
     StrongholdStart(Dimension &, Random &, int, int);
 };

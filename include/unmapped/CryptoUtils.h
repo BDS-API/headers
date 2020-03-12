@@ -1,13 +1,10 @@
 #pragma once
 
 #include "../core/Path.h"
-#include <string>
 
 
-class CryptoUtils {
+namespace CryptoUtils {
 
-public:
-
-    std::string getFileChecksum(Core::Path const&);
     std::string getDirectroyChecksum(Core::Path const&);
+    std::string getFileChecksum(Core::Path const&);
 };

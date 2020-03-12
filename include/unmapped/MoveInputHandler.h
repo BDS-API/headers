@@ -1,34 +1,33 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
 #include "../bedrock/network/packet/PlayerAuthInputPacket.h"
 #include "../bedrock/actor/Player.h"
-#include "./MoveInput.h"
+#include "MoveInput.h"
+#include "../bedrock/util/Vec3.h"
 
 
 class MoveInputHandler : MoveInput {
 
 public:
-    virtual ~MoveInputHandler();
     virtual void tick(Player &);
-    virtual void clearInputState();
-    virtual bool isChangeHeight()const;
+    ~MoveInputHandler();
     virtual bool isPlayerMoving()const;
+    virtual bool isChangeHeight()const;
     virtual void fillInputPacket(PlayerAuthInputPacket &);
-
-    MoveInputHandler();
-    void _updateXY(bool);
-    bool isMovingForward()const;
-    bool isMovingLeft()const;
-    bool isMovingRight()const;
-    bool wantsMoveForward()const;
-    bool isJumpDown()const;
-    void setSneakPersistence(bool);
+    virtual void clearInputState();
     void setGazeDirection(Vec3 const&);
-    void getGazeDirection()const;
-    void _toggleSneak();
+    bool isMovingRight()const;
+    bool isMovingForward()const;
 //  void _getLookBitmask(MoveInputHandler::LookDirection); //TODO: incomplete function definition
-//  void _getLookBitmask(MoveInputHandler::LookDirection, MoveInputHandler::LookDirection); //TODO: incomplete function definition
+    bool isJumpDown()const;
     void _updateGGVector(short, float, float, float);
+    MoveInputHandler();
+    bool wantsMoveForward()const;
+    void setSneakPersistence(bool);
+    bool isMovingLeft()const;
+    void _toggleSneak();
+//  void _getLookBitmask(MoveInputHandler::LookDirection, MoveInputHandler::LookDirection); //TODO: incomplete function definition
     void _updateMoveVector(float, float);
+    void getGazeDirection()const;
+    void _updateXY(bool);
 };

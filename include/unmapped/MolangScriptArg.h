@@ -1,18 +1,16 @@
 #pragma once
 
-#include "./MolangScriptArg.h"
 #include "../json/Value.h"
 
 
 class MolangScriptArg {
 
 public:
-
-    ~MolangScriptArg();
-    MolangScriptArg(MolangScriptArg const&);
-    MolangScriptArg();
-    MolangScriptArg(float);
+    void set(Json::Value const&);
     void clear();
     bool isEqual(MolangScriptArg const&)const;
-    void set(Json::Value const&);
+    MolangScriptArg();
+    ~MolangScriptArg();
+    MolangScriptArg(MolangScriptArg const&);
+    MolangScriptArg(float);
 };

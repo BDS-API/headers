@@ -1,22 +1,21 @@
 #pragma once
 
-#include "./Goal.h"
-#include "../Mob.h"
 #include "../../util/BlockPos.h"
+#include "Goal.h"
+#include "../Mob.h"
 #include <string>
 
 
 class MoveIndoorsGoal : Goal {
 
 public:
-    virtual ~MoveIndoorsGoal();
     virtual bool canUse();
-    virtual bool canContinueToUse();
+    ~MoveIndoorsGoal();
     virtual void start();
     virtual void stop();
-    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
-
+    virtual void tick();
+    virtual bool canContinueToUse();
     MoveIndoorsGoal(Mob &, float, float);
     void _startPathfinding();
     void _isInside(BlockPos const&);

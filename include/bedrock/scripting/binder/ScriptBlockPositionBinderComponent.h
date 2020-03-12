@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../unmapped/ScriptEngine.h"
 #include "../ScriptObjectHandle.h"
-#include "./ScriptBinderComponent.h"
+#include <string>
+#include "../unmapped/ScriptEngine.h"
 #include "../../util/BlockPos.h"
+#include "ScriptBinderComponent.h"
 
 
 class ScriptBlockPositionBinderComponent : ScriptBinderComponent {
@@ -11,11 +12,10 @@ class ScriptBlockPositionBinderComponent : ScriptBinderComponent {
 public:
     static std::string TAG;
 
-    virtual ~ScriptBlockPositionBinderComponent();
-    virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
-
-    ScriptBlockPositionBinderComponent();
+    virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
+    ~ScriptBlockPositionBinderComponent();
     ScriptBlockPositionBinderComponent(BlockPos const&);
     void getPosition()const;
+    ScriptBlockPositionBinderComponent();
 };

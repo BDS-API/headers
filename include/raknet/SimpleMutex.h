@@ -4,15 +4,13 @@
 
 namespace RakNet {
 
-class SimpleMutex {
+    class SimpleMutex {
 
-public:
-
-    SimpleMutex();
-    void Init();
-    ~SimpleMutex();
-    void Lock();
-    void Unlock();
-};
-
+    public:
+        SimpleMutex();
+        ~SimpleMutex();
+        void Init();
+        void Unlock();
+        void Lock();
+    };
 }

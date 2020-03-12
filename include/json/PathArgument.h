@@ -1,22 +1,19 @@
 #pragma once
 
-#include "./PathArgument.h"
 #include <string>
 
 
 namespace Json {
 
-class PathArgument {
+    class PathArgument {
 
-public:
-
-    PathArgument();
-    PathArgument(unsigned int);
-    PathArgument(char const*);
-    PathArgument(std::string const&);
-    ~PathArgument();
-    PathArgument(Json::PathArgument &&);
-    PathArgument(Json::PathArgument const&);
-};
-
+    public:
+        PathArgument(char const*);
+        PathArgument(Json::PathArgument const&);
+        PathArgument();
+        PathArgument(Json::PathArgument &&);
+        ~PathArgument();
+        PathArgument(std::string const&);
+        PathArgument(unsigned int);
+    };
 }

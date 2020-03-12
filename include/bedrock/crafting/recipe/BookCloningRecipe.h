@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../../mce/UUID.h"
-#include "./MultiRecipe.h"
-#include "../../container/CraftingContainer.h"
-#include "../../level/Level.h"
 #include <string>
+#include "MultiRecipe.h"
+#include "../../../mce/UUID.h"
+#include "../../level/Level.h"
+#include "../../container/CraftingContainer.h"
 
 
 class BookCloningRecipe : MultiRecipe {
@@ -12,15 +12,14 @@ class BookCloningRecipe : MultiRecipe {
 public:
     static long ID;
 
-    virtual ~BookCloningRecipe();
     virtual void assemble(CraftingContainer &)const;
-    virtual void getCraftingSize()const;
+    virtual void matches(CraftingContainer &, Level &)const;
     virtual void getIngredient(int, int)const;
     virtual void getResultItem()const;
-    virtual void matches(CraftingContainer &, Level &)const;
-    virtual void size()const;
     virtual bool isExperimental()const;
-
-    BookCloningRecipe(std::string);
+    virtual void getCraftingSize()const;
+    virtual void size()const;
+    ~BookCloningRecipe();
     BookCloningRecipe(std::string, mce::UUID const&);
+    BookCloningRecipe(std::string);
 };

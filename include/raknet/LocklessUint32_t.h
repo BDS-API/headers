@@ -4,15 +4,13 @@
 
 namespace RakNet {
 
-class LocklessUint32_t {
+    class LocklessUint32_t {
 
-public:
-
-    void GetValue()const;
-    LocklessUint32_t();
-    LocklessUint32_t(unsigned int);
-    void Increment();
-    void Decrement();
-};
-
+    public:
+        LocklessUint32_t(unsigned int);
+        LocklessUint32_t();
+        void Decrement();
+        void GetValue()const;
+        void Increment();
+    };
 }

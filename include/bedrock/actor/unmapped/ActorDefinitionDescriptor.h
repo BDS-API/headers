@@ -1,27 +1,25 @@
 #pragma once
 
-#include "../../definition/DefinitionTrigger.h"
+#include <string>
+#include "../../../unmapped/HashString.h"
 #include "../Actor.h"
 #include "../../../unmapped/VariantParameterList.h"
-#include "../../../unmapped/HashString.h"
-#include "./ActorDefinitionDescriptor.h"
-#include <string>
+#include "../../definition/DefinitionTrigger.h"
 
 
 class ActorDefinitionDescriptor {
 
 public:
-
-    ~ActorDefinitionDescriptor();
-    void combine(ActorDefinitionDescriptor const&);
-    void subtract(ActorDefinitionDescriptor const&);
-    void contains(ActorDefinitionDescriptor const&)const;
-    void overlaps(ActorDefinitionDescriptor const&)const;
-    void empty()const;
-    bool hasComponent(Util::HashString const&)const;
-    void executeEvent(Actor &, std::string const&, VariantParameterList const&);
     void executeTrigger(Actor &, DefinitionTrigger const&, VariantParameterList const&);
-    void forceExecuteTrigger(Actor &, DefinitionTrigger const&, VariantParameterList const&);
+    void executeEvent(Actor &, std::string const&, VariantParameterList const&);
+    ~ActorDefinitionDescriptor();
+    void overlaps(ActorDefinitionDescriptor const&)const;
     ActorDefinitionDescriptor();
+    void subtract(ActorDefinitionDescriptor const&);
+    void forceExecuteTrigger(Actor &, DefinitionTrigger const&, VariantParameterList const&);
+    void combine(ActorDefinitionDescriptor const&);
+    void empty()const;
+    void contains(ActorDefinitionDescriptor const&)const;
+    bool hasComponent(Util::HashString const&)const;
     ActorDefinitionDescriptor(ActorDefinitionDescriptor &&);
 };

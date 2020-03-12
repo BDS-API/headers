@@ -1,22 +1,21 @@
 #pragma once
 
-#include "./MeleeAttackGoal.h"
 #include "../Actor.h"
-#include "../Mob.h"
 #include <string>
+#include "../Mob.h"
+#include "MeleeAttackGoal.h"
 
 
 class StompAttackGoal : MeleeAttackGoal {
 
 public:
-    virtual ~StompAttackGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
+    virtual void appendDebugInfo(std::string &)const;
     virtual void start();
+    ~StompAttackGoal();
     virtual void stop();
     virtual void tick();
-    virtual void appendDebugInfo(std::string &)const;
     virtual void _attemptAttackTarget(Actor *);
-
+    virtual bool canUse();
+    virtual bool canContinueToUse();
 //  StompAttackGoal(Mob &, float, bool, float, ActorCategory, int, float, bool, int, bool); //TODO: incomplete function definition
 };

@@ -1,29 +1,28 @@
 #pragma once
 
-#include "./FileChunk.h"
+#include "FileChunk.h"
 
 
 class FileChunkManager {
 
 public:
-
+    void requestedAllChunks()const;
     FileChunkManager();
-    FileChunkManager(unsigned long, unsigned int);
+    void getProgress()const;
     void _generateChunkInfo();
-    void reset();
+    void getDownloadedBytes()const;
+    void writtenAllChunks()const;
     void reset(unsigned long, unsigned int);
     void reset(unsigned long);
     void queueReceivedChunk(FileChunk &&);
-    void getAndIncrementNextChunk();
-    void getTotalNumberOfChunks();
-    void receivedAllChunks()const;
-    void writtenAllChunks()const;
-    void requestedAllChunks()const;
-    void dequeueChunk();
-    bool canWriteChunk()const;
-    void getChunks()const;
-    void getDownloadedBytes()const;
-    void getProgress()const;
-    void getChunkInfo(int)const;
     ~FileChunkManager();
+    void dequeueChunk();
+    void reset();
+    FileChunkManager(unsigned long, unsigned int);
+    void getChunkInfo(int)const;
+    bool canWriteChunk()const;
+    void receivedAllChunks()const;
+    void getAndIncrementNextChunk();
+    void getChunks()const;
+    void getTotalNumberOfChunks();
 };

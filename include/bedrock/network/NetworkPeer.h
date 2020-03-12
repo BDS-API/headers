@@ -2,15 +2,13 @@
 
 #include <functional>
 #include <memory>
-#include "./NetworkPeer.h"
 
 
 class NetworkPeer {
 
 public:
-    virtual ~NetworkPeer();
+    ~NetworkPeer();
     virtual void update();
-//  virtual void flush(std::function<void (void)> &&); //TODO: incomplete function definition
-
+    virtual void flush(std::function<void (void)> &&);
     NetworkPeer(std::shared_ptr<NetworkPeer>);
 };

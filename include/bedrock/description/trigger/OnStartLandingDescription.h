@@ -1,13 +1,12 @@
 #pragma once
 
-#include "./TriggerDescription.h"
+#include "TriggerDescription.h"
 
 
 class OnStartLandingDescription : TriggerDescription {
 
 public:
+    ~OnStartLandingDescription();
     virtual void getJsonName()const;
-    virtual ~OnStartLandingDescription();
-
     OnStartLandingDescription();
 };

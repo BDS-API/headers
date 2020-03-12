@@ -1,26 +1,23 @@
 #pragma once
 
-#include "./AddressOrGUID.h"
-#include "./RakNetGUID.h"
-#include "./SystemAddress.h"
-#include "./Packet.h"
+#include "SystemAddress.h"
+#include "RakNetGUID.h"
+#include "Packet.h"
 
 
 namespace RakNet {
 
-class AddressOrGUID {
+    class AddressOrGUID {
 
-public:
-
-    AddressOrGUID(RakNet::RakNetGUID const&);
-    AddressOrGUID(RakNet::SystemAddress const&);
-    AddressOrGUID(RakNet::Packet *);
-    void ToInteger(RakNet::AddressOrGUID const&);
-    void ToString(bool)const;
-    void ToString(bool, char *)const;
-    bool IsUndefined()const;
-    AddressOrGUID(RakNet::AddressOrGUID const&);
-    AddressOrGUID();
-};
-
+    public:
+        void ToString(bool, char *)const;
+        void ToInteger(RakNet::AddressOrGUID const&);
+        bool IsUndefined()const;
+        AddressOrGUID(RakNet::RakNetGUID const&);
+        AddressOrGUID();
+        AddressOrGUID(RakNet::Packet *);
+        AddressOrGUID(RakNet::AddressOrGUID const&);
+        void ToString(bool)const;
+        AddressOrGUID(RakNet::SystemAddress const&);
+    };
 }

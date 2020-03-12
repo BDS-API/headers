@@ -1,8 +1,7 @@
 #pragma once
 
+#include "SemVersion.h"
 #include <string>
-#include "./SemVersion.h"
-#include "./BaseGameVersion.h"
 
 
 class BaseGameVersion {
@@ -12,24 +11,23 @@ public:
     static long EMPTY;
     static long ANY;
 
-
+    BaseGameVersion(SemVersion const&);
+    void getMajor()const;
+    std::string asString()const;
+    void getMinor()const;
+    void operator>=(BaseGameVersion const&)const;
+//  BaseGameVersion(BaseGameVersion::any_version_constructor); //TODO: incomplete function definition
+    void operator>(BaseGameVersion const&)const;
+    BaseGameVersion(BaseGameVersion const&);
+    void operator<=(BaseGameVersion const&)const;
+    bool asSemVersion()const;
     ~BaseGameVersion();
     BaseGameVersion();
-    BaseGameVersion(BaseGameVersion const&);
-    BaseGameVersion(unsigned short, unsigned int);
-//  BaseGameVersion(BaseGameVersion::any_version_constructor); //TODO: incomplete function definition
-    BaseGameVersion(SemVersion const&);
     void operator==(BaseGameVersion const&)const;
     void operator<(BaseGameVersion const&)const;
-    void operator<=(BaseGameVersion const&)const;
-    void operator>(BaseGameVersion const&)const;
-    void operator>=(BaseGameVersion const&)const;
-    std::string asString()const;
-    bool isValid()const;
-    bool asSemVersion()const;
+    BaseGameVersion(unsigned short, unsigned int);
     bool isAnyVersion()const;
-    void getMajor()const;
-    void getMinor()const;
+    bool isValid()const;
     bool isCompatibleWith(BaseGameVersion const&)const;
     void fromString(std::string const&, BaseGameVersion &);
 };

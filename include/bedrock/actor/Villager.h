@@ -1,18 +1,17 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier.h"
+#include "VillagerBase.h"
 #include "../../unmapped/VariantParameterList.h"
-#include "./VillagerBase.h"
 #include "unmapped/ActorDefinitionGroup.h"
 #include <string>
+#include "unmapped/ActorDefinitionIdentifier.h"
 
 
 class Villager : VillagerBase {
 
 public:
 //  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual ~Villager();
     virtual void buildDebugInfo(std::string &)const;
-
+    ~Villager();
     Villager(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

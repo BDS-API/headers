@@ -4,11 +4,9 @@
 
 namespace FeatureLoading {
 
-class FeatureRootParseContext {
+    class FeatureRootParseContext {
 
-public:
-
-    ~FeatureRootParseContext();
-};
-
+    public:
+        ~FeatureRootParseContext();
+    };
 }

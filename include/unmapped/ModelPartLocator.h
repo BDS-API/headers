@@ -5,6 +5,5 @@
 class ModelPartLocator {
 
 public:
-
     ~ModelPartLocator();
 };

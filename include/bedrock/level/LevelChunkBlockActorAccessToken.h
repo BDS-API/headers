@@ -1,11 +1,10 @@
 #pragma once
 
-#include "./LevelChunk.h"
+#include "LevelChunk.h"
 
 
 class LevelChunkBlockActorAccessToken {
 
 public:
-
     LevelChunkBlockActorAccessToken(LevelChunk const&);
 };

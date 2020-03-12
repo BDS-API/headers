@@ -1,14 +1,13 @@
 #pragma once
 
-#include "./ITickingSystem.h"
+#include "ITickingSystem.h"
 #include "../../../unmapped/EntityRegistry.h"
 
 
 class SchedulerSystem : ITickingSystem {
 
 public:
-    virtual ~SchedulerSystem();
+    ~SchedulerSystem();
     virtual void tick(EntityRegistry &);
-
     SchedulerSystem();
 };

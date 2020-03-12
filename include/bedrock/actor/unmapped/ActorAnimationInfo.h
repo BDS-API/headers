@@ -5,7 +5,6 @@
 class ActorAnimationInfo {
 
 public:
-
     ActorAnimationInfo();
     ~ActorAnimationInfo();
 };

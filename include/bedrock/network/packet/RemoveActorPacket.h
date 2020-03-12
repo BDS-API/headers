@@ -2,20 +2,18 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
-#include <string>
+#include "Packet.h"
 
 
 class RemoveActorPacket : Packet {
 
 public:
-    virtual ~RemoveActorPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
+    ~RemoveActorPacket();
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    RemoveActorPacket();
+    virtual void getId()const;
+    virtual std::string getName()const;
     RemoveActorPacket(ActorUniqueID);
+    RemoveActorPacket();
 };

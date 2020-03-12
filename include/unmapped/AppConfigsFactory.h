@@ -2,9 +2,7 @@
 
 
 
-class AppConfigsFactory {
-
-public:
+namespace AppConfigsFactory {
 
     void createAppConfigs();
 };

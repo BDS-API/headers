@@ -4,17 +4,15 @@
 
 namespace RakNet {
 
-class RakNetRandom {
+    class RakNetRandom {
 
-public:
-
-    RakNetRandom();
-    ~RakNetRandom();
-    void SeedMT(unsigned int);
-    void ReloadMT();
-    void RandomMT();
-    void FrandomMT();
-//  void FillBufferMT(void *, unsigned int); //TODO: incomplete function definition
-};
-
+    public:
+        void RandomMT();
+        void ReloadMT();
+        ~RakNetRandom();
+        void FrandomMT();
+        RakNetRandom();
+        void SeedMT(unsigned int);
+        void FillBufferMT(void *, unsigned int);
+    };
 }

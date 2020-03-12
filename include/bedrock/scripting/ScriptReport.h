@@ -1,28 +1,25 @@
 #pragma once
 
-#include <memory>
-#include "./ScriptReport.h"
 #include <string>
+#include <memory>
 
 
 namespace ScriptApi {
 
-class ScriptReport {
+    class ScriptReport {
 
-public:
-
-    ScriptReport();
-    void merge(ScriptApi::ScriptReport &&);
-    void clear();
-    void addError();
-    void addError(std::string const&);
-//  void addError(std::unique_ptr<ScriptApi::JavaScriptErrorHandler, std::default_delete<ScriptApi::JavaScriptErrorHandler>> &&); //TODO: incomplete function definition
-    void addWarning();
-    void addWarning(std::string const&);
-    bool hasErrors()const;
-    bool hasWarnings()const;
-    void getReportItems()const;
-    ~ScriptReport();
-};
-
+    public:
+        bool hasWarnings()const;
+        void addError();
+        ~ScriptReport();
+        void addWarning();
+        ScriptReport();
+        void addWarning(std::string const&);
+        bool hasErrors()const;
+        void merge(ScriptApi::ScriptReport &&);
+//      void addError(std::unique_ptr<ScriptApi::JavaScriptErrorHandler> &&); //TODO: incomplete function definition
+        void getReportItems()const;
+        void addError(std::string const&);
+        void clear();
+    };
 }

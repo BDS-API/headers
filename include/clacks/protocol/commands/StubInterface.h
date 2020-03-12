@@ -2,15 +2,33 @@
 
 
 
-namespace com::mojang::clacks::protocol::Commands {
+namespace com {
 
-class StubInterface {
+    namespace mojang {
 
-public:
-    virtual ~StubInterface();
-    virtual void experimental_async();
+        namespace clacks {
 
-    StubInterface();
-};
+            namespace protocol {
 
+                namespace Commands {
+
+                    class StubInterface {
+
+                    public:
+                        class experimental_async_interface;
+
+                        virtual void experimental_async();
+                        ~StubInterface();
+                        StubInterface();
+                        class experimental_async_interface {
+
+                        public:
+                            ~experimental_async_interface();
+                            experimental_async_interface();
+                        };
+                    };
+                }
+            }
+        }
+    }
 }

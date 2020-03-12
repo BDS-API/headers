@@ -1,21 +1,20 @@
 #pragma once
 
-#include <string>
 #include "unmapped/BlockSource.h"
-#include "./BlockLegacy.h"
 #include "../util/BlockPos.h"
-#include "../util/Random.h"
+#include <string>
 #include "../../unmapped/Block.h"
+#include "BlockLegacy.h"
+#include "../util/Random.h"
 
 
 class PrismarineBlock : BlockLegacy {
 
 public:
-    virtual ~PrismarineBlock();
+    virtual std::string buildDescriptionId(Block const&)const;
+    ~PrismarineBlock();
     virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
-    virtual std::string buildDescriptionId(Block const&)const;
     virtual bool isAuxValueRelevantForPicking()const;
-
     PrismarineBlock(std::string const&, int);
 };

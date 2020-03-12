@@ -5,6 +5,5 @@
 class IPacketHandlerDispatcher {
 
 public:
-
     ~IPacketHandlerDispatcher();
 };

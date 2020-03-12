@@ -1,11 +1,8 @@
 #pragma once
 
-#include <memory>
-#include "../bedrock/nbt/CompoundTag.h"
 #include "../bedrock/actor/Actor.h"
 #include <vector>
-#include "./MobEffectInstance.h"
-#include <string>
+#include "../bedrock/nbt/CompoundTag.h"
 
 
 class MobEffectInstance {
@@ -14,43 +11,42 @@ public:
     static long MAX_AMPLIFIER_COUNT;
     static long NO_EFFECT;
 
-
-    MobEffectInstance();
-    MobEffectInstance(unsigned int);
-    void _setVisibility();
-    MobEffectInstance(unsigned int, int);
-    MobEffectInstance(unsigned int, int, int);
     MobEffectInstance(unsigned int, int, int, bool, bool, bool);
     MobEffectInstance(unsigned int, int, int, int, int, int, bool, bool, bool);
-    void update(MobEffectInstance const&);
-    void getId()const;
-    void getDuration()const;
-    void setDuration(int);
-    void getAmplifier()const;
-    void getSplashDuration()const;
-    void getLingerDuration()const;
-    void getSplashEffect()const;
-    bool isAmbient()const;
-    bool isEffectVisible()const;
-    bool displaysOnScreenTextureAnimation()const;
-    void tick(Actor *);
-    void _tickDownDuration();
-    void applyEffects(Actor *)const;
-    void removeEffects(Actor *)const;
-    std::string getDescriptionId()const;
-    std::string getDisplayName()const;
-    void getComponentName()const;
     std::string toString()const;
-    void operator==(MobEffectInstance const&)const;
-    void operator!=(MobEffectInstance const&)const;
-    void operator<(MobEffectInstance const&)const;
-    void save()const;
 //  void getDifficulityDuration(Difficulty)const; //TODO: incomplete function definition
-    void load(CompoundTag *);
+    MobEffectInstance(unsigned int);
+    void getAmplifier()const;
+    void operator<(MobEffectInstance const&)const;
+    void applyEffects(Actor *)const;
+    std::string getDescriptionId()const;
+    void getColorValue(std::vector<MobEffectInstance> const&);
     void setNoCounter(bool);
-    bool isNoCounter()const;
-    void getColorValue(std::vector<MobEffectInstance, std::allocator<MobEffectInstance>> const&);
-    void areAllEffectsAmbient(std::vector<MobEffectInstance, std::allocator<MobEffectInstance>> const&);
+    void operator!=(MobEffectInstance const&)const;
+    void removeEffects(Actor *)const;
+    void getDuration()const;
+    bool isAmbient()const;
+    void getLingerDuration()const;
+    bool isEffectVisible()const;
+    void getComponentName()const;
+    void getSplashDuration()const;
+    void _tickDownDuration();
+    std::string getDisplayName()const;
+    void getId()const;
+    void _setVisibility();
+    void setDuration(int);
+    void operator==(MobEffectInstance const&)const;
+    void load(CompoundTag *);
 //  bool hasDifficulityDuration(Difficulty)const; //TODO: incomplete function definition
+    MobEffectInstance(unsigned int, int);
+    void tick(Actor *);
+    void getSplashEffect()const;
+    void areAllEffectsAmbient(std::vector<MobEffectInstance> const&);
+    bool displaysOnScreenTextureAnimation()const;
+    bool isNoCounter()const;
+    void save()const;
 //  void setDifficulityDuration(Difficulty, int); //TODO: incomplete function definition
+    MobEffectInstance();
+    void update(MobEffectInstance const&);
+    MobEffectInstance(unsigned int, int, int);
 };

@@ -1,16 +1,15 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList.h"
-#include "./Throwable.h"
-#include "unmapped/ActorDefinitionGroup.h"
 #include "unmapped/ActorDefinitionIdentifier.h"
+#include "../../unmapped/VariantParameterList.h"
+#include "unmapped/ActorDefinitionGroup.h"
+#include "Throwable.h"
 
 
 class ThrownEnderpearl : Throwable {
 
 public:
+    ~ThrownEnderpearl();
 //  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual ~ThrownEnderpearl();
-
     ThrownEnderpearl(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

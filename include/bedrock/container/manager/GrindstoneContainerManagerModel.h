@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack.h"
-#include "./ContainerManagerModel.h"
-#include "../../util/BlockPos.h"
+#include "ContainerManagerModel.h"
 #include "../../item/ItemInstance.h"
+#include "../../../unmapped/ContainerItemStack.h"
 #include "../../network/packet/CraftingEventPacket.h"
+#include "../../util/BlockPos.h"
 #include "../../actor/Player.h"
 
 
@@ -15,18 +15,17 @@ public:
     static long ADDITIONAL_SLOT;
     static long RESULT_SLOT;
 
-    virtual ~GrindstoneContainerManagerModel();
-    virtual void getItems();
-    virtual void setSlot(int, ContainerItemStack const&, bool);
-    virtual void getSlot(int);
-    virtual void setData(int, int);
     virtual void broadcastChanges();
     virtual void init();
-
-//  GrindstoneContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    ~GrindstoneContainerManagerModel();
+    virtual void setData(int, int);
+    virtual void getSlot(int);
+    virtual void getItems();
     bool isGrindstoneValid(float);
     void sendCraftedPacket(CraftingEventPacket &);
+//  GrindstoneContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
     void getBlockPos()const;
-    void fireDisenchantedAchievementEvent();
     void fireItemAcquiredEvent(ItemInstance const&, int);
+    void fireDisenchantedAchievementEvent();
 };

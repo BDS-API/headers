@@ -5,6 +5,5 @@
 class OverworldHeightAttributes {
 
 public:
-
     OverworldHeightAttributes();
 };

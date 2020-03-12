@@ -1,12 +1,10 @@
 #pragma once
 
-#include "./IWorldRegistriesProvider.h"
+#include "IWorldRegistriesProvider.h"
 #include "../bedrock/pack/ResourcePackManager.h"
 
 
-class AutomaticFeatureRules {
-
-public:
+namespace AutomaticFeatureRules {
 
     void attachAutomaticFeatures(ResourcePackManager &, IWorldRegistriesProvider &, bool);
 };

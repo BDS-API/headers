@@ -1,22 +1,21 @@
 #pragma once
 
-#include "../../item/unmapped/ItemDescriptor.h"
-#include "../../../unmapped/ContainerItemStack.h"
-#include <memory>
-#include "../model/ContainerModel.h"
 #include "../../item/ItemInstance.h"
-#include "./ContainerController.h"
+#include "../../../unmapped/ContainerItemStack.h"
+#include "ContainerController.h"
+#include <memory>
+#include "../../item/unmapped/ItemDescriptor.h"
+#include "../model/ContainerModel.h"
 
 
 class FurnaceFuelContainerController : ContainerController {
 
 public:
-    virtual ~FurnaceFuelContainerController();
-    virtual bool isItemAllowed(ItemInstance const&)const;
-    virtual void _getAvailableSetCount(int, ContainerItemStack const&)const;
     virtual void _getAvailableAddCount(int)const;
-
+    virtual void _getAvailableSetCount(int, ContainerItemStack const&)const;
+    ~FurnaceFuelContainerController();
+    virtual bool isItemAllowed(ItemInstance const&)const;
+    bool isBucket(ItemDescriptor const&);
     FurnaceFuelContainerController(std::shared_ptr<ContainerModel>);
     bool isFurnaceFuelItem(ItemInstance const&);
-    bool isBucket(ItemDescriptor const&);
 };

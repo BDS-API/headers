@@ -6,8 +6,7 @@
 class BoostItem {
 
 public:
-
-    void setItem(std::string const&);
     void setReplacement(std::string const&);
+    void setItem(std::string const&);
     BoostItem();
 };

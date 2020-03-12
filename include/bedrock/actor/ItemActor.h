@@ -1,17 +1,16 @@
 #pragma once
 
-#include "../block/unmapped/BlockSource.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Actor.h"
-#include "../item/ItemStack.h"
-#include "./ItemActor.h"
+#include "Player.h"
 #include "../../unmapped/VariantParameterList.h"
-#include "damagesource/ActorDamageSource.h"
-#include "../util/Vec3.h"
-#include "../../unmapped/DataLoadHelper.h"
 #include "unmapped/ActorDefinitionGroup.h"
+#include "Actor.h"
+#include "../util/Vec3.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../nbt/CompoundTag.h"
-#include "./Player.h"
+#include "../block/unmapped/BlockSource.h"
+#include "../item/ItemStack.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../../unmapped/DataLoadHelper.h"
 
 
 class ItemActor : Actor {
@@ -20,33 +19,32 @@ public:
     static long LIFETIME;
 
 //  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual ~ItemActor();
-    virtual void getAddPacket();
-    virtual void normalTick();
-    virtual void playerTouch(Player &);
     virtual bool isInvulnerableTo(ActorDamageSource const&)const;
+    ~ItemActor();
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
 //  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
-    virtual void getSourceUniqueID()const;
     virtual void getHandleWaterAABB()const;
     virtual bool canSynchronizeNewEntity()const;
-    virtual bool canMakeStepSound()const;
-    virtual void _hurt(ActorDamageSource const&, int, bool, bool);
-    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+    virtual void normalTick();
     virtual void addAdditionalSaveData(CompoundTag &);
-
-    void getItemStack();
-    bool isFromFishing()const;
-    void getItemStack()const;
-    void setItemStack(ItemStack const&);
-    void setDefaultPickUpDelay();
-    void setIsFromFishing(bool);
-    bool hasPickUpDelay();
-    void _validateItem();
-    ItemActor(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void clientInitialize(BlockSource &, Vec3 const&, ItemStack const&, int, bool, bool);
-    void _setUnderwaterMovement();
-    void _mergeWithNeighbours();
-    void _defineEntityData();
+    virtual void getSourceUniqueID()const;
+    virtual void playerTouch(Player &);
+    virtual void _hurt(ActorDamageSource const&, int, bool, bool);
+    virtual void getAddPacket();
+    virtual bool canMakeStepSound()const;
     void setSourceEntity(Actor const*);
+    void setIsFromFishing(bool);
+    bool isFromFishing()const;
     void _merge(ItemActor *);
+    void getItemStack()const;
+    bool hasPickUpDelay();
+    void _mergeWithNeighbours();
+    ItemActor(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    void setDefaultPickUpDelay();
+    void _setUnderwaterMovement();
+    void clientInitialize(BlockSource &, Vec3 const&, ItemStack const&, int, bool, bool);
+    void setItemStack(ItemStack const&);
+    void _validateItem();
+    void _defineEntityData();
+    void getItemStack();
 };

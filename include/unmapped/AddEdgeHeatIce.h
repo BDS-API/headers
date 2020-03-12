@@ -1,15 +1,12 @@
 #pragma once
 
-#include "./PreBiome.h"
+#include "PreBiome.h"
 
 
 namespace LayerFilters {
 
-class AddEdgeHeatIce {
+    namespace AddEdgeHeatIce {
 
-public:
-
-//  void operator()(LayerDetails::NeighborhoodReader<LayerValues::PreBiome, 1u, 1u> &)const; //TODO: incomplete function definition
-};
-
+//      void operator()(LayerDetails::NeighborhoodReader<LayerValues::PreBiome, 1u, 1u> &)const; //TODO: incomplete function definition
+    };
 }

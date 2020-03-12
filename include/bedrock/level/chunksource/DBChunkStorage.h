@@ -1,16 +1,16 @@
 #pragma once
 
+#include "ChunkViewSource.h"
 #include "../storage/DBStorage.h"
-#include <memory>
-#include "./ChunkSource.h"
-#include "./ChunkViewSource.h"
-#include "../../Scheduler.h"
+#include <string>
 #include "../../block/unmapped/BlockSource.h"
 #include "../../../unmapped/DBChunkStorageKey.h"
-#include "../LevelChunkFinalDeleter.h"
+#include "ChunkSource.h"
 #include "../../../unmapped/DBStorageWriteBatch.h"
-#include "../LevelChunk.h"
 #include <functional>
+#include <memory>
+#include "../LevelChunk.h"
+#include "../../Scheduler.h"
 
 
 class DBChunkStorage : ChunkSource {
@@ -19,28 +19,27 @@ public:
     static long threadBatch;
     static std::string threadBuffer;
 
-    virtual ~DBChunkStorage();
-    virtual void shutdown();
-    virtual bool isShutdownDone();
-    virtual void postProcess(ChunkViewSource &);
     virtual void checkAndReplaceChunk(ChunkViewSource &, LevelChunk &);
-    virtual void loadChunk(LevelChunk &, bool);
+    virtual bool isShutdownDone();
+    virtual void flushPendingWrites();
+    virtual void postProcess(ChunkViewSource &);
+    virtual void acquireDiscarded(std::unique_ptr<LevelChunk>);
+    virtual void hintDiscardBatchEnd();
+    virtual void shutdown();
+    ~DBChunkStorage();
     virtual void saveLiveChunk(LevelChunk &);
     virtual void hintDiscardBatchBegin();
-    virtual void hintDiscardBatchEnd();
-    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, LevelChunkFinalDeleter>);
-    virtual void flushPendingWrites();
-
-    DBChunkStorage(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>, DBStorage &, Scheduler &);
-    void _writeBatch();
-    void _hasChunkUncached(DBChunkStorageKey const&);
-    void _hasChunk(DBChunkStorageKey const&);
+    virtual void loadChunk(LevelChunk &, bool);
     void _loadChunkFromDB(LevelChunk &);
-    void _applyChunkFixup(LevelChunk *, BlockSource &);
-    void _upgradeFix(LevelChunk &, BlockSource &);
-    void _loadAndBlendFromDB(LevelChunk &);
-    void _serializeChunk(LevelChunk const&, DBStorageWriteBatch &);
     void _getBuffer();
+    void _hasChunk(DBChunkStorageKey const&);
     void freeCaches();
-//  void registerUpgradeFixHandler(std::function<void (LevelChunk &, BlockSource &)>); //TODO: incomplete function definition
+    void _hasChunkUncached(DBChunkStorageKey const&);
+    void _writeBatch();
+    void _applyChunkFixup(LevelChunk *, BlockSource &);
+    void registerUpgradeFixHandler(std::function<void (LevelChunk &, BlockSource &)>);
+    void _upgradeFix(LevelChunk &, BlockSource &);
+    void _serializeChunk(LevelChunk const&, DBStorageWriteBatch &);
+    DBChunkStorage(std::unique_ptr<ChunkSource>, DBStorage &, Scheduler &);
+    void _loadAndBlendFromDB(LevelChunk &);
 };

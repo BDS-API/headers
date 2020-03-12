@@ -1,23 +1,22 @@
 #pragma once
 
-#include "../../../../../unmapped/BoundingBox.h"
 #include "../../../../util/Random.h"
 #include "../StrongholdPiece.h"
-#include <memory>
 #include "../../../../block/unmapped/BlockSource.h"
-#include "../StructurePiece.h"
 #include <vector>
+#include <memory>
+#include "../../../../../unmapped/BoundingBox.h"
+#include "../StructurePiece.h"
 
 
 class SHFiveCrossing : StrongholdPiece {
 
 public:
-    virtual ~SHFiveCrossing();
     virtual void getType()const;
-    virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
+    ~SHFiveCrossing();
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-
-    void createPiece(std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
-    SHFiveCrossing();
+    virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &);
     SHFiveCrossing(int, Random &, BoundingBox const&, int);
+    SHFiveCrossing();
+    void createPiece(std::vector<std::unique_ptr<StructurePiece>> &, Random &, int, int, int, int, int);
 };

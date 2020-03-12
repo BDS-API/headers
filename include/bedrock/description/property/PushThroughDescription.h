@@ -1,16 +1,15 @@
 #pragma once
 
-#include "./PropertyDescription.h"
 #include "../../../json/Value.h"
+#include "PropertyDescription.h"
 
 
 class PushThroughDescription : PropertyDescription {
 
 public:
+    ~PushThroughDescription();
     virtual void getJsonName()const;
-    virtual ~PushThroughDescription();
     virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
-
     PushThroughDescription();
 };

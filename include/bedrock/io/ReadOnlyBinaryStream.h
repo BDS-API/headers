@@ -1,6 +1,5 @@
 #pragma once
 
-#include <memory>
 #include <vector>
 #include <string>
 
@@ -8,35 +7,34 @@
 class ReadOnlyBinaryStream {
 
 public:
-    virtual ~ReadOnlyBinaryStream();
-//  virtual void read(void *, unsigned long); //TODO: incomplete function definition
-
-    void getUnreadLength()const;
-    void getReadPointer()const;
-    void setReadPointer(unsigned long);
-    void getLength()const;
-    std::string getData()const;
-    void readVectorList(std::vector<unsigned int, std::allocator<unsigned int>> &);
-    ReadOnlyBinaryStream(std::string &&);
-    ReadOnlyBinaryStream(std::string const&, bool);
-    void getBool();
-    void getByte();
-    void getSignedShort();
-    void getUnsignedShort();
+    ~ReadOnlyBinaryStream();
+    virtual void read(void *, unsigned long);
     void getSignedBigEndianInt();
-    void getSignedInt();
-    void getUnsignedInt();
-    void getSignedInt64();
-    void getUnsignedInt64();
     void getDouble();
-    void getFloat();
-    void getFixedFloat(double);
-    void getVarInt64();
-    void getNormalizedFloat();
-    void getVarInt();
-    void getUnsignedVarInt();
-    void getUnsignedVarInt64();
-    void getString(std::string &);
+    void getSignedShort();
     std::string getString();
+    void getUnsignedInt();
+    std::string getData()const;
+    void getUnsignedVarInt();
+    void setReadPointer(unsigned long);
+    void getVarInt();
+    ReadOnlyBinaryStream(std::string const&, bool);
+    void getVarInt64();
+    void getUnsignedShort();
+    void getFixedFloat(double);
+    void getUnreadLength()const;
+    void getSignedInt();
+    void readVectorList(std::vector<unsigned int> &);
+    void getNormalizedFloat();
+    void getBool();
     void getUnsignedChar();
+    void getLength()const;
+    void getString(std::string &);
+    ReadOnlyBinaryStream(std::string &&);
+    void getUnsignedVarInt64();
+    void getSignedInt64();
+    void getReadPointer()const;
+    void getByte();
+    void getFloat();
+    void getUnsignedInt64();
 };

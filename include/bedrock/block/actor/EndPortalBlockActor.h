@@ -1,13 +1,12 @@
 #pragma once
 
-#include "./BlockActor.h"
 #include "../../util/BlockPos.h"
+#include "BlockActor.h"
 
 
 class EndPortalBlockActor : BlockActor {
 
 public:
-    virtual ~EndPortalBlockActor();
-
+    ~EndPortalBlockActor();
     EndPortalBlockActor(BlockPos const&);
 };

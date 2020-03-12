@@ -1,13 +1,11 @@
 #pragma once
 
-#include "../bedrock/io/ReadOnlyBinaryStream.h"
 #include "../bedrock/io/BinaryStream.h"
+#include "../bedrock/io/ReadOnlyBinaryStream.h"
 
 
-class PotionMixDataEntry {
+namespace PotionMixDataEntry {
 
-public:
-
-    void write(BinaryStream &)const;
     void read(ReadOnlyBinaryStream &);
+    void write(BinaryStream &)const;
 };

@@ -1,17 +1,16 @@
 #pragma once
 
-#include "../../unmapped/SemVersion.h"
-#include "./SimpleContainer.h"
-#include "../nbt/ListTag.h"
+#include "SimpleContainer.h"
 #include <string>
+#include "../nbt/ListTag.h"
+#include "../../unmapped/SemVersion.h"
 
 
 class PlayerUIContainer : SimpleContainer {
 
 public:
-    virtual ~PlayerUIContainer();
-
-    PlayerUIContainer(std::string const&, bool, int);
+    ~PlayerUIContainer();
     void save();
+    PlayerUIContainer(std::string const&, bool, int);
     void load(ListTag const&, SemVersion const&);
 };

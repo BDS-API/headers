@@ -1,20 +1,17 @@
 #pragma once
 
-#include "./GameRulesChangedPacketData.h"
-#include <memory>
-#include "./GameRule.h"
 #include <vector>
+#include "GameRule.h"
 
 
 class GameRulesChangedPacketData {
 
 public:
-
-    GameRulesChangedPacketData();
+    void setRules(std::vector<GameRule>);
     ~GameRulesChangedPacketData();
     GameRulesChangedPacketData(GameRulesChangedPacketData &&);
     void addRule(GameRule const&);
-    void getRules()const;
-    void setRules(std::vector<GameRule, std::allocator<GameRule>>);
+    GameRulesChangedPacketData();
     void reserve(unsigned int);
+    void getRules()const;
 };

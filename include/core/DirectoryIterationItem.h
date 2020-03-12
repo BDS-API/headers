@@ -1,34 +1,31 @@
 #pragma once
 
-#include "./Path.h"
-#include "./PathPart.h"
-#include <string>
+#include "PathPart.h"
+#include "Path.h"
 
 
 namespace Core {
 
-class DirectoryIterationItem {
+    class DirectoryIterationItem {
 
-public:
-
-//  DirectoryIterationItem(Core::DirectoryIterationFlags); //TODO: incomplete function definition
-    void getFileSize()const;
-    void setFileSize(unsigned long);
-    void getFileSizeAllocationOnDisk()const;
-    void setFileSizeAllocationOnDisk(unsigned long);
-    std::string getFullPathName()const;
-    void setName(Core::PathPart const&);
-    void getName()const;
-    void setFullPathName(Core::Path);
-    void getType()const;
-//  void setType(Core::FileType); //TODO: incomplete function definition
-    bool isDirectory()const;
-    bool isFile()const;
-    void getCreateTime()const;
-    void setCreateTime(long);
-    void getModifyTime()const;
-    void setModifyTime(long);
-    ~DirectoryIterationItem();
-};
-
+    public:
+//      void setType(Core::FileType); //TODO: incomplete function definition
+        void getModifyTime()const;
+        void setFileSize(unsigned long);
+//      DirectoryIterationItem(Core::DirectoryIterationFlags); //TODO: incomplete function definition
+        void setFullPathName(Core::Path);
+        void getCreateTime()const;
+        void setModifyTime(long);
+        void setName(Core::PathPart const&);
+        bool isDirectory()const;
+        ~DirectoryIterationItem();
+        std::string getFullPathName()const;
+        void setCreateTime(long);
+        void getFileSize()const;
+        bool isFile()const;
+        void getType()const;
+        void getName()const;
+        void setFileSizeAllocationOnDisk(unsigned long);
+        void getFileSizeAllocationOnDisk()const;
+    };
 }

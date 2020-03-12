@@ -1,24 +1,21 @@
 #pragma once
 
 #include "../../io/BinaryStream.h"
-#include "../../actor/unmapped/ActorInfo.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include <memory>
-#include "./Packet.h"
 #include <vector>
-#include <string>
+#include "../../actor/unmapped/ActorInfo.h"
+#include "Packet.h"
 
 
 class AvailableActorIdentifiersPacket : Packet {
 
 public:
-    virtual ~AvailableActorIdentifiersPacket();
     virtual void getId()const;
+    virtual void read(ReadOnlyBinaryStream &);
+    ~AvailableActorIdentifiersPacket();
     virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
-    virtual void read(ReadOnlyBinaryStream &);
-
     AvailableActorIdentifiersPacket();
-    AvailableActorIdentifiersPacket(std::vector<ActorInfo, std::allocator<ActorInfo>> const&);
+    AvailableActorIdentifiersPacket(std::vector<ActorInfo> const&);
     void getIdentifiers()const;
 };

@@ -1,19 +1,16 @@
 #pragma once
 
-#include "./DefinitionModifier.h"
-#include <memory>
+#include "DefinitionModifier.h"
 #include "../../unmapped/VariantParameterList.h"
-#include "../actor/Actor.h"
 #include <vector>
-#include "./DefinitionEvent.h"
+#include "../actor/Actor.h"
 
 
 class DefinitionEvent {
 
 public:
-
     ~DefinitionEvent();
-    DefinitionEvent(DefinitionEvent const&);
+    void evaluateGroups(Actor &, std::vector<DefinitionModifier> &, VariantParameterList const&);
     DefinitionEvent();
-    void evaluateGroups(Actor &, std::vector<DefinitionModifier, std::allocator<DefinitionModifier>> &, VariantParameterList const&);
+    DefinitionEvent(DefinitionEvent const&);
 };

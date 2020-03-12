@@ -1,20 +1,19 @@
 #pragma once
 
-#include "./ItemInstance.h"
+#include "ItemStack.h"
 #include "../util/BlockPos.h"
-#include "./Item.h"
-#include "../actor/Actor.h"
-#include "./ItemStack.h"
 #include <string>
+#include "../actor/Actor.h"
+#include "ItemInstance.h"
+#include "Item.h"
 
 
 class LeadItem : Item {
 
 public:
-    virtual ~LeadItem();
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
-
-    LeadItem(std::string const&, int);
+    ~LeadItem();
     void bindPlayerMobs(Actor &, int, int, int, ItemInstance *);
+    LeadItem(std::string const&, int);
     bool canBindPlayerMobs(Actor const&, BlockPos const&);
 };

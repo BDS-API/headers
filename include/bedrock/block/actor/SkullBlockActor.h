@@ -1,29 +1,28 @@
 #pragma once
 
-#include "../../nbt/CompoundTag.h"
-#include "./BlockActor.h"
-#include "../../util/BlockPos.h"
+#include "BlockActor.h"
 #include "../../../unmapped/DataLoadHelper.h"
 #include "../../level/Level.h"
+#include "../../nbt/CompoundTag.h"
 #include "../unmapped/BlockSource.h"
+#include "../../util/BlockPos.h"
 
 
 class SkullBlockActor : BlockActor {
 
 public:
-    virtual ~SkullBlockActor();
-    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void save(CompoundTag &)const;
-    virtual void tick(BlockSource &);
-    virtual void onChanged(BlockSource &);
+    ~SkullBlockActor();
     virtual void getUpdatePacket(BlockSource &);
+    virtual void onChanged(BlockSource &);
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
-
-    SkullBlockActor(BlockPos const&);
-    void getSkullType()const;
-//  void setSkullType(SkullBlockActor::SkullType); //TODO: incomplete function definition
+    virtual void tick(BlockSource &);
+    virtual void save(CompoundTag &)const;
     void setSkullType(int);
-    void getRotation()const;
     void setRotation(float);
+    void getRotation()const;
+    void getSkullType()const;
     void getMouthAnimation(float);
+//  void setSkullType(SkullBlockActor::SkullType); //TODO: incomplete function definition
+    SkullBlockActor(BlockPos const&);
 };

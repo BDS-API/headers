@@ -1,18 +1,17 @@
 #pragma once
 
+#include "SavedData.h"
 #include "../bedrock/level/storage/LevelStorage.h"
-#include "./SavedData.h"
 #include <string>
 
 
 class SavedDataStorage {
 
 public:
-    virtual ~SavedDataStorage();
-
-    SavedDataStorage(LevelStorage *);
-    void loadAndSet(SavedData &, std::string const&);
+    ~SavedDataStorage();
     void set(std::string const&, SavedData &);
+    void loadAndSet(SavedData &, std::string const&);
     void save();
+    SavedDataStorage(LevelStorage *);
     void _save(SavedData const&);
 };

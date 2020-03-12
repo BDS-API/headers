@@ -1,15 +1,12 @@
 #pragma once
 
-#include "./PrioritizedGoal.h"
-#include <memory>
+#include "PrioritizedGoal.h"
 #include <vector>
 
 
-class GoalSelectorUtility {
+namespace GoalSelectorUtility {
 
-public:
-
+    void tryStartGoals(std::vector<PrioritizedGoal> &);
+    bool canUseInSystem(PrioritizedGoal &, std::vector<PrioritizedGoal> &);
     bool canCoExist(PrioritizedGoal &, PrioritizedGoal &);
-    bool canUseInSystem(PrioritizedGoal &, std::vector<PrioritizedGoal, std::allocator<PrioritizedGoal>> &);
-    void tryStartGoals(std::vector<PrioritizedGoal, std::allocator<PrioritizedGoal>> &);
 };

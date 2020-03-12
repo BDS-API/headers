@@ -1,14 +1,13 @@
 #pragma once
 
-#include "./BoundingBox.h"
+#include "BoundingBox.h"
 
 
 class BiomeArea {
 
 public:
-
-    ~BiomeArea();
-    void at(unsigned int, unsigned int)const;
     void at(unsigned int, unsigned int);
+    void at(unsigned int, unsigned int)const;
+    ~BiomeArea();
     BiomeArea(BoundingBox const&, unsigned int);
 };

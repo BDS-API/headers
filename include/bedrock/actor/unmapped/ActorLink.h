@@ -5,6 +5,5 @@
 class ActorLink {
 
 public:
-
     ActorLink();
 };

@@ -1,17 +1,16 @@
 #pragma once
 
-#include "./Item.h"
-#include "./ItemStackBase.h"
+#include "Item.h"
 #include <string>
+#include "ItemStackBase.h"
 
 
 class EnchantedBookItem : Item {
 
 public:
-    virtual ~EnchantedBookItem();
-    virtual bool isGlint(ItemStackBase const&)const;
-    virtual void getEnchantSlot()const;
     virtual void getEnchantValue()const;
-
+    ~EnchantedBookItem();
+    virtual void getEnchantSlot()const;
+    virtual bool isGlint(ItemStackBase const&)const;
     EnchantedBookItem(std::string const&, int, bool);
 };

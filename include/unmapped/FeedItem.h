@@ -1,18 +1,25 @@
 #pragma once
 
-#include "./Effect.h"
-#include "./FeedItem.h"
 #include <string>
 
 
 class FeedItem {
 
 public:
+    class Effect;
 
-    ~FeedItem();
     void setItem(std::string const&);
-    void addEffect(FeedItem::Effect const&);
-    FeedItem();
-    FeedItem(FeedItem const&);
     FeedItem(FeedItem &&);
+    void addEffect(FeedItem::Effect const&);
+    ~FeedItem();
+    FeedItem(FeedItem const&);
+    FeedItem();
+    class Effect {
+
+    public:
+        Effect(FeedItem::Effect &&);
+        Effect();
+        Effect(FeedItem::Effect const&);
+        ~Effect();
+    };
 };

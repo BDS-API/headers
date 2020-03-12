@@ -1,11 +1,10 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack.h"
-#include "../../actor/Player.h"
-#include "../../util/BlockPos.h"
-#include "./LevelContainerManagerModel.h"
 #include "../../block/actor/BeaconBlockActor.h"
-#include <string>
+#include "../../../unmapped/ContainerItemStack.h"
+#include "../../util/BlockPos.h"
+#include "LevelContainerManagerModel.h"
+#include "../../actor/Player.h"
 
 
 class BeaconContainerManagerModel : LevelContainerManagerModel {
@@ -13,30 +12,29 @@ class BeaconContainerManagerModel : LevelContainerManagerModel {
 public:
     static long PAYMENT_SLOT;
 
-    virtual ~BeaconContainerManagerModel();
     virtual void getItems();
+    virtual void init();
+    ~BeaconContainerManagerModel();
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
-    virtual void init();
-
-//  BeaconContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
-    void _getBeaconBlockEntity();
-    void _resetSelectionState();
-    bool isPaymentAvailable()const;
-    void haveEffectsChanged();
-    bool isTierAvailable(int);
-    bool isTierSelected(int);
-    bool hasPrimarySelection()const;
-    bool hasSecondarySelection()const;
-    void confirmTransaction();
     void _confirmPayment();
-    void _sendBeaconPaymentPacket(BeaconBlockActor &);
-    void cancelTransaction();
+    void confirmTransaction();
     void getEffectId(int);
-    void selectEffect(int, bool);
-    std::string getEffectHoverName(int, bool);
-    bool isSelected(int, bool);
-    bool isSecondaryEffect(int);
+    void _getBeaconBlockEntity();
+//  BeaconContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
+    bool hasSecondarySelection()const;
+    void haveEffectsChanged();
     bool isActive();
+    void _sendBeaconPaymentPacket(BeaconBlockActor &);
+    bool hasPrimarySelection()const;
+    bool isPaymentAvailable()const;
+    bool isSecondaryEffect(int);
+    bool isSelected(int, bool);
+    void cancelTransaction();
+    bool isTierAvailable(int);
+    std::string getEffectHoverName(int, bool);
+    void selectEffect(int, bool);
     bool isAnyEffectValid();
+    void _resetSelectionState();
+    bool isTierSelected(int);
 };

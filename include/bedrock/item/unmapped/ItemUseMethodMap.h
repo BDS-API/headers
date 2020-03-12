@@ -3,12 +3,10 @@
 #include <string>
 
 
-class ItemUseMethodMap {
+namespace ItemUseMethodMap {
 
-public:
     static std::string mMap;
 
-
-    void getItemUseMethod(std::string const&);
 //  std::string getItemUseMethodName(ItemUseMethod); //TODO: incomplete function definition
+    void getItemUseMethod(std::string const&);
 };

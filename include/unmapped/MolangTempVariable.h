@@ -1,7 +1,6 @@
 #pragma once
 
-#include "./HashedString.h"
-#include "./MolangTempVariable.h"
+#include "HashedString.h"
 
 
 class MolangTempVariable {
@@ -9,10 +8,9 @@ class MolangTempVariable {
 public:
     static long defaultErrorValue;
 
-
+    MolangTempVariable(HashedString const&);
     ~MolangTempVariable();
     MolangTempVariable(MolangTempVariable const&);
-    MolangTempVariable(HashedString const&);
     void getName()const;
     MolangTempVariable(MolangTempVariable &&);
     void operator==(MolangTempVariable const&)const;

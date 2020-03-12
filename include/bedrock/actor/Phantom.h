@@ -1,19 +1,18 @@
 #pragma once
 
-#include "./Monster.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../../unmapped/RenderParams.h"
 #include "unmapped/ActorDefinitionGroup.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
+#include "Monster.h"
 
 
 class Phantom : Monster {
 
 public:
-    virtual ~Phantom();
-    virtual void normalTick();
     virtual void shouldRender()const;
+    ~Phantom();
     virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void checkSpawnRules(bool);
-
+    virtual void normalTick();
     Phantom(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

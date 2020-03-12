@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../Actor.h"
-#include "../../../unmapped/Amplifier.h"
-#include "../../../unmapped/MobEffectInstance.h"
-#include <memory>
-#include "../../../unmapped/Attribute.h"
 #include "../../pack/ResourcePackManager.h"
 #include "../attribute/AttributeModifier.h"
-#include "../attribute/AttributeBuff.h"
 #include <string>
+#include "../../../unmapped/MobEffectInstance.h"
+#include "../Actor.h"
+#include "../attribute/AttributeBuff.h"
+#include "../../../unmapped/Amplifier.h"
+#include "../../../unmapped/Attribute.h"
+#include <memory>
 
 
 class MobEffect {
@@ -47,40 +47,39 @@ public:
     static long HERO_OF_THE_VILLAGE;
     static long mMobEffects;
 
-    virtual ~MobEffect();
-    virtual void applyEffects(Actor *, int, int)const;
-    virtual void removeEffects(Actor *);
+    ~MobEffect();
     virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const;
     virtual bool isInstantaneous()const;
+    virtual void applyEffects(Actor *, int, int)const;
+    virtual void removeEffects(Actor *);
     virtual void getAttributeModifierValue(int, AttributeModifier const&)const;
-
-    void initEffects(ResourcePackManager *);
-    void addAttributeModifier(Attribute const&, std::shared_ptr<AttributeModifier>);
-    void addAttributeBuff(Attribute const&, std::shared_ptr<AttributeBuff>);
     void setValueAmplifier(std::shared_ptr<Amplifier>);
-    void setDurationAmplifier(std::shared_ptr<Amplifier>);
+    void clearAttributeModifiers();
+    void getDurationModifier()const;
+    std::string getResourceName()const;
+    void _createInstantBuff(std::shared_ptr<AttributeBuff> const&, int, float)const;
     void shutdownEffects();
+    void getColor()const;
+    void _setDurationModifier(float);
+    bool isVisible()const;
+    void viewAttributeModifiers()const;
+    void initEffects(ResourcePackManager *);
+    void getComponentName()const;
     void getByName(std::string const&);
     void getById(int);
-    void getId()const;
-    void getComponentName()const;
-    MobEffect(int, std::string const&, std::string const&, bool, int, int, std::string const&, bool);
-    std::string getResourceName()const;
-    std::string getIconName()const;
-    void _createInstantBuff(std::shared_ptr<AttributeBuff> const&, int, float)const;
+    void clearAttributeBuffs();
     void _createTemporalBuff(std::shared_ptr<AttributeBuff> const&, int, int)const;
-    void _createAttributeModifer(std::shared_ptr<AttributeModifier> const&, int)const;
-    bool isHarmful()const;
+    void getId()const;
+    void addAttributeBuff(Attribute const&, std::shared_ptr<AttributeBuff>);
+    std::string formatDuration(MobEffectInstance const*);
+    void getIcon()const;
     std::string getDescriptionId()const;
     bool hasIcon()const;
-    void getIcon()const;
-    void getDurationModifier()const;
     bool isDisabled()const;
-    void getColor()const;
-    bool isVisible()const;
-    std::string formatDuration(MobEffectInstance const*);
-    void clearAttributeBuffs();
-    void clearAttributeModifiers();
-    void viewAttributeModifiers()const;
-    void _setDurationModifier(float);
+    void _createAttributeModifer(std::shared_ptr<AttributeModifier> const&, int)const;
+    void setDurationAmplifier(std::shared_ptr<Amplifier>);
+    std::string getIconName()const;
+    void addAttributeModifier(Attribute const&, std::shared_ptr<AttributeModifier>);
+    MobEffect(int, std::string const&, std::string const&, bool, int, int, std::string const&, bool);
+    bool isHarmful()const;
 };

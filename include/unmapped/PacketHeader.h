@@ -6,15 +6,14 @@
 class PacketHeader {
 
 public:
-
     void fromRaw(unsigned int);
-    void getPacketId()const;
     void getClientId()const;
-    void getSenderId()const;
     PacketHeader();
-    void getChannel()const;
     void setSenderSubId(unsigned char);
-//  void setPacketId(MinecraftPacketIds); //TODO: incomplete function definition
-    void setClientId(unsigned char);
     void write(BinaryStream &);
+    void setClientId(unsigned char);
+    void getPacketId()const;
+//  void setPacketId(MinecraftPacketIds); //TODO: incomplete function definition
+    void getSenderId()const;
+    void getChannel()const;
 };

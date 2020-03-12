@@ -4,12 +4,10 @@
 
 namespace BedrockEngine {
 
-class PlatformRuntimeInfo {
+    class PlatformRuntimeInfo {
 
-public:
-    virtual ~PlatformRuntimeInfo();
-
-    PlatformRuntimeInfo();
-};
-
+    public:
+        ~PlatformRuntimeInfo();
+        PlatformRuntimeInfo();
+    };
 }

@@ -1,12 +1,10 @@
 #pragma once
 
-#include "../BlockLegacy.h"
 #include "../../util/BlockPos.h"
+#include "../BlockLegacy.h"
 
 
-class BlockActorFactory {
-
-public:
+namespace BlockActorFactory {
 
 //  void createBlockEntity(BlockActorType, BlockPos const&, BlockLegacy const&); //TODO: incomplete function definition
 };

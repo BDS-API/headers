@@ -1,26 +1,25 @@
 #pragma once
 
-#include <string>
 #include "unmapped/BlockSource.h"
-#include "./BlockLegacy.h"
 #include "../util/BlockPos.h"
-#include "../util/Random.h"
+#include <string>
 #include "../../unmapped/Block.h"
+#include "BlockLegacy.h"
+#include "../util/Random.h"
 
 
 class MonsterEggBlock : BlockLegacy {
 
 public:
-    virtual ~MonsterEggBlock();
-    virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
-    virtual std::string buildDescriptionId(Block const&)const;
     virtual bool isAuxValueRelevantForPicking()const;
+    virtual void getResourceCount(Random &, Block const&, int)const;
     virtual void getVariant(Block const&)const;
+    virtual std::string buildDescriptionId(Block const&)const;
+    ~MonsterEggBlock();
+    virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
-
-    MonsterEggBlock(std::string const&, int);
+    void getMonsterEggStoneTypeForHostBlock(Block const&);
     void getHostBlock(Block const&);
     bool isCompatibleHostBlock(Block const&);
-    void getMonsterEggStoneTypeForHostBlock(Block const&);
+    MonsterEggBlock(std::string const&, int);
 };

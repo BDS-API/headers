@@ -1,7 +1,7 @@
 #pragma once
 
+#include "Control.h"
 #include "../actor/Mob.h"
-#include "./Control.h"
 
 
 class BodyControl : Control {
@@ -9,9 +9,8 @@ class BodyControl : Control {
 public:
     static long MAX_CLAMP_ANGLE;
 
-    virtual ~BodyControl();
     virtual void clientTick(Mob &);
-
-    BodyControl();
+    ~BodyControl();
     void _allowUpdateBodyRotation(Mob const&)const;
+    BodyControl();
 };

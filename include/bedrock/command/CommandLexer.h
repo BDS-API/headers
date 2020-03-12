@@ -6,12 +6,11 @@
 class CommandLexer {
 
 public:
-
-    bool isIdentifierCharacter(char);
-    bool isDigit(char);
-    bool isSpace(char);
-    CommandLexer(std::string const&);
-    void step();
     void next()const;
+    void step();
+    bool isSpace(char);
+    bool isDigit(char);
     void _getSelectors()const;
+    bool isIdentifierCharacter(char);
+    CommandLexer(std::string const&);
 };

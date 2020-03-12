@@ -1,17 +1,16 @@
 #pragma once
 
-#include "../../util/Random.h"
+#include "LootItemCondition.h"
 #include "../../../unmapped/LootTableContext.h"
 #include "../../../json/Value.h"
-#include "./LootItemCondition.h"
+#include "../../util/Random.h"
 
 
 class LootItemRandomChanceCondition : LootItemCondition {
 
 public:
-    virtual ~LootItemRandomChanceCondition();
+    ~LootItemRandomChanceCondition();
     virtual void applies(Random &, LootTableContext &);
-
     LootItemRandomChanceCondition(float);
     void deserialize(Json::Value);
 };

@@ -5,7 +5,6 @@
 class IDataInput {
 
 public:
-    virtual ~IDataInput();
-
+    ~IDataInput();
     IDataInput();
 };

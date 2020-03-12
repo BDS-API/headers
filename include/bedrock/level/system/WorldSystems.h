@@ -3,11 +3,9 @@
 #include "../../pack/ResourcePackManager.h"
 
 
-class WorldSystems {
+namespace WorldSystems {
 
-public:
     static long mInitialized;
-
 
     void init(ResourcePackManager *);
     void shutdown();

@@ -1,21 +1,20 @@
 #pragma once
 
+#include "DoorInteractGoal.h"
 #include "../Mob.h"
-#include "./DoorInteractGoal.h"
 #include <string>
 
 
 class BreakDoorGoal : DoorInteractGoal {
 
 public:
-    virtual ~BreakDoorGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
-    virtual void start();
-    virtual void stop();
     virtual void tick();
+    virtual bool canUse();
+    virtual void stop();
+    ~BreakDoorGoal();
+    virtual void start();
     virtual void appendDebugInfo(std::string &)const;
-
+    virtual bool canContinueToUse();
     BreakDoorGoal(Mob &);
     void getBreakRate()const;
 };

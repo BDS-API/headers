@@ -5,7 +5,6 @@
 class IPackTelemetry {
 
 public:
-    virtual ~IPackTelemetry();
-
+    ~IPackTelemetry();
     IPackTelemetry();
 };

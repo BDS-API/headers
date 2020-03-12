@@ -6,10 +6,9 @@
 class SavedData {
 
 public:
-    virtual ~SavedData();
-
-    SavedData(std::string const&);
+    ~SavedData();
     void setDirty(bool);
-    bool isDirty()const;
+    SavedData(std::string const&);
     std::string getId()const;
+    bool isDirty()const;
 };

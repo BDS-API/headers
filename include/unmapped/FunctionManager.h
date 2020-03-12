@@ -1,42 +1,49 @@
 #pragma once
 
-#include "../core/Path.h"
-#include "../bedrock/command/dispatcher/ICommandDispatcher.h"
-#include "../bedrock/pack/ResourcePackManager.h"
-#include "../bedrock/command/CommandRegistry.h"
-#include "../json/Value.h"
-#include "./IFunctionEntry.h"
-#include <memory>
-#include "./FunctionEntry.h"
-#include "../bedrock/command/orgin/CommandOrigin.h"
-#include "./GameRule.h"
-#include <vector>
 #include <string>
+#include "FunctionEntry.h"
+#include "../bedrock/command/CommandRegistry.h"
+#include "../bedrock/command/origin/CommandOrigin.h"
+#include "IFunctionEntry.h"
+#include "GameRule.h"
+#include "../json/Value.h"
+#include "../bedrock/pack/ResourcePackManager.h"
+#include "../core/Path.h"
+#include <vector>
+#include <memory>
+#include "../bedrock/command/dispatcher/ICommandDispatcher.h"
 
 
 class FunctionManager {
 
 public:
-    virtual ~FunctionManager();
+    class OriginMapping;
 
-    FunctionManager(std::unique_ptr<ICommandDispatcher, std::default_delete<ICommandDispatcher>>, std::unique_ptr<CommandOrigin, std::default_delete<CommandOrigin>>, GameRule const*);
-    void load(ResourcePackManager &, CommandRegistry &);
-    void _addTickFunctionsFromJson(Json::Value const&);
-    std::string getFunctionNameFromPath(Core::Path const&);
-    void execute(FunctionEntry &, CommandOrigin const&);
-    void _isRecursiveCall()const;
-    void _processCommandStack(FunctionEntry &, CommandOrigin const&);
-    void queueCommands(std::vector<std::unique_ptr<IFunctionEntry, std::default_delete<IFunctionEntry>>, std::allocator<std::unique_ptr<IFunctionEntry, std::default_delete<IFunctionEntry>>>> const&, CommandOrigin const&);
-    void getExecutionLimit()const;
+    ~FunctionManager();
+    void getEarliestSupportedCommandVersion();
+//  void _processFunctionEntry(std::string const&, std::vector<std::string> const&, std::vector<std::string> &, CurrentCmdVersion, CommandRegistry const&); //TODO: incomplete function definition
     void _addOriginReference(CommandOrigin const&, unsigned int);
-    void tick();
+    void _getTickList()const;
     void getCommandDispatcher();
     void getFunction(std::string const&);
-    void getEarliestSupportedCommandVersion();
-    void _createFunction(std::string const&, std::vector<std::unique_ptr<IFunctionEntry, std::default_delete<IFunctionEntry>>, std::allocator<std::unique_ptr<IFunctionEntry, std::default_delete<IFunctionEntry>>>> &&);
-//  void _createFunctionWithError(std::string const&, FunctionState); //TODO: incomplete function definition
-//  void _processFunctionEntry(std::string const&, std::vector<std::string, std::allocator<std::string>> const&, std::vector<std::string, std::allocator<std::string>> &, CurrentCmdVersion, CommandRegistry const&); //TODO: incomplete function definition
     void _getCommandList()const;
-    void _getTickList()const;
+    void getExecutionLimit()const;
     void _removeOriginReference(CommandOrigin const&, unsigned int);
+    void _addTickFunctionsFromJson(Json::Value const&);
+    void _processCommandStack(FunctionEntry &, CommandOrigin const&);
+//  void _createFunctionWithError(std::string const&, FunctionState); //TODO: incomplete function definition
+    void execute(FunctionEntry &, CommandOrigin const&);
+    FunctionManager(std::unique_ptr<ICommandDispatcher>, std::unique_ptr<CommandOrigin>, GameRule const*);
+    void _isRecursiveCall()const;
+    void load(ResourcePackManager &, CommandRegistry &);
+    void _createFunction(std::string const&, std::vector<std::unique_ptr<IFunctionEntry>> &&);
+    void tick();
+    std::string getFunctionNameFromPath(Core::Path const&);
+    void queueCommands(std::vector<std::unique_ptr<IFunctionEntry>> const&, CommandOrigin const&);
+    class OriginMapping {
+
+    public:
+        OriginMapping(FunctionManager::OriginMapping &&);
+        ~OriginMapping();
+    };
 };

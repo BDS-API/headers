@@ -2,31 +2,29 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./BookEditPacket.h"
-#include "./Packet.h"
-#include "../../../unmapped/PageContent.h"
 #include <string>
+#include "../../../unmapped/PageContent.h"
+#include "Packet.h"
 
 
 class BookEditPacket : Packet {
 
 public:
-    virtual ~BookEditPacket();
-    virtual void getId()const;
+    ~BookEditPacket();
     virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    BookEditPacket(BookEditPacket const&);
-    BookEditPacket(BookEditPacket &&);
-    BookEditPacket();
-    void _writePage(BinaryStream &)const;
-    void _readPage(ReadOnlyBinaryStream &);
-    void setToReplacePage(int, int, PageContent const&);
-    void _storePage(PageContent const&);
-    void setToAddPage(int, int, PageContent const&);
+    virtual void getId()const;
     void setToDeletePage(int, int);
-    void setToSwapPages(int, int, int);
+    void setToReplacePage(int, int, PageContent const&);
+    BookEditPacket();
+    void setToAddPage(int, int, PageContent const&);
+    void _writePage(BinaryStream &)const;
+    BookEditPacket(BookEditPacket &&);
     void setToFinalize(int, std::string, std::string, std::string);
+    void setToSwapPages(int, int, int);
+    BookEditPacket(BookEditPacket const&);
     void getPage()const;
+    void _storePage(PageContent const&);
+    void _readPage(ReadOnlyBinaryStream &);
 };

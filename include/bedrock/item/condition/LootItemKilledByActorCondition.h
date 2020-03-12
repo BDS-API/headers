@@ -1,18 +1,17 @@
 #pragma once
 
-#include "../../util/Random.h"
-#include "../../../unmapped/LootTableContext.h"
 #include "../../../json/Value.h"
+#include "../../util/Random.h"
 #include "../../actor/unmapped/ActorDefinitionIdentifier.h"
-#include "./LootItemCondition.h"
+#include "LootItemCondition.h"
+#include "../../../unmapped/LootTableContext.h"
 
 
 class LootItemKilledByActorCondition : LootItemCondition {
 
 public:
-    virtual ~LootItemKilledByActorCondition();
     virtual void applies(Random &, LootTableContext &);
-
-    LootItemKilledByActorCondition(ActorDefinitionIdentifier);
+    ~LootItemKilledByActorCondition();
     void deserialize(Json::Value);
+    LootItemKilledByActorCondition(ActorDefinitionIdentifier);
 };

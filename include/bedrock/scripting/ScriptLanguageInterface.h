@@ -4,12 +4,10 @@
 
 namespace ScriptApi {
 
-class ScriptLanguageInterface {
+    class ScriptLanguageInterface {
 
-public:
-    virtual ~ScriptLanguageInterface();
-
-    ScriptLanguageInterface();
-};
-
+    public:
+        ~ScriptLanguageInterface();
+        ScriptLanguageInterface();
+    };
 }

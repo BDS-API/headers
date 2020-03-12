@@ -1,20 +1,18 @@
 #pragma once
 
-#include "./BossDefinition.h"
-#include <memory>
 #include "../../unmapped/EntityContext.h"
-#include "../../unmapped/BossComponent.h"
 #include "../../json/Value.h"
+#include "../../unmapped/BossComponent.h"
+#include <memory>
 
 
 class BossDefinition {
 
 public:
-
-//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, BossDefinition>> &); //TODO: incomplete function definition
-    void initialize(EntityContext &, BossComponent &);
-    void deserializeData(Json::Value &);
     void serializeData(Json::Value &)const;
     BossDefinition();
+    void initialize(EntityContext &, BossComponent &);
+//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, BossDefinition>> &); //TODO: incomplete function definition
+    void deserializeData(Json::Value &);
     ~BossDefinition();
 };

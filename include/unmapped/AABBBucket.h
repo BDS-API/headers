@@ -1,24 +1,22 @@
 #pragma once
 
-#include "./AABBBucket.h"
-#include "./RopeAABB.h"
+#include "RopeAABB.h"
 
 
 class AABBBucket {
 
 public:
-
-    ~AABBBucket();
-    void size()const;
-    void get(unsigned long);
-    void clear();
-    void add(RopeAABB const&);
-    AABBBucket(AABBBucket &&);
-    AABBBucket();
-    void clearDirty();
-    void mergeAABBs();
     void markDirty();
-    bool isDirty();
     bool needsFinalize()const;
+    void get(unsigned long);
+    ~AABBBucket();
+    void clear();
+    void mergeAABBs();
+    void add(RopeAABB const&);
     void clearNeedsFinalize();
+    AABBBucket(AABBBucket &&);
+    void size()const;
+    void clearDirty();
+    AABBBucket();
+    bool isDirty();
 };

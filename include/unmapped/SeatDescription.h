@@ -5,6 +5,5 @@
 class SeatDescription {
 
 public:
-
     SeatDescription();
 };

@@ -1,23 +1,22 @@
 #pragma once
 
-#include <string>
 #include "unmapped/BlockSource.h"
-#include "./BlockLegacy.h"
 #include "../util/BlockPos.h"
-#include "../util/Random.h"
+#include <string>
 #include "../../unmapped/Block.h"
+#include "BlockLegacy.h"
+#include "../util/Random.h"
 
 
 class ConcreteBlock : BlockLegacy {
 
 public:
-    virtual ~ConcreteBlock();
+    ~ConcreteBlock();
+    virtual bool isAuxValueRelevantForPicking()const;
     virtual bool isValidAuxValue(int)const;
-    virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getMapColor(BlockSource &, BlockPos const&)const;
     virtual std::string buildDescriptionId(Block const&)const;
-    virtual bool isAuxValueRelevantForPicking()const;
+    virtual void getResourceItem(Random &, Block const&, int)const;
     virtual void getSilkTouchItemInstance(Block const&)const;
-
     ConcreteBlock(std::string const&, int);
 };

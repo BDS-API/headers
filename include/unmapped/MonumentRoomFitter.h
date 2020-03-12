@@ -5,7 +5,6 @@
 class MonumentRoomFitter {
 
 public:
-    virtual ~MonumentRoomFitter();
-
+    ~MonumentRoomFitter();
     MonumentRoomFitter();
 };

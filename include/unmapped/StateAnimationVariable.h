@@ -1,21 +1,19 @@
 #pragma once
 
-#include "./StateAnimationVariable.h"
-#include "./RenderParams.h"
-#include "./HashedString.h"
+#include "HashedString.h"
+#include "RenderParams.h"
 #include "../json/Value.h"
 
 
 class StateAnimationVariable {
 
 public:
-
-    StateAnimationVariable(HashedString const&);
     void addKeyFrame(float, float);
+    ~StateAnimationVariable();
+    void toJson(Json::Value &)const;
+    StateAnimationVariable(StateAnimationVariable const&);
     void sort();
     void setVariable(RenderParams &)const;
     void removeVariable(RenderParams &)const;
-    void toJson(Json::Value &)const;
-    StateAnimationVariable(StateAnimationVariable const&);
-    ~StateAnimationVariable();
+    StateAnimationVariable(HashedString const&);
 };

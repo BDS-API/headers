@@ -2,13 +2,14 @@
 
 
 
-namespace Core::FileSystem {
+namespace Core {
 
-class FileTransferProgress {
+    namespace FileSystem {
 
-public:
+        class FileTransferProgress {
 
-    FileTransferProgress();
-};
-
+        public:
+            FileTransferProgress();
+        };
+    }
 }

@@ -5,7 +5,6 @@
 class ITickingSystem {
 
 public:
-    virtual ~ITickingSystem();
-
+    ~ITickingSystem();
     ITickingSystem();
 };

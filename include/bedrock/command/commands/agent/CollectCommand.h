@@ -6,14 +6,12 @@
 
 namespace AgentCommands {
 
-class CollectCommand : AgentCommands::Command {
+    class CollectCommand : AgentCommands::Command {
 
-public:
-    virtual ~CollectCommand();
-    virtual void execute();
-    virtual bool isDone();
-
-//  CollectCommand(Player &, int, AgentCommands::CollectCommand::CollectionSpecification); //TODO: incomplete function definition
-};
-
+    public:
+        virtual bool isDone();
+        virtual void execute();
+        ~CollectCommand();
+//      CollectCommand(Player &, int, AgentCommands::CollectCommand::CollectionSpecification); //TODO: incomplete function definition
+    };
 }

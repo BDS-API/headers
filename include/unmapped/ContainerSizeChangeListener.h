@@ -5,7 +5,6 @@
 class ContainerSizeChangeListener {
 
 public:
-    virtual ~ContainerSizeChangeListener();
-
+    ~ContainerSizeChangeListener();
     ContainerSizeChangeListener();
 };

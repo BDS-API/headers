@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack.h"
-#include "./ContainerManagerModel.h"
-#include "../../util/BlockPos.h"
+#include "ContainerManagerModel.h"
 #include "../../item/ItemInstance.h"
+#include "../../../unmapped/ContainerItemStack.h"
 #include "../../network/packet/CraftingEventPacket.h"
+#include "../../util/BlockPos.h"
 #include "../../actor/Player.h"
 
 
@@ -15,19 +15,18 @@ public:
     static long MATERIAL_SLOT;
     static long RESULT_SLOT;
 
-    virtual ~AnvilContainerManagerModel();
-    virtual void getItems();
-    virtual void setSlot(int, ContainerItemStack const&, bool);
-    virtual void getSlot(int);
-    virtual void setData(int, int);
     virtual void broadcastChanges();
+    virtual void getSlot(int);
+    ~AnvilContainerManagerModel();
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    virtual void setData(int, int);
+    virtual void getItems();
     virtual void init();
-
-//  AnvilContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
-    bool isAnvilValid(float);
     void applyDamageToAnvilBlock();
-    void fireItemCraftedEvent(ItemInstance const&);
-    void fireItemAcquiredEvent(ItemInstance const&, int);
     void sendCraftedPacket(CraftingEventPacket &);
+    void fireItemAcquiredEvent(ItemInstance const&, int);
+    bool isAnvilValid(float);
+    void fireItemCraftedEvent(ItemInstance const&);
     void getBlockPos()const;
+//  AnvilContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
 };

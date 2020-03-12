@@ -5,7 +5,6 @@
 class AutoCompleteInformation {
 
 public:
-
     AutoCompleteInformation();
     ~AutoCompleteInformation();
 };

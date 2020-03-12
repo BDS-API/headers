@@ -1,12 +1,11 @@
 #pragma once
 
-#include "./ItemStackBase.h"
-#include "./ItemInstance.h"
-#include "./Item.h"
+#include "ItemStack.h"
 #include "../block/BlockLegacy.h"
 #include "../nbt/CompoundTag.h"
-#include "./ItemStack.h"
 #include "../../unmapped/Block.h"
+#include "ItemStackBase.h"
+#include "Item.h"
 
 
 class ItemInstance : ItemStackBase {
@@ -14,20 +13,19 @@ class ItemInstance : ItemStackBase {
 public:
     static long EMPTY_ITEM;
 
-    virtual ~ItemInstance();
+    ~ItemInstance();
     virtual void reinit(Item const&, int, int);
     virtual void reinit(BlockLegacy const&, int);
-
-    ItemInstance();
-    ItemInstance(BlockLegacy const&, int);
     ItemInstance(Block const&, int, CompoundTag const*);
-    ItemInstance(BlockLegacy const&, int, short);
+    ItemInstance(BlockLegacy const&, int);
+    void clone()const;
+    ItemInstance(ItemStack const&);
     ItemInstance(Item const&);
+    ItemInstance();
     ItemInstance(Item const&, int);
     ItemInstance(Item const&, int, int);
     ItemInstance(Item const&, int, int, CompoundTag const*);
     ItemInstance(ItemInstance const&);
-    ItemInstance(ItemStack const&);
-    void clone()const;
     void fromTag(CompoundTag const&);
+    ItemInstance(BlockLegacy const&, int, short);
 };

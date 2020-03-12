@@ -1,16 +1,15 @@
 #pragma once
 
-#include "./PropertyDescription.h"
 #include "../../../json/Value.h"
+#include "PropertyDescription.h"
 
 
 class CanPowerJumpDescription : PropertyDescription {
 
 public:
-    virtual void getJsonName()const;
-    virtual ~CanPowerJumpDescription();
-    virtual void deserializeData(Json::Value &);
+    ~CanPowerJumpDescription();
     virtual void serializeData(Json::Value &)const;
-
+    virtual void deserializeData(Json::Value &);
+    virtual void getJsonName()const;
     CanPowerJumpDescription();
 };

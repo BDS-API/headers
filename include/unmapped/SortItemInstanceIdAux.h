@@ -3,9 +3,7 @@
 #include "../bedrock/item/ItemInstance.h"
 
 
-class SortItemInstanceIdAux {
-
-public:
+namespace SortItemInstanceIdAux {
 
     void operator()(ItemInstance const&, ItemInstance const&)const;
 };

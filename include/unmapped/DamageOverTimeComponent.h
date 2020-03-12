@@ -1,20 +1,18 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
-#include "./DataLoadHelper.h"
 #include "../bedrock/nbt/CompoundTag.h"
-#include "./DamageOverTimeComponent.h"
+#include "DataLoadHelper.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class DamageOverTimeComponent {
 
 public:
-
-    DamageOverTimeComponent(DamageOverTimeComponent &&);
     void addAdditionalSaveData(CompoundTag &)const;
-    void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
+    DamageOverTimeComponent(DamageOverTimeComponent &&);
+    void setDamageTime(int);
     void getHurtValue()const;
     void getDamageTimeInterval()const;
+    void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
     void getDamageTime()const;
-    void setDamageTime(int);
 };

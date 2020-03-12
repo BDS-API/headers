@@ -4,12 +4,10 @@
 
 namespace LayerValues {
 
-class PreBiome {
+    class PreBiome {
 
-public:
-
-    bool isOcean()const;
-    bool isSpecial()const;
-};
-
+    public:
+        bool isSpecial()const;
+        bool isOcean()const;
+    };
 }

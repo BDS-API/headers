@@ -1,16 +1,13 @@
 #pragma once
 
-#include "./LanguageChangedListener.h"
 
 
 namespace I18n {
 
-class LanguageChangedListener {
+    class LanguageChangedListener {
 
-public:
-
-    ~LanguageChangedListener();
-    LanguageChangedListener(I18n::LanguageChangedListener &&);
-};
-
+    public:
+        LanguageChangedListener(I18n::LanguageChangedListener &&);
+        ~LanguageChangedListener();
+    };
 }

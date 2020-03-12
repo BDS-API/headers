@@ -1,15 +1,14 @@
 #pragma once
 
 #include "../Actor.h"
-#include "./BehaviorNode.h"
+#include "BehaviorNode.h"
 
 
 class FindActorNode : BehaviorNode {
 
 public:
-    virtual ~FindActorNode();
     virtual void tick(Actor &);
+    ~FindActorNode();
     virtual void initializeFromDefinition(Actor &);
-
     FindActorNode();
 };

@@ -6,9 +6,8 @@
 class DatagramHeaderFormat {
 
 public:
-
+    void GetDataHeaderByteLength();
     DatagramHeaderFormat();
     void Deserialize(RakNet::BitStream *);
     void Serialize(RakNet::BitStream *);
-    void GetDataHeaderByteLength();
 };

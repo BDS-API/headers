@@ -1,6 +1,5 @@
 #pragma once
 
-#include "./ActorDefinitionIdentifier.h"
 #include <string>
 
 
@@ -11,30 +10,29 @@ public:
     static std::string EVENT_BEGIN;
     static std::string EVENT_END;
 
-
-    ~ActorDefinitionIdentifier();
-    ActorDefinitionIdentifier();
-    ActorDefinitionIdentifier(std::string, std::string, std::string);
     void _initialize();
+    std::string getNamespace()const;
+    std::string getFullName()const;
     ActorDefinitionIdentifier(ActorDefinitionIdentifier const&);
+    void setInitEvent(std::string const&);
+    ActorDefinitionIdentifier(std::string, std::string, std::string);
+    ~ActorDefinitionIdentifier();
     ActorDefinitionIdentifier(ActorDefinitionIdentifier &&);
+    void initialize(std::string const&);
+    ActorDefinitionIdentifier();
+    std::string getIdentifier()const;
     void _extractIdentifier(std::string const&, ActorDefinitionIdentifier &);
+    void getCanonicalHash()const;
+    std::string getCanonicalName()const;
+    bool isVanilla()const;
+    std::string getInitEvent()const;
+    void operator==(ActorDefinitionIdentifier const&)const;
     ActorDefinitionIdentifier(char const*);
-    ActorDefinitionIdentifier(std::string const&);
 //  ActorDefinitionIdentifier(ActorType); //TODO: incomplete function definition
     bool isEmpty()const;
-    void clear();
-    void initialize(std::string const&);
-    void initialize(std::string const&, std::string const&, std::string const&);
-    void setIdentifier(std::string const&);
-    void setInitEvent(std::string const&);
-    std::string getNamespace()const;
-    std::string getIdentifier()const;
-    std::string getInitEvent()const;
-    std::string getCanonicalName()const;
-    void getCanonicalHash()const;
-    std::string getFullName()const;
-    bool isVanilla()const;
-    void operator==(ActorDefinitionIdentifier const&)const;
     void _getLegacyActorType()const;
+    void setIdentifier(std::string const&);
+    ActorDefinitionIdentifier(std::string const&);
+    void initialize(std::string const&, std::string const&, std::string const&);
+    void clear();
 };

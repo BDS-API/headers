@@ -1,6 +1,6 @@
 #pragma once
 
-#include "./Goal.h"
+#include "Goal.h"
 #include "../Mob.h"
 #include <string>
 
@@ -8,12 +8,11 @@
 class TradeWithPlayerGoal : Goal {
 
 public:
-    virtual ~TradeWithPlayerGoal();
+    virtual void appendDebugInfo(std::string &)const;
+    ~TradeWithPlayerGoal();
+    virtual void stop();
+    virtual void start();
     virtual bool canUse();
     virtual bool canContinueToUse();
-    virtual void start();
-    virtual void stop();
-    virtual void appendDebugInfo(std::string &)const;
-
     TradeWithPlayerGoal(Mob &);
 };

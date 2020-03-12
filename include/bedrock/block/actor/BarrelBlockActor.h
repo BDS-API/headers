@@ -1,22 +1,20 @@
 #pragma once
 
-#include "./ChestBlockActor.h"
-#include "../../actor/Player.h"
 #include "../../util/BlockPos.h"
 #include "../unmapped/BlockSource.h"
-#include <string>
+#include "ChestBlockActor.h"
+#include "../../actor/Player.h"
 
 
 class BarrelBlockActor : ChestBlockActor {
 
 public:
-    virtual ~BarrelBlockActor();
-    virtual void onPlace(BlockSource &);
     virtual std::string getName()const;
-    virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
+    virtual void onPlace(BlockSource &);
+    ~BarrelBlockActor();
     virtual void playOpenSound(BlockSource &);
+    virtual void startOpen(Player &);
     virtual void playCloseSound(BlockSource &);
-
     BarrelBlockActor(BlockPos const&);
 };

@@ -3,19 +3,17 @@
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
 #include "../../block/unmapped/BlockDefinitionGroup.h"
-#include "./Packet.h"
-#include <string>
+#include "Packet.h"
 
 
 class UpdateBlockPropertiesPacket : Packet {
 
 public:
-    virtual ~UpdateBlockPropertiesPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
+    ~UpdateBlockPropertiesPacket();
+    virtual std::string getName()const;
+    virtual void getId()const;
     UpdateBlockPropertiesPacket();
     UpdateBlockPropertiesPacket(BlockDefinitionGroup const&);
 };

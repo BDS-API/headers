@@ -1,31 +1,29 @@
 #pragma once
 
-#include "./Value.h"
-#include "./Writer.h"
 #include <string>
+#include "Value.h"
+#include "Writer.h"
 
 
 namespace Json {
 
-class StyledWriter : Json::Writer {
+    class StyledWriter : Json::Writer {
 
-public:
-    virtual ~StyledWriter();
-    virtual std::string write(Json::Value const&);
-
-    StyledWriter();
-    void writeCommentBeforeValue(Json::Value const&);
-    void writeValue(Json::Value const&);
-    void writeCommentAfterValueOnSameLine(Json::Value const&);
-    void pushValue(std::string const&);
-    void writeArrayValue(Json::Value const&);
-    void writeWithIndent(std::string const&);
-    void indent();
-    void unindent();
-    bool isMultineArray(Json::Value const&);
-    void writeIndent();
-    bool hasCommentForValue(Json::Value const&);
-    void normalizeEOL(std::string const&);
-};
-
+    public:
+        virtual std::string write(Json::Value const&);
+        ~StyledWriter();
+        void pushValue(std::string const&);
+        void writeCommentBeforeValue(Json::Value const&);
+        void writeValue(Json::Value const&);
+        void writeCommentAfterValueOnSameLine(Json::Value const&);
+        void unindent();
+        void indent();
+        void writeIndent();
+        bool isMultineArray(Json::Value const&);
+        void normalizeEOL(std::string const&);
+        void writeWithIndent(std::string const&);
+        bool hasCommentForValue(Json::Value const&);
+        StyledWriter();
+        void writeArrayValue(Json::Value const&);
+    };
 }

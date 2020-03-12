@@ -1,30 +1,29 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorRuntimeID.h"
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include <string>
+#include "../../actor/unmapped/ActorRuntimeID.h"
+#include "Packet.h"
 
 
 class NpcRequestPacket : Packet {
 
 public:
-    virtual ~NpcRequestPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
+    ~NpcRequestPacket();
+    virtual std::string getName()const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    NpcRequestPacket();
-//  NpcRequestPacket(ActorRuntimeID, NpcRequestPacket::RequestType, std::string, unsigned char); //TODO: incomplete function definition
+    virtual void getId()const;
     NpcRequestPacket(ActorRuntimeID);
+//  NpcRequestPacket(ActorRuntimeID, NpcRequestPacket::RequestType, std::string, unsigned char); //TODO: incomplete function definition
+    NpcRequestPacket();
     NpcRequestPacket(ActorRuntimeID, int);
-    NpcRequestPacket(ActorRuntimeID, std::string const&);
+    void getSkin()const;
     void requestSetName(ActorRuntimeID, std::string);
-    void requestSetSkin(ActorRuntimeID, int);
+    NpcRequestPacket(ActorRuntimeID, std::string const&);
+    std::string getInteractText()const;
     void requestSetInteractText(ActorRuntimeID, std::string);
     std::string getNpcName()const;
-    void getSkin()const;
-    std::string getInteractText()const;
+    void requestSetSkin(ActorRuntimeID, int);
 };

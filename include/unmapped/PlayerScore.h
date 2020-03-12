@@ -1,16 +1,14 @@
 #pragma once
 
-#include "./ScoreboardId.h"
-#include "./PlayerScore.h"
+#include "ScoreboardId.h"
 
 
 class PlayerScore {
 
 public:
-
+    PlayerScore(PlayerScore const&);
     PlayerScore(ScoreboardId const&, int);
+    PlayerScore(PlayerScore &&);
     void getId()const;
     void getScore()const;
-    PlayerScore(PlayerScore &&);
-    PlayerScore(PlayerScore const&);
 };

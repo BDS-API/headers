@@ -5,7 +5,6 @@
 class ICommandDispatcher {
 
 public:
-    virtual ~ICommandDispatcher();
-
+    ~ICommandDispatcher();
     ICommandDispatcher();
 };

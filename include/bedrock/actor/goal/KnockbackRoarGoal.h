@@ -1,22 +1,21 @@
 #pragma once
 
-#include "../../definition/DefinitionTrigger.h"
-#include "../unmapped/ActorFilterGroup.h"
-#include "./Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "../Mob.h"
+#include "../unmapped/ActorFilterGroup.h"
+#include "Goal.h"
+#include "../../definition/DefinitionTrigger.h"
 
 
 class KnockbackRoarGoal : Goal {
 
 public:
-    virtual ~KnockbackRoarGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
-    virtual void start();
-    virtual void stop();
     virtual void tick();
+    virtual bool canUse();
+    virtual void stop();
+    virtual bool canContinueToUse();
+    ~KnockbackRoarGoal();
     virtual void appendDebugInfo(std::string &)const;
-
+    virtual void start();
     KnockbackRoarGoal(Mob &, int, int, int, int, int, ActorFilterGroup const&, ActorFilterGroup const&, DefinitionTrigger, float);
 };

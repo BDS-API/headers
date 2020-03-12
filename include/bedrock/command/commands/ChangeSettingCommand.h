@@ -1,17 +1,16 @@
 #pragma once
 
+#include "../origin/CommandOrigin.h"
 #include "../CommandRegistry.h"
-#include "./ServerCommand.h"
-#include "../orgin/CommandOrigin.h"
+#include "ServerCommand.h"
 #include "../CommandOutput.h"
 
 
 class ChangeSettingCommand : ServerCommand {
 
 public:
-    virtual ~ChangeSettingCommand();
+    ~ChangeSettingCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-
-    void setup(CommandRegistry &);
     ChangeSettingCommand();
+    void setup(CommandRegistry &);
 };

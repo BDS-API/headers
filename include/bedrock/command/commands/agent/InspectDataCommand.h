@@ -6,15 +6,13 @@
 
 namespace AgentCommands {
 
-class InspectDataCommand : AgentCommands::Command {
+    class InspectDataCommand : AgentCommands::Command {
 
-public:
-    virtual ~InspectDataCommand();
-    virtual void execute();
-    virtual bool isDone();
-    virtual void fireCommandDoneEvent();
-
-//  InspectDataCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
-};
-
+    public:
+        virtual void fireCommandDoneEvent();
+        virtual void execute();
+        ~InspectDataCommand();
+        virtual bool isDone();
+//      InspectDataCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
+    };
 }

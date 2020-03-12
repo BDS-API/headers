@@ -1,12 +1,10 @@
 #pragma once
 
+#include "RenderParams.h"
+#include "MolangScriptArg.h"
 #include <functional>
-#include "./MolangScriptArg.h"
-#include "./HashedString.h"
-#include <memory>
-#include "./MolangGenericQueryFunctionPtr.h"
 #include <vector>
-#include "./RenderParams.h"
+#include "HashedString.h"
 
 
 class MolangGenericQueryFunctionPtr {
@@ -14,11 +12,10 @@ class MolangGenericQueryFunctionPtr {
 public:
     static long defaultErrorValue;
 
-
-    ~MolangGenericQueryFunctionPtr();
+    void operator==(MolangGenericQueryFunctionPtr const&)const;
+    MolangGenericQueryFunctionPtr(std::function<MolangScriptArg (RenderParams &, std::vector<MolangScriptArg> const&)> const*, HashedString const&);
     MolangGenericQueryFunctionPtr(MolangGenericQueryFunctionPtr const&);
-    MolangGenericQueryFunctionPtr(std::function<MolangScriptArg (RenderParams &, std::vector<MolangScriptArg, std::allocator<MolangScriptArg>> const&)> const*, HashedString const&);
+    ~MolangGenericQueryFunctionPtr();
     void getGenericQueryFunctionPtr()const;
     MolangGenericQueryFunctionPtr(MolangGenericQueryFunctionPtr &&);
-    void operator==(MolangGenericQueryFunctionPtr const&)const;
 };

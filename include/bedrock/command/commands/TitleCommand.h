@@ -1,17 +1,16 @@
 #pragma once
 
-#include "./MessagingCommand.h"
+#include "../origin/CommandOrigin.h"
 #include "../CommandRegistry.h"
-#include "../orgin/CommandOrigin.h"
 #include "../CommandOutput.h"
+#include "MessagingCommand.h"
 
 
 class TitleCommand : MessagingCommand {
 
 public:
-    virtual ~TitleCommand();
+    ~TitleCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-
-    void setup(CommandRegistry &);
     TitleCommand();
+    void setup(CommandRegistry &);
 };

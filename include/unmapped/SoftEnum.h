@@ -4,11 +4,9 @@
 
 namespace commands {
 
-class SoftEnum {
+    class SoftEnum {
 
-public:
-
-    SoftEnum(char const*);
-};
-
+    public:
+        SoftEnum(char const*);
+    };
 }

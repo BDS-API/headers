@@ -1,34 +1,31 @@
 #pragma once
 
-#include "./TemplateStructurePiece.h"
-#include <string>
-#include "../../LevelChunk.h"
-#include "../../../util/BlockPos.h"
-#include "../../../actor/unmapped/ActorDefinitionIdentifier.h"
-#include "../../../../unmapped/Dimension.h"
-#include <memory>
-#include "../../../util/Random.h"
 #include "../../../block/unmapped/BlockSource.h"
-#include <vector>
+#include "TemplateStructurePiece.h"
+#include <string>
+#include "../../../../unmapped/Dimension.h"
+#include "../../../actor/unmapped/ActorDefinitionIdentifier.h"
 #include "../../../../unmapped/BoundingBox.h"
+#include "../../../util/Random.h"
+#include "../../../util/BlockPos.h"
+#include <vector>
 #include "../../../../unmapped/StructureManager.h"
+#include "../../LevelChunk.h"
 
 
 namespace PillagerOutpostPieces {
 
-class PillagerOutpostPiece : TemplateStructurePiece {
+    class PillagerOutpostPiece : TemplateStructurePiece {
 
-public:
-    virtual ~PillagerOutpostPiece();
-    virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
-    virtual void addHardcodedSpawnAreas(LevelChunk &)const;
-    virtual void _handleDataMarker(std::string const&, BlockPos const&, BlockSource &, Random &, BoundingBox const&);
-
-//  PillagerOutpostPiece(StructureManager &, std::string, BlockPos const&, Rotation, float, bool, Dimension &); //TODO: incomplete function definition
-    void _loadTemplate();
-    PillagerOutpostPiece(StructureManager &);
-    void _addMobsFromPositions(BoundingBox const&, ActorDefinitionIdentifier const&, BlockSource &, std::vector<BlockPos, std::allocator<BlockPos>> const&);
-};
-
+    public:
+        ~PillagerOutpostPiece();
+        virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
+        virtual void _handleDataMarker(std::string const&, BlockPos const&, BlockSource &, Random &, BoundingBox const&);
+        virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&);
+        virtual void addHardcodedSpawnAreas(LevelChunk &)const;
+        void _addMobsFromPositions(BoundingBox const&, ActorDefinitionIdentifier const&, BlockSource &, std::vector<BlockPos> const&);
+        PillagerOutpostPiece(StructureManager &);
+        void _loadTemplate();
+//      PillagerOutpostPiece(StructureManager &, std::string, BlockPos const&, Rotation, float, bool, Dimension &); //TODO: incomplete function definition
+    };
 }

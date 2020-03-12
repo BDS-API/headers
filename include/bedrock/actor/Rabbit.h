@@ -1,29 +1,28 @@
 #pragma once
 
-#include "../../unmapped/RenderParams.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Animal.h"
-#include "../../unmapped/DataLoadHelper.h"
 #include "unmapped/ActorDefinitionGroup.h"
+#include "../../unmapped/RenderParams.h"
+#include "Animal.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../nbt/CompoundTag.h"
+#include "../../unmapped/DataLoadHelper.h"
 
 
 class Rabbit : Animal {
 
 public:
-    virtual ~Rabbit();
-    virtual void onSynchedDataUpdate(int);
-    virtual void updateEntitySpecificMolangVariables(RenderParams &);
+    virtual void newServerAiStep();
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void newServerAiStep();
-
-    Rabbit(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void getRandomRabbitType();
-    void getJumpCompletion(float);
-    void getRabbitType()const;
-    void setRabbitType(int);
-    void readyToEat()const;
-    bool wantsMoreFood()const;
+    virtual void onSynchedDataUpdate(int);
+    ~Rabbit();
+    virtual void updateEntitySpecificMolangVariables(RenderParams &);
     void eatCarrot();
+    bool wantsMoreFood()const;
+    void setRabbitType(int);
+    void getJumpCompletion(float);
+    void getRandomRabbitType();
+    void readyToEat()const;
+    Rabbit(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    void getRabbitType()const;
 };

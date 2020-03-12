@@ -1,24 +1,22 @@
 #pragma once
 
-#include "../../util/Random.h"
-#include <memory>
-#include "./ChunkSource.h"
 #include "../../util/ChunkPos.h"
-#include "../LevelChunkFinalDeleter.h"
+#include "../../util/Random.h"
+#include "ChunkSource.h"
+#include <memory>
 #include "../LevelChunk.h"
 
 
 class MainChunkSource : ChunkSource {
 
 public:
-    virtual ~MainChunkSource();
-    virtual void getExistingChunk(ChunkPos const&);
+    virtual void acquireDiscarded(std::unique_ptr<LevelChunk>);
+    virtual void clearDeletedEntities();
     virtual void getRandomChunk(Random &);
-//  virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode); //TODO: incomplete function definition
-    virtual void acquireDiscarded(std::unique_ptr<LevelChunk, LevelChunkFinalDeleter>);
+    virtual void getExistingChunk(ChunkPos const&);
     virtual void getChunkMap();
     virtual void getStorage()const;
-    virtual void clearDeletedEntities();
-
-    MainChunkSource(std::unique_ptr<ChunkSource, std::default_delete<ChunkSource>>);
+    ~MainChunkSource();
+//  virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode); //TODO: incomplete function definition
+    MainChunkSource(std::unique_ptr<ChunkSource>);
 };

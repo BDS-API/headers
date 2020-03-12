@@ -5,6 +5,5 @@
 class MineshaftData {
 
 public:
-
     MineshaftData(bool);
 };

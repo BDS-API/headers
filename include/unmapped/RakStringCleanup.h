@@ -5,6 +5,5 @@
 class RakStringCleanup {
 
 public:
-
     ~RakStringCleanup();
 };

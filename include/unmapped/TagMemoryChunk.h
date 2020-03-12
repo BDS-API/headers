@@ -1,18 +1,16 @@
 #pragma once
 
-#include "./TagMemoryChunk.h"
 
 
 class TagMemoryChunk {
 
 public:
-
-    TagMemoryChunk();
-    ~TagMemoryChunk();
+    void operator!=(TagMemoryChunk const&)const;
     TagMemoryChunk(TagMemoryChunk &&);
     void size()const;
-    void operator==(TagMemoryChunk const&)const;
     void copy()const;
+    TagMemoryChunk();
+    void operator==(TagMemoryChunk const&)const;
     void data()const;
-    void operator!=(TagMemoryChunk const&)const;
+    ~TagMemoryChunk();
 };

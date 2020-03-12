@@ -1,31 +1,29 @@
 #pragma once
 
-#include "./ExpressionNode.h"
+#include "ExpressionNode.h"
+#include "BoneOrientation.h"
 #include "../bedrock/util/Vec3.h"
-#include "./KeyFrameTransformData.h"
+#include "RenderParams.h"
 #include "../json/Value.h"
-#include "./BoneOrientation.h"
-#include "./RenderParams.h"
 
 
 class KeyFrameTransformData {
 
 public:
-
-    void operator==(KeyFrameTransformData const&)const;
-    void operator!=(KeyFrameTransformData const&)const;
-    void addChannelTransform(ExpressionNode const&);
-    void addChannelTransform(ExpressionNode const&, int);
-    void addChannelTransform(ExpressionNode const&, Vec3 const&);
-    void addChannelTransform(ExpressionNode const&, ExpressionNode const&, ExpressionNode const&);
-//  void animate(RenderParams &, BoneOrientation &, float, BoneTransformType)const; //TODO: incomplete function definition
-    bool isConstant()const;
     void getSequencedTransformCount()const;
-    void operator[](unsigned long);
-    void operator[](unsigned long)const;
+    bool isConstant()const;
+    void addChannelTransform(ExpressionNode const&, Vec3 const&);
     void toJson(Json::Value &)const;
-    KeyFrameTransformData();
-    ~KeyFrameTransformData();
+    void operator==(KeyFrameTransformData const&)const;
+    void operator[](unsigned long)const;
+//  void animate(RenderParams &, BoneOrientation &, float, BoneTransformType)const; //TODO: incomplete function definition
+    void addChannelTransform(ExpressionNode const&, ExpressionNode const&, ExpressionNode const&);
     KeyFrameTransformData(KeyFrameTransformData &&);
+    void addChannelTransform(ExpressionNode const&, int);
+    void operator[](unsigned long);
+    void operator!=(KeyFrameTransformData const&)const;
+    KeyFrameTransformData();
     KeyFrameTransformData(KeyFrameTransformData const&);
+    void addChannelTransform(ExpressionNode const&);
+    ~KeyFrameTransformData();
 };

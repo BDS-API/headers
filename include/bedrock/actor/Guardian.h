@@ -1,14 +1,14 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Actor.h"
 #include "../../unmapped/VariantParameterList.h"
-#include "../util/BlockPos.h"
-#include "damagesource/ActorDamageSource.h"
-#include "./Monster.h"
-#include "../../unmapped/DataLoadHelper.h"
 #include "unmapped/ActorDefinitionGroup.h"
+#include "../util/BlockPos.h"
+#include "Actor.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../nbt/CompoundTag.h"
+#include "damagesource/ActorDamageSource.h"
+#include "../../unmapped/DataLoadHelper.h"
+#include "Monster.h"
 
 
 class Guardian : Monster {
@@ -17,35 +17,34 @@ public:
     static long ATTACK_TIME;
     static long FIRST_DAMAGE_TIME;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
 //  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual ~Guardian();
     virtual bool canSeeInvisible()const;
+    virtual void aiStep();
+    ~Guardian();
     virtual void setTarget(Actor *);
+    virtual void addAdditionalSaveData(CompoundTag &);
+    virtual void getAmbientSoundPostponeTicks();
+    virtual void getMaxHeadXRot();
+    virtual void _onSizeUpdated();
+    virtual bool isDarkEnoughToSpawn()const;
+    virtual void checkSpawnRules(bool);
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void _onSizeUpdated();
-    virtual void getAmbientSoundPostponeTicks();
-    virtual void aiStep();
-    virtual void checkSpawnRules(bool);
-    virtual void getMaxHeadXRot();
-    virtual bool isDarkEnoughToSpawn()const;
-
-    Guardian(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void registerLoopingSounds();
+    void getTailAnimation(float);
+    void getWalkTargetValue(BlockPos const&);
+    void getAttackAnimationScale(float);
     bool isElder()const;
     void setElder(bool);
-    void getAttackDuration();
-    void setElderGhost();
-    void makeStepSound();
-    void getWalkTargetValue(BlockPos const&);
-    void getTargetEntity()const;
-    void getAttackAnimationScale(float);
-    void getTailAnimation(float);
-    void getSpikesAnimation(float);
     bool isElderGhost()const;
+    void getTargetEntity()const;
+    void makeStepSound();
+    void setElderGhost();
     void setAttackTime(int);
-    void getEyeTarget();
     void getMoveEyeVector();
+    void registerLoopingSounds();
+    void getSpikesAnimation(float);
+    void getEyeTarget();
+    void getAttackDuration();
+    Guardian(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

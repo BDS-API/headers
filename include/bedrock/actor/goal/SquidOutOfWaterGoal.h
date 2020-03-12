@@ -1,20 +1,19 @@
 #pragma once
 
-#include "./Goal.h"
-#include "../Squid.h"
 #include <string>
+#include "Goal.h"
+#include "../Squid.h"
 
 
 class SquidOutOfWaterGoal : Goal {
 
 public:
-    virtual ~SquidOutOfWaterGoal();
+    ~SquidOutOfWaterGoal();
     virtual bool canUse();
-    virtual bool canContinueToUse();
-    virtual void start();
-    virtual void stop();
-    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
-
+    virtual void stop();
+    virtual bool canContinueToUse();
+    virtual void tick();
+    virtual void start();
     SquidOutOfWaterGoal(Squid &);
 };

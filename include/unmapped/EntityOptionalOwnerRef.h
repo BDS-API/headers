@@ -5,14 +5,13 @@
 class EntityOptionalOwnerRef {
 
 public:
-
-    ~EntityOptionalOwnerRef();
-    EntityOptionalOwnerRef();
-//  void setOwnedRef(OwnerPtrT<EntityRefTraits> &&); //TODO: incomplete function definition
 //  void setWeakRef(WeakRefT<EntityRefTraits> const&); //TODO: incomplete function definition
-//  void setWeakRef(WeakRefT<EntityRefTraits> &&); //TODO: incomplete function definition
+    bool isOwned()const;
+    EntityOptionalOwnerRef();
+    bool isWeak()const;
     void tryGet()const;
     bool isSet()const;
-    bool isOwned()const;
-    bool isWeak()const;
+    ~EntityOptionalOwnerRef();
+//  void setWeakRef(WeakRefT<EntityRefTraits> &&); //TODO: incomplete function definition
+//  void setOwnedRef(OwnerPtrT<EntityRefTraits> &&); //TODO: incomplete function definition
 };

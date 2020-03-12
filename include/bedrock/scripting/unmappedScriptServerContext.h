@@ -5,13 +5,12 @@
 class ScriptServerContext {
 
 public:
-
-    ScriptServerContext();
-    bool isValid()const;
     void reset();
-    void validate();
     void getLevel();
+    bool isValid()const;
+    void getPacketSender();
+    void validate();
     void getMinecraft();
     void getRegistry();
-    void getPacketSender();
+    ScriptServerContext();
 };

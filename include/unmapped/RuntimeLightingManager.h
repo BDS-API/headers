@@ -1,20 +1,28 @@
 #pragma once
 
 #include "../bedrock/util/Brightness.h"
-#include "./Dimension.h"
 #include "../bedrock/util/BlockPos.h"
+#include "Dimension.h"
 
 
 class RuntimeLightingManager {
 
 public:
+    class RuntimeLightingSubchunkList;
 
-    ~RuntimeLightingManager();
-    RuntimeLightingManager(Dimension &);
-    void updateBlockLight(BlockPos const&, Brightness, Brightness, Brightness, Brightness, bool);
-    void _checkForRelightingTask();
-    void _getListOfChunksWithPlayerDistance();
     void _sortChunksToProcessByDistance();
+    void _checkForRelightingTask();
+    RuntimeLightingManager(Dimension &);
+    ~RuntimeLightingManager();
     void _relightChunks();
     void _removeProcessedSubchunks();
+    void updateBlockLight(BlockPos const&, Brightness, Brightness, Brightness, Brightness, bool);
+    void _getListOfChunksWithPlayerDistance();
+    class RuntimeLightingSubchunkList {
+
+    public:
+        RuntimeLightingSubchunkList(RuntimeLightingManager::RuntimeLightingSubchunkList &&);
+        RuntimeLightingSubchunkList();
+        ~RuntimeLightingSubchunkList();
+    };
 };

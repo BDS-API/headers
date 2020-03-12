@@ -1,16 +1,15 @@
 #pragma once
 
-#include "./PropertyDescription.h"
 #include "../../../json/Value.h"
+#include "PropertyDescription.h"
 
 
 class FamilyTypeDescription : PropertyDescription {
 
 public:
-    virtual void getJsonName()const;
-    virtual ~FamilyTypeDescription();
-    virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
-
+    ~FamilyTypeDescription();
+    virtual void getJsonName()const;
+    virtual void deserializeData(Json::Value &);
     FamilyTypeDescription();
 };

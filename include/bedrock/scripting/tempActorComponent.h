@@ -3,13 +3,14 @@
 #include "../actor/unmapped/ActorUniqueID.h"
 
 
-namespace ScriptApi::WORKAROUNDS {
+namespace ScriptApi {
 
-class tempActorComponent {
+    namespace WORKAROUNDS {
 
-public:
+        class tempActorComponent {
 
-    tempActorComponent(ActorUniqueID const&);
-};
-
+        public:
+            tempActorComponent(ActorUniqueID const&);
+        };
+    }
 }

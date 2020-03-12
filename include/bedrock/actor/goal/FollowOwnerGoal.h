@@ -1,23 +1,22 @@
 #pragma once
 
-#include "../../../unmapped/Dimension.h"
-#include "./Goal.h"
+#include <string>
 #include "../Player.h"
 #include "../Mob.h"
-#include <string>
+#include "Goal.h"
+#include "../../../unmapped/Dimension.h"
 
 
 class FollowOwnerGoal : Goal {
 
 public:
-    virtual ~FollowOwnerGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
     virtual void start();
-    virtual void stop();
+    virtual bool canContinueToUse();
     virtual void tick();
-    virtual void appendDebugInfo(std::string &)const;
 //  virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>); //TODO: incomplete function definition
-
+    virtual bool canUse();
+    virtual void stop();
+    ~FollowOwnerGoal();
+    virtual void appendDebugInfo(std::string &)const;
     FollowOwnerGoal(Mob &, float, float, float);
 };

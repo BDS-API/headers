@@ -7,11 +7,10 @@
 class OnHitSubcomponent {
 
 public:
-    virtual ~OnHitSubcomponent();
-
-    OnHitSubcomponent();
+    ~OnHitSubcomponent();
     void _canAttack(Actor *, Actor *)const;
-    void readfromJSON(Json::Value &);
+    OnHitSubcomponent();
     void writetoJSON(Json::Value &)const;
     void getSubcomponentName();
+    void readfromJSON(Json::Value &);
 };

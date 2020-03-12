@@ -3,24 +3,19 @@
 #include <string>
 
 
-namespace Crypto::Symmetric {
+namespace Crypto {
 
-class Symmetric {
+    namespace Symmetric {
 
-public:
+        class Symmetric {
 
-//  Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode); //TODO: incomplete function definition
-    void getBlockSize()const;
-    void init(std::string const&, std::string const&);
-    ~Symmetric();
-    void decrypt(std::string const&, std::string &);
-    void getKeySize()const;
-//  Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode); //TODO: incomplete function definition
-    void getBlockSize()const;
-    void init(std::string const&, std::string const&);
-    ~Symmetric();
-    void decrypt(std::string const&, std::string &);
-    void getKeySize()const;
-};
-
+        public:
+//          Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode); //TODO: incomplete function definition
+            void getKeySize()const;
+            void getBlockSize()const;
+            void init(std::string const&, std::string const&);
+            ~Symmetric();
+            void decrypt(std::string const&, std::string &);
+        };
+    }
 }

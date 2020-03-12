@@ -1,20 +1,18 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../io/BinaryStream.h"
-#include <string>
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "Packet.h"
 
 
 class OnScreenTextureAnimationPacket : Packet {
 
 public:
-    virtual ~OnScreenTextureAnimationPacket();
     virtual void getId()const;
-    virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
+    ~OnScreenTextureAnimationPacket();
+    virtual void write(BinaryStream &)const;
+    virtual std::string getName()const;
     OnScreenTextureAnimationPacket();
     OnScreenTextureAnimationPacket(unsigned int);
 };

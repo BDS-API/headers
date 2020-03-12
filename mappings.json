@@ -10,7 +10,7 @@
     "ITickingSystem": "bedrock/level/system/",
     "Goal": "bedrock/actor/goal/",
     "Command": "bedrock/command/commands/",
-    "CommandOrigin": "bedrock/command/orgin/",
+    "CommandOrigin": "bedrock/command/origin/",
     "Tag": "bedrock/nbt/",
     "Biome": "bedrock/level/biome/",
     "IFeature": "bedrock/level/feature/",
@@ -98,6 +98,7 @@
     "AgentCommands": "bedrock/command/commands/agent/"
   },
   "name": {
+    "Core": "core/",
     "DedicatedServer": "bedrock/",
     "ServerInstance": "bedrock/",
     "BedrockLog": "bedrock/log/",
@@ -110,6 +111,7 @@
     "ChunkPos": "bedrock/util/",
     "Vec3": "bedrock/util/",
     "Vec2": "bedrock/util/",
+    "Pos": "bedrock/util/",
     "Brightness": "bedrock/util/",
     "Color": "bedrock/util/",
     "Random": "bedrock/util/",
@@ -123,7 +125,12 @@
     "VanillaItems": "bedrock/item/",
     "VanillaItemTiers": "bedrock/item/",
     "VanillaWorldSystems": "bedrock/level/system/",
-    "WorldSystems": "bedrock/level/system/"
+    "WorldSystems": "bedrock/level/system/",
+    "Minecraft": "bedrock/",
+    "Scheduler": "bedrock/",
+    "GameSession": "bedrock/",
+    "Tick": "bedrock/util/",
+    "RakNet": "raknet/"
   },
   "regex": {
     "^Level(?!Db).*": "bedrock/level/",

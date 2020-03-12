@@ -2,20 +2,18 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../actor/unmapped/ActorLink.h"
-#include <string>
+#include "Packet.h"
 
 
 class SetActorLinkPacket : Packet {
 
 public:
-    virtual ~SetActorLinkPacket();
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void getId()const;
     virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
-    virtual void read(ReadOnlyBinaryStream &);
-
+    ~SetActorLinkPacket();
     SetActorLinkPacket();
     SetActorLinkPacket(ActorLink const&);
 };

@@ -5,7 +5,6 @@
 class IWorldRegistriesProvider {
 
 public:
-    virtual ~IWorldRegistriesProvider();
-
+    ~IWorldRegistriesProvider();
     IWorldRegistriesProvider();
 };

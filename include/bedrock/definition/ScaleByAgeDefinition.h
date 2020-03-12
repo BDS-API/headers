@@ -1,18 +1,16 @@
 #pragma once
 
-#include "../../unmapped/ScaleByAgeComponent.h"
-#include <memory>
 #include "../../unmapped/EntityContext.h"
-#include "./ScaleByAgeDefinition.h"
+#include "../../unmapped/ScaleByAgeComponent.h"
 #include "../../json/Value.h"
+#include <memory>
 
 
 class ScaleByAgeDefinition {
 
 public:
-
-//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, ScaleByAgeDefinition>> &); //TODO: incomplete function definition
     void initialize(EntityContext &, ScaleByAgeComponent &);
-    void deserializeData(Json::Value &);
     void serializeData(Json::Value &)const;
+    void deserializeData(Json::Value &);
+//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, ScaleByAgeDefinition>> &); //TODO: incomplete function definition
 };

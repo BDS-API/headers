@@ -1,17 +1,15 @@
 #pragma once
 
-#include "./DataItem.h"
 
 
 class DataItem {
 
 public:
-    virtual ~DataItem();
+    ~DataItem();
     virtual bool isDataEqual(DataItem const&)const;
-
-//  DataItem(DataItemType, unsigned short); //TODO: incomplete function definition
     void getType()const;
-    void setDirty(bool);
-    void getId()const;
     bool isDirty()const;
+    void setDirty(bool);
+//  DataItem(DataItemType, unsigned short); //TODO: incomplete function definition
+    void getId()const;
 };

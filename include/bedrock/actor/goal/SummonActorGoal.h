@@ -1,28 +1,26 @@
 #pragma once
 
+#include <string>
 #include "../Actor.h"
+#include "../Mob.h"
 #include "../../../unmapped/SummonSpellData.h"
-#include <memory>
-#include "./Goal.h"
+#include "Goal.h"
 #include <vector>
 #include "../unmapped/ActorDefinitionIdentifier.h"
-#include "../Mob.h"
-#include <string>
 
 
 class SummonActorGoal : Goal {
 
 public:
-    virtual ~SummonActorGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
-    virtual void start();
-    virtual void stop();
-    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
-
-    SummonActorGoal(Mob &, std::vector<SummonSpellData, std::allocator<SummonSpellData>> const&);
-    void _selectBestSpell(Actor &)const;
+    virtual bool canContinueToUse();
+    virtual void tick();
+    virtual void stop();
+    virtual bool canUse();
+    ~SummonActorGoal();
+    virtual void start();
     void _getCurrentSpell()const;
+    SummonActorGoal(Mob &, std::vector<SummonSpellData> const&);
+    void _selectBestSpell(Actor &)const;
     void _createSpellEntity(float, float, float, float, float, int, ActorDefinitionIdentifier)const;
 };

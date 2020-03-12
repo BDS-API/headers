@@ -1,19 +1,26 @@
 #pragma once
 
-#include "./EntityRegistryOwned.h"
-#include "./OwnerStorageEntity.h"
+#include "EntityRegistryOwned.h"
 
 
 class OwnerStorageEntity {
 
 public:
+    class EntityContextOwned;
 
-//  OwnerStorageEntity(OwnerStorageEntity::EmptyInit); //TODO: incomplete function definition
-//  OwnerStorageEntity(OwnerStorageEntity::VariadicInit, EntityRegistryOwned &); //TODO: incomplete function definition
-    OwnerStorageEntity(OwnerStorageEntity &&);
     void _reset();
-    void _hasValue()const;
+//  OwnerStorageEntity(OwnerStorageEntity::VariadicInit, EntityRegistryOwned &); //TODO: incomplete function definition
+//  OwnerStorageEntity(OwnerStorageEntity::EmptyInit); //TODO: incomplete function definition
+    OwnerStorageEntity(OwnerStorageEntity &&);
     ~OwnerStorageEntity();
-    void _remake(EntityRegistryOwned &);
+    void _hasValue()const;
     void _getStackRef()const;
+    void _remake(EntityRegistryOwned &);
+    class EntityContextOwned {
+
+    public:
+        void destroy();
+        void _ownedRegistry()const;
+        EntityContextOwned(EntityRegistryOwned &);
+    };
 };

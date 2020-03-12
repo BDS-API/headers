@@ -1,11 +1,9 @@
 #pragma once
 
-#include "./Recipes.h"
+#include "Recipes.h"
 
 
-class ToolRecipes {
-
-public:
+namespace ToolRecipes {
 
     void addRecipes(Recipes &);
 };

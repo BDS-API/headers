@@ -1,8 +1,7 @@
 #pragma once
 
+#include "ContentLogEndPoint.h"
 #include "../core/Path.h"
-#include "./ContentLogEndPoint.h"
-#include <string>
 
 
 class ContentLogFileEndPoint : ContentLogEndPoint {
@@ -10,13 +9,12 @@ class ContentLogFileEndPoint : ContentLogEndPoint {
 public:
     static long FILE_NAME;
 
-    virtual ~ContentLogFileEndPoint();
-    virtual void flush();
-    virtual void setEnabled(bool);
-    virtual bool isEnabled()const;
 //  virtual void log(LogArea, LogLevel, char const*); //TODO: incomplete function definition
-
-    ContentLogFileEndPoint(Core::Path, Core::Path);
-    std::string getLogFileName()const;
+    virtual void setEnabled(bool);
+    ~ContentLogFileEndPoint();
+    virtual bool isEnabled()const;
+    virtual void flush();
     void deleteAllContentLogs()const;
+    std::string getLogFileName()const;
+    ContentLogFileEndPoint(Core::Path, Core::Path);
 };

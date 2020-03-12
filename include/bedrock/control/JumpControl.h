@@ -1,22 +1,21 @@
 #pragma once
 
-#include "../actor/Mob.h"
-#include "../description/component/JumpControlDescription.h"
-#include "./Control.h"
 #include "../../unmapped/JumpControlComponent.h"
+#include "Control.h"
+#include "../description/component/JumpControlDescription.h"
+#include "../actor/Mob.h"
 
 
 class JumpControl : Control {
 
 public:
-    virtual ~JumpControl();
+//  virtual void setJumpType(JumpControlComponent &, Mob &, JumpType); //TODO: incomplete function definition
     virtual void initializeInternal(Mob &, JumpControlDescription *);
-    virtual void tick(JumpControlComponent &, Mob &);
+    ~JumpControl();
     virtual void getJumpDelay(JumpControlComponent const&, Mob const&)const;
     virtual void getJumpPower(JumpControlComponent const&, Mob const&)const;
     virtual void getJumpType(JumpControlComponent const&, Mob const&)const;
-//  virtual void setJumpType(JumpControlComponent &, Mob &, JumpType); //TODO: incomplete function definition
     virtual void resetSpeedModifier(JumpControlComponent const&, Mob &);
-
+    virtual void tick(JumpControlComponent &, Mob &);
     JumpControl();
 };

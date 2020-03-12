@@ -1,17 +1,15 @@
 #pragma once
 
-#include "./EntitySensorDefinition.h"
-#include <memory>
 #include "../../unmapped/EntitySensorComponent.h"
 #include "../../unmapped/EntityContext.h"
+#include <memory>
 
 
 class EntitySensorDefinition {
 
 public:
-
-//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, EntitySensorDefinition>> &); //TODO: incomplete function definition
+    ~EntitySensorDefinition();
     void initialize(EntityContext &, EntitySensorComponent &);
     EntitySensorDefinition();
-    ~EntitySensorDefinition();
+//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, EntitySensorDefinition>> &); //TODO: incomplete function definition
 };

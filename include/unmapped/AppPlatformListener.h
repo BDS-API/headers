@@ -1,29 +1,28 @@
 #pragma once
 
-#include "./PushNotificationMessage.h"
+#include "PushNotificationMessage.h"
 
 
 class AppPlatformListener {
 
 public:
-    virtual ~AppPlatformListener();
-    virtual void onLowMemory();
-    virtual void onAppPaused();
-    virtual void onAppUnpaused();
-    virtual void onAppPreSuspended();
-    virtual void onAppSuspended();
-    virtual void onAppResumed();
-    virtual void onAppFocusLost();
-    virtual void onAppFocusGained();
-    virtual void onAppTerminated();
-//  virtual void onOperationModeChanged(OperationMode); //TODO: incomplete function definition
-    virtual void onPerformanceModeChanged(bool);
-    virtual void onPushNotificationReceived(PushNotificationMessage const&);
     virtual void onResizeBegin();
     virtual void onResizeEnd();
-
+    virtual void onAppSuspended();
+//  virtual void onOperationModeChanged(OperationMode); //TODO: incomplete function definition
+    ~AppPlatformListener();
+    virtual void onLowMemory();
+    virtual void onAppPaused();
+    virtual void onPerformanceModeChanged(bool);
+    virtual void onAppPreSuspended();
+    virtual void onAppFocusLost();
+    virtual void onAppTerminated();
+    virtual void onAppFocusGained();
+    virtual void onAppUnpaused();
+    virtual void onAppResumed();
+    virtual void onPushNotificationReceived(PushNotificationMessage const&);
     AppPlatformListener();
-    void initListener(float);
     AppPlatformListener(bool);
     void terminate();
+    void initListener(float);
 };

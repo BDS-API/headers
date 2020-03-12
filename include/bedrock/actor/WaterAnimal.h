@@ -1,17 +1,16 @@
 #pragma once
 
+#include "Mob.h"
 #include "unmapped/ActorDefinitionGroup.h"
 #include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Mob.h"
 
 
 class WaterAnimal : Mob {
 
 public:
-    virtual ~WaterAnimal();
+    virtual void useNewAi()const;
     virtual void aiStep();
     virtual void checkSpawnRules(bool);
-    virtual void useNewAi()const;
-
+    ~WaterAnimal();
     WaterAnimal(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

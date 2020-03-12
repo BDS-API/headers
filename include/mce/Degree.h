@@ -1,16 +1,14 @@
 #pragma once
 
-#include "./Radian.h"
+#include "Radian.h"
 
 
 namespace mce {
 
-class Degree {
+    class Degree {
 
-public:
-
-    Degree(mce::Radian);
-    bool asFloat()const;
-};
-
+    public:
+        bool asFloat()const;
+        Degree(mce::Radian);
+    };
 }

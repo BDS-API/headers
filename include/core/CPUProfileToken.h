@@ -2,15 +2,16 @@
 
 
 
-namespace Core::Profile {
+namespace Core {
 
-class CPUProfileToken {
+    namespace Profile {
 
-public:
+        class CPUProfileToken {
 
-    CPUProfileToken();
-    CPUProfileToken(unsigned long, char const*, char const*, unsigned int);
-    bool isValid()const;
-};
-
+        public:
+            CPUProfileToken(unsigned long, char const*, char const*, unsigned int);
+            bool isValid()const;
+            CPUProfileToken();
+        };
+    }
 }

@@ -7,9 +7,8 @@ class WSAStartupSingleton {
 public:
     static long refCount;
 
-
-    WSAStartupSingleton();
     ~WSAStartupSingleton();
-    void AddRef();
     void Deref();
+    WSAStartupSingleton();
+    void AddRef();
 };

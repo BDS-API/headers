@@ -1,26 +1,36 @@
 #pragma once
 
-#include "../../mce/UUID.h"
-#include "../../unmapped/WhitelistEntry.h"
+#include <string>
 #include "../../unmapped/IJsonSerializable.h"
 #include "../../json/Value.h"
+#include "../../mce/UUID.h"
 #include <functional>
-#include <string>
+#include "../../unmapped/WhitelistEntry.h"
 
 
 class Whitelist : IJsonSerializable {
 
 public:
-    virtual ~Whitelist();
+    class WhitelistEntryMatcher;
+
+    ~Whitelist();
     virtual void serialize(Json::Value &);
     virtual void deserialize(Json::Value &);
-
-//  Whitelist(std::function<void (void)>); //TODO: incomplete function definition
-    bool isAllowed(mce::UUID const&, std::string const&)const;
-    bool isIgnoringPlayerLimit(mce::UUID const&, std::string const&)const;
-    void clear();
     void getEntries()const;
-    void addEntry(WhitelistEntry const&);
-    void removeByName(std::string const&);
+    Whitelist(std::function<void (void)>);
+    void clear();
     void tryUpdateEntries(mce::UUID const&, std::string const&, std::string const&);
+    bool isAllowed(mce::UUID const&, std::string const&)const;
+    void addEntry(WhitelistEntry const&);
+    bool isIgnoringPlayerLimit(mce::UUID const&, std::string const&)const;
+    void removeByName(std::string const&);
+    class WhitelistEntryMatcher {
+
+    public:
+        WhitelistEntryMatcher(Whitelist::WhitelistEntryMatcher &&);
+        void operator()(WhitelistEntry &);
+        WhitelistEntryMatcher(std::string, std::string);
+        ~WhitelistEntryMatcher();
+        WhitelistEntryMatcher(Whitelist::WhitelistEntryMatcher const&);
+    };
 };

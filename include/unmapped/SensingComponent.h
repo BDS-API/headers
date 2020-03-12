@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
-#include "./SensingComponent.h"
-#include "../bedrock/actor/Mob.h"
 #include "../bedrock/actor/Actor.h"
+#include "../bedrock/actor/Mob.h"
+#include "../bedrock/util/Vec3.h"
 
 
 class SensingComponent {
 
 public:
-
-    ~SensingComponent();
+    void reset();
+    void withinFOV(Mob &, Vec3 const&, float);
     SensingComponent(SensingComponent &&);
     SensingComponent();
-    void reset();
+    ~SensingComponent();
     bool canSee(Mob &, Actor const&);
-    void withinFOV(Mob &, Vec3 const&, float);
 };

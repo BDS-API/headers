@@ -1,25 +1,23 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorRuntimeID.h"
-#include "../../block/actor/CommandBlockActor.h"
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
-#include "../../block/unmapped/BlockSource.h"
 #include "../../../unmapped/BaseCommandBlock.h"
-#include <string>
+#include "../../block/unmapped/BlockSource.h"
+#include "../../actor/unmapped/ActorRuntimeID.h"
+#include "../../block/actor/CommandBlockActor.h"
+#include "Packet.h"
 
 
 class CommandBlockUpdatePacket : Packet {
 
 public:
-    virtual ~CommandBlockUpdatePacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
+    ~CommandBlockUpdatePacket();
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    CommandBlockUpdatePacket(BlockSource &, CommandBlockActor const&);
+    virtual void getId()const;
+    virtual std::string getName()const;
     CommandBlockUpdatePacket(ActorRuntimeID, BaseCommandBlock const&);
+    CommandBlockUpdatePacket(BlockSource &, CommandBlockActor const&);
     CommandBlockUpdatePacket();
 };

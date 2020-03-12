@@ -5,6 +5,5 @@
 class ContextAccessor {
 
 public:
-
     ~ContextAccessor();
 };

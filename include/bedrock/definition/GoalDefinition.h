@@ -1,9 +1,8 @@
 #pragma once
 
-#include "../actor/Mob.h"
-#include "./GoalDefinition.h"
 #include "../../json/Value.h"
 #include <string>
+#include "../actor/Mob.h"
 
 
 class GoalDefinition {
@@ -11,16 +10,15 @@ class GoalDefinition {
 public:
     static std::string mGoalMap;
 
-
-    ~GoalDefinition();
-    GoalDefinition();
-    GoalDefinition(GoalDefinition const&);
-    GoalDefinition(GoalDefinition &&);
-    void parse(Json::Value &, int);
     void _getTargetSelectionMethodFromString(std::string const&);
+    GoalDefinition(GoalDefinition &&);
+    ~GoalDefinition();
     void _getPOITypeFromString(std::string);
-    void CreateGoal(Mob &, GoalDefinition const&);
+    void parse(Json::Value &, int);
+    void shutdown();
+    GoalDefinition(GoalDefinition const&);
     void GoalExists(std::string const&);
     void init();
-    void shutdown();
+    void CreateGoal(Mob &, GoalDefinition const&);
+    GoalDefinition();
 };

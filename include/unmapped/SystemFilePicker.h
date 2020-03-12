@@ -1,22 +1,20 @@
 #pragma once
 
-#include "../core/Path.h"
-#include "./SystemFilePicker.h"
-#include <memory>
-#include "./IFilePicker.h"
-#include <vector>
+#include "FileInfo.h"
 #include <functional>
-#include "./FileInfo.h"
+#include "../core/Path.h"
+#include <vector>
+#include <memory>
+#include "IFilePicker.h"
 
 
 class SystemFilePicker : IFilePicker, std::enable_shared_from_this<SystemFilePicker> {
 
 public:
-    virtual ~SystemFilePicker();
-//  virtual void initFilePick(Core::Path const&, std::function<void (bool, FileInfo)>); //TODO: incomplete function definition
-    virtual void readBytes(FileInfo const&, unsigned long, unsigned long, std::vector<unsigned char, std::allocator<unsigned char>> &);
-    virtual void writeBytes(FileInfo const&, unsigned long, unsigned long, std::vector<unsigned char, std::allocator<unsigned char>> const&);
-
-    SystemFilePicker();
+    virtual void writeBytes(FileInfo const&, unsigned long, unsigned long, std::vector<unsigned char> const&);
+    ~SystemFilePicker();
+    virtual void initFilePick(Core::Path const&, std::function<void (bool, FileInfo)>);
+    virtual void readBytes(FileInfo const&, unsigned long, unsigned long, std::vector<unsigned char> &);
     void _fillFileInfo(Core::Path const&);
+    SystemFilePicker();
 };

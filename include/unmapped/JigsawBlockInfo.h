@@ -1,16 +1,14 @@
 #pragma once
 
-#include "./Block.h"
-#include "./JigsawBlockInfo.h"
-#include "../bedrock/util/BlockPos.h"
 #include <string>
+#include "Block.h"
+#include "../bedrock/util/BlockPos.h"
 
 
 class JigsawBlockInfo {
 
 public:
-
-    ~JigsawBlockInfo();
-    JigsawBlockInfo(JigsawBlockInfo &&);
     JigsawBlockInfo(BlockPos const&, Block const*, Block const*, std::string, std::string);
+    JigsawBlockInfo(JigsawBlockInfo &&);
+    ~JigsawBlockInfo();
 };

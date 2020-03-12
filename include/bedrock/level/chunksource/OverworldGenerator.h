@@ -1,50 +1,54 @@
 #pragma once
 
-#include "../../util/Random.h"
+#include "ChunkViewSource.h"
 #include "../../../unmapped/BiomeSource.h"
-#include "../../block/unmapped/BlockTickingQueue.h"
-#include "../../../unmapped/BiomeRegistry.h"
 #include "../LevelData.h"
-#include "../../../unmapped/Dimension.h"
-#include "./ChunkSource.h"
-#include "../../../unmapped/BiomeArea.h"
-#include "./ChunkViewSource.h"
-#include "../../block/unmapped/BlockSource.h"
-#include "../../block/unmapped/BlockVolume.h"
-#include "../../util/BlockPos.h"
-#include "../../../unmapped/BoundingBox.h"
-#include "../generator/WorldGenerator.h"
 #include "../../util/ChunkPos.h"
 #include "../LevelChunk.h"
-#include "../../../unmapped/ThreadData.h"
-#include <string>
+#include "../../util/Random.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "ChunkSource.h"
+#include "../../util/BlockPos.h"
+#include "../../../unmapped/BoundingBox.h"
+#include "../../../unmapped/BiomeArea.h"
+#include "../../block/unmapped/BlockVolume.h"
+#include "../../../unmapped/BiomeRegistry.h"
+#include "../../../unmapped/Dimension.h"
+#include "../../block/unmapped/BlockTickingQueue.h"
+#include "../generator/WorldGenerator.h"
 
 
 class OverworldGenerator : ChunkSource, WorldGenerator {
 
 public:
+    class ThreadData;
+
     static long SNOW_CUTOFF;
     static long SNOW_SCALE;
 
-    virtual ~OverworldGenerator();
+    virtual void addHardcodedSpawnAreas(LevelChunk &);
     virtual void postProcess(ChunkViewSource &);
-    virtual void loadChunk(LevelChunk &, bool);
     virtual void postProcessMobsAt(BlockSource *, int, int, Random &);
-    virtual void debugRender();
-    virtual void prepareHeights(BlockVolume &, ChunkPos const&, bool);
-    virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
+//  virtual void garbageCollectBlueprints(buffer_span<ChunkPos>); //TODO: incomplete function definition
+    ~OverworldGenerator();
     virtual void findSpawnPosition()const;
+    virtual void loadChunk(LevelChunk &, bool);
+    virtual void getBiomeArea(BoundingBox const&, unsigned int)const;
+    virtual void debugRender();
     virtual void getFeatureTypeAt(BlockPos const&);
 //  virtual void findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos &); //TODO: incomplete function definition
-//  virtual void garbageCollectBlueprints(buffer_span<ChunkPos>); //TODO: incomplete function definition
-    virtual void addHardcodedSpawnAreas(LevelChunk &);
-
-    OverworldGenerator(Dimension &, unsigned int, bool);
-    void _makeLayers(LevelData const&, BiomeRegistry const&);
+    virtual void prepareHeights(BlockVolume &, ChunkPos const&, bool);
     void _prepareHeights(BlockVolume &, ChunkPos const&, BiomeSource const&, bool);
-    void getHeights(float *, BiomeArea const&, int, int, int);
-    void buildSurfaces(OverworldGenerator::ThreadData &, BlockVolume &, LevelChunk &, ChunkPos const&);
-    void _prepareStructureBlueprints(ChunkPos const&, BiomeSource &);
     void _fixWaterAlongEdges(LevelChunk &, BlockSource &, BlockTickingQueue &);
+    void _prepareStructureBlueprints(ChunkPos const&, BiomeSource &);
+    void buildSurfaces(OverworldGenerator::ThreadData &, BlockVolume &, LevelChunk &, ChunkPos const&);
+    void getHeights(float *, BiomeArea const&, int, int, int);
     std::string gatherStats();
+    void _makeLayers(LevelData const&, BiomeRegistry const&);
+    OverworldGenerator(Dimension &, unsigned int, bool);
+    class ThreadData {
+
+    public:
+        ThreadData();
+    };
 };

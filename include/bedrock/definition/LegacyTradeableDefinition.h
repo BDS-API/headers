@@ -1,20 +1,18 @@
 #pragma once
 
-#include <memory>
-#include "../../unmapped/EntityContext.h"
 #include "../../unmapped/LegacyTradeableComponent.h"
-#include "./LegacyTradeableDefinition.h"
+#include "../../unmapped/EntityContext.h"
 #include "../../json/Value.h"
+#include <memory>
 
 
 class LegacyTradeableDefinition {
 
 public:
-
-//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, LegacyTradeableDefinition>> &); //TODO: incomplete function definition
-    void initialize(EntityContext &, LegacyTradeableComponent &);
-    void deserializeData(Json::Value &);
-    void serializeData(Json::Value &)const;
-    LegacyTradeableDefinition();
     ~LegacyTradeableDefinition();
+    void deserializeData(Json::Value &);
+    LegacyTradeableDefinition();
+    void serializeData(Json::Value &)const;
+    void initialize(EntityContext &, LegacyTradeableComponent &);
+//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, LegacyTradeableDefinition>> &); //TODO: incomplete function definition
 };

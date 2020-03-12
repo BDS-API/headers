@@ -4,13 +4,11 @@
 
 namespace BedrockLog {
 
-class CategoryLogFile {
+    class CategoryLogFile {
 
-public:
-
-//  void AddChannel(BedrockLog::LogChannel); //TODO: incomplete function definition
-    CategoryLogFile();
-    ~CategoryLogFile();
-};
-
+    public:
+//      void AddChannel(BedrockLog::LogChannel); //TODO: incomplete function definition
+        CategoryLogFile();
+        ~CategoryLogFile();
+    };
 }

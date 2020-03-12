@@ -6,14 +6,13 @@
 class RopePoints {
 
 public:
-
-    RopePoints();
-    ~RopePoints();
+    void freezeInterpolation();
     void size()const;
-    void beginRope();
-    void endRope();
-    void pushBack(Vec3 const&);
+    RopePoints();
     void getInterpolated(unsigned long, float)const;
     void reserve(unsigned long);
-    void freezeInterpolation();
+    void pushBack(Vec3 const&);
+    void endRope();
+    void beginRope();
+    ~RopePoints();
 };

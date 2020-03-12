@@ -1,17 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/BehaviorTreeDefinitionPtr.h"
-#include "../../../unmapped/BehaviorFactory.h"
-#include "./BehaviorDefinition.h"
 #include "../../../json/Value.h"
+#include "../../../unmapped/BehaviorTreeDefinitionPtr.h"
+#include "BehaviorDefinition.h"
+#include "../../../unmapped/BehaviorFactory.h"
 
 
 class DecoratorDefinition : BehaviorDefinition {
 
 public:
-    virtual ~DecoratorDefinition();
-
-    DecoratorDefinition();
+    ~DecoratorDefinition();
     void get()const;
+    DecoratorDefinition();
     void _decoratorLoadChildBehavior(Json::Value, BehaviorFactory const&, BehaviorTreeDefinitionPtr);
 };

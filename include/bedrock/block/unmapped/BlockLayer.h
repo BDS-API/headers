@@ -5,6 +5,5 @@
 class BlockLayer {
 
 public:
-
     BlockLayer();
 };

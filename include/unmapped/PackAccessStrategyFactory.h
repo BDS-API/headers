@@ -1,19 +1,17 @@
 #pragma once
 
-#include "./PackReport.h"
-#include "./IContentKeyProvider.h"
-#include "./ResourceLocation.h"
-#include "./ContentIdentity.h"
+#include "ResourceLocation.h"
+#include "PackReport.h"
+#include "IContentKeyProvider.h"
+#include "ContentIdentity.h"
 
 
-class PackAccessStrategyFactory {
-
-public:
+namespace PackAccessStrategyFactory {
 
     void create(ResourceLocation &, IContentKeyProvider const&, PackReport &, bool);
-    void createForZip(ResourceLocation const&, bool);
-    void createForDirectoryWithEncryptedBlob(ResourceLocation const&, ResourceLocation const&, IContentKeyProvider const&);
     void createForEncrypted(ResourceLocation const&, ContentIdentity const&, IContentKeyProvider const&, bool);
-    void createForDirectory(ResourceLocation const&, bool);
     void createForEncryptedZip(ResourceLocation const&, IContentKeyProvider const&);
+    void createForDirectory(ResourceLocation const&, bool);
+    void createForDirectoryWithEncryptedBlob(ResourceLocation const&, ResourceLocation const&, IContentKeyProvider const&);
+    void createForZip(ResourceLocation const&, bool);
 };

@@ -6,19 +6,18 @@
 class Stopwatch {
 
 public:
-    virtual ~Stopwatch();
     virtual void stop();
     virtual void stopContinue();
+    ~Stopwatch();
     virtual void print(std::string const&);
-
-    Stopwatch();
-    void getLast();
     void getMax();
-    void reset();
-    void start();
-    void getTotal();
     void getCount();
-    void tick();
+    void start();
     bool isReset()const;
+    void getLast();
+    void getTotal();
     void printEvery(int, std::string const&);
+    void tick();
+    Stopwatch();
+    void reset();
 };

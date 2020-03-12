@@ -4,11 +4,8 @@
 
 namespace LayerFilters {
 
-class River {
+    namespace River {
 
-public:
-
-//  void operator()(LayerDetails::NeighborhoodReader<int, 1u, 1u> &)const; //TODO: incomplete function definition
-};
-
+//      void operator()(LayerDetails::NeighborhoodReader<int, 1u, 1u> &)const; //TODO: incomplete function definition
+    };
 }

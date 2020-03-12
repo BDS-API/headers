@@ -2,11 +2,9 @@
 
 
 
-class MinecraftScheduler {
+namespace MinecraftScheduler {
 
-public:
     static long mInstance;
-
 
     void client();
     void destroyClientSingleton();

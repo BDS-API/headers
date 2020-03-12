@@ -2,9 +2,7 @@
 
 
 
-class PackErrorFactory {
-
-public:
+namespace PackErrorFactory {
 
 //  void createPackError(PackErrorType); //TODO: incomplete function definition
 };

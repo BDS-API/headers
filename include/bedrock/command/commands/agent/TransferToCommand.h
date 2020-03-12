@@ -6,14 +6,12 @@
 
 namespace AgentCommands {
 
-class TransferToCommand : AgentCommands::Command {
+    class TransferToCommand : AgentCommands::Command {
 
-public:
-    virtual ~TransferToCommand();
-    virtual void execute();
-    virtual bool isDone();
-
-    TransferToCommand(Player &, int, int, int);
-};
-
+    public:
+        ~TransferToCommand();
+        virtual bool isDone();
+        virtual void execute();
+        TransferToCommand(Player &, int, int, int);
+    };
 }

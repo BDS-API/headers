@@ -1,20 +1,19 @@
 #pragma once
 
 #include "../network/packet/sender/PacketSender.h"
-#include "../Scheduler.h"
 #include "../../unmapped/NetworkIdentifier.h"
+#include "../Scheduler.h"
 #include <string>
 
 
 class ResourcePackTransmissionManager {
 
 public:
-
-    ResourcePackTransmissionManager(Scheduler &);
     ~ResourcePackTransmissionManager();
+    void getResourcePackDownloadManager(PacketSender &, NetworkIdentifier const&, std::string const&);
     void update();
     void getResourcePackUploadManager(PacketSender &, NetworkIdentifier const&, std::string const&);
-    void getResourcePackDownloadManager(PacketSender &, NetworkIdentifier const&, std::string const&);
     void getResourcePackDownloadManager(std::string const&)const;
+    ResourcePackTransmissionManager(Scheduler &);
     void cleanupResourcePackManager(NetworkIdentifier const&);
 };

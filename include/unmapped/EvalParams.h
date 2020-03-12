@@ -5,7 +5,6 @@
 class EvalParams {
 
 public:
-
-    EvalParams();
     ~EvalParams();
+    EvalParams();
 };

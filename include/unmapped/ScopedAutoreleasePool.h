@@ -5,12 +5,11 @@
 class ScopedAutoreleasePool {
 
 public:
-
-    ScopedAutoreleasePool();
+    void reset();
     void _create();
     ~ScopedAutoreleasePool();
+    void drainNow();
     void _drain();
     void drain();
-    void drainNow();
-    void reset();
+    ScopedAutoreleasePool();
 };

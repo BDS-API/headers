@@ -1,28 +1,26 @@
 #pragma once
 
-#include <functional>
-#include "./Path.h"
 #include "../bedrock/file/access/IFileAccess.h"
+#include <functional>
 #include <string>
+#include "Path.h"
 
 
 namespace Core {
 
-class UnzipFile {
+    class UnzipFile {
 
-public:
-
-    UnzipFile(IFileAccess *, Core::Path const&);
-    ~UnzipFile();
-    bool isGood()const;
-    void locateFile(char const*, int);
-    void goToFirstFile();
-    void goToNextFile();
-    std::string getCurrentFileName()const;
-    void openCurrentFileForReading();
-    void closeCurrentFile();
-//  void appendCurrentFileContents(std::string &, unsigned long, std::function<void (int, std::string const&)>); //TODO: incomplete function definition
-    void getTotalFilesInZip();
-};
-
+    public:
+        UnzipFile(IFileAccess *, Core::Path const&);
+        void locateFile(char const*, int);
+        void closeCurrentFile();
+        void getTotalFilesInZip();
+        void openCurrentFileForReading();
+        bool isGood()const;
+        void goToFirstFile();
+        std::string getCurrentFileName()const;
+        void goToNextFile();
+        ~UnzipFile();
+        void appendCurrentFileContents(std::string &, unsigned long, std::function<void (int, std::string const&)>);
+    };
 }

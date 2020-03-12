@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/BehaviorFactory.h"
-#include "./DecoratorDefinition.h"
 #include "../../../json/Value.h"
+#include "DecoratorDefinition.h"
+#include "../../../unmapped/BehaviorFactory.h"
 
 
 class InverterDefinition : DecoratorDefinition {
 
 public:
-    virtual ~InverterDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
-
+    ~InverterDefinition();
     InverterDefinition();
 };

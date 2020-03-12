@@ -1,10 +1,11 @@
 #pragma once
 
-#include "./ScriptBinderComponent.h"
-#include "../unmapped/ScriptEngine.h"
 #include "../ScriptObjectHandle.h"
-#include "../../level/tickingarea/ITickingArea.h"
+#include <string>
+#include "../unmapped/ScriptEngine.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
+#include "../../level/tickingarea/ITickingArea.h"
+#include "ScriptBinderComponent.h"
 
 
 class ScriptActorAreaBinderComponent : ScriptBinderComponent {
@@ -12,12 +13,11 @@ class ScriptActorAreaBinderComponent : ScriptBinderComponent {
 public:
     static std::string TAG;
 
-    virtual ~ScriptActorAreaBinderComponent();
-    virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
-
-    ScriptActorAreaBinderComponent();
+    ~ScriptActorAreaBinderComponent();
+    virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     ScriptActorAreaBinderComponent(ActorUniqueID);
+    ScriptActorAreaBinderComponent();
     ScriptActorAreaBinderComponent(ITickingArea const&);
     void getIdentifier()const;
 };

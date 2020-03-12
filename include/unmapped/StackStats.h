@@ -5,6 +5,5 @@
 class StackStats {
 
 public:
-
     StackStats();
 };

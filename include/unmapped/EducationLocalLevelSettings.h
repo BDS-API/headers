@@ -5,6 +5,5 @@
 class EducationLocalLevelSettings {
 
 public:
-
     EducationLocalLevelSettings();
 };

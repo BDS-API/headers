@@ -3,14 +3,15 @@
 #include <string>
 
 
-namespace ClientBlobCache::Server {
+namespace ClientBlobCache {
 
-class Blob {
+    namespace Server {
 
-public:
+        class Blob {
 
-    Blob(unsigned long, std::string &&);
-    ~Blob();
-};
-
+        public:
+            Blob(unsigned long, std::string &&);
+            ~Blob();
+        };
+    }
 }

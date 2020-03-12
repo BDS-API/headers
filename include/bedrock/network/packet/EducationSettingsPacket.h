@@ -2,20 +2,18 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../../unmapped/EducationLevelSettings.h"
-#include <string>
+#include "Packet.h"
 
 
 class EducationSettingsPacket : Packet {
 
 public:
-    virtual ~EducationSettingsPacket();
-    virtual void getId()const;
+    ~EducationSettingsPacket();
     virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
+    virtual void getId()const;
     virtual void read(ReadOnlyBinaryStream &);
-
+    virtual void write(BinaryStream &)const;
     EducationSettingsPacket();
     EducationSettingsPacket(EducationLevelSettings);
     void getEducationLevelSettings()const;

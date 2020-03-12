@@ -1,18 +1,17 @@
 #pragma once
 
-#include "./LevelChunk.h"
-#include <memory>
+#include "LevelChunk.h"
 #include "../../unmapped/Dimension.h"
+#include <memory>
 
 
 class LevelChunkGarbageCollector {
 
 public:
-
-    void _onFinalDelete();
-    LevelChunkGarbageCollector(Dimension &);
-    void acquireDiscardedChunk(std::unique_ptr<LevelChunk, std::default_delete<LevelChunk>>);
     void getPendingDeletesCount()const;
-    void flush();
+    void acquireDiscardedChunk(std::unique_ptr<LevelChunk>);
+    LevelChunkGarbageCollector(Dimension &);
     ~LevelChunkGarbageCollector();
+    void flush();
+    void _onFinalDelete();
 };

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../../definition/DefinitionTrigger.h"
+#include <string>
 #include "../Actor.h"
-#include "../../util/BlockPos.h"
-#include "./BaseMoveToBlockGoal.h"
 #include "../../block/unmapped/BlockSource.h"
 #include "../Mob.h"
+#include "BaseMoveToBlockGoal.h"
+#include "../../util/BlockPos.h"
 #include "../../../unmapped/FloatRange.h"
-#include <string>
+#include "../../definition/DefinitionTrigger.h"
 
 
 class DropItemForGoal : BaseMoveToBlockGoal {
@@ -15,18 +15,17 @@ class DropItemForGoal : BaseMoveToBlockGoal {
 public:
     static long COOLDOWN_TICKS;
 
-    virtual ~DropItemForGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
     virtual void start();
-    virtual void stop();
     virtual void tick();
-    virtual void appendDebugInfo(std::string &)const;
-    virtual bool isValidTarget(BlockSource &, BlockPos const&);
+    ~DropItemForGoal();
     virtual void findTargetBlock();
-
-    DropItemForGoal(Mob &, float, int, int, float, DefinitionTrigger const&, float, float, float, std::string, FloatRange);
+    virtual bool canUse();
+    virtual void stop();
+    virtual bool isValidTarget(BlockSource &, BlockPos const&);
+    virtual bool canContinueToUse();
+    virtual void appendDebugInfo(std::string &)const;
+    void getFilter();
     void _getLootTable();
     void _checkWhereHaveYouBeenAchievement(Actor *);
-    void getFilter();
+    DropItemForGoal(Mob &, float, int, int, float, DefinitionTrigger const&, float, float, float, std::string, FloatRange);
 };

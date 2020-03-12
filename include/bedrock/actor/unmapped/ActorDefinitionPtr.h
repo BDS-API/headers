@@ -1,8 +1,7 @@
 #pragma once
 
+#include "ActorDefinitionGroup.h"
 #include "../../definition/ActorDefinition.h"
-#include "./ActorDefinitionPtr.h"
-#include "./ActorDefinitionGroup.h"
 
 
 class ActorDefinitionPtr {
@@ -10,17 +9,16 @@ class ActorDefinitionPtr {
 public:
     static long NONE;
 
-
     void operator->()const;
+    ActorDefinitionPtr();
     void operator->();
     void onGroupDestroyed();
-    ActorDefinitionPtr();
-    ActorDefinitionPtr(ActorDefinitionGroup &, ActorDefinition &);
-    void onGroupReloaded();
-    ActorDefinitionPtr(ActorDefinitionPtr &&);
-    void _move(ActorDefinitionPtr &&);
-    ActorDefinitionPtr(ActorDefinitionPtr const&);
     void _deref();
+    ActorDefinitionPtr(ActorDefinitionPtr &&);
     ~ActorDefinitionPtr();
     void operator*();
+    void onGroupReloaded();
+    ActorDefinitionPtr(ActorDefinitionGroup &, ActorDefinition &);
+    ActorDefinitionPtr(ActorDefinitionPtr const&);
+    void _move(ActorDefinitionPtr &&);
 };

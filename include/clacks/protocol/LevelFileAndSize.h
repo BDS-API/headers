@@ -1,45 +1,51 @@
 #pragma once
 
-#include "./LevelFileAndSize.h"
 #include <string>
 
 
-namespace com::mojang::clacks::protocol {
+namespace com {
 
-class LevelFileAndSize /*google::protobuf::Message*/ { //TODO: incomplete class definition
+    namespace mojang {
 
-public:
-    virtual ~LevelFileAndSize();
-    virtual void New()const;
-//  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition
-    virtual void Clear();
-    virtual bool IsInitialized()const;
-//  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition
-    virtual void ByteSizeLong()const;
-//  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition
-    virtual void GetCachedSize()const;
-    virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
-//  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition
-//  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition
-    virtual void SetCachedSize(int)const;
-    virtual void GetMetadata()const;
+        namespace clacks {
 
-    void set_value(std::string &&);
-    void InitAsDefaultInstance();
-    LevelFileAndSize();
-    void SharedCtor();
-    LevelFileAndSize(com::mojang::clacks::protocol::LevelFileAndSize const&);
-    void SharedDtor();
-    void descriptor();
-    void default_instance();
-    void MergeFrom(com::mojang::clacks::protocol::LevelFileAndSize const&);
-    void CopyFrom(com::mojang::clacks::protocol::LevelFileAndSize const&);
-    void Swap(com::mojang::clacks::protocol::LevelFileAndSize *);
-    void InternalSwap(com::mojang::clacks::protocol::LevelFileAndSize *);
-    std::string value()const;
-    void internal_default_instance();
-    std::string mutable_value();
-    void GetArenaNoVirtual()const;
-};
+            namespace protocol {
 
+                class LevelFileAndSize /*google::protobuf::Message*/ { //TODO: incomplete class definition
+
+                public:
+//                  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition
+                    virtual void Clear();
+                    virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
+                    ~LevelFileAndSize();
+//                  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition
+                    virtual void New()const;
+//                  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition
+                    virtual void SetCachedSize(int)const;
+//                  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition
+//                  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition
+                    virtual void GetMetadata()const;
+                    virtual void ByteSizeLong()const;
+                    virtual void GetCachedSize()const;
+                    virtual bool IsInitialized()const;
+                    void SharedDtor();
+                    std::string mutable_value();
+                    void CopyFrom(com::mojang::clacks::protocol::LevelFileAndSize const&);
+                    void Swap(com::mojang::clacks::protocol::LevelFileAndSize *);
+                    void InitAsDefaultInstance();
+                    void MergeFrom(com::mojang::clacks::protocol::LevelFileAndSize const&);
+                    std::string value()const;
+                    void GetArenaNoVirtual()const;
+                    void InternalSwap(com::mojang::clacks::protocol::LevelFileAndSize *);
+                    void set_value(std::string &&);
+                    LevelFileAndSize(com::mojang::clacks::protocol::LevelFileAndSize const&);
+                    void default_instance();
+                    void SharedCtor();
+                    void descriptor();
+                    void internal_default_instance();
+                    LevelFileAndSize();
+                };
+            }
+        }
+    }
 }

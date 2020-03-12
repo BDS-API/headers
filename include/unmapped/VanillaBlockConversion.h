@@ -3,9 +3,7 @@
 #include <string>
 
 
-class VanillaBlockConversion {
-
-public:
+namespace VanillaBlockConversion {
 
     void getBlockTypeFromLegacyId(unsigned int);
     void getBlockTypeLegacyIdFromName(std::string const&);

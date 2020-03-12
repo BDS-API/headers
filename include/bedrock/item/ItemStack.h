@@ -1,17 +1,16 @@
 #pragma once
 
-#include "../actor/Mob.h"
-#include "./ItemStackBase.h"
-#include "./ItemInstance.h"
-#include "../../unmapped/RecipeIngredient.h"
-#include "./Item.h"
-#include "../level/Level.h"
-#include "../actor/Actor.h"
-#include "../actor/Player.h"
 #include "../block/BlockLegacy.h"
+#include "../actor/Actor.h"
+#include "ItemInstance.h"
 #include "../nbt/CompoundTag.h"
-#include "./ItemStack.h"
+#include "../../unmapped/RecipeIngredient.h"
 #include "../../unmapped/Block.h"
+#include "../actor/Mob.h"
+#include "Item.h"
+#include "../level/Level.h"
+#include "../actor/Player.h"
+#include "ItemStackBase.h"
 
 
 class ItemStack : ItemStackBase {
@@ -19,34 +18,33 @@ class ItemStack : ItemStackBase {
 public:
     static long EMPTY_ITEM;
 
-    virtual ~ItemStack();
+    ~ItemStack();
     virtual void reinit(Item const&, int, int);
     virtual void reinit(BlockLegacy const&, int);
-
-    ItemStack();
     ItemStack(BlockLegacy const&, int);
-    ItemStack(Block const&, int, CompoundTag const*);
-    ItemStack(Item const&);
-    ItemStack(Item const&, int);
-    ItemStack(Item const&, int, int);
-    ItemStack(Item const&, int, int, CompoundTag const*);
-    ItemStack(ItemInstance const&);
     ItemStack(RecipeIngredient const&);
-    ItemStack(ItemStack const&);
-    void getStrippedNetworkItem()const;
-    void useOn(Actor &, int, int, int, unsigned char, float, float, float);
+    ItemStack(Item const&, int, int);
     void getDestroySpeed(Block const&)const;
-    void use(Player &);
-    void inventoryTick(Level &, Actor &, int, bool);
-    void useAsFuel();
-    void removeEnchants();
     void mineBlock(Block const&, int, int, int, Mob *);
-    void sameItemAndAuxAndBlockData(ItemStack const&)const;
-    void clone()const;
-    void fromTag(CompoundTag const&);
+    void removeEnchants();
     void fromTag(CompoundTag const&, Level &);
+    void useOn(Actor &, int, int, int, unsigned char, float, float, float);
+    void playSoundIncrementally(Mob &)const;
+    ItemStack(ItemInstance const&);
+    void getStrippedNetworkItem()const;
     void releaseUsing(Player *, int);
     void getMaxUseDuration()const;
+    ItemStack(Item const&, int, int, CompoundTag const*);
+    void clone()const;
+    ItemStack(Item const&);
+    void fromTag(CompoundTag const&);
     void useTimeDepleted(Level *, Player *);
-    void playSoundIncrementally(Mob &)const;
+    void sameItemAndAuxAndBlockData(ItemStack const&)const;
+    void inventoryTick(Level &, Actor &, int, bool);
+    ItemStack(Item const&, int);
+    void use(Player &);
+    void useAsFuel();
+    ItemStack();
+    ItemStack(ItemStack const&);
+    ItemStack(Block const&, int, CompoundTag const*);
 };

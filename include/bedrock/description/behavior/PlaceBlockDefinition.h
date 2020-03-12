@@ -1,12 +1,11 @@
 #pragma once
 
-#include "./BehaviorDefinition.h"
+#include "BehaviorDefinition.h"
 
 
 class PlaceBlockDefinition : BehaviorDefinition {
 
 public:
-    virtual ~PlaceBlockDefinition();
-
+    ~PlaceBlockDefinition();
     PlaceBlockDefinition();
 };

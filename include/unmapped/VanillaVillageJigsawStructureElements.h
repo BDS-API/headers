@@ -1,13 +1,11 @@
 #pragma once
 
-#include "./FeatureRegistry.h"
-#include "./StructureManager.h"
-#include "./JigsawStructureRegistry.h"
+#include "JigsawStructureRegistry.h"
+#include "FeatureRegistry.h"
+#include "StructureManager.h"
 
 
-class VanillaVillageJigsawStructureElements {
-
-public:
+namespace VanillaVillageJigsawStructureElements {
 
     void initialize(StructureManager &, FeatureRegistry &, JigsawStructureRegistry &);
 };

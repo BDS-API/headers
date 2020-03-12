@@ -1,32 +1,30 @@
 #pragma once
 
-#include "../actor/Mob.h"
+#include "ItemStack.h"
 #include <string>
-#include "./ItemStackBase.h"
-#include "../../unmapped/Tier.h"
-#include "./ItemInstance.h"
-#include "./Item.h"
-#include "../level/Level.h"
-#include "../actor/Player.h"
-#include "./ItemStack.h"
+#include "ItemInstance.h"
 #include "../../unmapped/Block.h"
+#include "../actor/Player.h"
+#include "../actor/Mob.h"
+#include "Item.h"
+#include "../level/Level.h"
+#include "ItemStackBase.h"
 
 
 class WeaponItem : Item {
 
 public:
-    virtual ~WeaponItem();
-    virtual bool canDestroySpecial(Block const&)const;
+    ~WeaponItem();
     virtual void getAttackDamage()const;
-    virtual bool isHandEquipped()const;
+    virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual bool canDestroyInCreative()const;
-    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
+    virtual bool canDestroySpecial(Block const&)const;
+    virtual bool isHandEquipped()const;
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
-    virtual void getEnchantSlot()const;
     virtual void getEnchantValue()const;
     virtual void use(ItemStack &, Player &)const;
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const;
-    virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
-
+    virtual void getEnchantSlot()const;
+    virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     WeaponItem(std::string const&, int, Item::Tier const&);
 };

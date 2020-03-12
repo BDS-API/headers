@@ -2,15 +2,16 @@
 
 
 
-namespace Core::ZipUtils {
+namespace Core {
 
-class ZipSettings {
+    namespace ZipUtils {
 
-public:
+        class ZipSettings {
 
-    ZipSettings();
-//  ZipSettings(Core::ZipUtils::ZipCompressionLevel); //TODO: incomplete function definition
-    ~ZipSettings();
-};
-
+        public:
+            ~ZipSettings();
+//          ZipSettings(Core::ZipUtils::ZipCompressionLevel); //TODO: incomplete function definition
+            ZipSettings();
+        };
+    }
 }

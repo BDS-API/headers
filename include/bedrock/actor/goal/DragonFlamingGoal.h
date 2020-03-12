@@ -1,7 +1,7 @@
 #pragma once
 
-#include "./Goal.h"
 #include "../EnderDragon.h"
+#include "Goal.h"
 #include <string>
 
 
@@ -13,13 +13,12 @@ public:
     static long SITTING_FLAME_ATTACK_COUNT;
     static long WARMUP_TIME;
 
-    virtual ~DragonFlamingGoal();
-    virtual bool canUse();
-    virtual bool canContinueToUse();
     virtual void start();
-    virtual void stop();
+    virtual bool canContinueToUse();
+    ~DragonFlamingGoal();
     virtual void tick();
+    virtual void stop();
+    virtual bool canUse();
     virtual void appendDebugInfo(std::string &)const;
-
     DragonFlamingGoal(EnderDragon &);
 };

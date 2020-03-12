@@ -1,48 +1,45 @@
 #pragma once
 
-#include "./Raid.h"
-#include "./Village.h"
-#include <memory>
-#include "../bedrock/util/AABB.h"
-#include "../bedrock/actor/Actor.h"
-#include "./RaidBossComponent.h"
 #include "../bedrock/actor/Player.h"
-#include "../bedrock/actor/Mob.h"
+#include "../bedrock/actor/Actor.h"
 #include "../bedrock/actor/unmapped/ActorUniqueID.h"
-#include <string>
+#include "../bedrock/actor/Mob.h"
+#include "Village.h"
+#include <memory>
+#include "Raid.h"
+#include "../bedrock/util/AABB.h"
 
 
 class RaidBossComponent {
 
 public:
-
-    ~RaidBossComponent();
-    RaidBossComponent(RaidBossComponent &&);
-    RaidBossComponent();
-    void initialize(ActorUniqueID);
+    void getHealthPercent();
+    void setVillage(std::weak_ptr<Village>);
     void updateName(Actor &);
-//  void _broadcastBossEvent(BossEventUpdateType, Actor &); //TODO: incomplete function definition
-    void updateHealthBarVisible(bool, Actor &);
-    void setupBossBarInfo(Actor &, std::shared_ptr<Village>);
-    void setRaidInProgress(bool);
-    void setBossBarVisibleBounds(AABB);
-    void getColor();
-    std::string getName();
     void getVillage();
-    bool isWithinRange(Mob const&);
+    void registerPlayer(Player *);
     void getBossBarVisibleBounds();
     void updateBossBarStats(Actor &, Raid const&);
-    void updatePercent(float, Actor &);
-    void setVillage(std::weak_ptr<Village>);
-    void removeBossBar(Actor &);
-    void sendRegistryMessages(Actor &);
-    void _handleRegisterPlayers(Actor &);
-    void getHealthPercent();
-    void getOwnerUniqueID();
 //  void _sendBossEvent(BossEventUpdateType, Player &); //TODO: incomplete function definition
-    void registerPlayer(Player *);
-    void unRegisterPlayer(Player *);
-    void getWaveStarted();
+    void sendRegistryMessages(Actor &);
+    void setBossBarVisibleBounds(AABB);
+    void setupBossBarInfo(Actor &, std::shared_ptr<Village>);
     void getRaidInProgress();
+    void removeBossBar(Actor &);
+    RaidBossComponent(RaidBossComponent &&);
+    ~RaidBossComponent();
+    std::string getName();
+    void _handleRegisterPlayers(Actor &);
+    void initialize(ActorUniqueID);
+//  void _broadcastBossEvent(BossEventUpdateType, Actor &); //TODO: incomplete function definition
+    bool isWithinRange(Mob const&);
     void setWaveStarted(bool);
+    void getOwnerUniqueID();
+    void unRegisterPlayer(Player *);
+    void getColor();
+    void getWaveStarted();
+    void setRaidInProgress(bool);
+    void updatePercent(float, Actor &);
+    RaidBossComponent();
+    void updateHealthBarVisible(bool, Actor &);
 };

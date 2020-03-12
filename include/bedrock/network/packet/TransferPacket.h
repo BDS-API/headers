@@ -1,20 +1,19 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "Packet.h"
 #include <string>
 
 
 class TransferPacket : Packet {
 
 public:
-    virtual ~TransferPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
+    ~TransferPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
+    virtual void getId()const;
+    virtual void write(BinaryStream &)const;
+    virtual std::string getName()const;
     TransferPacket();
     TransferPacket(std::string const&, int);
 };

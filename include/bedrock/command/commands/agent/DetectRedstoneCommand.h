@@ -6,14 +6,12 @@
 
 namespace AgentCommands {
 
-class DetectRedstoneCommand : AgentCommands::Command {
+    class DetectRedstoneCommand : AgentCommands::Command {
 
-public:
-    virtual ~DetectRedstoneCommand();
-    virtual void execute();
-    virtual bool isDone();
-
-//  DetectRedstoneCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
-};
-
+    public:
+        ~DetectRedstoneCommand();
+        virtual bool isDone();
+        virtual void execute();
+//      DetectRedstoneCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition
+    };
 }

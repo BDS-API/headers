@@ -1,13 +1,13 @@
 #pragma once
 
+#include "ItemStack.h"
 #include <string>
-#include "./ItemStackBase.h"
-#include <memory>
-#include "./Item.h"
-#include "../level/Level.h"
-#include "../actor/Player.h"
 #include "../nbt/CompoundTag.h"
-#include "./ItemStack.h"
+#include "../actor/Player.h"
+#include "ItemStackBase.h"
+#include <memory>
+#include "Item.h"
+#include "../level/Level.h"
 #include "unmapped/ItemDescriptor.h"
 
 
@@ -28,24 +28,23 @@ public:
     static long TAG_PAGE_PHOTO_NAME;
     static long TAG_ID;
 
-    virtual ~WrittenBookItem();
+    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const;
     virtual bool isGlint(ItemStackBase const&)const;
-    virtual bool requiresInteract()const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
     virtual void use(ItemStack &, Player &)const;
-    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&)const;
+    ~WrittenBookItem();
+    virtual bool requiresInteract()const;
     virtual std::string getInteractText(Player const&)const;
-
+    std::string getAuthor(ItemStack const&);
+    void getGeneration(std::unique_ptr<CompoundTag> const&);
+    bool canBeCopied(std::unique_ptr<CompoundTag> const&);
+    std::string getXUID(ItemStack const&);
     WrittenBookItem(std::string const&, int);
-    void makeSureTagIsValid(CompoundTag const&);
-    void getPages(ItemStack const&);
     void getPageCount(ItemStack const&);
     void getPageCountByType(ItemStack const&);
     std::string getTitle(ItemStack const&);
-    std::string getAuthor(ItemStack const&);
-    std::string getXUID(ItemStack const&);
-    void getGeneration(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&);
-    std::string getBookId(ItemStack const&);
-    bool canBeCopied(std::unique_ptr<CompoundTag, std::default_delete<CompoundTag>> const&);
+    void getPages(ItemStack const&);
+    void makeSureTagIsValid(CompoundTag const&);
     void resolvedBookComponents(ItemStack const&, Player const&);
+    std::string getBookId(ItemStack const&);
 };

@@ -2,9 +2,7 @@
 
 
 
-class PackSettingsJsonValidator {
-
-public:
+namespace PackSettingsJsonValidator {
 
     void getValidator();
 };

@@ -2,7 +2,8 @@
 
 #include "../unmapped/ScriptEngine.h"
 #include "../ScriptObjectHandle.h"
-#include "./ScriptBinderComponent.h"
+#include <string>
+#include "ScriptBinderComponent.h"
 
 
 class ScriptTickingAreaBinderComponent : ScriptBinderComponent {
@@ -10,11 +11,10 @@ class ScriptTickingAreaBinderComponent : ScriptBinderComponent {
 public:
     static std::string TAG;
 
-    virtual ~ScriptTickingAreaBinderComponent();
-    virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
-
-    ScriptTickingAreaBinderComponent();
-    ScriptTickingAreaBinderComponent(ScriptApi::ScriptObjectHandle &&);
+    virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
+    ~ScriptTickingAreaBinderComponent();
     void getData()const;
+    ScriptTickingAreaBinderComponent(ScriptApi::ScriptObjectHandle &&);
+    ScriptTickingAreaBinderComponent();
 };

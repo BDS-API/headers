@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../bedrock/level/LevelChunk.h"
 #include "../bedrock/util/ChunkPos.h"
-#include "./Dimension.h"
 #include "../bedrock/block/unmapped/BlockSource.h"
+#include "../bedrock/level/LevelChunk.h"
+#include "Dimension.h"
 
 
 class Seasons {
 
 public:
-
     Seasons(Dimension &);
     ~Seasons();
     void tick();

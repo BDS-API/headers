@@ -6,9 +6,8 @@
 class CompoundTagUpdater {
 
 public:
-
-    void getVersion()const;
-    ~CompoundTagUpdater();
     CompoundTagUpdater(unsigned int);
+    void getVersion()const;
     void update(CompoundTag &)const;
+    ~CompoundTagUpdater();
 };

@@ -1,16 +1,15 @@
 #pragma once
 
-#include "./MobSpawnRules.h"
+#include "MobSpawnRules.h"
 #include <string>
 
 
 class SpawnGroupData {
 
 public:
-
-    SpawnGroupData(std::string const&, MobSpawnRules &);
-    void addSpawnRules(MobSpawnRules &);
     std::string getIdentifier()const;
-    void getSpawnRules()const;
+    void addSpawnRules(MobSpawnRules &);
     ~SpawnGroupData();
+    SpawnGroupData(std::string const&, MobSpawnRules &);
+    void getSpawnRules()const;
 };

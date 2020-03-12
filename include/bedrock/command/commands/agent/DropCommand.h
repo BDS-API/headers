@@ -6,14 +6,12 @@
 
 namespace AgentCommands {
 
-class DropCommand : AgentCommands::Command {
+    class DropCommand : AgentCommands::Command {
 
-public:
-    virtual ~DropCommand();
-    virtual void execute();
-    virtual bool isDone();
-
-//  DropCommand(Player &, int, int, AgentCommands::Direction); //TODO: incomplete function definition
-};
-
+    public:
+        virtual bool isDone();
+        virtual void execute();
+        ~DropCommand();
+//      DropCommand(Player &, int, int, AgentCommands::Direction); //TODO: incomplete function definition
+    };
 }

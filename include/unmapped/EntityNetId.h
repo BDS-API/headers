@@ -1,21 +1,19 @@
 #pragma once
 
-#include "../bedrock/io/ReadOnlyBinaryStream.h"
-#include "./EntityNetId.h"
-#include "./EntityRegistry.h"
-#include "./EntityContext.h"
+#include "EntityRegistry.h"
 #include "../bedrock/io/BinaryStream.h"
+#include "../bedrock/io/ReadOnlyBinaryStream.h"
+#include "EntityContext.h"
 
 
 class EntityNetId {
 
 public:
-
-    void serialize(BinaryStream &)const;
-    void deserialize(ReadOnlyBinaryStream &);
     EntityNetId(unsigned int);
+    void serialize(BinaryStream &)const;
     void getHash()const;
     void operator==(EntityNetId const&)const;
-    void _serverGetEntityNetId(EntityContext &);
+    void deserialize(ReadOnlyBinaryStream &);
     void _serverTryGetEntity(EntityRegistry &);
+    void _serverGetEntityNetId(EntityContext &);
 };

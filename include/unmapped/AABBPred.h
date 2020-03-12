@@ -3,9 +3,7 @@
 #include "../bedrock/util/AABB.h"
 
 
-class AABBPred {
-
-public:
+namespace AABBPred {
 
     void operator()(AABB const&, AABB const&)const;
 };

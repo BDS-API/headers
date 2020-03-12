@@ -5,7 +5,6 @@
 class MolangVariable {
 
 public:
-
-    ~MolangVariable();
     MolangVariable();
+    ~MolangVariable();
 };

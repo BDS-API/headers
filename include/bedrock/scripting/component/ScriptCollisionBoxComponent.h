@@ -1,11 +1,10 @@
 #pragma once
 
-#include "../../actor/Actor.h"
-#include "../unmapped/ScriptEngine.h"
 #include "../ScriptObjectHandle.h"
-#include "../ScriptVersionInfo.h"
+#include "../unmapped/ScriptEngine.h"
 #include "../unmapped/ScriptServerContext.h"
-#include <string>
+#include "../../actor/Actor.h"
+#include "../ScriptVersionInfo.h"
 
 
 class ScriptCollisionBoxComponent /*ScriptTemplateFactory<ScriptServerContext>::Component*/ { //TODO: incomplete class definition
@@ -13,11 +12,10 @@ class ScriptCollisionBoxComponent /*ScriptTemplateFactory<ScriptServerContext>::
 public:
     static long mHash;
 
-    virtual ~ScriptCollisionBoxComponent();
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
+    ~ScriptCollisionBoxComponent();
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;
-
     void getHash();
     ScriptCollisionBoxComponent();
     std::string getName();

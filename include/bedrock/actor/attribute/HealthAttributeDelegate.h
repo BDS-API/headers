@@ -1,19 +1,18 @@
 #pragma once
 
-#include "./AttributeBuff.h"
-#include "./AttributeInstanceDelegate.h"
-#include "./AttributeBuffInfo.h"
-#include "./AttributeInstance.h"
+#include "AttributeInstanceDelegate.h"
+#include "AttributeBuffInfo.h"
 #include "../Mob.h"
+#include "AttributeInstance.h"
+#include "AttributeBuff.h"
 
 
 class HealthAttributeDelegate : AttributeInstanceDelegate {
 
 public:
-    virtual ~HealthAttributeDelegate();
-    virtual void tick();
-    virtual void change(float, float, AttributeBuffInfo);
     virtual void getBuffValue(AttributeBuff const&)const;
-
+    ~HealthAttributeDelegate();
+    virtual void change(float, float, AttributeBuffInfo);
+    virtual void tick();
     HealthAttributeDelegate(AttributeInstance const&, Mob *);
 };

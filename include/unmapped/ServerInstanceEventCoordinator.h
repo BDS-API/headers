@@ -8,19 +8,18 @@
 class ServerInstanceEventCoordinator {
 
 public:
-
-    ~ServerInstanceEventCoordinator();
-    ServerInstanceEventCoordinator();
-    void sendServerInitializeStart(ServerInstance &);
-    void sendServerInitializeEnd(ServerInstance &);
-    void sendServerMinecraftInitialized(ServerInstance &, Minecraft &);
-    void sendServerLevelInitialized(ServerInstance &, Level &);
     void sendServerUpdateStart(ServerInstance &);
-    void sendServerUpdateEnd(ServerInstance &);
-    void sendServerSuspend(ServerInstance &);
-    void sendServerResume(ServerInstance &);
     void sendServerThreadStarted(ServerInstance &);
-    void sendServerThreadStopped(ServerInstance &);
-    void sendStartLeaveGame(ServerInstance &);
+    void sendServerInitializeEnd(ServerInstance &);
+    void sendServerUpdateEnd(ServerInstance &);
+    void sendServerMinecraftInitialized(ServerInstance &, Minecraft &);
     void sendLeaveGameDone(ServerInstance &);
+    void sendStartLeaveGame(ServerInstance &);
+    void sendServerInitializeStart(ServerInstance &);
+    void sendServerLevelInitialized(ServerInstance &, Level &);
+    void sendServerResume(ServerInstance &);
+    void sendServerSuspend(ServerInstance &);
+    ~ServerInstanceEventCoordinator();
+    void sendServerThreadStopped(ServerInstance &);
+    ServerInstanceEventCoordinator();
 };

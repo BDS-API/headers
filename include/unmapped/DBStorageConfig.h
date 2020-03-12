@@ -1,15 +1,13 @@
 #pragma once
 
-#include "../core/Path.h"
 #include "../bedrock/Scheduler.h"
-#include "./DBStorageConfig.h"
+#include "../core/Path.h"
 
 
 class DBStorageConfig {
 
 public:
-
-    DBStorageConfig(Scheduler &, Core::Path const&);
     ~DBStorageConfig();
     DBStorageConfig(DBStorageConfig &&);
+    DBStorageConfig(Scheduler &, Core::Path const&);
 };

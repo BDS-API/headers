@@ -1,19 +1,17 @@
 #pragma once
 
-#include "./ThirdPartyInfo.h"
 #include <string>
 
 
 class ThirdPartyInfo {
 
 public:
-
-    ThirdPartyInfo(ThirdPartyInfo const&);
-    ~ThirdPartyInfo();
-    ThirdPartyInfo();
-    std::string getCreatorId()const;
-    std::string getCreatorName()const;
     bool isEligible(std::string const&)const;
-    bool isValid()const;
+    ~ThirdPartyInfo();
     bool isXblRequired()const;
+    ThirdPartyInfo(ThirdPartyInfo const&);
+    std::string getCreatorName()const;
+    ThirdPartyInfo();
+    bool isValid()const;
+    std::string getCreatorId()const;
 };

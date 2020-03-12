@@ -1,16 +1,15 @@
 #pragma once
 
+#include "AttributeInstance.h"
+#include "AttributeInstanceDelegate.h"
 #include "../Player.h"
-#include "./AttributeInstance.h"
-#include "./AttributeInstanceDelegate.h"
 
 
 class HungerAttributeDelegate : AttributeInstanceDelegate {
 
 public:
-    virtual ~HungerAttributeDelegate();
-    virtual void tick();
+    ~HungerAttributeDelegate();
     virtual void notify(long);
-
+    virtual void tick();
     HungerAttributeDelegate(AttributeInstance const&, Player *);
 };

@@ -4,12 +4,10 @@
 
 namespace ScriptApi {
 
-class ScriptCallbackInterface {
+    class ScriptCallbackInterface {
 
-public:
-    virtual ~ScriptCallbackInterface();
-
-    ScriptCallbackInterface();
-};
-
+    public:
+        ~ScriptCallbackInterface();
+        ScriptCallbackInterface();
+    };
 }

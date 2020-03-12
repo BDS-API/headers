@@ -5,6 +5,5 @@
 class zone {
 
 public:
-
     zone();
 };

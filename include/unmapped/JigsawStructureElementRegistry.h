@@ -1,17 +1,16 @@
 #pragma once
 
-#include <memory>
-#include "./StructurePoolElement.h"
 #include <string>
+#include "StructurePoolElement.h"
+#include <memory>
 
 
 class JigsawStructureElementRegistry {
 
 public:
-
-    JigsawStructureElementRegistry();
-    void registerStructureElement(std::string, std::unique_ptr<StructurePoolElement, std::default_delete<StructurePoolElement>> &&);
-    void lookupByName(std::string)const;
     void clear();
+    void lookupByName(std::string)const;
+    void registerStructureElement(std::string, std::unique_ptr<StructurePoolElement> &&);
     ~JigsawStructureElementRegistry();
+    JigsawStructureElementRegistry();
 };

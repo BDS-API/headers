@@ -4,12 +4,10 @@
 
 namespace Bedrock {
 
-class LogEndPoint {
+    class LogEndPoint {
 
-public:
-    virtual ~LogEndPoint();
-
-    LogEndPoint();
-};
-
+    public:
+        ~LogEndPoint();
+        LogEndPoint();
+    };
 }

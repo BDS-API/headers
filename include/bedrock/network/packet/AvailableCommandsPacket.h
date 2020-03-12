@@ -1,32 +1,74 @@
 #pragma once
 
-#include "../../../unmapped/ConstrainedValueData.h"
-#include "../../../unmapped/SoftEnumData.h"
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include <memory>
-#include "../../../unmapped/EnumData.h"
-#include "./Packet.h"
-#include <vector>
-#include "../../command/CommandData.h"
 #include <string>
+#include <vector>
+#include "Packet.h"
 
 
 class AvailableCommandsPacket : Packet {
 
 public:
-    virtual ~AvailableCommandsPacket();
+    class CommandData;
+    class ConstrainedValueData;
+    class EnumData;
+    class OverloadData;
+    class ParamData;
+    class SoftEnumData;
+
     virtual void getId()const;
     virtual std::string getName()const;
+    ~AvailableCommandsPacket();
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
     AvailableCommandsPacket();
-    AvailableCommandsPacket(std::vector<std::string, std::allocator<std::string>> const&, std::vector<std::string, std::allocator<std::string>> const&, std::vector<AvailableCommandsPacket::EnumData, std::allocator<std::vector &>> &&, std::vector<AvailableCommandsPacket::ConstrainedValueData, std::allocator<std::vector<AvailableCommandsPacket::EnumData, std::allocator<std::vector &>> &&>> &&, std::vector<AvailableCommandsPacket::CommandData, std::allocator<std::allocator<std::vector<AvailableCommandsPacket::EnumData, std::allocator<std::vector &>> &&>>> &&, std::vector<AvailableCommandsPacket::SoftEnumData, std::allocator<AvailableCommandsPacket::CommandData>> &&);
     std::string getEnumValues()const;
-    void getSoftEnums()const;
-    std::string getPostfixes()const;
-    void getEnums()const;
-    void getCommands()const;
     void getConstraints()const;
+    void getSoftEnums()const;
+    void getEnums()const;
+    std::string getPostfixes()const;
+    AvailableCommandsPacket(std::vector<std::string> const&, std::vector<std::string> const&, std::vector<AvailableCommandsPacket::EnumData> &&, std::vector<AvailableCommandsPacket::ConstrainedValueData> &&, std::vector<AvailableCommandsPacket::CommandData> &&, std::vector<AvailableCommandsPacket::SoftEnumData> &&);
+    void getCommands()const;
+    class CommandData {
+
+    public:
+        ~CommandData();
+        CommandData();
+        CommandData(AvailableCommandsPacket::CommandData &&);
+    };
+    class ConstrainedValueData {
+
+    public:
+        ConstrainedValueData(AvailableCommandsPacket::ConstrainedValueData &&);
+        ConstrainedValueData();
+        ~ConstrainedValueData();
+    };
+    class EnumData {
+
+    public:
+        ~EnumData();
+        EnumData(AvailableCommandsPacket::EnumData &&);
+        EnumData();
+    };
+    class OverloadData {
+
+    public:
+        ~OverloadData();
+        OverloadData(AvailableCommandsPacket::OverloadData &&);
+        OverloadData();
+    };
+    class ParamData {
+
+    public:
+        ParamData(AvailableCommandsPacket::ParamData &&);
+        ParamData();
+        ~ParamData();
+    };
+    class SoftEnumData {
+
+    public:
+        SoftEnumData(AvailableCommandsPacket::SoftEnumData &&);
+        ~SoftEnumData();
+    };
 };

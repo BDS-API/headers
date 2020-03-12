@@ -1,8 +1,8 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup.h"
+#include "Animal.h"
 #include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Animal.h"
+#include "unmapped/ActorDefinitionGroup.h"
 
 
 class Sheep : Animal {
@@ -10,17 +10,16 @@ class Sheep : Animal {
 public:
     static long EAT_ANIMATION_TICKS;
 
-    virtual ~Sheep();
 //  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void getLootTable();
-    virtual void getDefaultLootTable();
     virtual void aiStep();
-    virtual void ate();
     virtual void useNewAi()const;
-    virtual void jumpFromGround();
+    ~Sheep();
+    virtual void ate();
+    virtual void getDefaultLootTable();
     virtual void newServerAiStep();
-
-    Sheep(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    virtual void jumpFromGround();
     bool isGrazing()const;
     void _getOffspringColor(Animal &, Animal &);
+    Sheep(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

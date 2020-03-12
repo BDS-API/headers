@@ -1,16 +1,14 @@
 #pragma once
 
-#include "./FileChunkInfo.h"
 
 
 class FileChunkInfo {
 
 public:
-
-    FileChunkInfo(int, unsigned long, unsigned long);
-    void operator<(FileChunkInfo const&)const;
     void operator==(FileChunkInfo const&)const;
+    FileChunkInfo(int, unsigned long, unsigned long);
     void size()const;
     bool containsByte(int)const;
+    void operator<(FileChunkInfo const&)const;
     bool isValid()const;
 };

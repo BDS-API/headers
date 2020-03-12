@@ -6,10 +6,9 @@
 class WhitelistFile {
 
 public:
-
-    ~WhitelistFile();
     WhitelistFile(Core::Path const&);
+    ~WhitelistFile();
+    void syncToDisc();
     void reload();
     void getWhitelist()const;
-    void syncToDisc();
 };

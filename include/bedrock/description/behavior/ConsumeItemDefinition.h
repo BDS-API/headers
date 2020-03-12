@@ -1,12 +1,11 @@
 #pragma once
 
-#include "./BehaviorDefinition.h"
+#include "BehaviorDefinition.h"
 
 
 class ConsumeItemDefinition : BehaviorDefinition {
 
 public:
-    virtual ~ConsumeItemDefinition();
-
+    ~ConsumeItemDefinition();
     ConsumeItemDefinition();
 };

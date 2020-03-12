@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
-#include "./TradeResupplyComponent.h"
-#include "./DataLoadHelper.h"
 #include "../bedrock/nbt/CompoundTag.h"
+#include "DataLoadHelper.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class TradeResupplyComponent {
 
 public:
-
-    TradeResupplyComponent(TradeResupplyComponent &&);
-    TradeResupplyComponent();
     void initFromDefinition(Actor &);
-    void reloadComponent(Actor &);
     void addAdditionalSaveData(CompoundTag &);
+    TradeResupplyComponent(TradeResupplyComponent &&);
+    void reloadComponent(Actor &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
+    TradeResupplyComponent();
 };

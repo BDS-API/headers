@@ -1,27 +1,25 @@
 #pragma once
 
-#include <utility>
-#include "./Option.h"
-#include <memory>
-#include <vector>
-#include <functional>
 #include <string>
+#include "Option.h"
+#include <functional>
+#include <vector>
+#include <utility>
 
 
 class IntOption : Option {
 
 public:
-    virtual ~IntOption();
-    virtual void save(std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>> &);
+    ~IntOption();
     virtual void load(std::string const&);
-
-//  IntOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, int, std::vector<int, std::allocator<int>> const&, bool); //TODO: incomplete function definition
-    void _validate(int);
-//  IntOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, int, bool, int, int); //TODO: incomplete function definition
-    void set(int, bool);
-    void getValue()const;
+    virtual void save(std::vector<std::pair<std::string, std::string>> &);
     void getDefault()const;
+    void set(int, bool);
+//  IntOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, int, std::vector<int> const&, bool); //TODO: incomplete function definition
+    void getValue()const;
     void getValues()const;
+    void _validate(int);
     void setCoerceSaveValueCallback(std::function<int (int)>);
     void reset();
+//  IntOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, int, bool, int, int); //TODO: incomplete function definition
 };

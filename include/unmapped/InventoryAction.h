@@ -1,21 +1,19 @@
 #pragma once
 
 #include "../bedrock/item/ItemStack.h"
-#include "./InventorySource.h"
-#include "./InventoryAction.h"
+#include "InventorySource.h"
 
 
 class InventoryAction {
 
 public:
-
-    InventoryAction(InventorySource, unsigned int, ItemStack const&, ItemStack const&);
-    ~InventoryAction();
-    void getSource()const;
-    void getSlot()const;
-    void getFromItem()const;
-    void getToItem()const;
-    InventoryAction(InventoryAction const&);
-    void reverse()const;
     void operator==(InventoryAction const&)const;
+    InventoryAction(InventoryAction const&);
+    ~InventoryAction();
+    void getToItem()const;
+    void reverse()const;
+    void getSource()const;
+    void getFromItem()const;
+    InventoryAction(InventorySource, unsigned int, ItemStack const&, ItemStack const&);
+    void getSlot()const;
 };

@@ -5,7 +5,6 @@
 class ThreadSpecificData {
 
 public:
-
-    ThreadSpecificData();
     ~ThreadSpecificData();
+    ThreadSpecificData();
 };

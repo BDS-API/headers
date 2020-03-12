@@ -1,13 +1,12 @@
 #pragma once
 
-#include "./TriggerDescription.h"
+#include "TriggerDescription.h"
 
 
 class OnFriendlyAngerDescription : TriggerDescription {
 
 public:
+    ~OnFriendlyAngerDescription();
     virtual void getJsonName()const;
-    virtual ~OnFriendlyAngerDescription();
-
     OnFriendlyAngerDescription();
 };

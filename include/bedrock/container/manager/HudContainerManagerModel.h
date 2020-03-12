@@ -1,22 +1,21 @@
 #pragma once
 
 #include "../../../unmapped/ContainerItemStack.h"
-#include "./ContainerManagerModel.h"
 #include "../../actor/Player.h"
+#include "ContainerManagerModel.h"
 
 
 class HudContainerManagerModel : ContainerManagerModel {
 
 public:
-    virtual ~HudContainerManagerModel();
     virtual void getItems();
-    virtual void setSlot(int, ContainerItemStack const&, bool);
-    virtual void getSlot(int);
-    virtual void setData(int, int);
-    virtual void broadcastChanges();
+    ~HudContainerManagerModel();
     virtual void init();
-
-//  HudContainerManagerModel(ContainerID, Player &); //TODO: incomplete function definition
-    void refreshHotbar();
+    virtual void broadcastChanges();
+    virtual void getSlot(int);
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    virtual void setData(int, int);
     void getHotbarItems();
+    void refreshHotbar();
+//  HudContainerManagerModel(ContainerID, Player &); //TODO: incomplete function definition
 };

@@ -1,18 +1,16 @@
 #pragma once
 
-#include "./PackInstanceId.h"
-#include "./PackIdVersion.h"
 #include <string>
+#include "PackIdVersion.h"
 
 
 class PackInstanceId {
 
 public:
-
     PackInstanceId(PackInstanceId const&);
-    ~PackInstanceId();
-    PackInstanceId(PackInstanceId &&);
-    PackInstanceId();
-    PackInstanceId(PackIdVersion const&, std::string const&);
     void operator==(PackInstanceId const&)const;
+    PackInstanceId();
+    ~PackInstanceId();
+    PackInstanceId(PackIdVersion const&, std::string const&);
+    PackInstanceId(PackInstanceId &&);
 };

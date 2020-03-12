@@ -5,7 +5,15 @@
 class SubChunkBrightnessStorage {
 
 public:
+    class LightPair;
 
-    SubChunkBrightnessStorage();
     void reset(bool, bool);
+    SubChunkBrightnessStorage();
+    class LightPair {
+
+    public:
+        void toBrightnessPair()const;
+        bool isDarkness()const;
+        LightPair(unsigned char);
+    };
 };

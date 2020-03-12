@@ -1,22 +1,27 @@
 #pragma once
 
-#include "./BehaviorData.h"
-#include <memory>
-#include "./DataProxy.h"
 #include <string>
+#include <memory>
 
 
 class BehaviorData {
 
 public:
+    class DataProxy;
 
-    ~BehaviorData();
-    BehaviorData(BehaviorData &&);
     BehaviorData();
-    bool hasData(std::string const&)const;
-//  bool hasDataOfType(std::string const&, BehaviorData::DataType)const; //TODO: incomplete function definition
-    void reset();
+    void pushToStack(std::unique_ptr<BehaviorData::DataProxy>);
     void copyData(std::string const&, std::string const&, BehaviorData &);
-    void pushToStack(std::unique_ptr<BehaviorData::DataProxy, std::default_delete<BehaviorData::DataProxy>>);
     void popFromStack(std::string const&);
+    void reset();
+    ~BehaviorData();
+//  bool hasDataOfType(std::string const&, BehaviorData::DataType)const; //TODO: incomplete function definition
+    BehaviorData(BehaviorData &&);
+    bool hasData(std::string const&)const;
+    class DataProxy {
+
+    public:
+        ~DataProxy();
+//      DataProxy(std::string const&, BehaviorData::DataType); //TODO: incomplete function definition
+    };
 };

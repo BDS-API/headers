@@ -1,23 +1,22 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Actor.h"
 #include "../../unmapped/VariantParameterList.h"
-#include "../../unmapped/DataLoadHelper.h"
 #include "unmapped/ActorDefinitionGroup.h"
+#include "Actor.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../nbt/CompoundTag.h"
+#include "../../unmapped/DataLoadHelper.h"
 
 
 class ShulkerBullet : Actor {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual ~ShulkerBullet();
     virtual void normalTick();
-    virtual bool isPickable();
     virtual bool isOnFire()const;
-    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+    ~ShulkerBullet();
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
     virtual void addAdditionalSaveData(CompoundTag &);
-
+    virtual bool isPickable();
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
     ShulkerBullet(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

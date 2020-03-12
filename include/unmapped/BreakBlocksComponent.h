@@ -1,16 +1,14 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
-#include "./BreakBlocksComponent.h"
 #include "../bedrock/block/BlockLegacy.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class BreakBlocksComponent {
 
 public:
-
-    BreakBlocksComponent(BreakBlocksComponent &&);
-    void initFromDefinition(Actor &);
     void breakNearbyBlocks(Actor &);
     bool isBreakable(Actor &, BlockLegacy const&)const;
+    BreakBlocksComponent(BreakBlocksComponent &&);
+    void initFromDefinition(Actor &);
 };

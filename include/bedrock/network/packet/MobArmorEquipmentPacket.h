@@ -2,26 +2,23 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../item/ItemStack.h"
-#include "./MobArmorEquipmentPacket.h"
 #include "../../actor/Mob.h"
-#include <string>
+#include "Packet.h"
 
 
 class MobArmorEquipmentPacket : Packet {
 
 public:
-    virtual ~MobArmorEquipmentPacket();
     virtual void getId()const;
+    ~MobArmorEquipmentPacket();
     virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    MobArmorEquipmentPacket(MobArmorEquipmentPacket const&);
-    MobArmorEquipmentPacket();
+    virtual void write(BinaryStream &)const;
     MobArmorEquipmentPacket(Mob const&);
-    void get(ItemStack &, ItemStack const&);
     void fillIn(Mob &)const;
 //  void set(Mob &, ItemStack const&, ArmorSlot)const; //TODO: incomplete function definition
+    void get(ItemStack &, ItemStack const&);
+    MobArmorEquipmentPacket(MobArmorEquipmentPacket const&);
+    MobArmorEquipmentPacket();
 };

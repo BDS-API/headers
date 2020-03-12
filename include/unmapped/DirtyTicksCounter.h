@@ -5,12 +5,11 @@
 class DirtyTicksCounter {
 
 public:
-
-    void max();
-    DirtyTicksCounter();
-    void reset();
     void touch();
-    void getTicksSinceLastChange()const;
     void getTotalDirtyTicks()const;
+    DirtyTicksCounter();
+    void max();
     bool isDirty()const;
+    void getTicksSinceLastChange()const;
+    void reset();
 };

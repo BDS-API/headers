@@ -1,13 +1,12 @@
 #pragma once
 
-#include "./BackgroundWorker.h"
+#include "BackgroundTask.h"
+#include <string>
+#include "ITaskExecutionContext.h"
 #include <ratio>
 #include <memory>
-#include "./BackgroundTask.h"
-#include "./WorkerPool.h"
-#include "./ITaskExecutionContext.h"
+#include "WorkerPool.h"
 #include <optional>
-#include <string>
 
 
 class BackgroundWorker : ITaskExecutionContext {
@@ -15,37 +14,36 @@ class BackgroundWorker : ITaskExecutionContext {
 public:
     static long gLocalWorkerMappingSingleton;
 
-    virtual ~BackgroundWorker();
+    ~BackgroundWorker();
     virtual bool isAsync()const;
     virtual bool canTaskRunAgain()const;
-
+    void getThreadId()const;
+//  void setMaxSleepTimeout(std::chrono::duration<long, std::ratio<1l, 1000000000l>>); //TODO: incomplete function definition
+    void popScope(BackgroundWorker *);
+//  void setOSPriority(Bedrock::Threading::OSThreadPriority const&); //TODO: incomplete function definition
+    void getApproximateTaskCount()const;
     void getCurrentTask();
-//  BackgroundWorker(std::string, bool, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, WorkerPool &, bool); //TODO: incomplete function definition
+    void _processNextTask();
+    void requestStop(bool);
+    std::string getName()const;
     void wake();
-    void _hasAvailableWork()const;
-    void queue(std::shared_ptr<BackgroundTask>);
-    void _assignWorkerToThisThread();
+    void getLocal();
+    bool processTaskSync();
+    void _canAccessInternalState();
     void start();
-    void _setCoreAffinity();
-    void _setOSPriority();
-    void _doNoWorkDelay();
+    void resortPriorityQueue();
+    void _runOneTask();
+    void _assignWorkerToThisThread();
+    void queue(std::shared_ptr<BackgroundTask>);
     void _sleepTimeoutElapsed()const;
     void _workerThread()const;
-    bool processTaskSync();
-    void _processNextTask();
-    void _tryPop();
-    void resortPriorityQueue();
-    void _canAccessInternalState();
-    void resetWorkerThreadID();
-//  void setMaxSleepTimeout(std::chrono::duration<long, std::ratio<1l, 1000000000l>>); //TODO: incomplete function definition
-    void getThreadId()const;
-    void getLocal();
     void pushScope();
-    void popScope(BackgroundWorker *);
-    void _runOneTask();
-    void requestStop(bool);
-//  void setOSPriority(Bedrock::Threading::OSThreadPriority const&); //TODO: incomplete function definition
-    std::string getName()const;
+    void _setOSPriority();
+//  BackgroundWorker(std::string, bool, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, WorkerPool &, bool); //TODO: incomplete function definition
     bool isIdle()const;
-    void getApproximateTaskCount()const;
+    void _hasAvailableWork()const;
+    void _doNoWorkDelay();
+    void _setCoreAffinity();
+    void resetWorkerThreadID();
+    void _tryPop();
 };

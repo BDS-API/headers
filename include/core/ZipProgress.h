@@ -2,15 +2,16 @@
 
 
 
-namespace Core::ZipUtils {
+namespace Core {
 
-class ZipProgress {
+    namespace ZipUtils {
 
-public:
+        class ZipProgress {
 
-    ZipProgress();
-    void clear();
-    ~ZipProgress();
-};
-
+        public:
+            ZipProgress();
+            ~ZipProgress();
+            void clear();
+        };
+    }
 }

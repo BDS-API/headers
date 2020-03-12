@@ -1,6 +1,5 @@
 #pragma once
 
-#include "./BlockListEventMap.h"
 #include "../BlockLegacy.h"
 #include <string>
 
@@ -8,12 +7,11 @@
 class BlockListEventMap {
 
 public:
-
-    ~BlockListEventMap();
-    BlockListEventMap(std::string);
+    BlockListEventMap(BlockListEventMap &&);
+    std::string getEventName()const;
     void addBlock(BlockLegacy const&);
     BlockListEventMap(BlockListEventMap const&);
-    BlockListEventMap(BlockListEventMap &&);
+    ~BlockListEventMap();
     void getBlockSet()const;
-    std::string getEventName()const;
+    BlockListEventMap(std::string);
 };

@@ -1,97 +1,94 @@
 #pragma once
 
-#include "./BitStream.h"
 
 
 namespace RakNet {
 
-class BitStream {
+    class BitStream {
 
-public:
-
-    void SetReadOffset(unsigned int);
-    void DoEndianSwap();
-    bool IsNetworkOrder();
-    void GetData()const;
-    void GetNumberOfBytesUsed()const;
-    void GetNumberOfUnreadBits()const;
-    void GetInstance();
-    void DestroyInstance(RakNet::BitStream *);
-    BitStream();
-    BitStream(unsigned int);
-    BitStream(unsigned char *, unsigned int, bool);
-    void SetNumberOfBitsAllocated(unsigned int);
-    ~BitStream();
-    void Reset();
-    void Write(char const*, unsigned int);
-    void AddBitsAndReallocate(unsigned int);
-    void WriteBits(unsigned char const*, unsigned int, bool);
-    void Write(RakNet::BitStream *);
-    void Write(RakNet::BitStream *, unsigned int);
-    void Write(RakNet::BitStream &, unsigned int);
-    void Write(RakNet::BitStream &);
-    void Read(RakNet::BitStream *, unsigned int);
-    void Read(RakNet::BitStream *);
-    void Read(RakNet::BitStream &, unsigned int);
-    void Read(RakNet::BitStream &);
-    void Read(char *, unsigned int);
-    void ReadBits(unsigned char *, unsigned int, bool);
-    void ResetReadPointer();
-    void ResetWritePointer();
-    void Write0();
-    void Write1();
-    void ReadBit();
-    void WriteAlignedBytes(unsigned char const*, unsigned int);
-    void EndianSwapBytes(int, int);
-    void ReverseBytesInPlace(unsigned char *, unsigned int);
-    void WriteAlignedBytesSafe(char const*, unsigned int, unsigned int);
-    void ReadAlignedBytes(unsigned char *, unsigned int);
-    void ReadAlignedBytesSafe(char *, int &, int);
-    void ReadAlignedBytesSafe(char *, unsigned int &, unsigned int);
-    void ReadAlignedBytesSafeAlloc(char **, int &, unsigned int);
-    void ReadAlignedBytesSafeAlloc(char **, unsigned int &, unsigned int);
-    void SetData(unsigned char *);
-    void WriteCompressed(unsigned char const*, unsigned int, bool);
-    void ReadCompressed(unsigned char *, unsigned int, bool);
-    void GetNumberOfBitsAllocated()const;
-    void PadWithZeroToByteLength(unsigned int);
-//  void NumberOfLeadingZeroes(signed const); //TODO: incomplete function definition
-    void NumberOfLeadingZeroes(unsigned char);
-    void NumberOfLeadingZeroes(short);
-    void NumberOfLeadingZeroes(unsigned short);
-    void NumberOfLeadingZeroes(int);
-    void NumberOfLeadingZeroes(unsigned int);
-    void NumberOfLeadingZeroes(long);
-    void NumberOfLeadingZeroes(unsigned long);
-    void AssertStreamEmpty();
-    void PrintBits(char *)const;
-    void PrintBits()const;
-    void PrintHex(char *)const;
-    void PrintHex()const;
-    void CopyData(unsigned char **)const;
-    void IgnoreBits(unsigned int);
-    void IgnoreBytes(unsigned int);
-    void SetWriteOffset(unsigned int);
-    void AssertCopyData();
-    bool IsNetworkOrderInternal();
-    void ReverseBytes(unsigned char *, unsigned char *, unsigned int);
-    void Read(char *);
-    void Read(unsigned char *);
-    void WriteAlignedVar8(char const*);
-    void ReadAlignedVar8(char *);
-    void WriteAlignedVar16(char const*);
-    void ReadAlignedVar16(char *);
-    void WriteAlignedVar32(char const*);
-    void ReadAlignedVar32(char *);
-    void ReadFloat16(float &, float, float);
-    void SerializeFloat16(bool, float &, float, float);
-    void WriteFloat16(float, float, float);
-    void GetNumberOfBitsUsed()const;
-    void GetReadOffset()const;
-    void AlignWriteToByteBoundary();
-    void AlignReadToByteBoundary();
-    void GetWriteOffset()const;
-    bool IsBigEndian();
-};
-
+    public:
+        void ReadCompressed(unsigned char *, unsigned int, bool);
+        void Write(RakNet::BitStream *, unsigned int);
+        void DestroyInstance(RakNet::BitStream *);
+        void Write(RakNet::BitStream *);
+        void DoEndianSwap();
+        void PrintHex()const;
+        void AssertCopyData();
+        void ReadAlignedVar32(char *);
+        void EndianSwapBytes(int, int);
+        void CopyData(unsigned char **)const;
+        void Read(unsigned char *);
+        void Read(RakNet::BitStream *);
+        void ReverseBytesInPlace(unsigned char *, unsigned int);
+        void ReadAlignedBytesSafeAlloc(char **, unsigned int &, unsigned int);
+        void SerializeFloat16(bool, float &, float, float);
+        void Read(char *, unsigned int);
+        void Read(RakNet::BitStream *, unsigned int);
+        void Write1();
+        void SetWriteOffset(unsigned int);
+        void AssertStreamEmpty();
+        void AddBitsAndReallocate(unsigned int);
+        bool IsNetworkOrder();
+        void SetNumberOfBitsAllocated(unsigned int);
+        void NumberOfLeadingZeroes(unsigned int);
+        void Write(RakNet::BitStream &);
+        void NumberOfLeadingZeroes(short);
+        BitStream(unsigned int);
+        void ReadAlignedBytesSafe(char *, unsigned int &, unsigned int);
+        void IgnoreBits(unsigned int);
+        void ReadFloat16(float &, float, float);
+        void PadWithZeroToByteLength(unsigned int);
+        void Read(char *);
+        ~BitStream();
+        void WriteBits(unsigned char const*, unsigned int, bool);
+        void ReadBits(unsigned char *, unsigned int, bool);
+        bool IsNetworkOrderInternal();
+        void IgnoreBytes(unsigned int);
+        void Write(RakNet::BitStream &, unsigned int);
+        void WriteAlignedBytesSafe(char const*, unsigned int, unsigned int);
+        void NumberOfLeadingZeroes(unsigned char);
+        void ReadAlignedBytesSafe(char *, int &, int);
+        void ReadBit();
+        void ResetReadPointer();
+        void SetData(unsigned char *);
+        void Write(char const*, unsigned int);
+        void WriteAlignedVar8(char const*);
+        void GetNumberOfBitsUsed()const;
+        void NumberOfLeadingZeroes(int);
+        void WriteAlignedVar16(char const*);
+        bool IsBigEndian();
+        void Write0();
+        void PrintBits(char *)const;
+        void GetNumberOfUnreadBits()const;
+        void GetData()const;
+        BitStream(unsigned char *, unsigned int, bool);
+        void Reset();
+        void GetInstance();
+        void ReadAlignedVar16(char *);
+        void NumberOfLeadingZeroes(unsigned short);
+        void GetNumberOfBitsAllocated()const;
+        void AlignWriteToByteBoundary();
+        void ReadAlignedVar8(char *);
+        void GetNumberOfBytesUsed()const;
+        void AlignReadToByteBoundary();
+        void NumberOfLeadingZeroes(unsigned long);
+        BitStream();
+        void GetReadOffset()const;
+        void ResetWritePointer();
+        void WriteAlignedBytes(unsigned char const*, unsigned int);
+        void ReadAlignedBytes(unsigned char *, unsigned int);
+        void GetWriteOffset()const;
+        void ReadAlignedBytesSafeAlloc(char **, int &, unsigned int);
+        void ReverseBytes(unsigned char *, unsigned char *, unsigned int);
+        void PrintBits()const;
+        void WriteFloat16(float, float, float);
+        void NumberOfLeadingZeroes(long);
+        void WriteCompressed(unsigned char const*, unsigned int, bool);
+        void Read(RakNet::BitStream &);
+        void Read(RakNet::BitStream &, unsigned int);
+        void PrintHex(char *)const;
+        void SetReadOffset(unsigned int);
+        void WriteAlignedVar32(char const*);
+//      void NumberOfLeadingZeroes(signed const); //TODO: incomplete function definition
+    };
 }

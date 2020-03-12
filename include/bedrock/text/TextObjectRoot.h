@@ -1,21 +1,18 @@
 #pragma once
 
-#include "./TextObjectRoot.h"
+#include "ITextObject.h"
 #include <memory>
-#include "./ITextObject.h"
-#include <string>
 
 
 class TextObjectRoot : ITextObject {
 
 public:
-    virtual ~TextObjectRoot();
-    virtual std::string asString()const;
+    ~TextObjectRoot();
     virtual bool asJsonValue()const;
-
-    TextObjectRoot();
+    virtual std::string asString()const;
     TextObjectRoot(TextObjectRoot &&);
-    void addChild(std::unique_ptr<ITextObject, std::default_delete<ITextObject>>);
+    void addChild(std::unique_ptr<ITextObject>);
     void clear();
+    TextObjectRoot();
     bool isEmpty()const;
 };

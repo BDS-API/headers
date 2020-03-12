@@ -4,11 +4,9 @@
 
 namespace RakNet {
 
-class InternalPacketFixedSizeTransmissionHeader {
+    class InternalPacketFixedSizeTransmissionHeader {
 
-public:
-
-    InternalPacketFixedSizeTransmissionHeader();
-};
-
+    public:
+        InternalPacketFixedSizeTransmissionHeader();
+    };
 }

@@ -1,20 +1,17 @@
 #pragma once
 
-#include "./PackError.h"
-#include <memory>
+#include "PackError.h"
 #include <vector>
-#include "./EducationMetadataError.h"
 #include <string>
 
 
 class EducationMetadataError : PackError {
 
 public:
-    virtual ~EducationMetadataError();
     virtual std::string getLocErrorMessageMap()const;
     virtual std::string getEventErrorMessageMap()const;
-
-    EducationMetadataError(EducationMetadataError const&);
+    ~EducationMetadataError();
+//  EducationMetadataError(PackParseErrorType, std::vector<std::string> const&); //TODO: incomplete function definition
     EducationMetadataError();
-//  EducationMetadataError(PackParseErrorType, std::vector<std::string, std::allocator<std::string>> const&); //TODO: incomplete function definition
+    EducationMetadataError(EducationMetadataError const&);
 };

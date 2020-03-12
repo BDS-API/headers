@@ -6,8 +6,7 @@
 class ZlibFileAccessWrapper {
 
 public:
-
-    ZlibFileAccessWrapper(IFileAccess *);
     void getZipFunctions()const;
     ~ZlibFileAccessWrapper();
+    ZlibFileAccessWrapper(IFileAccess *);
 };

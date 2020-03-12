@@ -5,6 +5,5 @@
 class SlotDropChance {
 
 public:
-
     SlotDropChance();
 };

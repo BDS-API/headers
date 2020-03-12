@@ -1,23 +1,22 @@
 #pragma once
 
-#include <memory>
-#include "../../../util/Random.h"
-#include "./StructurePiece.h"
-#include "./NetherFortressPiece.h"
 #include "../../../block/unmapped/BlockSource.h"
-#include <vector>
+#include "StructurePiece.h"
 #include "../../../../unmapped/BoundingBox.h"
+#include "../../../util/Random.h"
+#include <vector>
+#include <memory>
+#include "NetherFortressPiece.h"
 
 
 class NBCastleCorridorTBalconyPiece : NetherFortressPiece {
 
 public:
-    virtual ~NBCastleCorridorTBalconyPiece();
-    virtual void getType()const;
-    virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &);
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-
-    void createPiece(std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, int, int, int, int, int);
-    NBCastleCorridorTBalconyPiece();
+    virtual void getType()const;
+    ~NBCastleCorridorTBalconyPiece();
+    virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &);
     NBCastleCorridorTBalconyPiece(int, BoundingBox const&, int);
+    void createPiece(std::vector<std::unique_ptr<StructurePiece>> &, Random &, int, int, int, int, int);
+    NBCastleCorridorTBalconyPiece();
 };

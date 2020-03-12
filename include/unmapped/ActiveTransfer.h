@@ -1,23 +1,23 @@
 #pragma once
 
-#include "./ActiveTransfer.h"
-#include "./ActiveTransfersManager.h"
-#include "./NetworkIdentifier.h"
+#include "ActiveTransfersManager.h"
+#include "NetworkIdentifier.h"
 
 
-namespace ClientBlobCache::Server {
+namespace ClientBlobCache {
 
-class ActiveTransfer {
+    namespace Server {
 
-public:
+        class ActiveTransfer {
 
-    ~ActiveTransfer();
-    ActiveTransfer(ClientBlobCache::Server::ActiveTransfer &&);
-    ActiveTransfer();
-    ActiveTransfer(ClientBlobCache::Server::ActiveTransfersManager &, NetworkIdentifier const&);
-    void onAckReceived(unsigned long);
-    void shouldBeSent()const;
-    bool isDone()const;
-};
-
+        public:
+            bool isDone()const;
+            void onAckReceived(unsigned long);
+            ActiveTransfer(ClientBlobCache::Server::ActiveTransfersManager &, NetworkIdentifier const&);
+            ~ActiveTransfer();
+            ActiveTransfer();
+            void shouldBeSent()const;
+            ActiveTransfer(ClientBlobCache::Server::ActiveTransfer &&);
+        };
+    }
 }

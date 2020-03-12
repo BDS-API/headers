@@ -3,9 +3,7 @@
 #include "../bedrock/level/Level.h"
 
 
-class TheEndSpikeHelper {
-
-public:
+namespace TheEndSpikeHelper {
 
     void getSpikesForLevel(Level &);
 };

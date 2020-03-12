@@ -5,7 +5,6 @@
 class IStructureConstraint {
 
 public:
-    virtual ~IStructureConstraint();
-
+    ~IStructureConstraint();
     IStructureConstraint();
 };

@@ -1,23 +1,23 @@
 #pragma once
 
-#include <memory>
-#include "./Path.h"
 #include <vector>
 #include <string>
+#include "Path.h"
 
 
-namespace Core::ZipUtils {
+namespace Core {
 
-class ZipFileRestrictions {
+    namespace ZipUtils {
 
-public:
+        class ZipFileRestrictions {
 
-    ZipFileRestrictions();
-    ~ZipFileRestrictions();
-    void allowFile(Core::Path const&)const;
-    void addForbiddenExtensions(std::vector<std::string, std::allocator<std::string>> const&);
-    void addRestrictedExtensions(std::vector<std::string, std::allocator<std::string>> const&);
-    void addForbiddenFilenames(std::vector<std::string, std::allocator<std::string>> const&);
-};
-
+        public:
+            void addForbiddenFilenames(std::vector<std::string> const&);
+            void addForbiddenExtensions(std::vector<std::string> const&);
+            void addRestrictedExtensions(std::vector<std::string> const&);
+            ~ZipFileRestrictions();
+            ZipFileRestrictions();
+            void allowFile(Core::Path const&)const;
+        };
+    }
 }

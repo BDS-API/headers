@@ -1,18 +1,16 @@
 #pragma once
 
-#include "../../unmapped/LoadedResourceData.h"
 #include "../../core/Path.h"
-#include <memory>
-#include "./ResourcePackMergeStrategy.h"
-#include <vector>
+#include "../../unmapped/LoadedResourceData.h"
 #include "../../json/Value.h"
+#include <vector>
+#include "ResourcePackMergeStrategy.h"
 
 
 class BiomeRegistryMergeStrategy : ResourcePackMergeStrategy {
 
 public:
-    virtual ~BiomeRegistryMergeStrategy();
-    virtual void mergeFiles(std::vector<LoadedResourceData, std::allocator<LoadedResourceData>> const&);
-
+    ~BiomeRegistryMergeStrategy();
+    virtual void mergeFiles(std::vector<LoadedResourceData> const&);
     BiomeRegistryMergeStrategy(Core::Path const&, Json::Value &);
 };

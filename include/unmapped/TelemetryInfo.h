@@ -5,6 +5,5 @@
 class TelemetryInfo {
 
 public:
-
     ~TelemetryInfo();
 };

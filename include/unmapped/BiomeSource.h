@@ -6,8 +6,7 @@
 class BiomeSource {
 
 public:
-    virtual ~BiomeSource();
-
-    void getBiome(BlockPos const&)const;
+    ~BiomeSource();
     BiomeSource();
+    void getBiome(BlockPos const&)const;
 };

@@ -1,15 +1,14 @@
 #pragma once
 
-#include <memory>
 #include "../level/chunksource/ChunkViewSource.h"
+#include <memory>
 
 
 class CommandArea {
 
 public:
-
-    void getRegion();
+    CommandArea(std::unique_ptr<ChunkViewSource>);
     void getRegion()const;
-    CommandArea(std::unique_ptr<ChunkViewSource, std::default_delete<ChunkViewSource>>);
+    void getRegion();
     ~CommandArea();
 };

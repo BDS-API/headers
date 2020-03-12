@@ -1,57 +1,55 @@
 #pragma once
 
-#include "../../description/component/ContainerDescription.h"
-#include "../Actor.h"
-#include "../../nbt/CompoundTag.h"
-#include "../ItemActor.h"
-#include "../../util/Vec3.h"
-#include "../../level/Level.h"
-#include "../../../unmapped/ContainerContentChangeListener.h"
+#include "../../item/ItemStack.h"
+#include <string>
+#include "../Player.h"
 #include "../../../unmapped/DataLoadHelper.h"
 #include "../../block/unmapped/BlockSource.h"
-#include "../Player.h"
-#include "./IEntityComponent.h"
-#include "../../item/ItemStack.h"
-#include "./ContainerComponent.h"
-#include <string>
+#include "../Actor.h"
+#include "../../util/Vec3.h"
+#include "../../description/component/ContainerDescription.h"
+#include "../../../unmapped/ContainerContentChangeListener.h"
+#include "../../level/Level.h"
+#include "../../nbt/CompoundTag.h"
+#include "IEntityComponent.h"
+#include "../ItemActor.h"
 
 
 class ContainerComponent : ContainerContentChangeListener, IEntityComponent {
 
 public:
+    ~ContainerComponent();
     virtual void containerContentChanged(int);
-    virtual ~ContainerComponent();
-
-    ContainerComponent();
-    ContainerComponent(ContainerComponent &&);
-    void _getRawContainerPtr()const;
-    void initFromDefinition(Actor &);
-    void initFromDefinition(Actor &, ContainerDescription const&);
-//  void rebuildContainer(Actor &, ContainerType, int, bool, int, bool); //TODO: incomplete function definition
-    void addAdditionalSaveData(CompoundTag &);
-    void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    bool canOpenContainer(Actor const&, Player &)const;
-    void openContainer(Actor &, Player &);
-    void _unpackLootTable(Level &);
-    bool canBeSiphonedFrom()const;
-    bool isPrivate()const;
     void setCustomName(std::string const&);
+    void openContainer(Actor &, Player &);
+    ContainerComponent();
+    void addAdditionalSaveData(CompoundTag &);
+    bool hasRoomForItem(ItemStack const&);
+//  void rebuildContainer(Actor &, ContainerType, int, bool, int, bool); //TODO: incomplete function definition
+    void setLootTable(std::string, int);
+    void findFirstSlotForItem(ItemStack const&)const;
+    bool isPrivate()const;
+    void initFromDefinition(Actor &);
+    void _unpackLootTable(Level &);
+    void removeItem(int, int);
+    ContainerComponent(ContainerComponent &&);
+    void removeItemsOfType(ItemStack const&, int);
+    void dropContents(BlockSource &, Vec3 const&, bool);
+    void _getRawContainerPtr()const;
+    void initFromDefinition(Actor &, ContainerDescription const&);
+    void countItemsOfType(ItemStack const&)const;
+    void addItem(ItemStack &);
+    void getSlots()const;
+    void addItem(BlockSource &, ItemStack &, int, int);
+    void addItem(ItemActor &);
+    bool canBeSiphonedFrom()const;
+    bool hasRoomForItem(ItemActor const&);
+    void setItem(int, ItemStack const&);
+    bool canOpenContainer(Actor const&, Player &)const;
     bool hasCustomName()const;
     void getContainerType()const;
-    void getContainerSize()const;
     void _tryMoveInItem(BlockSource &, ItemStack &, int, int, int);
-    bool hasRoomForItem(ItemActor const&);
-    bool hasRoomForItem(ItemStack const&);
-    void addItem(ItemStack &);
-    void addItem(ItemActor &);
-    void addItem(BlockSource &, ItemStack &, int, int);
-    void setItem(int, ItemStack const&);
     void getItem(int)const;
-    void removeItem(int, int);
-    void countItemsOfType(ItemStack const&)const;
-    void getSlots()const;
-    void removeItemsOfType(ItemStack const&, int);
-    void findFirstSlotForItem(ItemStack const&)const;
-    void dropContents(BlockSource &, Vec3 const&, bool);
-    void setLootTable(std::string, int);
+    void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
+    void getContainerSize()const;
 };

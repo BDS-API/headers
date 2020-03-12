@@ -1,18 +1,17 @@
 #pragma once
 
-#include "./BlockItem.h"
+#include "ItemStack.h"
+#include <string>
 #include "../util/BlockPos.h"
 #include "../actor/Actor.h"
-#include "./ItemStack.h"
-#include <string>
+#include "BlockItem.h"
 
 
 class BambooBlockItem : BlockItem {
 
 public:
-    virtual ~BambooBlockItem();
-    virtual void getLevelDataForAuxValue(int)const;
+    ~BambooBlockItem();
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
-
+    virtual void getLevelDataForAuxValue(int)const;
     BambooBlockItem(std::string const&, int);
 };

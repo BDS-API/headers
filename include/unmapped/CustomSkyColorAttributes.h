@@ -5,6 +5,5 @@
 class CustomSkyColorAttributes {
 
 public:
-
     CustomSkyColorAttributes();
 };

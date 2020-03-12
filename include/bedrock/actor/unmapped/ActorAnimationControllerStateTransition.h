@@ -1,18 +1,16 @@
 #pragma once
 
+#include "../../../json/Value.h"
 #include <string>
 #include "../../../unmapped/RenderParams.h"
-#include "../../../json/Value.h"
-#include "./ActorAnimationControllerStateTransition.h"
 
 
 class ActorAnimationControllerStateTransition {
 
 public:
-
+    ~ActorAnimationControllerStateTransition();
+    void toJson(Json::Value &)const;
     ActorAnimationControllerStateTransition(std::string const&, std::string const&);
     void shouldTransition(RenderParams &)const;
-    void toJson(Json::Value &)const;
     ActorAnimationControllerStateTransition(ActorAnimationControllerStateTransition const&);
-    ~ActorAnimationControllerStateTransition();
 };

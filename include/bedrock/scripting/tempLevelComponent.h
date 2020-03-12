@@ -2,13 +2,14 @@
 
 
 
-namespace ScriptApi::WORKAROUNDS {
+namespace ScriptApi {
 
-class tempLevelComponent {
+    namespace WORKAROUNDS {
 
-public:
+        class tempLevelComponent {
 
-    tempLevelComponent();
-};
-
+        public:
+            tempLevelComponent();
+        };
+    }
 }

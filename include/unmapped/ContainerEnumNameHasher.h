@@ -2,9 +2,7 @@
 
 
 
-class ContainerEnumNameHasher {
-
-public:
+namespace ContainerEnumNameHasher {
 
 //  void operator()(ContainerEnumName const&)const; //TODO: incomplete function definition
 };

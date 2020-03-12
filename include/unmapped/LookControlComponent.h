@@ -1,33 +1,31 @@
 #pragma once
 
-#include "./LookControlComponent.h"
+#include "../bedrock/actor/Mob.h"
 #include "../bedrock/util/Vec3.h"
 #include <memory>
 #include "../bedrock/actor/Actor.h"
 #include "../bedrock/control/LookControl.h"
-#include "../bedrock/actor/Mob.h"
 
 
 class LookControlComponent {
 
 public:
-
-    ~LookControlComponent();
-    LookControlComponent(LookControlComponent &&);
-    LookControlComponent();
-    void initialize(Mob &);
-    void setInternalType(std::unique_ptr<LookControl, std::default_delete<LookControl>>);
-    void getHasWantedPosition()const;
-    void setHasWantedPosition(bool);
-    void getHasWantedRotation()const;
     void setHasWantedRotation(bool);
-    void getXMax()const;
-    void getYMax()const;
-    void setYMax(float);
+    void getHasWantedRotation()const;
     void getWantedPosition()const;
-    void getWantedRotation()const;
     void setLookAtPosition(Actor const*, float, float);
+    void initialize(Mob &);
+    void setYMax(float);
+    LookControlComponent();
+    void setInternalType(std::unique_ptr<LookControl>);
     void setLookAtPosition(Vec3 const&, float, float);
+    ~LookControlComponent();
+    void getHasWantedPosition()const;
+    void getYMax()const;
+    LookControlComponent(LookControlComponent &&);
+    void getWantedRotation()const;
     void setLookAtRotation(Vec3 const&, float, float);
+    void getXMax()const;
     void update(Mob &);
+    void setHasWantedPosition(bool);
 };

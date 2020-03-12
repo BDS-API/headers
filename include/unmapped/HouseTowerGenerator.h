@@ -1,24 +1,22 @@
 #pragma once
 
-#include "./StructureManager.h"
-#include "../bedrock/util/Random.h"
-#include <memory>
-#include "./SectionGenerator.h"
 #include "../bedrock/level/structure/piece/StructurePiece.h"
-#include <vector>
-#include "../bedrock/level/structure/piece/EndCityPiece.h"
 #include "../bedrock/util/BlockPos.h"
+#include "SectionGenerator.h"
+#include "../bedrock/level/structure/piece/EndCityPiece.h"
+#include <vector>
+#include <memory>
+#include "../bedrock/util/Random.h"
+#include "StructureManager.h"
 
 
 namespace EndCityPieces {
 
-class HouseTowerGenerator : EndCityPieces::SectionGenerator {
+    class HouseTowerGenerator : EndCityPieces::SectionGenerator {
 
-public:
-    virtual void generate(StructureManager &, std::vector<std::unique_ptr<EndCityPieces::SectionGenerator, std::default_delete<EndCityPieces::SectionGenerator>>, std::allocator<std::unique_ptr<EndCityPieces::SectionGenerator, std::default_delete<EndCityPieces::SectionGenerator>>>> const&, int, EndCityPieces::EndCityPiece *, BlockPos const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<std::vector &>>, std::allocator<std::default_delete<std::vector &>>> &, Random &);
-    virtual ~HouseTowerGenerator();
-
-    HouseTowerGenerator();
-};
-
+    public:
+        virtual void generate(StructureManager &, std::vector<std::unique_ptr<EndCityPieces::SectionGenerator>> const&, int, EndCityPieces::EndCityPiece *, BlockPos const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &);
+        ~HouseTowerGenerator();
+        HouseTowerGenerator();
+    };
 }

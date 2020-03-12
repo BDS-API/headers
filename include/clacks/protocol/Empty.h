@@ -1,40 +1,46 @@
 #pragma once
 
-#include "./Empty.h"
 
 
-namespace com::mojang::clacks::protocol {
+namespace com {
 
-class Empty /*google::protobuf::Message*/ { //TODO: incomplete class definition
+    namespace mojang {
 
-public:
-    virtual ~Empty();
-    virtual void New()const;
-//  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition
-    virtual void Clear();
-    virtual bool IsInitialized()const;
-//  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition
-    virtual void ByteSizeLong()const;
-//  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition
-    virtual void GetCachedSize()const;
-    virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
-//  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition
-//  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition
-    virtual void SetCachedSize(int)const;
-    virtual void GetMetadata()const;
+        namespace clacks {
 
-    void InitAsDefaultInstance();
-    Empty();
-    void SharedCtor();
-    Empty(com::mojang::clacks::protocol::Empty const&);
-    void SharedDtor();
-    void descriptor();
-    void default_instance();
-    void MergeFrom(com::mojang::clacks::protocol::Empty const&);
-    void CopyFrom(com::mojang::clacks::protocol::Empty const&);
-    void Swap(com::mojang::clacks::protocol::Empty *);
-    void InternalSwap(com::mojang::clacks::protocol::Empty *);
-    void internal_default_instance();
-};
+            namespace protocol {
 
+                class Empty /*google::protobuf::Message*/ { //TODO: incomplete class definition
+
+                public:
+                    virtual void Clear();
+                    ~Empty();
+//                  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition
+                    virtual void GetCachedSize()const;
+//                  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition
+                    virtual void GetMetadata()const;
+//                  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition
+                    virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
+                    virtual bool IsInitialized()const;
+//                  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition
+//                  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition
+                    virtual void SetCachedSize(int)const;
+                    virtual void ByteSizeLong()const;
+                    virtual void New()const;
+                    void internal_default_instance();
+                    void InitAsDefaultInstance();
+                    void Swap(com::mojang::clacks::protocol::Empty *);
+                    void InternalSwap(com::mojang::clacks::protocol::Empty *);
+                    Empty(com::mojang::clacks::protocol::Empty const&);
+                    void SharedCtor();
+                    void default_instance();
+                    Empty();
+                    void MergeFrom(com::mojang::clacks::protocol::Empty const&);
+                    void CopyFrom(com::mojang::clacks::protocol::Empty const&);
+                    void descriptor();
+                    void SharedDtor();
+                };
+            }
+        }
+    }
 }

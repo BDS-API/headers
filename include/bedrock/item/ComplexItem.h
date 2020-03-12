@@ -1,18 +1,17 @@
 #pragma once
 
-#include "./Item.h"
-#include "../level/Level.h"
-#include "../actor/Actor.h"
-#include "./ItemStack.h"
 #include <string>
+#include "ItemStack.h"
+#include "../actor/Actor.h"
+#include "Item.h"
+#include "../level/Level.h"
 
 
 class ComplexItem : Item {
 
 public:
-    virtual ~ComplexItem();
-    virtual bool isComplex()const;
+    ~ComplexItem();
     virtual void getUpdatePacket(ItemStack const&, Level &, Actor &)const;
-
+    virtual bool isComplex()const;
     ComplexItem(std::string const&, int);
 };

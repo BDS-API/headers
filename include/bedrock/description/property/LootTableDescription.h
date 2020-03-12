@@ -1,16 +1,15 @@
 #pragma once
 
-#include "./PropertyDescription.h"
 #include "../../../json/Value.h"
+#include "PropertyDescription.h"
 
 
 class LootTableDescription : PropertyDescription {
 
 public:
+    ~LootTableDescription();
     virtual void getJsonName()const;
-    virtual ~LootTableDescription();
-    virtual void deserializeData(Json::Value &);
     virtual void serializeData(Json::Value &)const;
-
+    virtual void deserializeData(Json::Value &);
     LootTableDescription();
 };

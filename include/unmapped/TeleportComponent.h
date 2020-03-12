@@ -1,29 +1,27 @@
 #pragma once
 
 #include "../bedrock/util/Vec3.h"
-#include "../bedrock/actor/Actor.h"
 #include "../bedrock/description/component/TeleportDescription.h"
-#include "./TeleportComponent.h"
+#include "../bedrock/actor/Actor.h"
 
 
 class TeleportComponent {
 
 public:
-
-    TeleportComponent(TeleportComponent &&);
-    TeleportComponent();
-    void initFromDefinition(Actor &);
-    void initFromDefinition(TeleportDescription const&);
-    void teleport(Actor &, Vec3 const&);
+    void setTeleportTime(int);
     void randomTeleport(Actor &);
-    void teleportTowards(Actor &, Actor const&);
+    void initFromDefinition(Actor &);
     void getRandomTeleports();
-    void getMinTeleportTime();
-    void getMaxTeleportTime();
-    void getTargetDistance();
     void getTargetTeleportChance();
     void getLightTeleportChance();
+    void teleport(Actor &, Vec3 const&);
+    void getTargetDistance();
     void getDarkTeleportChance();
+    TeleportComponent(TeleportComponent &&);
+    void teleportTowards(Actor &, Actor const&);
     void getTeleportTime();
-    void setTeleportTime(int);
+    void getMinTeleportTime();
+    void initFromDefinition(TeleportDescription const&);
+    TeleportComponent();
+    void getMaxTeleportTime();
 };

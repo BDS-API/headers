@@ -1,11 +1,9 @@
 #pragma once
 
+#include "HashedString.h"
 #include <functional>
-#include "./HashedString.h"
-#include <memory>
 #include <vector>
-#include "./MolangQueryFunctionPtr.h"
-#include "./RenderParams.h"
+#include "RenderParams.h"
 
 
 class MolangQueryFunctionPtr {
@@ -13,11 +11,10 @@ class MolangQueryFunctionPtr {
 public:
     static long defaultErrorValue;
 
-
-    ~MolangQueryFunctionPtr();
     MolangQueryFunctionPtr(MolangQueryFunctionPtr const&);
-    MolangQueryFunctionPtr(std::function<float (RenderParams &, std::vector<float, std::allocator<float>> const&)> const*, HashedString const&);
+    MolangQueryFunctionPtr(std::function<float (RenderParams &, std::vector<float> const&)> const*, HashedString const&);
     void getQueryFunctionPtr()const;
+    ~MolangQueryFunctionPtr();
     MolangQueryFunctionPtr(MolangQueryFunctionPtr &&);
     void operator==(MolangQueryFunctionPtr const&)const;
 };

@@ -1,17 +1,16 @@
 #pragma once
 
+#include "../origin/CommandOrigin.h"
 #include "../CommandRegistry.h"
-#include "./ServerCommand.h"
-#include "../orgin/CommandOrigin.h"
+#include "ServerCommand.h"
 #include "../CommandOutput.h"
 
 
 class DeOpCommand : ServerCommand {
 
 public:
-    virtual ~DeOpCommand();
+    ~DeOpCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-
-    void setup(CommandRegistry &);
     DeOpCommand();
+    void setup(CommandRegistry &);
 };

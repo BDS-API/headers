@@ -1,23 +1,21 @@
 #pragma once
 
-#include "./ISurfaceBuilder.h"
-#include "../bedrock/util/Random.h"
 #include "../bedrock/block/unmapped/BlockVolume.h"
-#include "./EntityContext.h"
 #include "../bedrock/util/BlockPos.h"
+#include "ISurfaceBuilder.h"
+#include "EntityContext.h"
+#include "../bedrock/util/Random.h"
 #include "../bedrock/level/biome/Biome.h"
 
 
 namespace VanillaSurfaceBuilders {
 
-class NetherSurfaceBuilder : ISurfaceBuilder {
+    class NetherSurfaceBuilder : ISurfaceBuilder {
 
-public:
-    virtual ~NetherSurfaceBuilder();
-    virtual void init(EntityContext &, unsigned int);
-    virtual void buildSurfaceAt(Biome &, Random &, BlockVolume &, BlockPos const&, float, short);
-
-    NetherSurfaceBuilder();
-};
-
+    public:
+        ~NetherSurfaceBuilder();
+        virtual void buildSurfaceAt(Biome &, Random &, BlockVolume &, BlockPos const&, float, short);
+        virtual void init(EntityContext &, unsigned int);
+        NetherSurfaceBuilder();
+    };
 }

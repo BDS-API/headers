@@ -1,15 +1,14 @@
 #pragma once
 
-#include "./SimpleHashStringFilterTest.h"
 #include "../../unmapped/FilterContext.h"
+#include "SimpleHashStringFilterTest.h"
 
 
 class BlockIsNameTest : SimpleHashStringFilterTest {
 
 public:
-    virtual ~BlockIsNameTest();
     virtual void evaluate(FilterContext const&)const;
+    ~BlockIsNameTest();
     virtual void getName()const;
-
     BlockIsNameTest();
 };

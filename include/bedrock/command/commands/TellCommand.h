@@ -1,17 +1,16 @@
 #pragma once
 
-#include "./MessagingCommand.h"
+#include "../origin/CommandOrigin.h"
 #include "../CommandRegistry.h"
-#include "../orgin/CommandOrigin.h"
 #include "../CommandOutput.h"
+#include "MessagingCommand.h"
 
 
 class TellCommand : MessagingCommand {
 
 public:
-    virtual ~TellCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
-
-    void setup(CommandRegistry &);
+    ~TellCommand();
     TellCommand();
+    void setup(CommandRegistry &);
 };

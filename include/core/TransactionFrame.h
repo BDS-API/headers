@@ -1,22 +1,19 @@
 #pragma once
 
-#include "./Result.h"
-#include "./TransactionFrame.h"
+#include "Result.h"
 #include <functional>
-#include "./Path.h"
+#include "Path.h"
 
 
 namespace Core {
 
-class TransactionFrame {
+    class TransactionFrame {
 
-public:
-
-//  void exec(Core::FileAccessType, Core::Path const&, std::function<Core::Result (Core::TransactionFrame &)> const&); //TODO: incomplete function definition
-//  TransactionFrame(Core::FileAccessType, Core::Path const&); //TODO: incomplete function definition
-    ~TransactionFrame();
-    void getTransaction();
-    void getPath()const;
-};
-
+    public:
+//      void exec(Core::FileAccessType, Core::Path const&, std::function<Core::Result (Core::TransactionFrame &)> const&); //TODO: incomplete function definition
+//      TransactionFrame(Core::FileAccessType, Core::Path const&); //TODO: incomplete function definition
+        void getTransaction();
+        void getPath()const;
+        ~TransactionFrame();
+    };
 }

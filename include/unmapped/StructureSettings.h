@@ -1,10 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
-#include "./StructureSettings.h"
+#include <string>
 #include "../bedrock/actor/unmapped/ActorUniqueID.h"
 #include "../bedrock/util/BlockPos.h"
-#include <string>
+#include "../bedrock/util/Vec3.h"
 
 
 class StructureSettings {
@@ -13,33 +12,32 @@ public:
     static long DEFAULT_STRUCTURE_SIZE;
     static long DEFAULT_STRUCTURE_OFFSET;
 
-
-    StructureSettings(StructureSettings const&);
-    ~StructureSettings();
+    void getRotation()const;
+    void getMirror()const;
     StructureSettings(StructureSettings &&);
-    StructureSettings();
-    void operator==(StructureSettings const&)const;
-    void operator!=(StructureSettings const&)const;
-    void setPaletteName(std::string);
-    std::string getPaletteName()const;
-    void setIgnoreEntities(bool);
-    void getIgnoreEntities()const;
-    void getIgnoreBlocks()const;
-    void setIgnoreBlocks(bool);
-    void getStructureSize()const;
-    void setStructureSize(BlockPos const&);
+//  void setRotation(Rotation); //TODO: incomplete function definition
     void getStructureOffset()const;
     void setStructureOffset(BlockPos const&);
     void getPivot()const;
-    void setPivot(Vec3 const&);
-    void getLastTouchedByPlayerID()const;
-    void setLastTouchedByPlayerID(ActorUniqueID);
-    void getRotation()const;
-//  void setRotation(Rotation); //TODO: incomplete function definition
-    void getMirror()const;
-//  void setMirror(Mirror); //TODO: incomplete function definition
-    void getIntegrityValue()const;
     void setIntegrityValue(float);
+//  void setMirror(Mirror); //TODO: incomplete function definition
     void getIntegritySeed()const;
+    void setIgnoreBlocks(bool);
+    void getIgnoreBlocks()const;
+    StructureSettings();
+    StructureSettings(StructureSettings const&);
+    void getStructureSize()const;
+    void setPivot(Vec3 const&);
     void setIntegritySeed(unsigned int);
+    void setLastTouchedByPlayerID(ActorUniqueID);
+    void getLastTouchedByPlayerID()const;
+    ~StructureSettings();
+    void getIntegrityValue()const;
+    void getIgnoreEntities()const;
+    void operator!=(StructureSettings const&)const;
+    void setPaletteName(std::string);
+    void operator==(StructureSettings const&)const;
+    void setStructureSize(BlockPos const&);
+    void setIgnoreEntities(bool);
+    std::string getPaletteName()const;
 };

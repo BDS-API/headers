@@ -1,22 +1,21 @@
 #pragma once
 
-#include "../Player.h"
 #include "../../../unmapped/Dimension.h"
+#include "../Player.h"
 
 
 class Goal {
 
 public:
-    virtual ~Goal();
-    virtual bool canContinueToUse();
-    virtual bool canBeInterrupted();
     virtual void start();
-    virtual void stop();
-    virtual void tick();
     virtual bool isTargetGoal()const;
 //  virtual void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>); //TODO: incomplete function definition
-
+    virtual bool canBeInterrupted();
+    virtual void tick();
+    virtual void stop();
+    virtual bool canContinueToUse();
+    ~Goal();
     Goal();
-    void setRequiredControlFlags(int);
     void getRequiredControlFlags()const;
+    void setRequiredControlFlags(int);
 };

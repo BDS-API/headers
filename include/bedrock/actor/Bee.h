@@ -1,20 +1,19 @@
 #pragma once
 
+#include "Animal.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../../unmapped/VariantParameterList.h"
 #include "unmapped/ActorDefinitionGroup.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Animal.h"
 
 
 class Bee : Animal {
 
 public:
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual ~Bee();
     virtual void normalTick();
-    virtual void onSynchedDataUpdate(int);
+    ~Bee();
     virtual void getAmbientSoundPostponeTicks();
-
-    Bee(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    virtual void onSynchedDataUpdate(int);
+//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
     void _registerLoopingSounds();
+    Bee(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

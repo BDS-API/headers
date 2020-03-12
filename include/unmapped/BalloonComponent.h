@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
-#include "./DataLoadHelper.h"
 #include "../bedrock/nbt/CompoundTag.h"
-#include "./DistanceConstraint.h"
+#include "DistanceConstraint.h"
+#include <string>
+#include "../bedrock/util/Vec3.h"
 #include "../bedrock/actor/Actor.h"
-#include "./BalloonComponent.h"
+#include "DataLoadHelper.h"
 
 
 class BalloonComponent {
@@ -17,20 +17,19 @@ public:
     static std::string MAX_HEIGHT_TAG;
     static std::string SHOULD_DROP_TAG;
 
-
-    BalloonComponent();
-    BalloonComponent(BalloonComponent &&);
-    ~BalloonComponent();
-    void onRemoved(Actor &, bool);
-    void getAttachedActor(Actor &);
     void setAttachedActor(Actor &, Actor *);
+    BalloonComponent(BalloonComponent &&);
+    void getAttachedActor(Actor &);
+    void _integrateBalloon(Vec3 &, Vec3 *, Vec3 const&, DistanceConstraint *);
+    BalloonComponent();
+    void onRemoved(Actor &, bool);
     void detach(Actor &);
-    void addAdditionalSaveData(CompoundTag &);
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &);
-    void getMaxHeight()const;
-    void getBalloonForActor(Actor const&);
     void shouldPop(Actor &, bool &);
     void integrate(Actor &);
-    void _integrateBalloon(Vec3 &, Vec3 *, Vec3 const&, DistanceConstraint *);
+    ~BalloonComponent();
     void computeMaxHeight(Actor &);
+    void getMaxHeight()const;
+    void getBalloonForActor(Actor const&);
+    void addAdditionalSaveData(CompoundTag &);
 };

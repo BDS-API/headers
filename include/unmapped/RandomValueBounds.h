@@ -7,12 +7,11 @@
 class RandomValueBounds {
 
 public:
-
-    RandomValueBounds();
-    void getMin()const;
-    void getMax()const;
     void getInt(Random &)const;
+    void getMin()const;
+    RandomValueBounds();
+    void deserialize(Json::Value);
     void getFloat(Random &)const;
     bool matchesValue(int)const;
-    void deserialize(Json::Value);
+    void getMax()const;
 };

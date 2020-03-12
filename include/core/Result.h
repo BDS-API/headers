@@ -1,41 +1,38 @@
 #pragma once
 
 #include <functional>
-#include "./Result.h"
 #include <string>
 
 
 namespace Core {
 
-class Result {
+    class Result {
 
-public:
-
-    Result(bool, std::function<char const* (std::string *)>);
-    Result(Core::Result &&);
-    Result(Core::Result const&);
-    void peekFailed()const;
-    void peekSucceeded()const;
-    void throwFailed()const;
-    void _setHandled()const;
-    void succeeded()const;
-    void failed()const;
-    void architecturalProblem()const;
-    void succeededArchitecturalProblem()const;
-    void failedArchitecturalProblem()const;
-    void ignoreError()const;
-    void catastrophic()const;
-    void otherMechanism();
-    void message(std::string *)const;
-    void makeSuccess();
-    void makeFailure();
-    void makeFailure(std::string &&);
-    void makeFailure(std::function<char const* (std::string *)> &&);
-    void makeFailureWithStringLiteral(char const*);
-    void makeFailureNotImplemented();
-    ~Result();
-    void merge(Core::Result &&, Core::Result &);
-    void either(Core::Result &&, Core::Result &);
-};
-
+    public:
+        void peekFailed()const;
+        void merge(Core::Result &&, Core::Result &);
+        void ignoreError()const;
+        void succeeded()const;
+        void either(Core::Result &&, Core::Result &);
+        void makeFailure(std::string &&);
+        void makeFailureNotImplemented();
+        void message(std::string *)const;
+        void peekSucceeded()const;
+        Result(bool, std::function<char const* (std::string *)>);
+        void failed()const;
+        void otherMechanism();
+        void makeFailure(std::function<char const* (std::string *)> &&);
+        void throwFailed()const;
+        void makeFailureWithStringLiteral(char const*);
+        void catastrophic()const;
+        void makeSuccess();
+        ~Result();
+        void succeededArchitecturalProblem()const;
+        void failedArchitecturalProblem()const;
+        Result(Core::Result &&);
+        void makeFailure();
+        void _setHandled()const;
+        void architecturalProblem()const;
+        Result(Core::Result const&);
+    };
 }

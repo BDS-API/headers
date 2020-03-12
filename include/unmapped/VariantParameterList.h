@@ -5,11 +5,17 @@
 class VariantParameterList {
 
 public:
+    class Parameter;
 
-    VariantParameterList();
+//  void clearParameter(FilterSubject); //TODO: incomplete function definition
+//  void getParameterType(FilterSubject)const; //TODO: incomplete function definition
     void clear();
 //  bool hasParameter(FilterSubject)const; //TODO: incomplete function definition
-//  void getParameterType(FilterSubject)const; //TODO: incomplete function definition
     void getParameterCount()const;
-//  void clearParameter(FilterSubject); //TODO: incomplete function definition
+    VariantParameterList();
+    class Parameter {
+
+    public:
+        Parameter();
+    };
 };

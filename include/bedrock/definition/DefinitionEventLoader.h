@@ -3,9 +3,7 @@
 #include "../../json/Value.h"
 
 
-class DefinitionEventLoader {
-
-public:
+namespace DefinitionEventLoader {
 
     void loadEvent(Json::Value);
     void loadCollection(Json::Value);

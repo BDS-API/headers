@@ -1,21 +1,19 @@
 #pragma once
 
-#include "../bedrock/item/unmapped/ItemDescriptor.h"
 #include "../bedrock/item/ItemInstance.h"
 #include "../bedrock/item/Item.h"
+#include "../bedrock/item/unmapped/ItemDescriptor.h"
 
 
 namespace PotionBrewing {
 
-class Ingredient {
+    class Ingredient {
 
-public:
-
-    Ingredient(Item const&, int);
-    Ingredient(ItemInstance const&);
-    void equals(ItemDescriptor const&)const;
-    void getItemId()const;
-    void getData()const;
-};
-
+    public:
+        Ingredient(Item const&, int);
+        void equals(ItemDescriptor const&)const;
+        Ingredient(ItemInstance const&);
+        void getData()const;
+        void getItemId()const;
+    };
 }

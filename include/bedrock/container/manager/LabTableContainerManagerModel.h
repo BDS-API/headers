@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../../unmapped/ContainerItemStack.h"
-#include "./LevelContainerManagerModel.h"
 #include "../../util/BlockPos.h"
+#include "LevelContainerManagerModel.h"
 #include "../../actor/Player.h"
+#include "../../../unmapped/ContainerItemStack.h"
 
 
 class LabTableContainerManagerModel : LevelContainerManagerModel {
@@ -11,14 +11,13 @@ class LabTableContainerManagerModel : LevelContainerManagerModel {
 public:
     static long INPUT_SLOTS;
 
-    virtual ~LabTableContainerManagerModel();
     virtual void getItems();
+    ~LabTableContainerManagerModel();
+    virtual void setData(int, int);
     virtual void setSlot(int, ContainerItemStack const&, bool);
     virtual void getSlot(int);
-    virtual void setData(int, int);
     virtual void broadcastChanges();
-    virtual void init();
     virtual bool isValid(float);
-
+    virtual void init();
 //  LabTableContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
 };

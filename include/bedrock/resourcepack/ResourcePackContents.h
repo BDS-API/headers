@@ -5,6 +5,5 @@
 class ResourcePackContents {
 
 public:
-
     ResourcePackContents();
 };

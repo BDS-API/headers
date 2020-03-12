@@ -1,25 +1,23 @@
 #pragma once
 
-#include "../../../unmapped/SendEventData.h"
-#include <memory>
-#include "./Goal.h"
-#include <vector>
-#include "../Mob.h"
 #include <string>
+#include "../Mob.h"
+#include "../../../unmapped/SendEventData.h"
+#include <vector>
+#include "Goal.h"
 
 
 class SendEventGoal : Goal {
 
 public:
-    virtual ~SendEventGoal();
-    virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();
-    virtual void stop();
+    ~SendEventGoal();
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
-
-    SendEventGoal(Mob &, std::vector<SendEventData, std::allocator<SendEventData>> const&);
+    virtual bool canUse();
+    virtual void stop();
+    SendEventGoal(Mob &, std::vector<SendEventData> const&);
     void _selectBestSpell();
     void _getCurrentSpell()const;
 };

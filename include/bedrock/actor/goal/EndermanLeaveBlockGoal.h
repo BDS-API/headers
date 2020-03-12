@@ -1,17 +1,16 @@
 #pragma once
 
-#include "./Goal.h"
 #include "../EnderMan.h"
+#include "Goal.h"
 #include <string>
 
 
 class EndermanLeaveBlockGoal : Goal {
 
 public:
-    virtual ~EndermanLeaveBlockGoal();
+    virtual void appendDebugInfo(std::string &)const;
+    ~EndermanLeaveBlockGoal();
     virtual bool canUse();
     virtual void tick();
-    virtual void appendDebugInfo(std::string &)const;
-
     EndermanLeaveBlockGoal(EnderMan &);
 };

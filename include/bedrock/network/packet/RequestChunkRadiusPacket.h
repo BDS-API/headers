@@ -1,20 +1,18 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../io/BinaryStream.h"
-#include <string>
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "Packet.h"
 
 
 class RequestChunkRadiusPacket : Packet {
 
 public:
-    virtual ~RequestChunkRadiusPacket();
-    virtual void getId()const;
     virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
+    ~RequestChunkRadiusPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
-    RequestChunkRadiusPacket();
+    virtual void write(BinaryStream &)const;
+    virtual void getId()const;
     RequestChunkRadiusPacket(int);
+    RequestChunkRadiusPacket();
 };

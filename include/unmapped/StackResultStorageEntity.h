@@ -1,18 +1,16 @@
 #pragma once
 
-#include "./WeakStorageEntity.h"
-#include "./EntityContext.h"
-#include "./StackResultStorageEntity.h"
+#include "WeakStorageEntity.h"
+#include "EntityContext.h"
 
 
 class StackResultStorageEntity {
 
 public:
-
-//  StackResultStorageEntity(decltype(nullptr); //TODO: incomplete function definition
-    StackResultStorageEntity(WeakStorageEntity const&);
     StackResultStorageEntity(EntityContext const&);
+//  StackResultStorageEntity(decltype(nullptr); //TODO: incomplete function definition
     StackResultStorageEntity(StackResultStorageEntity &&);
-    void _hasValue()const;
+    StackResultStorageEntity(WeakStorageEntity const&);
     void _getStackRef()const;
+    void _hasValue()const;
 };

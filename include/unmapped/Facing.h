@@ -1,12 +1,11 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
 #include "../bedrock/util/Random.h"
+#include "../bedrock/util/Vec3.h"
 
 
-class Facing {
+namespace Facing {
 
-public:
     static long OPPOSITE_FACING;
     static long STEP_X;
     static long STEP_Y;
@@ -21,20 +20,19 @@ public:
     static long ALL_EXCEPT;
     static long ALL_EXCEPT_AXIS_Y;
 
-
-    void getStepX(unsigned char);
-    void getStepY(unsigned char);
-    void getStepZ(unsigned char);
-    bool isHorizontal(unsigned char);
-    void toString(unsigned char);
-    void getRandomFace(Random &);
-    void getRandomFaceHorizontal(Random &);
-    void from2DDataValue(int);
     void getClockWise(unsigned char);
-    void getCounterClockWise(unsigned char);
-    void getOpposite(unsigned char);
-//  void rotateFace(unsigned char, Facing::Rotation); //TODO: incomplete function definition
     void fromVec3(Vec3 const&);
 //  void convertWeirdoDirectionToFacingDirection(WeirdoDirection); //TODO: incomplete function definition
+    void from2DDataValue(int);
+    void getStepY(unsigned char);
+    void getRandomFaceHorizontal(Random &);
+    void getRandomFace(Random &);
+    void toString(unsigned char);
     void convertYRotationToFacingDirection(float);
+    void getStepX(unsigned char);
+    void getOpposite(unsigned char);
+//  void rotateFace(unsigned char, Facing::Rotation); //TODO: incomplete function definition
+    bool isHorizontal(unsigned char);
+    void getStepZ(unsigned char);
+    void getCounterClockWise(unsigned char);
 };

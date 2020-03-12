@@ -3,13 +3,11 @@
 #include <string>
 
 
-class ScriptCommandFactory {
+namespace ScriptCommandFactory {
 
-public:
     static long mIdMutex;
     static long mCurrentId;
 
-
-    void createScriptCommand(std::string const&);
     void _getNextId();
+    void createScriptCommand(std::string const&);
 };

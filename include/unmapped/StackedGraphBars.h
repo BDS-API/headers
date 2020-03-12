@@ -1,23 +1,28 @@
 #pragma once
 
-#include <array>
-#include <memory>
-#include "./ColorKey.h"
-#include <vector>
 #include <string>
+#include <vector>
+#include <array>
 
 
 class StackedGraphBars {
 
 public:
+    class ColorKey;
 
     ~StackedGraphBars();
-    StackedGraphBars(std::string const&, std::vector<StackedGraphBars::ColorKey, std::allocator<StackedGraphBars::ColorKey>> const&, int);
-    void setHeight(float);
-//  void addBar(std::array<float, 2ul> const&); //TODO: incomplete function definition
-    void getColors()const;
     void getData()const;
-    void getHeight()const;
+    void getColors()const;
     std::string getGraphName()const;
+    StackedGraphBars(std::string const&, std::vector<StackedGraphBars::ColorKey> const&, int);
+//  void addBar(std::array<float, 2ul> const&); //TODO: incomplete function definition
+    void getHeight()const;
     void getMaxBars()const;
+    void setHeight(float);
+    class ColorKey {
+
+    public:
+        ColorKey(StackedGraphBars::ColorKey const&);
+        ~ColorKey();
+    };
 };

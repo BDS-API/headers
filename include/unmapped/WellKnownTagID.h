@@ -1,13 +1,12 @@
 #pragma once
 
-#include "./TagRegistry.h"
 #include <string>
+#include "TagRegistry.h"
 
 
 class WellKnownTagID {
 
 public:
-
     void init(TagRegistry &, std::string const&);
     WellKnownTagID();
 };

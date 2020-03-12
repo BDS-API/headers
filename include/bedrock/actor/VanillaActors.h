@@ -2,9 +2,7 @@
 
 
 
-class VanillaActors {
-
-public:
+namespace VanillaActors {
 
     void registerVanillaActorData();
 };

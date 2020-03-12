@@ -2,22 +2,20 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
-#include <string>
+#include "Packet.h"
 
 
 class MapCreateLockedCopyPacket : Packet {
 
 public:
-    virtual ~MapCreateLockedCopyPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
+    virtual std::string getName()const;
+    virtual void getId()const;
+    ~MapCreateLockedCopyPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
-    MapCreateLockedCopyPacket();
     MapCreateLockedCopyPacket(ActorUniqueID, ActorUniqueID);
-    void getOriginalMapId()const;
     void getNewMapId()const;
+    MapCreateLockedCopyPacket();
+    void getOriginalMapId()const;
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "./ITextObject.h"
+#include <string>
 
 
 class ITextObject {
@@ -11,8 +11,7 @@ public:
     static std::string RAW_TEXT_TRANSLATE_KEY;
     static std::string RAW_TEXT_WITH_KEY;
 
-    virtual ~ITextObject();
-
+    ~ITextObject();
     ITextObject();
     ITextObject(ITextObject const&);
 };

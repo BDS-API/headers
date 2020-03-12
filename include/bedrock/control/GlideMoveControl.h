@@ -1,17 +1,16 @@
 #pragma once
 
-#include "../actor/Mob.h"
-#include "../../unmapped/MoveControlComponent.h"
 #include "../description/component/MoveControlDescription.h"
-#include "./MoveControl.h"
+#include "../../unmapped/MoveControlComponent.h"
+#include "MoveControl.h"
+#include "../actor/Mob.h"
 
 
 class GlideMoveControl : MoveControl {
 
 public:
-    virtual ~GlideMoveControl();
-    virtual void initializeInternal(Mob &, MoveControlDescription *);
+    ~GlideMoveControl();
     virtual void tick(MoveControlComponent &, Mob &);
-
+    virtual void initializeInternal(Mob &, MoveControlDescription *);
     GlideMoveControl();
 };

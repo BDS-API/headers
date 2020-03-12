@@ -1,80 +1,78 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
-#include <memory>
-#include "../bedrock/description/component/NavigationDescription.h"
-#include "../bedrock/actor/Actor.h"
 #include "../bedrock/actor/navigation/PathNavigation.h"
+#include "../bedrock/actor/Actor.h"
+#include "../bedrock/description/component/NavigationDescription.h"
 #include "../bedrock/actor/Mob.h"
-#include "./NavigationComponent.h"
-#include "./Path.h"
+#include "../bedrock/util/Vec3.h"
+#include "Path.h"
+#include <memory>
 
 
 class NavigationComponent {
 
 public:
-
-    ~NavigationComponent();
-    NavigationComponent(NavigationComponent &&);
-    NavigationComponent();
     void initializeFromDefinition(Mob &, NavigationDescription *);
-    void setIsAmphibious(bool);
-    void setAvoidSun(bool);
-    void setCanPassDoors(bool);
-    void setCanOpenDoors(bool);
-    void setAvoidWater(bool);
-    void setAvoidDamageBlocks(bool);
-    void setCanFloat(bool);
-    void setCanSink(bool);
-    void setAvoidPortals(bool);
-    void setCanBreach(bool);
-    void setCanJump(bool);
-    void getAvoidDamageBlocks()const;
-    void getAvoidPortals()const;
-    void getAvoidSun()const;
-    void getAvoidWater()const;
-    void getCanBreach()const;
-    void getCanFloat()const;
-    void getCanJump()const;
-    void getCanOpenDoors()const;
-    void getCanPassDoors()const;
-    void getCanSink()const;
-    void getEndPathRadiusSqr()const;
-    void setEndPathRadius(float);
-    void getHasDestination()const;
-    void setHasDestination(bool);
-    void getHasEndPathRadius()const;
-    void setHasEndPathRadius(bool);
-    void setInternalType(std::unique_ptr<PathNavigation, std::default_delete<PathNavigation>>);
-    void getIsAmphibious()const;
     void getIsFollowingRivers()const;
-    void setIsFollowingRivers(bool);
-    void getLastStuckCheckPosition()const;
-    void setLastStuckCheckPosition(Vec3 const&);
-    void getMaxDistance(Actor const&)const;
-    void getPath()const;
-    void setPath(std::unique_ptr<Path, std::default_delete<Path>>);
-    void resetPath();
-    void getSpeed()const;
-    void setSpeed(float);
-    void getTerminationThreshold()const;
-    void setTerminationThreshold(float);
-    void getTickTimeout()const;
-    void setTickTimeout(int);
-    bool isDone()const;
+    void getCanFloat()const;
+    void moveTo(Mob &, std::unique_ptr<Path>, float);
+    void setCanPassDoors(bool);
+    void setCanSink(bool);
+    void setAvoidWater(bool);
     bool isStuck(int)const;
-    void incrementTick();
-    void updateLastStuckCheck(Mob const&);
-    void getTargetOffset()const;
     void setTargetOffset(Vec3 const&);
-    bool canUpdatePath(Mob const&)const;
-    void createPath(Mob &, Vec3 const&);
-    void moveTo(Mob &, Vec3 const&, float);
-    void moveTo(Mob &, Vec3 const&, float, Vec3 const&);
-    void createPath(Mob &, Actor &);
-    void moveTo(Mob &, Actor &, float);
-    void moveTo(Mob &, std::unique_ptr<Path, std::default_delete<Path>>, float);
     void update(Mob &);
-    void stop(Mob &);
+    void getAvoidDamageBlocks()const;
+    void getCanJump()const;
+    void getSpeed()const;
+    void setAvoidPortals(bool);
+    void setEndPathRadius(float);
     void travel(Mob &, float &, float &, float &);
+    void getAvoidWater()const;
+    void setAvoidSun(bool);
+    void getLastStuckCheckPosition()const;
+    void setInternalType(std::unique_ptr<PathNavigation>);
+    NavigationComponent();
+    void incrementTick();
+    void getAvoidSun()const;
+    void getCanBreach()const;
+    void getHasEndPathRadius()const;
+    void setSpeed(float);
+    bool isDone()const;
+    void moveTo(Mob &, Actor &, float);
+    bool canUpdatePath(Mob const&)const;
+    void setHasEndPathRadius(bool);
+    void setCanOpenDoors(bool);
+    void setTerminationThreshold(float);
+    void setHasDestination(bool);
+    void moveTo(Mob &, Vec3 const&, float);
+    void resetPath();
+    void setTickTimeout(int);
+    void updateLastStuckCheck(Mob const&);
+    void getCanSink()const;
+    void getIsAmphibious()const;
+    void getMaxDistance(Actor const&)const;
+    void getHasDestination()const;
+    void getTickTimeout()const;
+    NavigationComponent(NavigationComponent &&);
+    void setLastStuckCheckPosition(Vec3 const&);
+    void getTerminationThreshold()const;
+    void getAvoidPortals()const;
+    void stop(Mob &);
+    void setIsAmphibious(bool);
+    void getCanPassDoors()const;
+    void moveTo(Mob &, Vec3 const&, float, Vec3 const&);
+    void createPath(Mob &, Vec3 const&);
+    void setPath(std::unique_ptr<Path>);
+    void setAvoidDamageBlocks(bool);
+    void setCanJump(bool);
+    void setCanBreach(bool);
+    void getPath()const;
+    void setIsFollowingRivers(bool);
+    void getTargetOffset()const;
+    void setCanFloat(bool);
+    void getCanOpenDoors()const;
+    void getEndPathRadiusSqr()const;
+    ~NavigationComponent();
+    void createPath(Mob &, Actor &);
 };

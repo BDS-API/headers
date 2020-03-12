@@ -1,22 +1,20 @@
 #pragma once
 
 #include "../bedrock/actor/Actor.h"
-#include "./TargetNearbyComponent.h"
 
 
 class TargetNearbyComponent {
 
 public:
-
-    TargetNearbyComponent(TargetNearbyComponent &&);
-    TargetNearbyComponent();
-    void initFromDefinition(Actor &);
-    void getWasSeenLastTick()const;
-    void getWasInsideRange()const;
     void getWasOutsideRange()const;
-    void getPreviousDistance()const;
+    void getWasInsideRange()const;
+    TargetNearbyComponent();
     void setWasSeenLastTick(bool);
+    TargetNearbyComponent(TargetNearbyComponent &&);
+    void initFromDefinition(Actor &);
     void setWasInsideRange(bool);
-    void setWasOutsideRange(bool);
     void setPreviousDistance(float);
+    void setWasOutsideRange(bool);
+    void getPreviousDistance()const;
+    void getWasSeenLastTick()const;
 };

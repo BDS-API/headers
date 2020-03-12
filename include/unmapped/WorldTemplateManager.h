@@ -1,49 +1,47 @@
 #pragma once
 
-#include "../core/Path.h"
-#include "../mce/UUID.h"
+#include "IContentKeyProvider.h"
 #include "../core/FilePathManager.h"
-#include "./PackManifestFactory.h"
-#include "./PackIdVersion.h"
-#include <memory>
-#include "./Pack.h"
-#include "./IContentKeyProvider.h"
-#include "./PackSourceFactory.h"
-#include <vector>
-#include "./WorldTemplateInfo.h"
+#include "PackIdVersion.h"
+#include "Pack.h"
+#include "WorldTemplateInfo.h"
 #include <functional>
-#include <string>
+#include "../core/Path.h"
+#include <vector>
+#include <memory>
+#include "PackManifestFactory.h"
+#include "PackSourceFactory.h"
+#include "../mce/UUID.h"
 
 
 class WorldTemplateManager {
 
 public:
-
-    WorldTemplateManager(PackManifestFactory &, IContentKeyProvider const&, PackSourceFactory &, Core::FilePathManager const&, bool);
     void _initialize();
-    void _initializePackSources();
-    std::string _getWorldTemplatesPath()const;
-    void _onStorageDirectoryChanged();
-    ~WorldTemplateManager();
-    void populateWorldTemplates();
     void sortWorldTemplates();
-    void onStorageDirectoryChanged();
-    bool isInitialized();
-    void addKnownPackFromImport(Pack const&);
-    void _onDiscoverWorldTemplate(Pack const&);
-    void getWorldTemplateAtIndex(int)const;
-    void _isValidWorld(int)const;
-    void getLocalPremiumPackIds()const;
-    void findWorldTemplateAtIndex(int);
-    void findInstalledWorldTemplateByUUID(std::vector<mce::UUID, std::allocator<mce::UUID>> const&)const;
-    void findInstalledWorldTemplateByPackUUIDNonConst(std::vector<mce::UUID, std::allocator<mce::UUID>> const&)const;
-    void findInstalledWorldTemplate(PackIdVersion const&)const;
-    void getWorldTemplateSize()const;
-    bool isWorldTemplateInstalled(mce::UUID const&)const;
-    void deleteWorldTemplate(PackIdVersion const&);
     void deleteWorldTemplateFiles(PackIdVersion const&);
+    void _initializePackSources();
+    void _onDiscoverWorldTemplate(Pack const&);
+    void setSortMethod(std::function<bool (std::unique_ptr<WorldTemplateInfo> const&, std::unique_ptr<WorldTemplateInfo> const&)>);
+    ~WorldTemplateManager();
+    bool isWorldTemplateInstalled(mce::UUID const&)const;
+    void populateWorldTemplates();
+    WorldTemplateManager(PackManifestFactory &, IContentKeyProvider const&, PackSourceFactory &, Core::FilePathManager const&, bool);
+    void deleteWorldTemplate(PackIdVersion const&);
+    void _isValidWorld(int)const;
     void postDeleteWorldTemplate(PackIdVersion const&);
-    void _deleteWorldTemplate(PackIdVersion const&, std::function<bool (Core::Path const&)>);
+    void getWorldTemplateSize()const;
     void getProxy();
-    void setSortMethod(std::function<bool (std::unique_ptr<WorldTemplateInfo, std::default_delete<WorldTemplateInfo>> const&, std::unique_ptr<WorldTemplateInfo, std::default_delete<WorldTemplateInfo>> const&)>);
+    void findInstalledWorldTemplateByPackUUIDNonConst(std::vector<mce::UUID> const&)const;
+    void findWorldTemplateAtIndex(int);
+    void findInstalledWorldTemplate(PackIdVersion const&)const;
+    void addKnownPackFromImport(Pack const&);
+    void onStorageDirectoryChanged();
+    std::string _getWorldTemplatesPath()const;
+    void _deleteWorldTemplate(PackIdVersion const&, std::function<bool (Core::Path const&)>);
+    bool isInitialized();
+    void getWorldTemplateAtIndex(int)const;
+    void getLocalPremiumPackIds()const;
+    void findInstalledWorldTemplateByUUID(std::vector<mce::UUID> const&)const;
+    void _onStorageDirectoryChanged();
 };

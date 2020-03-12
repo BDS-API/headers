@@ -1,30 +1,29 @@
 #pragma once
 
-#include "./ItemDescriptor.h"
-#include "../../actor/Actor.h"
-#include "../../actor/Player.h"
-#include "../ItemInstance.h"
-#include "../ItemStack.h"
+#include "ItemDescriptor.h"
 #include <string>
+#include "../ItemInstance.h"
+#include "../../actor/Actor.h"
+#include "../ItemStack.h"
+#include "../../actor/Player.h"
 
 
 class ItemEventCoordinator {
 
 public:
-
-    void onInventoryItemOpened(bool);
-    void onInventoryItemClosed();
+    void onInventoryLayoutSelected(int, int);
+    void onPreviewItemPopulatedInContainer(ItemInstance const&, std::string const&);
+    void onItemSelected(ItemInstance const&);
     void onItemTransferredFromContainer(ItemInstance const&, std::string const&);
     void onItemTransferredToContainer(ItemInstance const&, std::string const&);
-    void onPreviewItemPopulatedInContainer(ItemInstance const&, std::string const&);
-    void onInventoryLayoutSelected(int, int);
-    void onInventoryItemCraftedAutomaticallyByRecipe(ItemStack const&);
-    void onRecipeSelected(ItemStack const&);
-    void onItemSmelted(Player &, ItemDescriptor const&, ItemDescriptor const&);
-    void onItemSpawnedActor(ItemInstance const&, Actor const&);
-    void onItemModifiedActor(ItemInstance const&, Actor const&);
-    void onItemSelectedSlot(int);
-    void onItemSelected(ItemInstance const&);
-    ~ItemEventCoordinator();
     ItemEventCoordinator();
+    void onInventoryItemClosed();
+    void onInventoryItemCraftedAutomaticallyByRecipe(ItemStack const&);
+    void onItemSelectedSlot(int);
+    void onItemSpawnedActor(ItemInstance const&, Actor const&);
+    ~ItemEventCoordinator();
+    void onInventoryItemOpened(bool);
+    void onItemSmelted(Player &, ItemDescriptor const&, ItemDescriptor const&);
+    void onItemModifiedActor(ItemInstance const&, Actor const&);
+    void onRecipeSelected(ItemStack const&);
 };

@@ -1,8 +1,7 @@
 #pragma once
 
-#include "../json/Value.h"
 #include <string>
-#include "./NpcAction.h"
+#include "../json/Value.h"
 
 
 class NpcAction {
@@ -15,21 +14,20 @@ public:
     static std::string TEXT_KEY;
     static std::string BUTTON_NAME_KEY;
 
-    virtual ~NpcAction();
+    ~NpcAction();
     virtual void fromJson(Json::Value const&);
-
+    void operator==(NpcAction const&)const;
 //  NpcAction(NpcActionType); //TODO: incomplete function definition
-    void getType()const;
-    void getMode()const;
 //  void setMode(NpcActionMode); //TODO: incomplete function definition
-    void setButtonName(std::string const&);
-    std::string getButtonName()const;
-    std::string getButtonRawTextName()const;
+    void getType()const;
+    void operator!=(NpcAction const&)const;
+    void setText(std::string const&);
     std::string getText()const;
     std::string getRawText()const;
-    void setText(std::string const&);
+    std::string getButtonName()const;
     void toJsonBase(Json::Value &);
-    void operator==(NpcAction const&)const;
-    void operator!=(NpcAction const&)const;
+    void getMode()const;
+    void setButtonName(std::string const&);
     void read(Json::Value const&);
+    std::string getButtonRawTextName()const;
 };

@@ -1,25 +1,26 @@
 #pragma once
 
 #include <functional>
+#include "ZipProgress.h"
 #include <memory>
-#include "./ZipProgress.h"
 
 
-namespace Core::ZipUtils {
+namespace Core {
 
-class ZipProgressList {
+    namespace ZipUtils {
 
-public:
+        class ZipProgressList {
 
-    ZipProgressList();
-    ~ZipProgressList();
-    void getCount();
-    void _getSum(std::function<unsigned int (std::shared_ptr<Core::ZipUtils::ZipProgress>)>);
-    void getSkipped();
-    void getTotal();
-    void getProgress();
-    void clear();
-    void createProgress();
-};
-
+        public:
+            void createProgress();
+            void clear();
+            void getTotal();
+            void _getSum(std::function<unsigned int (std::shared_ptr<Core::ZipUtils::ZipProgress>)>);
+            ZipProgressList();
+            void getSkipped();
+            void getProgress();
+            ~ZipProgressList();
+            void getCount();
+        };
+    }
 }

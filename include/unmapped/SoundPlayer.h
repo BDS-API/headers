@@ -5,6 +5,5 @@
 class SoundPlayer {
 
 public:
-
     ~SoundPlayer();
 };

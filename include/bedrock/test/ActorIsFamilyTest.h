@@ -1,15 +1,14 @@
 #pragma once
 
-#include "./SimpleHashStringFilterTest.h"
 #include "../../unmapped/FilterContext.h"
+#include "SimpleHashStringFilterTest.h"
 
 
 class ActorIsFamilyTest : SimpleHashStringFilterTest {
 
 public:
-    virtual ~ActorIsFamilyTest();
     virtual void evaluate(FilterContext const&)const;
+    ~ActorIsFamilyTest();
     virtual void getName()const;
-
     ActorIsFamilyTest();
 };

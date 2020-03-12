@@ -1,13 +1,18 @@
 #pragma once
 
-#include "./SurfaceMaterialAdjustmentAttributes.h"
 
 
 class SurfaceMaterialAdjustmentAttributes {
 
 public:
+    class Element;
 
-    ~SurfaceMaterialAdjustmentAttributes();
     SurfaceMaterialAdjustmentAttributes(SurfaceMaterialAdjustmentAttributes &&);
     SurfaceMaterialAdjustmentAttributes();
+    ~SurfaceMaterialAdjustmentAttributes();
+    class Element {
+
+    public:
+        Element();
+    };
 };

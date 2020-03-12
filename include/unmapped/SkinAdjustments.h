@@ -5,6 +5,5 @@
 class SkinAdjustments {
 
 public:
-
     SkinAdjustments();
 };

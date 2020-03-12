@@ -4,12 +4,10 @@
 
 namespace Core {
 
-class SingleThreadedLock {
+    class SingleThreadedLock {
 
-public:
-
-    void lock();
-    void unlock();
-};
-
+    public:
+        void lock();
+        void unlock();
+    };
 }

@@ -4,11 +4,9 @@
 
 namespace BlockGeometry {
 
-class Face {
+    class Face {
 
-public:
-
-    ~Face();
-};
-
+    public:
+        ~Face();
+    };
 }

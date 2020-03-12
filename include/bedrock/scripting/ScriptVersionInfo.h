@@ -4,11 +4,9 @@
 
 namespace ScriptApi {
 
-class ScriptVersionInfo {
+    class ScriptVersionInfo {
 
-public:
-
-    ScriptVersionInfo();
-};
-
+    public:
+        ScriptVersionInfo();
+    };
 }

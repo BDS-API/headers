@@ -1,17 +1,15 @@
 #pragma once
 
-#include "./EntityServerPacket.h"
 #include "../../../unmapped/EntityContext.h"
-#include <string>
+#include "EntityServerPacket.h"
 
 
 class AddEntityPacket : EntityServerPacket {
 
 public:
-    virtual ~AddEntityPacket();
-    virtual void getId()const;
+    ~AddEntityPacket();
     virtual std::string getName()const;
-
+    virtual void getId()const;
     AddEntityPacket();
     AddEntityPacket(EntityContext &);
 };

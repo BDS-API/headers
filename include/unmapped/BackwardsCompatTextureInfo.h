@@ -5,6 +5,5 @@
 class BackwardsCompatTextureInfo {
 
 public:
-
     ~BackwardsCompatTextureInfo();
 };

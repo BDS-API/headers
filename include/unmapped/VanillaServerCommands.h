@@ -3,9 +3,7 @@
 #include "../bedrock/command/CommandRegistry.h"
 
 
-class VanillaServerCommands {
-
-public:
+namespace VanillaServerCommands {
 
     void setup(CommandRegistry &);
 };

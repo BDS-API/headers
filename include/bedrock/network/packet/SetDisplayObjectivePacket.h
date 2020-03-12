@@ -1,20 +1,19 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream.h"
-#include <string>
 #include "../../io/BinaryStream.h"
-#include "./Packet.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "Packet.h"
+#include <string>
 
 
 class SetDisplayObjectivePacket : Packet {
 
 public:
-    virtual ~SetDisplayObjectivePacket();
+    ~SetDisplayObjectivePacket();
     virtual void getId()const;
     virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    SetDisplayObjectivePacket();
+    virtual void write(BinaryStream &)const;
 //  SetDisplayObjectivePacket(std::string const&, std::string const&, std::string const&, std::string const&, ObjectiveSortOrder); //TODO: incomplete function definition
+    SetDisplayObjectivePacket();
 };

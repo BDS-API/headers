@@ -1,22 +1,21 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../io/BinaryStream.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "Packet.h"
 #include <string>
 
 
 class SettingsCommandPacket : Packet {
 
 public:
-    virtual ~SettingsCommandPacket();
     virtual void getId()const;
-    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
+    ~SettingsCommandPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
-    SettingsCommandPacket();
-    SettingsCommandPacket(std::string const&, bool);
+    virtual std::string getName()const;
     std::string getCommandString()const;
     void getSupressOutput()const;
+    SettingsCommandPacket(std::string const&, bool);
+    SettingsCommandPacket();
 };

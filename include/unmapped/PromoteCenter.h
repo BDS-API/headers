@@ -5,12 +5,10 @@
 
 namespace LayerFilters {
 
-class PromoteCenter {
+    class PromoteCenter {
 
-public:
-
-    PromoteCenter(Biome &, Biome &);
-//  void operator()(LayerDetails::NeighborhoodReader<Biome *, 1u, 1u> &)const; //TODO: incomplete function definition
-};
-
+    public:
+//      void operator()(LayerDetails::NeighborhoodReader<Biome *, 1u, 1u> &)const; //TODO: incomplete function definition
+        PromoteCenter(Biome &, Biome &);
+    };
 }

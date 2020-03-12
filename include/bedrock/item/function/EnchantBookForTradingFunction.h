@@ -1,26 +1,25 @@
 #pragma once
 
-#include "../../util/Random.h"
 #include "../condition/LootItemCondition.h"
-#include "../../../unmapped/LootTableContext.h"
-#include <memory>
-#include "./LootItemFunction.h"
-#include "../../../json/Value.h"
-#include <vector>
 #include "../ItemInstance.h"
-#include "../../../unmapped/Trade.h"
+#include "../../util/Random.h"
 #include "../ItemStack.h"
+#include "../../../unmapped/Trade.h"
+#include <vector>
+#include <memory>
+#include "../../../json/Value.h"
+#include "../../../unmapped/LootTableContext.h"
+#include "LootItemFunction.h"
 
 
 class EnchantBookForTradingFunction : LootItemFunction {
 
 public:
-    virtual ~EnchantBookForTradingFunction();
-    virtual void apply(ItemStack &, Random &, LootTableContext &);
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &);
-    virtual void apply(ItemInstance &, Random &, LootTableContext &);
     virtual void apply(ItemInstance &, Random &, Trade const&, LootTableContext &);
-
-    void deserialize(Json::Value, std::vector<std::unique_ptr<LootItemCondition, std::default_delete<LootItemCondition>>, std::allocator<std::unique_ptr<LootItemCondition, std::default_delete<LootItemCondition>>>> &);
-    EnchantBookForTradingFunction(std::vector<std::unique_ptr<LootItemCondition, std::default_delete<LootItemCondition>>, std::allocator<std::unique_ptr<LootItemCondition, std::default_delete<LootItemCondition>>>> &);
+    virtual void apply(ItemInstance &, Random &, LootTableContext &);
+    virtual void apply(ItemStack &, Random &, LootTableContext &);
+    ~EnchantBookForTradingFunction();
+    EnchantBookForTradingFunction(std::vector<std::unique_ptr<LootItemCondition>> &);
+    void deserialize(Json::Value, std::vector<std::unique_ptr<LootItemCondition>> &);
 };

@@ -1,23 +1,21 @@
 #pragma once
 
-#include "./FilterInput.h"
 #include <string>
 
 
 class FilterInput {
 
 public:
-
-    FilterInput(int);
-    ~FilterInput();
     void getType()const;
+    FilterInput(char const*);
+    FilterInput(int);
     std::string getString()const;
-    FilterInput(float);
-    FilterInput(std::string const&);
+    ~FilterInput();
+    void getBool()const;
     FilterInput(bool);
     FilterInput(FilterInput const&);
-    FilterInput(char const*);
-    void getInt()const;
-    void getBool()const;
+    FilterInput(std::string const&);
+    FilterInput(float);
     void getFloat()const;
+    void getInt()const;
 };

@@ -1,136 +1,146 @@
 #pragma once
 
-#include <utility>
-#include "../../unmapped/ContentIdentity.h"
-#include <unordered_map>
-#include <string>
-#include "../../unmapped/LegacyPackIdVersion.h"
-#include "../../unmapped/SemVersion.h"
-#include "../../unmapped/BaseGameVersion.h"
-#include "../../unmapped/PackIdVersion.h"
-#include <memory>
-#include "./PackManifest.h"
 #include "../../unmapped/ResourceInformation.h"
-#include <vector>
-#include "../../unmapped/ResourceLocation.h"
-#include <functional>
-#include "../../unmapped/ResourceMetadata.h"
+#include "../../unmapped/ContentIdentity.h"
+#include <string>
+#include <unordered_map>
 #include "../../json/Value.h"
+#include "../../unmapped/LegacyPackIdVersion.h"
+#include "../../unmapped/BaseGameVersion.h"
+#include <functional>
+#include <vector>
+#include "../../unmapped/SemVersion.h"
+#include <memory>
+#include "../../unmapped/ResourceMetadata.h"
+#include "../../unmapped/PackIdVersion.h"
+#include <utility>
+#include "../../unmapped/ResourceLocation.h"
 
 
 class PackManifest {
 
 public:
+    class CapabilityRegistry;
+
     static std::string MarioPackId;
     static std::string STRING_TO_PACK_SCOPE;
 
-    virtual ~PackManifest();
+    ~PackManifest();
     virtual void clone()const;
-
-//  PackManifest(ManifestType); //TODO: incomplete function definition
-    void getLocation()const;
-    void setLocation(ResourceLocation const&);
-    std::string getDescription()const;
-    std::string getDescriptionRaw()const;
-    void setDescription(std::string const&);
     std::string getName()const;
-    std::string getNameRaw()const;
-    std::string getNameForTelemetry()const;
-    void setName(std::string const&);
-    bool isUsingPackNameKeyword()const;
-    bool isUsingPackDescriptionKeyword()const;
-    void getMetaData()const;
-    void setMetadata(ResourceMetadata const&);
-    bool hasExpired()const;
-    void setExpired(bool);
-    void getPackType()const;
-//  void setPackType(PackType); //TODO: incomplete function definition
-    bool hasPlugins()const;
-    void setHasPlugins(bool);
-    bool hasClientData()const;
-    void setHasClientData(bool);
-    bool hasEducationMetadata()const;
-    void setHasEducationMetadata(bool);
-    void getPackCategory()const;
-//  void setPackCategory(PackCategory); //TODO: incomplete function definition
-//  void addPackCapability(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
+    std::string getLanguageCodesForPackKeywords()const;
 //  bool hasPackCapability(gsl::basic_string_span<char const, -1l>)const; //TODO: incomplete function definition
-    void setPackCapabilitiesTrusted();
-    std::string getCapabilityTypes();
 //  std::string PackScopeToString(PackScope); //TODO: incomplete function definition
-    void StringToPackScope(std::string const&);
-    void getPackOrigin()const;
-//  void setPackOrigin(PackOrigin); //TODO: incomplete function definition
-    void getPackSettings()const;
-    void setPackSettings(Json::Value const&);
-    void getIdentity()const;
+//  void setManifestType(ManifestType const&); //TODO: incomplete function definition
+    void setLastModifiedDate(std::string const&);
+    void getDependentPackIdentities()const;
+    void _serializeDependencies(Json::Value &)const;
+    void getContentIdentity()const;
+    void setLocation(ResourceLocation const&);
     void setIdentity(PackIdVersion const&);
-    void getMinEngineVersion()const;
-    void setMinEngineVersion(SemVersion const&);
-    void getRequiredBaseGameVersion()const;
+    void getOptionLockedState()const;
+//  void setOriginalFormatVersion(PackManifestFormat); //TODO: incomplete function definition
+    std::string getNameRaw()const;
+//  void setPackOrigin(PackOrigin); //TODO: incomplete function definition
+    void _serializeVersion(Json::Value &, SemVersion const&)const;
+    void getOriginalFormatVersion()const;
     void getFormatVersion()const;
-    bool isPremium()const;
-    void setRequiredBaseGameVersion(BaseGameVersion const&);
+    void setExpired(bool);
+//  void setFormatVersion(PackManifestFormat); //TODO: incomplete function definition
+    void _serializeModules(Json::Value &)const;
+    void setInvalidUUID();
+    std::string getLastModifiedDate()const;
+    void _serailizeLegacyModuleDependencies(Json::Value &)const;
+//  void setOptionLockedState(TemplateLockState); //TODO: incomplete function definition
+//  void setPackCategory(PackCategory); //TODO: incomplete function definition
+    std::string getDescriptionRaw()const;
+    void getIdentity()const;
+    void setHasClientData(bool);
+    bool hasClientData()const;
+    void getManifestOrigin()const;
+    void setHasEducationMetadata(bool);
+    void clearLegacyModuleDependencies();
+    bool isUsingPackDescriptionKeyword()const;
+    bool canBeRedownloaded()const;
+    void getMetaData()const;
+    void getModules()const;
+    void addLegacyModuleDependency(LegacyPackIdVersion const&);
+//  bool hasModuleType(ResourceInformation::ResourceType)const; //TODO: incomplete function definition
+    void setSourceIdentity(ContentIdentity const&);
+    void setMetadata(ResourceMetadata const&);
+    bool isTitleLocked()const;
+    bool hasPlugins()const;
+    void getPackCategory()const;
+    void setLanguageCodesForPackKeywords(std::vector<std::string>);
+    void getLegacyModuleDependencies()const;
+    bool isRestrictedPack()const;
+    void addPackDependency(PackIdVersion const&);
+    void setHasPlugins(bool);
+//  void setManifestOrigin(ManifestOrigin const&); //TODO: incomplete function definition
+    void setPackIconLocation(ResourceLocation const&);
+    void addModule(ResourceInformation const&);
+    void StringToPackScope(std::string const&);
+//  void setPackScope(PackScope); //TODO: incomplete function definition
+//  void addPackCapability(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
+    PackManifest(PackManifest const&);
+    bool isPlatformLocked()const;
+    void setContentIdentity(ContentIdentity const&);
+    void setLastModifiedDate(long);
+    void getManifestType()const;
+    void clearPackDependencies();
+    void getPackType()const;
+    std::string getCapabilityTypes();
+    void _serializeMeta(Json::Value &)const;
+    void getPackSize()const;
+//  void serialize(PackManifestFormat, Json::Value &)const; //TODO: incomplete function definition
+    std::string getNameForTelemetry()const;
+    void setMinEngineVersion(SemVersion const&);
+    void getPackSettings()const;
     bool isHidden()const;
     void setHidden(bool);
-//  bool isPremiumLocked(IEntitlementManager &)const; //TODO: incomplete function definition
-    bool isRestrictedPack()const;
-    void getManifestOrigin()const;
-//  void setManifestOrigin(ManifestOrigin const&); //TODO: incomplete function definition
-    void getManifestType()const;
-//  void setManifestType(ManifestType const&); //TODO: incomplete function definition
-    void getPackIconLocation()const;
-    void setPackIconLocation(ResourceLocation const&);
-    bool hasModule(PackIdVersion const&)const;
-//  bool hasModuleType(ResourceInformation::ResourceType)const; //TODO: incomplete function definition
-    void addModule(ResourceInformation const&);
-    void getModules()const;
-    void clearModules();
-    void getDependentPackIdentities()const;
-    void addPackDependency(PackIdVersion const&);
-    void clearPackDependencies();
-    void addLegacyModuleDependency(LegacyPackIdVersion const&);
-    void getLegacyModuleDependencies()const;
-    bool hasLegacyModuleDependencies()const;
-    void clearLegacyModuleDependencies();
-    void getPackSize()const;
-    void setPackSize(unsigned long);
-    bool hasValidUUID()const;
-    void setInvalidUUID();
-    bool isPlatformLocked()const;
-    void setPlatformLocked(bool);
-    bool isTitleLocked()const;
-    void setTitleLocked(bool);
-    void getOptionLockedState()const;
-//  void setOptionLockedState(TemplateLockState); //TODO: incomplete function definition
-    void getPackScope()const;
-//  void setPackScope(PackScope); //TODO: incomplete function definition
-//  void serialize(PackManifestFormat, Json::Value &)const; //TODO: incomplete function definition
     void _serializeHeader(Json::Value &)const;
-    void _serializeModules(Json::Value &)const;
-    void _serializeDependencies(Json::Value &)const;
-    void _serializeMeta(Json::Value &)const;
-    void _serailizeLegacyModuleDependencies(Json::Value &)const;
-    void _serializeVersion(Json::Value &, SemVersion const&)const;
-    std::string getLastModifiedDate()const;
-    void setLastModifiedDate(long);
-    void setLastModifiedDate(std::string const&);
-//  void setFormatVersion(PackManifestFormat); //TODO: incomplete function definition
-    void getOriginalFormatVersion()const;
-//  void setOriginalFormatVersion(PackManifestFormat); //TODO: incomplete function definition
-    std::string generateBaseIconPath()const;
-    void getFileSystemFromOrigin()const;
-    std::string getZipFolderPath()const;
-    std::string generateIconPath()const;
-    void getContentIdentity()const;
-    void setContentIdentity(ContentIdentity const&);
-    void setLanguageCodesForPackKeywords(std::vector<std::string, std::allocator<std::string>>);
-    std::string getLanguageCodesForPackKeywords()const;
-    std::string getPackNameLocalization()const;
+    void getLocation()const;
+    bool hasExpired()const;
+//  PackManifest(ManifestType); //TODO: incomplete function definition
+    void getPackOrigin()const;
+    void setName(std::string const&);
+    bool hasValidUUID()const;
+    void clearModules();
 //  void setLocalizedNameKeywords(std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&); //TODO: incomplete function definition
+    void setPackSize(unsigned long);
+//  bool isPremiumLocked(IEntitlementManager &)const; //TODO: incomplete function definition
+    void setTitleLocked(bool);
+//  void setPackType(PackType); //TODO: incomplete function definition
+    std::string generateBaseIconPath()const;
+    std::string getZipFolderPath()const;
+    bool hasLegacyModuleDependencies()const;
+    void setPackSettings(Json::Value const&);
+    bool isUsingPackNameKeyword()const;
+    void setRequiredBaseGameVersion(BaseGameVersion const&);
+    void getRequiredBaseGameVersion()const;
+    void getPackIconLocation()const;
     void setCanBeRedownloaded(bool);
-    bool canBeRedownloaded()const;
+    bool hasModule(PackIdVersion const&)const;
     void getSourceIdentity()const;
-    void setSourceIdentity(ContentIdentity const&);
-    PackManifest(PackManifest const&);
+    std::string getDescription()const;
+    bool hasEducationMetadata()const;
+    void getMinEngineVersion()const;
+    void getPackScope()const;
+    bool isPremium()const;
+    void setPackCapabilitiesTrusted();
+    std::string generateIconPath()const;
+    void getFileSystemFromOrigin()const;
+    std::string getPackNameLocalization()const;
+    void setPlatformLocked(bool);
+    void setDescription(std::string const&);
+    class CapabilityRegistry {
+
+    public:
+        void _get();
+//      void registerCapability(gsl::basic_string_span<char const, -1l>, bool); //TODO: incomplete function definition
+        std::string getCapabilities();
+        std::string getTrustedCapabilities();
+        ~CapabilityRegistry();
+        CapabilityRegistry();
+    };
 };

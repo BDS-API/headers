@@ -1,11 +1,10 @@
 #pragma once
 
-#include "../bedrock/Scheduler.h"
-#include <memory>
-#include "./BackgroundTask.h"
-#include "./WorkerPool.h"
 #include <optional>
 #include <string>
+#include "../bedrock/Scheduler.h"
+#include <memory>
+#include "BackgroundTask.h"
 
 
 class WorkerPool {
@@ -14,28 +13,27 @@ public:
     static long sAllPools;
     static long sAllPoolsMutex;
 
-
-    void begin()const;
+//  WorkerPool(std::string, unsigned long, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, bool); //TODO: incomplete function definition
+    bool hasPendingWork()const;
     bool isAsync()const;
+    void getBacklogSizeBusyLimit()const;
+    ~WorkerPool();
+//  void shiftWorkersPriority(Bedrock::Threading::OSThreadPriority const&); //TODO: incomplete function definition
     void end()const;
+    void allWorkersIdle()const;
+    void getThreadIds()const;
+    void resortPriorityQueue();
+    WorkerPool(std::string, Scheduler &);
     void getAllPools();
+    void _checkPendingWork();
     void _registerPool(WorkerPool &);
     void _unregisterPool(WorkerPool &);
-//  WorkerPool(std::string, unsigned long, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, bool); //TODO: incomplete function definition
-    WorkerPool(std::string, Scheduler &);
-    ~WorkerPool();
+    void size()const;
+    bool hasReadyWork()const;
     void kick(unsigned long);
-    void getBacklogSizeBusyLimit()const;
     void queue(std::shared_ptr<BackgroundTask>, bool);
     void tryPop(int);
-    void _checkPendingWork();
-    void resortPriorityQueue();
-    void size()const;
-    void getThreadIds()const;
-    void allWorkersIdle()const;
-//  void shiftWorkersPriority(Bedrock::Threading::OSThreadPriority const&); //TODO: incomplete function definition
-    bool hasPendingWork()const;
     void getNextPendingWorkTime()const;
+    void begin()const;
     void getPerformanceInfo();
-    bool hasReadyWork()const;
 };

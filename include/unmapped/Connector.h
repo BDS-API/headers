@@ -5,7 +5,13 @@
 class Connector {
 
 public:
-    virtual ~Connector();
+    class NatPunchInfo;
 
+    ~Connector();
     Connector();
+    class NatPunchInfo {
+
+    public:
+        NatPunchInfo();
+    };
 };

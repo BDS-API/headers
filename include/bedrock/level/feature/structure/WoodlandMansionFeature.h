@@ -1,21 +1,20 @@
 #pragma once
 
-#include "./StructureFeature.h"
-#include "../../../util/BlockPos.h"
+#include "../../../util/ChunkPos.h"
+#include "../../../../unmapped/BiomeSource.h"
 #include "../../chunksource/OverworldGenerator.h"
 #include "../../../../unmapped/Dimension.h"
 #include "../../../util/Random.h"
-#include "../../../../unmapped/BiomeSource.h"
-#include "../../../util/ChunkPos.h"
+#include "../../../util/BlockPos.h"
+#include "StructureFeature.h"
 
 
 class WoodlandMansionFeature : StructureFeature {
 
 public:
-    virtual ~WoodlandMansionFeature();
+    ~WoodlandMansionFeature();
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos &);
-    virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);
     virtual void createStructureStart(Dimension &, BiomeSource &, Random &, ChunkPos const&);
-
+    virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int);
     WoodlandMansionFeature(OverworldGenerator &, unsigned int);
 };

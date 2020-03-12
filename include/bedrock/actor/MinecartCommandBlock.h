@@ -1,25 +1,24 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../../unmapped/VariantParameterList.h"
-#include "../../unmapped/DataLoadHelper.h"
 #include "unmapped/ActorDefinitionGroup.h"
+#include "Minecart.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../nbt/CompoundTag.h"
-#include "./Minecart.h"
+#include "../../unmapped/DataLoadHelper.h"
 
 
 class MinecartCommandBlock : Minecart {
 
 public:
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual ~MinecartCommandBlock();
-    virtual bool canShowNameTag()const;
-    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void getType();
     virtual void getDefaultDisplayBlock()const;
-    virtual void applyNaturalSlowdown();
+    ~MinecartCommandBlock();
     virtual void lazyInitDisplayBlock();
-
+    virtual void addAdditionalSaveData(CompoundTag &);
+    virtual void applyNaturalSlowdown();
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual void getType();
+    virtual bool canShowNameTag()const;
     MinecartCommandBlock(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

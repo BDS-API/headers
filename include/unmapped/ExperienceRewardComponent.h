@@ -1,16 +1,14 @@
 #pragma once
 
 #include "../bedrock/actor/Actor.h"
-#include "./ExperienceRewardComponent.h"
 
 
 class ExperienceRewardComponent {
 
 public:
-
-    void getOnBredExperience(Actor &)const;
-    void getOnDeathExperience(Actor &)const;
     ~ExperienceRewardComponent();
     ExperienceRewardComponent(ExperienceRewardComponent &&);
+    void getOnDeathExperience(Actor &)const;
+    void getOnBredExperience(Actor &)const;
     ExperienceRewardComponent();
 };

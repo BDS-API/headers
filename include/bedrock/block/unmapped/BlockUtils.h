@@ -3,9 +3,7 @@
 #include "../../../unmapped/Block.h"
 
 
-class BlockUtils {
-
-public:
+namespace BlockUtils {
 
     bool isFullFlowingWater(Block const&);
 };

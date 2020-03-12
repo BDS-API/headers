@@ -1,17 +1,16 @@
 #pragma once
 
+#include "ContentLogEndPoint.h"
 #include "../bedrock/eventing/IMinecraftEventing.h"
-#include "./ContentLogEndPoint.h"
 
 
 class WorldSessionEndPoint : ContentLogEndPoint {
 
 public:
-    virtual ~WorldSessionEndPoint();
-    virtual void flush();
-    virtual void setEnabled(bool);
+    ~WorldSessionEndPoint();
     virtual bool isEnabled()const;
 //  virtual void log(LogArea, LogLevel, char const*); //TODO: incomplete function definition
-
+    virtual void flush();
+    virtual void setEnabled(bool);
     WorldSessionEndPoint(IMinecraftEventing &);
 };

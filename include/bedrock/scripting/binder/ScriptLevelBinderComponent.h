@@ -2,7 +2,8 @@
 
 #include "../unmapped/ScriptEngine.h"
 #include "../ScriptObjectHandle.h"
-#include "./ScriptBinderComponent.h"
+#include <string>
+#include "ScriptBinderComponent.h"
 
 
 class ScriptLevelBinderComponent : ScriptBinderComponent {
@@ -10,11 +11,10 @@ class ScriptLevelBinderComponent : ScriptBinderComponent {
 public:
     static std::string TAG;
 
-    virtual ~ScriptLevelBinderComponent();
-    virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&);
-
-    ScriptLevelBinderComponent();
+    ~ScriptLevelBinderComponent();
+    virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const;
     ScriptLevelBinderComponent(unsigned int);
     void getIdentifier()const;
+    ScriptLevelBinderComponent();
 };

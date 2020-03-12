@@ -6,8 +6,7 @@
 class ActorAnimationControllerInfo {
 
 public:
-
-    ActorAnimationControllerInfo(HashedString const&);
     ActorAnimationControllerInfo();
     ~ActorAnimationControllerInfo();
+    ActorAnimationControllerInfo(HashedString const&);
 };

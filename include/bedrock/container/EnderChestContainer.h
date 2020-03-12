@@ -1,8 +1,8 @@
 #pragma once
 
-#include "./FillingContainer.h"
-#include "../actor/Player.h"
+#include "FillingContainer.h"
 #include "../block/actor/ChestBlockActor.h"
+#include "../actor/Player.h"
 
 
 class EnderChestContainer : FillingContainer {
@@ -10,10 +10,9 @@ class EnderChestContainer : FillingContainer {
 public:
     static long ITEMS_SIZE;
 
-    virtual ~EnderChestContainer();
-    virtual void startOpen(Player &);
     virtual void stopOpen(Player &);
-
-    EnderChestContainer();
+    ~EnderChestContainer();
+    virtual void startOpen(Player &);
     void setActiveChest(ChestBlockActor *);
+    EnderChestContainer();
 };

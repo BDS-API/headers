@@ -2,9 +2,8 @@
 
 
 
-class Palette {
+namespace Palette {
 
-public:
     static long WHITE;
     static long ORANGE;
     static long MAGENTA;
@@ -22,7 +21,6 @@ public:
     static long RED;
     static long BLACK;
 
-
-//  void getColor(PaletteColor); //TODO: incomplete function definition
     void fromByte(unsigned char);
+//  void getColor(PaletteColor); //TODO: incomplete function definition
 };

@@ -1,22 +1,20 @@
 #pragma once
 
 #include <string>
-#include "../../unmapped/BribeableComponent.h"
+#include "../../json/Value.h"
 #include <memory>
 #include "../../unmapped/EntityContext.h"
-#include "./BribeableDefinition.h"
-#include "../../json/Value.h"
+#include "../../unmapped/BribeableComponent.h"
 
 
 class BribeableDefinition {
 
 public:
-
-//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, BribeableDefinition>> &); //TODO: incomplete function definition
-    void addBribeItemByName(std::string const&);
-    void initialize(EntityContext &, BribeableComponent &);
-    void deserializeData(Json::Value &);
-    void serializeData(Json::Value &)const;
     BribeableDefinition();
+    void serializeData(Json::Value &)const;
+    void deserializeData(Json::Value &);
     ~BribeableDefinition();
+//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, BribeableDefinition>> &); //TODO: incomplete function definition
+    void initialize(EntityContext &, BribeableComponent &);
+    void addBribeItemByName(std::string const&);
 };

@@ -1,23 +1,21 @@
 #pragma once
 
 #include "../ItemInstance.h"
-#include "./ItemGroup.h"
 
 
 class ItemGroup {
 
 public:
-
-    ItemGroup();
     ~ItemGroup();
     ItemGroup(ItemGroup &&);
-    ItemGroup(ItemGroup const&);
+    bool isEmpty()const;
     ItemGroup(ItemInstance const&);
+    void getItemTemplate()const;
+    void getItemInstance()const;
+    ItemGroup();
+    ItemGroup(ItemGroup const&);
     void setCount(int);
     ItemGroup(ItemInstance const&, int);
-    void getItemInstance()const;
     void getItemType()const;
-    void getItemTemplate()const;
-    bool isEmpty()const;
     void getCount()const;
 };

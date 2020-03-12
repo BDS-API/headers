@@ -1,21 +1,20 @@
 #pragma once
 
-#include "./Goal.h"
-#include "../Horse.h"
+#include "Goal.h"
 #include <string>
+#include "../Horse.h"
 
 
 class SkeletonHorseTrapGoal : Goal {
 
 public:
-    virtual ~SkeletonHorseTrapGoal();
-    virtual bool canUse();
     virtual void start();
-    virtual void tick();
+    ~SkeletonHorseTrapGoal();
     virtual void appendDebugInfo(std::string &)const;
-
-    SkeletonHorseTrapGoal(Horse &, int, float);
+    virtual void tick();
+    virtual bool canUse();
     void _getClosestPlayer()const;
-//  void _createHorse(Difficulty const&); //TODO: incomplete function definition
 //  void _createSkeleton(Difficulty const&, Horse const&); //TODO: incomplete function definition
+//  void _createHorse(Difficulty const&); //TODO: incomplete function definition
+    SkeletonHorseTrapGoal(Horse &, int, float);
 };

@@ -1,20 +1,18 @@
 #pragma once
 
-#include "./RoomDefinition.h"
 #include <memory>
 
 
 class RoomDefinition {
 
 public:
-
     RoomDefinition();
-    RoomDefinition(int);
-    void setConnection(unsigned char const&, std::shared_ptr<RoomDefinition>);
-    void updateOpenings();
-    void findSource(int);
-    bool isSpecial();
     void countOpenings();
+    void findSource(int);
+    RoomDefinition(int);
+    void updateOpenings();
+    bool isSpecial();
+    void setConnection(unsigned char const&, std::shared_ptr<RoomDefinition>);
     ~RoomDefinition();
     RoomDefinition(RoomDefinition const&);
 };

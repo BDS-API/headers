@@ -6,6 +6,5 @@
 class Particle {
 
 public:
-
     void setColor(Color const&);
 };

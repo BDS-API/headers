@@ -1,8 +1,8 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup.h"
+#include "Animal.h"
 #include "unmapped/ActorDefinitionIdentifier.h"
-#include "./Animal.h"
+#include "unmapped/ActorDefinitionGroup.h"
 
 
 class PolarBear : Animal {
@@ -10,9 +10,8 @@ class PolarBear : Animal {
 public:
     static long STAND_ANIMATION_TICKS;
 
-    virtual ~PolarBear();
+    ~PolarBear();
     virtual void normalTick();
-
-    PolarBear(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
     void getStandingAnimationScale(float);
+    PolarBear(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

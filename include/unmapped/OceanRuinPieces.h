@@ -1,17 +1,15 @@
 #pragma once
 
-#include "./StructureManager.h"
-#include "../bedrock/util/Random.h"
-#include <memory>
 #include "../bedrock/level/structure/piece/StructurePiece.h"
-#include <vector>
 #include "../bedrock/util/BlockPos.h"
-#include <string>
+#include <vector>
+#include <memory>
+#include "../bedrock/util/Random.h"
+#include "StructureManager.h"
 
 
-class OceanRuinPieces {
+namespace OceanRuinPieces {
 
-public:
     static long RUIN_LOOT;
     static long BIG_RUIN_LOOT;
     static long STRUCTURE_RUIN_2_BRICK;
@@ -28,12 +26,11 @@ public:
     static long bigRuinsMossy;
     static long mSettings;
 
-
-    std::string _getSmallWarmRuin(Random &);
     std::string _getBigWarmRuin(Random &);
-//  void _addClusterRuins(StructureManager &, Random &, Rotation const&, BlockPos const&, OceanRuinConfiguration const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &); //TODO: incomplete function definition
-    void _allPositions(Random &, int, int, int);
-//  void _addPiece(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, OceanRuinConfiguration const&, bool, float); //TODO: incomplete function definition
+//  void addPieces(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, OceanRuinConfiguration const&); //TODO: incomplete function definition
     void init();
-//  void addPieces(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>, std::allocator<std::unique_ptr<StructurePiece, std::default_delete<StructurePiece>>>> &, Random &, OceanRuinConfiguration const&); //TODO: incomplete function definition
+//  void _addPiece(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, OceanRuinConfiguration const&, bool, float); //TODO: incomplete function definition
+    std::string _getSmallWarmRuin(Random &);
+    void _allPositions(Random &, int, int, int);
+//  void _addClusterRuins(StructureManager &, Random &, Rotation const&, BlockPos const&, OceanRuinConfiguration const&, std::vector<std::unique_ptr<StructurePiece>> &); //TODO: incomplete function definition
 };

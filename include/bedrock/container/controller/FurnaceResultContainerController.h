@@ -1,16 +1,15 @@
 #pragma once
 
-#include "../../item/ItemInstance.h"
 #include <memory>
+#include "ContainerController.h"
 #include "../model/ContainerModel.h"
-#include "./ContainerController.h"
+#include "../../item/ItemInstance.h"
 
 
 class FurnaceResultContainerController : ContainerController {
 
 public:
-    virtual ~FurnaceResultContainerController();
+    ~FurnaceResultContainerController();
     virtual bool isItemAllowed(ItemInstance const&)const;
-
     FurnaceResultContainerController(std::shared_ptr<ContainerModel>);
 };

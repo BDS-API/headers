@@ -1,20 +1,18 @@
 #pragma once
 
-#include "../../io/ReadOnlyBinaryStream.h"
-#include <string>
 #include "../../io/BinaryStream.h"
-#include "./Packet.h"
+#include "../../io/ReadOnlyBinaryStream.h"
+#include "Packet.h"
 
 
 class SetLastHurtByPacket : Packet {
 
 public:
-    virtual ~SetLastHurtByPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
+    virtual void getId()const;
+    ~SetLastHurtByPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
+    virtual std::string getName()const;
     SetLastHurtByPacket();
 //  SetLastHurtByPacket(ActorType); //TODO: incomplete function definition
 };

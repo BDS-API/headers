@@ -1,24 +1,23 @@
 #pragma once
 
-#include "./LootTableContext.h"
-#include "../json/Value.h"
-#include "../bedrock/util/Random.h"
-#include <memory>
-#include "../bedrock/item/ItemStack.h"
-#include <vector>
 #include "../bedrock/item/condition/LootItemCondition.h"
+#include "../json/Value.h"
+#include <vector>
+#include "../bedrock/item/ItemStack.h"
+#include <memory>
+#include "../bedrock/util/Random.h"
+#include "LootTableContext.h"
 
 
 class LootPoolEntry {
 
 public:
-    virtual ~LootPoolEntry();
-
+    ~LootPoolEntry();
     void getConditions()const;
-    void getWeight(float)const;
-    void createItem(std::vector<ItemStack, std::allocator<ItemStack>> &, Random &, LootTableContext &);
+    LootPoolEntry(int, int, std::vector<std::unique_ptr<LootItemCondition>> &);
+    LootPoolEntry();
     bool isExperimentalOnly()const;
     void deserialize(Json::Value);
-    LootPoolEntry(int, int, std::vector<std::unique_ptr<LootItemCondition, std::default_delete<LootItemCondition>>, std::allocator<std::unique_ptr<LootItemCondition, std::default_delete<LootItemCondition>>>> &);
-    LootPoolEntry();
+    void getWeight(float)const;
+    void createItem(std::vector<ItemStack> &, Random &, LootTableContext &);
 };

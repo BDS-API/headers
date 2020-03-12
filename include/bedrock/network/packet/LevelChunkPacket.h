@@ -2,26 +2,31 @@
 
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../util/ChunkPos.h"
-#include <string>
+#include "Packet.h"
 
 
 class LevelChunkPacket : Packet {
 
 public:
+    class SubChunkMetadata;
 
-    virtual ~LevelChunkPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
+    virtual void getId()const;
+    ~LevelChunkPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
-    LevelChunkPacket();
-    LevelChunkPacket(ChunkPos const&, bool);
-    void writeCacheMetadata(BinaryStream &)const;
-    void readCacheMetadata(ReadOnlyBinaryStream &);
+    virtual std::string getName()const;
     void getMetadata()const;
-    void pushSubChunkMetadata(unsigned long);
+    void readCacheMetadata(ReadOnlyBinaryStream &);
     void getCacheBlobsCount()const;
+    LevelChunkPacket();
+    void writeCacheMetadata(BinaryStream &)const;
+    LevelChunkPacket(ChunkPos const&, bool);
+    void pushSubChunkMetadata(unsigned long);
+    class SubChunkMetadata {
+
+    public:
+        SubChunkMetadata(unsigned long);
+        SubChunkMetadata();
+    };
 };

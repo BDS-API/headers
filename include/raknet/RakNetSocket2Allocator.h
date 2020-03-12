@@ -1,16 +1,13 @@
 #pragma once
 
-#include "./RakNetSocket2.h"
+#include "RakNetSocket2.h"
 
 
 namespace RakNet {
 
-class RakNetSocket2Allocator {
+    namespace RakNetSocket2Allocator {
 
-public:
-
-    void DeallocRNS2(RakNet::RakNetSocket2 *);
-    void AllocRNS2();
-};
-
+        void AllocRNS2();
+        void DeallocRNS2(RakNet::RakNetSocket2 *);
+    };
 }

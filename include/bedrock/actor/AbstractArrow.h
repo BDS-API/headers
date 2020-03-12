@@ -1,41 +1,40 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../util/Vec2.h"
-#include "./Actor.h"
+#include "Player.h"
 #include "../../unmapped/VariantParameterList.h"
-#include "../util/Vec3.h"
-#include "../../unmapped/DataLoadHelper.h"
 #include "unmapped/ActorDefinitionGroup.h"
+#include "Actor.h"
+#include "../util/Vec3.h"
+#include "unmapped/ActorDefinitionIdentifier.h"
 #include "../nbt/CompoundTag.h"
-#include "./Player.h"
+#include "../../unmapped/DataLoadHelper.h"
 
 
 class AbstractArrow : Actor {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual ~AbstractArrow();
-    virtual void lerpTo(Vec3 const&, Vec2 const&, int);
-    virtual void lerpMotion(Vec3 const&);
-    virtual void normalTick();
-    virtual void getShadowHeightOffs();
+    virtual void getSourceUniqueID()const;
     virtual void getShadowRadius()const;
     virtual void playerTouch(Player &);
-    virtual void getSourceUniqueID()const;
-    virtual bool canChangeDimensions()const;
-    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void shoot(Vec3 const&, float, float, Vec3 const&);
     virtual void _playPickupSound();
-
-    AbstractArrow(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void _defineEntityData();
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+    virtual void lerpTo(Vec3 const&, Vec2 const&, int);
+    virtual void getShadowHeightOffs();
+    virtual void lerpMotion(Vec3 const&);
+    virtual void addAdditionalSaveData(CompoundTag &);
+    virtual bool canChangeDimensions()const;
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual void normalTick();
+    virtual void shoot(Vec3 const&, float, float, Vec3 const&);
+    ~AbstractArrow();
+    void _isPlayerOwned()const;
+    void getBaseDamage();
     void _canPickup(Player const&)const;
     void setBaseDamage(float);
-    void getBaseDamage();
-    void setIsPlayerOwned(bool);
+    AbstractArrow(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
     void setIsCreative(bool);
+    void setIsPlayerOwned(bool);
     void setFavoredSlot(int);
-    void _isPlayerOwned()const;
+    void _defineEntityData();
 };

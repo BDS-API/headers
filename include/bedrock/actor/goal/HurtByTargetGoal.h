@@ -1,21 +1,19 @@
 #pragma once
 
-#include <memory>
-#include "./TargetGoal.h"
-#include "../../../unmapped/MobDescriptor.h"
-#include <vector>
-#include "../Mob.h"
 #include <string>
+#include "../Mob.h"
+#include <vector>
+#include "TargetGoal.h"
+#include "../../../unmapped/MobDescriptor.h"
 
 
 class HurtByTargetGoal : TargetGoal {
 
 public:
-    virtual ~HurtByTargetGoal();
     virtual bool canUse();
+    ~HurtByTargetGoal();
+    virtual void alertOther(Mob *, Mob *);
     virtual void start();
     virtual void appendDebugInfo(std::string &)const;
-    virtual void alertOther(Mob *, Mob *);
-
-    HurtByTargetGoal(Mob &, std::vector<MobDescriptor, std::allocator<MobDescriptor>> const&, bool);
+    HurtByTargetGoal(Mob &, std::vector<MobDescriptor> const&, bool);
 };

@@ -1,29 +1,26 @@
 #pragma once
 
-#include "../../../unmapped/PackInstanceId.h"
-#include "../../../unmapped/BaseGameVersion.h"
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include <memory>
-#include "./Packet.h"
+#include "../../../unmapped/PackInstanceId.h"
 #include <vector>
-#include <string>
+#include "Packet.h"
+#include "../../../unmapped/BaseGameVersion.h"
 
 
 class ResourcePackStackPacket : Packet {
 
 public:
-    virtual ~ResourcePackStackPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
+    ~ResourcePackStackPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
+    virtual std::string getName()const;
+    virtual void getId()const;
+    bool isExperimental()const;
+    ResourcePackStackPacket(std::vector<PackInstanceId>, std::vector<PackInstanceId>, BaseGameVersion const&, bool, bool);
+    void getBaseGameVersion()const;
     ResourcePackStackPacket();
-    ResourcePackStackPacket(std::vector<PackInstanceId, std::allocator<PackInstanceId>>, std::vector<PackInstanceId, std::allocator<PackInstanceId>>, BaseGameVersion const&, bool, bool);
+    bool isTexturePackRequired()const;
     void getAddOnIdsAndVersions()const;
     void getTexturePackIdsAndVersions()const;
-    bool isTexturePackRequired()const;
-    bool isExperimental()const;
-    void getBaseGameVersion()const;
 };

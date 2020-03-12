@@ -3,19 +3,17 @@
 #include "../../io/BinaryStream.h"
 #include "../../io/ReadOnlyBinaryStream.h"
 #include "../../actor/ItemActor.h"
-#include "./Packet.h"
-#include <string>
+#include "Packet.h"
 
 
 class AddItemActorPacket : Packet {
 
 public:
-    virtual ~AddItemActorPacket();
     virtual void getId()const;
-    virtual std::string getName()const;
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-
-    AddItemActorPacket();
+    ~AddItemActorPacket();
+    virtual std::string getName()const;
     AddItemActorPacket(ItemActor &);
+    AddItemActorPacket();
 };

@@ -1,18 +1,16 @@
 #pragma once
 
-#include "./PackManifest.h"
-#include "./WorldTemplatePackManifest.h"
+#include "PackManifest.h"
 
 
 class WorldTemplatePackManifest : PackManifest {
 
 public:
-    virtual ~WorldTemplatePackManifest();
     virtual void clone()const;
-
-    WorldTemplatePackManifest();
+    ~WorldTemplatePackManifest();
     WorldTemplatePackManifest(PackManifest &&);
+    WorldTemplatePackManifest(WorldTemplatePackManifest const&);
 //  void setGameType(GameType); //TODO: incomplete function definition
     void getGameType()const;
-    WorldTemplatePackManifest(WorldTemplatePackManifest const&);
+    WorldTemplatePackManifest();
 };

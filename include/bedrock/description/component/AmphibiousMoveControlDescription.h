@@ -1,13 +1,12 @@
 #pragma once
 
-#include "./MoveControlDescription.h"
+#include "MoveControlDescription.h"
 
 
 class AmphibiousMoveControlDescription : MoveControlDescription {
 
 public:
+    ~AmphibiousMoveControlDescription();
     virtual void getJsonName()const;
-    virtual ~AmphibiousMoveControlDescription();
-
     AmphibiousMoveControlDescription();
 };

@@ -1,11 +1,9 @@
 #pragma once
 
-#include "./LevelChunk.h"
+#include "LevelChunk.h"
 
 
-class LevelChunkPhase1Deleter {
-
-public:
+namespace LevelChunkPhase1Deleter {
 
     void operator()(LevelChunk *);
 };

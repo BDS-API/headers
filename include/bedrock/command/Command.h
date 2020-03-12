@@ -1,10 +1,10 @@
 #pragma once
 
-#include "./CommandSelectorBase.h"
-#include "./CommandFlag.h"
-#include "./CommandOutput.h"
-#include "orgin/CommandOrigin.h"
 #include <string>
+#include "CommandSelectorBase.h"
+#include "CommandFlag.h"
+#include "origin/CommandOrigin.h"
+#include "CommandOutput.h"
 
 
 class Command {
@@ -12,18 +12,17 @@ class Command {
 public:
     static std::string WILDCARD_TOKEN;
 
-    virtual ~Command();
-
-    Command();
-    std::string getCommandName()const;
-    bool hasFlag(CommandFlag)const;
-    void getRegistry()const;
-    void run(CommandOrigin const&, CommandOutput &)const;
-    void sendTelemetry(CommandOrigin const&, CommandOutput const&)const;
+    ~Command();
     void getPlayerFromOrigin(CommandOrigin const&);
-    void shouldSendTelemetry(CommandOrigin const&)const;
-    void validData(int, unsigned short &, CommandOutput &);
-    void validRange(int, int, int, CommandOutput &);
     bool isWildcard(CommandSelectorBase const&);
+    Command();
+    void sendTelemetry(CommandOrigin const&, CommandOutput const&)const;
+    void validData(int, unsigned short &, CommandOutput &);
+    void getRegistry()const;
+    std::string getCommandName()const;
+    void validRange(int, int, int, CommandOutput &);
     bool isTemplateLockedAction(CommandOrigin const&);
+    void run(CommandOrigin const&, CommandOutput &)const;
+    bool hasFlag(CommandFlag)const;
+    void shouldSendTelemetry(CommandOrigin const&)const;
 };

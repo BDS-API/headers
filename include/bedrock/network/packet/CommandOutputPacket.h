@@ -1,24 +1,22 @@
 #pragma once
 
 #include "../../io/BinaryStream.h"
-#include "../../command/orgin/CommandOrigin.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
 #include "../../command/CommandOutput.h"
-#include <string>
+#include "Packet.h"
+#include "../../command/origin/CommandOrigin.h"
 
 
 class CommandOutputPacket : Packet {
 
 public:
-    virtual ~CommandOutputPacket();
-    virtual void getId()const;
-    virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
+    ~CommandOutputPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
-    CommandOutputPacket();
+    virtual std::string getName()const;
+    virtual void getId()const;
+    virtual void write(BinaryStream &)const;
     CommandOutputPacket(CommandOrigin const&, CommandOutput const&);
-    void getOriginData()const;
+    CommandOutputPacket();
     void getOutput()const;
+    void getOriginData()const;
 };

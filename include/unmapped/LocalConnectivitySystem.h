@@ -1,13 +1,11 @@
 #pragma once
 
-#include "./LocalConnector.h"
+#include "LocalConnector.h"
 
 
-class LocalConnectivitySystem {
+namespace LocalConnectivitySystem {
 
-public:
-
+    void removeHost(LocalConnector &);
     void getHost()const;
     void addHost(LocalConnector &);
-    void removeHost(LocalConnector &);
 };

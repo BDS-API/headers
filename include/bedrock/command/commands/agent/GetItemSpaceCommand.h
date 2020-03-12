@@ -6,15 +6,13 @@
 
 namespace AgentCommands {
 
-class GetItemSpaceCommand : AgentCommands::Command {
+    class GetItemSpaceCommand : AgentCommands::Command {
 
-public:
-    virtual ~GetItemSpaceCommand();
-    virtual void execute();
-    virtual bool isDone();
-    virtual void fireCommandDoneEvent();
-
-    GetItemSpaceCommand(Player &, int, int);
-};
-
+    public:
+        ~GetItemSpaceCommand();
+        virtual bool isDone();
+        virtual void fireCommandDoneEvent();
+        virtual void execute();
+        GetItemSpaceCommand(Player &, int, int);
+    };
 }

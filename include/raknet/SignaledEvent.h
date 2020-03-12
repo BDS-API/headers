@@ -4,16 +4,14 @@
 
 namespace RakNet {
 
-class SignaledEvent {
+    class SignaledEvent {
 
-public:
-
-    SignaledEvent();
-    ~SignaledEvent();
-    void InitEvent();
-    void CloseEvent();
-    void SetEvent();
-    void WaitOnEvent(int);
-};
-
+    public:
+        void CloseEvent();
+        void WaitOnEvent(int);
+        void SetEvent();
+        SignaledEvent();
+        void InitEvent();
+        ~SignaledEvent();
+    };
 }

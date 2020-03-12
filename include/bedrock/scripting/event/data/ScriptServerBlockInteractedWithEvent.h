@@ -1,11 +1,10 @@
 #pragma once
 
-#include "../../../util/BlockPos.h"
 #include "../../unmapped/ScriptEngine.h"
-#include "./ScriptEventData.h"
-#include "../../../actor/unmapped/ActorUniqueID.h"
+#include "../../../util/BlockPos.h"
 #include "../../ScriptObjectHandle.h"
-#include <string>
+#include "ScriptEventData.h"
+#include "../../../actor/unmapped/ActorUniqueID.h"
 
 
 class ScriptServerBlockInteractedWithEvent : ScriptEventData {
@@ -13,12 +12,11 @@ class ScriptServerBlockInteractedWithEvent : ScriptEventData {
 public:
     static long mHash;
 
-    virtual ~ScriptServerBlockInteractedWithEvent();
+    ~ScriptServerBlockInteractedWithEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
-
-    void getHash();
+    std::string getName();
     ScriptServerBlockInteractedWithEvent();
     void setActorId(ActorUniqueID const&);
     void setBlockPos(BlockPos const&);
-    std::string getName();
+    void getHash();
 };

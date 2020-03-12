@@ -1,13 +1,12 @@
 #pragma once
 
-#include "./ChemistryAuxDataBlockItem.h"
-#include "./ItemStackBase.h"
+#include "ItemStackBase.h"
+#include "ChemistryAuxDataBlockItem.h"
 
 
 class ElementBlockItem : ChemistryAuxDataBlockItem {
 
 public:
-    virtual ~ElementBlockItem();
     virtual void fixupOnLoad(ItemStackBase &)const;
-
+    ~ElementBlockItem();
 };

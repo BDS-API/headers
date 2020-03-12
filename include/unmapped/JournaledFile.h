@@ -1,32 +1,30 @@
 #pragma once
 
-#include "../core/Path.h"
-#include <memory>
-#include <vector>
-#include "../core/Result.h"
-#include "../core/FileOpenMode.h"
-#include <functional>
 #include <string>
+#include "../core/FileOpenMode.h"
+#include "../core/Result.h"
+#include "../core/Path.h"
+#include <functional>
+#include <vector>
 
 
 class JournaledFile {
 
 public:
-
-    std::string findReadPath(Core::Path);
+    JournaledFile(std::function<Core::Result (Core::Path)> &&);
+    void getFile()const;
+    bool isOpen()const;
+    void write(void const*, unsigned long);
     std::string findBackupPath(Core::Path);
     void fileOrBackupExists(Core::Path);
-    void populateImportantFiles(Core::Path, std::vector<std::string, std::allocator<std::string>> &);
-    bool isOldFile(Core::Path);
+    void populateImportantFiles(Core::Path, std::vector<std::string> &);
     bool isNewFile(Core::Path);
-    JournaledFile(std::function<Core::Result (Core::Path)> &&);
     ~JournaledFile();
-    bool isOpen()const;
-    void close();
 //  void open(Core::Path, Core::FileOpenMode, Core::FileBufferingMode); //TODO: incomplete function definition
-    void _flushFiles();
-//  void write(void const*, unsigned long); //TODO: incomplete function definition
+    bool isOldFile(Core::Path);
     void flush();
+    void _flushFiles();
+    void close();
+    std::string findReadPath(Core::Path);
     void getFile();
-    void getFile()const;
 };

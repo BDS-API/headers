@@ -1,22 +1,21 @@
 #pragma once
 
-#include "../../util/BlockPos.h"
-#include "./BaseMoveToBlockGoal.h"
+#include <string>
 #include "../../block/unmapped/BlockSource.h"
 #include "../Mob.h"
-#include <string>
+#include "BaseMoveToBlockGoal.h"
+#include "../../util/BlockPos.h"
 
 
 class InspectBookshelfGoal : BaseMoveToBlockGoal {
 
 public:
-    virtual ~InspectBookshelfGoal();
-    virtual bool canContinueToUse();
-    virtual void tick();
-    virtual void appendDebugInfo(std::string &)const;
-    virtual bool isValidTarget(BlockSource &, BlockPos const&);
-    virtual void _canReach(BlockPos const&);
+    ~InspectBookshelfGoal();
     virtual void findTargetBlock();
-
+    virtual void _canReach(BlockPos const&);
+    virtual void appendDebugInfo(std::string &)const;
+    virtual void tick();
+    virtual bool isValidTarget(BlockSource &, BlockPos const&);
+    virtual bool canContinueToUse();
     InspectBookshelfGoal(Mob &, float, int, int, int, float);
 };

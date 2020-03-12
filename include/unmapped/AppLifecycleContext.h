@@ -5,12 +5,11 @@
 class AppLifecycleContext {
 
 public:
-
+    void setHasGraphicsContext(bool);
+    void transitionEndRenderingThisFrame();
+    void setFocus(bool);
     AppLifecycleContext();
     bool canRender()const;
-    void setHasGraphicsContext(bool);
-    void setFocus(bool);
-    void transitionBeginRenderingThisFrame();
     void applyNewState();
-    void transitionEndRenderingThisFrame();
+    void transitionBeginRenderingThisFrame();
 };

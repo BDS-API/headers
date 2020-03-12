@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../../util/Random.h"
-#include "../../block/unmapped/BlockSource.h"
-#include "./Feature.h"
 #include "../../util/BlockPos.h"
+#include "../../block/unmapped/BlockSource.h"
+#include "Feature.h"
+#include "../../util/Random.h"
 
 
 class EndPodiumFeature : Feature {
@@ -16,8 +16,7 @@ public:
     static long END_PODIUM_LOCATION;
     static long END_PODIUM_CHUNK_POSITION;
 
-    virtual ~EndPodiumFeature();
     virtual void place(BlockSource &, BlockPos const&, Random &)const;
-
+    ~EndPodiumFeature();
     EndPodiumFeature(bool);
 };

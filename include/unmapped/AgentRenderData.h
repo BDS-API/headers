@@ -5,6 +5,5 @@
 class AgentRenderData {
 
 public:
-
     AgentRenderData();
 };

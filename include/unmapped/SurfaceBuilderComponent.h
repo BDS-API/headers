@@ -5,6 +5,5 @@
 class SurfaceBuilderComponent {
 
 public:
-
     SurfaceBuilderComponent();
 };

@@ -1,16 +1,15 @@
 #pragma once
 
 #include "../../../json/Value.h"
-#include "./ComponentDescription.h"
+#include "ComponentDescription.h"
 
 
 class NpcDescription : ComponentDescription {
 
 public:
-    virtual void getJsonName()const;
-    virtual ~NpcDescription();
-    virtual void deserializeData(Json::Value &);
+    ~NpcDescription();
     virtual void serializeData(Json::Value &)const;
-
+    virtual void getJsonName()const;
+    virtual void deserializeData(Json::Value &);
     NpcDescription();
 };

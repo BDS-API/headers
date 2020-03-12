@@ -6,10 +6,9 @@
 class StructureTelemetryServerData {
 
 public:
-
-    StructureTelemetryServerData();
     void setHasBeenActivedByRedstone();
     bool hasBeenActivatedByRedstone();
+    StructureTelemetryServerData();
     void setHasLoadedIntoUnloadedChunks(BlockPos const&);
     bool hasBeenLoadedIntoUnloadedChunks(BlockPos const&);
 };

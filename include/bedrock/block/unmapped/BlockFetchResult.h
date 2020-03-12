@@ -1,18 +1,16 @@
 #pragma once
 
-#include "../../../unmapped/Block.h"
 #include "../../util/BlockPos.h"
-#include "./BlockFetchResult.h"
+#include "../../../unmapped/Block.h"
 
 
 class BlockFetchResult {
 
 public:
-
     BlockFetchResult(Block const&, BlockPos const&, unsigned int);
-    void getBlock()const;
-    void getBlockPos()const;
-    void getDistanceSquared()const;
     BlockFetchResult(BlockFetchResult &&);
+    void getDistanceSquared()const;
     BlockFetchResult(BlockFetchResult const&);
+    void getBlockPos()const;
+    void getBlock()const;
 };

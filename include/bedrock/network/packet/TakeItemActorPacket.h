@@ -1,21 +1,19 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorRuntimeID.h"
 #include "../../io/BinaryStream.h"
+#include "../../actor/unmapped/ActorRuntimeID.h"
 #include "../../io/ReadOnlyBinaryStream.h"
-#include "./Packet.h"
-#include <string>
+#include "Packet.h"
 
 
 class TakeItemActorPacket : Packet {
 
 public:
-    virtual ~TakeItemActorPacket();
-    virtual void getId()const;
     virtual std::string getName()const;
+    virtual void getId()const;
     virtual void write(BinaryStream &)const;
+    ~TakeItemActorPacket();
     virtual void read(ReadOnlyBinaryStream &);
-
     TakeItemActorPacket();
     TakeItemActorPacket(ActorRuntimeID, ActorRuntimeID);
 };

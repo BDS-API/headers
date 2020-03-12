@@ -1,15 +1,14 @@
 #pragma once
 
 #include "../Actor.h"
-#include "./BehaviorNode.h"
+#include "BehaviorNode.h"
 
 
 class ShootBowNode : BehaviorNode {
 
 public:
-    virtual ~ShootBowNode();
-    virtual void tick(Actor &);
+    ~ShootBowNode();
     virtual void initializeFromDefinition(Actor &);
-
+    virtual void tick(Actor &);
     ShootBowNode();
 };

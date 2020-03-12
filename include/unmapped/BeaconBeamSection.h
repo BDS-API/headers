@@ -5,6 +5,5 @@
 class BeaconBeamSection {
 
 public:
-
     BeaconBeamSection();
 };

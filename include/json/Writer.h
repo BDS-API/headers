@@ -4,12 +4,10 @@
 
 namespace Json {
 
-class Writer {
+    class Writer {
 
-public:
-    virtual ~Writer();
-
-    Writer();
-};
-
+    public:
+        ~Writer();
+        Writer();
+    };
 }
