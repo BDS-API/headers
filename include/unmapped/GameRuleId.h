@@ -5,7 +5,7 @@
 class GameRuleId {
 
 public:
-    GameRuleId(int);
     GameRuleId(GameRuleId const&);
     GameRuleId(GameRuleId &&);
+    GameRuleId(int);
 };

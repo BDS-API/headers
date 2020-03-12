@@ -1,18 +1,18 @@
 #pragma once
 
-#include <vector>
 #include <string>
+#include <vector>
 
 
 class CommandOutputMessage {
 
 public:
-    CommandOutputMessage(CommandOutputMessage &&);
-    CommandOutputMessage(CommandOutputMessage const&);
-    std::string getMessageId()const;
     void getType()const;
     ~CommandOutputMessage();
+    CommandOutputMessage(CommandOutputMessage const&);
+    CommandOutputMessage(CommandOutputMessage &&);
+    std::string getMessageId()const;
+//  CommandOutputMessage(CommandOutputMessageType, std::string const&, std::vector<std::string> &&); //TODO: incomplete function definition
     std::string getParams()const;
     std::string getUserMessage()const;
-//  CommandOutputMessage(CommandOutputMessageType, std::string const&, std::vector<std::string> &&); //TODO: incomplete function definition
 };

@@ -1,10 +1,7 @@
 #pragma once
 
-#include "../../../item/ItemInstance.h"
-#include "../../unmapped/ScriptEngine.h"
-#include "../../ScriptObjectHandle.h"
+#include <string>
 #include "ScriptEventData.h"
-#include "../../../actor/unmapped/ActorUniqueID.h"
 
 
 class ScriptServerActorCarriedItemChangedEvent : ScriptEventData {
@@ -14,10 +11,10 @@ public:
 
     ~ScriptServerActorCarriedItemChangedEvent();
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
-//  void setHand(HandSlot); //TODO: incomplete function definition
-    ScriptServerActorCarriedItemChangedEvent();
     void getHash();
-    void setActorId(ActorUniqueID const&);
-    void setItems(ItemInstance const&, ItemInstance const&);
     std::string getName();
+    void setItems(ItemInstance const&, ItemInstance const&);
+    ScriptServerActorCarriedItemChangedEvent();
+//  void setHand(HandSlot); //TODO: incomplete function definition
+    void setActorId(ActorUniqueID const&);
 };

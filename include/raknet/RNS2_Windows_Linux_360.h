@@ -1,6 +1,5 @@
 #pragma once
 
-#include "RNS2_SendParameters.h"
 
 
 namespace RakNet {

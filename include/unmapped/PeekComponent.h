@@ -5,9 +5,9 @@
 class PeekComponent {
 
 public:
-    void setHadTarget(bool);
-    PeekComponent();
-    PeekComponent(PeekComponent &&);
     void getDuration();
     void getHadTarget()const;
+    PeekComponent();
+    PeekComponent(PeekComponent &&);
+    void setHadTarget(bool);
 };

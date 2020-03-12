@@ -1,8 +1,7 @@
 #pragma once
 
-#include "../core/Path.h"
-#include <vector>
 #include <string>
+#include <vector>
 
 
 class PerfTimer {
@@ -15,26 +14,26 @@ public:
     static long test;
     static long mEnabled;
 
-    void _roundToPower2(unsigned int);
-    void _getStringId(char const*);
-    void rawRelease(PerfTimer::Node *, int);
+    void _getIdleQueue(int);
+    ~PerfTimer();
+    void serialize(PerfTimer::Node const*);
+    void releaseNodeChildren(PerfTimer::Node *, int);
+    void allocateNodes(std::vector<PerfTimer::Node *> &, int);
     void push(char const*, char const*, int);
+    void pop();
+    void _getStringId(char const*);
+    void _getMostSignificantBit(int);
     void init(Core::Path const&);
     void stopEventTimerForLog(std::string const&);
-    void allocateNodes(std::vector<PerfTimer::Node *> &, int);
-    ~PerfTimer();
-    void releaseNodeChildren(PerfTimer::Node *, int);
-    void startEventTimerForLog(std::string const&);
-    void _getIdleQueue(int);
-    void pop();
+    void rawRelease(PerfTimer::Node *, int);
     void allocate(int);
-    void _getMostSignificantBit(int);
-    void serialize(PerfTimer::Node const*);
+    void _roundToPower2(unsigned int);
+    void startEventTimerForLog(std::string const&);
 //  PerfTimer(std::thread::id); //TODO: incomplete function definition
     class Node {
 
     public:
-        Node();
         Node(char const*, char const*, int, double);
+        Node();
     };
 };

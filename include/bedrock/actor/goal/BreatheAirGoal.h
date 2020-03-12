@@ -1,20 +1,19 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class BreatheAirGoal : Goal {
 
 public:
-    virtual void tick();
+    virtual bool canUse();
     virtual bool canContinueToUse();
     virtual void start();
-    virtual bool canUse();
     virtual bool canBeInterrupted();
-    ~BreatheAirGoal();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
+    ~BreatheAirGoal();
     BreatheAirGoal(Mob &);
     void _findAirPosition();
     void _determineApproximateDepth();

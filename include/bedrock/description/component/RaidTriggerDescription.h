@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "ComponentDescription.h"
 
 
 class RaidTriggerDescription : ComponentDescription {
 
 public:
-    virtual void getJsonName()const;
     virtual void serializeData(Json::Value &)const;
-    ~RaidTriggerDescription();
     virtual void deserializeData(Json::Value &);
+    ~RaidTriggerDescription();
+    virtual void getJsonName()const;
     RaidTriggerDescription();
 };

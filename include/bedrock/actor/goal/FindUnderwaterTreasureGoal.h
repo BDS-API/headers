@@ -1,20 +1,19 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class FindUnderwaterTreasureGoal : Goal {
 
 public:
     virtual bool canContinueToUse();
-    virtual bool canBeInterrupted();
-    virtual void tick();
-    ~FindUnderwaterTreasureGoal();
-    virtual void start();
-    virtual bool canUse();
     virtual void stop();
+    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
+    virtual bool canUse();
+    virtual bool canBeInterrupted();
+    virtual void start();
+    ~FindUnderwaterTreasureGoal();
     FindUnderwaterTreasureGoal(Mob &, float, int, int);
 };

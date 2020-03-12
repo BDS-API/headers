@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Certificate.h"
+#include <string>
 
 
 namespace ExtendedCertificate {

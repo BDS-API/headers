@@ -1,7 +1,5 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "unmapped/ActorDefinitionGroup.h"
 #include "Fireball.h"
 
 

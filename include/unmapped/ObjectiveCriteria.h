@@ -1,17 +1,16 @@
 #pragma once
 
 #include <string>
-#include "../bedrock/nbt/CompoundTag.h"
 
 
 class ObjectiveCriteria {
 
 public:
-    void getRenderType()const;
-    void serialize(ObjectiveCriteria const&);
-    ~ObjectiveCriteria();
 //  ObjectiveCriteria(std::string const&, bool, ObjectiveRenderType); //TODO: incomplete function definition
+    ~ObjectiveCriteria();
     void deserialize(CompoundTag const&);
+    void serialize(ObjectiveCriteria const&);
     std::string getName()const;
+    void getRenderType()const;
     bool isReadOnly()const;
 };

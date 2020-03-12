@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../../../actor/Player.h"
 #include "../../Command.h"
 
 
@@ -10,8 +9,8 @@ namespace AgentCommands {
 
     public:
         virtual void execute();
-        virtual void tick();
         virtual bool isDone();
+        virtual void tick();
         ~MoveCommand();
         void _reachedPosition();
 //      MoveCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition

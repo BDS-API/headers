@@ -1,7 +1,7 @@
 #pragma once
 
-#include "IStructurePoolActorPredicate.h"
 #include <string>
+#include "IStructurePoolActorPredicate.h"
 
 
 class StructurePoolActorPredicateAlwaysTrue : IStructurePoolActorPredicate {

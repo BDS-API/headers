@@ -10,8 +10,8 @@ namespace ClientBlobCache {
         class Blob {
 
         public:
-            Blob(unsigned long, std::string &&);
             ~Blob();
+            Blob(unsigned long, std::string &&);
         };
     }
 }

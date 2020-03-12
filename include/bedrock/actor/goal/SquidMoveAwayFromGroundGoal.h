@@ -2,18 +2,17 @@
 
 #include <string>
 #include "Goal.h"
-#include "../Squid.h"
 
 
 class SquidMoveAwayFromGroundGoal : Goal {
 
 public:
+    virtual void stop();
+    virtual bool canContinueToUse();
     virtual bool canUse();
     virtual void start();
-    virtual bool canContinueToUse();
-    ~SquidMoveAwayFromGroundGoal();
     virtual void appendDebugInfo(std::string &)const;
+    ~SquidMoveAwayFromGroundGoal();
     virtual void tick();
-    virtual void stop();
     SquidMoveAwayFromGroundGoal(Squid &);
 };

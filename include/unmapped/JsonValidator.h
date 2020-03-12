@@ -1,9 +1,6 @@
 #pragma once
 
 #include <vector>
-#include "Property.h"
-#include <string>
-#include "../json/Value.h"
 
 
 namespace JsonValidator {

@@ -1,13 +1,12 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
 
 
 class RaidTriggerComponent {
 
 public:
+    RaidTriggerComponent(RaidTriggerComponent &&);
     void initFromDefinition(Actor &);
     void triggerRaid(Actor &);
-    RaidTriggerComponent(RaidTriggerComponent &&);
     void reloadComponent(Actor &);
 };

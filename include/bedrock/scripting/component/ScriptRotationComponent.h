@@ -1,10 +1,5 @@
 #pragma once
 
-#include "../ScriptObjectHandle.h"
-#include "../unmapped/ScriptEngine.h"
-#include "../unmapped/ScriptServerContext.h"
-#include "../../actor/Actor.h"
-#include "../ScriptVersionInfo.h"
 
 
 class ScriptRotationComponent /*ScriptTemplateFactory<ScriptServerContext>::Component*/ { //TODO: incomplete class definition
@@ -16,6 +11,6 @@ public:
     virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle &)const;
     virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, ScriptApi::ScriptObjectHandle const&)const;
     virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;
-    void getHash();
     ScriptRotationComponent();
+    void getHash();
 };

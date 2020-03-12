@@ -1,17 +1,10 @@
 #pragma once
 
+#include "MolangScriptArg.h"
+#include <vector>
 #include <string>
 #include <unordered_map>
-#include "MaterialVariants.h"
-#include "EvalParams.h"
-#include "../json/Value.h"
-#include "RenderParams.h"
-#include "MolangScriptArg.h"
 #include <functional>
-#include <vector>
-#include <memory>
-#include "HashedString.h"
-#include <utility>
 
 
 class ExpressionNode {

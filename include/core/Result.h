@@ -1,7 +1,7 @@
 #pragma once
 
-#include <functional>
 #include <string>
+#include <functional>
 
 
 namespace Core {
@@ -9,30 +9,30 @@ namespace Core {
     class Result {
 
     public:
-        void peekFailed()const;
         void merge(Core::Result &&, Core::Result &);
-        void ignoreError()const;
-        void succeeded()const;
-        void either(Core::Result &&, Core::Result &);
-        void makeFailure(std::string &&);
-        void makeFailureNotImplemented();
+        void makeFailureWithStringLiteral(char const*);
+        void succeededArchitecturalProblem()const;
+        void catastrophic()const;
+        ~Result();
+        void makeSuccess();
+        void otherMechanism();
+        Result(Core::Result &&);
+        Result(Core::Result const&);
+        void makeFailure(std::function<char const* (std::string *)> &&);
         void message(std::string *)const;
+        void _setHandled()const;
+        void peekFailed()const;
+        void ignoreError()const;
+        void either(Core::Result &&, Core::Result &);
+        void architecturalProblem()const;
+        void succeeded()const;
+        void makeFailure();
+        void failedArchitecturalProblem()const;
+        void makeFailureNotImplemented();
+        void failed()const;
+        void makeFailure(std::string &&);
         void peekSucceeded()const;
         Result(bool, std::function<char const* (std::string *)>);
-        void failed()const;
-        void otherMechanism();
-        void makeFailure(std::function<char const* (std::string *)> &&);
         void throwFailed()const;
-        void makeFailureWithStringLiteral(char const*);
-        void catastrophic()const;
-        void makeSuccess();
-        ~Result();
-        void succeededArchitecturalProblem()const;
-        void failedArchitecturalProblem()const;
-        Result(Core::Result &&);
-        void makeFailure();
-        void _setHandled()const;
-        void architecturalProblem()const;
-        Result(Core::Result const&);
     };
 }

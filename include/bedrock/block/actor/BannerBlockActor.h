@@ -1,16 +1,8 @@
 #pragma once
 
-#include "BlockActor.h"
-#include "../../item/ItemStack.h"
-#include <string>
-#include "../../item/ItemInstance.h"
-#include "../../../unmapped/DataLoadHelper.h"
-#include "../../level/Level.h"
-#include "../../nbt/CompoundTag.h"
-#include "../unmapped/BlockSource.h"
 #include <memory>
-#include "../../util/BlockPos.h"
-#include "../../actor/Player.h"
+#include <string>
+#include "BlockActor.h"
 
 
 class BannerBlockActor : BlockActor {
@@ -23,27 +15,27 @@ public:
     static std::string TAG_COLOR;
     static std::string TAG_TYPE;
 
-    virtual void getUpdatePacket(BlockSource &);
     virtual void save(CompoundTag &)const;
-    virtual void onPlace(BlockSource &);
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    ~BannerBlockActor();
-    virtual void tick(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
-//  void setBannerDetails(ItemStack &, int, std::string const&, std::string const&, BannerBlockType); //TODO: incomplete function definition
-    BannerBlockActor(BlockPos const&);
-    void getBaseColor(ItemStack const&);
-    void getPattern(int)const;
-    void getPatternCount()const;
+    virtual void tick(BlockSource &);
+    ~BannerBlockActor();
+    virtual void onPlace(BlockSource &);
     void getPatternCount(std::unique_ptr<CompoundTag> const&);
-    void getColor(int)const;
-    void getBaseColor()const;
-    void getType()const;
-    std::string getColors(std::unique_ptr<CompoundTag> const&);
     void getType(std::unique_ptr<CompoundTag> const&);
-    void getBaseColorInt()const;
-    void setItemValues(ItemStack const&);
+    void getType()const;
+    void getBaseColor()const;
     void removeLastPattern(ItemStack &, Player &);
+    void getPatternCount()const;
+    void getPattern(int)const;
     std::string getPatterns(std::unique_ptr<CompoundTag> const&);
+    BannerBlockActor(BlockPos const&);
+    void getColor(int)const;
+//  void setBannerDetails(ItemStack &, int, std::string const&, std::string const&, BannerBlockType); //TODO: incomplete function definition
+    void getBaseColor(ItemStack const&);
+    void setItemValues(ItemStack const&);
+    std::string getColors(std::unique_ptr<CompoundTag> const&);
     bool isDefaultBanner(ItemInstance const&);
+    void getBaseColorInt()const;
 };

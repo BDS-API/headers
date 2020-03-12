@@ -5,8 +5,8 @@
 class TextureItem {
 
 public:
-    TextureItem(TextureItem &&);
-    ~TextureItem();
     TextureItem(TextureItem const&);
     TextureItem();
+    ~TextureItem();
+    TextureItem(TextureItem &&);
 };

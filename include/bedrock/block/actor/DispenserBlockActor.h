@@ -1,36 +1,31 @@
 #pragma once
 
-#include "../../item/ItemStack.h"
-#include "../../../unmapped/DataLoadHelper.h"
-#include "RandomizableBlockActorContainer.h"
-#include "../../level/Level.h"
-#include "../../nbt/CompoundTag.h"
-#include "../unmapped/BlockSource.h"
+#include <string>
 #include "../../util/BlockPos.h"
-#include "../../actor/Player.h"
+#include "RandomizableBlockActorContainer.h"
 
 
 class DispenserBlockActor : RandomizableBlockActorContainer {
 
 public:
-    ~DispenserBlockActor();
-    virtual void save(CompoundTag &)const;
-    virtual void getMaxStackSize()const;
-    virtual void stopOpen(Player &);
-    virtual void getItem(int)const;
-    virtual void startOpen(Player &);
-    virtual void getContainer();
-    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
-    virtual void onMove();
     virtual void getContainerSize()const;
     virtual void setItem(int, ItemStack const&);
-    virtual void getRandomSlot();
-    virtual std::string getName()const;
+    virtual void getContainer();
+    virtual void save(CompoundTag &)const;
+    virtual void startOpen(Player &);
+    virtual void getMaxStackSize()const;
     virtual void getUpdatePacket(BlockSource &);
-//  DispenserBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition
-    void initItems();
-    bool isSlotEmpty(int);
+    ~DispenserBlockActor();
+    virtual std::string getName()const;
+    virtual void getRandomSlot();
+    virtual void onMove();
+    virtual void stopOpen(Player &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getItem(int)const;
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     DispenserBlockActor(BlockPos);
     bool isDispenser();
+//  DispenserBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition
+    bool isSlotEmpty(int);
+    void initItems();
 };

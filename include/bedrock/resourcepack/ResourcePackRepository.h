@@ -1,29 +1,9 @@
 #pragma once
 
-#include <unordered_map>
-#include "../pack/PackManifest.h"
-#include <memory>
-#include "../../unmapped/PackInstanceId.h"
-#include "../../core/Path.h"
-#include "ResourcePack.h"
 #include <string>
-#include <functional>
-#include "../../unmapped/Pack.h"
-#include "../../unmapped/PackIdVersion.h"
-#include "../../unmapped/InvalidPacksFilterGroup.h"
-#include "../../json/Value.h"
-#include "../../mce/UUID.h"
+#include <unordered_map>
 #include <vector>
-#include "../../unmapped/SemVersion.h"
-#include <utility>
-#include "../../unmapped/ResourceLocation.h"
-#include "../../unmapped/PackSourceFactory.h"
-#include "../eventing/IMinecraftEventing.h"
-#include "../../unmapped/ContentIdentity.h"
-#include "../../unmapped/PackInstance.h"
-#include "../../unmapped/PackManifestFactory.h"
-#include "../../core/FilePathManager.h"
-#include "../../unmapped/IContentAccessibilityProvider.h"
+#include <functional>
 
 
 class ResourcePackRepository {
@@ -46,107 +26,107 @@ public:
     static long CHEMISTRY_SERVER_PACK_UUID;
     static std::string EXPECTED_EXTENSIONS;
 
-    void getResourcePacksByPackId(std::vector<PackInstanceId> const&, std::vector<PackInstance> &)const;
-    void addPremiumWorldTemplateResourcePacks(Core::Path const&, ContentIdentity const&);
-    void untrackInvalidPack(ResourceLocation const&);
-    std::string getKnownInvalidPacksPath()const;
-    void _triggerRemoveResourcePackCallback(ResourcePack *);
-    void _initializePremiumWorldTemplatePackSource();
-    void addWorldResourcePacks(Core::Path const&);
-    std::string getPremiumWorldTemplatePath();
-    void _loadPacks(bool);
-    void postDeletePack(ResourceLocation const&);
-//  void _loadLastKnownUserPacks(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition
-    std::string getCachedBehaviorPacksPath();
-    void getPackManifestFactory();
-    void removePacksLoadedFromWorld();
-    void getResourcePackContainingModule(PackIdVersion const&)const;
-    void getChemistryServerPack()const;
-//  bool isResourcePackLoaded(PackIdVersion const&, PackOrigin const&); //TODO: incomplete function definition
-    void _reloadUserPacks();
-    bool isInitialized();
-    std::string getResourcePacksPath()const;
-    void getPackSourceFactory();
-    void deletePack(ResourceLocation const&);
-//  void _saveKnownUserPacks(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition
-//  void getPacksByResourceLocation(PackOrigin)const; //TODO: incomplete function definition
-    void removePacksLoadedFromCache();
-//  void getInvalidPacks(PackType)const; //TODO: incomplete function definition
-    std::string getTemporaryPremiumResourcePacksPath();
-    std::string getExpectedFileExtensions();
-    void _packLogVersionIsUpToDate(Json::Value const&);
+    void getPackSettingsFactory()const;
     std::string getPremiumBehaviorPackPath();
-    ~ResourcePackRepository();
-    std::string getCachedResourcePacksPath();
-    std::string getDevelopmentSkinPacksPath()const;
-    void getKeyProvider()const;
-    std::string getBehaviorPacksPath()const;
-    void getInvalidPacks(InvalidPacksFilterGroup const&)const;
-//  void getPacksByType(PackType)const; //TODO: incomplete function definition
-    void _findVanillaPacks();
-    ResourcePackRepository(IMinecraftEventing &, PackManifestFactory &, IContentAccessibilityProvider &, Core::FilePathManager *, PackSourceFactory &, bool);
-    void _refreshPacks();
-    std::string getPremiumPackPath();
-//  void _packExists(mce::UUID const&, SemVersion const&, PackOrigin)const; //TODO: incomplete function definition
-    std::string getTemporaryPremiumBehaviorPacksPath();
     void getResourcePackForPackId(PackIdVersion const&)const;
-    std::string getDevelopmentResourcePacksPath()const;
-    void unregisterResourcePackRemovedCallback(void *);
-    std::string getGlobalResourcePacksPath();
-//  void _updateKnownUserPacks(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition
-    void getResourcePackSatisfiesPackId(PackIdVersion const&, bool)const;
-    void _initializePackSource();
-    void _removePack(ResourceLocation const&, bool);
     void addKnownPackFromImport(PackManifest const&);
 //  std::string getKnownPacksPath(KnownPackType)const; //TODO: incomplete function definition
-    std::string getKnownValidPacksPath()const;
-    void deletePackFiles(ResourceLocation const&);
-    std::string getTreatmentPacksPath()const;
-    void _initializeWorldPackSource();
-//  void addInvalidPack(ResourceLocation const&, PackType); //TODO: incomplete function definition
-    void refreshPacks();
-    std::string getPremiumResourcePackPath();
-//  void _detectKnownPacksChange(ResourcePackRepository::KnownPackContainer &, ResourcePackRepository::KnownPackContainer const&, KnownPackType); //TODO: incomplete function definition
     void _addResourcePackIfNotAlreadyAdded(Pack &);
+    void _removePack(ResourceLocation const&, bool);
+    std::string getDevelopmentSkinPacksPath()const;
+//  void getInvalidPacks(PackType)const; //TODO: incomplete function definition
+    void getPackManifestFactory();
+    std::string getDevelopmentResourcePacksPath()const;
+    std::string getPremiumWorldTemplatePath();
     void requestReloadUserPacks();
+    void refreshPacks();
+//  void _updateKnownUserPacks(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition
+    ~ResourcePackRepository();
+//  void addInvalidPack(ResourceLocation const&, PackType); //TODO: incomplete function definition
+//  void _saveKnownUserPacks(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition
+    std::string getKnownInvalidPacksPath()const;
+    void _initializeWorldPackSource();
+    std::string getCachedBehaviorPacksPath();
+//  void _detectKnownPacksChange(ResourcePackRepository::KnownPackContainer &, ResourcePackRepository::KnownPackContainer const&, KnownPackType); //TODO: incomplete function definition
+    void _packLogVersionIsUpToDate(Json::Value const&);
+    void registerResourcePackRemovedCallback(void *, std::function<void (ResourcePack *)>);
+    std::string getTemporaryPremiumResourcePacksPath();
+    std::string getPremiumResourcePackPath();
+//  void _packExists(mce::UUID const&, SemVersion const&, PackOrigin)const; //TODO: incomplete function definition
+    void _initialize();
+    ResourcePackRepository(IMinecraftEventing &, PackManifestFactory &, IContentAccessibilityProvider &, Core::FilePathManager *, PackSourceFactory &, bool);
+    std::string getTemporaryPremiumBehaviorPacksPath();
+    void getResourcePackForPackIdOwned(PackIdVersion const&)const;
+    void getResourcePacksByPackId(std::vector<PackInstanceId> const&, std::vector<PackInstance> &)const;
+    void getPackSourceFactory();
+//  void getPacksByType(PackType)const; //TODO: incomplete function definition
+    void _triggerRemoveResourcePackCallback(ResourcePack *);
+    std::string getExpectedFileExtensions();
+//  void _updatePackLogVersion(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition
+//  void getPacksByResourceLocation(PackOrigin)const; //TODO: incomplete function definition
+    void removePacksLoadedFromCache();
     void getVanillaPack()const;
+    void getResourcePackSatisfiesPackId(PackIdVersion const&, bool)const;
+    void _initializeCachedPackSource();
+    void _loadPacks(bool);
+    std::string getTreatmentPacksPath()const;
+    void removePacksLoadedFromWorld();
+    void addCachedResourcePacks(std::unordered_map<ContentIdentity, std::string, std::hash<ContentIdentity>, std::equal_to<ContentIdentity>, std::allocator<std::pair<ContentIdentity const, std::string>>> const*);
+    void getResourcePackByUUID(mce::UUID const&)const;
+    void _initializePackSource();
+    void _refreshPacks();
+    void _initializePremiumWorldTemplatePackSource();
+    std::string getBehaviorPacksPath()const;
+    void getChemistryServerPack()const;
+    void _findVanillaPacks();
     void getPackLoadingReport()const;
     void getResourcePackInPath(Core::Path const&)const;
-    void getResourcePackByUUID(mce::UUID const&)const;
-    void _initializeCachedPackSource();
-    void _initialize();
-    void getPackSettingsFactory()const;
+    void untrackInvalidPack(ResourceLocation const&);
+    void getKeyProvider()const;
     std::string getDevelopmentBehaviorPacksPath()const;
-    void registerResourcePackRemovedCallback(void *, std::function<void (ResourcePack *)>);
-    void getResourcePackForPackIdOwned(PackIdVersion const&)const;
-//  void _updatePackLogVersion(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition
+    std::string getGlobalResourcePacksPath();
+    void getInvalidPacks(InvalidPacksFilterGroup const&)const;
+    void deletePackFiles(ResourceLocation const&);
+//  void _loadLastKnownUserPacks(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition
+    std::string getKnownValidPacksPath()const;
+    std::string getCachedResourcePacksPath();
+    void postDeletePack(ResourceLocation const&);
+    void deletePack(ResourceLocation const&);
     std::string getSkinPacksPath()const;
+    void unregisterResourcePackRemovedCallback(void *);
+    std::string getResourcePacksPath()const;
+    void addPremiumWorldTemplateResourcePacks(Core::Path const&, ContentIdentity const&);
+    std::string getPremiumPackPath();
+    bool isInitialized();
+    void _reloadUserPacks();
     void _validateDependencies();
-//  void addCachedResourcePacks(std::unordered_map<ContentIdentity, std::string, std::hash<ContentIdentity>, std::equal_to<ContentIdentity>, std::allocator<std::pair<ContentIdentity const, std::string>>> const*); //TODO: incomplete function definition
+    void addWorldResourcePacks(Core::Path const&);
+//  bool isResourcePackLoaded(PackIdVersion const&, PackOrigin const&); //TODO: incomplete function definition
+    void getResourcePackContainingModule(PackIdVersion const&)const;
     class KnownPackContainer {
 
     public:
-        void getPack(ResourceLocation const&);
-        void getPacks();
-        void operator==(ResourcePackRepository::KnownPackContainer const&)const;
         ~KnownPackContainer();
         void getPack(PackIdVersion const&)const;
-        void addPack(ResourcePackRepository::KnownPackInfo const&);
-        KnownPackContainer();
         void addPack(ResourcePackRepository::KnownPackInfo &&);
-        void operator!=(ResourcePackRepository::KnownPackContainer const&)const;
+        void getPack(ResourceLocation const&);
+        void operator==(ResourcePackRepository::KnownPackContainer const&)const;
         void getPack(ResourceLocation const&)const;
+        void addPack(ResourcePackRepository::KnownPackInfo const&);
+        void getPacks();
+        void getPack(PackIdVersion const&);
+        KnownPackContainer();
         void getPacks()const;
         bool hasPack(ResourcePackRepository::KnownPackInfo const&)const;
-        void getPack(PackIdVersion const&);
+        void operator!=(ResourcePackRepository::KnownPackContainer const&)const;
     };
     class KnownPackInfo {
 
     public:
-        void operator!=(ResourcePackRepository::KnownPackInfo const&)const;
-        void operator==(ResourcePackRepository::KnownPackInfo const&)const;
         ~KnownPackInfo();
+        void operator==(ResourcePackRepository::KnownPackInfo const&)const;
         KnownPackInfo();
         KnownPackInfo(ResourcePackRepository::KnownPackInfo const&);
+        void operator!=(ResourcePackRepository::KnownPackInfo const&)const;
     };
 };

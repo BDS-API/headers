@@ -1,17 +1,15 @@
 #pragma once
 
-#include "../json/Value.h"
-#include "../bedrock/actor/Actor.h"
 
 
 class SkinData {
 
 public:
-    SkinData(Actor const&);
-    SkinData(SkinData &&);
-    void applyToActor(Actor &)const;
-    void softMatch(SkinData const&, bool &)const;
     void serialize()const;
+    SkinData(SkinData &&);
     SkinData(int, int);
+    SkinData(Actor const&);
     SkinData(Json::Value const&);
+    void softMatch(SkinData const&, bool &)const;
+    void applyToActor(Actor &)const;
 };

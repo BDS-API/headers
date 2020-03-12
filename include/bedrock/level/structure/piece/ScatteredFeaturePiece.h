@@ -1,8 +1,6 @@
 #pragma once
 
-#include "../../../block/unmapped/BlockSource.h"
 #include "StructurePiece.h"
-#include "../../../../unmapped/BoundingBox.h"
 
 
 class ScatteredFeaturePiece : StructurePiece {

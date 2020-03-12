@@ -1,8 +1,8 @@
 #pragma once
 
 #include <string>
-#include <vector>
 #include <array>
+#include <vector>
 
 
 class StackedGraphBars {
@@ -10,15 +10,15 @@ class StackedGraphBars {
 public:
     class ColorKey;
 
+    void getMaxBars()const;
+    void getHeight()const;
+    void setHeight(float);
     ~StackedGraphBars();
+    void addBar(std::array<float, 2ul> const&);
+    std::string getGraphName()const;
     void getData()const;
     void getColors()const;
-    std::string getGraphName()const;
     StackedGraphBars(std::string const&, std::vector<StackedGraphBars::ColorKey> const&, int);
-//  void addBar(std::array<float, 2ul> const&); //TODO: incomplete function definition
-    void getHeight()const;
-    void getMaxBars()const;
-    void setHeight(float);
     class ColorKey {
 
     public:

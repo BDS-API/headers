@@ -1,19 +1,18 @@
 #pragma once
 
-#include "../bedrock/nbt/Tag.h"
 
 
 class CompoundTagVariant {
 
 public:
-    void operator->()const;
-    void emplace(Tag &&);
-    void get()const;
-    void operator*()const;
     void get();
+    void get()const;
+    void operator->()const;
     CompoundTagVariant(Tag &&);
-    ~CompoundTagVariant();
+    void operator*()const;
     CompoundTagVariant(CompoundTagVariant &&);
+    void emplace(Tag &&);
+    ~CompoundTagVariant();
     void copy()const;
     CompoundTagVariant();
 };

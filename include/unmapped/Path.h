@@ -1,9 +1,6 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
-#include "PathfinderNode.h"
 #include <vector>
-#include "../bedrock/util/Vec3.h"
 
 
 class Path {
@@ -11,36 +8,36 @@ class Path {
 public:
     class Node;
 
-    void getIndex()const;
-    void getLastPos()const;
+    Path();
     void next();
-    void makeCopy()const;
+    void getPos(Actor const*, unsigned long)const;
+    bool isValid()const;
+    bool isValidIndex(unsigned long)const;
+    void setIndex(unsigned long);
+    void currentPos()const;
+    void getCompletionType()const;
+    void getEndPos()const;
+    void getLastPos()const;
+    void getSize()const;
+    void getNodeType(unsigned long)const;
+    void getIndex()const;
+    ~Path();
 //  void buildFromNodes(std::vector<Path::Node> &&, PathCompletionType); //TODO: incomplete function definition
     void currentPos(Actor const*)const;
-    ~Path();
-    void getBlockPos(Actor const*, unsigned long)const;
-    void getNodeType(unsigned long)const;
-    void sameAs(Path *)const;
-    void getNodePos(unsigned long)const;
-    void getEndPos()const;
-    void setIndex(unsigned long);
-    bool endsInXZ(Vec3 const&);
-    void currentPos()const;
-    Path();
-    void getPos(Actor const*, unsigned long)const;
-    bool isDone();
-    void getCompletionType()const;
-    bool isValidIndex(unsigned long)const;
-    bool isValid()const;
-    Path(Path const&);
     void setSize(unsigned long);
-    void getSize()const;
+    void getNodePos(unsigned long)const;
+    bool isDone();
+    void getBlockPos(Actor const*, unsigned long)const;
+    void makeCopy()const;
+    Path(Path const&);
+    bool endsInXZ(Vec3 const&);
+    void sameAs(Path *)const;
     class Node {
 
     public:
-        void getType()const;
-        Node(Path::Node const&);
         Node();
+        Node(Path::Node const&);
         void set(PathfinderNode const&);
+        void getType()const;
     };
 };

@@ -1,12 +1,9 @@
 #pragma once
 
-#include <string>
-#include <unordered_map>
-#include <functional>
 #include "IntOption.h"
+#include <unordered_map>
+#include <string>
 #include <vector>
-#include <memory>
-#include <utility>
 
 
 class EnumOption : IntOption {

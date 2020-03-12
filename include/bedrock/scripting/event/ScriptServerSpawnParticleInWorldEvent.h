@@ -1,10 +1,6 @@
 #pragma once
 
-#include "../ScriptObjectHandle.h"
 #include <string>
-#include "../unmapped/ScriptEngine.h"
-#include "../unmapped/ScriptServerContext.h"
-#include "../ScriptVersionInfo.h"
 
 
 class ScriptServerSpawnParticleInWorldEvent /*ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent*/ { //TODO: incomplete class definition
@@ -12,9 +8,9 @@ class ScriptServerSpawnParticleInWorldEvent /*ScriptTemplateFactory<ScriptServer
 public:
     static long mHash;
 
-    ~ScriptServerSpawnParticleInWorldEvent();
     virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);
+    ~ScriptServerSpawnParticleInWorldEvent();
     virtual void getEventData(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle &);
-    void getHash();
     ScriptServerSpawnParticleInWorldEvent();
+    void getHash();
 };

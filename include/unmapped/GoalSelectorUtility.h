@@ -1,6 +1,5 @@
 #pragma once
 
-#include "PrioritizedGoal.h"
 #include <vector>
 
 

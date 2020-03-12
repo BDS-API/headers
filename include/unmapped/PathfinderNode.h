@@ -1,21 +1,20 @@
 #pragma once
 
-#include "../bedrock/util/BlockPos.h"
 
 
 class PathfinderNode {
 
 public:
     PathfinderNode(PathfinderNode const&);
-    void equals(PathfinderNode *);
-    void hashCode();
-    void setMoveMalus(float);
-    PathfinderNode();
-    void distanceToSqr(PathfinderNode *)const;
     void inOpenSet();
+    void equals(PathfinderNode *);
+//  PathfinderNode(BlockPos const&, NodeType); //TODO: incomplete function definition
+    PathfinderNode();
+    void setCostMalus(float);
     void distanceTo(PathfinderNode *)const;
     void getCostMalus()const;
-//  PathfinderNode(BlockPos const&, NodeType); //TODO: incomplete function definition
-    void setCostMalus(float);
+    void setMoveMalus(float);
+    void distanceToSqr(PathfinderNode *)const;
     void getType()const;
+    void hashCode();
 };

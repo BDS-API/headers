@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../WitherBoss.h"
-#include "Goal.h"
 #include <string>
+#include "Goal.h"
 
 
 class WitherDoNothingGoal : Goal {
 
 public:
-    virtual bool canUse();
     ~WitherDoNothingGoal();
     virtual void appendDebugInfo(std::string &)const;
+    virtual bool canUse();
     WitherDoNothingGoal(WitherBoss &);
 };

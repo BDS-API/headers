@@ -7,8 +7,8 @@ class SavedData {
 
 public:
     ~SavedData();
-    void setDirty(bool);
     SavedData(std::string const&);
     std::string getId()const;
+    void setDirty(bool);
     bool isDirty()const;
 };

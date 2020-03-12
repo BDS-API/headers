@@ -10,8 +10,8 @@ namespace Core {
 
         public:
             ~ZipSettings();
-//          ZipSettings(Core::ZipUtils::ZipCompressionLevel); //TODO: incomplete function definition
             ZipSettings();
+//          ZipSettings(Core::ZipUtils::ZipCompressionLevel); //TODO: incomplete function definition
         };
     }
 }

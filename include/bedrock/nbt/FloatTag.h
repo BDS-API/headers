@@ -1,22 +1,21 @@
 #pragma once
 
 #include "Tag.h"
-#include "../io/IDataInput.h"
-#include "../io/IDataOutput.h"
+#include <string>
 
 
 class FloatTag : Tag {
 
 public:
-    ~FloatTag();
+    virtual void hash()const;
     virtual void load(IDataInput &);
-    virtual void write(IDataOutput &)const;
     virtual void copy()const;
     virtual void getId()const;
+    virtual void write(IDataOutput &)const;
     virtual void equals(Tag const&)const;
     virtual std::string toString()const;
-    virtual void hash()const;
-    FloatTag(FloatTag &&);
-    FloatTag();
+    ~FloatTag();
     FloatTag(float);
+    FloatTag();
+    FloatTag(FloatTag &&);
 };

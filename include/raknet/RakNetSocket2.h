@@ -1,8 +1,5 @@
 #pragma once
 
-#include "RNS2EventHandler.h"
-#include "SystemAddress.h"
-#include "NetworkAdapter.h"
 
 
 namespace RakNet {
@@ -12,17 +9,17 @@ namespace RakNet {
     public:
         virtual void SetMulticastInterface(int);
         ~RakNetSocket2();
+        RakNetSocket2();
+        void GetMyIP(RakNet::SystemAddress *);
         void GetMyAdapters(RakNet::NetworkAdapter *);
+        void DomainNameToIP(char const*, char *);
+        void SetRecvEventHandler(RakNet::RNS2EventHandler *);
+        void GetUserConnectionSocketIndex()const;
 //      void SetSocketType(RakNet::RNS2Type); //TODO: incomplete function definition
         void GetSocketType()const;
-        void SetUserConnectionSocketIndex(unsigned int);
-        void GetUserConnectionSocketIndex()const;
-        void SetRecvEventHandler(RakNet::RNS2EventHandler *);
-        bool IsBerkleySocket()const;
-        void GetMyIP(RakNet::SystemAddress *);
-        void DomainNameToIP(char const*, char *);
-        RakNetSocket2();
-        void GetBoundAddress()const;
         void GetEventHandler()const;
+        void SetUserConnectionSocketIndex(unsigned int);
+        bool IsBerkleySocket()const;
+        void GetBoundAddress()const;
     };
 }

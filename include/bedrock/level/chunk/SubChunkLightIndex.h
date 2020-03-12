@@ -1,22 +1,21 @@
 #pragma once
 
-#include "../../util/Pos.h"
 
 
 class SubChunkLightIndex {
 
 public:
-    void computeSubChunkIndex()const;
-    SubChunkLightIndex(SubChunkLightIndex const&);
-    SubChunkLightIndex(Pos const&);
-    void nextY()const;
-    void nextZ()const;
-    void nextX()const;
-    void prevZ()const;
-    void computeInternalIndexFromPos(Pos const&);
-    void computeSubChunkCoordinates(unsigned int &, unsigned int &, unsigned int &)const;
-    SubChunkLightIndex(unsigned int);
-    void prevX()const;
-    void computeSubChunkIndexAndCoordinates(unsigned int &, unsigned int &, unsigned int &)const;
     void prevY()const;
+    void computeSubChunkIndexAndCoordinates(unsigned int &, unsigned int &, unsigned int &)const;
+    void prevZ()const;
+    SubChunkLightIndex(unsigned int);
+    void computeSubChunkIndex()const;
+    SubChunkLightIndex(Pos const&);
+    void nextX()const;
+    void nextZ()const;
+    void computeSubChunkCoordinates(unsigned int &, unsigned int &, unsigned int &)const;
+    void computeInternalIndexFromPos(Pos const&);
+    void prevX()const;
+    SubChunkLightIndex(SubChunkLightIndex const&);
+    void nextY()const;
 };

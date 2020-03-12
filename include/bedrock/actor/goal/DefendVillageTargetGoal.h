@@ -1,10 +1,8 @@
 #pragma once
 
 #include <string>
-#include "../Mob.h"
-#include <vector>
 #include "TargetGoal.h"
-#include "../../../unmapped/MobDescriptor.h"
+#include <vector>
 
 
 class DefendVillageTargetGoal : TargetGoal {
@@ -12,7 +10,7 @@ class DefendVillageTargetGoal : TargetGoal {
 public:
     virtual void appendDebugInfo(std::string &)const;
     virtual bool canUse();
-    virtual void start();
     ~DefendVillageTargetGoal();
+    virtual void start();
     DefendVillageTargetGoal(Mob &, std::vector<MobDescriptor> const&);
 };

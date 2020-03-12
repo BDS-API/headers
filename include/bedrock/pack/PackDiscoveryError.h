@@ -1,8 +1,8 @@
 #pragma once
 
-#include "PackError.h"
 #include <vector>
 #include <string>
+#include "PackError.h"
 
 
 class PackDiscoveryError : PackError {
@@ -12,6 +12,6 @@ public:
     virtual std::string getEventErrorMessageMap()const;
     ~PackDiscoveryError();
     PackDiscoveryError(PackDiscoveryError const&);
-    PackDiscoveryError();
 //  PackDiscoveryError(PackParseErrorType, std::vector<std::string> const&); //TODO: incomplete function definition
+    PackDiscoveryError();
 };

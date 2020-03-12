@@ -1,9 +1,7 @@
 #pragma once
 
-#include "../bedrock/file/access/IFileAccess.h"
-#include <functional>
 #include <string>
-#include "Path.h"
+#include <functional>
 
 
 namespace Core {
@@ -11,16 +9,16 @@ namespace Core {
     class UnzipFile {
 
     public:
+        void goToFirstFile();
         UnzipFile(IFileAccess *, Core::Path const&);
-        void locateFile(char const*, int);
         void closeCurrentFile();
+        std::string getCurrentFileName()const;
+        void appendCurrentFileContents(std::string &, unsigned long, std::function<void (int, std::string const&)>);
+        void locateFile(char const*, int);
+        bool isGood()const;
         void getTotalFilesInZip();
         void openCurrentFileForReading();
-        bool isGood()const;
-        void goToFirstFile();
-        std::string getCurrentFileName()const;
-        void goToNextFile();
         ~UnzipFile();
-        void appendCurrentFileContents(std::string &, unsigned long, std::function<void (int, std::string const&)>);
+        void goToNextFile();
     };
 }

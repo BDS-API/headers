@@ -6,8 +6,8 @@
 class EntityRegistryOwned {
 
 public:
-    void destroyEntity(EntityContext);
+    void createEntity();
     ~EntityRegistryOwned();
     EntityRegistryOwned();
-    void createEntity();
+    void destroyEntity(EntityContext);
 };

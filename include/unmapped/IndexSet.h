@@ -6,21 +6,21 @@
 class IndexSet {
 
 public:
-    void subsetOf(IndexSet const&)const;
     void operator==(IndexSet const&)const;
-    ~IndexSet();
-    IndexSet(IndexSet const&);
-    void size()const;
+    void contains(unsigned long)const;
     void intersects(IndexSet const&)const;
+    IndexSet(std::vector<unsigned long>, std::vector<unsigned long>);
     IndexSet(unsigned long, unsigned long);
     IndexSet();
-    void insert(unsigned long);
+    ~IndexSet();
     void remove(unsigned long);
-    void sameSetAs(IndexSet const&)const;
-    IndexSet(std::vector<unsigned long>, std::vector<unsigned long>);
-    void contains(unsigned long)const;
+    void insert(unsigned long);
     void reserve(unsigned long);
-    IndexSet(IndexSet &&);
     void clear();
+    IndexSet(IndexSet const&);
+    void size()const;
+    void subsetOf(IndexSet const&)const;
     void getPacked()const;
+    IndexSet(IndexSet &&);
+    void sameSetAs(IndexSet const&)const;
 };

@@ -1,16 +1,15 @@
 #pragma once
 
-#include "../Actor.h"
-#include "BehaviorNode.h"
 #include <string>
+#include "BehaviorNode.h"
 
 
 class MoveNode : BehaviorNode {
 
 public:
     ~MoveNode();
-    virtual void initializeFromDefinition(Actor &);
     virtual void tick(Actor &);
-    void convertDirectionStringToKeyPress(std::string);
+    virtual void initializeFromDefinition(Actor &);
     MoveNode();
+    void convertDirectionStringToKeyPress(std::string);
 };

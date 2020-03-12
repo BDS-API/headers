@@ -1,48 +1,45 @@
 #pragma once
 
-#include "../../item/ItemStack.h"
+#include <string>
 #include "../../../unmapped/ContainerContentChangeListener.h"
-#include "../../../unmapped/ContainerItemStack.h"
-#include "../../../unmapped/SlotData.h"
 #include <functional>
-#include "../../item/unmapped/ItemDescriptor.h"
 
 
 class ContainerModel : ContainerContentChangeListener {
 
 public:
-    virtual void switchItemExpando(int);
-    virtual void setItem(int, ContainerItemStack const&);
-    virtual void containerContentChanged(int);
-    virtual void getContainerSize()const;
-    virtual void _onItemChanged(int, ItemStack const&, ItemStack const&);
-    virtual bool isItemFiltered(ContainerItemStack const&)const;
-    virtual bool isValid();
-    virtual void releaseResources();
-    virtual void postInit();
-    ~ContainerModel();
     virtual void getItems()const;
-    virtual void tick(int);
-    virtual bool isExpanableItemFiltered(int)const;
-    virtual void getItemExpandStatus(int)const;
-    virtual void getFilteredContainerSize()const;
-    virtual void _getContainerOffset()const;
     virtual void getItemInstances();
+    virtual void containerContentChanged(int);
+    virtual void releaseResources();
+    virtual void getFilteredContainerSize()const;
+    virtual void getContainerSize()const;
     virtual std::string getItemGroupName(int)const;
+    virtual bool isItemFiltered(ContainerItemStack const&)const;
     virtual void getItem(int)const;
-//  void setContainerCategory(ContainerCategory); //TODO: incomplete function definition
-    void _notifyPlayer(int, ItemStack const&, ItemStack const&);
-    void resize(int);
-    void _init();
-    void networkUpdateItem(int, ItemStack const&, ItemStack const&);
-    void setItemSource(int, SlotData const&);
-    void getItemSource(int)const;
-//  ContainerModel(ContainerEnumName, int, ContainerCategory); //TODO: incomplete function definition
-    void getContainerEnumName()const;
-    void registerOnContainerChangedCallback(std::function<void (int, ItemStack const&, ItemStack const&)>);
-    void getContainerCategory()const;
-    void getItemCount(ItemDescriptor const&);
-    bool isIntermediaryCategory()const;
+    virtual void setItem(int, ContainerItemStack const&);
+    virtual void switchItemExpando(int);
+    virtual void _onItemChanged(int, ItemStack const&, ItemStack const&);
+    ~ContainerModel();
+    virtual void postInit();
+    virtual void _getContainerOffset()const;
+    virtual bool isExpanableItemFiltered(int)const;
+    virtual bool isValid();
+    virtual void tick(int);
+    virtual void getItemExpandStatus(int)const;
     std::string getContainerStringName()const;
+    void _init();
+    void _notifyPlayer(int, ItemStack const&, ItemStack const&);
+    void registerOnContainerChangedCallback(std::function<void (int, ItemStack const&, ItemStack const&)>);
     void registerPlayerNotificationCallback(std::function<void (int, ItemStack const&, ItemStack const&)>);
+    void getItemSource(int)const;
+    void getContainerCategory()const;
+    void setItemSource(int, SlotData const&);
+    bool isIntermediaryCategory()const;
+    void networkUpdateItem(int, ItemStack const&, ItemStack const&);
+    void getContainerEnumName()const;
+//  void setContainerCategory(ContainerCategory); //TODO: incomplete function definition
+    void getItemCount(ItemDescriptor const&);
+    void resize(int);
+//  ContainerModel(ContainerEnumName, int, ContainerCategory); //TODO: incomplete function definition
 };

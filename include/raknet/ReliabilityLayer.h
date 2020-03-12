@@ -1,13 +1,6 @@
 #pragma once
 
-#include "PluginInterface2.h"
 #include "uint24_t.h"
-#include "SystemAddress.h"
-#include "BitStream.h"
-#include "RakNetRandom.h"
-#include "InternalPacket.h"
-#include "RakNetSocket2.h"
-#include "SplitPacketChannel.h"
 
 
 namespace RakNet {
@@ -18,79 +11,79 @@ namespace RakNet {
         class DatagramHistoryNode;
         class UnreliableWithAckReceiptNode;
 
-        ReliabilityLayer();
-        void AddFirstToDatagramHistory(RakNet::uint24_t, unsigned long);
-        void ApplyNetworkSimulator(double, unsigned int, unsigned int);
-        bool IsDeadConnection()const;
-        void GetMaxMessageHeaderLengthBits();
-        void KillConnection();
-        void GetTimeBetweenPackets()const;
-        void MoveToListHead(RakNet::InternalPacket *);
-        void SetUnreliableTimeout(unsigned int);
-        void AreAcksWaiting();
-        void GetMaxDatagramSizeExcludingMessageHeaderBits();
-        void AddFirstToDatagramHistory(RakNet::uint24_t, RakNet::uint24_t, unsigned long);
-        void PushDatagram();
-        void SetTimeoutTime(unsigned int);
-        bool IsOlderOrderedPacket(RakNet::uint24_t, RakNet::uint24_t);
-        void BuildPacketFromSplitPacketList(unsigned short, unsigned long, RakNet::RakNetSocket2 *, RakNet::SystemAddress &, RakNet::RakNetRandom *, RakNet::BitStream &);
-//      void AllocInternalPacketData(RakNet::InternalPacket *, RakNet::InternalPacketRefCountedData **, unsigned char *, unsigned char *); //TODO: incomplete function definition
-        void RemoveFromUnreliableLinkedList(RakNet::InternalPacket *);
-        void ClearPacketsAndDatagrams();
         void AllocInternalPacketData(RakNet::InternalPacket *, unsigned char *);
-        void SetSplitMessageProgressInterval(int);
-        bool IsResendQueueEmpty()const;
-        void TagMostRecentPushAsSecondOfPacketPair();
-        void FreeInternalPacketData(RakNet::InternalPacket *, char const*, unsigned int);
-        ~ReliabilityLayer();
+//      void AllocInternalPacketData(RakNet::InternalPacket *, RakNet::InternalPacketRefCountedData **, unsigned char *, unsigned char *); //TODO: incomplete function definition
         void SplitPacket(RakNet::InternalPacket *);
-        void InitializeVariables();
-        void SendBitStream(RakNet::RakNetSocket2 *, RakNet::SystemAddress &, RakNet::BitStream *, RakNet::RakNetRandom *, unsigned long);
-//      void AddSubsequentToDatagramHistory(RakNet::ReliabilityLayer::MessageNumberNode *, RakNet::uint24_t); //TODO: incomplete function definition
-        void Reset(bool, int, bool);
-//      void Update(RakNet::RakNetSocket2 *, RakNet::SystemAddress &, int, unsigned long, unsigned int, DataStructures::List<RakNet::PluginInterface2 *> &, RakNet::RakNetRandom *, RakNet::BitStream &); //TODO: incomplete function definition
-        void ReleaseToInternalPacketPool(RakNet::InternalPacket *);
-        void AddToUnreliableLinkedList(RakNet::InternalPacket *);
-//      void RemovePacketFromResendListAndDeleteOlderReliableSequenced(RakNet::uint24_t, unsigned long, DataStructures::List<RakNet::PluginInterface2 *> &, RakNet::SystemAddress const&); //TODO: incomplete function definition
-        void UpdateWindowFromAck(unsigned long);
-        void GetNextSendTime()const;
-        void PushPacket(unsigned long, RakNet::InternalPacket *, bool);
-        void InitHeapWeights();
-        void AddToListTail(RakNet::InternalPacket *, bool);
-        void CheckSHA1(char *, unsigned char *, unsigned int);
-        void RemoveFromDatagramHistory(RakNet::uint24_t);
-        void InsertPacketIntoResendList(RakNet::InternalPacket *, unsigned long, bool, bool);
-        void ValidateResendList()const;
-        void RemoveFromList(RakNet::InternalPacket *, bool);
-        void PopListHead(bool);
-        void BuildPacketFromSplitPacketList(RakNet::SplitPacketChannel *, unsigned long);
-        void SendAcknowledgementPacket(RakNet::uint24_t, unsigned long);
-        void WriteToBitStreamFromInternalPacket(RakNet::BitStream *, RakNet::InternalPacket const*, unsigned long);
         void GetResendListDataSize()const;
-        void FreeThreadSafeMemory();
-        void UpdateWindowFromPacketloss(unsigned long);
-        void Receive(unsigned char **);
-//      void Send(char *, unsigned int, PacketPriority, PacketReliability, unsigned char, bool, int, unsigned long, unsigned int); //TODO: incomplete function definition
-        void AllocInternalPacketData(RakNet::InternalPacket *, unsigned int, bool, char const*, unsigned int);
-        void ResetPacketsAndDatagrams();
-        void InsertIntoSplitPacketList(RakNet::InternalPacket *, unsigned long);
-        void SendACKs(RakNet::RakNetSocket2 *, RakNet::SystemAddress &, unsigned long, RakNet::RakNetRandom *, RakNet::BitStream &);
-        void GetNextWeight(int);
-        void GetMaxDatagramSizeExcludingMessageHeaderBytes();
-        void GetMessageHeaderLengthBits(RakNet::InternalPacket const*);
-        void CreateInternalPacketCopy(RakNet::InternalPacket *, int, int, unsigned long);
-//      void GetStatistics(RakNet::RakNetStatistics *); //TODO: incomplete function definition
-        void AckTimeout(unsigned long);
-        void CreateInternalPacketFromBitStream(RakNet::BitStream *, unsigned long);
-//      void HandleSocketReceiveFromConnectedPlayer(char const*, unsigned int, RakNet::SystemAddress &, DataStructures::List<RakNet::PluginInterface2 *> &, int, RakNet::RakNetSocket2 *, RakNet::RakNetRandom *, unsigned long, RakNet::BitStream &); //TODO: incomplete function definition
         void GetTimeoutTime();
-        void GetMessageNumberNodeByDatagramIndex(RakNet::uint24_t, unsigned long *);
-        bool IsOutgoingDataWaiting();
+        void CreateInternalPacketCopy(RakNet::InternalPacket *, int, int, unsigned long);
+        bool IsOlderOrderedPacket(RakNet::uint24_t, RakNet::uint24_t);
+        void AreAcksWaiting();
+        void AckTimeout(unsigned long);
+        void SendAcknowledgementPacket(RakNet::uint24_t, unsigned long);
+//      void HandleSocketReceiveFromConnectedPlayer(char const*, unsigned int, RakNet::SystemAddress &, DataStructures::List<RakNet::PluginInterface2 *> &, int, RakNet::RakNetSocket2 *, RakNet::RakNetRandom *, unsigned long, RakNet::BitStream &); //TODO: incomplete function definition
+//      void Send(char *, unsigned int, PacketPriority, PacketReliability, unsigned char, bool, int, unsigned long, unsigned int); //TODO: incomplete function definition
+        void FreeThreadSafeMemory();
+        void InsertIntoSplitPacketList(RakNet::InternalPacket *, unsigned long);
+        void CheckSHA1(char *, unsigned char *, unsigned int);
+        void SetUnreliableTimeout(unsigned int);
+        void BuildPacketFromSplitPacketList(RakNet::SplitPacketChannel *, unsigned long);
+        void AddToUnreliableLinkedList(RakNet::InternalPacket *);
+        void SetTimeoutTime(unsigned int);
         void AllocateFromInternalPacketPool();
-        bool IsSendThrottled(int);
+        void UpdateWindowFromAck(unsigned long);
+        void Receive(unsigned char **);
+        void RemoveFromUnreliableLinkedList(RakNet::InternalPacket *);
+        void ValidateResendList()const;
         void GetSHA1(unsigned char *, unsigned int, char *);
+        void AllocInternalPacketData(RakNet::InternalPacket *, unsigned int, bool, char const*, unsigned int);
+        void InitializeVariables();
+        void GetMessageNumberNodeByDatagramIndex(RakNet::uint24_t, unsigned long *);
+        void InsertPacketIntoResendList(RakNet::InternalPacket *, unsigned long, bool, bool);
+        void SendACKs(RakNet::RakNetSocket2 *, RakNet::SystemAddress &, unsigned long, RakNet::RakNetRandom *, RakNet::BitStream &);
+        void UpdateWindowFromPacketloss(unsigned long);
+        void PopListHead(bool);
+//      void AddSubsequentToDatagramHistory(RakNet::ReliabilityLayer::MessageNumberNode *, RakNet::uint24_t); //TODO: incomplete function definition
+        void MoveToListHead(RakNet::InternalPacket *);
+        void AddFirstToDatagramHistory(RakNet::uint24_t, unsigned long);
+        void RemoveFromDatagramHistory(RakNet::uint24_t);
+        void WriteToBitStreamFromInternalPacket(RakNet::BitStream *, RakNet::InternalPacket const*, unsigned long);
+        void SetSplitMessageProgressInterval(int);
+        bool IsSendThrottled(int);
+        void AddToListTail(RakNet::InternalPacket *, bool);
+        void GetMaxMessageHeaderLengthBits();
+        void InitHeapWeights();
+        void CreateInternalPacketFromBitStream(RakNet::BitStream *, unsigned long);
+        bool IsResendQueueEmpty()const;
+        void PushDatagram();
+        void GetMaxDatagramSizeExcludingMessageHeaderBits();
+        bool IsOutgoingDataWaiting();
+        void RemoveFromList(RakNet::InternalPacket *, bool);
+//      void Update(RakNet::RakNetSocket2 *, RakNet::SystemAddress &, int, unsigned long, unsigned int, DataStructures::List<RakNet::PluginInterface2 *> &, RakNet::RakNetRandom *, RakNet::BitStream &); //TODO: incomplete function definition
+        void KillConnection();
+//      void GetStatistics(RakNet::RakNetStatistics *); //TODO: incomplete function definition
+        void BuildPacketFromSplitPacketList(unsigned short, unsigned long, RakNet::RakNetSocket2 *, RakNet::SystemAddress &, RakNet::RakNetRandom *, RakNet::BitStream &);
+        void AddFirstToDatagramHistory(RakNet::uint24_t, RakNet::uint24_t, unsigned long);
         void FreeMemory(bool);
+        void ResetPacketsAndDatagrams();
+        void ReleaseToInternalPacketPool(RakNet::InternalPacket *);
+        ~ReliabilityLayer();
+        void ClearPacketsAndDatagrams();
+//      void RemovePacketFromResendListAndDeleteOlderReliableSequenced(RakNet::uint24_t, unsigned long, DataStructures::List<RakNet::PluginInterface2 *> &, RakNet::SystemAddress const&); //TODO: incomplete function definition
+        void Reset(bool, int, bool);
+        void GetTimeBetweenPackets()const;
+        void TagMostRecentPushAsSecondOfPacketPair();
+        void GetMaxDatagramSizeExcludingMessageHeaderBytes();
+        void GetNextWeight(int);
+        bool IsDeadConnection()const;
+        ReliabilityLayer();
+        void SendBitStream(RakNet::RakNetSocket2 *, RakNet::SystemAddress &, RakNet::BitStream *, RakNet::RakNetRandom *, unsigned long);
         void ResendBufferOverflow()const;
+        void ApplyNetworkSimulator(double, unsigned int, unsigned int);
+        void PushPacket(unsigned long, RakNet::InternalPacket *, bool);
+        void GetNextSendTime()const;
+        void FreeInternalPacketData(RakNet::InternalPacket *, char const*, unsigned int);
+        void GetMessageHeaderLengthBits(RakNet::InternalPacket const*);
         class DatagramHistoryNode {
 
         public:

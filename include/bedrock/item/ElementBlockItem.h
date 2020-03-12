@@ -1,6 +1,5 @@
 #pragma once
 
-#include "ItemStackBase.h"
 #include "ChemistryAuxDataBlockItem.h"
 
 

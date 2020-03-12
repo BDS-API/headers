@@ -1,19 +1,18 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
+#include <string>
 #include "Packet.h"
 
 
 class SetDifficultyPacket : Packet {
 
 public:
-    ~SetDifficultyPacket();
-    virtual void write(BinaryStream &)const;
-    virtual void getId()const;
-    virtual std::string getName()const;
     virtual void read(ReadOnlyBinaryStream &);
+    virtual void getId()const;
+    virtual void write(BinaryStream &)const;
+    ~SetDifficultyPacket();
+    virtual std::string getName()const;
 //  SetDifficultyPacket(Difficulty); //TODO: incomplete function definition
-    void getDifficulty()const;
     SetDifficultyPacket();
+    void getDifficulty()const;
 };

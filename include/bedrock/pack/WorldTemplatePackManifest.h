@@ -6,11 +6,11 @@
 class WorldTemplatePackManifest : PackManifest {
 
 public:
-    virtual void clone()const;
     ~WorldTemplatePackManifest();
-    WorldTemplatePackManifest(PackManifest &&);
-    WorldTemplatePackManifest(WorldTemplatePackManifest const&);
+    virtual void clone()const;
 //  void setGameType(GameType); //TODO: incomplete function definition
+    WorldTemplatePackManifest(PackManifest &&);
     void getGameType()const;
+    WorldTemplatePackManifest(WorldTemplatePackManifest const&);
     WorldTemplatePackManifest();
 };

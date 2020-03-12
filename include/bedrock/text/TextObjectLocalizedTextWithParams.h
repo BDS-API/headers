@@ -1,15 +1,15 @@
 #pragma once
 
-#include <vector>
 #include "ITextObject.h"
 #include <string>
+#include <vector>
 
 
 class TextObjectLocalizedTextWithParams : ITextObject {
 
 public:
+    virtual std::string asString()const;
     virtual bool asJsonValue()const;
     ~TextObjectLocalizedTextWithParams();
-    virtual std::string asString()const;
     TextObjectLocalizedTextWithParams(std::string, std::vector<std::string> const&);
 };

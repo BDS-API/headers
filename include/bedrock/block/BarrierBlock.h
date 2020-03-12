@@ -1,16 +1,15 @@
 #pragma once
 
-#include "BlockLegacy.h"
-#include "../../unmapped/Block.h"
 #include <string>
+#include "BlockLegacy.h"
 
 
 class BarrierBlock : BlockLegacy {
 
 public:
-    ~BarrierBlock();
     virtual bool canContainLiquid()const;
-    virtual void getShadeBrightness()const;
     virtual bool canConnect(Block const&, unsigned char, Block const&)const;
+    ~BarrierBlock();
+    virtual void getShadeBrightness()const;
     BarrierBlock(std::string const&, int);
 };

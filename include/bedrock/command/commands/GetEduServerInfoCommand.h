@@ -1,9 +1,6 @@
 #pragma once
 
-#include "../origin/CommandOrigin.h"
-#include "../CommandRegistry.h"
 #include "../Command.h"
-#include "../CommandOutput.h"
 
 
 class GetEduServerInfoCommand : Command {

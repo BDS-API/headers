@@ -1,8 +1,8 @@
 #pragma once
 
 #include <string>
-#include "NetworkPeer.h"
 #include <memory>
+#include "NetworkPeer.h"
 
 
 class CompressedNetworkPeer : NetworkPeer {
@@ -10,7 +10,7 @@ class CompressedNetworkPeer : NetworkPeer {
 public:
     virtual void receivePacket(std::string &);
     virtual void getNetworkStatus();
-    ~CompressedNetworkPeer();
 //  virtual void sendPacket(std::string const&, NetworkPeer::Reliability, int, unsigned short, Compressibility); //TODO: incomplete function definition
+    ~CompressedNetworkPeer();
     CompressedNetworkPeer(std::shared_ptr<NetworkPeer>);
 };

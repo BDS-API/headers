@@ -1,12 +1,11 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
 
 
 class PreferredPathComponent {
 
 public:
+    void getPreferredPath(Actor &);
     void initFromDefinition(Actor &);
     PreferredPathComponent(PreferredPathComponent &&);
-    void getPreferredPath(Actor &);
 };

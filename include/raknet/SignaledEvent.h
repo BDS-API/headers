@@ -7,11 +7,11 @@ namespace RakNet {
     class SignaledEvent {
 
     public:
-        void CloseEvent();
         void WaitOnEvent(int);
-        void SetEvent();
-        SignaledEvent();
         void InitEvent();
+        SignaledEvent();
+        void CloseEvent();
+        void SetEvent();
         ~SignaledEvent();
     };
 }

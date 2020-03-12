@@ -1,8 +1,7 @@
 #pragma once
 
-#include "../BlockLegacy.h"
-#include <functional>
 #include <string>
+#include <functional>
 
 
 namespace BlockTypeRegistry {
@@ -10,9 +9,9 @@ namespace BlockTypeRegistry {
     static std::string mBlockLookupMap;
 
     void forEachBlock(std::function<bool (BlockLegacy const&)>);
+    void prepareBlocks(unsigned int);
     void forEachBlockDEPRECATED(std::function<bool (BlockLegacy &)>);
+    void lookupByName(std::string const&);
     void unregisterBlock(std::string const&);
     void unregisterBlocks();
-    void lookupByName(std::string const&);
-    void prepareBlocks(unsigned int);
 };

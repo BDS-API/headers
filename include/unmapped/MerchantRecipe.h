@@ -1,45 +1,43 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance.h"
-#include "../bedrock/nbt/CompoundTag.h"
 
 
 class MerchantRecipe {
 
 public:
-    bool isOutOfUses()const;
-    bool isSameButBetter(MerchantRecipe &)const;
-    void createTag()const;
-    void load(CompoundTag const*);
-    MerchantRecipe(MerchantRecipe &&);
-    void getMaxUses()const;
-    void calculateDemandPrices(int);
-    void init(ItemInstance const&, ItemInstance const&, ItemInstance const&);
-    void setUses(int);
-    void setTraderExp(unsigned int);
-    void getDemand()const;
-    MerchantRecipe(CompoundTag const*);
-    void setPriceMultiplierA(float);
-    void getTier()const;
     void increaseMaxUses(int);
-    void setTier(int);
-    void getBaseCountB()const;
-    MerchantRecipe(MerchantRecipe const&);
-    void getBuyAItem()const;
-    void setMaxUses(int);
-    void getBaseCountA()const;
-    MerchantRecipe(ItemInstance const&, ItemInstance const&);
-    void getUses()const;
-    void setPriceMultiplierB(float);
-    bool isSame(MerchantRecipe &)const;
-    void setRewardExp(bool);
     MerchantRecipe(ItemInstance const&, ItemInstance const&, ItemInstance const&);
-    void shouldRewardExp()const;
-    void getTraderExp()const;
+    void getMaxUses()const;
+    void getBaseCountB()const;
     void getSellItem()const;
+    void shouldRewardExp()const;
+    void load(CompoundTag const*);
+    void setTier(int);
     void setDemand(int);
-    ~MerchantRecipe();
-    bool hasSecondaryBuyItem()const;
+    void getTier()const;
+    void setTraderExp(unsigned int);
+    void setUses(int);
+    MerchantRecipe(CompoundTag const*);
+    void createTag()const;
+    void setRewardExp(bool);
+    void setPriceMultiplierA(float);
     void increaseUses();
+    void init(ItemInstance const&, ItemInstance const&, ItemInstance const&);
+    void getBuyAItem()const;
+    void setPriceMultiplierB(float);
+    MerchantRecipe(MerchantRecipe &&);
+    void getUses()const;
+    void getBaseCountA()const;
+    void setMaxUses(int);
+    MerchantRecipe(ItemInstance const&, ItemInstance const&);
+    bool isOutOfUses()const;
+    void getDemand()const;
+    bool isSameButBetter(MerchantRecipe &)const;
+    MerchantRecipe(MerchantRecipe const&);
+    void calculateDemandPrices(int);
+    ~MerchantRecipe();
+    void getTraderExp()const;
     void getBuyBItem()const;
+    bool hasSecondaryBuyItem()const;
+    bool isSame(MerchantRecipe &)const;
 };

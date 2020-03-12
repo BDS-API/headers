@@ -4,9 +4,8 @@
 
 namespace Core {
 
-    class SingleThreadedLock {
+    namespace SingleThreadedLock {
 
-    public:
         void lock();
         void unlock();
     };

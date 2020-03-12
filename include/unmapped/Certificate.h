@@ -1,33 +1,30 @@
 #pragma once
 
-#include "PrivateKeyManager.h"
-#include "UnverifiedCertificate.h"
-#include <string>
-#include "../json/Value.h"
 #include <memory>
+#include <string>
 
 
 class Certificate {
 
 public:
-    bool isCertificateAuthority()const;
-    Certificate(UnverifiedCertificate const&, std::unique_ptr<Certificate>);
-    void createWrappedCertificate(PrivateKeyManager &, long, long, std::string const&, bool, Json::Value const*, std::unique_ptr<Certificate>);
     std::string toString()const;
-    Certificate(Certificate &&);
-    void addToEnd(Certificate const&);
+    void getData(std::string const&, Json::Value const&)const;
+    void getParentCertificate()const;
+    void createWrappedCertificate(PrivateKeyManager &, long, long, std::string const&, bool, Json::Value const*, std::unique_ptr<Certificate>);
+    void addAuthorityToCertificate(PrivateKeyManager &, long, long, std::string const&, std::unique_ptr<Certificate>);
+    std::string getIdentityPublicKey()const;
+    void getExtraData(std::string const&, Json::Value const&)const;
+    Certificate(UnverifiedCertificate const&, std::unique_ptr<Certificate>);
+    bool isCertificateAuthority()const;
     bool isValid()const;
+    Certificate(Certificate const&);
+    void getRootParentCertificate();
     void validate(long);
     void getNotBeforeDate()const;
-    void getData(std::string const&, Json::Value const&)const;
-    Certificate(Certificate const&);
-    std::string getIdentityPublicKey()const;
-    ~Certificate();
     void getExpirationDate()const;
-    void getExtraData(std::string const&, Json::Value const&)const;
-    void createWebToken(PrivateKeyManager &, long, long, std::string const&, bool, Json::Value const*);
-    void getRootParentCertificate();
     std::string getSignerPublicKey()const;
-    void addAuthorityToCertificate(PrivateKeyManager &, long, long, std::string const&, std::unique_ptr<Certificate>);
-    void getParentCertificate()const;
+    Certificate(Certificate &&);
+    void addToEnd(Certificate const&);
+    ~Certificate();
+    void createWebToken(PrivateKeyManager &, long, long, std::string const&, bool, Json::Value const*);
 };

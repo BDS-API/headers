@@ -1,6 +1,5 @@
 #pragma once
 
-#include "MoveActorAbsoluteData.h"
 
 
 class MoveActorDeltaData {
@@ -8,9 +7,9 @@ class MoveActorDeltaData {
 public:
     class Header;
 
-    MoveActorDeltaData();
     void applyIntDelta(float, int);
     void parseDeltas(MoveActorAbsoluteData const&)const;
+    MoveActorDeltaData();
     class Header {
 
     public:

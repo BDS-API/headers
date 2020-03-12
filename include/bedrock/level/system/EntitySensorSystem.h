@@ -1,10 +1,6 @@
 #pragma once
 
-#include "../../../unmapped/EntitySensorComponent.h"
-#include "../../actor/unmapped/ActorComponent.h"
 #include "ITickingSystem.h"
-#include "../../../unmapped/EntityContext.h"
-#include "../../../unmapped/EntityRegistry.h"
 
 
 class EntitySensorSystem : ITickingSystem {

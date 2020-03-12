@@ -7,8 +7,8 @@
 class SubtractiveLightInfo {
 
 public:
+    SubtractiveLightInfo();
     SubtractiveLightInfo(SubChunkLightIndex, Brightness);
     SubtractiveLightInfo(SubtractiveLightInfo const&);
-    SubtractiveLightInfo();
     void operator<(SubtractiveLightInfo const&);
 };

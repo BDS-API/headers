@@ -1,17 +1,17 @@
 #pragma once
 
-#include <functional>
 #include <string>
+#include <functional>
 
 
 class ActorInteraction {
 
 public:
-    void interact();
-    std::string getInteractText()const;
     void setInteractText(std::string const&);
-    ~ActorInteraction();
-    void capture(std::function<void (void)>);
     ActorInteraction(bool);
+    void capture(std::function<void (void)>);
+    void interact();
+    ~ActorInteraction();
     void shouldCapture()const;
+    std::string getInteractText()const;
 };

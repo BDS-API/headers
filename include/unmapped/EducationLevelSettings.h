@@ -1,15 +1,15 @@
 #pragma once
 
-#include "../bedrock/level/storage/LevelStorage.h"
+#include <string>
 
 
 class EducationLevelSettings {
 
 public:
+    EducationLevelSettings(EducationLevelSettings const&);
+    EducationLevelSettings();
+    void save(LevelStorage const&);
     ~EducationLevelSettings();
     std::string getCommandOverrideFunctor()const;
-    EducationLevelSettings(EducationLevelSettings const&);
     void load(LevelStorage const&);
-    void save(LevelStorage const&);
-    EducationLevelSettings();
 };

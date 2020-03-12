@@ -1,20 +1,19 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class AvoidMobGoal : Goal {
 
 public:
-    virtual void tick();
+    virtual void findNearestEntityToAvoid(float);
+    virtual void start();
+    virtual void stop();
     ~AvoidMobGoal();
     virtual bool canUse();
-    virtual void findNearestEntityToAvoid(float);
-    virtual bool canContinueToUse();
     virtual void appendDebugInfo(std::string &)const;
-    virtual void stop();
-    virtual void start();
+    virtual bool canContinueToUse();
+    virtual void tick();
     AvoidMobGoal(Mob &, float, float, float, float, float, bool);
 };

@@ -6,10 +6,10 @@
 class SaveTransactionManager {
 
 public:
+    SaveTransactionManager(std::function<void (bool)>);
     void onEndCompaction();
     void deleteShowIconFunction();
     void _showGlobalSaveIcon();
-    SaveTransactionManager(std::function<void (bool)>);
     void onBeginCompaction();
     ~SaveTransactionManager();
     void _hideGlobalSaveIcon();

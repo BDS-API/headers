@@ -5,6 +5,6 @@
 
 namespace DefinitionEventLoader {
 
-    void loadEvent(Json::Value);
     void loadCollection(Json::Value);
+    void loadEvent(Json::Value);
 };

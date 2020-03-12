@@ -1,31 +1,28 @@
 #pragma once
 
-#include "../../../unmapped/HashString.h"
 #include <string>
-#include "../../item/ItemInstance.h"
-#include "../../nbt/CompoundTag.h"
-#include "../../item/unmapped/ItemDescriptor.h"
+#include "../../../unmapped/HashString.h"
 
 
 class Recipe {
 
 public:
-    virtual void getId()const;
-    virtual void getItemPack()const;
-    virtual bool isMultiRecipe()const;
-    ~Recipe();
-    virtual bool itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;
     virtual bool itemsMatch(ItemDescriptor const&, ItemDescriptor const&)const;
+    virtual void getId()const;
+    virtual bool itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const;
+    virtual void getItemPack()const;
+    ~Recipe();
+    virtual bool isMultiRecipe()const;
     virtual bool itemsMatch(ItemDescriptor const&, ItemDescriptor const&, CompoundTag const*)const;
-    void getHeight()const;
-    void getTag()const;
-    Recipe(std::string, Util::HashString);
+    std::string getRecipeId()const;
     void countQuantityOfIngredient(ItemInstance const&);
     void getIngredients()const;
     void getPriority()const;
-    std::string getRecipeId()const;
     void operator==(Recipe const&)const;
-    void getWidth()const;
+    Recipe(std::string, Util::HashString);
     Recipe(Recipe &&);
+    void getWidth()const;
+    void getTag()const;
+    void getHeight()const;
     bool isAnyAuxValue(ItemDescriptor const&);
 };

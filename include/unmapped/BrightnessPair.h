@@ -6,6 +6,6 @@
 class BrightnessPair {
 
 public:
-    BrightnessPair(Brightness, Brightness);
     BrightnessPair(BrightnessPair const&);
+    BrightnessPair(Brightness, Brightness);
 };

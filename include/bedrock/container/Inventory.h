@@ -1,25 +1,23 @@
 #pragma once
 
-#include "../item/ItemStack.h"
 #include "FillingContainer.h"
-#include "../actor/Player.h"
 
 
 class Inventory : FillingContainer {
 
 public:
-    virtual void getEmptySlotsCount()const;
-    virtual void getFirstEmptySlot()const;
-    virtual void setContainerSize(int);
+    virtual void dropAll(bool);
     virtual bool canAdd(ItemStack const&)const;
     virtual void init();
-    virtual void dropAll(bool);
-    ~Inventory();
+    virtual void getEmptySlotsCount()const;
+    virtual void getFirstEmptySlot()const;
     virtual void add(ItemStack &);
-    void setupDefault();
-    void clearInventoryWithDefault(bool);
-    void _getDefaultStartingMapScale()const;
+    virtual void setContainerSize(int);
+    ~Inventory();
     void tick(int);
     void getComplexItems();
+    void clearInventoryWithDefault(bool);
+    void setupDefault();
+    void _getDefaultStartingMapScale()const;
     Inventory(Player *);
 };

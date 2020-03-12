@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "Packet.h"
 #include <string>
+#include "Packet.h"
 
 
 class DisconnectPacket : Packet {
 
 public:
-    virtual void write(BinaryStream &)const;
     ~DisconnectPacket();
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual void getId()const;
+    virtual void write(BinaryStream &)const;
     virtual std::string getName()const;
+    virtual void getId()const;
+    virtual void read(ReadOnlyBinaryStream &);
     DisconnectPacket();
     DisconnectPacket(std::string const&, bool);
 };

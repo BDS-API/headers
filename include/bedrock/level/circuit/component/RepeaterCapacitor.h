@@ -1,33 +1,28 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitTrackingInfo.h"
-#include "../../../../unmapped/CircuitSystem.h"
-#include "../../../../unmapped/CircuitSceneGraph.h"
 #include "CapacitorComponent.h"
-#include "../../../util/BlockPos.h"
-#include "BaseCircuitComponent.h"
 
 
 class RepeaterCapacitor : CapacitorComponent {
 
 public:
-    ~RepeaterCapacitor();
-    virtual bool canConsumerPower();
-    virtual void evaluate(CircuitSystem &, BlockPos const&);
-    virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
-    virtual void setStrength(int);
-    virtual void getPoweroutDirection()const;
-    virtual void consumePowerAnyDirection();
-    virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
-    virtual void cacheValues(CircuitSystem &, BlockPos const&);
     virtual void removeSource(BlockPos const&, BaseCircuitComponent const*);
+    virtual void evaluate(CircuitSystem &, BlockPos const&);
+    virtual void setStrength(int);
+    virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
+    virtual void consumePowerAnyDirection();
+    virtual bool canConsumerPower();
+    ~RepeaterCapacitor();
+    virtual void getPoweroutDirection()const;
+    virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
     virtual void getInstanceType()const;
+    virtual void cacheValues(CircuitSystem &, BlockPos const&);
     virtual void getStrength()const;
-    virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
     virtual void checkLock(CircuitSystem &, BlockPos const&);
-    void alternatePulse();
-    void extendPulse();
-    void setDelay(int);
+    virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
 //  void delayPulse(RepeaterCapacitor::States); //TODO: incomplete function definition
+    void alternatePulse();
     RepeaterCapacitor();
+    void setDelay(int);
+    void extendPulse();
 };

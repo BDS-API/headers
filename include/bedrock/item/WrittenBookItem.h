@@ -1,14 +1,8 @@
 #pragma once
 
-#include "ItemStack.h"
-#include <string>
-#include "../nbt/CompoundTag.h"
-#include "../actor/Player.h"
-#include "ItemStackBase.h"
 #include <memory>
 #include "Item.h"
-#include "../level/Level.h"
-#include "unmapped/ItemDescriptor.h"
+#include <string>
 
 
 class WrittenBookItem : Item {
@@ -28,23 +22,23 @@ public:
     static long TAG_PAGE_PHOTO_NAME;
     static long TAG_ID;
 
-    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const;
-    virtual bool isGlint(ItemStackBase const&)const;
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const;
-    virtual void use(ItemStack &, Player &)const;
-    ~WrittenBookItem();
+    virtual bool isGlint(ItemStackBase const&)const;
     virtual bool requiresInteract()const;
+    virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const;
+    ~WrittenBookItem();
     virtual std::string getInteractText(Player const&)const;
-    std::string getAuthor(ItemStack const&);
-    void getGeneration(std::unique_ptr<CompoundTag> const&);
-    bool canBeCopied(std::unique_ptr<CompoundTag> const&);
-    std::string getXUID(ItemStack const&);
+    virtual void use(ItemStack &, Player &)const;
     WrittenBookItem(std::string const&, int);
-    void getPageCount(ItemStack const&);
-    void getPageCountByType(ItemStack const&);
+    bool canBeCopied(std::unique_ptr<CompoundTag> const&);
     std::string getTitle(ItemStack const&);
-    void getPages(ItemStack const&);
-    void makeSureTagIsValid(CompoundTag const&);
-    void resolvedBookComponents(ItemStack const&, Player const&);
+    void getGeneration(std::unique_ptr<CompoundTag> const&);
     std::string getBookId(ItemStack const&);
+    void resolvedBookComponents(ItemStack const&, Player const&);
+    void getPages(ItemStack const&);
+    void getPageCount(ItemStack const&);
+    std::string getAuthor(ItemStack const&);
+    std::string getXUID(ItemStack const&);
+    void getPageCountByType(ItemStack const&);
+    void makeSureTagIsValid(CompoundTag const&);
 };

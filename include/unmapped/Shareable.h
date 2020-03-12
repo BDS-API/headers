@@ -6,7 +6,7 @@
 class Shareable {
 
 public:
-    Shareable();
     void setCraftInto(std::string const&);
+    Shareable();
     void setItem(std::string const&);
 };

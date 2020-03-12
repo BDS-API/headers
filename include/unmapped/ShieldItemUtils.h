@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../bedrock/actor/damagesource/ActorDamageSource.h"
 
 
 namespace ShieldItemUtils {

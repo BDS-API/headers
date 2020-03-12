@@ -1,8 +1,7 @@
 #pragma once
 
-#include "BlockLegacy.h"
 #include <string>
-#include "../../unmapped/Material.h"
+#include "BlockLegacy.h"
 
 
 class DriedKelpBlock : BlockLegacy {

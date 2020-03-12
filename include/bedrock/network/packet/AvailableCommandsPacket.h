@@ -1,10 +1,8 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
 #include <string>
-#include <vector>
 #include "Packet.h"
+#include <vector>
 
 
 class AvailableCommandsPacket : Packet {
@@ -17,46 +15,46 @@ public:
     class ParamData;
     class SoftEnumData;
 
-    virtual void getId()const;
     virtual std::string getName()const;
-    ~AvailableCommandsPacket();
     virtual void write(BinaryStream &)const;
     virtual void read(ReadOnlyBinaryStream &);
-    AvailableCommandsPacket();
-    std::string getEnumValues()const;
-    void getConstraints()const;
-    void getSoftEnums()const;
+    virtual void getId()const;
+    ~AvailableCommandsPacket();
     void getEnums()const;
-    std::string getPostfixes()const;
+    void getConstraints()const;
+    AvailableCommandsPacket();
     AvailableCommandsPacket(std::vector<std::string> const&, std::vector<std::string> const&, std::vector<AvailableCommandsPacket::EnumData> &&, std::vector<AvailableCommandsPacket::ConstrainedValueData> &&, std::vector<AvailableCommandsPacket::CommandData> &&, std::vector<AvailableCommandsPacket::SoftEnumData> &&);
+    void getSoftEnums()const;
+    std::string getEnumValues()const;
     void getCommands()const;
+    std::string getPostfixes()const;
     class CommandData {
 
     public:
         ~CommandData();
-        CommandData();
         CommandData(AvailableCommandsPacket::CommandData &&);
+        CommandData();
     };
     class ConstrainedValueData {
 
     public:
+        ~ConstrainedValueData();
         ConstrainedValueData(AvailableCommandsPacket::ConstrainedValueData &&);
         ConstrainedValueData();
-        ~ConstrainedValueData();
     };
     class EnumData {
 
     public:
         ~EnumData();
-        EnumData(AvailableCommandsPacket::EnumData &&);
         EnumData();
+        EnumData(AvailableCommandsPacket::EnumData &&);
     };
     class OverloadData {
 
     public:
-        ~OverloadData();
-        OverloadData(AvailableCommandsPacket::OverloadData &&);
         OverloadData();
+        OverloadData(AvailableCommandsPacket::OverloadData &&);
+        ~OverloadData();
     };
     class ParamData {
 

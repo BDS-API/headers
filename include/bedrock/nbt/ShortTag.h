@@ -1,8 +1,7 @@
 #pragma once
 
 #include "Tag.h"
-#include "../io/IDataInput.h"
-#include "../io/IDataOutput.h"
+#include <string>
 
 
 class ShortTag : Tag {
@@ -10,13 +9,13 @@ class ShortTag : Tag {
 public:
     virtual void copy()const;
     virtual void getId()const;
-    virtual void equals(Tag const&)const;
-    virtual void write(IDataOutput &)const;
-    virtual std::string toString()const;
-    virtual void hash()const;
-    virtual void load(IDataInput &);
     ~ShortTag();
-    ShortTag(ShortTag &&);
+    virtual void write(IDataOutput &)const;
+    virtual void load(IDataInput &);
+    virtual void hash()const;
+    virtual std::string toString()const;
+    virtual void equals(Tag const&)const;
     ShortTag();
     ShortTag(short);
+    ShortTag(ShortTag &&);
 };

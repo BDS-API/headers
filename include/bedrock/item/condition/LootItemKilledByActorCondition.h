@@ -1,10 +1,8 @@
 #pragma once
 
-#include "../../../json/Value.h"
-#include "../../util/Random.h"
 #include "../../actor/unmapped/ActorDefinitionIdentifier.h"
 #include "LootItemCondition.h"
-#include "../../../unmapped/LootTableContext.h"
+#include "../../../json/Value.h"
 
 
 class LootItemKilledByActorCondition : LootItemCondition {

@@ -1,23 +1,17 @@
 #pragma once
 
-#include "../condition/LootItemCondition.h"
 #include <string>
-#include "../../util/Random.h"
-#include "../ItemInstance.h"
-#include "../ItemStack.h"
-#include <vector>
-#include <memory>
 #include "../../../json/Value.h"
-#include "../../../unmapped/LootTableContext.h"
+#include <vector>
 #include "LootItemFunction.h"
 
 
 class FillContainerFunction : LootItemFunction {
 
 public:
+    virtual void apply(ItemStack &, Random &, LootTableContext &);
     ~FillContainerFunction();
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
-    virtual void apply(ItemStack &, Random &, LootTableContext &);
     void deserialize(Json::Value, std::vector<std::unique_ptr<LootItemCondition>> &);
     FillContainerFunction(std::vector<std::unique_ptr<LootItemCondition>> &, std::string const&);
 };

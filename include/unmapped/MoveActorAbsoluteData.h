@@ -1,8 +1,5 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
-#include "../bedrock/util/Vec2.h"
-#include "../bedrock/actor/Actor.h"
 
 
 class MoveActorAbsoluteData {
@@ -10,16 +7,16 @@ class MoveActorAbsoluteData {
 public:
     class Header;
 
-    MoveActorAbsoluteData(Actor const&);
-    void calculateDelta(MoveActorAbsoluteData const&)const;
-    bool isDifferenceSignificant(MoveActorAbsoluteData const&, Vec3 const&)const;
-    void getYHeadRot()const;
-    void operator==(MoveActorAbsoluteData const&)const;
     void setYHeadRot(float);
-    void getRot()const;
+    MoveActorAbsoluteData(Actor const&);
     void getIntDelta(float, float);
+    void calculateDelta(MoveActorAbsoluteData const&)const;
     MoveActorAbsoluteData();
+    void getRot()const;
+    bool isDifferenceSignificant(MoveActorAbsoluteData const&, Vec3 const&)const;
+    void operator==(MoveActorAbsoluteData const&)const;
     void setRot(Vec2 const&);
+    void getYHeadRot()const;
     class Header {
 
     public:

@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../bedrock/level/circuit/component/BaseCircuitComponent.h"
-#include "../bedrock/util/BlockPos.h"
 
 
 class CircuitTrackingInfo {
@@ -9,13 +7,13 @@ class CircuitTrackingInfo {
 public:
     class Entry;
 
-    CircuitTrackingInfo(CircuitTrackingInfo const&);
     CircuitTrackingInfo(BaseCircuitComponent *, BlockPos const&, int);
+    CircuitTrackingInfo(CircuitTrackingInfo const&);
     class Entry {
 
     public:
+        Entry(CircuitTrackingInfo::Entry const&);
         void set(BaseCircuitComponent *, BlockPos const&, unsigned char const&, unsigned long);
         Entry();
-        Entry(CircuitTrackingInfo::Entry const&);
     };
 };

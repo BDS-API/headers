@@ -6,8 +6,8 @@
 class DamageSensorTrigger {
 
 public:
-    DamageSensorTrigger();
     ~DamageSensorTrigger();
-    DamageSensorTrigger(DamageSensorTrigger const&);
+    DamageSensorTrigger();
     void setCause(std::string const&);
+    DamageSensorTrigger(DamageSensorTrigger const&);
 };

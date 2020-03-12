@@ -1,22 +1,19 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "../../item/ItemStack.h"
-#include "../../../mce/UUID.h"
-#include <vector>
+#include <string>
 #include "Packet.h"
+#include <vector>
 
 
 class CraftingEventPacket : Packet {
 
 public:
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual std::string getName()const;
-    ~CraftingEventPacket();
-    virtual void getId()const;
     virtual void write(BinaryStream &)const;
+    virtual std::string getName()const;
+    virtual void getId()const;
+    ~CraftingEventPacket();
+    virtual void read(ReadOnlyBinaryStream &);
 //  CraftingEventPacket(ContainerID, int, mce::UUID const&); //TODO: incomplete function definition
-    CraftingEventPacket();
 //  CraftingEventPacket(ContainerID, int, mce::UUID const&, std::vector<ItemStack> &&, std::vector<ItemStack> &); //TODO: incomplete function definition
+    CraftingEventPacket();
 };

@@ -1,12 +1,8 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "../../actor/Actor.h"
-#include "../../actor/attribute/AttributeInstance.h"
-#include <vector>
+#include <string>
 #include "Packet.h"
-#include "../../actor/attribute/AttributeInstanceHandle.h"
+#include <vector>
 
 
 class UpdateAttributesPacket : Packet {
@@ -14,24 +10,24 @@ class UpdateAttributesPacket : Packet {
 public:
     class AttributeData;
 
-    virtual void write(BinaryStream &)const;
-    virtual void read(ReadOnlyBinaryStream &);
     virtual void getId()const;
-    virtual std::string getName()const;
     ~UpdateAttributesPacket();
-    void getAttributeData()const;
+    virtual void write(BinaryStream &)const;
+    virtual std::string getName()const;
+    virtual void read(ReadOnlyBinaryStream &);
     void getRuntimeId()const;
-    UpdateAttributesPacket(Actor const&, std::vector<AttributeInstanceHandle> const&);
     UpdateAttributesPacket();
+    void getAttributeData()const;
+    UpdateAttributesPacket(Actor const&, std::vector<AttributeInstanceHandle> const&);
     class AttributeData {
 
     public:
-        AttributeData(UpdateAttributesPacket::AttributeData const&);
-        void write(BinaryStream &)const;
-        AttributeData(AttributeInstance const&);
         AttributeData(UpdateAttributesPacket::AttributeData &&);
+        AttributeData(UpdateAttributesPacket::AttributeData const&);
         ~AttributeData();
+        void write(BinaryStream &)const;
         void read(ReadOnlyBinaryStream &);
         AttributeData();
+        AttributeData(AttributeInstance const&);
     };
 };

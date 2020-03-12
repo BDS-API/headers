@@ -1,21 +1,20 @@
 #pragma once
 
-#include <vector>
-#include "../../json/Value.h"
 #include <string>
+#include <vector>
 
 
 class PackError {
 
 public:
-    virtual std::string getLocErrorMessage()const;
     ~PackError();
-    void deserialize(Json::Value const&);
-    PackError(PackError const&);
-    std::string getEventErrorMessage()const;
-    void serialize(Json::Value &);
+    virtual std::string getLocErrorMessage()const;
     void getPackErrorType()const;
 //  PackError(PackErrorType, std::vector<std::string> const&); //TODO: incomplete function definition
-    std::string getErrorParameters()const;
     void getErrorValue()const;
+    std::string getErrorParameters()const;
+    PackError(PackError const&);
+    void deserialize(Json::Value const&);
+    void serialize(Json::Value &);
+    std::string getEventErrorMessage()const;
 };

@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../../util/BlockPos.h"
 
 
 class BlockPosIterator {

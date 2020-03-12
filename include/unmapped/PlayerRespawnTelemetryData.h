@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Event.h"
 #include <string>
 
 
@@ -9,14 +8,14 @@ class PlayerRespawnTelemetryData {
 public:
     static std::string mEventName;
 
-    void setShortJumpCount(unsigned int);
-    void setSearchTime(unsigned int);
-    PlayerRespawnTelemetryData();
-    void setSearchTime(double);
-    void setPositionSourceType(unsigned int);
     std::string getEventName()const;
-    void setJumpDistance(double);
-    void WriteEventData(Social::Events::Event &)const;
+    PlayerRespawnTelemetryData();
+    void setPositionSourceType(unsigned int);
     void setChangedDimension(bool);
+    void setShortJumpCount(unsigned int);
     void setLongJumpCount(unsigned int);
+    void WriteEventData(Social::Events::Event &)const;
+    void setSearchTime(unsigned int);
+    void setSearchTime(double);
+    void setJumpDistance(double);
 };

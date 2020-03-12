@@ -8,7 +8,7 @@ namespace mce {
     class Radian {
 
     public:
-        bool asFloat()const;
         Radian(mce::Degree);
+        bool asFloat()const;
     };
 }

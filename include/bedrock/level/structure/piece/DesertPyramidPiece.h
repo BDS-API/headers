@@ -1,9 +1,6 @@
 #pragma once
 
-#include "../../../block/unmapped/BlockSource.h"
 #include "ScatteredFeaturePiece.h"
-#include "../../../util/Random.h"
-#include "../../../../unmapped/BoundingBox.h"
 
 
 class DesertPyramidPiece : ScatteredFeaturePiece {

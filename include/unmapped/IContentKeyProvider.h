@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ContentIdentity.h"
+#include <string>
 
 
 class IContentKeyProvider {

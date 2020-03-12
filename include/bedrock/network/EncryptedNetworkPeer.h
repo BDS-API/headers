@@ -1,18 +1,18 @@
 #pragma once
 
 #include <string>
-#include "NetworkPeer.h"
 #include <memory>
+#include "NetworkPeer.h"
 
 
 class EncryptedNetworkPeer : NetworkPeer {
 
 public:
-    virtual void getNetworkStatus();
-//  virtual void sendPacket(std::string const&, NetworkPeer::Reliability, int, unsigned short, Compressibility); //TODO: incomplete function definition
     ~EncryptedNetworkPeer();
+//  virtual void sendPacket(std::string const&, NetworkPeer::Reliability, int, unsigned short, Compressibility); //TODO: incomplete function definition
+    virtual void getNetworkStatus();
     virtual void receivePacket(std::string &);
-    void enableEncryption(std::string const&);
     bool isEncrypted()const;
     EncryptedNetworkPeer(std::shared_ptr<NetworkPeer>);
+    void enableEncryption(std::string const&);
 };

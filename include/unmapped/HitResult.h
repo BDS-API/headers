@@ -1,37 +1,34 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
-#include "../bedrock/util/BlockPos.h"
-#include "../bedrock/util/Vec3.h"
 
 
 class HitResult {
 
 public:
-    HitResult(Vec3 const&, Vec3 const&, Vec3 const&);
+    void getLiquidPos()const;
+    void setOutOfRange();
+    void getFacing()const;
     HitResult(HitResult &&);
-    void setFacing(unsigned char);
-    void getEntity()const;
+    HitResult(Vec3 const&, Vec3 const&, BlockPos const&, unsigned char, Vec3 const&);
     bool isHit()const;
     void resetHitType();
-    void getLiquidPos()const;
-    void getPos()const;
-    HitResult(HitResult const&);
-    HitResult(Vec3 const&, Vec3 const&, Actor &, Vec3 const&);
-    HitResult();
     void getLiquidFacing()const;
-    void setIsHitLiquid(bool, HitResult);
+    void distanceTo(Actor const&)const;
     HitResult(Vec3 const&, Vec3 const&, HitResult const&);
-    HitResult(Vec3 const&, Vec3 const&, Actor &);
-    void getHitResultType();
-    void getLiquid()const;
-    bool isTile()const;
+    HitResult(Vec3 const&, Vec3 const&, Actor &, Vec3 const&);
+    void setIsHitLiquid(bool, HitResult);
     bool isEntity()const;
     bool isHitLiquid()const;
-    void setOutOfRange();
-    void distanceTo(Actor const&)const;
-    HitResult(Vec3 const&, Vec3 const&, BlockPos const&, unsigned char, Vec3 const&);
-    void resetHitEntity();
+    HitResult(Vec3 const&, Vec3 const&, Actor &);
+    void getEntity()const;
+    bool isTile()const;
     void getBlock()const;
-    void getFacing()const;
+    void resetHitEntity();
+    HitResult(Vec3 const&, Vec3 const&, Vec3 const&);
+    void setFacing(unsigned char);
+    HitResult(HitResult const&);
+    void getLiquid()const;
+    HitResult();
+    void getPos()const;
+    void getHitResultType();
 };

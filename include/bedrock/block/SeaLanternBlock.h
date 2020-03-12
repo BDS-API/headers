@@ -1,9 +1,7 @@
 #pragma once
 
-#include "BlockLegacy.h"
-#include "../util/Random.h"
-#include "../../unmapped/Block.h"
 #include <string>
+#include "BlockLegacy.h"
 
 
 class SeaLanternBlock : BlockLegacy {
@@ -11,7 +9,7 @@ class SeaLanternBlock : BlockLegacy {
 public:
     virtual bool canBeSilkTouched()const;
     virtual void getResourceCount(Random &, Block const&, int)const;
-    ~SeaLanternBlock();
     virtual void getResourceItem(Random &, Block const&, int)const;
+    ~SeaLanternBlock();
     SeaLanternBlock(std::string const&, int);
 };

@@ -1,10 +1,9 @@
 #pragma once
 
 #include <string>
-#include <functional>
 #include <memory>
-#include "../Scheduler.h"
 #include "NetworkPeer.h"
+#include <functional>
 
 
 class BatchedNetworkPeer : NetworkPeer {
@@ -12,21 +11,21 @@ class BatchedNetworkPeer : NetworkPeer {
 public:
     class DataCallback;
 
-    virtual void update();
-//  virtual void sendPacket(std::string const&, NetworkPeer::Reliability, int, unsigned short, Compressibility); //TODO: incomplete function definition
     virtual void getNetworkStatus();
-    virtual void receivePacket(std::string &);
+    virtual void update();
     ~BatchedNetworkPeer();
     virtual void flush(std::function<void (void)> &&);
-    void setAsyncEnabled(bool);
+//  virtual void sendPacket(std::string const&, NetworkPeer::Reliability, int, unsigned short, Compressibility); //TODO: incomplete function definition
+    virtual void receivePacket(std::string &);
     void getCompressibleState(unsigned long)const;
-    BatchedNetworkPeer(std::shared_ptr<NetworkPeer>, Scheduler &);
+    void setAsyncEnabled(bool);
     void _startSendTask();
+    BatchedNetworkPeer(std::shared_ptr<NetworkPeer>, Scheduler &);
     class DataCallback {
 
     public:
-        DataCallback();
         ~DataCallback();
+        DataCallback();
         DataCallback(BatchedNetworkPeer::DataCallback &&);
     };
 };

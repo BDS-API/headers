@@ -1,20 +1,19 @@
 #pragma once
 
-#include "ActorInfo.h"
-#include <vector>
 #include <string>
+#include <vector>
 
 
 class ActorInfoRegistry {
 
 public:
-    void setSpawnEggAvailable(std::string, bool);
     ~ActorInfoRegistry();
-    void getActorInfoList()const;
-    void getActorInfoId(std::string const&)const;
-    void getActorInfo(unsigned int)const;
     ActorInfoRegistry();
-    void _digestInfoFromServer(std::vector<ActorInfo> const&);
+    void getActorInfoList()const;
     void registerActorInfo(ActorInfo const&);
+    void _digestInfoFromServer(std::vector<ActorInfo> const&);
+    void getActorInfoId(std::string const&)const;
+    void setSpawnEggAvailable(std::string, bool);
+    void getActorInfo(unsigned int)const;
     bool isSpawnEggAvailable(std::string);
 };

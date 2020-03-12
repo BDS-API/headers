@@ -17,8 +17,8 @@ namespace com {
                     public:
                         class experimental_async_interface;
 
-                        virtual void experimental_async();
                         ~StubInterface();
+                        virtual void experimental_async();
                         StubInterface();
                         class experimental_async_interface {
 

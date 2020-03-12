@@ -1,23 +1,22 @@
 #pragma once
 
 #include "Tag.h"
-#include "../io/IDataInput.h"
+#include <string>
 #include "../../unmapped/TagMemoryChunk.h"
-#include "../io/IDataOutput.h"
 
 
 class IntArrayTag : Tag {
 
 public:
     virtual void getId()const;
-    ~IntArrayTag();
-    virtual std::string toString()const;
-    virtual void write(IDataOutput &)const;
-    virtual void load(IDataInput &);
-    virtual void copy()const;
-    virtual void hash()const;
     virtual void equals(Tag const&)const;
+    virtual void write(IDataOutput &)const;
+    virtual std::string toString()const;
+    virtual void hash()const;
+    virtual void copy()const;
+    ~IntArrayTag();
+    virtual void load(IDataInput &);
     IntArrayTag(TagMemoryChunk);
-    IntArrayTag();
     IntArrayTag(IntArrayTag &&);
+    IntArrayTag();
 };

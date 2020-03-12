@@ -1,35 +1,29 @@
 #pragma once
 
-#include "../../item/ItemStack.h"
 #include "ContainerManagerModel.h"
-#include "../../item/ItemInstance.h"
-#include "../../../unmapped/ContainerItemStack.h"
-#include "../../util/BlockPos.h"
-#include "../../item/unmapped/ItemDescriptor.h"
-#include "../../actor/Player.h"
 
 
 class BrewingStandContainerManagerModel : ContainerManagerModel {
 
 public:
-    virtual void init();
-    virtual void setSlot(int, ContainerItemStack const&, bool);
-    virtual void getItems();
-    virtual void setData(int, int);
     virtual void getSlot(int);
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    virtual void init();
+    virtual void getItems();
     virtual void broadcastChanges();
     ~BrewingStandContainerManagerModel();
-    void getBrewProgress(int);
+    virtual void setData(int, int);
+    void _getBrewingStandEntity();
+//  BrewingStandContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
+    void _onOutputSlotChanged(int, ItemStack const&, ItemStack const&);
     void firePotionBrewedEvent(ItemDescriptor const&, int);
-    void _onFuelSlotChanged(int, ItemStack const&, ItemStack const&);
+    void getFuelProgress(int);
+    void _onInputSlotChanged(int, ItemStack const&, ItemStack const&);
+    void getBubbleProgress(int);
+    void getBrewProgress(int);
+    bool isStandValid(float);
     bool isFinished(int &, int &, int);
     void fireItemAcquiredEvent(ItemInstance const&, int);
-    bool isStandValid(float);
-    void _onInputSlotChanged(int, ItemStack const&, ItemStack const&);
-    void _getBrewingStandEntity();
+    void _onFuelSlotChanged(int, ItemStack const&, ItemStack const&);
     void getBlockPos()const;
-//  BrewingStandContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
-    void getFuelProgress(int);
-    void _onOutputSlotChanged(int, ItemStack const&, ItemStack const&);
-    void getBubbleProgress(int);
 };

@@ -1,8 +1,7 @@
 #pragma once
 
-#include "../EnderDragon.h"
-#include "Goal.h"
 #include <string>
+#include "Goal.h"
 
 
 class DragonLandingGoal : Goal {
@@ -12,10 +11,10 @@ public:
     ~DragonLandingGoal();
     virtual void tick();
     virtual void start();
-    virtual bool canContinueToUse();
-    virtual void appendDebugInfo(std::string &)const;
     virtual void stop();
-    void findNewTarget();
+    virtual void appendDebugInfo(std::string &)const;
+    virtual bool canContinueToUse();
     DragonLandingGoal(EnderDragon &);
     void navigateToNextPathNode();
+    void findNewTarget();
 };

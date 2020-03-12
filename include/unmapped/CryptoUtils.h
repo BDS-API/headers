@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../core/Path.h"
+#include <string>
 
 
 namespace CryptoUtils {

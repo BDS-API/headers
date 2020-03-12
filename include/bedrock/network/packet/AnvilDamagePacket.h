@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "../../../unmapped/NetworkBlockPosition.h"
+#include <string>
 #include "Packet.h"
 
 
 class AnvilDamagePacket : Packet {
 
 public:
-    virtual void read(ReadOnlyBinaryStream &);
-    ~AnvilDamagePacket();
     virtual void write(BinaryStream &)const;
-    virtual void getId()const;
+    ~AnvilDamagePacket();
     virtual std::string getName()const;
+    virtual void getId()const;
+    virtual void read(ReadOnlyBinaryStream &);
     AnvilDamagePacket(int, NetworkBlockPosition const&);
     AnvilDamagePacket();
 };

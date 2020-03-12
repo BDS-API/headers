@@ -1,13 +1,13 @@
 #pragma once
 
-#include <functional>
 #include <string>
+#include <functional>
 
 
 class RoleCheckerCallback {
 
 public:
-    ~RoleCheckerCallback();
-//  RoleCheckerCallback(std::function<void (ADRole, std::string const&, std::string const&)>); //TODO: incomplete function definition
 //  void call(ADRole, std::string const&, std::string const&); //TODO: incomplete function definition
+    RoleCheckerCallback(std::function<void (ADRole, std::string const&, std::string const&)>);
+    ~RoleCheckerCallback();
 };

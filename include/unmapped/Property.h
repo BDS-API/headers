@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 
 
 namespace Social {
@@ -9,10 +10,10 @@ namespace Social {
         class Property {
 
         public:
-            std::string getName()const;
             void getValue()const;
-            Property(Social::Events::Property const&);
             void operator==(Social::Events::Property const&)const;
+            Property(Social::Events::Property const&);
+            std::string getName()const;
             ~Property();
             Property();
         };

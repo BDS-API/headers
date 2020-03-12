@@ -1,22 +1,21 @@
 #pragma once
 
-#include "PathfinderNode.h"
 
 
 class BinaryHeap {
 
 public:
-    void _init();
-    void changeCost(PathfinderNode *, float);
     BinaryHeap();
-    void clear();
-    void peek();
-    void remove(PathfinderNode *);
-    void upHeap(int);
-    void size();
-    void insert(PathfinderNode *);
     ~BinaryHeap();
-    void downHeap(int);
-    bool isEmpty();
+    void insert(PathfinderNode *);
+    void upHeap(int);
+    void remove(PathfinderNode *);
+    void clear();
+    void changeCost(PathfinderNode *, float);
     void pop();
+    void downHeap(int);
+    void peek();
+    void size();
+    void _init();
+    bool isEmpty();
 };

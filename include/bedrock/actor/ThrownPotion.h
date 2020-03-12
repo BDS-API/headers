@@ -1,11 +1,6 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList.h"
-#include "unmapped/ActorDefinitionGroup.h"
 #include "Throwable.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "../nbt/CompoundTag.h"
-#include "../../unmapped/DataLoadHelper.h"
 
 
 class ThrownPotion : Throwable {
@@ -13,15 +8,15 @@ class ThrownPotion : Throwable {
 public:
     static long SPLASH_RANGE;
 
+    virtual void setAuxValue(int);
+    virtual void addAdditionalSaveData(CompoundTag &);
+//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
     ~ThrownPotion();
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void setAuxValue(int);
     virtual void queryEntityRenderer()const;
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual void addAdditionalSaveData(CompoundTag &);
-    bool isLinger()const;
+    ThrownPotion(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    void setLinger(bool);
     void init(short);
     void getPotionId()const;
-    void setLinger(bool);
-    ThrownPotion(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    bool isLinger()const;
 };

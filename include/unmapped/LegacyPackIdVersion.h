@@ -6,9 +6,9 @@
 class LegacyPackIdVersion {
 
 public:
+    ~LegacyPackIdVersion();
     void getUpgradedPackId()const;
     LegacyPackIdVersion(LegacyPackIdVersion const&);
-    ~LegacyPackIdVersion();
     LegacyPackIdVersion(std::string const&, std::string const&);
     LegacyPackIdVersion(LegacyPackIdVersion &&);
 };

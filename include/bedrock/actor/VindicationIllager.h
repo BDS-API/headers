@@ -1,18 +1,15 @@
 #pragma once
 
 #include "HumanoidMonster.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "unmapped/ActorDefinitionGroup.h"
-#include "../util/BlockPos.h"
 
 
 class VindicationIllager : HumanoidMonster {
 
 public:
-    virtual void getRidingHeight();
     virtual void useNewAi()const;
-    ~VindicationIllager();
+    virtual void getRidingHeight();
     virtual bool canExistInPeaceful()const;
+    ~VindicationIllager();
     virtual void _getWalkTargetValue(BlockPos const&);
     VindicationIllager(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

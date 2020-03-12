@@ -2,7 +2,6 @@
 
 #include "CompositeDefinition.h"
 #include "../../../json/Value.h"
-#include "../../../unmapped/BehaviorFactory.h"
 
 
 class SequenceDefinition : CompositeDefinition {

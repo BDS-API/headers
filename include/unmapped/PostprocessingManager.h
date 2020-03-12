@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../bedrock/util/ChunkPos.h"
 
 
 class PostprocessingManager {
@@ -8,15 +7,15 @@ class PostprocessingManager {
 public:
     class Owns;
 
-    PostprocessingManager();
-    void _release(ChunkPos const&);
-    void tryLock(ChunkPos const&);
     ~PostprocessingManager();
+    void _release(ChunkPos const&);
+    PostprocessingManager();
+    void tryLock(ChunkPos const&);
     class Owns {
 
     public:
-        Owns(ChunkPos const&, PostprocessingManager &);
-        Owns(PostprocessingManager &);
         ~Owns();
+        Owns(PostprocessingManager &);
+        Owns(ChunkPos const&, PostprocessingManager &);
     };
 };

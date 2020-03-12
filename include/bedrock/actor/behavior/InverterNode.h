@@ -1,14 +1,13 @@
 #pragma once
 
-#include "../Actor.h"
 #include "BehaviorNode.h"
 
 
 class InverterNode : BehaviorNode {
 
 public:
-    ~InverterNode();
     virtual void tick(Actor &);
+    ~InverterNode();
     virtual void initializeFromDefinition(Actor &);
     InverterNode();
 };

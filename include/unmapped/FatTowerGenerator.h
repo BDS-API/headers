@@ -1,13 +1,7 @@
 #pragma once
 
-#include "../bedrock/level/structure/piece/StructurePiece.h"
-#include "../bedrock/util/BlockPos.h"
 #include "SectionGenerator.h"
-#include "../bedrock/level/structure/piece/EndCityPiece.h"
 #include <vector>
-#include <memory>
-#include "../bedrock/util/Random.h"
-#include "StructureManager.h"
 
 
 namespace EndCityPieces {

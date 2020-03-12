@@ -7,6 +7,6 @@ class ComponentDescription : Description {
 
 public:
     ~ComponentDescription();
-    ComponentDescription();
     ComponentDescription(ComponentDescription &&);
+    ComponentDescription();
 };

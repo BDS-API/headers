@@ -1,17 +1,15 @@
 #pragma once
 
-#include "../ScriptObjectHandle.h"
-#include "ScriptObjectBinder.h"
-#include "ScriptBinderTemplate.h"
 #include <string>
+#include "ScriptBinderTemplate.h"
 
 
 class ScriptBinderEventDataTemplate : ScriptBinderTemplate {
 
 public:
+    virtual std::string getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
     ~ScriptBinderEventDataTemplate();
-    virtual std::string getTemplateIdentifier()const;
-    void build(std::string const&, ScriptApi::ScriptObjectHandle &&);
     ScriptBinderEventDataTemplate();
+    void build(std::string const&, ScriptApi::ScriptObjectHandle &&);
 };

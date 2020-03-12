@@ -8,7 +8,7 @@ namespace mce {
     class Degree {
 
     public:
-        bool asFloat()const;
         Degree(mce::Radian);
+        bool asFloat()const;
     };
 }

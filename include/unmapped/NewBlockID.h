@@ -5,6 +5,6 @@
 class NewBlockID {
 
 public:
-    NewBlockID(NewBlockID const&);
     NewBlockID(unsigned short const&);
+    NewBlockID(NewBlockID const&);
 };

@@ -1,9 +1,6 @@
 #pragma once
 
-#include "LegacyStructureTemplate.h"
 #include "IStructureConstraint.h"
-#include "IBlockPlacementTarget.h"
-#include "../bedrock/util/BlockPos.h"
 
 
 class GroundedConstraint : IStructureConstraint {

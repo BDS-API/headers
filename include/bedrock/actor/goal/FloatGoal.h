@@ -1,16 +1,15 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class FloatGoal : Goal {
 
 public:
     virtual void appendDebugInfo(std::string &)const;
-    ~FloatGoal();
-    virtual bool canUse();
     virtual void tick();
+    virtual bool canUse();
+    ~FloatGoal();
     FloatGoal(Mob &);
 };

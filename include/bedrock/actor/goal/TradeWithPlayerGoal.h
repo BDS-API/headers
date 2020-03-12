@@ -1,18 +1,17 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class TradeWithPlayerGoal : Goal {
 
 public:
-    virtual void appendDebugInfo(std::string &)const;
-    ~TradeWithPlayerGoal();
-    virtual void stop();
-    virtual void start();
     virtual bool canUse();
+    ~TradeWithPlayerGoal();
     virtual bool canContinueToUse();
+    virtual void start();
+    virtual void stop();
+    virtual void appendDebugInfo(std::string &)const;
     TradeWithPlayerGoal(Mob &);
 };

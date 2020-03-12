@@ -1,27 +1,27 @@
 #pragma once
 
-#include "../../nbt/ListTag.h"
+#include <string>
 #include "../../../unmapped/EnchantmentInstance.h"
 
 
 class ItemEnchants {
 
 public:
-    ItemEnchants(int, ListTag const&);
-    bool canEnchant(EnchantmentInstance, bool);
-    void _fromList(ListTag const&);
-    void getTotalValue(bool)const;
-    ItemEnchants(ItemEnchants &&);
     void getSlot()const;
-    void addEnchants(ItemEnchants const&, bool);
-    ~ItemEnchants();
-    void _toList()const;
-    std::string getEnchantNames()const;
-    bool isEmpty()const;
-//  bool hasEnchant(Enchant::Type)const; //TODO: incomplete function definition
-    ItemEnchants(int);
     void getEnchants(int)const;
-    void count()const;
+    ItemEnchants(int, ListTag const&);
+    ItemEnchants(ItemEnchants &&);
+    void _toList()const;
+    void _fromList(ListTag const&);
+    ~ItemEnchants();
     void addEnchant(EnchantmentInstance, bool);
+    void count()const;
+    bool canEnchant(EnchantmentInstance, bool);
+    bool isEmpty()const;
     void getAllEnchants()const;
+    std::string getEnchantNames()const;
+    void getTotalValue(bool)const;
+//  bool hasEnchant(Enchant::Type)const; //TODO: incomplete function definition
+    void addEnchants(ItemEnchants const&, bool);
+    ItemEnchants(int);
 };

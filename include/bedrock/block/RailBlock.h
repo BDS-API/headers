@@ -1,8 +1,7 @@
 #pragma once
 
-#include "BaseRailBlock.h"
-#include "../../unmapped/Block.h"
 #include <string>
+#include "BaseRailBlock.h"
 
 
 class RailBlock : BaseRailBlock {

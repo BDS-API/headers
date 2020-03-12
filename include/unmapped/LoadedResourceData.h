@@ -7,6 +7,6 @@ class LoadedResourceData {
 
 public:
     LoadedResourceData(LoadedResourceData &&);
-    LoadedResourceData(int, std::string const&);
     ~LoadedResourceData();
+    LoadedResourceData(int, std::string const&);
 };

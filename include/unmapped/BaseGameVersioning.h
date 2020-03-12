@@ -1,7 +1,5 @@
 #pragma once
 
-#include "WorldTemplateManager.h"
-#include "../bedrock/level/LevelData.h"
 
 
 namespace BaseGameVersioning {

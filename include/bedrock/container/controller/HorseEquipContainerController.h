@@ -1,22 +1,19 @@
 #pragma once
 
-#include "../../item/unmapped/ItemTransferAmount.h"
-#include "../../item/ItemInstance.h"
-#include "../../../unmapped/ContainerItemStack.h"
-#include "ContainerController.h"
-#include <vector>
 #include <memory>
-#include "../model/ContainerModel.h"
+#include "../../item/unmapped/ItemTransferAmount.h"
+#include <vector>
+#include "ContainerController.h"
 
 
 class HorseEquipContainerController : ContainerController {
 
 public:
-    virtual void _getAvailableSetCount(int, ContainerItemStack const&)const;
-    virtual void _getAvailableAddCount(int)const;
-    ~HorseEquipContainerController();
     virtual void _canSet(int, ContainerItemStack const&, ItemTransferAmount)const;
-    HorseEquipContainerController(std::shared_ptr<ContainerModel>);
-    void setAllowedArmorItems(std::vector<ItemInstance> const&);
+    virtual void _getAvailableAddCount(int)const;
+    virtual void _getAvailableSetCount(int, ContainerItemStack const&)const;
+    ~HorseEquipContainerController();
     void setAllowedSaddleItems(std::vector<ItemInstance> const&);
+    void setAllowedArmorItems(std::vector<ItemInstance> const&);
+    HorseEquipContainerController(std::shared_ptr<ContainerModel>);
 };

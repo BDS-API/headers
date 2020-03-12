@@ -1,7 +1,5 @@
 #pragma once
 
-#include "ActiveTransfersManager.h"
-#include "NetworkIdentifier.h"
 #include <string>
 
 
@@ -12,9 +10,9 @@ namespace ClientBlobCache {
         class TransferBuilder {
 
         public:
-            TransferBuilder(ClientBlobCache::Server::ActiveTransfersManager &, NetworkIdentifier const&);
-            ~TransferBuilder();
             void add(unsigned long, std::string &);
+            ~TransferBuilder();
+            TransferBuilder(ClientBlobCache::Server::ActiveTransfersManager &, NetworkIdentifier const&);
             TransferBuilder();
         };
     }

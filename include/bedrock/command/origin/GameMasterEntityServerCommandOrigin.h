@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID.h"
 #include "ActorServerCommandOrigin.h"
-#include "../../actor/Actor.h"
-#include "../../level/Level.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
 
 
 class GameMasterEntityServerCommandOrigin : ActorServerCommandOrigin {
 
 public:
-    virtual bool isSelectorExpansionAllowed()const;
-    virtual void getPermissionsLevel()const;
-    virtual void clone()const;
-    virtual void getOriginType()const;
     ~GameMasterEntityServerCommandOrigin();
+    virtual void getPermissionsLevel()const;
+    virtual void getOriginType()const;
+    virtual void clone()const;
+    virtual bool isSelectorExpansionAllowed()const;
     GameMasterEntityServerCommandOrigin(Actor &);
     GameMasterEntityServerCommandOrigin(ActorUniqueID, Level &);
 };

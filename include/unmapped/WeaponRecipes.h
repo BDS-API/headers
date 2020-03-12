@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Recipes.h"
 
 
 namespace WeaponRecipes {

@@ -1,10 +1,7 @@
 #pragma once
 
-#include "../../../item/ItemInstance.h"
-#include "../../unmapped/ScriptEngine.h"
-#include "../../ScriptObjectHandle.h"
+#include <string>
 #include "ScriptEventData.h"
-#include "../../../actor/unmapped/ActorUniqueID.h"
 
 
 class ScriptServerActorUseItemEvent : ScriptEventData {
@@ -12,12 +9,12 @@ class ScriptServerActorUseItemEvent : ScriptEventData {
 public:
     static long mHash;
 
-    virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
     ~ScriptServerActorUseItemEvent();
+    virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
     void setItemStack(ItemInstance const&);
+    ScriptServerActorUseItemEvent();
     std::string getName();
+    void setActorId(ActorUniqueID const&);
     void getHash();
 //  void setUseMethod(ItemUseMethod); //TODO: incomplete function definition
-    ScriptServerActorUseItemEvent();
-    void setActorId(ActorUniqueID const&);
 };

@@ -1,17 +1,16 @@
 #pragma once
 
-#include "Property.h"
 
 
 namespace FormJsonValidator {
 
-    void getValidator();
-    void getContentItemProperty(JsonValidator::Property const&, JsonValidator::Property const&, JsonValidator::Property const&, JsonValidator::Property const&, JsonValidator::Property const&, JsonValidator::Property const&);
-    void getLabelProperty();
-    void getDropdownProperty(bool);
     void getStepSliderProperty(bool);
-    void getSliderProperty(bool);
+    void getDropdownProperty(bool);
+    void getLabelProperty();
     void getToggleProperty(bool);
+    void getValidator();
     void getTextInputProperty(bool);
+    void getContentItemProperty(JsonValidator::Property const&, JsonValidator::Property const&, JsonValidator::Property const&, JsonValidator::Property const&, JsonValidator::Property const&, JsonValidator::Property const&);
+    void getSliderProperty(bool);
     void getControlLockedProperty();
 };

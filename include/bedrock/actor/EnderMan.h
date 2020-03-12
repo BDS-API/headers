@@ -1,12 +1,5 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup.h"
-#include "../../unmapped/MobEffectInstance.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "../nbt/CompoundTag.h"
-#include "../../unmapped/Block.h"
-#include "damagesource/ActorDamageSource.h"
-#include "../../unmapped/DataLoadHelper.h"
 #include "Monster.h"
 
 
@@ -18,21 +11,21 @@ public:
     static long SPEED_MODIFIER_ATTACKING_UUID;
     static long SPEED_MODIFIER_ATTACKING;
 
-    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    virtual void newServerAiStep();
-    virtual void addAdditionalSaveData(CompoundTag &);
     virtual void hurtEffects(ActorDamageSource const&, int, bool, bool);
-    virtual void normalTick();
-    virtual bool canBeAffectedByArrow(MobEffectInstance const&)const;
-    virtual void getAmbientSound();
-    virtual void resolveDeathLoot(int, ActorDamageSource const&);
-    virtual void shouldRender()const;
-    virtual void aiStep();
-    ~EnderMan();
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
-    void getCarryingBlock();
-    void setCarryingBlock(Block const&);
+    virtual void resolveDeathLoot(int, ActorDamageSource const&);
+    virtual void getAmbientSound();
+    ~EnderMan();
+    virtual void addAdditionalSaveData(CompoundTag &);
+    virtual bool canBeAffectedByArrow(MobEffectInstance const&)const;
+    virtual void normalTick();
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+    virtual void shouldRender()const;
+    virtual void newServerAiStep();
+    virtual void aiStep();
     void shutdown();
     EnderMan(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    void getCarryingBlock();
     void _teleport();
+    void setCarryingBlock(Block const&);
 };

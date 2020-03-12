@@ -5,7 +5,7 @@
 class TradeTier {
 
 public:
-    ~TradeTier();
     TradeTier(TradeTier &&);
+    ~TradeTier();
     TradeTier();
 };

@@ -1,19 +1,17 @@
 #pragma once
 
 #include "AttributeBuffInfo.h"
-#include "AttributeBuff.h"
-#include "AttributeInstance.h"
 
 
 class AttributeInstanceDelegate {
 
 public:
-    virtual void change(float, float, AttributeBuffInfo);
-    virtual void tick();
-    virtual void notify(long);
     virtual void getBuffValue(AttributeBuff const&)const;
+    virtual void notify(long);
+    virtual void tick();
     ~AttributeInstanceDelegate();
-    void _getInstance()const;
+    virtual void change(float, float, AttributeBuffInfo);
     void _getMutableInstance()const;
+    void _getInstance()const;
     AttributeInstanceDelegate(AttributeInstance const&);
 };

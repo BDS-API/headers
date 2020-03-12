@@ -1,34 +1,30 @@
 #pragma once
 
-#include "../bedrock/actor/Player.h"
-#include "InventorySource.h"
 #include <vector>
-#include "../bedrock/item/ItemStack.h"
-#include "InventoryAction.h"
 
 
 class InventoryTransaction {
 
 public:
-    void verifyBalance()const;
-    void recalculateBalance();
-    void verifyFull(Player &, bool)const;
-    void getVerifyFunction(InventorySource const&)const;
+    void addItemToContent(ItemStack const&, int);
+    void executeFull(Player &, bool)const;
+    void getActions(InventorySource const&)const;
     void getAllActions()const;
     void getExecuteFunction(InventorySource const&)const;
+    void resetBalance();
+    void getSourceCount()const;
     InventoryTransaction();
-    void getActions(InventorySource const&)const;
-    InventoryTransaction(InventoryTransaction const&);
     void _dropCreatedItems(Player &)const;
     void _logTransaction(bool)const;
-    void resetBalance();
-    void addActionToContent(InventoryAction const&);
-    void addItemToContent(ItemStack const&, int);
-    void reverse()const;
-    void executeFull(Player &, bool)const;
-    void forceBalanceTransaction();
-    ~InventoryTransaction();
+    void recalculateBalance();
+    void getVerifyFunction(InventorySource const&)const;
     void addAction(InventoryAction const&);
-    void getSourceCount()const;
+    void verifyFull(Player &, bool)const;
+    ~InventoryTransaction();
+    void reverse()const;
+    InventoryTransaction(InventoryTransaction const&);
     InventoryTransaction(std::vector<InventoryAction> const&);
+    void verifyBalance()const;
+    void forceBalanceTransaction();
+    void addActionToContent(InventoryAction const&);
 };

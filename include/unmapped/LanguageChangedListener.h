@@ -7,7 +7,7 @@ namespace I18n {
     class LanguageChangedListener {
 
     public:
-        LanguageChangedListener(I18n::LanguageChangedListener &&);
         ~LanguageChangedListener();
+        LanguageChangedListener(I18n::LanguageChangedListener &&);
     };
 }

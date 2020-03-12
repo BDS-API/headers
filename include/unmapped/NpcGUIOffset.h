@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../json/Value.h"
 
 
 class NpcGUIOffset {

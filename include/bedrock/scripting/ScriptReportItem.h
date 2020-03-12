@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 
 
 namespace ScriptApi {
@@ -9,14 +9,14 @@ namespace ScriptApi {
     class ScriptReportItem {
 
     public:
-        ~ScriptReportItem();
-        ScriptReportItem();
-//      ScriptReportItem(ScriptApi::ScriptReportItemType, std::string const&); //TODO: incomplete function definition
-//      void setType(ScriptApi::ScriptReportItemType); //TODO: incomplete function definition
         void getErrorHandler()const;
-        void getType()const;
-//      ScriptReportItem(std::unique_ptr<ScriptApi::JavaScriptErrorHandler> &&); //TODO: incomplete function definition
+//      void setType(ScriptApi::ScriptReportItemType); //TODO: incomplete function definition
+        ScriptReportItem();
 //      ScriptReportItem(ScriptApi::ScriptReportItemType); //TODO: incomplete function definition
+        void getType()const;
+        ScriptReportItem(std::unique_ptr<ScriptApi::JavaScriptErrorHandler> &&);
+        ~ScriptReportItem();
         std::string getMessage()const;
+//      ScriptReportItem(ScriptApi::ScriptReportItemType, std::string const&); //TODO: incomplete function definition
     };
 }

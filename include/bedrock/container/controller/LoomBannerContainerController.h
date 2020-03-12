@@ -2,8 +2,6 @@
 
 #include <memory>
 #include "ContainerController.h"
-#include "../model/ContainerModel.h"
-#include "../../item/ItemInstance.h"
 
 
 class LoomBannerContainerController : ContainerController {

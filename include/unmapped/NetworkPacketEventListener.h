@@ -1,7 +1,5 @@
 #pragma once
 
-#include "PacketHeader.h"
-#include "../bedrock/network/packet/Packet.h"
 
 
 class NetworkPacketEventListener {

@@ -1,9 +1,5 @@
 #pragma once
 
-#include "../bedrock/level/circuit/component/BaseCircuitComponent.h"
-#include "../bedrock/util/BlockPos.h"
-#include "../bedrock/block/unmapped/BlockSource.h"
-#include "../bedrock/util/ChunkPos.h"
 #include <memory>
 
 
@@ -12,36 +8,36 @@ class CircuitSceneGraph {
 public:
     class PendingEntry;
 
-    ~CircuitSceneGraph();
+    void add(BlockPos const&, std::unique_ptr<BaseCircuitComponent>);
+    void findRelationships(BlockPos const&, BaseCircuitComponent *, BlockSource *);
     void preSetupPoweredBlocks(ChunkPos const&);
     void update(BlockSource *);
-    void addIfPoweredBlockAt(BlockSource &, BlockPos const&);
-    CircuitSceneGraph();
-    void getBaseComponent(BlockPos const&);
-    void getFromPendingAdd(BlockPos const&, unsigned long);
-    bool processPendingRemoves();
-    void add(BlockPos const&, std::unique_ptr<BaseCircuitComponent>);
     bool isPendingAdd(BlockPos const&);
+    void getBaseComponent(BlockPos const&);
+    void removeComponent(BlockPos const&);
+    void addIfPoweredBlockAt(BlockSource &, BlockPos const&);
     void scheduleRelationshipUpdate(BlockPos const&, BaseCircuitComponent *);
-    void getFromPendingAdd(BlockPos const&);
-    bool processPendingUpdates(BlockSource *);
+    void getComponent(BlockPos const&, unsigned long);
+    void invalidatePos(BlockPos const&);
+    ~CircuitSceneGraph();
+    void addPositionToReEvaluate(ChunkPos const&, BlockPos const&);
     bool processPendingAdds();
     void getComponents_FastLookupByChunkPos();
-    void findRelationships(BlockPos const&, BaseCircuitComponent *, BlockSource *);
+    bool processPendingUpdates(BlockSource *);
+    bool processPendingRemoves();
+    void getFromPendingAdd(BlockPos const&, unsigned long);
+    CircuitSceneGraph();
+    void getFromPendingAdd(BlockPos const&);
     void setPendingAddAsNewlyLoaded();
-    void addPositionToReEvaluate(ChunkPos const&, BlockPos const&);
-    void invalidatePos(BlockPos const&);
-    void remove(BlockPos const&, BaseCircuitComponent *);
-    void removeComponent(BlockPos const&);
-    void removeStaleRelationships();
-    void getComponent(BlockPos const&, unsigned long);
     void getComponents_FastIterationAcrossActive();
+    void remove(BlockPos const&, BaseCircuitComponent *);
+    void removeStaleRelationships();
     class PendingEntry {
 
     public:
+        PendingEntry(BlockPos const&, BaseCircuitComponent *);
+        PendingEntry(BlockPos const&, std::unique_ptr<BaseCircuitComponent>);
         ~PendingEntry();
         PendingEntry(CircuitSceneGraph::PendingEntry &&);
-        PendingEntry(BlockPos const&, std::unique_ptr<BaseCircuitComponent>);
-        PendingEntry(BlockPos const&, BaseCircuitComponent *);
     };
 };

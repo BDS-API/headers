@@ -1,14 +1,13 @@
 #pragma once
 
-#include "ShulkerBoxBlock.h"
-#include "../../unmapped/Block.h"
 #include <string>
+#include "ShulkerBoxBlock.h"
 
 
 class UndyedShulkerBoxBlock : ShulkerBoxBlock {
 
 public:
-    ~UndyedShulkerBoxBlock();
     virtual void getColor(Block const&)const;
+    ~UndyedShulkerBoxBlock();
     UndyedShulkerBoxBlock(std::string const&, int);
 };

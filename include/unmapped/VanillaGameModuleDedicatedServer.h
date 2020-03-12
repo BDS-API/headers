@@ -6,8 +6,8 @@
 class VanillaGameModuleDedicatedServer : IGameModuleShared {
 
 public:
+    virtual void createGameModuleServer();
     virtual void createInPackagePacks();
     ~VanillaGameModuleDedicatedServer();
-    virtual void createGameModuleServer();
     VanillaGameModuleDedicatedServer();
 };

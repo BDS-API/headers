@@ -9,8 +9,8 @@ namespace Core {
         class ZipProgress {
 
         public:
-            ZipProgress();
             ~ZipProgress();
+            ZipProgress();
             void clear();
         };
     }

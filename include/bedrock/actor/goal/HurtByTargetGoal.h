@@ -1,19 +1,17 @@
 #pragma once
 
 #include <string>
-#include "../Mob.h"
-#include <vector>
 #include "TargetGoal.h"
-#include "../../../unmapped/MobDescriptor.h"
+#include <vector>
 
 
 class HurtByTargetGoal : TargetGoal {
 
 public:
-    virtual bool canUse();
-    ~HurtByTargetGoal();
     virtual void alertOther(Mob *, Mob *);
-    virtual void start();
     virtual void appendDebugInfo(std::string &)const;
+    ~HurtByTargetGoal();
+    virtual bool canUse();
+    virtual void start();
     HurtByTargetGoal(Mob &, std::vector<MobDescriptor> const&, bool);
 };

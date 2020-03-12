@@ -7,8 +7,8 @@
 class TextObjectLocalizedText : ITextObject {
 
 public:
-    virtual std::string asString()const;
     virtual bool asJsonValue()const;
+    virtual std::string asString()const;
     ~TextObjectLocalizedText();
     TextObjectLocalizedText(std::string);
 };

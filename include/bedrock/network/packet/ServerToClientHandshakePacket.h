@@ -1,20 +1,18 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "Packet.h"
 #include <string>
+#include "Packet.h"
 
 
 class ServerToClientHandshakePacket : Packet {
 
 public:
     virtual void getId()const;
-    virtual void read(ReadOnlyBinaryStream &);
     virtual void write(BinaryStream &)const;
-    ~ServerToClientHandshakePacket();
     virtual std::string getName()const;
-    ServerToClientHandshakePacket();
-    std::string getData()const;
+    ~ServerToClientHandshakePacket();
+    virtual void read(ReadOnlyBinaryStream &);
     ServerToClientHandshakePacket(std::string const&);
+    std::string getData()const;
+    ServerToClientHandshakePacket();
 };

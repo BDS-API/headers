@@ -6,7 +6,7 @@
 class MoveControlSkipDescription : MoveControlDescription {
 
 public:
-    virtual void getJsonName()const;
     ~MoveControlSkipDescription();
+    virtual void getJsonName()const;
     MoveControlSkipDescription();
 };

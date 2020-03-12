@@ -9,9 +9,9 @@ namespace Core {
         class BasicFileData {
 
         public:
+            BasicFileData(Core::FileSystem::BasicFileData const&);
             ~BasicFileData();
             BasicFileData(Core::FileSystem::BasicFileData &&);
-            BasicFileData(Core::FileSystem::BasicFileData const&);
         };
     }
 }

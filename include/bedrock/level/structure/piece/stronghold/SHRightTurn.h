@@ -1,22 +1,17 @@
 #pragma once
 
-#include "../../../../util/Random.h"
-#include "../StrongholdPiece.h"
-#include "../../../../block/unmapped/BlockSource.h"
 #include <vector>
-#include <memory>
-#include "../../../../../unmapped/BoundingBox.h"
-#include "../StructurePiece.h"
+#include "../StrongholdPiece.h"
 
 
 class SHRightTurn : StrongholdPiece {
 
 public:
-    ~SHRightTurn();
-    virtual void getType()const;
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
+    ~SHRightTurn();
     virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &);
+    virtual void getType()const;
     void createPiece(std::vector<std::unique_ptr<StructurePiece>> &, Random &, int, int, int, int, int);
-    SHRightTurn(int, Random &, BoundingBox const&, int);
     SHRightTurn();
+    SHRightTurn(int, Random &, BoundingBox const&, int);
 };

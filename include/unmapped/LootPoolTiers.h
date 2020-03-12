@@ -7,6 +7,6 @@ namespace LootPoolTiers {
 
     void deserialize(Json::Value);
     void getBonusRolls();
-    void getBonusChance();
     void getRange();
+    void getBonusChance();
 };

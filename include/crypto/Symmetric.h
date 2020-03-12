@@ -10,12 +10,12 @@ namespace Crypto {
         class Symmetric {
 
         public:
-//          Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode); //TODO: incomplete function definition
-            void getKeySize()const;
+            void decrypt(std::string const&, std::string &);
             void getBlockSize()const;
+            void getKeySize()const;
+//          Symmetric(Crypto::Symmetric::System, Crypto::Symmetric::OperationMode); //TODO: incomplete function definition
             void init(std::string const&, std::string const&);
             ~Symmetric();
-            void decrypt(std::string const&, std::string &);
         };
     }
 }

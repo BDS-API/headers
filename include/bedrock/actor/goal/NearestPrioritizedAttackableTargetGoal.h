@@ -1,10 +1,8 @@
 #pragma once
 
 #include <string>
-#include "../Mob.h"
 #include "NearestAttackableTargetGoal.h"
 #include <vector>
-#include "../../../unmapped/MobDescriptor.h"
 
 
 class NearestPrioritizedAttackableTargetGoal : NearestAttackableTargetGoal {

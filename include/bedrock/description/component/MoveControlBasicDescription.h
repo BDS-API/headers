@@ -6,7 +6,7 @@
 class MoveControlBasicDescription : MoveControlDescription {
 
 public:
-    virtual void getJsonName()const;
     ~MoveControlBasicDescription();
+    virtual void getJsonName()const;
     MoveControlBasicDescription();
 };

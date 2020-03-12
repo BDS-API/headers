@@ -1,23 +1,21 @@
 #pragma once
 
 #include <string>
-#include "../json/Value.h"
-#include <vector>
 #include <memory>
-#include "WebToken.h"
+#include <vector>
 
 
 class UnverifiedCertificate {
 
 public:
-    std::string getIdentityPublicKey()const;
-    void fromString(std::string const&);
-    std::string toString()const;
-    void addToChain(Json::Value &)const;
+    ~UnverifiedCertificate();
     void addToEnd(UnverifiedCertificate const&);
+    void fromString(std::string const&);
+    UnverifiedCertificate(UnverifiedCertificate const&);
+    std::string getIdentityPublicKey()const;
     UnverifiedCertificate(UnverifiedCertificate &&);
     void verify(std::vector<std::string> const&)const;
-    ~UnverifiedCertificate();
+    std::string toString()const;
     UnverifiedCertificate(WebToken const&, std::unique_ptr<UnverifiedCertificate>);
-    UnverifiedCertificate(UnverifiedCertificate const&);
+    void addToChain(Json::Value &)const;
 };

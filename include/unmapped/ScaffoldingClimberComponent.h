@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../bedrock/util/AABB.h"
-#include "../bedrock/actor/Actor.h"
 
 
 class ScaffoldingClimberComponent {

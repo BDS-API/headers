@@ -7,9 +7,9 @@ class ActionQueue {
 
 public:
     void pushBackActionEvent(ActionEvent);
-    void clearQueue();
-    void getNextActionEvent(ActionEvent &);
     ActionQueue();
-    bool isEmpty()const;
+    void getNextActionEvent(ActionEvent &);
+    void clearQueue();
     ~ActionQueue();
+    bool isEmpty()const;
 };

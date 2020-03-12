@@ -1,20 +1,18 @@
 #pragma once
 
-#include "../bedrock/util/Random.h"
-#include "../bedrock/util/Vec3.h"
 
 
 class PlayerRespawnBlockRadiusRandomizer {
 
 public:
-    bool hasMorePossibilities()const;
+    void init(unsigned int, Random &);
+    void getRadius()const;
     void getIterationCount()const;
     void _isPrime(unsigned int)const;
-    void reduceIterationCount();
-    void _getLargestPrime(unsigned int)const;
-    void init(unsigned int, Random &);
     PlayerRespawnBlockRadiusRandomizer();
+    void _getLargestPrime(unsigned int)const;
     void getNextPosition(Vec3 &, bool);
-    void getRadius()const;
     void markAsExhausted();
+    bool hasMorePossibilities()const;
+    void reduceIterationCount();
 };

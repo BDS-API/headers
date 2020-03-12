@@ -1,15 +1,14 @@
 #pragma once
 
 #include "DefintionDescription.h"
-#include "../../../json/Value.h"
 
 
 class RuntimeIdentifierDescription : DefintionDescription {
 
 public:
-    ~RuntimeIdentifierDescription();
     virtual void getJsonName()const;
+    ~RuntimeIdentifierDescription();
+    RuntimeIdentifierDescription();
     void parse(Json::Value &);
     RuntimeIdentifierDescription(RuntimeIdentifierDescription &&);
-    RuntimeIdentifierDescription();
 };

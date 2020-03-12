@@ -1,6 +1,5 @@
 #pragma once
 
-#include <ratio>
 
 
 class BackgroundWorkerPerfInfo {

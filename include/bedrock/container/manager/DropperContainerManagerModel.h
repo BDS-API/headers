@@ -1,8 +1,6 @@
 #pragma once
 
-#include "../../util/BlockPos.h"
 #include "LevelContainerManagerModel.h"
-#include "../../actor/Player.h"
 
 
 class DropperContainerManagerModel : LevelContainerManagerModel {

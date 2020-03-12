@@ -1,8 +1,5 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
-#include "../bedrock/Scheduler.h"
-#include "../bedrock/level/Level.h"
 #include "Dimension.h"
 
 

@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../../../item/ItemStack.h"
-#include "../../../actor/Player.h"
 #include "../../Command.h"
 
 

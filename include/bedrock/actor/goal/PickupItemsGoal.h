@@ -1,21 +1,19 @@
 #pragma once
 
-#include "../../item/ItemStack.h"
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class PickupItemsGoal : Goal {
 
 public:
     ~PickupItemsGoal();
-    virtual bool canContinueToUse();
-    virtual void appendDebugInfo(std::string &)const;
-    virtual bool canUse();
-    virtual void start();
-    virtual void tick();
     virtual void stop();
-    PickupItemsGoal(Mob &, float, bool, int, float);
+    virtual void appendDebugInfo(std::string &)const;
+    virtual void tick();
+    virtual void start();
+    virtual bool canContinueToUse();
+    virtual bool canUse();
     void _dropItem(ItemStack const&)const;
+    PickupItemsGoal(Mob &, float, bool, int, float);
 };

@@ -1,47 +1,43 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitTrackingInfo.h"
-#include "../../../../unmapped/CircuitSystem.h"
-#include "../../../util/BlockPos.h"
-#include "../../../../unmapped/CircuitSceneGraph.h"
 
 
 class BaseCircuitComponent {
 
 public:
-    virtual bool hasChildrenSource();
-    virtual bool canStopPower();
-    virtual void getDirection()const;
-    virtual void getInstanceType()const;
-    virtual void setDirection(unsigned char);
-    virtual bool hasSource(BaseCircuitComponent &);
-    virtual bool isHalfPulse();
-    virtual void getBaseType()const;
-    virtual void checkLock(CircuitSystem &, BlockPos const&);
-    virtual void evaluate(CircuitSystem &, BlockPos const&);
-    ~BaseCircuitComponent();
-    virtual void cacheValues(CircuitSystem &, BlockPos const&);
-    virtual void getStrength()const;
-    virtual void allowIndirect();
-    virtual void consumePowerAnyDirection();
-    virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
-    virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
     virtual void setStrength(int);
-    virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
-    virtual bool canConsumerPower();
+    virtual bool canStopPower();
+    virtual void updateDependencies(CircuitSceneGraph &, BlockPos const&);
+    virtual void consumePowerAnyDirection();
+    virtual bool isHalfPulse();
     virtual bool isSecondaryPowered();
-    virtual void removeSource(BlockPos const&, BaseCircuitComponent const*);
+    virtual bool hasChildrenSource();
+    virtual void checkLock(CircuitSystem &, BlockPos const&);
+    ~BaseCircuitComponent();
     virtual void setStopPower(bool);
-    bool hasDirectPower();
-    void setAllowPowerUp(bool);
-    bool canAllowPowerUp();
-    bool isRemoved()const;
-    void trackPowerSource(CircuitTrackingInfo const&, int, bool, int);
-    void setRemoved();
+    virtual void getInstanceType()const;
+    virtual bool hasSource(BaseCircuitComponent &);
+    virtual void evaluate(CircuitSystem &, BlockPos const&);
+    virtual void getBaseType()const;
+    virtual void cacheValues(CircuitSystem &, BlockPos const&);
+    virtual bool canConsumerPower();
+    virtual void getDirection()const;
+    virtual void removeSource(BlockPos const&, BaseCircuitComponent const*);
+    virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
+    virtual void getStrength()const;
+    virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
+    virtual void allowIndirect();
+    virtual void setDirection(unsigned char);
     void clearFirstTimeFlag();
-    void trackPowerSourceDuplicates(CircuitTrackingInfo const&, int, bool);
-    void calculateValue(CircuitSystem &);
-    void setAllowPowerDown(bool);
-    BaseCircuitComponent();
     bool canAllowPowerDown();
+    void setAllowPowerUp(bool);
+    void trackPowerSource(CircuitTrackingInfo const&, int, bool, int);
+    void trackPowerSourceDuplicates(CircuitTrackingInfo const&, int, bool);
+    void setRemoved();
+    BaseCircuitComponent();
+    bool hasDirectPower();
+    void setAllowPowerDown(bool);
+    bool canAllowPowerUp();
+    void calculateValue(CircuitSystem &);
+    bool isRemoved()const;
 };

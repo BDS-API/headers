@@ -1,8 +1,7 @@
 #pragma once
 
-#include "BlockLegacy.h"
-#include "../../unmapped/BaseGameVersion.h"
 #include <string>
+#include "BlockLegacy.h"
 
 
 class CameraBlock : BlockLegacy {

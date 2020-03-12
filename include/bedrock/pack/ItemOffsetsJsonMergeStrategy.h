@@ -1,11 +1,9 @@
 #pragma once
 
 #include <string>
-#include "../../unmapped/LoadedResourceData.h"
-#include "../../json/Value.h"
-#include <functional>
-#include <vector>
 #include "ResourcePackMergeStrategy.h"
+#include <vector>
+#include <functional>
 
 
 class ItemOffsetsJsonMergeStrategy : ResourcePackMergeStrategy {

@@ -6,10 +6,10 @@ class DirtyTicksCounter {
 
 public:
     void touch();
+    void max();
     void getTotalDirtyTicks()const;
     DirtyTicksCounter();
-    void max();
     bool isDirty()const;
-    void getTicksSinceLastChange()const;
     void reset();
+    void getTicksSinceLastChange()const;
 };

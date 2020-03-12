@@ -1,28 +1,25 @@
 #pragma once
 
-#include "ExpressionNode.h"
 #include <string>
 #include "../bedrock/actor/unmapped/ActorAnimationControllerPtr.h"
-#include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr.h"
 #include <vector>
-#include "HashedString.h"
-#include <utility>
+#include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr.h"
 
 
 class AnimationResourceDefinitionMap {
 
 public:
     void getAnimations();
-    void getAnimationControllers();
-    ~AnimationResourceDefinitionMap();
-    void getAnimationControllers()const;
-    void mergeActorAnimateScriptArray(std::vector<std::pair<HashedString, ExpressionNode>> const&);
-    void removeActorAnimateScript(HashedString const&);
-    void getAnimateScriptArray()const;
     void getAnimateScriptArray();
-    void mergeAnimation(std::string const&, ActorSkeletalAnimationPtr);
-    bool isAnimationResourceDefinitionMapEmpty()const;
-    void getAnimations()const;
     void mergeAnimationController(std::string const&, ActorAnimationControllerPtr);
     AnimationResourceDefinitionMap();
+    void mergeAnimation(std::string const&, ActorSkeletalAnimationPtr);
+    void getAnimationControllers()const;
+    void getAnimateScriptArray()const;
+    bool isAnimationResourceDefinitionMapEmpty()const;
+    void getAnimationControllers();
+    void removeActorAnimateScript(HashedString const&);
+    ~AnimationResourceDefinitionMap();
+    void getAnimations()const;
+    void mergeActorAnimateScriptArray(std::vector<std::pair<HashedString, ExpressionNode>> const&);
 };

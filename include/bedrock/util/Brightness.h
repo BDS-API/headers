@@ -9,7 +9,7 @@ public:
     static long MIN;
     static long INVALID;
 
+    Brightness(unsigned char const&);
     Brightness(Brightness const&);
     Brightness();
-    Brightness(unsigned char const&);
 };

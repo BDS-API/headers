@@ -1,32 +1,27 @@
 #pragma once
 
 #include <string>
-#include "ObjectiveCriteria.h"
-#include "../bedrock/level/scoreboard/Scoreboard.h"
-#include "ScoreboardId.h"
-#include "ScoreboardIdentityRef.h"
-#include "../bedrock/nbt/CompoundTag.h"
 
 
 class Objective {
 
 public:
-//  void _modifyPlayerScore(int &, ScoreboardId const&, int, PlayerScoreSetFunction); //TODO: incomplete function definition
+    bool hasScores()const;
+    void getCriteria()const;
     void setDisplayName(std::string const&);
-    ~Objective();
-    void _resetPlayer(ScoreboardId const&);
+    void getPlayerScore(ScoreboardId const&)const;
+    void serialize(Objective const&);
+    void deserialize(CompoundTag const&, Scoreboard &);
+//  void getPlayerScoreRef(ScoreboardId const&, ScoreInfoRef &); //TODO: incomplete function definition
+    Objective(std::string const&, ObjectiveCriteria const&);
     void getRenderType()const;
     void getPlayers()const;
-    void getCriteria()const;
-    Objective(std::string const&, ObjectiveCriteria const&);
+//  void _modifyPlayerScore(int &, ScoreboardId const&, int, PlayerScoreSetFunction); //TODO: incomplete function definition
     void getScores()const;
-//  void getPlayerScoreRef(ScoreboardId const&, ScoreInfoRef &); //TODO: incomplete function definition
-    void deserialize(CompoundTag const&, Scoreboard &);
-    void serialize(Objective const&);
-    std::string getDisplayName()const;
-    bool hasScores()const;
+    ~Objective();
     std::string getName()const;
-    void getPlayerScore(ScoreboardId const&)const;
-    void _loadPlayerScore(ScoreboardIdentityRef &, int);
     bool hasScore(ScoreboardId const&)const;
+    std::string getDisplayName()const;
+    void _loadPlayerScore(ScoreboardIdentityRef &, int);
+    void _resetPlayer(ScoreboardId const&);
 };

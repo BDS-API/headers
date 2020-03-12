@@ -1,13 +1,8 @@
 #pragma once
 
-#include "BlockActor.h"
 #include <string>
-#include "../../../unmapped/DataLoadHelper.h"
+#include "BlockActor.h"
 #include "../../text/TextObjectRoot.h"
-#include "../../level/Level.h"
-#include "../../nbt/CompoundTag.h"
-#include "../unmapped/BlockSource.h"
-#include "../../util/BlockPos.h"
 
 
 class SignBlockActor : BlockActor {
@@ -16,23 +11,23 @@ public:
     class CachedLineData;
     class CachedMessageData;
 
-    ~SignBlockActor();
-    virtual void getUpdatePacket(BlockSource &);
-    virtual std::string getImmersiveReaderText(BlockSource &);
-    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void onChanged(BlockSource &);
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
     virtual void getShadowRadius(BlockSource &)const;
+    virtual void onChanged(BlockSource &);
+    ~SignBlockActor();
+    virtual std::string getImmersiveReaderText(BlockSource &);
     virtual void save(CompoundTag &)const;
-    void setCachedMessage(SignBlockActor::CachedMessageData);
-    std::string getMessage();
-    void setMessage(std::string, std::string);
-    void getType()const;
-    void getCachedMessage()const;
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
 //  void setType(SignBlockActor::SignType); //TODO: incomplete function definition
+    void setMessage(std::string, std::string);
+    void setCachedMessage(SignBlockActor::CachedMessageData);
+    void getCachedMessage()const;
     SignBlockActor(BlockPos const&);
     void setMessage(TextObjectRoot, std::string);
     void _clearCachedMessage();
+    std::string getMessage();
+    void getType()const;
     class CachedLineData {
 
     public:
@@ -42,7 +37,7 @@ public:
     class CachedMessageData {
 
     public:
-        ~CachedMessageData();
         CachedMessageData();
+        ~CachedMessageData();
     };
 };

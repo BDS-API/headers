@@ -1,7 +1,6 @@
 #pragma once
 
 #include <memory>
-#include "../bedrock/util/Color.h"
 
 
 class Material {
@@ -10,37 +9,37 @@ public:
     static long mMaterials;
     static long mInitialized;
 
-    void _setNotSolid();
-    bool isLiquid()const;
+    void operator==(Material const&)const;
+    bool isReplaceable()const;
+    void _setupSurfaceMaterials();
+    bool isTopSolid(bool, bool)const;
+    void getTranslucency()const;
+    void getBlocksMotion()const;
     void _setMapColor(Color const&);
+    void getColor()const;
+    void _setReplaceable();
+    void _setNotBlockingMotion();
+    void _setNotBlockingPrecipitation();
+    bool isLiquid()const;
+    void _setNotSolid();
+    void _setNotAlwaysDestroyable();
 //  Material(MaterialType, Material::Settings, float); //TODO: incomplete function definition
     void teardownMaterials();
-    ~Material();
-    void _setupSurfaceMaterials();
-    void getColor()const;
 //  void getMaterial(MaterialType); //TODO: incomplete function definition
-    void initMaterials();
-//  bool isType(MaterialType)const; //TODO: incomplete function definition
-    bool isFlammable()const;
-    void getBlocksMotion()const;
     bool isSuperHot()const;
-    void _setNotBlockingMotion();
-    void getBlocksPrecipitation()const;
-    void getType()const;
-    void getTranslucency()const;
-    bool isReplaceable()const;
-    void _setNotBlockingPrecipitation();
-    void _setSuperHot();
-    bool isTopSolid(bool, bool)const;
-    void operator==(Material const&)const;
-    bool isSolid()const;
-    bool isSolidBlocking()const;
-    void _setReplaceable();
-    void _setNotAlwaysDestroyable();
-    void addMaterial(std::unique_ptr<Material>);
-    bool isAlwaysDestroyable()const;
-    void _setFlammable();
-    void operator!=(Material const&)const;
-    void _setNeverBuildable();
     bool isNeverBuildable()const;
+    bool isFlammable()const;
+    void getBlocksPrecipitation()const;
+//  bool isType(MaterialType)const; //TODO: incomplete function definition
+    ~Material();
+    bool isSolid()const;
+    void _setNeverBuildable();
+    void _setFlammable();
+    void _setSuperHot();
+    void initMaterials();
+    void addMaterial(std::unique_ptr<Material>);
+    void operator!=(Material const&)const;
+    bool isSolidBlocking()const;
+    void getType()const;
+    bool isAlwaysDestroyable()const;
 };

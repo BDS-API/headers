@@ -7,10 +7,10 @@ namespace Core {
     class UnzipInternals {
 
     public:
-        UnzipInternals(void *);
-        ~UnzipInternals();
-        void set(void *);
         void get()const;
+        UnzipInternals(void *);
+        void set(void *);
+        ~UnzipInternals();
         void get();
     };
 }

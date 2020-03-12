@@ -1,19 +1,18 @@
 #pragma once
 
 #include <memory>
-#include <functional>
 #include <string>
-#include "../../description/blockcomponent/BlockComponentDescription.h"
+#include <functional>
 
 
 class BlockComponentFactory {
 
 public:
-    void teardownFactory();
     std::string getRegisteredComponentNames()const;
+    ~BlockComponentFactory();
+    void registerDescription(std::string const&, std::function<std::unique_ptr<BlockComponentDescription> (void)>);
+    void createComponentDescription(std::string const&)const;
+    void teardownFactory();
     BlockComponentFactory();
     void initializeFactory();
-    void registerDescription(std::string const&, std::function<std::unique_ptr<BlockComponentDescription> (void)>);
-    ~BlockComponentFactory();
-    void createComponentDescription(std::string const&)const;
 };

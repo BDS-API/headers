@@ -1,11 +1,9 @@
 #pragma once
 
 #include "BehaviorDefinition.h"
-#include <vector>
-#include <memory>
-#include "../../../json/Value.h"
 #include "../../../unmapped/BehaviorTreeDefinitionPtr.h"
-#include "../../../unmapped/BehaviorFactory.h"
+#include "../../../json/Value.h"
+#include <vector>
 
 
 class CompositeDefinition : BehaviorDefinition {
@@ -13,7 +11,7 @@ class CompositeDefinition : BehaviorDefinition {
 public:
     ~CompositeDefinition();
     CompositeDefinition();
-    void _compositeLoadChildrenBehaviors(Json::Value, std::vector<std::unique_ptr<BehaviorDefinition>> &, BehaviorFactory const&, BehaviorTreeDefinitionPtr);
-    void getCount()const;
     void get(unsigned long)const;
+    void getCount()const;
+    void _compositeLoadChildrenBehaviors(Json::Value, std::vector<std::unique_ptr<BehaviorDefinition>> &, BehaviorFactory const&, BehaviorTreeDefinitionPtr);
 };

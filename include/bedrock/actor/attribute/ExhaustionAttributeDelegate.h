@@ -1,6 +1,5 @@
 #pragma once
 
-#include "AttributeInstance.h"
 #include "AttributeInstanceDelegate.h"
 
 

@@ -1,8 +1,7 @@
 #pragma once
 
-#include "../EnderDragon.h"
-#include "Goal.h"
 #include <string>
+#include "Goal.h"
 
 
 class DragonChargePlayerGoal : Goal {
@@ -11,12 +10,12 @@ public:
     static long CHARGE_RECOVERY_TIME;
     static long SITTING_CHARGE_VIEW_RANGE;
 
-    virtual void start();
-    virtual void stop();
-    ~DragonChargePlayerGoal();
-    virtual bool canContinueToUse();
     virtual void tick();
-    virtual bool canUse();
+    virtual bool canContinueToUse();
+    ~DragonChargePlayerGoal();
     virtual void appendDebugInfo(std::string &)const;
+    virtual void stop();
+    virtual bool canUse();
+    virtual void start();
     DragonChargePlayerGoal(EnderDragon &);
 };

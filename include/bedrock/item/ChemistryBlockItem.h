@@ -1,7 +1,6 @@
 #pragma once
 
 #include "BlockItem.h"
-#include "ItemStackBase.h"
 
 
 class ChemistryBlockItem : BlockItem {

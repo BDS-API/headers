@@ -14,9 +14,9 @@ namespace MinecraftWorkerPool {
     static long WATCHDOG;
 
     void loadWorkerConfigurations(unsigned int, unsigned int);
-    void createSingletons();
-    void initializeDefaults();
-    void configureServerThread();
     void configureMainThread();
     void destroySingletons();
+    void createSingletons();
+    void configureServerThread();
+    void initializeDefaults();
 };

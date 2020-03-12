@@ -1,21 +1,17 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "../../../unmapped/Block.h"
+#include <string>
 #include "UpdateBlockPacket.h"
-#include "../../util/BlockPos.h"
-#include "../../actor/unmapped/ActorBlockSyncMessage.h"
 
 
 class UpdateBlockSyncedPacket : UpdateBlockPacket {
 
 public:
-    virtual void getId()const;
     virtual void read(ReadOnlyBinaryStream &);
+    virtual void getId()const;
     ~UpdateBlockSyncedPacket();
-    virtual void write(BinaryStream &)const;
     virtual std::string getName()const;
+    virtual void write(BinaryStream &)const;
     UpdateBlockSyncedPacket(BlockPos const&, unsigned int, Block const&, unsigned char, ActorBlockSyncMessage const&);
     UpdateBlockSyncedPacket();
 };

@@ -1,24 +1,20 @@
 #pragma once
 
 #include <string>
-#include "../../../unmapped/RenderParams.h"
-#include "ActorAnimationControllerPlayer.h"
-#include "../../../unmapped/HashedString.h"
-#include "../../../json/Value.h"
 
 
 class ActorAnimationController {
 
 public:
-    ActorAnimationController(HashedString const&, std::string const&);
     void updateActiveParticleState(RenderParams &, int, int, ActorAnimationControllerPlayer &)const;
-    ~ActorAnimationController();
-    void addState(HashedString const&);
     void updateActiveSoundEffectState(RenderParams &, int, int, ActorAnimationControllerPlayer &)const;
-    void findState(std::string const&, bool, unsigned long);
-    void toJson(Json::Value &)const;
-    void resolveTransitionStateIndices();
+    void addState(HashedString const&);
     std::string getSourceFilePathWithExtension()const;
-    void findStateIndex(std::string const&, bool, unsigned long)const;
+    void toJson(Json::Value &)const;
+    ActorAnimationController(HashedString const&, std::string const&);
+    ~ActorAnimationController();
+    void findState(std::string const&, bool, unsigned long);
+    void resolveTransitionStateIndices();
     void fireEvents(RenderParams &, ActorAnimationControllerPlayer &)const;
+    void findStateIndex(std::string const&, bool, unsigned long)const;
 };

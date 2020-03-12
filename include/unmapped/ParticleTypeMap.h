@@ -7,7 +7,7 @@ namespace ParticleTypeMap {
 
     static std::string map;
 
-    void getParticleTypeId(std::string const&);
 //  std::string getParticleName(ParticleType); //TODO: incomplete function definition
+    void getParticleTypeId(std::string const&);
     std::string getParticleNameTypeList();
 };

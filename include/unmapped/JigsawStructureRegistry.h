@@ -1,24 +1,23 @@
 #pragma once
 
-#include "StructureTemplatePool.h"
-#include <string>
 #include <memory>
+#include <string>
 
 
 class JigsawStructureRegistry {
 
 public:
-    void getJigsawStructureElementRegistry()const;
+    void getJigsawStructureElementRegistry();
+    void getJigsawStructureActorRulesRegistry();
     void getJigsawStructureBlockRulesRegistry();
+    void getJigsawStructureElementRegistry()const;
     void getJigsawStructureBlockTagRulesRegistry()const;
     ~JigsawStructureRegistry();
     void lookupByName(std::string)const;
-    void registerPool(std::unique_ptr<StructureTemplatePool> &&);
+    void getJigsawStructureBlockRulesRegistry()const;
     void getJigsawStructureActorRulesRegistry()const;
-    void getJigsawStructureActorRulesRegistry();
     JigsawStructureRegistry();
+    void registerPool(std::unique_ptr<StructureTemplatePool> &&);
     void clear();
     void getJigsawStructureBlockTagRulesRegistry();
-    void getJigsawStructureBlockRulesRegistry()const;
-    void getJigsawStructureElementRegistry();
 };

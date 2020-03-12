@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../util/BlockPos.h"
+#include <string>
 #include "FurnaceBlockActor.h"
 
 

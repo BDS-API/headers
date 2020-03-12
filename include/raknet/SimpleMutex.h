@@ -7,10 +7,10 @@ namespace RakNet {
     class SimpleMutex {
 
     public:
-        SimpleMutex();
-        ~SimpleMutex();
         void Init();
         void Unlock();
+        SimpleMutex();
         void Lock();
+        ~SimpleMutex();
     };
 }

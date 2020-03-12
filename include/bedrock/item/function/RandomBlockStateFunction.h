@@ -1,15 +1,8 @@
 #pragma once
 
-#include "../condition/LootItemCondition.h"
-#include "../../../unmapped/RandomValueBounds.h"
 #include <string>
-#include "../../util/Random.h"
-#include "../ItemInstance.h"
-#include "../ItemStack.h"
-#include <vector>
-#include <memory>
 #include "../../../json/Value.h"
-#include "../../../unmapped/LootTableContext.h"
+#include <vector>
 #include "LootItemFunction.h"
 
 

@@ -15,17 +15,17 @@ public:
     static long MIN;
     static long LOWEST;
 
-    Vec2(float, float);
-    void operator-(Vec2 const&)const;
-    void length()const;
-    void operator==(Vec2 const&)const;
     void dot(Vec2 const&)const;
-    void operator*(float)const;
-    Vec2();
     void normalized()const;
-    void operator+(Vec2 const&)const;
-    void operator!=(Vec2 const&)const;
-//  Vec2(glm::tvec20<float, (glm::precision>); //TODO: incomplete function definition
-    void lengthSquared()const;
+    Vec2();
+    void operator-(Vec2 const&)const;
     void distanceToSqr(Vec2 const&)const;
+//  Vec2(glm::tvec20<float, (glm::precision>); //TODO: incomplete function definition
+    void operator==(Vec2 const&)const;
+    void operator*(float)const;
+    void lengthSquared()const;
+    void operator!=(Vec2 const&)const;
+    void operator+(Vec2 const&)const;
+    Vec2(float, float);
+    void length()const;
 };

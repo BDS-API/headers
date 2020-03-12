@@ -1,9 +1,6 @@
 #pragma once
 
-#include "ProjectileComponent.h"
-#include "../bedrock/actor/Actor.h"
 #include "OnHitSubcomponent.h"
-#include "../json/Value.h"
 
 
 class MobEffectSubcomponent : OnHitSubcomponent {
@@ -13,7 +10,7 @@ public:
     ~MobEffectSubcomponent();
     virtual void doOnHitEffect(Actor &, ProjectileComponent &);
     virtual void writetoJSON(Json::Value &)const;
+    void _addEffectFromJSON(Json::Value &);
     MobEffectSubcomponent();
     void getSubcomponentName();
-    void _addEffectFromJSON(Json::Value &);
 };

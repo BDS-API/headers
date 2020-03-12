@@ -7,8 +7,8 @@
 class TextObjectText : ITextObject {
 
 public:
-    ~TextObjectText();
     virtual bool asJsonValue()const;
+    ~TextObjectText();
     virtual std::string asString()const;
     TextObjectText(std::string);
 };

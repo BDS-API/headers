@@ -5,7 +5,7 @@
 class ActorFactoryData {
 
 public:
-    ActorFactoryData();
     ActorFactoryData(ActorFactoryData const&);
+    ActorFactoryData();
     ~ActorFactoryData();
 };

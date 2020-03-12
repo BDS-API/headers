@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../../unmapped/FilterInput.h"
 #include <string>
+#include "../../unmapped/FilterInput.h"
 
 
 class FilterInputDefinition {
 
 public:
-    FilterInputDefinition(int);
     FilterInputDefinition(FilterInputDefinition const&);
-    ~FilterInputDefinition();
     FilterInputDefinition(FilterInput, std::string const&);
+    FilterInputDefinition(int);
+    ~FilterInputDefinition();
 };

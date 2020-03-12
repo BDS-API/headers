@@ -1,7 +1,7 @@
 #pragma once
 
-#include <functional>
 #include "../bedrock/level/storage/LevelStorage.h"
+#include <functional>
 
 
 class DBStorageWriteBatch : LevelStorage::Batch {
@@ -9,15 +9,16 @@ class DBStorageWriteBatch : LevelStorage::Batch {
 public:
     class PerfContext;
 
-    ~DBStorageWriteBatch();
-//  virtual void putKey(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
-//  virtual void deleteKey(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
     virtual void flush(LevelStorage &);
-    void addFlushCallback(std::function<void (void)>);
+//  virtual void deleteKey(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
+//  virtual void putKey(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
+    ~DBStorageWriteBatch();
     DBStorageWriteBatch();
+    void addFlushCallback(std::function<void (void)>);
     void clear();
-    namespace PerfContext {
+    class PerfContext {
 
+    public:
         void log(unsigned long)const;
     };
 };

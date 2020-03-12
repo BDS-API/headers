@@ -1,30 +1,26 @@
 #pragma once
 
-#include "../bedrock/description/component/MoveControlDescription.h"
-#include "../bedrock/actor/Mob.h"
-#include "../bedrock/util/Vec3.h"
 #include <memory>
-#include "../bedrock/control/MoveControl.h"
 
 
 class MoveControlComponent {
 
 public:
-    void setInternalType(std::unique_ptr<MoveControl>);
-    void getHasWantedPosition()const;
-    ~MoveControlComponent();
-    MoveControlComponent();
-    void initializeFromDefinition(Mob &, MoveControlDescription *);
-    void setShouldBreach(bool);
-    void _setWantedPosition(Vec3 const&);
-    MoveControlComponent(MoveControlComponent &&);
-    void getWantedPosition();
-    void update(Mob &);
-    void setWantedPosition(Mob &, Vec3 const&, float);
-    void setMaxTurn(float);
-    void getShouldBreach()const;
-    void setHasWantedPosition(bool);
+    void getSpeedModifier()const;
     void getMaxTurn()const;
     void setSpeedModifier(float);
-    void getSpeedModifier()const;
+    void update(Mob &);
+    MoveControlComponent();
+    void getWantedPosition();
+    void setMaxTurn(float);
+    ~MoveControlComponent();
+    void getShouldBreach()const;
+    void setWantedPosition(Mob &, Vec3 const&, float);
+    void getHasWantedPosition()const;
+    void _setWantedPosition(Vec3 const&);
+    void setInternalType(std::unique_ptr<MoveControl>);
+    void setShouldBreach(bool);
+    void setHasWantedPosition(bool);
+    void initializeFromDefinition(Mob &, MoveControlDescription *);
+    MoveControlComponent(MoveControlComponent &&);
 };

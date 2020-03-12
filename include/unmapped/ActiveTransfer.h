@@ -1,7 +1,5 @@
 #pragma once
 
-#include "ActiveTransfersManager.h"
-#include "NetworkIdentifier.h"
 
 
 namespace ClientBlobCache {
@@ -11,13 +9,13 @@ namespace ClientBlobCache {
         class ActiveTransfer {
 
         public:
-            bool isDone()const;
             void onAckReceived(unsigned long);
+            ActiveTransfer(ClientBlobCache::Server::ActiveTransfer &&);
+            bool isDone()const;
             ActiveTransfer(ClientBlobCache::Server::ActiveTransfersManager &, NetworkIdentifier const&);
+            void shouldBeSent()const;
             ~ActiveTransfer();
             ActiveTransfer();
-            void shouldBeSent()const;
-            ActiveTransfer(ClientBlobCache::Server::ActiveTransfer &&);
         };
     }
 }

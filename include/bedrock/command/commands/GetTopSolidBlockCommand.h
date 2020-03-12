@@ -1,16 +1,13 @@
 #pragma once
 
-#include "../origin/CommandOrigin.h"
-#include "../CommandRegistry.h"
 #include "../Command.h"
-#include "../CommandOutput.h"
 
 
 class GetTopSolidBlockCommand : Command {
 
 public:
-    ~GetTopSolidBlockCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
+    ~GetTopSolidBlockCommand();
     void setup(CommandRegistry &);
     GetTopSolidBlockCommand();
 };

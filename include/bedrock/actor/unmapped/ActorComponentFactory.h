@@ -5,7 +5,7 @@
 class ActorComponentFactory {
 
 public:
+    void _initialize();
     ActorComponentFactory(bool);
     ~ActorComponentFactory();
-    void _initialize();
 };

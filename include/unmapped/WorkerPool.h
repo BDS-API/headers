@@ -2,9 +2,7 @@
 
 #include <optional>
 #include <string>
-#include "../bedrock/Scheduler.h"
 #include <memory>
-#include "BackgroundTask.h"
 
 
 class WorkerPool {
@@ -13,27 +11,27 @@ public:
     static long sAllPools;
     static long sAllPoolsMutex;
 
-//  WorkerPool(std::string, unsigned long, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, bool); //TODO: incomplete function definition
-    bool hasPendingWork()const;
-    bool isAsync()const;
-    void getBacklogSizeBusyLimit()const;
-    ~WorkerPool();
-//  void shiftWorkersPriority(Bedrock::Threading::OSThreadPriority const&); //TODO: incomplete function definition
+    void begin()const;
     void end()const;
-    void allWorkersIdle()const;
     void getThreadIds()const;
-    void resortPriorityQueue();
     WorkerPool(std::string, Scheduler &);
-    void getAllPools();
-    void _checkPendingWork();
-    void _registerPool(WorkerPool &);
+    bool hasReadyWork()const;
+    bool isAsync()const;
+    void resortPriorityQueue();
+    void tryPop(int);
     void _unregisterPool(WorkerPool &);
     void size()const;
-    bool hasReadyWork()const;
+//  WorkerPool(std::string, unsigned long, Bedrock::Threading::OSThreadPriority const&, std::optional<unsigned long>, bool); //TODO: incomplete function definition
+    void getBacklogSizeBusyLimit()const;
     void kick(unsigned long);
-    void queue(std::shared_ptr<BackgroundTask>, bool);
-    void tryPop(int);
-    void getNextPendingWorkTime()const;
-    void begin()const;
+    void _checkPendingWork();
     void getPerformanceInfo();
+    void getAllPools();
+    void getNextPendingWorkTime()const;
+    ~WorkerPool();
+    void allWorkersIdle()const;
+    void _registerPool(WorkerPool &);
+    void queue(std::shared_ptr<BackgroundTask>, bool);
+//  void shiftWorkersPriority(Bedrock::Threading::OSThreadPriority const&); //TODO: incomplete function definition
+    bool hasPendingWork()const;
 };

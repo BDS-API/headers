@@ -1,54 +1,49 @@
 #pragma once
 
-#include "PrivateKeyManager.h"
-#include <string>
-#include "../mce/Image.h"
-#include "AnimatedImageData.h"
-#include "Certificate.h"
-#include <vector>
 #include <memory>
-#include "WebToken.h"
+#include <string>
+#include <vector>
 
 
 class SubClientConnectionRequest {
 
 public:
-    void getSkinImageHeight()const;
-    void getCertificate()const;
-    std::string getPlatformOnlineId()const;
-    std::string getPlatformId()const;
-    SubClientConnectionRequest(std::unique_ptr<WebToken>, std::string const&);
-    void validate(std::unique_ptr<Certificate>, long)const;
-    void getCapeImageHeight()const;
-    SubClientConnectionRequest(SubClientConnectionRequest const&);
-    void verify(std::vector<std::string> const&, long);
-//  void create(PrivateKeyManager &, std::string const&, Certificate const&, std::string const&, unsigned long, std::string const&, std::string const&, mce::Image const&, mce::Image const&, std::vector<AnimatedImageData> const&, std::string const&, std::string const&, std::string const&, bool, bool, InputMode, std::string const&, bool, std::string const&, std::string const&, bool, std::string); //TODO: incomplete function definition
-    void getBinaryData(std::string const&)const;
-    std::string getSkinAnimationData()const;
-    ~SubClientConnectionRequest();
-    void getSkinImageWidth()const;
-    std::string getDeviceId()const;
-    std::string getSkinId()const;
-    void getCurrentInputMode()const;
-    void verifySelfSigned();
-    void getAnimatedImageData()const;
-    bool isVerified()const;
     void getDeviceOS()const;
-    std::string getSelfSignedId()const;
-    bool isPremiumSkin()const;
-    void getSkinData()const;
-    std::string getPlatformOfflineId()const;
+    void verify(std::vector<std::string> const&, long);
+    SubClientConnectionRequest(SubClientConnectionRequest const&);
     void getCapeImageWidth()const;
-    bool isPersonaSkin()const;
-    std::string getSkinResourcePatch()const;
-    void getCapeData()const;
-    void getClientRandomId()const;
+    void getCertificate()const;
+    std::string getDeviceId()const;
+    void getCurrentInputMode()const;
+//  void create(PrivateKeyManager &, std::string const&, Certificate const&, std::string const&, unsigned long, std::string const&, std::string const&, mce::Image const&, mce::Image const&, std::vector<AnimatedImageData> const&, std::string const&, std::string const&, std::string const&, bool, bool, InputMode, std::string const&, bool, std::string const&, std::string const&, bool, std::string); //TODO: incomplete function definition
+    void getSkinImageHeight()const;
     std::string toString();
+    std::string getPlatformOfflineId()const;
     void getData(std::string const&)const;
+    ~SubClientConnectionRequest();
+    std::string getPlatformId()const;
+    std::string getSkinAnimationData()const;
+    std::string getSelfSignedId()const;
     bool isCapeOnClassicSkin()const;
+    void getSkinData()const;
+    std::string getSkinResourcePatch()const;
+    SubClientConnectionRequest(std::unique_ptr<WebToken>, std::string const&);
+    void getSkinImageWidth()const;
+    void getCapeData()const;
+    void getBinaryData(std::string const&)const;
     bool isThirdPartyNameOnly()const;
+    bool isPersonaSkin()const;
+    void getClientRandomId()const;
+    bool isPremiumSkin()const;
+    std::string getPlatformOnlineId()const;
+    std::string getSkinGeometry()const;
+    void getCapeImageHeight()const;
     void fromString(std::string const&);
     std::string getCapeId()const;
+    void validate(std::unique_ptr<Certificate>, long)const;
+    void verifySelfSigned();
+    std::string getSkinId()const;
+    void getAnimatedImageData()const;
+    bool isVerified()const;
     std::string getThirdPartyName()const;
-    std::string getSkinGeometry()const;
 };

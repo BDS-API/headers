@@ -1,48 +1,41 @@
 #pragma once
 
-#include "../LevelChunk.h"
 #include <string>
-#include "../../util/Random.h"
-#include "../../../mce/UUID.h"
-#include "../../util/Vec3.h"
-#include "../../actor/unmapped/ActorUniqueID.h"
-#include "../../actor/Actor.h"
-#include "../../../unmapped/Bounds.h"
-#include "../../util/Tick.h"
-#include "../../../unmapped/Dimension.h"
 #include "ITickingArea.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include "../../../mce/UUID.h"
 
 
 class TickingArea : ITickingArea {
 
 public:
-    virtual void getView()const;
-    virtual std::string getName()const;
-    virtual void getEntityId()const;
-    virtual void getMaxDistToPlayers()const;
-    virtual void onChunkLoaded(LevelChunk &);
-    ~TickingArea();
     virtual void updatePosition(Vec3 const&);
-    virtual void getDescription()const;
-    virtual void onChunkDiscarded(LevelChunk &);
-    virtual bool isRemoved();
-    virtual void tickSeasons(Random &);
-    virtual bool isAlwaysActive()const;
-    virtual void onComponentChanged(unsigned int, float, bool);
+    ~TickingArea();
+    virtual void getEntityId()const;
+    virtual void onChunkLoaded(LevelChunk &);
     virtual void entityHasBeenFound()const;
     virtual void getBlockSource();
-    virtual void center();
+    virtual bool isAlwaysActive()const;
+    virtual void onComponentChanged(unsigned int, float, bool);
+    virtual void getView()const;
     virtual void getId()const;
-    virtual void setEntityFound();
+    virtual bool isRemoved();
     virtual void remove();
-    virtual bool isEntityOwned()const;
-    virtual void setRegionForEntity(Actor &);
+    virtual void setEntityFound();
     virtual void findOwner(unsigned char &);
+    virtual void onChunkDiscarded(LevelChunk &);
     virtual void getView();
+    virtual void setRegionForEntity(Actor &);
     virtual void tick(Tick const&, bool);
+    virtual bool isEntityOwned()const;
+    virtual void getDescription()const;
+    virtual void getMaxDistToPlayers()const;
+    virtual std::string getName()const;
+    virtual void tickSeasons(Random &);
+    virtual void center();
+    void _save();
     TickingArea(Dimension &, mce::UUID, std::string const&, Bounds const&, bool);
+    TickingArea(Dimension &, mce::UUID, std::string const&, ActorUniqueID, Bounds const&, bool, float, bool);
     TickingArea(Dimension &, mce::UUID, Bounds const&, ActorUniqueID);
     TickingArea(Dimension &, mce::UUID, Bounds const&, ActorUniqueID, float);
-    TickingArea(Dimension &, mce::UUID, std::string const&, ActorUniqueID, Bounds const&, bool, float, bool);
-    void _save();
 };

@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
 
 
 class TrailComponent {
@@ -8,7 +7,7 @@ class TrailComponent {
 public:
     static long MAX_SPAWN_OFFSET;
 
+    void initFromDefinition(Actor &);
     TrailComponent();
     TrailComponent(TrailComponent &&);
-    void initFromDefinition(Actor &);
 };

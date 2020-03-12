@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../bedrock/util/Random.h"
-#include "Block.h"
 #include "IStructurePoolBlockPredicate.h"
 
 

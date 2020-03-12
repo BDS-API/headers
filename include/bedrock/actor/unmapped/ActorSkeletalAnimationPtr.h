@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../../../unmapped/HashedString.h"
-#include "ActorAnimationGroup.h"
 
 
 class ActorSkeletalAnimationPtr {
@@ -9,16 +7,16 @@ class ActorSkeletalAnimationPtr {
 public:
     static long NONE;
 
-    void operator->()const;
-    void get();
-    ActorSkeletalAnimationPtr(ActorAnimationGroup &, HashedString const&);
     ~ActorSkeletalAnimationPtr();
-    ActorSkeletalAnimationPtr(ActorSkeletalAnimationPtr const&);
     bool isNull()const;
-    ActorSkeletalAnimationPtr();
-    void operator!=(ActorSkeletalAnimationPtr const&)const;
-    void operator==(ActorSkeletalAnimationPtr const&)const;
-    void getName()const;
-    void operator->();
+    ActorSkeletalAnimationPtr(ActorSkeletalAnimationPtr const&);
     void get()const;
+    void operator->()const;
+    void operator->();
+    void get();
+    void operator==(ActorSkeletalAnimationPtr const&)const;
+    void operator!=(ActorSkeletalAnimationPtr const&)const;
+    ActorSkeletalAnimationPtr();
+    ActorSkeletalAnimationPtr(ActorAnimationGroup &, HashedString const&);
+    void getName()const;
 };

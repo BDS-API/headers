@@ -1,6 +1,6 @@
 #pragma once
 
-#include "NetworkIdentifier.h"
+#include <string>
 #include "Connector.h"
 #include "GameConnectionInfo.h"
 
@@ -12,31 +12,31 @@ public:
 
     static long sLocalConnectivitySystem;
 
-    virtual void getIPv6Port()const;
     ~LocalConnector();
-    virtual void onAppSuspended();
-    virtual std::string getLocalIp();
-    virtual bool isIPv4Supported()const;
-//  virtual void removeConnectionStateListener(Connector::ConnectionStateListener *); //TODO: incomplete function definition
-    virtual void setupNatPunch(bool);
-    virtual void getConnectedGameInfo()const;
-    virtual void getPort()const;
-    virtual bool isIPv6Supported()const;
-//  virtual void addConnectionStateListener(Connector::ConnectionStateListener *); //TODO: incomplete function definition
-    virtual void getIPv4Port()const;
-    virtual void startNatPunchingClient(Social::GameConnectionInfo);
-    virtual std::string getLocalIps()const;
+    virtual void getIPv6Port()const;
     virtual void onAppResumed();
-    virtual void getNatPunchInfo()const;
-    virtual void getGUID()const;
     virtual void getRefinedLocalIps()const;
-    void onRemoteDisconnected(LocalConnector const&);
+    virtual bool isIPv6Supported()const;
+    virtual void getPort()const;
+    virtual std::string getLocalIp();
+    virtual void setupNatPunch(bool);
+    virtual void onAppSuspended();
+    virtual void startNatPunchingClient(Social::GameConnectionInfo);
+//  virtual void addConnectionStateListener(Connector::ConnectionStateListener *); //TODO: incomplete function definition
+//  virtual void removeConnectionStateListener(Connector::ConnectionStateListener *); //TODO: incomplete function definition
+    virtual void getNatPunchInfo()const;
+    virtual std::string getLocalIps()const;
+    virtual bool isIPv4Supported()const;
+    virtual void getGUID()const;
+    virtual void getIPv4Port()const;
+    virtual void getConnectedGameInfo()const;
     void connect(NetworkIdentifier const&);
+    void createPeer(LocalConnector &);
+    void disconnect();
+    void onRemoteDisconnected(LocalConnector const&);
     LocalConnector(LocalConnector::ConnectionCallbacks &, NetworkIdentifier const&);
     void host(NetworkIdentifier const&);
-    void disconnect();
     void runEvents();
-    void createPeer(LocalConnector &);
     class ConnectionCallbacks {
 
     public:

@@ -1,6 +1,5 @@
 #pragma once
 
-#include "ActorAnimationGroup.h"
 
 
 class ActorAnimationGroupParseMetaData {

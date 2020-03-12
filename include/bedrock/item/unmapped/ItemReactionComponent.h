@@ -1,8 +1,5 @@
 #pragma once
 
-#include "../../../unmapped/LabTableReaction.h"
-#include "../../block/unmapped/BlockSource.h"
-#include "../ItemStack.h"
 #include "../../../unmapped/LabTableReactionComponent.h"
 
 

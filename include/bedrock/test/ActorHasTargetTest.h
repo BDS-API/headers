@@ -1,7 +1,6 @@
 #pragma once
 
 #include "SimpleBoolFilterTest.h"
-#include "../../unmapped/FilterContext.h"
 
 
 class ActorHasTargetTest : SimpleBoolFilterTest {

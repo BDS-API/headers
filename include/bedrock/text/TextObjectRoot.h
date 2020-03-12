@@ -2,6 +2,7 @@
 
 #include "ITextObject.h"
 #include <memory>
+#include <string>
 
 
 class TextObjectRoot : ITextObject {
@@ -13,6 +14,6 @@ public:
     TextObjectRoot(TextObjectRoot &&);
     void addChild(std::unique_ptr<ITextObject>);
     void clear();
-    TextObjectRoot();
     bool isEmpty()const;
+    TextObjectRoot();
 };

@@ -5,7 +5,7 @@
 class SendEventData {
 
 public:
-    SendEventData();
-    ~SendEventData();
     SendEventData(SendEventData const&);
+    ~SendEventData();
+    SendEventData();
 };

@@ -6,7 +6,7 @@
 class AmphibiousMoveControlDescription : MoveControlDescription {
 
 public:
-    ~AmphibiousMoveControlDescription();
     virtual void getJsonName()const;
+    ~AmphibiousMoveControlDescription();
     AmphibiousMoveControlDescription();
 };

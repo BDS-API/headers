@@ -1,6 +1,5 @@
 #pragma once
 
-#include "CPUProfileToken.h"
 
 
 namespace Core {

@@ -1,10 +1,7 @@
 #pragma once
 
-#include "../../unmapped/IFunctionEntry.h"
-#include "origin/CommandOrigin.h"
-#include "Command.h"
 #include <memory>
-#include "../../unmapped/FunctionManager.h"
+#include "../../unmapped/IFunctionEntry.h"
 
 
 class CommandFunctionEntry : IFunctionEntry {

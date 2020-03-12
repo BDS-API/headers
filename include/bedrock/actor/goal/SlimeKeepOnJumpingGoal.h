@@ -1,16 +1,15 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class SlimeKeepOnJumpingGoal : Goal {
 
 public:
-    virtual bool canUse();
-    ~SlimeKeepOnJumpingGoal();
-    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
+    virtual void tick();
+    ~SlimeKeepOnJumpingGoal();
+    virtual bool canUse();
     SlimeKeepOnJumpingGoal(Mob &);
 };

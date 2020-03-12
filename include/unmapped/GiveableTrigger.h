@@ -6,8 +6,8 @@
 class GiveableTrigger {
 
 public:
-    void addItemByName(std::string const&);
-    GiveableTrigger(GiveableTrigger const&);
     GiveableTrigger();
+    void addItemByName(std::string const&);
     ~GiveableTrigger();
+    GiveableTrigger(GiveableTrigger const&);
 };

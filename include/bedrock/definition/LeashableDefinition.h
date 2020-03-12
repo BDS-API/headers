@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../../json/Value.h"
 #include <memory>
 
 
 class LeashableDefinition {
 
 public:
-//  void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, LeashableDefinition>> &); //TODO: incomplete function definition
+    void serializeData(Json::Value &)const;
     void deserializeData(Json::Value &);
+    void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, LeashableDefinition>> &);
     ~LeashableDefinition();
     LeashableDefinition();
-    void serializeData(Json::Value &)const;
 };

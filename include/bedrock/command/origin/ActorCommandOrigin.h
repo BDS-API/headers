@@ -1,26 +1,25 @@
 #pragma once
 
+#include <string>
 #include "../../actor/unmapped/ActorUniqueID.h"
 #include "CommandOrigin.h"
-#include "../../actor/Actor.h"
-#include "../../level/Level.h"
 
 
 class ActorCommandOrigin : CommandOrigin {
 
 public:
-    virtual void getPermissionsLevel()const;
-    virtual std::string getRequestId()const;
-    virtual void clone()const;
-    virtual void getWorldPosition()const;
-    ~ActorCommandOrigin();
-    virtual void getBlockPosition()const;
-    virtual void getLevel()const;
     virtual void getDimension()const;
     virtual std::string getName()const;
+    virtual void getPermissionsLevel()const;
+    ~ActorCommandOrigin();
+    virtual void clone()const;
+    virtual void getBlockPosition()const;
+    virtual void getLevel()const;
     virtual void getEntity()const;
-    virtual void getOriginType()const;
+    virtual void getWorldPosition()const;
+    virtual std::string getRequestId()const;
     virtual bool isSelectorExpansionAllowed()const;
-    ActorCommandOrigin(ActorUniqueID, Level &);
+    virtual void getOriginType()const;
     ActorCommandOrigin(Actor &);
+    ActorCommandOrigin(ActorUniqueID, Level &);
 };

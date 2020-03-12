@@ -1,30 +1,13 @@
 #pragma once
 
-#include "../bedrock/actor/Player.h"
-#include "VillageManager.h"
-#include "../bedrock/level/Level.h"
+#include "../bedrock/util/Vec3.h"
+#include <memory>
+#include <vector>
+#include "../bedrock/util/Tick.h"
+#include <string>
 #include <unordered_set>
 #include <unordered_map>
-#include "Dimension.h"
-#include "Block.h"
-#include <memory>
-#include "../bedrock/util/AABB.h"
-#include <string>
-#include "../bedrock/actor/Mob.h"
-#include "../bedrock/util/Vec3.h"
-#include <functional>
-#include "../bedrock/nbt/CompoundTag.h"
-#include "HashedString.h"
-#include "Raid.h"
-#include "../bedrock/util/Random.h"
-#include "../bedrock/block/unmapped/BlockSource.h"
-#include <vector>
-#include "POIInstance.h"
-#include "../bedrock/actor/Actor.h"
-#include <utility>
 #include "../bedrock/actor/unmapped/ActorUniqueID.h"
-#include "../bedrock/util/BlockPos.h"
-#include "../bedrock/util/Tick.h"
 #include "../mce/UUID.h"
 
 
@@ -58,115 +41,115 @@ public:
     static std::string STORAGE_KEY_POI;
     static std::string STORAGE_KEY_RAID;
 
-    void _helpLocateRaiders(Raid const&);
-    void removeVillageSavedData();
-    bool canSpawnAt(BlockSource &, int, int, int, int, int, int);
-//  void addActorToVillage(DwellerRole, ActorUniqueID const&); //TODO: incomplete function definition
-    void _setDefaultBoundsAround(BlockPos const&);
-    bool isVeryBadStanding(ActorUniqueID const&);
-    bool canSpawnAt(BlockSource &, BlockPos const&, BlockPos const&);
-    void _saveVillagePlayerStanding()const;
-    void modifyStanding(ActorUniqueID const&, int);
-    void _findSpawnPointForRaid(Vec3 &, float, float, bool, bool)const;
-    void _claimUnclaimedPOIs();
-    void _ringBells(BlockSource &, Random &)const;
-    bool isValidRegisteredPOI(BlockSource &, Block const&, BlockPos const&);
-    void _chooseRaidSpawnPosition(unsigned long, Vec3 &)const;
-    void getRaidBounds()const;
-    void _updateAggressors();
-    void removeVillager(ActorUniqueID const&);
-    void _saveVillageRaid()const;
-//  void fetchOwnedPOI(ActorUniqueID const&, POIType); //TODO: incomplete function definition
-    ~Village();
-    bool isBadStanding(ActorUniqueID const&);
-    Village(Dimension &, mce::UUID, BlockPos const&);
-    void getClosestBadStandingPlayer(Actor *);
-//  void _readyRaidGroup(std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &); //TODO: incomplete function definition
-//  void _getType(POIType); //TODO: incomplete function definition
-    void _addPoiToVillage(ActorUniqueID const&, std::weak_ptr<POIInstance>);
-    void _createRaid();
-    void _saveVillageData()const;
-    void getBedPOICount()const;
-    void getPopulationSize()const;
-    void getCenter()const;
-    void checkNeedMoreVillagers()const;
-    void _loadVillageData(CompoundTag const&);
-    bool isVillagePOI(BlockSource const&, BlockPos const&);
-    void rewardAllPlayers(int);
-    void _loadVillagePOIs(CompoundTag const&);
-    void getStanding(ActorUniqueID const&);
-    void getClosestAggressor(Actor *);
-    void startVillageHeroTimer();
-    void saveEntireVillage();
-    bool isVillagePOI(VillageManager const&, Block const&);
-    void getUniqueID()const;
-    bool canRemove()const;
-    void _saveVillageDwellers()const;
-    void getUnclaimedPOIs()const;
-    void triggerRaid();
-    void _calcPOIDist();
-    std::string _getUniqueVillageKey()const;
-//  bool hasSpecificDweller(DwellerRole, ActorUniqueID const&)const; //TODO: incomplete function definition
-//  void _findClosestDweller(Actor *, Actor *&, float &, std::unordered_map<ActorUniqueID, Tick, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<std::pair<ActorUniqueID const, Tick>>> const&)const; //TODO: incomplete function definition
-    void _updateDwellerTimers();
-    void withinVillageBounds(Vec3 const&, float)const;
-    void removeAllInstancesofActorFromVillage(ActorUniqueID const&);
-    void _loadVillageDwellers(CompoundTag const&);
-    void clearOwnedPOIs();
-    void onRemovedFromManager();
-    bool isGoodStanding(ActorUniqueID const&);
-    void _chooseRandomPosAtDistance(Random &, Vec3 const&, float)const;
-    void addPOI(std::weak_ptr<POIInstance>);
-    bool isBreedTimerOk()const;
-//  void getClosestPOI(POIType, BlockPos const&); //TODO: incomplete function definition
-    void clearRaid();
-    void _sendRaidUpdateToPlayersInVillage(bool)const;
-    void _spawnPassiveDwellers(BlockSource &, int);
-    void resetNoBreedTimer();
-    void _clearVillagerPOIs(ActorUniqueID const&);
-    bool hasAggressors()const;
-    bool isVillageHeroActive()const;
-    bool canAddPOI(std::weak_ptr<POIInstance>)const;
-//  bool hasInvalidRole(ActorUniqueID const&, DwellerRole const&); //TODO: incomplete function definition
-    void tick(Tick, BlockSource &);
-    void fireSoundTheAlarm();
-    void _chooseRandomDirectionFromVillage(Random &)const;
-    void _findWeightedPOI(std::vector<std::weak_ptr<POIInstance>> &, Random &, ActorUniqueID);
-    void _findSpawnableRegion(Vec3, int)const;
-    void addVillager(ActorUniqueID const&);
-//  void _getDwellerMap(DwellerRole)const; //TODO: incomplete function definition
-//  void _spawnRaidGroup(Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &)const; //TODO: incomplete function definition
-    void getPOICount()const;
-    void loadDataByKey(std::string const&, CompoundTag const&);
-//  void resetDwellerTimer(DwellerRole, ActorUniqueID const&); //TODO: incomplete function definition
-    void _loadVillagePlayerStanding(CompoundTag const&);
-    void _updateClaimedPOIs(BlockSource &);
-    void _loadVillageRaid(CompoundTag const&);
-    void getIdealPopulationSize()const;
-    void getApproximateRadius()const;
-    void findRandomSpawnPos(BlockSource &, BlockPos const&, BlockPos const&);
-    void _applyHeroOfTheVillageEffect(BlockSource &, AABB const&);
-    void _sendSoundTheAlarmAchievement(Player const&)const;
-    void _updateUnclaimedPOIs(BlockSource &);
-    void _shouldUpdate()const;
-    bool hasPOI(std::weak_ptr<POIInstance>)const;
-    void getBounds()const;
-    void addAggressor(Mob const&);
-    bool isValidBedPOI(Block const&);
-    void debugDraw();
-    void _findPreferredPOI(std::vector<std::weak_ptr<POIInstance>> &, HashedString const&, ActorUniqueID);
     void _saveVillagePOIs()const;
+    void _loadVillageData(CompoundTag const&);
+    bool canRemove()const;
+//  void _playSoundFrom(Vec3 const&, LevelSoundEvent); //TODO: incomplete function definition
+    void _findSpawnPointForRaid(Vec3 &, float, float, bool, bool)const;
+    void triggerRaid();
+    void _findAvailablePOI(unsigned long, Level &, Random &, ActorUniqueID);
+    bool isValidBedPOI(Block const&);
+    void getPOICount()const;
+    bool isGoodStanding(ActorUniqueID const&);
+    Village(Dimension &, mce::UUID, BlockPos const&);
+//  void _getType(POIType); //TODO: incomplete function definition
+    void _shouldSave()const;
+    void loadDataByKey(std::string const&, CompoundTag const&);
+    bool canSpawnAt(BlockSource &, int, int, int, int, int, int);
+    void _loadVillageDwellers(CompoundTag const&);
+    void rewardAllPlayers(int);
+    void _chooseRandomPosAtDistance(Random &, Vec3 const&, float)const;
+    void _spawnRaidGroup(Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &)const;
+    void getBounds()const;
+    void clearOwnedPOIs();
+    void _findWeightedPOI(std::vector<std::weak_ptr<POIInstance>> &, Random &, ActorUniqueID);
+    void _chooseRandomDirectionFromVillage(Random &)const;
+    bool hasRaid()const;
+//  bool hasSpecificDweller(DwellerRole, ActorUniqueID const&)const; //TODO: incomplete function definition
+    std::string _getUniqueVillageKey()const;
+    void _helpLocateRaiders(Raid const&);
+    void _chooseRaidSpawnPosition(unsigned long, Vec3 &)const;
+    void _loadVillagePlayerStanding(CompoundTag const&);
+//  void resetDwellerTimer(DwellerRole, ActorUniqueID const&); //TODO: incomplete function definition
+    void _updateClaimedPOIs(BlockSource &);
+//  void addActorToVillage(DwellerRole, ActorUniqueID const&); //TODO: incomplete function definition
+    void removeVillageSavedData();
+    void _findClosestDweller(Actor *, Actor *&, float &, std::unordered_map<ActorUniqueID, Tick, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<std::pair<ActorUniqueID const, Tick>>> const&)const;
+    void getClosestBadStandingPlayer(Actor *);
+    void _loadVillageRaid(CompoundTag const&);
+    void _shouldUpdate()const;
+    void _sendRaidUpdateToPlayersInVillage(bool)const;
+//  void _getDwellerMap(DwellerRole)const; //TODO: incomplete function definition
+    bool isVillagePOI(BlockSource const&, BlockPos const&);
+    bool isVillageHeroActive()const;
     bool isValidRegisteredPOI(BlockSource &, BlockPos const&);
+    void removeAllInstancesofActorFromVillage(ActorUniqueID const&);
+    void startVillageHeroTimer();
+    bool isVeryBadStanding(ActorUniqueID const&);
+    void _findPlayerCentricSpawnPointForRaid(Vec3 &, bool)const;
+    void getUniqueID()const;
+    void checkNeedMoreVillagers()const;
+    void _loadVillagePOIs(CompoundTag const&);
+    void debugDraw();
+    void _setDefaultBoundsAround(BlockPos const&);
+    void getCenter()const;
+    void _saveVillageRaid()const;
+    void _findSpawnableRegion(Vec3, int, bool &)const;
+//  void fetchOwnedPOI(ActorUniqueID const&, POIType); //TODO: incomplete function definition
+    void findRandomSpawnPos(BlockSource &, BlockPos const&, BlockPos const&);
+    void tick(Tick, BlockSource &);
+    void onRemovedFromManager();
+    bool canSpawnAt(BlockSource &, BlockPos const&, BlockPos const&);
+    bool isVillagePOI(VillageManager const&, Block const&);
+    void _spawnAndReadyRaidGroup(unsigned long, Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &);
+    void getBedPOICount()const;
+    void _ringBells(BlockSource &, Random &)const;
+    void getPopulationSize()const;
+    void saveEntireVillage();
+//  void removeActorFromVillage(DwellerRole, ActorUniqueID const&); //TODO: incomplete function definition
+    void _findSpawnableRegion(Vec3, int)const;
+    void _saveVillageDwellers()const;
+    void addVillager(ActorUniqueID const&);
+    bool isBreedTimerOk()const;
+    void _addPoiToVillage(ActorUniqueID const&, std::weak_ptr<POIInstance>);
+    void _findPreferredPOI(std::vector<std::weak_ptr<POIInstance>> &, HashedString const&, ActorUniqueID);
+    void _updateAggressors();
+    void addPOI(std::weak_ptr<POIInstance>);
+    void _clearVillagerPOIs(ActorUniqueID const&);
+    void getStanding(ActorUniqueID const&);
+    void resetNoBreedTimer();
+//  void getClosestPOI(POIType, BlockPos const&); //TODO: incomplete function definition
+    void _calcPOIDist();
+    void _saveVillageData()const;
+    void _createRaid();
+    void _applyHeroOfTheVillageEffect(BlockSource &, AABB const&);
+    void _readyRaidGroup(std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &);
+    void fireSoundTheAlarm();
+    ~Village();
+    void _updateDwellerTimers();
+    void addAggressor(Mob const&);
+    void getApproximateRadius()const;
+    void _saveVillagePlayerStanding()const;
+    void getIdealPopulationSize()const;
+    void _claimUnclaimedPOIs();
+    bool hasAggressors()const;
+    void getUnclaimedPOIs()const;
+    void modifyStanding(ActorUniqueID const&, int);
+    void getRaid()const;
+    bool hasPOI(std::weak_ptr<POIInstance>)const;
+    bool isValidRegisteredPOI(BlockSource &, Block const&, BlockPos const&);
+    void clearRaid();
+//  void getDwellerRoleCount(DwellerRole)const; //TODO: incomplete function definition
+    bool isBadStanding(ActorUniqueID const&);
+    void _sendSoundTheAlarmAchievement(Player const&)const;
+    void getClosestAggressor(Actor *);
+//  bool hasInvalidRole(ActorUniqueID const&, DwellerRole const&); //TODO: incomplete function definition
+    void getRaidBounds()const;
+    void withinVillageBounds(Vec3 const&, float)const;
+    bool canAddPOI(std::weak_ptr<POIInstance>)const;
+    void removeVillager(ActorUniqueID const&);
     void villagerLivesHere(ActorUniqueID const&)const;
 //  void _getDwellerMap(DwellerRole); //TODO: incomplete function definition
-    void _shouldSave()const;
-    void _findAvailablePOI(unsigned long, Level &, Random &, ActorUniqueID);
-    bool hasRaid()const;
-    void _findSpawnableRegion(Vec3, int, bool &)const;
-    void getRaid()const;
-//  void getDwellerRoleCount(DwellerRole)const; //TODO: incomplete function definition
-    void _findPlayerCentricSpawnPointForRaid(Vec3 &, bool)const;
-//  void _spawnAndReadyRaidGroup(unsigned long, Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &); //TODO: incomplete function definition
-//  void removeActorFromVillage(DwellerRole, ActorUniqueID const&); //TODO: incomplete function definition
-//  void _playSoundFrom(Vec3 const&, LevelSoundEvent); //TODO: incomplete function definition
+    void _updateUnclaimedPOIs(BlockSource &);
+    void _spawnPassiveDwellers(BlockSource &, int);
 };

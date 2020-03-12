@@ -1,8 +1,5 @@
 #pragma once
 
-#include "../../../unmapped/HashedString.h"
-#include "ActorAnimationControllerInfo.h"
-#include "ActorAnimationControllerGroup.h"
 #include <memory>
 
 
@@ -11,17 +8,17 @@ class ActorAnimationControllerPtr {
 public:
     static long NONE;
 
-    void get()const;
-    void getName()const;
-    void get();
-    void operator->()const;
-    ~ActorAnimationControllerPtr();
-    void operator==(ActorAnimationControllerPtr const&)const;
-    ActorAnimationControllerPtr();
-    ActorAnimationControllerPtr(ActorAnimationControllerPtr const&);
-    bool isNull()const;
-    void operator!=(ActorAnimationControllerPtr const&)const;
-    ActorAnimationControllerPtr(ActorAnimationControllerGroup &, HashedString const&);
     void operator->();
+    void getName()const;
+    void operator->()const;
+    void get()const;
+    bool isNull()const;
+    ActorAnimationControllerPtr(ActorAnimationControllerGroup &, HashedString const&);
+    ~ActorAnimationControllerPtr();
+    void get();
+    void operator==(ActorAnimationControllerPtr const&)const;
     ActorAnimationControllerPtr(std::shared_ptr<ActorAnimationControllerInfo>);
+    ActorAnimationControllerPtr(ActorAnimationControllerPtr const&);
+    ActorAnimationControllerPtr();
+    void operator!=(ActorAnimationControllerPtr const&)const;
 };

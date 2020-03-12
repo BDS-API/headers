@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "PropertyDescription.h"
 
 
 class AmbientSoundIntervalDescription : PropertyDescription {
 
 public:
-    ~AmbientSoundIntervalDescription();
     virtual void deserializeData(Json::Value &);
-    virtual void getJsonName()const;
+    ~AmbientSoundIntervalDescription();
     virtual void serializeData(Json::Value &)const;
+    virtual void getJsonName()const;
     AmbientSoundIntervalDescription();
 };

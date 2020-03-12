@@ -1,9 +1,8 @@
 #pragma once
 
-#include "../bedrock/actor/Player.h"
+#include <string>
 #include "../core/Path.h"
 #include <vector>
-#include <string>
 
 
 class PhotoStorage {
@@ -13,26 +12,26 @@ public:
     static std::string BOOKS_DIR;
     static std::string MANIFEST_NAME;
 
-    std::string getPhotoPath();
-    PhotoStorage(Core::Path const&);
-    std::string getPhotoPath(Player &);
-    void _addValidFile(Core::Path);
-    void setValidLoosePhoto(Player &, std::string const&);
-    void _writeFile(Core::Path, std::string const&);
-    void _readFile(Core::Path, std::string &);
-    bool isValidBookPhoto(std::string const&, std::string const&);
-    void getLoosePhoto(Player &, std::string const&, std::string &);
-//  void getLoosePhotos(Player &, std::vector<Core::PathBuffer<std::string>> &); //TODO: incomplete function definition
-    ~PhotoStorage();
-    std::string getBookPath();
-    bool isValidLoosePhoto(Player &, std::string const&);
-    void _isValidFile(Core::Path);
-    void getBookPath(std::string const&);
     void _readManifest();
-    void deleteLoosePhoto(Player &, std::string const&);
-    void deleteBookPhoto(std::string const&, std::string const&);
-    void storeLoosePhoto(Player &, std::string const&, std::string const&);
-    void storeBookPhoto(std::string const&, std::string const&, std::string const&);
+    void getBookPath(std::string const&);
+    void getLoosePhotos(Player &, std::vector<Core::PathBuffer<std::string>> &);
+    std::string getBookPath();
     void _writeManifest();
+    PhotoStorage(Core::Path const&);
+    void deleteBookPhoto(std::string const&, std::string const&);
+    std::string getPhotoPath();
+    bool isValidLoosePhoto(Player &, std::string const&);
+    void _writeFile(Core::Path, std::string const&);
+    void deleteLoosePhoto(Player &, std::string const&);
+    void storeBookPhoto(std::string const&, std::string const&, std::string const&);
+    void _isValidFile(Core::Path);
+    void storeLoosePhoto(Player &, std::string const&, std::string const&);
+    void setValidLoosePhoto(Player &, std::string const&);
+    void _addValidFile(Core::Path);
+    std::string getPhotoPath(Player &);
+    bool isValidBookPhoto(std::string const&, std::string const&);
+    ~PhotoStorage();
     void getBookPhoto(std::string const&, std::string const&, std::string &);
+    void getLoosePhoto(Player &, std::string const&, std::string &);
+    void _readFile(Core::Path, std::string &);
 };

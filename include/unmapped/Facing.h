@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../bedrock/util/Random.h"
-#include "../bedrock/util/Vec3.h"
 
 
 namespace Facing {
@@ -20,19 +18,19 @@ namespace Facing {
     static long ALL_EXCEPT;
     static long ALL_EXCEPT_AXIS_Y;
 
-    void getClockWise(unsigned char);
-    void fromVec3(Vec3 const&);
-//  void convertWeirdoDirectionToFacingDirection(WeirdoDirection); //TODO: incomplete function definition
-    void from2DDataValue(int);
-    void getStepY(unsigned char);
     void getRandomFaceHorizontal(Random &);
-    void getRandomFace(Random &);
-    void toString(unsigned char);
-    void convertYRotationToFacingDirection(float);
-    void getStepX(unsigned char);
     void getOpposite(unsigned char);
-//  void rotateFace(unsigned char, Facing::Rotation); //TODO: incomplete function definition
-    bool isHorizontal(unsigned char);
+    void convertYRotationToFacingDirection(float);
+    void fromVec3(Vec3 const&);
+    void getStepY(unsigned char);
     void getStepZ(unsigned char);
+    void toString(unsigned char);
+    bool isHorizontal(unsigned char);
+//  void rotateFace(unsigned char, Facing::Rotation); //TODO: incomplete function definition
+    void getStepX(unsigned char);
+    void from2DDataValue(int);
     void getCounterClockWise(unsigned char);
+    void getClockWise(unsigned char);
+    void getRandomFace(Random &);
+//  void convertWeirdoDirectionToFacingDirection(WeirdoDirection); //TODO: incomplete function definition
 };

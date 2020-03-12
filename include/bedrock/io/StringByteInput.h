@@ -6,8 +6,8 @@
 class StringByteInput : BytesDataInput {
 
 public:
-    virtual void numBytesLeft()const;
     virtual void readBytes(void *, unsigned long);
+    virtual void numBytesLeft()const;
     ~StringByteInput();
 //  StringByteInput(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
 };

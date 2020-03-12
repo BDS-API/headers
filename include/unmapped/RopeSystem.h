@@ -1,13 +1,6 @@
 #pragma once
 
-#include "RopeAABB.h"
-#include "RopeParams.h"
-#include "../bedrock/actor/unmapped/ActorUniqueID.h"
-#include "../bedrock/util/Vec3.h"
-#include "../bedrock/block/unmapped/BlockSource.h"
-#include "RopeNode.h"
 #include <memory>
-#include "AABBBucket.h"
 
 
 class RopeSystem {
@@ -18,44 +11,44 @@ public:
     static long sEnabled;
 
     void _startNewBucket(unsigned long, float);
-    void _solveStartBlocks();
-    void _updateRenderPoints();
-    void _solveCollision(RopeNode &, RopeAABB const&);
-    void getPins(Vec3 &, Vec3 &)const;
-    void initialize(RopeParams const&);
-    void _solveDistanceConstraintBlock(Vec3 &, Vec3 &, Vec3 &, Vec3 &, float);
-    void _integrate();
-//  void addWave(RopeWave); //TODO: incomplete function definition
     void updatePins(Vec3 const&, Vec3 const&);
-    void _applyFriction1D(RopeNode &, int);
-    void _solvePinConstraints();
+    void _solveStartBlocks();
+    void _solveCollision(RopeNode &, RopeAABB const&);
     void _prepareAABBBuckets();
-    bool isDestroyed()const;
-    void _initializePins();
-    void _solveCollisions(bool);
-    void _tickWaves();
-    void _initializePins(Vec3 const&, Vec3 const&);
-    ~RopeSystem();
-    void storeEndPinEntity(ActorUniqueID const&);
-    RopeSystem();
-    void _pruneBlacklist();
-    void _stretchRope();
     void _resizeRope();
-    void _solveEndBlocks();
-    void _cacheColliders(BlockSource &);
-    void _solveDistanceConstraint(Vec3 &, Vec3 &, float);
-    void _solveFrictionConstraints();
-    void _propagateDistanceConstraint(Vec3 const&, Vec3 &, float);
-    void getEndPinEntity()const;
-    void _finalizeBucket(AABBBucket &);
-    void _solveDistanceConstraints3();
-    void queueTick(BlockSource &, std::shared_ptr<RopeSystem> &);
-    void _pushRange(unsigned long, unsigned long);
-    void _tick();
+    void _integrate();
+    void _updateRenderPoints();
+    void _initializePins();
     void _solveDistanceConstraints1();
-    void getPoints();
-    void getCutNode()const;
-    void cutAtPercent(float);
+    RopeSystem();
+    void _solveDistanceConstraint(Vec3 &, Vec3 &, float);
     bool isCut()const;
     void _getBucket(unsigned char);
+    void getCutNode()const;
+    bool isDestroyed()const;
+//  void addWave(RopeWave); //TODO: incomplete function definition
+    void _solveFrictionConstraints();
+    void storeEndPinEntity(ActorUniqueID const&);
+    void getPins(Vec3 &, Vec3 &)const;
+    void cutAtPercent(float);
+    void _solveDistanceConstraintBlock(Vec3 &, Vec3 &, Vec3 &, Vec3 &, float);
+    void _solveEndBlocks();
+    void _finalizeBucket(AABBBucket &);
+    void _initializePins(Vec3 const&, Vec3 const&);
+    void _tickWaves();
+    void queueTick(BlockSource &, std::shared_ptr<RopeSystem> &);
+    void _solvePinConstraints();
+    void _pruneBlacklist();
+    void _pushRange(unsigned long, unsigned long);
+    ~RopeSystem();
+    void _applyFriction1D(RopeNode &, int);
+    void initialize(RopeParams const&);
+    void _propagateDistanceConstraint(Vec3 const&, Vec3 &, float);
+    void _cacheColliders(BlockSource &);
+    void _solveCollisions(bool);
+    void getEndPinEntity()const;
+    void _tick();
+    void getPoints();
+    void _stretchRope();
+    void _solveDistanceConstraints3();
 };

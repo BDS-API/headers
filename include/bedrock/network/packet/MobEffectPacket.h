@@ -1,19 +1,18 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../actor/unmapped/ActorRuntimeID.h"
-#include "../../io/ReadOnlyBinaryStream.h"
+#include <string>
 #include "Packet.h"
+#include "../../actor/unmapped/ActorRuntimeID.h"
 
 
 class MobEffectPacket : Packet {
 
 public:
-    virtual void write(BinaryStream &)const;
-    virtual void read(ReadOnlyBinaryStream &);
     virtual std::string getName()const;
-    virtual void getId()const;
+    virtual void write(BinaryStream &)const;
     ~MobEffectPacket();
+    virtual void getId()const;
+    virtual void read(ReadOnlyBinaryStream &);
     MobEffectPacket();
 //  MobEffectPacket(ActorRuntimeID, MobEffectPacket::Event, int, int, int, bool); //TODO: incomplete function definition
 };

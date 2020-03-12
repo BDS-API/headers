@@ -1,7 +1,7 @@
 #pragma once
 
-#include <functional>
 #include <memory>
+#include <functional>
 
 
 class ScheduledCallback {

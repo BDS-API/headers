@@ -1,51 +1,48 @@
 #pragma once
 
-#include "../bedrock/actor/Actor.h"
 #include "../bedrock/actor/unmapped/ActorUniqueID.h"
-#include "../bedrock/actor/Mob.h"
-#include "../bedrock/util/Vec3.h"
 
 
 class FlockingComponent {
 
 public:
+    void manageNeighborhood(Actor &);
+    void getMaxHeight()const;
+    void clearNeighborhood();
+    void setCurrentHeading(Vec3 const&);
+    void getIsEnabled()const;
     void updateNeighborhoodData(Actor const&);
-    void getInFlock()const;
-    void setGoalHeading(Vec3 const&);
-    void setHasGoalTarget(bool);
+    void addFlockMember(ActorUniqueID);
+    FlockingComponent(FlockingComponent &&);
     void mergeNeighborhoods(Actor &);
     void getNeighborhood();
-    ~FlockingComponent();
     void getCurrentHeading()const;
-    void getCohesionWeight()const;
-    void setInFlock(bool);
-    void getMinHeight()const;
-    void addFlockMember(ActorUniqueID);
-    void toggleFlock(bool);
-    FlockingComponent(FlockingComponent &&);
+    ~FlockingComponent();
     void setGroupVelocity(Vec3 const&);
-    void getSeparationWeight()const;
-    void setIsLeader(bool);
-    bool needsDoubleSpeed();
-    void validateVariantEntityTypes(Actor const&, Actor const&)const;
-    void calculateFlockVector(Actor const&);
-    void setCurrentHeading(Vec3 const&);
-    FlockingComponent();
-    bool containsMember(ActorUniqueID);
-    void getFlockLimit()const;
-    void setFlockLimit(int);
-    void breakFlock(Actor const&);
-    void calculateGoalHeading(Mob &);
-    void manageNeighborhood(Actor &);
-    void joinFlock(Actor &);
-    void getMaxHeight()const;
-    void setUsingDirection(bool);
-    void getIsEnabled()const;
-    bool hasGoalTarget()const;
-    void clearNeighborhood();
-    void getGoalHeading()const;
-    void getIsLeader()const;
-    void getUsingDirection()const;
     bool canJoinFlock(Actor &)const;
+    void breakFlock(Actor const&);
+    void setUsingDirection(bool);
+    void validateVariantEntityTypes(Actor const&, Actor const&)const;
+    void getIsLeader()const;
+    void getFlockLimit()const;
+    void getCohesionWeight()const;
+    void setHasGoalTarget(bool);
+    bool needsDoubleSpeed();
+    void getUsingDirection()const;
+    void setInFlock(bool);
+    void setGoalHeading(Vec3 const&);
+    void getMinHeight()const;
+    void calculateFlockVector(Actor const&);
+    void getSeparationWeight()const;
+    void toggleFlock(bool);
+    void joinFlock(Actor &);
     void getInWater()const;
+    void setIsLeader(bool);
+    void getInFlock()const;
+    void setFlockLimit(int);
+    bool hasGoalTarget()const;
+    void getGoalHeading()const;
+    bool containsMember(ActorUniqueID);
+    void calculateGoalHeading(Mob &);
+    FlockingComponent();
 };

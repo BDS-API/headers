@@ -1,10 +1,8 @@
 #pragma once
 
-#include "../bedrock/pack/ResourceLoader.h"
 #include <string>
-#include <vector>
 #include <memory>
-#include "ResourceLocation.h"
+#include <vector>
 
 
 namespace ResourceLoaders {
@@ -13,10 +11,10 @@ namespace ResourceLoaders {
     static long backCompatGroup;
     static std::string supportedImageExtensions;
 
-    void load(ResourceLocation const&, std::string &);
-//  void registerLoader(ResourceFileSystem, std::unique_ptr<ResourceLoader>); //TODO: incomplete function definition
-    void clearLoaders();
     std::string getPathContainingResource(ResourceLocation const&);
+    void clearLoaders();
+    void load(ResourceLocation const&, std::string &);
     std::string getPath(ResourceLocation const&);
     void load(ResourceLocation const&, std::string &, std::vector<std::string> const&);
+//  void registerLoader(ResourceFileSystem, std::unique_ptr<ResourceLoader>); //TODO: incomplete function definition
 };

@@ -1,48 +1,41 @@
 #pragma once
 
-#include "Player.h"
-#include "../../unmapped/VariantParameterList.h"
-#include "unmapped/ActorDefinitionGroup.h"
-#include "../util/BlockPos.h"
 #include "../util/ChunkPos.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "../nbt/CompoundTag.h"
-#include "../../unmapped/DataLoadHelper.h"
 #include "Monster.h"
 
 
 class Slime : Monster {
 
 public:
-    virtual bool canDealDamage();
-    virtual void doPlayLandSound();
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual void playJumpSound();
-    virtual void remove();
-    virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void findAttackTarget();
-    virtual void playLandSound();
-    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    ~Slime();
-    virtual void _getWalkTargetValue(BlockPos const&);
-    virtual void onSynchedDataUpdate(int);
-    virtual void getSquishSound();
-    virtual void setSlimeSize(int);
-    virtual void playerTouch(Player &);
-    virtual void getShadowRadius()const;
-    virtual void useNewAi()const;
-    virtual void doPlayJumpSound();
     virtual void aiStep();
+    virtual void addAdditionalSaveData(CompoundTag &);
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
+    virtual void setSlimeSize(int);
+    virtual void playJumpSound();
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
     virtual void checkSpawnRules(bool);
-    virtual void decreaseSquish();
-    virtual void createChild(int);
+    ~Slime();
+    virtual void useNewAi()const;
+    virtual void _getWalkTargetValue(BlockPos const&);
     virtual void normalTick();
-    Slime(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
-    void getTargetSquish()const;
-    void getSquishValue()const;
-    void _getRandomSeedFromSlimeChunk(ChunkPos);
-    void justJumped();
+    virtual void decreaseSquish();
+    virtual void getShadowRadius()const;
+    virtual void playerTouch(Player &);
+    virtual void findAttackTarget();
+    virtual bool canDealDamage();
+    virtual void createChild(int);
+    virtual void getSquishSound();
+    virtual void onSynchedDataUpdate(int);
+    virtual void doPlayJumpSound();
+    virtual void remove();
+    virtual void doPlayLandSound();
+    virtual void playLandSound();
     void getOldSquishValue()const;
+    Slime(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    void justJumped();
+    void getTargetSquish()const;
+    void _getRandomSeedFromSlimeChunk(ChunkPos);
+    void getSquishValue()const;
     void justLanded();
     void getSlimeSize()const;
 };

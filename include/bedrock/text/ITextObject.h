@@ -1,6 +1,5 @@
 #pragma once
 
-#include <string>
 
 
 class ITextObject {
@@ -12,6 +11,6 @@ public:
     static std::string RAW_TEXT_WITH_KEY;
 
     ~ITextObject();
-    ITextObject();
     ITextObject(ITextObject const&);
+    ITextObject();
 };

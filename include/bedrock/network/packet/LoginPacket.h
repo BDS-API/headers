@@ -1,21 +1,19 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "../../../unmapped/ConnectionRequest.h"
+#include <string>
 #include "Packet.h"
 
 
 class LoginPacket : Packet {
 
 public:
-    virtual void write(BinaryStream &)const;
-    virtual void disallowBatching()const;
-    virtual std::string getName()const;
     ~LoginPacket();
     virtual void read(ReadOnlyBinaryStream &);
+    virtual void disallowBatching()const;
     virtual void getId()const;
-    LoginPacket();
+    virtual void write(BinaryStream &)const;
+    virtual std::string getName()const;
     LoginPacket(int, ConnectionRequest const&);
     LoginPacket(LoginPacket &&);
+    LoginPacket();
 };

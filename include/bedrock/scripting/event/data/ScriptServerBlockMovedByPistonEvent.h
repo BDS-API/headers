@@ -1,9 +1,6 @@
 #pragma once
 
 #include <string>
-#include "../../unmapped/ScriptEngine.h"
-#include "../../../util/BlockPos.h"
-#include "../../ScriptObjectHandle.h"
 #include "ScriptEventData.h"
 
 
@@ -14,10 +11,10 @@ public:
 
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
     ~ScriptServerBlockMovedByPistonEvent();
+    void setPistonAction(std::string);
+    std::string getName();
+    void setPistonPos(BlockPos const&);
     ScriptServerBlockMovedByPistonEvent();
     void getHash();
-    std::string getName();
     void setBlockPos(BlockPos const&);
-    void setPistonAction(std::string);
-    void setPistonPos(BlockPos const&);
 };

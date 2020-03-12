@@ -6,7 +6,7 @@
 class AtlasItemManager {
 
 public:
-    AtlasItemManager();
     ~AtlasItemManager();
     void getTextureItem(std::string const&)const;
+    AtlasItemManager();
 };

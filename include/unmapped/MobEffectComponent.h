@@ -5,7 +5,7 @@
 class MobEffectComponent {
 
 public:
-    ~MobEffectComponent();
     MobEffectComponent();
     MobEffectComponent(MobEffectComponent &&);
+    ~MobEffectComponent();
 };

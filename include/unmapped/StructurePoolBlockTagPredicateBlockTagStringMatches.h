@@ -1,9 +1,7 @@
 #pragma once
 
-#include "IStructurePoolBlockTagPredicate.h"
-#include "Block.h"
 #include <string>
-#include "../bedrock/nbt/CompoundTag.h"
+#include "IStructurePoolBlockTagPredicate.h"
 
 
 class StructurePoolBlockTagPredicateBlockTagStringMatches : IStructurePoolBlockTagPredicate {

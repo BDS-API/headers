@@ -1,42 +1,40 @@
 #pragma once
 
-#include "../bedrock/actor/Player.h"
+#include <string>
 #include "../mce/UUID.h"
-#include <ratio>
-#include "../bedrock/actor/Actor.h"
 
 
 class BossComponent {
 
 public:
-    void setHealthBarVisible(Actor &, bool);
-    std::string getName()const;
-//  void setOverlay(Actor &, BossBarOverlay); //TODO: incomplete function definition
+    BossComponent(BossComponent &&);
+    void setHealthPercent(Actor &, float);
+    void getColor()const;
+    void getCreateWorldFog()const;
+    void tryRemoveBoss(Actor &, Player &);
+    void registerPlayer(Actor &, Player *);
+    void addPlayerToParty(mce::UUID, int);
+    void handleRegisterPlayers(Actor &);
+//  void setColor(Actor &, BossBarColor); //TODO: incomplete function definition
+    BossComponent();
+    void getPlayerParty()const;
 //  void broadcastBossEvent(Actor &, BossEventUpdateType); //TODO: incomplete function definition
-//  void setLastPlayerUpdate(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>); //TODO: incomplete function definition
-    void getShouldDarkenSky()const;
+    ~BossComponent();
+    void getOverlay()const;
+    void sendDeathTelemetry(Actor &);
+    void getLastHealth()const;
+    std::string getName()const;
     void unRegisterPlayer(Actor &, Player *);
     void getHealthPercent()const;
-    bool isWithinRange(Actor &, Player const*)const;
-    void handleRegisterPlayers(Actor &);
-    void getPlayerParty()const;
-    BossComponent();
-    void tryRemoveBoss(Actor &, Player &);
-    ~BossComponent();
     void setCreateWorldFog(Actor &, bool);
-//  void _sendBossEvent(Actor &, BossEventUpdateType, Player *); //TODO: incomplete function definition
-    void sendDeathTelemetry(Actor &);
-    void getLastPlayerUpdate()const;
-    void getLastHealth()const;
-    void registerPlayer(Actor &, Player *);
-    void getHudRangeSqr()const;
-    void setHealthPercent(Actor &, float);
     void getHealthBarVisible()const;
-    BossComponent(BossComponent &&);
-//  void setColor(Actor &, BossBarColor); //TODO: incomplete function definition
-    void addPlayerToParty(mce::UUID, int);
+    void getLastPlayerUpdate()const;
+    void getShouldDarkenSky()const;
+//  void setOverlay(Actor &, BossBarOverlay); //TODO: incomplete function definition
     void setLastHealth(int);
-    void getCreateWorldFog()const;
-    void getOverlay()const;
-    void getColor()const;
+    void getHudRangeSqr()const;
+    bool isWithinRange(Actor &, Player const*)const;
+//  void setLastPlayerUpdate(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>); //TODO: incomplete function definition
+    void setHealthBarVisible(Actor &, bool);
+//  void _sendBossEvent(Actor &, BossEventUpdateType, Player *); //TODO: incomplete function definition
 };

@@ -5,9 +5,9 @@
 
 namespace StopwatchHandler {
 
-    void printEvery(int);
-    void print();
-    void get(std::string const&);
-    void clearAll();
     void clear(std::string const&);
+    void clearAll();
+    void printEvery(int);
+    void get(std::string const&);
+    void print();
 };

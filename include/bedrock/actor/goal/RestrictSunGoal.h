@@ -1,17 +1,16 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class RestrictSunGoal : Goal {
 
 public:
-    virtual void stop();
-    virtual void start();
-    virtual bool canUse();
-    ~RestrictSunGoal();
     virtual void appendDebugInfo(std::string &)const;
+    virtual bool canUse();
+    virtual void start();
+    virtual void stop();
+    ~RestrictSunGoal();
     RestrictSunGoal(Mob &);
 };

@@ -1,16 +1,15 @@
 #pragma once
 
-#include "../EnderMan.h"
-#include "Goal.h"
 #include <string>
+#include "Goal.h"
 
 
 class EndermanTakeBlockGoal : Goal {
 
 public:
     ~EndermanTakeBlockGoal();
+    virtual bool canUse();
     virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
-    virtual bool canUse();
     EndermanTakeBlockGoal(EnderMan &);
 };

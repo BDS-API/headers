@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../bedrock/util/Random.h"
 #include "../json/Value.h"
 
 
@@ -11,9 +10,9 @@ public:
 
     IntRange(int);
     bool isInRangeExclusive(int)const;
-    IntRange(int, int);
-    void parseJson(Json::Value, int, int);
     void getValue(Random &)const;
-    IntRange();
+    void parseJson(Json::Value, int, int);
     bool isInRangeInclusive(int)const;
+    IntRange();
+    IntRange(int, int);
 };

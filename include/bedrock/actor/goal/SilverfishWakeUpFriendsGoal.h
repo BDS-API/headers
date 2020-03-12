@@ -1,16 +1,15 @@
 #pragma once
 
-#include "../Silverfish.h"
-#include "Goal.h"
 #include <string>
+#include "Goal.h"
 
 
 class SilverfishWakeUpFriendsGoal : Goal {
 
 public:
     virtual bool canUse();
-    virtual void tick();
-    ~SilverfishWakeUpFriendsGoal();
     virtual void appendDebugInfo(std::string &)const;
+    ~SilverfishWakeUpFriendsGoal();
+    virtual void tick();
     SilverfishWakeUpFriendsGoal(Silverfish &);
 };

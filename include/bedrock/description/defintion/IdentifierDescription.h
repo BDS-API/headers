@@ -1,7 +1,7 @@
 #pragma once
 
-#include "DefintionDescription.h"
 #include <string>
+#include "DefintionDescription.h"
 
 
 class IdentifierDescription : DefintionDescription {
@@ -9,7 +9,7 @@ class IdentifierDescription : DefintionDescription {
 public:
     virtual void getJsonName()const;
     ~IdentifierDescription();
-    IdentifierDescription(char const*);
-    IdentifierDescription(std::string const&);
     IdentifierDescription(IdentifierDescription &&);
+    IdentifierDescription(std::string const&);
+    IdentifierDescription(char const*);
 };

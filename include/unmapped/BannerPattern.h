@@ -1,9 +1,8 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance.h"
 #include <string>
-#include <vector>
 #include "../bedrock/item/ItemStack.h"
+#include <vector>
 
 
 class BannerPattern {
@@ -50,22 +49,22 @@ public:
     static long mTrianglesBottom;
     static long mTrianglesTop;
 
-    bool matchesPatternItem(ItemInstance const&)const;
-    void getIngredientItem()const;
-    void getPatternItemType()const;
-    BannerPattern(std::string const&, std::string const&, std::string const&, std::string const&, std::string const&);
-    BannerPattern(std::string const&, std::string const&, std::vector<std::string> const&);
-    void getPatternIndexFromNameID(std::string const&);
-    bool hasPattern()const;
-    std::string getPattern()const;
-    ~BannerPattern();
     BannerPattern(std::string const&, std::string const&, ItemStack, short, bool);
+    std::string getPattern()const;
+    bool requiresPatternItem()const;
+    void getPatternItemType()const;
+    BannerPattern(std::string const&, std::string const&, std::vector<std::string> const&);
+    bool matchesPatternItem(ItemInstance const&)const;
+    ~BannerPattern();
+    BannerPattern(std::string const&, std::string const&);
+    BannerPattern(std::string const&, std::string const&, ItemStack, short);
     void initPatterns();
+    bool hasPattern()const;
+    std::string getName()const;
     void getIgnoreAux()const;
     std::string getNameID()const;
+    void getPatternIndexFromNameID(std::string const&);
+    BannerPattern(std::string const&, std::string const&, std::string const&, std::string const&, std::string const&);
     bool requiresIngredientItem()const;
-    bool requiresPatternItem()const;
-    BannerPattern(std::string const&, std::string const&, ItemStack, short);
-    std::string getName()const;
-    BannerPattern(std::string const&, std::string const&);
+    void getIngredientItem()const;
 };

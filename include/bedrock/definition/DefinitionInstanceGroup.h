@@ -1,21 +1,21 @@
 #pragma once
 
+#include <string>
 #include <memory>
-#include "instance/IDefinitionInstance.h"
 
 
 class DefinitionInstanceGroup {
 
 public:
-    void add(std::shared_ptr<IDefinitionInstance> const&);
-    void subtract(DefinitionInstanceGroup const&);
-    void overlaps(DefinitionInstanceGroup const&)const;
-    std::string _getDefinitionNameFromTypeId(unsigned short const&);
-    void remove(std::shared_ptr<IDefinitionInstance> const&);
+    DefinitionInstanceGroup(DefinitionInstanceGroup &&);
     ~DefinitionInstanceGroup();
-    void combine(DefinitionInstanceGroup const&);
+    void add(std::shared_ptr<IDefinitionInstance> const&);
+    void overlaps(DefinitionInstanceGroup const&)const;
     DefinitionInstanceGroup();
     void clear();
-    DefinitionInstanceGroup(DefinitionInstanceGroup &&);
+    void combine(DefinitionInstanceGroup const&);
+    void subtract(DefinitionInstanceGroup const&);
+    std::string _getDefinitionNameFromTypeId(unsigned short const&);
     void contains(DefinitionInstanceGroup const&)const;
+    void remove(std::shared_ptr<IDefinitionInstance> const&);
 };

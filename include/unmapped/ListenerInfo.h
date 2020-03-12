@@ -1,8 +1,7 @@
 #pragma once
 
-#include <functional>
-#include "Block.h"
 #include "../bedrock/util/Vec3.h"
+#include <functional>
 
 
 class ListenerInfo {

@@ -8,13 +8,13 @@ class AsynchronousIPResolver {
 public:
     class ResolvedIp;
 
-    std::string getIp()const;
     std::string getOriginalUrl()const;
-    AsynchronousIPResolver(std::string);
-    ~AsynchronousIPResolver();
     void _resolve();
+    ~AsynchronousIPResolver();
     AsynchronousIPResolver(AsynchronousIPResolver const&);
+    std::string getIp()const;
     bool isDone()const;
+    AsynchronousIPResolver(std::string);
     class ResolvedIp {
 
     public:

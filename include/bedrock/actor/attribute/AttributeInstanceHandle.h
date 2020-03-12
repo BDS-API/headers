@@ -2,9 +2,8 @@
 
 
 
-class AttributeInstanceHandle {
+namespace AttributeInstanceHandle {
 
-public:
     void getMutableInstance()const;
     void getInstance()const;
 };

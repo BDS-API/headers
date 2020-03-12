@@ -7,20 +7,20 @@ namespace Core {
     class FileStats {
 
     public:
-        void getAllocatedUsedFileSystemSize()const;
-        void addReadOperation(bool, unsigned long);
-        void getNumFailedWriteOperations()const;
-        void setFileSystemUsedSize(long, long);
-        void getNumBytesWritten()const;
-        void getNumFailedReadOperations()const;
-        FileStats();
-        void getNumBytesRead()const;
+        void getNumSuccessfulWriteOperations()const;
         void getNumSuccessfulReadOperations()const;
+        void getNumFailedReadOperations()const;
+        void addReadOperation(bool, unsigned long);
+        void getUsedFileSystemSize()const;
+        void setFileSystemUsedSize(long, long);
+        void getNumFailedWriteOperations()const;
+        void getAllocatedUsedFileSystemSize()const;
+        void getNumBytesWritten()const;
+        void getNumBytesRead()const;
+        void clear();
         void addReadWriteOperation(bool, unsigned long, unsigned long);
         void addWriteOperation(bool, unsigned long);
+        FileStats();
         void notifyChangeInFileSize(long, long);
-        void clear();
-        void getUsedFileSystemSize()const;
-        void getNumSuccessfulWriteOperations()const;
     };
 }

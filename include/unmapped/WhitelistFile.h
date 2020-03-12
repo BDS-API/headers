@@ -1,14 +1,13 @@
 #pragma once
 
-#include "../core/Path.h"
 
 
 class WhitelistFile {
 
 public:
-    WhitelistFile(Core::Path const&);
-    ~WhitelistFile();
     void syncToDisc();
     void reload();
+    WhitelistFile(Core::Path const&);
+    ~WhitelistFile();
     void getWhitelist()const;
 };

@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Dimension.h"
-#include "../bedrock/util/Vec3.h"
 
 
 class ChangeDimensionRequest {

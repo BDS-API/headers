@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../../mce/UUID.h"
 #include <string>
+#include "../../../mce/UUID.h"
 
 
 class AttributeModifier {
@@ -9,18 +9,18 @@ class AttributeModifier {
 public:
     static long mInvalidUUID;
 
-    ~AttributeModifier();
     virtual bool isInstantaneous()const;
-    AttributeModifier();
-    void getId()const;
-    void getOperation()const;
-    bool isSerializable()const;
-    void setSerialize(bool);
-    AttributeModifier(AttributeModifier const&);
-    void getAmount()const;
-    std::string getName()const;
-    AttributeModifier(mce::UUID, std::string const&, float, int, int, bool);
-    void getOperand()const;
+    ~AttributeModifier();
     void operator!=(AttributeModifier const&)const;
+    AttributeModifier();
+    void getAmount()const;
+    AttributeModifier(mce::UUID, std::string const&, float, int, int, bool);
+    void getOperation()const;
+    void getOperand()const;
     void operator==(AttributeModifier const&)const;
+    void getId()const;
+    void setSerialize(bool);
+    std::string getName()const;
+    bool isSerializable()const;
+    AttributeModifier(AttributeModifier const&);
 };

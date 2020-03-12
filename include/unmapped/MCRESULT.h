@@ -5,11 +5,11 @@
 class MCRESULT {
 
 public:
-    bool isSuccess()const;
-//  MCRESULT(bool, MCCATEGORY, unsigned short); //TODO: incomplete function definition
-    void getFullCode()const;
     void operator!=(MCRESULT const&)const;
-    bool isSuccess(int);
     MCRESULT(int);
+    bool isSuccess()const;
+    void getFullCode()const;
+//  MCRESULT(bool, MCCATEGORY, unsigned short); //TODO: incomplete function definition
+    bool isSuccess(int);
     void operator==(MCRESULT const&)const;
 };

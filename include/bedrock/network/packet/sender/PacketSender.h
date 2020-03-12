@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../../../../unmapped/NetworkIdentifier.h"
-#include "../Packet.h"
 
 
 class PacketSender {

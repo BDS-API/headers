@@ -1,17 +1,16 @@
 #pragma once
 
-#include "LevelData.h"
 
 
 class LevelDataWrapper {
 
 public:
-    void operator*();
-    void setLevelData(LevelData &);
-    void operator->();
-    void operator->()const;
-    void operator*()const;
     LevelDataWrapper();
-    void resetLevelDataPointer();
+    void operator->()const;
+    void operator*();
+    void operator->();
+    void operator*()const;
     ~LevelDataWrapper();
+    void resetLevelDataPointer();
+    void setLevelData(LevelData &);
 };

@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../../util/BlockPos.h"
-#include "../../io/ReadOnlyBinaryStream.h"
+#include <string>
 #include "Packet.h"
-#include "../../io/BinaryStream.h"
 
 
 class SetSpawnPositionPacket : Packet {
 
 public:
+    ~SetSpawnPositionPacket();
     virtual void write(BinaryStream &)const;
     virtual void getId()const;
-    ~SetSpawnPositionPacket();
-    virtual std::string getName()const;
     virtual void read(ReadOnlyBinaryStream &);
-    SetSpawnPositionPacket();
+    virtual std::string getName()const;
 //  SetSpawnPositionPacket(BlockPos const&, SpawnPositionType, bool); //TODO: incomplete function definition
+    SetSpawnPositionPacket();
 };

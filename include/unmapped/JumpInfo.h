@@ -5,15 +5,15 @@
 class JumpInfo {
 
 public:
-    void setJumpDelay(int);
-    void operator!=(JumpInfo const&);
-    void getDistanceScale()const;
-    void setAnimDuration(int);
-    void setHeight(float);
-    void operator==(JumpInfo const&);
-    void getJumpDelay()const;
     void getHeight()const;
-    void getAnimDuration()const;
+    void getJumpDelay()const;
+    void operator==(JumpInfo const&);
+    void setJumpDelay(int);
     void setDistanceScale(float);
+    void setHeight(float);
+    void operator!=(JumpInfo const&);
     JumpInfo(float, float, int, int);
+    void getDistanceScale()const;
+    void getAnimDuration()const;
+    void setAnimDuration(int);
 };

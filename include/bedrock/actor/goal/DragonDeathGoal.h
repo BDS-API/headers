@@ -1,19 +1,18 @@
 #pragma once
 
-#include "../EnderDragon.h"
-#include "Goal.h"
 #include <string>
+#include "Goal.h"
 
 
 class DragonDeathGoal : Goal {
 
 public:
     virtual void tick();
+    virtual void stop();
+    ~DragonDeathGoal();
+    virtual bool canUse();
+    virtual bool canContinueToUse();
     virtual void start();
     virtual void appendDebugInfo(std::string &)const;
-    ~DragonDeathGoal();
-    virtual bool canContinueToUse();
-    virtual void stop();
-    virtual bool canUse();
     DragonDeathGoal(EnderDragon &);
 };

@@ -7,15 +7,15 @@ namespace DataStructures {
     class ByteQueue {
 
     public:
+        void PeekContiguousBytes(unsigned int *)const;
+        void Clear(char const*, unsigned int);
+        void GetBytesWritten()const;
+        void ReadBytes(char *, unsigned int, bool);
+        void DecrementReadOffset(unsigned int);
+        void IncrementReadOffset(unsigned int);
         ByteQueue();
         void Print();
-        void IncrementReadOffset(unsigned int);
-        void ReadBytes(char *, unsigned int, bool);
-        ~ByteQueue();
-        void PeekContiguousBytes(unsigned int *)const;
         void WriteBytes(char const*, unsigned int, char const*, unsigned int);
-        void DecrementReadOffset(unsigned int);
-        void GetBytesWritten()const;
-        void Clear(char const*, unsigned int);
+        ~ByteQueue();
     };
 }

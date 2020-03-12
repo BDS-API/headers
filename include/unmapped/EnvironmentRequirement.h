@@ -5,8 +5,8 @@
 class EnvironmentRequirement {
 
 public:
-    EnvironmentRequirement(EnvironmentRequirement const&);
+    ~EnvironmentRequirement();
     EnvironmentRequirement();
     EnvironmentRequirement(EnvironmentRequirement &&);
-    ~EnvironmentRequirement();
+    EnvironmentRequirement(EnvironmentRequirement const&);
 };

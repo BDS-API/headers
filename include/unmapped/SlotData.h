@@ -8,14 +8,14 @@ class SlotData {
 public:
     static long UNKNOWN_LOCATION;
 
+    ~SlotData();
+    SlotData(std::string const&, int);
     SlotData(SlotData &&);
     SlotData(SlotData const&);
     bool isActive()const;
-    void set(std::string const&, int);
-    void clear();
-    SlotData();
-    void operator==(SlotData const&)const;
-    SlotData(std::string const&, int);
-    ~SlotData();
     SlotData(std::string &&, int);
+    void clear();
+    void operator==(SlotData const&)const;
+    SlotData();
+    void set(std::string const&, int);
 };

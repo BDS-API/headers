@@ -1,31 +1,26 @@
 #pragma once
 
 #include "BlockActor.h"
-#include "../../../unmapped/DataLoadHelper.h"
-#include "../../level/Level.h"
-#include "../../nbt/CompoundTag.h"
-#include "../unmapped/BlockSource.h"
-#include "../../util/BlockPos.h"
 
 
 class ConduitBlockActor : BlockActor {
 
 public:
-    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void save(CompoundTag &)const;
-    virtual void getUpdatePacket(BlockSource &);
     ~ConduitBlockActor();
+    virtual void save(CompoundTag &)const;
     virtual void tick(BlockSource &);
-    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
     virtual bool hasAlphaLayer()const;
-    void incrementWindLevel();
-    void _checkShape(BlockSource &);
-    void incrementAnimationValue(float);
-    bool isActive()const;
-    void _applyEffects(BlockSource &);
-    void _updateTarget(BlockSource &);
-    ConduitBlockActor(BlockPos const&);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void getUpdatePacket(BlockSource &);
     void _animateTick(BlockSource &)const;
-    void setEffectRange(int);
+    void _checkShape(BlockSource &);
+    void incrementWindLevel();
     void setShellRotation(float);
+    void _updateTarget(BlockSource &);
+    void setEffectRange(int);
+    ConduitBlockActor(BlockPos const&);
+    void incrementAnimationValue(float);
+    void _applyEffects(BlockSource &);
+    bool isActive()const;
 };

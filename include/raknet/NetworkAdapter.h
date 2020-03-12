@@ -7,7 +7,7 @@ namespace RakNet {
     class NetworkAdapter {
 
     public:
-        NetworkAdapter();
         void GetNumberOfAddresses();
+        NetworkAdapter();
     };
 }

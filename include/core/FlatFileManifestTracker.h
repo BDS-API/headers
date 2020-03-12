@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Path.h"
-#include "FlatFileManifest.h"
 #include <memory>
 
 
@@ -11,12 +9,12 @@ namespace Core {
 
     public:
         void updateManifest(std::shared_ptr<Core::FlatFileManifest>, bool);
-        void unloadAllManifests();
         ~FlatFileManifestTracker();
         void loadManifest(Core::Path const&);
         void tryUnloadManifest(Core::Path const&);
-        void manifestExists(Core::Path const&)const;
-        FlatFileManifestTracker();
+        void unloadAllManifests();
         void updateManifests(Core::Path const&);
+        FlatFileManifestTracker();
+        void manifestExists(Core::Path const&)const;
     };
 }

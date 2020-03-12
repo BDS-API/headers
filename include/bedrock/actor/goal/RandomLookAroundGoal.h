@@ -1,18 +1,17 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class RandomLookAroundGoal : Goal {
 
 public:
-    virtual bool canUse();
     virtual void appendDebugInfo(std::string &)const;
-    virtual bool canContinueToUse();
-    ~RandomLookAroundGoal();
+    virtual bool canUse();
     virtual void start();
+    virtual bool canContinueToUse();
     virtual void tick();
+    ~RandomLookAroundGoal();
     RandomLookAroundGoal(Mob &, int, int, float);
 };

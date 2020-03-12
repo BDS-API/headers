@@ -6,8 +6,8 @@
 class ConsoleInputReader {
 
 public:
-    ConsoleInputReader();
-    ~ConsoleInputReader();
-    void unblockReading();
     void getLine(std::string &);
+    ConsoleInputReader();
+    void unblockReading();
+    ~ConsoleInputReader();
 };

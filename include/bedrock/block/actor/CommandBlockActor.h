@@ -1,63 +1,56 @@
 #pragma once
 
-#include "BlockActor.h"
 #include <string>
-#include "../../../unmapped/DataLoadHelper.h"
-#include "../../level/Level.h"
-#include "../../nbt/CompoundTag.h"
-#include "../unmapped/BlockSource.h"
-#include "../../util/BlockPos.h"
-#include "../../../unmapped/UIProfanityContext.h"
-#include "../../actor/Player.h"
+#include "BlockActor.h"
 
 
 class CommandBlockActor : BlockActor {
 
 public:
-    virtual void getUpdatePacket(BlockSource &);
     ~CommandBlockActor();
-    virtual void onCustomTagLoadDone(BlockSource &);
-    virtual void saveBlockData(CompoundTag &, BlockSource &)const;
+    virtual void onPlace(BlockSource &);
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void onChanged(BlockSource &);
     virtual std::string getCustomName()const;
-    virtual void _playerCanUpdate(Player const&)const;
-    virtual void onPlace(BlockSource &);
-    virtual std::string getFilteredCustomName(UIProfanityContext const&);
-    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
-    virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
     virtual void save(CompoundTag &)const;
-    void getTrackOutput()const;
-//  void updateBlock(BlockSource &, std::string const&, std::string const&, CommandBlockMode, bool, bool, bool, int, bool); //TODO: incomplete function definition
-//  void _updateLastPerformedModes(bool, bool, CommandBlockMode); //TODO: incomplete function definition
-    std::string getLastOutput()const;
-    void getCommandBlock(BlockSource &)const;
+    virtual void saveBlockData(CompoundTag &, BlockSource &)const;
+    virtual void _playerCanUpdate(Player const&)const;
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void onCustomTagLoadDone(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
+    virtual std::string getFilteredCustomName(UIProfanityContext const&);
+    void getSuccessCount()const;
     void setSuccessCount(int);
+//  void _setAutomatic(BlockSource &, bool, CommandBlockMode); //TODO: incomplete function definition
+//  void updateBlock(BlockSource &, std::string const&, std::string const&, CommandBlockMode, bool, bool, bool, int, bool); //TODO: incomplete function definition
+    void getLastPerformedRedstoneMode()const;
     void getDelayOnActivation()const;
     void shouldExecuteOnFirstTick()const;
-    void getBaseCommandBlock();
-    bool isRedstoneMode()const;
-    void setTrackOutput(bool);
-    bool wasConditionMet();
-    bool isAutomatic()const;
+    void getMode(BlockSource &)const;
+//  void _updateLastPerformedModes(bool, bool, CommandBlockMode); //TODO: incomplete function definition
+    void markConditionMet(BlockSource &);
+    void getTrackOutput()const;
+    void getTickDelay()const;
     void getLastPerformedConditionalMode()const;
-    void getConditionalMode(BlockSource &)const;
-    void setCustomName(std::string const&);
-    void getLastPerformedCBMode()const;
-    void getLastPerformedRedstoneMode()const;
-    void getSuccessCount()const;
-    void getBaseCommandBlock()const;
-    void getPowered()const;
-    std::string getCommand()const;
+    void _loadAutomatic(bool);
+    bool isRedstoneMode()const;
 //  void setAutomatic(BlockSource &, bool, CommandBlockMode); //TODO: incomplete function definition
     void performCommand(BlockSource &);
-    void markConditionMet(BlockSource &);
-//  CommandBlockActor(BlockPos const&, CommandBlockMode); //TODO: incomplete function definition
-    void setPowered(bool);
-    void _loadAutomatic(bool);
-    void markForSaving(BlockSource &, int, bool);
-//  void _setAutomatic(BlockSource &, bool, CommandBlockMode); //TODO: incomplete function definition
-    void getTickDelay()const;
-    void getMode(BlockSource &)const;
+    void setTrackOutput(bool);
+    std::string getLastOutput()const;
     void markForSaving(BlockSource &);
+    void getCommandBlock(BlockSource &)const;
+    void setPowered(bool);
+    void getLastPerformedCBMode()const;
+    void getConditionalMode(BlockSource &)const;
+//  CommandBlockActor(BlockPos const&, CommandBlockMode); //TODO: incomplete function definition
+    void getPowered()const;
+    void setCustomName(std::string const&);
+    bool isAutomatic()const;
+    void markForSaving(BlockSource &, int, bool);
+    std::string getCommand()const;
+    bool wasConditionMet();
+    void getBaseCommandBlock()const;
+    void getBaseCommandBlock();
 };

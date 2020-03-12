@@ -7,8 +7,8 @@ class CommandFilePath {
 
 public:
     CommandFilePath();
-    CommandFilePath(std::string const&);
-    void operator==(CommandFilePath const&)const;
     ~CommandFilePath();
+    void operator==(CommandFilePath const&)const;
+    CommandFilePath(std::string const&);
     std::string getText()const;
 };

@@ -7,32 +7,32 @@ namespace Core {
     class FileOpenMode {
 
     public:
-        void read();
-        bool isCreate()const;
+        bool isReadOnly()const;
+        bool isAppend()const;
         void cMode();
-        void rbPlus();
-        void readExisting();
-        void create();
-        void append();
-        void truncate();
-        FileOpenMode();
+        bool isBinary()const;
         void wbPlus();
         void wb();
-        bool isBinary()const;
+        FileOpenMode();
+        void truncate();
+        void read();
         void binary();
-        void writeCreateOrAppend();
-        void cModeWide();
         bool isWrite()const;
-        bool isTruncate()const;
-        bool isReadOnly()const;
-        FileOpenMode(char const*);
-        void operator==(Core::FileOpenMode const&)const;
-        bool isRead()const;
-        bool isAppend()const;
-//      FileOpenMode(std::_Ios_Openmode); //TODO: incomplete function definition
-        void wPlus();
-        void writeCreateOrTruncate();
-        void write();
         void rb();
+        void wPlus();
+        void operator==(Core::FileOpenMode const&)const;
+        void cModeWide();
+        bool isCreate()const;
+        void writeCreateOrAppend();
+        void create();
+        void rbPlus();
+        void append();
+//      FileOpenMode(std::_Ios_Openmode); //TODO: incomplete function definition
+        void writeCreateOrTruncate();
+        bool isRead()const;
+        FileOpenMode(char const*);
+        bool isTruncate()const;
+        void write();
+        void readExisting();
     };
 }

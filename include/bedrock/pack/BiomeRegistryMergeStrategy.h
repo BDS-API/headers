@@ -1,10 +1,7 @@
 #pragma once
 
-#include "../../core/Path.h"
-#include "../../unmapped/LoadedResourceData.h"
-#include "../../json/Value.h"
-#include <vector>
 #include "ResourcePackMergeStrategy.h"
+#include <vector>
 
 
 class BiomeRegistryMergeStrategy : ResourcePackMergeStrategy {

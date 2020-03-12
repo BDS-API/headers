@@ -6,6 +6,6 @@ class SummonSpellStage {
 
 public:
     SummonSpellStage(SummonSpellStage const&);
-    SummonSpellStage();
     ~SummonSpellStage();
+    SummonSpellStage();
 };

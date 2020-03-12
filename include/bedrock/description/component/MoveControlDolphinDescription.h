@@ -6,7 +6,7 @@
 class MoveControlDolphinDescription : MoveControlDescription {
 
 public:
-    ~MoveControlDolphinDescription();
     virtual void getJsonName()const;
+    ~MoveControlDolphinDescription();
     MoveControlDolphinDescription();
 };

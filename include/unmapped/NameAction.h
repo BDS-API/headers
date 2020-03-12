@@ -5,7 +5,7 @@
 class NameAction {
 
 public:
-    NameAction();
     ~NameAction();
     NameAction(NameAction const&);
+    NameAction();
 };

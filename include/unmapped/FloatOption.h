@@ -1,20 +1,19 @@
 #pragma once
 
-#include "Option.h"
-#include <vector>
 #include <string>
-#include <utility>
+#include <vector>
+#include "Option.h"
 
 
 class FloatOption : Option {
 
 public:
     virtual void load(std::string const&);
-    ~FloatOption();
     virtual void save(std::vector<std::pair<std::string, std::string>> &);
-    void getDefault()const;
+    ~FloatOption();
+    void reset();
 //  FloatOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, float, float, float); //TODO: incomplete function definition
+    void getDefault()const;
     void set(float, bool);
     void getValue()const;
-    void reset();
 };

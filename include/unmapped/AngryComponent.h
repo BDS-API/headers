@@ -1,24 +1,22 @@
 #pragma once
 
-#include "../bedrock/actor/Mob.h"
-#include "../bedrock/actor/Actor.h"
 
 
 class AngryComponent {
 
 public:
-    ~AngryComponent();
-    void setAngry(Mob &, bool);
-    void setBroadcastRange(int);
-    void getBroadcastRange()const;
-    void getBroadcastFilter()const;
     void setHasTicked(bool);
-    AngryComponent();
-    AngryComponent(AngryComponent &&);
-    void getBroadcastAnger()const;
-    bool canAttack(Mob &, Mob *, Actor *, bool, bool);
-    void getHasTicked()const;
     void setBroadcastAnger(bool);
-    void restartTimer(Mob &);
+    void getHasTicked()const;
+    void getBroadcastFilter()const;
+    void setAngry(Mob &, bool);
+    void getBroadcastAnger()const;
+    AngryComponent();
+    void getBroadcastRange()const;
+    AngryComponent(AngryComponent &&);
+    void setBroadcastRange(int);
+    ~AngryComponent();
     void initFromDefinition(Actor &);
+    void restartTimer(Mob &);
+    bool canAttack(Mob &, Mob *, Actor *, bool, bool);
 };

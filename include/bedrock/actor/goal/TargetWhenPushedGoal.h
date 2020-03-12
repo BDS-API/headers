@@ -1,23 +1,20 @@
 #pragma once
 
 #include <string>
-#include "../Actor.h"
-#include "../Mob.h"
-#include <vector>
 #include "Goal.h"
-#include "../../../unmapped/MobDescriptor.h"
+#include <vector>
 
 
 class TargetWhenPushedGoal : Goal {
 
 public:
     virtual void appendDebugInfo(std::string &)const;
-    ~TargetWhenPushedGoal();
-    virtual bool canContinueToUse();
+    virtual void stop();
     virtual void start();
     virtual bool canBeInterrupted();
+    ~TargetWhenPushedGoal();
     virtual bool canUse();
-    virtual void stop();
-    TargetWhenPushedGoal(Mob &, std::vector<MobDescriptor>, float);
+    virtual bool canContinueToUse();
     void _isValidTarget(Actor &);
+    TargetWhenPushedGoal(Mob &, std::vector<MobDescriptor>, float);
 };

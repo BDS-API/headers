@@ -1,34 +1,31 @@
 #pragma once
 
-#include "../../block/BlockLegacy.h"
-#include "../../../unmapped/Block.h"
-#include "../ItemStack.h"
-#include "../Item.h"
+#include <string>
 
 
 class ItemDescriptor {
 
 public:
-    ItemDescriptor(Block const&);
-    ~ItemDescriptor();
-    void getId()const;
-    ItemDescriptor(ItemDescriptor const&);
-    bool isValid()const;
-    ItemDescriptor(ItemDescriptor &&);
-    void operator==(ItemDescriptor const&)const;
-    void getAuxValue()const;
-    bool isNull()const;
-    void sameItemAndAux(ItemStack const&)const;
-    std::string getRawNameId()const;
-    ItemDescriptor();
-    void getIdAux()const;
-    void sameItem(ItemDescriptor const&)const;
-    void getLegacyBlock()const;
-    void getBlock()const;
-    ItemDescriptor(int, int);
-    void setAuxValue(short);
     ItemDescriptor(Item const&, int);
+    ItemDescriptor(ItemDescriptor const&);
     void sameItemAndAux(ItemDescriptor const&)const;
-    ItemDescriptor(BlockLegacy const&);
+    bool isValid()const;
+    void sameItemAndAux(ItemStack const&)const;
+    void getLegacyBlock()const;
+    ItemDescriptor(int, int);
+    void getAuxValue()const;
+    void setAuxValue(short);
+    std::string getRawNameId()const;
+    void getId()const;
+    void operator==(ItemDescriptor const&)const;
+    ~ItemDescriptor();
+    ItemDescriptor(ItemDescriptor &&);
+    ItemDescriptor();
+    ItemDescriptor(Block const&);
+    bool isNull()const;
+    void getBlock()const;
+    void getIdAux()const;
     void getItem()const;
+    void sameItem(ItemDescriptor const&)const;
+    ItemDescriptor(BlockLegacy const&);
 };

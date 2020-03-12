@@ -1,20 +1,18 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "../../util/Vec3.h"
+#include <string>
 #include "Packet.h"
 
 
 class LevelEventPacket : Packet {
 
 public:
-    virtual void write(BinaryStream &)const;
-    virtual std::string getName()const;
     ~LevelEventPacket();
-    virtual void read(ReadOnlyBinaryStream &);
+    virtual void write(BinaryStream &)const;
     virtual void getId()const;
-//  LevelEventPacket(LevelEvent, float, float, float, int); //TODO: incomplete function definition
+    virtual void read(ReadOnlyBinaryStream &);
+    virtual std::string getName()const;
 //  LevelEventPacket(LevelEvent, Vec3 const&, int); //TODO: incomplete function definition
     LevelEventPacket();
+//  LevelEventPacket(LevelEvent, float, float, float, int); //TODO: incomplete function definition
 };

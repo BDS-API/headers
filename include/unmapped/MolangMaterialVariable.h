@@ -1,6 +1,5 @@
 #pragma once
 
-#include "HashedString.h"
 
 
 class MolangMaterialVariable {
@@ -8,9 +7,9 @@ class MolangMaterialVariable {
 public:
     static long defaultErrorValue;
 
-    MolangMaterialVariable(MolangMaterialVariable const&);
+    MolangMaterialVariable(MolangMaterialVariable &&);
+    MolangMaterialVariable(HashedString const&);
     ~MolangMaterialVariable();
     void operator==(MolangMaterialVariable const&)const;
-    MolangMaterialVariable(HashedString const&);
-    MolangMaterialVariable(MolangMaterialVariable &&);
+    MolangMaterialVariable(MolangMaterialVariable const&);
 };

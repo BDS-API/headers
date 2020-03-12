@@ -8,12 +8,12 @@ namespace Json {
     class PathArgument {
 
     public:
-        PathArgument(char const*);
-        PathArgument(Json::PathArgument const&);
         PathArgument();
-        PathArgument(Json::PathArgument &&);
-        ~PathArgument();
-        PathArgument(std::string const&);
+        PathArgument(Json::PathArgument const&);
         PathArgument(unsigned int);
+        PathArgument(char const*);
+        PathArgument(std::string const&);
+        ~PathArgument();
+        PathArgument(Json::PathArgument &&);
     };
 }

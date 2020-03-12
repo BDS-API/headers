@@ -1,7 +1,6 @@
 #pragma once
 
 #include "AuxDataBlockItem.h"
-#include "ItemStackBase.h"
 
 
 class ChemistryAuxDataBlockItem : AuxDataBlockItem {

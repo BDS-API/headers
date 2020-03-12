@@ -1,9 +1,7 @@
 #pragma once
 
-#include "GameRulesChangedPacketData.h"
 #include <string>
 #include "GameRule.h"
-#include "../bedrock/nbt/CompoundTag.h"
 #include "GameRuleId.h"
 
 
@@ -17,32 +15,32 @@ public:
     static long MIN_PLAYER_SPAWN_RADIUS;
     static long MAX_PLAYER_SPAWN_RADIUS;
 
-    GameRules();
-    void createAllGameRulesPacket()const;
-    void getBool(GameRuleId)const;
-    void setTagData(CompoundTag &)const;
-    void _registerEDURules();
-    void setRule(GameRuleId, bool, bool, bool *, bool *, GameRule::ValidationError *);
-    void setRule(GameRuleId, float, bool, bool *, bool *, GameRule::ValidationError *);
-    GameRules(GameRules &&);
-    void _validateRules();
-    void deserializeRules(GameRulesChangedPacketData const&);
-    void getTagData(CompoundTag const&);
-    void _registerRules();
-    void getRule(GameRuleId)const;
-    void _registerRule(std::string const&, GameRuleId);
-    void getFloat(GameRuleId)const;
-    void nameToGameRuleIndex(std::string const&)const;
-    void getInt(GameRuleId)const;
     void _createPacket(GameRule const&);
-    void _getRule(GameRuleId);
-    void _getMarketplaceGameRulesDefaultMap();
-    void _validateMarketplaceGameRuleTypes();
+    GameRules(GameRules &&);
+    void setRule(GameRuleId, float, bool, bool *, bool *, GameRule::ValidationError *);
     void getRules()const;
-    void setMarketplaceOverrides();
-    ~GameRules();
-    bool hasRule(GameRuleId)const;
+    void getTagData(CompoundTag const&);
+    void getInt(GameRuleId)const;
+    void setTagData(CompoundTag &)const;
+    void setRule(GameRuleId, bool, bool, bool *, bool *, GameRule::ValidationError *);
+    void nameToGameRuleIndex(std::string const&)const;
     GameRules(GameRules const&);
+    void _registerEDURules();
     void setRule(GameRuleId, int, bool, bool *, bool *, GameRule::ValidationError *);
+    bool hasRule(GameRuleId)const;
+    void getRule(GameRuleId)const;
+    void _registerRules();
 //  void _setRule(GameRuleId, GameRule::Value, GameRule::Type, bool, bool *, bool *, GameRule::ValidationError *); //TODO: incomplete function definition
+    void getBool(GameRuleId)const;
+    void _registerRule(std::string const&, GameRuleId);
+    void deserializeRules(GameRulesChangedPacketData const&);
+    ~GameRules();
+    void setMarketplaceOverrides();
+    void createAllGameRulesPacket()const;
+    void _validateRules();
+    GameRules();
+    void _validateMarketplaceGameRuleTypes();
+    void _getMarketplaceGameRulesDefaultMap();
+    void _getRule(GameRuleId);
+    void getFloat(GameRuleId)const;
 };

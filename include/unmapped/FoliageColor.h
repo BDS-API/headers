@@ -1,11 +1,7 @@
 #pragma once
 
 #include <string>
-#include "../mce/Image.h"
-#include "../bedrock/util/BlockPos.h"
 #include <array>
-#include "../bedrock/block/unmapped/BlockSource.h"
-#include "../bedrock/util/Random.h"
 
 
 namespace FoliageColor {
@@ -21,28 +17,28 @@ namespace FoliageColor {
     static std::string mGrassPalettes;
     static std::string mFoliagePalettes;
 
-    void _getY(float, float);
-    void buildGrassColor(BlockPos const&, BlockPos const&, BlockSource &, Random &);
+    void getBirchColor(float, float);
+    void getGrassColor(float, float);
     void getMapBirchColor(float, float);
     void getGrassColor(std::string const&, float);
+    void getFoliageColor(float, float);
+    void _index(float, float);
+    void getEvergreenColor(float, float);
+    void getMapFoliageColor(float, float);
+    void getMapGrassColor(BlockSource &, BlockPos const&);
     void getFoliageColor(std::string const&, float, float);
+    void calculateMapGrassColorHelper(BlockSource &, BlockPos const&, BlockPos const&, int &, int &, int &);
+    void _getY(float, float);
     void getMapGrassColor(float, float);
-//  void _setPalette(mce::Image const&, std::array<int, 65536ul> &); //TODO: incomplete function definition
+    void getGrassColor(BlockSource &, BlockPos const&);
+    void _getX(float, float);
+    void setFoliageColorPalette(std::string const&, mce::Image &);
+    void getGrassColor(std::string const&, float, float);
+    void buildGrassColor(BlockPos const&, BlockPos const&, BlockSource &, Random &);
     void _toRGB(int);
-    void getDefaultColor();
+    void _setPalette(mce::Image const&, std::array<int, 65536ul> &);
     void getGrassNoise();
     void setGrassColorPalette(std::string const&, mce::Image &);
-    void getGrassColor(std::string const&, float, float);
-    void calculateMapGrassColorHelper(BlockSource &, BlockPos const&, BlockPos const&, int &, int &, int &);
-    void _index(float, float);
-    void getMapGrassColor(BlockSource &, BlockPos const&);
-    void getEvergreenColor(float, float);
-    void getGrassColor(BlockSource &, BlockPos const&);
-    void getMapFoliageColor(float, float);
-    void getGrassColor(float, float);
-    void getBirchColor(float, float);
-    void getFoliageColor(float, float);
-    void _getX(float, float);
+    void getDefaultColor();
     void getMapEvergreenColor(float, float);
-    void setFoliageColorPalette(std::string const&, mce::Image &);
 };

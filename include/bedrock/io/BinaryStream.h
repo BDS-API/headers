@@ -1,39 +1,39 @@
 #pragma once
 
-#include "ReadOnlyBinaryStream.h"
 #include <string>
+#include "ReadOnlyBinaryStream.h"
 
 
 class BinaryStream : ReadOnlyBinaryStream {
 
 public:
     ~BinaryStream();
-    void writeSignedInt64(long);
-    void writeVarInt(int);
-    void writeFloat(float);
-//  void writeString(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
-    void writeSignedShort(short);
-    void writeUnsignedShort(unsigned short);
-    std::string getAndReleaseData();
-    void writeSignedInt(int);
-    void writeFixedFloat(float, double);
-    void writeBool(bool);
-    void writeUnsignedInt(unsigned int);
-    void writeUnsignedInt64(unsigned long);
-    void writeUnsignedVarInt(unsigned int);
-    void writeNormalizedFloat(float);
-    BinaryStream(std::string &&);
-    BinaryStream(std::string &, bool);
-    void writeDouble(double);
-    BinaryStream();
-    void writeUnsignedVarInt64(unsigned long);
-    void writeVarInt64(long);
     void writeByte(unsigned char);
-    void write(void const*, unsigned long);
-    void writeStream(BinaryStream &);
-    void writeUnsignedChar(unsigned char);
+    void writeFixedFloat(float, double);
+    void writeFloat(float);
+    BinaryStream();
+    void writeUnsignedInt(unsigned int);
     void reset();
-    void reserve(unsigned long);
+    void writeSignedInt64(long);
+    void writeSignedInt(int);
+    void writeUnsignedShort(unsigned short);
+    BinaryStream(std::string &, bool);
+    std::string getAndReleaseData();
+    void writeBool(bool);
+    void writeUnsignedVarInt(unsigned int);
+    BinaryStream(std::string &&);
+    void writeVarInt(int);
+    void writeUnsignedChar(unsigned char);
+    void writeSignedShort(short);
+    void write(void const*, unsigned long);
     BinaryStream(std::string const&);
+    void writeVarInt64(long);
+    void reserve(unsigned long);
+    void writeUnsignedVarInt64(unsigned long);
+    void writeNormalizedFloat(float);
     void writeSignedBigEndianInt(int);
+    void writeDouble(double);
+//  void writeString(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
+    void writeUnsignedInt64(unsigned long);
+    void writeStream(BinaryStream &);
 };

@@ -6,7 +6,7 @@
 class MoveControlFlyDescription : MoveControlDescription {
 
 public:
-    ~MoveControlFlyDescription();
     virtual void getJsonName()const;
+    ~MoveControlFlyDescription();
     MoveControlFlyDescription();
 };

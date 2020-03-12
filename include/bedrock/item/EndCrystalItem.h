@@ -1,18 +1,15 @@
 #pragma once
 
 #include <string>
-#include "ItemStack.h"
-#include "../util/BlockPos.h"
-#include "../actor/Actor.h"
-#include "ItemStackBase.h"
 #include "Item.h"
+#include "../util/BlockPos.h"
 
 
 class EndCrystalItem : Item {
 
 public:
-    ~EndCrystalItem();
-    virtual bool isGlint(ItemStackBase const&)const;
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const;
+    virtual bool isGlint(ItemStackBase const&)const;
+    ~EndCrystalItem();
     EndCrystalItem(std::string const&, int);
 };

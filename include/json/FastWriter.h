@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Value.h"
+#include <string>
 #include "Writer.h"
 
 
@@ -11,8 +11,8 @@ namespace Json {
     public:
         ~FastWriter();
         virtual std::string write(Json::Value const&);
-        void writeValue(Json::Value const&);
         void enableYAMLCompatibility();
+        void writeValue(Json::Value const&);
         FastWriter();
     };
 }

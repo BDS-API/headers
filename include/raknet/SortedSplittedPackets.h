@@ -1,6 +1,5 @@
 #pragma once
 
-#include "InternalPacket.h"
 
 
 namespace RakNet {
@@ -8,13 +7,13 @@ namespace RakNet {
     class SortedSplittedPackets {
 
     public:
+        ~SortedSplittedPackets();
+        void PacketId();
         void Add(RakNet::InternalPacket *, char const*, unsigned int);
         void AllocSize();
-        SortedSplittedPackets();
+        void AddedPacketsCount();
         void Preallocate(RakNet::InternalPacket *, char const*, unsigned int);
         void Get(unsigned int);
-        void AddedPacketsCount();
-        void PacketId();
-        ~SortedSplittedPackets();
+        SortedSplittedPackets();
     };
 }

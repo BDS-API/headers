@@ -6,7 +6,7 @@
 class NavigationFlyDescription : NavigationDescription {
 
 public:
-    virtual void getJsonName()const;
     ~NavigationFlyDescription();
+    virtual void getJsonName()const;
     NavigationFlyDescription();
 };

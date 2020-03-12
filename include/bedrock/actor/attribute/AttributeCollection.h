@@ -1,16 +1,14 @@
 #pragma once
 
-#include "../../../unmapped/HashedString.h"
-#include "../../../unmapped/Attribute.h"
 
 
 class AttributeCollection {
 
 public:
-    AttributeCollection();
+    ~AttributeCollection();
     void addAttribute(HashedString const&, Attribute *);
+    bool hasAttribute(HashedString const&);
     void instance();
     void getAttribute(HashedString const&);
-    ~AttributeCollection();
-    bool hasAttribute(HashedString const&);
+    AttributeCollection();
 };

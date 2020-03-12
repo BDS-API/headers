@@ -1,14 +1,13 @@
 #pragma once
 
-#include "MobEffect.h"
-#include "../attribute/AttributeModifier.h"
 #include <string>
+#include "MobEffect.h"
 
 
 class AttackDamageMobEffect : MobEffect {
 
 public:
-    ~AttackDamageMobEffect();
     virtual void getAttributeModifierValue(int, AttributeModifier const&)const;
+    ~AttackDamageMobEffect();
     AttackDamageMobEffect(int, std::string const&, std::string const&, bool, int, int);
 };

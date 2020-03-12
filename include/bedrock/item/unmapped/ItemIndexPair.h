@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../ItemStack.h"
 
 
 class ItemIndexPair {

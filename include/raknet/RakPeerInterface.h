@@ -8,9 +8,9 @@ namespace RakNet {
 
     public:
         ~RakPeerInterface();
-        void GetInstance();
-        void Get64BitUniqueRandomNumber();
         RakPeerInterface();
+        void Get64BitUniqueRandomNumber();
+        void GetInstance();
         void DestroyInstance(RakNet::RakPeerInterface *);
     };
 }

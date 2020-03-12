@@ -1,22 +1,21 @@
 #pragma once
 
 #include "Tag.h"
-#include "../io/IDataInput.h"
-#include "../io/IDataOutput.h"
+#include <string>
 
 
 class IntTag : Tag {
 
 public:
-    virtual void copy()const;
+    virtual void equals(Tag const&)const;
     virtual void load(IDataInput &);
-    ~IntTag();
+    virtual std::string toString()const;
     virtual void write(IDataOutput &)const;
     virtual void getId()const;
-    virtual std::string toString()const;
-    virtual void equals(Tag const&)const;
+    virtual void copy()const;
     virtual void hash()const;
+    ~IntTag();
+    IntTag(int);
     IntTag();
     IntTag(IntTag &&);
-    IntTag(int);
 };

@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "ComponentDescription.h"
 
 
 class JumpControlDescription : ComponentDescription {
 
 public:
-    virtual void serializeData(Json::Value &)const;
+    virtual void getJsonName()const;
     ~JumpControlDescription();
     virtual void deserializeData(Json::Value &);
-    virtual void getJsonName()const;
+    virtual void serializeData(Json::Value &)const;
     JumpControlDescription();
 };

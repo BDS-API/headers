@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../bedrock/item/ItemInstance.h"
 
 
 namespace SortItemInstanceIdAux {

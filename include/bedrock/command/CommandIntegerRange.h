@@ -5,10 +5,10 @@
 class CommandIntegerRange {
 
 public:
-    CommandIntegerRange(int, int, bool);
     void getMaxValue()const;
+    void getMinValue()const;
     void getInverted()const;
+    CommandIntegerRange(int, int, bool);
     CommandIntegerRange();
     bool isWithinRange(int)const;
-    void getMinValue()const;
 };

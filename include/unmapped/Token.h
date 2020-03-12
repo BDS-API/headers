@@ -6,15 +6,15 @@
 class Token {
 
 public:
-    void getValue(int)const;
-    void getText(std::string const&)const;
-    void getValueAsFloat(float)const;
-    void _parseRandom();
-    Token(std::string const&);
     ~Token();
-    void tokenize(std::string const&);
-//  void compatibleWith(Token::Type)const; //TODO: incomplete function definition
+    Token(std::string const&);
+    bool isNumber()const;
+    void getValue(int)const;
+    void _parseRandom();
     void getBool(bool)const;
     Token(Token &&);
-    bool isNumber()const;
+//  void compatibleWith(Token::Type)const; //TODO: incomplete function definition
+    void tokenize(std::string const&);
+    void getValueAsFloat(float)const;
+    void getText(std::string const&)const;
 };

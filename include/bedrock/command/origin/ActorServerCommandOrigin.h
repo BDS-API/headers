@@ -1,18 +1,16 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID.h"
 #include "ActorCommandOrigin.h"
-#include "../../actor/Actor.h"
-#include "../../level/Level.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
 
 
 class ActorServerCommandOrigin : ActorCommandOrigin {
 
 public:
+    ~ActorServerCommandOrigin();
     virtual void getOriginType()const;
     virtual void getPermissionsLevel()const;
-    ~ActorServerCommandOrigin();
     virtual void clone()const;
-    ActorServerCommandOrigin(ActorUniqueID, Level &);
     ActorServerCommandOrigin(Actor &);
+    ActorServerCommandOrigin(ActorUniqueID, Level &);
 };

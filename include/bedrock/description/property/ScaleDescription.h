@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "PropertyDescription.h"
 
 
 class ScaleDescription : PropertyDescription {
 
 public:
-    virtual void deserializeData(Json::Value &);
-    virtual void getJsonName()const;
     virtual void serializeData(Json::Value &)const;
     ~ScaleDescription();
+    virtual void getJsonName()const;
+    virtual void deserializeData(Json::Value &);
     ScaleDescription();
 };

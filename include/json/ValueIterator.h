@@ -1,8 +1,5 @@
 #pragma once
 
-#include "Value.h"
-#include <utility>
-#include "ValueConstIterator.h"
 
 
 namespace Json {
@@ -10,10 +7,10 @@ namespace Json {
     class ValueIterator {
 
     public:
-        ValueIterator(Json::ValueConstIterator const&);
-//      ValueIterator(std::_Rb_tree_iterator<std::pair<Json::Value::CZString const, Json::Value>> const&); //TODO: incomplete function definition
         ValueIterator();
+        ValueIterator(Json::ValueConstIterator const&);
         void operator*()const;
         ValueIterator(Json::ValueIterator const&);
+//      ValueIterator(std::_Rb_tree_iterator<std::pair<Json::Value::CZString const, Json::Value>> const&); //TODO: incomplete function definition
     };
 }

@@ -5,6 +5,6 @@
 class WorldTemplateManagerProxyCallbacks {
 
 public:
-    ~WorldTemplateManagerProxyCallbacks();
     WorldTemplateManagerProxyCallbacks(WorldTemplateManagerProxyCallbacks const&);
+    ~WorldTemplateManagerProxyCallbacks();
 };

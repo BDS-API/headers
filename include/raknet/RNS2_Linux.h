@@ -1,8 +1,5 @@
 #pragma once
 
-#include "NetworkAdapter.h"
-#include "SystemAddress.h"
-#include "RNS2_SendParameters.h"
 #include "RNS2_Berkley.h"
 #include "RNS2_Windows_Linux_360.h"
 
@@ -13,10 +10,10 @@ namespace RakNet {
 
     public:
         ~RNS2_Linux();
-//      virtual void Bind(RakNet::RNS2_BerkleyBindParameters *, char const*, unsigned int); //TODO: incomplete function definition
         virtual void Send(RakNet::RNS2_SendParameters *, char const*, unsigned int);
-        void GetMyIP(RakNet::SystemAddress *);
-        void GetMyAdapters(RakNet::NetworkAdapter *);
+//      virtual void Bind(RakNet::RNS2_BerkleyBindParameters *, char const*, unsigned int); //TODO: incomplete function definition
         RNS2_Linux();
+        void GetMyAdapters(RakNet::NetworkAdapter *);
+        void GetMyIP(RakNet::SystemAddress *);
     };
 }

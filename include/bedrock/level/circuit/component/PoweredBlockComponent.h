@@ -1,26 +1,22 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitTrackingInfo.h"
-#include "../../../../unmapped/CircuitSystem.h"
-#include "../../../../unmapped/CircuitSceneGraph.h"
-#include "../../../util/BlockPos.h"
 #include "BaseCircuitComponent.h"
 
 
 class PoweredBlockComponent : BaseCircuitComponent {
 
 public:
-    virtual void getBaseType()const;
-    virtual void getInstanceType()const;
-    virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
-    virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
-    virtual void evaluate(CircuitSystem &, BlockPos const&);
-    virtual void getStrength()const;
-    ~PoweredBlockComponent();
     virtual bool hasChildrenSource();
+    ~PoweredBlockComponent();
+    virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
+    virtual void getInstanceType()const;
+    virtual void getStrength()const;
+    virtual void evaluate(CircuitSystem &, BlockPos const&);
+    virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
     virtual bool canConsumerPower();
+    virtual void getBaseType()const;
     void setAllowAsPowerSource(bool);
+    bool isAllowedAsPowerSource();
     bool isPromotedToProducer();
     PoweredBlockComponent(unsigned char);
-    bool isAllowedAsPowerSource();
 };

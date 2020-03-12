@@ -2,21 +2,20 @@
 
 #include <string>
 #include "Option.h"
-#include <functional>
 #include <vector>
-#include <utility>
+#include <functional>
 
 
 class StringOption : Option {
 
 public:
-    virtual void save(std::vector<std::pair<std::string, std::string>> &);
-    ~StringOption();
     virtual void load(std::string const&);
-    void reset();
-    void set(std::string const&, bool);
-    std::string getValue()const;
-//  StringOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, std::string const&); //TODO: incomplete function definition
+    ~StringOption();
+    virtual void save(std::vector<std::pair<std::string, std::string>> &);
     void setCoerceValueCallback(std::function<std::string (std::string const&)>);
+    std::string getValue()const;
+    void reset();
+//  StringOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, std::string const&); //TODO: incomplete function definition
+    void set(std::string const&, bool);
     std::string getDefault()const;
 };

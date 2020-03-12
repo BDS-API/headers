@@ -14,36 +14,36 @@ namespace com {
                 class LevelFileAndSize /*google::protobuf::Message*/ { //TODO: incomplete class definition
 
                 public:
-//                  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition
-                    virtual void Clear();
-                    virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
-                    ~LevelFileAndSize();
-//                  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition
                     virtual void New()const;
-//                  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition
-                    virtual void SetCachedSize(int)const;
-//                  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition
-//                  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition
-                    virtual void GetMetadata()const;
-                    virtual void ByteSizeLong()const;
                     virtual void GetCachedSize()const;
+                    ~LevelFileAndSize();
+//                  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition
                     virtual bool IsInitialized()const;
-                    void SharedDtor();
-                    std::string mutable_value();
-                    void CopyFrom(com::mojang::clacks::protocol::LevelFileAndSize const&);
-                    void Swap(com::mojang::clacks::protocol::LevelFileAndSize *);
+//                  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition
+//                  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition
+                    virtual void GetMetadata()const;
+//                  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition
+//                  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition
+                    virtual void SetCachedSize(int)const;
+                    virtual void Clear();
+                    virtual void ByteSizeLong()const;
+                    virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const;
                     void InitAsDefaultInstance();
-                    void MergeFrom(com::mojang::clacks::protocol::LevelFileAndSize const&);
-                    std::string value()const;
-                    void GetArenaNoVirtual()const;
-                    void InternalSwap(com::mojang::clacks::protocol::LevelFileAndSize *);
+                    void Swap(com::mojang::clacks::protocol::LevelFileAndSize *);
+                    std::string mutable_value();
+                    void descriptor();
+                    LevelFileAndSize();
                     void set_value(std::string &&);
-                    LevelFileAndSize(com::mojang::clacks::protocol::LevelFileAndSize const&);
                     void default_instance();
                     void SharedCtor();
-                    void descriptor();
+                    void InternalSwap(com::mojang::clacks::protocol::LevelFileAndSize *);
+                    void GetArenaNoVirtual()const;
+                    void MergeFrom(com::mojang::clacks::protocol::LevelFileAndSize const&);
                     void internal_default_instance();
-                    LevelFileAndSize();
+                    void SharedDtor();
+                    std::string value()const;
+                    void CopyFrom(com::mojang::clacks::protocol::LevelFileAndSize const&);
+                    LevelFileAndSize(com::mojang::clacks::protocol::LevelFileAndSize const&);
                 };
             }
         }

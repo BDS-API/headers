@@ -6,7 +6,7 @@
 class ResourcePath {
 
 public:
+    ResourcePath(ResourcePath &&);
     ResourcePath(std::string const&, std::string const&);
     ~ResourcePath();
-    ResourcePath(ResourcePath &&);
 };

@@ -1,39 +1,35 @@
 #pragma once
 
-#include "unmapped/ActorDefinitionGroup.h"
-#include "../../unmapped/RenderParams.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
 #include "Mob.h"
-#include "damagesource/ActorDamageSource.h"
 
 
 class Squid : Mob {
 
 public:
-    virtual void aiStep();
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
-    virtual void checkSpawnObstruction()const;
     virtual void checkSpawnRules(bool);
-    virtual void updateEntitySpecificMolangVariables(RenderParams &);
+    virtual void checkSpawnObstruction()const;
+    virtual void aiStep();
     virtual void getAmbientSoundPostponeTicks();
     ~Squid();
+    virtual void updateEntitySpecificMolangVariables(RenderParams &);
     virtual void getJumpPower()const;
+//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
-    void setXBodyRot(float &);
-    void getTy();
-    void setXBodyRotO(float &);
+    Squid(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
     void _randomInkDir();
     void setZBodyRot(float &);
-    void getZBodyRot()const;
     void getZBodyRotO()const;
-    void setZBodyRotO(float &);
-    Squid(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    void getOldTentacleAngle()const;
+    void setXBodyRot(float &);
+    void getZBodyRot()const;
+    void setTy(float);
     void spawnInkParticles();
+    void setXBodyRotO(float &);
     void getXBodyRot()const;
+    void getXBodyRotO()const;
+    void setZBodyRotO(float &);
     void getTentacleAngle()const;
     void setTx(float);
-    void setTy(float);
-    void getXBodyRotO()const;
-    void getOldTentacleAngle()const;
     void setTz(float);
+    void getTy();
 };

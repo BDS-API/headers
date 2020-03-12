@@ -1,9 +1,6 @@
 #pragma once
 
-#include "../../../unmapped/IBlockPlacementTarget.h"
 #include "IFeature.h"
-#include "../../util/BlockPos.h"
-#include "../../util/Random.h"
 
 
 class WeightedRandomFeature : IFeature {

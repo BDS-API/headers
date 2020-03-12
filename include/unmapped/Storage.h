@@ -7,8 +7,8 @@ namespace LayerDetails {
     class Storage {
 
     public:
+        Storage(LayerDetails::Storage &&);
         ~Storage();
         Storage(unsigned long);
-        Storage(LayerDetails::Storage &&);
     };
 }

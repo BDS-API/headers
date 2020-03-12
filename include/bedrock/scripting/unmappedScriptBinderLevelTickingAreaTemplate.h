@@ -1,16 +1,15 @@
 #pragma once
 
-#include "ScriptObjectBinder.h"
+#include <string>
 #include "ScriptBinderTemplate.h"
-#include "../../level/tickingarea/ITickingArea.h"
 
 
 class ScriptBinderLevelTickingAreaTemplate : ScriptBinderTemplate {
 
 public:
-    virtual std::string getTemplateIdentifier()const;
     ~ScriptBinderLevelTickingAreaTemplate();
+    virtual std::string getTemplateIdentifier()const;
     virtual void applyTemplate(ScriptObjectBinder &)const;
-    void build(ITickingArea const&);
     ScriptBinderLevelTickingAreaTemplate();
+    void build(ITickingArea const&);
 };

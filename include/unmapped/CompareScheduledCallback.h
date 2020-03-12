@@ -1,6 +1,5 @@
 #pragma once
 
-#include "ScheduledCallback.h"
 
 
 namespace CompareScheduledCallback {

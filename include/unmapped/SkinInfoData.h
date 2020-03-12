@@ -1,25 +1,24 @@
 #pragma once
 
 #include <string>
-#include "../mce/Image.h"
 
 
 class SkinInfoData {
 
 public:
-    virtual void validateAndResizeSkinData(mce::Image &, bool);
     ~SkinInfoData();
-    void setClean();
-    void setForceAlpha(mce::Image &, int, int, int, int);
-    void getGeometryData()const;
-    void getSkinMutable();
-    void copySkinPart(mce::Image &, int, int, int, int, int, int, int, int);
-    bool isAlphaTest()const;
-    void verifyIsPremiumGeometry(std::string const&);
+    virtual void validateAndResizeSkinData(mce::Image &, bool);
+    bool isValidSize(unsigned long);
     bool isDirty()const;
+    void getSkinMutable();
+    bool isValidFullSize(unsigned long);
+    void setClean();
     void validateAlpha(mce::Image &, int, int, int, int, float, bool);
+    void copySkinPart(mce::Image &, int, int, int, int, int, int, int, int);
+    void verifyIsPremiumGeometry(std::string const&);
+    void getGeometryData()const;
     void getSkin()const;
     void setNoAlpha(mce::Image &, int, int, int, int);
-    bool isValidSize(unsigned long);
-    bool isValidFullSize(unsigned long);
+    void setForceAlpha(mce::Image &, int, int, int, int);
+    bool isAlphaTest()const;
 };

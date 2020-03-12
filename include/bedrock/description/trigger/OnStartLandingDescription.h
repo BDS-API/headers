@@ -6,7 +6,7 @@
 class OnStartLandingDescription : TriggerDescription {
 
 public:
-    ~OnStartLandingDescription();
     virtual void getJsonName()const;
+    ~OnStartLandingDescription();
     OnStartLandingDescription();
 };

@@ -1,21 +1,18 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
 #include <string>
-#include "../../../mce/UUID.h"
-#include "../../../unmapped/SerializedSkin.h"
 #include "Packet.h"
+#include "../../../mce/UUID.h"
 
 
 class PlayerSkinPacket : Packet {
 
 public:
-    virtual std::string getName()const;
+    ~PlayerSkinPacket();
     virtual void read(ReadOnlyBinaryStream &);
     virtual void write(BinaryStream &)const;
-    ~PlayerSkinPacket();
     virtual void getId()const;
+    virtual std::string getName()const;
     PlayerSkinPacket();
     PlayerSkinPacket(mce::UUID, SerializedSkin const&, std::string const&, std::string const&);
 };

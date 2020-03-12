@@ -1,13 +1,13 @@
 #pragma once
 
-#include "IStructurePoolActorPredicate.h"
 #include <string>
+#include "IStructurePoolActorPredicate.h"
 
 
 class StructurePoolActorPredicateActorMatch : IStructurePoolActorPredicate {
 
 public:
-    virtual void test(std::string const&)const;
     ~StructurePoolActorPredicateActorMatch();
+    virtual void test(std::string const&)const;
     StructurePoolActorPredicateActorMatch(std::string);
 };

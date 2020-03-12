@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../actor/unmapped/ActorInfoRegistry.h"
-#include "../block/unmapped/BlockDefinitionGroup.h"
 
 
 namespace VanillaItems {
@@ -243,9 +241,9 @@ namespace VanillaItems {
     static long mHoneycomb;
     static long mHoneyBottle;
 
+    void initClientData();
+    void registerItems(bool);
     void initCreativeItemsCallback(ActorInfoRegistry *, BlockDefinitionGroup *, bool);
     void unregisterItems();
     void initCreativeCategories();
-    void registerItems(bool);
-    void initClientData();
 };

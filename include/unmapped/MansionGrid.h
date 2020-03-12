@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../bedrock/util/Random.h"
-#include "SimpleGrid.h"
 
 
 namespace WoodlandMansionPieces {
@@ -10,13 +8,13 @@ namespace WoodlandMansionPieces {
 
     public:
         void get1x2RoomDirection(WoodlandMansionPieces::SimpleGrid const&, int, int, int, int)const;
-        void _cleanEdges(WoodlandMansionPieces::SimpleGrid &);
-        void _setupThirdFloor();
         ~MansionGrid();
-        void _identifyRooms(WoodlandMansionPieces::SimpleGrid &, WoodlandMansionPieces::SimpleGrid &);
-        bool isHouse(WoodlandMansionPieces::SimpleGrid const&, int, int);
-        bool isRoomId(WoodlandMansionPieces::SimpleGrid const&, int, int, int, int)const;
+        void _setupThirdFloor();
         MansionGrid(Random &);
         void _recursiveCorridor(WoodlandMansionPieces::SimpleGrid &, int, int, unsigned char, int);
+        bool isHouse(WoodlandMansionPieces::SimpleGrid const&, int, int);
+        void _identifyRooms(WoodlandMansionPieces::SimpleGrid &, WoodlandMansionPieces::SimpleGrid &);
+        bool isRoomId(WoodlandMansionPieces::SimpleGrid const&, int, int, int, int)const;
+        void _cleanEdges(WoodlandMansionPieces::SimpleGrid &);
     };
 }

@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "ComponentDescription.h"
 
 
 class WaterMovementDescription : ComponentDescription {
 
 public:
-    ~WaterMovementDescription();
-    virtual void getJsonName()const;
     virtual void serializeData(Json::Value &)const;
+    virtual void getJsonName()const;
+    ~WaterMovementDescription();
     virtual void deserializeData(Json::Value &);
     WaterMovementDescription();
 };

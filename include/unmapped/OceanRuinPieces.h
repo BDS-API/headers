@@ -1,11 +1,7 @@
 #pragma once
 
-#include "../bedrock/level/structure/piece/StructurePiece.h"
-#include "../bedrock/util/BlockPos.h"
+#include <string>
 #include <vector>
-#include <memory>
-#include "../bedrock/util/Random.h"
-#include "StructureManager.h"
 
 
 namespace OceanRuinPieces {
@@ -26,11 +22,11 @@ namespace OceanRuinPieces {
     static long bigRuinsMossy;
     static long mSettings;
 
-    std::string _getBigWarmRuin(Random &);
-//  void addPieces(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, OceanRuinConfiguration const&); //TODO: incomplete function definition
     void init();
 //  void _addPiece(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, OceanRuinConfiguration const&, bool, float); //TODO: incomplete function definition
-    std::string _getSmallWarmRuin(Random &);
-    void _allPositions(Random &, int, int, int);
 //  void _addClusterRuins(StructureManager &, Random &, Rotation const&, BlockPos const&, OceanRuinConfiguration const&, std::vector<std::unique_ptr<StructurePiece>> &); //TODO: incomplete function definition
+    void _allPositions(Random &, int, int, int);
+//  void addPieces(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, OceanRuinConfiguration const&); //TODO: incomplete function definition
+    std::string _getSmallWarmRuin(Random &);
+    std::string _getBigWarmRuin(Random &);
 };

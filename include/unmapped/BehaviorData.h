@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 
 
 class BehaviorData {
@@ -9,15 +9,15 @@ class BehaviorData {
 public:
     class DataProxy;
 
+    bool hasData(std::string const&)const;
     BehaviorData();
-    void pushToStack(std::unique_ptr<BehaviorData::DataProxy>);
-    void copyData(std::string const&, std::string const&, BehaviorData &);
-    void popFromStack(std::string const&);
+    BehaviorData(BehaviorData &&);
+//  bool hasDataOfType(std::string const&, BehaviorData::DataType)const; //TODO: incomplete function definition
     void reset();
     ~BehaviorData();
-//  bool hasDataOfType(std::string const&, BehaviorData::DataType)const; //TODO: incomplete function definition
-    BehaviorData(BehaviorData &&);
-    bool hasData(std::string const&)const;
+    void copyData(std::string const&, std::string const&, BehaviorData &);
+    void pushToStack(std::unique_ptr<BehaviorData::DataProxy>);
+    void popFromStack(std::string const&);
     class DataProxy {
 
     public:

@@ -1,32 +1,30 @@
 #pragma once
 
-#include "../../core/Path.h"
 #include <string>
-#include <functional>
 #include "PackAccessStrategy.h"
-#include "../../unmapped/ResourceLocation.h"
+#include <functional>
 
 
 class DirectoryPackAccessStrategy : PackAccessStrategy {
 
 public:
-    virtual void forEachInAssetSet(Core::Path const&, std::function<void (Core::Path const&)>)const;
-    virtual bool canRecurse()const;
     virtual std::string getPackName()const;
-    ~DirectoryPackAccessStrategy();
-    virtual void getPackSize()const;
-    virtual bool isTrusted()const;
-    virtual void getPackLocation()const;
-    virtual bool hasAsset(Core::Path const&, bool)const;
-    virtual bool hasFolder(Core::Path const&)const;
-    virtual bool isWritable()const;
     virtual void getAsset(Core::Path const&, std::string &, bool)const;
-//  virtual void deleteAsset(Core::PathBuffer<std::string> const&); //TODO: incomplete function definition
-    virtual void forEachIn(Core::Path const&, std::function<void (Core::Path const&)>, bool)const;
-    virtual void setIsTrusted(bool);
+    virtual bool isTrusted()const;
     virtual void getStrategyType()const;
-    virtual void unload();
-    virtual void createSubPack(Core::Path const&)const;
+    virtual bool canRecurse()const;
+    virtual void setIsTrusted(bool);
+    virtual bool hasFolder(Core::Path const&)const;
+    virtual void getPackLocation()const;
+//  virtual void deleteAsset(Core::PathBuffer<std::string> const&); //TODO: incomplete function definition
     virtual void writeAsset(Core::Path const&, std::string const&);
+    virtual void unload();
+    ~DirectoryPackAccessStrategy();
+    virtual bool isWritable()const;
+    virtual void forEachIn(Core::Path const&, std::function<void (Core::Path const&)>, bool)const;
+    virtual void createSubPack(Core::Path const&)const;
+    virtual void getPackSize()const;
+    virtual bool hasAsset(Core::Path const&, bool)const;
+    virtual void forEachInAssetSet(Core::Path const&, std::function<void (Core::Path const&)>)const;
     DirectoryPackAccessStrategy(ResourceLocation const&, bool);
 };

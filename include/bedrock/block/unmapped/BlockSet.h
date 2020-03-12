@@ -5,6 +5,6 @@
 class BlockSet {
 
 public:
-    ~BlockSet();
     BlockSet(BlockSet &&);
+    ~BlockSet();
 };

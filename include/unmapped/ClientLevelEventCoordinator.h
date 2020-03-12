@@ -5,6 +5,6 @@
 class ClientLevelEventCoordinator {
 
 public:
-    ~ClientLevelEventCoordinator();
     ClientLevelEventCoordinator();
+    ~ClientLevelEventCoordinator();
 };

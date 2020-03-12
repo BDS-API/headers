@@ -111,7 +111,7 @@ namespace VanillaStates {
     static long BlockLightLevel;
     static long BeehiveHoneyLevel;
 
-    void unregisterStates();
-    void getState(std::string const&);
     void registerStates();
+    void getState(std::string const&);
+    void unregisterStates();
 };

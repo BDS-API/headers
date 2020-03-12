@@ -1,23 +1,21 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
 #include <string>
-#include <vector>
 #include "Packet.h"
+#include <vector>
 
 
 class UpdateSoftEnumPacket : Packet {
 
 public:
+    virtual void write(BinaryStream &)const;
     virtual void getId()const;
     ~UpdateSoftEnumPacket();
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual void write(BinaryStream &)const;
     virtual std::string getName()const;
-    UpdateSoftEnumPacket();
-    std::string getValues()const;
+    virtual void read(ReadOnlyBinaryStream &);
     void getType()const;
-//  UpdateSoftEnumPacket(SoftEnumUpdateType, std::string const&, std::vector<std::string> const&); //TODO: incomplete function definition
     std::string getEnumName()const;
+    std::string getValues()const;
+//  UpdateSoftEnumPacket(SoftEnumUpdateType, std::string const&, std::vector<std::string> const&); //TODO: incomplete function definition
+    UpdateSoftEnumPacket();
 };

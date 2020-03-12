@@ -1,10 +1,6 @@
 #pragma once
 
-#include "../../../unmapped/PermissionsFile.h"
-#include "../origin/CommandOrigin.h"
-#include "../CommandRegistry.h"
 #include "ServerCommand.h"
-#include "../CommandOutput.h"
 
 
 class PermissionCommand : ServerCommand {
@@ -12,11 +8,11 @@ class PermissionCommand : ServerCommand {
 public:
     static long mPermissionsFile;
 
-    ~PermissionCommand();
     virtual void execute(CommandOrigin const&, CommandOutput &)const;
+    ~PermissionCommand();
     void list(CommandOrigin const&, CommandOutput &)const;
+    void set(CommandOrigin const&, CommandOutput &)const;
+    void setup(CommandRegistry &, PermissionsFile *);
     void reload(CommandOrigin const&, CommandOutput &)const;
     PermissionCommand();
-    void setup(CommandRegistry &, PermissionsFile *);
-    void set(CommandOrigin const&, CommandOutput &)const;
 };

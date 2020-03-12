@@ -10,19 +10,19 @@ namespace RakNet {
         class TimeAndValue2;
 
         BPSTracker();
-        void Push1(unsigned long, unsigned long);
         void Reset(char const*, unsigned int);
-        void ClearExpired1(unsigned long);
+        ~BPSTracker();
+        void GetBPS1Threadsafe(unsigned long);
         void GetBPS1(unsigned long);
         void GetTotal1()const;
-        void GetBPS1Threadsafe(unsigned long);
-        ~BPSTracker();
+        void ClearExpired1(unsigned long);
+        void Push1(unsigned long, unsigned long);
         class TimeAndValue2 {
 
         public:
-            TimeAndValue2();
-            TimeAndValue2(unsigned long, unsigned long);
             ~TimeAndValue2();
+            TimeAndValue2(unsigned long, unsigned long);
+            TimeAndValue2();
         };
     };
 }

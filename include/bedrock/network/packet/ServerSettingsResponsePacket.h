@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "Packet.h"
 #include <string>
+#include "Packet.h"
 
 
 class ServerSettingsResponsePacket : Packet {
 
 public:
-    virtual void write(BinaryStream &)const;
-    virtual void read(ReadOnlyBinaryStream &);
     ~ServerSettingsResponsePacket();
+    virtual void read(ReadOnlyBinaryStream &);
     virtual void getId()const;
     virtual std::string getName()const;
+    virtual void write(BinaryStream &)const;
     ServerSettingsResponsePacket(unsigned int, std::string const&);
     ServerSettingsResponsePacket();
 };

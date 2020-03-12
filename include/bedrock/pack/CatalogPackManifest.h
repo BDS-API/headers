@@ -1,18 +1,18 @@
 #pragma once
 
-#include "PackManifest.h"
 #include <string>
+#include "PackManifest.h"
 
 
 class CatalogPackManifest : PackManifest {
 
 public:
-    virtual void clone()const;
     ~CatalogPackManifest();
+    virtual void clone()const;
     CatalogPackManifest(CatalogPackManifest const&);
-    void setProductId(std::string);
-    std::string getProductId()const;
-//  void setMinimumPerformanceRequirements(DlcPerformanceTier); //TODO: incomplete function definition
-    void getMinimumPerformanceRequirements()const;
     CatalogPackManifest();
+//  void setMinimumPerformanceRequirements(DlcPerformanceTier); //TODO: incomplete function definition
+    std::string getProductId()const;
+    void getMinimumPerformanceRequirements()const;
+    void setProductId(std::string);
 };

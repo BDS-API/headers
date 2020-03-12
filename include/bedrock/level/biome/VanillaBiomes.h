@@ -1,9 +1,5 @@
 #pragma once
 
-#include "../../../unmapped/BiomeRegistry.h"
-#include "../../../unmapped/SurfaceBuilderRegistry.h"
-#include "../../../unmapped/BiomeComponentFactory.h"
-#include "../../../unmapped/IWorldRegistriesProvider.h"
 
 
 namespace VanillaBiomes {
@@ -80,12 +76,12 @@ namespace VanillaBiomes {
     static long mSavannaRockMutated;
     static long mRoofedForestMutated;
 
-    void initBiomeComponents(BiomeComponentFactory &);
     void initBiomes(BiomeRegistry &);
-    bool isValidSpawn(int);
-    void initVanillaBiomeTypeComponent(BiomeRegistry &);
     void initSurfaceBuilders(SurfaceBuilderRegistry &);
-    void initDefaultWorldGenComponents(IWorldRegistriesProvider &);
-    void initClientOnlyComponents(BiomeRegistry &);
     void shutdownBiomes();
+    void initVanillaBiomeTypeComponent(BiomeRegistry &);
+    void initBiomeComponents(BiomeComponentFactory &);
+    void initClientOnlyComponents(BiomeRegistry &);
+    bool isValidSpawn(int);
+    void initDefaultWorldGenComponents(IWorldRegistriesProvider &);
 };

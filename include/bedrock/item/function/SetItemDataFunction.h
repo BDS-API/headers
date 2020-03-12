@@ -1,23 +1,16 @@
 #pragma once
 
-#include "../condition/LootItemCondition.h"
-#include "../../../unmapped/RandomValueBounds.h"
-#include "../../util/Random.h"
-#include "../ItemInstance.h"
-#include "../ItemStack.h"
-#include <vector>
-#include <memory>
 #include "../../../json/Value.h"
-#include "../../../unmapped/LootTableContext.h"
+#include <vector>
 #include "LootItemFunction.h"
 
 
 class SetItemDataFunction : LootItemFunction {
 
 public:
-    virtual void apply(ItemStack &, Random &, LootTableContext &);
-    ~SetItemDataFunction();
     virtual void apply(ItemInstance &, Random &, LootTableContext &);
-    SetItemDataFunction(std::vector<std::unique_ptr<LootItemCondition>> &, RandomValueBounds &);
+    ~SetItemDataFunction();
+    virtual void apply(ItemStack &, Random &, LootTableContext &);
     void deserialize(Json::Value, std::vector<std::unique_ptr<LootItemCondition>> &);
+    SetItemDataFunction(std::vector<std::unique_ptr<LootItemCondition>> &, RandomValueBounds &);
 };

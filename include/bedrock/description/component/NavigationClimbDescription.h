@@ -6,7 +6,7 @@
 class NavigationClimbDescription : NavigationDescription {
 
 public:
-    virtual void getJsonName()const;
     ~NavigationClimbDescription();
+    virtual void getJsonName()const;
     NavigationClimbDescription();
 };

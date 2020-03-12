@@ -5,7 +5,7 @@
 class SchedulerComponent {
 
 public:
-    void getCurrentEventIndex()const;
     void setCurrentEventIndex(int);
+    void getCurrentEventIndex()const;
     SchedulerComponent(SchedulerComponent &&);
 };

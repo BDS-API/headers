@@ -5,7 +5,7 @@
 class TradeItem {
 
 public:
-    ~TradeItem();
     TradeItem();
+    ~TradeItem();
     TradeItem(TradeItem &&);
 };

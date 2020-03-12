@@ -1,17 +1,8 @@
 #pragma once
 
-#include "../../util/AABB.h"
 #include <string>
-#include "../../../unmapped/DataLoadHelper.h"
-#include "../../util/Vec3.h"
-#include "../../level/Level.h"
-#include "../../level/LevelChunk.h"
-#include "../../nbt/CompoundTag.h"
-#include "../unmapped/BlockSource.h"
+#include "../../util/AABB.h"
 #include <vector>
-#include "../../util/BlockPos.h"
-#include "../../../unmapped/UIProfanityContext.h"
-#include "../../actor/Player.h"
 
 
 class BlockActor {
@@ -20,70 +11,70 @@ public:
     static std::string mIdClassMap;
     static std::string mClassIdMap;
 
-    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
-    virtual bool isFinished();
-    virtual void onRemoved(BlockSource &);
-    virtual void getCrackEntity(BlockSource &, BlockPos const&);
-    virtual void saveItemInstanceData(CompoundTag &);
-    virtual void _playerCanUpdate(Player const&)const;
-    virtual std::string getImmersiveReaderText(BlockSource &);
     virtual void getShadowRadius(BlockSource &)const;
+    virtual void getCrackEntity(BlockSource &, BlockPos const&);
     virtual void onChunkUnloaded(LevelChunk &);
-    virtual bool hasAlphaLayer()const;
     virtual bool isCustomNameSaved();
-    virtual void onChanged(BlockSource &);
-    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual bool isMovable(BlockSource &);
-    virtual void getDeletionDelayTimeSeconds()const;
-    virtual void getOwningPiston(BlockSource &);
-    virtual void triggerEvent(int, int);
-    ~BlockActor();
-    virtual void getUpdatePacket(BlockSource &);
-    virtual void onChunkLoaded(LevelChunk &);
-    virtual void onNeighborChanged(BlockSource &, BlockPos const&);
-    virtual void saveBlockData(CompoundTag &, BlockSource &)const;
+    virtual void save(CompoundTag &)const;
     virtual void getDebugText(std::vector<std::string> &, BlockPos const&);
-    virtual void tick(BlockSource &);
-    virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
-    virtual std::string getName()const;
-    virtual void clearCache();
-    virtual void getContainer();
+    virtual std::string getCustomName()const;
+    virtual void getOwningPiston(BlockSource &);
+    virtual void onChanged(BlockSource &);
     virtual void onMove();
     virtual std::string getFilteredCustomName(UIProfanityContext const&);
-    virtual void getRepairCost()const;
+    virtual std::string getImmersiveReaderText(BlockSource &);
     virtual void onPlace(BlockSource &);
+    virtual std::string getName()const;
+    virtual void loadBlockData(CompoundTag const&, BlockSource &, DataLoadHelper &);
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual bool isFinished();
+    virtual void saveBlockData(CompoundTag &, BlockSource &)const;
+    virtual void getDeletionDelayTimeSeconds()const;
+    virtual void getContainer();
+    virtual void tick(BlockSource &);
+    virtual bool isMovable(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
+    ~BlockActor();
+    virtual void onRemoved(BlockSource &);
+    virtual void getRepairCost()const;
+    virtual void onChunkLoaded(LevelChunk &);
     virtual void onCustomTagLoadDone(BlockSource &);
-    virtual std::string getCustomName()const;
-    virtual void save(CompoundTag &)const;
-    void moveTo(BlockPos const&);
-    void assignBlockIfNotAssigned(BlockSource &);
-    void setChanged();
-    void getType()const;
-    bool canRenderCustomName()const;
-    void stopDestroy();
-    void onUpdatePacket(CompoundTag const&, BlockSource &, Player const*);
-    std::string getDisplayName()const;
-    void setMovable(bool);
-    void shutdown();
+    virtual void saveItemInstanceData(CompoundTag &);
+    virtual void clearCache();
+    virtual void onNeighborChanged(BlockSource &, BlockPos const&);
+    virtual void triggerEvent(int, int);
+    virtual void _playerCanUpdate(Player const&)const;
+    virtual bool hasAlphaLayer()const;
     void setCustomNameSaved(bool);
-//  BlockActor(BlockActorType, BlockPos const&, std::string const&); //TODO: incomplete function definition
-    void setCustomName(std::string const&);
-//  void setRendererId(BlockActorRendererId); //TODO: incomplete function definition
-    void getPosition()const;
-    bool isClientSideOnly()const;
-//  bool isType(BlockActor &, BlockActorType); //TODO: incomplete function definition
-    bool isInWorld()const;
-    void getAABB()const;
-    void getBlock()const;
     void distanceToSqr(Vec3 const&);
-//  void setId(BlockActorType, std::string const&); //TODO: incomplete function definition
-    void _resetAABB();
-    void initBlockEntities();
-    void getEntityTerrainInterlockDataConst()const;
     void getEntityTerrainInterlockData();
-    void setBB(AABB);
-    void loadStatic(Level &, CompoundTag const&, DataLoadHelper &);
-    void setClientSideOnly(bool);
+    void getBlock()const;
 //  bool isType(BlockActorType)const; //TODO: incomplete function definition
+//  BlockActor(BlockActorType, BlockPos const&, std::string const&); //TODO: incomplete function definition
+    void setChanged();
+//  bool isType(BlockActor &, BlockActorType); //TODO: incomplete function definition
+    void setClientSideOnly(bool);
+    bool isInWorld()const;
+    void getPosition()const;
+    void onUpdatePacket(CompoundTag const&, BlockSource &, Player const*);
+    void moveTo(BlockPos const&);
+    std::string getDisplayName()const;
+    void shutdown();
+    void getAABB()const;
+    void getType()const;
+    void _resetAABB();
+//  void setId(BlockActorType, std::string const&); //TODO: incomplete function definition
+    void getEntityTerrainInterlockDataConst()const;
+    void loadStatic(Level &, CompoundTag const&, DataLoadHelper &);
+    void stopDestroy();
+    void assignBlockIfNotAssigned(BlockSource &);
+    bool isClientSideOnly()const;
+    void initBlockEntities();
     void getRendererId()const;
+    bool canRenderCustomName()const;
+    void setCustomName(std::string const&);
+    void setMovable(bool);
+    void setBB(AABB);
+//  void setRendererId(BlockActorRendererId); //TODO: incomplete function definition
 };

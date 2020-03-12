@@ -1,19 +1,17 @@
 #pragma once
 
-#include "../../io/BinaryStream.h"
-#include "../../io/ReadOnlyBinaryStream.h"
-#include "Packet.h"
 #include <string>
+#include "Packet.h"
 
 
 class GuiDataPickItemPacket : Packet {
 
 public:
-    virtual void write(BinaryStream &)const;
     virtual std::string getName()const;
+    virtual void write(BinaryStream &)const;
     ~GuiDataPickItemPacket();
     virtual void getId()const;
     virtual void read(ReadOnlyBinaryStream &);
-    GuiDataPickItemPacket();
     GuiDataPickItemPacket(std::string const&, std::string const&, int const&);
+    GuiDataPickItemPacket();
 };

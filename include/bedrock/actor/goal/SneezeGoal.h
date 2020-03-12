@@ -1,21 +1,19 @@
 #pragma once
 
 #include <string>
-#include "../Mob.h"
-#include <vector>
 #include "Goal.h"
-#include "../../../unmapped/MobDescriptor.h"
+#include <vector>
 
 
 class SneezeGoal : Goal {
 
 public:
     virtual bool canContinueToUse();
-    virtual void start();
     virtual void stop();
-    virtual void tick();
     virtual void appendDebugInfo(std::string &)const;
     ~SneezeGoal();
     virtual bool canUse();
+    virtual void tick();
+    virtual void start();
     SneezeGoal(Mob &, float, float, float, std::string const&, std::string const&, std::string const&, float, std::vector<MobDescriptor> const&, float);
 };

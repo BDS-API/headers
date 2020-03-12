@@ -239,7 +239,6 @@ class AttributeCollection;
 class AttributeDescription;
 class AttributeInstance;
 class AttributeInstanceDelegate;
-class AttributeInstanceHandle;
 class AttributeModifier;
 class AutoCompleteInformation;
 class AutoCompleteOption;
@@ -872,9 +871,6 @@ namespace Core {
     class ScopedLoadTimeSection;
 }
 namespace Core {
-    class SingleThreadedLock;
-}
-namespace Core {
     class StorageAreaState;
 }
 namespace Core {
@@ -969,7 +965,6 @@ class DBStorageEnvironmentChain;
 class DBStorageWriteBatch;
 class DamageCondition;
 class DamageOverTimeComponent;
-class DamageOverTimeDefinition;
 class DamageOverTimeSystem;
 class DamageSensorComponent;
 class DamageSensorDefinition;
@@ -1290,7 +1285,6 @@ class FloatTag;
 class FloatWanderGoal;
 class FloatsInLiquidDescription;
 class FlockingComponent;
-class FlockingDefinition;
 class FlockingSystem;
 class FlowerBlock;
 class FlowerFeature;
@@ -1384,7 +1378,6 @@ class GroundOffsetDescription;
 class GroundedConstraint;
 class GrowCropSystem;
 class GrowsCropComponent;
-class GrowsCropDefinition;
 class Guardian;
 class GuardianAttackGoal;
 class GuiDataPickItemPacket;
@@ -1508,7 +1501,6 @@ class IndexSet;
 class InputModeBoolOption;
 class InputModeFloatOption;
 class InsomniaComponent;
-class InsomniaDefinition;
 class InsomniaSystem;
 class InspectBookshelfGoal;
 class InstantaneousAttributeBuff;
@@ -2280,7 +2272,6 @@ class RailActivatorDescription;
 class RailActivatorSystem;
 class RailBlock;
 class RailMovementComponent;
-class RailMovementDefinition;
 class RailMovementSystem;
 class RakDataInput;
 class RakDataOutput;
@@ -2534,7 +2525,6 @@ class ScaffoldingBlockItem;
 class ScaffoldingClimberComponent;
 class ScaffoldingClimberSystem;
 class ScaleByAgeComponent;
-class ScaleByAgeDefinition;
 class ScaleByAgeSystem;
 class ScaleDescription;
 class ScaredGoal;

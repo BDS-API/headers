@@ -1,6 +1,5 @@
 #pragma once
 
-#include "HashedString.h"
 
 
 class MolangArrayVariable {
@@ -8,10 +7,10 @@ class MolangArrayVariable {
 public:
     static long defaultErrorValue;
 
-    void getName()const;
-    void operator==(MolangArrayVariable const&)const;
     MolangArrayVariable(MolangArrayVariable const&);
     ~MolangArrayVariable();
+    void operator==(MolangArrayVariable const&)const;
     MolangArrayVariable(MolangArrayVariable &&);
     MolangArrayVariable(HashedString const&);
+    void getName()const;
 };

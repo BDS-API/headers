@@ -7,9 +7,9 @@ class PlayerScoreboardId {
 public:
     static long INVALID;
 
-    PlayerScoreboardId();
     void operator==(PlayerScoreboardId const&)const;
-    PlayerScoreboardId(long);
-    void operator!=(PlayerScoreboardId const&)const;
     void getHash()const;
+    PlayerScoreboardId(long);
+    PlayerScoreboardId();
+    void operator!=(PlayerScoreboardId const&)const;
 };

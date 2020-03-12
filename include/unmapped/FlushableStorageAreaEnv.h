@@ -1,15 +1,14 @@
 #pragma once
 
-#include "FlushableEnv.h"
-#include "../core/FileStorageArea.h"
 #include <memory>
+#include "FlushableEnv.h"
 
 
 class FlushableStorageAreaEnv : FlushableEnv {
 
 public:
-    virtual void flushToPermanentStorage();
     ~FlushableStorageAreaEnv();
+    virtual void flushToPermanentStorage();
 //  FlushableStorageAreaEnv(leveldb::Env *, std::shared_ptr<Core::FileStorageArea>); //TODO: incomplete function definition
     void _flushStorageArea();
 };

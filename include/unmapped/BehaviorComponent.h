@@ -1,19 +1,17 @@
 #pragma once
 
-#include "BehaviorTreeDefinitionPtr.h"
-#include "../bedrock/actor/Actor.h"
 
 
 class BehaviorComponent {
 
 public:
-    void reset(Actor &);
-    ~BehaviorComponent();
-    void getRoot();
     void initFromDefinition(Actor &);
+    void getRoot();
     void runTree(Actor &, BehaviorTreeDefinitionPtr &);
-    BehaviorComponent(BehaviorComponent &&);
-    BehaviorComponent();
     void resetRoot();
+    BehaviorComponent(BehaviorComponent &&);
+    ~BehaviorComponent();
     void getBehaviorData();
+    void reset(Actor &);
+    BehaviorComponent();
 };

@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../../util/BlockPos.h"
-#include "../../actor/Player.h"
 #include "FurnaceContainerManagerModel.h"
 
 

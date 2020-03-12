@@ -5,7 +5,7 @@
 class AreaAttackComponent {
 
 public:
+    AreaAttackComponent();
     ~AreaAttackComponent();
     AreaAttackComponent(AreaAttackComponent &&);
-    AreaAttackComponent();
 };

@@ -5,6 +5,6 @@
 class BuildMatch {
 
 public:
-    BuildMatch();
     BuildMatch(BuildMatch const&);
+    BuildMatch();
 };

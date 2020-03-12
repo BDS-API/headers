@@ -1,20 +1,19 @@
 #pragma once
 
 #include <string>
-#include "../mce/UUID.h"
 #include "IJsonSerializable.h"
-#include "../json/Value.h"
+#include "../mce/UUID.h"
 
 
 class WhitelistEntry : IJsonSerializable {
 
 public:
-    virtual void serialize(Json::Value &);
     ~WhitelistEntry();
+    virtual void serialize(Json::Value &);
     virtual void deserialize(Json::Value &);
-    WhitelistEntry(WhitelistEntry &&);
-    WhitelistEntry(std::string);
-    WhitelistEntry(std::string, mce::UUID, std::string, bool);
     WhitelistEntry(WhitelistEntry const&);
     WhitelistEntry(Json::Value &);
+    WhitelistEntry(std::string, mce::UUID, std::string, bool);
+    WhitelistEntry(std::string);
+    WhitelistEntry(WhitelistEntry &&);
 };

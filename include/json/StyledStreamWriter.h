@@ -1,8 +1,7 @@
 #pragma once
 
-#include "Value.h"
-#include <ostream>
 #include <string>
+#include <ostream>
 
 
 namespace Json {
@@ -10,20 +9,20 @@ namespace Json {
     class StyledStreamWriter {
 
     public:
-        void writeCommentBeforeValue(Json::Value const&);
-        void write(std::ostream &, Json::Value const&);
-        void writeWithIndent(std::string const&);
-        bool isMultineArray(Json::Value const&);
-        void writeIndent();
+        void normalizeEOL(std::string const&);
         void unindent();
         bool hasCommentForValue(Json::Value const&);
-        void normalizeEOL(std::string const&);
-        void pushValue(std::string const&);
-        void indent();
-        void writeValue(Json::Value const&);
         void writeCommentAfterValueOnSameLine(Json::Value const&);
         StyledStreamWriter(std::string);
         void writeArrayValue(Json::Value const&);
+        void indent();
+        bool isMultineArray(Json::Value const&);
+        void writeWithIndent(std::string const&);
+        void writeValue(Json::Value const&);
+        void writeIndent();
+        void pushValue(std::string const&);
+        void writeCommentBeforeValue(Json::Value const&);
         ~StyledStreamWriter();
+        void write(std::ostream &, Json::Value const&);
     };
 }

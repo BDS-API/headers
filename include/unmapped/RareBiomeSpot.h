@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../bedrock/level/biome/Biome.h"
 
 
 namespace LayerFilters {

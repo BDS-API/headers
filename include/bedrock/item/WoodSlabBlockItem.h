@@ -1,17 +1,14 @@
 #pragma once
 
-#include "SlabBlockItem.h"
-#include "ItemStack.h"
 #include <string>
-#include "../util/BlockPos.h"
-#include "../actor/Actor.h"
+#include "SlabBlockItem.h"
 
 
 class WoodSlabBlockItem : SlabBlockItem {
 
 public:
     ~WoodSlabBlockItem();
-    virtual void getLevelDataForAuxValue(int)const;
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const;
+    virtual void getLevelDataForAuxValue(int)const;
     WoodSlabBlockItem(std::string const&, int);
 };

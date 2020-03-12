@@ -1,19 +1,18 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class ScaredGoal : Goal {
 
 public:
-    ~ScaredGoal();
-    virtual bool canContinueToUse();
-    virtual void tick();
     virtual void stop();
     virtual bool canUse();
-    virtual void appendDebugInfo(std::string &)const;
+    virtual bool canContinueToUse();
     virtual void start();
+    virtual void appendDebugInfo(std::string &)const;
+    virtual void tick();
+    ~ScaredGoal();
     ScaredGoal(Mob &, int);
 };

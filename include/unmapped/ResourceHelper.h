@@ -1,9 +1,6 @@
 #pragma once
 
 #include <string>
-#include "PackIdVersion.h"
-#include "PackInstanceId.h"
-#include "../json/Value.h"
 
 
 namespace ResourceHelper {

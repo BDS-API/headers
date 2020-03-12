@@ -1,10 +1,5 @@
 #pragma once
 
-#include "../ScriptObjectHandle.h"
-#include "../unmapped/ScriptEngine.h"
-#include "../unmapped/ScriptServerContext.h"
-#include "../../actor/Actor.h"
-#include "../ScriptVersionInfo.h"
 
 
 class ScriptPositionComponent /*ScriptTemplateFactory<ScriptServerContext>::Component*/ { //TODO: incomplete class definition

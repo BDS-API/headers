@@ -1,23 +1,22 @@
 #pragma once
 
-#include "../../../unmapped/IntRange.h"
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
+#include "../../../unmapped/IntRange.h"
 
 
 class RandomHoverGoal : Goal {
 
 public:
+    ~RandomHoverGoal();
+    virtual void appendDebugInfo(std::string &)const;
+    virtual bool canUse();
+    virtual void start();
     virtual void tick();
     virtual bool canContinueToUse();
-    virtual void appendDebugInfo(std::string &)const;
-    ~RandomHoverGoal();
-    virtual void start();
-    virtual bool canUse();
+    void _moveToTarget();
     void _computeNewTarget();
-    void _mobMeetsPreconditions()const;
     void _findNewTarget()const;
     RandomHoverGoal(Mob &, float, int, float, float, float, IntRange);
-    void _moveToTarget();
+    void _mobMeetsPreconditions()const;
 };

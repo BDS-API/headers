@@ -1,14 +1,13 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "BehaviorDefinition.h"
-#include "../../../unmapped/BehaviorFactory.h"
+#include "../../../json/Value.h"
 
 
 class FindBlockDefinition : BehaviorDefinition {
 
 public:
-    ~FindBlockDefinition();
     virtual void load(Json::Value, BehaviorFactory const&);
+    ~FindBlockDefinition();
     FindBlockDefinition();
 };

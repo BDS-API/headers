@@ -5,7 +5,7 @@
 class PosibleTransformation {
 
 public:
-    ~PosibleTransformation();
-    PosibleTransformation();
     PosibleTransformation(PosibleTransformation const&);
+    PosibleTransformation();
+    ~PosibleTransformation();
 };

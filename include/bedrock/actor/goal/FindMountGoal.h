@@ -1,21 +1,20 @@
 #pragma once
 
-#include "Goal.h"
-#include "../Mob.h"
 #include <string>
+#include "Goal.h"
 
 
 class FindMountGoal : Goal {
 
 public:
-    virtual void tick();
-    virtual void stop();
-    virtual bool canUse();
     virtual bool canContinueToUse();
+    virtual bool canUse();
+    virtual void tick();
+    virtual void start();
     virtual void appendDebugInfo(std::string &)const;
     ~FindMountGoal();
-    virtual void start();
-    bool isInMountRange();
+    virtual void stop();
     FindMountGoal(Mob &, float, int, bool, bool, float, int);
     void getAttackReachSqr();
+    bool isInMountRange();
 };

@@ -8,7 +8,7 @@ namespace Json {
 
     public:
         void all();
-        Features();
         void strictMode();
+        Features();
     };
 }

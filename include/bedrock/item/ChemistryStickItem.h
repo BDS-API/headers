@@ -1,15 +1,7 @@
 #pragma once
 
-#include "ChemistryItem.h"
-#include "ItemStack.h"
 #include <string>
-#include "../actor/Actor.h"
-#include "../../unmapped/Block.h"
-#include "../actor/Player.h"
-#include "../actor/Mob.h"
-#include "ItemInstance.h"
-#include "../level/Level.h"
-#include "ItemStackBase.h"
+#include "ChemistryItem.h"
 
 
 class ChemistryStickItem : ChemistryItem {
@@ -23,24 +15,24 @@ public:
     static long DAMAGE_MASK;
     static std::string ACTIVATION_TIMESTAMP_TAG;
 
-    virtual void setMaxDamage(int);
-    virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
-    virtual bool showsDurabilityInCreative()const;
-    virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
-    virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
     virtual void use(ItemStack &, Player &)const;
-    virtual void uniqueAuxValues()const;
-    virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     ~ChemistryStickItem();
+    virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const;
+    virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const;
     virtual void fixupOnLoad(ItemStackBase &)const;
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const;
-    ChemistryStickItem(std::string const&, int);
-    bool isChemistryStick(ItemInstance const&);
-    void getColorType(int);
-    void _tick(ItemStack &, unsigned long)const;
+    virtual void setMaxDamage(int);
+    virtual bool showsDurabilityInCreative()const;
+    virtual void mineBlock(ItemStack &, Block const&, int, int, int, Actor *)const;
+    virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const;
+    virtual void uniqueAuxValues()const;
     void _activateItem(ItemStack &, unsigned long)const;
-    std::string _getColorName(int)const;
-    void _getDamagePercent(ItemStack const&, unsigned long)const;
+    bool isChemistryStick(ItemInstance const&);
     bool isActive(int);
+    void _getDamagePercent(ItemStack const&, unsigned long)const;
+    ChemistryStickItem(std::string const&, int);
+    void getColorType(int);
     void _storeActivationTimestamp(ItemStack &, unsigned long, int)const;
+    std::string _getColorName(int)const;
+    void _tick(ItemStack &, unsigned long)const;
 };

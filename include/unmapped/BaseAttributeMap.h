@@ -1,8 +1,5 @@
 #pragma once
 
-#include "HashedString.h"
-#include "Attribute.h"
-#include "../bedrock/actor/attribute/AttributeInstance.h"
 
 
 class BaseAttributeMap {
@@ -10,21 +7,21 @@ class BaseAttributeMap {
 public:
     static long mInvalidInstance;
 
-    void getDirtyAttributes();
-    void end()const;
-    void registerAttribute(Attribute const&);
-    void onAttributeModified(AttributeInstance const&);
-    void getMutableInstance(unsigned int);
-    void getInstance(unsigned int)const;
-    void end();
-    void getInstance(HashedString const&)const;
-    void clearDirtyAttributes();
-    void begin();
-    void getMutableInstance(Attribute const&);
     void getMutableInstance(HashedString const&);
-    BaseAttributeMap();
-    void getInstance(Attribute const&)const;
-    void begin()const;
+    void onAttributeModified(AttributeInstance const&);
+    void clearDirtyAttributes();
     ~BaseAttributeMap();
     void getSyncableAttributes()const;
+    void getDirtyAttributes();
+    void getInstance(unsigned int)const;
+    BaseAttributeMap();
+    void begin()const;
+    void end();
+    void getMutableInstance(Attribute const&);
+    void getInstance(Attribute const&)const;
+    void getInstance(HashedString const&)const;
+    void end()const;
+    void begin();
+    void getMutableInstance(unsigned int);
+    void registerAttribute(Attribute const&);
 };

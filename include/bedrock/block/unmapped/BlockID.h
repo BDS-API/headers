@@ -6,6 +6,6 @@ class BlockID {
 
 public:
     BlockID(BlockID const&);
-    BlockID(unsigned char const&);
     BlockID();
+    BlockID(unsigned char const&);
 };

@@ -8,7 +8,7 @@ namespace BedrockLog {
 
     public:
 //      void AddChannel(BedrockLog::LogChannel); //TODO: incomplete function definition
-        CategoryLogFile();
         ~CategoryLogFile();
+        CategoryLogFile();
     };
 }

@@ -5,6 +5,6 @@
 class ItemData {
 
 public:
-    ItemData(ItemData &&);
     ~ItemData();
+    ItemData(ItemData &&);
 };

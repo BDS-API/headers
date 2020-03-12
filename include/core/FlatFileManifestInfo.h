@@ -1,8 +1,6 @@
 #pragma once
 
-#include "../bedrock/io/BinaryStream.h"
-#include "../bedrock/io/ReadOnlyBinaryStream.h"
-#include "Path.h"
+#include <string>
 
 
 namespace Core {
@@ -10,27 +8,27 @@ namespace Core {
     class FlatFileManifestInfo {
 
     public:
-        void setFileSize(unsigned long);
-        void writeToStream(BinaryStream &)const;
         void operator==(Core::FlatFileManifestInfo const&)const;
-        void setPath(Core::Path const&);
-        void setSeekPos(unsigned long);
-        bool isDeleted()const;
-        ~FlatFileManifestInfo();
-        FlatFileManifestInfo(Core::FlatFileManifestInfo const&);
-//      void setAttributes(Core::FileType, bool); //TODO: incomplete function definition
-        void getFileType()const;
-        void getFlags()const;
-        std::string getPath()const;
-        void setFlags(unsigned char);
-        bool isFile()const;
-//      void setFileType(Core::FileType); //TODO: incomplete function definition
-        void getSeekPos()const;
-        FlatFileManifestInfo();
         FlatFileManifestInfo(Core::FlatFileManifestInfo &&);
         void getFileSize()const;
-        bool isDirectory()const;
+        void writeToStream(BinaryStream &)const;
         void setDeleted(bool);
+        void getSeekPos()const;
+        void getFlags()const;
+        void getFileType()const;
+        bool isDeleted()const;
+        void setFileSize(unsigned long);
+        void setPath(Core::Path const&);
+        bool isFile()const;
         void readFromStream(ReadOnlyBinaryStream &);
+        void setSeekPos(unsigned long);
+//      void setFileType(Core::FileType); //TODO: incomplete function definition
+        FlatFileManifestInfo();
+        bool isDirectory()const;
+        void setFlags(unsigned char);
+        ~FlatFileManifestInfo();
+        std::string getPath()const;
+//      void setAttributes(Core::FileType, bool); //TODO: incomplete function definition
+        FlatFileManifestInfo(Core::FlatFileManifestInfo const&);
     };
 }

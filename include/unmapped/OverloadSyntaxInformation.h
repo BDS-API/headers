@@ -7,6 +7,6 @@ class OverloadSyntaxInformation {
 
 public:
     ~OverloadSyntaxInformation();
-    OverloadSyntaxInformation(std::string const&, unsigned int, unsigned int);
     OverloadSyntaxInformation(OverloadSyntaxInformation &&);
+    OverloadSyntaxInformation(std::string const&, unsigned int, unsigned int);
 };

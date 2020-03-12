@@ -1,8 +1,5 @@
 #pragma once
 
-#include "../origin/CommandOrigin.h"
-#include "../CommandRegistry.h"
-#include "../CommandOutput.h"
 #include "MessagingCommand.h"
 
 

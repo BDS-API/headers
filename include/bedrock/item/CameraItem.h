@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Item.h"
 #include <string>
+#include "Item.h"
 
 
 class CameraItem : Item {

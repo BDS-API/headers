@@ -1,25 +1,19 @@
 #pragma once
 
-#include "../util/Vec2.h"
-#include "../../unmapped/VariantParameterList.h"
-#include "unmapped/ActorDefinitionGroup.h"
 #include "Actor.h"
-#include "../util/Vec3.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "damagesource/ActorDamageSource.h"
 
 
 class Balloon : Actor {
 
 public:
-    virtual void remove();
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
-    virtual void normalTick();
     virtual void lerpTo(Vec3 const&, Vec2 const&, int);
-    virtual bool isPickable();
+    virtual void normalTick();
     ~Balloon();
+//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition
+    virtual void remove();
     virtual void _hurt(ActorDamageSource const&, int, bool, bool);
-    void remove(bool);
-    Balloon(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    virtual bool isPickable();
     void _init();
+    Balloon(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    void remove(bool);
 };

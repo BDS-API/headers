@@ -2,9 +2,6 @@
 
 #include <string>
 #include "../bedrock/actor/unmapped/ActorUniqueID.h"
-#include "../bedrock/util/BlockPos.h"
-#include "../bedrock/nbt/CompoundTag.h"
-#include "DataLoadHelper.h"
 
 
 class StructureEditorData {
@@ -18,51 +15,51 @@ public:
     static long MAX_STRUCTURE_OFFSET;
     static std::string DEFAULT_STRUCTURE_NAMESPACE;
 
-//  void getOrientedBounds(BlockPos const&, Rotation); //TODO: incomplete function definition
-    void setIntegrityValue(float);
-    void setStructureOffset(BlockPos const&);
-    StructureEditorData(StructureEditorData const&);
-    void setIncludePlayers(bool);
-    void setStructureDataField(std::string const&);
-//  void setRedstoneSaveMode(StructureRedstoneSaveMode); //TODO: incomplete function definition
-//  void setMirror(Mirror); //TODO: incomplete function definition
-    StructureEditorData(StructureEditorData &&);
-    void setIgnoreEntities(bool);
-    void getLastTouchedByPlayerID()const;
-    void getIncludePlayers()const;
-    void setLastTouchedByPlayerID(ActorUniqueID);
-    void getIgnoreEntities()const;
-    std::string getStructureName()const;
-    void getNameWithoutNamespace(std::string const&);
-//  void setStructureName(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
-    void structureNameIsValid(std::string const&);
-    void setIgnoreBlocks(bool);
-//  void setStructureBlockType(StructureBlockType); //TODO: incomplete function definition
-//  void setRotation(Rotation); //TODO: incomplete function definition
-    void operator==(StructureEditorData const&)const;
-    void getShowBoundingBox()const;
-    void setIntegritySeed(unsigned int);
-    void validateOffset(BlockPos const&);
-    void load(CompoundTag const&, DataLoadHelper &);
-    void getPivot()const;
-    void getIgnoreBlocks()const;
     void setShowBoundingBox(bool);
-    void validateSize(BlockPos const&);
-    std::string getStructureDataField()const;
-    StructureEditorData();
-    void save(CompoundTag &)const;
-    void getRotation()const;
-    void getIntegrityValue()const;
-    void getIntegritySeed()const;
-    void getStructureSettings()const;
-    void setStructureSize(BlockPos const&);
+    void getIgnoreBlocks()const;
+    void getIgnoreEntities()const;
+    void setStructureDataField(std::string const&);
+    void validateOffset(BlockPos const&);
+    void getIncludePlayers()const;
+    void load(CompoundTag const&, DataLoadHelper &);
     void getNamespaceFromName(std::string const&);
-    void getStructureBlockType()const;
-    void initStateWithExperimentalFlag(bool);
     void getStructureSize()const;
-    void operator!=(StructureEditorData const&)const;
-    void getStructureOffset()const;
     ~StructureEditorData();
-    void getRedstoneSaveMode()const;
     void getMirror()const;
+    void getPivot()const;
+    void setIgnoreBlocks(bool);
+//  void setRotation(Rotation); //TODO: incomplete function definition
+    void setIgnoreEntities(bool);
+    std::string getStructureName()const;
+//  void setStructureName(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition
+    void getRedstoneSaveMode()const;
+    void structureNameIsValid(std::string const&);
+    void operator==(StructureEditorData const&)const;
+    void setLastTouchedByPlayerID(ActorUniqueID);
+    void getNameWithoutNamespace(std::string const&);
+    void operator!=(StructureEditorData const&)const;
+    void getRotation()const;
+    void getIntegritySeed()const;
+    void validateSize(BlockPos const&);
+    void setStructureOffset(BlockPos const&);
+    void getStructureBlockType()const;
+//  void getOrientedBounds(BlockPos const&, Rotation); //TODO: incomplete function definition
+    std::string getStructureDataField()const;
+    void getShowBoundingBox()const;
+    void setIntegrityValue(float);
+    void setIntegritySeed(unsigned int);
+//  void setRedstoneSaveMode(StructureRedstoneSaveMode); //TODO: incomplete function definition
+    void getLastTouchedByPlayerID()const;
+    void getStructureSettings()const;
+//  void setStructureBlockType(StructureBlockType); //TODO: incomplete function definition
+    void getStructureOffset()const;
+//  void setMirror(Mirror); //TODO: incomplete function definition
+    void getIntegrityValue()const;
+    void initStateWithExperimentalFlag(bool);
+    StructureEditorData(StructureEditorData const&);
+    void setStructureSize(BlockPos const&);
+    void save(CompoundTag &)const;
+    StructureEditorData(StructureEditorData &&);
+    StructureEditorData();
+    void setIncludePlayers(bool);
 };

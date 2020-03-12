@@ -21,6 +21,6 @@ namespace Palette {
     static long RED;
     static long BLACK;
 
-    void fromByte(unsigned char);
 //  void getColor(PaletteColor); //TODO: incomplete function definition
+    void fromByte(unsigned char);
 };

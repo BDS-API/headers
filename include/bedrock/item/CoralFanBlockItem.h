@@ -1,9 +1,7 @@
 #pragma once
 
-#include "ItemStack.h"
 #include <string>
 #include "../util/BlockPos.h"
-#include "../actor/Actor.h"
 #include "BlockItem.h"
 
 

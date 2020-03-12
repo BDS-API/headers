@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 
 
 namespace Crypto {
@@ -9,11 +10,11 @@ namespace Crypto {
         class Hash {
 
         public:
+            void getUUID();
             ~Hash();
 //          Hash(Crypto::Hash::HashType); //TODO: incomplete function definition
-            std::string final();
-            void getUUID();
             void update(void const*, unsigned int);
+            std::string final();
         };
     }
 }

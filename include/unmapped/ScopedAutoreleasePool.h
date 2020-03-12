@@ -6,10 +6,10 @@ class ScopedAutoreleasePool {
 
 public:
     void reset();
-    void _create();
     ~ScopedAutoreleasePool();
-    void drainNow();
-    void _drain();
     void drain();
+    void _drain();
     ScopedAutoreleasePool();
+    void drainNow();
+    void _create();
 };

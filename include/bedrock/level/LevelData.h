@@ -1,153 +1,145 @@
 #pragma once
 
-#include "../util/BlockPos.h"
-#include "LevelSettings.h"
-#include "../../unmapped/ContentIdentity.h"
-#include "../../unmapped/GameRuleId.h"
 #include <string>
-#include "../util/Tick.h"
-#include "../../raknet/BitStream.h"
-#include "../../unmapped/BaseGameVersion.h"
-#include "../nbt/CompoundTag.h"
-#include "../../unmapped/PackIdVersion.h"
+#include "../../unmapped/GameRuleId.h"
 
 
 class LevelData {
 
 public:
-    bool isWorldTemplateOptionLocked()const;
-    void getMultiplayerGameIntent()const;
-    bool isLegacyLevel()const;
-    bool isEducationEditionLevel()const;
-    void setCommandsEnabled(bool);
-    void getBaseGameVersion()const;
-//  LevelData(LevelSettings const&, std::string const&, GeneratorType, BlockPos const&, bool, EducationEditionOffer, float, float); //TODO: incomplete function definition
-//  void setEducationEditionOffer(EducationEditionOffer); //TODO: incomplete function definition
-    bool hasAchievementsDisabled()const;
-    void getGameDifficulty()const;
-    void setUseMsaGamertagsOnly(bool);
-    void getForceGameType()const;
-    bool hasSpawnPos()const;
-//  void setXBLBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition
-    bool hasLockedResourcePack()const;
-    void setBonusChestEnabled(bool);
-    void getGameRules()const;
-//  void v1_read(RakNet::BitStream &, StorageVersion); //TODO: incomplete function definition
-    void setLANBroadcastIntent(bool);
-    void clearLoadedPlayerTag();
-    void setOnlySpawnV1Villagers(bool);
-    void createTag()const;
-    void setTexturepacksRequired(bool);
-    void setRequiresCopiedPackRemovalCheck(bool);
-    void incrementTick();
-    void setHasLockedResourcePack(bool);
     void getServerChunkTickRange()const;
-    void getWorldCenter()const;
-    void getGameType()const;
-    bool hasCommandsEnabled()const;
-    bool hasStartWithMapEnabled()const;
-    void getAdventureSettings();
-    void setFromWorldTemplate(bool);
-    void setSpawnMobs(bool);
-    void setBaseGameVersion(BaseGameVersion const&);
-    void getSeed()const;
-    LevelData(LevelData &&);
-    void getWorldTemplateIdentity()const;
-    void getTime()const;
-    void setWorldTemplateIdentity(PackIdVersion const&);
-    void getXBLBroadcastMode()const;
-    void setServerChunkTickRange(unsigned int);
-    void educationFeaturesEnabled()const;
-    void getTagData(CompoundTag const&);
-//  void setGameDifficulty(Difficulty); //TODO: incomplete function definition
-    void setMultiplayerGame(bool);
-    LevelData();
-    bool isPremiumWorldTemplate()const;
-    bool hasBonusChestEnabled()const;
-    bool isFromLockedTemplate()const;
-    void getSpawnPos()const;
-    void setTime(int);
-    void getDefaultAbilities()const;
-    void setMultiplayerGameIntent(bool);
-    void setRainLevel(float);
-    bool hasExperimentalGameplayEnabled()const;
-    void setEducationFeaturesEnabled(bool);
-    bool isTexturepacksRequired()const;
-    void disableAchievements();
-    void setSeed(unsigned int);
-    void getLANBroadcast()const;
-    void getGenerator()const;
-    void getFlatWorldGeneratorOptions()const;
-    void getDefaultAbilities();
-    void setEducationProductId(std::string const&);
-    void getRainLevel()const;
-    bool isAlwaysDay()const;
-    void setRainTime(int);
-    void _setGameRulesBasedOnPremiumContentIdentity();
-    void setStartWithMapEnabled(bool);
-    void setWorldTemplateOptionLocked(bool);
-    void setPremiumTemplateContentIdentity(ContentIdentity const&);
-    void setNetworkVersion(int);
-    void getOnlySpawnV1Villagers()const;
-//  void setGameType(GameType); //TODO: incomplete function definition
-    void setConfirmedPlatformLockedContent(bool);
-    void setCurrentTick(Tick &);
-    bool hasMapsCenteredToOrigin()const;
-    void setForceGameType(bool);
-    void getRainTime()const;
-    void setFromLockedTemplate(bool);
-    void setLevelName(std::string const&);
-    void getPremiumTemplateContentIdentity()const;
-    bool isNewLevel()const;
-//  void setGenerator(GeneratorType); //TODO: incomplete function definition
-//  void setPlatformBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition
-    bool isMultiplayerGame()const;
-    bool requiresCopiedPackRemovalCheck()const;
-    void setBonusChestSpawned(bool);
-    void getLastLoadedWithVersion()const;
-    void getUseMsaGamertagsOnly()const;
-    void getCurrentTick()const;
-    LevelData(CompoundTag const&);
-    void getLastPlayed()const;
-    void getPlatformBroadcastMode()const;
-    bool isFromWorldTemplate()const;
-    void setTagData(CompoundTag &)const;
-    bool isRaining()const;
-    void setLANBroadcast(bool);
-    bool isLightning()const;
-    void getLANBroadcastIntent()const;
-    bool hasLockedBehaviorPack()const;
-    bool isGameRule(GameRuleId)const;
-//  void setStorageVersion(StorageVersion); //TODO: incomplete function definition
-    void setLightningTime(int);
-//  void setXBLBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition
-    void getBonusChestSpawned()const;
-    void updateLastTimePlayed()const;
-    void getXBLBroadcastIntent()const;
-//  void setPlatformBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition
-    void getSpawnMobs()const;
-    void _updateLimitedWorldOrigin(BlockPos const&);
-    std::string getLevelName()const;
-    void getLightningTime()const;
-    void setEducationOid(std::string const&);
-    void getLightningLevel()const;
-    std::string getEducationProductId()const;
-    void getEducationEditionOffer()const;
-    void getNetworkVersion()const;
-    void setHasLockedBehaviorPack(bool);
-    ~LevelData();
-    void getLoadedPlayerTag();
+//  void v1_read(RakNet::BitStream &, StorageVersion); //TODO: incomplete function definition
     void getNetherScale()const;
-    void getStorageVersion()const;
-    void getPlatformBroadcastIntent()const;
-    void getMinCompatibleClientVersion()const;
+    bool isRaining()const;
+    bool isNewLevel()const;
+    bool hasConfirmedPlatformLockedContent()const;
+    void setPremiumTemplateContentIdentity(ContentIdentity const&);
+    void getFlatWorldGeneratorOptions()const;
+//  void setGameDifficulty(Difficulty); //TODO: incomplete function definition
+    void setLANBroadcastIntent(bool);
+    void setForceGameType(bool);
+    bool isLightning()const;
+    void setStartWithMapEnabled(bool);
+    void setConfirmedPlatformLockedContent(bool);
+    void setLevelName(std::string const&);
+    void getSpawnMobs()const;
+//  void setXBLBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition
+    void getNetworkVersion()const;
+//  void setEducationEditionOffer(EducationEditionOffer); //TODO: incomplete function definition
+    void getGameType()const;
+    bool isWorldTemplateOptionLocked()const;
+    void getLastPlayed()const;
+    void getDefaultAbilities();
+    bool isFromLockedTemplate()const;
+    bool hasMapsCenteredToOrigin()const;
+    void clearLoadedPlayerTag();
+//  void setPlatformBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition
+    LevelData(CompoundTag const&);
+    void getLANBroadcast()const;
+    void setRequiresCopiedPackRemovalCheck(bool);
+    void setEducationFeaturesEnabled(bool);
     void setLightningLevel(float);
     void getWorldStartCount()const;
-    bool hasConfirmedPlatformLockedContent()const;
-    void setSpawnPos(BlockPos const&);
-    bool achievementsWillBeDisabledOnLoad()const;
     void recordStartUp();
+    void getMinCompatibleClientVersion()const;
+    void updateLastTimePlayed()const;
+    void setTime(int);
+    void getPlatformBroadcastIntent()const;
+    void getRainTime()const;
+    void setBaseGameVersion(BaseGameVersion const&);
+    bool hasCommandsEnabled()const;
+    void setFromWorldTemplate(bool);
+    void getStorageVersion()const;
+    void setNetworkVersion(int);
     void getGameRules();
-    void touchLastLoadedWithVersion();
+//  void setPlatformBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition
+    void getForceGameType()const;
+    void disableAchievements();
+    void getUseMsaGamertagsOnly()const;
+    void getOnlySpawnV1Villagers()const;
+    void getAdventureSettings();
+    void createTag()const;
+//  void setXBLBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition
+    void setEducationProductId(std::string const&);
+    void setRainLevel(float);
+    LevelData();
+    bool isEducationEditionLevel()const;
+    void getMultiplayerGameIntent()const;
+    void getEducationEditionOffer()const;
+    void educationFeaturesEnabled()const;
+    bool isTexturepacksRequired()const;
+    void setTagData(CompoundTag &)const;
+//  LevelData(LevelSettings const&, std::string const&, GeneratorType, BlockPos const&, bool, EducationEditionOffer, float, float); //TODO: incomplete function definition
+    void setSpawnMobs(bool);
+    bool hasLockedResourcePack()const;
+    void getPlatformBroadcastMode()const;
+    bool hasBonusChestEnabled()const;
+    void getTime()const;
+    void getWorldCenter()const;
+    void setHasLockedResourcePack(bool);
+    void getCurrentTick()const;
+    void setWorldTemplateOptionLocked(bool);
+    void setFromLockedTemplate(bool);
+    void setSpawnPos(BlockPos const&);
+    std::string getEducationProductId()const;
+    void getWorldTemplateIdentity()const;
+    void incrementTick();
+    void setMultiplayerGame(bool);
+    void setRainTime(int);
+    bool isAlwaysDay()const;
+    void getGameDifficulty()const;
+    void getBonusChestSpawned()const;
+    void getTagData(CompoundTag const&);
+    void setServerChunkTickRange(unsigned int);
+    void getLightningTime()const;
+    bool isMultiplayerGame()const;
+    void setCurrentTick(Tick &);
     std::string getEducationOid()const;
+    LevelData(LevelData &&);
+    bool hasSpawnPos()const;
+    bool isGameRule(GameRuleId)const;
+    void setLightningTime(int);
+    void getXBLBroadcastMode()const;
+//  void setGameType(GameType); //TODO: incomplete function definition
+    bool isFromWorldTemplate()const;
+    void getSpawnPos()const;
+//  void setGenerator(GeneratorType); //TODO: incomplete function definition
+    void setUseMsaGamertagsOnly(bool);
+    void setOnlySpawnV1Villagers(bool);
+    void setTexturepacksRequired(bool);
+    void setLANBroadcast(bool);
+    void setEducationOid(std::string const&);
+    void setWorldTemplateIdentity(PackIdVersion const&);
+    void _setGameRulesBasedOnPremiumContentIdentity();
+    void touchLastLoadedWithVersion();
+    void getPremiumTemplateContentIdentity()const;
+    void getLANBroadcastIntent()const;
+    bool hasExperimentalGameplayEnabled()const;
+    void setHasLockedBehaviorPack(bool);
+    void getLastLoadedWithVersion()const;
+    void _updateLimitedWorldOrigin(BlockPos const&);
+    void getXBLBroadcastIntent()const;
+    void setMultiplayerGameIntent(bool);
+//  void setStorageVersion(StorageVersion); //TODO: incomplete function definition
+    void getBaseGameVersion()const;
+    void getDefaultAbilities()const;
+    void getSeed()const;
+    void getLoadedPlayerTag();
+    bool isPremiumWorldTemplate()const;
+    void getLightningLevel()const;
+    void getRainLevel()const;
+    void setBonusChestSpawned(bool);
+    void getGenerator()const;
+    bool requiresCopiedPackRemovalCheck()const;
+    bool hasLockedBehaviorPack()const;
+    bool hasStartWithMapEnabled()const;
+    bool isLegacyLevel()const;
+    void setCommandsEnabled(bool);
+    void setBonusChestEnabled(bool);
+    bool hasAchievementsDisabled()const;
+    void setSeed(unsigned int);
+    void getGameRules()const;
+    bool achievementsWillBeDisabledOnLoad()const;
+    std::string getLevelName()const;
+    ~LevelData();
 };

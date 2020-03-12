@@ -1,10 +1,6 @@
 #pragma once
 
-#include "unmapped/BlockSource.h"
-#include "../util/BlockPos.h"
 #include <string>
-#include "../../unmapped/Material.h"
-#include "../util/Vec3.h"
 #include "BlockLegacy.h"
 
 

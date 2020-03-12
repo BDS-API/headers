@@ -2,7 +2,6 @@
 
 #include <string>
 #include <array>
-#include "../bedrock/util/Color.h"
 
 
 namespace ColorFormat {
@@ -30,13 +29,13 @@ namespace ColorFormat {
     static std::string ITALIC;
     static std::string RESET;
 
-    void FromString(std::string const&);
-    bool IsColorCode(std::string const&);
-    void ColorFromColorCode(std::string const&);
-    void ColorFromChar(char);
-    void getCurrentColors();
+    void setColors(std::array<Color, 17ul> const&);
     void NameFromFormatCode(std::string const&);
+    void ColorFromChar(char);
     bool IsColorCode(char);
+    void getCurrentColors();
+    void FromString(std::string const&);
+    void ColorFromColorCode(std::string const&);
     std::string ColorCodeFromColor(Color const&);
-//  void setColors(std::array<Color, 17ul> const&); //TODO: incomplete function definition
+    bool IsColorCode(std::string const&);
 };

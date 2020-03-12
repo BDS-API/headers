@@ -1,20 +1,18 @@
 #pragma once
 
 #include <string>
-#include "../Mob.h"
-#include <vector>
 #include "Goal.h"
-#include "../../../unmapped/MobDescriptor.h"
+#include <vector>
 
 
 class FollowCaravanGoal : Goal {
 
 public:
-    virtual void stop();
-    virtual void appendDebugInfo(std::string &)const;
-    virtual void start();
-    virtual void tick();
     virtual bool canContinueToUse();
+    virtual void tick();
+    virtual void stop();
+    virtual void start();
+    virtual void appendDebugInfo(std::string &)const;
     virtual bool canUse();
     ~FollowCaravanGoal();
     void firstIsLeashed(Mob *, int);

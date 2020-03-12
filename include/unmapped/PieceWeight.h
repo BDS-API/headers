@@ -6,9 +6,9 @@
 class PieceWeight {
 
 public:
-    PieceWeight(PieceWeight &&);
-    void doPlace(int);
-    ~PieceWeight();
     PieceWeight(std::string const&, int, int, int, bool);
+    PieceWeight(PieceWeight &&);
+    ~PieceWeight();
+    void doPlace(int);
     bool isValid();
 };

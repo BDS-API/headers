@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../../unmapped/VariantParameterList.h"
-#include "../actor/Actor.h"
 
 
 class DefinitionTrigger {
@@ -9,7 +7,7 @@ class DefinitionTrigger {
 public:
     DefinitionTrigger(DefinitionTrigger &&);
     DefinitionTrigger();
+    bool canTrigger(Actor const&, VariantParameterList const&)const;
     ~DefinitionTrigger();
     DefinitionTrigger(DefinitionTrigger const&);
-    bool canTrigger(Actor const&, VariantParameterList const&)const;
 };

@@ -6,6 +6,6 @@ namespace MinecraftScheduler {
 
     static long mInstance;
 
-    void client();
     void destroyClientSingleton();
+    void client();
 };

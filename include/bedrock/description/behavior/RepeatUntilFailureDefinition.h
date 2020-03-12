@@ -2,7 +2,6 @@
 
 #include "../../../json/Value.h"
 #include "DecoratorDefinition.h"
-#include "../../../unmapped/BehaviorFactory.h"
 
 
 class RepeatUntilFailureDefinition : DecoratorDefinition {

@@ -1,8 +1,5 @@
 #pragma once
 
-#include "AABBContactPoint.h"
-#include "../bedrock/util/AABB.h"
-#include "../bedrock/util/Vec3.h"
 
 
 class RopeAABB {

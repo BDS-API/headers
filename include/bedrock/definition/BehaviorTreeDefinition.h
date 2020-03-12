@@ -6,9 +6,9 @@
 class BehaviorTreeDefinition {
 
 public:
-    std::string getName()const;
-    BehaviorTreeDefinition(std::string const&);
-    ~BehaviorTreeDefinition();
-    void getRoot()const;
     std::string getStringInput()const;
+    void getRoot()const;
+    std::string getName()const;
+    ~BehaviorTreeDefinition();
+    BehaviorTreeDefinition(std::string const&);
 };

@@ -7,23 +7,23 @@ namespace mce {
     class Blob {
 
     public:
-        Blob(unsigned long);
+        void getSpan()const;
         void begin();
+        void cbegin()const;
+        void get();
+        Blob();
+        Blob(unsigned long);
+        void getSpan();
+        ~Blob();
+        void swap(mce::Blob &);
+        void end();
         void size()const;
         Blob(unsigned char const*, unsigned long);
-        void cend()const;
-        void cbegin()const;
-        Blob(mce::Blob &&);
-        void end();
         void empty()const;
-        void data();
         void data()const;
-        void get();
+        void data();
         void get()const;
-        ~Blob();
-        void getSpan();
-        void getSpan()const;
-        Blob();
-        void swap(mce::Blob &);
+        void cend()const;
+        Blob(mce::Blob &&);
     };
 }

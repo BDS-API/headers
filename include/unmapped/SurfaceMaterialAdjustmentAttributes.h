@@ -7,9 +7,9 @@ class SurfaceMaterialAdjustmentAttributes {
 public:
     class Element;
 
+    ~SurfaceMaterialAdjustmentAttributes();
     SurfaceMaterialAdjustmentAttributes(SurfaceMaterialAdjustmentAttributes &&);
     SurfaceMaterialAdjustmentAttributes();
-    ~SurfaceMaterialAdjustmentAttributes();
     class Element {
 
     public:

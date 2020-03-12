@@ -1,18 +1,9 @@
 #pragma once
 
-#include <unordered_map>
 #include "../bedrock/util/BlockPos.h"
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
-#include "../bedrock/block/unmapped/BlockSource.h"
-#include <functional>
-#include "../bedrock/level/feature/Feature.h"
-#include <memory>
+#include <unordered_map>
 #include "BoundingBox.h"
-#include "../bedrock/util/Random.h"
-#include "StructureManager.h"
-#include "LegacyStructureSettings.h"
 #include "StructurePoolElement.h"
-#include <utility>
 
 
 class FeaturePoolElement : StructurePoolElement {

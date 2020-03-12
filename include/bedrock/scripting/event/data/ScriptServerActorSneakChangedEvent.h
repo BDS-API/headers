@@ -1,9 +1,7 @@
 #pragma once
 
-#include "../../unmapped/ScriptEngine.h"
+#include <string>
 #include "ScriptEventData.h"
-#include "../../../actor/unmapped/ActorUniqueID.h"
-#include "../../ScriptObjectHandle.h"
 
 
 class ScriptServerActorSneakChangedEvent : ScriptEventData {
@@ -13,9 +11,9 @@ public:
 
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
     ~ScriptServerActorSneakChangedEvent();
-    void setActorId(ActorUniqueID const&);
-    ScriptServerActorSneakChangedEvent();
-    void setIsSneaking(bool);
     void getHash();
+    ScriptServerActorSneakChangedEvent();
     std::string getName();
+    void setIsSneaking(bool);
+    void setActorId(ActorUniqueID const&);
 };

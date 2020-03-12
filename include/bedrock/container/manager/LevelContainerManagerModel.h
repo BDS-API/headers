@@ -1,33 +1,30 @@
 #pragma once
 
-#include "../../item/ItemStack.h"
-#include "ContainerManagerModel.h"
-#include "../../../unmapped/ContainerItemStack.h"
+#include <string>
 #include "../../actor/unmapped/ActorUniqueID.h"
-#include "../../util/BlockPos.h"
-#include "../../actor/Player.h"
+#include "ContainerManagerModel.h"
 
 
 class LevelContainerManagerModel : ContainerManagerModel {
 
 public:
-    ~LevelContainerManagerModel();
-    virtual void getItems();
-    virtual void getSlot(int);
-    virtual bool isValid(float);
-    virtual void setSlot(int, ContainerItemStack const&, bool);
-    virtual void broadcastChanges();
     virtual void init();
+    virtual void broadcastChanges();
+    ~LevelContainerManagerModel();
     virtual void setData(int, int);
+    virtual void setSlot(int, ContainerItemStack const&, bool);
+    virtual void getSlot(int);
+    virtual void getItems();
+    virtual bool isValid(float);
     void getBlockPos()const;
-//  LevelContainerManagerModel(ContainerID, Player &, BlockPos const&, BlockActorType); //TODO: incomplete function definition
-    void _onBlockSlotChanged(int, ItemStack const&, ItemStack const&);
-    void setEntityUniqueID(ActorUniqueID);
-    void getEntityUniqueID()const;
-    void _getBlockEntity();
     std::string getEntityName()const;
     void setBlockPos(BlockPos const&);
+    void getEntityUniqueID()const;
+//  LevelContainerManagerModel(ContainerID, Player &, BlockPos const&, BlockActorType); //TODO: incomplete function definition
+    void _getBlockEntity();
+    void setEntityUniqueID(ActorUniqueID);
     void _getEntity();
 //  LevelContainerManagerModel(ContainerID, Player &, ActorUniqueID); //TODO: incomplete function definition
+    void _onBlockSlotChanged(int, ItemStack const&, ItemStack const&);
     void _getContainer();
 };

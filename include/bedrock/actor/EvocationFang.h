@@ -1,20 +1,17 @@
 #pragma once
 
 #include "Actor.h"
-#include "unmapped/ActorDefinitionIdentifier.h"
-#include "Mob.h"
-#include "unmapped/ActorDefinitionGroup.h"
 
 
 class EvocationFang : Actor {
 
 public:
-    virtual void getLifeSpan()const;
-    virtual void getSourceUniqueID()const;
-    virtual void getShadowRadius()const;
     virtual void normalTick();
-    ~EvocationFang();
 //  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition
-    EvocationFang(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    ~EvocationFang();
+    virtual void getShadowRadius()const;
+    virtual void getSourceUniqueID()const;
+    virtual void getLifeSpan()const;
     void dealDamageTo(Mob &);
+    EvocationFang(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
 };

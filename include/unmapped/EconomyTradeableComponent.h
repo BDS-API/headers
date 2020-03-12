@@ -1,60 +1,52 @@
 #pragma once
 
-#include "../bedrock/actor/Player.h"
-#include "../bedrock/actor/Actor.h"
-#include "../bedrock/network/packet/UpdateTradePacket.h"
-#include "Trade.h"
+#include <string>
 #include <vector>
-#include "../bedrock/item/ItemStack.h"
-#include "../bedrock/nbt/CompoundTag.h"
-#include "DataLoadHelper.h"
-#include "MerchantRecipeList.h"
-#include "../bedrock/actor/unmapped/ActorInteraction.h"
 
 
 class EconomyTradeableComponent {
 
 public:
-    void getCurrentTradeExp()const;
-    void setOffers(MerchantRecipeList *);
-    void notifyTrade(int);
-    bool hasSupplyRemaining()const;
-    void _generateTrades();
-    void _setMaxTradeTier(int);
-    void fixVillagerTierToMatchTradeList(MerchantRecipeList *);
-    void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    void _setTradeTier(int);
-    void addAdditionalSaveData(CompoundTag &);
-    void _canLevelUp();
-    EconomyTradeableComponent(Actor &);
-    void getTradeExpRequirements()const;
-    void getTradeExpForCurrentLevel()const;
-    bool isMaxLevel()const;
-    std::string getDisplayName()const;
-    void getOffers();
-    void _rearrangeTradeList(std::vector<Trade> &, unsigned long);
-    void loadOffersFromTag(CompoundTag const*);
     void _calculateDemandPrices(int);
     void setDataFromPacket(UpdateTradePacket const&);
-    void getMaxTradeTier()const;
-    void resupplyTrades();
-    void shouldConvertTrades()const;
-    void shouldPersistTrades()const;
-    void getRiches()const;
     void reloadComponent();
-    void initFromDefinition();
-    void notifyTradeUpdated(ItemStack &, bool);
-    void newServerAiStep();
-    ~EconomyTradeableComponent();
-    std::string loadDisplayName();
-    void setRiches(int);
-    void tryToTransferOldOffers(MerchantRecipeList *);
-    void getTradeExpToNextLevel()const;
-    void _getTradeTable();
-    void getInteraction(Player &, ActorInteraction &);
-    void matchExpAndTier();
-    void _getTradeTierFromCurrentExp();
-    void setCurrentTradeExp(int);
     void getTradeTier()const;
+    void matchExpAndTier();
+    void getCurrentTradeExp()const;
+    void tryToTransferOldOffers(MerchantRecipeList *);
 //  void createDataPacket(ContainerID); //TODO: incomplete function definition
+    void getMaxTradeTier()const;
+    std::string loadDisplayName();
+    void shouldPersistTrades()const;
+    void _rearrangeTradeList(std::vector<Trade> &, unsigned long);
+    void shouldConvertTrades()const;
+    void getRiches()const;
+    bool hasSupplyRemaining()const;
+    std::string getDisplayName()const;
+    void loadOffersFromTag(CompoundTag const*);
+    void _setTradeTier(int);
+    void getInteraction(Player &, ActorInteraction &);
+    void resupplyTrades();
+    void setOffers(MerchantRecipeList *);
+    void addAdditionalSaveData(CompoundTag &);
+    void setCurrentTradeExp(int);
+    void getTradeExpToNextLevel()const;
+    ~EconomyTradeableComponent();
+    void notifyTrade(int);
+    void newServerAiStep();
+    EconomyTradeableComponent(Actor &);
+    void _setMaxTradeTier(int);
+    void notifyTradeUpdated(ItemStack &, bool);
+    void _generateTrades();
+    void _canLevelUp();
+    void initFromDefinition();
+    bool isMaxLevel()const;
+    void _getTradeTierFromCurrentExp();
+    void setRiches(int);
+    void _getTradeTable();
+    void fixVillagerTierToMatchTradeList(MerchantRecipeList *);
+    void getOffers();
+    void getTradeExpForCurrentLevel()const;
+    void getTradeExpRequirements()const;
+    void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
 };

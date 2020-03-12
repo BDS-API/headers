@@ -1,6 +1,5 @@
 #pragma once
 
-#include "EntityRegistryOwned.h"
 
 
 class OwnerStorageEntity {
@@ -8,19 +7,19 @@ class OwnerStorageEntity {
 public:
     class EntityContextOwned;
 
-    void _reset();
 //  OwnerStorageEntity(OwnerStorageEntity::VariadicInit, EntityRegistryOwned &); //TODO: incomplete function definition
-//  OwnerStorageEntity(OwnerStorageEntity::EmptyInit); //TODO: incomplete function definition
-    OwnerStorageEntity(OwnerStorageEntity &&);
-    ~OwnerStorageEntity();
-    void _hasValue()const;
     void _getStackRef()const;
     void _remake(EntityRegistryOwned &);
+    ~OwnerStorageEntity();
+    void _hasValue()const;
+//  OwnerStorageEntity(OwnerStorageEntity::EmptyInit); //TODO: incomplete function definition
+    void _reset();
+    OwnerStorageEntity(OwnerStorageEntity &&);
     class EntityContextOwned {
 
     public:
         void destroy();
-        void _ownedRegistry()const;
         EntityContextOwned(EntityRegistryOwned &);
+        void _ownedRegistry()const;
     };
 };

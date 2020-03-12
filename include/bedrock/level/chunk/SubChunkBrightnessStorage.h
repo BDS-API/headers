@@ -13,7 +13,7 @@ public:
 
     public:
         void toBrightnessPair()const;
-        bool isDarkness()const;
         LightPair(unsigned char);
+        bool isDarkness()const;
     };
 };

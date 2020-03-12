@@ -5,7 +5,7 @@
 class ExecCtxPluck /*grpc_core::ExecCtx*/ { //TODO: incomplete class definition
 
 public:
-    virtual void CheckReadyToFinish();
     ~ExecCtxPluck();
+    virtual void CheckReadyToFinish();
     ExecCtxPluck(void *);
 };

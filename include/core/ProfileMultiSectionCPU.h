@@ -14,10 +14,10 @@ namespace Core {
 
             void end();
             ProfileMultiSectionCPU();
-            void suspend();
-            ProfileMultiSectionCPU(Core::Profile::CPUProfileToken);
-            void begin();
             ~ProfileMultiSectionCPU();
+            void suspend();
+            void begin();
+            ProfileMultiSectionCPU(Core::Profile::CPUProfileToken);
             class ProfileSectionSuspend {
 
             public:

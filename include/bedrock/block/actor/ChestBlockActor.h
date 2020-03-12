@@ -1,92 +1,82 @@
 #pragma once
 
-#include "RandomizableBlockActorFillingContainer.h"
-#include "BlockActor.h"
-#include "../../item/ItemStack.h"
 #include <string>
-#include "../../../unmapped/ContainerContentChangeListener.h"
-#include "../../../unmapped/DataLoadHelper.h"
-#include "../../item/ItemInstance.h"
-#include "../../level/Level.h"
-#include "../../nbt/CompoundTag.h"
-#include "../unmapped/BlockSource.h"
 #include <vector>
-#include "../../util/BlockPos.h"
-#include "../../actor/Player.h"
+#include "RandomizableBlockActorFillingContainer.h"
 
 
 class ChestBlockActor : RandomizableBlockActorFillingContainer {
 
 public:
+    virtual void clearCache();
+    virtual void _detectEntityObstruction(BlockSource &)const;
+    virtual void playOpenSound(BlockSource &);
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
+    virtual void triggerEvent(int, int);
+    virtual void getObstructionAABB()const;
     virtual void playCloseSound(BlockSource &);
-    virtual void loadItems(CompoundTag const&, Level &);
-    virtual void onNeighborChanged(BlockSource &, BlockPos const&);
-    virtual void removeContentChangeListener(ContainerContentChangeListener *);
-    virtual void tick(BlockSource &);
-    virtual void setContainerChanged(int);
     virtual std::string getName()const;
     ~ChestBlockActor();
-    virtual void stopOpen(Player &);
-    virtual void getMaxStackSize()const;
-    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
     virtual bool canPushInItem(BlockSource &, int, int, ItemInstance const&)const;
-    virtual void _detectEntityObstruction(BlockSource &)const;
-    virtual void saveItems(CompoundTag &)const;
-    virtual bool canPullOutItem(BlockSource &, int, int, ItemInstance const&)const;
-    virtual void getUpdatePacket(BlockSource &);
-    virtual void onRemoved(BlockSource &);
-    virtual void onPlace(BlockSource &);
-    virtual void saveItemInstanceData(CompoundTag &);
-    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
-    virtual void getContainerSize()const;
-    virtual void addContentChangeListener(ContainerContentChangeListener *);
     virtual void clearInventory(int);
-    virtual void getDebugText(std::vector<std::string> &, BlockPos const&);
-    virtual void getObstructionAABB()const;
-    virtual void getItem(int)const;
-    virtual void setItem(int, ItemStack const&);
-    virtual void clearCache();
-    virtual void save(CompoundTag &)const;
-    virtual void playOpenSound(BlockSource &);
-    virtual void _canOpenThis(BlockSource &)const;
-    virtual void onChanged(BlockSource &);
-    virtual void triggerEvent(int, int);
-    virtual void getCrackEntity(BlockSource &, BlockPos const&);
-    virtual void onMove();
     virtual void startOpen(Player &);
+    virtual bool canPullOutItem(BlockSource &, int, int, ItemInstance const&)const;
+    virtual void getContainerSize()const;
+    virtual void onMove();
+    virtual void saveItemInstanceData(CompoundTag &);
+    virtual void setItem(int, ItemStack const&);
+    virtual void tick(BlockSource &);
     virtual void getContainer();
-    void getOldOpenness()const;
-    void _tickOpenLid(BlockSource &);
-    void unpair(BlockSource &);
-    void getOpenness()const;
-    bool isTrappedChest()const;
-    void getPairedChestPosition();
-    void denyNotifyPlayersChange();
-    bool isMainSubchest();
-    void getOpenCount()const;
-    void openBy(Player &);
-    void getModelOffsetX();
-//  ChestBlockActor(BlockActorType, std::string const&, BlockActorRendererId, BlockPos const&, bool); //TODO: incomplete function definition
-    void getIsGlobalChest();
-    bool canOpen(BlockSource &)const;
-    void _detectBlockObstruction(BlockSource &)const;
-    void onMove(BlockSource &, BlockPos const&, BlockPos const&);
-    void _saveClientSideState(CompoundTag &)const;
-    void pairWith(ChestBlockActor *, bool);
-    void setOldOpenness(float);
-    bool isLargeChest()const;
-    void _legacyDetectBlockObstruction(BlockSource &)const;
-    void _playerClosedContainer(Player &);
-    void _unpair();
-    void createTrappedChestBlockEntity(BlockPos const&);
-    bool isFindable()const;
-    void forceCloseChest(BlockSource &);
-    void setFindable(bool);
+    virtual void onChanged(BlockSource &);
+    virtual void getMaxStackSize()const;
+    virtual void stopOpen(Player &);
+    virtual void saveItems(CompoundTag &)const;
+    virtual void loadItems(CompoundTag const&, Level &);
+    virtual void setContainerChanged(int);
+    virtual void _canOpenThis(BlockSource &)const;
+    virtual void save(CompoundTag &)const;
+    virtual void onNeighborChanged(BlockSource &, BlockPos const&);
+    virtual void _onUpdatePacket(CompoundTag const&, BlockSource &);
+    virtual void getItem(int)const;
+    virtual void addContentChangeListener(ContainerContentChangeListener *);
+    virtual void removeContentChangeListener(ContainerContentChangeListener *);
+    virtual void onRemoved(BlockSource &);
+    virtual void getUpdatePacket(BlockSource &);
+    virtual void getCrackEntity(BlockSource &, BlockPos const&);
+    virtual void getDebugText(std::vector<std::string> &, BlockPos const&);
+    virtual void onPlace(BlockSource &);
     void setOpenness(float);
+    void getPairedChestPosition();
+    void _detectBlockObstruction(BlockSource &)const;
+    void getModelOffsetX();
     bool canPairWith(BlockActor *, BlockSource &);
+    void getOpenCount()const;
     void _validatePairedChest(BlockSource &);
-    void _getCenter(float &, float &, float &);
+    void getIsGlobalChest();
+    bool isTrappedChest()const;
+//  ChestBlockActor(BlockActorType, std::string const&, BlockActorRendererId, BlockPos const&, bool); //TODO: incomplete function definition
+    void forceCloseChest(BlockSource &);
+    void openBy(Player &);
+    void unpair(BlockSource &);
+    void pairWith(ChestBlockActor *, bool);
     void _tryToPairWith(BlockSource &, BlockPos const&);
-    void createChestBlockEntity(BlockPos const&);
+    bool isFindable()const;
+    void _tickOpenLid(BlockSource &);
+    void _getCenter(float &, float &, float &);
+    void _unpair();
+    void onMove(BlockSource &, BlockPos const&, BlockPos const&);
+    bool isLargeChest()const;
+    void _saveClientSideState(CompoundTag &)const;
+    void getOpenness()const;
+    bool canOpen(BlockSource &)const;
+    void setFindable(bool);
     void _closeChest(BlockSource &, Player *);
+    void getOldOpenness()const;
+    void createChestBlockEntity(BlockPos const&);
+    bool isMainSubchest();
+    void denyNotifyPlayersChange();
+    void createTrappedChestBlockEntity(BlockPos const&);
+    void _legacyDetectBlockObstruction(BlockSource &)const;
+    void setOldOpenness(float);
+    void _playerClosedContainer(Player &);
 };

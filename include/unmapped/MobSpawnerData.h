@@ -1,7 +1,5 @@
 #pragma once
 
-#include "MobSpawnRules.h"
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
 
 
 class MobSpawnerData {

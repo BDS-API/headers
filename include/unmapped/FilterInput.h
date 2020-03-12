@@ -6,16 +6,16 @@
 class FilterInput {
 
 public:
-    void getType()const;
-    FilterInput(char const*);
-    FilterInput(int);
     std::string getString()const;
-    ~FilterInput();
-    void getBool()const;
-    FilterInput(bool);
     FilterInput(FilterInput const&);
-    FilterInput(std::string const&);
+    void getBool()const;
+    void getType()const;
     FilterInput(float);
-    void getFloat()const;
     void getInt()const;
+    FilterInput(int);
+    void getFloat()const;
+    ~FilterInput();
+    FilterInput(char const*);
+    FilterInput(std::string const&);
+    FilterInput(bool);
 };

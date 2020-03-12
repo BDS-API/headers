@@ -10,14 +10,14 @@ namespace Util {
     public:
         class HashFunc;
 
-        void operator<(Util::HashString const&)const;
-        std::string getString()const;
         void operator==(Util::HashString const&)const;
-        HashString(std::string const&);
         HashString(Util::HashString const&);
+        void operator<(Util::HashString const&)const;
+        HashString();
+        HashString(std::string const&);
+        std::string getString()const;
         ~HashString();
         void operator!=(Util::HashString const&)const;
-        HashString();
         class HashFunc {
 
         public:

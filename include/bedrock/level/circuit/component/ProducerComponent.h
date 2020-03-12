@@ -1,24 +1,20 @@
 #pragma once
 
-#include "../../../../unmapped/CircuitTrackingInfo.h"
-#include "../../../../unmapped/CircuitSystem.h"
-#include "../../../../unmapped/CircuitSceneGraph.h"
-#include "../../../util/BlockPos.h"
 #include "BaseCircuitComponent.h"
 
 
 class ProducerComponent : BaseCircuitComponent {
 
 public:
-    virtual void setStopPower(bool);
-    virtual bool canStopPower();
-    ~ProducerComponent();
-    virtual void getInstanceType()const;
     virtual void setStrength(int);
+    ~ProducerComponent();
     virtual void evaluate(CircuitSystem &, BlockPos const&);
+    virtual void setStopPower(bool);
     virtual void getBaseType()const;
+    virtual void getInstanceType()const;
+    virtual bool canStopPower();
     virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
+    ProducerComponent();
     bool doesAllowAttachments();
     void allowAttachments(bool);
-    ProducerComponent();
 };

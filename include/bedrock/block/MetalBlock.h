@@ -1,7 +1,7 @@
 #pragma once
 
-#include "BlockLegacy.h"
 #include <string>
+#include "BlockLegacy.h"
 
 
 class MetalBlock : BlockLegacy {

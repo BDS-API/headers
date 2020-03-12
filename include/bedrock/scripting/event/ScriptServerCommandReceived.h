@@ -1,10 +1,6 @@
 #pragma once
 
-#include "../ScriptObjectHandle.h"
 #include <string>
-#include "../unmapped/ScriptEngine.h"
-#include "../unmapped/ScriptServerContext.h"
-#include "../ScriptVersionInfo.h"
 
 
 class ScriptServerCommandReceived /*ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent*/ { //TODO: incomplete class definition
@@ -12,9 +8,9 @@ class ScriptServerCommandReceived /*ScriptTemplateFactory<ScriptServerContext>::
 public:
     static long mHash;
 
-    virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);
     ~ScriptServerCommandReceived();
     virtual void getEventData(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle &);
-    ScriptServerCommandReceived();
+    virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);
     void getHash();
+    ScriptServerCommandReceived();
 };

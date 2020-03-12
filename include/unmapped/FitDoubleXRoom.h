@@ -1,9 +1,7 @@
 #pragma once
 
-#include "../bedrock/definition/RoomDefinition.h"
-#include "../bedrock/util/Random.h"
-#include "MonumentRoomFitter.h"
 #include <memory>
+#include "MonumentRoomFitter.h"
 
 
 class FitDoubleXRoom : MonumentRoomFitter {

@@ -2,9 +2,6 @@
 
 #include <string>
 #include "MultiRecipe.h"
-#include "../../../mce/UUID.h"
-#include "../../level/Level.h"
-#include "../../container/CraftingContainer.h"
 
 
 class BannerDuplicateRecipe : MultiRecipe {
@@ -12,14 +9,14 @@ class BannerDuplicateRecipe : MultiRecipe {
 public:
     static long ID;
 
+    ~BannerDuplicateRecipe();
     virtual void getCraftingSize()const;
     virtual void getResultItem()const;
-    virtual void matches(CraftingContainer &, Level &)const;
-    virtual void getIngredient(int, int)const;
-    virtual bool isExperimental()const;
     virtual void size()const;
-    ~BannerDuplicateRecipe();
+    virtual void getIngredient(int, int)const;
     virtual void assemble(CraftingContainer &)const;
-    BannerDuplicateRecipe(std::string);
+    virtual void matches(CraftingContainer &, Level &)const;
+    virtual bool isExperimental()const;
     BannerDuplicateRecipe(std::string, mce::UUID const&);
+    BannerDuplicateRecipe(std::string);
 };
