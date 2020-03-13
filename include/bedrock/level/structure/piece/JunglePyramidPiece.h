@@ -6,8 +6,8 @@
 class JunglePyramidPiece : ScatteredFeaturePiece {
 
 public:
-    virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    ~JunglePyramidPiece();
-    virtual void getType()const;
-    JunglePyramidPiece(int, int);
+    ~JunglePyramidPiece(); // _ZN18JunglePyramidPieceD2Ev
+    virtual void getType()const; // _ZNK18JunglePyramidPiece7getTypeEv
+    virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN18JunglePyramidPiece11postProcessEP11BlockSourceR6RandomRK11BoundingBox
+    JunglePyramidPiece(int, int); // _ZN18JunglePyramidPieceC2Eii
 };

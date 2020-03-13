@@ -6,8 +6,8 @@
 class ActorUndergroundTest : SimpleBoolFilterTest {
 
 public:
-    ~ActorUndergroundTest();
-    virtual void getName()const;
-    virtual void evaluate(FilterContext const&)const;
-    ActorUndergroundTest();
+    ~ActorUndergroundTest(); // _ZN20ActorUndergroundTestD2Ev
+    virtual void evaluate(FilterContext const&)const; // _ZNK20ActorUndergroundTest8evaluateERK13FilterContext
+    virtual void getName()const; // _ZNK20ActorUndergroundTest7getNameEv
+    ActorUndergroundTest(); // _ZN20ActorUndergroundTestC2Ev
 };

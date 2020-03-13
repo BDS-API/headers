@@ -6,6 +6,6 @@
 class PropertyDescription : Description {
 
 public:
-    ~PropertyDescription();
-    PropertyDescription();
+    ~PropertyDescription(); // _ZN19PropertyDescriptionD2Ev
+    PropertyDescription(); // _ZN19PropertyDescriptionC2Ev
 };

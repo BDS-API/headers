@@ -6,8 +6,8 @@
 class QueryTargetCommand : Command {
 
 public:
-    ~QueryTargetCommand();
-    virtual void execute(CommandOrigin const&, CommandOutput &)const;
-    QueryTargetCommand();
-    void setup(CommandRegistry &);
+    ~QueryTargetCommand(); // _ZN18QueryTargetCommandD2Ev
+    virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK18QueryTargetCommand7executeERK13CommandOriginR13CommandOutput
+    void setup(CommandRegistry &); // _ZN18QueryTargetCommand5setupER15CommandRegistry
+    QueryTargetCommand(); // _ZN18QueryTargetCommandC2Ev
 };

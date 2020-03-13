@@ -7,8 +7,8 @@
 class OwnerHurtByTargetGoal : TargetGoal {
 
 public:
-    ~OwnerHurtByTargetGoal();
-    virtual bool canUse();
-    virtual void start();
-    OwnerHurtByTargetGoal(Mob &, std::vector<MobDescriptor> const&);
+    ~OwnerHurtByTargetGoal(); // _ZN21OwnerHurtByTargetGoalD2Ev
+    virtual bool canUse(); // _ZN21OwnerHurtByTargetGoal6canUseEv
+    virtual void start(); // _ZN21OwnerHurtByTargetGoal5startEv
+    OwnerHurtByTargetGoal(Mob &, std::vector<MobDescriptor> const&); // _ZN21OwnerHurtByTargetGoalC2ER3MobRKSt6vectorI13MobDescriptorSaIS3_EE
 };

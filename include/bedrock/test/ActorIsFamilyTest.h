@@ -6,8 +6,8 @@
 class ActorIsFamilyTest : SimpleHashStringFilterTest {
 
 public:
-    virtual void evaluate(FilterContext const&)const;
-    virtual void getName()const;
-    ~ActorIsFamilyTest();
-    ActorIsFamilyTest();
+    ~ActorIsFamilyTest(); // _ZN17ActorIsFamilyTestD2Ev
+    virtual void evaluate(FilterContext const&)const; // _ZNK17ActorIsFamilyTest8evaluateERK13FilterContext
+    virtual void getName()const; // _ZNK17ActorIsFamilyTest7getNameEv
+    ActorIsFamilyTest(); // _ZN17ActorIsFamilyTestC2Ev
 };

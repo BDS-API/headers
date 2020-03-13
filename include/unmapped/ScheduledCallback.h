@@ -7,7 +7,7 @@
 class ScheduledCallback {
 
 public:
-    ~ScheduledCallback();
-    ScheduledCallback(long, std::weak_ptr<bool>, std::function<void (void)>);
-    ScheduledCallback(ScheduledCallback const&);
+    ScheduledCallback(long, std::weak_ptr<bool>, std::function<void (void)>); // _ZN17ScheduledCallbackC2ElSt8weak_ptrIbESt8functionIFvvEE
+    ~ScheduledCallback(); // _ZN17ScheduledCallbackD2Ev
+    ScheduledCallback(ScheduledCallback const&); // _ZN17ScheduledCallbackC2ERKS_
 };

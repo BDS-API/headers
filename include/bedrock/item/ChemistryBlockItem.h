@@ -6,6 +6,6 @@
 class ChemistryBlockItem : BlockItem {
 
 public:
-    ~ChemistryBlockItem();
-    virtual void fixupOnLoad(ItemStackBase &)const;
+    ~ChemistryBlockItem(); // _ZN18ChemistryBlockItemD2Ev
+    virtual void fixupOnLoad(ItemStackBase &)const; // _ZNK18ChemistryBlockItem11fixupOnLoadER13ItemStackBase
 };

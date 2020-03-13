@@ -7,6 +7,6 @@
 class CameraItem : Item {
 
 public:
-    ~CameraItem();
-    CameraItem(std::string const&, int);
+    ~CameraItem(); // _ZN10CameraItemD2Ev
+    CameraItem(std::string const&, int); // _ZN10CameraItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
 };

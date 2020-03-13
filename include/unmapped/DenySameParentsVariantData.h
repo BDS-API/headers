@@ -5,5 +5,5 @@
 class DenySameParentsVariantData {
 
 public:
-    DenySameParentsVariantData();
+    DenySameParentsVariantData(); // _ZN26DenySameParentsVariantDataC2Ev
 };

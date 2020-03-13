@@ -5,6 +5,6 @@
 class ArbitraryBiomeComponent {
 
 public:
-    ArbitraryBiomeComponent();
-    ~ArbitraryBiomeComponent();
+    ArbitraryBiomeComponent(); // _ZN23ArbitraryBiomeComponentC2Ev
+    ~ArbitraryBiomeComponent(); // _ZN23ArbitraryBiomeComponentD2Ev
 };

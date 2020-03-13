@@ -5,7 +5,7 @@
 class GameRuleId {
 
 public:
-    GameRuleId(GameRuleId const&);
-    GameRuleId(GameRuleId &&);
-    GameRuleId(int);
+    GameRuleId(int); // _ZN10GameRuleIdC2Ei
+    GameRuleId(GameRuleId const&); // _ZN10GameRuleIdC2ERKS_
+    GameRuleId(GameRuleId &&); // _ZN10GameRuleIdC2EOS_
 };

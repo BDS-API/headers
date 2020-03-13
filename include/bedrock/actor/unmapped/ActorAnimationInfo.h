@@ -5,6 +5,6 @@
 class ActorAnimationInfo {
 
 public:
-    ~ActorAnimationInfo();
-    ActorAnimationInfo();
+    ActorAnimationInfo(); // _ZN18ActorAnimationInfoC2Ev
+    ~ActorAnimationInfo(); // _ZN18ActorAnimationInfoD2Ev
 };

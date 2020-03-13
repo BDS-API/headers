@@ -6,8 +6,8 @@
 class DifficultyCommand : Command {
 
 public:
-    ~DifficultyCommand();
-    virtual void execute(CommandOrigin const&, CommandOutput &)const;
-    void setup(CommandRegistry &);
-    DifficultyCommand();
+    ~DifficultyCommand(); // _ZN17DifficultyCommandD2Ev
+    virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK17DifficultyCommand7executeERK13CommandOriginR13CommandOutput
+    void setup(CommandRegistry &); // _ZN17DifficultyCommand5setupER15CommandRegistry
+    DifficultyCommand(); // _ZN17DifficultyCommandC2Ev
 };

@@ -6,13 +6,13 @@
 class PrioritizedGoal {
 
 public:
-    PrioritizedGoal(PrioritizedGoal &&);
-    void getToStart()const;
-    ~PrioritizedGoal();
-    PrioritizedGoal(int, std::unique_ptr<Goal>);
-    void setToStart(bool);
-    void getPriority()const;
-    void getUsed()const;
-    void setPriority(int);
-    void setUsed(bool);
+    PrioritizedGoal(int, std::unique_ptr<Goal>); // _ZN15PrioritizedGoalC2EiSt10unique_ptrI4GoalSt14default_deleteIS1_EE
+    PrioritizedGoal(PrioritizedGoal &&); // _ZN15PrioritizedGoalC2EOS_
+    ~PrioritizedGoal(); // _ZN15PrioritizedGoalD2Ev
+    void getPriority()const; // _ZNK15PrioritizedGoal11getPriorityEv
+    void setPriority(int); // _ZN15PrioritizedGoal11setPriorityEi
+    void getUsed()const; // _ZNK15PrioritizedGoal7getUsedEv
+    void setUsed(bool); // _ZN15PrioritizedGoal7setUsedEb
+    void getToStart()const; // _ZNK15PrioritizedGoal10getToStartEv
+    void setToStart(bool); // _ZN15PrioritizedGoal10setToStartEb
 };

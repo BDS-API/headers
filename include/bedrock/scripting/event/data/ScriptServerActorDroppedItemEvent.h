@@ -9,11 +9,11 @@ class ScriptServerActorDroppedItemEvent : ScriptEventData {
 public:
     static long mHash;
 
-    ~ScriptServerActorDroppedItemEvent();
-    virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
-    void setItemStack(ItemInstance const&);
-    void setActorId(ActorUniqueID const&);
-    std::string getName();
-    ScriptServerActorDroppedItemEvent();
-    void getHash();
+    ~ScriptServerActorDroppedItemEvent(); // _ZN33ScriptServerActorDroppedItemEventD2Ev
+    virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const; // _ZNK33ScriptServerActorDroppedItemEvent10_serializeER12ScriptEngineRN9ScriptApi18ScriptObjectHandleE
+    void getHash(); // _ZN33ScriptServerActorDroppedItemEvent7getHashEv
+    ScriptServerActorDroppedItemEvent(); // _ZN33ScriptServerActorDroppedItemEventC2Ev
+    void setActorId(ActorUniqueID const&); // _ZN33ScriptServerActorDroppedItemEvent10setActorIdERK13ActorUniqueID
+    void setItemStack(ItemInstance const&); // _ZN33ScriptServerActorDroppedItemEvent12setItemStackERK12ItemInstance
+    std::string getName(); // _ZN33ScriptServerActorDroppedItemEvent7getNameB5cxx11Ev
 };

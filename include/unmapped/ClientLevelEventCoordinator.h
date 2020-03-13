@@ -5,6 +5,6 @@
 class ClientLevelEventCoordinator {
 
 public:
-    ClientLevelEventCoordinator();
-    ~ClientLevelEventCoordinator();
+    ~ClientLevelEventCoordinator(); // _ZN27ClientLevelEventCoordinatorD2Ev
+    ClientLevelEventCoordinator(); // _ZN27ClientLevelEventCoordinatorC2Ev
 };

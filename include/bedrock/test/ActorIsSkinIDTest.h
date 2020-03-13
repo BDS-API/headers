@@ -6,8 +6,8 @@
 class ActorIsSkinIDTest : SimpleIntFilterTest {
 
 public:
-    virtual void evaluate(FilterContext const&)const;
-    virtual void getName()const;
-    ~ActorIsSkinIDTest();
-    ActorIsSkinIDTest();
+    ~ActorIsSkinIDTest(); // _ZN17ActorIsSkinIDTestD2Ev
+    virtual void evaluate(FilterContext const&)const; // _ZNK17ActorIsSkinIDTest8evaluateERK13FilterContext
+    virtual void getName()const; // _ZNK17ActorIsSkinIDTest7getNameEv
+    ActorIsSkinIDTest(); // _ZN17ActorIsSkinIDTestC2Ev
 };

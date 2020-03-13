@@ -7,9 +7,9 @@
 class WorldTemplatePackSource : DirectoryPackSource {
 
 public:
-    virtual void load(PackManifestFactory &, IContentKeyProvider const&);
-    ~WorldTemplatePackSource();
-    std::string _getFolderPathForPackType()const;
-//  WorldTemplatePackSource(WorldTemplateManager const&, mce::UUID const&, PackType, PackOrigin); //TODO: incomplete function definition
-    void getWorldTemplateId()const;
+    ~WorldTemplatePackSource(); // _ZN23WorldTemplatePackSourceD2Ev
+    virtual void load(PackManifestFactory &, IContentKeyProvider const&); // _ZN23WorldTemplatePackSource4loadER19PackManifestFactoryRK19IContentKeyProvider
+//  WorldTemplatePackSource(WorldTemplateManager const&, mce::UUID const&, PackType, PackOrigin); //TODO: incomplete function definition // _ZN23WorldTemplatePackSourceC2ERK20WorldTemplateManagerRKN3mce4UUIDE8PackType10PackOrigin
+    std::string _getFolderPathForPackType()const; // _ZNK23WorldTemplatePackSource25_getFolderPathForPackTypeB5cxx11Ev
+    void getWorldTemplateId()const; // _ZNK23WorldTemplatePackSource18getWorldTemplateIdEv
 };

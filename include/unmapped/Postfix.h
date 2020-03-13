@@ -7,6 +7,6 @@ namespace commands {
     class Postfix {
 
     public:
-        Postfix(char const*);
+        Postfix(char const*); // _ZN8commands7PostfixC2EPKc
     };
 }

@@ -6,8 +6,8 @@
 class RepeatUntilFailureNode : BehaviorNode {
 
 public:
-    ~RepeatUntilFailureNode();
-    virtual void initializeFromDefinition(Actor &);
-    virtual void tick(Actor &);
-    RepeatUntilFailureNode();
+    ~RepeatUntilFailureNode(); // _ZN22RepeatUntilFailureNodeD2Ev
+    virtual void tick(Actor &); // _ZN22RepeatUntilFailureNode4tickER5Actor
+    virtual void initializeFromDefinition(Actor &); // _ZN22RepeatUntilFailureNode24initializeFromDefinitionER5Actor
+    RepeatUntilFailureNode(); // _ZN22RepeatUntilFailureNodeC2Ev
 };

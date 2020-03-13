@@ -7,6 +7,6 @@ namespace BlockGeometry {
     class TessellatedModel {
 
     public:
-        ~TessellatedModel();
+        ~TessellatedModel(); // _ZN13BlockGeometry16TessellatedModelD2Ev
     };
 }

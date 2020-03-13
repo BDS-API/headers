@@ -6,7 +6,7 @@ namespace Core {
 
     namespace SingleThreadedLock {
 
-        void lock();
-        void unlock();
+        void lock(); // _ZN4Core18SingleThreadedLock4lockEv
+        void unlock(); // _ZN4Core18SingleThreadedLock6unlockEv
     };
 }

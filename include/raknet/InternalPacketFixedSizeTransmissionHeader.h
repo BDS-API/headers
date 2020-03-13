@@ -7,6 +7,6 @@ namespace RakNet {
     class InternalPacketFixedSizeTransmissionHeader {
 
     public:
-        InternalPacketFixedSizeTransmissionHeader();
+        InternalPacketFixedSizeTransmissionHeader(); // _ZN6RakNet41InternalPacketFixedSizeTransmissionHeaderC2Ev
     };
 }

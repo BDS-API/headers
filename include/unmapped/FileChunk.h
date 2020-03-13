@@ -5,7 +5,7 @@
 class FileChunk {
 
 public:
-    void operator<(FileChunk const&)const;
-    ~FileChunk();
-    FileChunk(FileChunk &&);
+    ~FileChunk(); // _ZN9FileChunkD2Ev
+    FileChunk(FileChunk &&); // _ZN9FileChunkC2EOS_
+    void operator<(FileChunk const&)const; // _ZNK9FileChunkltERKS_
 };

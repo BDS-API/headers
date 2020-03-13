@@ -5,5 +5,5 @@
 
 namespace LootItemFunctions {
 
-    void deserialize(Json::Value);
+    void deserialize(Json::Value); // _ZN17LootItemFunctions11deserializeEN4Json5ValueE
 };

@@ -8,7 +8,7 @@ namespace Bedrock {
 
         namespace AsyncResult {
 
-            void done();
+            void done(); // _ZN7Bedrock9Threading11AsyncResult4doneEv
         };
     }
 }

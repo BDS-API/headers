@@ -6,7 +6,7 @@
 class ExplodeSystem : ITickingSystem {
 
 public:
-    ~ExplodeSystem();
-    virtual void tick(EntityRegistry &);
-    ExplodeSystem();
+    ~ExplodeSystem(); // _ZN13ExplodeSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN13ExplodeSystem4tickER14EntityRegistry
+    ExplodeSystem(); // _ZN13ExplodeSystemC2Ev
 };

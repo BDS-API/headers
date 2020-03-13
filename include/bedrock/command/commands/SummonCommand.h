@@ -6,8 +6,8 @@
 class SummonCommand : Command {
 
 public:
-    virtual void execute(CommandOrigin const&, CommandOutput &)const;
-    ~SummonCommand();
-    SummonCommand();
-    void setup(CommandRegistry &);
+    ~SummonCommand(); // _ZN13SummonCommandD2Ev
+    virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK13SummonCommand7executeERK13CommandOriginR13CommandOutput
+    void setup(CommandRegistry &); // _ZN13SummonCommand5setupER15CommandRegistry
+    SummonCommand(); // _ZN13SummonCommandC2Ev
 };

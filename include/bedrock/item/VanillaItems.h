@@ -241,9 +241,9 @@ namespace VanillaItems {
     static long mHoneycomb;
     static long mHoneyBottle;
 
-    void initClientData();
-    void registerItems(bool);
-    void initCreativeItemsCallback(ActorInfoRegistry *, BlockDefinitionGroup *, bool);
-    void unregisterItems();
-    void initCreativeCategories();
+    void registerItems(bool); // _ZN12VanillaItems13registerItemsEb
+    void unregisterItems(); // _ZN12VanillaItems15unregisterItemsEv
+    void initClientData(); // _ZN12VanillaItems14initClientDataEv
+    void initCreativeCategories(); // _ZN12VanillaItems22initCreativeCategoriesEv
+    void initCreativeItemsCallback(ActorInfoRegistry *, BlockDefinitionGroup *, bool); // _ZN12VanillaItems25initCreativeItemsCallbackEP17ActorInfoRegistryP20BlockDefinitionGroupb
 };

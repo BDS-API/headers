@@ -5,5 +5,5 @@
 class MineshaftData {
 
 public:
-    MineshaftData(bool);
+    MineshaftData(bool); // _ZN13MineshaftDataC2Eb
 };

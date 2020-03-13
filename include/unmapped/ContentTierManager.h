@@ -5,7 +5,7 @@
 class ContentTierManager {
 
 public:
-    void getContentTierInfo()const;
-    void _calculateMemoryTier();
-    ContentTierManager();
+    ContentTierManager(); // _ZN18ContentTierManagerC2Ev
+    void _calculateMemoryTier(); // _ZN18ContentTierManager20_calculateMemoryTierEv
+    void getContentTierInfo()const; // _ZNK18ContentTierManager18getContentTierInfoEv
 };

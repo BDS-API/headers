@@ -7,10 +7,10 @@ namespace Core {
 
     namespace FlatFileOperations {
 
-        void transferFlatFileDirectory(Core::FileSystemImpl *, Core::Path const&, Core::FileSystemImpl *, Core::Path const&);
-        void copyFlatFile(Core::FileSystemImpl *, Core::Path const&, Core::FileSystemImpl *, Core::Path const&, std::vector<Core::ExcludedPath> const&, std::vector<Core::ExcludedPath> const&);
-        void createFlatFile(Core::FileSystemImpl *, Core::Path const&, Core::FileSystemImpl *, Core::Path const&, std::vector<Core::ExcludedPath> const&, bool);
-        void createFlatFileManifest(Core::FileSystemImpl &, Core::Path const&, std::vector<Core::FlatFileManifestInfo> const&);
-        void replaceFlatFileManifest(Core::FileSystemImpl &, Core::Path const&, std::vector<Core::FlatFileManifestInfo> const&, bool);
+        void createFlatFile(Core::FileSystemImpl *, Core::Path const&, Core::FileSystemImpl *, Core::Path const&, std::vector<Core::ExcludedPath> const&, bool); // _ZN4Core18FlatFileOperations14createFlatFileEPNS_14FileSystemImplERKNS_4PathES2_S5_RKSt6vectorINS_12ExcludedPathESaIS7_EEb
+        void createFlatFileManifest(Core::FileSystemImpl &, Core::Path const&, std::vector<Core::FlatFileManifestInfo> const&); // _ZN4Core18FlatFileOperations22createFlatFileManifestERNS_14FileSystemImplERKNS_4PathERKSt6vectorINS_20FlatFileManifestInfoESaIS7_EE
+        void copyFlatFile(Core::FileSystemImpl *, Core::Path const&, Core::FileSystemImpl *, Core::Path const&, std::vector<Core::ExcludedPath> const&, std::vector<Core::ExcludedPath> const&); // _ZN4Core18FlatFileOperations12copyFlatFileEPNS_14FileSystemImplERKNS_4PathES2_S5_RKSt6vectorINS_12ExcludedPathESaIS7_EESB_
+        void transferFlatFileDirectory(Core::FileSystemImpl *, Core::Path const&, Core::FileSystemImpl *, Core::Path const&); // _ZN4Core18FlatFileOperations25transferFlatFileDirectoryEPNS_14FileSystemImplERKNS_4PathES2_S5_
+        void replaceFlatFileManifest(Core::FileSystemImpl &, Core::Path const&, std::vector<Core::FlatFileManifestInfo> const&, bool); // _ZN4Core18FlatFileOperations23replaceFlatFileManifestERNS_14FileSystemImplERKNS_4PathERKSt6vectorINS_20FlatFileManifestInfoESaIS7_EEb
     };
 }

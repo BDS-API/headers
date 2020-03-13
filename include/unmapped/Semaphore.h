@@ -5,8 +5,8 @@
 class Semaphore {
 
 public:
-    void wait();
-    ~Semaphore();
-    void notify();
-    Semaphore();
+    ~Semaphore(); // _ZN9SemaphoreD2Ev
+    Semaphore(); // _ZN9SemaphoreC2Ev
+    void notify(); // _ZN9Semaphore6notifyEv
+    void wait(); // _ZN9Semaphore4waitEv
 };

@@ -7,7 +7,7 @@ namespace BedrockLog {
     class CategoryLogs {
 
     public:
-        CategoryLogs();
-        ~CategoryLogs();
+        CategoryLogs(); // _ZN10BedrockLog12CategoryLogsC2Ev
+        ~CategoryLogs(); // _ZN10BedrockLog12CategoryLogsD2Ev
     };
 }

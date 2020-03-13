@@ -5,5 +5,5 @@
 class TelemetryInfo {
 
 public:
-    ~TelemetryInfo();
+    ~TelemetryInfo(); // _ZN13TelemetryInfoD2Ev
 };

@@ -6,9 +6,9 @@
 class WaterAnimal : Mob {
 
 public:
-    virtual void checkSpawnRules(bool);
-    virtual void aiStep();
-    virtual void useNewAi()const;
-    ~WaterAnimal();
-    WaterAnimal(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    ~WaterAnimal(); // _ZN11WaterAnimalD2Ev
+    virtual void aiStep(); // _ZN11WaterAnimal6aiStepEv
+    virtual void checkSpawnRules(bool); // _ZN11WaterAnimal15checkSpawnRulesEb
+    virtual void useNewAi()const; // _ZNK11WaterAnimal8useNewAiEv
+    WaterAnimal(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN11WaterAnimalC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier
 };

@@ -5,6 +5,6 @@
 class IDefinitionSerializer {
 
 public:
-    ~IDefinitionSerializer();
-    IDefinitionSerializer();
+    ~IDefinitionSerializer(); // _ZN21IDefinitionSerializerD2Ev
+    IDefinitionSerializer(); // _ZN21IDefinitionSerializerC2Ev
 };

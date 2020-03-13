@@ -6,7 +6,7 @@
 class CommandBlockSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~CommandBlockSystem();
-    CommandBlockSystem();
+    ~CommandBlockSystem(); // _ZN18CommandBlockSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN18CommandBlockSystem4tickER14EntityRegistry
+    CommandBlockSystem(); // _ZN18CommandBlockSystemC2Ev
 };

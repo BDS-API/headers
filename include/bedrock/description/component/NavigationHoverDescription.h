@@ -6,7 +6,7 @@
 class NavigationHoverDescription : NavigationDescription {
 
 public:
-    ~NavigationHoverDescription();
-    virtual void getJsonName()const;
-    NavigationHoverDescription();
+    virtual void getJsonName()const; // _ZNK26NavigationHoverDescription11getJsonNameEv
+    ~NavigationHoverDescription(); // _ZN26NavigationHoverDescriptionD2Ev
+    NavigationHoverDescription(); // _ZN26NavigationHoverDescriptionC2Ev
 };

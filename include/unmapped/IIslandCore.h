@@ -7,7 +7,7 @@ namespace BedrockEngine {
     class IIslandCore {
 
     public:
-        ~IIslandCore();
-        IIslandCore();
+        ~IIslandCore(); // _ZN13BedrockEngine11IIslandCoreD2Ev
+        IIslandCore(); // _ZN13BedrockEngine11IIslandCoreC2Ev
     };
 }

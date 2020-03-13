@@ -4,5 +4,5 @@
 
 namespace BannerRecipes {
 
-    void addRecipes(Recipes &);
+    void addRecipes(Recipes &); // _ZN13BannerRecipes10addRecipesER7Recipes
 };

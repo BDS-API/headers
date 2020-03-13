@@ -7,13 +7,13 @@ class ScoreboardId {
 public:
     static long INVALID;
 
-    void operator>(ScoreboardId const&)const;
-    ScoreboardId(long);
-    void operator!=(ScoreboardId const&)const;
-    void getIdentityDef()const;
-    void operator<(ScoreboardId const&)const;
-    ScoreboardId();
-    void operator==(ScoreboardId const&)const;
-    void getHash()const;
-    ScoreboardId(ScoreboardId const&);
+    ScoreboardId(); // _ZN12ScoreboardIdC2Ev
+    ScoreboardId(long); // _ZN12ScoreboardIdC2El
+    ScoreboardId(ScoreboardId const&); // _ZN12ScoreboardIdC2ERKS_
+    void getHash()const; // _ZNK12ScoreboardId7getHashEv
+    void operator==(ScoreboardId const&)const; // _ZNK12ScoreboardIdeqERKS_
+    void operator!=(ScoreboardId const&)const; // _ZNK12ScoreboardIdneERKS_
+    void operator>(ScoreboardId const&)const; // _ZNK12ScoreboardIdgtERKS_
+    void operator<(ScoreboardId const&)const; // _ZNK12ScoreboardIdltERKS_
+    void getIdentityDef()const; // _ZNK12ScoreboardId14getIdentityDefEv
 };

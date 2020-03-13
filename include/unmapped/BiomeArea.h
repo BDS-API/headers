@@ -5,8 +5,8 @@
 class BiomeArea {
 
 public:
-    ~BiomeArea();
-    void at(unsigned int, unsigned int);
-    void at(unsigned int, unsigned int)const;
-    BiomeArea(BoundingBox const&, unsigned int);
+    ~BiomeArea(); // _ZN9BiomeAreaD2Ev
+    void at(unsigned int, unsigned int)const; // _ZNK9BiomeArea2atEjj
+    void at(unsigned int, unsigned int); // _ZN9BiomeArea2atEjj
+    BiomeArea(BoundingBox const&, unsigned int); // _ZN9BiomeAreaC2ERK11BoundingBoxj
 };

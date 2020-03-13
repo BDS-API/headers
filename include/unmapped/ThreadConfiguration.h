@@ -5,6 +5,6 @@
 class ThreadConfiguration {
 
 public:
-    ThreadConfiguration(ThreadConfiguration const&);
-    ThreadConfiguration();
+    ThreadConfiguration(); // _ZN19ThreadConfigurationC2Ev
+    ThreadConfiguration(ThreadConfiguration const&); // _ZN19ThreadConfigurationC2ERKS_
 };

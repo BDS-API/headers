@@ -5,5 +5,5 @@
 class SeatDescription {
 
 public:
-    SeatDescription();
+    SeatDescription(); // _ZN15SeatDescriptionC2Ev
 };

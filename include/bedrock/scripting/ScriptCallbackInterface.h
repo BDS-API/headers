@@ -7,7 +7,7 @@ namespace ScriptApi {
     class ScriptCallbackInterface {
 
     public:
-        ~ScriptCallbackInterface();
-        ScriptCallbackInterface();
+        ~ScriptCallbackInterface(); // _ZN9ScriptApi23ScriptCallbackInterfaceD2Ev
+        ScriptCallbackInterface(); // _ZN9ScriptApi23ScriptCallbackInterfaceC2Ev
     };
 }

@@ -6,7 +6,7 @@
 class PineFeature : TreeFeature {
 
 public:
-    ~PineFeature();
-    virtual void place(BlockSource &, BlockPos const&, Random &)const;
-    PineFeature(Actor *);
+    ~PineFeature(); // _ZN11PineFeatureD2Ev
+    virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK11PineFeature5placeER11BlockSourceRK8BlockPosR6Random
+    PineFeature(Actor *); // _ZN11PineFeatureC2EP5Actor
 };

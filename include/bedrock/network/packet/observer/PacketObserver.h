@@ -5,6 +5,6 @@
 class PacketObserver {
 
 public:
-    ~PacketObserver();
-    PacketObserver();
+    ~PacketObserver(); // _ZN14PacketObserverD2Ev
+    PacketObserver(); // _ZN14PacketObserverC2Ev
 };

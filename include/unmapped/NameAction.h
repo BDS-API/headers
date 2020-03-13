@@ -5,7 +5,7 @@
 class NameAction {
 
 public:
-    ~NameAction();
-    NameAction(NameAction const&);
-    NameAction();
+    ~NameAction(); // _ZN10NameActionD2Ev
+    NameAction(); // _ZN10NameActionC2Ev
+    NameAction(NameAction const&); // _ZN10NameActionC2ERKS_
 };

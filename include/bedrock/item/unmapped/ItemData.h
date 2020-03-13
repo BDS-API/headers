@@ -5,6 +5,6 @@
 class ItemData {
 
 public:
-    ~ItemData();
-    ItemData(ItemData &&);
+    ~ItemData(); // _ZN8ItemDataD2Ev
+    ItemData(ItemData &&); // _ZN8ItemDataC2EOS_
 };

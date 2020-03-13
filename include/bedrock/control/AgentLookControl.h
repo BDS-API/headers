@@ -8,8 +8,8 @@ class AgentLookControl : LookControl {
 public:
     static long sBaseYMax;
 
-    virtual void initializeInternal(Mob &);
-    ~AgentLookControl();
-    virtual void tick(Mob &);
-    AgentLookControl();
+    ~AgentLookControl(); // _ZN16AgentLookControlD2Ev
+    virtual void initializeInternal(Mob &); // _ZN16AgentLookControl18initializeInternalER3Mob
+    virtual void tick(Mob &); // _ZN16AgentLookControl4tickER3Mob
+    AgentLookControl(); // _ZN16AgentLookControlC2Ev
 };

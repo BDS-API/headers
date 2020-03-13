@@ -5,7 +5,7 @@
 class TradeTier {
 
 public:
-    TradeTier(TradeTier &&);
-    ~TradeTier();
-    TradeTier();
+    ~TradeTier(); // _ZN9TradeTierD2Ev
+    TradeTier(); // _ZN9TradeTierC2Ev
+    TradeTier(TradeTier &&); // _ZN9TradeTierC2EOS_
 };

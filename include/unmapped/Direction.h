@@ -13,6 +13,6 @@ namespace Direction {
     static long STEP_X;
     static long STEP_Z;
 
-    void getDirection(int, int, int, int);
-    void getDirection(float, float);
+    void getDirection(float, float); // _ZN9Direction12getDirectionEff
+    void getDirection(int, int, int, int); // _ZN9Direction12getDirectionEiiii
 };

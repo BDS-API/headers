@@ -7,7 +7,7 @@ namespace BedrockEngine {
     class PlatformRuntimeInfo {
 
     public:
-        ~PlatformRuntimeInfo();
-        PlatformRuntimeInfo();
+        ~PlatformRuntimeInfo(); // _ZN13BedrockEngine19PlatformRuntimeInfoD2Ev
+        PlatformRuntimeInfo(); // _ZN13BedrockEngine19PlatformRuntimeInfoC2Ev
     };
 }

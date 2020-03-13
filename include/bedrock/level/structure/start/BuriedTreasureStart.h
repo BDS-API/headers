@@ -6,8 +6,8 @@
 class BuriedTreasureStart : StructureStart {
 
 public:
-    virtual void getType()const;
-    ~BuriedTreasureStart();
-    BuriedTreasureStart(Dimension &, Random &, int, int);
-    BuriedTreasureStart();
+    ~BuriedTreasureStart(); // _ZN19BuriedTreasureStartD2Ev
+    virtual void getType()const; // _ZNK19BuriedTreasureStart7getTypeEv
+    BuriedTreasureStart(); // _ZN19BuriedTreasureStartC2Ev
+    BuriedTreasureStart(Dimension &, Random &, int, int); // _ZN19BuriedTreasureStartC2ER9DimensionR6Randomii
 };

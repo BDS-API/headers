@@ -9,7 +9,7 @@ namespace moodycamel {
         class ConcurrentQueueProducerTypelessBase {
 
         public:
-            ConcurrentQueueProducerTypelessBase();
+            ConcurrentQueueProducerTypelessBase(); // _ZN10moodycamel7details35ConcurrentQueueProducerTypelessBaseC2Ev
         };
     }
 }

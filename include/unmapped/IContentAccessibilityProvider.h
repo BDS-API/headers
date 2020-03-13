@@ -6,6 +6,6 @@
 class IContentAccessibilityProvider : IContentKeyProvider {
 
 public:
-    ~IContentAccessibilityProvider();
-    IContentAccessibilityProvider();
+    ~IContentAccessibilityProvider(); // _ZN29IContentAccessibilityProviderD2Ev
+    IContentAccessibilityProvider(); // _ZN29IContentAccessibilityProviderC2Ev
 };

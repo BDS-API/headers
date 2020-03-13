@@ -4,5 +4,5 @@
 
 namespace VanillaActors {
 
-    void registerVanillaActorData();
+    void registerVanillaActorData(); // _ZN13VanillaActors24registerVanillaActorDataEv
 };

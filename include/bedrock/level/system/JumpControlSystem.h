@@ -6,7 +6,7 @@
 class JumpControlSystem : ITickingSystem {
 
 public:
-    ~JumpControlSystem();
-    virtual void tick(EntityRegistry &);
-    JumpControlSystem();
+    ~JumpControlSystem(); // _ZN17JumpControlSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN17JumpControlSystem4tickER14EntityRegistry
+    JumpControlSystem(); // _ZN17JumpControlSystemC2Ev
 };

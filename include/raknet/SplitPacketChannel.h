@@ -7,7 +7,7 @@ namespace RakNet {
     class SplitPacketChannel {
 
     public:
-        SplitPacketChannel();
-        ~SplitPacketChannel();
+        ~SplitPacketChannel(); // _ZN6RakNet18SplitPacketChannelD2Ev
+        SplitPacketChannel(); // _ZN6RakNet18SplitPacketChannelC2Ev
     };
 }

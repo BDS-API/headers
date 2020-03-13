@@ -5,5 +5,5 @@
 class BiomeChunkState {
 
 public:
-    BiomeChunkState(unsigned char);
+    BiomeChunkState(unsigned char); // _ZN15BiomeChunkStateC2Eh
 };

@@ -4,5 +4,5 @@
 
 namespace VanillaVillageJigsawStructureActorRules {
 
-    void initialize(JigsawStructureRegistry &);
+    void initialize(JigsawStructureRegistry &); // _ZN39VanillaVillageJigsawStructureActorRules10initializeER23JigsawStructureRegistry
 };

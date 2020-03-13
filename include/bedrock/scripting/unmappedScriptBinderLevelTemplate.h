@@ -7,9 +7,9 @@
 class ScriptBinderLevelTemplate : ScriptBinderTemplate {
 
 public:
-    virtual void applyTemplate(ScriptObjectBinder &)const;
-    virtual std::string getTemplateIdentifier()const;
-    ~ScriptBinderLevelTemplate();
-    ScriptBinderLevelTemplate();
-//  void build(entt::Registry<unsigned int> &, unsigned int); //TODO: incomplete function definition
+    ~ScriptBinderLevelTemplate(); // _ZN25ScriptBinderLevelTemplateD2Ev
+    virtual std::string getTemplateIdentifier()const; // _ZNK25ScriptBinderLevelTemplate21getTemplateIdentifierB5cxx11Ev
+    virtual void applyTemplate(ScriptObjectBinder &)const; // _ZNK25ScriptBinderLevelTemplate13applyTemplateER18ScriptObjectBinder
+//  void build(entt::Registry<unsigned int> &, unsigned int); //TODO: incomplete function definition // _ZN25ScriptBinderLevelTemplate5buildERN4entt8RegistryIjEEj
+    ScriptBinderLevelTemplate(); // _ZN25ScriptBinderLevelTemplateC2Ev
 };

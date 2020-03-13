@@ -5,5 +5,5 @@
 class RakStringCleanup {
 
 public:
-    ~RakStringCleanup();
+    ~RakStringCleanup(); // _ZN16RakStringCleanupD2Ev
 };

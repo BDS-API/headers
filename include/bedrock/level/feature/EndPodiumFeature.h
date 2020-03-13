@@ -13,7 +13,7 @@ public:
     static long END_PODIUM_LOCATION;
     static long END_PODIUM_CHUNK_POSITION;
 
-    ~EndPodiumFeature();
-    virtual void place(BlockSource &, BlockPos const&, Random &)const;
-    EndPodiumFeature(bool);
+    ~EndPodiumFeature(); // _ZN16EndPodiumFeatureD2Ev
+    virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK16EndPodiumFeature5placeER11BlockSourceRK8BlockPosR6Random
+    EndPodiumFeature(bool); // _ZN16EndPodiumFeatureC2Eb
 };

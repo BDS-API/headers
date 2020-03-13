@@ -6,7 +6,7 @@
 class EnvironmentSensorSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~EnvironmentSensorSystem();
-    EnvironmentSensorSystem();
+    ~EnvironmentSensorSystem(); // _ZN23EnvironmentSensorSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN23EnvironmentSensorSystem4tickER14EntityRegistry
+    EnvironmentSensorSystem(); // _ZN23EnvironmentSensorSystemC2Ev
 };

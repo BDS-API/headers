@@ -5,5 +5,5 @@
 class ContentTierInfo {
 
 public:
-    ContentTierInfo();
+    ContentTierInfo(); // _ZN15ContentTierInfoC2Ev
 };

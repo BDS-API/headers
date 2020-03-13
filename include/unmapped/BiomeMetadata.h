@@ -5,6 +5,6 @@
 class BiomeMetadata {
 
 public:
-    BiomeMetadata();
-    ~BiomeMetadata();
+    BiomeMetadata(); // _ZN13BiomeMetadataC2Ev
+    ~BiomeMetadata(); // _ZN13BiomeMetadataD2Ev
 };

@@ -4,5 +4,5 @@
 
 namespace VanillaServerCommands {
 
-    void setup(CommandRegistry &);
+    void setup(CommandRegistry &); // _ZN21VanillaServerCommands5setupER15CommandRegistry
 };

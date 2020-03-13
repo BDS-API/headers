@@ -7,11 +7,11 @@ class ScriptBlockStateComponent /*ScriptTemplateFactory<ScriptServerContext>::Co
 public:
     static long mHash;
 
-    virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const;
-    virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, ScriptApi::ScriptObjectHandle &)const;
-    virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, ScriptApi::ScriptObjectHandle const&)const;
-    virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, bool &)const;
-    ~ScriptBlockStateComponent();
-    ScriptBlockStateComponent();
-    void getHash();
+    ~ScriptBlockStateComponent(); // _ZN25ScriptBlockStateComponentD2Ev
+    virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Actor &, bool &)const; // _ZNK25ScriptBlockStateComponent12hasComponentERKN9ScriptApi17ScriptVersionInfoER12ScriptEngineR19ScriptServerContextR5ActorRb
+    virtual void applyComponentTo(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, ScriptApi::ScriptObjectHandle const&)const; // _ZNK25ScriptBlockStateComponent16applyComponentToERKN9ScriptApi17ScriptVersionInfoER12ScriptEngineR19ScriptServerContextRK5BlockR11BlockSourceRK8BlockPosRKNS0_18ScriptObjectHandleE
+    virtual void retrieveComponentFrom(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, ScriptApi::ScriptObjectHandle &)const; // _ZNK25ScriptBlockStateComponent21retrieveComponentFromERKN9ScriptApi17ScriptVersionInfoER12ScriptEngineR19ScriptServerContextRK5BlockR11BlockSourceRK8BlockPosRNS0_18ScriptObjectHandleE
+    virtual bool hasComponent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, Block const&, BlockSource &, BlockPos const&, bool &)const; // _ZNK25ScriptBlockStateComponent12hasComponentERKN9ScriptApi17ScriptVersionInfoER12ScriptEngineR19ScriptServerContextRK5BlockR11BlockSourceRK8BlockPosRb
+    void getHash(); // _ZN25ScriptBlockStateComponent7getHashEv
+    ScriptBlockStateComponent(); // _ZN25ScriptBlockStateComponentC2Ev
 };

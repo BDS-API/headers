@@ -6,7 +6,7 @@
 class PeekSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~PeekSystem();
-    PeekSystem();
+    ~PeekSystem(); // _ZN10PeekSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN10PeekSystem4tickER14EntityRegistry
+    PeekSystem(); // _ZN10PeekSystemC2Ev
 };

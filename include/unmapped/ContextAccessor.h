@@ -5,5 +5,5 @@
 class ContextAccessor {
 
 public:
-    ~ContextAccessor();
+    ~ContextAccessor(); // _ZN15ContextAccessorD2Ev
 };

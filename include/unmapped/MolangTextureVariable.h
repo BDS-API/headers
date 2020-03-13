@@ -7,9 +7,9 @@ class MolangTextureVariable {
 public:
     static long defaultErrorValue;
 
-    void operator==(MolangTextureVariable const&)const;
-    MolangTextureVariable(MolangTextureVariable const&);
-    ~MolangTextureVariable();
-    MolangTextureVariable(MolangTextureVariable &&);
-    MolangTextureVariable(HashedString const&);
+    ~MolangTextureVariable(); // _ZN21MolangTextureVariableD2Ev
+    MolangTextureVariable(MolangTextureVariable const&); // _ZN21MolangTextureVariableC2ERKS_
+    MolangTextureVariable(HashedString const&); // _ZN21MolangTextureVariableC2ERK12HashedString
+    MolangTextureVariable(MolangTextureVariable &&); // _ZN21MolangTextureVariableC2EOS_
+    void operator==(MolangTextureVariable const&)const; // _ZNK21MolangTextureVariableeqERKS_
 };

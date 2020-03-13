@@ -477,6 +477,6 @@ namespace VanillaBlocks {
     static long mHoneyBlock;
     static long mHoneycombBlock;
 
-    void assignBlocks();
-    void unassignBlocks();
+    void assignBlocks(); // _ZN13VanillaBlocks12assignBlocksEv
+    void unassignBlocks(); // _ZN13VanillaBlocks14unassignBlocksEv
 };

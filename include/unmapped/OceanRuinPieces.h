@@ -22,11 +22,11 @@ namespace OceanRuinPieces {
     static long bigRuinsMossy;
     static long mSettings;
 
-    void init();
-//  void _addPiece(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, OceanRuinConfiguration const&, bool, float); //TODO: incomplete function definition
-//  void _addClusterRuins(StructureManager &, Random &, Rotation const&, BlockPos const&, OceanRuinConfiguration const&, std::vector<std::unique_ptr<StructurePiece>> &); //TODO: incomplete function definition
-    void _allPositions(Random &, int, int, int);
-//  void addPieces(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, OceanRuinConfiguration const&); //TODO: incomplete function definition
-    std::string _getSmallWarmRuin(Random &);
-    std::string _getBigWarmRuin(Random &);
+    std::string _getSmallWarmRuin(Random &); // _ZN15OceanRuinPieces17_getSmallWarmRuinB5cxx11ER6Random
+    std::string _getBigWarmRuin(Random &); // _ZN15OceanRuinPieces15_getBigWarmRuinB5cxx11ER6Random
+//  void _addClusterRuins(StructureManager &, Random &, Rotation const&, BlockPos const&, OceanRuinConfiguration const&, std::vector<std::unique_ptr<StructurePiece>> &); //TODO: incomplete function definition // _ZN15OceanRuinPieces16_addClusterRuinsER16StructureManagerR6RandomRK8RotationRK8BlockPosRK22OceanRuinConfigurationRSt6vectorISt10unique_ptrI14StructurePieceSt14default_deleteISF_EESaISI_EE
+    void _allPositions(Random &, int, int, int); // _ZN15OceanRuinPieces13_allPositionsER6Randomiii
+//  void _addPiece(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, OceanRuinConfiguration const&, bool, float); //TODO: incomplete function definition // _ZN15OceanRuinPieces9_addPieceER16StructureManagerRK8BlockPosRK8RotationRSt6vectorISt10unique_ptrI14StructurePieceSt14default_deleteISA_EESaISD_EER6RandomRK22OceanRuinConfigurationbf
+    void init(); // _ZN15OceanRuinPieces4initEv
+//  void addPieces(StructureManager &, BlockPos const&, Rotation const&, std::vector<std::unique_ptr<StructurePiece>> &, Random &, OceanRuinConfiguration const&); //TODO: incomplete function definition // _ZN15OceanRuinPieces9addPiecesER16StructureManagerRK8BlockPosRK8RotationRSt6vectorISt10unique_ptrI14StructurePieceSt14default_deleteISA_EESaISD_EER6RandomRK22OceanRuinConfiguration
 };

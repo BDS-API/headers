@@ -10,29 +10,29 @@ public:
     static long COOLDOWN_TIME;
     static long EVENT_COOLDOWN;
 
-    virtual void getUpdatePacket(BlockSource &);
-    virtual void tick(BlockSource &);
-    virtual void triggerEvent(int, int);
-    virtual void save(CompoundTag &)const;
-    virtual void load(Level &, CompoundTag const&, DataLoadHelper &);
-    virtual void onChanged(BlockSource &);
-    virtual bool hasAlphaLayer()const;
-    ~EndGatewayBlockActor();
-    void findValidSpawnAround(BlockSource &, BlockPos const&, bool, int);
-    void triggerCooldown(BlockSource &);
-    void findTallestBlock(BlockSource &, BlockPos const&, int, bool);
-    bool canTeleport(Actor *, BlockSource &)const;
-    void teleportEntity(Actor &);
-    void findExitPortal(WorldGenerator &, BlockPos const&);
-    void getExitPosition()const;
-    void exitPositionVerified()const;
-    void setExitPosition(BlockPos const&);
-    void getParticleAmount(BlockSource &, BlockPos const&)const;
-    bool isCoolingDown()const;
-    bool isSpawning()const;
-    void getSpawnPercentage()const;
-    void getCoolDownPercentage()const;
-    EndGatewayBlockActor(BlockPos const&);
-    void _getHighestSection(WorldGenerator &, BlockVolume &, BlockPos const&);
-    void _hasRoomForPlayer(BlockSource &, BlockPos const&);
+    ~EndGatewayBlockActor(); // _ZN20EndGatewayBlockActorD2Ev
+    virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN20EndGatewayBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
+    virtual void save(CompoundTag &)const; // _ZNK20EndGatewayBlockActor4saveER11CompoundTag
+    virtual void tick(BlockSource &); // _ZN20EndGatewayBlockActor4tickER11BlockSource
+    virtual void onChanged(BlockSource &); // _ZN20EndGatewayBlockActor9onChangedER11BlockSource
+    virtual void getUpdatePacket(BlockSource &); // _ZN20EndGatewayBlockActor15getUpdatePacketER11BlockSource
+    virtual void triggerEvent(int, int); // _ZN20EndGatewayBlockActor12triggerEventEii
+    virtual bool hasAlphaLayer()const; // _ZNK20EndGatewayBlockActor13hasAlphaLayerEv
+    EndGatewayBlockActor(BlockPos const&); // _ZN20EndGatewayBlockActorC2ERK8BlockPos
+    bool canTeleport(Actor *, BlockSource &)const; // _ZNK20EndGatewayBlockActor11canTeleportEP5ActorR11BlockSource
+    bool isSpawning()const; // _ZNK20EndGatewayBlockActor10isSpawningEv
+    bool isCoolingDown()const; // _ZNK20EndGatewayBlockActor13isCoolingDownEv
+    void teleportEntity(Actor &); // _ZN20EndGatewayBlockActor14teleportEntityER5Actor
+    void getSpawnPercentage()const; // _ZNK20EndGatewayBlockActor18getSpawnPercentageEv
+    void getCoolDownPercentage()const; // _ZNK20EndGatewayBlockActor21getCoolDownPercentageEv
+    void triggerCooldown(BlockSource &); // _ZN20EndGatewayBlockActor15triggerCooldownER11BlockSource
+    void _getHighestSection(WorldGenerator &, BlockVolume &, BlockPos const&); // _ZN20EndGatewayBlockActor18_getHighestSectionER14WorldGeneratorR11BlockVolumeRK8BlockPos
+    void findExitPortal(WorldGenerator &, BlockPos const&); // _ZN20EndGatewayBlockActor14findExitPortalER14WorldGeneratorRK8BlockPos
+    void getParticleAmount(BlockSource &, BlockPos const&)const; // _ZNK20EndGatewayBlockActor17getParticleAmountER11BlockSourceRK8BlockPos
+    void findTallestBlock(BlockSource &, BlockPos const&, int, bool); // _ZN20EndGatewayBlockActor16findTallestBlockER11BlockSourceRK8BlockPosib
+    void findValidSpawnAround(BlockSource &, BlockPos const&, bool, int); // _ZN20EndGatewayBlockActor20findValidSpawnAroundER11BlockSourceRK8BlockPosbi
+    void _hasRoomForPlayer(BlockSource &, BlockPos const&); // _ZN20EndGatewayBlockActor17_hasRoomForPlayerER11BlockSourceRK8BlockPos
+    void setExitPosition(BlockPos const&); // _ZN20EndGatewayBlockActor15setExitPositionERK8BlockPos
+    void getExitPosition()const; // _ZNK20EndGatewayBlockActor15getExitPositionEv
+    void exitPositionVerified()const; // _ZNK20EndGatewayBlockActor20exitPositionVerifiedEv
 };

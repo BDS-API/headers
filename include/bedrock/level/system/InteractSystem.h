@@ -6,7 +6,7 @@
 class InteractSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~InteractSystem();
-    InteractSystem();
+    ~InteractSystem(); // _ZN14InteractSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN14InteractSystem4tickER14EntityRegistry
+    InteractSystem(); // _ZN14InteractSystemC2Ev
 };

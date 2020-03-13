@@ -5,11 +5,11 @@
 class SkinData {
 
 public:
-    void serialize()const;
-    SkinData(SkinData &&);
-    SkinData(int, int);
-    SkinData(Actor const&);
-    SkinData(Json::Value const&);
-    void softMatch(SkinData const&, bool &)const;
-    void applyToActor(Actor &)const;
+    SkinData(SkinData &&); // _ZN8SkinDataC2EOS_
+    SkinData(Actor const&); // _ZN8SkinDataC2ERK5Actor
+    SkinData(int, int); // _ZN8SkinDataC2Eii
+    SkinData(Json::Value const&); // _ZN8SkinDataC2ERKN4Json5ValueE
+    void serialize()const; // _ZNK8SkinData9serializeEv
+    void applyToActor(Actor &)const; // _ZNK8SkinData12applyToActorER5Actor
+    void softMatch(SkinData const&, bool &)const; // _ZNK8SkinData9softMatchERKS_Rb
 };

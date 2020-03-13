@@ -5,6 +5,6 @@
 class EvalParams {
 
 public:
-    ~EvalParams();
-    EvalParams();
+    EvalParams(); // _ZN10EvalParamsC2Ev
+    ~EvalParams(); // _ZN10EvalParamsD2Ev
 };

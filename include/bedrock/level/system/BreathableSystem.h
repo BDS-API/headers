@@ -6,7 +6,7 @@
 class BreathableSystem : ITickingSystem {
 
 public:
-    ~BreathableSystem();
-    virtual void tick(EntityRegistry &);
-    BreathableSystem();
+    ~BreathableSystem(); // _ZN16BreathableSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN16BreathableSystem4tickER14EntityRegistry
+    BreathableSystem(); // _ZN16BreathableSystemC2Ev
 };

@@ -5,9 +5,9 @@
 class ExperienceRewardComponent {
 
 public:
-    ExperienceRewardComponent(ExperienceRewardComponent &&);
-    void getOnBredExperience(Actor &)const;
-    ExperienceRewardComponent();
-    void getOnDeathExperience(Actor &)const;
-    ~ExperienceRewardComponent();
+    void getOnBredExperience(Actor &)const; // _ZNK25ExperienceRewardComponent19getOnBredExperienceER5Actor
+    void getOnDeathExperience(Actor &)const; // _ZNK25ExperienceRewardComponent20getOnDeathExperienceER5Actor
+    ~ExperienceRewardComponent(); // _ZN25ExperienceRewardComponentD2Ev
+    ExperienceRewardComponent(ExperienceRewardComponent &&); // _ZN25ExperienceRewardComponentC2EOS_
+    ExperienceRewardComponent(); // _ZN25ExperienceRewardComponentC2Ev
 };

@@ -6,6 +6,6 @@
 class ConsumeItemDefinition : BehaviorDefinition {
 
 public:
-    ~ConsumeItemDefinition();
-    ConsumeItemDefinition();
+    ~ConsumeItemDefinition(); // _ZN21ConsumeItemDefinitionD2Ev
+    ConsumeItemDefinition(); // _ZN21ConsumeItemDefinitionC2Ev
 };

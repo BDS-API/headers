@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Item.h"
 
 
 namespace VanillaItemTiers {
@@ -10,5 +11,5 @@ namespace VanillaItemTiers {
     static long DIAMOND;
     static long GOLD;
 
-    void getTierItem(Item::Tier const&);
+    void getTierItem(Item::Tier const&); // _ZN16VanillaItemTiers11getTierItemERKN4Item4TierE
 };

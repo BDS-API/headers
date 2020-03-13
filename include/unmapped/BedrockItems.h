@@ -6,6 +6,6 @@ namespace BedrockItems {
 
     static long mAir;
 
-    void unregisterItems();
-    void registerItems();
+    void registerItems(); // _ZN12BedrockItems13registerItemsEv
+    void unregisterItems(); // _ZN12BedrockItems15unregisterItemsEv
 };

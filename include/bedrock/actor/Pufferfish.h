@@ -6,12 +6,12 @@
 class Pufferfish : Fish {
 
 public:
-    ~Pufferfish();
-    virtual void updateEntitySpecificMolangVariables(RenderParams &);
-    virtual void _hurt(ActorDamageSource const&, int, bool, bool);
-    virtual void _onSizeUpdated();
-    virtual void normalTick();
-    virtual void startRiding(Actor &);
-    virtual void playerTouch(Player &);
-    Pufferfish(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    ~Pufferfish(); // _ZN10PufferfishD2Ev
+    virtual void normalTick(); // _ZN10Pufferfish10normalTickEv
+    virtual void startRiding(Actor &); // _ZN10Pufferfish11startRidingER5Actor
+    virtual void playerTouch(Player &); // _ZN10Pufferfish11playerTouchER6Player
+    virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN10Pufferfish35updateEntitySpecificMolangVariablesER12RenderParams
+    virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN10Pufferfish5_hurtERK17ActorDamageSourceibb
+    virtual void _onSizeUpdated(); // _ZN10Pufferfish14_onSizeUpdatedEv
+    Pufferfish(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN10PufferfishC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier
 };

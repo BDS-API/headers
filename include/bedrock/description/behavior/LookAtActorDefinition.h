@@ -1,13 +1,13 @@
 #pragma once
 
-#include "BehaviorDefinition.h"
 #include "../../../json/Value.h"
+#include "BehaviorDefinition.h"
 
 
 class LookAtActorDefinition : BehaviorDefinition {
 
 public:
-    virtual void load(Json::Value, BehaviorFactory const&);
-    ~LookAtActorDefinition();
-    LookAtActorDefinition();
+    ~LookAtActorDefinition(); // _ZN21LookAtActorDefinitionD2Ev
+    virtual void load(Json::Value, BehaviorFactory const&); // _ZN21LookAtActorDefinition4loadEN4Json5ValueERK15BehaviorFactory
+    LookAtActorDefinition(); // _ZN21LookAtActorDefinitionC2Ev
 };

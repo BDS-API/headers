@@ -5,6 +5,6 @@
 class AutoCompleteInformation {
 
 public:
-    AutoCompleteInformation();
-    ~AutoCompleteInformation();
+    AutoCompleteInformation(); // _ZN23AutoCompleteInformationC2Ev
+    ~AutoCompleteInformation(); // _ZN23AutoCompleteInformationD2Ev
 };

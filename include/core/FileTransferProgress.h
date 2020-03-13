@@ -9,7 +9,7 @@ namespace Core {
         class FileTransferProgress {
 
         public:
-            FileTransferProgress();
+            FileTransferProgress(); // _ZN4Core10FileSystem20FileTransferProgressC2Ev
         };
     }
 }

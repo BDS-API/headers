@@ -7,6 +7,6 @@ namespace ScriptApi {
     class ScriptVersionInfo {
 
     public:
-        ScriptVersionInfo();
+        ScriptVersionInfo(); // _ZN9ScriptApi17ScriptVersionInfoC2Ev
     };
 }

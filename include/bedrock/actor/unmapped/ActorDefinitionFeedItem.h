@@ -5,5 +5,5 @@
 class ActorDefinitionFeedItem {
 
 public:
-    ActorDefinitionFeedItem();
+    ActorDefinitionFeedItem(); // _ZN23ActorDefinitionFeedItemC2Ev
 };

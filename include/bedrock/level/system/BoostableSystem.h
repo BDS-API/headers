@@ -6,7 +6,7 @@
 class BoostableSystem : ITickingSystem {
 
 public:
-    ~BoostableSystem();
-    virtual void tick(EntityRegistry &);
-    BoostableSystem();
+    ~BoostableSystem(); // _ZN15BoostableSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN15BoostableSystem4tickER14EntityRegistry
+    BoostableSystem(); // _ZN15BoostableSystemC2Ev
 };

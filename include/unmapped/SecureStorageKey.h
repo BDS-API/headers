@@ -5,5 +5,5 @@
 class SecureStorageKey {
 
 public:
-    SecureStorageKey();
+    SecureStorageKey(); // _ZN16SecureStorageKeyC2Ev
 };

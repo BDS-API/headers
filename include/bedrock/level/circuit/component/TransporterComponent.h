@@ -6,13 +6,13 @@
 class TransporterComponent : BaseCircuitComponent {
 
 public:
-    virtual void evaluate(CircuitSystem &, BlockPos const&);
-    ~TransporterComponent();
-    virtual void getBaseType()const;
-    virtual void cacheValues(CircuitSystem &, BlockPos const&);
-    virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &);
-    virtual void getInstanceType()const;
-    virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &);
-    virtual bool canConsumerPower();
-    TransporterComponent();
+    ~TransporterComponent(); // _ZN20TransporterComponentD2Ev
+    virtual bool canConsumerPower(); // _ZN20TransporterComponent16canConsumerPowerEv
+    virtual void getBaseType()const; // _ZNK20TransporterComponent11getBaseTypeEv
+    virtual void getInstanceType()const; // _ZNK20TransporterComponent15getInstanceTypeEv
+    virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &); // _ZN20TransporterComponent9addSourceER17CircuitSceneGraphRK19CircuitTrackingInfoRiRb
+    virtual void allowConnection(CircuitSceneGraph &, CircuitTrackingInfo const&, bool &); // _ZN20TransporterComponent15allowConnectionER17CircuitSceneGraphRK19CircuitTrackingInfoRb
+    virtual void evaluate(CircuitSystem &, BlockPos const&); // _ZN20TransporterComponent8evaluateER13CircuitSystemRK8BlockPos
+    virtual void cacheValues(CircuitSystem &, BlockPos const&); // _ZN20TransporterComponent11cacheValuesER13CircuitSystemRK8BlockPos
+    TransporterComponent(); // _ZN20TransporterComponentC2Ev
 };

@@ -5,5 +5,5 @@
 class ModelPartLocator {
 
 public:
-    ~ModelPartLocator();
+    ~ModelPartLocator(); // _ZN16ModelPartLocatorD2Ev
 };

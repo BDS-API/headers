@@ -4,5 +4,5 @@
 
 namespace TestDedicatedServerCommands {
 
-    void setupStandaloneServer(Minecraft &);
+    void setupStandaloneServer(Minecraft &); // _ZN27TestDedicatedServerCommands21setupStandaloneServerER9Minecraft
 };

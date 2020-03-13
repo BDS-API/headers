@@ -6,7 +6,7 @@
 class ItemReactionComponent : LabTableReactionComponent {
 
 public:
-    virtual void _onEnd(LabTableReaction &, BlockSource &);
-    ~ItemReactionComponent();
-    ItemReactionComponent(ItemStack const&);
+    ~ItemReactionComponent(); // _ZN21ItemReactionComponentD2Ev
+    virtual void _onEnd(LabTableReaction &, BlockSource &); // _ZN21ItemReactionComponent6_onEndER16LabTableReactionR11BlockSource
+    ItemReactionComponent(ItemStack const&); // _ZN21ItemReactionComponentC2ERK9ItemStack
 };

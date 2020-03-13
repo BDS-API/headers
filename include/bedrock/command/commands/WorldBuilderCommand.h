@@ -6,8 +6,8 @@
 class WorldBuilderCommand : Command {
 
 public:
-    ~WorldBuilderCommand();
-    virtual void execute(CommandOrigin const&, CommandOutput &)const;
-    WorldBuilderCommand();
-    void setup(CommandRegistry &);
+    ~WorldBuilderCommand(); // _ZN19WorldBuilderCommandD2Ev
+    virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK19WorldBuilderCommand7executeERK13CommandOriginR13CommandOutput
+    void setup(CommandRegistry &); // _ZN19WorldBuilderCommand5setupER15CommandRegistry
+    WorldBuilderCommand(); // _ZN19WorldBuilderCommandC2Ev
 };

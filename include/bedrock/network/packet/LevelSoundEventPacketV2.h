@@ -7,11 +7,11 @@
 class LevelSoundEventPacketV2 : Packet {
 
 public:
-    virtual std::string getName()const;
-    virtual void getId()const;
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual void write(BinaryStream &)const;
-    ~LevelSoundEventPacketV2();
-//  LevelSoundEventPacketV2(LevelSoundEvent, Vec3 const&, int, std::string const&, bool, bool); //TODO: incomplete function definition
-    LevelSoundEventPacketV2();
+    ~LevelSoundEventPacketV2(); // _ZN23LevelSoundEventPacketV2D2Ev
+    virtual void getId()const; // _ZNK23LevelSoundEventPacketV25getIdEv
+    virtual std::string getName()const; // _ZNK23LevelSoundEventPacketV27getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK23LevelSoundEventPacketV25writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN23LevelSoundEventPacketV24readER20ReadOnlyBinaryStream
+//  LevelSoundEventPacketV2(LevelSoundEvent, Vec3 const&, int, std::string const&, bool, bool); //TODO: incomplete function definition // _ZN23LevelSoundEventPacketV2C2E15LevelSoundEventRK4Vec3iRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEbb
+    LevelSoundEventPacketV2(); // _ZN23LevelSoundEventPacketV2C2Ev
 };

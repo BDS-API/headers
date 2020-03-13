@@ -6,7 +6,7 @@
 class SensingSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~SensingSystem();
-    SensingSystem();
+    ~SensingSystem(); // _ZN13SensingSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN13SensingSystem4tickER14EntityRegistry
+    SensingSystem(); // _ZN13SensingSystemC2Ev
 };

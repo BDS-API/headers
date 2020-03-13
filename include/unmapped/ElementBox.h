@@ -7,6 +7,6 @@ namespace BlockGeometry {
     class ElementBox {
 
     public:
-        ~ElementBox();
+        ~ElementBox(); // _ZN13BlockGeometry10ElementBoxD2Ev
     };
 }

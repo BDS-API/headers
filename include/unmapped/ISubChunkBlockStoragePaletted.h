@@ -6,6 +6,6 @@
 class ISubChunkBlockStoragePaletted : SubChunkBlockStorage {
 
 public:
-    ~ISubChunkBlockStoragePaletted();
-    ISubChunkBlockStoragePaletted();
+    ~ISubChunkBlockStoragePaletted(); // _ZN29ISubChunkBlockStoragePalettedD2Ev
+    ISubChunkBlockStoragePaletted(); // _ZN29ISubChunkBlockStoragePalettedC2Ev
 };

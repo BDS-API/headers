@@ -8,12 +8,12 @@
 class EducationSettingsPacket : Packet {
 
 public:
-    virtual void write(BinaryStream &)const;
-    ~EducationSettingsPacket();
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual std::string getName()const;
-    virtual void getId()const;
-    void getEducationLevelSettings()const;
-    EducationSettingsPacket();
-    EducationSettingsPacket(EducationLevelSettings);
+    ~EducationSettingsPacket(); // _ZN23EducationSettingsPacketD2Ev
+    virtual void getId()const; // _ZNK23EducationSettingsPacket5getIdEv
+    virtual std::string getName()const; // _ZNK23EducationSettingsPacket7getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK23EducationSettingsPacket5writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN23EducationSettingsPacket4readER20ReadOnlyBinaryStream
+    EducationSettingsPacket(); // _ZN23EducationSettingsPacketC2Ev
+    EducationSettingsPacket(EducationLevelSettings); // _ZN23EducationSettingsPacketC2E22EducationLevelSettings
+    void getEducationLevelSettings()const; // _ZNK23EducationSettingsPacket25getEducationLevelSettingsEv
 };

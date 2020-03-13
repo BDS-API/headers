@@ -5,6 +5,6 @@
 class IStructurePoolBlockPredicate {
 
 public:
-    ~IStructurePoolBlockPredicate();
-    IStructurePoolBlockPredicate();
+    ~IStructurePoolBlockPredicate(); // _ZN28IStructurePoolBlockPredicateD2Ev
+    IStructurePoolBlockPredicate(); // _ZN28IStructurePoolBlockPredicateC2Ev
 };

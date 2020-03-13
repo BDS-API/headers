@@ -7,12 +7,12 @@
 class SetCommandsEnabledPacket : Packet {
 
 public:
-    virtual void write(BinaryStream &)const;
-    ~SetCommandsEnabledPacket();
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual std::string getName()const;
-    virtual void getId()const;
-    SetCommandsEnabledPacket(bool);
-    bool hasCommandsEnabled()const;
-    SetCommandsEnabledPacket();
+    ~SetCommandsEnabledPacket(); // _ZN24SetCommandsEnabledPacketD2Ev
+    virtual void getId()const; // _ZNK24SetCommandsEnabledPacket5getIdEv
+    virtual std::string getName()const; // _ZNK24SetCommandsEnabledPacket7getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK24SetCommandsEnabledPacket5writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN24SetCommandsEnabledPacket4readER20ReadOnlyBinaryStream
+    SetCommandsEnabledPacket(); // _ZN24SetCommandsEnabledPacketC2Ev
+    SetCommandsEnabledPacket(bool); // _ZN24SetCommandsEnabledPacketC2Eb
+    bool hasCommandsEnabled()const; // _ZNK24SetCommandsEnabledPacket18hasCommandsEnabledEv
 };

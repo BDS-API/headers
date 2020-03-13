@@ -5,6 +5,6 @@
 class BackwardsCompatTextureGroup {
 
 public:
-    BackwardsCompatTextureGroup();
-    ~BackwardsCompatTextureGroup();
+    BackwardsCompatTextureGroup(); // _ZN27BackwardsCompatTextureGroupC2Ev
+    ~BackwardsCompatTextureGroup(); // _ZN27BackwardsCompatTextureGroupD2Ev
 };

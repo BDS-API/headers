@@ -6,7 +6,7 @@
 class RailActivatorSystem : ITickingSystem {
 
 public:
-    ~RailActivatorSystem();
-    virtual void tick(EntityRegistry &);
-    RailActivatorSystem();
+    ~RailActivatorSystem(); // _ZN19RailActivatorSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN19RailActivatorSystem4tickER14EntityRegistry
+    RailActivatorSystem(); // _ZN19RailActivatorSystemC2Ev
 };

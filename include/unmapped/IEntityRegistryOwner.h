@@ -5,5 +5,5 @@
 class IEntityRegistryOwner {
 
 public:
-    IEntityRegistryOwner();
+    IEntityRegistryOwner(); // _ZN20IEntityRegistryOwnerC2Ev
 };

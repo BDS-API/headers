@@ -6,7 +6,7 @@
 class MoveControlHoverDescription : MoveControlDescription {
 
 public:
-    ~MoveControlHoverDescription();
-    virtual void getJsonName()const;
-    MoveControlHoverDescription();
+    virtual void getJsonName()const; // _ZNK27MoveControlHoverDescription11getJsonNameEv
+    ~MoveControlHoverDescription(); // _ZN27MoveControlHoverDescriptionD2Ev
+    MoveControlHoverDescription(); // _ZN27MoveControlHoverDescriptionC2Ev
 };

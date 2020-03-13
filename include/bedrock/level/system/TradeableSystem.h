@@ -6,7 +6,7 @@
 class TradeableSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~TradeableSystem();
-    TradeableSystem();
+    ~TradeableSystem(); // _ZN15TradeableSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN15TradeableSystem4tickER14EntityRegistry
+    TradeableSystem(); // _ZN15TradeableSystemC2Ev
 };

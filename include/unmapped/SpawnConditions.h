@@ -5,6 +5,6 @@
 class SpawnConditions {
 
 public:
-    SpawnConditions();
-    SpawnConditions(SpawnConditions const&);
+    SpawnConditions(); // _ZN15SpawnConditionsC2Ev
+    SpawnConditions(SpawnConditions const&); // _ZN15SpawnConditionsC2ERKS_
 };

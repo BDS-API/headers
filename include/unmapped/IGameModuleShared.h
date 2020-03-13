@@ -5,6 +5,6 @@
 class IGameModuleShared {
 
 public:
-    ~IGameModuleShared();
-    IGameModuleShared();
+    ~IGameModuleShared(); // _ZN17IGameModuleSharedD2Ev
+    IGameModuleShared(); // _ZN17IGameModuleSharedC2Ev
 };

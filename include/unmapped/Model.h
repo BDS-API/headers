@@ -7,6 +7,6 @@ namespace BlockGeometry {
     class Model {
 
     public:
-        ~Model();
+        ~Model(); // _ZN13BlockGeometry5ModelD2Ev
     };
 }

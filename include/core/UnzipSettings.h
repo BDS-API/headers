@@ -9,8 +9,8 @@ namespace Core {
         class UnzipSettings {
 
         public:
-            ~UnzipSettings();
-            UnzipSettings();
+            UnzipSettings(); // _ZN4Core8ZipUtils13UnzipSettingsC2Ev
+            ~UnzipSettings(); // _ZN4Core8ZipUtils13UnzipSettingsD2Ev
         };
     }
 }

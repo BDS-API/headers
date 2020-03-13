@@ -6,7 +6,7 @@
 class CommandDispatcher : ICommandDispatcher {
 
 public:
-    virtual void performCommand(CommandOrigin const&, Command &);
-    ~CommandDispatcher();
-    CommandDispatcher();
+    ~CommandDispatcher(); // _ZN17CommandDispatcherD2Ev
+    virtual void performCommand(CommandOrigin const&, Command &); // _ZN17CommandDispatcher14performCommandERK13CommandOriginR7Command
+    CommandDispatcher(); // _ZN17CommandDispatcherC2Ev
 };

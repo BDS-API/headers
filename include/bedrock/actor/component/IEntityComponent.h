@@ -5,5 +5,5 @@
 class IEntityComponent {
 
 public:
-    IEntityComponent(IEntityComponent &&);
+    IEntityComponent(IEntityComponent &&); // _ZN16IEntityComponentC2EOS_
 };

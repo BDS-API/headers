@@ -7,11 +7,11 @@
 class BlockPickRequestPacket : Packet {
 
 public:
-    virtual void read(ReadOnlyBinaryStream &);
-    ~BlockPickRequestPacket();
-    virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
-    virtual void getId()const;
-    BlockPickRequestPacket();
-    BlockPickRequestPacket(BlockPos const&, bool const&, unsigned char const&);
+    ~BlockPickRequestPacket(); // _ZN22BlockPickRequestPacketD2Ev
+    virtual void getId()const; // _ZNK22BlockPickRequestPacket5getIdEv
+    virtual std::string getName()const; // _ZNK22BlockPickRequestPacket7getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK22BlockPickRequestPacket5writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN22BlockPickRequestPacket4readER20ReadOnlyBinaryStream
+    BlockPickRequestPacket(); // _ZN22BlockPickRequestPacketC2Ev
+    BlockPickRequestPacket(BlockPos const&, bool const&, unsigned char const&); // _ZN22BlockPickRequestPacketC2ERK8BlockPosRKbRKh
 };

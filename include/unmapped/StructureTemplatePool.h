@@ -7,14 +7,14 @@
 class StructureTemplatePool {
 
 public:
-    void getShuffledTemplateIndexes(Random &)const;
-    void getTemplate(unsigned long)const;
-    std::string getName()const;
-    ~StructureTemplatePool();
-    bool isValid()const;
-    void getRandomTemplate(Random &)const;
-    std::string getFallback()const;
-    StructureTemplatePool();
-    StructureTemplatePool(std::string, std::string, std::vector<std::pair<StructurePoolElement const*, int>> &);
-    void size()const;
+    ~StructureTemplatePool(); // _ZN21StructureTemplatePoolD2Ev
+    StructureTemplatePool(); // _ZN21StructureTemplatePoolC2Ev
+    StructureTemplatePool(std::string, std::string, std::vector<std::pair<StructurePoolElement const*, int>> &); // _ZN21StructureTemplatePoolC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_RSt6vectorISt4pairIPK20StructurePoolElementiESaISB_EE
+    void getTemplate(unsigned long)const; // _ZNK21StructureTemplatePool11getTemplateEm
+    std::string getFallback()const; // _ZNK21StructureTemplatePool11getFallbackB5cxx11Ev
+    void getRandomTemplate(Random &)const; // _ZNK21StructureTemplatePool17getRandomTemplateER6Random
+    void getShuffledTemplateIndexes(Random &)const; // _ZNK21StructureTemplatePool26getShuffledTemplateIndexesER6Random
+    std::string getName()const; // _ZNK21StructureTemplatePool7getNameB5cxx11Ev
+    void size()const; // _ZNK21StructureTemplatePool4sizeEv
+    bool isValid()const; // _ZNK21StructureTemplatePool7isValidEv
 };

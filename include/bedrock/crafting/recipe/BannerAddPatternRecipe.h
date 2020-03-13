@@ -9,15 +9,15 @@ class BannerAddPatternRecipe : MultiRecipe {
 public:
     static long ID;
 
-    virtual void getIngredient(int, int)const;
-    virtual void matches(CraftingContainer &, Level &)const;
-    virtual void getResultItem()const;
-    virtual void assemble(CraftingContainer &)const;
-    virtual void size()const;
-    ~BannerAddPatternRecipe();
-    virtual bool isExperimental()const;
-    virtual void getCraftingSize()const;
-    BannerAddPatternRecipe(std::string, mce::UUID const&);
-    BannerAddPatternRecipe(std::string);
-    void matchPatterns(CraftingContainer &)const;
+    ~BannerAddPatternRecipe(); // _ZN22BannerAddPatternRecipeD2Ev
+    virtual void assemble(CraftingContainer &)const; // _ZNK22BannerAddPatternRecipe8assembleER17CraftingContainer
+    virtual void getCraftingSize()const; // _ZNK22BannerAddPatternRecipe15getCraftingSizeEv
+    virtual void getIngredient(int, int)const; // _ZNK22BannerAddPatternRecipe13getIngredientEii
+    virtual void getResultItem()const; // _ZNK22BannerAddPatternRecipe13getResultItemEv
+    virtual void matches(CraftingContainer &, Level &)const; // _ZNK22BannerAddPatternRecipe7matchesER17CraftingContainerR5Level
+    virtual void size()const; // _ZNK22BannerAddPatternRecipe4sizeEv
+    virtual bool isExperimental()const; // _ZNK22BannerAddPatternRecipe14isExperimentalEv
+    BannerAddPatternRecipe(std::string); // _ZN22BannerAddPatternRecipeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    BannerAddPatternRecipe(std::string, mce::UUID const&); // _ZN22BannerAddPatternRecipeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN3mce4UUIDE
+    void matchPatterns(CraftingContainer &)const; // _ZNK22BannerAddPatternRecipe13matchPatternsER17CraftingContainer
 };

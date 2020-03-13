@@ -6,7 +6,7 @@
 class CommandRawText {
 
 public:
-    ~CommandRawText();
-    CommandRawText();
-    std::string getText()const;
+    std::string getText()const; // _ZNK14CommandRawText7getTextB5cxx11Ev
+    CommandRawText(); // _ZN14CommandRawTextC2Ev
+    ~CommandRawText(); // _ZN14CommandRawTextD2Ev
 };

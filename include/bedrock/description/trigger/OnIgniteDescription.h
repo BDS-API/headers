@@ -6,7 +6,7 @@
 class OnIgniteDescription : TriggerDescription {
 
 public:
-    ~OnIgniteDescription();
-    virtual void getJsonName()const;
-    OnIgniteDescription();
+    virtual void getJsonName()const; // _ZNK19OnIgniteDescription11getJsonNameEv
+    ~OnIgniteDescription(); // _ZN19OnIgniteDescriptionD2Ev
+    OnIgniteDescription(); // _ZN19OnIgniteDescriptionC2Ev
 };

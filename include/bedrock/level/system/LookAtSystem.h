@@ -6,7 +6,7 @@
 class LookAtSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~LookAtSystem();
-    LookAtSystem();
+    ~LookAtSystem(); // _ZN12LookAtSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN12LookAtSystem4tickER14EntityRegistry
+    LookAtSystem(); // _ZN12LookAtSystemC2Ev
 };

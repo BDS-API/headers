@@ -9,9 +9,9 @@ namespace Core {
         class ZipProgress {
 
         public:
-            ~ZipProgress();
-            ZipProgress();
-            void clear();
+            ZipProgress(); // _ZN4Core8ZipUtils11ZipProgressC2Ev
+            void clear(); // _ZN4Core8ZipUtils11ZipProgress5clearEv
+            ~ZipProgress(); // _ZN4Core8ZipUtils11ZipProgressD2Ev
         };
     }
 }

@@ -5,5 +5,5 @@
 class IPacketHandlerDispatcher {
 
 public:
-    ~IPacketHandlerDispatcher();
+    ~IPacketHandlerDispatcher(); // _ZN24IPacketHandlerDispatcherD2Ev
 };

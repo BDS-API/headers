@@ -6,7 +6,7 @@
 class GrowCropSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~GrowCropSystem();
-    GrowCropSystem();
+    ~GrowCropSystem(); // _ZN14GrowCropSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN14GrowCropSystem4tickER14EntityRegistry
+    GrowCropSystem(); // _ZN14GrowCropSystemC2Ev
 };

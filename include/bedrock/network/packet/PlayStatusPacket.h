@@ -7,11 +7,11 @@
 class PlayStatusPacket : Packet {
 
 public:
-    virtual std::string getName()const;
-    virtual void read(ReadOnlyBinaryStream &);
-    ~PlayStatusPacket();
-    virtual void getId()const;
-    virtual void write(BinaryStream &)const;
-//  PlayStatusPacket(PlayStatus); //TODO: incomplete function definition
-    PlayStatusPacket();
+    ~PlayStatusPacket(); // _ZN16PlayStatusPacketD2Ev
+    virtual void getId()const; // _ZNK16PlayStatusPacket5getIdEv
+    virtual std::string getName()const; // _ZNK16PlayStatusPacket7getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK16PlayStatusPacket5writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN16PlayStatusPacket4readER20ReadOnlyBinaryStream
+    PlayStatusPacket(); // _ZN16PlayStatusPacketC2Ev
+//  PlayStatusPacket(PlayStatus); //TODO: incomplete function definition // _ZN16PlayStatusPacketC2E10PlayStatus
 };

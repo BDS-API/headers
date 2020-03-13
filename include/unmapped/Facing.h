@@ -18,19 +18,19 @@ namespace Facing {
     static long ALL_EXCEPT;
     static long ALL_EXCEPT_AXIS_Y;
 
-    void getRandomFaceHorizontal(Random &);
-    void getOpposite(unsigned char);
-    void convertYRotationToFacingDirection(float);
-    void fromVec3(Vec3 const&);
-    void getStepY(unsigned char);
-    void getStepZ(unsigned char);
-    void toString(unsigned char);
-    bool isHorizontal(unsigned char);
-//  void rotateFace(unsigned char, Facing::Rotation); //TODO: incomplete function definition
-    void getStepX(unsigned char);
-    void from2DDataValue(int);
-    void getCounterClockWise(unsigned char);
-    void getClockWise(unsigned char);
-    void getRandomFace(Random &);
-//  void convertWeirdoDirectionToFacingDirection(WeirdoDirection); //TODO: incomplete function definition
+    void getStepX(unsigned char); // _ZN6Facing8getStepXEh
+    void getStepY(unsigned char); // _ZN6Facing8getStepYEh
+    void getStepZ(unsigned char); // _ZN6Facing8getStepZEh
+    bool isHorizontal(unsigned char); // _ZN6Facing12isHorizontalEh
+    void toString(unsigned char); // _ZN6Facing8toStringEh
+    void getRandomFace(Random &); // _ZN6Facing13getRandomFaceER6Random
+    void getRandomFaceHorizontal(Random &); // _ZN6Facing23getRandomFaceHorizontalER6Random
+    void from2DDataValue(int); // _ZN6Facing15from2DDataValueEi
+    void getClockWise(unsigned char); // _ZN6Facing12getClockWiseEh
+    void getCounterClockWise(unsigned char); // _ZN6Facing19getCounterClockWiseEh
+    void getOpposite(unsigned char); // _ZN6Facing11getOppositeEh
+//  void rotateFace(unsigned char, Facing::Rotation); //TODO: incomplete function definition // _ZN6Facing10rotateFaceEhNS_8RotationE
+    void fromVec3(Vec3 const&); // _ZN6Facing8fromVec3ERK4Vec3
+//  void convertWeirdoDirectionToFacingDirection(WeirdoDirection); //TODO: incomplete function definition // _ZN6Facing39convertWeirdoDirectionToFacingDirectionE15WeirdoDirection
+    void convertYRotationToFacingDirection(float); // _ZN6Facing33convertYRotationToFacingDirectionEf
 };

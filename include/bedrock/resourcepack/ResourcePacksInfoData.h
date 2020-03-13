@@ -6,9 +6,9 @@
 class ResourcePacksInfoData {
 
 public:
-    ResourcePacksInfoData();
-    std::string collectKeys()const;
-    void getTexturePackSize()const;
-    ~ResourcePacksInfoData();
-    void getAddOnPackSize()const;
+    ~ResourcePacksInfoData(); // _ZN21ResourcePacksInfoDataD2Ev
+    std::string collectKeys()const; // _ZNK21ResourcePacksInfoData11collectKeysB5cxx11Ev
+    void getAddOnPackSize()const; // _ZNK21ResourcePacksInfoData16getAddOnPackSizeEv
+    void getTexturePackSize()const; // _ZNK21ResourcePacksInfoData18getTexturePackSizeEv
+    ResourcePacksInfoData(); // _ZN21ResourcePacksInfoDataC2Ev
 };

@@ -5,6 +5,6 @@
 class BiomeSourceGetBiomeCache {
 
 public:
-    ~BiomeSourceGetBiomeCache();
-    BiomeSourceGetBiomeCache();
+    BiomeSourceGetBiomeCache(); // _ZN24BiomeSourceGetBiomeCacheC2Ev
+    ~BiomeSourceGetBiomeCache(); // _ZN24BiomeSourceGetBiomeCacheD2Ev
 };

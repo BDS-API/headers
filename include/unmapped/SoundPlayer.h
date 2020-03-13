@@ -5,5 +5,5 @@
 class SoundPlayer {
 
 public:
-    ~SoundPlayer();
+    ~SoundPlayer(); // _ZN11SoundPlayerD2Ev
 };

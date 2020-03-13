@@ -6,8 +6,8 @@
 class FilterTestClock : SimpleFloatFilterTest {
 
 public:
-    virtual void evaluate(FilterContext const&)const;
-    ~FilterTestClock();
-    virtual void getName()const;
-    FilterTestClock();
+    ~FilterTestClock(); // _ZN15FilterTestClockD2Ev
+    virtual void evaluate(FilterContext const&)const; // _ZNK15FilterTestClock8evaluateERK13FilterContext
+    virtual void getName()const; // _ZNK15FilterTestClock7getNameEv
+    FilterTestClock(); // _ZN15FilterTestClockC2Ev
 };

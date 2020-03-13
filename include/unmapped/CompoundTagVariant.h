@@ -5,14 +5,14 @@
 class CompoundTagVariant {
 
 public:
-    void get();
-    void get()const;
-    void operator->()const;
-    CompoundTagVariant(Tag &&);
-    void operator*()const;
-    CompoundTagVariant(CompoundTagVariant &&);
-    void emplace(Tag &&);
-    ~CompoundTagVariant();
-    void copy()const;
-    CompoundTagVariant();
+    void operator*()const; // _ZNK18CompoundTagVariantdeEv
+    void get(); // _ZN18CompoundTagVariant3getEv
+    void copy()const; // _ZNK18CompoundTagVariant4copyEv
+    ~CompoundTagVariant(); // _ZN18CompoundTagVariantD2Ev
+    void get()const; // _ZNK18CompoundTagVariant3getEv
+    void operator->()const; // _ZNK18CompoundTagVariantptEv
+    CompoundTagVariant(); // _ZN18CompoundTagVariantC2Ev
+    CompoundTagVariant(CompoundTagVariant &&); // _ZN18CompoundTagVariantC2EOS_
+    CompoundTagVariant(Tag &&); // _ZN18CompoundTagVariantC2EO3Tag
+    void emplace(Tag &&); // _ZN18CompoundTagVariant7emplaceEO3Tag
 };

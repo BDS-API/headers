@@ -7,6 +7,6 @@ class BiomeHeight {
 public:
     static long MIN_DEPTH;
 
-    void less()const;
-    BiomeHeight(float, float);
+    BiomeHeight(float, float); // _ZN11BiomeHeightC2Eff
+    void less()const; // _ZNK11BiomeHeight4lessEv
 };

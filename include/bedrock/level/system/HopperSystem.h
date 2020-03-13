@@ -6,7 +6,7 @@
 class HopperSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~HopperSystem();
-    HopperSystem();
+    ~HopperSystem(); // _ZN12HopperSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN12HopperSystem4tickER14EntityRegistry
+    HopperSystem(); // _ZN12HopperSystemC2Ev
 };

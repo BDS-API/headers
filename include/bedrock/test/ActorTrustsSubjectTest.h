@@ -6,8 +6,8 @@
 class ActorTrustsSubjectTest : SimpleBoolFilterTest {
 
 public:
-    virtual void getName()const;
-    ~ActorTrustsSubjectTest();
-    virtual void evaluate(FilterContext const&)const;
-    ActorTrustsSubjectTest();
+    ~ActorTrustsSubjectTest(); // _ZN22ActorTrustsSubjectTestD2Ev
+    virtual void evaluate(FilterContext const&)const; // _ZNK22ActorTrustsSubjectTest8evaluateERK13FilterContext
+    virtual void getName()const; // _ZNK22ActorTrustsSubjectTest7getNameEv
+    ActorTrustsSubjectTest(); // _ZN22ActorTrustsSubjectTestC2Ev
 };

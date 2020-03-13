@@ -5,6 +5,6 @@
 class UriListener {
 
 public:
-    ~UriListener();
-    UriListener();
+    ~UriListener(); // _ZN11UriListenerD2Ev
+    UriListener(); // _ZN11UriListenerC2Ev
 };

@@ -4,5 +4,5 @@
 
 namespace CompareScheduledCallback {
 
-    void operator()(ScheduledCallback const&, ScheduledCallback const&);
+    void operator()(ScheduledCallback const&, ScheduledCallback const&); // _ZN24CompareScheduledCallbackclERK17ScheduledCallbackS2_
 };

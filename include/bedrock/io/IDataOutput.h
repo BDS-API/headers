@@ -5,6 +5,6 @@
 class IDataOutput {
 
 public:
-    ~IDataOutput();
-    IDataOutput();
+    ~IDataOutput(); // _ZN11IDataOutputD2Ev
+    IDataOutput(); // _ZN11IDataOutputC2Ev
 };

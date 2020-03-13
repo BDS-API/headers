@@ -6,7 +6,7 @@
 class MossStoneSelector : BlockSelector {
 
 public:
-    virtual void next(Random &, int, int, int, bool)const;
-    ~MossStoneSelector();
-    MossStoneSelector();
+    ~MossStoneSelector(); // _ZN17MossStoneSelectorD2Ev
+    virtual void next(Random &, int, int, int, bool)const; // _ZNK17MossStoneSelector4nextER6Randomiiib
+    MossStoneSelector(); // _ZN17MossStoneSelectorC2Ev
 };

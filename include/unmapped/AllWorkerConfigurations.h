@@ -5,6 +5,6 @@
 class AllWorkerConfigurations {
 
 public:
-    AllWorkerConfigurations(AllWorkerConfigurations const&);
-    AllWorkerConfigurations();
+    AllWorkerConfigurations(); // _ZN23AllWorkerConfigurationsC2Ev
+    AllWorkerConfigurations(AllWorkerConfigurations const&); // _ZN23AllWorkerConfigurationsC2ERKS_
 };

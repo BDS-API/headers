@@ -7,12 +7,12 @@
 class ShulkerPeekGoal : Goal {
 
 public:
-    virtual void tick();
-    ~ShulkerPeekGoal();
-    virtual void start();
-    virtual void stop();
-    virtual bool canUse();
-    virtual void appendDebugInfo(std::string &)const;
-    virtual bool canContinueToUse();
-    ShulkerPeekGoal(Mob &);
+    ~ShulkerPeekGoal(); // _ZN15ShulkerPeekGoalD2Ev
+    virtual bool canUse(); // _ZN15ShulkerPeekGoal6canUseEv
+    virtual bool canContinueToUse(); // _ZN15ShulkerPeekGoal16canContinueToUseEv
+    virtual void start(); // _ZN15ShulkerPeekGoal5startEv
+    virtual void stop(); // _ZN15ShulkerPeekGoal4stopEv
+    virtual void tick(); // _ZN15ShulkerPeekGoal4tickEv
+    virtual void appendDebugInfo(std::string &)const; // _ZNK15ShulkerPeekGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    ShulkerPeekGoal(Mob &); // _ZN15ShulkerPeekGoalC2ER3Mob
 };

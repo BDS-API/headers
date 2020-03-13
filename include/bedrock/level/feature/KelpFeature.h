@@ -6,8 +6,8 @@
 class KelpFeature : Feature {
 
 public:
-    ~KelpFeature();
-    virtual void place(BlockSource &, BlockPos const&, Random &)const;
-    KelpFeature();
-    void _canPlace(BlockSource &, BlockPos const&)const;
+    ~KelpFeature(); // _ZN11KelpFeatureD2Ev
+    virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK11KelpFeature5placeER11BlockSourceRK8BlockPosR6Random
+    KelpFeature(); // _ZN11KelpFeatureC2Ev
+    void _canPlace(BlockSource &, BlockPos const&)const; // _ZNK11KelpFeature9_canPlaceER11BlockSourceRK8BlockPos
 };

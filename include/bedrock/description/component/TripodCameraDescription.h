@@ -6,9 +6,9 @@
 class TripodCameraDescription : ComponentDescription {
 
 public:
-    ~TripodCameraDescription();
-    virtual void serializeData(Json::Value &)const;
-    virtual void getJsonName()const;
-    virtual void deserializeData(Json::Value &);
-    TripodCameraDescription();
+    virtual void getJsonName()const; // _ZNK23TripodCameraDescription11getJsonNameEv
+    ~TripodCameraDescription(); // _ZN23TripodCameraDescriptionD2Ev
+    virtual void deserializeData(Json::Value &); // _ZN23TripodCameraDescription15deserializeDataERN4Json5ValueE
+    virtual void serializeData(Json::Value &)const; // _ZNK23TripodCameraDescription13serializeDataERN4Json5ValueE
+    TripodCameraDescription(); // _ZN23TripodCameraDescriptionC2Ev
 };

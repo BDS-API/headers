@@ -11,9 +11,9 @@ public:
     static long MAX_ENCHANTED_ARMOR_CHANCE;
     static long MAX_ENCHANTED_WEAPON_CHANCE;
 
-    virtual void addAdditionalSaveData(CompoundTag &);
-    virtual void doHurtTarget(Actor *);
-    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &);
-    ~HumanoidMonster();
-    HumanoidMonster(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    ~HumanoidMonster(); // _ZN15HumanoidMonsterD2Ev
+    virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &); // _ZN15HumanoidMonster22readAdditionalSaveDataERK11CompoundTagR14DataLoadHelper
+    virtual void addAdditionalSaveData(CompoundTag &); // _ZN15HumanoidMonster21addAdditionalSaveDataER11CompoundTag
+    virtual void doHurtTarget(Actor *); // _ZN15HumanoidMonster12doHurtTargetEP5Actor
+    HumanoidMonster(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN15HumanoidMonsterC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier
 };

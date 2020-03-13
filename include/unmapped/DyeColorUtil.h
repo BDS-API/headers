@@ -4,5 +4,5 @@
 
 namespace DyeColorUtil {
 
-    void getItemColor(int);
+    void getItemColor(int); // _ZN12DyeColorUtil12getItemColorEi
 };

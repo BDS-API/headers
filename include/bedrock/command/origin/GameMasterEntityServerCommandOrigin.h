@@ -7,11 +7,11 @@
 class GameMasterEntityServerCommandOrigin : ActorServerCommandOrigin {
 
 public:
-    ~GameMasterEntityServerCommandOrigin();
-    virtual void getPermissionsLevel()const;
-    virtual void getOriginType()const;
-    virtual void clone()const;
-    virtual bool isSelectorExpansionAllowed()const;
-    GameMasterEntityServerCommandOrigin(Actor &);
-    GameMasterEntityServerCommandOrigin(ActorUniqueID, Level &);
+    ~GameMasterEntityServerCommandOrigin(); // _ZN35GameMasterEntityServerCommandOriginD2Ev
+    virtual void getPermissionsLevel()const; // _ZNK35GameMasterEntityServerCommandOrigin19getPermissionsLevelEv
+    virtual void clone()const; // _ZNK35GameMasterEntityServerCommandOrigin5cloneEv
+    virtual bool isSelectorExpansionAllowed()const; // _ZNK35GameMasterEntityServerCommandOrigin26isSelectorExpansionAllowedEv
+    virtual void getOriginType()const; // _ZNK35GameMasterEntityServerCommandOrigin13getOriginTypeEv
+    GameMasterEntityServerCommandOrigin(Actor &); // _ZN35GameMasterEntityServerCommandOriginC2ER5Actor
+    GameMasterEntityServerCommandOrigin(ActorUniqueID, Level &); // _ZN35GameMasterEntityServerCommandOriginC2E13ActorUniqueIDR5Level
 };

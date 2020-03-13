@@ -8,9 +8,9 @@ namespace AgentCommands {
     class TransferToCommand : AgentCommands::Command {
 
     public:
-        virtual bool isDone();
-        ~TransferToCommand();
-        virtual void execute();
-        TransferToCommand(Player &, int, int, int);
+        ~TransferToCommand(); // _ZN13AgentCommands17TransferToCommandD2Ev
+        virtual void execute(); // _ZN13AgentCommands17TransferToCommand7executeEv
+        virtual bool isDone(); // _ZN13AgentCommands17TransferToCommand6isDoneEv
+        TransferToCommand(Player &, int, int, int); // _ZN13AgentCommands17TransferToCommandC2ER6Playeriii
     };
 }

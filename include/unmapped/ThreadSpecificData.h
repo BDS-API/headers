@@ -5,6 +5,6 @@
 class ThreadSpecificData {
 
 public:
-    ~ThreadSpecificData();
-    ThreadSpecificData();
+    ThreadSpecificData(); // _ZN18ThreadSpecificDataC2Ev
+    ~ThreadSpecificData(); // _ZN18ThreadSpecificDataD2Ev
 };

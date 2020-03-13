@@ -6,8 +6,8 @@
 class InstantaneousAttributeBuff : AttributeBuff {
 
 public:
-    ~InstantaneousAttributeBuff();
-    virtual bool isInstantaneous()const;
-    virtual bool isSerializable()const;
-//  InstantaneousAttributeBuff(float, AttributeBuffType); //TODO: incomplete function definition
+    ~InstantaneousAttributeBuff(); // _ZN26InstantaneousAttributeBuffD2Ev
+    virtual bool isInstantaneous()const; // _ZNK26InstantaneousAttributeBuff15isInstantaneousEv
+    virtual bool isSerializable()const; // _ZNK26InstantaneousAttributeBuff14isSerializableEv
+//  InstantaneousAttributeBuff(float, AttributeBuffType); //TODO: incomplete function definition // _ZN26InstantaneousAttributeBuffC2Ef17AttributeBuffType
 };

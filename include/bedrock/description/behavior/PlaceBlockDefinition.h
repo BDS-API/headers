@@ -6,6 +6,6 @@
 class PlaceBlockDefinition : BehaviorDefinition {
 
 public:
-    ~PlaceBlockDefinition();
-    PlaceBlockDefinition();
+    ~PlaceBlockDefinition(); // _ZN20PlaceBlockDefinitionD2Ev
+    PlaceBlockDefinition(); // _ZN20PlaceBlockDefinitionC2Ev
 };

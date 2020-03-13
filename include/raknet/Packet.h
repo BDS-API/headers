@@ -7,6 +7,6 @@ namespace RakNet {
     class Packet {
 
     public:
-        Packet();
+        Packet(); // _ZN6RakNet6PacketC2Ev
     };
 }

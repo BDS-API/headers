@@ -5,5 +5,5 @@
 class SurfaceBuilderComponent {
 
 public:
-    SurfaceBuilderComponent();
+    SurfaceBuilderComponent(); // _ZN23SurfaceBuilderComponentC2Ev
 };

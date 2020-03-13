@@ -6,7 +6,7 @@
 class DaylightDetectorBlockActor : BlockActor {
 
 public:
-    virtual void tick(BlockSource &);
-    ~DaylightDetectorBlockActor();
-    DaylightDetectorBlockActor(BlockPos const&);
+    ~DaylightDetectorBlockActor(); // _ZN26DaylightDetectorBlockActorD2Ev
+    virtual void tick(BlockSource &); // _ZN26DaylightDetectorBlockActor4tickER11BlockSource
+    DaylightDetectorBlockActor(BlockPos const&); // _ZN26DaylightDetectorBlockActorC2ERK8BlockPos
 };

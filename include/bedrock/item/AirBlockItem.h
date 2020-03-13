@@ -7,6 +7,6 @@
 class AirBlockItem : Item {
 
 public:
-    ~AirBlockItem();
-    AirBlockItem(std::string const&, int);
+    ~AirBlockItem(); // _ZN12AirBlockItemD2Ev
+    AirBlockItem(std::string const&, int); // _ZN12AirBlockItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
 };

@@ -7,6 +7,6 @@ namespace BlockGeometry {
     class Element {
 
     public:
-        ~Element();
+        ~Element(); // _ZN13BlockGeometry7ElementD2Ev
     };
 }

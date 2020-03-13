@@ -5,5 +5,5 @@
 class EducationLocalLevelSettings {
 
 public:
-    EducationLocalLevelSettings();
+    EducationLocalLevelSettings(); // _ZN27EducationLocalLevelSettingsC2Ev
 };

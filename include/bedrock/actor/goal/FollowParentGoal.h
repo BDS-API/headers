@@ -7,12 +7,12 @@
 class FollowParentGoal : Goal {
 
 public:
-    virtual void tick();
-    virtual bool canContinueToUse();
-    virtual void stop();
-    ~FollowParentGoal();
-    virtual void appendDebugInfo(std::string &)const;
-    virtual void start();
-    virtual bool canUse();
-    FollowParentGoal(Mob &, float);
+    ~FollowParentGoal(); // _ZN16FollowParentGoalD2Ev
+    virtual bool canUse(); // _ZN16FollowParentGoal6canUseEv
+    virtual bool canContinueToUse(); // _ZN16FollowParentGoal16canContinueToUseEv
+    virtual void start(); // _ZN16FollowParentGoal5startEv
+    virtual void stop(); // _ZN16FollowParentGoal4stopEv
+    virtual void tick(); // _ZN16FollowParentGoal4tickEv
+    virtual void appendDebugInfo(std::string &)const; // _ZNK16FollowParentGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    FollowParentGoal(Mob &, float); // _ZN16FollowParentGoalC2ER3Mobf
 };

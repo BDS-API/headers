@@ -5,5 +5,5 @@
 class ActorLink {
 
 public:
-    ActorLink();
+    ActorLink(); // _ZN9ActorLinkC2Ev
 };

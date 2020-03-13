@@ -7,16 +7,16 @@ class ConsoleChunkBlender {
 public:
     static long sConversionBlendNoise;
 
-    void _copyColumnFromGenerated(LevelChunk &, LevelChunk &, int, int);
-    ~ConsoleChunkBlender();
-    void _calcAlphaOverworld(float, float);
-    void _findTopMostWaterHeight(LevelChunk &, int, int);
-    void blendChunkEnd(LevelChunk &, LevelChunk &);
-    void _findHighestStoneOrBedrockHeight(LevelChunk &, int, int);
-    void blendChunkNether(LevelChunk &, LevelChunk &);
-    void _shiftColumnBySetBlocks(LevelChunk &, int, int, int, int);
-    void setInterpolants(int, int, int, int);
-    void _prepInterpTable();
-    ConsoleChunkBlender();
-    void blendChunkOverworld(LevelChunk &, LevelChunk &);
+    ConsoleChunkBlender(); // _ZN19ConsoleChunkBlenderC2Ev
+    ~ConsoleChunkBlender(); // _ZN19ConsoleChunkBlenderD2Ev
+    void setInterpolants(int, int, int, int); // _ZN19ConsoleChunkBlender15setInterpolantsEiiii
+    void blendChunkOverworld(LevelChunk &, LevelChunk &); // _ZN19ConsoleChunkBlender19blendChunkOverworldER10LevelChunkS1_
+    void _prepInterpTable(); // _ZN19ConsoleChunkBlender16_prepInterpTableEv
+    void _findHighestStoneOrBedrockHeight(LevelChunk &, int, int); // _ZN19ConsoleChunkBlender32_findHighestStoneOrBedrockHeightER10LevelChunkii
+    void _findTopMostWaterHeight(LevelChunk &, int, int); // _ZN19ConsoleChunkBlender23_findTopMostWaterHeightER10LevelChunkii
+    void _calcAlphaOverworld(float, float); // _ZN19ConsoleChunkBlender19_calcAlphaOverworldEff
+    void _shiftColumnBySetBlocks(LevelChunk &, int, int, int, int); // _ZN19ConsoleChunkBlender23_shiftColumnBySetBlocksER10LevelChunkiiii
+    void _copyColumnFromGenerated(LevelChunk &, LevelChunk &, int, int); // _ZN19ConsoleChunkBlender24_copyColumnFromGeneratedER10LevelChunkS1_ii
+    void blendChunkNether(LevelChunk &, LevelChunk &); // _ZN19ConsoleChunkBlender16blendChunkNetherER10LevelChunkS1_
+    void blendChunkEnd(LevelChunk &, LevelChunk &); // _ZN19ConsoleChunkBlender13blendChunkEndER10LevelChunkS1_
 };

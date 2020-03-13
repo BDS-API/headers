@@ -13,10 +13,10 @@ namespace MinecraftWorkerPool {
     static long CONNECTEDSTORAGE;
     static long WATCHDOG;
 
-    void loadWorkerConfigurations(unsigned int, unsigned int);
-    void configureMainThread();
-    void destroySingletons();
-    void createSingletons();
-    void configureServerThread();
-    void initializeDefaults();
+    void loadWorkerConfigurations(unsigned int, unsigned int); // _ZN19MinecraftWorkerPool24loadWorkerConfigurationsEjj
+    void initializeDefaults(); // _ZN19MinecraftWorkerPool18initializeDefaultsEv
+    void configureMainThread(); // _ZN19MinecraftWorkerPool19configureMainThreadEv
+    void configureServerThread(); // _ZN19MinecraftWorkerPool21configureServerThreadEv
+    void createSingletons(); // _ZN19MinecraftWorkerPool16createSingletonsEv
+    void destroySingletons(); // _ZN19MinecraftWorkerPool17destroySingletonsEv
 };

@@ -7,7 +7,7 @@
 class LoomBannerContainerController : ContainerController {
 
 public:
-    virtual bool isItemAllowed(ItemInstance const&)const;
-    ~LoomBannerContainerController();
-    LoomBannerContainerController(std::shared_ptr<ContainerModel>);
+    ~LoomBannerContainerController(); // _ZN29LoomBannerContainerControllerD2Ev
+    virtual bool isItemAllowed(ItemInstance const&)const; // _ZNK29LoomBannerContainerController13isItemAllowedERK12ItemInstance
+    LoomBannerContainerController(std::shared_ptr<ContainerModel>); // _ZN29LoomBannerContainerControllerC2ESt10shared_ptrI14ContainerModelE
 };

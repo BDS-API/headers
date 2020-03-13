@@ -24,7 +24,7 @@ namespace SharedConstants {
     static long NetworkDefaultMaxConnections;
     static long MinimumCompatibleGameVersionForLevelData;
 
-    void getVersionCode();
-    bool isVersion(int, int, int, int);
-    void getVersionCode(int, int, int, int);
+    bool isVersion(int, int, int, int); // _ZN15SharedConstants9isVersionEiiii
+    void getVersionCode(); // _ZN15SharedConstants14getVersionCodeEv
+    void getVersionCode(int, int, int, int); // _ZN15SharedConstants14getVersionCodeEiiii
 };

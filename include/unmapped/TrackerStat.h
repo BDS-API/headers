@@ -5,5 +5,5 @@
 class TrackerStat {
 
 public:
-    TrackerStat();
+    TrackerStat(); // _ZN11TrackerStatC2Ev
 };

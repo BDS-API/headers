@@ -4,5 +4,5 @@
 
 namespace ToolRecipes {
 
-    void addRecipes(Recipes &);
+    void addRecipes(Recipes &); // _ZN11ToolRecipes10addRecipesER7Recipes
 };

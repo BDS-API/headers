@@ -5,13 +5,13 @@
 class ChannelTransform {
 
 public:
-    ChannelTransform(ChannelTransform const&);
-    ChannelTransform(ExpressionNode const&, ExpressionNode const&, ExpressionNode const&);
-    ~ChannelTransform();
-//  void animate(RenderParams &, BoneOrientation &, float, BoneTransformType)const; //TODO: incomplete function definition
-    ChannelTransform(ExpressionNode const&, Vec3 const&);
-    void operator==(ChannelTransform const&)const;
-    ChannelTransform(ExpressionNode const&);
-    void toJson(Json::Value &)const;
-    ChannelTransform(ExpressionNode const&, int);
+    ChannelTransform(ExpressionNode const&); // _ZN16ChannelTransformC2ERK14ExpressionNode
+    ChannelTransform(ExpressionNode const&, Vec3 const&); // _ZN16ChannelTransformC2ERK14ExpressionNodeRK4Vec3
+    ChannelTransform(ExpressionNode const&, ExpressionNode const&, ExpressionNode const&); // _ZN16ChannelTransformC2ERK14ExpressionNodeS2_S2_
+    ChannelTransform(ExpressionNode const&, int); // _ZN16ChannelTransformC2ERK14ExpressionNodei
+    void operator==(ChannelTransform const&)const; // _ZNK16ChannelTransformeqERKS_
+//  void animate(RenderParams &, BoneOrientation &, float, BoneTransformType)const; //TODO: incomplete function definition // _ZNK16ChannelTransform7animateER12RenderParamsR15BoneOrientationf17BoneTransformType
+    void toJson(Json::Value &)const; // _ZNK16ChannelTransform6toJsonERN4Json5ValueE
+    ~ChannelTransform(); // _ZN16ChannelTransformD2Ev
+    ChannelTransform(ChannelTransform const&); // _ZN16ChannelTransformC2ERKS_
 };

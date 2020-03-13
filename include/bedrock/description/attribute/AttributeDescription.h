@@ -6,6 +6,6 @@
 class AttributeDescription : Description {
 
 public:
-    ~AttributeDescription();
-    AttributeDescription();
+    ~AttributeDescription(); // _ZN20AttributeDescriptionD2Ev
+    AttributeDescription(); // _ZN20AttributeDescriptionC2Ev
 };

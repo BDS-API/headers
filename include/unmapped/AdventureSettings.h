@@ -5,5 +5,5 @@
 class AdventureSettings {
 
 public:
-    AdventureSettings();
+    AdventureSettings(); // _ZN17AdventureSettingsC2Ev
 };

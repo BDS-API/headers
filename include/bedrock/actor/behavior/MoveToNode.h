@@ -6,9 +6,9 @@
 class MoveToNode : BehaviorNode {
 
 public:
-    ~MoveToNode();
-    virtual void initializeFromDefinition(Actor &);
-    virtual void tick(Actor &);
-    MoveToNode();
-    void lookAt(Mob &, Vec3 const&, float, float);
+    ~MoveToNode(); // _ZN10MoveToNodeD2Ev
+    virtual void tick(Actor &); // _ZN10MoveToNode4tickER5Actor
+    virtual void initializeFromDefinition(Actor &); // _ZN10MoveToNode24initializeFromDefinitionER5Actor
+    MoveToNode(); // _ZN10MoveToNodeC2Ev
+    void lookAt(Mob &, Vec3 const&, float, float); // _ZN10MoveToNode6lookAtER3MobRK4Vec3ff
 };

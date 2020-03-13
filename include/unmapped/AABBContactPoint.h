@@ -5,5 +5,5 @@
 class AABBContactPoint {
 
 public:
-    AABBContactPoint();
+    AABBContactPoint(); // _ZN16AABBContactPointC2Ev
 };

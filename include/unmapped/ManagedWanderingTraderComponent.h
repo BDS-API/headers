@@ -4,6 +4,6 @@
 
 namespace ManagedWanderingTraderComponent {
 
-    void reloadComponent(Actor &);
-    void initFromDefinition(Actor &);
+    void initFromDefinition(Actor &); // _ZN31ManagedWanderingTraderComponent18initFromDefinitionER5Actor
+    void reloadComponent(Actor &); // _ZN31ManagedWanderingTraderComponent15reloadComponentER5Actor
 };

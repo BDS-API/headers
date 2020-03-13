@@ -6,8 +6,8 @@
 class StrongholdStart : StructureStart {
 
 public:
-    ~StrongholdStart();
-    virtual bool isValid()const;
-    virtual void getType()const;
-    StrongholdStart(Dimension &, Random &, int, int);
+    ~StrongholdStart(); // _ZN15StrongholdStartD2Ev
+    virtual bool isValid()const; // _ZNK15StrongholdStart7isValidEv
+    virtual void getType()const; // _ZNK15StrongholdStart7getTypeEv
+    StrongholdStart(Dimension &, Random &, int, int); // _ZN15StrongholdStartC2ER9DimensionR6Randomii
 };

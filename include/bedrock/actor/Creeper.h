@@ -6,17 +6,17 @@
 class Creeper : Monster {
 
 public:
-    virtual void die(ActorDamageSource const&);
-    virtual void useNewAi()const;
-    virtual void _onSizeUpdated();
-    virtual void normalTick();
-    ~Creeper();
-    void _getSwell()const;
-    void _getOldSwell()const;
-    void _setSwell(int);
-    void _setSwellDir(int);
-    void getSwellDir();
-    void getSwelling(float)const;
-    void _setOldSwell(int);
-    Creeper(ActorDefinitionGroup *, ActorDefinitionIdentifier const&);
+    ~Creeper(); // _ZN7CreeperD2Ev
+    virtual void normalTick(); // _ZN7Creeper10normalTickEv
+    virtual void die(ActorDamageSource const&); // _ZN7Creeper3dieERK17ActorDamageSource
+    virtual void _onSizeUpdated(); // _ZN7Creeper14_onSizeUpdatedEv
+    virtual void useNewAi()const; // _ZNK7Creeper8useNewAiEv
+    Creeper(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN7CreeperC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier
+    void _getSwell()const; // _ZNK7Creeper9_getSwellEv
+    void _setOldSwell(int); // _ZN7Creeper12_setOldSwellEi
+    void _setSwellDir(int); // _ZN7Creeper12_setSwellDirEi
+    void getSwellDir(); // _ZN7Creeper11getSwellDirEv
+    void _setSwell(int); // _ZN7Creeper9_setSwellEi
+    void _getOldSwell()const; // _ZNK7Creeper12_getOldSwellEv
+    void getSwelling(float)const; // _ZNK7Creeper11getSwellingEf
 };

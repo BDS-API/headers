@@ -5,5 +5,5 @@
 class NetworkComponent {
 
 public:
-    NetworkComponent(NetworkComponent &&);
+    NetworkComponent(NetworkComponent &&); // _ZN16NetworkComponentC2EOS_
 };

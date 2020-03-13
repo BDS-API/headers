@@ -6,7 +6,7 @@
 class OpenDoorAnnotationSystem : ITickingSystem {
 
 public:
-    ~OpenDoorAnnotationSystem();
-    virtual void tick(EntityRegistry &);
-    OpenDoorAnnotationSystem();
+    ~OpenDoorAnnotationSystem(); // _ZN24OpenDoorAnnotationSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN24OpenDoorAnnotationSystem4tickER14EntityRegistry
+    OpenDoorAnnotationSystem(); // _ZN24OpenDoorAnnotationSystemC2Ev
 };

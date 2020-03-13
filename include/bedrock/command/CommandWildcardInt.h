@@ -5,8 +5,8 @@
 class CommandWildcardInt {
 
 public:
-    CommandWildcardInt(int);
-    CommandWildcardInt();
-    void getValue()const;
-    bool isWildcard()const;
+    CommandWildcardInt(); // _ZN18CommandWildcardIntC2Ev
+    CommandWildcardInt(int); // _ZN18CommandWildcardIntC2Ei
+    bool isWildcard()const; // _ZNK18CommandWildcardInt10isWildcardEv
+    void getValue()const; // _ZNK18CommandWildcardInt8getValueEv
 };

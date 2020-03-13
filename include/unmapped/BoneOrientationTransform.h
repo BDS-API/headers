@@ -5,5 +5,5 @@
 class BoneOrientationTransform {
 
 public:
-    BoneOrientationTransform();
+    BoneOrientationTransform(); // _ZN24BoneOrientationTransformC2Ev
 };

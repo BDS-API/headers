@@ -5,5 +5,5 @@
 class FilterContext {
 
 public:
-    FilterContext();
+    FilterContext(); // _ZN13FilterContextC2Ev
 };

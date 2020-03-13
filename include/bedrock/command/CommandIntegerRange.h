@@ -5,10 +5,10 @@
 class CommandIntegerRange {
 
 public:
-    void getMaxValue()const;
-    void getMinValue()const;
-    void getInverted()const;
-    CommandIntegerRange(int, int, bool);
-    CommandIntegerRange();
-    bool isWithinRange(int)const;
+    CommandIntegerRange(); // _ZN19CommandIntegerRangeC2Ev
+    CommandIntegerRange(int, int, bool); // _ZN19CommandIntegerRangeC2Eiib
+    bool isWithinRange(int)const; // _ZNK19CommandIntegerRange13isWithinRangeEi
+    void getMinValue()const; // _ZNK19CommandIntegerRange11getMinValueEv
+    void getMaxValue()const; // _ZNK19CommandIntegerRange11getMaxValueEv
+    void getInverted()const; // _ZNK19CommandIntegerRange11getInvertedEv
 };

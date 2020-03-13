@@ -8,9 +8,9 @@ class ScriptServerChatReceived /*ScriptTemplateFactory<ScriptServerContext>::Rec
 public:
     static long mHash;
 
-    ~ScriptServerChatReceived();
-    virtual void getEventData(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle &);
-    virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&);
-    void getHash();
-    ScriptServerChatReceived();
+    ~ScriptServerChatReceived(); // _ZN24ScriptServerChatReceivedD2Ev
+    virtual void receivedEvent(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle const&); // _ZN24ScriptServerChatReceived13receivedEventERKN9ScriptApi17ScriptVersionInfoER12ScriptEngineR19ScriptServerContextRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_18ScriptObjectHandleE
+    virtual void getEventData(ScriptApi::ScriptVersionInfo const&, ScriptEngine &, ScriptServerContext &, std::string const&, ScriptApi::ScriptObjectHandle &); // _ZN24ScriptServerChatReceived12getEventDataERKN9ScriptApi17ScriptVersionInfoER12ScriptEngineR19ScriptServerContextRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERNS0_18ScriptObjectHandleE
+    void getHash(); // _ZN24ScriptServerChatReceived7getHashEv
+    ScriptServerChatReceived(); // _ZN24ScriptServerChatReceivedC2Ev
 };

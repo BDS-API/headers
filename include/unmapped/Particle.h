@@ -5,5 +5,5 @@
 class Particle {
 
 public:
-    void setColor(Color const&);
+    void setColor(Color const&); // _ZN8Particle8setColorERK5Color
 };

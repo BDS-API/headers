@@ -5,6 +5,6 @@
 class IDataInput {
 
 public:
-    ~IDataInput();
-    IDataInput();
+    ~IDataInput(); // _ZN10IDataInputD2Ev
+    IDataInput(); // _ZN10IDataInputC2Ev
 };

@@ -5,5 +5,5 @@
 class SlotDropChance {
 
 public:
-    SlotDropChance();
+    SlotDropChance(); // _ZN14SlotDropChanceC2Ev
 };

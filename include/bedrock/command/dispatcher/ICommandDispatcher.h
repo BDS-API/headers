@@ -5,6 +5,6 @@
 class ICommandDispatcher {
 
 public:
-    ~ICommandDispatcher();
-    ICommandDispatcher();
+    ~ICommandDispatcher(); // _ZN18ICommandDispatcherD2Ev
+    ICommandDispatcher(); // _ZN18ICommandDispatcherC2Ev
 };

@@ -6,6 +6,6 @@ namespace BedrockBlocks {
 
     static long mAir;
 
-    void unassignBlocks();
-    void assignBlocks();
+    void assignBlocks(); // _ZN13BedrockBlocks12assignBlocksEv
+    void unassignBlocks(); // _ZN13BedrockBlocks14unassignBlocksEv
 };

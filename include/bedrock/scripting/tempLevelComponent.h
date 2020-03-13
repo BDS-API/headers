@@ -9,7 +9,7 @@ namespace ScriptApi {
         class tempLevelComponent {
 
         public:
-            tempLevelComponent();
+            tempLevelComponent(); // _ZN9ScriptApi11WORKAROUNDS18tempLevelComponentC2Ev
         };
     }
 }

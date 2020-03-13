@@ -5,7 +5,7 @@
 class SchedulerComponent {
 
 public:
-    void setCurrentEventIndex(int);
-    void getCurrentEventIndex()const;
-    SchedulerComponent(SchedulerComponent &&);
+    SchedulerComponent(SchedulerComponent &&); // _ZN18SchedulerComponentC2EOS_
+    void setCurrentEventIndex(int); // _ZN18SchedulerComponent20setCurrentEventIndexEi
+    void getCurrentEventIndex()const; // _ZNK18SchedulerComponent20getCurrentEventIndexEv
 };

@@ -6,6 +6,6 @@
 class VanillaAppConfigs : AppConfigs {
 
 public:
-    ~VanillaAppConfigs();
-    VanillaAppConfigs();
+    ~VanillaAppConfigs(); // _ZN17VanillaAppConfigsD2Ev
+    VanillaAppConfigs(); // _ZN17VanillaAppConfigsC2Ev
 };

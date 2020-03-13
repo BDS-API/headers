@@ -9,8 +9,8 @@ namespace Bedrock {
         class AsyncBase {
 
         public:
-            ~AsyncBase();
-            AsyncBase();
+            AsyncBase(); // _ZN7Bedrock9Threading9AsyncBaseC2Ev
+            ~AsyncBase(); // _ZN7Bedrock9Threading9AsyncBaseD2Ev
         };
     }
 }

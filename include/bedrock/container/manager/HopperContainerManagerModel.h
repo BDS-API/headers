@@ -6,8 +6,8 @@
 class HopperContainerManagerModel : LevelContainerManagerModel {
 
 public:
-    virtual void init();
-    ~HopperContainerManagerModel();
-//  HopperContainerManagerModel(ContainerID, Player &, ActorUniqueID const&); //TODO: incomplete function definition
-//  HopperContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition
+    ~HopperContainerManagerModel(); // _ZN27HopperContainerManagerModelD2Ev
+    virtual void init(); // _ZN27HopperContainerManagerModel4initEv
+//  HopperContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN27HopperContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
+//  HopperContainerManagerModel(ContainerID, Player &, ActorUniqueID const&); //TODO: incomplete function definition // _ZN27HopperContainerManagerModelC2E11ContainerIDR6PlayerRK13ActorUniqueID
 };

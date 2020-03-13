@@ -5,6 +5,6 @@
 class ScriptContainerComponentBase /*ScriptTemplateFactory<ScriptServerContext>::Component*/ { //TODO: incomplete class definition
 
 public:
-    ~ScriptContainerComponentBase();
-    ScriptContainerComponentBase();
+    ~ScriptContainerComponentBase(); // _ZN28ScriptContainerComponentBaseD2Ev
+    ScriptContainerComponentBase(); // _ZN28ScriptContainerComponentBaseC2Ev
 };

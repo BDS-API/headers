@@ -4,5 +4,5 @@
 
 namespace AppConfigsFactory {
 
-    void createAppConfigs();
+    void createAppConfigs(); // _ZN17AppConfigsFactory16createAppConfigsEv
 };

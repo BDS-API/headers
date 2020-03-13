@@ -6,8 +6,8 @@
 class FilterTestBiome : SimpleIntFilterTest {
 
 public:
-    ~FilterTestBiome();
-    virtual void getName()const;
-    virtual void evaluate(FilterContext const&)const;
-    FilterTestBiome();
+    ~FilterTestBiome(); // _ZN15FilterTestBiomeD2Ev
+    virtual void evaluate(FilterContext const&)const; // _ZNK15FilterTestBiome8evaluateERK13FilterContext
+    virtual void getName()const; // _ZNK15FilterTestBiome7getNameEv
+    FilterTestBiome(); // _ZN15FilterTestBiomeC2Ev
 };

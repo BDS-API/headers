@@ -5,5 +5,5 @@
 class OverworldHeightAttributes {
 
 public:
-    OverworldHeightAttributes();
+    OverworldHeightAttributes(); // _ZN25OverworldHeightAttributesC2Ev
 };

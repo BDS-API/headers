@@ -5,6 +5,6 @@
 class PlayerStorageIds {
 
 public:
-    ~PlayerStorageIds();
-    PlayerStorageIds();
+    PlayerStorageIds(); // _ZN16PlayerStorageIdsC2Ev
+    ~PlayerStorageIds(); // _ZN16PlayerStorageIdsD2Ev
 };

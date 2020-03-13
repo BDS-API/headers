@@ -7,7 +7,7 @@
 class RailBlock : BaseRailBlock {
 
 public:
-    virtual void getVariant(Block const&)const;
-    ~RailBlock();
-    RailBlock(std::string const&, int);
+    ~RailBlock(); // _ZN9RailBlockD2Ev
+    virtual void getVariant(Block const&)const; // _ZNK9RailBlock10getVariantERK5Block
+    RailBlock(std::string const&, int); // _ZN9RailBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
 };

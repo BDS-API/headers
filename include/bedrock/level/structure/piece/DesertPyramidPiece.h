@@ -6,8 +6,8 @@
 class DesertPyramidPiece : ScatteredFeaturePiece {
 
 public:
-    virtual void getType()const;
-    ~DesertPyramidPiece();
-    virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    DesertPyramidPiece(int, int);
+    ~DesertPyramidPiece(); // _ZN18DesertPyramidPieceD2Ev
+    virtual void getType()const; // _ZNK18DesertPyramidPiece7getTypeEv
+    virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN18DesertPyramidPiece11postProcessEP11BlockSourceR6RandomRK11BoundingBox
+    DesertPyramidPiece(int, int); // _ZN18DesertPyramidPieceC2Eii
 };

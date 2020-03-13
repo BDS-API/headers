@@ -7,11 +7,11 @@
 class MultiplayerSettingsPacket : Packet {
 
 public:
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual std::string getName()const;
-    virtual void write(BinaryStream &)const;
-    ~MultiplayerSettingsPacket();
-    virtual void getId()const;
-    MultiplayerSettingsPacket();
-//  MultiplayerSettingsPacket(MultiplayerSettingsPacketType); //TODO: incomplete function definition
+    ~MultiplayerSettingsPacket(); // _ZN25MultiplayerSettingsPacketD2Ev
+    virtual void getId()const; // _ZNK25MultiplayerSettingsPacket5getIdEv
+    virtual std::string getName()const; // _ZNK25MultiplayerSettingsPacket7getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK25MultiplayerSettingsPacket5writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN25MultiplayerSettingsPacket4readER20ReadOnlyBinaryStream
+    MultiplayerSettingsPacket(); // _ZN25MultiplayerSettingsPacketC2Ev
+//  MultiplayerSettingsPacket(MultiplayerSettingsPacketType); //TODO: incomplete function definition // _ZN25MultiplayerSettingsPacketC2E29MultiplayerSettingsPacketType
 };

@@ -7,8 +7,8 @@ namespace Automation {
 
     namespace AutomationSession {
 
-        bool isReady();
-        void connect(std::string const&);
-        bool isConnecting();
+        void connect(std::string const&); // _ZN10Automation17AutomationSession7connectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+        bool isReady(); // _ZN10Automation17AutomationSession7isReadyEv
+        bool isConnecting(); // _ZN10Automation17AutomationSession12isConnectingEv
     };
 }

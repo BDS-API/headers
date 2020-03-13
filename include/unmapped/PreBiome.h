@@ -7,7 +7,7 @@ namespace LayerValues {
     class PreBiome {
 
     public:
-        bool isSpecial()const;
-        bool isOcean()const;
+        bool isOcean()const; // _ZNK11LayerValues8PreBiome7isOceanEv
+        bool isSpecial()const; // _ZNK11LayerValues8PreBiome9isSpecialEv
     };
 }

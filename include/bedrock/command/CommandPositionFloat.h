@@ -5,5 +5,5 @@
 class CommandPositionFloat {
 
 public:
-    CommandPositionFloat();
+    CommandPositionFloat(); // _ZN20CommandPositionFloatC2Ev
 };

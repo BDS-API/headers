@@ -7,7 +7,7 @@ namespace BlockSerializationUtils {
     class NbtToBlockCache {
 
     public:
-        NbtToBlockCache();
-        ~NbtToBlockCache();
+        NbtToBlockCache(); // _ZN23BlockSerializationUtils15NbtToBlockCacheC2Ev
+        ~NbtToBlockCache(); // _ZN23BlockSerializationUtils15NbtToBlockCacheD2Ev
     };
 }

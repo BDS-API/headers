@@ -6,8 +6,8 @@
 class FilterTestTemperatureType : SimpleIntFilterTest {
 
 public:
-    virtual void getName()const;
-    virtual void evaluate(FilterContext const&)const;
-    ~FilterTestTemperatureType();
-    FilterTestTemperatureType();
+    ~FilterTestTemperatureType(); // _ZN25FilterTestTemperatureTypeD2Ev
+    virtual void evaluate(FilterContext const&)const; // _ZNK25FilterTestTemperatureType8evaluateERK13FilterContext
+    virtual void getName()const; // _ZNK25FilterTestTemperatureType7getNameEv
+    FilterTestTemperatureType(); // _ZN25FilterTestTemperatureTypeC2Ev
 };

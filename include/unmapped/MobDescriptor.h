@@ -5,7 +5,7 @@
 class MobDescriptor {
 
 public:
-    MobDescriptor();
-    ~MobDescriptor();
-    MobDescriptor(MobDescriptor const&);
+    ~MobDescriptor(); // _ZN13MobDescriptorD2Ev
+    MobDescriptor(MobDescriptor const&); // _ZN13MobDescriptorC2ERKS_
+    MobDescriptor(); // _ZN13MobDescriptorC2Ev
 };

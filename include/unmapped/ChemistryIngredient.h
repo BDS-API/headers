@@ -5,9 +5,9 @@
 class ChemistryIngredient {
 
 public:
-//  ChemistryIngredient(CompoundType, int); //TODO: incomplete function definition
-    ~ChemistryIngredient();
-    ChemistryIngredient(ChemistryIngredient const&);
-//  ChemistryIngredient(ElementType, int); //TODO: incomplete function definition
-    ChemistryIngredient(ItemInstance const&);
+    ~ChemistryIngredient(); // _ZN19ChemistryIngredientD2Ev
+    ChemistryIngredient(ChemistryIngredient const&); // _ZN19ChemistryIngredientC2ERKS_
+//  ChemistryIngredient(ElementType, int); //TODO: incomplete function definition // _ZN19ChemistryIngredientC2E11ElementTypei
+//  ChemistryIngredient(CompoundType, int); //TODO: incomplete function definition // _ZN19ChemistryIngredientC2E12CompoundTypei
+    ChemistryIngredient(ItemInstance const&); // _ZN19ChemistryIngredientC2ERK12ItemInstance
 };

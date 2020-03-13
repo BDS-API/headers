@@ -6,8 +6,8 @@
 class BlockActorLevelListener : LevelListener {
 
 public:
-    virtual void onChunkUnloaded(LevelChunk &);
-    virtual void onChunkLoaded(LevelChunk &);
-    ~BlockActorLevelListener();
-    BlockActorLevelListener();
+    ~BlockActorLevelListener(); // _ZN23BlockActorLevelListenerD2Ev
+    virtual void onChunkLoaded(LevelChunk &); // _ZN23BlockActorLevelListener13onChunkLoadedER10LevelChunk
+    virtual void onChunkUnloaded(LevelChunk &); // _ZN23BlockActorLevelListener15onChunkUnloadedER10LevelChunk
+    BlockActorLevelListener(); // _ZN23BlockActorLevelListenerC2Ev
 };

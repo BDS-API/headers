@@ -6,7 +6,7 @@
 class AmphibiousMoveControl : GenericMoveControl {
 
 public:
-    ~AmphibiousMoveControl();
-    virtual void tick(MoveControlComponent &, Mob &);
-    AmphibiousMoveControl();
+    ~AmphibiousMoveControl(); // _ZN21AmphibiousMoveControlD2Ev
+    virtual void tick(MoveControlComponent &, Mob &); // _ZN21AmphibiousMoveControl4tickER20MoveControlComponentR3Mob
+    AmphibiousMoveControl(); // _ZN21AmphibiousMoveControlC2Ev
 };

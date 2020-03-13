@@ -7,7 +7,7 @@ namespace Bedrock {
     class LogEndPoint {
 
     public:
-        ~LogEndPoint();
-        LogEndPoint();
+        ~LogEndPoint(); // _ZN7Bedrock11LogEndPointD2Ev
+        LogEndPoint(); // _ZN7Bedrock11LogEndPointC2Ev
     };
 }

@@ -4,5 +4,5 @@
 
 namespace LevelChunkPhase1Deleter {
 
-    void operator()(LevelChunk *);
+    void operator()(LevelChunk *); // _ZN23LevelChunkPhase1DeleterclEP10LevelChunk
 };

@@ -4,5 +4,5 @@
 
 namespace VanillaVillageJigsawStructureBlockRules {
 
-    void initialize(JigsawStructureRegistry &);
+    void initialize(JigsawStructureRegistry &); // _ZN39VanillaVillageJigsawStructureBlockRules10initializeER23JigsawStructureRegistry
 };

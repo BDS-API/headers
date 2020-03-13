@@ -7,7 +7,7 @@
 class BlastFurnaceBlockActor : FurnaceBlockActor {
 
 public:
-    ~BlastFurnaceBlockActor();
-    virtual std::string getName()const;
-    BlastFurnaceBlockActor(BlockPos const&);
+    ~BlastFurnaceBlockActor(); // _ZN22BlastFurnaceBlockActorD2Ev
+    virtual std::string getName()const; // _ZNK22BlastFurnaceBlockActor7getNameB5cxx11Ev
+    BlastFurnaceBlockActor(BlockPos const&); // _ZN22BlastFurnaceBlockActorC2ERK8BlockPos
 };

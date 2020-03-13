@@ -5,6 +5,6 @@
 class SecureStorage {
 
 public:
-    ~SecureStorage();
-    SecureStorage();
+    ~SecureStorage(); // _ZN13SecureStorageD2Ev
+    SecureStorage(); // _ZN13SecureStorageC2Ev
 };

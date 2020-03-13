@@ -7,11 +7,11 @@
 class MoveTowardsTargetGoal : Goal {
 
 public:
-    virtual void stop();
-    virtual void start();
-    virtual bool canContinueToUse();
-    virtual bool canUse();
-    virtual void appendDebugInfo(std::string &)const;
-    ~MoveTowardsTargetGoal();
-    MoveTowardsTargetGoal(Mob &, float, float);
+    ~MoveTowardsTargetGoal(); // _ZN21MoveTowardsTargetGoalD2Ev
+    virtual bool canUse(); // _ZN21MoveTowardsTargetGoal6canUseEv
+    virtual bool canContinueToUse(); // _ZN21MoveTowardsTargetGoal16canContinueToUseEv
+    virtual void start(); // _ZN21MoveTowardsTargetGoal5startEv
+    virtual void stop(); // _ZN21MoveTowardsTargetGoal4stopEv
+    virtual void appendDebugInfo(std::string &)const; // _ZNK21MoveTowardsTargetGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    MoveTowardsTargetGoal(Mob &, float, float); // _ZN21MoveTowardsTargetGoalC2ER3Mobff
 };

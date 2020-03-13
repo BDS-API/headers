@@ -7,7 +7,7 @@
 class LoomDyeContainerController : ContainerController {
 
 public:
-    ~LoomDyeContainerController();
-    virtual bool isItemAllowed(ItemInstance const&)const;
-    LoomDyeContainerController(std::shared_ptr<ContainerModel>);
+    ~LoomDyeContainerController(); // _ZN26LoomDyeContainerControllerD2Ev
+    virtual bool isItemAllowed(ItemInstance const&)const; // _ZNK26LoomDyeContainerController13isItemAllowedERK12ItemInstance
+    LoomDyeContainerController(std::shared_ptr<ContainerModel>); // _ZN26LoomDyeContainerControllerC2ESt10shared_ptrI14ContainerModelE
 };

@@ -6,8 +6,8 @@
 class LookAtActorNode : BehaviorNode {
 
 public:
-    virtual void tick(Actor &);
-    virtual void initializeFromDefinition(Actor &);
-    ~LookAtActorNode();
-    LookAtActorNode();
+    ~LookAtActorNode(); // _ZN15LookAtActorNodeD2Ev
+    virtual void tick(Actor &); // _ZN15LookAtActorNode4tickER5Actor
+    virtual void initializeFromDefinition(Actor &); // _ZN15LookAtActorNode24initializeFromDefinitionER5Actor
+    LookAtActorNode(); // _ZN15LookAtActorNodeC2Ev
 };

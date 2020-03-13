@@ -8,11 +8,11 @@
 class RemoveActorPacket : Packet {
 
 public:
-    ~RemoveActorPacket();
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual std::string getName()const;
-    virtual void getId()const;
-    virtual void write(BinaryStream &)const;
-    RemoveActorPacket(ActorUniqueID);
-    RemoveActorPacket();
+    ~RemoveActorPacket(); // _ZN17RemoveActorPacketD2Ev
+    virtual void getId()const; // _ZNK17RemoveActorPacket5getIdEv
+    virtual std::string getName()const; // _ZNK17RemoveActorPacket7getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK17RemoveActorPacket5writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN17RemoveActorPacket4readER20ReadOnlyBinaryStream
+    RemoveActorPacket(); // _ZN17RemoveActorPacketC2Ev
+    RemoveActorPacket(ActorUniqueID); // _ZN17RemoveActorPacketC2E13ActorUniqueID
 };

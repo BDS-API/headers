@@ -7,14 +7,14 @@
 class DragonLandingGoal : Goal {
 
 public:
-    virtual bool canUse();
-    ~DragonLandingGoal();
-    virtual void tick();
-    virtual void start();
-    virtual void stop();
-    virtual void appendDebugInfo(std::string &)const;
-    virtual bool canContinueToUse();
-    DragonLandingGoal(EnderDragon &);
-    void navigateToNextPathNode();
-    void findNewTarget();
+    ~DragonLandingGoal(); // _ZN17DragonLandingGoalD2Ev
+    virtual bool canUse(); // _ZN17DragonLandingGoal6canUseEv
+    virtual bool canContinueToUse(); // _ZN17DragonLandingGoal16canContinueToUseEv
+    virtual void start(); // _ZN17DragonLandingGoal5startEv
+    virtual void stop(); // _ZN17DragonLandingGoal4stopEv
+    virtual void tick(); // _ZN17DragonLandingGoal4tickEv
+    virtual void appendDebugInfo(std::string &)const; // _ZNK17DragonLandingGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    DragonLandingGoal(EnderDragon &); // _ZN17DragonLandingGoalC2ER11EnderDragon
+    void findNewTarget(); // _ZN17DragonLandingGoal13findNewTargetEv
+    void navigateToNextPathNode(); // _ZN17DragonLandingGoal22navigateToNextPathNodeEv
 };

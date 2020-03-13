@@ -5,5 +5,5 @@
 class CustomSkyColorAttributes {
 
 public:
-    CustomSkyColorAttributes();
+    CustomSkyColorAttributes(); // _ZN24CustomSkyColorAttributesC2Ev
 };

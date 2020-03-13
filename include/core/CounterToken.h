@@ -9,8 +9,8 @@ namespace Core {
         class CounterToken {
 
         public:
-            CounterToken(unsigned long);
-            CounterToken();
+            CounterToken(); // _ZN4Core7Profile12CounterTokenC2Ev
+            CounterToken(unsigned long); // _ZN4Core7Profile12CounterTokenC2Em
         };
     }
 }

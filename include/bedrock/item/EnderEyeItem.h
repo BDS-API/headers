@@ -7,8 +7,8 @@
 class EnderEyeItem : Item {
 
 public:
-    virtual bool isThrowable()const;
-    ~EnderEyeItem();
-    virtual void use(ItemStack &, Player &)const;
-    EnderEyeItem(std::string const&, int);
+    ~EnderEyeItem(); // _ZN12EnderEyeItemD2Ev
+    virtual bool isThrowable()const; // _ZNK12EnderEyeItem11isThrowableEv
+    virtual void use(ItemStack &, Player &)const; // _ZNK12EnderEyeItem3useER9ItemStackR6Player
+    EnderEyeItem(std::string const&, int); // _ZN12EnderEyeItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
 };

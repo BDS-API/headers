@@ -5,6 +5,6 @@
 class MolangVariable {
 
 public:
-    ~MolangVariable();
-    MolangVariable();
+    ~MolangVariable(); // _ZN14MolangVariableD2Ev
+    MolangVariable(); // _ZN14MolangVariableC2Ev
 };

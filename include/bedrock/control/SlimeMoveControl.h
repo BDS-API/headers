@@ -6,8 +6,8 @@
 class SlimeMoveControl : MoveControl {
 
 public:
-    virtual void tick(MoveControlComponent &, Mob &);
-    ~SlimeMoveControl();
-    void _getJumpDelay(Mob &)const;
-    SlimeMoveControl();
+    ~SlimeMoveControl(); // _ZN16SlimeMoveControlD2Ev
+    virtual void tick(MoveControlComponent &, Mob &); // _ZN16SlimeMoveControl4tickER20MoveControlComponentR3Mob
+    SlimeMoveControl(); // _ZN16SlimeMoveControlC2Ev
+    void _getJumpDelay(Mob &)const; // _ZNK16SlimeMoveControl13_getJumpDelayER3Mob
 };

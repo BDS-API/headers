@@ -4,5 +4,5 @@
 
 namespace ClassID {
 
-    void getNextID();
+    void getNextID(); // _ZN7ClassID9getNextIDEv
 };

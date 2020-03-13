@@ -7,6 +7,6 @@ namespace FeatureLoading {
     class FeatureRootParseContext {
 
     public:
-        ~FeatureRootParseContext();
+        ~FeatureRootParseContext(); // _ZN14FeatureLoading23FeatureRootParseContextD2Ev
     };
 }

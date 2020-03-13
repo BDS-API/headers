@@ -7,6 +7,6 @@ namespace RakNet {
     class InternalPacket {
 
     public:
-        InternalPacket();
+        InternalPacket(); // _ZN6RakNet14InternalPacketC2Ev
     };
 }

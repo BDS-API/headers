@@ -7,9 +7,9 @@
 class SeaLanternBlock : BlockLegacy {
 
 public:
-    virtual bool canBeSilkTouched()const;
-    virtual void getResourceCount(Random &, Block const&, int)const;
-    virtual void getResourceItem(Random &, Block const&, int)const;
-    ~SeaLanternBlock();
-    SeaLanternBlock(std::string const&, int);
+    ~SeaLanternBlock(); // _ZN15SeaLanternBlockD2Ev
+    virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK15SeaLanternBlock16getResourceCountER6RandomRK5Blocki
+    virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK15SeaLanternBlock15getResourceItemER6RandomRK5Blocki
+    virtual bool canBeSilkTouched()const; // _ZNK15SeaLanternBlock16canBeSilkTouchedEv
+    SeaLanternBlock(std::string const&, int); // _ZN15SeaLanternBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
 };

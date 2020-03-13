@@ -6,10 +6,10 @@
 class OceanMonumentStart : StructureStart {
 
 public:
-    virtual void postProcess(BlockSource *, Random &, BoundingBox const&);
-    ~OceanMonumentStart();
-    virtual void getType()const;
-    OceanMonumentStart(Dimension &, Random &, int, int);
-    void createMonument(Dimension &, Random &, int, int);
-    OceanMonumentStart();
+    ~OceanMonumentStart(); // _ZN18OceanMonumentStartD2Ev
+    virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN18OceanMonumentStart11postProcessEP11BlockSourceR6RandomRK11BoundingBox
+    virtual void getType()const; // _ZNK18OceanMonumentStart7getTypeEv
+    OceanMonumentStart(); // _ZN18OceanMonumentStartC2Ev
+    void createMonument(Dimension &, Random &, int, int); // _ZN18OceanMonumentStart14createMonumentER9DimensionR6Randomii
+    OceanMonumentStart(Dimension &, Random &, int, int); // _ZN18OceanMonumentStartC2ER9DimensionR6Randomii
 };

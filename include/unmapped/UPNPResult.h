@@ -5,5 +5,5 @@
 class UPNPResult {
 
 public:
-    UPNPResult();
+    UPNPResult(); // _ZN10UPNPResultC2Ev
 };

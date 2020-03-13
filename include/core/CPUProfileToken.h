@@ -9,9 +9,9 @@ namespace Core {
         class CPUProfileToken {
 
         public:
-            CPUProfileToken(unsigned long, char const*, char const*, unsigned int);
-            bool isValid()const;
-            CPUProfileToken();
+            CPUProfileToken(); // _ZN4Core7Profile15CPUProfileTokenC2Ev
+            CPUProfileToken(unsigned long, char const*, char const*, unsigned int); // _ZN4Core7Profile15CPUProfileTokenC2EmPKcS3_j
+            bool isValid()const; // _ZNK4Core7Profile15CPUProfileToken7isValidEv
         };
     }
 }

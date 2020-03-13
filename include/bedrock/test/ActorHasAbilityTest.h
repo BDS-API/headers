@@ -6,8 +6,8 @@
 class ActorHasAbilityTest : SimpleIntFilterTest {
 
 public:
-    virtual void getName()const;
-    virtual void evaluate(FilterContext const&)const;
-    ~ActorHasAbilityTest();
-    ActorHasAbilityTest();
+    ~ActorHasAbilityTest(); // _ZN19ActorHasAbilityTestD2Ev
+    virtual void evaluate(FilterContext const&)const; // _ZNK19ActorHasAbilityTest8evaluateERK13FilterContext
+    virtual void getName()const; // _ZNK19ActorHasAbilityTest7getNameEv
+    ActorHasAbilityTest(); // _ZN19ActorHasAbilityTestC2Ev
 };

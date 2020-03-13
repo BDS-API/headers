@@ -5,5 +5,5 @@
 class BeaconBeamSection {
 
 public:
-    BeaconBeamSection();
+    BeaconBeamSection(); // _ZN17BeaconBeamSectionC2Ev
 };

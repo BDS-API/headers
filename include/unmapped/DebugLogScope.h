@@ -6,6 +6,6 @@
 class DebugLogScope {
 
 public:
-    ~DebugLogScope();
-    DebugLogScope(std::string const&);
+    DebugLogScope(std::string const&); // _ZN13DebugLogScopeC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    ~DebugLogScope(); // _ZN13DebugLogScopeD2Ev
 };

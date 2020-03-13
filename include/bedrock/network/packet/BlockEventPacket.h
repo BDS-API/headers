@@ -8,11 +8,11 @@
 class BlockEventPacket : Packet {
 
 public:
-    virtual void getId()const;
-    virtual void write(BinaryStream &)const;
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual std::string getName()const;
-    ~BlockEventPacket();
-    BlockEventPacket();
-    BlockEventPacket(BlockPos, int, int);
+    ~BlockEventPacket(); // _ZN16BlockEventPacketD2Ev
+    virtual void getId()const; // _ZNK16BlockEventPacket5getIdEv
+    virtual std::string getName()const; // _ZNK16BlockEventPacket7getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK16BlockEventPacket5writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN16BlockEventPacket4readER20ReadOnlyBinaryStream
+    BlockEventPacket(BlockPos, int, int); // _ZN16BlockEventPacketC2E8BlockPosii
+    BlockEventPacket(); // _ZN16BlockEventPacketC2Ev
 };

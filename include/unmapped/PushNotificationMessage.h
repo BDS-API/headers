@@ -5,5 +5,5 @@
 class PushNotificationMessage {
 
 public:
-    void getType()const;
+    void getType()const; // _ZNK23PushNotificationMessage7getTypeEv
 };

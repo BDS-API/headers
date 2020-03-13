@@ -5,7 +5,7 @@
 class PosibleTransformation {
 
 public:
-    PosibleTransformation(PosibleTransformation const&);
-    PosibleTransformation();
-    ~PosibleTransformation();
+    ~PosibleTransformation(); // _ZN21PosibleTransformationD2Ev
+    PosibleTransformation(PosibleTransformation const&); // _ZN21PosibleTransformationC2ERKS_
+    PosibleTransformation(); // _ZN21PosibleTransformationC2Ev
 };

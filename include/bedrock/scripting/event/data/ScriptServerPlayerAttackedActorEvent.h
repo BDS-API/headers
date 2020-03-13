@@ -9,11 +9,11 @@ class ScriptServerPlayerAttackedActorEvent : ScriptEventData {
 public:
     static long mHash;
 
-    ~ScriptServerPlayerAttackedActorEvent();
-    virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const;
-    std::string getName();
-    void getHash();
-    void setAttackedActorId(ActorUniqueID const&);
-    void setPlayerId(ActorUniqueID const&);
-    ScriptServerPlayerAttackedActorEvent();
+    ~ScriptServerPlayerAttackedActorEvent(); // _ZN36ScriptServerPlayerAttackedActorEventD2Ev
+    virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const; // _ZNK36ScriptServerPlayerAttackedActorEvent10_serializeER12ScriptEngineRN9ScriptApi18ScriptObjectHandleE
+    void getHash(); // _ZN36ScriptServerPlayerAttackedActorEvent7getHashEv
+    ScriptServerPlayerAttackedActorEvent(); // _ZN36ScriptServerPlayerAttackedActorEventC2Ev
+    void setPlayerId(ActorUniqueID const&); // _ZN36ScriptServerPlayerAttackedActorEvent11setPlayerIdERK13ActorUniqueID
+    void setAttackedActorId(ActorUniqueID const&); // _ZN36ScriptServerPlayerAttackedActorEvent18setAttackedActorIdERK13ActorUniqueID
+    std::string getName(); // _ZN36ScriptServerPlayerAttackedActorEvent7getNameB5cxx11Ev
 };

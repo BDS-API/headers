@@ -5,6 +5,6 @@
 class IFilePicker {
 
 public:
-    ~IFilePicker();
-    IFilePicker();
+    ~IFilePicker(); // _ZN11IFilePickerD2Ev
+    IFilePicker(); // _ZN11IFilePickerC2Ev
 };

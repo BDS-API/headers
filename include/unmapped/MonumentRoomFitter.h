@@ -5,6 +5,6 @@
 class MonumentRoomFitter {
 
 public:
-    ~MonumentRoomFitter();
-    MonumentRoomFitter();
+    ~MonumentRoomFitter(); // _ZN18MonumentRoomFitterD2Ev
+    MonumentRoomFitter(); // _ZN18MonumentRoomFitterC2Ev
 };

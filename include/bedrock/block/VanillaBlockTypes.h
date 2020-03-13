@@ -477,6 +477,6 @@ namespace VanillaBlockTypes {
     static long mHoneyBlock;
     static long mHoneycombBlock;
 
-    void registerBlocks();
-    void unregisterBlocks();
+    void unregisterBlocks(); // _ZN17VanillaBlockTypes16unregisterBlocksEv
+    void registerBlocks(); // _ZN17VanillaBlockTypes14registerBlocksEv
 };

@@ -5,8 +5,8 @@
 class TextureItem {
 
 public:
-    TextureItem(TextureItem const&);
-    TextureItem();
-    ~TextureItem();
-    TextureItem(TextureItem &&);
+    TextureItem(); // _ZN11TextureItemC2Ev
+    ~TextureItem(); // _ZN11TextureItemD2Ev
+    TextureItem(TextureItem const&); // _ZN11TextureItemC2ERKS_
+    TextureItem(TextureItem &&); // _ZN11TextureItemC2EOS_
 };

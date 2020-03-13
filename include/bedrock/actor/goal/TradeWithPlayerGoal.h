@@ -7,11 +7,11 @@
 class TradeWithPlayerGoal : Goal {
 
 public:
-    virtual bool canUse();
-    ~TradeWithPlayerGoal();
-    virtual bool canContinueToUse();
-    virtual void start();
-    virtual void stop();
-    virtual void appendDebugInfo(std::string &)const;
-    TradeWithPlayerGoal(Mob &);
+    ~TradeWithPlayerGoal(); // _ZN19TradeWithPlayerGoalD2Ev
+    virtual bool canUse(); // _ZN19TradeWithPlayerGoal6canUseEv
+    virtual bool canContinueToUse(); // _ZN19TradeWithPlayerGoal16canContinueToUseEv
+    virtual void start(); // _ZN19TradeWithPlayerGoal5startEv
+    virtual void stop(); // _ZN19TradeWithPlayerGoal4stopEv
+    virtual void appendDebugInfo(std::string &)const; // _ZNK19TradeWithPlayerGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    TradeWithPlayerGoal(Mob &); // _ZN19TradeWithPlayerGoalC2ER3Mob
 };

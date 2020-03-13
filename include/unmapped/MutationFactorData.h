@@ -5,5 +5,5 @@
 class MutationFactorData {
 
 public:
-    MutationFactorData();
+    MutationFactorData(); // _ZN18MutationFactorDataC2Ev
 };

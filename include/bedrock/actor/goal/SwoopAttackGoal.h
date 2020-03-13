@@ -1,19 +1,19 @@
 #pragma once
 
 #include <string>
-#include "Goal.h"
 #include "../../../unmapped/FloatRange.h"
+#include "Goal.h"
 
 
 class SwoopAttackGoal : Goal {
 
 public:
-    virtual void stop();
-    virtual bool canUse();
-    virtual void tick();
-    virtual void appendDebugInfo(std::string &)const;
-    virtual bool canContinueToUse();
-    virtual void start();
-    ~SwoopAttackGoal();
-    SwoopAttackGoal(Mob &, float, FloatRange);
+    ~SwoopAttackGoal(); // _ZN15SwoopAttackGoalD2Ev
+    virtual bool canUse(); // _ZN15SwoopAttackGoal6canUseEv
+    virtual bool canContinueToUse(); // _ZN15SwoopAttackGoal16canContinueToUseEv
+    virtual void start(); // _ZN15SwoopAttackGoal5startEv
+    virtual void stop(); // _ZN15SwoopAttackGoal4stopEv
+    virtual void tick(); // _ZN15SwoopAttackGoal4tickEv
+    virtual void appendDebugInfo(std::string &)const; // _ZNK15SwoopAttackGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    SwoopAttackGoal(Mob &, float, FloatRange); // _ZN15SwoopAttackGoalC2ER3Mobf10FloatRange
 };

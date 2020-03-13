@@ -6,8 +6,8 @@
 class FilterTestAltitude : SimpleIntFilterTest {
 
 public:
-    virtual void evaluate(FilterContext const&)const;
-    virtual void getName()const;
-    ~FilterTestAltitude();
-    FilterTestAltitude();
+    ~FilterTestAltitude(); // _ZN18FilterTestAltitudeD2Ev
+    virtual void evaluate(FilterContext const&)const; // _ZNK18FilterTestAltitude8evaluateERK13FilterContext
+    virtual void getName()const; // _ZNK18FilterTestAltitude7getNameEv
+    FilterTestAltitude(); // _ZN18FilterTestAltitudeC2Ev
 };

@@ -5,6 +5,6 @@
 class ScriptBinderTemplate {
 
 public:
-    ~ScriptBinderTemplate();
-    ScriptBinderTemplate();
+    ~ScriptBinderTemplate(); // _ZN20ScriptBinderTemplateD2Ev
+    ScriptBinderTemplate(); // _ZN20ScriptBinderTemplateC2Ev
 };

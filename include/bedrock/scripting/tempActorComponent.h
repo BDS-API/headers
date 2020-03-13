@@ -9,7 +9,7 @@ namespace ScriptApi {
         class tempActorComponent {
 
         public:
-            tempActorComponent(ActorUniqueID const&);
+            tempActorComponent(ActorUniqueID const&); // _ZN9ScriptApi11WORKAROUNDS18tempActorComponentC2ERK13ActorUniqueID
         };
     }
 }

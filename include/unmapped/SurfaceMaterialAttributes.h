@@ -5,5 +5,5 @@
 class SurfaceMaterialAttributes {
 
 public:
-    SurfaceMaterialAttributes();
+    SurfaceMaterialAttributes(); // _ZN25SurfaceMaterialAttributesC2Ev
 };

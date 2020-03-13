@@ -40,39 +40,39 @@ public:
     static long HERO_OF_THE_VILLAGE;
     static long mMobEffects;
 
-    virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const;
-    virtual void removeEffects(Actor *);
-    virtual void getAttributeModifierValue(int, AttributeModifier const&)const;
-    ~MobEffect();
-    virtual void applyEffects(Actor *, int, int)const;
-    virtual bool isInstantaneous()const;
-    void shutdownEffects();
-    void getComponentName()const;
-    void getId()const;
-    void _createInstantBuff(std::shared_ptr<AttributeBuff> const&, int, float)const;
-    void _createAttributeModifer(std::shared_ptr<AttributeModifier> const&, int)const;
-    void clearAttributeBuffs();
-    void getColor()const;
-    std::string getResourceName()const;
-    void getIcon()const;
-    std::string getIconName()const;
-    void initEffects(ResourcePackManager *);
-    bool isHarmful()const;
-    bool hasIcon()const;
-    std::string formatDuration(MobEffectInstance const*);
-    void setValueAmplifier(std::shared_ptr<Amplifier>);
-    void setDurationAmplifier(std::shared_ptr<Amplifier>);
-    std::string getDescriptionId()const;
-    void getByName(std::string const&);
-    void getById(int);
-    void clearAttributeModifiers();
-    void viewAttributeModifiers()const;
-    void addAttributeModifier(Attribute const&, std::shared_ptr<AttributeModifier>);
-    void _createTemporalBuff(std::shared_ptr<AttributeBuff> const&, int, int)const;
-    void getDurationModifier()const;
-    void _setDurationModifier(float);
-    bool isVisible()const;
-    MobEffect(int, std::string const&, std::string const&, bool, int, int, std::string const&, bool);
-    void addAttributeBuff(Attribute const&, std::shared_ptr<AttributeBuff>);
-    bool isDisabled()const;
+    ~MobEffect(); // _ZN9MobEffectD2Ev
+    virtual void applyEffects(Actor *, int, int)const; // _ZNK9MobEffect12applyEffectsEP5Actorii
+    virtual void removeEffects(Actor *); // _ZN9MobEffect13removeEffectsEP5Actor
+    virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const; // _ZNK9MobEffect24applyInstantaneousEffectEP5ActorS1_S1_if
+    virtual bool isInstantaneous()const; // _ZNK9MobEffect15isInstantaneousEv
+    virtual void getAttributeModifierValue(int, AttributeModifier const&)const; // _ZNK9MobEffect25getAttributeModifierValueEiRK17AttributeModifier
+    void initEffects(ResourcePackManager *); // _ZN9MobEffect11initEffectsEP19ResourcePackManager
+    void addAttributeModifier(Attribute const&, std::shared_ptr<AttributeModifier>); // _ZN9MobEffect20addAttributeModifierERK9AttributeSt10shared_ptrI17AttributeModifierE
+    void addAttributeBuff(Attribute const&, std::shared_ptr<AttributeBuff>); // _ZN9MobEffect16addAttributeBuffERK9AttributeSt10shared_ptrI13AttributeBuffE
+    void setValueAmplifier(std::shared_ptr<Amplifier>); // _ZN9MobEffect17setValueAmplifierESt10shared_ptrI9AmplifierE
+    void setDurationAmplifier(std::shared_ptr<Amplifier>); // _ZN9MobEffect20setDurationAmplifierESt10shared_ptrI9AmplifierE
+    void shutdownEffects(); // _ZN9MobEffect15shutdownEffectsEv
+    void getByName(std::string const&); // _ZN9MobEffect9getByNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    void getById(int); // _ZN9MobEffect7getByIdEi
+    void getId()const; // _ZNK9MobEffect5getIdEv
+    void getComponentName()const; // _ZNK9MobEffect16getComponentNameEv
+    MobEffect(int, std::string const&, std::string const&, bool, int, int, std::string const&, bool); // _ZN9MobEffectC2EiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_biiS7_b
+    std::string getResourceName()const; // _ZNK9MobEffect15getResourceNameB5cxx11Ev
+    std::string getIconName()const; // _ZNK9MobEffect11getIconNameB5cxx11Ev
+    void _createInstantBuff(std::shared_ptr<AttributeBuff> const&, int, float)const; // _ZNK9MobEffect18_createInstantBuffERKSt10shared_ptrI13AttributeBuffEif
+    void _createTemporalBuff(std::shared_ptr<AttributeBuff> const&, int, int)const; // _ZNK9MobEffect19_createTemporalBuffERKSt10shared_ptrI13AttributeBuffEii
+    void _createAttributeModifer(std::shared_ptr<AttributeModifier> const&, int)const; // _ZNK9MobEffect23_createAttributeModiferERKSt10shared_ptrI17AttributeModifierEi
+    bool isHarmful()const; // _ZNK9MobEffect9isHarmfulEv
+    std::string getDescriptionId()const; // _ZNK9MobEffect16getDescriptionIdB5cxx11Ev
+    bool hasIcon()const; // _ZNK9MobEffect7hasIconEv
+    void getIcon()const; // _ZNK9MobEffect7getIconEv
+    void getDurationModifier()const; // _ZNK9MobEffect19getDurationModifierEv
+    bool isDisabled()const; // _ZNK9MobEffect10isDisabledEv
+    void getColor()const; // _ZNK9MobEffect8getColorEv
+    bool isVisible()const; // _ZNK9MobEffect9isVisibleEv
+    std::string formatDuration(MobEffectInstance const*); // _ZN9MobEffect14formatDurationB5cxx11EPK17MobEffectInstance
+    void clearAttributeBuffs(); // _ZN9MobEffect19clearAttributeBuffsEv
+    void clearAttributeModifiers(); // _ZN9MobEffect23clearAttributeModifiersEv
+    void viewAttributeModifiers()const; // _ZNK9MobEffect22viewAttributeModifiersEv
+    void _setDurationModifier(float); // _ZN9MobEffect20_setDurationModifierEf
 };

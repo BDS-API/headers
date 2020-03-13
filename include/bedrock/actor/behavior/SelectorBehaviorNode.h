@@ -6,8 +6,8 @@
 class SelectorBehaviorNode : BehaviorNode {
 
 public:
-    virtual void tick(Actor &);
-    ~SelectorBehaviorNode();
-    virtual void initializeFromDefinition(Actor &);
-    SelectorBehaviorNode();
+    ~SelectorBehaviorNode(); // _ZN20SelectorBehaviorNodeD2Ev
+    virtual void tick(Actor &); // _ZN20SelectorBehaviorNode4tickER5Actor
+    virtual void initializeFromDefinition(Actor &); // _ZN20SelectorBehaviorNode24initializeFromDefinitionER5Actor
+    SelectorBehaviorNode(); // _ZN20SelectorBehaviorNodeC2Ev
 };

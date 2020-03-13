@@ -5,5 +5,5 @@
 class BlockLayer {
 
 public:
-    BlockLayer();
+    BlockLayer(); // _ZN10BlockLayerC2Ev
 };

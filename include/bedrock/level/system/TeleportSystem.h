@@ -6,7 +6,7 @@
 class TeleportSystem : ITickingSystem {
 
 public:
-    ~TeleportSystem();
-    virtual void tick(EntityRegistry &);
-    TeleportSystem();
+    ~TeleportSystem(); // _ZN14TeleportSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN14TeleportSystem4tickER14EntityRegistry
+    TeleportSystem(); // _ZN14TeleportSystemC2Ev
 };

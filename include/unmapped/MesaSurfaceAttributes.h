@@ -5,5 +5,5 @@
 class MesaSurfaceAttributes {
 
 public:
-    MesaSurfaceAttributes();
+    MesaSurfaceAttributes(); // _ZN21MesaSurfaceAttributesC2Ev
 };

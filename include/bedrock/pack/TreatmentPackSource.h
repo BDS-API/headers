@@ -1,23 +1,23 @@
 #pragma once
 
-#include <memory>
 #include <string>
-#include "PackSource.h"
+#include <memory>
 #include <functional>
+#include "PackSource.h"
 
 
 class TreatmentPackSource : PackSource {
 
 public:
-    ~TreatmentPackSource();
-    virtual void forEachPackConst(std::function<void (Pack const&)>)const;
-    virtual void getPackOrigin()const;
-    virtual void load(PackManifestFactory &, IContentKeyProvider const&);
-    virtual void getPackType()const;
-    virtual void forEachPack(std::function<void (Pack &)>);
-    bool isCopyable()const;
-    void removePack(Core::Path const&);
-    std::string getPath()const;
-//  TreatmentPackSource(Core::Path const&, PackType); //TODO: incomplete function definition
-    void addPack(std::unique_ptr<Pack> &&);
+    ~TreatmentPackSource(); // _ZN19TreatmentPackSourceD2Ev
+    virtual void forEachPackConst(std::function<void (Pack const&)>)const; // _ZNK19TreatmentPackSource16forEachPackConstESt8functionIFvRK4PackEE
+    virtual void forEachPack(std::function<void (Pack &)>); // _ZN19TreatmentPackSource11forEachPackESt8functionIFvR4PackEE
+    virtual void getPackOrigin()const; // _ZNK19TreatmentPackSource13getPackOriginEv
+    virtual void getPackType()const; // _ZNK19TreatmentPackSource11getPackTypeEv
+    virtual void load(PackManifestFactory &, IContentKeyProvider const&); // _ZN19TreatmentPackSource4loadER19PackManifestFactoryRK19IContentKeyProvider
+//  TreatmentPackSource(Core::Path const&, PackType); //TODO: incomplete function definition // _ZN19TreatmentPackSourceC2ERKN4Core4PathE8PackType
+    std::string getPath()const; // _ZNK19TreatmentPackSource7getPathB5cxx11Ev
+    bool isCopyable()const; // _ZNK19TreatmentPackSource10isCopyableEv
+    void addPack(std::unique_ptr<Pack> &&); // _ZN19TreatmentPackSource7addPackEOSt10unique_ptrI4PackSt14default_deleteIS1_EE
+    void removePack(Core::Path const&); // _ZN19TreatmentPackSource10removePackERKN4Core4PathE
 };

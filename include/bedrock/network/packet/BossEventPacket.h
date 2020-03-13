@@ -8,13 +8,13 @@
 class BossEventPacket : Packet {
 
 public:
-    virtual std::string getName()const;
-    virtual void read(ReadOnlyBinaryStream &);
-    ~BossEventPacket();
-    virtual void getId()const;
-    virtual void write(BinaryStream &)const;
-//  BossEventPacket(BossEventUpdateType, RaidBossComponent &); //TODO: incomplete function definition
-    BossEventPacket();
-//  BossEventPacket(BossEventUpdateType, ActorUniqueID, BossComponent &); //TODO: incomplete function definition
-//  BossEventPacket(BossEventUpdateType, ActorUniqueID, ActorUniqueID); //TODO: incomplete function definition
+    ~BossEventPacket(); // _ZN15BossEventPacketD2Ev
+    virtual void getId()const; // _ZNK15BossEventPacket5getIdEv
+    virtual std::string getName()const; // _ZNK15BossEventPacket7getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK15BossEventPacket5writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN15BossEventPacket4readER20ReadOnlyBinaryStream
+    BossEventPacket(); // _ZN15BossEventPacketC2Ev
+//  BossEventPacket(BossEventUpdateType, RaidBossComponent &); //TODO: incomplete function definition // _ZN15BossEventPacketC2E19BossEventUpdateTypeR17RaidBossComponent
+//  BossEventPacket(BossEventUpdateType, ActorUniqueID, BossComponent &); //TODO: incomplete function definition // _ZN15BossEventPacketC2E19BossEventUpdateType13ActorUniqueIDR13BossComponent
+//  BossEventPacket(BossEventUpdateType, ActorUniqueID, ActorUniqueID); //TODO: incomplete function definition // _ZN15BossEventPacketC2E19BossEventUpdateType13ActorUniqueIDS1_
 };

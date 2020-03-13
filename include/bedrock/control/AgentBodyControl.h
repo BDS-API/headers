@@ -6,7 +6,7 @@
 class AgentBodyControl : BodyControl {
 
 public:
-    ~AgentBodyControl();
-    virtual void clientTick(Mob &);
-    AgentBodyControl();
+    ~AgentBodyControl(); // _ZN16AgentBodyControlD2Ev
+    virtual void clientTick(Mob &); // _ZN16AgentBodyControl10clientTickER3Mob
+    AgentBodyControl(); // _ZN16AgentBodyControlC2Ev
 };

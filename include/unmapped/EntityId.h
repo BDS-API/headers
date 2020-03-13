@@ -5,7 +5,7 @@
 class EntityId {
 
 public:
-    void operator==(EntityId const&)const;
-    void operator!=(EntityId const&)const;
-    EntityId(unsigned long);
+    EntityId(unsigned long); // _ZN8EntityIdC2Em
+    void operator==(EntityId const&)const; // _ZNK8EntityIdeqERKS_
+    void operator!=(EntityId const&)const; // _ZNK8EntityIdneERKS_
 };

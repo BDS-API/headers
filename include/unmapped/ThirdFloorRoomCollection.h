@@ -8,7 +8,7 @@ namespace WoodlandMansionPieces {
     class ThirdFloorRoomCollection : WoodlandMansionPieces::SecondFloorRoomCollection {
 
     public:
-        ~ThirdFloorRoomCollection();
-        ThirdFloorRoomCollection();
+        ~ThirdFloorRoomCollection(); // _ZN21WoodlandMansionPieces24ThirdFloorRoomCollectionD2Ev
+        ThirdFloorRoomCollection(); // _ZN21WoodlandMansionPieces24ThirdFloorRoomCollectionC2Ev
     };
 }

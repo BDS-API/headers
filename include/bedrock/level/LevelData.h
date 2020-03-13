@@ -7,139 +7,139 @@
 class LevelData {
 
 public:
-    void getServerChunkTickRange()const;
-//  void v1_read(RakNet::BitStream &, StorageVersion); //TODO: incomplete function definition
-    void getNetherScale()const;
-    bool isRaining()const;
-    bool isNewLevel()const;
-    bool hasConfirmedPlatformLockedContent()const;
-    void setPremiumTemplateContentIdentity(ContentIdentity const&);
-    void getFlatWorldGeneratorOptions()const;
-//  void setGameDifficulty(Difficulty); //TODO: incomplete function definition
-    void setLANBroadcastIntent(bool);
-    void setForceGameType(bool);
-    bool isLightning()const;
-    void setStartWithMapEnabled(bool);
-    void setConfirmedPlatformLockedContent(bool);
-    void setLevelName(std::string const&);
-    void getSpawnMobs()const;
-//  void setXBLBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition
-    void getNetworkVersion()const;
-//  void setEducationEditionOffer(EducationEditionOffer); //TODO: incomplete function definition
-    void getGameType()const;
-    bool isWorldTemplateOptionLocked()const;
-    void getLastPlayed()const;
-    void getDefaultAbilities();
-    bool isFromLockedTemplate()const;
-    bool hasMapsCenteredToOrigin()const;
-    void clearLoadedPlayerTag();
-//  void setPlatformBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition
-    LevelData(CompoundTag const&);
-    void getLANBroadcast()const;
-    void setRequiresCopiedPackRemovalCheck(bool);
-    void setEducationFeaturesEnabled(bool);
-    void setLightningLevel(float);
-    void getWorldStartCount()const;
-    void recordStartUp();
-    void getMinCompatibleClientVersion()const;
-    void updateLastTimePlayed()const;
-    void setTime(int);
-    void getPlatformBroadcastIntent()const;
-    void getRainTime()const;
-    void setBaseGameVersion(BaseGameVersion const&);
-    bool hasCommandsEnabled()const;
-    void setFromWorldTemplate(bool);
-    void getStorageVersion()const;
-    void setNetworkVersion(int);
-    void getGameRules();
-//  void setPlatformBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition
-    void getForceGameType()const;
-    void disableAchievements();
-    void getUseMsaGamertagsOnly()const;
-    void getOnlySpawnV1Villagers()const;
-    void getAdventureSettings();
-    void createTag()const;
-//  void setXBLBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition
-    void setEducationProductId(std::string const&);
-    void setRainLevel(float);
-    LevelData();
-    bool isEducationEditionLevel()const;
-    void getMultiplayerGameIntent()const;
-    void getEducationEditionOffer()const;
-    void educationFeaturesEnabled()const;
-    bool isTexturepacksRequired()const;
-    void setTagData(CompoundTag &)const;
-//  LevelData(LevelSettings const&, std::string const&, GeneratorType, BlockPos const&, bool, EducationEditionOffer, float, float); //TODO: incomplete function definition
-    void setSpawnMobs(bool);
-    bool hasLockedResourcePack()const;
-    void getPlatformBroadcastMode()const;
-    bool hasBonusChestEnabled()const;
-    void getTime()const;
-    void getWorldCenter()const;
-    void setHasLockedResourcePack(bool);
-    void getCurrentTick()const;
-    void setWorldTemplateOptionLocked(bool);
-    void setFromLockedTemplate(bool);
-    void setSpawnPos(BlockPos const&);
-    std::string getEducationProductId()const;
-    void getWorldTemplateIdentity()const;
-    void incrementTick();
-    void setMultiplayerGame(bool);
-    void setRainTime(int);
-    bool isAlwaysDay()const;
-    void getGameDifficulty()const;
-    void getBonusChestSpawned()const;
-    void getTagData(CompoundTag const&);
-    void setServerChunkTickRange(unsigned int);
-    void getLightningTime()const;
-    bool isMultiplayerGame()const;
-    void setCurrentTick(Tick &);
-    std::string getEducationOid()const;
-    LevelData(LevelData &&);
-    bool hasSpawnPos()const;
-    bool isGameRule(GameRuleId)const;
-    void setLightningTime(int);
-    void getXBLBroadcastMode()const;
-//  void setGameType(GameType); //TODO: incomplete function definition
-    bool isFromWorldTemplate()const;
-    void getSpawnPos()const;
-//  void setGenerator(GeneratorType); //TODO: incomplete function definition
-    void setUseMsaGamertagsOnly(bool);
-    void setOnlySpawnV1Villagers(bool);
-    void setTexturepacksRequired(bool);
-    void setLANBroadcast(bool);
-    void setEducationOid(std::string const&);
-    void setWorldTemplateIdentity(PackIdVersion const&);
-    void _setGameRulesBasedOnPremiumContentIdentity();
-    void touchLastLoadedWithVersion();
-    void getPremiumTemplateContentIdentity()const;
-    void getLANBroadcastIntent()const;
-    bool hasExperimentalGameplayEnabled()const;
-    void setHasLockedBehaviorPack(bool);
-    void getLastLoadedWithVersion()const;
-    void _updateLimitedWorldOrigin(BlockPos const&);
-    void getXBLBroadcastIntent()const;
-    void setMultiplayerGameIntent(bool);
-//  void setStorageVersion(StorageVersion); //TODO: incomplete function definition
-    void getBaseGameVersion()const;
-    void getDefaultAbilities()const;
-    void getSeed()const;
-    void getLoadedPlayerTag();
-    bool isPremiumWorldTemplate()const;
-    void getLightningLevel()const;
-    void getRainLevel()const;
-    void setBonusChestSpawned(bool);
-    void getGenerator()const;
-    bool requiresCopiedPackRemovalCheck()const;
-    bool hasLockedBehaviorPack()const;
-    bool hasStartWithMapEnabled()const;
-    bool isLegacyLevel()const;
-    void setCommandsEnabled(bool);
-    void setBonusChestEnabled(bool);
-    bool hasAchievementsDisabled()const;
-    void setSeed(unsigned int);
-    void getGameRules()const;
-    bool achievementsWillBeDisabledOnLoad()const;
-    std::string getLevelName()const;
-    ~LevelData();
+    bool hasSpawnPos()const; // _ZNK9LevelData11hasSpawnPosEv
+    void getLastLoadedWithVersion()const; // _ZNK9LevelData24getLastLoadedWithVersionEv
+    LevelData(); // _ZN9LevelDataC2Ev
+//  LevelData(LevelSettings const&, std::string const&, GeneratorType, BlockPos const&, bool, EducationEditionOffer, float, float); //TODO: incomplete function definition // _ZN9LevelDataC2ERK13LevelSettingsRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE13GeneratorTypeRK8BlockPosb21EducationEditionOfferff
+    void setSpawnPos(BlockPos const&); // _ZN9LevelData11setSpawnPosERK8BlockPos
+    LevelData(CompoundTag const&); // _ZN9LevelDataC2ERK11CompoundTag
+    void getTagData(CompoundTag const&); // _ZN9LevelData10getTagDataERK11CompoundTag
+    LevelData(LevelData &&); // _ZN9LevelDataC2EOS_
+    ~LevelData(); // _ZN9LevelDataD2Ev
+//  void v1_read(RakNet::BitStream &, StorageVersion); //TODO: incomplete function definition // _ZN9LevelData7v1_readERN6RakNet9BitStreamE14StorageVersion
+    void createTag()const; // _ZNK9LevelData9createTagEv
+    void setTagData(CompoundTag &)const; // _ZNK9LevelData10setTagDataER11CompoundTag
+    void getFlatWorldGeneratorOptions()const; // _ZNK9LevelData28getFlatWorldGeneratorOptionsEv
+    bool isEducationEditionLevel()const; // _ZNK9LevelData23isEducationEditionLevelEv
+//  void setGameType(GameType); //TODO: incomplete function definition // _ZN9LevelData11setGameTypeE8GameType
+    void _setGameRulesBasedOnPremiumContentIdentity(); // _ZN9LevelData42_setGameRulesBasedOnPremiumContentIdentityEv
+    void getPremiumTemplateContentIdentity()const; // _ZNK9LevelData33getPremiumTemplateContentIdentityEv
+    void getSeed()const; // _ZNK9LevelData7getSeedEv
+    void getSpawnPos()const; // _ZNK9LevelData11getSpawnPosEv
+    void getTime()const; // _ZNK9LevelData7getTimeEv
+    bool isAlwaysDay()const; // _ZNK9LevelData11isAlwaysDayEv
+    void getGameRules()const; // _ZNK9LevelData12getGameRulesEv
+    bool isGameRule(GameRuleId)const; // _ZNK9LevelData10isGameRuleE10GameRuleId
+    void getServerChunkTickRange()const; // _ZNK9LevelData23getServerChunkTickRangeEv
+    void setServerChunkTickRange(unsigned int); // _ZN9LevelData23setServerChunkTickRangeEj
+    void getLoadedPlayerTag(); // _ZN9LevelData18getLoadedPlayerTagEv
+    void setSeed(unsigned int); // _ZN9LevelData7setSeedEj
+    void _updateLimitedWorldOrigin(BlockPos const&); // _ZN9LevelData25_updateLimitedWorldOriginERK8BlockPos
+    void setTime(int); // _ZN9LevelData7setTimeEi
+    void clearLoadedPlayerTag(); // _ZN9LevelData20clearLoadedPlayerTagEv
+    std::string getLevelName()const; // _ZNK9LevelData12getLevelNameB5cxx11Ev
+    void setLevelName(std::string const&); // _ZN9LevelData12setLevelNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    void getGenerator()const; // _ZNK9LevelData12getGeneratorEv
+//  void setGenerator(GeneratorType); //TODO: incomplete function definition // _ZN9LevelData12setGeneratorE13GeneratorType
+    void touchLastLoadedWithVersion(); // _ZN9LevelData26touchLastLoadedWithVersionEv
+    void getLastPlayed()const; // _ZNK9LevelData13getLastPlayedEv
+    void updateLastTimePlayed()const; // _ZNK9LevelData20updateLastTimePlayedEv
+    bool isLightning()const; // _ZNK9LevelData11isLightningEv
+    void getLightningLevel()const; // _ZNK9LevelData17getLightningLevelEv
+    void setLightningLevel(float); // _ZN9LevelData17setLightningLevelEf
+    void getLightningTime()const; // _ZNK9LevelData16getLightningTimeEv
+    void setLightningTime(int); // _ZN9LevelData16setLightningTimeEi
+    bool isRaining()const; // _ZNK9LevelData9isRainingEv
+    void getRainLevel()const; // _ZNK9LevelData12getRainLevelEv
+    void setRainLevel(float); // _ZN9LevelData12setRainLevelEf
+    void getRainTime()const; // _ZNK9LevelData11getRainTimeEv
+    void setRainTime(int); // _ZN9LevelData11setRainTimeEi
+    void getGameType()const; // _ZNK9LevelData11getGameTypeEv
+    void getGameDifficulty()const; // _ZNK9LevelData17getGameDifficultyEv
+//  void setGameDifficulty(Difficulty); //TODO: incomplete function definition // _ZN9LevelData17setGameDifficultyE10Difficulty
+    void getForceGameType()const; // _ZNK9LevelData16getForceGameTypeEv
+    void setForceGameType(bool); // _ZN9LevelData16setForceGameTypeEb
+    void getSpawnMobs()const; // _ZNK9LevelData12getSpawnMobsEv
+    void setSpawnMobs(bool); // _ZN9LevelData12setSpawnMobsEb
+    bool hasAchievementsDisabled()const; // _ZNK9LevelData23hasAchievementsDisabledEv
+    void disableAchievements(); // _ZN9LevelData19disableAchievementsEv
+    void getUseMsaGamertagsOnly()const; // _ZNK9LevelData22getUseMsaGamertagsOnlyEv
+    void setUseMsaGamertagsOnly(bool); // _ZN9LevelData22setUseMsaGamertagsOnlyEb
+    bool achievementsWillBeDisabledOnLoad()const; // _ZNK9LevelData32achievementsWillBeDisabledOnLoadEv
+    bool hasCommandsEnabled()const; // _ZNK9LevelData18hasCommandsEnabledEv
+    void recordStartUp(); // _ZN9LevelData13recordStartUpEv
+    bool isNewLevel()const; // _ZNK9LevelData10isNewLevelEv
+    void getWorldCenter()const; // _ZNK9LevelData14getWorldCenterEv
+    void getWorldStartCount()const; // _ZNK9LevelData18getWorldStartCountEv
+    void getStorageVersion()const; // _ZNK9LevelData17getStorageVersionEv
+//  void setStorageVersion(StorageVersion); //TODO: incomplete function definition // _ZN9LevelData17setStorageVersionE14StorageVersion
+    void getMinCompatibleClientVersion()const; // _ZNK9LevelData29getMinCompatibleClientVersionEv
+    void getNetworkVersion()const; // _ZNK9LevelData17getNetworkVersionEv
+    void setNetworkVersion(int); // _ZN9LevelData17setNetworkVersionEi
+    bool isPremiumWorldTemplate()const; // _ZNK9LevelData22isPremiumWorldTemplateEv
+    void setPremiumTemplateContentIdentity(ContentIdentity const&); // _ZN9LevelData33setPremiumTemplateContentIdentityERK15ContentIdentity
+    void getWorldTemplateIdentity()const; // _ZNK9LevelData24getWorldTemplateIdentityEv
+    void setWorldTemplateIdentity(PackIdVersion const&); // _ZN9LevelData24setWorldTemplateIdentityERK13PackIdVersion
+    void getBaseGameVersion()const; // _ZNK9LevelData18getBaseGameVersionEv
+    void setBaseGameVersion(BaseGameVersion const&); // _ZN9LevelData18setBaseGameVersionERK15BaseGameVersion
+    void getCurrentTick()const; // _ZNK9LevelData14getCurrentTickEv
+    void incrementTick(); // _ZN9LevelData13incrementTickEv
+    void setCurrentTick(Tick &); // _ZN9LevelData14setCurrentTickER4Tick
+    void getAdventureSettings(); // _ZN9LevelData20getAdventureSettingsEv
+    void getGameRules(); // _ZN9LevelData12getGameRulesEv
+    void getDefaultAbilities()const; // _ZNK9LevelData19getDefaultAbilitiesEv
+    void getDefaultAbilities(); // _ZN9LevelData19getDefaultAbilitiesEv
+    void getEducationEditionOffer()const; // _ZNK9LevelData24getEducationEditionOfferEv
+//  void setEducationEditionOffer(EducationEditionOffer); //TODO: incomplete function definition // _ZN9LevelData24setEducationEditionOfferE21EducationEditionOffer
+    void educationFeaturesEnabled()const; // _ZNK9LevelData24educationFeaturesEnabledEv
+    void setEducationFeaturesEnabled(bool); // _ZN9LevelData27setEducationFeaturesEnabledEb
+    bool hasConfirmedPlatformLockedContent()const; // _ZNK9LevelData33hasConfirmedPlatformLockedContentEv
+    void setConfirmedPlatformLockedContent(bool); // _ZN9LevelData33setConfirmedPlatformLockedContentEb
+    void getMultiplayerGameIntent()const; // _ZNK9LevelData24getMultiplayerGameIntentEv
+    void setMultiplayerGameIntent(bool); // _ZN9LevelData24setMultiplayerGameIntentEb
+    bool isMultiplayerGame()const; // _ZNK9LevelData17isMultiplayerGameEv
+    void setMultiplayerGame(bool); // _ZN9LevelData18setMultiplayerGameEb
+    void getLANBroadcastIntent()const; // _ZNK9LevelData21getLANBroadcastIntentEv
+    void setLANBroadcastIntent(bool); // _ZN9LevelData21setLANBroadcastIntentEb
+    void getLANBroadcast()const; // _ZNK9LevelData15getLANBroadcastEv
+    void setLANBroadcast(bool); // _ZN9LevelData15setLANBroadcastEb
+    void getXBLBroadcastIntent()const; // _ZNK9LevelData21getXBLBroadcastIntentEv
+//  void setXBLBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition // _ZN9LevelData21setXBLBroadcastIntentEN6Social18GamePublishSettingE
+    void getXBLBroadcastMode()const; // _ZNK9LevelData19getXBLBroadcastModeEv
+//  void setXBLBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition // _ZN9LevelData19setXBLBroadcastModeEN6Social18GamePublishSettingE
+    void getPlatformBroadcastIntent()const; // _ZNK9LevelData26getPlatformBroadcastIntentEv
+//  void setPlatformBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition // _ZN9LevelData26setPlatformBroadcastIntentEN6Social18GamePublishSettingE
+    void getPlatformBroadcastMode()const; // _ZNK9LevelData24getPlatformBroadcastModeEv
+//  void setPlatformBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition // _ZN9LevelData24setPlatformBroadcastModeEN6Social18GamePublishSettingE
+    void setCommandsEnabled(bool); // _ZN9LevelData18setCommandsEnabledEb
+    bool hasExperimentalGameplayEnabled()const; // _ZNK9LevelData30hasExperimentalGameplayEnabledEv
+    bool isTexturepacksRequired()const; // _ZNK9LevelData22isTexturepacksRequiredEv
+    void setTexturepacksRequired(bool); // _ZN9LevelData23setTexturepacksRequiredEb
+    bool hasLockedBehaviorPack()const; // _ZNK9LevelData21hasLockedBehaviorPackEv
+    void setHasLockedBehaviorPack(bool); // _ZN9LevelData24setHasLockedBehaviorPackEb
+    bool hasLockedResourcePack()const; // _ZNK9LevelData21hasLockedResourcePackEv
+    void setHasLockedResourcePack(bool); // _ZN9LevelData24setHasLockedResourcePackEb
+    bool isFromLockedTemplate()const; // _ZNK9LevelData20isFromLockedTemplateEv
+    void setFromLockedTemplate(bool); // _ZN9LevelData21setFromLockedTemplateEb
+    bool isFromWorldTemplate()const; // _ZNK9LevelData19isFromWorldTemplateEv
+    void setFromWorldTemplate(bool); // _ZN9LevelData20setFromWorldTemplateEb
+    bool isWorldTemplateOptionLocked()const; // _ZNK9LevelData27isWorldTemplateOptionLockedEv
+    void setWorldTemplateOptionLocked(bool); // _ZN9LevelData28setWorldTemplateOptionLockedEb
+    std::string getEducationOid()const; // _ZNK9LevelData15getEducationOidB5cxx11Ev
+    void setEducationOid(std::string const&); // _ZN9LevelData15setEducationOidERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    std::string getEducationProductId()const; // _ZNK9LevelData21getEducationProductIdB5cxx11Ev
+    void setEducationProductId(std::string const&); // _ZN9LevelData21setEducationProductIdERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    bool hasBonusChestEnabled()const; // _ZNK9LevelData20hasBonusChestEnabledEv
+    void getBonusChestSpawned()const; // _ZNK9LevelData20getBonusChestSpawnedEv
+    void setBonusChestEnabled(bool); // _ZN9LevelData20setBonusChestEnabledEb
+    void setBonusChestSpawned(bool); // _ZN9LevelData20setBonusChestSpawnedEb
+    bool hasStartWithMapEnabled()const; // _ZNK9LevelData22hasStartWithMapEnabledEv
+    void setStartWithMapEnabled(bool); // _ZN9LevelData22setStartWithMapEnabledEb
+    bool hasMapsCenteredToOrigin()const; // _ZNK9LevelData23hasMapsCenteredToOriginEv
+    void setOnlySpawnV1Villagers(bool); // _ZN9LevelData23setOnlySpawnV1VillagersEb
+    void getOnlySpawnV1Villagers()const; // _ZNK9LevelData23getOnlySpawnV1VillagersEv
+    void getNetherScale()const; // _ZNK9LevelData14getNetherScaleEv
+    bool isLegacyLevel()const; // _ZNK9LevelData13isLegacyLevelEv
+    bool requiresCopiedPackRemovalCheck()const; // _ZNK9LevelData30requiresCopiedPackRemovalCheckEv
+    void setRequiresCopiedPackRemovalCheck(bool); // _ZN9LevelData33setRequiresCopiedPackRemovalCheckEb
 };

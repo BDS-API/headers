@@ -4,5 +4,5 @@
 
 namespace PackSettingsJsonValidator {
 
-    void getValidator();
+    void getValidator(); // _ZN25PackSettingsJsonValidator12getValidatorEv
 };

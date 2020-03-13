@@ -6,7 +6,7 @@
 class MountTamingSystem : ITickingSystem {
 
 public:
-    ~MountTamingSystem();
-    virtual void tick(EntityRegistry &);
-    MountTamingSystem();
+    ~MountTamingSystem(); // _ZN17MountTamingSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN17MountTamingSystem4tickER14EntityRegistry
+    MountTamingSystem(); // _ZN17MountTamingSystemC2Ev
 };

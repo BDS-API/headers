@@ -7,8 +7,8 @@
 class SwampTreeFeature : TreeFeature {
 
 public:
-    virtual void place(BlockSource &, BlockPos const&, Random &)const;
-    ~SwampTreeFeature();
-    void _addVine(BlockSource &, BlockPos, int)const;
-    SwampTreeFeature();
+    ~SwampTreeFeature(); // _ZN16SwampTreeFeatureD2Ev
+    virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK16SwampTreeFeature5placeER11BlockSourceRK8BlockPosR6Random
+    SwampTreeFeature(); // _ZN16SwampTreeFeatureC2Ev
+    void _addVine(BlockSource &, BlockPos, int)const; // _ZNK16SwampTreeFeature8_addVineER11BlockSource8BlockPosi
 };

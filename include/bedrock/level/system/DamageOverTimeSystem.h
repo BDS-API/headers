@@ -6,7 +6,7 @@
 class DamageOverTimeSystem : ITickingSystem {
 
 public:
-    ~DamageOverTimeSystem();
-    virtual void tick(EntityRegistry &);
-    DamageOverTimeSystem();
+    ~DamageOverTimeSystem(); // _ZN20DamageOverTimeSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN20DamageOverTimeSystem4tickER14EntityRegistry
+    DamageOverTimeSystem(); // _ZN20DamageOverTimeSystemC2Ev
 };

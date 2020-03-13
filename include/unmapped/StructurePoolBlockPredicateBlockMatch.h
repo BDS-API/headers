@@ -6,7 +6,7 @@
 class StructurePoolBlockPredicateBlockMatch : IStructurePoolBlockPredicate {
 
 public:
-    ~StructurePoolBlockPredicateBlockMatch();
-    virtual void test(Block const&, Random &)const;
-    StructurePoolBlockPredicateBlockMatch(Block const&);
+    ~StructurePoolBlockPredicateBlockMatch(); // _ZN37StructurePoolBlockPredicateBlockMatchD2Ev
+    virtual void test(Block const&, Random &)const; // _ZNK37StructurePoolBlockPredicateBlockMatch4testERK5BlockR6Random
+    StructurePoolBlockPredicateBlockMatch(Block const&); // _ZN37StructurePoolBlockPredicateBlockMatchC2ERK5Block
 };

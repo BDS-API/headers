@@ -7,11 +7,11 @@
 class SetPlayerGameTypePacket : Packet {
 
 public:
-    virtual void read(ReadOnlyBinaryStream &);
-    virtual std::string getName()const;
-    virtual void getId()const;
-    ~SetPlayerGameTypePacket();
-    virtual void write(BinaryStream &)const;
-//  SetPlayerGameTypePacket(GameType); //TODO: incomplete function definition
-    SetPlayerGameTypePacket();
+    ~SetPlayerGameTypePacket(); // _ZN23SetPlayerGameTypePacketD2Ev
+    virtual void getId()const; // _ZNK23SetPlayerGameTypePacket5getIdEv
+    virtual std::string getName()const; // _ZNK23SetPlayerGameTypePacket7getNameB5cxx11Ev
+    virtual void write(BinaryStream &)const; // _ZNK23SetPlayerGameTypePacket5writeER12BinaryStream
+    virtual void read(ReadOnlyBinaryStream &); // _ZN23SetPlayerGameTypePacket4readER20ReadOnlyBinaryStream
+    SetPlayerGameTypePacket(); // _ZN23SetPlayerGameTypePacketC2Ev
+//  SetPlayerGameTypePacket(GameType); //TODO: incomplete function definition // _ZN23SetPlayerGameTypePacketC2E8GameType
 };

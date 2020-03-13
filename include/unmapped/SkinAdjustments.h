@@ -5,5 +5,5 @@
 class SkinAdjustments {
 
 public:
-    SkinAdjustments();
+    SkinAdjustments(); // _ZN15SkinAdjustmentsC2Ev
 };

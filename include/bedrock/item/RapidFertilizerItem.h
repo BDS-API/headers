@@ -6,6 +6,6 @@
 class RapidFertilizerItem : FertilizerItem {
 
 public:
-    ~RapidFertilizerItem();
-    virtual void fixupOnLoad(ItemStackBase &)const;
+    ~RapidFertilizerItem(); // _ZN19RapidFertilizerItemD2Ev
+    virtual void fixupOnLoad(ItemStackBase &)const; // _ZNK19RapidFertilizerItem11fixupOnLoadER13ItemStackBase
 };

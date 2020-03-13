@@ -5,5 +5,5 @@
 class PackStats {
 
 public:
-    PackStats();
+    PackStats(); // _ZN9PackStatsC2Ev
 };

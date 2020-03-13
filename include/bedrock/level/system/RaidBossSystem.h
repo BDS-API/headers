@@ -6,7 +6,7 @@
 class RaidBossSystem : ITickingSystem {
 
 public:
-    virtual void tick(EntityRegistry &);
-    ~RaidBossSystem();
-    RaidBossSystem();
+    ~RaidBossSystem(); // _ZN14RaidBossSystemD2Ev
+    virtual void tick(EntityRegistry &); // _ZN14RaidBossSystem4tickER14EntityRegistry
+    RaidBossSystem(); // _ZN14RaidBossSystemC2Ev
 };

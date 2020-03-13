@@ -5,6 +5,6 @@
 class NpcGUIOffset {
 
 public:
-    NpcGUIOffset(Json::Value const&);
-    NpcGUIOffset();
+    NpcGUIOffset(); // _ZN12NpcGUIOffsetC2Ev
+    NpcGUIOffset(Json::Value const&); // _ZN12NpcGUIOffsetC2ERKN4Json5ValueE
 };

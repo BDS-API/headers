@@ -29,13 +29,13 @@ namespace ColorFormat {
     static std::string ITALIC;
     static std::string RESET;
 
-    void setColors(std::array<Color, 17ul> const&);
-    void NameFromFormatCode(std::string const&);
-    void ColorFromChar(char);
-    bool IsColorCode(char);
-    void getCurrentColors();
-    void FromString(std::string const&);
-    void ColorFromColorCode(std::string const&);
-    std::string ColorCodeFromColor(Color const&);
-    bool IsColorCode(std::string const&);
+    void FromString(std::string const&); // _ZN11ColorFormat10FromStringERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    void NameFromFormatCode(std::string const&); // _ZN11ColorFormat18NameFromFormatCodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    void ColorFromChar(char); // _ZN11ColorFormat13ColorFromCharEc
+    void ColorFromColorCode(std::string const&); // _ZN11ColorFormat18ColorFromColorCodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    bool IsColorCode(char); // _ZN11ColorFormat11IsColorCodeEc
+    bool IsColorCode(std::string const&); // _ZN11ColorFormat11IsColorCodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    std::string ColorCodeFromColor(Color const&); // _ZN11ColorFormat18ColorCodeFromColorB5cxx11ERK5Color
+    void setColors(std::array<Color, 17ul> const&); // _ZN11ColorFormat9setColorsERKSt5arrayI5ColorLm17EE
+    void getCurrentColors(); // _ZN11ColorFormat16getCurrentColorsEv
 };

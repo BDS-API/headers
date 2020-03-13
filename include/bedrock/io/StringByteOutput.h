@@ -7,7 +7,7 @@
 class StringByteOutput : BytesDataOutput {
 
 public:
-    ~StringByteOutput();
-    virtual void writeBytes(void const*, unsigned long);
-    StringByteOutput(std::string &);
+    ~StringByteOutput(); // _ZN16StringByteOutputD2Ev
+    virtual void writeBytes(void const*, unsigned long); // _ZN16StringByteOutput10writeBytesEPKvm
+    StringByteOutput(std::string &); // _ZN16StringByteOutputC2ERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 };
