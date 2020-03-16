@@ -4,13 +4,14 @@
 #include "Goal.h"
 
 
-class EatCarriedItemGoal : Goal {
+class EatCarriedItemGoal : public Goal {
 
 public:
     static long EATING_TIME;
     static long CHEW_CHANCE;
 
-    ~EatCarriedItemGoal(); // _ZN18EatCarriedItemGoalD2Ev
+    virtual ~EatCarriedItemGoal(); // _ZN18EatCarriedItemGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN18EatCarriedItemGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN18EatCarriedItemGoal16canContinueToUseEv
     virtual void start(); // _ZN18EatCarriedItemGoal5startEv

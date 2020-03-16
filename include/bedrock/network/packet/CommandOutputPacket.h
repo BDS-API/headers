@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class CommandOutputPacket : Packet {
+class CommandOutputPacket : public Packet {
 
 public:
-    ~CommandOutputPacket(); // _ZN19CommandOutputPacketD2Ev
+    virtual ~CommandOutputPacket(); // _ZN19CommandOutputPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK19CommandOutputPacket5getIdEv
     virtual std::string getName()const; // _ZNK19CommandOutputPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK19CommandOutputPacket5writeER12BinaryStream

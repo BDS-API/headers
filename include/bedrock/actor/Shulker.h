@@ -4,20 +4,21 @@
 #include "../util/BlockPos.h"
 
 
-class Shulker : Mob {
+class Shulker : public Mob {
 
 public:
     static long COVERED_ARMOR_MODIFIER_UUID;
     static long COVERED_ARMOR_MODIFIER;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN7Shulker15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Shulker(); // _ZN7ShulkerD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN7Shulker15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Shulker(); // _ZN7ShulkerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void setPos(Vec3 const&); // _ZN7Shulker6setPosERK4Vec3
     virtual void normalTick(); // _ZN7Shulker10normalTickEv
     virtual bool isInWall()const; // _ZNK7Shulker8isInWallEv
     virtual void getShadowRadius()const; // _ZNK7Shulker15getShadowRadiusEv
     virtual bool canAttack(Actor *, bool)const; // _ZNK7Shulker9canAttackEP5Actorb
-    virtual void shouldRender()const; // _ZNK7Shulker12shouldRenderEv
+    virtual bool shouldRender()const; // _ZNK7Shulker12shouldRenderEv
     virtual bool isInvulnerableTo(ActorDamageSource const&)const; // _ZNK7Shulker16isInvulnerableToERK17ActorDamageSource
     virtual void getPickRadius(); // _ZN7Shulker13getPickRadiusEv
     virtual bool isLeashableType(); // _ZN7Shulker15isLeashableTypeEv

@@ -4,10 +4,11 @@
 #include "FurnaceBlock.h"
 
 
-class SmokerBlock : FurnaceBlock {
+class SmokerBlock : public FurnaceBlock {
 
 public:
-    ~SmokerBlock(); // _ZN11SmokerBlockD2Ev
+    virtual ~SmokerBlock(); // _ZN11SmokerBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK11SmokerBlock15getResourceItemER6RandomRK5Blocki
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const; // _ZNK11SmokerBlock14asItemInstanceER11BlockSourceRK8BlockPosRK5Block
     virtual void use(Player &, BlockPos const&)const; // _ZNK11SmokerBlock3useER6PlayerRK8BlockPos

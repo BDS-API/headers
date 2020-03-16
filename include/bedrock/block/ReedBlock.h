@@ -4,15 +4,16 @@
 #include "BlockLegacy.h"
 
 
-class ReedBlock : BlockLegacy {
+class ReedBlock : public BlockLegacy {
 
 public:
-    ~ReedBlock(); // _ZN9ReedBlockD2Ev
+    virtual ~ReedBlock(); // _ZN9ReedBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK9ReedBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK9ReedBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void waterSpreadCausesSpawn()const; // _ZNK9ReedBlock22waterSpreadCausesSpawnEv
     virtual bool canContainLiquid()const; // _ZNK9ReedBlock16canContainLiquidEv
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK9ReedBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK9ReedBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK9ReedBlock8mayPlaceER11BlockSourceRK8BlockPos
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK9ReedBlock15neighborChangedER11BlockSourceRK8BlockPosS4_
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK9ReedBlock15getResourceItemER6RandomRK5Blocki

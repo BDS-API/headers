@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class RestrictOpenDoorGoal : Goal {
+class RestrictOpenDoorGoal : public Goal {
 
 public:
-    ~RestrictOpenDoorGoal(); // _ZN20RestrictOpenDoorGoalD2Ev
+    virtual ~RestrictOpenDoorGoal(); // _ZN20RestrictOpenDoorGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN20RestrictOpenDoorGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN20RestrictOpenDoorGoal16canContinueToUseEv
     virtual void start(); // _ZN20RestrictOpenDoorGoal5startEv

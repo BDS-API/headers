@@ -4,9 +4,10 @@
 #include "BlockLegacy.h"
 
 
-class HoneycombBlock : BlockLegacy {
+class HoneycombBlock : public BlockLegacy {
 
 public:
-    ~HoneycombBlock(); // _ZN14HoneycombBlockD2Ev
+    virtual ~HoneycombBlock(); // _ZN14HoneycombBlockD2Ev
+    virtual void __fake_function0(); // fake
     HoneycombBlock(std::string const&, int, Material const&); // _ZN14HoneycombBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiRK8Material
 };

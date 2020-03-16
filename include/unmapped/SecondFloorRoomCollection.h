@@ -6,10 +6,11 @@
 
 namespace WoodlandMansionPieces {
 
-    class SecondFloorRoomCollection : WoodlandMansionPieces::FloorRoomCollection {
+    class SecondFloorRoomCollection : public WoodlandMansionPieces::FloorRoomCollection {
 
     public:
-        ~SecondFloorRoomCollection(); // _ZN21WoodlandMansionPieces25SecondFloorRoomCollectionD2Ev
+        virtual ~SecondFloorRoomCollection(); // _ZN21WoodlandMansionPieces25SecondFloorRoomCollectionD2Ev
+        virtual void __fake_function0(); // fake
         virtual std::string get1x1(Random &); // _ZN21WoodlandMansionPieces25SecondFloorRoomCollection6get1x1B5cxx11ER6Random
         virtual std::string get1x1Secret(Random &); // _ZN21WoodlandMansionPieces25SecondFloorRoomCollection12get1x1SecretB5cxx11ER6Random
         virtual std::string get1x2SideEntrance(Random &, bool); // _ZN21WoodlandMansionPieces25SecondFloorRoomCollection18get1x2SideEntranceB5cxx11ER6Randomb

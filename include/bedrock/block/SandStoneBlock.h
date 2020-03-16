@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class SandStoneBlock : BlockLegacy {
+class SandStoneBlock : public BlockLegacy {
 
 public:
-    ~SandStoneBlock(); // _ZN14SandStoneBlockD2Ev
+    virtual ~SandStoneBlock(); // _ZN14SandStoneBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canBeOriginalSurface()const; // _ZNK14SandStoneBlock20canBeOriginalSurfaceEv
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK14SandStoneBlock15getResourceItemER6RandomRK5Blocki
     virtual std::string buildDescriptionId(Block const&)const; // _ZNK14SandStoneBlock18buildDescriptionIdB5cxx11ERK5Block

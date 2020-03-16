@@ -3,10 +3,11 @@
 #include "Actor.h"
 
 
-class LlamaSpit : Actor {
+class LlamaSpit : public Actor {
 
 public:
-    ~LlamaSpit(); // _ZN9LlamaSpitD2Ev
+    virtual ~LlamaSpit(); // _ZN9LlamaSpitD2Ev
+    virtual void __fake_function0(); // fake
     virtual void lerpTo(Vec3 const&, Vec2 const&, int); // _ZN9LlamaSpit6lerpToERK4Vec3RK4Vec2i
     virtual void normalTick(); // _ZN9LlamaSpit10normalTickEv
     virtual void getShadowHeightOffs(); // _ZN9LlamaSpit19getShadowHeightOffsEv

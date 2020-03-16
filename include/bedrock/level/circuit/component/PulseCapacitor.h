@@ -3,10 +3,11 @@
 #include "CapacitorComponent.h"
 
 
-class PulseCapacitor : CapacitorComponent {
+class PulseCapacitor : public CapacitorComponent {
 
 public:
-    ~PulseCapacitor(); // _ZN14PulseCapacitorD2Ev
+    virtual ~PulseCapacitor(); // _ZN14PulseCapacitorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getStrength()const; // _ZNK14PulseCapacitor11getStrengthEv
     virtual void setStrength(int); // _ZN14PulseCapacitor11setStrengthEi
     virtual void consumePowerAnyDirection(); // _ZN14PulseCapacitor24consumePowerAnyDirectionEv

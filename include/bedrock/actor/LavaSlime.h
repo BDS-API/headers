@@ -3,11 +3,12 @@
 #include "Slime.h"
 
 
-class LavaSlime : Slime {
+class LavaSlime : public Slime {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN9LavaSlime15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~LavaSlime(); // _ZN9LavaSlimeD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN9LavaSlime15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~LavaSlime(); // _ZN9LavaSlimeD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isInLava()const; // _ZNK9LavaSlime8isInLavaEv
     virtual void getBrightness(float)const; // _ZNK9LavaSlime13getBrightnessEf
     virtual bool isOnFire()const; // _ZNK9LavaSlime8isOnFireEv

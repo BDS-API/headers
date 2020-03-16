@@ -3,9 +3,10 @@
 #include "ChemistryAuxDataBlockItem.h"
 
 
-class ElementBlockItem : ChemistryAuxDataBlockItem {
+class ElementBlockItem : public ChemistryAuxDataBlockItem {
 
 public:
-    ~ElementBlockItem(); // _ZN16ElementBlockItemD2Ev
+    virtual ~ElementBlockItem(); // _ZN16ElementBlockItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void fixupOnLoad(ItemStackBase &)const; // _ZNK16ElementBlockItem11fixupOnLoadER13ItemStackBase
 };

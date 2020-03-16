@@ -1,14 +1,14 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include <functional>
+#include <string>
 
 
 class MinecraftCommands {
 
 public:
-//  void setOpPermissionLevel(CommandPermissionLevel); //TODO: incomplete function definition // _ZN17MinecraftCommands20setOpPermissionLevelE22CommandPermissionLevel
+//    void setOpPermissionLevel(long); //TODO: incomplete function definition // _ZN17MinecraftCommands20setOpPermissionLevelE22CommandPermissionLevel
     void getOpPermissionLevel()const; // _ZNK17MinecraftCommands20getOpPermissionLevelEv
     MinecraftCommands(Minecraft &, Automation::AutomationClient &); // _ZN17MinecraftCommandsC2ER9MinecraftRN10Automation16AutomationClientE
     void initCoreEnums(bool, BaseGameVersion const&); // _ZN17MinecraftCommands13initCoreEnumsEbRK15BaseGameVersion
@@ -19,7 +19,7 @@ public:
     void handleOutput(CommandOrigin const&, CommandOutput const&)const; // _ZNK17MinecraftCommands12handleOutputERK13CommandOriginRK13CommandOutput
     void executeCommand(std::shared_ptr<CommandContext>, bool)const; // _ZNK17MinecraftCommands14executeCommandESt10shared_ptrI14CommandContextEb
     void setRegistryNetworkUpdateCallback(std::function<void (Packet const&)>)const; // _ZNK17MinecraftCommands32setRegistryNetworkUpdateCallbackESt8functionIFvRK6PacketEE
-//  void runCommand(HashedString const&, CommandOrigin &, CurrentCmdVersion); //TODO: incomplete function definition // _ZN17MinecraftCommands10runCommandERK12HashedStringR13CommandOrigin17CurrentCmdVersion
+//    void runCommand(HashedString const&, CommandOrigin &, long); //TODO: incomplete function definition // _ZN17MinecraftCommands10runCommandERK12HashedStringR13CommandOrigin17CurrentCmdVersion
     void registerChatPermissionsCallback(std::function<bool (void)>); // _ZN17MinecraftCommands31registerChatPermissionsCallbackESt8functionIFbvEE
     void setOutputSender(std::unique_ptr<CommandOutputSender>); // _ZN17MinecraftCommands15setOutputSenderESt10unique_ptrI19CommandOutputSenderSt14default_deleteIS1_EE
     void getOutputSender(); // _ZN17MinecraftCommands15getOutputSenderEv

@@ -3,10 +3,11 @@
 #include "DefintionDescription.h"
 
 
-class RuntimeIdentifierDescription : DefintionDescription {
+class RuntimeIdentifierDescription : public DefintionDescription {
 
 public:
-    ~RuntimeIdentifierDescription(); // _ZN28RuntimeIdentifierDescriptionD2Ev
+    virtual ~RuntimeIdentifierDescription(); // _ZN28RuntimeIdentifierDescriptionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getJsonName()const; // _ZNK28RuntimeIdentifierDescription11getJsonNameEv
     RuntimeIdentifierDescription(); // _ZN28RuntimeIdentifierDescriptionC2Ev
     RuntimeIdentifierDescription(RuntimeIdentifierDescription &&); // _ZN28RuntimeIdentifierDescriptionC2EOS_

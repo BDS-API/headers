@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "LootItemFunction.h"
+#include "../../../json/Value.h"
 #include <vector>
 
 
-class EnchantWithLevelsFunction : LootItemFunction {
+class EnchantWithLevelsFunction : public LootItemFunction {
 
 public:
-    ~EnchantWithLevelsFunction(); // _ZN25EnchantWithLevelsFunctionD2Ev
+    virtual ~EnchantWithLevelsFunction(); // _ZN25EnchantWithLevelsFunctionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void apply(ItemStack &, Random &, LootTableContext &); // _ZN25EnchantWithLevelsFunction5applyER9ItemStackR6RandomR16LootTableContext
     virtual void apply(ItemInstance &, Random &, LootTableContext &); // _ZN25EnchantWithLevelsFunction5applyER12ItemInstanceR6RandomR16LootTableContext
     void deserialize(Json::Value, std::vector<std::unique_ptr<LootItemCondition>> &); // _ZN25EnchantWithLevelsFunction11deserializeEN4Json5ValueERSt6vectorISt10unique_ptrI17LootItemConditionSt14default_deleteIS4_EESaIS7_EE

@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "ActorBlock.h"
 #include <vector>
+#include "ActorBlock.h"
 
 
-class BrewingStandBlock : ActorBlock {
+class BrewingStandBlock : public ActorBlock {
 
 public:
-    ~BrewingStandBlock(); // _ZN17BrewingStandBlockD2Ev
+    virtual ~BrewingStandBlock(); // _ZN17BrewingStandBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &)const; // _ZNK17BrewingStandBlock8addAABBsERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EE
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK17BrewingStandBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &, Actor *)const; // _ZNK17BrewingStandBlock18addCollisionShapesERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EEP5Actor

@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class BreatheAirGoal : Goal {
+class BreatheAirGoal : public Goal {
 
 public:
-    ~BreatheAirGoal(); // _ZN14BreatheAirGoalD2Ev
+    virtual ~BreatheAirGoal(); // _ZN14BreatheAirGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN14BreatheAirGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN14BreatheAirGoal16canContinueToUseEv
     virtual bool canBeInterrupted(); // _ZN14BreatheAirGoal16canBeInterruptedEv

@@ -5,10 +5,11 @@
 #include "Packet.h"
 
 
-class MapInfoRequestPacket : Packet {
+class MapInfoRequestPacket : public Packet {
 
 public:
-    ~MapInfoRequestPacket(); // _ZN20MapInfoRequestPacketD2Ev
+    virtual ~MapInfoRequestPacket(); // _ZN20MapInfoRequestPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK20MapInfoRequestPacket5getIdEv
     virtual std::string getName()const; // _ZNK20MapInfoRequestPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK20MapInfoRequestPacket5writeER12BinaryStream

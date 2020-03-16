@@ -6,10 +6,11 @@
 class AttributeBuff {
 
 public:
-    ~AttributeBuff(); // _ZN13AttributeBuffD2Ev
+    virtual ~AttributeBuff(); // _ZN13AttributeBuffD2Ev
+    virtual void __fake_function0(); // fake
     virtual void setDurationAmplifier(std::shared_ptr<Amplifier>); // _ZN13AttributeBuff20setDurationAmplifierESt10shared_ptrI9AmplifierE
     AttributeBuff(AttributeBuff const&); // _ZN13AttributeBuffC2ERKS_
-//  AttributeBuff(float, int, AttributeBuffType); //TODO: incomplete function definition // _ZN13AttributeBuffC2Efi17AttributeBuffType
+//    AttributeBuff(float, int, long); //TODO: incomplete function definition // _ZN13AttributeBuffC2Efi17AttributeBuffType
     void getAmount()const; // _ZNK13AttributeBuff9getAmountEv
     void getType()const; // _ZNK13AttributeBuff7getTypeEv
     void getInfo()const; // _ZNK13AttributeBuff7getInfoEv
@@ -21,5 +22,5 @@ public:
     void getOperand()const; // _ZNK13AttributeBuff10getOperandEv
     void setOperand(int); // _ZN13AttributeBuff10setOperandEi
     void operator==(AttributeBuff const&)const; // _ZNK13AttributeBuffeqERKS_
-//  void buffTypeToDamageCause(AttributeBuffType); //TODO: incomplete function definition // _ZN13AttributeBuff21buffTypeToDamageCauseE17AttributeBuffType
+//    void buffTypeToDamageCause(long); //TODO: incomplete function definition // _ZN13AttributeBuff21buffTypeToDamageCauseE17AttributeBuffType
 };

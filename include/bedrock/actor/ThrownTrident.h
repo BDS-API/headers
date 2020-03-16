@@ -3,11 +3,12 @@
 #include "AbstractArrow.h"
 
 
-class ThrownTrident : AbstractArrow {
+class ThrownTrident : public AbstractArrow {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN13ThrownTrident15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~ThrownTrident(); // _ZN13ThrownTridentD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN13ThrownTrident15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~ThrownTrident(); // _ZN13ThrownTridentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN13ThrownTrident10normalTickEv
     virtual void playerTouch(Player &); // _ZN13ThrownTrident11playerTouchER6Player
     virtual bool isEnchanted()const; // _ZNK13ThrownTrident11isEnchantedEv

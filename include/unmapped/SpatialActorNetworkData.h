@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
-#include "../bedrock/actor/unmapped/ActorRuntimeID.h"
 #include "../bedrock/util/Vec2.h"
+#include "../bedrock/actor/unmapped/ActorRuntimeID.h"
+#include "../bedrock/util/Vec3.h"
 
 
 class SpatialActorNetworkData {
@@ -12,7 +12,7 @@ public:
     void sendUpdate(bool, bool, bool); // _ZN23SpatialActorNetworkData10sendUpdateEbbb
     void _sendPacket(Packet &); // _ZN23SpatialActorNetworkData11_sendPacketER6Packet
     void forceSetSentData(); // _ZN23SpatialActorNetworkData16forceSetSentDataEv
-    void shouldSendUpdate(bool, bool)const; // _ZNK23SpatialActorNetworkData16shouldSendUpdateEbb
+    bool shouldSendUpdate(bool, bool)const; // _ZNK23SpatialActorNetworkData16shouldSendUpdateEbb
     void enableAutoSend(bool); // _ZN23SpatialActorNetworkData14enableAutoSendEb
     bool isAutoSendEnabled()const; // _ZNK23SpatialActorNetworkData17isAutoSendEnabledEv
     void handleServerData(MoveActorDeltaData const&); // _ZN23SpatialActorNetworkData16handleServerDataERK18MoveActorDeltaData

@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "CropBlock.h"
+#include <string>
 
 
-class CarrotBlock : CropBlock {
+class CarrotBlock : public CropBlock {
 
 public:
-    ~CarrotBlock(); // _ZN11CarrotBlockD2Ev
+    virtual ~CarrotBlock(); // _ZN11CarrotBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK11CarrotBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK11CarrotBlock16getResourceCountER6RandomRK5Blocki
     virtual void getRenderLayer()const; // _ZNK11CarrotBlock14getRenderLayerEv

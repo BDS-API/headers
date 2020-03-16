@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class HoneyBlock : BlockLegacy {
+class HoneyBlock : public BlockLegacy {
 
 public:
-    ~HoneyBlock(); // _ZN10HoneyBlockD2Ev
+    virtual ~HoneyBlock(); // _ZN10HoneyBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK10HoneyBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void onStepOn(Actor &, BlockPos const&)const; // _ZNK10HoneyBlock8onStepOnER5ActorRK8BlockPos
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const; // _ZNK10HoneyBlock8onFallOnER11BlockSourceRK8BlockPosP5Actorf

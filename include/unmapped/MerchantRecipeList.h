@@ -5,7 +5,8 @@
 class MerchantRecipeList {
 
 public:
-    ~MerchantRecipeList(); // _ZN18MerchantRecipeListD2Ev
+    virtual ~MerchantRecipeList(); // _ZN18MerchantRecipeListD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getRecipeFor(ItemInstance const&, ItemInstance const&, int); // _ZN18MerchantRecipeList12getRecipeForERK12ItemInstanceS2_i
     virtual void addIfNewOrBetter(MerchantRecipe *); // _ZN18MerchantRecipeList16addIfNewOrBetterEP14MerchantRecipe
     virtual void getMatchingRecipeFor(ItemInstance const&, ItemInstance const&, ItemInstance const&); // _ZN18MerchantRecipeList20getMatchingRecipeForERK12ItemInstanceS2_S2_

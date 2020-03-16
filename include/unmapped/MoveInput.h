@@ -5,7 +5,8 @@
 class MoveInput {
 
 public:
-    ~MoveInput(); // _ZN9MoveInputD2Ev
+    virtual ~MoveInput(); // _ZN9MoveInputD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(Player &); // _ZN9MoveInput4tickER6Player
     virtual void render(float); // _ZN9MoveInput6renderEf
     virtual void setKey(int, bool); // _ZN9MoveInput6setKeyEib

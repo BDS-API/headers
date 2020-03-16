@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class TargetWhenPushedGoal : Goal {
+class TargetWhenPushedGoal : public Goal {
 
 public:
-    ~TargetWhenPushedGoal(); // _ZN20TargetWhenPushedGoalD2Ev
+    virtual ~TargetWhenPushedGoal(); // _ZN20TargetWhenPushedGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN20TargetWhenPushedGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN20TargetWhenPushedGoal16canContinueToUseEv
     virtual bool canBeInterrupted(); // _ZN20TargetWhenPushedGoal16canBeInterruptedEv

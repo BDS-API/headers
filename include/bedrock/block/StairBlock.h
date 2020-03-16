@@ -1,17 +1,18 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 #include "BlockLegacy.h"
 #include <vector>
 
 
-class StairBlock : BlockLegacy {
+class StairBlock : public BlockLegacy {
 
 public:
     static long DEAD_SPACES;
 
-    ~StairBlock(); // _ZN10StairBlockD2Ev
+    virtual ~StairBlock(); // _ZN10StairBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK10StairBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &)const; // _ZNK10StairBlock8addAABBsERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EE
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK10StairBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb

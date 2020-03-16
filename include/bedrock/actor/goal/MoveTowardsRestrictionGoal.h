@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class MoveTowardsRestrictionGoal : Goal {
+class MoveTowardsRestrictionGoal : public Goal {
 
 public:
-    ~MoveTowardsRestrictionGoal(); // _ZN26MoveTowardsRestrictionGoalD2Ev
+    virtual ~MoveTowardsRestrictionGoal(); // _ZN26MoveTowardsRestrictionGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN26MoveTowardsRestrictionGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN26MoveTowardsRestrictionGoal16canContinueToUseEv
     virtual void start(); // _ZN26MoveTowardsRestrictionGoal5startEv

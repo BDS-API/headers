@@ -4,10 +4,11 @@
 #include "IDataInput.h"
 
 
-class BytesDataInput : IDataInput {
+class BytesDataInput : public IDataInput {
 
 public:
-    ~BytesDataInput(); // _ZN14BytesDataInputD2Ev
+    virtual ~BytesDataInput(); // _ZN14BytesDataInputD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string readString(); // _ZN14BytesDataInput10readStringB5cxx11Ev
     virtual std::string readLongString(); // _ZN14BytesDataInput14readLongStringB5cxx11Ev
     virtual void readFloat(); // _ZN14BytesDataInput9readFloatEv

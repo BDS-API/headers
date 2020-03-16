@@ -3,11 +3,12 @@
 #include <memory>
 
 
-class InMemorySequentialFile /*leveldb::SequentialFile*/ { //TODO: incomplete class definition
+class InMemorySequentialFile /*public leveldb::SequentialFile*/ { //TODO: incomplete class definition
 
 public:
-    ~InMemorySequentialFile(); // _ZN22InMemorySequentialFileD2Ev
-//  virtual void Read(unsigned long, leveldb::Slice *, char *); //TODO: incomplete function definition // _ZN22InMemorySequentialFile4ReadEmPN7leveldb5SliceEPc
+    virtual ~InMemorySequentialFile(); // _ZN22InMemorySequentialFileD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void Read__incomplete0(unsigned long, long *, char *); //TODO: incomplete function definition // _ZN22InMemorySequentialFile4ReadEmPN7leveldb5SliceEPc
     virtual void Skip(unsigned long); // _ZN22InMemorySequentialFile4SkipEm
     InMemorySequentialFile(std::shared_ptr<InMemoryFile>); // _ZN22InMemorySequentialFileC2ESt10shared_ptrI12InMemoryFileE
 };

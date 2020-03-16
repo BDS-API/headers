@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../../nbt/CompoundTag.h"
+#include <string>
 #include "Packet.h"
 
 
-class BlockActorDataPacket : Packet {
+class BlockActorDataPacket : public Packet {
 
 public:
-    ~BlockActorDataPacket(); // _ZN20BlockActorDataPacketD2Ev
+    virtual ~BlockActorDataPacket(); // _ZN20BlockActorDataPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK20BlockActorDataPacket5getIdEv
     virtual std::string getName()const; // _ZNK20BlockActorDataPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK20BlockActorDataPacket5writeER12BinaryStream

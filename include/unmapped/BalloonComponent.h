@@ -22,7 +22,7 @@ public:
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &); // _ZN16BalloonComponent22readAdditionalSaveDataER5ActorRK11CompoundTagR14DataLoadHelper
     void getMaxHeight()const; // _ZNK16BalloonComponent12getMaxHeightEv
     void getBalloonForActor(Actor const&); // _ZN16BalloonComponent18getBalloonForActorERK5Actor
-    void shouldPop(Actor &, bool &); // _ZN16BalloonComponent9shouldPopER5ActorRb
+    bool shouldPop(Actor &, bool &); // _ZN16BalloonComponent9shouldPopER5ActorRb
     void integrate(Actor &); // _ZN16BalloonComponent9integrateER5Actor
     void _integrateBalloon(Vec3 &, Vec3 *, Vec3 const&, DistanceConstraint *); // _ZN16BalloonComponent17_integrateBalloonER4Vec3PS0_RKS0_P18DistanceConstraint
     void computeMaxHeight(Actor &); // _ZN16BalloonComponent16computeMaxHeightER5Actor

@@ -3,14 +3,15 @@
 #include "ServerCommand.h"
 
 
-class SaveCommand : ServerCommand {
+class SaveCommand : public ServerCommand {
 
 public:
     static long mSaveAllMutex;
     static long mSaveAllFileList;
     static long mState;
 
-    ~SaveCommand(); // _ZN11SaveCommandD2Ev
+    virtual ~SaveCommand(); // _ZN11SaveCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK11SaveCommand7executeERK13CommandOriginR13CommandOutput
     void saveHold(CommandOutput &); // _ZN11SaveCommand8saveHoldER13CommandOutput
     void saveResume(CommandOutput &); // _ZN11SaveCommand10saveResumeER13CommandOutput

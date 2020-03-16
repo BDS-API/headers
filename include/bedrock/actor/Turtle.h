@@ -3,10 +3,11 @@
 #include "Animal.h"
 
 
-class Turtle : Animal {
+class Turtle : public Animal {
 
 public:
-    ~Turtle(); // _ZN6TurtleD2Ev
+    virtual ~Turtle(); // _ZN6TurtleD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN6Turtle10normalTickEv
     virtual void getShadowRadius()const; // _ZNK6Turtle15getShadowRadiusEv
     virtual void die(ActorDamageSource const&); // _ZN6Turtle3dieERK17ActorDamageSource

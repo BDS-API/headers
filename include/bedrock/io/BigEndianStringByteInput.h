@@ -4,10 +4,11 @@
 #include "StringByteInput.h"
 
 
-class BigEndianStringByteInput : StringByteInput {
+class BigEndianStringByteInput : public StringByteInput {
 
 public:
-    ~BigEndianStringByteInput(); // _ZN24BigEndianStringByteInputD2Ev
+    virtual ~BigEndianStringByteInput(); // _ZN24BigEndianStringByteInputD2Ev
+    virtual void __fake_function0(); // fake
     virtual void readFloat(); // _ZN24BigEndianStringByteInput9readFloatEv
     virtual void readDouble(); // _ZN24BigEndianStringByteInput10readDoubleEv
     virtual void readShort(); // _ZN24BigEndianStringByteInput9readShortEv

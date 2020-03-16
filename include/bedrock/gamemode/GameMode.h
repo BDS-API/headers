@@ -17,7 +17,8 @@ public:
     static long PICKRANGE_SURVIVAL_MAXIMUM_SQR;
     static long PICKRANGE_CREATIVE_MAXIMUM_SQR;
 
-    ~GameMode(); // _ZN8GameModeD2Ev
+    virtual ~GameMode(); // _ZN8GameModeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &); // _ZN8GameMode17startDestroyBlockERK8BlockPoshRb
     virtual void destroyBlock(BlockPos const&, unsigned char); // _ZN8GameMode12destroyBlockERK8BlockPosh
     virtual void continueDestroyBlock(BlockPos const&, unsigned char, bool &); // _ZN8GameMode20continueDestroyBlockERK8BlockPoshRb
@@ -27,7 +28,7 @@ public:
     virtual void continueBuildBlock(BlockPos const&, unsigned char); // _ZN8GameMode18continueBuildBlockERK8BlockPosh
     virtual void stopBuildBlock(); // _ZN8GameMode14stopBuildBlockEv
     virtual void tick(); // _ZN8GameMode4tickEv
-//  virtual void getPickRange(InputMode const&, bool); //TODO: incomplete function definition // _ZN8GameMode12getPickRangeERK9InputModeb
+    virtual void getPickRange__incomplete0(long const&, bool); //TODO: incomplete function definition // _ZN8GameMode12getPickRangeERK9InputModeb
     virtual void useItem(ItemStack &); // _ZN8GameMode7useItemER9ItemStack
     virtual void useItemOn(ItemStack &, BlockPos const&, unsigned char, Vec3 const&, Block const*); // _ZN8GameMode9useItemOnER9ItemStackRK8BlockPoshRK4Vec3PK5Block
     virtual void interact(Actor &, Vec3 const&); // _ZN8GameMode8interactER5ActorRK4Vec3

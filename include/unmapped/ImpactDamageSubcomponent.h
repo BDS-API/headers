@@ -3,10 +3,11 @@
 #include "OnHitSubcomponent.h"
 
 
-class ImpactDamageSubcomponent : OnHitSubcomponent {
+class ImpactDamageSubcomponent : public OnHitSubcomponent {
 
 public:
-    ~ImpactDamageSubcomponent(); // _ZN24ImpactDamageSubcomponentD2Ev
+    virtual ~ImpactDamageSubcomponent(); // _ZN24ImpactDamageSubcomponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void readfromJSON(Json::Value &); // _ZN24ImpactDamageSubcomponent12readfromJSONERN4Json5ValueE
     virtual void writetoJSON(Json::Value &)const; // _ZNK24ImpactDamageSubcomponent11writetoJSONERN4Json5ValueE
     virtual void doOnHitEffect(Actor &, ProjectileComponent &); // _ZN24ImpactDamageSubcomponent13doOnHitEffectER5ActorR19ProjectileComponent

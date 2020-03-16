@@ -5,12 +5,13 @@
 
 namespace Core {
 
-    class OutputFileStream : Core::FileStream {
+    class OutputFileStream : public Core::FileStream {
 
     public:
-        ~OutputFileStream(); // _ZN4Core16OutputFileStreamD1Ev
-//      void open(Core::Path const&, std::_Ios_Openmode); //TODO: incomplete function definition // _ZN4Core16OutputFileStream4openERKNS_4PathESt13_Ios_Openmode
+        virtual ~OutputFileStream(); // _ZN4Core16OutputFileStreamD1Ev
+        virtual void __fake_function0(); // fake
+//        void open(Core::Path const&, long); //TODO: incomplete function definition // _ZN4Core16OutputFileStream4openERKNS_4PathESt13_Ios_Openmode
         OutputFileStream(); // _ZN4Core16OutputFileStreamC1Ev
-//      OutputFileStream(Core::Path const&, std::_Ios_Openmode); //TODO: incomplete function definition // _ZN4Core16OutputFileStreamC1ERKNS_4PathESt13_Ios_Openmode
+//        OutputFileStream(Core::Path const&, long); //TODO: incomplete function definition // _ZN4Core16OutputFileStreamC1ERKNS_4PathESt13_Ios_Openmode
     };
 }

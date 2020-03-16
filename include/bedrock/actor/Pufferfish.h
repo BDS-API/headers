@@ -3,10 +3,11 @@
 #include "Fish.h"
 
 
-class Pufferfish : Fish {
+class Pufferfish : public Fish {
 
 public:
-    ~Pufferfish(); // _ZN10PufferfishD2Ev
+    virtual ~Pufferfish(); // _ZN10PufferfishD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN10Pufferfish10normalTickEv
     virtual void startRiding(Actor &); // _ZN10Pufferfish11startRidingER5Actor
     virtual void playerTouch(Player &); // _ZN10Pufferfish11playerTouchER6Player

@@ -5,16 +5,17 @@
 #include <vector>
 
 
-class ComposterBlock : BlockLegacy {
+class ComposterBlock : public BlockLegacy {
 
 public:
     static long PARTICLE_OFFSET;
 
-    ~ComposterBlock(); // _ZN14ComposterBlockD2Ev
+    virtual ~ComposterBlock(); // _ZN14ComposterBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK14ComposterBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &)const; // _ZNK14ComposterBlock8addAABBsERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EE
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &, Actor *)const; // _ZNK14ComposterBlock18addCollisionShapesERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EEP5Actor
-//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition // _ZNK14ComposterBlock17canProvideSupportERK5Blockh16BlockSupportType
+    virtual bool canProvideSupport__incomplete0(Block const&, unsigned char, long)const; //TODO: incomplete function definition // _ZNK14ComposterBlock17canProvideSupportERK5Blockh16BlockSupportType
     virtual bool canContainLiquid()const; // _ZNK14ComposterBlock16canContainLiquidEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK14ComposterBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRemove(BlockSource &, BlockPos const&)const; // _ZNK14ComposterBlock8onRemoveER11BlockSourceRK8BlockPos
@@ -26,7 +27,7 @@ public:
     ComposterBlock(std::string const&, int); // _ZN14ComposterBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
     void _emitBoneMeal(Level &, BlockSource &, BlockPos const&)const; // _ZNK14ComposterBlock13_emitBoneMealER5LevelR11BlockSourceRK8BlockPos
     void empty(BlockSource &, Block const&, BlockPos const&); // _ZN14ComposterBlock5emptyER11BlockSourceRK5BlockRK8BlockPos
-//  void _notifyClientComposterUsed(Player const&, short, MinecraftEventing::POIBlockInteractionType)const; //TODO: incomplete function definition // _ZNK14ComposterBlock26_notifyClientComposterUsedERK6PlayersN17MinecraftEventing23POIBlockInteractionTypeE
+//    void _notifyClientComposterUsed(Player const&, short, long)const; //TODO: incomplete function definition // _ZNK14ComposterBlock26_notifyClientComposterUsedERK6PlayersN17MinecraftEventing23POIBlockInteractionTypeE
     void addItem(ItemStack const&, BlockSource &, Block const&, BlockPos const&); // _ZN14ComposterBlock7addItemERK9ItemStackR11BlockSourceRK5BlockRK8BlockPos
     void _verifyIsComposter(Block const&); // _ZN14ComposterBlock18_verifyIsComposterERK5Block
     void getComposterAt(BlockSource &, BlockPos const&); // _ZN14ComposterBlock14getComposterAtER11BlockSourceRK8BlockPos

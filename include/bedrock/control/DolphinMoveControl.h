@@ -3,10 +3,11 @@
 #include "MoveControl.h"
 
 
-class DolphinMoveControl : MoveControl {
+class DolphinMoveControl : public MoveControl {
 
 public:
-    ~DolphinMoveControl(); // _ZN18DolphinMoveControlD2Ev
+    virtual ~DolphinMoveControl(); // _ZN18DolphinMoveControlD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(MoveControlComponent &, Mob &); // _ZN18DolphinMoveControl4tickER20MoveControlComponentR3Mob
     DolphinMoveControl(); // _ZN18DolphinMoveControlC2Ev
     void _handleBreaching(Mob &); // _ZN18DolphinMoveControl16_handleBreachingER3Mob

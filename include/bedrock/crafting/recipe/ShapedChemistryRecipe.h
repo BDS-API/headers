@@ -1,17 +1,18 @@
 #pragma once
 
+#include "ShapedRecipe.h"
 #include <string>
 #include <memory>
 #include <vector>
-#include "ShapedRecipe.h"
 
 
-class ShapedChemistryRecipe : ShapedRecipe {
+class ShapedChemistryRecipe : public ShapedRecipe {
 
 public:
     static long ID;
 
-    ~ShapedChemistryRecipe(); // _ZN21ShapedChemistryRecipeD2Ev
+    virtual ~ShapedChemistryRecipe(); // _ZN21ShapedChemistryRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void matches(CraftingContainer &, Level &)const; // _ZNK21ShapedChemistryRecipe7matchesER17CraftingContainerR5Level
     virtual void getId()const; // _ZNK21ShapedChemistryRecipe5getIdEv
     ShapedChemistryRecipe(ShapedChemistryRecipe &&); // _ZN21ShapedChemistryRecipeC2EOS_

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Result.h"
 #include <functional>
+#include "Result.h"
 #include "Path.h"
 
 

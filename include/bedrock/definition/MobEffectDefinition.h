@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 
 
 class MobEffectDefinition {
@@ -9,7 +9,7 @@ class MobEffectDefinition {
 public:
     MobEffectDefinition(); // _ZN19MobEffectDefinitionC2Ev
     ~MobEffectDefinition(); // _ZN19MobEffectDefinitionD2Ev
-    void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, MobEffectDefinition>> &); // _ZN19MobEffectDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
+    void buildSchema(std::shared_ptr<long> &); // _ZN19MobEffectDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
     void setMobEffectByName(std::string const&); // _ZN19MobEffectDefinition18setMobEffectByNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void setEffectTimeInTicks(int const&); // _ZN19MobEffectDefinition20setEffectTimeInTicksERKi
     void initialize(EntityContext &, MobEffectComponent &); // _ZN19MobEffectDefinition10initializeER13EntityContextR18MobEffectComponent

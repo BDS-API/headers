@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "LiquidBlock.h"
+#include <string>
 
 
-class LiquidBlockStatic : LiquidBlock {
+class LiquidBlockStatic : public LiquidBlock {
 
 public:
-    ~LiquidBlockStatic(); // _ZN17LiquidBlockStaticD2Ev
+    virtual ~LiquidBlockStatic(); // _ZN17LiquidBlockStaticD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK17LiquidBlockStatic4tickER11BlockSourceRK8BlockPosR6Random
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK17LiquidBlockStatic15neighborChangedER11BlockSourceRK8BlockPosS4_
     LiquidBlockStatic(std::string const&, int, Material const&); // _ZN17LiquidBlockStaticC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiRK8Material

@@ -5,10 +5,11 @@
 #include "Item.h"
 
 
-class ShearsItem : Item {
+class ShearsItem : public Item {
 
 public:
-    ~ShearsItem(); // _ZN10ShearsItemD2Ev
+    virtual ~ShearsItem(); // _ZN10ShearsItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canDestroySpecial(Block const&)const; // _ZNK10ShearsItem17canDestroySpecialERK5Block
     virtual void getEnchantSlot()const; // _ZNK10ShearsItem14getEnchantSlotEv
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK10ShearsItem8dispenseER11BlockSourceR9ContaineriRK4Vec3h

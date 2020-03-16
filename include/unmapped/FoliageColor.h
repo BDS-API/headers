@@ -36,7 +36,7 @@ namespace FoliageColor {
     void calculateMapGrassColorHelper(BlockSource &, BlockPos const&, BlockPos const&, int &, int &, int &); // _ZN12FoliageColor28calculateMapGrassColorHelperER11BlockSourceRK8BlockPosS4_RiS5_S5_
     void getGrassColor(BlockSource &, BlockPos const&); // _ZN12FoliageColor13getGrassColorER11BlockSourceRK8BlockPos
     void getMapGrassColor(BlockSource &, BlockPos const&); // _ZN12FoliageColor16getMapGrassColorER11BlockSourceRK8BlockPos
-    void _setPalette(mce::Image const&, std::array<int, 65536ul> &); // _ZN12FoliageColor11_setPaletteERKN3mce5ImageERSt5arrayIiLm65536EE
+    void _setPalette(mce::Image const&, std::array<int, long> &); // _ZN12FoliageColor11_setPaletteERKN3mce5ImageERSt5arrayIiLm65536EE
     void setGrassColorPalette(std::string const&, mce::Image &); // _ZN12FoliageColor20setGrassColorPaletteERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERN3mce5ImageE
     void setFoliageColorPalette(std::string const&, mce::Image &); // _ZN12FoliageColor22setFoliageColorPaletteERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERN3mce5ImageE
     void buildGrassColor(BlockPos const&, BlockPos const&, BlockSource &, Random &); // _ZN12FoliageColor15buildGrassColorERK8BlockPosS2_R11BlockSourceR6Random

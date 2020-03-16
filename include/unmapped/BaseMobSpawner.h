@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
 #include <memory>
+#include "../bedrock/actor/unmapped/ActorDefinitionIdentifier.h"
 
 
 class BaseMobSpawner {
 
 public:
-    ~BaseMobSpawner(); // _ZN14BaseMobSpawnerD2Ev
+    virtual ~BaseMobSpawner(); // _ZN14BaseMobSpawnerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &); // _ZN14BaseMobSpawner4tickER11BlockSource
     virtual void load(CompoundTag const&); // _ZN14BaseMobSpawner4loadERK11CompoundTag
     virtual void save(CompoundTag &); // _ZN14BaseMobSpawner4saveER11CompoundTag

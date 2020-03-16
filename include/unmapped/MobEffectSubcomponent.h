@@ -3,10 +3,11 @@
 #include "OnHitSubcomponent.h"
 
 
-class MobEffectSubcomponent : OnHitSubcomponent {
+class MobEffectSubcomponent : public OnHitSubcomponent {
 
 public:
-    ~MobEffectSubcomponent(); // _ZN21MobEffectSubcomponentD2Ev
+    virtual ~MobEffectSubcomponent(); // _ZN21MobEffectSubcomponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void readfromJSON(Json::Value &); // _ZN21MobEffectSubcomponent12readfromJSONERN4Json5ValueE
     virtual void writetoJSON(Json::Value &)const; // _ZNK21MobEffectSubcomponent11writetoJSONERN4Json5ValueE
     virtual void doOnHitEffect(Actor &, ProjectileComponent &); // _ZN21MobEffectSubcomponent13doOnHitEffectER5ActorR19ProjectileComponent

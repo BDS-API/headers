@@ -1,15 +1,16 @@
 #pragma once
 
-#include "BlockActor.h"
 #include "../../util/BlockPos.h"
+#include "BlockActor.h"
 
 
-class ItemFrameBlockActor : BlockActor {
+class ItemFrameBlockActor : public BlockActor {
 
 public:
     static long ROTATION_DEGREES;
 
-    ~ItemFrameBlockActor(); // _ZN19ItemFrameBlockActorD2Ev
+    virtual ~ItemFrameBlockActor(); // _ZN19ItemFrameBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN19ItemFrameBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK19ItemFrameBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN19ItemFrameBlockActor4tickER11BlockSource
@@ -18,7 +19,7 @@ public:
     virtual void getShadowRadius(BlockSource &)const; // _ZNK19ItemFrameBlockActor15getShadowRadiusER11BlockSource
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &); // _ZN19ItemFrameBlockActor15_onUpdatePacketERK11CompoundTagR11BlockSource
     ItemFrameBlockActor(BlockPos); // _ZN19ItemFrameBlockActorC2E8BlockPos
-//  ItemFrameBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition // _ZN19ItemFrameBlockActorC2E8BlockPos14BlockActorType
+//    ItemFrameBlockActor(BlockPos, long); //TODO: incomplete function definition // _ZN19ItemFrameBlockActorC2E8BlockPos14BlockActorType
     void _updateMapBit(BlockSource &); // _ZN19ItemFrameBlockActor13_updateMapBitER11BlockSource
     void updateNameTag(); // _ZN19ItemFrameBlockActor13updateNameTagEv
     void getClockFrame(); // _ZN19ItemFrameBlockActor13getClockFrameEv

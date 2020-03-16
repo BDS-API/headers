@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class EatBlockGoal : Goal {
+class EatBlockGoal : public Goal {
 
 public:
-    ~EatBlockGoal(); // _ZN12EatBlockGoalD2Ev
+    virtual ~EatBlockGoal(); // _ZN12EatBlockGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN12EatBlockGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN12EatBlockGoal16canContinueToUseEv
     virtual void start(); // _ZN12EatBlockGoal5startEv

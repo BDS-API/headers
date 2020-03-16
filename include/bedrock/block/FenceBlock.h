@@ -5,14 +5,15 @@
 #include <vector>
 
 
-class FenceBlock : BlockLegacy {
+class FenceBlock : public BlockLegacy {
 
 public:
-    ~FenceBlock(); // _ZN10FenceBlockD2Ev
+    virtual ~FenceBlock(); // _ZN10FenceBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK10FenceBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &, Actor *)const; // _ZNK10FenceBlock18addCollisionShapesERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EEP5Actor
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const; // _ZNK10FenceBlock19getLiquidClipVolumeER11BlockSourceRK8BlockPosR4AABB
-//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition // _ZNK10FenceBlock17canProvideSupportERK5Blockh16BlockSupportType
+    virtual bool canProvideSupport__incomplete0(Block const&, unsigned char, long)const; //TODO: incomplete function definition // _ZNK10FenceBlock17canProvideSupportERK5Blockh16BlockSupportType
     virtual bool canConnect(Block const&, unsigned char, Block const&)const; // _ZNK10FenceBlock10canConnectERK5BlockhS2_
     virtual bool isFenceBlock()const; // _ZNK10FenceBlock12isFenceBlockEv
     virtual bool canContainLiquid()const; // _ZNK10FenceBlock16canContainLiquidEv

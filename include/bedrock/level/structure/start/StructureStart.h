@@ -5,7 +5,8 @@
 class StructureStart {
 
 public:
-    ~StructureStart(); // _ZN14StructureStartD2Ev
+    virtual ~StructureStart(); // _ZN14StructureStartD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN14StructureStart11postProcessEP11BlockSourceR6RandomRK11BoundingBox
     virtual bool isValid()const; // _ZNK14StructureStart7isValidEv
     void getPieces()const; // _ZNK14StructureStart9getPiecesEv

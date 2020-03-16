@@ -4,15 +4,16 @@
 #include "BushBlock.h"
 
 
-class CropBlock : BushBlock {
+class CropBlock : public BushBlock {
 
 public:
-    ~CropBlock(); // _ZN9CropBlockD2Ev
+    virtual ~CropBlock(); // _ZN9CropBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK9CropBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK9CropBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isCropBlock()const; // _ZNK9CropBlock11isCropBlockEv
     virtual bool canContainLiquid()const; // _ZNK9CropBlock16canContainLiquidEv
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK9CropBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK9CropBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const; // _ZNK9CropBlock10mayPlaceOnER11BlockSourceRK8BlockPos
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK9CropBlock15neighborChangedER11BlockSourceRK8BlockPosS4_
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const; // _ZNK9CropBlock14asItemInstanceER11BlockSourceRK8BlockPosRK5Block

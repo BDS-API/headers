@@ -4,10 +4,11 @@
 #include "BushBlock.h"
 
 
-class DeadBush : BushBlock {
+class DeadBush : public BushBlock {
 
 public:
-    ~DeadBush(); // _ZN8DeadBushD2Ev
+    virtual ~DeadBush(); // _ZN8DeadBushD2Ev
+    virtual void __fake_function0(); // fake
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const; // _ZNK8DeadBush10mayPlaceOnER11BlockSourceRK8BlockPos
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK8DeadBush16getResourceCountER6RandomRK5Blocki
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK8DeadBush15getResourceItemER6RandomRK5Blocki

@@ -3,15 +3,16 @@
 #include "Monster.h"
 
 
-class Guardian : Monster {
+class Guardian : public Monster {
 
 public:
     static long ATTACK_TIME;
     static long FIRST_DAMAGE_TIME;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN8Guardian15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN8Guardian21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Guardian(); // _ZN8GuardianD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN8Guardian15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN8Guardian21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Guardian(); // _ZN8GuardianD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canSeeInvisible()const; // _ZNK8Guardian15canSeeInvisibleEv
     virtual void setTarget(Actor *); // _ZN8Guardian9setTargetEP5Actor
     virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN8Guardian5_hurtERK17ActorDamageSourceibb

@@ -1,18 +1,19 @@
 #pragma once
 
-#include <string>
 #include "Mob.h"
+#include <string>
 
 
-class Npc : Mob {
+class Npc : public Mob {
 
 public:
     static std::string SKIN_ID_TAG;
     static std::string Skins;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Npc15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Npc20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Npc(); // _ZN3NpcD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Npc15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Npc20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Npc(); // _ZN3NpcD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool breaksFallingBlocks()const; // _ZNK3Npc19breaksFallingBlocksEv
     virtual bool canShowNameTag()const; // _ZNK3Npc14canShowNameTagEv
     virtual std::string getFormattedNameTag()const; // _ZNK3Npc19getFormattedNameTagB5cxx11Ev

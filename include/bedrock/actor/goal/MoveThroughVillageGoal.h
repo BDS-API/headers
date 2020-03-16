@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class MoveThroughVillageGoal : Goal {
+class MoveThroughVillageGoal : public Goal {
 
 public:
-    ~MoveThroughVillageGoal(); // _ZN22MoveThroughVillageGoalD2Ev
+    virtual ~MoveThroughVillageGoal(); // _ZN22MoveThroughVillageGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN22MoveThroughVillageGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN22MoveThroughVillageGoal16canContinueToUseEv
     virtual void start(); // _ZN22MoveThroughVillageGoal5startEv

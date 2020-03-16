@@ -4,13 +4,14 @@
 #include "ActorBlock.h"
 
 
-class DaylightDetectorBlock : ActorBlock {
+class DaylightDetectorBlock : public ActorBlock {
 
 public:
-    ~DaylightDetectorBlock(); // _ZN21DaylightDetectorBlockD2Ev
+    virtual ~DaylightDetectorBlock(); // _ZN21DaylightDetectorBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isInteractiveBlock()const; // _ZNK21DaylightDetectorBlock18isInteractiveBlockEv
     virtual bool isSignalSource()const; // _ZNK21DaylightDetectorBlock14isSignalSourceEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK21DaylightDetectorBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK21DaylightDetectorBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK21DaylightDetectorBlock15checkIsPathableER5ActorRK8BlockPosS4_
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK21DaylightDetectorBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRemove(BlockSource &, BlockPos const&)const; // _ZNK21DaylightDetectorBlock8onRemoveER11BlockSourceRK8BlockPos

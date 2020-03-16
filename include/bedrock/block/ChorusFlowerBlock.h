@@ -4,16 +4,17 @@
 #include "BlockLegacy.h"
 
 
-class ChorusFlowerBlock : BlockLegacy {
+class ChorusFlowerBlock : public BlockLegacy {
 
 public:
     static long DEAD_AGE;
     static long GROW_RATE;
     static long BRANCH_DIRECTIONS;
 
-    ~ChorusFlowerBlock(); // _ZN17ChorusFlowerBlockD2Ev
+    virtual ~ChorusFlowerBlock(); // _ZN17ChorusFlowerBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK17ChorusFlowerBlock4tickER11BlockSourceRK8BlockPosR6Random
-//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition // _ZNK17ChorusFlowerBlock17canProvideSupportERK5Blockh16BlockSupportType
+    virtual bool canProvideSupport__incomplete0(Block const&, unsigned char, long)const; //TODO: incomplete function definition // _ZNK17ChorusFlowerBlock17canProvideSupportERK5Blockh16BlockSupportType
     virtual bool isWaterBlocking()const; // _ZNK17ChorusFlowerBlock15isWaterBlockingEv
     virtual void waterSpreadCausesSpawn()const; // _ZNK17ChorusFlowerBlock22waterSpreadCausesSpawnEv
     virtual bool canContainLiquid()const; // _ZNK17ChorusFlowerBlock16canContainLiquidEv

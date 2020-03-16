@@ -3,9 +3,10 @@
 #include "BlockActor.h"
 
 
-class EndPortalBlockActor : BlockActor {
+class EndPortalBlockActor : public BlockActor {
 
 public:
-    ~EndPortalBlockActor(); // _ZN19EndPortalBlockActorD2Ev
+    virtual ~EndPortalBlockActor(); // _ZN19EndPortalBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     EndPortalBlockActor(BlockPos const&); // _ZN19EndPortalBlockActorC2ERK8BlockPos
 };

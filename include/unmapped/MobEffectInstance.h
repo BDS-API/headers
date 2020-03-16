@@ -40,12 +40,12 @@ public:
     void operator!=(MobEffectInstance const&)const; // _ZNK17MobEffectInstanceneERKS_
     void operator<(MobEffectInstance const&)const; // _ZNK17MobEffectInstanceltERKS_
     void save()const; // _ZNK17MobEffectInstance4saveEv
-//  void getDifficulityDuration(Difficulty)const; //TODO: incomplete function definition // _ZNK17MobEffectInstance22getDifficulityDurationE10Difficulty
+//    void getDifficulityDuration(long)const; //TODO: incomplete function definition // _ZNK17MobEffectInstance22getDifficulityDurationE10Difficulty
     void load(CompoundTag *); // _ZN17MobEffectInstance4loadEP11CompoundTag
     void setNoCounter(bool); // _ZN17MobEffectInstance12setNoCounterEb
     bool isNoCounter()const; // _ZNK17MobEffectInstance11isNoCounterEv
     void getColorValue(std::vector<MobEffectInstance> const&); // _ZN17MobEffectInstance13getColorValueERKSt6vectorIS_SaIS_EE
     void areAllEffectsAmbient(std::vector<MobEffectInstance> const&); // _ZN17MobEffectInstance20areAllEffectsAmbientERKSt6vectorIS_SaIS_EE
-//  bool hasDifficulityDuration(Difficulty)const; //TODO: incomplete function definition // _ZNK17MobEffectInstance22hasDifficulityDurationE10Difficulty
-//  void setDifficulityDuration(Difficulty, int); //TODO: incomplete function definition // _ZN17MobEffectInstance22setDifficulityDurationE10Difficultyi
+//    bool hasDifficulityDuration(long)const; //TODO: incomplete function definition // _ZNK17MobEffectInstance22hasDifficulityDurationE10Difficulty
+//    void setDifficulityDuration(long, int); //TODO: incomplete function definition // _ZN17MobEffectInstance22setDifficulityDurationE10Difficultyi
 };

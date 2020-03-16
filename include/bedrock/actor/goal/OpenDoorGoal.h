@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "DoorInteractGoal.h"
+#include <string>
 
 
-class OpenDoorGoal : DoorInteractGoal {
+class OpenDoorGoal : public DoorInteractGoal {
 
 public:
-    ~OpenDoorGoal(); // _ZN12OpenDoorGoalD2Ev
+    virtual ~OpenDoorGoal(); // _ZN12OpenDoorGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN12OpenDoorGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN12OpenDoorGoal16canContinueToUseEv
     virtual void start(); // _ZN12OpenDoorGoal5startEv

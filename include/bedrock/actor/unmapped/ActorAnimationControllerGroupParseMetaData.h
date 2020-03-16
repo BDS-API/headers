@@ -5,5 +5,5 @@
 class ActorAnimationControllerGroupParseMetaData {
 
 public:
-//  ActorAnimationControllerGroupParseMetaData(ActorAnimationControllerGroup *, CurrentCmdVersion const&); //TODO: incomplete function definition // _ZN42ActorAnimationControllerGroupParseMetaDataC2EP29ActorAnimationControllerGroupRK17CurrentCmdVersion
+//    ActorAnimationControllerGroupParseMetaData(ActorAnimationControllerGroup *, long const&); //TODO: incomplete function definition // _ZN42ActorAnimationControllerGroupParseMetaDataC2EP29ActorAnimationControllerGroupRK17CurrentCmdVersion
 };

@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class ThinFenceBlock : BlockLegacy {
+class ThinFenceBlock : public BlockLegacy {
 
 public:
-    ~ThinFenceBlock(); // _ZN14ThinFenceBlockD2Ev
+    virtual ~ThinFenceBlock(); // _ZN14ThinFenceBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &)const; // _ZNK14ThinFenceBlock8addAABBsERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EE
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK14ThinFenceBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &, Actor *)const; // _ZNK14ThinFenceBlock18addCollisionShapesERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EEP5Actor

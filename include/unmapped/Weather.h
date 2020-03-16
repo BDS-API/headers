@@ -3,11 +3,12 @@
 #include "../bedrock/level/LevelListener.h"
 
 
-class Weather : LevelListener {
+class Weather : public LevelListener {
 
 public:
-    ~Weather(); // _ZN7WeatherD2Ev
-//  virtual void levelEvent(LevelEvent, Vec3 const&, int); //TODO: incomplete function definition // _ZN7Weather10levelEventE10LevelEventRK4Vec3i
+    virtual ~Weather(); // _ZN7WeatherD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void levelEvent__incomplete0(long, Vec3 const&, int); //TODO: incomplete function definition // _ZN7Weather10levelEventE10LevelEventRK4Vec3i
     Weather(Dimension &); // _ZN7WeatherC2ER9Dimension
     void setRainLevel(float); // _ZN7Weather12setRainLevelEf
     void setLightningLevel(float); // _ZN7Weather17setLightningLevelEf

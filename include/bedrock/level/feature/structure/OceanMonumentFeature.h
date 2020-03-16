@@ -3,10 +3,11 @@
 #include "StructureFeature.h"
 
 
-class OceanMonumentFeature : StructureFeature {
+class OceanMonumentFeature : public StructureFeature {
 
 public:
-    ~OceanMonumentFeature(); // _ZN20OceanMonumentFeatureD2Ev
+    virtual ~OceanMonumentFeature(); // _ZN20OceanMonumentFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &); // _ZN20OceanMonumentFeature17initMobSpawnTypesER26HardcodedSpawnAreaRegistry
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos &); // _ZN20OceanMonumentFeature26getNearestGeneratedFeatureER9DimensionR11BiomeSourceRK8BlockPosRS4_
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int); // _ZN20OceanMonumentFeature14isFeatureChunkERK11BiomeSourceR6RandomRK8ChunkPosj

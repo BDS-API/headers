@@ -5,12 +5,13 @@
 
 namespace AgentCommands {
 
-    class DetectRedstoneCommand : AgentCommands::Command {
+    class DetectRedstoneCommand : public AgentCommands::Command {
 
     public:
-        ~DetectRedstoneCommand(); // _ZN13AgentCommands21DetectRedstoneCommandD2Ev
+        virtual ~DetectRedstoneCommand(); // _ZN13AgentCommands21DetectRedstoneCommandD2Ev
+        virtual void __fake_function0(); // fake
         virtual void execute(); // _ZN13AgentCommands21DetectRedstoneCommand7executeEv
         virtual bool isDone(); // _ZN13AgentCommands21DetectRedstoneCommand6isDoneEv
-//      DetectRedstoneCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition // _ZN13AgentCommands21DetectRedstoneCommandC2ER6PlayerNS_9DirectionE
+//        DetectRedstoneCommand(Player &, long); //TODO: incomplete function definition // _ZN13AgentCommands21DetectRedstoneCommandC2ER6PlayerNS_9DirectionE
     };
 }

@@ -5,10 +5,11 @@
 #include "Packet.h"
 
 
-class PhotoTransferPacket : Packet {
+class PhotoTransferPacket : public Packet {
 
 public:
-    ~PhotoTransferPacket(); // _ZN19PhotoTransferPacketD2Ev
+    virtual ~PhotoTransferPacket(); // _ZN19PhotoTransferPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK19PhotoTransferPacket5getIdEv
     virtual std::string getName()const; // _ZNK19PhotoTransferPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK19PhotoTransferPacket5writeER12BinaryStream

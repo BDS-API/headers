@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class EnderpearlItem : Item {
+class EnderpearlItem : public Item {
 
 public:
-    ~EnderpearlItem(); // _ZN14EnderpearlItemD2Ev
+    virtual ~EnderpearlItem(); // _ZN14EnderpearlItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isThrowable()const; // _ZNK14EnderpearlItem11isThrowableEv
     virtual void use(ItemStack &, Player &)const; // _ZNK14EnderpearlItem3useER9ItemStackR6Player
     virtual void getCooldownType()const; // _ZNK14EnderpearlItem15getCooldownTypeEv

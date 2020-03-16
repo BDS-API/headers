@@ -3,10 +3,11 @@
 #include "BlockActor.h"
 
 
-class FlowerPotBlockActor : BlockActor {
+class FlowerPotBlockActor : public BlockActor {
 
 public:
-    ~FlowerPotBlockActor(); // _ZN19FlowerPotBlockActorD2Ev
+    virtual ~FlowerPotBlockActor(); // _ZN19FlowerPotBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN19FlowerPotBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK19FlowerPotBlockActor4saveER11CompoundTag
     virtual void onChanged(BlockSource &); // _ZN19FlowerPotBlockActor9onChangedER11BlockSource

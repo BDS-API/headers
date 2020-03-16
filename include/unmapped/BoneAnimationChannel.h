@@ -5,9 +5,9 @@
 class BoneAnimationChannel {
 
 public:
-//  BoneAnimationChannel(BoneTransformType); //TODO: incomplete function definition // _ZN20BoneAnimationChannelC2E17BoneTransformType
-//  BoneAnimationChannel(BoneTransformType, ExpressionNode const&); //TODO: incomplete function definition // _ZN20BoneAnimationChannelC2E17BoneTransformTypeRK14ExpressionNode
-//  BoneAnimationChannel(BoneTransformType, ExpressionNode const&, ExpressionNode const&, ExpressionNode const&); //TODO: incomplete function definition // _ZN20BoneAnimationChannelC2E17BoneTransformTypeRK14ExpressionNodeS3_S3_
+//    BoneAnimationChannel(long); //TODO: incomplete function definition // _ZN20BoneAnimationChannelC2E17BoneTransformType
+//    BoneAnimationChannel(long, ExpressionNode const&); //TODO: incomplete function definition // _ZN20BoneAnimationChannelC2E17BoneTransformTypeRK14ExpressionNode
+//    BoneAnimationChannel(long, ExpressionNode const&, ExpressionNode const&, ExpressionNode const&); //TODO: incomplete function definition // _ZN20BoneAnimationChannelC2E17BoneTransformTypeRK14ExpressionNodeS3_S3_
     void addKeyFrame(float); // _ZN20BoneAnimationChannel11addKeyFrameEf
     void getKeyFrames()const; // _ZNK20BoneAnimationChannel12getKeyFramesEv
     void getKeyFrames(); // _ZN20BoneAnimationChannel12getKeyFramesEv

@@ -1,9 +1,9 @@
 #pragma once
 
-#include <vector>
-#include <memory>
 #include <mutex>
 #include "SubChunkBrightnessStorage.h"
+#include <memory>
+#include <vector>
 #include <functional>
 
 
@@ -31,7 +31,7 @@ public:
     void fetchBlocksInBox(BlockPos const&, BoundingBox const&, std::function<bool (Block const&)> const&, std::vector<BlockFetchResult> &)const; // _ZNK8SubChunk16fetchBlocksInBoxERK8BlockPosRK11BoundingBoxRKSt8functionIFbRK5BlockEERSt6vectorI16BlockFetchResultSaISF_EE
     void prune(); // _ZN8SubChunk5pruneEv
     void _setBlock(unsigned char, unsigned short, Block const&); // _ZN8SubChunk9_setBlockEhtRK5Block
-//  void setAllBlocks(buffer_span<Block const*>, unsigned long, unsigned long); //TODO: incomplete function definition // _ZN8SubChunk12setAllBlocksE11buffer_spanIPK5BlockEmm
+//    void setAllBlocks(long, unsigned long, unsigned long); //TODO: incomplete function definition // _ZN8SubChunk12setAllBlocksE11buffer_spanIPK5BlockEmm
     bool isUniform(Block const&)const; // _ZNK8SubChunk9isUniformERK5Block
     void serialize(IDataOutput &, bool)const; // _ZNK8SubChunk9serializeER11IDataOutputb
     void deserialize(IDataInput &, BlockPalette const&); // _ZN8SubChunk11deserializeER10IDataInputRK12BlockPalette

@@ -3,10 +3,11 @@
 #include "BaseCircuitComponent.h"
 
 
-class ProducerComponent : BaseCircuitComponent {
+class ProducerComponent : public BaseCircuitComponent {
 
 public:
-    ~ProducerComponent(); // _ZN17ProducerComponentD2Ev
+    virtual ~ProducerComponent(); // _ZN17ProducerComponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void setStrength(int); // _ZN17ProducerComponent11setStrengthEi
     virtual bool canStopPower(); // _ZN17ProducerComponent12canStopPowerEv
     virtual void setStopPower(bool); // _ZN17ProducerComponent12setStopPowerEb

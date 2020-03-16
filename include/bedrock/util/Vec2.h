@@ -25,7 +25,9 @@ public:
     void length()const; // _ZNK4Vec26lengthEv
     void operator!=(Vec2 const&)const; // _ZNK4Vec2neERKS_
     void operator+(Vec2 const&)const; // _ZNK4Vec2plERKS_
-//  Vec2(glm::tvec20<float, (glm::precision>); //TODO: incomplete function definition // _ZN4Vec2C2ERKN3glm5tvec2IfLNS0_9precisionE0EEE
+//    Vec2(long); //TODO: incomplete function definition // _ZN4Vec2C2ERKN3glm5tvec2IfLNS0_9precisionE0EEE
+    void operator*=(float); // _ZN4Vec2mLEf
     void operator==(Vec2 const&)const; // _ZNK4Vec2eqERKS_
     void dot(Vec2 const&)const; // _ZNK4Vec23dotERKS_
+    void operator+=(Vec2 const&); // _ZN4Vec2pLERKS_
 };

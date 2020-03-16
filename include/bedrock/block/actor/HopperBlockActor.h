@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include "../../../unmapped/Hopper.h"
+#include <string>
 #include "BlockActor.h"
 #include "../../container/Container.h"
 
 
-class HopperBlockActor : BlockActor, Container, Hopper {
+class HopperBlockActor : public BlockActor, public Container, public Hopper {
 
 public:
-    ~HopperBlockActor(); // _ZN16HopperBlockActorD2Ev
+    virtual ~HopperBlockActor(); // _ZN16HopperBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN16HopperBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK16HopperBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN16HopperBlockActor4tickER11BlockSource
@@ -34,7 +35,7 @@ public:
     void checkForSmeltEverythingAchievement(BlockSource &); // _ZN16HopperBlockActor34checkForSmeltEverythingAchievementER11BlockSource
     bool isAttachedToChestAndFurnace(BlockSource &); // _ZN16HopperBlockActor27isAttachedToChestAndFurnaceER11BlockSource
     void getAttachedFurnace(BlockSource &); // _ZN16HopperBlockActor18getAttachedFurnaceER11BlockSource
-//  bool isAttachedToContainerType(BlockSource &, ContainerType); //TODO: incomplete function definition // _ZN16HopperBlockActor25isAttachedToContainerTypeER11BlockSource13ContainerType
-//  bool isSourceOfContainerType(BlockSource &, ContainerType); //TODO: incomplete function definition // _ZN16HopperBlockActor23isSourceOfContainerTypeER11BlockSource13ContainerType
+//    bool isAttachedToContainerType(BlockSource &, long); //TODO: incomplete function definition // _ZN16HopperBlockActor25isAttachedToContainerTypeER11BlockSource13ContainerType
+//    bool isSourceOfContainerType(BlockSource &, long); //TODO: incomplete function definition // _ZN16HopperBlockActor23isSourceOfContainerTypeER11BlockSource13ContainerType
     void updateCooldownAfterMove(Tick const&, int); // _ZN16HopperBlockActor23updateCooldownAfterMoveERK4Ticki
 };

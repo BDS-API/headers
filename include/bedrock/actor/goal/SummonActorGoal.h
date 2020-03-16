@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
-#include "../unmapped/ActorDefinitionIdentifier.h"
-#include "Goal.h"
 #include <vector>
+#include <string>
+#include "Goal.h"
+#include "../unmapped/ActorDefinitionIdentifier.h"
 
 
-class SummonActorGoal : Goal {
+class SummonActorGoal : public Goal {
 
 public:
-    ~SummonActorGoal(); // _ZN15SummonActorGoalD2Ev
+    virtual ~SummonActorGoal(); // _ZN15SummonActorGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15SummonActorGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15SummonActorGoal16canContinueToUseEv
     virtual void start(); // _ZN15SummonActorGoal5startEv

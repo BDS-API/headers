@@ -3,10 +3,11 @@
 #include "StructurePiece.h"
 
 
-class BuriedTreasurePiece : StructurePiece {
+class BuriedTreasurePiece : public StructurePiece {
 
 public:
-    ~BuriedTreasurePiece(); // _ZN19BuriedTreasurePieceD2Ev
+    virtual ~BuriedTreasurePiece(); // _ZN19BuriedTreasurePieceD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getType()const; // _ZNK19BuriedTreasurePiece7getTypeEv
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN19BuriedTreasurePiece11postProcessEP11BlockSourceR6RandomRK11BoundingBox
     BuriedTreasurePiece(int, int); // _ZN19BuriedTreasurePieceC2Eii

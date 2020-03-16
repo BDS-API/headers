@@ -4,15 +4,16 @@
 #include "Sapling.h"
 
 
-class BambooSapling : Sapling {
+class BambooSapling : public Sapling {
 
 public:
-    ~BambooSapling(); // _ZN13BambooSaplingD2Ev
+    virtual ~BambooSapling(); // _ZN13BambooSaplingD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13BambooSapling4tickER11BlockSourceRK8BlockPosR6Random
     virtual void randomlyModifyPosition(BlockPos const&)const; // _ZNK13BambooSapling22randomlyModifyPositionERK8BlockPos
     virtual bool isValidAuxValue(int)const; // _ZNK13BambooSapling15isValidAuxValueEi
     virtual bool canContainLiquid()const; // _ZNK13BambooSapling16canContainLiquidEv
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK13BambooSapling12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK13BambooSapling12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK13BambooSapling8mayPlaceER11BlockSourceRK8BlockPos
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK13BambooSapling15neighborChangedER11BlockSourceRK8BlockPosS4_
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK13BambooSapling15getResourceItemER6RandomRK5Blocki

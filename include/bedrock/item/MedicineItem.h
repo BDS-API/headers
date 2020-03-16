@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "ChemistryItem.h"
 
 
-class MedicineItem : ChemistryItem {
+class MedicineItem : public ChemistryItem {
 
 public:
-    ~MedicineItem(); // _ZN12MedicineItemD2Ev
+    virtual ~MedicineItem(); // _ZN12MedicineItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isValidAuxValue(int)const; // _ZNK12MedicineItem15isValidAuxValueEi
     virtual void use(ItemStack &, Player &)const; // _ZNK12MedicineItem3useER9ItemStackR6Player
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const; // _ZNK12MedicineItem15useTimeDepletedER9ItemStackP5LevelP6Player

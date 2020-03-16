@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class WebBlock : BlockLegacy {
+class WebBlock : public BlockLegacy {
 
 public:
-    ~WebBlock(); // _ZN8WebBlockD2Ev
+    virtual ~WebBlock(); // _ZN8WebBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK8WebBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void waterSpreadCausesSpawn()const; // _ZNK8WebBlock22waterSpreadCausesSpawnEv
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK8WebBlock15getResourceItemER6RandomRK5Blocki

@@ -1,14 +1,15 @@
 #pragma once
 
-#include <memory>
 #include "OnHitSubcomponent.h"
+#include <memory>
 #include <vector>
 
 
-class SplashPotionEffectSubcomponent : OnHitSubcomponent {
+class SplashPotionEffectSubcomponent : public OnHitSubcomponent {
 
 public:
-    ~SplashPotionEffectSubcomponent(); // _ZN30SplashPotionEffectSubcomponentD2Ev
+    virtual ~SplashPotionEffectSubcomponent(); // _ZN30SplashPotionEffectSubcomponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void readfromJSON(Json::Value &); // _ZN30SplashPotionEffectSubcomponent12readfromJSONERN4Json5ValueE
     virtual void writetoJSON(Json::Value &)const; // _ZNK30SplashPotionEffectSubcomponent11writetoJSONERN4Json5ValueE
     virtual void doOnHitEffect(Actor &, ProjectileComponent &); // _ZN30SplashPotionEffectSubcomponent13doOnHitEffectER5ActorR19ProjectileComponent

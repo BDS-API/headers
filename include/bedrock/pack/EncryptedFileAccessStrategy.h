@@ -1,18 +1,19 @@
 #pragma once
 
-#include <string>
 #include "DirectoryPackAccessStrategy.h"
+#include <string>
 
 
-class EncryptedFileAccessStrategy : DirectoryPackAccessStrategy {
+class EncryptedFileAccessStrategy : public DirectoryPackAccessStrategy {
 
 public:
-    ~EncryptedFileAccessStrategy(); // _ZN27EncryptedFileAccessStrategyD2Ev
+    virtual ~EncryptedFileAccessStrategy(); // _ZN27EncryptedFileAccessStrategyD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isWritable()const; // _ZNK27EncryptedFileAccessStrategy10isWritableEv
     virtual bool isTrusted()const; // _ZNK27EncryptedFileAccessStrategy9isTrustedEv
     virtual bool hasAsset(Core::Path const&, bool)const; // _ZNK27EncryptedFileAccessStrategy8hasAssetERKN4Core4PathEb
     virtual void getAsset(Core::Path const&, std::string &, bool)const; // _ZNK27EncryptedFileAccessStrategy8getAssetERKN4Core4PathERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
-//  virtual void deleteAsset(Core::PathBuffer<std::string> const&); //TODO: incomplete function definition // _ZN27EncryptedFileAccessStrategy11deleteAssetERKN4Core10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE
+    virtual void deleteAsset__incomplete0(long const&); //TODO: incomplete function definition // _ZN27EncryptedFileAccessStrategy11deleteAssetERKN4Core10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE
     virtual void writeAsset(Core::Path const&, std::string const&); // _ZN27EncryptedFileAccessStrategy10writeAssetERKN4Core4PathERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void createSubPack(Core::Path const&)const; // _ZNK27EncryptedFileAccessStrategy13createSubPackERKN4Core4PathE
     virtual void generateAssetSet(); // _ZN27EncryptedFileAccessStrategy16generateAssetSetEv

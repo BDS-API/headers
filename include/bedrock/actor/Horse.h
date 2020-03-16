@@ -4,14 +4,15 @@
 #include "Animal.h"
 
 
-class Horse : Animal {
+class Horse : public Animal {
 
 public:
     static long DATA_AGE;
     static long DONKEY_CHEST_COUNT;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Horse15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Horse(); // _ZN5HorseD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Horse15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Horse(); // _ZN5HorseD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getInterpolatedRidingOffset(float)const; // _ZNK5Horse27getInterpolatedRidingOffsetEf
     virtual void normalTick(); // _ZN5Horse10normalTickEv
     virtual void positionRider(Actor &, float); // _ZN5Horse13positionRiderER5Actorf
@@ -54,8 +55,8 @@ public:
     virtual void getClosestMommy(Actor *, float); // _ZN5Horse15getClosestMommyEP5Actorf
     virtual std::string getMadSound(); // _ZN5Horse11getMadSoundB5cxx11Ev
     Horse(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN5HorseC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier
-//  void getHorseFlag(HorseFlags)const; //TODO: incomplete function definition // _ZNK5Horse12getHorseFlagE10HorseFlags
-//  void setHorseFlag(HorseFlags, bool); //TODO: incomplete function definition // _ZN5Horse12setHorseFlagE10HorseFlagsb
+//    void getHorseFlag(long)const; //TODO: incomplete function definition // _ZNK5Horse12getHorseFlagE10HorseFlags
+//    void setHorseFlag(long, bool); //TODO: incomplete function definition // _ZN5Horse12setHorseFlagE10HorseFlagsb
     void openMouth(); // _ZN5Horse9openMouthEv
     void createInventory(); // _ZN5Horse15createInventoryEv
     void doPlayerRide(Player *); // _ZN5Horse12doPlayerRideEP6Player

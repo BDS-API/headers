@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "CommandOrigin.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
+#include "CommandOrigin.h"
 
 
-class PlayerCommandOrigin : CommandOrigin {
+class PlayerCommandOrigin : public CommandOrigin {
 
 public:
-    ~PlayerCommandOrigin(); // _ZN19PlayerCommandOriginD2Ev
+    virtual ~PlayerCommandOrigin(); // _ZN19PlayerCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getRequestId()const; // _ZNK19PlayerCommandOrigin12getRequestIdB5cxx11Ev
     virtual std::string getName()const; // _ZNK19PlayerCommandOrigin7getNameB5cxx11Ev
     virtual void getBlockPosition()const; // _ZNK19PlayerCommandOrigin16getBlockPositionEv
@@ -20,7 +21,7 @@ public:
     virtual void clone()const; // _ZNK19PlayerCommandOrigin5cloneEv
     virtual void getCursorHitBlockPos()const; // _ZNK19PlayerCommandOrigin20getCursorHitBlockPosEv
     virtual void getCursorHitPos()const; // _ZNK19PlayerCommandOrigin15getCursorHitPosEv
-//  virtual bool canUseAbility(AbilitiesIndex)const; //TODO: incomplete function definition // _ZNK19PlayerCommandOrigin13canUseAbilityE14AbilitiesIndex
+    virtual bool canUseAbility__incomplete0(long)const; //TODO: incomplete function definition // _ZNK19PlayerCommandOrigin13canUseAbilityE14AbilitiesIndex
     virtual bool isSelectorExpansionAllowed()const; // _ZNK19PlayerCommandOrigin26isSelectorExpansionAllowedEv
     virtual void getSourceId()const; // _ZNK19PlayerCommandOrigin11getSourceIdEv
     virtual void getSourceSubId()const; // _ZNK19PlayerCommandOrigin14getSourceSubIdEv

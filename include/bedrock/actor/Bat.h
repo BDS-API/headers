@@ -3,10 +3,11 @@
 #include "Mob.h"
 
 
-class Bat : Mob {
+class Bat : public Mob {
 
 public:
-    ~Bat(); // _ZN3BatD2Ev
+    virtual ~Bat(); // _ZN3BatD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN3Bat10normalTickEv
     virtual void checkFallDamage(float, bool); // _ZN3Bat15checkFallDamageEfb
     virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN3Bat5_hurtERK17ActorDamageSourceibb

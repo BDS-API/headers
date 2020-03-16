@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include "Actor.h"
+#include <string>
 
 
-class Minecart : Actor {
+class Minecart : public Actor {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN8Minecart15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN8Minecart21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Minecart(); // _ZN8MinecartD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN8Minecart15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN8Minecart21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Minecart(); // _ZN8MinecartD2Ev
+    virtual void __fake_function0(); // fake
     virtual void lerpTo(Vec3 const&, Vec2 const&, int); // _ZN8Minecart6lerpToERK4Vec3RK4Vec2i
     virtual void normalTick(); // _ZN8Minecart10normalTickEv
     virtual void getShadowHeightOffs(); // _ZN8Minecart19getShadowHeightOffsEv

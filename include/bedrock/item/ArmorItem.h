@@ -1,11 +1,11 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "Item.h"
 
 
-class ArmorItem : Item {
+class ArmorItem : public Item {
 
 public:
     class ArmorMaterial;
@@ -19,7 +19,8 @@ public:
     static long ELYTRA;
     static long TURTLE;
 
-    ~ArmorItem(); // _ZN9ArmorItemD2Ev
+    virtual ~ArmorItem(); // _ZN9ArmorItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isArmor()const; // _ZNK9ArmorItem7isArmorEv
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const; // _ZNK9ArmorItem24appendFormattedHovertextERK13ItemStackBaseR5LevelRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const; // _ZNK9ArmorItem17isValidRepairItemERK12ItemInstanceS2_
@@ -39,13 +40,13 @@ public:
     bool hasCustomColor(std::unique_ptr<CompoundTag> const&)const; // _ZNK9ArmorItem14hasCustomColorERKSt10unique_ptrI11CompoundTagSt14default_deleteIS1_EE
     void clearColor(ItemStack &)const; // _ZNK9ArmorItem10clearColorER9ItemStack
     void setColor(ItemStack &, Color const&)const; // _ZNK9ArmorItem8setColorER9ItemStackRK5Color
-//  ArmorItem(std::string const&, int, ArmorItem::ArmorMaterial const&, int, ArmorSlot); //TODO: incomplete function definition // _ZN9ArmorItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiRKNS_13ArmorMaterialEi9ArmorSlot
+//    ArmorItem(std::string const&, int, ArmorItem::ArmorMaterial const&, int, long); //TODO: incomplete function definition // _ZN9ArmorItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiRKNS_13ArmorMaterialEi9ArmorSlot
     bool isElytra()const; // _ZNK9ArmorItem8isElytraEv
-//  void getArmorForSlot(ArmorSlot, int); //TODO: incomplete function definition // _ZN9ArmorItem15getArmorForSlotE9ArmorSloti
-//  void dispenseArmor(BlockSource &, Container &, int, Vec3 const&, unsigned char, ArmorSlot); //TODO: incomplete function definition // _ZN9ArmorItem13dispenseArmorER11BlockSourceR9ContaineriRK4Vec3h9ArmorSlot
+//    void getArmorForSlot(long, int); //TODO: incomplete function definition // _ZN9ArmorItem15getArmorForSlotE9ArmorSloti
+//    void dispenseArmor(BlockSource &, Container &, int, Vec3 const&, unsigned char, long); //TODO: incomplete function definition // _ZN9ArmorItem13dispenseArmorER11BlockSourceR9ContaineriRK4Vec3h9ArmorSlot
     void getSlotForItem(ItemStack const&); // _ZN9ArmorItem14getSlotForItemERK9ItemStack
     bool isElytraBroken(int); // _ZN9ArmorItem14isElytraBrokenEi
-//  void playEquipSound(BlockSource &, ArmorSlot, Player &)const; //TODO: incomplete function definition // _ZNK9ArmorItem14playEquipSoundER11BlockSource9ArmorSlotR6Player
+//    void playEquipSound(BlockSource &, long, Player &)const; //TODO: incomplete function definition // _ZNK9ArmorItem14playEquipSoundER11BlockSource9ArmorSlotR6Player
     bool isElytra(ItemDescriptor const&); // _ZN9ArmorItem8isElytraERK14ItemDescriptor
     bool isFlyEnabled(ItemInstance const&); // _ZN9ArmorItem12isFlyEnabledERK12ItemInstance
     bool isDamageable(ItemDescriptor const&); // _ZN9ArmorItem12isDamageableERK14ItemDescriptor
@@ -53,8 +54,8 @@ public:
 
     public:
         ArmorMaterial(int, int, int, int, int, int); // _ZN9ArmorItem13ArmorMaterialC2Eiiiiii
-//      void getHealthForSlot(ArmorSlot)const; //TODO: incomplete function definition // _ZNK9ArmorItem13ArmorMaterial16getHealthForSlotE9ArmorSlot
-//      void getDefenseForSlot(ArmorSlot)const; //TODO: incomplete function definition // _ZNK9ArmorItem13ArmorMaterial17getDefenseForSlotE9ArmorSlot
+//        void getHealthForSlot(long)const; //TODO: incomplete function definition // _ZNK9ArmorItem13ArmorMaterial16getHealthForSlotE9ArmorSlot
+//        void getDefenseForSlot(long)const; //TODO: incomplete function definition // _ZNK9ArmorItem13ArmorMaterial17getDefenseForSlotE9ArmorSlot
         void getEnchantValue()const; // _ZNK9ArmorItem13ArmorMaterial15getEnchantValueEv
     };
 };

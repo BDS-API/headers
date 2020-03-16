@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class ActorPickRequestPacket : Packet {
+class ActorPickRequestPacket : public Packet {
 
 public:
-    ~ActorPickRequestPacket(); // _ZN22ActorPickRequestPacketD2Ev
+    virtual ~ActorPickRequestPacket(); // _ZN22ActorPickRequestPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK22ActorPickRequestPacket5getIdEv
     virtual std::string getName()const; // _ZNK22ActorPickRequestPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK22ActorPickRequestPacket5writeER12BinaryStream

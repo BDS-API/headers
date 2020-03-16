@@ -35,7 +35,7 @@ public:
     void _assignPOIOnly(std::shared_ptr<POIInstance> &&); // _ZN14VillageManager14_assignPOIOnlyEOSt10shared_ptrI11POIInstanceE
     void getPOI(BlockPos const&)const; // _ZNK14VillageManager6getPOIERK8BlockPos
     void _createPOI(BlockPos const&, Block const&); // _ZN14VillageManager10_createPOIERK8BlockPosRK5Block
-//  bool hasPOI(BlockPos const&, POIType)const; //TODO: incomplete function definition // _ZNK14VillageManager6hasPOIERK8BlockPos7POIType
+//    bool hasPOI(BlockPos const&, long)const; //TODO: incomplete function definition // _ZNK14VillageManager6hasPOIERK8BlockPos7POIType
     void getPOIBlueprint(Block const&); // _ZN14VillageManager15getPOIBlueprintERK5Block
     void removePOI(std::weak_ptr<POIInstance>); // _ZN14VillageManager9removePOIESt8weak_ptrI11POIInstanceE
     bool isRegisteredPOI(Block const&)const; // _ZNK14VillageManager15isRegisteredPOIERK5Block

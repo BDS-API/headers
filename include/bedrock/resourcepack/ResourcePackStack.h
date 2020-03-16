@@ -1,16 +1,17 @@
 #pragma once
 
-#include <vector>
-#include <ostream>
 #include <istream>
-#include <functional>
+#include <ostream>
 #include "../../unmapped/PackInstance.h"
+#include <vector>
+#include <functional>
 
 
 class ResourcePackStack {
 
 public:
-    ~ResourcePackStack(); // _ZN17ResourcePackStackD2Ev
+    virtual ~ResourcePackStack(); // _ZN17ResourcePackStackD2Ev
+    virtual void __fake_function0(); // fake
     virtual void loadAllVersionsOf(ResourceLocation const&)const; // _ZNK17ResourcePackStack17loadAllVersionsOfERK16ResourceLocation
     virtual void loadAllVersionsOf(ResourceLocation const&, ResourcePackMergeStrategy &)const; // _ZNK17ResourcePackStack17loadAllVersionsOfERK16ResourceLocationR25ResourcePackMergeStrategy
     ResourcePackStack(); // _ZN17ResourcePackStackC2Ev
@@ -34,7 +35,7 @@ public:
     void removeDuplicates(); // _ZN17ResourcePackStack16removeDuplicatesEv
     void removeIf(std::function<bool (PackInstance const&)> const&); // _ZN17ResourcePackStack8removeIfERKSt8functionIFbRK12PackInstanceEE
     void ensureSupportedSubpacks(ContentTierInfo const&); // _ZN17ResourcePackStack23ensureSupportedSubpacksERK15ContentTierInfo
-//  bool hasCapabilityInStack(gsl::basic_string_span<char const, -1l>)const; //TODO: incomplete function definition // _ZNK17ResourcePackStack20hasCapabilityInStackEN3gsl17basic_string_spanIKcLln1EEE
+//    bool hasCapabilityInStack(long)const; //TODO: incomplete function definition // _ZNK17ResourcePackStack20hasCapabilityInStackEN3gsl17basic_string_spanIKcLln1EEE
     void generateAssetSet(); // _ZN17ResourcePackStack16generateAssetSetEv
     bool canSupportPacks(ContentTierInfo const&)const; // _ZNK17ResourcePackStack15canSupportPacksERK15ContentTierInfo
     void removeUnsupportedPacks(ContentTierInfo const&); // _ZN17ResourcePackStack22removeUnsupportedPacksERK15ContentTierInfo

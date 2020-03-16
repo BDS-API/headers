@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class HurtArmorPacket : Packet {
+class HurtArmorPacket : public Packet {
 
 public:
-    ~HurtArmorPacket(); // _ZN15HurtArmorPacketD2Ev
+    virtual ~HurtArmorPacket(); // _ZN15HurtArmorPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK15HurtArmorPacket5getIdEv
     virtual std::string getName()const; // _ZNK15HurtArmorPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK15HurtArmorPacket5writeER12BinaryStream

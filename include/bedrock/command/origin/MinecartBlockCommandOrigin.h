@@ -3,10 +3,11 @@
 #include "BlockCommandOrigin.h"
 
 
-class MinecartBlockCommandOrigin : BlockCommandOrigin {
+class MinecartBlockCommandOrigin : public BlockCommandOrigin {
 
 public:
-    ~MinecartBlockCommandOrigin(); // _ZN26MinecartBlockCommandOriginD2Ev
+    virtual ~MinecartBlockCommandOrigin(); // _ZN26MinecartBlockCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getBlockPosition()const; // _ZNK26MinecartBlockCommandOrigin16getBlockPositionEv
     virtual void getWorldPosition()const; // _ZNK26MinecartBlockCommandOrigin16getWorldPositionEv
     virtual void clone()const; // _ZNK26MinecartBlockCommandOrigin5cloneEv

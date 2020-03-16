@@ -5,10 +5,11 @@
 #include "Item.h"
 
 
-class DiggerItem : Item {
+class DiggerItem : public Item {
 
 public:
-    ~DiggerItem(); // _ZN10DiggerItemD2Ev
+    virtual ~DiggerItem(); // _ZN10DiggerItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAttackDamage()const; // _ZNK10DiggerItem15getAttackDamageEv
     virtual bool isHandEquipped()const; // _ZNK10DiggerItem14isHandEquippedEv
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const; // _ZNK10DiggerItem24appendFormattedHovertextERK13ItemStackBaseR5LevelRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb

@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class CompletedUsingItemPacket : Packet {
+class CompletedUsingItemPacket : public Packet {
 
 public:
-    ~CompletedUsingItemPacket(); // _ZN24CompletedUsingItemPacketD2Ev
+    virtual ~CompletedUsingItemPacket(); // _ZN24CompletedUsingItemPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK24CompletedUsingItemPacket5getIdEv
     virtual std::string getName()const; // _ZNK24CompletedUsingItemPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK24CompletedUsingItemPacket5writeER12BinaryStream

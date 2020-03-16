@@ -13,7 +13,7 @@ public:
     void getSlots()const; // _ZNK19EquippableComponent8getSlotsEv
     void getSlot(int)const; // _ZNK19EquippableComponent7getSlotEi
     void getSlotCount()const; // _ZNK19EquippableComponent12getSlotCountEv
-//  void createDataPacket(Actor &, ContainerID)const; //TODO: incomplete function definition // _ZNK19EquippableComponent16createDataPacketER5Actor11ContainerID
+//    void createDataPacket(Actor &, long)const; //TODO: incomplete function definition // _ZNK19EquippableComponent16createDataPacketER5Actor11ContainerID
     void createTag(Actor &)const; // _ZNK19EquippableComponent9createTagER5Actor
     void setDataFromPacket(UpdateEquipPacket const&); // _ZN19EquippableComponent17setDataFromPacketERK17UpdateEquipPacket
 };

@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class OcelotAttackGoal : Goal {
+class OcelotAttackGoal : public Goal {
 
 public:
-    ~OcelotAttackGoal(); // _ZN16OcelotAttackGoalD2Ev
+    virtual ~OcelotAttackGoal(); // _ZN16OcelotAttackGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN16OcelotAttackGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN16OcelotAttackGoal16canContinueToUseEv
     virtual void stop(); // _ZN16OcelotAttackGoal4stopEv

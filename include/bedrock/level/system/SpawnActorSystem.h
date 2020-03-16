@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class SpawnActorSystem : ITickingSystem {
+class SpawnActorSystem : public ITickingSystem {
 
 public:
-    ~SpawnActorSystem(); // _ZN16SpawnActorSystemD2Ev
+    virtual ~SpawnActorSystem(); // _ZN16SpawnActorSystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN16SpawnActorSystem4tickER14EntityRegistry
     SpawnActorSystem(); // _ZN16SpawnActorSystemC2Ev
 };

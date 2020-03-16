@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class StopSoundPacket : Packet {
+class StopSoundPacket : public Packet {
 
 public:
-    ~StopSoundPacket(); // _ZN15StopSoundPacketD2Ev
+    virtual ~StopSoundPacket(); // _ZN15StopSoundPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK15StopSoundPacket5getIdEv
     virtual std::string getName()const; // _ZNK15StopSoundPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK15StopSoundPacket5writeER12BinaryStream

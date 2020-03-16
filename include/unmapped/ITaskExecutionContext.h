@@ -5,6 +5,7 @@
 class ITaskExecutionContext {
 
 public:
-    ~ITaskExecutionContext(); // _ZN21ITaskExecutionContextD2Ev
+    virtual ~ITaskExecutionContext(); // _ZN21ITaskExecutionContextD2Ev
+    virtual void __fake_function0(); // fake
     ITaskExecutionContext(); // _ZN21ITaskExecutionContextC2Ev
 };

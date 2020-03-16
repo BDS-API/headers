@@ -3,10 +3,11 @@
 #include "BlockActor.h"
 
 
-class MusicBlockActor : BlockActor {
+class MusicBlockActor : public BlockActor {
 
 public:
-    ~MusicBlockActor(); // _ZN15MusicBlockActorD2Ev
+    virtual ~MusicBlockActor(); // _ZN15MusicBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN15MusicBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK15MusicBlockActor4saveER11CompoundTag
     MusicBlockActor(BlockPos const&); // _ZN15MusicBlockActorC2ERK8BlockPos

@@ -5,10 +5,11 @@
 
 namespace AgentCommands {
 
-    class GetItemSpaceCommand : AgentCommands::Command {
+    class GetItemSpaceCommand : public AgentCommands::Command {
 
     public:
-        ~GetItemSpaceCommand(); // _ZN13AgentCommands19GetItemSpaceCommandD2Ev
+        virtual ~GetItemSpaceCommand(); // _ZN13AgentCommands19GetItemSpaceCommandD2Ev
+        virtual void __fake_function0(); // fake
         virtual void execute(); // _ZN13AgentCommands19GetItemSpaceCommand7executeEv
         virtual bool isDone(); // _ZN13AgentCommands19GetItemSpaceCommand6isDoneEv
         virtual void fireCommandDoneEvent(); // _ZN13AgentCommands19GetItemSpaceCommand20fireCommandDoneEventEv

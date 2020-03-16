@@ -24,6 +24,6 @@ namespace CommandUtils {
     void createMapData(Actor &, ItemInstance &, CommandOutput &); // _ZN12CommandUtils13createMapDataER5ActorR12ItemInstanceR13CommandOutput
     void clearBlockEntityContents(BlockSource &, BlockPos const&); // _ZN12CommandUtils24clearBlockEntityContentsER11BlockSourceRK8BlockPos
     void getInvalidCommandEntities(); // _ZN12CommandUtils25getInvalidCommandEntitiesEv
-//  bool isValidCommandEntity(std::vector<ActorType> const&, ActorType); //TODO: incomplete function definition // _ZN12CommandUtils20isValidCommandEntityERKSt6vectorI9ActorTypeSaIS1_EES1_
+//    bool isValidCommandEntity(std::vector<long> const&, long); //TODO: incomplete function definition // _ZN12CommandUtils20isValidCommandEntityERKSt6vectorI9ActorTypeSaIS1_EES1_
     void getOriginPlayer(CommandOrigin const&); // _ZN12CommandUtils15getOriginPlayerERK13CommandOrigin
 };

@@ -5,13 +5,14 @@
 #include "../util/BlockPos.h"
 
 
-class DetectorRailBlock : BaseRailBlock {
+class DetectorRailBlock : public BaseRailBlock {
 
 public:
-    ~DetectorRailBlock(); // _ZN17DetectorRailBlockD2Ev
+    virtual ~DetectorRailBlock(); // _ZN17DetectorRailBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK17DetectorRailBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isSignalSource()const; // _ZNK17DetectorRailBlock14isSignalSourceEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK17DetectorRailBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK17DetectorRailBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK17DetectorRailBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK17DetectorRailBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const; // _ZNK17DetectorRailBlock12entityInsideER11BlockSourceRK8BlockPosR5Actor

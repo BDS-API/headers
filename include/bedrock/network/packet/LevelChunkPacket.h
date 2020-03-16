@@ -4,12 +4,13 @@
 #include "Packet.h"
 
 
-class LevelChunkPacket : Packet {
+class LevelChunkPacket : public Packet {
 
 public:
     class SubChunkMetadata;
 
-    ~LevelChunkPacket(); // _ZN16LevelChunkPacketD2Ev
+    virtual ~LevelChunkPacket(); // _ZN16LevelChunkPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK16LevelChunkPacket5getIdEv
     virtual std::string getName()const; // _ZNK16LevelChunkPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK16LevelChunkPacket5writeER12BinaryStream

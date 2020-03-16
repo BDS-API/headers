@@ -10,7 +10,7 @@ namespace Json {
     public:
         class CZString;
 
-//      Value(Json::ValueType); //TODO: incomplete function definition // _ZN4Json5ValueC2ENS_9ValueTypeE
+//        Value(long); //TODO: incomplete function definition // _ZN4Json5ValueC2ENS_9ValueTypeE
         Value(unsigned int); // _ZN4Json5ValueC2Ej
         Value(int); // _ZN4Json5ValueC2Ei
         Value(long); // _ZN4Json5ValueC2Ex
@@ -43,7 +43,7 @@ namespace Json {
         bool asDouble(double)const; // _ZNK4Json5Value8asDoubleEd
         bool asFloat(float)const; // _ZNK4Json5Value7asFloatEf
         bool asBool(bool)const; // _ZNK4Json5Value6asBoolEb
-//      bool isConvertibleTo(Json::ValueType)const; //TODO: incomplete function definition // _ZNK4Json5Value15isConvertibleToENS_9ValueTypeE
+//        bool isConvertibleTo(long)const; //TODO: incomplete function definition // _ZNK4Json5Value15isConvertibleToENS_9ValueTypeE
         void size()const; // _ZNK4Json5Value4sizeEv
         void empty()const; // _ZNK4Json5Value5emptyEv
         bool isNull()const; // _ZNK4Json5Value6isNullEv
@@ -78,10 +78,10 @@ namespace Json {
         bool isDouble()const; // _ZNK4Json5Value8isDoubleEv
         bool isNumeric()const; // _ZNK4Json5Value9isNumericEv
         bool isString()const; // _ZNK4Json5Value8isStringEv
-//      void setComment(char const*, Json::CommentPlacement); //TODO: incomplete function definition // _ZN4Json5Value10setCommentEPKcNS_16CommentPlacementE
-//      void setComment(std::string const&, Json::CommentPlacement); //TODO: incomplete function definition // _ZN4Json5Value10setCommentERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_16CommentPlacementE
-//      bool hasComment(Json::CommentPlacement)const; //TODO: incomplete function definition // _ZNK4Json5Value10hasCommentENS_16CommentPlacementE
-//      std::string getComment(Json::CommentPlacement)const; //TODO: incomplete function definition // _ZNK4Json5Value10getCommentB5cxx11ENS_16CommentPlacementE
+//        void setComment(char const*, long); //TODO: incomplete function definition // _ZN4Json5Value10setCommentEPKcNS_16CommentPlacementE
+//        void setComment(std::string const&, long); //TODO: incomplete function definition // _ZN4Json5Value10setCommentERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_16CommentPlacementE
+//        bool hasComment(long)const; //TODO: incomplete function definition // _ZNK4Json5Value10hasCommentENS_16CommentPlacementE
+//        std::string getComment(long)const; //TODO: incomplete function definition // _ZNK4Json5Value10getCommentB5cxx11ENS_16CommentPlacementE
         std::string toStyledString()const; // _ZNK4Json5Value14toStyledStringB5cxx11Ev
         void begin()const; // _ZNK4Json5Value5beginEv
         void end()const; // _ZNK4Json5Value3endEv
@@ -94,7 +94,7 @@ namespace Json {
             bool isStaticString()const; // _ZNK4Json5Value8CZString14isStaticStringEv
             void index()const; // _ZNK4Json5Value8CZString5indexEv
             CZString(unsigned int); // _ZN4Json5Value8CZStringC2Ej
-//          CZString(char const*, Json::Value::CZString::DuplicationPolicy); //TODO: incomplete function definition // _ZN4Json5Value8CZStringC2EPKcNS1_17DuplicationPolicyE
+//            CZString(char const*, long); //TODO: incomplete function definition // _ZN4Json5Value8CZStringC2EPKcNS1_17DuplicationPolicyE
             CZString(Json::Value::CZString const&); // _ZN4Json5Value8CZStringC2ERKS1_
             ~CZString(); // _ZN4Json5Value8CZStringD2Ev
             void swap(Json::Value::CZString &); // _ZN4Json5Value8CZString4swapERS1_

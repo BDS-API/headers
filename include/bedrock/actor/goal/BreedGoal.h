@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include "../../util/Vec3.h"
+#include <string>
 #include "Goal.h"
 #include "../../util/Vec2.h"
 
 
-class BreedGoal : Goal {
+class BreedGoal : public Goal {
 
 public:
-    ~BreedGoal(); // _ZN9BreedGoalD2Ev
+    virtual ~BreedGoal(); // _ZN9BreedGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN9BreedGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN9BreedGoal16canContinueToUseEv
     virtual void stop(); // _ZN9BreedGoal4stopEv

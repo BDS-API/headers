@@ -4,13 +4,14 @@
 #include "BlockLegacy.h"
 
 
-class FrostedIceBlock : BlockLegacy {
+class FrostedIceBlock : public BlockLegacy {
 
 public:
     static long MIN_NEIGHBORS;
     static long MAX_AGE;
 
-    ~FrostedIceBlock(); // _ZN15FrostedIceBlockD2Ev
+    virtual ~FrostedIceBlock(); // _ZN15FrostedIceBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK15FrostedIceBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK15FrostedIceBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const; // _ZNK15FrostedIceBlock17playerWillDestroyER6PlayerRK8BlockPosRK5Block

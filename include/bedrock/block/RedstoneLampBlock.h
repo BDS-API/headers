@@ -4,12 +4,13 @@
 #include "BlockLegacy.h"
 
 
-class RedstoneLampBlock : BlockLegacy {
+class RedstoneLampBlock : public BlockLegacy {
 
 public:
-    ~RedstoneLampBlock(); // _ZN17RedstoneLampBlockD2Ev
+    virtual ~RedstoneLampBlock(); // _ZN17RedstoneLampBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK17RedstoneLampBlock4tickER11BlockSourceRK8BlockPosR6Random
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK17RedstoneLampBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK17RedstoneLampBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK17RedstoneLampBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK17RedstoneLampBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK17RedstoneLampBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

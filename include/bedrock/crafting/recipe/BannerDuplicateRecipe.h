@@ -4,12 +4,13 @@
 #include "MultiRecipe.h"
 
 
-class BannerDuplicateRecipe : MultiRecipe {
+class BannerDuplicateRecipe : public MultiRecipe {
 
 public:
     static long ID;
 
-    ~BannerDuplicateRecipe(); // _ZN21BannerDuplicateRecipeD2Ev
+    virtual ~BannerDuplicateRecipe(); // _ZN21BannerDuplicateRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void assemble(CraftingContainer &)const; // _ZNK21BannerDuplicateRecipe8assembleER17CraftingContainer
     virtual void getCraftingSize()const; // _ZNK21BannerDuplicateRecipe15getCraftingSizeEv
     virtual void getIngredient(int, int)const; // _ZNK21BannerDuplicateRecipe13getIngredientEii

@@ -3,13 +3,14 @@
 #include "BlockActor.h"
 
 
-class CampfireBlockActor : BlockActor {
+class CampfireBlockActor : public BlockActor {
 
 public:
     static long MIN_SMOKE_THRESHOLD_COUNTER;
     static long MAX_SMOKE_THRESHOLD_COUNTER;
 
-    ~CampfireBlockActor(); // _ZN18CampfireBlockActorD2Ev
+    virtual ~CampfireBlockActor(); // _ZN18CampfireBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN18CampfireBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK18CampfireBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN18CampfireBlockActor4tickER11BlockSource

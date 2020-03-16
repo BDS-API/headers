@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "../util/BlockPos.h"
 #include "ChemistryItem.h"
 
 
-class BalloonItem : ChemistryItem {
+class BalloonItem : public ChemistryItem {
 
 public:
-    ~BalloonItem(); // _ZN11BalloonItemD2Ev
+    virtual ~BalloonItem(); // _ZN11BalloonItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getColor(std::unique_ptr<CompoundTag> const&, ItemDescriptor const&)const; // _ZNK11BalloonItem8getColorERKSt10unique_ptrI11CompoundTagSt14default_deleteIS1_EERK14ItemDescriptor
     virtual bool isTintable()const; // _ZNK11BalloonItem10isTintableEv
     virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const; // _ZNK11BalloonItem18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE

@@ -3,10 +3,11 @@
 #include "IFeature.h"
 
 
-class Feature : IFeature {
+class Feature : public IFeature {
 
 public:
-    ~Feature(); // _ZN7FeatureD2Ev
+    virtual ~Feature(); // _ZN7FeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const; // _ZNK7Feature5placeER21IBlockPlacementTargetRK8BlockPosR6Random
     Feature(Actor *); // _ZN7FeatureC2EP5Actor
     void _setManuallyPlaced(Actor *); // _ZN7Feature18_setManuallyPlacedEP5Actor

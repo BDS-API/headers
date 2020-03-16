@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class SuspiciousStewItem : Item {
+class SuspiciousStewItem : public Item {
 
 public:
-    ~SuspiciousStewItem(); // _ZN18SuspiciousStewItemD2Ev
+    virtual ~SuspiciousStewItem(); // _ZN18SuspiciousStewItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void uniqueAuxValues()const; // _ZNK18SuspiciousStewItem15uniqueAuxValuesEv
     virtual void useTimeDepleted(ItemStack &, Level *, Player *)const; // _ZNK18SuspiciousStewItem15useTimeDepletedER9ItemStackP5LevelP6Player
     void _getStewEffects(); // _ZN18SuspiciousStewItem15_getStewEffectsEv

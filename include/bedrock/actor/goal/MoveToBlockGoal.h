@@ -1,22 +1,23 @@
 #pragma once
 
-#include <string>
 #include "../../util/Vec3.h"
+#include <string>
 #include "Goal.h"
 #include <vector>
 
 
-class MoveToBlockGoal : Goal {
+class MoveToBlockGoal : public Goal {
 
 public:
-    ~MoveToBlockGoal(); // _ZN15MoveToBlockGoalD2Ev
+    virtual ~MoveToBlockGoal(); // _ZN15MoveToBlockGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15MoveToBlockGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15MoveToBlockGoal16canContinueToUseEv
     virtual void start(); // _ZN15MoveToBlockGoal5startEv
     virtual void stop(); // _ZN15MoveToBlockGoal4stopEv
     virtual void tick(); // _ZN15MoveToBlockGoal4tickEv
     virtual void appendDebugInfo(std::string &)const; // _ZNK15MoveToBlockGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  MoveToBlockGoal(Mob &, float, int, int, int, int, float, Vec3, float, TargetSelectionMethod, std::vector<DefinitionTrigger>, std::vector<DefinitionTrigger>, std::vector<ItemDescriptor>); //TODO: incomplete function definition // _ZN15MoveToBlockGoalC2ER3Mobfiiiif4Vec3f21TargetSelectionMethodSt6vectorI17DefinitionTriggerSaIS5_EES7_S4_I14ItemDescriptorSaIS8_EE
+//    MoveToBlockGoal(Mob &, float, int, int, int, int, float, Vec3, float, long, std::vector<DefinitionTrigger>, std::vector<DefinitionTrigger>, std::vector<ItemDescriptor>); //TODO: incomplete function definition // _ZN15MoveToBlockGoalC2ER3Mobfiiiif4Vec3f21TargetSelectionMethodSt6vectorI17DefinitionTriggerSaIS5_EES7_S4_I14ItemDescriptorSaIS8_EE
     void _isCooldownActive()const; // _ZNK15MoveToBlockGoal17_isCooldownActiveEv
     void _tickCooldown(); // _ZN15MoveToBlockGoal13_tickCooldownEv
     void _nextStartTick(); // _ZN15MoveToBlockGoal14_nextStartTickEv

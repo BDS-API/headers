@@ -1,13 +1,13 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 
 
 class MountTameableDefinition {
 
 public:
-    void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, MountTameableDefinition>> &); // _ZN23MountTameableDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
+    void buildSchema(std::shared_ptr<long> &); // _ZN23MountTameableDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
     void initialize(EntityContext &, MountTamingComponent &); // _ZN23MountTameableDefinition10initializeER13EntityContextR20MountTamingComponent
     void deserializeData(Json::Value &); // _ZN23MountTameableDefinition15deserializeDataERN4Json5ValueE
     void serializeData(Json::Value &)const; // _ZNK23MountTameableDefinition13serializeDataERN4Json5ValueE

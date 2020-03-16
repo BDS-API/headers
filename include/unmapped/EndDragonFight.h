@@ -1,9 +1,9 @@
 #pragma once
 
 #include <memory>
+#include <tuple>
 #include "../bedrock/util/BlockPos.h"
 #include <vector>
-#include <tuple>
 
 
 class EndDragonFight {
@@ -22,7 +22,7 @@ public:
 
     EndDragonFight(BlockSource &); // _ZN14EndDragonFightC2ER11BlockSource
     void loadData(CompoundTag const&); // _ZN14EndDragonFight8loadDataERK11CompoundTag
-//  void _setRespawnStage(RespawnAnimation); //TODO: incomplete function definition // _ZN14EndDragonFight16_setRespawnStageE16RespawnAnimation
+//    void _setRespawnStage(long); //TODO: incomplete function definition // _ZN14EndDragonFight16_setRespawnStageE16RespawnAnimation
     void saveData(CompoundTag &); // _ZN14EndDragonFight8saveDataER11CompoundTag
     void tick(); // _ZN14EndDragonFight4tickEv
     void _assignAndExecuteNextGatewayTask(); // _ZN14EndDragonFight32_assignAndExecuteNextGatewayTaskEv
@@ -40,9 +40,9 @@ public:
     void setDragonKilled(EnderDragon &); // _ZN14EndDragonFight15setDragonKilledER11EnderDragon
     void _spawnNewGatewayPair(); // _ZN14EndDragonFight20_spawnNewGatewayPairEv
     void spawnNewGatewayChunks(BlockPos const&, bool, bool); // _ZN14EndDragonFight21spawnNewGatewayChunksERK8BlockPosbb
-    void _spawnNewGatewayChunksTask(std::tuple<EndDragonFight::GatewayTask, EndDragonFight::GateWayGenerator, EndDragonFight::GateWayGenerator> &); // _ZN14EndDragonFight26_spawnNewGatewayChunksTaskERSt5tupleIJNS_11GatewayTaskENS_16GateWayGeneratorES2_EE
+    void _spawnNewGatewayChunksTask(std::tuple<long, EndDragonFight::GateWayGenerator, EndDragonFight::GateWayGenerator> &); // _ZN14EndDragonFight26_spawnNewGatewayChunksTaskERSt5tupleIJNS_11GatewayTaskENS_16GateWayGeneratorES2_EE
     void verifyExitPositions(EndGatewayBlockActor &); // _ZN14EndDragonFight19verifyExitPositionsER20EndGatewayBlockActor
-    void _verifyExitPositionsTask(std::tuple<EndDragonFight::GatewayTask, EndDragonFight::GateWayGenerator, EndDragonFight::GateWayGenerator> &); // _ZN14EndDragonFight24_verifyExitPositionsTaskERSt5tupleIJNS_11GatewayTaskENS_16GateWayGeneratorES2_EE
+    void _verifyExitPositionsTask(std::tuple<long, EndDragonFight::GateWayGenerator, EndDragonFight::GateWayGenerator> &); // _ZN14EndDragonFight24_verifyExitPositionsTaskERSt5tupleIJNS_11GatewayTaskENS_16GateWayGeneratorES2_EE
     void _makeEndIslandFeature(BlockSource &, BlockPos); // _ZN14EndDragonFight21_makeEndIslandFeatureER11BlockSource8BlockPos
     void _setEndGatewayBlockActorExitPosition(BlockSource &, BlockSource &, BlockPos const&, BlockPos const&, bool); // _ZN14EndDragonFight36_setEndGatewayBlockActorExitPositionER11BlockSourceS1_RK8BlockPosS4_b
     void _areaIsLoaded(ChunkPos const&, ChunkViewSource &, int)const; // _ZNK14EndDragonFight13_areaIsLoadedERK8ChunkPosR15ChunkViewSourcei

@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class AvoidMobGoal : Goal {
+class AvoidMobGoal : public Goal {
 
 public:
-    ~AvoidMobGoal(); // _ZN12AvoidMobGoalD2Ev
+    virtual ~AvoidMobGoal(); // _ZN12AvoidMobGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN12AvoidMobGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN12AvoidMobGoal16canContinueToUseEv
     virtual void start(); // _ZN12AvoidMobGoal5startEv

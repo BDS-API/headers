@@ -3,10 +3,11 @@
 #include "Throwable.h"
 
 
-class ExperiencePotion : Throwable {
+class ExperiencePotion : public Throwable {
 
 public:
-    ~ExperiencePotion(); // _ZN16ExperiencePotionD2Ev
+    virtual ~ExperiencePotion(); // _ZN16ExperiencePotionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getThrowPower(); // _ZN16ExperiencePotion13getThrowPowerEv
     virtual void getThrowUpAngleOffset(); // _ZN16ExperiencePotion21getThrowUpAngleOffsetEv
     virtual void getGravity(); // _ZN16ExperiencePotion10getGravityEv

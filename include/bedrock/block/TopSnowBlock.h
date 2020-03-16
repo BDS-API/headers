@@ -4,12 +4,13 @@
 #include "HeavyBlock.h"
 
 
-class TopSnowBlock : HeavyBlock {
+class TopSnowBlock : public HeavyBlock {
 
 public:
     static long MAX_HEIGHT;
 
-    ~TopSnowBlock(); // _ZN12TopSnowBlockD2Ev
+    virtual ~TopSnowBlock(); // _ZN12TopSnowBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK12TopSnowBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK12TopSnowBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK12TopSnowBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
@@ -28,7 +29,7 @@ public:
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const; // _ZNK12TopSnowBlock17getPlacementBlockER5ActorRK8BlockPoshRK4Vec3i
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const; // _ZNK12TopSnowBlock13playerDestroyER6PlayerRK8BlockPosRK5Block
     virtual bool canBeBuiltOver(BlockSource &, BlockPos const&)const; // _ZNK12TopSnowBlock14canBeBuiltOverER11BlockSourceRK8BlockPos
-    virtual void shouldStopFalling(Actor &)const; // _ZNK12TopSnowBlock17shouldStopFallingER5Actor
+    virtual bool shouldStopFalling(Actor &)const; // _ZNK12TopSnowBlock17shouldStopFallingER5Actor
     virtual void calcGroundFriction(Mob &, BlockPos const&)const; // _ZNK12TopSnowBlock18calcGroundFrictionER3MobRK8BlockPos
     virtual bool canHaveExtraData()const; // _ZNK12TopSnowBlock16canHaveExtraDataEv
     virtual void getVisualShape(Block const&, AABB &, bool)const; // _ZNK12TopSnowBlock14getVisualShapeERK5BlockR4AABBb

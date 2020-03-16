@@ -21,6 +21,6 @@ namespace Palette {
     static long RED;
     static long BLACK;
 
-//  void getColor(PaletteColor); //TODO: incomplete function definition // _ZN7Palette8getColorE12PaletteColor
+//    void getColor(long); //TODO: incomplete function definition // _ZN7Palette8getColorE12PaletteColor
     void fromByte(unsigned char); // _ZN7Palette8fromByteEh
 };

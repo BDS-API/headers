@@ -14,7 +14,7 @@ public:
     void begin(); // _ZN20CircuitComponentList5beginEv
     void end(); // _ZN20CircuitComponentList3endEv
     void removeSource(BlockPos const&, BaseCircuitComponent const*); // _ZN20CircuitComponentList12removeSourceERK8BlockPosPK20BaseCircuitComponent
-//  void erase(__gnu_cxx::__normal_iterator<CircuitComponentList::Item *, std::vector<CircuitComponentList::Item>>); //TODO: incomplete function definition // _ZN20CircuitComponentList5eraseEN9__gnu_cxx17__normal_iteratorIPNS_4ItemESt6vectorIS2_SaIS2_EEEE
+//    void erase(long); //TODO: incomplete function definition // _ZN20CircuitComponentList5eraseEN9__gnu_cxx17__normal_iteratorIPNS_4ItemESt6vectorIS2_SaIS2_EEEE
     CircuitComponentList(CircuitComponentList const&); // _ZN20CircuitComponentListC2ERKS_
     CircuitComponentList(CircuitComponentList &&); // _ZN20CircuitComponentListC2EOS_
     void push_back(CircuitComponentList::Item const&); // _ZN20CircuitComponentList9push_backERKNS_4ItemE

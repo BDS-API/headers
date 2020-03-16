@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../../actor/unmapped/ActorRuntimeID.h"
 #include <string>
 #include "Packet.h"
-#include "../../actor/unmapped/ActorRuntimeID.h"
 
 
-class CommandBlockUpdatePacket : Packet {
+class CommandBlockUpdatePacket : public Packet {
 
 public:
-    ~CommandBlockUpdatePacket(); // _ZN24CommandBlockUpdatePacketD2Ev
+    virtual ~CommandBlockUpdatePacket(); // _ZN24CommandBlockUpdatePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK24CommandBlockUpdatePacket5getIdEv
     virtual std::string getName()const; // _ZNK24CommandBlockUpdatePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK24CommandBlockUpdatePacket5writeER12BinaryStream

@@ -4,12 +4,13 @@
 #include "MultiRecipe.h"
 
 
-class FireworksRecipe : MultiRecipe {
+class FireworksRecipe : public MultiRecipe {
 
 public:
     static long ID;
 
-    ~FireworksRecipe(); // _ZN15FireworksRecipeD2Ev
+    virtual ~FireworksRecipe(); // _ZN15FireworksRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void assemble(CraftingContainer &)const; // _ZNK15FireworksRecipe8assembleER17CraftingContainer
     virtual void getCraftingSize()const; // _ZNK15FireworksRecipe15getCraftingSizeEv
     virtual void getIngredient(int, int)const; // _ZNK15FireworksRecipe13getIngredientEii

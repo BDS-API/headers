@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "../util/BlockPos.h"
 #include "Item.h"
 
 
-class BedItem : Item {
+class BedItem : public Item {
 
 public:
-    ~BedItem(); // _ZN7BedItemD2Ev
+    virtual ~BedItem(); // _ZN7BedItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isValidAuxValue(int)const; // _ZNK7BedItem15isValidAuxValueEi
     virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const; // _ZNK7BedItem18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE
     virtual void getIcon(ItemStackBase const&, int, bool)const; // _ZNK7BedItem7getIconERK13ItemStackBaseib

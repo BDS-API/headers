@@ -9,8 +9,9 @@ public:
     static long mEnchants;
     static long mAllowExperimental;
 
-    ~Enchant(); // _ZN7EnchantD2Ev
-//  virtual bool isCompatibleWith(Enchant::Type)const; //TODO: incomplete function definition // _ZNK7Enchant16isCompatibleWithENS_4TypeE
+    virtual ~Enchant(); // _ZN7EnchantD2Ev
+    virtual void __fake_function0(); // fake
+    virtual bool isCompatibleWith__incomplete0(long)const; //TODO: incomplete function definition // _ZNK7Enchant16isCompatibleWithENS_4TypeE
     virtual void getMinCost(int)const; // _ZNK7Enchant10getMinCostEi
     virtual void getMaxCost(int)const; // _ZNK7Enchant10getMaxCostEi
     virtual void getMinLevel()const; // _ZNK7Enchant11getMinLevelEv
@@ -22,8 +23,8 @@ public:
     virtual bool isMeleeDamageEnchant()const; // _ZNK7Enchant20isMeleeDamageEnchantEv
     virtual bool isProtectionEnchant()const; // _ZNK7Enchant19isProtectionEnchantEv
     virtual bool isTreasureOnly()const; // _ZNK7Enchant14isTreasureOnlyEv
-//  Enchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, int, bool); //TODO: incomplete function definition // _ZN7EnchantC2ENS_4TypeENS_9FrequencyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_iib
-//  Enchant(Enchant::Type, Enchant::Frequency, std::string const&, std::string const&, int, int); //TODO: incomplete function definition // _ZN7EnchantC2ENS_4TypeENS_9FrequencyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_ii
+//    Enchant(long, long, std::string const&, std::string const&, int, int, bool); //TODO: incomplete function definition // _ZN7EnchantC2ENS_4TypeENS_9FrequencyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_iib
+//    Enchant(long, long, std::string const&, std::string const&, int, int); //TODO: incomplete function definition // _ZN7EnchantC2ENS_4TypeENS_9FrequencyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_ii
     void getFrequency()const; // _ZNK7Enchant12getFrequencyEv
     bool isLootable()const; // _ZNK7Enchant10isLootableEv
     bool isExperimental()const; // _ZNK7Enchant14isExperimentalEv

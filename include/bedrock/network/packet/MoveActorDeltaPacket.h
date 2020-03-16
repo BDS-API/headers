@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class MoveActorDeltaPacket : Packet {
+class MoveActorDeltaPacket : public Packet {
 
 public:
-    ~MoveActorDeltaPacket(); // _ZN20MoveActorDeltaPacketD2Ev
+    virtual ~MoveActorDeltaPacket(); // _ZN20MoveActorDeltaPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK20MoveActorDeltaPacket5getIdEv
     virtual std::string getName()const; // _ZNK20MoveActorDeltaPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK20MoveActorDeltaPacket5writeER12BinaryStream

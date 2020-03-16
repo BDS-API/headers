@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../bedrock/util/AABB.h"
 #include <memory>
 #include "../bedrock/actor/unmapped/ActorUniqueID.h"
 #include <string>
+#include "../bedrock/util/AABB.h"
 
 
 class RaidBossComponent {
@@ -14,7 +14,7 @@ public:
     RaidBossComponent(); // _ZN17RaidBossComponentC2Ev
     void initialize(ActorUniqueID); // _ZN17RaidBossComponent10initializeE13ActorUniqueID
     void updateName(Actor &); // _ZN17RaidBossComponent10updateNameER5Actor
-//  void _broadcastBossEvent(BossEventUpdateType, Actor &); //TODO: incomplete function definition // _ZN17RaidBossComponent19_broadcastBossEventE19BossEventUpdateTypeR5Actor
+//    void _broadcastBossEvent(long, Actor &); //TODO: incomplete function definition // _ZN17RaidBossComponent19_broadcastBossEventE19BossEventUpdateTypeR5Actor
     void updateHealthBarVisible(bool, Actor &); // _ZN17RaidBossComponent22updateHealthBarVisibleEbR5Actor
     void setupBossBarInfo(Actor &, std::shared_ptr<Village>); // _ZN17RaidBossComponent16setupBossBarInfoER5ActorSt10shared_ptrI7VillageE
     void setRaidInProgress(bool); // _ZN17RaidBossComponent17setRaidInProgressEb
@@ -32,7 +32,7 @@ public:
     void _handleRegisterPlayers(Actor &); // _ZN17RaidBossComponent22_handleRegisterPlayersER5Actor
     void getHealthPercent(); // _ZN17RaidBossComponent16getHealthPercentEv
     void getOwnerUniqueID(); // _ZN17RaidBossComponent16getOwnerUniqueIDEv
-//  void _sendBossEvent(BossEventUpdateType, Player &); //TODO: incomplete function definition // _ZN17RaidBossComponent14_sendBossEventE19BossEventUpdateTypeR6Player
+//    void _sendBossEvent(long, Player &); //TODO: incomplete function definition // _ZN17RaidBossComponent14_sendBossEventE19BossEventUpdateTypeR6Player
     void registerPlayer(Player *); // _ZN17RaidBossComponent14registerPlayerEP6Player
     void unRegisterPlayer(Player *); // _ZN17RaidBossComponent16unRegisterPlayerEP6Player
     void getWaveStarted(); // _ZN17RaidBossComponent14getWaveStartedEv

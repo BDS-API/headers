@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../../util/AABB.h"
 #include <string>
 #include <vector>
-#include "../../util/AABB.h"
 
 
 class BlockActor {
@@ -11,7 +11,8 @@ public:
     static std::string mIdClassMap;
     static std::string mClassIdMap;
 
-    ~BlockActor(); // _ZN10BlockActorD2Ev
+    virtual ~BlockActor(); // _ZN10BlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN10BlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK10BlockActor4saveER11CompoundTag
     virtual void saveItemInstanceData(CompoundTag &); // _ZN10BlockActor20saveItemInstanceDataER11CompoundTag
@@ -46,10 +47,10 @@ public:
     virtual void onChunkUnloaded(LevelChunk &); // _ZN10BlockActor15onChunkUnloadedER10LevelChunk
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &); // _ZN10BlockActor15_onUpdatePacketERK11CompoundTagR11BlockSource
     virtual void _playerCanUpdate(Player const&)const; // _ZNK10BlockActor16_playerCanUpdateERK6Player
-//  void setId(BlockActorType, std::string const&); //TODO: incomplete function definition // _ZN10BlockActor5setIdE14BlockActorTypeRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+//    void setId(long, std::string const&); //TODO: incomplete function definition // _ZN10BlockActor5setIdE14BlockActorTypeRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void initBlockEntities(); // _ZN10BlockActor17initBlockEntitiesEv
     void shutdown(); // _ZN10BlockActor8shutdownEv
-//  BlockActor(BlockActorType, BlockPos const&, std::string const&); //TODO: incomplete function definition // _ZN10BlockActorC2E14BlockActorTypeRK8BlockPosRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+//    BlockActor(long, BlockPos const&, std::string const&); //TODO: incomplete function definition // _ZN10BlockActorC2E14BlockActorTypeRK8BlockPosRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void _resetAABB(); // _ZN10BlockActor10_resetAABBEv
     void setCustomName(std::string const&); // _ZN10BlockActor13setCustomNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void assignBlockIfNotAssigned(BlockSource &); // _ZN10BlockActor24assignBlockIfNotAssignedER11BlockSource
@@ -59,8 +60,8 @@ public:
     void setCustomNameSaved(bool); // _ZN10BlockActor18setCustomNameSavedEb
     void distanceToSqr(Vec3 const&); // _ZN10BlockActor13distanceToSqrERK4Vec3
     void onUpdatePacket(CompoundTag const&, BlockSource &, Player const*); // _ZN10BlockActor14onUpdatePacketERK11CompoundTagR11BlockSourcePK6Player
-//  bool isType(BlockActorType)const; //TODO: incomplete function definition // _ZNK10BlockActor6isTypeE14BlockActorType
-//  bool isType(BlockActor &, BlockActorType); //TODO: incomplete function definition // _ZN10BlockActor6isTypeERS_14BlockActorType
+//    bool isType(long)const; //TODO: incomplete function definition // _ZNK10BlockActor6isTypeE14BlockActorType
+//    bool isType(BlockActor &, long); //TODO: incomplete function definition // _ZN10BlockActor6isTypeERS_14BlockActorType
     bool isInWorld()const; // _ZNK10BlockActor9isInWorldEv
     void stopDestroy(); // _ZN10BlockActor11stopDestroyEv
     void getAABB()const; // _ZNK10BlockActor7getAABBEv
@@ -71,7 +72,7 @@ public:
     bool isClientSideOnly()const; // _ZNK10BlockActor16isClientSideOnlyEv
     void setClientSideOnly(bool); // _ZN10BlockActor17setClientSideOnlyEb
     void getRendererId()const; // _ZNK10BlockActor13getRendererIdEv
-//  void setRendererId(BlockActorRendererId); //TODO: incomplete function definition // _ZN10BlockActor13setRendererIdE20BlockActorRendererId
+//    void setRendererId(long); //TODO: incomplete function definition // _ZN10BlockActor13setRendererIdE20BlockActorRendererId
     bool canRenderCustomName()const; // _ZNK10BlockActor19canRenderCustomNameEv
     std::string getDisplayName()const; // _ZNK10BlockActor14getDisplayNameB5cxx11Ev
     void getBlock()const; // _ZNK10BlockActor8getBlockEv

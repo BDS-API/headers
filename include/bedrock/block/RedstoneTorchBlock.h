@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include "TorchBlock.h"
+#include <string>
 
 
-class RedstoneTorchBlock : TorchBlock {
+class RedstoneTorchBlock : public TorchBlock {
 
 public:
-    ~RedstoneTorchBlock(); // _ZN18RedstoneTorchBlockD2Ev
+    virtual ~RedstoneTorchBlock(); // _ZN18RedstoneTorchBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isSignalSource()const; // _ZNK18RedstoneTorchBlock14isSignalSourceEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK18RedstoneTorchBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK18RedstoneTorchBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK18RedstoneTorchBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK18RedstoneTorchBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK18RedstoneTorchBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

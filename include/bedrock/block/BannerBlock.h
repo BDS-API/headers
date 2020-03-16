@@ -4,7 +4,7 @@
 #include "ActorBlock.h"
 
 
-class BannerBlock : ActorBlock {
+class BannerBlock : public ActorBlock {
 
 public:
     static long STANDING_AABB;
@@ -13,7 +13,8 @@ public:
     static long EAST_AABB;
     static long WEST_AABB;
 
-    ~BannerBlock(); // _ZN11BannerBlockD2Ev
+    virtual ~BannerBlock(); // _ZN11BannerBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK11BannerBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK11BannerBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK11BannerBlock15checkIsPathableER5ActorRK8BlockPosS4_

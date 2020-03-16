@@ -1,26 +1,27 @@
 #pragma once
 
-#include "../../unmapped/EducationLevelSettings.h"
-#include "../block/unmapped/BlockSourceListener.h"
-#include "../../unmapped/EntityNetId.h"
-#include <vector>
-#include <memory>
-#include "../util/ChunkPos.h"
-#include "../../unmapped/IWorldRegistriesProvider.h"
 #include <string>
+#include <memory>
 #include "../actor/unmapped/ActorRuntimeID.h"
-#include <functional>
+#include "../block/unmapped/BlockSourceListener.h"
+#include <vector>
+#include "../../unmapped/EntityNetId.h"
 #include "../../unmapped/Abilities.h"
+#include <functional>
+#include "../../unmapped/IWorldRegistriesProvider.h"
 #include "../actor/unmapped/ActorUniqueID.h"
+#include "../../unmapped/EducationLevelSettings.h"
+#include "../util/ChunkPos.h"
 
 
-class Level : BlockSourceListener, IWorldRegistriesProvider {
+class Level : public BlockSourceListener, public IWorldRegistriesProvider {
 
 public:
     class CompareLevelChunkQueuedSavingElement;
     class LevelChunkQueuedSavingElement;
 
-    ~Level(); // _ZN5LevelD2Ev
+    virtual ~Level(); // _ZN5LevelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onSourceCreated(BlockSource &); // _ZN5Level15onSourceCreatedER11BlockSource
     virtual void onSourceDestroyed(BlockSource &); // _ZN5Level17onSourceDestroyedER11BlockSource
     virtual void initialize(std::string const&, LevelSettings const&, LevelData *, std::string const*); // _ZN5Level10initializeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK13LevelSettingsP9LevelDataPS6_
@@ -54,7 +55,7 @@ public:
     virtual void tick(); // _ZN5Level4tickEv
     virtual void directTickEntities(BlockSource &); // _ZN5Level18directTickEntitiesER11BlockSource
     virtual void updateSleepingPlayerList(); // _ZN5Level24updateSleepingPlayerListEv
-//  virtual void setDifficulty(Difficulty); //TODO: incomplete function definition // _ZN5Level13setDifficultyE10Difficulty
+    virtual void setDifficulty__incomplete0(long); //TODO: incomplete function definition // _ZN5Level13setDifficultyE10Difficulty
     virtual void setCommandsEnabled(bool); // _ZN5Level18setCommandsEnabledEb
     virtual void setWorldTemplateOptionsUnlocked(); // _ZN5Level31setWorldTemplateOptionsUnlockedEv
     virtual void saveAdditionalData(); // _ZN5Level18saveAdditionalDataEv
@@ -72,7 +73,7 @@ public:
     virtual void clearTagCache(); // _ZN5Level13clearTagCacheEv
     virtual void decrementTagCache(std::string const&, TagRegistry &); // _ZN5Level17decrementTagCacheERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER11TagRegistry
     virtual void incrementTagCache(std::string const&, TagRegistry &); // _ZN5Level17incrementTagCacheERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER11TagRegistry
-//  virtual void runCommand(HashedString const&, CommandOrigin &, CommandOriginSystem, CurrentCmdVersion); //TODO: incomplete function definition // _ZN5Level10runCommandERK12HashedStringR13CommandOrigin19CommandOriginSystem17CurrentCmdVersion
+    virtual void runCommand__incomplete0(HashedString const&, CommandOrigin &, long, long); //TODO: incomplete function definition // _ZN5Level10runCommandERK12HashedStringR13CommandOrigin19CommandOriginSystem17CurrentCmdVersion
     virtual void getTagRegistry(); // _ZN5Level14getTagRegistryEv
     virtual void setFinishedInitializing(); // _ZN5Level23setFinishedInitializingEv
     void getIOTasksGroup(); // _ZN5Level15getIOTasksGroupEv
@@ -100,7 +101,7 @@ public:
     void _setServerLevelEventCoordinator(std::unique_ptr<ServerLevelEventCoordinator> &&); // _ZN5Level31_setServerLevelEventCoordinatorEOSt10unique_ptrI27ServerLevelEventCoordinatorSt14default_deleteIS1_EE
     void setBlockEventCoordinator(std::unique_ptr<BlockEventCoordinator> &&); // _ZN5Level24setBlockEventCoordinatorEOSt10unique_ptrI21BlockEventCoordinatorSt14default_deleteIS1_EE
     void setItemEventCoordinator(std::unique_ptr<ItemEventCoordinator> &&); // _ZN5Level23setItemEventCoordinatorEOSt10unique_ptrI20ItemEventCoordinatorSt14default_deleteIS1_EE
-//  void setDefaultGameType(GameType); //TODO: incomplete function definition // _ZN5Level18setDefaultGameTypeE8GameType
+//    void setDefaultGameType(long); //TODO: incomplete function definition // _ZN5Level18setDefaultGameTypeE8GameType
     void _resetBiomeData(); // _ZN5Level15_resetBiomeDataEv
     void _loadBiomeData(); // _ZN5Level14_loadBiomeDataEv
     Tick* getCurrentTick()const; // _ZNK5Level14getCurrentTickEv
@@ -114,8 +115,8 @@ public:
     void setPacketSender(PacketSender *); // _ZN5Level15setPacketSenderEP12PacketSender
     void _removeAllPlayers(); // _ZN5Level17_removeAllPlayersEv
     bool isLeaveGameDone(); // _ZN5Level15isLeaveGameDoneEv
-//  void createDimension(AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN5Level15createDimensionE11AutomaticIDI9DimensioniE
-//  void getDimension(AutomaticID<Dimension, int>)const; //TODO: incomplete function definition // _ZNK5Level12getDimensionE11AutomaticIDI9DimensioniE
+//    void createDimension(long); //TODO: incomplete function definition // _ZN5Level15createDimensionE11AutomaticIDI9DimensioniE
+//    void getDimension(long)const; //TODO: incomplete function definition // _ZNK5Level12getDimensionE11AutomaticIDI9DimensioniE
     void forEachDimension(std::function<bool (Dimension &)>); // _ZN5Level16forEachDimensionESt8functionIFbR9DimensionEE
     void forEachDimension(std::function<bool (Dimension const&)>)const; // _ZNK5Level16forEachDimensionESt8functionIFbRK9DimensionEE
     void getChunkTickRange()const; // _ZNK5Level17getChunkTickRangeEv
@@ -123,7 +124,7 @@ public:
     void getPortalForcer(); // _ZN5Level15getPortalForcerEv
     void requestPlayerChangeDimension(Player &, std::unique_ptr<ChangeDimensionRequest>); // _ZN5Level28requestPlayerChangeDimensionER6PlayerSt10unique_ptrI22ChangeDimensionRequestSt14default_deleteIS3_EE
     void _handleChangeDimensionRequests(); // _ZN5Level30_handleChangeDimensionRequestsEv
-//  void entityChangeDimension(Actor &, AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN5Level21entityChangeDimensionER5Actor11AutomaticIDI9DimensioniE
+//    void entityChangeDimension(Actor &, long); //TODO: incomplete function definition // _ZN5Level21entityChangeDimensionER5Actor11AutomaticIDI9DimensioniE
     void getDimensionConversionData()const; // _ZNK5Level26getDimensionConversionDataEv
     void _playerChangeDimension(Player *, ChangeDimensionRequest &); // _ZN5Level22_playerChangeDimensionEP6PlayerR22ChangeDimensionRequest
     void forceRemoveEntity(Actor &); // _ZN5Level17forceRemoveEntityER5Actor
@@ -134,8 +135,8 @@ public:
     void _suspendPlayer(mce::UUID const&); // _ZN5Level14_suspendPlayerERKN3mce4UUIDE
     void _resumePlayer(mce::UUID const&); // _ZN5Level13_resumePlayerERKN3mce4UUIDE
     void _fixEntitiesRegion(std::vector<Actor *> &, BlockSource const&, Dimension &); // _ZN5Level18_fixEntitiesRegionERSt6vectorIP5ActorSaIS2_EERK11BlockSourceR9Dimension
-//  void checkAndHandleMaterial(AABB const&, MaterialType, Actor *); //TODO: incomplete function definition // _ZN5Level22checkAndHandleMaterialERK4AABB12MaterialTypeP5Actor
-//  void checkMaterial(AABB const&, MaterialType, Actor *); //TODO: incomplete function definition // _ZN5Level13checkMaterialERK4AABB12MaterialTypeP5Actor
+//    void checkAndHandleMaterial(AABB const&, long, Actor *); //TODO: incomplete function definition // _ZN5Level22checkAndHandleMaterialERK4AABB12MaterialTypeP5Actor
+//    void checkMaterial(AABB const&, long, Actor *); //TODO: incomplete function definition // _ZN5Level13checkMaterialERK4AABB12MaterialTypeP5Actor
     void _syncTime(int); // _ZN5Level9_syncTimeEi
     bool isClientSide()const; // _ZNK5Level12isClientSideEv
     void _cleanupDisconnectedPlayers(); // _ZN5Level27_cleanupDisconnectedPlayersEv
@@ -154,25 +155,25 @@ public:
     void saveDirtyChunks(); // _ZN5Level15saveDirtyChunksEv
     void findPath(Actor &, int, int, int, NavigationComponent &); // _ZN5Level8findPathER5ActoriiiR19NavigationComponent
     void findPath(Actor &, Actor &, NavigationComponent &); // _ZN5Level8findPathER5ActorS1_R19NavigationComponent
-//  void broadcastLevelEvent(LevelEvent, Vec3 const&, int, Player *); //TODO: incomplete function definition // _ZN5Level19broadcastLevelEventE10LevelEventRK4Vec3iP6Player
-//  void broadcastLevelEvent(LevelEvent, CompoundTag const&, Player *); //TODO: incomplete function definition // _ZN5Level19broadcastLevelEventE10LevelEventRK11CompoundTagP6Player
-//  void playSound(BlockSource &, LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level9playSoundER11BlockSource15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
+//    void broadcastLevelEvent(long, Vec3 const&, int, Player *); //TODO: incomplete function definition // _ZN5Level19broadcastLevelEventE10LevelEventRK4Vec3iP6Player
+//    void broadcastLevelEvent(long, CompoundTag const&, Player *); //TODO: incomplete function definition // _ZN5Level19broadcastLevelEventE10LevelEventRK11CompoundTagP6Player
+//    void playSound(BlockSource &, long, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level9playSoundER11BlockSource15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
     void getPrimaryLocalPlayer()const; // _ZNK5Level21getPrimaryLocalPlayerEv
-//  void playSound(LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level9playSoundE15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
-//  void playSynchronizedSound(BlockSource &, LevelSoundEvent, Vec3 const&, Block const&, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level21playSynchronizedSoundER11BlockSource15LevelSoundEventRK4Vec3RK5BlockRK25ActorDefinitionIdentifierbb
-//  void playSynchronizedSound(BlockSource &, LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level21playSynchronizedSoundER11BlockSource15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
-//  void broadcastSoundEvent(BlockSource &, LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level19broadcastSoundEventER11BlockSource15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
-//  void broadcastSoundEvent(BlockSource &, LevelSoundEvent, Vec3 const&, Block const&, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level19broadcastSoundEventER11BlockSource15LevelSoundEventRK4Vec3RK5BlockRK25ActorDefinitionIdentifierbb
-//  void broadcastDimensionEvent(BlockSource &, LevelEvent, Vec3 const&, int, Player *); //TODO: incomplete function definition // _ZN5Level23broadcastDimensionEventER11BlockSource10LevelEventRK4Vec3iP6Player
-//  void broadcastDimensionEvent(BlockSource &, LevelEvent, Vec3 const&, Block const&, Player *); //TODO: incomplete function definition // _ZN5Level23broadcastDimensionEventER11BlockSource10LevelEventRK4Vec3RK5BlockP6Player
-//  void handleLevelEvent(LevelEvent, Vec3 const&, int); //TODO: incomplete function definition // _ZN5Level16handleLevelEventE10LevelEventRK4Vec3i
-//  void handleLevelEvent(LevelEvent, CompoundTag const&); //TODO: incomplete function definition // _ZN5Level16handleLevelEventE10LevelEventRK11CompoundTag
-//  void handleSoundEvent(LevelSoundEvent, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level16handleSoundEventE15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
+//    void playSound(long, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level9playSoundE15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
+//    void playSynchronizedSound(BlockSource &, long, Vec3 const&, Block const&, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level21playSynchronizedSoundER11BlockSource15LevelSoundEventRK4Vec3RK5BlockRK25ActorDefinitionIdentifierbb
+//    void playSynchronizedSound(BlockSource &, long, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level21playSynchronizedSoundER11BlockSource15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
+//    void broadcastSoundEvent(BlockSource &, long, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level19broadcastSoundEventER11BlockSource15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
+//    void broadcastSoundEvent(BlockSource &, long, Vec3 const&, Block const&, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level19broadcastSoundEventER11BlockSource15LevelSoundEventRK4Vec3RK5BlockRK25ActorDefinitionIdentifierbb
+//    void broadcastDimensionEvent(BlockSource &, long, Vec3 const&, int, Player *); //TODO: incomplete function definition // _ZN5Level23broadcastDimensionEventER11BlockSource10LevelEventRK4Vec3iP6Player
+//    void broadcastDimensionEvent(BlockSource &, long, Vec3 const&, Block const&, Player *); //TODO: incomplete function definition // _ZN5Level23broadcastDimensionEventER11BlockSource10LevelEventRK4Vec3RK5BlockP6Player
+//    void handleLevelEvent(long, Vec3 const&, int); //TODO: incomplete function definition // _ZN5Level16handleLevelEventE10LevelEventRK4Vec3i
+//    void handleLevelEvent(long, CompoundTag const&); //TODO: incomplete function definition // _ZN5Level16handleLevelEventE10LevelEventRK11CompoundTag
+//    void handleSoundEvent(long, Vec3 const&, int, ActorDefinitionIdentifier const&, bool, bool); //TODO: incomplete function definition // _ZN5Level16handleSoundEventE15LevelSoundEventRK4Vec3iRK25ActorDefinitionIdentifierbb
     void handleSoundEvent(std::string const&, Vec3 const&, float, float); // _ZN5Level16handleSoundEventERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK4Vec3ff
     void handleStopSoundEvent(std::string const&); // _ZN5Level20handleStopSoundEventERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void handleStopAllSounds(); // _ZN5Level19handleStopAllSoundsEv
-//  void addParticle(ParticleType, Vec3 const&, Vec3 const&, int, CompoundTag const*, bool); //TODO: incomplete function definition // _ZN5Level11addParticleE12ParticleTypeRK4Vec3S3_iPK11CompoundTagb
-//  void sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int); //TODO: incomplete function definition // _ZN5Level24sendServerLegacyParticleE12ParticleTypeRK4Vec3S3_i
+//    void addParticle(long, Vec3 const&, Vec3 const&, int, CompoundTag const*, bool); //TODO: incomplete function definition // _ZN5Level11addParticleE12ParticleTypeRK4Vec3S3_iPK11CompoundTagb
+//    void sendServerLegacyParticle(long, Vec3 const&, Vec3 const&, int); //TODO: incomplete function definition // _ZN5Level24sendServerLegacyParticleE12ParticleTypeRK4Vec3S3_i
     void getDifficulty()const; // _ZNK5Level13getDifficultyEv
     void getNextRuntimeID(); // _ZN5Level16getNextRuntimeIDEv
     void getActorEventCoordinator(); // _ZN5Level24getActorEventCoordinatorEv
@@ -192,7 +193,7 @@ public:
     void removeListener(LevelListener &); // _ZN5Level14removeListenerER13LevelListener
     void _tickTemporaryPointers(); // _ZN5Level22_tickTemporaryPointersEv
     void _clientHandleAddOwnedEntity(EntityNetId); // _ZN5Level27_clientHandleAddOwnedEntityE11EntityNetId
-//  void _clientHandleAddWeakRefEntity(EntityNetId, WeakRefT<EntityRefTraits> const&); //TODO: incomplete function definition // _ZN5Level29_clientHandleAddWeakRefEntityE11EntityNetIdRK8WeakRefTI15EntityRefTraitsE
+//    void _clientHandleAddWeakRefEntity(EntityNetId, long const&); //TODO: incomplete function definition // _ZN5Level29_clientHandleAddWeakRefEntityE11EntityNetIdRK8WeakRefTI15EntityRefTraitsE
     void _clientHandleRemoveOwnedEntity(EntityNetId); // _ZN5Level30_clientHandleRemoveOwnedEntityE11EntityNetId
     void _clientHandleRemoveWeakRefEntity(EntityNetId); // _ZN5Level32_clientHandleRemoveWeakRefEntityE11EntityNetId
     void explode(BlockSource &, Actor *, Vec3 const&, float, bool, bool, float, bool); // _ZN5Level7explodeER11BlockSourceP5ActorRK4Vec3fbbfb
@@ -210,16 +211,16 @@ public:
     void getLANBroadcastIntent()const; // _ZNK5Level21getLANBroadcastIntentEv
     void setLANBroadcast(bool); // _ZN5Level15setLANBroadcastEb
     void getLANBroadcast()const; // _ZNK5Level15getLANBroadcastEv
-//  void setXBLBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition // _ZN5Level21setXBLBroadcastIntentEN6Social18GamePublishSettingE
+//    void setXBLBroadcastIntent(long); //TODO: incomplete function definition // _ZN5Level21setXBLBroadcastIntentEN6Social18GamePublishSettingE
     void getXBLBroadcastIntent()const; // _ZNK5Level21getXBLBroadcastIntentEv
     bool hasXBLBroadcastIntent()const; // _ZNK5Level21hasXBLBroadcastIntentEv
-//  void setXBLBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition // _ZN5Level19setXBLBroadcastModeEN6Social18GamePublishSettingE
+//    void setXBLBroadcastMode(long); //TODO: incomplete function definition // _ZN5Level19setXBLBroadcastModeEN6Social18GamePublishSettingE
     void getXBLBroadcastMode()const; // _ZNK5Level19getXBLBroadcastModeEv
     bool hasXBLBroadcast()const; // _ZNK5Level15hasXBLBroadcastEv
-//  void setPlatformBroadcastIntent(Social::GamePublishSetting); //TODO: incomplete function definition // _ZN5Level26setPlatformBroadcastIntentEN6Social18GamePublishSettingE
+//    void setPlatformBroadcastIntent(long); //TODO: incomplete function definition // _ZN5Level26setPlatformBroadcastIntentEN6Social18GamePublishSettingE
     void getPlatformBroadcastIntent()const; // _ZNK5Level26getPlatformBroadcastIntentEv
     bool hasPlatformBroadcastIntent()const; // _ZNK5Level26hasPlatformBroadcastIntentEv
-//  void setPlatformBroadcastMode(Social::GamePublishSetting); //TODO: incomplete function definition // _ZN5Level24setPlatformBroadcastModeEN6Social18GamePublishSettingE
+//    void setPlatformBroadcastMode(long); //TODO: incomplete function definition // _ZN5Level24setPlatformBroadcastModeEN6Social18GamePublishSettingE
     void getPlatformBroadcastMode()const; // _ZNK5Level24getPlatformBroadcastModeEv
     bool hasPlatformBroadcast()const; // _ZNK5Level20hasPlatformBroadcastEv
     void setHasLockedBehaviorPack(bool); // _ZN5Level24setHasLockedBehaviorPackEb
@@ -235,11 +236,11 @@ public:
     void getBlockEventCoordinator(); // _ZN5Level24getBlockEventCoordinatorEv
     void _getClientLevelEventCoordinator(); // _ZN5Level31_getClientLevelEventCoordinatorEv
     void getItemEventCoordinator(); // _ZN5Level23getItemEventCoordinatorEv
-//  void broadcastEntityEvent(Actor *, ActorEvent, int); //TODO: incomplete function definition // _ZN5Level20broadcastEntityEventEP5Actor10ActorEventi
-//  void addBossEventListener(BossEventListener *); //TODO: incomplete function definition // _ZN5Level20addBossEventListenerEP17BossEventListener
-//  void removeBossEventListener(BossEventListener *); //TODO: incomplete function definition // _ZN5Level23removeBossEventListenerEP17BossEventListener
-//  void broadcastBossEvent(BossEventUpdateType, ActorUniqueID const&, BossEventPacket const&); //TODO: incomplete function definition // _ZN5Level18broadcastBossEventE19BossEventUpdateTypeRK13ActorUniqueIDRK15BossEventPacket
-//  void broadcastBossEvent(BossEventUpdateType); //TODO: incomplete function definition // _ZN5Level18broadcastBossEventE19BossEventUpdateType
+//    void broadcastEntityEvent(Actor *, long, int); //TODO: incomplete function definition // _ZN5Level20broadcastEntityEventEP5Actor10ActorEventi
+//    void addBossEventListener(long *); //TODO: incomplete function definition // _ZN5Level20addBossEventListenerEP17BossEventListener
+//    void removeBossEventListener(long *); //TODO: incomplete function definition // _ZN5Level23removeBossEventListenerEP17BossEventListener
+//    void broadcastBossEvent(long, ActorUniqueID const&, BossEventPacket const&); //TODO: incomplete function definition // _ZN5Level18broadcastBossEventE19BossEventUpdateTypeRK13ActorUniqueIDRK15BossEventPacket
+//    void broadcastBossEvent(long); //TODO: incomplete function definition // _ZN5Level18broadcastBossEventE19BossEventUpdateType
     void areBossEventListenersReady(); // _ZN5Level26areBossEventListenersReadyEv
     bool hasLevelStorage()const; // _ZNK5Level15hasLevelStorageEv
     void getLevelStorage(); // _ZN5Level15getLevelStorageEv
@@ -312,8 +313,8 @@ public:
     bool hasStartWithMapEnabled()const; // _ZNK5Level22hasStartWithMapEnabledEv
     void getLootTables(); // _ZN5Level13getLootTablesEv
     void updateWeather(float, int, float, int); // _ZN5Level13updateWeatherEfifi
-//  void takePicture(cg::ImageBuffer &, Actor *, Actor *, ScreenshotOptions &); //TODO: incomplete function definition // _ZN5Level11takePictureERN2cg11ImageBufferEP5ActorS4_R17ScreenshotOptions
-//  void upgradeStorageVersion(StorageVersion); //TODO: incomplete function definition // _ZN5Level21upgradeStorageVersionE14StorageVersion
+//    void takePicture(long &, Actor *, Actor *, long &); //TODO: incomplete function definition // _ZN5Level11takePictureERN2cg11ImageBufferEP5ActorS4_R17ScreenshotOptions
+//    void upgradeStorageVersion(long); //TODO: incomplete function definition // _ZN5Level21upgradeStorageVersionE14StorageVersion
     void save(); // _ZN5Level4saveEv
     void suspendAndSave(); // _ZN5Level14suspendAndSaveEv
     void waitAsyncSuspendWork(); // _ZN5Level20waitAsyncSuspendWorkEv
@@ -322,12 +323,12 @@ public:
     void addParticleEffect(HashedString const&, Actor const&, HashedString const&, Vec3 const&, MolangVariableMap const&); // _ZN5Level17addParticleEffectERK12HashedStringRK5ActorS2_RK4Vec3RK17MolangVariableMap
     void addTerrainParticleEffect(BlockPos const&, Block const&, Vec3 const&, float, float, float); // _ZN5Level24addTerrainParticleEffectERK8BlockPosRK5BlockRK4Vec3fff
     void addTerrainSlideEffect(BlockPos const&, Block const&, Vec3 const&, float, float, float); // _ZN5Level21addTerrainSlideEffectERK8BlockPosRK5BlockRK4Vec3fff
-//  void addBreakingItemParticleEffect(Vec3 const&, ParticleType, TextureUVCoordinateSet const&, bool); //TODO: incomplete function definition // _ZN5Level29addBreakingItemParticleEffectERK4Vec312ParticleTypeRK22TextureUVCoordinateSetb
+//    void addBreakingItemParticleEffect(Vec3 const&, long, TextureUVCoordinateSet const&, bool); //TODO: incomplete function definition // _ZN5Level29addBreakingItemParticleEffectERK4Vec312ParticleTypeRK22TextureUVCoordinateSetb
     bool hasCommandsEnabled()const; // _ZNK5Level18hasCommandsEnabledEv
     bool hasExperimentalGameplayEnabled()const; // _ZNK5Level30hasExperimentalGameplayEnabledEv
     void useMsaGamertagsOnly()const; // _ZNK5Level19useMsaGamertagsOnlyEv
     void setMsaGamertagsOnly(bool); // _ZN5Level19setMsaGamertagsOnlyEb
-//  void getSpecialMultiplier(AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN5Level20getSpecialMultiplierE11AutomaticIDI9DimensioniE
+//    void getSpecialMultiplier(long); //TODO: incomplete function definition // _ZN5Level20getSpecialMultiplierE11AutomaticIDI9DimensioniE
     void getNewUniqueID(); // _ZN5Level14getNewUniqueIDEv
     bool isExporting()const; // _ZNK5Level11isExportingEv
     void setIsExporting(bool); // _ZN5Level14setIsExportingEb
@@ -340,8 +341,8 @@ public:
     void _loadMapData(ActorUniqueID const&); // _ZN5Level12_loadMapDataERK13ActorUniqueID
     void getMapSavedData(std::unique_ptr<CompoundTag> const&); // _ZN5Level15getMapSavedDataERKSt10unique_ptrI11CompoundTagSt14default_deleteIS1_EE
     void requestMapInfo(ActorUniqueID); // _ZN5Level14requestMapInfoE13ActorUniqueID
-//  void createMapSavedData(ActorUniqueID const&, BlockPos const&, AutomaticID<Dimension, int>, int); //TODO: incomplete function definition // _ZN5Level18createMapSavedDataERK13ActorUniqueIDRK8BlockPos11AutomaticIDI9DimensioniEi
-//  void createMapSavedData(std::vector<ActorUniqueID> const&, BlockPos const&, AutomaticID<Dimension, int>, int); //TODO: incomplete function definition // _ZN5Level18createMapSavedDataERKSt6vectorI13ActorUniqueIDSaIS1_EERK8BlockPos11AutomaticIDI9DimensioniEi
+//    void createMapSavedData(ActorUniqueID const&, BlockPos const&, long, int); //TODO: incomplete function definition // _ZN5Level18createMapSavedDataERK13ActorUniqueIDRK8BlockPos11AutomaticIDI9DimensioniEi
+//    void createMapSavedData(std::vector<ActorUniqueID> const&, BlockPos const&, long, int); //TODO: incomplete function definition // _ZN5Level18createMapSavedDataERKSt6vectorI13ActorUniqueIDSaIS1_EERK8BlockPos11AutomaticIDI9DimensioniEi
     void _createMapSavedData(ActorUniqueID const&); // _ZN5Level19_createMapSavedDataERK13ActorUniqueID
     void copyAndLockMap(ActorUniqueID, ActorUniqueID); // _ZN5Level14copyAndLockMapE13ActorUniqueIDS0_
     void expandMapByID(ActorUniqueID, bool); // _ZN5Level13expandMapByIDE13ActorUniqueIDb
@@ -359,7 +360,7 @@ public:
     void saveEducationLevelSettings(); // _ZN5Level26saveEducationLevelSettingsEv
     void getServerAuthoritativeMovement()const; // _ZNK5Level30getServerAuthoritativeMovementEv
     void setServerAuthoritativeMovement(bool); // _ZN5Level30setServerAuthoritativeMovementEb
-    void shouldCorrectPlayerMovement()const; // _ZNK5Level27shouldCorrectPlayerMovementEv
+    bool shouldCorrectPlayerMovement()const; // _ZNK5Level27shouldCorrectPlayerMovementEv
     void setCorrectPlayerMovement(bool); // _ZN5Level24setCorrectPlayerMovementEb
     void getPlayerMovementScoreThreshold()const; // _ZNK5Level31getPlayerMovementScoreThresholdEv
     void setPlayerMovementScoreThreshold(float); // _ZN5Level31setPlayerMovementScoreThresholdEf
@@ -367,7 +368,7 @@ public:
     void getPlayerMovementDistanceThresholdSqr()const; // _ZNK5Level37getPlayerMovementDistanceThresholdSqrEv
     void setPlayerMovementDistanceThreshold(float); // _ZN5Level34setPlayerMovementDistanceThresholdEf
     void getPlayerMovementDurationThreshold()const; // _ZNK5Level34getPlayerMovementDurationThresholdEv
-//  void setPlayerMovementDurationThreshold(std::chrono::duration<long, std::ratio<1l, 1000l>>); //TODO: incomplete function definition // _ZN5Level34setPlayerMovementDurationThresholdENSt6chrono8durationIlSt5ratioILl1ELl1000EEEE
+//    void setPlayerMovementDurationThreshold(long); //TODO: incomplete function definition // _ZN5Level34setPlayerMovementDurationThresholdENSt6chrono8durationIlSt5ratioILl1ELl1000EEEE
     class CompareLevelChunkQueuedSavingElement {
 
     public:
@@ -376,6 +377,6 @@ public:
     class LevelChunkQueuedSavingElement {
 
     public:
-//      LevelChunkQueuedSavingElement(ChunkPos, AutomaticID<Dimension, int>, int); //TODO: incomplete function definition // _ZN5Level29LevelChunkQueuedSavingElementC2E8ChunkPos11AutomaticIDI9DimensioniEi
+//        LevelChunkQueuedSavingElement(ChunkPos, long, int); //TODO: incomplete function definition // _ZN5Level29LevelChunkQueuedSavingElementC2E8ChunkPos11AutomaticIDI9DimensioniEi
     };
 };

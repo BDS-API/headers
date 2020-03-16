@@ -3,10 +3,11 @@
 #include "ITickingAreaView.h"
 
 
-class TickingAreaView : ITickingAreaView {
+class TickingAreaView : public ITickingAreaView {
 
 public:
-    ~TickingAreaView(); // _ZN15TickingAreaViewD2Ev
+    virtual ~TickingAreaView(); // _ZN15TickingAreaViewD2Ev
+    virtual void __fake_function0(); // fake
     virtual void init(Bounds const&, bool); // _ZN15TickingAreaView4initERK6Boundsb
     virtual void tick(Tick const&, BlockSource &, bool); // _ZN15TickingAreaView4tickERK4TickR11BlockSourceb
     virtual void tickSeasons(BlockSource &, Random &); // _ZN15TickingAreaView11tickSeasonsER11BlockSourceR6Random

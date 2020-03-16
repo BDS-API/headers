@@ -4,12 +4,13 @@
 #include "Goal.h"
 
 
-class DragonStrafePlayerGoal : Goal {
+class DragonStrafePlayerGoal : public Goal {
 
 public:
     static long FIREBALL_CHARGE_AMOUNT;
 
-    ~DragonStrafePlayerGoal(); // _ZN22DragonStrafePlayerGoalD2Ev
+    virtual ~DragonStrafePlayerGoal(); // _ZN22DragonStrafePlayerGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN22DragonStrafePlayerGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN22DragonStrafePlayerGoal16canContinueToUseEv
     virtual void start(); // _ZN22DragonStrafePlayerGoal5startEv

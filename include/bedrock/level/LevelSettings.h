@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../unmapped/EducationLevelSettings.h"
-#include <vector>
-#include "../../unmapped/GameRules.h"
 #include <string>
+#include "../../unmapped/GameRules.h"
+#include <vector>
 #include "../../unmapped/Abilities.h"
+#include "../../unmapped/EducationLevelSettings.h"
 
 
 class LevelSettings {
@@ -15,8 +15,8 @@ public:
     LevelSettings(LevelSettings &&); // _ZN13LevelSettingsC2EOS_
     LevelSettings(); // _ZN13LevelSettingsC2Ev
     LevelSettings(LevelSummary const&); // _ZN13LevelSettingsC2ERK12LevelSummary
-//  LevelSettings(LevelData const&, AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN13LevelSettingsC2ERK9LevelData11AutomaticIDI9DimensioniE
-//  LevelSettings(unsigned int, GameType, Difficulty, AutomaticID<Dimension, int>, GeneratorType, BlockPos const&, bool, int, EducationEditionOffer, float, float, bool, bool, bool, Social::GamePublishSetting, Social::GamePublishSetting, bool, bool, bool, bool, bool, bool, GameRules, bool, bool, Abilities, unsigned int, bool, bool, bool, BaseGameVersion const&); //TODO: incomplete function definition // _ZN13LevelSettingsC2Ej8GameType10Difficulty11AutomaticIDI9DimensioniE13GeneratorTypeRK8BlockPosbi21EducationEditionOfferffbbbN6Social18GamePublishSettingESB_bbbbbb9GameRulesbb9AbilitiesjbbbRK15BaseGameVersion
+//    LevelSettings(LevelData const&, long); //TODO: incomplete function definition // _ZN13LevelSettingsC2ERK9LevelData11AutomaticIDI9DimensioniE
+//    LevelSettings(unsigned int, long, long, long, long, BlockPos const&, bool, int, long, float, float, bool, bool, bool, long, long, bool, bool, bool, bool, bool, bool, GameRules, bool, bool, Abilities, unsigned int, bool, bool, bool, BaseGameVersion const&); //TODO: incomplete function definition // _ZN13LevelSettingsC2Ej8GameType10Difficulty11AutomaticIDI9DimensioniE13GeneratorTypeRK8BlockPosbi21EducationEditionOfferffbbbN6Social18GamePublishSettingESB_bbbbbb9GameRulesbb9AbilitiesjbbbRK15BaseGameVersion
     void setEducationFeaturesEnabled(bool); // _ZN13LevelSettings27setEducationFeaturesEnabledEb
     void getDefaultSpawn()const; // _ZNK13LevelSettings15getDefaultSpawnEv
     void getSeed()const; // _ZNK13LevelSettings7getSeedEv
@@ -32,7 +32,7 @@ public:
     void getLightningLevel()const; // _ZNK13LevelSettings17getLightningLevelEv
     bool isEducationEditionWorld()const; // _ZNK13LevelSettings23isEducationEditionWorldEv
     void getEducationEditionOffer()const; // _ZNK13LevelSettings24getEducationEditionOfferEv
-//  void setEducationEditionOffer(EducationEditionOffer); //TODO: incomplete function definition // _ZN13LevelSettings24setEducationEditionOfferE21EducationEditionOffer
+//    void setEducationEditionOffer(long); //TODO: incomplete function definition // _ZN13LevelSettings24setEducationEditionOfferE21EducationEditionOffer
     void educationFeaturesEnabled()const; // _ZNK13LevelSettings24educationFeaturesEnabledEv
     void setImmutableWorld(bool); // _ZN13LevelSettings17setImmutableWorldEb
     void getImmutableWorld()const; // _ZNK13LevelSettings17getImmutableWorldEv
@@ -55,7 +55,7 @@ public:
     void getServerChunkTickRange()const; // _ZNK13LevelSettings23getServerChunkTickRangeEv
     void getDefaultAbilities()const; // _ZNK13LevelSettings19getDefaultAbilitiesEv
     void setOverrideSavedSettings(bool); // _ZN13LevelSettings24setOverrideSavedSettingsEb
-    void shouldOverrideSavedSettings()const; // _ZNK13LevelSettings27shouldOverrideSavedSettingsEv
+    bool shouldOverrideSavedSettings()const; // _ZNK13LevelSettings27shouldOverrideSavedSettingsEv
     void overrideSavedSettings(LevelData &)const; // _ZNK13LevelSettings21overrideSavedSettingsER9LevelData
     bool achievementsWillBeDisabledOnLoad()const; // _ZNK13LevelSettings32achievementsWillBeDisabledOnLoadEv
     void setNewWorldBehaviorPackIdentities(std::vector<PackInstanceId> const&); // _ZN13LevelSettings33setNewWorldBehaviorPackIdentitiesERKSt6vectorI14PackInstanceIdSaIS1_EE
@@ -63,7 +63,7 @@ public:
     void setNewWorldResourcePackIdentities(std::vector<PackInstanceId> const&); // _ZN13LevelSettings33setNewWorldResourcePackIdentitiesERKSt6vectorI14PackInstanceIdSaIS1_EE
     void getNewWorldResourcePackIdentities()const; // _ZNK13LevelSettings33getNewWorldResourcePackIdentitiesEv
     void setForceExperimentalGameplay(bool); // _ZN13LevelSettings28setForceExperimentalGameplayEb
-    void shouldForceExperimentalGameplay()const; // _ZNK13LevelSettings31shouldForceExperimentalGameplayEv
+    bool shouldForceExperimentalGameplay()const; // _ZNK13LevelSettings31shouldForceExperimentalGameplayEv
     bool isFromWorldTemplate()const; // _ZNK13LevelSettings19isFromWorldTemplateEv
     bool isWorldTemplateOptionLocked()const; // _ZNK13LevelSettings27isWorldTemplateOptionLockedEv
     void getOnlySpawnV1Villagers()const; // _ZNK13LevelSettings23getOnlySpawnV1VillagersEv
@@ -72,7 +72,7 @@ public:
     void setBaseGameVersion(BaseGameVersion const&); // _ZN13LevelSettings18setBaseGameVersionERK15BaseGameVersion
     void setEducationLevelSettings(EducationLevelSettings); // _ZN13LevelSettings25setEducationLevelSettingsE22EducationLevelSettings
     void getEducationLevelSettings()const; // _ZNK13LevelSettings25getEducationLevelSettingsEv
-//  void validateGameDifficulty(Difficulty); //TODO: incomplete function definition // _ZN13LevelSettings22validateGameDifficultyE10Difficulty
-//  std::string generatorTypeToString(GeneratorType); //TODO: incomplete function definition // _ZN13LevelSettings21generatorTypeToStringB5cxx11E13GeneratorType
+//    void validateGameDifficulty(long); //TODO: incomplete function definition // _ZN13LevelSettings22validateGameDifficultyE10Difficulty
+//    std::string generatorTypeToString(long); //TODO: incomplete function definition // _ZN13LevelSettings21generatorTypeToStringB5cxx11E13GeneratorType
     void parseSeedString(std::string const&, unsigned int); // _ZN13LevelSettings15parseSeedStringERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj
 };

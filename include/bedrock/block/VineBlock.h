@@ -4,7 +4,7 @@
 #include "BlockLegacy.h"
 
 
-class VineBlock : BlockLegacy {
+class VineBlock : public BlockLegacy {
 
 public:
     static long VINE_SOUTH;
@@ -13,7 +13,8 @@ public:
     static long VINE_WEST;
     static long VINE_ALL;
 
-    ~VineBlock(); // _ZN9VineBlockD2Ev
+    virtual ~VineBlock(); // _ZN9VineBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK9VineBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK9VineBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void waterSpreadCausesSpawn()const; // _ZNK9VineBlock22waterSpreadCausesSpawnEv

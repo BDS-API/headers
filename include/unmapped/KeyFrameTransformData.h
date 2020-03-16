@@ -11,7 +11,7 @@ public:
     void addChannelTransform(ExpressionNode const&, int); // _ZN21KeyFrameTransformData19addChannelTransformERK14ExpressionNodei
     void addChannelTransform(ExpressionNode const&, Vec3 const&); // _ZN21KeyFrameTransformData19addChannelTransformERK14ExpressionNodeRK4Vec3
     void addChannelTransform(ExpressionNode const&, ExpressionNode const&, ExpressionNode const&); // _ZN21KeyFrameTransformData19addChannelTransformERK14ExpressionNodeS2_S2_
-//  void animate(RenderParams &, BoneOrientation &, float, BoneTransformType)const; //TODO: incomplete function definition // _ZNK21KeyFrameTransformData7animateER12RenderParamsR15BoneOrientationf17BoneTransformType
+//    void animate(RenderParams &, BoneOrientation &, float, long)const; //TODO: incomplete function definition // _ZNK21KeyFrameTransformData7animateER12RenderParamsR15BoneOrientationf17BoneTransformType
     bool isConstant()const; // _ZNK21KeyFrameTransformData10isConstantEv
     void getSequencedTransformCount()const; // _ZNK21KeyFrameTransformData26getSequencedTransformCountEv
     void operator[](unsigned long); // _ZN21KeyFrameTransformDataixEm

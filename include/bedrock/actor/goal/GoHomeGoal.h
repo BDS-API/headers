@@ -5,12 +5,13 @@
 #include <vector>
 
 
-class GoHomeGoal : Goal {
+class GoHomeGoal : public Goal {
 
 public:
     static long GIVE_UP_TICKS;
 
-    ~GoHomeGoal(); // _ZN10GoHomeGoalD2Ev
+    virtual ~GoHomeGoal(); // _ZN10GoHomeGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN10GoHomeGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN10GoHomeGoal16canContinueToUseEv
     virtual void start(); // _ZN10GoHomeGoal5startEv

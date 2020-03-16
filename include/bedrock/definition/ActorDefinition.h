@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include "../../json/Value.h"
+#include <string>
 
 
 class ActorDefinition {

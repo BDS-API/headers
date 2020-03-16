@@ -11,7 +11,7 @@ public:
     Path(Path const&); // _ZN4PathC2ERKS_
     Path(); // _ZN4PathC2Ev
     ~Path(); // _ZN4PathD2Ev
-//  void buildFromNodes(std::vector<Path::Node> &&, PathCompletionType); //TODO: incomplete function definition // _ZN4Path14buildFromNodesEOSt6vectorINS_4NodeESaIS1_EE18PathCompletionType
+//    void buildFromNodes(std::vector<Path::Node> &&, long); //TODO: incomplete function definition // _ZN4Path14buildFromNodesEOSt6vectorINS_4NodeESaIS1_EE18PathCompletionType
     void next(); // _ZN4Path4nextEv
     bool isDone(); // _ZN4Path6isDoneEv
     bool isValid()const; // _ZNK4Path7isValidEv

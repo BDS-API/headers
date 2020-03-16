@@ -4,12 +4,13 @@
 #include "ScriptEventData.h"
 
 
-class ScriptServerWeatherEventData : ScriptEventData {
+class ScriptServerWeatherEventData : public ScriptEventData {
 
 public:
     static long mHash;
 
-    ~ScriptServerWeatherEventData(); // _ZN28ScriptServerWeatherEventDataD2Ev
+    virtual ~ScriptServerWeatherEventData(); // _ZN28ScriptServerWeatherEventDataD2Ev
+    virtual void __fake_function0(); // fake
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const; // _ZNK28ScriptServerWeatherEventData10_serializeER12ScriptEngineRN9ScriptApi18ScriptObjectHandleE
     void getHash(); // _ZN28ScriptServerWeatherEventData7getHashEv
     ScriptServerWeatherEventData(); // _ZN28ScriptServerWeatherEventDataC2Ev

@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class ExploreOutskirtsGoal : Goal {
+class ExploreOutskirtsGoal : public Goal {
 
 public:
-    ~ExploreOutskirtsGoal(); // _ZN20ExploreOutskirtsGoalD2Ev
+    virtual ~ExploreOutskirtsGoal(); // _ZN20ExploreOutskirtsGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN20ExploreOutskirtsGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN20ExploreOutskirtsGoal16canContinueToUseEv
     virtual void start(); // _ZN20ExploreOutskirtsGoal5startEv

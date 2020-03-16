@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class ResourcePackChunkRequestPacket : Packet {
+class ResourcePackChunkRequestPacket : public Packet {
 
 public:
-    ~ResourcePackChunkRequestPacket(); // _ZN30ResourcePackChunkRequestPacketD2Ev
+    virtual ~ResourcePackChunkRequestPacket(); // _ZN30ResourcePackChunkRequestPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK30ResourcePackChunkRequestPacket5getIdEv
     virtual std::string getName()const; // _ZNK30ResourcePackChunkRequestPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK30ResourcePackChunkRequestPacket5writeER12BinaryStream

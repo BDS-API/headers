@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "ActorBlock.h"
 #include <vector>
+#include "ActorBlock.h"
 
 
-class EndPortalBlock : ActorBlock {
+class EndPortalBlock : public ActorBlock {
 
 public:
-    ~EndPortalBlock(); // _ZN14EndPortalBlockD2Ev
+    virtual ~EndPortalBlock(); // _ZN14EndPortalBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK14EndPortalBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK14EndPortalBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &, Actor *)const; // _ZNK14EndPortalBlock18addCollisionShapesERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EEP5Actor

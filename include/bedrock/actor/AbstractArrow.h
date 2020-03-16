@@ -3,11 +3,12 @@
 #include "Actor.h"
 
 
-class AbstractArrow : Actor {
+class AbstractArrow : public Actor {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN13AbstractArrow15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~AbstractArrow(); // _ZN13AbstractArrowD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN13AbstractArrow15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~AbstractArrow(); // _ZN13AbstractArrowD2Ev
+    virtual void __fake_function0(); // fake
     virtual void lerpTo(Vec3 const&, Vec2 const&, int); // _ZN13AbstractArrow6lerpToERK4Vec3RK4Vec2i
     virtual void lerpMotion(Vec3 const&); // _ZN13AbstractArrow10lerpMotionERK4Vec3
     virtual void normalTick(); // _ZN13AbstractArrow10normalTickEv

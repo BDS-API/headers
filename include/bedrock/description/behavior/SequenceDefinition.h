@@ -4,10 +4,11 @@
 #include "CompositeDefinition.h"
 
 
-class SequenceDefinition : CompositeDefinition {
+class SequenceDefinition : public CompositeDefinition {
 
 public:
-    ~SequenceDefinition(); // _ZN18SequenceDefinitionD2Ev
+    virtual ~SequenceDefinition(); // _ZN18SequenceDefinitionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Json::Value, BehaviorFactory const&); // _ZN18SequenceDefinition4loadEN4Json5ValueERK15BehaviorFactory
     SequenceDefinition(); // _ZN18SequenceDefinitionC2Ev
 };

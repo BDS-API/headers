@@ -7,7 +7,8 @@ class Connector {
 public:
     class NatPunchInfo;
 
-    ~Connector(); // _ZN9ConnectorD2Ev
+    virtual ~Connector(); // _ZN9ConnectorD2Ev
+    virtual void __fake_function0(); // fake
     Connector(); // _ZN9ConnectorC2Ev
     class NatPunchInfo {
 

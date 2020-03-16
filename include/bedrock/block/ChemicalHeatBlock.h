@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class ChemicalHeatBlock : BlockLegacy {
+class ChemicalHeatBlock : public BlockLegacy {
 
 public:
-    ~ChemicalHeatBlock(); // _ZN17ChemicalHeatBlockD2Ev
+    virtual ~ChemicalHeatBlock(); // _ZN17ChemicalHeatBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK17ChemicalHeatBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const; // _ZNK17ChemicalHeatBlock19canBeUsedInCommandsEbRK15BaseGameVersion
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK17ChemicalHeatBlock7onPlaceER11BlockSourceRK8BlockPos

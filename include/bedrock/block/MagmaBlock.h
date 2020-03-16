@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class MagmaBlock : BlockLegacy {
+class MagmaBlock : public BlockLegacy {
 
 public:
-    ~MagmaBlock(); // _ZN10MagmaBlockD2Ev
+    virtual ~MagmaBlock(); // _ZN10MagmaBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK10MagmaBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK10MagmaBlock15checkIsPathableER5ActorRK8BlockPosS4_
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK10MagmaBlock7onPlaceER11BlockSourceRK8BlockPos

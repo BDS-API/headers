@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "Packet.h"
 #include <vector>
+#include "Packet.h"
 
 
-class ResourcePackStackPacket : Packet {
+class ResourcePackStackPacket : public Packet {
 
 public:
-    ~ResourcePackStackPacket(); // _ZN23ResourcePackStackPacketD2Ev
+    virtual ~ResourcePackStackPacket(); // _ZN23ResourcePackStackPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK23ResourcePackStackPacket5getIdEv
     virtual std::string getName()const; // _ZNK23ResourcePackStackPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK23ResourcePackStackPacket5writeER12BinaryStream

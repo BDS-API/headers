@@ -5,7 +5,8 @@
 class RegionFile {
 
 public:
-    ~RegionFile(); // _ZN10RegionFileD2Ev
+    virtual ~RegionFile(); // _ZN10RegionFileD2Ev
+    virtual void __fake_function0(); // fake
     RegionFile(Core::Path const&); // _ZN10RegionFileC2ERKN4Core4PathE
     void _close(); // _ZN10RegionFile6_closeEv
     void open(); // _ZN10RegionFile4openEv

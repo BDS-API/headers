@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class RedStoneOreBlock : BlockLegacy {
+class RedStoneOreBlock : public BlockLegacy {
 
 public:
-    ~RedStoneOreBlock(); // _ZN16RedStoneOreBlockD2Ev
+    virtual ~RedStoneOreBlock(); // _ZN16RedStoneOreBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK16RedStoneOreBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void onStepOn(Actor &, BlockPos const&)const; // _ZNK16RedStoneOreBlock8onStepOnER5ActorRK8BlockPos
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK16RedStoneOreBlock16getResourceCountER6RandomRK5Blocki

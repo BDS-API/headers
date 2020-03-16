@@ -10,25 +10,26 @@ namespace com {
 
             namespace protocol {
 
-                class PlayerInfo /*google::protobuf::Message*/ { //TODO: incomplete class definition
+                class PlayerInfo /*public google::protobuf::Message*/ { //TODO: incomplete class definition
 
                 public:
-                    ~PlayerInfo(); // _ZN3com6mojang6clacks8protocol10PlayerInfoD2Ev
+                    virtual ~PlayerInfo(); // _ZN3com6mojang6clacks8protocol10PlayerInfoD2Ev
+                    virtual void __fake_function0(); // fake
                     virtual void New()const; // _ZNK3com6mojang6clacks8protocol10PlayerInfo3NewEv
-//                  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol10PlayerInfo3NewEPN6google8protobuf5ArenaE
+                    virtual void New__incomplete1(long *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol10PlayerInfo3NewEPN6google8protobuf5ArenaE
                     virtual void Clear(); // _ZN3com6mojang6clacks8protocol10PlayerInfo5ClearEv
                     virtual bool IsInitialized()const; // _ZNK3com6mojang6clacks8protocol10PlayerInfo13IsInitializedEv
-//                  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol10PlayerInfo27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE
+                    virtual void MergePartialFromCodedStream__incomplete0(long *); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol10PlayerInfo27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE
                     virtual void ByteSizeLong()const; // _ZNK3com6mojang6clacks8protocol10PlayerInfo12ByteSizeLongEv
-//                  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol10PlayerInfo24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE
+                    virtual void SerializeWithCachedSizes__incomplete0(long *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol10PlayerInfo24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE
                     virtual void GetCachedSize()const; // _ZNK3com6mojang6clacks8protocol10PlayerInfo13GetCachedSizeEv
                     virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const; // _ZNK3com6mojang6clacks8protocol10PlayerInfo39InternalSerializeWithCachedSizesToArrayEbPh
-//                  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol10PlayerInfo8CopyFromERKN6google8protobuf7MessageE
-//                  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol10PlayerInfo9MergeFromERKN6google8protobuf7MessageE
+                    virtual void CopyFrom__incomplete1(long const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol10PlayerInfo8CopyFromERKN6google8protobuf7MessageE
+                    virtual void MergeFrom__incomplete1(long const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol10PlayerInfo9MergeFromERKN6google8protobuf7MessageE
                     virtual void SetCachedSize(int)const; // _ZNK3com6mojang6clacks8protocol10PlayerInfo13SetCachedSizeEi
                     virtual void GetMetadata()const; // _ZNK3com6mojang6clacks8protocol10PlayerInfo11GetMetadataEv
                     void mutable_name(); // _ZN3com6mojang6clacks8protocol10PlayerInfo12mutable_nameEv
-//                  void set_playertype(com::mojang::clacks::protocol::PlayerType); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol10PlayerInfo14set_playertypeENS2_10PlayerTypeE
+//                    void set_playertype(long); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol10PlayerInfo14set_playertypeENS2_10PlayerTypeE
                     void mutable_xuid(); // _ZN3com6mojang6clacks8protocol10PlayerInfo12mutable_xuidEv
                     void GetArenaNoVirtual()const; // _ZNK3com6mojang6clacks8protocol10PlayerInfo17GetArenaNoVirtualEv
                     void InitAsDefaultInstance(); // _ZN3com6mojang6clacks8protocol10PlayerInfo21InitAsDefaultInstanceEv

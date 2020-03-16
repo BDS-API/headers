@@ -4,15 +4,16 @@
 #include "BlockLegacy.h"
 
 
-class LeverBlock : BlockLegacy {
+class LeverBlock : public BlockLegacy {
 
 public:
-    ~LeverBlock(); // _ZN10LeverBlockD2Ev
+    virtual ~LeverBlock(); // _ZN10LeverBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK10LeverBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isInteractiveBlock()const; // _ZNK10LeverBlock18isInteractiveBlockEv
     virtual bool isSignalSource()const; // _ZNK10LeverBlock14isSignalSourceEv
     virtual void onFillBlock(BlockSource &, BlockPos const&, Block const&)const; // _ZNK10LeverBlock11onFillBlockER11BlockSourceRK8BlockPosRK5Block
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK10LeverBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK10LeverBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK10LeverBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRemove(BlockSource &, BlockPos const&)const; // _ZNK10LeverBlock8onRemoveER11BlockSourceRK8BlockPos
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK10LeverBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

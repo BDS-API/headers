@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "Packet.h"
 #include <vector>
+#include "Packet.h"
 
 
-class PurchaseReceiptPacket : Packet {
+class PurchaseReceiptPacket : public Packet {
 
 public:
-    ~PurchaseReceiptPacket(); // _ZN21PurchaseReceiptPacketD2Ev
+    virtual ~PurchaseReceiptPacket(); // _ZN21PurchaseReceiptPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK21PurchaseReceiptPacket5getIdEv
     virtual std::string getName()const; // _ZNK21PurchaseReceiptPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK21PurchaseReceiptPacket5writeER12BinaryStream

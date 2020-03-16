@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class RiderJumpPacket : Packet {
+class RiderJumpPacket : public Packet {
 
 public:
-    ~RiderJumpPacket(); // _ZN15RiderJumpPacketD2Ev
+    virtual ~RiderJumpPacket(); // _ZN15RiderJumpPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK15RiderJumpPacket5getIdEv
     virtual std::string getName()const; // _ZNK15RiderJumpPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK15RiderJumpPacket5writeER12BinaryStream

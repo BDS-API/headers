@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class AddItemActorPacket : Packet {
+class AddItemActorPacket : public Packet {
 
 public:
-    ~AddItemActorPacket(); // _ZN18AddItemActorPacketD2Ev
+    virtual ~AddItemActorPacket(); // _ZN18AddItemActorPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK18AddItemActorPacket5getIdEv
     virtual std::string getName()const; // _ZNK18AddItemActorPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK18AddItemActorPacket5writeER12BinaryStream

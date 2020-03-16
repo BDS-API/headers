@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class ItemFrameDropItemPacket : Packet {
+class ItemFrameDropItemPacket : public Packet {
 
 public:
-    ~ItemFrameDropItemPacket(); // _ZN23ItemFrameDropItemPacketD2Ev
+    virtual ~ItemFrameDropItemPacket(); // _ZN23ItemFrameDropItemPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK23ItemFrameDropItemPacket5getIdEv
     virtual std::string getName()const; // _ZNK23ItemFrameDropItemPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK23ItemFrameDropItemPacket5writeER12BinaryStream

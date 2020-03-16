@@ -5,10 +5,11 @@
 #include "Item.h"
 
 
-class BottleItem : Item {
+class BottleItem : public Item {
 
 public:
-    ~BottleItem(); // _ZN10BottleItemD2Ev
+    virtual ~BottleItem(); // _ZN10BottleItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isLiquidClipItem(int)const; // _ZNK10BottleItem16isLiquidClipItemEi
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK10BottleItem8dispenseER11BlockSourceR9ContaineriRK4Vec3h
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const; // _ZNK10BottleItem6_useOnER9ItemStackR5Actor8BlockPoshfff

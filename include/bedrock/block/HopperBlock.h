@@ -5,13 +5,14 @@
 #include "ActorBlock.h"
 
 
-class HopperBlock : ActorBlock {
+class HopperBlock : public ActorBlock {
 
 public:
-    ~HopperBlock(); // _ZN11HopperBlockD2Ev
+    virtual ~HopperBlock(); // _ZN11HopperBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &)const; // _ZNK11HopperBlock8addAABBsERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EE
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &, Actor *)const; // _ZNK11HopperBlock18addCollisionShapesERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EEP5Actor
-//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition // _ZNK11HopperBlock17canProvideSupportERK5Blockh16BlockSupportType
+    virtual bool canProvideSupport__incomplete0(Block const&, unsigned char, long)const; //TODO: incomplete function definition // _ZNK11HopperBlock17canProvideSupportERK5Blockh16BlockSupportType
     virtual bool isContainerBlock()const; // _ZNK11HopperBlock16isContainerBlockEv
     virtual bool isInteractiveBlock()const; // _ZNK11HopperBlock18isInteractiveBlockEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK11HopperBlock7onPlaceER11BlockSourceRK8BlockPos

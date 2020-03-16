@@ -50,5 +50,5 @@ public:
     void getPins(Vec3 &, Vec3 &)const; // _ZNK10RopeSystem7getPinsER4Vec3S1_
     void storeEndPinEntity(ActorUniqueID const&); // _ZN10RopeSystem17storeEndPinEntityERK13ActorUniqueID
     void getEndPinEntity()const; // _ZNK10RopeSystem15getEndPinEntityEv
-//  void addWave(RopeWave); //TODO: incomplete function definition // _ZN10RopeSystem7addWaveE8RopeWave
+//    void addWave(long); //TODO: incomplete function definition // _ZN10RopeSystem7addWaveE8RopeWave
 };

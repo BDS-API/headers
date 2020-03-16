@@ -3,9 +3,10 @@
 #include "../Description.h"
 
 
-class AttributeDescription : Description {
+class AttributeDescription : public Description {
 
 public:
-    ~AttributeDescription(); // _ZN20AttributeDescriptionD2Ev
+    virtual ~AttributeDescription(); // _ZN20AttributeDescriptionD2Ev
+    virtual void __fake_function0(); // fake
     AttributeDescription(); // _ZN20AttributeDescriptionC2Ev
 };

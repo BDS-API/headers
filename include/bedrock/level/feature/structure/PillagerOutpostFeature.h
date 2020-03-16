@@ -3,10 +3,11 @@
 #include "StructureFeature.h"
 
 
-class PillagerOutpostFeature : StructureFeature {
+class PillagerOutpostFeature : public StructureFeature {
 
 public:
-    ~PillagerOutpostFeature(); // _ZN22PillagerOutpostFeatureD2Ev
+    virtual ~PillagerOutpostFeature(); // _ZN22PillagerOutpostFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &); // _ZN22PillagerOutpostFeature17initMobSpawnTypesER26HardcodedSpawnAreaRegistry
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos &); // _ZN22PillagerOutpostFeature26getNearestGeneratedFeatureER9DimensionR11BiomeSourceRK8BlockPosRS4_
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int); // _ZN22PillagerOutpostFeature14isFeatureChunkERK11BiomeSourceR6RandomRK8ChunkPosj

@@ -1,20 +1,21 @@
 #pragma once
 
-#include <unordered_map>
-#include <memory>
 #include <string>
-#include "ActorSkeletalAnimationPtr.h"
+#include <memory>
 #include "ActorAnimationPlayer.h"
+#include <unordered_map>
+#include "ActorSkeletalAnimationPtr.h"
 
 
-class ActorAnimationControllerStatePlayer : ActorAnimationPlayer {
+class ActorAnimationControllerStatePlayer : public ActorAnimationPlayer {
 
 public:
-    ~ActorAnimationControllerStatePlayer(); // _ZN35ActorAnimationControllerStatePlayerD2Ev
-    virtual void applyToPose(RenderParams &, std::unordered_map<SkeletalHierarchyIndex, std::vector<BoneOrientation>, std::hash<SkeletalHierarchyIndex>, std::equal_to<SkeletalHierarchyIndex>, std::allocator<std::pair<SkeletalHierarchyIndex const, std::vector<BoneOrientation>>>> &, float); // _ZN35ActorAnimationControllerStatePlayer11applyToPoseER12RenderParamsRSt13unordered_mapI22SkeletalHierarchyIndexSt6vectorI15BoneOrientationSaIS5_EESt4hashIS3_ESt8equal_toIS3_ESaISt4pairIKS3_S7_EEEf
+    virtual ~ActorAnimationControllerStatePlayer(); // _ZN35ActorAnimationControllerStatePlayerD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void applyToPose(RenderParams &, std::unordered_map<long, std::vector<BoneOrientation>, std::hash<long>, long, std::allocator<std::pair<long const, std::vector<BoneOrientation>>>> &, float); // _ZN35ActorAnimationControllerStatePlayer11applyToPoseER12RenderParamsRSt13unordered_mapI22SkeletalHierarchyIndexSt6vectorI15BoneOrientationSaIS5_EESt4hashIS3_ESt8equal_toIS3_ESaISt4pairIKS3_S7_EEEf
     virtual void resetAnimation(); // _ZN35ActorAnimationControllerStatePlayer14resetAnimationEv
-    virtual void bindParticleEffects(std::unordered_map<StringKey, ParticleEffectPtr, std::hash<StringKey>, std::equal_to<StringKey>, std::allocator<std::pair<StringKey const, ParticleEffectPtr>>> const&); // _ZN35ActorAnimationControllerStatePlayer19bindParticleEffectsERKSt13unordered_mapI9StringKey17ParticleEffectPtrSt4hashIS1_ESt8equal_toIS1_ESaISt4pairIKS1_S2_EEE
-    virtual void bindSoundEffects(std::unordered_map<StringKey, std::string, std::hash<StringKey>, std::equal_to<StringKey>, std::allocator<std::pair<StringKey const, std::string>>> const&); // _ZN35ActorAnimationControllerStatePlayer16bindSoundEffectsERKSt13unordered_mapI9StringKeyNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4hashIS1_ESt8equal_toIS1_ESaISt4pairIKS1_S7_EEE
+    virtual void bindParticleEffects(std::unordered_map<StringKey, long, std::hash<StringKey>, long, std::allocator<std::pair<StringKey const, long>>> const&); // _ZN35ActorAnimationControllerStatePlayer19bindParticleEffectsERKSt13unordered_mapI9StringKey17ParticleEffectPtrSt4hashIS1_ESt8equal_toIS1_ESaISt4pairIKS1_S2_EEE
+    virtual void bindSoundEffects(std::unordered_map<StringKey, std::string, std::hash<StringKey>, long, std::allocator<std::pair<StringKey const, std::string>>> const&); // _ZN35ActorAnimationControllerStatePlayer16bindSoundEffectsERKSt13unordered_mapI9StringKeyNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4hashIS1_ESt8equal_toIS1_ESaISt4pairIKS1_S7_EEE
     virtual bool hasAnimationFinished()const; // _ZNK35ActorAnimationControllerStatePlayer20hasAnimationFinishedEv
     virtual void findAnimation(HashedString const&); // _ZN35ActorAnimationControllerStatePlayer13findAnimationERK12HashedString
     virtual void getAnimationType()const; // _ZNK35ActorAnimationControllerStatePlayer16getAnimationTypeEv

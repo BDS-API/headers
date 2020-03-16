@@ -1,20 +1,21 @@
 #pragma once
 
 #include <string>
-#include <array>
 #include "../bedrock/test/FilterTest.h"
+#include <array>
 
 
 class FilterGroup {
 
 public:
-    ~FilterGroup(); // _ZN11FilterGroupD2Ev
+    virtual ~FilterGroup(); // _ZN11FilterGroupD2Ev
+    virtual void __fake_function0(); // fake
     virtual void _setupContext(FilterTest const&, FilterContext &)const; // _ZNK11FilterGroup13_setupContextERK10FilterTestR13FilterContext
     virtual void _handleUnknownMember(std::string const&, Json::Value const&); // _ZN11FilterGroup20_handleUnknownMemberERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN4Json5ValueE
     FilterGroup(FilterGroup const&); // _ZN11FilterGroupC2ERKS_
-//  FilterGroup(FilterGroup::CollectionType); //TODO: incomplete function definition // _ZN11FilterGroupC2ENS_14CollectionTypeE
-    void evaluate(std::array<FilterContext, 7ul> &)const; // _ZNK11FilterGroup8evaluateERSt5arrayI13FilterContextLm7EE
-    void _evaluateMember(FilterTest const&, std::array<FilterContext, 7ul> &)const; // _ZNK11FilterGroup15_evaluateMemberERK10FilterTestRSt5arrayI13FilterContextLm7EE
+//    FilterGroup(long); //TODO: incomplete function definition // _ZN11FilterGroupC2ENS_14CollectionTypeE
+    void evaluate(std::array<FilterContext, long> &)const; // _ZNK11FilterGroup8evaluateERSt5arrayI13FilterContextLm7EE
+    void _evaluateMember(FilterTest const&, std::array<FilterContext, long> &)const; // _ZNK11FilterGroup15_evaluateMemberERK10FilterTestRSt5arrayI13FilterContextLm7EE
     void parse(Json::Value const&); // _ZN11FilterGroup5parseERKN4Json5ValueE
     void _parseObject(std::string const&, Json::Value const&); // _ZN11FilterGroup12_parseObjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN4Json5ValueE
     void _parseTest(Json::Value const&); // _ZN11FilterGroup10_parseTestERKN4Json5ValueE

@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../../util/BlockPos.h"
+#include <string>
 #include "Packet.h"
 
 
-class BlockEventPacket : Packet {
+class BlockEventPacket : public Packet {
 
 public:
-    ~BlockEventPacket(); // _ZN16BlockEventPacketD2Ev
+    virtual ~BlockEventPacket(); // _ZN16BlockEventPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK16BlockEventPacket5getIdEv
     virtual std::string getName()const; // _ZNK16BlockEventPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK16BlockEventPacket5writeER12BinaryStream

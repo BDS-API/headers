@@ -7,7 +7,7 @@ namespace Core {
     class StringSpan {
 
     public:
-//      StringSpan(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition // _ZN4Core10StringSpanC2EN3gsl17basic_string_spanIKcLln1EEE
+//        StringSpan(long); //TODO: incomplete function definition // _ZN4Core10StringSpanC2EN3gsl17basic_string_spanIKcLln1EEE
         void size()const; // _ZNK4Core10StringSpan4sizeEv
         StringSpan(char const*, unsigned long); // _ZN4Core10StringSpanC2EPKcm
         void find(Core::StringSpan)const; // _ZNK4Core10StringSpan4findES0_

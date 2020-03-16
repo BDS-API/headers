@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../util/Tick.h"
 #include <string>
 #include <memory>
-#include "../util/Tick.h"
 #include <vector>
 
 
@@ -22,7 +22,8 @@ public:
     static std::string TAG_STORE_CAN_DESTROY;
     static std::string TAG_CHARGED_ITEM;
 
-    ~ItemStackBase(); // _ZN13ItemStackBaseD2Ev
+    virtual ~ItemStackBase(); // _ZN13ItemStackBaseD2Ev
+    virtual void __fake_function0(); // fake
     bool isValid()const; // _ZNK13ItemStackBase7isValidEv
     bool isItem()const; // _ZNK13ItemStackBase6isItemEv
     bool isEmptyStack()const; // _ZNK13ItemStackBase12isEmptyStackEv
@@ -165,7 +166,7 @@ public:
     void getIsValidPickupTime()const; // _ZNK13ItemStackBase20getIsValidPickupTimeEv
     void getPickupTime()const; // _ZNK13ItemStackBase13getPickupTimeEv
     void setPickupTime(); // _ZN13ItemStackBase13setPickupTimeEv
-//  void setPickupTime(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>); //TODO: incomplete function definition // _ZN13ItemStackBase13setPickupTimeENSt6chrono10time_pointINS0_3_V212steady_clockENS0_8durationIlSt5ratioILl1ELl1000000000EEEEEE
+//    void setPickupTime(long); //TODO: incomplete function definition // _ZN13ItemStackBase13setPickupTimeENSt6chrono10time_pointINS0_3_V212steady_clockENS0_8durationIlSt5ratioILl1ELl1000000000EEEEEE
     void setShowPickUp(bool); // _ZN13ItemStackBase13setShowPickUpEb
     void setChargedItem(ItemInstance const&, bool); // _ZN13ItemStackBase14setChargedItemERK12ItemInstanceb
     void _setChargedItem(ItemInstance const&); // _ZN13ItemStackBase15_setChargedItemERK12ItemInstance

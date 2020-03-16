@@ -21,7 +21,7 @@ public:
     void count()const; // _ZNK12ItemEnchants5countEv
     bool isEmpty()const; // _ZNK12ItemEnchants7isEmptyEv
     void getTotalValue(bool)const; // _ZNK12ItemEnchants13getTotalValueEb
-//  bool hasEnchant(Enchant::Type)const; //TODO: incomplete function definition // _ZNK12ItemEnchants10hasEnchantEN7Enchant4TypeE
+//    bool hasEnchant(long)const; //TODO: incomplete function definition // _ZNK12ItemEnchants10hasEnchantEN7Enchant4TypeE
     void getSlot()const; // _ZNK12ItemEnchants7getSlotEv
     void _toList()const; // _ZNK12ItemEnchants7_toListEv
 };

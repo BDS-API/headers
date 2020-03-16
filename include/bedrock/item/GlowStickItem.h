@@ -1,17 +1,18 @@
 #pragma once
 
+#include <memory>
 #include <string>
 #include "ChemistryStickItem.h"
-#include <memory>
 
 
-class GlowStickItem : ChemistryStickItem {
+class GlowStickItem : public ChemistryStickItem {
 
 public:
     static long MAX_ACTIVE_TICKS;
     static long COLORS;
 
-    ~GlowStickItem(); // _ZN13GlowStickItemD2Ev
+    virtual ~GlowStickItem(); // _ZN13GlowStickItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isValidAuxValue(int)const; // _ZNK13GlowStickItem15isValidAuxValueEi
     virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const; // _ZNK13GlowStickItem18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE
     virtual bool isEmissive(int)const; // _ZNK13GlowStickItem10isEmissiveEi

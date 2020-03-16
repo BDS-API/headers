@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class PlayerRideTamedGoal : Goal {
+class PlayerRideTamedGoal : public Goal {
 
 public:
-    ~PlayerRideTamedGoal(); // _ZN19PlayerRideTamedGoalD2Ev
+    virtual ~PlayerRideTamedGoal(); // _ZN19PlayerRideTamedGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN19PlayerRideTamedGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN19PlayerRideTamedGoal16canContinueToUseEv
     virtual void start(); // _ZN19PlayerRideTamedGoal5startEv

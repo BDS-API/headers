@@ -4,10 +4,11 @@
 #include "../../actor/unmapped/ActorUniqueID.h"
 
 
-class GameMasterEntityServerCommandOrigin : ActorServerCommandOrigin {
+class GameMasterEntityServerCommandOrigin : public ActorServerCommandOrigin {
 
 public:
-    ~GameMasterEntityServerCommandOrigin(); // _ZN35GameMasterEntityServerCommandOriginD2Ev
+    virtual ~GameMasterEntityServerCommandOrigin(); // _ZN35GameMasterEntityServerCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getPermissionsLevel()const; // _ZNK35GameMasterEntityServerCommandOrigin19getPermissionsLevelEv
     virtual void clone()const; // _ZNK35GameMasterEntityServerCommandOrigin5cloneEv
     virtual bool isSelectorExpansionAllowed()const; // _ZNK35GameMasterEntityServerCommandOrigin26isSelectorExpansionAllowedEv

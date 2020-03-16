@@ -4,13 +4,14 @@
 #include "Goal.h"
 
 
-class DragonChargePlayerGoal : Goal {
+class DragonChargePlayerGoal : public Goal {
 
 public:
     static long CHARGE_RECOVERY_TIME;
     static long SITTING_CHARGE_VIEW_RANGE;
 
-    ~DragonChargePlayerGoal(); // _ZN22DragonChargePlayerGoalD2Ev
+    virtual ~DragonChargePlayerGoal(); // _ZN22DragonChargePlayerGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN22DragonChargePlayerGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN22DragonChargePlayerGoal16canContinueToUseEv
     virtual void start(); // _ZN22DragonChargePlayerGoal5startEv

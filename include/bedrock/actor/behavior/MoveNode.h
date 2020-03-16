@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "BehaviorNode.h"
+#include <string>
 
 
-class MoveNode : BehaviorNode {
+class MoveNode : public BehaviorNode {
 
 public:
-    ~MoveNode(); // _ZN8MoveNodeD2Ev
+    virtual ~MoveNode(); // _ZN8MoveNodeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(Actor &); // _ZN8MoveNode4tickER5Actor
     virtual void initializeFromDefinition(Actor &); // _ZN8MoveNode24initializeFromDefinitionER5Actor
     MoveNode(); // _ZN8MoveNodeC2Ev

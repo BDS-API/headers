@@ -5,14 +5,15 @@
 #include <vector>
 
 
-class LoopbackPacketSender : PacketSender {
+class LoopbackPacketSender : public PacketSender {
 
 public:
-    ~LoopbackPacketSender(); // _ZN20LoopbackPacketSenderD2Ev
+    virtual ~LoopbackPacketSender(); // _ZN20LoopbackPacketSenderD2Ev
+    virtual void __fake_function0(); // fake
     virtual void send(Packet &); // _ZN20LoopbackPacketSender4sendER6Packet
     virtual void sendToServer(Packet &); // _ZN20LoopbackPacketSender12sendToServerER6Packet
     virtual void sendToClient(NetworkIdentifier const&, Packet const&, unsigned char); // _ZN20LoopbackPacketSender12sendToClientERK17NetworkIdentifierRK6Packeth
-    virtual void sendToClients(std::vector<NetworkIdentifierWithSubId> const&, Packet const&); // _ZN20LoopbackPacketSender13sendToClientsERKSt6vectorI26NetworkIdentifierWithSubIdSaIS1_EERK6Packet
+    virtual void sendToClients(std::vector<long> const&, Packet const&); // _ZN20LoopbackPacketSender13sendToClientsERKSt6vectorI26NetworkIdentifierWithSubIdSaIS1_EERK6Packet
     virtual void sendBroadcast(Packet const&); // _ZN20LoopbackPacketSender13sendBroadcastERK6Packet
     virtual void sendBroadcast(NetworkIdentifier const&, unsigned char, Packet const&); // _ZN20LoopbackPacketSender13sendBroadcastERK17NetworkIdentifierhRK6Packet
     virtual void flush(NetworkIdentifier const&, std::function<void (void)> &&); // _ZN20LoopbackPacketSender5flushERK17NetworkIdentifierOSt8functionIFvvEE

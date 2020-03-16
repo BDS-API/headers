@@ -1,10 +1,10 @@
 #pragma once
 
+#include <memory>
 #include "Result.h"
 #include <vector>
-#include <memory>
-#include "FileOpenMode.h"
 #include <functional>
+#include "FileOpenMode.h"
 
 
 namespace Core {
@@ -12,13 +12,14 @@ namespace Core {
     class FileSystemImpl {
 
     public:
-        ~FileSystemImpl(); // _ZN4Core14FileSystemImplD2Ev
+        virtual ~FileSystemImpl(); // _ZN4Core14FileSystemImplD2Ev
+        virtual void __fake_function0(); // fake
         virtual bool isValidPath(Core::Path const&); // _ZN4Core14FileSystemImpl11isValidPathERKNS_4PathE
         virtual bool isRelativePath(Core::Path const&); // _ZN4Core14FileSystemImpl14isRelativePathERKNS_4PathE
         virtual void getLastModificationTime(Core::Path const&, long *); // _ZN4Core14FileSystemImpl23getLastModificationTimeERKNS_4PathEPl
         virtual void copyTimeAndAccessRights(Core::Path const&, Core::Path const&); // _ZN4Core14FileSystemImpl23copyTimeAndAccessRightsERKNS_4PathES3_
-        virtual void requestFlush(std::vector<Core::PathBuffer<std::string>> const&); // _ZN4Core14FileSystemImpl12requestFlushERKSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EE
-        virtual void shouldCommit(); // _ZN4Core14FileSystemImpl12shouldCommitEv
+        virtual void requestFlush(std::vector<long> const&); // _ZN4Core14FileSystemImpl12requestFlushERKSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EE
+        virtual bool shouldCommit(); // _ZN4Core14FileSystemImpl12shouldCommitEv
         virtual void getCrossStorageCopyMode(); // _ZN4Core14FileSystemImpl23getCrossStorageCopyModeEv
         virtual void getTransactionWriteSizeLimit()const; // _ZNK4Core14FileSystemImpl28getTransactionWriteSizeLimitEv
         virtual void _createEmptyFile(Core::Path const&); // _ZN4Core14FileSystemImpl16_createEmptyFileERKNS_4PathE
@@ -29,9 +30,9 @@ namespace Core {
         virtual void _createDirectoryRecursively(Core::Path const&); // _ZN4Core14FileSystemImpl27_createDirectoryRecursivelyERKNS_4PathE
         virtual void _deleteDirectoryAndContentsRecursively(Core::Path const&); // _ZN4Core14FileSystemImpl38_deleteDirectoryAndContentsRecursivelyERKNS_4PathE
         virtual void _deleteDirectoryContentsRecursively(Core::Path const&); // _ZN4Core14FileSystemImpl35_deleteDirectoryContentsRecursivelyERKNS_4PathE
-//      virtual void _deleteRecursively(Core::Path const&, Core::FileType); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl18_deleteRecursivelyERKNS_4PathENS_8FileTypeE
-        virtual void _getDirectoryFiles(std::vector<Core::PathBuffer<std::string>> &, Core::Path const&); // _ZN4Core14FileSystemImpl18_getDirectoryFilesERSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EERKNS_4PathE
-        virtual void _getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::string>> &, Core::Path const&); // _ZN4Core14FileSystemImpl29_getDirectoryFilesRecursivelyERSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EERKNS_4PathE
+        virtual void _deleteRecursively__incomplete0(Core::Path const&, long); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl18_deleteRecursivelyERKNS_4PathENS_8FileTypeE
+        virtual void _getDirectoryFiles(std::vector<long> &, Core::Path const&); // _ZN4Core14FileSystemImpl18_getDirectoryFilesERSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EERKNS_4PathE
+        virtual void _getDirectoryFilesRecursively(std::vector<long> &, Core::Path const&); // _ZN4Core14FileSystemImpl29_getDirectoryFilesRecursivelyERSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EERKNS_4PathE
         virtual void _getDirectoryFilesSizeRecursively(unsigned long &, Core::Path const&); // _ZN4Core14FileSystemImpl33_getDirectoryFilesSizeRecursivelyERmRKNS_4PathE
         virtual void _getDirectoryFilesAllocatedSizeRecursively(unsigned long &, unsigned long &, Core::Path const&); // _ZN4Core14FileSystemImpl42_getDirectoryFilesAllocatedSizeRecursivelyERmS1_RKNS_4PathE
         virtual void _copyDirectoryAndContentsRecursively(Core::Path const&, Core::Path const&); // _ZN4Core14FileSystemImpl36_copyDirectoryAndContentsRecursivelyERKNS_4PathES3_
@@ -40,7 +41,7 @@ namespace Core {
         virtual void _createFlatFile(Core::Path const&, Core::Path const&); // _ZN4Core14FileSystemImpl15_createFlatFileERKNS_4PathES3_
         virtual void _flatFileFileExists(Core::Path const&, Core::Path const&); // _ZN4Core14FileSystemImpl19_flatFileFileExistsERKNS_4PathES3_
         virtual void _flatFileDirectoryExists(Core::Path const&, Core::Path const&); // _ZN4Core14FileSystemImpl24_flatFileDirectoryExistsERKNS_4PathES3_
-//      virtual void _flatFileIterateOverDirectory(Core::Path const&, Core::Path const&, Core::DirectoryIterationFlags, std::function<Core::Result (Core::DirectoryIterationItem const&)>); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl29_flatFileIterateOverDirectoryERKNS_4PathES3_NS_23DirectoryIterationFlagsESt8functionIFNS_6ResultERKNS_22DirectoryIterationItemEEE
+        virtual void _flatFileIterateOverDirectory__incomplete0(Core::Path const&, Core::Path const&, long, std::function<Core::Result (Core::DirectoryIterationItem const&)>); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl29_flatFileIterateOverDirectoryERKNS_4PathES3_NS_23DirectoryIterationFlagsESt8functionIFNS_6ResultERKNS_22DirectoryIterationItemEEE
         virtual void _isDirectoryPathAFlatFile(Core::Path const&); // _ZN4Core14FileSystemImpl25_isDirectoryPathAFlatFileERKNS_4PathE
         virtual void _copyFlatFile(Core::Path const&, Core::Path const&, std::vector<Core::ExcludedPath> const&, std::vector<Core::ExcludedPath> const&); // _ZN4Core14FileSystemImpl13_copyFlatFileERKNS_4PathES3_RKSt6vectorINS_12ExcludedPathESaIS5_EES9_
         virtual void _flatFileDeleteFileOrDirectory(Core::Path const&, Core::Path const&, bool, bool); // _ZN4Core14FileSystemImpl30_flatFileDeleteFileOrDirectoryERKNS_4PathES3_bb
@@ -51,7 +52,7 @@ namespace Core {
         virtual void _writeOperation(Core::Path const&, Core::Result &&, std::function<void (Core::FileStorageArea *)>, unsigned long); // _ZN4Core14FileSystemImpl15_writeOperationERKNS_4PathEONS_6ResultESt8functionIFvPNS_15FileStorageAreaEEEm
         void getFileStats(); // _ZN4Core14FileSystemImpl12getFileStatsEv
         void getGlobalStats(); // _ZN4Core14FileSystemImpl14getGlobalStatsEv
-//      FileSystemImpl(Core::FileAccessType, std::shared_ptr<Core::FileStorageArea>, std::shared_ptr<Core::FlatFileManifestTracker>); //TODO: incomplete function definition // _ZN4Core14FileSystemImplC2ENS_14FileAccessTypeESt10shared_ptrINS_15FileStorageAreaEES2_INS_23FlatFileManifestTrackerEE
+//        FileSystemImpl(long, std::shared_ptr<Core::FileStorageArea>, std::shared_ptr<Core::FlatFileManifestTracker>); //TODO: incomplete function definition // _ZN4Core14FileSystemImplC2ENS_14FileAccessTypeESt10shared_ptrINS_15FileStorageAreaEES2_INS_23FlatFileManifestTrackerEE
         void _isTransactionEnded()const; // _ZNK4Core14FileSystemImpl19_isTransactionEndedEv
         void getAccessType()const; // _ZNK4Core14FileSystemImpl13getAccessTypeEv
         void getStorageArea(); // _ZN4Core14FileSystemImpl14getStorageAreaEv
@@ -59,8 +60,8 @@ namespace Core {
         void getLoggingEnabled()const; // _ZNK4Core14FileSystemImpl17getLoggingEnabledEv
         void enumerateFiles(std::function<void (Core::FileImpl *)> const&); // _ZN4Core14FileSystemImpl14enumerateFilesERKSt8functionIFvPNS_8FileImplEEE
         void commit(); // _ZN4Core14FileSystemImpl6commitEv
-//      void openFile(std::unique_ptr<Core::FileImpl> &, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl8openFileERSt10unique_ptrINS_8FileImplESt14default_deleteIS2_EERKNS_4PathENS_12FileOpenModeENS_17FileBufferingModeE
-//      void _flatFileOpenFlatFile(std::unique_ptr<Core::FileImpl> &, Core::Path const&, Core::Path const&, Core::FileOpenMode, Core::FileBufferingMode); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl21_flatFileOpenFlatFileERSt10unique_ptrINS_8FileImplESt14default_deleteIS2_EERKNS_4PathES9_NS_12FileOpenModeENS_17FileBufferingModeE
+//        void openFile(std::unique_ptr<Core::FileImpl> &, Core::Path const&, Core::FileOpenMode, long); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl8openFileERSt10unique_ptrINS_8FileImplESt14default_deleteIS2_EERKNS_4PathENS_12FileOpenModeENS_17FileBufferingModeE
+//        void _flatFileOpenFlatFile(std::unique_ptr<Core::FileImpl> &, Core::Path const&, Core::Path const&, Core::FileOpenMode, long); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl21_flatFileOpenFlatFileERSt10unique_ptrINS_8FileImplESt14default_deleteIS2_EERKNS_4PathES9_NS_12FileOpenModeENS_17FileBufferingModeE
         void _readWriteOperation(Core::Result &&, std::function<void (Core::FileStorageArea *)>, unsigned long, unsigned long); // _ZN4Core14FileSystemImpl19_readWriteOperationEONS_6ResultESt8functionIFvPNS_15FileStorageAreaEEEmm
         void _readOperation(Core::Result &&, unsigned long); // _ZN4Core14FileSystemImpl14_readOperationEONS_6ResultEm
         void fileExists(Core::Path const&); // _ZN4Core14FileSystemImpl10fileExistsERKNS_4PathE
@@ -79,9 +80,9 @@ namespace Core {
         void deleteDirectoryAndContentsRecursively(Core::Path const&); // _ZN4Core14FileSystemImpl37deleteDirectoryAndContentsRecursivelyERKNS_4PathE
         void deleteDirectoryContentsRecursively(Core::Path const&); // _ZN4Core14FileSystemImpl34deleteDirectoryContentsRecursivelyERKNS_4PathE
         void renameDirectory(Core::Path const&, Core::Path const&); // _ZN4Core14FileSystemImpl15renameDirectoryERKNS_4PathES3_
-//      void iterateOverDirectory(Core::Path const&, Core::DirectoryIterationFlags, std::function<Core::Result (Core::DirectoryIterationItem const&)>); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl20iterateOverDirectoryERKNS_4PathENS_23DirectoryIterationFlagsESt8functionIFNS_6ResultERKNS_22DirectoryIterationItemEEE
-        void getDirectoryFiles(std::vector<Core::PathBuffer<std::string>> &, Core::Path const&); // _ZN4Core14FileSystemImpl17getDirectoryFilesERSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EERKNS_4PathE
-        void getDirectoryFilesRecursively(std::vector<Core::PathBuffer<std::string>> &, Core::Path const&); // _ZN4Core14FileSystemImpl28getDirectoryFilesRecursivelyERSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EERKNS_4PathE
+//        void iterateOverDirectory(Core::Path const&, long, std::function<Core::Result (Core::DirectoryIterationItem const&)>); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl20iterateOverDirectoryERKNS_4PathENS_23DirectoryIterationFlagsESt8functionIFNS_6ResultERKNS_22DirectoryIterationItemEEE
+        void getDirectoryFiles(std::vector<long> &, Core::Path const&); // _ZN4Core14FileSystemImpl17getDirectoryFilesERSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EERKNS_4PathE
+        void getDirectoryFilesRecursively(std::vector<long> &, Core::Path const&); // _ZN4Core14FileSystemImpl28getDirectoryFilesRecursivelyERSt6vectorINS_10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EERKNS_4PathE
         void getDirectoryFilesSizeRecursively(unsigned long &, Core::Path const&); // _ZN4Core14FileSystemImpl32getDirectoryFilesSizeRecursivelyERmRKNS_4PathE
         void getDirectoryFilesAllocatedSizeRecursively(unsigned long &, unsigned long &, Core::Path const&); // _ZN4Core14FileSystemImpl41getDirectoryFilesAllocatedSizeRecursivelyERmS1_RKNS_4PathE
         void copyDirectoryAndContentsRecursively(Core::Path const&, Core::Path const&); // _ZN4Core14FileSystemImpl35copyDirectoryAndContentsRecursivelyERKNS_4PathES3_
@@ -93,7 +94,7 @@ namespace Core {
         void getFlatFileManifestTracker()const; // _ZNK4Core14FileSystemImpl26getFlatFileManifestTrackerEv
         void getFileOrDirectorySize(Core::Path const&, unsigned long *); // _ZN4Core14FileSystemImpl22getFileOrDirectorySizeERKNS_4PathEPm
         void countDirectoryFiles(Core::Path const&, unsigned long *); // _ZN4Core14FileSystemImpl19countDirectoryFilesERKNS_4PathEPm
-//      void getEntryType(Core::Path const&, Core::FileType &); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl12getEntryTypeERKNS_4PathERNS_8FileTypeE
+//        void getEntryType(Core::Path const&, long &); //TODO: incomplete function definition // _ZN4Core14FileSystemImpl12getEntryTypeERKNS_4PathERNS_8FileTypeE
         void _addFile(Core::FileImpl *); // _ZN4Core14FileSystemImpl8_addFileEPNS_8FileImplE
         void _removeFile(Core::FileImpl *); // _ZN4Core14FileSystemImpl11_removeFileEPNS_8FileImplE
         void notifyChangeInFileSize(long, long); // _ZN4Core14FileSystemImpl22notifyChangeInFileSizeEll

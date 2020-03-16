@@ -1,13 +1,14 @@
 #pragma once
 
-#include <vector>
 #include "../StrongholdPiece.h"
+#include <vector>
 
 
-class SHFillerCorridor : StrongholdPiece {
+class SHFillerCorridor : public StrongholdPiece {
 
 public:
-    ~SHFillerCorridor(); // _ZN16SHFillerCorridorD2Ev
+    virtual ~SHFillerCorridor(); // _ZN16SHFillerCorridorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getType()const; // _ZNK16SHFillerCorridor7getTypeEv
     virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &); // _ZN16SHFillerCorridor11addChildrenEP14StructurePieceRSt6vectorISt10unique_ptrIS0_St14default_deleteIS0_EESaIS6_EER6Random
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN16SHFillerCorridor11postProcessEP11BlockSourceR6RandomRK11BoundingBox

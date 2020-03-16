@@ -4,14 +4,15 @@
 #include "Goal.h"
 
 
-class DragonScanningGoal : Goal {
+class DragonScanningGoal : public Goal {
 
 public:
     static long SITTING_SCANNING_IDLE_TICKS;
     static long SITTING_ATTACK_VIEW_RANGE;
     static long SITTING_CHARGE_VIEW_RANGE;
 
-    ~DragonScanningGoal(); // _ZN18DragonScanningGoalD2Ev
+    virtual ~DragonScanningGoal(); // _ZN18DragonScanningGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN18DragonScanningGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN18DragonScanningGoal16canContinueToUseEv
     virtual void start(); // _ZN18DragonScanningGoal5startEv

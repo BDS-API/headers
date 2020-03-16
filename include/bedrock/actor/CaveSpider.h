@@ -4,10 +4,11 @@
 #include "Spider.h"
 
 
-class CaveSpider : Spider {
+class CaveSpider : public Spider {
 
 public:
-    ~CaveSpider(); // _ZN10CaveSpiderD2Ev
+    virtual ~CaveSpider(); // _ZN10CaveSpiderD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getDebugText(std::vector<std::string> &); // _ZN10CaveSpider12getDebugTextERSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS6_EE
     virtual void getModelScale()const; // _ZNK10CaveSpider13getModelScaleEv
     virtual void getSpiderType()const; // _ZNK10CaveSpider13getSpiderTypeEv

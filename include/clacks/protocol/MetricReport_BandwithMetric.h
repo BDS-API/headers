@@ -10,21 +10,22 @@ namespace com {
 
             namespace protocol {
 
-                class MetricReport_BandwithMetric /*google::protobuf::Message*/ { //TODO: incomplete class definition
+                class MetricReport_BandwithMetric /*public google::protobuf::Message*/ { //TODO: incomplete class definition
 
                 public:
-                    ~MetricReport_BandwithMetric(); // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetricD2Ev
+                    virtual ~MetricReport_BandwithMetric(); // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetricD2Ev
+                    virtual void __fake_function0(); // fake
                     virtual void New()const; // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric3NewEv
-//                  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric3NewEPN6google8protobuf5ArenaE
+                    virtual void New__incomplete1(long *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric3NewEPN6google8protobuf5ArenaE
                     virtual void Clear(); // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetric5ClearEv
                     virtual bool IsInitialized()const; // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric13IsInitializedEv
-//                  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetric27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE
+                    virtual void MergePartialFromCodedStream__incomplete0(long *); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetric27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE
                     virtual void ByteSizeLong()const; // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric12ByteSizeLongEv
-//                  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE
+                    virtual void SerializeWithCachedSizes__incomplete0(long *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE
                     virtual void GetCachedSize()const; // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric13GetCachedSizeEv
                     virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const; // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric39InternalSerializeWithCachedSizesToArrayEbPh
-//                  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetric8CopyFromERKN6google8protobuf7MessageE
-//                  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetric9MergeFromERKN6google8protobuf7MessageE
+                    virtual void CopyFrom__incomplete1(long const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetric8CopyFromERKN6google8protobuf7MessageE
+                    virtual void MergeFrom__incomplete1(long const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetric9MergeFromERKN6google8protobuf7MessageE
                     virtual void SetCachedSize(int)const; // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric13SetCachedSizeEi
                     virtual void GetMetadata()const; // _ZNK3com6mojang6clacks8protocol27MetricReport_BandwithMetric11GetMetadataEv
                     void set_allocated_xuid(com::mojang::clacks::protocol::Xuid *); // _ZN3com6mojang6clacks8protocol27MetricReport_BandwithMetric18set_allocated_xuidEPNS2_4XuidE

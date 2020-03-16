@@ -1,10 +1,10 @@
 #pragma once
 
-#include <unordered_map>
-#include <vector>
-#include <memory>
 #include <string>
+#include <memory>
 #include <map>
+#include <vector>
+#include <unordered_map>
 #include <functional>
 
 
@@ -30,18 +30,18 @@ namespace I18n {
     void _findAvailableLanguages(Json::Value const&, std::vector<std::string> &); // _ZN4I18n23_findAvailableLanguagesERKN4Json5ValueERSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISA_EE
     std::string _generatePackKeyPrefix(PackManifest const&); // _ZN4I18n22_generatePackKeyPrefixB5cxx11ERK12PackManifest
     std::string findAvailableLanguageNames(ResourcePackManager &); // _ZN4I18n26findAvailableLanguageNamesB5cxx11ER19ResourcePackManager
-    void _findAvailableLanguageNames(Json::Value const&, std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string>>> &); // _ZN4I18n27_findAvailableLanguageNamesERKN4Json5ValueERSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_St4hashISA_ESt8equal_toISA_ESaISt4pairIKSA_SA_EEE
+    void _findAvailableLanguageNames(Json::Value const&, std::unordered_map<std::string, std::string, std::hash<std::string>, long, std::allocator<std::pair<std::string const, std::string>>> &); // _ZN4I18n27_findAvailableLanguageNamesERKN4Json5ValueERSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_St4hashISA_ESt8equal_toISA_ESaISt4pairIKSA_SA_EEE
     void loadLanguages(ResourcePackManager &, ResourceLoadManager &, std::string const&); // _ZN4I18n13loadLanguagesER19ResourcePackManagerR19ResourceLoadManagerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void loadAllLanguages(ResourcePackManager &); // _ZN4I18n16loadAllLanguagesER19ResourcePackManager
     std::string getLanguageCodesFromPack(PackAccessStrategy const&); // _ZN4I18n24getLanguageCodesFromPackB5cxx11ERK18PackAccessStrategy
     void loadLanguageKeywordsFromPack(PackManifest const&, PackAccessStrategy const&); // _ZN4I18n28loadLanguageKeywordsFromPackERK12PackManifestRK18PackAccessStrategy
     void loadLanguageKeywordsFromPack(PackManifest const&, PackAccessStrategy const&, std::vector<std::string> const&); // _ZN4I18n28loadLanguageKeywordsFromPackERK12PackManifestRK18PackAccessStrategyRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISC_EE
     void _getPackKeywordLocale(std::string const&); // _ZN4I18n21_getPackKeywordLocaleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-    void appendLanguageStringsFromPack(PackManifest const&, std::multimap<std::string, std::pair<std::string, std::string>, std::less<std::string>, std::allocator<std::pair<std::string const, std::pair<std::string, std::string>>>> const&); // _ZN4I18n29appendLanguageStringsFromPackERK12PackManifestRKSt8multimapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIS9_S9_ESt4lessIS9_ESaISA_IKS9_SB_EEE
+    void appendLanguageStringsFromPack(PackManifest const&, std::multimap<std::string, std::pair<std::string, std::string>, long, std::allocator<std::pair<std::string const, std::pair<std::string, std::string>>>> const&); // _ZN4I18n29appendLanguageStringsFromPackERK12PackManifestRKSt8multimapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIS9_S9_ESt4lessIS9_ESaISA_IKS9_SB_EEE
     void getLanguageKeywordsFromPack(PackManifest const&, std::string const&); // _ZN4I18n27getLanguageKeywordsFromPackERK12PackManifestRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-    void loadLangaugesByLocale(std::unordered_multimap<std::string, std::pair<std::string, std::string>, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::pair<std::string, std::string>>>> const&); // _ZN4I18n21loadLangaugesByLocaleERKSt18unordered_multimapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIS6_S6_ESt4hashIS6_ESt8equal_toIS6_ESaIS7_IKS6_S8_EEE
+    void loadLangaugesByLocale(std::unordered_multimap<std::string, std::pair<std::string, std::string>, std::hash<std::string>, long, std::allocator<std::pair<std::string const, std::pair<std::string, std::string>>>> const&); // _ZN4I18n21loadLangaugesByLocaleERKSt18unordered_multimapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIS6_S6_ESt4hashIS6_ESt8equal_toIS6_ESaIS7_IKS6_S8_EEE
     void _getAdditionalTranslationsBackupLocale(std::string const&, bool); // _ZN4I18n38_getAdditionalTranslationsBackupLocaleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
-    void appendAdditionalTranslations(std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&, std::string const&); // _ZN4I18n28appendAdditionalTranslationsERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_St4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S6_EEERSC_
+    void appendAdditionalTranslations(std::unordered_map<std::string, std::string, std::hash<std::string>, long, std::allocator<std::pair<std::string const, std::string>>> const&, std::string const&); // _ZN4I18n28appendAdditionalTranslationsERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_St4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S6_EEERSC_
     void _findLocaleFor(std::string const&); // _ZN4I18n14_findLocaleForERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void appendLanguageStrings(PackAccessStrategy *); // _ZN4I18n21appendLanguageStringsEP18PackAccessStrategy
     void addLanguageChangedListener(std::weak_ptr<bool>, std::function<void (std::string const&, bool)>); // _ZN4I18n26addLanguageChangedListenerESt8weak_ptrIbESt8functionIFvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEbEE

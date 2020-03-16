@@ -4,10 +4,11 @@
 #include "CommandOrigin.h"
 
 
-class ServerCommandOrigin : CommandOrigin {
+class ServerCommandOrigin : public CommandOrigin {
 
 public:
-    ~ServerCommandOrigin(); // _ZN19ServerCommandOriginD2Ev
+    virtual ~ServerCommandOrigin(); // _ZN19ServerCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getRequestId()const; // _ZNK19ServerCommandOrigin12getRequestIdB5cxx11Ev
     virtual std::string getName()const; // _ZNK19ServerCommandOrigin7getNameB5cxx11Ev
     virtual void getBlockPosition()const; // _ZNK19ServerCommandOrigin16getBlockPositionEv
@@ -20,5 +21,5 @@ public:
     virtual bool canUseCommandsWithoutCheatsEnabled()const; // _ZNK19ServerCommandOrigin34canUseCommandsWithoutCheatsEnabledEv
     virtual bool isSelectorExpansionAllowed()const; // _ZNK19ServerCommandOrigin26isSelectorExpansionAllowedEv
     virtual void getOriginType()const; // _ZNK19ServerCommandOrigin13getOriginTypeEv
-//  ServerCommandOrigin(std::string const&, ServerLevel &, CommandPermissionLevel); //TODO: incomplete function definition // _ZN19ServerCommandOriginC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER11ServerLevel22CommandPermissionLevel
+//    ServerCommandOrigin(std::string const&, ServerLevel &, long); //TODO: incomplete function definition // _ZN19ServerCommandOriginC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER11ServerLevel22CommandPermissionLevel
 };

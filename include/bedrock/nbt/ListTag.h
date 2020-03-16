@@ -1,21 +1,22 @@
 #pragma once
 
+#include "Tag.h"
 #include <string>
 #include <memory>
-#include "Tag.h"
 
 
-class ListTag : Tag {
+class ListTag : public Tag {
 
 public:
-    ~ListTag(); // _ZN7ListTagD2Ev
+    virtual ~ListTag(); // _ZN7ListTagD2Ev
+    virtual void __fake_function0(); // fake
     virtual void deleteChildren(); // _ZN7ListTag14deleteChildrenEv
     virtual void write(IDataOutput &)const; // _ZNK7ListTag5writeER11IDataOutput
     virtual void load(IDataInput &); // _ZN7ListTag4loadER10IDataInput
     virtual std::string toString()const; // _ZNK7ListTag8toStringB5cxx11Ev
     virtual void getId()const; // _ZNK7ListTag5getIdEv
     virtual void equals(Tag const&)const; // _ZNK7ListTag6equalsERK3Tag
-//  virtual void print(std::string const&, PrintStream &)const; //TODO: incomplete function definition // _ZNK7ListTag5printERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER11PrintStream
+    virtual void print__incomplete0(std::string const&, long &)const; //TODO: incomplete function definition // _ZNK7ListTag5printERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER11PrintStream
     virtual void copy()const; // _ZNK7ListTag4copyEv
     virtual void hash()const; // _ZNK7ListTag4hashEv
     ListTag(ListTag &&); // _ZN7ListTagC2EOS_

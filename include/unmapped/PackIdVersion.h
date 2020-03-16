@@ -10,8 +10,8 @@ public:
     PackIdVersion(PackIdVersion const&); // _ZN13PackIdVersionC2ERKS_
     PackIdVersion(PackIdVersion &&); // _ZN13PackIdVersionC2EOS_
     PackIdVersion(); // _ZN13PackIdVersionC2Ev
-//  PackIdVersion(std::string const&, std::string const&, PackType); //TODO: incomplete function definition // _ZN13PackIdVersionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_8PackType
-//  PackIdVersion(mce::UUID const&, SemVersion const&, PackType); //TODO: incomplete function definition // _ZN13PackIdVersionC2ERKN3mce4UUIDERK10SemVersion8PackType
+//    PackIdVersion(std::string const&, std::string const&, long); //TODO: incomplete function definition // _ZN13PackIdVersionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_8PackType
+//    PackIdVersion(mce::UUID const&, SemVersion const&, long); //TODO: incomplete function definition // _ZN13PackIdVersionC2ERKN3mce4UUIDERK10SemVersion8PackType
     void operator==(PackIdVersion const&)const; // _ZNK13PackIdVersioneqERKS_
     void operator!=(PackIdVersion const&)const; // _ZNK13PackIdVersionneERKS_
     void operator<(PackIdVersion const&)const; // _ZNK13PackIdVersionltERKS_

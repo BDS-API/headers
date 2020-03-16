@@ -1,14 +1,15 @@
 #pragma once
 
+#include "ContainerManagerModel.h"
 #include <string>
 #include "../../actor/unmapped/ActorUniqueID.h"
-#include "ContainerManagerModel.h"
 
 
-class LevelContainerManagerModel : ContainerManagerModel {
+class LevelContainerManagerModel : public ContainerManagerModel {
 
 public:
-    ~LevelContainerManagerModel(); // _ZN26LevelContainerManagerModelD2Ev
+    virtual ~LevelContainerManagerModel(); // _ZN26LevelContainerManagerModelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getItems(); // _ZN26LevelContainerManagerModel8getItemsEv
     virtual void setSlot(int, ContainerItemStack const&, bool); // _ZN26LevelContainerManagerModel7setSlotEiRK18ContainerItemStackb
     virtual void getSlot(int); // _ZN26LevelContainerManagerModel7getSlotEi
@@ -16,8 +17,8 @@ public:
     virtual void broadcastChanges(); // _ZN26LevelContainerManagerModel16broadcastChangesEv
     virtual void init(); // _ZN26LevelContainerManagerModel4initEv
     virtual bool isValid(float); // _ZN26LevelContainerManagerModel7isValidEf
-//  LevelContainerManagerModel(ContainerID, Player &, BlockPos const&, BlockActorType); //TODO: incomplete function definition // _ZN26LevelContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos14BlockActorType
-//  LevelContainerManagerModel(ContainerID, Player &, ActorUniqueID); //TODO: incomplete function definition // _ZN26LevelContainerManagerModelC2E11ContainerIDR6Player13ActorUniqueID
+//    LevelContainerManagerModel(long, Player &, BlockPos const&, long); //TODO: incomplete function definition // _ZN26LevelContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos14BlockActorType
+//    LevelContainerManagerModel(long, Player &, ActorUniqueID); //TODO: incomplete function definition // _ZN26LevelContainerManagerModelC2E11ContainerIDR6Player13ActorUniqueID
     void getEntityUniqueID()const; // _ZNK26LevelContainerManagerModel17getEntityUniqueIDEv
     std::string getEntityName()const; // _ZNK26LevelContainerManagerModel13getEntityNameB5cxx11Ev
     void setEntityUniqueID(ActorUniqueID); // _ZN26LevelContainerManagerModel17setEntityUniqueIDE13ActorUniqueID

@@ -3,10 +3,11 @@
 #include "BlockActor.h"
 
 
-class MobSpawnerBlockActor : BlockActor {
+class MobSpawnerBlockActor : public BlockActor {
 
 public:
-    ~MobSpawnerBlockActor(); // _ZN20MobSpawnerBlockActorD2Ev
+    virtual ~MobSpawnerBlockActor(); // _ZN20MobSpawnerBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN20MobSpawnerBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK20MobSpawnerBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN20MobSpawnerBlockActor4tickER11BlockSource

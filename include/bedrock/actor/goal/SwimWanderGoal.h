@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class SwimWanderGoal : Goal {
+class SwimWanderGoal : public Goal {
 
 public:
-    ~SwimWanderGoal(); // _ZN14SwimWanderGoalD2Ev
+    virtual ~SwimWanderGoal(); // _ZN14SwimWanderGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN14SwimWanderGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN14SwimWanderGoal16canContinueToUseEv
     virtual void start(); // _ZN14SwimWanderGoal5startEv

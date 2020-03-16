@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class MobArmorEquipmentPacket : Packet {
+class MobArmorEquipmentPacket : public Packet {
 
 public:
-    ~MobArmorEquipmentPacket(); // _ZN23MobArmorEquipmentPacketD2Ev
+    virtual ~MobArmorEquipmentPacket(); // _ZN23MobArmorEquipmentPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK23MobArmorEquipmentPacket5getIdEv
     virtual std::string getName()const; // _ZNK23MobArmorEquipmentPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK23MobArmorEquipmentPacket5writeER12BinaryStream
@@ -17,5 +18,5 @@ public:
     MobArmorEquipmentPacket(Mob const&); // _ZN23MobArmorEquipmentPacketC2ERK3Mob
     void get(ItemStack &, ItemStack const&); // _ZN23MobArmorEquipmentPacket3getER9ItemStackRKS0_
     void fillIn(Mob &)const; // _ZNK23MobArmorEquipmentPacket6fillInER3Mob
-//  void set(Mob &, ItemStack const&, ArmorSlot)const; //TODO: incomplete function definition // _ZNK23MobArmorEquipmentPacket3setER3MobRK9ItemStack9ArmorSlot
+//    void set(Mob &, ItemStack const&, long)const; //TODO: incomplete function definition // _ZNK23MobArmorEquipmentPacket3setER3MobRK9ItemStack9ArmorSlot
 };

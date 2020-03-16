@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class ChestBlockActor : RandomizableBlockActorFillingContainer {
+class ChestBlockActor : public RandomizableBlockActorFillingContainer {
 
 public:
-    ~ChestBlockActor(); // _ZN15ChestBlockActorD2Ev
+    virtual ~ChestBlockActor(); // _ZN15ChestBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN15ChestBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK15ChestBlockActor4saveER11CompoundTag
     virtual void saveItemInstanceData(CompoundTag &); // _ZN15ChestBlockActor20saveItemInstanceDataER11CompoundTag
@@ -45,7 +46,7 @@ public:
     virtual void _canOpenThis(BlockSource &)const; // _ZNK15ChestBlockActor12_canOpenThisER11BlockSource
     virtual void getObstructionAABB()const; // _ZNK15ChestBlockActor18getObstructionAABBEv
     virtual void _detectEntityObstruction(BlockSource &)const; // _ZNK15ChestBlockActor24_detectEntityObstructionER11BlockSource
-//  ChestBlockActor(BlockActorType, std::string const&, BlockActorRendererId, BlockPos const&, bool); //TODO: incomplete function definition // _ZN15ChestBlockActorC2E14BlockActorTypeRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE20BlockActorRendererIdRK8BlockPosb
+//    ChestBlockActor(long, std::string const&, long, BlockPos const&, bool); //TODO: incomplete function definition // _ZN15ChestBlockActorC2E14BlockActorTypeRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE20BlockActorRendererIdRK8BlockPosb
     void createChestBlockEntity(BlockPos const&); // _ZN15ChestBlockActor22createChestBlockEntityERK8BlockPos
     void createTrappedChestBlockEntity(BlockPos const&); // _ZN15ChestBlockActor29createTrappedChestBlockEntityERK8BlockPos
     bool isLargeChest()const; // _ZNK15ChestBlockActor12isLargeChestEv

@@ -3,10 +3,11 @@
 #include "Animal.h"
 
 
-class Chicken : Animal {
+class Chicken : public Animal {
 
 public:
-    ~Chicken(); // _ZN7ChickenD2Ev
+    virtual ~Chicken(); // _ZN7ChickenD2Ev
+    virtual void __fake_function0(); // fake
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN7Chicken35updateEntitySpecificMolangVariablesER12RenderParams
     virtual void _playStepSound(BlockPos const&, Block const&); // _ZN7Chicken14_playStepSoundERK8BlockPosRK5Block
     virtual void aiStep(); // _ZN7Chicken6aiStepEv

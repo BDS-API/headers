@@ -3,10 +3,11 @@
 #include "CapacitorComponent.h"
 
 
-class ComparatorCapacitor : CapacitorComponent {
+class ComparatorCapacitor : public CapacitorComponent {
 
 public:
-    ~ComparatorCapacitor(); // _ZN19ComparatorCapacitorD2Ev
+    virtual ~ComparatorCapacitor(); // _ZN19ComparatorCapacitorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void consumePowerAnyDirection(); // _ZN19ComparatorCapacitor24consumePowerAnyDirectionEv
     virtual bool canConsumerPower(); // _ZN19ComparatorCapacitor16canConsumerPowerEv
     virtual void getInstanceType()const; // _ZNK19ComparatorCapacitor15getInstanceTypeEv
@@ -20,7 +21,7 @@ public:
     ComparatorCapacitor(); // _ZN19ComparatorCapacitorC2Ev
     void getOldStrength(); // _ZN19ComparatorCapacitor14getOldStrengthEv
     bool isSubtractMode(); // _ZN19ComparatorCapacitor14isSubtractModeEv
-//  void setMode(ComparatorCapacitor::Mode); //TODO: incomplete function definition // _ZN19ComparatorCapacitor7setModeENS_4ModeE
+//    void setMode(long); //TODO: incomplete function definition // _ZN19ComparatorCapacitor7setModeENS_4ModeE
     void clearAnalogStrength(unsigned char); // _ZN19ComparatorCapacitor19clearAnalogStrengthEh
     void setAnalogStrength(int, unsigned char); // _ZN19ComparatorCapacitor17setAnalogStrengthEih
     void GetRearStrength(); // _ZN19ComparatorCapacitor15GetRearStrengthEv

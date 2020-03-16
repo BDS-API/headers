@@ -3,10 +3,11 @@
 #include "AttributeInstanceDelegate.h"
 
 
-class ExhaustionAttributeDelegate : AttributeInstanceDelegate {
+class ExhaustionAttributeDelegate : public AttributeInstanceDelegate {
 
 public:
-    ~ExhaustionAttributeDelegate(); // _ZN27ExhaustionAttributeDelegateD2Ev
+    virtual ~ExhaustionAttributeDelegate(); // _ZN27ExhaustionAttributeDelegateD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(); // _ZN27ExhaustionAttributeDelegate4tickEv
     ExhaustionAttributeDelegate(AttributeInstance const&); // _ZN27ExhaustionAttributeDelegateC2ERK17AttributeInstance
 };

@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class RestrictSunGoal : Goal {
+class RestrictSunGoal : public Goal {
 
 public:
-    ~RestrictSunGoal(); // _ZN15RestrictSunGoalD2Ev
+    virtual ~RestrictSunGoal(); // _ZN15RestrictSunGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15RestrictSunGoal6canUseEv
     virtual void start(); // _ZN15RestrictSunGoal5startEv
     virtual void stop(); // _ZN15RestrictSunGoal4stopEv

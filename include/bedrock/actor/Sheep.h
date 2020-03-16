@@ -3,13 +3,14 @@
 #include "Animal.h"
 
 
-class Sheep : Animal {
+class Sheep : public Animal {
 
 public:
     static long EAT_ANIMATION_TICKS;
 
-    ~Sheep(); // _ZN5SheepD2Ev
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN5Sheep17handleEntityEventE10ActorEventi
+    virtual ~Sheep(); // _ZN5SheepD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN5Sheep17handleEntityEventE10ActorEventi
     virtual void getLootTable(); // _ZN5Sheep12getLootTableEv
     virtual void getDefaultLootTable(); // _ZN5Sheep19getDefaultLootTableEv
     virtual void aiStep(); // _ZN5Sheep6aiStepEv

@@ -1,14 +1,15 @@
 #pragma once
 
+#include <memory>
 #include <string>
 #include "CommandOrigin.h"
-#include <memory>
 
 
-class VirtualCommandOrigin : CommandOrigin {
+class VirtualCommandOrigin : public CommandOrigin {
 
 public:
-    ~VirtualCommandOrigin(); // _ZN20VirtualCommandOriginD2Ev
+    virtual ~VirtualCommandOrigin(); // _ZN20VirtualCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getRequestId()const; // _ZNK20VirtualCommandOrigin12getRequestIdB5cxx11Ev
     virtual std::string getName()const; // _ZNK20VirtualCommandOrigin7getNameB5cxx11Ev
     virtual void getBlockPosition()const; // _ZNK20VirtualCommandOrigin16getBlockPositionEv
@@ -20,7 +21,7 @@ public:
     virtual void clone()const; // _ZNK20VirtualCommandOrigin5cloneEv
     virtual bool hasChatPerms()const; // _ZNK20VirtualCommandOrigin12hasChatPermsEv
     virtual bool hasTellPerms()const; // _ZNK20VirtualCommandOrigin12hasTellPermsEv
-//  virtual bool canUseAbility(AbilitiesIndex)const; //TODO: incomplete function definition // _ZNK20VirtualCommandOrigin13canUseAbilityE14AbilitiesIndex
+    virtual bool canUseAbility__incomplete0(long)const; //TODO: incomplete function definition // _ZNK20VirtualCommandOrigin13canUseAbilityE14AbilitiesIndex
     virtual bool canUseCommandsWithoutCheatsEnabled()const; // _ZNK20VirtualCommandOrigin34canUseCommandsWithoutCheatsEnabledEv
     virtual bool isSelectorExpansionAllowed()const; // _ZNK20VirtualCommandOrigin26isSelectorExpansionAllowedEv
     virtual void getSourceId()const; // _ZNK20VirtualCommandOrigin11getSourceIdEv

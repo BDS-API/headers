@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class TransferPacket : Packet {
+class TransferPacket : public Packet {
 
 public:
-    ~TransferPacket(); // _ZN14TransferPacketD2Ev
+    virtual ~TransferPacket(); // _ZN14TransferPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK14TransferPacket5getIdEv
     virtual std::string getName()const; // _ZNK14TransferPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK14TransferPacket5writeER12BinaryStream

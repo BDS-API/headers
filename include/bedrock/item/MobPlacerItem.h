@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "../util/BlockPos.h"
 #include "Item.h"
 
 
-class MobPlacerItem : Item {
+class MobPlacerItem : public Item {
 
 public:
-    ~MobPlacerItem(); // _ZN13MobPlacerItemD2Ev
+    virtual ~MobPlacerItem(); // _ZN13MobPlacerItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tearDown(); // _ZN13MobPlacerItem8tearDownEv
     virtual bool isExperimental(ItemDescriptor const*)const; // _ZNK13MobPlacerItem14isExperimentalEPK14ItemDescriptor
     virtual bool isLiquidClipItem(int)const; // _ZNK13MobPlacerItem16isLiquidClipItemEi
@@ -27,8 +28,8 @@ public:
     MobPlacerItem(std::string const&, int); // _ZN13MobPlacerItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
     void initializeIcons(); // _ZN13MobPlacerItem15initializeIconsEv
     void setActorInfoRegistry(ActorInfoRegistry *); // _ZN13MobPlacerItem20setActorInfoRegistryEP17ActorInfoRegistry
-//  void setActorResourceDefinitionGroup(ActorResourceDefinitionGroup const*); //TODO: incomplete function definition // _ZN13MobPlacerItem31setActorResourceDefinitionGroupEPK28ActorResourceDefinitionGroup
-//  void spawnMobAt(BlockSource &, ActorType, Vec3 const&, Vec3 const&, ItemStack const&, Actor *)const; //TODO: incomplete function definition // _ZNK13MobPlacerItem10spawnMobAtER11BlockSource9ActorTypeRK4Vec3S5_RK9ItemStackP5Actor
+//    void setActorResourceDefinitionGroup(long const*); //TODO: incomplete function definition // _ZN13MobPlacerItem31setActorResourceDefinitionGroupEPK28ActorResourceDefinitionGroup
+//    void spawnMobAt(BlockSource &, long, Vec3 const&, Vec3 const&, ItemStack const&, Actor *)const; //TODO: incomplete function definition // _ZNK13MobPlacerItem10spawnMobAtER11BlockSource9ActorTypeRK4Vec3S5_RK9ItemStackP5Actor
     void spawnOrMoveAgent(Vec3 const&, Actor &); // _ZN13MobPlacerItem16spawnOrMoveAgentERK4Vec3R5Actor
     void _setAgentOwner(Player &, Agent &); // _ZN13MobPlacerItem14_setAgentOwnerER6PlayerR5Agent
 };

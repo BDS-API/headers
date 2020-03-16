@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../Command.h"
+#include <string>
 #include <vector>
 
 
-class TagCommand : Command {
+class TagCommand : public Command {
 
 public:
-    ~TagCommand(); // _ZN10TagCommandD2Ev
+    virtual ~TagCommand(); // _ZN10TagCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK10TagCommand7executeERK13CommandOriginR13CommandOutput
     void setup(CommandRegistry &); // _ZN10TagCommand5setupER15CommandRegistry
     TagCommand(); // _ZN10TagCommandC2Ev

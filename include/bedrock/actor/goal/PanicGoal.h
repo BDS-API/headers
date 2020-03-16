@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class PanicGoal : Goal {
+class PanicGoal : public Goal {
 
 public:
-    ~PanicGoal(); // _ZN9PanicGoalD2Ev
+    virtual ~PanicGoal(); // _ZN9PanicGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN9PanicGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN9PanicGoal16canContinueToUseEv
     virtual void start(); // _ZN9PanicGoal5startEv

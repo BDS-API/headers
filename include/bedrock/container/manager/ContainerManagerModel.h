@@ -1,22 +1,23 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include <functional>
+#include <string>
 #include "IContainerManager.h"
 
 
-class ContainerManagerModel : IContainerManager {
+class ContainerManagerModel : public IContainerManager {
 
 public:
-    ~ContainerManagerModel(); // _ZN21ContainerManagerModelD2Ev
+    virtual ~ContainerManagerModel(); // _ZN21ContainerManagerModelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getContainerId()const; // _ZNK21ContainerManagerModel14getContainerIdEv
-//  virtual void setContainerId(ContainerID); //TODO: incomplete function definition // _ZN21ContainerManagerModel14setContainerIdE11ContainerID
+    virtual void setContainerId__incomplete0(long); //TODO: incomplete function definition // _ZN21ContainerManagerModel14setContainerIdE11ContainerID
     virtual void getContainerType()const; // _ZNK21ContainerManagerModel16getContainerTypeEv
-//  virtual void setContainerType(ContainerType); //TODO: incomplete function definition // _ZN21ContainerManagerModel16setContainerTypeE13ContainerType
+    virtual void setContainerType__incomplete0(long); //TODO: incomplete function definition // _ZN21ContainerManagerModel16setContainerTypeE13ContainerType
     virtual void init(); // _ZN21ContainerManagerModel4initEv
     virtual bool isValid(float); // _ZN21ContainerManagerModel7isValidEf
-//  ContainerManagerModel(ContainerID, Player &); //TODO: incomplete function definition // _ZN21ContainerManagerModelC2E11ContainerIDR6Player
+//    ContainerManagerModel(long, Player &); //TODO: incomplete function definition // _ZN21ContainerManagerModelC2E11ContainerIDR6Player
     void tick(int); // _ZN21ContainerManagerModel4tickEi
     void grantExperience(int); // _ZN21ContainerManagerModel15grantExperienceEi
     std::string getBlockName(BlockPos const&)const; // _ZNK21ContainerManagerModel12getBlockNameB5cxx11ERK8BlockPos

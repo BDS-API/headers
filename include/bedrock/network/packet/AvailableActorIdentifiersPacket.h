@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "Packet.h"
 #include <vector>
+#include "Packet.h"
 
 
-class AvailableActorIdentifiersPacket : Packet {
+class AvailableActorIdentifiersPacket : public Packet {
 
 public:
-    ~AvailableActorIdentifiersPacket(); // _ZN31AvailableActorIdentifiersPacketD2Ev
+    virtual ~AvailableActorIdentifiersPacket(); // _ZN31AvailableActorIdentifiersPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK31AvailableActorIdentifiersPacket5getIdEv
     virtual std::string getName()const; // _ZNK31AvailableActorIdentifiersPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK31AvailableActorIdentifiersPacket5writeER12BinaryStream

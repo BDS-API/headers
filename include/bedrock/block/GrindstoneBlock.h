@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class GrindstoneBlock : BlockLegacy {
+class GrindstoneBlock : public BlockLegacy {
 
 public:
-    ~GrindstoneBlock(); // _ZN15GrindstoneBlockD2Ev
+    virtual ~GrindstoneBlock(); // _ZN15GrindstoneBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK15GrindstoneBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isInteractiveBlock()const; // _ZNK15GrindstoneBlock18isInteractiveBlockEv
     virtual bool canContainLiquid()const; // _ZNK15GrindstoneBlock16canContainLiquidEv

@@ -7,7 +7,8 @@
 class ReadOnlyBinaryStream {
 
 public:
-    ~ReadOnlyBinaryStream(); // _ZN20ReadOnlyBinaryStreamD2Ev
+    virtual ~ReadOnlyBinaryStream(); // _ZN20ReadOnlyBinaryStreamD2Ev
+    virtual void __fake_function0(); // fake
     virtual void read(void *, unsigned long); // _ZN20ReadOnlyBinaryStream4readEPvm
     void getUnreadLength()const; // _ZNK20ReadOnlyBinaryStream15getUnreadLengthEv
     void getReadPointer()const; // _ZNK20ReadOnlyBinaryStream14getReadPointerEv

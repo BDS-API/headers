@@ -4,12 +4,13 @@
 #include "BlockLegacy.h"
 
 
-class MyceliumBlock : BlockLegacy {
+class MyceliumBlock : public BlockLegacy {
 
 public:
     static long MIN_BRIGHTNESS;
 
-    ~MyceliumBlock(); // _ZN13MyceliumBlockD2Ev
+    virtual ~MyceliumBlock(); // _ZN13MyceliumBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13MyceliumBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK13MyceliumBlock15getResourceItemER6RandomRK5Blocki
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13MyceliumBlock11animateTickER11BlockSourceRK8BlockPosR6Random

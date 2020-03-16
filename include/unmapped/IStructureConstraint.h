@@ -5,6 +5,7 @@
 class IStructureConstraint {
 
 public:
-    ~IStructureConstraint(); // _ZN20IStructureConstraintD2Ev
+    virtual ~IStructureConstraint(); // _ZN20IStructureConstraintD2Ev
+    virtual void __fake_function0(); // fake
     IStructureConstraint(); // _ZN20IStructureConstraintC2Ev
 };

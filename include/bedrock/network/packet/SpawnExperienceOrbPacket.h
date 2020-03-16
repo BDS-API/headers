@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class SpawnExperienceOrbPacket : Packet {
+class SpawnExperienceOrbPacket : public Packet {
 
 public:
-    ~SpawnExperienceOrbPacket(); // _ZN24SpawnExperienceOrbPacketD2Ev
+    virtual ~SpawnExperienceOrbPacket(); // _ZN24SpawnExperienceOrbPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK24SpawnExperienceOrbPacket5getIdEv
     virtual std::string getName()const; // _ZNK24SpawnExperienceOrbPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK24SpawnExperienceOrbPacket5writeER12BinaryStream

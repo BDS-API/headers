@@ -1,20 +1,21 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "../bedrock/level/LevelStorageSource.h"
 #include <vector>
 
 
-class ExternalFileLevelStorageSource : LevelStorageSource {
+class ExternalFileLevelStorageSource : public LevelStorageSource {
 
 public:
-    ~ExternalFileLevelStorageSource(); // _ZN30ExternalFileLevelStorageSourceD2Ev
+    virtual ~ExternalFileLevelStorageSource(); // _ZN30ExternalFileLevelStorageSourceD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getName()const; // _ZNK30ExternalFileLevelStorageSource7getNameB5cxx11Ev
     virtual void getLevelData(std::string const&)const; // _ZNK30ExternalFileLevelStorageSource12getLevelDataERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void getLevelData(std::string const&, LevelData &)const; // _ZNK30ExternalFileLevelStorageSource12getLevelDataERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER9LevelData
     virtual void saveLevelData(std::string const&, LevelData const&); // _ZN30ExternalFileLevelStorageSource13saveLevelDataERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK9LevelData
-    virtual void getLevelList(std::vector<Core::PathBuffer<std::string>> &); // _ZN30ExternalFileLevelStorageSource12getLevelListERSt6vectorIN4Core10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EE
+    virtual void getLevelList(std::vector<long> &); // _ZN30ExternalFileLevelStorageSource12getLevelListERSt6vectorIN4Core10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaIS9_EE
     virtual void createLevelStorage(Scheduler &, std::string const&, ContentIdentity const&, IContentKeyProvider const&); // _ZN30ExternalFileLevelStorageSource18createLevelStorageER9SchedulerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK15ContentIdentityRK19IContentKeyProvider
     virtual bool isNewLevelIdAcceptable(std::string const&); // _ZN30ExternalFileLevelStorageSource22isNewLevelIdAcceptableERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void deleteLevel(std::string const&); // _ZN30ExternalFileLevelStorageSource11deleteLevelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
@@ -23,7 +24,7 @@ public:
     virtual void createBackupCopyOfWorld(std::string const&, std::string const&, std::string const&); // _ZN30ExternalFileLevelStorageSource23createBackupCopyOfWorldERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_
     virtual bool isConvertible(std::string const&); // _ZN30ExternalFileLevelStorageSource13isConvertibleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual bool requiresConversion(std::string const&); // _ZN30ExternalFileLevelStorageSource18requiresConversionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  virtual void convertLevel(std::string const&, ProgressListener *); //TODO: incomplete function definition // _ZN30ExternalFileLevelStorageSource12convertLevelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP16ProgressListener
+    virtual void convertLevel__incomplete0(std::string const&, long *); //TODO: incomplete function definition // _ZN30ExternalFileLevelStorageSource12convertLevelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP16ProgressListener
     virtual bool isLevelMarkedForSync(Core::Path const&)const; // _ZNK30ExternalFileLevelStorageSource20isLevelMarkedForSyncERKN4Core4PathE
     virtual bool isLevelPartiallyCopied(Core::Path const&)const; // _ZNK30ExternalFileLevelStorageSource22isLevelPartiallyCopiedERKN4Core4PathE
     virtual std::string getLevelDatFoundPath(Core::Path const&)const; // _ZNK30ExternalFileLevelStorageSource20getLevelDatFoundPathB5cxx11ERKN4Core4PathE

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 
 
 class GoalSelectorComponent {
@@ -21,5 +21,5 @@ public:
     void stopTargetGoals(); // _ZN21GoalSelectorComponent15stopTargetGoalsEv
     void stopNormalGoals(); // _ZN21GoalSelectorComponent15stopNormalGoalsEv
     void buildDebugInfo(std::string &)const; // _ZNK21GoalSelectorComponent14buildDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN21GoalSelectorComponent24onPlayerDimensionChangedEP6Player11AutomaticIDI9DimensioniE
+//    void onPlayerDimensionChanged(Player *, long); //TODO: incomplete function definition // _ZN21GoalSelectorComponent24onPlayerDimensionChangedEP6Player11AutomaticIDI9DimensioniE
 };

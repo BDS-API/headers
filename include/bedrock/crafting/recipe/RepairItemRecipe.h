@@ -4,12 +4,13 @@
 #include "MultiRecipe.h"
 
 
-class RepairItemRecipe : MultiRecipe {
+class RepairItemRecipe : public MultiRecipe {
 
 public:
     static long ID;
 
-    ~RepairItemRecipe(); // _ZN16RepairItemRecipeD2Ev
+    virtual ~RepairItemRecipe(); // _ZN16RepairItemRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void assemble(CraftingContainer &)const; // _ZNK16RepairItemRecipe8assembleER17CraftingContainer
     virtual void getCraftingSize()const; // _ZNK16RepairItemRecipe15getCraftingSizeEv
     virtual void getIngredient(int, int)const; // _ZNK16RepairItemRecipe13getIngredientEii

@@ -5,10 +5,11 @@
 
 namespace WoodlandMansionPieces {
 
-    class ThirdFloorRoomCollection : WoodlandMansionPieces::SecondFloorRoomCollection {
+    class ThirdFloorRoomCollection : public WoodlandMansionPieces::SecondFloorRoomCollection {
 
     public:
-        ~ThirdFloorRoomCollection(); // _ZN21WoodlandMansionPieces24ThirdFloorRoomCollectionD2Ev
+        virtual ~ThirdFloorRoomCollection(); // _ZN21WoodlandMansionPieces24ThirdFloorRoomCollectionD2Ev
+        virtual void __fake_function0(); // fake
         ThirdFloorRoomCollection(); // _ZN21WoodlandMansionPieces24ThirdFloorRoomCollectionC2Ev
     };
 }

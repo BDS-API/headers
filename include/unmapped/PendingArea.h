@@ -18,5 +18,5 @@ public:
     void createEntityTickingArea(mce::UUID, ActorUniqueID, Bounds const&, bool, float); // _ZN11PendingArea23createEntityTickingAreaEN3mce4UUIDE13ActorUniqueIDRK6Boundsbf
     void validTag(CompoundTag const&); // _ZN11PendingArea8validTagERK11CompoundTag
     void load(std::string const&, CompoundTag const&); // _ZN11PendingArea4loadERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK11CompoundTag
-//  void serialize(AutomaticID<Dimension, int>)const; //TODO: incomplete function definition // _ZNK11PendingArea9serializeE11AutomaticIDI9DimensioniE
+//    void serialize(long)const; //TODO: incomplete function definition // _ZNK11PendingArea9serializeE11AutomaticIDI9DimensioniE
 };

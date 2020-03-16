@@ -4,5 +4,5 @@
 
 namespace PackErrorFactory {
 
-//  void createPackError(PackErrorType); //TODO: incomplete function definition // _ZN16PackErrorFactory15createPackErrorE13PackErrorType
+//    void createPackError(long); //TODO: incomplete function definition // _ZN16PackErrorFactory15createPackErrorE13PackErrorType
 };

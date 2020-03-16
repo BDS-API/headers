@@ -3,10 +3,11 @@
 #include "Amplifier.h"
 
 
-class MultiplyValueAmplifier : Amplifier {
+class MultiplyValueAmplifier : public Amplifier {
 
 public:
-    ~MultiplyValueAmplifier(); // _ZN22MultiplyValueAmplifierD2Ev
+    virtual ~MultiplyValueAmplifier(); // _ZN22MultiplyValueAmplifierD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAmount(int, float)const; // _ZNK22MultiplyValueAmplifier9getAmountEif
     MultiplyValueAmplifier(float); // _ZN22MultiplyValueAmplifierC2Ef
 };

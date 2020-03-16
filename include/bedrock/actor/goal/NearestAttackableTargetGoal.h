@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "TargetGoal.h"
+#include <string>
 #include <vector>
 
 
-class NearestAttackableTargetGoal : TargetGoal {
+class NearestAttackableTargetGoal : public TargetGoal {
 
 public:
-    ~NearestAttackableTargetGoal(); // _ZN27NearestAttackableTargetGoalD2Ev
+    virtual ~NearestAttackableTargetGoal(); // _ZN27NearestAttackableTargetGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN27NearestAttackableTargetGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN27NearestAttackableTargetGoal16canContinueToUseEv
     virtual void start(); // _ZN27NearestAttackableTargetGoal5startEv

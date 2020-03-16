@@ -3,7 +3,7 @@
 #include "Mob.h"
 
 
-class ArmorStand : Mob {
+class ArmorStand : public Mob {
 
 public:
     class Pose;
@@ -23,7 +23,8 @@ public:
     static long POSE_CANCAN_B;
     static long POSE_HERO;
 
-    ~ArmorStand(); // _ZN10ArmorStandD2Ev
+    virtual ~ArmorStand(); // _ZN10ArmorStandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN10ArmorStand10normalTickEv
     virtual void getShadowRadius()const; // _ZNK10ArmorStand15getShadowRadiusEv
     virtual void interactPreventDefault(); // _ZN10ArmorStand22interactPreventDefaultEv
@@ -50,8 +51,8 @@ public:
     void _updatePoseFromSynchedData(); // _ZN10ArmorStand26_updatePoseFromSynchedDataEv
     void getNumSlotsFilled()const; // _ZNK10ArmorStand17getNumSlotsFilledEv
     void _setBit(char &, int, bool); // _ZN10ArmorStand7_setBitERcib
-//  void _trySwapItem(Player &, EquipmentSlot); //TODO: incomplete function definition // _ZN10ArmorStand12_trySwapItemER6Player13EquipmentSlot
-//  void _rotateLimb(ArmorSlot); //TODO: incomplete function definition // _ZN10ArmorStand11_rotateLimbE9ArmorSlot
+//    void _trySwapItem(Player &, long); //TODO: incomplete function definition // _ZN10ArmorStand12_trySwapItemER6Player13EquipmentSlot
+//    void _rotateLimb(long); //TODO: incomplete function definition // _ZN10ArmorStand11_rotateLimbE9ArmorSlot
     void _dropItem(ItemStack const&); // _ZN10ArmorStand9_dropItemERK9ItemStack
     void getHeadPose()const; // _ZNK10ArmorStand11getHeadPoseEv
     void getBodyPose()const; // _ZNK10ArmorStand11getBodyPoseEv

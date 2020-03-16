@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
-#include "ITickingArea.h"
-#include "../../actor/unmapped/ActorUniqueID.h"
 #include "../../../mce/UUID.h"
+#include <string>
+#include "../../actor/unmapped/ActorUniqueID.h"
+#include "ITickingArea.h"
 
 
-class TickingArea : ITickingArea {
+class TickingArea : public ITickingArea {
 
 public:
-    ~TickingArea(); // _ZN11TickingAreaD2Ev
+    virtual ~TickingArea(); // _ZN11TickingAreaD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK11TickingArea5getIdEv
     virtual std::string getName()const; // _ZNK11TickingArea7getNameB5cxx11Ev
     virtual void getEntityId()const; // _ZNK11TickingArea11getEntityIdEv

@@ -1,18 +1,19 @@
 #pragma once
 
-#include <string>
 #include <functional>
 #include "Option.h"
+#include <string>
 #include <vector>
 
 
-class BoolOption : Option {
+class BoolOption : public Option {
 
 public:
-    ~BoolOption(); // _ZN10BoolOptionD2Ev
+    virtual ~BoolOption(); // _ZN10BoolOptionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void save(std::vector<std::pair<std::string, std::string>> &); // _ZN10BoolOption4saveERSt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ESaIS8_EE
     virtual void load(std::string const&); // _ZN10BoolOption4loadERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  BoolOption(OptionID, OptionOwnerType, OptionResetFlags, std::string const&, std::string const&, bool); //TODO: incomplete function definition // _ZN10BoolOptionC2E8OptionID15OptionOwnerType16OptionResetFlagsRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_b
+//    BoolOption(long, long, long, std::string const&, std::string const&, bool); //TODO: incomplete function definition // _ZN10BoolOptionC2E8OptionID15OptionOwnerType16OptionResetFlagsRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_b
     void _set(bool, bool); // _ZN10BoolOption4_setEbb
     void set(bool, bool); // _ZN10BoolOption3setEbb
     void setDefault(bool); // _ZN10BoolOption10setDefaultEb

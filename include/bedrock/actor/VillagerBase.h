@@ -3,14 +3,15 @@
 #include "Mob.h"
 
 
-class VillagerBase : Mob {
+class VillagerBase : public Mob {
 
 public:
-//  virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN12VillagerBase16reloadComponentsEN5Actor20InitializationMethodERK20VariantParameterList
-    ~VillagerBase(); // _ZN12VillagerBaseD2Ev
+    virtual void reloadComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN12VillagerBase16reloadComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~VillagerBase(); // _ZN12VillagerBaseD2Ev
+    virtual void __fake_function0(); // fake
     virtual void interactPreventDefault(); // _ZN12VillagerBase22interactPreventDefaultEv
     virtual void onLightningHit(); // _ZN12VillagerBase14onLightningHitEv
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN12VillagerBase17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN12VillagerBase17handleEntityEventE10ActorEventi
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &); // _ZN12VillagerBase22readAdditionalSaveDataERK11CompoundTagR14DataLoadHelper
     virtual void addAdditionalSaveData(CompoundTag &); // _ZN12VillagerBase21addAdditionalSaveDataER11CompoundTag
     virtual void _onSizeUpdated(); // _ZN12VillagerBase14_onSizeUpdatedEv
@@ -23,7 +24,7 @@ public:
     void getBreedingStackIndex()const; // _ZNK12VillagerBase21getBreedingStackIndexEv
     void setWillingToBreed(bool); // _ZN12VillagerBase17setWillingToBreedEb
     void consumeLoveFood(); // _ZN12VillagerBase15consumeLoveFoodEv
-//  void _addParticlesAroundSelf(ParticleType); //TODO: incomplete function definition // _ZN12VillagerBase23_addParticlesAroundSelfE12ParticleType
+//    void _addParticlesAroundSelf(long); //TODO: incomplete function definition // _ZN12VillagerBase23_addParticlesAroundSelfE12ParticleType
     void _wantsItem(Item const&); // _ZN12VillagerBase10_wantsItemERK4Item
     void stopGoals(); // _ZN12VillagerBase9stopGoalsEv
 };

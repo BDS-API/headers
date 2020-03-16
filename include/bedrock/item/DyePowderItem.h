@@ -1,17 +1,18 @@
 #pragma once
 
+#include "FertilizerItem.h"
 #include <string>
 #include <memory>
 #include "../util/BlockPos.h"
-#include "FertilizerItem.h"
 
 
-class DyePowderItem : FertilizerItem {
+class DyePowderItem : public FertilizerItem {
 
 public:
     static long mColorMap;
 
-    ~DyePowderItem(); // _ZN13DyePowderItemD2Ev
+    virtual ~DyePowderItem(); // _ZN13DyePowderItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isDye()const; // _ZNK13DyePowderItem5isDyeEv
     virtual bool isFertilizer(int)const; // _ZNK13DyePowderItem12isFertilizerEi
     virtual bool isValidAuxValue(int)const; // _ZNK13DyePowderItem15isValidAuxValueEi

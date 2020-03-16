@@ -1,18 +1,19 @@
 #pragma once
 
-#include "unmapped/ActorUniqueID.h"
-#include "../util/Random.h"
 #include "Actor.h"
+#include "../util/Random.h"
+#include "unmapped/ActorUniqueID.h"
 
 
-class FireworksRocketActor : Actor {
+class FireworksRocketActor : public Actor {
 
 public:
-    ~FireworksRocketActor(); // _ZN20FireworksRocketActorD2Ev
+    virtual ~FireworksRocketActor(); // _ZN20FireworksRocketActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void lerpMotion(Vec3 const&); // _ZN20FireworksRocketActor10lerpMotionERK4Vec3
     virtual void normalTick(); // _ZN20FireworksRocketActor10normalTickEv
     virtual void getShadowRadius()const; // _ZNK20FireworksRocketActor15getShadowRadiusEv
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN20FireworksRocketActor17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN20FireworksRocketActor17handleEntityEventE10ActorEventi
     virtual void onSynchedDataUpdate(int); // _ZN20FireworksRocketActor19onSynchedDataUpdateEi
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &); // _ZN20FireworksRocketActor22readAdditionalSaveDataERK11CompoundTagR14DataLoadHelper
     virtual void addAdditionalSaveData(CompoundTag &); // _ZN20FireworksRocketActor21addAdditionalSaveDataER11CompoundTag

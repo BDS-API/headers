@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include <vector>
 
 
@@ -26,6 +26,6 @@ public:
     void lookupEntityType(ActorDefinitionIdentifier const&); // _ZN12ActorFactory16lookupEntityTypeERK25ActorDefinitionIdentifier
     std::string generateActorIdentifierList()const; // _ZNK12ActorFactory27generateActorIdentifierListB5cxx11Ev
     void _digestIdentifierListFromServer(std::vector<ActorInfo> const&); // _ZN12ActorFactory31_digestIdentifierListFromServerERKSt6vectorI9ActorInfoSaIS1_EE
-    void setEntityInitializer(std::shared_ptr<IEntityInitializer>); // _ZN12ActorFactory20setEntityInitializerESt10shared_ptrI18IEntityInitializerE
+    void setEntityInitializer(std::shared_ptr<long>); // _ZN12ActorFactory20setEntityInitializerESt10shared_ptrI18IEntityInitializerE
     ~ActorFactory(); // _ZN12ActorFactoryD2Ev
 };

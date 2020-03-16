@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "BaseMoveToBlockGoal.h"
+#include <string>
 
 
-class LayEggGoal : BaseMoveToBlockGoal {
+class LayEggGoal : public BaseMoveToBlockGoal {
 
 public:
-    ~LayEggGoal(); // _ZN10LayEggGoalD2Ev
+    virtual ~LayEggGoal(); // _ZN10LayEggGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN10LayEggGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN10LayEggGoal16canContinueToUseEv
     virtual void start(); // _ZN10LayEggGoal5startEv

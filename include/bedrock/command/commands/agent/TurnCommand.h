@@ -5,13 +5,14 @@
 
 namespace AgentCommands {
 
-    class TurnCommand : AgentCommands::Command {
+    class TurnCommand : public AgentCommands::Command {
 
     public:
-        ~TurnCommand(); // _ZN13AgentCommands11TurnCommandD2Ev
+        virtual ~TurnCommand(); // _ZN13AgentCommands11TurnCommandD2Ev
+        virtual void __fake_function0(); // fake
         virtual void execute(); // _ZN13AgentCommands11TurnCommand7executeEv
         virtual bool isDone(); // _ZN13AgentCommands11TurnCommand6isDoneEv
         virtual void tick(); // _ZN13AgentCommands11TurnCommand4tickEv
-//      TurnCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition // _ZN13AgentCommands11TurnCommandC2ER6PlayerNS_9DirectionE
+//        TurnCommand(Player &, long); //TODO: incomplete function definition // _ZN13AgentCommands11TurnCommandC2ER6PlayerNS_9DirectionE
     };
 }

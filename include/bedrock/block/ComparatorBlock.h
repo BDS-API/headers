@@ -4,15 +4,16 @@
 #include "ActorBlock.h"
 
 
-class ComparatorBlock : ActorBlock {
+class ComparatorBlock : public ActorBlock {
 
 public:
-    ~ComparatorBlock(); // _ZN15ComparatorBlockD2Ev
+    virtual ~ComparatorBlock(); // _ZN15ComparatorBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK15ComparatorBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isInteractiveBlock()const; // _ZNK15ComparatorBlock18isInteractiveBlockEv
     virtual bool isSignalSource()const; // _ZNK15ComparatorBlock14isSignalSourceEv
     virtual void getDirectSignal(BlockSource &, BlockPos const&, int)const; // _ZNK15ComparatorBlock15getDirectSignalER11BlockSourceRK8BlockPosi
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK15ComparatorBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK15ComparatorBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK15ComparatorBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK15ComparatorBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK15ComparatorBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

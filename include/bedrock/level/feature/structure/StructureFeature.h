@@ -6,7 +6,8 @@
 class StructureFeature {
 
 public:
-    ~StructureFeature(); // _ZN16StructureFeatureD2Ev
+    virtual ~StructureFeature(); // _ZN16StructureFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initMobSpawnTypes(HardcodedSpawnAreaRegistry &); // _ZN16StructureFeature17initMobSpawnTypesER26HardcodedSpawnAreaRegistry
     virtual void postProcess(BlockSource *, Random &, int, int); // _ZN16StructureFeature11postProcessEP11BlockSourceR6Randomii
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos &); // _ZN16StructureFeature26getNearestGeneratedFeatureER9DimensionR11BiomeSourceRK8BlockPosRS4_
@@ -23,6 +24,6 @@ public:
     void setRandomSeedFor(Random &, int, int, int, unsigned int); // _ZN16StructureFeature16setRandomSeedForER6Randomiiij
     bool isInsideBoundingFeature(int, int, int); // _ZN16StructureFeature23isInsideBoundingFeatureEiii
     void findNearestFeaturePositionBySpacing(Dimension &, StructureFeature &, BiomeSource &, BlockPos const&, BlockPos &, int, int, int, bool, int, bool); // _ZN16StructureFeature35findNearestFeaturePositionBySpacingER9DimensionRS_R11BiomeSourceRK8BlockPosRS5_iiibib
-//  void findFarAwayStructures(buffer_span<ChunkPos>, unsigned int); //TODO: incomplete function definition // _ZN16StructureFeature21findFarAwayStructuresE11buffer_spanI8ChunkPosEj
-//  void garbageCollectBlueprints(buffer_span<ChunkPos>, unsigned int); //TODO: incomplete function definition // _ZN16StructureFeature24garbageCollectBlueprintsE11buffer_spanI8ChunkPosEj
+//    void findFarAwayStructures(long, unsigned int); //TODO: incomplete function definition // _ZN16StructureFeature21findFarAwayStructuresE11buffer_spanI8ChunkPosEj
+//    void garbageCollectBlueprints(long, unsigned int); //TODO: incomplete function definition // _ZN16StructureFeature24garbageCollectBlueprintsE11buffer_spanI8ChunkPosEj
 };

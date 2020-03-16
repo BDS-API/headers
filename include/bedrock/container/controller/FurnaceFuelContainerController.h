@@ -4,10 +4,11 @@
 #include "ContainerController.h"
 
 
-class FurnaceFuelContainerController : ContainerController {
+class FurnaceFuelContainerController : public ContainerController {
 
 public:
-    ~FurnaceFuelContainerController(); // _ZN30FurnaceFuelContainerControllerD2Ev
+    virtual ~FurnaceFuelContainerController(); // _ZN30FurnaceFuelContainerControllerD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isItemAllowed(ItemInstance const&)const; // _ZNK30FurnaceFuelContainerController13isItemAllowedERK12ItemInstance
     virtual void _getAvailableSetCount(int, ContainerItemStack const&)const; // _ZNK30FurnaceFuelContainerController21_getAvailableSetCountEiRK18ContainerItemStack
     virtual void _getAvailableAddCount(int)const; // _ZNK30FurnaceFuelContainerController21_getAvailableAddCountEi

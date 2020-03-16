@@ -16,7 +16,7 @@ public:
     void operator<(HashedString const&)const; // _ZNK12HashedStringltERKS_
     HashedString(HashedString const&); // _ZN12HashedStringC2ERKS_
     HashedString(HashedString &&); // _ZN12HashedStringC2EOS_
-//  HashedString(decltype(nullptr); //TODO: incomplete function definition // _ZN12HashedStringC2EDn
+//    HashedString(long); //TODO: incomplete function definition // _ZN12HashedStringC2EDn
     void computeHash(char const*); // _ZN12HashedString11computeHashEPKc
     void computeHash(std::string const&); // _ZN12HashedString11computeHashERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     HashedString(char const*); // _ZN12HashedStringC2EPKc

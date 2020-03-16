@@ -35,6 +35,6 @@ public:
     void _validSignature()const; // _ZNK4Pack15_validSignatureEv
     bool isTrusted()const; // _ZNK4Pack9isTrustedEv
     void generateWorldPackHistoryInfo()const; // _ZNK4Pack28generateWorldPackHistoryInfoEv
-//  void createPack(ResourceLocation const&, PackType, PackOrigin, PackManifestFactory &, IContentKeyProvider const&, PackSourceReport *); //TODO: incomplete function definition // _ZN4Pack10createPackERK16ResourceLocation8PackType10PackOriginR19PackManifestFactoryRK19IContentKeyProviderP16PackSourceReport
-//  void createPackMetadata(PackType, PackManifest &, PackAccessStrategy const&, PackReport &); //TODO: incomplete function definition // _ZN4Pack18createPackMetadataE8PackTypeR12PackManifestRK18PackAccessStrategyR10PackReport
+//    void createPack(ResourceLocation const&, long, long, PackManifestFactory &, IContentKeyProvider const&, PackSourceReport *); //TODO: incomplete function definition // _ZN4Pack10createPackERK16ResourceLocation8PackType10PackOriginR19PackManifestFactoryRK19IContentKeyProviderP16PackSourceReport
+//    void createPackMetadata(long, PackManifest &, PackAccessStrategy const&, PackReport &); //TODO: incomplete function definition // _ZN4Pack18createPackMetadataE8PackTypeR12PackManifestRK18PackAccessStrategyR10PackReport
 };

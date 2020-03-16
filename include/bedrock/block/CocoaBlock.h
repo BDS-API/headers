@@ -4,13 +4,14 @@
 #include "BlockLegacy.h"
 
 
-class CocoaBlock : BlockLegacy {
+class CocoaBlock : public BlockLegacy {
 
 public:
-    ~CocoaBlock(); // _ZN10CocoaBlockD2Ev
+    virtual ~CocoaBlock(); // _ZN10CocoaBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK10CocoaBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK10CocoaBlock7onPlaceER11BlockSourceRK8BlockPos
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK10CocoaBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK10CocoaBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK10CocoaBlock15neighborChangedER11BlockSourceRK8BlockPosS4_
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK10CocoaBlock16getResourceCountER6RandomRK5Blocki
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK10CocoaBlock15getResourceItemER6RandomRK5Blocki

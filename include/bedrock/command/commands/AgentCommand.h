@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include <functional>
+#include <string>
 #include "../Command.h"
 
 
-class AgentCommand : Command {
+class AgentCommand : public Command {
 
 public:
-    ~AgentCommand(); // _ZN12AgentCommandD2Ev
+    virtual ~AgentCommand(); // _ZN12AgentCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK12AgentCommand7executeERK13CommandOriginR13CommandOutput
     void setup(CommandRegistry &); // _ZN12AgentCommand5setupER15CommandRegistry
     AgentCommand(); // _ZN12AgentCommandC2Ev

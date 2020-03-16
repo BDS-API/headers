@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class CarrotOnAStickItem : Item {
+class CarrotOnAStickItem : public Item {
 
 public:
-    ~CarrotOnAStickItem(); // _ZN18CarrotOnAStickItemD2Ev
+    virtual ~CarrotOnAStickItem(); // _ZN18CarrotOnAStickItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isHandEquipped()const; // _ZNK18CarrotOnAStickItem14isHandEquippedEv
     virtual bool requiresInteract()const; // _ZNK18CarrotOnAStickItem16requiresInteractEv
     virtual void getEnchantSlot()const; // _ZNK18CarrotOnAStickItem14getEnchantSlotEv

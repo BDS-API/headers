@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class SwellGoal : Goal {
+class SwellGoal : public Goal {
 
 public:
-    ~SwellGoal(); // _ZN9SwellGoalD2Ev
+    virtual ~SwellGoal(); // _ZN9SwellGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN9SwellGoal6canUseEv
     virtual void start(); // _ZN9SwellGoal5startEv
     virtual void stop(); // _ZN9SwellGoal4stopEv

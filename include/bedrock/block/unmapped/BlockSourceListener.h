@@ -6,7 +6,8 @@
 class BlockSourceListener {
 
 public:
-    ~BlockSourceListener(); // _ZN19BlockSourceListenerD2Ev
+    virtual ~BlockSourceListener(); // _ZN19BlockSourceListenerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onSourceCreated(BlockSource &); // _ZN19BlockSourceListener15onSourceCreatedER11BlockSource
     virtual void onSourceDestroyed(BlockSource &); // _ZN19BlockSourceListener17onSourceDestroyedER11BlockSource
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&); // _ZN19BlockSourceListener13onAreaChangedER11BlockSourceRK8BlockPosS4_

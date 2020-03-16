@@ -14,7 +14,8 @@ public:
     class InteractionMappingBase {
 
     public:
-        ~InteractionMappingBase(); // _ZN23PlayerInteractionSystem22InteractionMappingBaseD2Ev
+        virtual ~InteractionMappingBase(); // _ZN23PlayerInteractionSystem22InteractionMappingBaseD2Ev
+        virtual void __fake_function0(); // fake
         virtual void getInteraction(Actor &, Player &, ActorInteraction &); // _ZN23PlayerInteractionSystem22InteractionMappingBase14getInteractionER5ActorR6PlayerR16ActorInteraction
         InteractionMappingBase(); // _ZN23PlayerInteractionSystem22InteractionMappingBaseC2Ev
     };

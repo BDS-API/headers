@@ -13,10 +13,10 @@ public:
     SemVersion(); // _ZN10SemVersionC2Ev
     void _parseVersionToString(); // _ZN10SemVersion21_parseVersionToStringEv
     SemVersion(unsigned short, unsigned short, unsigned short, std::string const&, std::string const&); // _ZN10SemVersionC2EtttRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_
-//  SemVersion(SemVersion::any_version_constructor); //TODO: incomplete function definition // _ZN10SemVersionC2ENS_23any_version_constructorE
-//  void fromString(std::string const&, SemVersion &, SemVersion::ParseOption); //TODO: incomplete function definition // _ZN10SemVersion10fromStringERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERS_NS_11ParseOptionE
+//    SemVersion(long); //TODO: incomplete function definition // _ZN10SemVersionC2ENS_23any_version_constructorE
+//    void fromString(std::string const&, SemVersion &, long); //TODO: incomplete function definition // _ZN10SemVersion10fromStringERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERS_NS_11ParseOptionE
     void fromJsonArray(Json::Value const&, SemVersion &); // _ZN10SemVersion13fromJsonArrayERKN4Json5ValueERS_
-//  void fromJson(Json::Value const&, SemVersion &, SemVersion::ParseOption); //TODO: incomplete function definition // _ZN10SemVersion8fromJsonERKN4Json5ValueERS_NS_11ParseOptionE
+//    void fromJson(Json::Value const&, SemVersion &, long); //TODO: incomplete function definition // _ZN10SemVersion8fromJsonERKN4Json5ValueERS_NS_11ParseOptionE
     void operator<(SemVersion const&)const; // _ZNK10SemVersionltERKS_
     void operator>(SemVersion const&)const; // _ZNK10SemVersiongtERKS_
     void operator==(SemVersion const&)const; // _ZNK10SemVersioneqERKS_

@@ -5,6 +5,7 @@
 class ScriptBinderComponent {
 
 public:
-    ~ScriptBinderComponent(); // _ZN21ScriptBinderComponentD2Ev
+    virtual ~ScriptBinderComponent(); // _ZN21ScriptBinderComponentD2Ev
+    virtual void __fake_function0(); // fake
     ScriptBinderComponent(); // _ZN21ScriptBinderComponentC2Ev
 };

@@ -14,7 +14,7 @@ public:
     static long test;
     static long mEnabled;
 
-//  PerfTimer(std::thread::id); //TODO: incomplete function definition // _ZN9PerfTimerC2ENSt6thread2idE
+//    PerfTimer(long); //TODO: incomplete function definition // _ZN9PerfTimerC2ENSt6thread2idE
     ~PerfTimer(); // _ZN9PerfTimerD2Ev
     void allocate(int); // _ZN9PerfTimer8allocateEi
     void _roundToPower2(unsigned int); // _ZN9PerfTimer14_roundToPower2Ej

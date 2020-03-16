@@ -12,7 +12,7 @@ public:
     void getUniqueId()const; // _ZNK19MapItemTrackedActor11getUniqueIdEv
     void getDimensionId(); // _ZN19MapItemTrackedActor14getDimensionIdEv
     void getDecorationType()const; // _ZNK19MapItemTrackedActor17getDecorationTypeEv
-//  void setDecorationType(MapDecoration::Type); //TODO: incomplete function definition // _ZN19MapItemTrackedActor17setDecorationTypeEN13MapDecoration4TypeE
+//    void setDecorationType(long); //TODO: incomplete function definition // _ZN19MapItemTrackedActor17setDecorationTypeEN13MapDecoration4TypeE
     ~MapItemTrackedActor(); // _ZN19MapItemTrackedActorD2Ev
     MapItemTrackedActor(MapItemTrackedActor::UniqueId const&, BlockSource &); // _ZN19MapItemTrackedActorC2ERKNS_8UniqueIdER11BlockSource
     void nextUpdatePacket(MapItemSavedData const&); // _ZN19MapItemTrackedActor16nextUpdatePacketERK16MapItemSavedData

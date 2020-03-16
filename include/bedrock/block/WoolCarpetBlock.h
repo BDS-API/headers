@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class WoolCarpetBlock : BlockLegacy {
+class WoolCarpetBlock : public BlockLegacy {
 
 public:
-    ~WoolCarpetBlock(); // _ZN15WoolCarpetBlockD2Ev
+    virtual ~WoolCarpetBlock(); // _ZN15WoolCarpetBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK15WoolCarpetBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK15WoolCarpetBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void waterSpreadCausesSpawn()const; // _ZNK15WoolCarpetBlock22waterSpreadCausesSpawnEv

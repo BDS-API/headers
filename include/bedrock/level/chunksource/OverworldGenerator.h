@@ -1,11 +1,11 @@
 #pragma once
 
 #include <string>
-#include "ChunkSource.h"
 #include "../generator/WorldGenerator.h"
+#include "ChunkSource.h"
 
 
-class OverworldGenerator : ChunkSource, WorldGenerator {
+class OverworldGenerator : public ChunkSource, public WorldGenerator {
 
 public:
     class ThreadData;
@@ -13,7 +13,8 @@ public:
     static long SNOW_CUTOFF;
     static long SNOW_SCALE;
 
-    ~OverworldGenerator(); // _ZN18OverworldGeneratorD2Ev
+    virtual ~OverworldGenerator(); // _ZN18OverworldGeneratorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcess(ChunkViewSource &); // _ZN18OverworldGenerator11postProcessER15ChunkViewSource
     virtual void loadChunk(LevelChunk &, bool); // _ZN18OverworldGenerator9loadChunkER10LevelChunkb
     virtual void postProcessMobsAt(BlockSource *, int, int, Random &); // _ZN18OverworldGenerator17postProcessMobsAtEP11BlockSourceiiR6Random
@@ -22,8 +23,8 @@ public:
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const; // _ZNK18OverworldGenerator12getBiomeAreaERK11BoundingBoxj
     virtual void findSpawnPosition()const; // _ZNK18OverworldGenerator17findSpawnPositionEv
     virtual void getFeatureTypeAt(BlockPos const&); // _ZN18OverworldGenerator16getFeatureTypeAtERK8BlockPos
-//  virtual void findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos &); //TODO: incomplete function definition // _ZN18OverworldGenerator18findNearestFeatureE20StructureFeatureTypeRK8BlockPosRS1_
-//  virtual void garbageCollectBlueprints(buffer_span<ChunkPos>); //TODO: incomplete function definition // _ZN18OverworldGenerator24garbageCollectBlueprintsE11buffer_spanI8ChunkPosE
+    virtual void findNearestFeature__incomplete0(long, BlockPos const&, BlockPos &); //TODO: incomplete function definition // _ZN18OverworldGenerator18findNearestFeatureE20StructureFeatureTypeRK8BlockPosRS1_
+    virtual void garbageCollectBlueprints__incomplete0(long); //TODO: incomplete function definition // _ZN18OverworldGenerator24garbageCollectBlueprintsE11buffer_spanI8ChunkPosE
     virtual void addHardcodedSpawnAreas(LevelChunk &); // _ZN18OverworldGenerator22addHardcodedSpawnAreasER10LevelChunk
     OverworldGenerator(Dimension &, unsigned int, bool); // _ZN18OverworldGeneratorC2ER9Dimensionjb
     void _makeLayers(LevelData const&, BiomeRegistry const&); // _ZN18OverworldGenerator11_makeLayersERK9LevelDataRK13BiomeRegistry

@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class AnvilDamagePacket : Packet {
+class AnvilDamagePacket : public Packet {
 
 public:
-    ~AnvilDamagePacket(); // _ZN17AnvilDamagePacketD2Ev
+    virtual ~AnvilDamagePacket(); // _ZN17AnvilDamagePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK17AnvilDamagePacket5getIdEv
     virtual std::string getName()const; // _ZNK17AnvilDamagePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK17AnvilDamagePacket5writeER12BinaryStream

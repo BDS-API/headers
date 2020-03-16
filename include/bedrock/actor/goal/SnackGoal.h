@@ -5,7 +5,7 @@
 #include <vector>
 
 
-class SnackGoal : Goal {
+class SnackGoal : public Goal {
 
 public:
     static long PATH_RANGE;
@@ -16,7 +16,8 @@ public:
     static long SEARCH_SIZE;
     static long STOP_DIST_SQRD;
 
-    ~SnackGoal(); // _ZN9SnackGoalD2Ev
+    virtual ~SnackGoal(); // _ZN9SnackGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN9SnackGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN9SnackGoal16canContinueToUseEv
     virtual void start(); // _ZN9SnackGoal5startEv

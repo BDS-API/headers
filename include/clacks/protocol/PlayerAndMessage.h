@@ -10,21 +10,22 @@ namespace com {
 
             namespace protocol {
 
-                class PlayerAndMessage /*google::protobuf::Message*/ { //TODO: incomplete class definition
+                class PlayerAndMessage /*public google::protobuf::Message*/ { //TODO: incomplete class definition
 
                 public:
-                    ~PlayerAndMessage(); // _ZN3com6mojang6clacks8protocol16PlayerAndMessageD2Ev
+                    virtual ~PlayerAndMessage(); // _ZN3com6mojang6clacks8protocol16PlayerAndMessageD2Ev
+                    virtual void __fake_function0(); // fake
                     virtual void New()const; // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage3NewEv
-//                  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage3NewEPN6google8protobuf5ArenaE
+                    virtual void New__incomplete1(long *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage3NewEPN6google8protobuf5ArenaE
                     virtual void Clear(); // _ZN3com6mojang6clacks8protocol16PlayerAndMessage5ClearEv
                     virtual bool IsInitialized()const; // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage13IsInitializedEv
-//                  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol16PlayerAndMessage27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE
+                    virtual void MergePartialFromCodedStream__incomplete0(long *); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol16PlayerAndMessage27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE
                     virtual void ByteSizeLong()const; // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage12ByteSizeLongEv
-//                  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE
+                    virtual void SerializeWithCachedSizes__incomplete0(long *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE
                     virtual void GetCachedSize()const; // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage13GetCachedSizeEv
                     virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const; // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage39InternalSerializeWithCachedSizesToArrayEbPh
-//                  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol16PlayerAndMessage8CopyFromERKN6google8protobuf7MessageE
-//                  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol16PlayerAndMessage9MergeFromERKN6google8protobuf7MessageE
+                    virtual void CopyFrom__incomplete1(long const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol16PlayerAndMessage8CopyFromERKN6google8protobuf7MessageE
+                    virtual void MergeFrom__incomplete1(long const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol16PlayerAndMessage9MergeFromERKN6google8protobuf7MessageE
                     virtual void SetCachedSize(int)const; // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage13SetCachedSizeEi
                     virtual void GetMetadata()const; // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage11GetMetadataEv
                     void message()const; // _ZNK3com6mojang6clacks8protocol16PlayerAndMessage7messageEv

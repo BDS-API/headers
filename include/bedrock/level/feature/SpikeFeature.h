@@ -3,12 +3,13 @@
 #include "Feature.h"
 
 
-class SpikeFeature : Feature {
+class SpikeFeature : public Feature {
 
 public:
     class EndSpike;
 
-    ~SpikeFeature(); // _ZN12SpikeFeatureD2Ev
+    virtual ~SpikeFeature(); // _ZN12SpikeFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK12SpikeFeature5placeER11BlockSourceRK8BlockPosR6Random
     SpikeFeature(SpikeFeature::EndSpike const&); // _ZN12SpikeFeatureC2ERKNS_8EndSpikeE
     void setCrystalInvulnerable(bool); // _ZN12SpikeFeature22setCrystalInvulnerableEb

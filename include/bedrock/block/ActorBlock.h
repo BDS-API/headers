@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class ActorBlock : BlockLegacy {
+class ActorBlock : public BlockLegacy {
 
 public:
-    ~ActorBlock(); // _ZN10ActorBlockD2Ev
+    virtual ~ActorBlock(); // _ZN10ActorBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const; // _ZNK10ActorBlock17playerWillDestroyER6PlayerRK8BlockPosRK5Block
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK10ActorBlock15neighborChangedER11BlockSourceRK8BlockPosS4_
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const; // _ZNK10ActorBlock14spawnResourcesER11BlockSourceRK8BlockPosRK5Blockfi

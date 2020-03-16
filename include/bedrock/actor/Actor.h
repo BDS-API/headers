@@ -1,14 +1,14 @@
 #pragma once
 
-#include "unmapped/ActorUniqueID.h"
-#include <vector>
-#include <memory>
-#include "../util/BlockPos.h"
 #include <string>
-#include <functional>
+#include "unmapped/ActorUniqueID.h"
+#include <memory>
 #include "../util/Vec3.h"
+#include <vector>
 #include "../../unmapped/ActionEvent.h"
+#include <functional>
 #include "unmapped/ActorRuntimeID.h"
+#include "../util/BlockPos.h"
 
 
 class Actor {
@@ -20,12 +20,13 @@ public:
     static long DEFAULT_AMBIENT_SOUND_INTERVAL_RANGE;
     static std::string RIDING_TAG;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Actor15reloadHardcodedENS_20InitializationMethodERK20VariantParameterList
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Actor21reloadHardcodedClientENS_20InitializationMethodERK20VariantParameterList
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Actor20initializeComponentsENS_20InitializationMethodERK20VariantParameterList
-//  virtual void reloadComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Actor16reloadComponentsENS_20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Actor15reloadHardcodedENS_20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Actor21reloadHardcodedClientENS_20InitializationMethodERK20VariantParameterList
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Actor20initializeComponentsENS_20InitializationMethodERK20VariantParameterList
+    virtual void reloadComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Actor16reloadComponentsENS_20InitializationMethodERK20VariantParameterList
     virtual bool hasComponent(Util::HashString const&)const; // _ZNK5Actor12hasComponentERKN4Util10HashStringE
-    ~Actor(); // _ZN5ActorD2Ev
+    virtual ~Actor(); // _ZN5ActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void reset(); // _ZN5Actor5resetEv
     virtual void getOnDeathExperience(); // _ZN5Actor20getOnDeathExperienceEv
     virtual void getOwnerEntityType(); // _ZN5Actor18getOwnerEntityTypeEv
@@ -34,7 +35,7 @@ public:
     virtual void getPos()const; // _ZNK5Actor6getPosEv
     virtual void getPosOld()const; // _ZNK5Actor9getPosOldEv
     virtual void getPosExtrapolated(float)const; // _ZNK5Actor18getPosExtrapolatedEf
-//  virtual void getAttachPos(ActorLocation, float)const; //TODO: incomplete function definition // _ZNK5Actor12getAttachPosE13ActorLocationf
+    virtual void getAttachPos__incomplete0(long, float)const; //TODO: incomplete function definition // _ZNK5Actor12getAttachPosE13ActorLocationf
     virtual void getFiringPos()const; // _ZNK5Actor12getFiringPosEv
     virtual void setRot(Vec2 const&); // _ZN5Actor6setRotERK4Vec2
     virtual void move(Vec3 const&); // _ZN5Actor4moveERK4Vec3
@@ -64,7 +65,7 @@ public:
     virtual void startRiding(Actor &); // _ZN5Actor11startRidingERS_
     virtual void addRider(Actor &); // _ZN5Actor8addRiderERS_
     virtual void flagRiderToRemove(Actor &); // _ZN5Actor17flagRiderToRemoveERS_
-//  virtual void getExitTip(std::string const&, InputMode)const; //TODO: incomplete function definition // _ZNK5Actor10getExitTipERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE9InputMode
+    virtual void getExitTip__incomplete0(std::string const&, long)const; //TODO: incomplete function definition // _ZNK5Actor10getExitTipERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE9InputMode
     virtual void intersects(Vec3 const&, Vec3 const&)const; // _ZNK5Actor10intersectsERK4Vec3S2_
     virtual bool isFree(Vec3 const&, float); // _ZN5Actor6isFreeERK4Vec3f
     virtual bool isFree(Vec3 const&); // _ZN5Actor6isFreeERK4Vec3
@@ -86,7 +87,7 @@ public:
     virtual bool isImmersedInWater()const; // _ZNK5Actor17isImmersedInWaterEv
     virtual bool isInWaterOrRain()const; // _ZNK5Actor15isInWaterOrRainEv
     virtual bool isInLava()const; // _ZNK5Actor8isInLavaEv
-//  virtual bool isUnderLiquid(MaterialType)const; //TODO: incomplete function definition // _ZNK5Actor13isUnderLiquidE12MaterialType
+    virtual bool isUnderLiquid__incomplete0(long)const; //TODO: incomplete function definition // _ZNK5Actor13isUnderLiquidE12MaterialType
     virtual bool isOverWater()const; // _ZNK5Actor11isOverWaterEv
     virtual void makeStuckInBlock(float); // _ZN5Actor16makeStuckInBlockEf
     virtual void getCameraOffset()const; // _ZNK5Actor15getCameraOffsetEv
@@ -140,7 +141,7 @@ public:
     virtual bool isEnchanted()const; // _ZNK5Actor11isEnchantedEv
     virtual void rideJumped(); // _ZN5Actor10rideJumpedEv
     virtual void rideLanded(Vec3 const&, Vec3 const&); // _ZN5Actor10rideLandedERK4Vec3S2_
-    virtual void shouldRender()const; // _ZNK5Actor12shouldRenderEv
+    virtual bool shouldRender()const; // _ZNK5Actor12shouldRenderEv
     virtual bool isInvulnerableTo(ActorDamageSource const&)const; // _ZNK5Actor16isInvulnerableToERK17ActorDamageSource
     virtual void actuallyHurt(int, ActorDamageSource const*, bool); // _ZN5Actor12actuallyHurtEiPK17ActorDamageSourceb
     virtual void animateHurt(); // _ZN5Actor11animateHurtEv
@@ -148,7 +149,7 @@ public:
     virtual void onLightningHit(); // _ZN5Actor14onLightningHitEv
     virtual void onBounceStarted(BlockPos const&, Block const&); // _ZN5Actor15onBounceStartedERK8BlockPosRK5Block
     virtual void feed(int); // _ZN5Actor4feedEi
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN5Actor17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN5Actor17handleEntityEventE10ActorEventi
     virtual void getPickRadius(); // _ZN5Actor13getPickRadiusEv
     virtual void spawnAtLocation(int, int); // _ZN5Actor15spawnAtLocationEii
     virtual void spawnAtLocation(int, int, float); // _ZN5Actor15spawnAtLocationEiif
@@ -158,13 +159,13 @@ public:
     virtual void despawn(); // _ZN5Actor7despawnEv
     virtual void killed(Actor &); // _ZN5Actor6killedERS_
     virtual void awardKillScore(Actor &, int); // _ZN5Actor14awardKillScoreERS_i
-//  virtual void setArmor(ArmorSlot, ItemStack const&); //TODO: incomplete function definition // _ZN5Actor8setArmorE9ArmorSlotRK9ItemStack
-//  virtual void getArmor(ArmorSlot)const; //TODO: incomplete function definition // _ZNK5Actor8getArmorE9ArmorSlot
-//  virtual void getArmorMaterialTypeInSlot(ArmorSlot)const; //TODO: incomplete function definition // _ZNK5Actor26getArmorMaterialTypeInSlotE9ArmorSlot
-//  virtual void getArmorMaterialTextureTypeInSlot(ArmorSlot)const; //TODO: incomplete function definition // _ZNK5Actor33getArmorMaterialTextureTypeInSlotE9ArmorSlot
-//  virtual void getArmorColorInSlot(ArmorSlot, int)const; //TODO: incomplete function definition // _ZNK5Actor19getArmorColorInSlotE9ArmorSloti
-//  virtual void setEquippedSlot(ArmorSlot, int, int); //TODO: incomplete function definition // _ZN5Actor15setEquippedSlotE9ArmorSlotii
-//  virtual void setEquippedSlot(ArmorSlot, ItemStack const&); //TODO: incomplete function definition // _ZN5Actor15setEquippedSlotE9ArmorSlotRK9ItemStack
+    virtual void setArmor__incomplete0(long, ItemStack const&); //TODO: incomplete function definition // _ZN5Actor8setArmorE9ArmorSlotRK9ItemStack
+    virtual void getArmor__incomplete0(long)const; //TODO: incomplete function definition // _ZNK5Actor8getArmorE9ArmorSlot
+    virtual void getArmorMaterialTypeInSlot__incomplete0(long)const; //TODO: incomplete function definition // _ZNK5Actor26getArmorMaterialTypeInSlotE9ArmorSlot
+    virtual void getArmorMaterialTextureTypeInSlot__incomplete0(long)const; //TODO: incomplete function definition // _ZNK5Actor33getArmorMaterialTextureTypeInSlotE9ArmorSlot
+    virtual void getArmorColorInSlot__incomplete0(long, int)const; //TODO: incomplete function definition // _ZNK5Actor19getArmorColorInSlotE9ArmorSloti
+    virtual void setEquippedSlot__incomplete1(long, int, int); //TODO: incomplete function definition // _ZN5Actor15setEquippedSlotE9ArmorSlotii
+    virtual void setEquippedSlot__incomplete1(long, ItemStack const&); //TODO: incomplete function definition // _ZN5Actor15setEquippedSlotE9ArmorSlotRK9ItemStack
     virtual void getCarriedItem()const; // _ZNK5Actor14getCarriedItemEv
     virtual void setCarriedItem(ItemStack const&); // _ZN5Actor14setCarriedItemERK9ItemStack
     virtual void setOffhandSlot(ItemStack const&); // _ZN5Actor14setOffhandSlotERK9ItemStack
@@ -184,14 +185,14 @@ public:
     virtual void getPortalWaitTime()const; // _ZNK5Actor17getPortalWaitTimeEv
     virtual void getDimensionId()const; // _ZNK5Actor14getDimensionIdEv
     virtual bool canChangeDimensions()const; // _ZNK5Actor19canChangeDimensionsEv
-//  virtual void changeDimension(AutomaticID<Dimension, int>, bool); //TODO: incomplete function definition // _ZN5Actor15changeDimensionE11AutomaticIDI9DimensioniEb
+    virtual void changeDimension__incomplete1(long, bool); //TODO: incomplete function definition // _ZN5Actor15changeDimensionE11AutomaticIDI9DimensioniEb
     virtual void changeDimension(ChangeDimensionPacket const&); // _ZN5Actor15changeDimensionERK21ChangeDimensionPacket
     virtual void getControllingPlayer()const; // _ZNK5Actor20getControllingPlayerEv
     virtual void checkFallDamage(float, bool); // _ZN5Actor15checkFallDamageEfb
     virtual void causeFallDamage(float); // _ZN5Actor15causeFallDamageEf
     virtual void handleFallDistanceOnServer(float, bool); // _ZN5Actor26handleFallDistanceOnServerEfb
-//  virtual void playSynchronizedSound(LevelSoundEvent, Vec3 const&, Block const&, bool); //TODO: incomplete function definition // _ZN5Actor21playSynchronizedSoundE15LevelSoundEventRK4Vec3RK5Blockb
-//  virtual void playSynchronizedSound(LevelSoundEvent, Vec3 const&, int, bool); //TODO: incomplete function definition // _ZN5Actor21playSynchronizedSoundE15LevelSoundEventRK4Vec3ib
+    virtual void playSynchronizedSound__incomplete1(long, Vec3 const&, Block const&, bool); //TODO: incomplete function definition // _ZN5Actor21playSynchronizedSoundE15LevelSoundEventRK4Vec3RK5Blockb
+    virtual void playSynchronizedSound__incomplete1(long, Vec3 const&, int, bool); //TODO: incomplete function definition // _ZN5Actor21playSynchronizedSoundE15LevelSoundEventRK4Vec3ib
     virtual void onSynchedDataUpdate(int); // _ZN5Actor19onSynchedDataUpdateEi
     virtual bool canAddRider(Actor &)const; // _ZNK5Actor11canAddRiderERS_
     virtual bool canBePulledIntoVehicle()const; // _ZNK5Actor22canBePulledIntoVehicleEv
@@ -219,7 +220,7 @@ public:
     virtual void getAnimationComponent(); // _ZN5Actor21getAnimationComponentEv
     virtual void openContainerComponent(Player &); // _ZN5Actor22openContainerComponentER6Player
     virtual void swing(); // _ZN5Actor5swingEv
-//  virtual void useItem(ItemStack &, ItemUseMethod, bool); //TODO: incomplete function definition // _ZN5Actor7useItemER9ItemStack13ItemUseMethodb
+    virtual void useItem__incomplete0(ItemStack &, long, bool); //TODO: incomplete function definition // _ZN5Actor7useItemER9ItemStack13ItemUseMethodb
     virtual bool hasOutputSignal(unsigned char)const; // _ZNK5Actor15hasOutputSignalEh
     virtual void getOutputSignal()const; // _ZNK5Actor15getOutputSignalEv
     virtual void getDebugText(std::vector<std::string> &); // _ZN5Actor12getDebugTextERSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS6_EE
@@ -242,13 +243,13 @@ public:
     virtual void startSpinAttack(); // _ZN5Actor15startSpinAttackEv
     virtual void stopSpinAttack(); // _ZN5Actor14stopSpinAttackEv
     virtual void setDamageNearbyMobs(bool); // _ZN5Actor19setDamageNearbyMobsEb
-//  virtual void renderDebugServerState(Options const&); //TODO: incomplete function definition // _ZN5Actor22renderDebugServerStateERK7Options
+    virtual void renderDebugServerState__incomplete0(long const&); //TODO: incomplete function definition // _ZN5Actor22renderDebugServerStateERK7Options
     virtual void reloadLootTable(); // _ZN5Actor15reloadLootTableEv
     virtual void reloadLootTable(EquipmentTableDescription const*); // _ZN5Actor15reloadLootTableEPK25EquipmentTableDescription
     virtual void getDeletionDelayTimeSeconds()const; // _ZNK5Actor27getDeletionDelayTimeSecondsEv
     virtual void kill(); // _ZN5Actor4killEv
     virtual void die(ActorDamageSource const&); // _ZN5Actor3dieERK17ActorDamageSource
-    virtual void shouldTick()const; // _ZNK5Actor10shouldTickEv
+    virtual bool shouldTick()const; // _ZNK5Actor10shouldTickEv
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN5Actor35updateEntitySpecificMolangVariablesER12RenderParams
     virtual bool canMakeStepSound()const; // _ZNK5Actor16canMakeStepSoundEv
     virtual void outOfWorld(); // _ZN5Actor10outOfWorldEv
@@ -283,11 +284,11 @@ public:
     void updateDescription(); // _ZN5Actor17updateDescriptionEv
     void getLevel(); // _ZN5Actor8getLevelEv
     void _setupServerAnimationComponent(); // _ZN5Actor30_setupServerAnimationComponentEv
-//  bool hasCategory(ActorCategory)const; //TODO: incomplete function definition // _ZNK5Actor11hasCategoryE13ActorCategory
+//    bool hasCategory(long)const; //TODO: incomplete function definition // _ZNK5Actor11hasCategoryE13ActorCategory
     void requireReload(); // _ZN5Actor13requireReloadEv
     void reloadIfRequired(); // _ZN5Actor16reloadIfRequiredEv
     void sendActorDefinitionEventTriggered(std::string const&); // _ZN5Actor33sendActorDefinitionEventTriggeredERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  bool hasType(ActorType)const; //TODO: incomplete function definition // _ZNK5Actor7hasTypeE9ActorType
+//    bool hasType(long)const; //TODO: incomplete function definition // _ZNK5Actor7hasTypeE9ActorType
     void executeEvent(std::string const&, VariantParameterList const&); // _ZN5Actor12executeEventERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK20VariantParameterList
     void getInitializationMethod(); // _ZN5Actor23getInitializationMethodEv
     void setLeashHolder(ActorUniqueID); // _ZN5Actor14setLeashHolderE13ActorUniqueID
@@ -298,10 +299,10 @@ public:
     void setVariant(int); // _ZN5Actor10setVariantEi
     void setMarkVariant(int); // _ZN5Actor14setMarkVariantEi
     void setSkinID(int); // _ZN5Actor9setSkinIDEi
-//  void setColor(PaletteColor); //TODO: incomplete function definition // _ZN5Actor8setColorE12PaletteColor
-//  void setColor2(PaletteColor); //TODO: incomplete function definition // _ZN5Actor9setColor2E12PaletteColor
-//  void setStatusFlag(ActorFlags, bool); //TODO: incomplete function definition // _ZN5Actor13setStatusFlagE10ActorFlagsb
-//  void getStatusFlag(ActorFlags)const; //TODO: incomplete function definition // _ZNK5Actor13getStatusFlagE10ActorFlags
+//    void setColor(long); //TODO: incomplete function definition // _ZN5Actor8setColorE12PaletteColor
+//    void setColor2(long); //TODO: incomplete function definition // _ZN5Actor9setColor2E12PaletteColor
+//    void setStatusFlag(long, bool); //TODO: incomplete function definition // _ZN5Actor13setStatusFlagE10ActorFlagsb
+//    void getStatusFlag(long)const; //TODO: incomplete function definition // _ZNK5Actor13getStatusFlagE10ActorFlags
     bool isBaby()const; // _ZNK5Actor6isBabyEv
     void updateBBFromDescription(); // _ZN5Actor23updateBBFromDescriptionEv
     void setCanClimb(bool); // _ZN5Actor11setCanClimbEb
@@ -374,8 +375,8 @@ public:
     void setCollidableMobNear(bool); // _ZN5Actor20setCollidableMobNearEb
     void _playMovementSound(bool); // _ZN5Actor18_playMovementSoundEb
     bool isInScaffolding()const; // _ZNK5Actor15isInScaffoldingEv
-//  void playSound(LevelSoundEvent, Vec3 const&, Block const&); //TODO: incomplete function definition // _ZN5Actor9playSoundE15LevelSoundEventRK4Vec3RK5Block
-//  void playSound(LevelSoundEvent, Vec3 const&, int); //TODO: incomplete function definition // _ZN5Actor9playSoundE15LevelSoundEventRK4Vec3i
+//    void playSound(long, Vec3 const&, Block const&); //TODO: incomplete function definition // _ZN5Actor9playSoundE15LevelSoundEventRK4Vec3RK5Block
+//    void playSound(long, Vec3 const&, int); //TODO: incomplete function definition // _ZN5Actor9playSoundE15LevelSoundEventRK4Vec3i
     void onOnewayCollision(BlockPos); // _ZN5Actor17onOnewayCollisionE8BlockPos
     void onOnewayCollision(AABB const&); // _ZN5Actor17onOnewayCollisionERK4AABB
     void _updateOnewayCollisions(BlockSource &); // _ZN5Actor23_updateOnewayCollisionsER11BlockSource
@@ -539,7 +540,7 @@ public:
     void getActorIdentifier()const; // _ZNK5Actor18getActorIdentifierEv
     void setChanged(); // _ZN5Actor10setChangedEv
     void getEntityData()const; // _ZNK5Actor13getEntityDataEv
-//  void _setActorTypeId(ActorType); //TODO: incomplete function definition // _ZN5Actor15_setActorTypeIdE9ActorType
+//    void _setActorTypeId(long); //TODO: incomplete function definition // _ZN5Actor15_setActorTypeIdE9ActorType
     void getSpatialNetworkData()const; // _ZNK5Actor21getSpatialNetworkDataEv
     void getSpatialNetworkData(); // _ZN5Actor21getSpatialNetworkDataEv
     bool isDebugging()const; // _ZNK5Actor11isDebuggingEv
@@ -574,11 +575,11 @@ public:
     void _setDimension(Dimension &); // _ZN5Actor13_setDimensionER9Dimension
     void buildForward()const; // _ZNK5Actor12buildForwardEv
     void getPortalEntranceAxis()const; // _ZNK5Actor21getPortalEntranceAxisEv
-//  void _setNetherPortalData(AutomaticID<Dimension, int>, AutomaticID<Dimension, int>, int); //TODO: incomplete function definition // _ZN5Actor20_setNetherPortalDataE11AutomaticIDI9DimensioniES2_i
+//    void _setNetherPortalData(long, long, int); //TODO: incomplete function definition // _ZN5Actor20_setNetherPortalDataE11AutomaticIDI9DimensioniES2_i
     void _setLevelPtr(Level *); // _ZN5Actor12_setLevelPtrEP5Level
     void getRandom()const; // _ZNK5Actor9getRandomEv
     bool isClient()const; // _ZNK5Actor8isClientEv
-//  bool hasAttributeBuff(AttributeBuffType)const; //TODO: incomplete function definition // _ZNK5Actor16hasAttributeBuffE17AttributeBuffType
+//    bool hasAttributeBuff(long)const; //TODO: incomplete function definition // _ZNK5Actor16hasAttributeBuffE17AttributeBuffType
     void getMaxHealth()const; // _ZNK5Actor12getMaxHealthEv
     void serializationSetHealth(int); // _ZN5Actor22serializationSetHealthEi
     void healEffects(int); // _ZN5Actor11healEffectsEi
@@ -642,7 +643,7 @@ public:
     bool isActionQueueEmpty()const; // _ZNK5Actor18isActionQueueEmptyEv
     void setLimitedLife(int); // _ZN5Actor14setLimitedLifeEi
     void onChunkDiscarded(); // _ZN5Actor16onChunkDiscardedEv
-    void shouldOrphan(BlockSource &); // _ZN5Actor12shouldOrphanER11BlockSource
+    bool shouldOrphan(BlockSource &); // _ZN5Actor12shouldOrphanER11BlockSource
     void setStructuralIntegrity(int); // _ZN5Actor22setStructuralIntegrityEi
     void getStructuralIntegrity()const; // _ZNK5Actor22getStructuralIntegrityEv
     void setHurtTime(int); // _ZN5Actor11setHurtTimeEi
@@ -650,7 +651,7 @@ public:
     void setHurtDir(int); // _ZN5Actor10setHurtDirEi
     void getHurtDir()const; // _ZNK5Actor10getHurtDirEv
     bool isSafeToSleepNear()const; // _ZNK5Actor17isSafeToSleepNearEv
-//  void fetchNearbyActorsSorted(Vec3 const&, ActorType); //TODO: incomplete function definition // _ZN5Actor23fetchNearbyActorsSortedERK4Vec39ActorType
+//    void fetchNearbyActorsSorted(Vec3 const&, long); //TODO: incomplete function definition // _ZN5Actor23fetchNearbyActorsSortedERK4Vec39ActorType
     void getMolangVariables(); // _ZN5Actor18getMolangVariablesEv
     void updateMolangVariables(RenderParams &); // _ZN5Actor21updateMolangVariablesER12RenderParams
     void cacheComponentData(); // _ZN5Actor18cacheComponentDataEv

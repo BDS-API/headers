@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class SquidFleeGoal : Goal {
+class SquidFleeGoal : public Goal {
 
 public:
-    ~SquidFleeGoal(); // _ZN13SquidFleeGoalD2Ev
+    virtual ~SquidFleeGoal(); // _ZN13SquidFleeGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN13SquidFleeGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN13SquidFleeGoal16canContinueToUseEv
     virtual void start(); // _ZN13SquidFleeGoal5startEv

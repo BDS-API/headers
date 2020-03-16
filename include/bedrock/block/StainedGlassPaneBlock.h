@@ -1,13 +1,14 @@
 #pragma once
 
-#include "ThinFenceBlock.h"
 #include <string>
+#include "ThinFenceBlock.h"
 
 
-class StainedGlassPaneBlock : ThinFenceBlock {
+class StainedGlassPaneBlock : public ThinFenceBlock {
 
 public:
-    ~StainedGlassPaneBlock(); // _ZN21StainedGlassPaneBlockD2Ev
+    virtual ~StainedGlassPaneBlock(); // _ZN21StainedGlassPaneBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string buildDescriptionId(Block const&)const; // _ZNK21StainedGlassPaneBlock18buildDescriptionIdB5cxx11ERK5Block
     virtual bool isAuxValueRelevantForPicking()const; // _ZNK21StainedGlassPaneBlock28isAuxValueRelevantForPickingEv
     virtual void getSilkTouchItemInstance(Block const&)const; // _ZNK21StainedGlassPaneBlock24getSilkTouchItemInstanceERK5Block

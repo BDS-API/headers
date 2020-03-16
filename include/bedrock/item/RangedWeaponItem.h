@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class RangedWeaponItem : Item {
+class RangedWeaponItem : public Item {
 
 public:
-    ~RangedWeaponItem(); // _ZN16RangedWeaponItemD2Ev
+    virtual ~RangedWeaponItem(); // _ZN16RangedWeaponItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getEnchantValue()const; // _ZNK16RangedWeaponItem15getEnchantValueEv
     virtual void use(ItemStack &, Player &)const; // _ZNK16RangedWeaponItem3useER9ItemStackR6Player
     virtual void releaseUsing(ItemStack &, Player *, int)const; // _ZNK16RangedWeaponItem12releaseUsingER9ItemStackP6Playeri

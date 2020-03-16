@@ -1,16 +1,17 @@
 #pragma once
 
-#include <vector>
-#include <memory>
-#include "../util/BlockPos.h"
 #include <string>
+#include <memory>
+#include <vector>
 #include "Item.h"
+#include "../util/BlockPos.h"
 
 
-class BannerItem : Item {
+class BannerItem : public Item {
 
 public:
-    ~BannerItem(); // _ZN10BannerItemD2Ev
+    virtual ~BannerItem(); // _ZN10BannerItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isWearableThroughLootTable(std::unique_ptr<CompoundTag> const&)const; // _ZNK10BannerItem26isWearableThroughLootTableERKSt10unique_ptrI11CompoundTagSt14default_deleteIS1_EE
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const; // _ZNK10BannerItem24appendFormattedHovertextERK13ItemStackBaseR5LevelRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
     virtual bool isValidAuxValue(int)const; // _ZNK10BannerItem15isValidAuxValueEi

@@ -36,6 +36,6 @@ namespace ColorFormat {
     bool IsColorCode(char); // _ZN11ColorFormat11IsColorCodeEc
     bool IsColorCode(std::string const&); // _ZN11ColorFormat11IsColorCodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     std::string ColorCodeFromColor(Color const&); // _ZN11ColorFormat18ColorCodeFromColorB5cxx11ERK5Color
-    void setColors(std::array<Color, 17ul> const&); // _ZN11ColorFormat9setColorsERKSt5arrayI5ColorLm17EE
+    void setColors(std::array<Color, long> const&); // _ZN11ColorFormat9setColorsERKSt5arrayI5ColorLm17EE
     void getCurrentColors(); // _ZN11ColorFormat16getCurrentColorsEv
 };

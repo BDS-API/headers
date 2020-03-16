@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "AirBlock.h"
+#include <string>
 
 
-class LightBlock : AirBlock {
+class LightBlock : public AirBlock {
 
 public:
-    ~LightBlock(); // _ZN10LightBlockD2Ev
+    virtual ~LightBlock(); // _ZN10LightBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getLightEmission(Block const&)const; // _ZNK10LightBlock16getLightEmissionERK5Block
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const; // _ZNK10LightBlock8mayPlaceER11BlockSourceRK8BlockPosh
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK10LightBlock8mayPlaceER11BlockSourceRK8BlockPos

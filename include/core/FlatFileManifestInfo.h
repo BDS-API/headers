@@ -20,11 +20,11 @@ namespace Core {
         void getFlags()const; // _ZNK4Core20FlatFileManifestInfo8getFlagsEv
         void getFileType()const; // _ZNK4Core20FlatFileManifestInfo11getFileTypeEv
         bool isFile()const; // _ZNK4Core20FlatFileManifestInfo6isFileEv
-//      void setFileType(Core::FileType); //TODO: incomplete function definition // _ZN4Core20FlatFileManifestInfo11setFileTypeENS_8FileTypeE
+//        void setFileType(long); //TODO: incomplete function definition // _ZN4Core20FlatFileManifestInfo11setFileTypeENS_8FileTypeE
         bool isDirectory()const; // _ZNK4Core20FlatFileManifestInfo11isDirectoryEv
         bool isDeleted()const; // _ZNK4Core20FlatFileManifestInfo9isDeletedEv
         void setDeleted(bool); // _ZN4Core20FlatFileManifestInfo10setDeletedEb
-//      void setAttributes(Core::FileType, bool); //TODO: incomplete function definition // _ZN4Core20FlatFileManifestInfo13setAttributesENS_8FileTypeEb
+//        void setAttributes(long, bool); //TODO: incomplete function definition // _ZN4Core20FlatFileManifestInfo13setAttributesENS_8FileTypeEb
         void readFromStream(ReadOnlyBinaryStream &); // _ZN4Core20FlatFileManifestInfo14readFromStreamER20ReadOnlyBinaryStream
         void writeToStream(BinaryStream &)const; // _ZNK4Core20FlatFileManifestInfo13writeToStreamER12BinaryStream
         void operator==(Core::FlatFileManifestInfo const&)const; // _ZNK4Core20FlatFileManifestInfoeqERKS0_

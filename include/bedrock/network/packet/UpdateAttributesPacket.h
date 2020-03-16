@@ -1,16 +1,17 @@
 #pragma once
 
 #include <string>
-#include "Packet.h"
 #include <vector>
+#include "Packet.h"
 
 
-class UpdateAttributesPacket : Packet {
+class UpdateAttributesPacket : public Packet {
 
 public:
     class AttributeData;
 
-    ~UpdateAttributesPacket(); // _ZN22UpdateAttributesPacketD2Ev
+    virtual ~UpdateAttributesPacket(); // _ZN22UpdateAttributesPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK22UpdateAttributesPacket5getIdEv
     virtual std::string getName()const; // _ZNK22UpdateAttributesPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK22UpdateAttributesPacket5writeER12BinaryStream

@@ -3,12 +3,13 @@
 #include "../Command.h"
 
 
-class MobEventCommand : Command {
+class MobEventCommand : public Command {
 
 public:
     class InitProxy;
 
-    ~MobEventCommand(); // _ZN15MobEventCommandD2Ev
+    virtual ~MobEventCommand(); // _ZN15MobEventCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK15MobEventCommand7executeERK13CommandOriginR13CommandOutput
     MobEventCommand(); // _ZN15MobEventCommandC2Ev
     void setup(CommandRegistry &, MobEventCommand::InitProxy &&); // _ZN15MobEventCommand5setupER15CommandRegistryONS_9InitProxyE

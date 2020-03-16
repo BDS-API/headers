@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "../../../unmapped/HashString.h"
+#include <string>
 
 
 class Recipe {
 
 public:
-    ~Recipe(); // _ZN6RecipeD2Ev
+    virtual ~Recipe(); // _ZN6RecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK6Recipe5getIdEv
     virtual void getItemPack()const; // _ZNK6Recipe11getItemPackEv
     virtual bool isMultiRecipe()const; // _ZNK6Recipe13isMultiRecipeEv

@@ -4,7 +4,7 @@
 #include "Goal.h"
 
 
-class DragonFlamingGoal : Goal {
+class DragonFlamingGoal : public Goal {
 
 public:
     static long ROAR_DURATION;
@@ -12,7 +12,8 @@ public:
     static long SITTING_FLAME_ATTACK_COUNT;
     static long WARMUP_TIME;
 
-    ~DragonFlamingGoal(); // _ZN17DragonFlamingGoalD2Ev
+    virtual ~DragonFlamingGoal(); // _ZN17DragonFlamingGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN17DragonFlamingGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN17DragonFlamingGoal16canContinueToUseEv
     virtual void start(); // _ZN17DragonFlamingGoal5startEv

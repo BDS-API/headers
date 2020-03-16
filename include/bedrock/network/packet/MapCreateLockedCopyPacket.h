@@ -5,10 +5,11 @@
 #include "Packet.h"
 
 
-class MapCreateLockedCopyPacket : Packet {
+class MapCreateLockedCopyPacket : public Packet {
 
 public:
-    ~MapCreateLockedCopyPacket(); // _ZN25MapCreateLockedCopyPacketD2Ev
+    virtual ~MapCreateLockedCopyPacket(); // _ZN25MapCreateLockedCopyPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK25MapCreateLockedCopyPacket5getIdEv
     virtual std::string getName()const; // _ZNK25MapCreateLockedCopyPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK25MapCreateLockedCopyPacket5writeER12BinaryStream

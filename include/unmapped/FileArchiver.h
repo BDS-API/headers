@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include <functional>
+#include <string>
 
 
 class FileArchiver {
@@ -30,7 +30,7 @@ public:
     void _printMessage(std::string const&); // _ZN12FileArchiver13_printMessageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void importLevel(Core::Path const&, std::function<void (FileArchiver::Result &)>, bool); // _ZN12FileArchiver11importLevelERKN4Core4PathESt8functionIFvRNS_6ResultEEEb
     void _importVanillaLevel(Core::Path const&, std::function<void (FileArchiver::Result &)>, bool); // _ZN12FileArchiver19_importVanillaLevelERKN4Core4PathESt8functionIFvRNS_6ResultEEEb
-//  void generateFilePickerSettings(FileArchiver::ExportType, std::string const&)const; //TODO: incomplete function definition // _ZNK12FileArchiver26generateFilePickerSettingsENS_10ExportTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+//    void generateFilePickerSettings(long, std::string const&)const; //TODO: incomplete function definition // _ZNK12FileArchiver26generateFilePickerSettingsENS_10ExportTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void getOperationPercentage()const; // _ZNK12FileArchiver22getOperationPercentageEv
     void getCurrentState()const; // _ZNK12FileArchiver15getCurrentStateEv
     void _hasResourcePacks(std::string const&)const; // _ZNK12FileArchiver17_hasResourcePacksERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

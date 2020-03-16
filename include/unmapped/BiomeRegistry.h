@@ -1,18 +1,19 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include <functional>
+#include <string>
 #include "IEntityRegistryOwner.h"
 
 
-class BiomeRegistry : IEntityRegistryOwner {
+class BiomeRegistry : public IEntityRegistryOwner {
 
 public:
     class BiomeParent;
 
     virtual void getEntityRegistry(); // _ZN13BiomeRegistry17getEntityRegistryEv
-    ~BiomeRegistry(); // _ZN13BiomeRegistryD2Ev
+    virtual ~BiomeRegistry(); // _ZN13BiomeRegistryD2Ev
+    virtual void __fake_function0(); // fake
     void setLoadFromPacks(bool); // _ZN13BiomeRegistry16setLoadFromPacksEb
     BiomeRegistry(); // _ZN13BiomeRegistryC2Ev
     void _initTagRegistry(); // _ZN13BiomeRegistry16_initTagRegistryEv
@@ -26,12 +27,12 @@ public:
     void lookupByName(std::string const&)const; // _ZNK13BiomeRegistry12lookupByNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void initServerFromPacks(ResourcePackManager &, IWorldRegistriesProvider &); // _ZN13BiomeRegistry19initServerFromPacksER19ResourcePackManagerR24IWorldRegistriesProvider
     void _buildInheritanceTree(ResourcePackManager &); // _ZN13BiomeRegistry21_buildInheritanceTreeER19ResourcePackManager
-//  void _initServerFromInheritanceTree(InheritanceTree<BiomeRegistry::BiomeParent> &, IWorldRegistriesProvider &); //TODO: incomplete function definition // _ZN13BiomeRegistry30_initServerFromInheritanceTreeER15InheritanceTreeINS_11BiomeParentEER24IWorldRegistriesProvider
+//    void _initServerFromInheritanceTree(long &, IWorldRegistriesProvider &); //TODO: incomplete function definition // _ZN13BiomeRegistry30_initServerFromInheritanceTreeER15InheritanceTreeINS_11BiomeParentEER24IWorldRegistriesProvider
     void initClientFromPacks(ResourcePackManager &); // _ZN13BiomeRegistry19initClientFromPacksER19ResourcePackManager
     void registrationFinished(); // _ZN13BiomeRegistry20registrationFinishedEv
-//  void _loadSingleBiome(ResourcePackManager &, InheritanceTree<BiomeRegistry::BiomeParent> &, std::string const&); //TODO: incomplete function definition // _ZN13BiomeRegistry16_loadSingleBiomeER19ResourcePackManagerR15InheritanceTreeINS_11BiomeParentEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  void _mergeDataInheritance(Json::Value &, InheritanceTree<BiomeRegistry::BiomeParent> &, BiomeRegistry::BiomeParent const&); //TODO: incomplete function definition // _ZN13BiomeRegistry21_mergeDataInheritanceERN4Json5ValueER15InheritanceTreeINS_11BiomeParentEERKS4_
-//  void _addToInheritanceTree(InheritanceTree<BiomeRegistry::BiomeParent> &, std::string const&, Json::Value &&); //TODO: incomplete function definition // _ZN13BiomeRegistry21_addToInheritanceTreeER15InheritanceTreeINS_11BiomeParentEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEON4Json5ValueE
+//    void _loadSingleBiome(ResourcePackManager &, long &, std::string const&); //TODO: incomplete function definition // _ZN13BiomeRegistry16_loadSingleBiomeER19ResourcePackManagerR15InheritanceTreeINS_11BiomeParentEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+//    void _mergeDataInheritance(Json::Value &, long &, BiomeRegistry::BiomeParent const&); //TODO: incomplete function definition // _ZN13BiomeRegistry21_mergeDataInheritanceERN4Json5ValueER15InheritanceTreeINS_11BiomeParentEERKS4_
+//    void _addToInheritanceTree(long &, std::string const&, Json::Value &&); //TODO: incomplete function definition // _ZN13BiomeRegistry21_addToInheritanceTreeER15InheritanceTreeINS_11BiomeParentEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEON4Json5ValueE
     class BiomeParent {
 
     public:

@@ -1,16 +1,17 @@
 #pragma once
 
-#include <string>
-#include "BaseMoveToBlockGoal.h"
 #include "../../../unmapped/FloatRange.h"
+#include "BaseMoveToBlockGoal.h"
+#include <string>
 
 
-class DropItemForGoal : BaseMoveToBlockGoal {
+class DropItemForGoal : public BaseMoveToBlockGoal {
 
 public:
     static long COOLDOWN_TICKS;
 
-    ~DropItemForGoal(); // _ZN15DropItemForGoalD2Ev
+    virtual ~DropItemForGoal(); // _ZN15DropItemForGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15DropItemForGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15DropItemForGoal16canContinueToUseEv
     virtual void start(); // _ZN15DropItemForGoal5startEv

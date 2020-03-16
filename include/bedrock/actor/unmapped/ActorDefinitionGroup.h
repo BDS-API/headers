@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include <string>
+#include "../../../json/Value.h"
 
 
 class ActorDefinitionGroup {
@@ -9,7 +9,8 @@ class ActorDefinitionGroup {
 public:
     class EDLWrapper;
 
-    ~ActorDefinitionGroup(); // _ZN20ActorDefinitionGroupD2Ev
+    virtual ~ActorDefinitionGroup(); // _ZN20ActorDefinitionGroupD2Ev
+    virtual void __fake_function0(); // fake
     ActorDefinitionGroup(Level &, ResourcePackManager &, IMinecraftEventing &, bool); // _ZN20ActorDefinitionGroupC2ER5LevelR19ResourcePackManagerR18IMinecraftEventingb
     void _getResources(Level &); // _ZN20ActorDefinitionGroup13_getResourcesER5Level
     void _loadTemplates(Level &, std::string const&, Json::Value, SemVersion const&); // _ZN20ActorDefinitionGroup14_loadTemplatesER5LevelRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN4Json5ValueERK10SemVersion

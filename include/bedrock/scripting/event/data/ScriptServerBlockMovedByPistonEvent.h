@@ -4,12 +4,13 @@
 #include "ScriptEventData.h"
 
 
-class ScriptServerBlockMovedByPistonEvent : ScriptEventData {
+class ScriptServerBlockMovedByPistonEvent : public ScriptEventData {
 
 public:
     static long mHash;
 
-    ~ScriptServerBlockMovedByPistonEvent(); // _ZN35ScriptServerBlockMovedByPistonEventD2Ev
+    virtual ~ScriptServerBlockMovedByPistonEvent(); // _ZN35ScriptServerBlockMovedByPistonEventD2Ev
+    virtual void __fake_function0(); // fake
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const; // _ZNK35ScriptServerBlockMovedByPistonEvent10_serializeER12ScriptEngineRN9ScriptApi18ScriptObjectHandleE
     void getHash(); // _ZN35ScriptServerBlockMovedByPistonEvent7getHashEv
     ScriptServerBlockMovedByPistonEvent(); // _ZN35ScriptServerBlockMovedByPistonEventC2Ev

@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class TradeInterestGoal : Goal {
+class TradeInterestGoal : public Goal {
 
 public:
-    ~TradeInterestGoal(); // _ZN17TradeInterestGoalD2Ev
+    virtual ~TradeInterestGoal(); // _ZN17TradeInterestGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN17TradeInterestGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN17TradeInterestGoal16canContinueToUseEv
     virtual void start(); // _ZN17TradeInterestGoal5startEv

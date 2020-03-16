@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class TakeFlowerGoal : Goal {
+class TakeFlowerGoal : public Goal {
 
 public:
-    ~TakeFlowerGoal(); // _ZN14TakeFlowerGoalD2Ev
+    virtual ~TakeFlowerGoal(); // _ZN14TakeFlowerGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN14TakeFlowerGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN14TakeFlowerGoal16canContinueToUseEv
     virtual void start(); // _ZN14TakeFlowerGoal5startEv

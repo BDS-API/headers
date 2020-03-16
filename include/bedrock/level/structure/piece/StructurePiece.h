@@ -6,7 +6,8 @@
 class StructurePiece {
 
 public:
-    ~StructurePiece(); // _ZN14StructurePieceD2Ev
+    virtual ~StructurePiece(); // _ZN14StructurePieceD2Ev
+    virtual void __fake_function0(); // fake
     virtual void moveBoundingBox(int, int, int); // _ZN14StructurePiece15moveBoundingBoxEiii
     virtual bool asPoolElement(); // _ZN14StructurePiece13asPoolElementEv
     virtual void getType()const; // _ZNK14StructurePiece7getTypeEv

@@ -1,17 +1,18 @@
 #pragma once
 
-#include <string>
 #include <memory>
-#include "FileOpenMode.h"
+#include <string>
 #include "FileImpl.h"
+#include "FileOpenMode.h"
 
 
 namespace Core {
 
-    class FlatFile : Core::FileImpl {
+    class FlatFile : public Core::FileImpl {
 
     public:
-        ~FlatFile(); // _ZN4Core8FlatFileD2Ev
+        virtual ~FlatFile(); // _ZN4Core8FlatFileD2Ev
+        virtual void __fake_function0(); // fake
         virtual std::string _getPath()const; // _ZNK4Core8FlatFile8_getPathB5cxx11Ev
         virtual void _getBlockSize()const; // _ZNK4Core8FlatFile13_getBlockSizeEv
         virtual void _isOpen(); // _ZN4Core8FlatFile7_isOpenEv

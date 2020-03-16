@@ -3,10 +3,11 @@
 #include "Feature.h"
 
 
-class LakeFeature : Feature {
+class LakeFeature : public Feature {
 
 public:
-    ~LakeFeature(); // _ZN11LakeFeatureD2Ev
+    virtual ~LakeFeature(); // _ZN11LakeFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK11LakeFeature5placeER11BlockSourceRK8BlockPosR6Random
     LakeFeature(Block const&); // _ZN11LakeFeatureC2ERK5Block
     LakeFeature(Block const&, Block const&); // _ZN11LakeFeatureC2ERK5BlockS2_

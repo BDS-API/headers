@@ -3,10 +3,11 @@
 #include "Animal.h"
 
 
-class Panda : Animal {
+class Panda : public Animal {
 
 public:
-    ~Panda(); // _ZN5PandaD2Ev
+    virtual ~Panda(); // _ZN5PandaD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN5Panda10normalTickEv
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &); // _ZN5Panda22readAdditionalSaveDataERK11CompoundTagR14DataLoadHelper
     virtual void _onSizeUpdated(); // _ZN5Panda14_onSizeUpdatedEv

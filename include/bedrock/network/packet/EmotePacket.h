@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../../actor/unmapped/ActorRuntimeID.h"
 #include <string>
 #include "Packet.h"
-#include "../../actor/unmapped/ActorRuntimeID.h"
 
 
-class EmotePacket : Packet {
+class EmotePacket : public Packet {
 
 public:
-    ~EmotePacket(); // _ZN11EmotePacketD2Ev
+    virtual ~EmotePacket(); // _ZN11EmotePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK11EmotePacket5getIdEv
     virtual std::string getName()const; // _ZNK11EmotePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK11EmotePacket5writeER12BinaryStream

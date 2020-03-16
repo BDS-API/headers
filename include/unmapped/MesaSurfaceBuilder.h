@@ -5,10 +5,11 @@
 
 namespace VanillaSurfaceBuilders {
 
-    class MesaSurfaceBuilder : ISurfaceBuilder {
+    class MesaSurfaceBuilder : public ISurfaceBuilder {
 
     public:
-        ~MesaSurfaceBuilder(); // _ZN22VanillaSurfaceBuilders18MesaSurfaceBuilderD2Ev
+        virtual ~MesaSurfaceBuilder(); // _ZN22VanillaSurfaceBuilders18MesaSurfaceBuilderD2Ev
+        virtual void __fake_function0(); // fake
         virtual void init(EntityContext &, unsigned int); // _ZN22VanillaSurfaceBuilders18MesaSurfaceBuilder4initER13EntityContextj
         virtual void buildSurfaceAt(Biome &, Random &, BlockVolume &, BlockPos const&, float, short); // _ZN22VanillaSurfaceBuilders18MesaSurfaceBuilder14buildSurfaceAtER5BiomeR6RandomR11BlockVolumeRK8BlockPosfs
         MesaSurfaceBuilder(); // _ZN22VanillaSurfaceBuilders18MesaSurfaceBuilderC2Ev

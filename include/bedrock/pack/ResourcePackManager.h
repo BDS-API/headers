@@ -1,16 +1,17 @@
 #pragma once
 
-#include "ResourceLoader.h"
-#include <vector>
-#include <memory>
 #include <string>
+#include <memory>
+#include <vector>
 #include <functional>
+#include "ResourceLoader.h"
 
 
-class ResourcePackManager : ResourceLoader {
+class ResourcePackManager : public ResourceLoader {
 
 public:
-    ~ResourcePackManager(); // _ZN19ResourcePackManagerD2Ev
+    virtual ~ResourcePackManager(); // _ZN19ResourcePackManagerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(ResourceLocation const&, std::string &)const; // _ZNK19ResourcePackManager4loadERK16ResourceLocationRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void load(ResourceLocation const&, std::string &, std::vector<std::string> const&)const; // _ZNK19ResourcePackManager4loadERK16ResourceLocationRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS8_SaIS8_EE
     virtual void loadAllVersionsOf(ResourceLocation const&)const; // _ZNK19ResourcePackManager17loadAllVersionsOfERK16ResourceLocation
@@ -20,8 +21,8 @@ public:
     virtual void getPath(ResourceLocation const&, std::vector<std::string> const&)const; // _ZNK19ResourcePackManager7getPathERK16ResourceLocationRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS9_EE
     virtual std::string getPathContainingResource(ResourceLocation const&)const; // _ZNK19ResourcePackManager25getPathContainingResourceB5cxx11ERK16ResourceLocation
     virtual void getPathContainingResource(ResourceLocation const&, std::vector<std::string>)const; // _ZNK19ResourcePackManager25getPathContainingResourceERK16ResourceLocationSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS9_EE
-//  virtual bool hasCapability(gsl::basic_string_span<char const, -1l>)const; //TODO: incomplete function definition // _ZNK19ResourcePackManager13hasCapabilityEN3gsl17basic_string_spanIKcLln1EEE
-//  ResourcePackManager(std::function<Core::PathBuffer<std::string> (void)>, ContentTierManager const&, bool); //TODO: incomplete function definition // _ZN19ResourcePackManagerC2ESt8functionIFN4Core10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvEERK18ContentTierManagerb
+    virtual bool hasCapability__incomplete0(long)const; //TODO: incomplete function definition // _ZNK19ResourcePackManager13hasCapabilityEN3gsl17basic_string_spanIKcLln1EEE
+//    ResourcePackManager(std::function<long (void)>, ContentTierManager const&, bool); //TODO: incomplete function definition // _ZN19ResourcePackManagerC2ESt8functionIFN4Core10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEvEERK18ContentTierManagerb
     void _getResource(Core::Path const&, std::string &)const; // _ZNK19ResourcePackManager12_getResourceERKN4Core4PathERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void loadText(ResourceLocation const&, std::string &)const; // _ZNK19ResourcePackManager8loadTextERK16ResourceLocationRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void loadAllVersionsOf(ResourceLocation const&, ResourcePackMergeStrategy &)const; // _ZNK19ResourcePackManager17loadAllVersionsOfERK16ResourceLocationR25ResourcePackMergeStrategy
@@ -33,12 +34,12 @@ public:
     void getStackSize()const; // _ZNK19ResourcePackManager12getStackSizeEv
     void findAllTexturesInUse()const; // _ZNK19ResourcePackManager20findAllTexturesInUseEv
     void findInPacks(ResourceLocation const&); // _ZN19ResourcePackManager11findInPacksERK16ResourceLocation
-//  void setStack(std::unique_ptr<ResourcePackStack>, ResourcePackStackType, bool); //TODO: incomplete function definition // _ZN19ResourcePackManager8setStackESt10unique_ptrI17ResourcePackStackSt14default_deleteIS1_EE21ResourcePackStackTypeb
+//    void setStack(std::unique_ptr<ResourcePackStack>, long, bool); //TODO: incomplete function definition // _ZN19ResourcePackManager8setStackESt10unique_ptrI17ResourcePackStackSt14default_deleteIS1_EE21ResourcePackStackTypeb
     void _handleComposeStack(bool); // _ZN19ResourcePackManager19_handleComposeStackEb
-//  void clearStack(ResourcePackStackType, bool); //TODO: incomplete function definition // _ZN19ResourcePackManager10clearStackE21ResourcePackStackTypeb
+//    void clearStack(long, bool); //TODO: incomplete function definition // _ZN19ResourcePackManager10clearStackE21ResourcePackStackTypeb
     void clearPackReports(); // _ZN19ResourcePackManager16clearPackReportsEv
     void mergePackReports(std::vector<PackReport> &); // _ZN19ResourcePackManager16mergePackReportsERSt6vectorI10PackReportSaIS1_EE
-//  void getStack(ResourcePackStackType)const; //TODO: incomplete function definition // _ZNK19ResourcePackManager8getStackE21ResourcePackStackType
+//    void getStack(long)const; //TODO: incomplete function definition // _ZNK19ResourcePackManager8getStackE21ResourcePackStackType
     void _shouldRebuildStack()const; // _ZNK19ResourcePackManager19_shouldRebuildStackEv
     void composeFullStack(ResourcePackStack &, ResourcePackStack const&, ResourcePackStack const&, ResourcePackStack const&)const; // _ZNK19ResourcePackManager16composeFullStackER17ResourcePackStackRKS0_S3_S3_
     void _composeFullStack(); // _ZN19ResourcePackManager17_composeFullStackEv
@@ -52,7 +53,7 @@ public:
     void unRegisterAllResourcePackListener(); // _ZN19ResourcePackManager33unRegisterAllResourcePackListenerEv
     void notifyLanguageSubpacksChanged(); // _ZN19ResourcePackManager29notifyLanguageSubpacksChangedEv
     void getResourcesOfGroup(PackInstance const&, std::string const&)const; // _ZNK19ResourcePackManager19getResourcesOfGroupERK12PackInstanceRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-    void _getResourcesOfGroup(PackInstance const&, std::string const&, std::vector<Core::PathBuffer<std::string>> &)const; // _ZNK19ResourcePackManager20_getResourcesOfGroupERK12PackInstanceRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorIN4Core10PathBufferIS8_EESaISE_EE
+    void _getResourcesOfGroup(PackInstance const&, std::string const&, std::vector<long> &)const; // _ZNK19ResourcePackManager20_getResourcesOfGroupERK12PackInstanceRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorIN4Core10PathBufferIS8_EESaISE_EE
     void getResourcesOfGroup(std::string const&)const; // _ZNK19ResourcePackManager19getResourcesOfGroupERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     bool isOnlyBaseGamePacks()const; // _ZNK19ResourcePackManager19isOnlyBaseGamePacksEv
     void checkHasExtraLocaleResources(std::string const&)const; // _ZNK19ResourcePackManager28checkHasExtraLocaleResourcesERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
@@ -60,8 +61,8 @@ public:
     void onBaseGamePackDownloadComplete(); // _ZN19ResourcePackManager30onBaseGamePackDownloadCompleteEv
     void handlePendingStackChanges(); // _ZN19ResourcePackManager25handlePendingStackChangesEv
     void forceStackCompose(); // _ZN19ResourcePackManager17forceStackComposeEv
-//  void copyPacksToLevel(Core::Path const&, PackType, PackSourceFactory const&, PackManifestFactory &, IContentKeyProvider const&)const; //TODO: incomplete function definition // _ZNK19ResourcePackManager16copyPacksToLevelERKN4Core4PathE8PackTypeRK17PackSourceFactoryR19PackManifestFactoryRK19IContentKeyProvider
-//  void copyPacksToLevel(Core::Path const&, PackType, PackSourceFactory const&, PackManifestFactory &, IContentKeyProvider const&, std::vector<PackInstance> const&)const; //TODO: incomplete function definition // _ZNK19ResourcePackManager16copyPacksToLevelERKN4Core4PathE8PackTypeRK17PackSourceFactoryR19PackManifestFactoryRK19IContentKeyProviderRKSt6vectorI12PackInstanceSaISE_EE
+//    void copyPacksToLevel(Core::Path const&, long, PackSourceFactory const&, PackManifestFactory &, IContentKeyProvider const&)const; //TODO: incomplete function definition // _ZNK19ResourcePackManager16copyPacksToLevelERKN4Core4PathE8PackTypeRK17PackSourceFactoryR19PackManifestFactoryRK19IContentKeyProvider
+//    void copyPacksToLevel(Core::Path const&, long, PackSourceFactory const&, PackManifestFactory &, IContentKeyProvider const&, std::vector<PackInstance> const&)const; //TODO: incomplete function definition // _ZNK19ResourcePackManager16copyPacksToLevelERKN4Core4PathE8PackTypeRK17PackSourceFactoryR19PackManifestFactoryRK19IContentKeyProviderRKSt6vectorI12PackInstanceSaISE_EE
     void getPackSourceReport()const; // _ZNK19ResourcePackManager19getPackSourceReportEv
     void setPackSourceReport(PackSourceReport &&); // _ZN19ResourcePackManager19setPackSourceReportEO16PackSourceReport
     void getPackSettings(PackIdVersion const&); // _ZN19ResourcePackManager15getPackSettingsERK13PackIdVersion

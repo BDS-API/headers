@@ -3,10 +3,11 @@
 #include "Feature.h"
 
 
-class TreeFeature : Feature {
+class TreeFeature : public Feature {
 
 public:
-    ~TreeFeature(); // _ZN11TreeFeatureD2Ev
+    virtual ~TreeFeature(); // _ZN11TreeFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK11TreeFeature5placeER11BlockSourceRK8BlockPosR6Random
     TreeFeature(Actor *, int, int, bool, bool); // _ZN11TreeFeatureC2EP5Actoriibb
     void _placeLeaf(BlockSource &, BlockPos const&)const; // _ZNK11TreeFeature10_placeLeafER11BlockSourceRK8BlockPos

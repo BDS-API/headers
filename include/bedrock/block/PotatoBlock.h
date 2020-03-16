@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "CropBlock.h"
+#include <string>
 
 
-class PotatoBlock : CropBlock {
+class PotatoBlock : public CropBlock {
 
 public:
-    ~PotatoBlock(); // _ZN11PotatoBlockD2Ev
+    virtual ~PotatoBlock(); // _ZN11PotatoBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK11PotatoBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const; // _ZNK11PotatoBlock14spawnResourcesER11BlockSourceRK8BlockPosRK5Blockfi
     virtual void getVariant(Block const&)const; // _ZNK11PotatoBlock10getVariantERK5Block

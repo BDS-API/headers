@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class StainedGlassBlock : BlockLegacy {
+class StainedGlassBlock : public BlockLegacy {
 
 public:
-    ~StainedGlassBlock(); // _ZN17StainedGlassBlockD2Ev
+    virtual ~StainedGlassBlock(); // _ZN17StainedGlassBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canConnect(Block const&, unsigned char, Block const&)const; // _ZNK17StainedGlassBlock10canConnectERK5BlockhS2_
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const; // _ZNK17StainedGlassBlock19canBeUsedInCommandsEbRK15BaseGameVersion
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK17StainedGlassBlock16getResourceCountER6RandomRK5Blocki

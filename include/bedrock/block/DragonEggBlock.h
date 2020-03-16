@@ -4,10 +4,11 @@
 #include "HeavyBlock.h"
 
 
-class DragonEggBlock : HeavyBlock {
+class DragonEggBlock : public HeavyBlock {
 
 public:
-    ~DragonEggBlock(); // _ZN14DragonEggBlockD2Ev
+    virtual ~DragonEggBlock(); // _ZN14DragonEggBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool breaksFallingBlocks(Block const&)const; // _ZNK14DragonEggBlock19breaksFallingBlocksERK5Block
     virtual void use(Player &, BlockPos const&)const; // _ZNK14DragonEggBlock3useER6PlayerRK8BlockPos
     virtual void attack(Player *, BlockPos const&)const; // _ZNK14DragonEggBlock6attackEP6PlayerRK8BlockPos

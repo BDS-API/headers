@@ -16,5 +16,5 @@ public:
     void below()const; // _ZNK13ChunkBlockPos5belowEv
     void hashCode()const; // _ZNK13ChunkBlockPos8hashCodeEv
     void operator==(ChunkBlockPos const&)const; // _ZNK13ChunkBlockPoseqERKS_
-//  void neighbor(Facing::Name)const; //TODO: incomplete function definition // _ZNK13ChunkBlockPos8neighborEN6Facing4NameE
+//    void neighbor(long)const; //TODO: incomplete function definition // _ZNK13ChunkBlockPos8neighborEN6Facing4NameE
 };

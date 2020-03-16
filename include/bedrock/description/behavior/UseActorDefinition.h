@@ -3,9 +3,10 @@
 #include "BehaviorDefinition.h"
 
 
-class UseActorDefinition : BehaviorDefinition {
+class UseActorDefinition : public BehaviorDefinition {
 
 public:
-    ~UseActorDefinition(); // _ZN18UseActorDefinitionD2Ev
+    virtual ~UseActorDefinition(); // _ZN18UseActorDefinitionD2Ev
+    virtual void __fake_function0(); // fake
     UseActorDefinition(); // _ZN18UseActorDefinitionC2Ev
 };

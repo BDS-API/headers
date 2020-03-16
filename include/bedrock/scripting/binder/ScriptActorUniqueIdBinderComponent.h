@@ -1,15 +1,16 @@
 #pragma once
 
-#include "ScriptBinderComponent.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
+#include "ScriptBinderComponent.h"
 
 
-class ScriptActorUniqueIdBinderComponent : ScriptBinderComponent {
+class ScriptActorUniqueIdBinderComponent : public ScriptBinderComponent {
 
 public:
     static std::string TAG;
 
-    ~ScriptActorUniqueIdBinderComponent(); // _ZN34ScriptActorUniqueIdBinderComponentD2Ev
+    virtual ~ScriptActorUniqueIdBinderComponent(); // _ZN34ScriptActorUniqueIdBinderComponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const; // _ZNK34ScriptActorUniqueIdBinderComponent9serializeER12ScriptEngineRKN9ScriptApi18ScriptObjectHandleE
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&); // _ZN34ScriptActorUniqueIdBinderComponent11deserializeER12ScriptEngineRKN9ScriptApi18ScriptObjectHandleE
     ScriptActorUniqueIdBinderComponent(); // _ZN34ScriptActorUniqueIdBinderComponentC2Ev

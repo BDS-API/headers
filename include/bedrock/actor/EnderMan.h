@@ -3,7 +3,7 @@
 #include "Monster.h"
 
 
-class EnderMan : Monster {
+class EnderMan : public Monster {
 
 public:
     static long mMayTake;
@@ -11,9 +11,10 @@ public:
     static long SPEED_MODIFIER_ATTACKING_UUID;
     static long SPEED_MODIFIER_ATTACKING;
 
-    ~EnderMan(); // _ZN8EnderManD2Ev
+    virtual ~EnderMan(); // _ZN8EnderManD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN8EnderMan10normalTickEv
-    virtual void shouldRender()const; // _ZNK8EnderMan12shouldRenderEv
+    virtual bool shouldRender()const; // _ZNK8EnderMan12shouldRenderEv
     virtual bool canBeAffectedByArrow(MobEffectInstance const&)const; // _ZNK8EnderMan20canBeAffectedByArrowERK17MobEffectInstance
     virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN8EnderMan5_hurtERK17ActorDamageSourceibb
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &); // _ZN8EnderMan22readAdditionalSaveDataERK11CompoundTagR14DataLoadHelper

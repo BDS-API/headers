@@ -1,16 +1,17 @@
 #pragma once
 
-#include <vector>
-#include <memory>
-#include "LootItemFunction.h"
 #include <string>
+#include <memory>
+#include <vector>
 #include "../../../json/Value.h"
+#include "LootItemFunction.h"
 
 
-class SetBookContentsFunction : LootItemFunction {
+class SetBookContentsFunction : public LootItemFunction {
 
 public:
-    ~SetBookContentsFunction(); // _ZN23SetBookContentsFunctionD2Ev
+    virtual ~SetBookContentsFunction(); // _ZN23SetBookContentsFunctionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void apply(ItemStack &, Random &, LootTableContext &); // _ZN23SetBookContentsFunction5applyER9ItemStackR6RandomR16LootTableContext
     virtual void apply(ItemInstance &, Random &, LootTableContext &); // _ZN23SetBookContentsFunction5applyER12ItemInstanceR6RandomR16LootTableContext
     void _fillUserData(CompoundTag &); // _ZN23SetBookContentsFunction13_fillUserDataER11CompoundTag

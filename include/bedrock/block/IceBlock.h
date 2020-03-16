@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class IceBlock : BlockLegacy {
+class IceBlock : public BlockLegacy {
 
 public:
-    ~IceBlock(); // _ZN8IceBlockD2Ev
+    virtual ~IceBlock(); // _ZN8IceBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK8IceBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const; // _ZNK8IceBlock17playerWillDestroyER6PlayerRK8BlockPosRK5Block
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK8IceBlock16getResourceCountER6RandomRK5Blocki

@@ -3,10 +3,11 @@
 #include "MegaTreeFeature.h"
 
 
-class MegaJungleTreeFeature : MegaTreeFeature {
+class MegaJungleTreeFeature : public MegaTreeFeature {
 
 public:
-    ~MegaJungleTreeFeature(); // _ZN21MegaJungleTreeFeatureD2Ev
+    virtual ~MegaJungleTreeFeature(); // _ZN21MegaJungleTreeFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK21MegaJungleTreeFeature5placeER11BlockSourceRK8BlockPosR6Random
     MegaJungleTreeFeature(Actor *, int, int, int, int); // _ZN21MegaJungleTreeFeatureC2EP5Actoriiii
     void _createCrown(BlockSource &, BlockPos const&, int)const; // _ZNK21MegaJungleTreeFeature12_createCrownER11BlockSourceRK8BlockPosi

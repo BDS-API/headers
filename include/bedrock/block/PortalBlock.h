@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class PortalBlock : BlockLegacy {
+class PortalBlock : public BlockLegacy {
 
 public:
-    ~PortalBlock(); // _ZN11PortalBlockD2Ev
+    virtual ~PortalBlock(); // _ZN11PortalBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK11PortalBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK11PortalBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isWaterBlocking()const; // _ZNK11PortalBlock15isWaterBlockingEv
@@ -23,8 +24,8 @@ public:
     virtual void getVisualShapeInWorld(Block const&, BlockSource &, BlockPos const&, AABB &, bool)const; // _ZNK11PortalBlock21getVisualShapeInWorldERK5BlockR11BlockSourceRK8BlockPosR4AABBb
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const; // _ZNK11PortalBlock11animateTickER11BlockSourceRK8BlockPosR6Random
     PortalBlock(std::string const&, int); // _ZN11PortalBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
-//  void _canSpawnBasedOnDifficulty(Difficulty, unsigned long)const; //TODO: incomplete function definition // _ZNK11PortalBlock26_canSpawnBasedOnDifficultyE10Difficultym
+//    void _canSpawnBasedOnDifficulty(long, unsigned long)const; //TODO: incomplete function definition // _ZNK11PortalBlock26_canSpawnBasedOnDifficultyE10Difficultym
     void _locateFloorYValue(BlockSource &, BlockPos const&)const; // _ZNK11PortalBlock18_locateFloorYValueER11BlockSourceRK8BlockPos
-//  void _offsetSpawnPosition(Vec3 &, PortalAxis)const; //TODO: incomplete function definition // _ZNK11PortalBlock20_offsetSpawnPositionER4Vec310PortalAxis
+//    void _offsetSpawnPosition(Vec3 &, long)const; //TODO: incomplete function definition // _ZNK11PortalBlock20_offsetSpawnPositionER4Vec310PortalAxis
     void trySpawnPortal(BlockSource &, BlockPos const&)const; // _ZNK11PortalBlock14trySpawnPortalER11BlockSourceRK8BlockPos
 };

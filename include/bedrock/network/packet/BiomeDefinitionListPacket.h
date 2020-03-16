@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../../nbt/CompoundTag.h"
+#include <string>
 #include "Packet.h"
 
 
-class BiomeDefinitionListPacket : Packet {
+class BiomeDefinitionListPacket : public Packet {
 
 public:
-    ~BiomeDefinitionListPacket(); // _ZN25BiomeDefinitionListPacketD2Ev
+    virtual ~BiomeDefinitionListPacket(); // _ZN25BiomeDefinitionListPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK25BiomeDefinitionListPacket5getIdEv
     virtual std::string getName()const; // _ZNK25BiomeDefinitionListPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK25BiomeDefinitionListPacket5writeER12BinaryStream

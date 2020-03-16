@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class SeaLanternBlock : BlockLegacy {
+class SeaLanternBlock : public BlockLegacy {
 
 public:
-    ~SeaLanternBlock(); // _ZN15SeaLanternBlockD2Ev
+    virtual ~SeaLanternBlock(); // _ZN15SeaLanternBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK15SeaLanternBlock16getResourceCountER6RandomRK5Blocki
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK15SeaLanternBlock15getResourceItemER6RandomRK5Blocki
     virtual bool canBeSilkTouched()const; // _ZNK15SeaLanternBlock16canBeSilkTouchedEv

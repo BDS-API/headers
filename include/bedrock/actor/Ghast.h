@@ -3,10 +3,11 @@
 #include "Mob.h"
 
 
-class Ghast : Mob {
+class Ghast : public Mob {
 
 public:
-    ~Ghast(); // _ZN5GhastD2Ev
+    virtual ~Ghast(); // _ZN5GhastD2Ev
+    virtual void __fake_function0(); // fake
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN5Ghast35updateEntitySpecificMolangVariablesER12RenderParams
     virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN5Ghast5_hurtERK17ActorDamageSourceibb
     virtual void getAmbientSoundPostponeTicks(); // _ZN5Ghast28getAmbientSoundPostponeTicksEv

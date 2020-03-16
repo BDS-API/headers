@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class NetworkChunkPublisherUpdatePacket : Packet {
+class NetworkChunkPublisherUpdatePacket : public Packet {
 
 public:
-    ~NetworkChunkPublisherUpdatePacket(); // _ZN33NetworkChunkPublisherUpdatePacketD2Ev
+    virtual ~NetworkChunkPublisherUpdatePacket(); // _ZN33NetworkChunkPublisherUpdatePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK33NetworkChunkPublisherUpdatePacket5getIdEv
     virtual std::string getName()const; // _ZNK33NetworkChunkPublisherUpdatePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK33NetworkChunkPublisherUpdatePacket5writeER12BinaryStream

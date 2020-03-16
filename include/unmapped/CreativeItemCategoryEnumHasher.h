@@ -4,5 +4,5 @@
 
 namespace CreativeItemCategoryEnumHasher {
 
-//  void operator()(CreativeItemCategory const&)const; //TODO: incomplete function definition // _ZNK30CreativeItemCategoryEnumHasherclERK20CreativeItemCategory
+//    void operator()(long const&)const; //TODO: incomplete function definition // _ZNK30CreativeItemCategoryEnumHasherclERK20CreativeItemCategory
 };

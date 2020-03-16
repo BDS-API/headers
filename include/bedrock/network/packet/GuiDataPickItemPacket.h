@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class GuiDataPickItemPacket : Packet {
+class GuiDataPickItemPacket : public Packet {
 
 public:
-    ~GuiDataPickItemPacket(); // _ZN21GuiDataPickItemPacketD2Ev
+    virtual ~GuiDataPickItemPacket(); // _ZN21GuiDataPickItemPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK21GuiDataPickItemPacket5getIdEv
     virtual std::string getName()const; // _ZNK21GuiDataPickItemPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK21GuiDataPickItemPacket5writeER12BinaryStream

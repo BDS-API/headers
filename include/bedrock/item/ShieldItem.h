@@ -4,14 +4,15 @@
 #include "Item.h"
 
 
-class ShieldItem : Item {
+class ShieldItem : public Item {
 
 public:
     static long EFFECTIVE_BLOCK_DELAY;
     static long IN_HAND_BLOCK_DURATION;
     static std::string TIMESTAMP_TAG;
 
-    ~ShieldItem(); // _ZN10ShieldItemD2Ev
+    virtual ~ShieldItem(); // _ZN10ShieldItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isHandEquipped()const; // _ZNK10ShieldItem14isHandEquippedEv
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const; // _ZNK10ShieldItem17isValidRepairItemERK12ItemInstanceS2_
     virtual void getEnchantSlot()const; // _ZNK10ShieldItem14getEnchantSlotEv

@@ -1,18 +1,19 @@
 #pragma once
 
-#include <unordered_map>
-#include <vector>
+#include <string>
 #include <memory>
 #include "../unmapped/IEntityRegistryOwner.h"
-#include <string>
+#include <vector>
+#include <unordered_map>
 
 
-class Minecraft : IEntityRegistryOwner {
+class Minecraft : public IEntityRegistryOwner {
 
 public:
     virtual void getEntityRegistry(); // _ZN9Minecraft17getEntityRegistryEv
-    ~Minecraft(); // _ZN9MinecraftD2Ev
-//  Minecraft(IMinecraftApp &, GameCallbacks &, Whitelist &, PermissionsFile *, Core::FilePathManager *, std::chrono::duration<long, std::ratio<1l, 1l>>, IMinecraftEventing &, NetworkHandler &, PacketSender &, unsigned char, Timer &, Timer &, ContentTierManager const&, ServerMetrics *); //TODO: incomplete function definition // _ZN9MinecraftC2ER13IMinecraftAppR13GameCallbacksR9WhitelistP15PermissionsFilePN4Core15FilePathManagerENSt6chrono8durationIlSt5ratioILl1ELl1EEEER18IMinecraftEventingR14NetworkHandlerR12PacketSenderhR5TimerSN_RK18ContentTierManagerP13ServerMetrics
+    virtual ~Minecraft(); // _ZN9MinecraftD2Ev
+    virtual void __fake_function0(); // fake
+//    Minecraft(IMinecraftApp &, GameCallbacks &, Whitelist &, PermissionsFile *, Core::FilePathManager *, long, IMinecraftEventing &, NetworkHandler &, PacketSender &, unsigned char, Timer &, Timer &, ContentTierManager const&, ServerMetrics *); //TODO: incomplete function definition // _ZN9MinecraftC2ER13IMinecraftAppR13GameCallbacksR9WhitelistP15PermissionsFilePN4Core15FilePathManagerENSt6chrono8durationIlSt5ratioILl1ELl1EEEER18IMinecraftEventingR14NetworkHandlerR12PacketSenderhR5TimerSN_RK18ContentTierManagerP13ServerMetrics
     void resetGameSession(); // _ZN9Minecraft16resetGameSessionEv
     void clearThreadCallbacks(); // _ZN9Minecraft20clearThreadCallbacksEv
     void updateScreens(); // _ZN9Minecraft13updateScreensEv
@@ -24,7 +25,7 @@ public:
     void startLeaveGame(bool); // _ZN9Minecraft14startLeaveGameEb
     bool isLeaveGameDone()const; // _ZNK9Minecraft15isLeaveGameDoneEv
     void clientReset(); // _ZN9Minecraft11clientResetEv
-//  void setGameModeReal(GameType); //TODO: incomplete function definition // _ZN9Minecraft15setGameModeRealE8GameType
+//    void setGameModeReal(long); //TODO: incomplete function definition // _ZN9Minecraft15setGameModeRealE8GameType
     void update(); // _ZN9Minecraft6updateEv
     void getServerNetworkHandler(); // _ZN9Minecraft23getServerNetworkHandlerEv
     void disconnectClient(NetworkIdentifier const&, std::string const&); // _ZN9Minecraft16disconnectClientERK17NetworkIdentifierRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
@@ -37,7 +38,7 @@ public:
     bool isModded(); // _ZN9Minecraft8isModdedEv
     bool isOnlineClient(); // _ZN9Minecraft14isOnlineClientEv
     void getNetworkStatistics()const; // _ZNK9Minecraft20getNetworkStatisticsEv
-//  void hostMultiplayer(std::string const&, std::unique_ptr<Level>, Player *, mce::UUID const&, std::unique_ptr<NetEventCallback>, int, bool, bool, std::vector<std::string> const&, std::string, ConnectionDefinition const&, std::unordered_map<PackIdVersion, std::string, std::hash<PackIdVersion>, std::equal_to<PackIdVersion>, std::allocator<std::pair<PackIdVersion const, std::string>>> const&, Scheduler &, TextFilteringProcessor *); //TODO: incomplete function definition // _ZN9Minecraft15hostMultiplayerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt10unique_ptrI5LevelSt14default_deleteIS9_EEP6PlayerRKN3mce4UUIDES8_I16NetEventCallbackSA_ISJ_EEibbRKSt6vectorIS5_SaIS5_EES5_RK20ConnectionDefinitionRKSt13unordered_mapI13PackIdVersionS5_St4hashISV_ESt8equal_toISV_ESaISt4pairIKSV_S5_EEER9SchedulerP22TextFilteringProcessor
+//    void hostMultiplayer(std::string const&, std::unique_ptr<Level>, Player *, mce::UUID const&, std::unique_ptr<NetEventCallback>, int, bool, bool, std::vector<std::string> const&, std::string, ConnectionDefinition const&, std::unordered_map<PackIdVersion, std::string, std::hash<PackIdVersion>, long, std::allocator<std::pair<PackIdVersion const, std::string>>> const&, Scheduler &, long *); //TODO: incomplete function definition // _ZN9Minecraft15hostMultiplayerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt10unique_ptrI5LevelSt14default_deleteIS9_EEP6PlayerRKN3mce4UUIDES8_I16NetEventCallbackSA_ISJ_EEibbRKSt6vectorIS5_SaIS5_EES5_RK20ConnectionDefinitionRKSt13unordered_mapI13PackIdVersionS5_St4hashISV_ESt8equal_toISV_ESaISt4pairIKSV_S5_EEER9SchedulerP22TextFilteringProcessor
     void getClientSubId()const; // _ZNK9Minecraft14getClientSubIdEv
     void setupServerCommands(std::string const&, std::string const&); // _ZN9Minecraft19setupServerCommandsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_
     bool usesNonLocalConnection(NetworkIdentifier const&); // _ZN9Minecraft22usesNonLocalConnectionERK17NetworkIdentifier

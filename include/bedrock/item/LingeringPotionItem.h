@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "PotionItem.h"
 
 
-class LingeringPotionItem : PotionItem {
+class LingeringPotionItem : public PotionItem {
 
 public:
-    ~LingeringPotionItem(); // _ZN19LingeringPotionItemD2Ev
+    virtual ~LingeringPotionItem(); // _ZN19LingeringPotionItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isThrowable()const; // _ZNK19LingeringPotionItem11isThrowableEv
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const; // _ZNK19LingeringPotionItem24appendFormattedHovertextERK13ItemStackBaseR5LevelRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
     virtual void use(ItemStack &, Player &)const; // _ZNK19LingeringPotionItem3useER9ItemStackR6Player

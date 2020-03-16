@@ -4,7 +4,7 @@
 #include "IAppPlatform.h"
 
 
-class AppPlatform : IAppPlatform {
+class AppPlatform : public IAppPlatform {
 
 public:
     static long HOME_PATH;
@@ -13,7 +13,8 @@ public:
     static long SHADERCACHE_PATH;
     static long mIsInitialized;
 
-    ~AppPlatform(); // _ZN11AppPlatformD2Ev
+    virtual ~AppPlatform(); // _ZN11AppPlatformD2Ev
+    virtual void __fake_function0(); // fake
     virtual void restartRequested(); // _ZN11AppPlatform16restartRequestedEv
     virtual std::string getLoggingPath()const; // _ZNK11AppPlatform14getLoggingPathB5cxx11Ev
     virtual bool isLowMemoryDevice()const; // _ZNK11AppPlatform17isLowMemoryDeviceEv
@@ -47,7 +48,7 @@ public:
     virtual void createUserInput(); // _ZN11AppPlatform15createUserInputEv
     virtual void getUserInputStatus(); // _ZN11AppPlatform18getUserInputStatusEv
     virtual std::string getUserInput(); // _ZN11AppPlatform12getUserInputB5cxx11Ev
-//  virtual void getFileAccess(ResourceFileSystem); //TODO: incomplete function definition // _ZN11AppPlatform13getFileAccessE18ResourceFileSystem
+    virtual void getFileAccess__incomplete0(long); //TODO: incomplete function definition // _ZN11AppPlatform13getFileAccessE18ResourceFileSystem
     virtual std::string copyImportFileToTempFolder(Core::Path const&); // _ZN11AppPlatform26copyImportFileToTempFolderB5cxx11ERKN4Core4PathE
     virtual void registerFileForCollectionWithCrashDump(Core::Path const&); // _ZN11AppPlatform38registerFileForCollectionWithCrashDumpERKN4Core4PathE
     virtual void getScreenWidth(); // _ZN11AppPlatform14getScreenWidthEv
@@ -63,10 +64,10 @@ public:
     virtual bool canManageLegacyData()const; // _ZNK11AppPlatform19canManageLegacyDataEv
     virtual bool supportsDayOneExperience()const; // _ZNK11AppPlatform24supportsDayOneExperienceEv
     virtual bool hasBroadcastPermission(); // _ZN11AppPlatform22hasBroadcastPermissionEv
-//  virtual bool hasAppInstalled(ExternalApp)const; //TODO: incomplete function definition // _ZNK11AppPlatform15hasAppInstalledE11ExternalApp
-//  virtual void navigateToStoreForApp(ExternalApp)const; //TODO: incomplete function definition // _ZNK11AppPlatform21navigateToStoreForAppE11ExternalApp
-//  virtual void launchApp(ExternalApp)const; //TODO: incomplete function definition // _ZNK11AppPlatform9launchAppE11ExternalApp
-//  virtual bool canSupportApp(ExternalApp)const; //TODO: incomplete function definition // _ZNK11AppPlatform13canSupportAppE11ExternalApp
+    virtual bool hasAppInstalled__incomplete0(long)const; //TODO: incomplete function definition // _ZNK11AppPlatform15hasAppInstalledE11ExternalApp
+    virtual void navigateToStoreForApp__incomplete0(long)const; //TODO: incomplete function definition // _ZNK11AppPlatform21navigateToStoreForAppE11ExternalApp
+    virtual void launchApp__incomplete0(long)const; //TODO: incomplete function definition // _ZNK11AppPlatform9launchAppE11ExternalApp
+    virtual bool canSupportApp__incomplete0(long)const; //TODO: incomplete function definition // _ZNK11AppPlatform13canSupportAppE11ExternalApp
     virtual void startBroadcast(); // _ZN11AppPlatform14startBroadcastEv
     virtual bool isContentAutoUpdateAllowed()const; // _ZNK11AppPlatform26isContentAutoUpdateAllowedEv
     virtual void getMaxSimultaneousDownloads()const; // _ZNK11AppPlatform27getMaxSimultaneousDownloadsEv
@@ -106,10 +107,10 @@ public:
     virtual bool isCentennial()const; // _ZNK11AppPlatform12isCentennialEv
     virtual std::string getPackageFamilyName()const; // _ZNK11AppPlatform20getPackageFamilyNameB5cxx11Ev
     virtual void getBuildPlatform()const; // _ZNK11AppPlatform16getBuildPlatformEv
-//  virtual void setARVRPlatform(ARVRPlatform); //TODO: incomplete function definition // _ZN11AppPlatform15setARVRPlatformE12ARVRPlatform
+    virtual void setARVRPlatform__incomplete0(long); //TODO: incomplete function definition // _ZN11AppPlatform15setARVRPlatformE12ARVRPlatform
     virtual void getARVRPlatform()const; // _ZNK11AppPlatform15getARVRPlatformEv
     virtual void getNumberOfParticleFramesToInterpolate()const; // _ZNK11AppPlatform38getNumberOfParticleFramesToInterpolateEv
-//  virtual void setVRControllerType(VRControllerType); //TODO: incomplete function definition // _ZN11AppPlatform19setVRControllerTypeE16VRControllerType
+    virtual void setVRControllerType__incomplete0(long); //TODO: incomplete function definition // _ZN11AppPlatform19setVRControllerTypeE16VRControllerType
     virtual void getVRControllerType()const; // _ZNK11AppPlatform19getVRControllerTypeEv
     virtual bool hasIDEProfiler(); // _ZN11AppPlatform14hasIDEProfilerEv
     virtual std::string getPlatformStringVar(int); // _ZN11AppPlatform20getPlatformStringVarB5cxx11Ei
@@ -120,7 +121,7 @@ public:
     virtual void useAppPlatformForTelemetryIPAddress(); // _ZN11AppPlatform35useAppPlatformForTelemetryIPAddressEv
     virtual std::string getModelName(); // _ZN11AppPlatform12getModelNameB5cxx11Ev
     virtual bool usesHDRBrightness()const; // _ZNK11AppPlatform17usesHDRBrightnessEv
-//  virtual void setFullscreenMode(FullscreenMode); //TODO: incomplete function definition // _ZN11AppPlatform17setFullscreenModeE14FullscreenMode
+    virtual void setFullscreenMode__incomplete0(long); //TODO: incomplete function definition // _ZN11AppPlatform17setFullscreenModeE14FullscreenMode
     virtual bool isNetworkThrottled(); // _ZN11AppPlatform18isNetworkThrottledEv
     virtual bool isLANAllowed()const; // _ZNK11AppPlatform12isLANAllowedEv
     virtual bool doesLANRequireMultiplayerRestrictions()const; // _ZNK11AppPlatform37doesLANRequireMultiplayerRestrictionsEv
@@ -152,7 +153,7 @@ public:
     virtual void getSecureStorageKey(std::string const&); // _ZN11AppPlatform19getSecureStorageKeyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void setSecureStorageKey(std::string const&, SecureStorageKey const&); // _ZN11AppPlatform19setSecureStorageKeyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK16SecureStorageKey
     virtual void reloadRenderResourcesOnResume()const; // _ZNK11AppPlatform29reloadRenderResourcesOnResumeEv
-    virtual void shouldPauseDownloadsWhenEnterGame()const; // _ZNK11AppPlatform33shouldPauseDownloadsWhenEnterGameEv
+    virtual bool shouldPauseDownloadsWhenEnterGame()const; // _ZNK11AppPlatform33shouldPauseDownloadsWhenEnterGameEv
     virtual void compareAppReceiptToLocalReceipt(std::string const&); // _ZN11AppPlatform31compareAppReceiptToLocalReceiptERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void getThirdPartyPackUUID()const; // _ZNK11AppPlatform21getThirdPartyPackUUIDEv
     virtual bool alwaysUseZippedPacksForDlc()const; // _ZNK11AppPlatform26alwaysUseZippedPacksForDlcEv
@@ -167,7 +168,7 @@ public:
     virtual void usePlatformProfilePicturesOnly()const; // _ZNK11AppPlatform30usePlatformProfilePicturesOnlyEv
     virtual bool requiresXboxLiveSigninToPlay()const; // _ZNK11AppPlatform28requiresXboxLiveSigninToPlayEv
     virtual bool requiresLiveGoldForMultiplayer()const; // _ZNK11AppPlatform30requiresLiveGoldForMultiplayerEv
-    virtual void shouldRegisterForXboxLiveNotifications()const; // _ZNK11AppPlatform38shouldRegisterForXboxLiveNotificationsEv
+    virtual bool shouldRegisterForXboxLiveNotifications()const; // _ZNK11AppPlatform38shouldRegisterForXboxLiveNotificationsEv
     virtual bool isRealmsEnabled()const; // _ZNK11AppPlatform15isRealmsEnabledEv
     virtual void minimizeBackgroundDownloads()const; // _ZNK11AppPlatform27minimizeBackgroundDownloadsEv
     virtual bool requiresAutoSaveIconExplanationPopup()const; // _ZNK11AppPlatform36requiresAutoSaveIconExplanationPopupEv
@@ -178,17 +179,17 @@ public:
     virtual void maxFileDataRequestConcurrency()const; // _ZNK11AppPlatform29maxFileDataRequestConcurrencyEv
     virtual void goToExternalConsumablesStoreListing()const; // _ZNK11AppPlatform35goToExternalConsumablesStoreListingEv
     virtual void getStoreNetworkFailureTimeout()const; // _ZNK11AppPlatform29getStoreNetworkFailureTimeoutEv
-//  virtual void createLoggingStorageArea(Core::FileAccessType, Core::Path const&); //TODO: incomplete function definition // _ZN11AppPlatform24createLoggingStorageAreaEN4Core14FileAccessTypeERKNS0_4PathE
+    virtual void createLoggingStorageArea__incomplete0(long, Core::Path const&); //TODO: incomplete function definition // _ZN11AppPlatform24createLoggingStorageAreaEN4Core14FileAccessTypeERKNS0_4PathE
     virtual void handlePlatformSpecificSPIErrors(std::string const&); // _ZN11AppPlatform31handlePlatformSpecificSPIErrorsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void useNativeStoreForRealmsPurchase(); // _ZN11AppPlatform31useNativeStoreForRealmsPurchaseEv
     virtual void importAsFlatFile()const; // _ZNK11AppPlatform16importAsFlatFileEv
     virtual bool isWebviewSupported()const; // _ZNK11AppPlatform18isWebviewSupportedEv
-//  virtual void createWebview(Webview::PlatformArguments &&)const; //TODO: incomplete function definition // _ZNK11AppPlatform13createWebviewEON7Webview17PlatformArgumentsE
+    virtual void createWebview__incomplete0(long &&)const; //TODO: incomplete function definition // _ZNK11AppPlatform13createWebviewEON7Webview17PlatformArgumentsE
     virtual void createXboxLiveSignInHandler()const; // _ZNK11AppPlatform27createXboxLiveSignInHandlerEv
     virtual void getPlatformTTSExists()const; // _ZNK11AppPlatform20getPlatformTTSExistsEv
     virtual void getPlatformTTSEnabled()const; // _ZNK11AppPlatform21getPlatformTTSEnabledEv
     virtual void getRenderSurfaceParameters()const; // _ZNK11AppPlatform26getRenderSurfaceParametersEv
-    virtual void shouldRemoveGraphicsDeviceOnAppTermination()const; // _ZNK11AppPlatform42shouldRemoveGraphicsDeviceOnAppTerminationEv
+    virtual bool shouldRemoveGraphicsDeviceOnAppTermination()const; // _ZNK11AppPlatform42shouldRemoveGraphicsDeviceOnAppTerminationEv
     virtual bool isJoinableViaExternalServers()const; // _ZNK11AppPlatform28isJoinableViaExternalServersEv
     virtual void onPrimaryUserNetworkReady(); // _ZN11AppPlatform25onPrimaryUserNetworkReadyEv
     virtual bool requiresNetworkOutageMessaging()const; // _ZNK11AppPlatform30requiresNetworkOutageMessagingEv
@@ -208,7 +209,7 @@ public:
     void getDpi()const; // _ZNK11AppPlatform6getDpiEv
     void setDpi(int); // _ZN11AppPlatform6setDpiEi
     void getUIScalingRules()const; // _ZNK11AppPlatform17getUIScalingRulesEv
-//  void setUIScalingRules(UIScalingRules); //TODO: incomplete function definition // _ZN11AppPlatform17setUIScalingRulesE14UIScalingRules
+//    void setUIScalingRules(long); //TODO: incomplete function definition // _ZN11AppPlatform17setUIScalingRulesE14UIScalingRules
     void getPlatformRuntimeInformation()const; // _ZNK11AppPlatform29getPlatformRuntimeInformationEv
     void accessPlatformRuntimeInformation_Shim(); // _ZN11AppPlatform37accessPlatformRuntimeInformation_ShimEv
     void getPlatformBuildInformation()const; // _ZNK11AppPlatform27getPlatformBuildInformationEv
@@ -217,12 +218,12 @@ public:
     void getFocusState(); // _ZN11AppPlatform13getFocusStateEv
     std::string getScratchPath(); // _ZN11AppPlatform14getScratchPathB5cxx11Ev
     void createUserInput(int); // _ZN11AppPlatform15createUserInputEi
-//  void StringizeUIScalingRules(UIScalingRules); //TODO: incomplete function definition // _ZN11AppPlatform23StringizeUIScalingRulesE14UIScalingRules
+//    void StringizeUIScalingRules(long); //TODO: incomplete function definition // _ZN11AppPlatform23StringizeUIScalingRulesE14UIScalingRules
     void addListener(AppPlatformListener *, float); // _ZN11AppPlatform11addListenerEP19AppPlatformListenerf
     void notifyTerminate(); // _ZN11AppPlatform15notifyTerminateEv
     bool isTerminating()const; // _ZNK11AppPlatform13isTerminatingEv
     void removeListener(AppPlatformListener *); // _ZN11AppPlatform14removeListenerEP19AppPlatformListener
-//  void addNetworkChangeObserver(NetworkChangeObserver &); //TODO: incomplete function definition // _ZN11AppPlatform24addNetworkChangeObserverER21NetworkChangeObserver
+//    void addNetworkChangeObserver(long &); //TODO: incomplete function definition // _ZN11AppPlatform24addNetworkChangeObserverER21NetworkChangeObserver
     void getDefaultUIProfile()const; // _ZNK11AppPlatform19getDefaultUIProfileEv
     void setMockMultiplayerActive(bool); // _ZN11AppPlatform24setMockMultiplayerActiveEb
     bool isInitialized(); // _ZN11AppPlatform13isInitializedEv

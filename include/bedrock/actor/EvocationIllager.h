@@ -3,11 +3,12 @@
 #include "HumanoidMonster.h"
 
 
-class EvocationIllager : HumanoidMonster {
+class EvocationIllager : public HumanoidMonster {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN16EvocationIllager15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~EvocationIllager(); // _ZN16EvocationIllagerD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN16EvocationIllager15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~EvocationIllager(); // _ZN16EvocationIllagerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getRidingHeight(); // _ZN16EvocationIllager15getRidingHeightEv
     virtual bool canExistInPeaceful()const; // _ZNK16EvocationIllager18canExistInPeacefulEv
     virtual void die(ActorDamageSource const&); // _ZN16EvocationIllager3dieERK17ActorDamageSource

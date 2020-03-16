@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class TargetNearbySystem : ITickingSystem {
+class TargetNearbySystem : public ITickingSystem {
 
 public:
-    ~TargetNearbySystem(); // _ZN18TargetNearbySystemD2Ev
+    virtual ~TargetNearbySystem(); // _ZN18TargetNearbySystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN18TargetNearbySystem4tickER14EntityRegistry
     TargetNearbySystem(); // _ZN18TargetNearbySystemC2Ev
 };

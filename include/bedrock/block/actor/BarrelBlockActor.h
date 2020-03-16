@@ -4,10 +4,11 @@
 #include "ChestBlockActor.h"
 
 
-class BarrelBlockActor : ChestBlockActor {
+class BarrelBlockActor : public ChestBlockActor {
 
 public:
-    ~BarrelBlockActor(); // _ZN16BarrelBlockActorD2Ev
+    virtual ~BarrelBlockActor(); // _ZN16BarrelBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onPlace(BlockSource &); // _ZN16BarrelBlockActor7onPlaceER11BlockSource
     virtual std::string getName()const; // _ZNK16BarrelBlockActor7getNameB5cxx11Ev
     virtual void startOpen(Player &); // _ZN16BarrelBlockActor9startOpenER6Player

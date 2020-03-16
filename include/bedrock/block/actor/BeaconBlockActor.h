@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../../container/Container.h"
 #include <string>
 #include "BlockActor.h"
-#include "../../container/Container.h"
 
 
-class BeaconBlockActor : BlockActor, Container {
+class BeaconBlockActor : public BlockActor, public Container {
 
 public:
-    ~BeaconBlockActor(); // _ZN16BeaconBlockActorD2Ev
+    virtual ~BeaconBlockActor(); // _ZN16BeaconBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN16BeaconBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK16BeaconBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN16BeaconBlockActor4tickER11BlockSource

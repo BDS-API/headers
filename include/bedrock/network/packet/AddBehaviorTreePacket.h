@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class AddBehaviorTreePacket : Packet {
+class AddBehaviorTreePacket : public Packet {
 
 public:
-    ~AddBehaviorTreePacket(); // _ZN21AddBehaviorTreePacketD2Ev
+    virtual ~AddBehaviorTreePacket(); // _ZN21AddBehaviorTreePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK21AddBehaviorTreePacket5getIdEv
     virtual std::string getName()const; // _ZNK21AddBehaviorTreePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK21AddBehaviorTreePacket5writeER12BinaryStream

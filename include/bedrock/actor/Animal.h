@@ -3,10 +3,11 @@
 #include "Mob.h"
 
 
-class Animal : Mob {
+class Animal : public Mob {
 
 public:
-    ~Animal(); // _ZN6AnimalD2Ev
+    virtual ~Animal(); // _ZN6AnimalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isInvulnerableTo(ActorDamageSource const&)const; // _ZNK6Animal16isInvulnerableToERK17ActorDamageSource
     virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN6Animal5_hurtERK17ActorDamageSourceibb
     virtual void _onSizeUpdated(); // _ZN6Animal14_onSizeUpdatedEv

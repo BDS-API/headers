@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "ITextObject.h"
 
 
-class TextObjectRoot : ITextObject {
+class TextObjectRoot : public ITextObject {
 
 public:
-    ~TextObjectRoot(); // _ZN14TextObjectRootD2Ev
+    virtual ~TextObjectRoot(); // _ZN14TextObjectRootD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string asString()const; // _ZNK14TextObjectRoot8asStringB5cxx11Ev
     virtual bool asJsonValue()const; // _ZNK14TextObjectRoot11asJsonValueEv
     TextObjectRoot(); // _ZN14TextObjectRootC2Ev

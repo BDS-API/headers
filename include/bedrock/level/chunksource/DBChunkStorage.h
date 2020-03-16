@@ -5,13 +5,14 @@
 #include "ChunkSource.h"
 
 
-class DBChunkStorage : ChunkSource {
+class DBChunkStorage : public ChunkSource {
 
 public:
     static long threadBatch;
     static std::string threadBuffer;
 
-    ~DBChunkStorage(); // _ZN14DBChunkStorageD2Ev
+    virtual ~DBChunkStorage(); // _ZN14DBChunkStorageD2Ev
+    virtual void __fake_function0(); // fake
     virtual void shutdown(); // _ZN14DBChunkStorage8shutdownEv
     virtual bool isShutdownDone(); // _ZN14DBChunkStorage14isShutdownDoneEv
     virtual void postProcess(ChunkViewSource &); // _ZN14DBChunkStorage11postProcessER15ChunkViewSource

@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class LanternBlock : BlockLegacy {
+class LanternBlock : public BlockLegacy {
 
 public:
-    ~LanternBlock(); // _ZN12LanternBlockD2Ev
+    virtual ~LanternBlock(); // _ZN12LanternBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK12LanternBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isWaterBlocking()const; // _ZNK12LanternBlock15isWaterBlockingEv
     virtual void waterSpreadCausesSpawn()const; // _ZNK12LanternBlock22waterSpreadCausesSpawnEv

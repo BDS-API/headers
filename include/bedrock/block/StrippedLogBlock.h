@@ -4,10 +4,11 @@
 #include <string>
 
 
-class StrippedLogBlock : RotatedPillarBlock {
+class StrippedLogBlock : public RotatedPillarBlock {
 
 public:
-    ~StrippedLogBlock(); // _ZN16StrippedLogBlockD2Ev
+    virtual ~StrippedLogBlock(); // _ZN16StrippedLogBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK16StrippedLogBlock16getResourceCountER6RandomRK5Blocki
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK16StrippedLogBlock15getResourceItemER6RandomRK5Blocki
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const; // _ZNK16StrippedLogBlock14asItemInstanceER11BlockSourceRK8BlockPosRK5Block

@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class ServerToClientHandshakePacket : Packet {
+class ServerToClientHandshakePacket : public Packet {
 
 public:
-    ~ServerToClientHandshakePacket(); // _ZN29ServerToClientHandshakePacketD2Ev
+    virtual ~ServerToClientHandshakePacket(); // _ZN29ServerToClientHandshakePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK29ServerToClientHandshakePacket5getIdEv
     virtual std::string getName()const; // _ZNK29ServerToClientHandshakePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK29ServerToClientHandshakePacket5writeER12BinaryStream

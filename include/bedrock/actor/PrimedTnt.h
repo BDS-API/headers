@@ -3,12 +3,13 @@
 #include "Actor.h"
 
 
-class PrimedTnt : Actor {
+class PrimedTnt : public Actor {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN9PrimedTnt15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN9PrimedTnt21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
-    ~PrimedTnt(); // _ZN9PrimedTntD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN9PrimedTnt15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN9PrimedTnt21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~PrimedTnt(); // _ZN9PrimedTntD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getOwnerEntityType(); // _ZN9PrimedTnt18getOwnerEntityTypeEv
     virtual void teleportTo(Vec3 const&, bool, int, int); // _ZN9PrimedTnt10teleportToERK4Vec3bii
     virtual void normalTick(); // _ZN9PrimedTnt10normalTickEv

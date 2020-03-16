@@ -5,7 +5,8 @@
 class BehaviorNode {
 
 public:
-    ~BehaviorNode(); // _ZN12BehaviorNodeD2Ev
+    virtual ~BehaviorNode(); // _ZN12BehaviorNodeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initializeFromDefinition(Actor &); // _ZN12BehaviorNode24initializeFromDefinitionER5Actor
     BehaviorNode(); // _ZN12BehaviorNodeC2Ev
     void getStatus()const; // _ZNK12BehaviorNode9getStatusEv

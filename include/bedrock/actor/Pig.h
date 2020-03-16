@@ -3,10 +3,11 @@
 #include "Animal.h"
 
 
-class Pig : Animal {
+class Pig : public Animal {
 
 public:
-    ~Pig(); // _ZN3PigD2Ev
+    virtual ~Pig(); // _ZN3PigD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN3Pig10normalTickEv
     virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN3Pig5_hurtERK17ActorDamageSourceibb
     virtual void _playStepSound(BlockPos const&, Block const&); // _ZN3Pig14_playStepSoundERK8BlockPosRK5Block

@@ -18,7 +18,7 @@ public:
     void addVisitedTable(LootTable const*); // _ZN16LootTableContext15addVisitedTableEPK9LootTable
     void removeVisitedTable(LootTable const*); // _ZN16LootTableContext18removeVisitedTableEPK9LootTable
     void getLuck()const; // _ZNK16LootTableContext7getLuckEv
-//  void getEntity(ActorTarget)const; //TODO: incomplete function definition // _ZNK16LootTableContext9getEntityE11ActorTarget
+//    void getEntity(long)const; //TODO: incomplete function definition // _ZNK16LootTableContext9getEntityE11ActorTarget
     void getExplosionRadius()const; // _ZNK16LootTableContext18getExplosionRadiusEv
     class Builder {
 

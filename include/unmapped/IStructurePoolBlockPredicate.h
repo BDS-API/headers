@@ -5,6 +5,7 @@
 class IStructurePoolBlockPredicate {
 
 public:
-    ~IStructurePoolBlockPredicate(); // _ZN28IStructurePoolBlockPredicateD2Ev
+    virtual ~IStructurePoolBlockPredicate(); // _ZN28IStructurePoolBlockPredicateD2Ev
+    virtual void __fake_function0(); // fake
     IStructurePoolBlockPredicate(); // _ZN28IStructurePoolBlockPredicateC2Ev
 };

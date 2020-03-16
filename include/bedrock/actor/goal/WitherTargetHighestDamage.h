@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "TargetGoal.h"
+#include <string>
 #include <vector>
 
 
-class WitherTargetHighestDamage : TargetGoal {
+class WitherTargetHighestDamage : public TargetGoal {
 
 public:
-    ~WitherTargetHighestDamage(); // _ZN25WitherTargetHighestDamageD2Ev
+    virtual ~WitherTargetHighestDamage(); // _ZN25WitherTargetHighestDamageD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN25WitherTargetHighestDamage6canUseEv
     virtual bool canContinueToUse(); // _ZN25WitherTargetHighestDamage16canContinueToUseEv
     virtual void start(); // _ZN25WitherTargetHighestDamage5startEv

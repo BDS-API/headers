@@ -23,13 +23,13 @@ public:
     void setId(std::string); // _ZN12LevelSummary5setIdENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void setName(std::string); // _ZN12LevelSummary7setNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void setLastPlayed(long); // _ZN12LevelSummary13setLastPlayedEl
-//  void setGameType(GameType); //TODO: incomplete function definition // _ZN12LevelSummary11setGameTypeE8GameType
-//  void setGameDifficulty(Difficulty); //TODO: incomplete function definition // _ZN12LevelSummary17setGameDifficultyE10Difficulty
+//    void setGameType(long); //TODO: incomplete function definition // _ZN12LevelSummary11setGameTypeE8GameType
+//    void setGameDifficulty(long); //TODO: incomplete function definition // _ZN12LevelSummary17setGameDifficultyE10Difficulty
     void setSizeOnDisk(unsigned long); // _ZN12LevelSummary13setSizeOnDiskEm
     std::string buildCustomIconPath(Core::Path const&); // _ZN12LevelSummary19buildCustomIconPathB5cxx11ERKN4Core4PathE
     std::string buildWorldIconPath(Core::Path const&); // _ZN12LevelSummary18buildWorldIconPathB5cxx11ERKN4Core4PathE
     LevelSummary(); // _ZN12LevelSummaryC2Ev
-//  LevelSummary(std::string const&, std::string const&, long, GameType, Difficulty, int, int, unsigned long, bool, bool, Social::GamePublishSetting, bool, EducationEditionOffer, GameVersion const&, GameVersion const&, StorageVersion, Core::Path const&, ContentIdentity const&); //TODO: incomplete function definition // _ZN12LevelSummaryC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_l8GameType10DifficultyiimbbN6Social18GamePublishSettingEb21EducationEditionOfferRK11GameVersionSF_14StorageVersionRKN4Core4PathERK15ContentIdentity
+//    LevelSummary(std::string const&, std::string const&, long, long, long, int, int, unsigned long, bool, bool, long, bool, long, GameVersion const&, GameVersion const&, long, Core::Path const&, ContentIdentity const&); //TODO: incomplete function definition // _ZN12LevelSummaryC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_l8GameType10DifficultyiimbbN6Social18GamePublishSettingEb21EducationEditionOfferRK11GameVersionSF_14StorageVersionRKN4Core4PathERK15ContentIdentity
     void _initializeWorldIconPath(Core::Path const&); // _ZN12LevelSummary24_initializeWorldIconPathERKN4Core4PathE
     LevelSummary(LevelData const&, Core::Path const&, Core::Path const&); // _ZN12LevelSummaryC2ERK9LevelDataRKN4Core4PathES6_
     void reinitializeWorldSize(Core::Path const&); // _ZN12LevelSummary21reinitializeWorldSizeERKN4Core4PathE

@@ -3,10 +3,11 @@
 #include "../Command.h"
 
 
-class CloneCommand : Command {
+class CloneCommand : public Command {
 
 public:
-    ~CloneCommand(); // _ZN12CloneCommandD2Ev
+    virtual ~CloneCommand(); // _ZN12CloneCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK12CloneCommand7executeERK13CommandOriginR13CommandOutput
     void setup(CommandRegistry &); // _ZN12CloneCommand5setupER15CommandRegistry
     CloneCommand(); // _ZN12CloneCommandC2Ev

@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class BreakDoorAnnotationSystem : ITickingSystem {
+class BreakDoorAnnotationSystem : public ITickingSystem {
 
 public:
-    ~BreakDoorAnnotationSystem(); // _ZN25BreakDoorAnnotationSystemD2Ev
+    virtual ~BreakDoorAnnotationSystem(); // _ZN25BreakDoorAnnotationSystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN25BreakDoorAnnotationSystem4tickER14EntityRegistry
     BreakDoorAnnotationSystem(); // _ZN25BreakDoorAnnotationSystemC2Ev
 };

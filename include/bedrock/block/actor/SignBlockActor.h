@@ -1,17 +1,18 @@
 #pragma once
 
+#include "../../text/TextObjectRoot.h"
 #include <string>
 #include "BlockActor.h"
-#include "../../text/TextObjectRoot.h"
 
 
-class SignBlockActor : BlockActor {
+class SignBlockActor : public BlockActor {
 
 public:
     class CachedLineData;
     class CachedMessageData;
 
-    ~SignBlockActor(); // _ZN14SignBlockActorD2Ev
+    virtual ~SignBlockActor(); // _ZN14SignBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN14SignBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK14SignBlockActor4saveER11CompoundTag
     virtual void onChanged(BlockSource &); // _ZN14SignBlockActor9onChangedER11BlockSource
@@ -25,7 +26,7 @@ public:
     void _clearCachedMessage(); // _ZN14SignBlockActor19_clearCachedMessageEv
     std::string getMessage(); // _ZN14SignBlockActor10getMessageB5cxx11Ev
     void getType()const; // _ZNK14SignBlockActor7getTypeEv
-//  void setType(SignBlockActor::SignType); //TODO: incomplete function definition // _ZN14SignBlockActor7setTypeENS_8SignTypeE
+//    void setType(long); //TODO: incomplete function definition // _ZN14SignBlockActor7setTypeENS_8SignTypeE
     void getCachedMessage()const; // _ZNK14SignBlockActor16getCachedMessageEv
     void setCachedMessage(SignBlockActor::CachedMessageData); // _ZN14SignBlockActor16setCachedMessageENS_17CachedMessageDataE
     class CachedLineData {

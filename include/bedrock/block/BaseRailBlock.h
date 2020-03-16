@@ -4,7 +4,7 @@
 #include "BlockLegacy.h"
 
 
-class BaseRailBlock : BlockLegacy {
+class BaseRailBlock : public BlockLegacy {
 
 public:
     class Rail;
@@ -12,7 +12,8 @@ public:
     static long DIR_FLAT_Z;
     static long DIR_FLAT_X;
 
-    ~BaseRailBlock(); // _ZN13BaseRailBlockD2Ev
+    virtual ~BaseRailBlock(); // _ZN13BaseRailBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13BaseRailBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK13BaseRailBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isWaterBlocking()const; // _ZNK13BaseRailBlock15isWaterBlockingEv

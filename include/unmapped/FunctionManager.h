@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include <vector>
 
 
@@ -10,7 +10,8 @@ class FunctionManager {
 public:
     class OriginMapping;
 
-    ~FunctionManager(); // _ZN15FunctionManagerD2Ev
+    virtual ~FunctionManager(); // _ZN15FunctionManagerD2Ev
+    virtual void __fake_function0(); // fake
     FunctionManager(std::unique_ptr<ICommandDispatcher>, std::unique_ptr<CommandOrigin>, GameRule const*); // _ZN15FunctionManagerC2ESt10unique_ptrI18ICommandDispatcherSt14default_deleteIS1_EES0_I13CommandOriginS2_IS5_EEPK8GameRule
     void load(ResourcePackManager &, CommandRegistry &); // _ZN15FunctionManager4loadER19ResourcePackManagerR15CommandRegistry
     void _addTickFunctionsFromJson(Json::Value const&); // _ZN15FunctionManager25_addTickFunctionsFromJsonERKN4Json5ValueE
@@ -26,8 +27,8 @@ public:
     void getFunction(std::string const&); // _ZN15FunctionManager11getFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void getEarliestSupportedCommandVersion(); // _ZN15FunctionManager34getEarliestSupportedCommandVersionEv
     void _createFunction(std::string const&, std::vector<std::unique_ptr<IFunctionEntry>> &&); // _ZN15FunctionManager15_createFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEOSt6vectorISt10unique_ptrI14IFunctionEntrySt14default_deleteISA_EESaISD_EE
-//  void _createFunctionWithError(std::string const&, FunctionState); //TODO: incomplete function definition // _ZN15FunctionManager24_createFunctionWithErrorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE13FunctionState
-//  void _processFunctionEntry(std::string const&, std::vector<std::string> const&, std::vector<std::string> &, CurrentCmdVersion, CommandRegistry const&); //TODO: incomplete function definition // _ZN15FunctionManager21_processFunctionEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS5_SaIS5_EERSA_17CurrentCmdVersionRK15CommandRegistry
+//    void _createFunctionWithError(std::string const&, long); //TODO: incomplete function definition // _ZN15FunctionManager24_createFunctionWithErrorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE13FunctionState
+//    void _processFunctionEntry(std::string const&, std::vector<std::string> const&, std::vector<std::string> &, long, CommandRegistry const&); //TODO: incomplete function definition // _ZN15FunctionManager21_processFunctionEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS5_SaIS5_EERSA_17CurrentCmdVersionRK15CommandRegistry
     void _getCommandList()const; // _ZNK15FunctionManager15_getCommandListEv
     void _getTickList()const; // _ZNK15FunctionManager12_getTickListEv
     void _removeOriginReference(CommandOrigin const&, unsigned int); // _ZN15FunctionManager22_removeOriginReferenceERK13CommandOriginj

@@ -3,10 +3,11 @@
 #include "Animal.h"
 
 
-class Rabbit : Animal {
+class Rabbit : public Animal {
 
 public:
-    ~Rabbit(); // _ZN6RabbitD2Ev
+    virtual ~Rabbit(); // _ZN6RabbitD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onSynchedDataUpdate(int); // _ZN6Rabbit19onSynchedDataUpdateEi
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN6Rabbit35updateEntitySpecificMolangVariablesER12RenderParams
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &); // _ZN6Rabbit22readAdditionalSaveDataERK11CompoundTagR14DataLoadHelper

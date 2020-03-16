@@ -29,8 +29,8 @@ namespace Facing {
     void getClockWise(unsigned char); // _ZN6Facing12getClockWiseEh
     void getCounterClockWise(unsigned char); // _ZN6Facing19getCounterClockWiseEh
     void getOpposite(unsigned char); // _ZN6Facing11getOppositeEh
-//  void rotateFace(unsigned char, Facing::Rotation); //TODO: incomplete function definition // _ZN6Facing10rotateFaceEhNS_8RotationE
+//    void rotateFace(unsigned char, long); //TODO: incomplete function definition // _ZN6Facing10rotateFaceEhNS_8RotationE
     void fromVec3(Vec3 const&); // _ZN6Facing8fromVec3ERK4Vec3
-//  void convertWeirdoDirectionToFacingDirection(WeirdoDirection); //TODO: incomplete function definition // _ZN6Facing39convertWeirdoDirectionToFacingDirectionE15WeirdoDirection
+//    void convertWeirdoDirectionToFacingDirection(long); //TODO: incomplete function definition // _ZN6Facing39convertWeirdoDirectionToFacingDirectionE15WeirdoDirection
     void convertYRotationToFacingDirection(float); // _ZN6Facing33convertYRotationToFacingDirectionEf
 };

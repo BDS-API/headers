@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "ActorBlock.h"
 #include <vector>
+#include "ActorBlock.h"
 
 
-class ItemFrameBlock : ActorBlock {
+class ItemFrameBlock : public ActorBlock {
 
 public:
-    ~ItemFrameBlock(); // _ZN14ItemFrameBlockD2Ev
+    virtual ~ItemFrameBlock(); // _ZN14ItemFrameBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK14ItemFrameBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK14ItemFrameBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isInteractiveBlock()const; // _ZNK14ItemFrameBlock18isInteractiveBlockEv

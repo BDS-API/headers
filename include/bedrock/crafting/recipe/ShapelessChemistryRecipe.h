@@ -1,17 +1,18 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "ShapelessRecipe.h"
 #include <vector>
 
 
-class ShapelessChemistryRecipe : ShapelessRecipe {
+class ShapelessChemistryRecipe : public ShapelessRecipe {
 
 public:
     static long ID;
 
-    ~ShapelessChemistryRecipe(); // _ZN24ShapelessChemistryRecipeD2Ev
+    virtual ~ShapelessChemistryRecipe(); // _ZN24ShapelessChemistryRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void matches(CraftingContainer &, Level &)const; // _ZNK24ShapelessChemistryRecipe7matchesER17CraftingContainerR5Level
     virtual void getId()const; // _ZNK24ShapelessChemistryRecipe5getIdEv
     ShapelessChemistryRecipe(ShapelessChemistryRecipe &&); // _ZN24ShapelessChemistryRecipeC2EOS_

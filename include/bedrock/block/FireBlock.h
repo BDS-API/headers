@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class FireBlock : BlockLegacy {
+class FireBlock : public BlockLegacy {
 
 public:
-    ~FireBlock(); // _ZN9FireBlockD2Ev
+    virtual ~FireBlock(); // _ZN9FireBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK9FireBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK9FireBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void waterSpreadCausesSpawn()const; // _ZNK9FireBlock22waterSpreadCausesSpawnEv

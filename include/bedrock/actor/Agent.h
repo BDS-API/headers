@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "Mob.h"
+#include <string>
 
 
-class Agent : Mob {
+class Agent : public Mob {
 
 public:
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Agent20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Agent(); // _ZN5AgentD2Ev
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Agent20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Agent(); // _ZN5AgentD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool breaksFallingBlocks()const; // _ZNK5Agent19breaksFallingBlocksEv
     virtual void teleportTo(Vec3 const&, bool, int, int); // _ZN5Agent10teleportToERK4Vec3bii
     virtual void normalTick(); // _ZN5Agent10normalTickEv
@@ -19,7 +20,7 @@ public:
     virtual void interactPreventDefault(); // _ZN5Agent22interactPreventDefaultEv
     virtual bool isPickable(); // _ZN5Agent10isPickableEv
     virtual bool isTargetable()const; // _ZNK5Agent12isTargetableEv
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN5Agent17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN5Agent17handleEntityEventE10ActorEventi
     virtual void setCarriedItem(ItemStack const&); // _ZN5Agent14setCarriedItemERK9ItemStack
     virtual bool canBePulledIntoVehicle()const; // _ZNK5Agent22canBePulledIntoVehicleEv
     virtual bool isWorldBuilder(); // _ZN5Agent14isWorldBuilderEv

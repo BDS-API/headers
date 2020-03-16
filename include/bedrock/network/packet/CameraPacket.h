@@ -5,10 +5,11 @@
 #include "Packet.h"
 
 
-class CameraPacket : Packet {
+class CameraPacket : public Packet {
 
 public:
-    ~CameraPacket(); // _ZN12CameraPacketD2Ev
+    virtual ~CameraPacket(); // _ZN12CameraPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK12CameraPacket5getIdEv
     virtual std::string getName()const; // _ZNK12CameraPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK12CameraPacket5writeER12BinaryStream

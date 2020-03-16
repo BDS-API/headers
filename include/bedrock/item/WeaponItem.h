@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class WeaponItem : Item {
+class WeaponItem : public Item {
 
 public:
-    ~WeaponItem(); // _ZN10WeaponItemD2Ev
+    virtual ~WeaponItem(); // _ZN10WeaponItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canDestroySpecial(Block const&)const; // _ZNK10WeaponItem17canDestroySpecialERK5Block
     virtual void getAttackDamage()const; // _ZNK10WeaponItem15getAttackDamageEv
     virtual bool isHandEquipped()const; // _ZNK10WeaponItem14isHandEquippedEv

@@ -4,10 +4,11 @@
 #include "BlockActor.h"
 
 
-class EnchantingTableBlockActor : BlockActor {
+class EnchantingTableBlockActor : public BlockActor {
 
 public:
-    ~EnchantingTableBlockActor(); // _ZN25EnchantingTableBlockActorD2Ev
+    virtual ~EnchantingTableBlockActor(); // _ZN25EnchantingTableBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN25EnchantingTableBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK25EnchantingTableBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN25EnchantingTableBlockActor4tickER11BlockSource

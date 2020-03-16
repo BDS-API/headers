@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "Item.h"
 
 
-class CoalItem : Item {
+class CoalItem : public Item {
 
 public:
-    ~CoalItem(); // _ZN8CoalItemD2Ev
+    virtual ~CoalItem(); // _ZN8CoalItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const; // _ZNK8CoalItem18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE
     virtual void getIcon(ItemStackBase const&, int, bool)const; // _ZNK8CoalItem7getIconERK13ItemStackBaseib
     virtual void setIcon(std::string const&, int); // _ZN8CoalItem7setIconERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi

@@ -1,18 +1,19 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "../util/BlockPos.h"
 #include "Item.h"
 
 
-class BucketItem : Item {
+class BucketItem : public Item {
 
 public:
     static long DRINK_DURATION;
     static long mFillTypeToEntityType;
 
-    ~BucketItem(); // _ZN10BucketItemD2Ev
+    virtual ~BucketItem(); // _ZN10BucketItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isDestructive(int)const; // _ZNK10BucketItem13isDestructiveEi
     virtual bool isLiquidClipItem(int)const; // _ZNK10BucketItem16isLiquidClipItemEi
     virtual bool isValidAuxValue(int)const; // _ZNK10BucketItem15isValidAuxValueEi
@@ -32,12 +33,12 @@ public:
     void addBucketEntitySaveData(Actor &, ItemStack &)const; // _ZNK10BucketItem23addBucketEntitySaveDataER5ActorR9ItemStack
     void getFishData(Actor const&); // _ZN10BucketItem11getFishDataERK5Actor
     void getEntityIdFromBucket(ItemInstance const&)const; // _ZNK10BucketItem21getEntityIdFromBucketERK12ItemInstance
-//  bool isBlockFillType(BucketFillType)const; //TODO: incomplete function definition // _ZNK10BucketItem15isBlockFillTypeE14BucketFillType
-//  bool isFishFillType(BucketFillType)const; //TODO: incomplete function definition // _ZNK10BucketItem14isFishFillTypeE14BucketFillType
+//    bool isBlockFillType(long)const; //TODO: incomplete function definition // _ZNK10BucketItem15isBlockFillTypeE14BucketFillType
+//    bool isFishFillType(long)const; //TODO: incomplete function definition // _ZNK10BucketItem14isFishFillTypeE14BucketFillType
     void readBucketEntitySaveData(BlockSource &, Actor *, unsigned char, BlockPos, ItemInstance const&)const; // _ZNK10BucketItem24readBucketEntitySaveDataER11BlockSourceP5Actorh8BlockPosRK12ItemInstance
-//  void _supportsEntityType(ActorType const&, int &)const; //TODO: incomplete function definition // _ZNK10BucketItem19_supportsEntityTypeERK9ActorTypeRi
+//    void _supportsEntityType(long const&, int &)const; //TODO: incomplete function definition // _ZNK10BucketItem19_supportsEntityTypeERK9ActorTypeRi
     void _takeLiquid(ItemStack &, Actor &, BlockPos const&)const; // _ZNK10BucketItem11_takeLiquidER9ItemStackR5ActorRK8BlockPos
-//  void _tryGetBlock(BucketFillType)const; //TODO: incomplete function definition // _ZNK10BucketItem12_tryGetBlockE14BucketFillType
+//    void _tryGetBlock(long)const; //TODO: incomplete function definition // _ZNK10BucketItem12_tryGetBlockE14BucketFillType
     void _emptyBucket(BlockSource &, Block const&, BlockPos const&, Actor *, ItemStack const&, unsigned char)const; // _ZNK10BucketItem12_emptyBucketER11BlockSourceRK5BlockRK8BlockPosP5ActorRK9ItemStackh
     void _getBucketFillType(Block const&)const; // _ZNK10BucketItem18_getBucketFillTypeERK5Block
     void _canEmptyBucketIntoBlock(Block const&, Block const&)const; // _ZNK10BucketItem24_canEmptyBucketIntoBlockERK5BlockS2_

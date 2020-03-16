@@ -3,9 +3,10 @@
 #include "BehaviorDefinition.h"
 
 
-class PlaceBlockDefinition : BehaviorDefinition {
+class PlaceBlockDefinition : public BehaviorDefinition {
 
 public:
-    ~PlaceBlockDefinition(); // _ZN20PlaceBlockDefinitionD2Ev
+    virtual ~PlaceBlockDefinition(); // _ZN20PlaceBlockDefinitionD2Ev
+    virtual void __fake_function0(); // fake
     PlaceBlockDefinition(); // _ZN20PlaceBlockDefinitionC2Ev
 };

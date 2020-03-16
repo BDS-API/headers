@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class StructureVoid : BlockLegacy {
+class StructureVoid : public BlockLegacy {
 
 public:
-    ~StructureVoid(); // _ZN13StructureVoidD2Ev
+    virtual ~StructureVoid(); // _ZN13StructureVoidD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK13StructureVoid17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual bool isObstructingChests(BlockSource &, BlockPos const&)const; // _ZNK13StructureVoid19isObstructingChestsER11BlockSourceRK8BlockPos
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &, Actor *)const; // _ZNK13StructureVoid18addCollisionShapesERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EEP5Actor

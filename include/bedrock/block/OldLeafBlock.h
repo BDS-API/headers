@@ -4,10 +4,11 @@
 #include "LeafBlock.h"
 
 
-class OldLeafBlock : LeafBlock {
+class OldLeafBlock : public LeafBlock {
 
 public:
-    ~OldLeafBlock(); // _ZN12OldLeafBlockD2Ev
+    virtual ~OldLeafBlock(); // _ZN12OldLeafBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK12OldLeafBlock15getResourceItemER6RandomRK5Blocki
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const; // _ZNK12OldLeafBlock14asItemInstanceER11BlockSourceRK8BlockPosRK5Block
     virtual void playerDestroy(Player &, BlockPos const&, Block const&)const; // _ZNK12OldLeafBlock13playerDestroyER6PlayerRK8BlockPosRK5Block
@@ -19,5 +20,5 @@ public:
     virtual void getVariant(Block const&)const; // _ZNK12OldLeafBlock10getVariantERK5Block
     virtual void getSilkTouchItemInstance(Block const&)const; // _ZNK12OldLeafBlock24getSilkTouchItemInstanceERK5Block
     virtual void getExtraResourceItem(Block const&)const; // _ZNK12OldLeafBlock20getExtraResourceItemERK5Block
-//  OldLeafBlock(std::string const&, int, WeakPtr<BlockLegacy>); //TODO: incomplete function definition // _ZN12OldLeafBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi7WeakPtrI11BlockLegacyE
+//    OldLeafBlock(std::string const&, int, long); //TODO: incomplete function definition // _ZN12OldLeafBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi7WeakPtrI11BlockLegacyE
 };

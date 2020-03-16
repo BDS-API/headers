@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "../util/BlockPos.h"
 #include "Item.h"
 
 
-class BlockItem : Item {
+class BlockItem : public Item {
 
 public:
-    ~BlockItem(); // _ZN9BlockItemD2Ev
+    virtual ~BlockItem(); // _ZN9BlockItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isExperimental(ItemDescriptor const*)const; // _ZNK9BlockItem14isExperimentalEPK14ItemDescriptor
     virtual bool isDestructive(int)const; // _ZNK9BlockItem13isDestructiveEi
     virtual bool isValidAuxValue(int)const; // _ZNK9BlockItem15isValidAuxValueEi

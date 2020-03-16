@@ -4,13 +4,14 @@
 #include "BasePressurePlateBlock.h"
 
 
-class WeightedPressurePlateBlock : BasePressurePlateBlock {
+class WeightedPressurePlateBlock : public BasePressurePlateBlock {
 
 public:
     static long MAX_WEIGHT_LIGHT;
     static long MAX_WEIGHT_HEAVY;
 
-    ~WeightedPressurePlateBlock(); // _ZN26WeightedPressurePlateBlockD2Ev
+    virtual ~WeightedPressurePlateBlock(); // _ZN26WeightedPressurePlateBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const; // _ZNK26WeightedPressurePlateBlock14asItemInstanceER11BlockSourceRK8BlockPosRK5Block
     virtual void getTickDelay()const; // _ZNK26WeightedPressurePlateBlock12getTickDelayEv
     virtual void getSignalStrength(BlockSource &, BlockPos const&)const; // _ZNK26WeightedPressurePlateBlock17getSignalStrengthER11BlockSourceRK8BlockPos

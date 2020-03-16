@@ -5,14 +5,15 @@
 
 namespace Automation {
 
-    class AutomationClient : UriListener {
+    class AutomationClient : public UriListener {
 
     public:
-        ~AutomationClient(); // _ZN10Automation16AutomationClientD2Ev
-//      virtual void onUri(ActivationUri const&); //TODO: incomplete function definition // _ZN10Automation16AutomationClient5onUriERK13ActivationUri
+        virtual ~AutomationClient(); // _ZN10Automation16AutomationClientD2Ev
+        virtual void __fake_function0(); // fake
+        virtual void onUri__incomplete0(long const&); //TODO: incomplete function definition // _ZN10Automation16AutomationClient5onUriERK13ActivationUri
         AutomationClient(IMinecraftApp &); // _ZN10Automation16AutomationClientC2ER13IMinecraftApp
         void getDefaultSession(); // _ZN10Automation16AutomationClient17getDefaultSessionEv
-//      void getSessionForCommand(Automation::CommandOrigin const&); //TODO: incomplete function definition // _ZN10Automation16AutomationClient20getSessionForCommandERKNS_13CommandOriginE
+//        void getSessionForCommand(long const&); //TODO: incomplete function definition // _ZN10Automation16AutomationClient20getSessionForCommandERKNS_13CommandOriginE
         void createSession(); // _ZN10Automation16AutomationClient13createSessionEv
         bool isReady(); // _ZN10Automation16AutomationClient7isReadyEv
         void send(Automation::Response const&); // _ZN10Automation16AutomationClient4sendERKNS_8ResponseE

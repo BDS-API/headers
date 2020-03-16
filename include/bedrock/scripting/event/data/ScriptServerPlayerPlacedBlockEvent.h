@@ -4,12 +4,13 @@
 #include "ScriptEventData.h"
 
 
-class ScriptServerPlayerPlacedBlockEvent : ScriptEventData {
+class ScriptServerPlayerPlacedBlockEvent : public ScriptEventData {
 
 public:
     static long mHash;
 
-    ~ScriptServerPlayerPlacedBlockEvent(); // _ZN34ScriptServerPlayerPlacedBlockEventD2Ev
+    virtual ~ScriptServerPlayerPlacedBlockEvent(); // _ZN34ScriptServerPlayerPlacedBlockEventD2Ev
+    virtual void __fake_function0(); // fake
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const; // _ZNK34ScriptServerPlayerPlacedBlockEvent10_serializeER12ScriptEngineRN9ScriptApi18ScriptObjectHandleE
     void getHash(); // _ZN34ScriptServerPlayerPlacedBlockEvent7getHashEv
     ScriptServerPlayerPlacedBlockEvent(); // _ZN34ScriptServerPlayerPlacedBlockEventC2Ev

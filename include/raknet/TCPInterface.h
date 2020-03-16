@@ -10,7 +10,8 @@ namespace RakNet {
     public:
         class ThisPtrPlusSysAddr;
 
-        ~TCPInterface(); // _ZN6RakNet12TCPInterfaceD2Ev
+        virtual ~TCPInterface(); // _ZN6RakNet12TCPInterfaceD2Ev
+        virtual void __fake_function0(); // fake
         virtual void Send(char const*, unsigned int, RakNet::SystemAddress const&, bool); // _ZN6RakNet12TCPInterface4SendEPKcjRKNS_13SystemAddressEb
         virtual void SendList(char const**, unsigned int const*, int, RakNet::SystemAddress const&, bool); // _ZN6RakNet12TCPInterface8SendListEPPKcPKjiRKNS_13SystemAddressEb
         virtual void ReceiveHasPackets(); // _ZN6RakNet12TCPInterface17ReceiveHasPacketsEv

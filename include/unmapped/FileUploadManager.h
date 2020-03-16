@@ -1,9 +1,9 @@
 #pragma once
 
-#include <string>
 #include <memory>
-#include "FileChunkInfo.h"
 #include <functional>
+#include <string>
+#include "FileChunkInfo.h"
 
 
 class FileUploadManager {
@@ -14,7 +14,8 @@ public:
     static long CHUNK_UPLOAD_SIZE;
     static std::string BOUNDARY;
 
-    ~FileUploadManager(); // _ZN17FileUploadManagerD2Ev
+    virtual ~FileUploadManager(); // _ZN17FileUploadManagerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getUploadProgress()const; // _ZNK17FileUploadManager17getUploadProgressEv
     FileUploadManager(TaskGroup &, std::shared_ptr<IFileChunkUploader>); // _ZN17FileUploadManagerC2ER9TaskGroupSt10shared_ptrI18IFileChunkUploaderE
     FileUploadManager(TaskGroup &, std::shared_ptr<IFileChunkUploader>, std::weak_ptr<FileArchiver>); // _ZN17FileUploadManagerC2ER9TaskGroupSt10shared_ptrI18IFileChunkUploaderESt8weak_ptrI12FileArchiverE

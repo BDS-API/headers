@@ -4,10 +4,11 @@
 #include <vector>
 
 
-class CoralFeature : Feature {
+class CoralFeature : public Feature {
 
 public:
-    ~CoralFeature(); // _ZN12CoralFeatureD2Ev
+    virtual ~CoralFeature(); // _ZN12CoralFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK12CoralFeature5placeER11BlockSourceRK8BlockPosR6Random
     CoralFeature(); // _ZN12CoralFeatureC2Ev
     void _placeCoral(BlockSource &, BlockPos const&, Random &, std::vector<BlockPos> &, std::vector<std::pair<BlockPos, unsigned char>> &, int)const; // _ZNK12CoralFeature11_placeCoralER11BlockSourceRK8BlockPosR6RandomRSt6vectorIS2_SaIS2_EERS7_ISt4pairIS2_hESaISC_EEi

@@ -19,7 +19,7 @@ public:
     void _extractIdentifier(std::string const&, ActorDefinitionIdentifier &); // _ZN25ActorDefinitionIdentifier18_extractIdentifierERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERS_
     ActorDefinitionIdentifier(char const*); // _ZN25ActorDefinitionIdentifierC2EPKc
     ActorDefinitionIdentifier(std::string const&); // _ZN25ActorDefinitionIdentifierC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  ActorDefinitionIdentifier(ActorType); //TODO: incomplete function definition // _ZN25ActorDefinitionIdentifierC2E9ActorType
+//    ActorDefinitionIdentifier(long); //TODO: incomplete function definition // _ZN25ActorDefinitionIdentifierC2E9ActorType
     bool isEmpty()const; // _ZNK25ActorDefinitionIdentifier7isEmptyEv
     void clear(); // _ZN25ActorDefinitionIdentifier5clearEv
     void initialize(std::string const&); // _ZN25ActorDefinitionIdentifier10initializeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

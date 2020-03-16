@@ -3,10 +3,11 @@
 #include "StructureStart.h"
 
 
-class PillagerOutpostStart : StructureStart {
+class PillagerOutpostStart : public StructureStart {
 
 public:
-    ~PillagerOutpostStart(); // _ZN20PillagerOutpostStartD2Ev
+    virtual ~PillagerOutpostStart(); // _ZN20PillagerOutpostStartD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN20PillagerOutpostStart11postProcessEP11BlockSourceR6RandomRK11BoundingBox
     virtual void getType()const; // _ZNK20PillagerOutpostStart7getTypeEv
     PillagerOutpostStart(); // _ZN20PillagerOutpostStartC2Ev

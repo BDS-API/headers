@@ -3,10 +3,11 @@
 #include "MoveControlDescription.h"
 
 
-class GenericMoveControlDescription : MoveControlDescription {
+class GenericMoveControlDescription : public MoveControlDescription {
 
 public:
     virtual void getJsonName()const; // _ZNK29GenericMoveControlDescription11getJsonNameEv
-    ~GenericMoveControlDescription(); // _ZN29GenericMoveControlDescriptionD2Ev
+    virtual ~GenericMoveControlDescription(); // _ZN29GenericMoveControlDescriptionD2Ev
+    virtual void __fake_function0(); // fake
     GenericMoveControlDescription(); // _ZN29GenericMoveControlDescriptionC2Ev
 };

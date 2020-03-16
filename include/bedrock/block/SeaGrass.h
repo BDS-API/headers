@@ -4,17 +4,18 @@
 #include "BlockLegacy.h"
 
 
-class SeaGrass : BlockLegacy {
+class SeaGrass : public BlockLegacy {
 
 public:
-    ~SeaGrass(); // _ZN8SeaGrassD2Ev
+    virtual ~SeaGrass(); // _ZN8SeaGrassD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK8SeaGrass4tickER11BlockSourceRK8BlockPosR6Random
     virtual void randomlyModifyPosition(BlockPos const&)const; // _ZNK8SeaGrass22randomlyModifyPositionERK8BlockPos
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK8SeaGrass7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isValidAuxValue(int)const; // _ZNK8SeaGrass15isValidAuxValueEi
     virtual void waterSpreadCausesSpawn()const; // _ZNK8SeaGrass22waterSpreadCausesSpawnEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK8SeaGrass7onPlaceER11BlockSourceRK8BlockPos
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK8SeaGrass12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK8SeaGrass12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayConsumeFertilizer(BlockSource &)const; // _ZNK8SeaGrass20mayConsumeFertilizerER11BlockSource
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK8SeaGrass8mayPlaceER11BlockSourceRK8BlockPos
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK8SeaGrass15neighborChangedER11BlockSourceRK8BlockPosS4_

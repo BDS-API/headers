@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 #include <vector>
 
 
@@ -11,7 +11,8 @@ public:
     static long SIZE_OFFSET;
     static std::string BLOCK_DESCRIPTION_PREFIX;
 
-    ~Block(); // _ZN5BlockD2Ev
+    virtual ~Block(); // _ZN5BlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getRenderLayer()const; // _ZNK5Block14getRenderLayerEv
     void getLegacyBlock()const; // _ZNK5Block14getLegacyBlockEv
     std::string getRawNameId()const; // _ZNK5Block12getRawNameIdB5cxx11Ev
@@ -33,12 +34,12 @@ public:
     bool isSolid()const; // _ZNK5Block7isSolidEv
     void ignoreBlockForInsideCubeRenderer()const; // _ZNK5Block32ignoreBlockForInsideCubeRendererEv
     bool pushesOutItems()const; // _ZNK5Block14pushesOutItemsEv
-    void shouldRandomTick()const; // _ZNK5Block16shouldRandomTickEv
-    void shouldRandomTickExtraLayer()const; // _ZNK5Block26shouldRandomTickExtraLayerEv
+    bool shouldRandomTick()const; // _ZNK5Block16shouldRandomTickEv
+    bool shouldRandomTickExtraLayer()const; // _ZNK5Block26shouldRandomTickExtraLayerEv
     void getTranslucency()const; // _ZNK5Block15getTranslucencyEv
     void getLightEmission()const; // _ZNK5Block16getLightEmissionEv
     bool hasVariableLighting()const; // _ZNK5Block19hasVariableLightingEv
-//  Block(unsigned short, WeakPtr<BlockLegacy> &); //TODO: incomplete function definition // _ZN5BlockC2EtR7WeakPtrI11BlockLegacyE
+//    Block(unsigned short, long &); //TODO: incomplete function definition // _ZN5BlockC2EtR7WeakPtrI11BlockLegacyE
     bool canSlide(BlockSource &, BlockPos const&)const; // _ZNK5Block8canSlideER11BlockSourceRK8BlockPos
     bool canInstatick()const; // _ZNK5Block12canInstatickEv
     void getCreativeCategory()const; // _ZNK5Block19getCreativeCategoryEv
@@ -69,7 +70,7 @@ public:
     bool isStrippable(Block const&)const; // _ZNK5Block12isStrippableERKS_
     void getStrippedBlock()const; // _ZNK5Block16getStrippedBlockEv
     bool canBeBrokenFromFalling()const; // _ZNK5Block22canBeBrokenFromFallingEv
-//  bool canProvideSupport(unsigned char, BlockSupportType)const; //TODO: incomplete function definition // _ZNK5Block17canProvideSupportEh16BlockSupportType
+//    bool canProvideSupport(unsigned char, long)const; //TODO: incomplete function definition // _ZNK5Block17canProvideSupportEh16BlockSupportType
     bool canConnect(Block const&, unsigned char, Block const&)const; // _ZNK5Block10canConnectERKS_hS1_
     void getConnectedDirections(BlockPos const&, BlockSource &, bool &, bool &, bool &, bool &)const; // _ZNK5Block22getConnectedDirectionsERK8BlockPosR11BlockSourceRbS5_S5_S5_
     void getAABB(BlockSource &, BlockPos const&, AABB &, bool)const; // _ZNK5Block7getAABBER11BlockSourceRK8BlockPosR4AABBb
@@ -125,7 +126,7 @@ public:
     void getSecondPart(BlockSource &, BlockPos const&, BlockPos &)const; // _ZNK5Block13getSecondPartER11BlockSourceRK8BlockPosRS2_
     void DEPRECATEDcallOnGraphicsModeChanged(bool, bool, bool); // _ZN5Block35DEPRECATEDcallOnGraphicsModeChangedEbbb
     void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK5Block15checkIsPathableER5ActorRK8BlockPosS4_
-    void shouldDispense(BlockSource &, Container &)const; // _ZNK5Block14shouldDispenseER11BlockSourceR9Container
+    bool shouldDispense(BlockSource &, Container &)const; // _ZNK5Block14shouldDispenseER11BlockSourceR9Container
     void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK5Block8dispenseER11BlockSourceR9ContaineriRK4Vec3h
     void onPlace(BlockSource &, BlockPos const&)const; // _ZNK5Block7onPlaceER11BlockSourceRK8BlockPos
     void onRemove(BlockSource &, BlockPos const&)const; // _ZNK5Block8onRemoveER11BlockSourceRK8BlockPos
@@ -137,7 +138,7 @@ public:
     void movedByPiston(BlockSource &, BlockPos const&)const; // _ZNK5Block13movedByPistonER11BlockSourceRK8BlockPos
     void updateEntityAfterFallOn(Actor &)const; // _ZNK5Block23updateEntityAfterFallOnER5Actor
     void ignoreEntitiesOnPistonMove()const; // _ZNK5Block26ignoreEntitiesOnPistonMoveEv
-//  void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK5Block12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+//    void onFertilized(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK5Block12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     void mayConsumeFertilizer(BlockSource &)const; // _ZNK5Block20mayConsumeFertilizerER11BlockSource
     void getIconYOffset()const; // _ZNK5Block14getIconYOffsetEv
     bool isWaterBlocking()const; // _ZNK5Block15isWaterBlockingEv
@@ -180,9 +181,9 @@ public:
     bool canHaveExtraData()const; // _ZNK5Block16canHaveExtraDataEv
     bool hasComparatorSignal()const; // _ZNK5Block19hasComparatorSignalEv
     void getComparatorSignal(BlockSource &, BlockPos const&, unsigned char)const; // _ZNK5Block19getComparatorSignalER11BlockSourceRK8BlockPosh
-    void shouldStopFalling(Actor &)const; // _ZNK5Block17shouldStopFallingER5Actor
+    bool shouldStopFalling(Actor &)const; // _ZNK5Block17shouldStopFallingER5Actor
     bool pushesUpFallingBlocks()const; // _ZNK5Block21pushesUpFallingBlocksEv
-//  bool hasProperty(BlockProperty)const; //TODO: incomplete function definition // _ZNK5Block11hasPropertyE13BlockProperty
+//    bool hasProperty(long)const; //TODO: incomplete function definition // _ZNK5Block11hasPropertyE13BlockProperty
     void getProperties()const; // _ZNK5Block13getPropertiesEv
     void keepState(ItemState const&)const; // _ZNK5Block9keepStateERK9ItemState
     void copyState(Block const&, ItemState const&)const; // _ZNK5Block9copyStateERKS_RK9ItemState
@@ -208,5 +209,5 @@ public:
     void onFillBlock(BlockSource &, BlockPos const&, Block const&)const; // _ZNK5Block11onFillBlockER11BlockSourceRK8BlockPosRKS_
     void waterSpreadCausesSpawn()const; // _ZNK5Block22waterSpreadCausesSpawnEv
     void getStateMask(ItemState const&)const; // _ZNK5Block12getStateMaskERK9ItemState
-    void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK5Block23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK5Block23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
 };

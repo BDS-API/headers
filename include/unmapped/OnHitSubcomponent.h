@@ -5,7 +5,8 @@
 class OnHitSubcomponent {
 
 public:
-    ~OnHitSubcomponent(); // _ZN17OnHitSubcomponentD2Ev
+    virtual ~OnHitSubcomponent(); // _ZN17OnHitSubcomponentD2Ev
+    virtual void __fake_function0(); // fake
     OnHitSubcomponent(); // _ZN17OnHitSubcomponentC2Ev
     void _canAttack(Actor *, Actor *)const; // _ZNK17OnHitSubcomponent10_canAttackEP5ActorS1_
     void readfromJSON(Json::Value &); // _ZN17OnHitSubcomponent12readfromJSONERN4Json5ValueE

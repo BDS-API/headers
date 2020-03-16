@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class BubbleColumnBlock : BlockLegacy {
+class BubbleColumnBlock : public BlockLegacy {
 
 public:
-    ~BubbleColumnBlock(); // _ZN17BubbleColumnBlockD2Ev
+    virtual ~BubbleColumnBlock(); // _ZN17BubbleColumnBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK17BubbleColumnBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK17BubbleColumnBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &)const; // _ZNK17BubbleColumnBlock8addAABBsERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EE

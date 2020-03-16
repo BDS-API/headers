@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class SetTimePacket : Packet {
+class SetTimePacket : public Packet {
 
 public:
-    ~SetTimePacket(); // _ZN13SetTimePacketD2Ev
+    virtual ~SetTimePacket(); // _ZN13SetTimePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK13SetTimePacket5getIdEv
     virtual std::string getName()const; // _ZNK13SetTimePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK13SetTimePacket5writeER12BinaryStream

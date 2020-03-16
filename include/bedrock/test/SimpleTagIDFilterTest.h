@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "FilterTest.h"
+#include <string>
 
 
-class SimpleTagIDFilterTest : FilterTest {
+class SimpleTagIDFilterTest : public FilterTest {
 
 public:
-    ~SimpleTagIDFilterTest(); // _ZN21SimpleTagIDFilterTestD2Ev
+    virtual ~SimpleTagIDFilterTest(); // _ZN21SimpleTagIDFilterTestD2Ev
+    virtual void __fake_function0(); // fake
     virtual void setup(FilterTest::Definition const&, FilterInputs const&); // _ZN21SimpleTagIDFilterTest5setupERKN10FilterTest10DefinitionERK12FilterInputs
     virtual void _serializeValue()const; // _ZNK21SimpleTagIDFilterTest15_serializeValueEv
     SimpleTagIDFilterTest(); // _ZN21SimpleTagIDFilterTestC2Ev

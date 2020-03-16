@@ -4,13 +4,14 @@
 #include "BlockLegacy.h"
 
 
-class CoralBlock : BlockLegacy {
+class CoralBlock : public BlockLegacy {
 
 public:
     static long DEAD_CORAL_OFFSET;
     static long DEAD_CORAL_BIT;
 
-    ~CoralBlock(); // _ZN10CoralBlockD2Ev
+    virtual ~CoralBlock(); // _ZN10CoralBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK10CoralBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isValidAuxValue(int)const; // _ZNK10CoralBlock15isValidAuxValueEi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK10CoralBlock7onPlaceER11BlockSourceRK8BlockPos

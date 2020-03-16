@@ -1,15 +1,16 @@
 #pragma once
 
-#include "unmapped/ActorUniqueID.h"
-#include "../../unmapped/MobEffectInstance.h"
 #include "Actor.h"
+#include "../../unmapped/MobEffectInstance.h"
+#include "unmapped/ActorUniqueID.h"
 
 
-class AreaEffectCloud : Actor {
+class AreaEffectCloud : public Actor {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN15AreaEffectCloud15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~AreaEffectCloud(); // _ZN15AreaEffectCloudD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN15AreaEffectCloud15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~AreaEffectCloud(); // _ZN15AreaEffectCloudD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN15AreaEffectCloud10normalTickEv
     virtual void getShadowRadius()const; // _ZNK15AreaEffectCloud15getShadowRadiusEv
     virtual void setOwner(ActorUniqueID); // _ZN15AreaEffectCloud8setOwnerE13ActorUniqueID
@@ -31,7 +32,7 @@ public:
     void getPotion()const; // _ZNK15AreaEffectCloud9getPotionEv
     void addEffect(MobEffectInstance); // _ZN15AreaEffectCloud9addEffectE17MobEffectInstance
     void getParticle()const; // _ZNK15AreaEffectCloud11getParticleEv
-//  void setParticle(ParticleType); //TODO: incomplete function definition // _ZN15AreaEffectCloud11setParticleE12ParticleType
+//    void setParticle(long); //TODO: incomplete function definition // _ZN15AreaEffectCloud11setParticleE12ParticleType
     void setDuration(int); // _ZN15AreaEffectCloud11setDurationEi
     void getDuration()const; // _ZNK15AreaEffectCloud11getDurationEv
     void setRadiusOnUse(float); // _ZN15AreaEffectCloud14setRadiusOnUseEf

@@ -1,19 +1,20 @@
 #pragma once
 
+#include "../../util/BlockPos.h"
 #include <string>
 #include "DispenserBlockActor.h"
-#include "../../util/BlockPos.h"
 
 
-class DropperBlockActor : DispenserBlockActor {
+class DropperBlockActor : public DispenserBlockActor {
 
 public:
-    ~DropperBlockActor(); // _ZN17DropperBlockActorD2Ev
+    virtual ~DropperBlockActor(); // _ZN17DropperBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getUpdatePacket(BlockSource &); // _ZN17DropperBlockActor15getUpdatePacketER11BlockSource
     virtual std::string getName()const; // _ZNK17DropperBlockActor7getNameB5cxx11Ev
     virtual void _onUpdatePacket(CompoundTag const&, BlockSource &); // _ZN17DropperBlockActor15_onUpdatePacketERK11CompoundTagR11BlockSource
     DropperBlockActor(BlockPos); // _ZN17DropperBlockActorC2E8BlockPos
-//  DropperBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition // _ZN17DropperBlockActorC2E8BlockPos14BlockActorType
+//    DropperBlockActor(BlockPos, long); //TODO: incomplete function definition // _ZN17DropperBlockActorC2E8BlockPos14BlockActorType
     void pushOutItems(BlockSource &); // _ZN17DropperBlockActor12pushOutItemsER11BlockSource
     void getAttachedContainer(BlockSource &); // _ZN17DropperBlockActor20getAttachedContainerER11BlockSource
     void _tryPushToComposter(BlockSource &, int); // _ZN17DropperBlockActor19_tryPushToComposterER11BlockSourcei

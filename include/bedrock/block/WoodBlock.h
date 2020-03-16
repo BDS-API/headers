@@ -4,10 +4,11 @@
 #include <string>
 
 
-class WoodBlock : RotatedPillarBlock {
+class WoodBlock : public RotatedPillarBlock {
 
 public:
-    ~WoodBlock(); // _ZN9WoodBlockD2Ev
+    virtual ~WoodBlock(); // _ZN9WoodBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isStrippable(Block const&)const; // _ZNK9WoodBlock12isStrippableERK5Block
     virtual void getStrippedBlock(Block const&)const; // _ZNK9WoodBlock16getStrippedBlockERK5Block
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK9WoodBlock15getResourceItemER6RandomRK5Blocki

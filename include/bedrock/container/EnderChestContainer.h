@@ -3,12 +3,13 @@
 #include "FillingContainer.h"
 
 
-class EnderChestContainer : FillingContainer {
+class EnderChestContainer : public FillingContainer {
 
 public:
     static long ITEMS_SIZE;
 
-    ~EnderChestContainer(); // _ZN19EnderChestContainerD2Ev
+    virtual ~EnderChestContainer(); // _ZN19EnderChestContainerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void startOpen(Player &); // _ZN19EnderChestContainer9startOpenER6Player
     virtual void stopOpen(Player &); // _ZN19EnderChestContainer8stopOpenER6Player
     EnderChestContainer(); // _ZN19EnderChestContainerC2Ev

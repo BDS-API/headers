@@ -1,15 +1,16 @@
 #pragma once
 
+#include "../../../unmapped/BehaviorTreeDefinitionPtr.h"
 #include "../../../json/Value.h"
 #include "BehaviorDefinition.h"
 #include <vector>
-#include "../../../unmapped/BehaviorTreeDefinitionPtr.h"
 
 
-class CompositeDefinition : BehaviorDefinition {
+class CompositeDefinition : public BehaviorDefinition {
 
 public:
-    ~CompositeDefinition(); // _ZN19CompositeDefinitionD2Ev
+    virtual ~CompositeDefinition(); // _ZN19CompositeDefinitionD2Ev
+    virtual void __fake_function0(); // fake
     CompositeDefinition(); // _ZN19CompositeDefinitionC2Ev
     void getCount()const; // _ZNK19CompositeDefinition8getCountEv
     void get(unsigned long)const; // _ZNK19CompositeDefinition3getEm

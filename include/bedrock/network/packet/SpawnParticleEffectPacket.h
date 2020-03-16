@@ -5,10 +5,11 @@
 #include "Packet.h"
 
 
-class SpawnParticleEffectPacket : Packet {
+class SpawnParticleEffectPacket : public Packet {
 
 public:
-    ~SpawnParticleEffectPacket(); // _ZN25SpawnParticleEffectPacketD2Ev
+    virtual ~SpawnParticleEffectPacket(); // _ZN25SpawnParticleEffectPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK25SpawnParticleEffectPacket5getIdEv
     virtual std::string getName()const; // _ZNK25SpawnParticleEffectPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK25SpawnParticleEffectPacket5writeER12BinaryStream

@@ -3,11 +3,12 @@
 #include "HangingActor.h"
 
 
-class LeashFenceKnotActor : HangingActor {
+class LeashFenceKnotActor : public HangingActor {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN19LeashFenceKnotActor15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~LeashFenceKnotActor(); // _ZN19LeashFenceKnotActorD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN19LeashFenceKnotActor15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~LeashFenceKnotActor(); // _ZN19LeashFenceKnotActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void remove(); // _ZN19LeashFenceKnotActor6removeEv
     virtual void teleportTo(Vec3 const&, bool, int, int); // _ZN19LeashFenceKnotActor10teleportToERK4Vec3bii
     virtual void getShadowRadius()const; // _ZNK19LeashFenceKnotActor15getShadowRadiusEv
@@ -22,7 +23,7 @@ public:
     virtual void dropItem(); // _ZN19LeashFenceKnotActor8dropItemEv
     virtual void wouldSurvive(BlockSource &); // _ZN19LeashFenceKnotActor12wouldSurviveER11BlockSource
     LeashFenceKnotActor(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN19LeashFenceKnotActorC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier
-    void shouldRenderAtSqrDistance(double); // _ZN19LeashFenceKnotActor25shouldRenderAtSqrDistanceEd
+    bool shouldRenderAtSqrDistance(double); // _ZN19LeashFenceKnotActor25shouldRenderAtSqrDistanceEd
     void removeAnimals(Player *); // _ZN19LeashFenceKnotActor13removeAnimalsEP6Player
     void numberofAnimalsAttached(); // _ZN19LeashFenceKnotActor23numberofAnimalsAttachedEv
     void recalculateBoundingBox(); // _ZN19LeashFenceKnotActor22recalculateBoundingBoxEv

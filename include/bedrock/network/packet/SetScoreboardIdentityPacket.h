@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class SetScoreboardIdentityPacket : Packet {
+class SetScoreboardIdentityPacket : public Packet {
 
 public:
-    ~SetScoreboardIdentityPacket(); // _ZN27SetScoreboardIdentityPacketD2Ev
+    virtual ~SetScoreboardIdentityPacket(); // _ZN27SetScoreboardIdentityPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK27SetScoreboardIdentityPacket5getIdEv
     virtual std::string getName()const; // _ZNK27SetScoreboardIdentityPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK27SetScoreboardIdentityPacket5writeER12BinaryStream

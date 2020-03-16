@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class FindUnderwaterTreasureGoal : Goal {
+class FindUnderwaterTreasureGoal : public Goal {
 
 public:
-    ~FindUnderwaterTreasureGoal(); // _ZN26FindUnderwaterTreasureGoalD2Ev
+    virtual ~FindUnderwaterTreasureGoal(); // _ZN26FindUnderwaterTreasureGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN26FindUnderwaterTreasureGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN26FindUnderwaterTreasureGoal16canContinueToUseEv
     virtual bool canBeInterrupted(); // _ZN26FindUnderwaterTreasureGoal16canBeInterruptedEv

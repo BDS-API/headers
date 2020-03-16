@@ -9,7 +9,8 @@ namespace ScriptApi {
     class ScriptFramework {
 
     public:
-        ~ScriptFramework(); // _ZN9ScriptApi15ScriptFrameworkD2Ev
+        virtual ~ScriptFramework(); // _ZN9ScriptApi15ScriptFrameworkD2Ev
+        virtual void __fake_function0(); // fake
         virtual void initialize(); // _ZN9ScriptApi15ScriptFramework10initializeEv
         virtual void shutdown(); // _ZN9ScriptApi15ScriptFramework8shutdownEv
         ScriptFramework(); // _ZN9ScriptApi15ScriptFrameworkC2Ev
@@ -44,7 +45,7 @@ namespace ScriptApi {
         void getValue(ScriptApi::ScriptObjectHandle const&, bool &); // _ZN9ScriptApi15ScriptFramework8getValueERKNS_18ScriptObjectHandleERb
         void getMember(ScriptApi::ScriptObjectHandle const&, std::string const&, std::string &); // _ZN9ScriptApi15ScriptFramework9getMemberERKNS_18ScriptObjectHandleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERS9_
         void getValue(ScriptApi::ScriptObjectHandle const&, std::string &); // _ZN9ScriptApi15ScriptFramework8getValueERKNS_18ScriptObjectHandleERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//      void getHandleType(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptObjectType &); //TODO: incomplete function definition // _ZN9ScriptApi15ScriptFramework13getHandleTypeERKNS_18ScriptObjectHandleERNS_16ScriptObjectTypeE
+//        void getHandleType(ScriptApi::ScriptObjectHandle const&, long &); //TODO: incomplete function definition // _ZN9ScriptApi15ScriptFramework13getHandleTypeERKNS_18ScriptObjectHandleERNS_16ScriptObjectTypeE
         void getArrayLength(ScriptApi::ScriptObjectHandle const&, int &); // _ZN9ScriptApi15ScriptFramework14getArrayLengthERKNS_18ScriptObjectHandleERi
         void getMemberNames(ScriptApi::ScriptObjectHandle const&, std::vector<std::string> &); // _ZN9ScriptApi15ScriptFramework14getMemberNamesERKNS_18ScriptObjectHandleERSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISA_EE
         void getGlobalObject(ScriptApi::ScriptObjectHandle &); // _ZN9ScriptApi15ScriptFramework15getGlobalObjectERNS_18ScriptObjectHandleE

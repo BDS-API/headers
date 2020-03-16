@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 #include "../../../unmapped/ContainerContentChangeListener.h"
 
 
-class ContainerModel : ContainerContentChangeListener {
+class ContainerModel : public ContainerContentChangeListener {
 
 public:
     virtual void containerContentChanged(int); // _ZN14ContainerModel23containerContentChangedEi
-    ~ContainerModel(); // _ZN14ContainerModelD2Ev
+    virtual ~ContainerModel(); // _ZN14ContainerModelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postInit(); // _ZN14ContainerModel8postInitEv
     virtual void releaseResources(); // _ZN14ContainerModel16releaseResourcesEv
     virtual void getContainerSize()const; // _ZNK14ContainerModel16getContainerSizeEv
@@ -27,7 +28,7 @@ public:
     virtual void switchItemExpando(int); // _ZN14ContainerModel17switchItemExpandoEi
     virtual void _getContainerOffset()const; // _ZNK14ContainerModel19_getContainerOffsetEv
     virtual void _onItemChanged(int, ItemStack const&, ItemStack const&); // _ZN14ContainerModel14_onItemChangedEiRK9ItemStackS2_
-//  ContainerModel(ContainerEnumName, int, ContainerCategory); //TODO: incomplete function definition // _ZN14ContainerModelC2E17ContainerEnumNamei17ContainerCategory
+//    ContainerModel(long, int, long); //TODO: incomplete function definition // _ZN14ContainerModelC2E17ContainerEnumNamei17ContainerCategory
     void resize(int); // _ZN14ContainerModel6resizeEi
     void _init(); // _ZN14ContainerModel5_initEv
     void registerOnContainerChangedCallback(std::function<void (int, ItemStack const&, ItemStack const&)>); // _ZN14ContainerModel34registerOnContainerChangedCallbackESt8functionIFviRK9ItemStackS3_EE
@@ -38,7 +39,7 @@ public:
     void _notifyPlayer(int, ItemStack const&, ItemStack const&); // _ZN14ContainerModel13_notifyPlayerEiRK9ItemStackS2_
     void networkUpdateItem(int, ItemStack const&, ItemStack const&); // _ZN14ContainerModel17networkUpdateItemEiRK9ItemStackS2_
     void getContainerCategory()const; // _ZNK14ContainerModel20getContainerCategoryEv
-//  void setContainerCategory(ContainerCategory); //TODO: incomplete function definition // _ZN14ContainerModel20setContainerCategoryE17ContainerCategory
+//    void setContainerCategory(long); //TODO: incomplete function definition // _ZN14ContainerModel20setContainerCategoryE17ContainerCategory
     void setItemSource(int, SlotData const&); // _ZN14ContainerModel13setItemSourceEiRK8SlotData
     void getItemSource(int)const; // _ZNK14ContainerModel13getItemSourceEi
     void getItemCount(ItemDescriptor const&); // _ZN14ContainerModel12getItemCountERK14ItemDescriptor

@@ -3,10 +3,11 @@
 #include "PathNavigation.h"
 
 
-class GenericPathNavigation : PathNavigation {
+class GenericPathNavigation : public PathNavigation {
 
 public:
-    ~GenericPathNavigation(); // _ZN21GenericPathNavigationD2Ev
+    virtual ~GenericPathNavigation(); // _ZN21GenericPathNavigationD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initializeInternal(Mob &, NavigationDescription *); // _ZN21GenericPathNavigation18initializeInternalER3MobP21NavigationDescription
     virtual void tick(NavigationComponent &, Mob &); // _ZN21GenericPathNavigation4tickER19NavigationComponentR3Mob
     virtual void getTempMobPos(Mob const&)const; // _ZNK21GenericPathNavigation13getTempMobPosERK3Mob

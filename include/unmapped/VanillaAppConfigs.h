@@ -3,9 +3,10 @@
 #include "AppConfigs.h"
 
 
-class VanillaAppConfigs : AppConfigs {
+class VanillaAppConfigs : public AppConfigs {
 
 public:
-    ~VanillaAppConfigs(); // _ZN17VanillaAppConfigsD2Ev
+    virtual ~VanillaAppConfigs(); // _ZN17VanillaAppConfigsD2Ev
+    virtual void __fake_function0(); // fake
     VanillaAppConfigs(); // _ZN17VanillaAppConfigsC2Ev
 };

@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class SoulSandBlock : BlockLegacy {
+class SoulSandBlock : public BlockLegacy {
 
 public:
-    ~SoulSandBlock(); // _ZN13SoulSandBlockD2Ev
+    virtual ~SoulSandBlock(); // _ZN13SoulSandBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13SoulSandBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK13SoulSandBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK13SoulSandBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb

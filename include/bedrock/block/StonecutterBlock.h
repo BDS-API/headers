@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class StonecutterBlock : BlockLegacy {
+class StonecutterBlock : public BlockLegacy {
 
 public:
-    ~StonecutterBlock(); // _ZN16StonecutterBlockD2Ev
+    virtual ~StonecutterBlock(); // _ZN16StonecutterBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK16StonecutterBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isCraftingBlock()const; // _ZNK16StonecutterBlock15isCraftingBlockEv
     virtual bool canContainLiquid()const; // _ZNK16StonecutterBlock16canContainLiquidEv

@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "Item.h"
 
 
-class ArrowItem : Item {
+class ArrowItem : public Item {
 
 public:
-    ~ArrowItem(); // _ZN9ArrowItemD2Ev
+    virtual ~ArrowItem(); // _ZN9ArrowItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const; // _ZNK9ArrowItem24appendFormattedHovertextERK13ItemStackBaseR5LevelRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
     virtual bool isValidAuxValue(int)const; // _ZNK9ArrowItem15isValidAuxValueEi
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK9ArrowItem8dispenseER11BlockSourceR9ContaineriRK4Vec3h

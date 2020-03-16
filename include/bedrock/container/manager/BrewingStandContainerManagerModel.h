@@ -3,17 +3,18 @@
 #include "ContainerManagerModel.h"
 
 
-class BrewingStandContainerManagerModel : ContainerManagerModel {
+class BrewingStandContainerManagerModel : public ContainerManagerModel {
 
 public:
-    ~BrewingStandContainerManagerModel(); // _ZN33BrewingStandContainerManagerModelD2Ev
+    virtual ~BrewingStandContainerManagerModel(); // _ZN33BrewingStandContainerManagerModelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getItems(); // _ZN33BrewingStandContainerManagerModel8getItemsEv
     virtual void setSlot(int, ContainerItemStack const&, bool); // _ZN33BrewingStandContainerManagerModel7setSlotEiRK18ContainerItemStackb
     virtual void getSlot(int); // _ZN33BrewingStandContainerManagerModel7getSlotEi
     virtual void setData(int, int); // _ZN33BrewingStandContainerManagerModel7setDataEii
     virtual void broadcastChanges(); // _ZN33BrewingStandContainerManagerModel16broadcastChangesEv
     virtual void init(); // _ZN33BrewingStandContainerManagerModel4initEv
-//  BrewingStandContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN33BrewingStandContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
+//    BrewingStandContainerManagerModel(long, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN33BrewingStandContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
     void _getBrewingStandEntity(); // _ZN33BrewingStandContainerManagerModel22_getBrewingStandEntityEv
     bool isStandValid(float); // _ZN33BrewingStandContainerManagerModel12isStandValidEf
     void getBrewProgress(int); // _ZN33BrewingStandContainerManagerModel15getBrewProgressEi

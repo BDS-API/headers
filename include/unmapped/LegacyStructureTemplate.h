@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include "../bedrock/util/Vec3.h"
+#include <string>
 #include "../bedrock/util/BlockPos.h"
 
 
@@ -39,14 +39,14 @@ public:
     void fillEntityList(BlockSource &, BlockPos const&, BlockPos &); // _ZN23LegacyStructureTemplate14fillEntityListER11BlockSourceRK8BlockPosRS2_
     void setAuthor(std::string); // _ZN23LegacyStructureTemplate9setAuthorENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void getBlockAtPos(BlockPos const&)const; // _ZNK23LegacyStructureTemplate13getBlockAtPosERK8BlockPos
-//  void getSize(Rotation); //TODO: incomplete function definition // _ZN23LegacyStructureTemplate7getSizeE8Rotation
-//  void getZeroPositionWithTransform(BlockPos const&, Mirror, Rotation); //TODO: incomplete function definition // _ZN23LegacyStructureTemplate28getZeroPositionWithTransformERK8BlockPos6Mirror8Rotation
-//  void getZeroPositionWithTransform(BlockPos const&, Mirror, Rotation, int, int); //TODO: incomplete function definition // _ZN23LegacyStructureTemplate28getZeroPositionWithTransformERK8BlockPos6Mirror8Rotationii
+//    void getSize(long); //TODO: incomplete function definition // _ZN23LegacyStructureTemplate7getSizeE8Rotation
+//    void getZeroPositionWithTransform(BlockPos const&, long, long); //TODO: incomplete function definition // _ZN23LegacyStructureTemplate28getZeroPositionWithTransformERK8BlockPos6Mirror8Rotation
+//    void getZeroPositionWithTransform(BlockPos const&, long, long, int, int); //TODO: incomplete function definition // _ZN23LegacyStructureTemplate28getZeroPositionWithTransformERK8BlockPos6Mirror8Rotationii
     bool isValid()const; // _ZNK23LegacyStructureTemplate7isValidEv
-//  void transform(BlockPos, Mirror, Rotation); //TODO: incomplete function definition // _ZN23LegacyStructureTemplate9transformE8BlockPos6Mirror8Rotation
+//    void transform(BlockPos, long, long); //TODO: incomplete function definition // _ZN23LegacyStructureTemplate9transformE8BlockPos6Mirror8Rotation
     void _calculateRelativePosition(Vec3, LegacyStructureSettings const&)const; // _ZNK23LegacyStructureTemplate26_calculateRelativePositionE4Vec3RK23LegacyStructureSettings
-//  void _transform(BlockPos, Mirror, Rotation)const; //TODO: incomplete function definition // _ZNK23LegacyStructureTemplate10_transformE8BlockPos6Mirror8Rotation
-//  void _transform(Vec3, Mirror, Rotation)const; //TODO: incomplete function definition // _ZNK23LegacyStructureTemplate10_transformE4Vec36Mirror8Rotation
+//    void _transform(BlockPos, long, long)const; //TODO: incomplete function definition // _ZNK23LegacyStructureTemplate10_transformE8BlockPos6Mirror8Rotation
+//    void _transform(Vec3, long, long)const; //TODO: incomplete function definition // _ZNK23LegacyStructureTemplate10_transformE4Vec36Mirror8Rotation
     ~LegacyStructureTemplate(); // _ZN23LegacyStructureTemplateD2Ev
     void _mapToData(Block const&, LegacyStructureSettings const&); // _ZN23LegacyStructureTemplate10_mapToDataERK5BlockRK23LegacyStructureSettings
     void _mapPropertyToExtraBlock(std::string const&, std::string const&); // _ZN23LegacyStructureTemplate24_mapPropertyToExtraBlockERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_

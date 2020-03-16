@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class MountTamingSystem : ITickingSystem {
+class MountTamingSystem : public ITickingSystem {
 
 public:
-    ~MountTamingSystem(); // _ZN17MountTamingSystemD2Ev
+    virtual ~MountTamingSystem(); // _ZN17MountTamingSystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN17MountTamingSystem4tickER14EntityRegistry
     MountTamingSystem(); // _ZN17MountTamingSystemC2Ev
 };

@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class FlowerPotBlock : ActorBlock {
+class FlowerPotBlock : public ActorBlock {
 
 public:
-    ~FlowerPotBlock(); // _ZN14FlowerPotBlockD2Ev
+    virtual ~FlowerPotBlock(); // _ZN14FlowerPotBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isInteractiveBlock()const; // _ZNK14FlowerPotBlock18isInteractiveBlockEv
     virtual bool isValidAuxValue(int)const; // _ZNK14FlowerPotBlock15isValidAuxValueEi
     virtual void waterSpreadCausesSpawn()const; // _ZNK14FlowerPotBlock22waterSpreadCausesSpawnEv

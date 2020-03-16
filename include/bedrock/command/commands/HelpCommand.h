@@ -3,10 +3,11 @@
 #include "../Command.h"
 
 
-class HelpCommand : Command {
+class HelpCommand : public Command {
 
 public:
-    ~HelpCommand(); // _ZN11HelpCommandD2Ev
+    virtual ~HelpCommand(); // _ZN11HelpCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK11HelpCommand7executeERK13CommandOriginR13CommandOutput
     void setup(CommandRegistry &); // _ZN11HelpCommand5setupER15CommandRegistry
     HelpCommand(); // _ZN11HelpCommandC2Ev

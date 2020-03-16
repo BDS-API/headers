@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class ModalFormResponsePacket : Packet {
+class ModalFormResponsePacket : public Packet {
 
 public:
-    ~ModalFormResponsePacket(); // _ZN23ModalFormResponsePacketD2Ev
+    virtual ~ModalFormResponsePacket(); // _ZN23ModalFormResponsePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK23ModalFormResponsePacket5getIdEv
     virtual std::string getName()const; // _ZNK23ModalFormResponsePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK23ModalFormResponsePacket5writeER12BinaryStream

@@ -1,15 +1,16 @@
 #pragma once
 
 #include <string>
-#include "CommandOrigin.h"
-#include "../../../unmapped/NetworkIdentifier.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
+#include "../../../unmapped/NetworkIdentifier.h"
+#include "CommandOrigin.h"
 
 
-class DevConsoleCommandOrigin : CommandOrigin {
+class DevConsoleCommandOrigin : public CommandOrigin {
 
 public:
-    ~DevConsoleCommandOrigin(); // _ZN23DevConsoleCommandOriginD2Ev
+    virtual ~DevConsoleCommandOrigin(); // _ZN23DevConsoleCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getRequestId()const; // _ZNK23DevConsoleCommandOrigin12getRequestIdB5cxx11Ev
     virtual std::string getName()const; // _ZNK23DevConsoleCommandOrigin7getNameB5cxx11Ev
     virtual void getBlockPosition()const; // _ZNK23DevConsoleCommandOrigin16getBlockPositionEv

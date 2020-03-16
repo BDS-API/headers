@@ -9,10 +9,10 @@ public:
 
     VariantParameterList(); // _ZN20VariantParameterListC2Ev
     void clear(); // _ZN20VariantParameterList5clearEv
-//  bool hasParameter(FilterSubject)const; //TODO: incomplete function definition // _ZNK20VariantParameterList12hasParameterE13FilterSubject
-//  void getParameterType(FilterSubject)const; //TODO: incomplete function definition // _ZNK20VariantParameterList16getParameterTypeE13FilterSubject
+//    bool hasParameter(long)const; //TODO: incomplete function definition // _ZNK20VariantParameterList12hasParameterE13FilterSubject
+//    void getParameterType(long)const; //TODO: incomplete function definition // _ZNK20VariantParameterList16getParameterTypeE13FilterSubject
     void getParameterCount()const; // _ZNK20VariantParameterList17getParameterCountEv
-//  void clearParameter(FilterSubject); //TODO: incomplete function definition // _ZN20VariantParameterList14clearParameterE13FilterSubject
+//    void clearParameter(long); //TODO: incomplete function definition // _ZN20VariantParameterList14clearParameterE13FilterSubject
     class Parameter {
 
     public:

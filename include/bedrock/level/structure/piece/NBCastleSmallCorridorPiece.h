@@ -1,13 +1,14 @@
 #pragma once
 
-#include "NetherFortressPiece.h"
 #include <vector>
+#include "NetherFortressPiece.h"
 
 
-class NBCastleSmallCorridorPiece : NetherFortressPiece {
+class NBCastleSmallCorridorPiece : public NetherFortressPiece {
 
 public:
-    ~NBCastleSmallCorridorPiece(); // _ZN26NBCastleSmallCorridorPieceD2Ev
+    virtual ~NBCastleSmallCorridorPiece(); // _ZN26NBCastleSmallCorridorPieceD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getType()const; // _ZNK26NBCastleSmallCorridorPiece7getTypeEv
     virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &); // _ZN26NBCastleSmallCorridorPiece11addChildrenEP14StructurePieceRSt6vectorISt10unique_ptrIS0_St14default_deleteIS0_EESaIS6_EER6Random
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN26NBCastleSmallCorridorPiece11postProcessEP11BlockSourceR6RandomRK11BoundingBox

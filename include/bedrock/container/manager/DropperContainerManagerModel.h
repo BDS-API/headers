@@ -3,10 +3,11 @@
 #include "LevelContainerManagerModel.h"
 
 
-class DropperContainerManagerModel : LevelContainerManagerModel {
+class DropperContainerManagerModel : public LevelContainerManagerModel {
 
 public:
-    ~DropperContainerManagerModel(); // _ZN28DropperContainerManagerModelD2Ev
+    virtual ~DropperContainerManagerModel(); // _ZN28DropperContainerManagerModelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void init(); // _ZN28DropperContainerManagerModel4initEv
-//  DropperContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN28DropperContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
+//    DropperContainerManagerModel(long, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN28DropperContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
 };

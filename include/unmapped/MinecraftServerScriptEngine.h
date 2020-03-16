@@ -3,10 +3,11 @@
 #include "ServerInstanceEventListener.h"
 
 
-class MinecraftServerScriptEngine : ServerInstanceEventListener /*ScriptEngineWithContext<ScriptServerContext>*/ { //TODO: incomplete class definition
+class MinecraftServerScriptEngine : public ServerInstanceEventListener /*public ScriptEngineWithContext<ScriptServerContext>*/ { //TODO: incomplete class definition
 
 public:
-    ~MinecraftServerScriptEngine(); // _ZN27MinecraftServerScriptEngineD2Ev
+    virtual ~MinecraftServerScriptEngine(); // _ZN27MinecraftServerScriptEngineD2Ev
+    virtual void __fake_function0(); // fake
     virtual void setupInterface(); // _ZN27MinecraftServerScriptEngine14setupInterfaceEv
     virtual void onExecuteCommandCalled(ScriptApi::ScriptVersionInfo const&, ScriptCommand &&); // _ZN27MinecraftServerScriptEngine22onExecuteCommandCalledERKN9ScriptApi17ScriptVersionInfoEO13ScriptCommand
     virtual void executeCommand(ScriptCommand const&); // _ZN27MinecraftServerScriptEngine14executeCommandERK13ScriptCommand
@@ -22,7 +23,7 @@ public:
     virtual void onLevelTick(); // _ZN27MinecraftServerScriptEngine11onLevelTickEv
     MinecraftServerScriptEngine(ServerInstance &); // _ZN27MinecraftServerScriptEngineC2ER14ServerInstance
     void _queueResourcePackScripts(ResourcePackManager &); // _ZN27MinecraftServerScriptEngine25_queueResourcePackScriptsER19ResourcePackManager
-//  void _setupContext(Minecraft &, PacketSender &, entt::Registry<unsigned int> &); //TODO: incomplete function definition // _ZN27MinecraftServerScriptEngine13_setupContextER9MinecraftR12PacketSenderRN4entt8RegistryIjEE
+//    void _setupContext(Minecraft &, PacketSender &, long &); //TODO: incomplete function definition // _ZN27MinecraftServerScriptEngine13_setupContextER9MinecraftR12PacketSenderRN4entt8RegistryIjEE
     void _initializeServer(Level &, NetworkHandler &); // _ZN27MinecraftServerScriptEngine17_initializeServerER5LevelR14NetworkHandler
     void _unregisterEventListeners(Level *, NetworkHandler &); // _ZN27MinecraftServerScriptEngine25_unregisterEventListenersEP5LevelR14NetworkHandler
     void _registerEventListeners(Level &, NetworkHandler &); // _ZN27MinecraftServerScriptEngine23_registerEventListenersER5LevelR14NetworkHandler

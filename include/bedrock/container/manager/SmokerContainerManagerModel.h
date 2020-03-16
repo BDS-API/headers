@@ -3,9 +3,10 @@
 #include "FurnaceContainerManagerModel.h"
 
 
-class SmokerContainerManagerModel : FurnaceContainerManagerModel {
+class SmokerContainerManagerModel : public FurnaceContainerManagerModel {
 
 public:
-    ~SmokerContainerManagerModel(); // _ZN27SmokerContainerManagerModelD2Ev
-//  SmokerContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN27SmokerContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
+    virtual ~SmokerContainerManagerModel(); // _ZN27SmokerContainerManagerModelD2Ev
+    virtual void __fake_function0(); // fake
+//    SmokerContainerManagerModel(long, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN27SmokerContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
 };

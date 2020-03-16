@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "BaseMoveToBlockGoal.h"
+#include <string>
 
 
-class HarvestFarmBlockGoal : BaseMoveToBlockGoal {
+class HarvestFarmBlockGoal : public BaseMoveToBlockGoal {
 
 public:
-    ~HarvestFarmBlockGoal(); // _ZN20HarvestFarmBlockGoalD2Ev
+    virtual ~HarvestFarmBlockGoal(); // _ZN20HarvestFarmBlockGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN20HarvestFarmBlockGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN20HarvestFarmBlockGoal16canContinueToUseEv
     virtual void start(); // _ZN20HarvestFarmBlockGoal5startEv

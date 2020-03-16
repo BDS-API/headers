@@ -3,11 +3,12 @@
 #include "WaterAnimal.h"
 
 
-class Dolphin : WaterAnimal {
+class Dolphin : public WaterAnimal {
 
 public:
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN7Dolphin20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Dolphin(); // _ZN7DolphinD2Ev
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN7Dolphin20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Dolphin(); // _ZN7DolphinD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canBePulledIntoVehicle()const; // _ZNK7Dolphin22canBePulledIntoVehicleEv
     virtual void aiStep(); // _ZN7Dolphin6aiStepEv
     virtual void createAIGoals(); // _ZN7Dolphin13createAIGoalsEv

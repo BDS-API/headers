@@ -4,7 +4,7 @@
 #include "StructurePiece.h"
 
 
-class OceanMonumentPiece : StructurePiece {
+class OceanMonumentPiece : public StructurePiece {
 
 public:
     static long mLeftWingIndex;
@@ -15,7 +15,8 @@ public:
     static long mGridroomLeftWingConnectIndex;
     static long mGridroomRightWingConnectIndex;
 
-    ~OceanMonumentPiece(); // _ZN18OceanMonumentPieceD2Ev
+    virtual ~OceanMonumentPiece(); // _ZN18OceanMonumentPieceD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&); // _ZN18OceanMonumentPiece17postProcessMobsAtEP11BlockSourceR6RandomRK11BoundingBox
     virtual void getWorldX(int, int); // _ZN18OceanMonumentPiece9getWorldXEii
     virtual void getWorldZ(int, int); // _ZN18OceanMonumentPiece9getWorldZEii

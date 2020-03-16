@@ -3,11 +3,12 @@
 #include "Actor.h"
 
 
-class Throwable : Actor {
+class Throwable : public Actor {
 
 public:
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN9Throwable20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Throwable(); // _ZN9ThrowableD2Ev
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN9Throwable20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Throwable(); // _ZN9ThrowableD2Ev
+    virtual void __fake_function0(); // fake
     virtual void lerpTo(Vec3 const&, Vec2 const&, int); // _ZN9Throwable6lerpToERK4Vec3RK4Vec2i
     virtual void lerpMotion(Vec3 const&); // _ZN9Throwable10lerpMotionERK4Vec3
     virtual void normalTick(); // _ZN9Throwable10normalTickEv

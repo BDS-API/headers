@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "BaseMoveToBlockGoal.h"
+#include <string>
 
 
-class InspectBookshelfGoal : BaseMoveToBlockGoal {
+class InspectBookshelfGoal : public BaseMoveToBlockGoal {
 
 public:
-    ~InspectBookshelfGoal(); // _ZN20InspectBookshelfGoalD2Ev
+    virtual ~InspectBookshelfGoal(); // _ZN20InspectBookshelfGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canContinueToUse(); // _ZN20InspectBookshelfGoal16canContinueToUseEv
     virtual void tick(); // _ZN20InspectBookshelfGoal4tickEv
     virtual void appendDebugInfo(std::string &)const; // _ZNK20InspectBookshelfGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

@@ -3,16 +3,17 @@
 #include "HumanoidMonster.h"
 
 
-class Witch : HumanoidMonster {
+class Witch : public HumanoidMonster {
 
 public:
     static long SPEED_MODIFIER_DRINKING_UUID;
     static long SPEED_MODIFIER_DRINKING;
 
-    ~Witch(); // _ZN5WitchD2Ev
+    virtual ~Witch(); // _ZN5WitchD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canAttack(Actor *, bool)const; // _ZNK5Witch9canAttackEP5Actorb
     virtual void performRangedAttack(Actor &, float); // _ZN5Witch19performRangedAttackER5Actorf
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN5Witch17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN5Witch17handleEntityEventE10ActorEventi
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN5Witch35updateEntitySpecificMolangVariablesER12RenderParams
     virtual void _onSizeUpdated(); // _ZN5Witch14_onSizeUpdatedEv
     virtual void aiStep(); // _ZN5Witch6aiStepEv

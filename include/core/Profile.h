@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
 #include "CounterToken.h"
 #include "CPUProfileToken.h"
+#include <string>
 
 
 namespace Core {
@@ -12,7 +12,7 @@ namespace Core {
         void getProfileTimeMS(char const*, char const*); // _ZN4Core7Profile16getProfileTimeMSEPKcS2_
         void generateCPUProfileToken(char const*, char const*, unsigned int); // _ZN4Core7Profile23generateCPUProfileTokenEPKcS2_j
         void generateCounterToken(char const*); // _ZN4Core7Profile20generateCounterTokenEPKc
-//      void generateCounterTokenWithConfig(char const*, Core::Profile::CounterFormat, long, Core::Profile::CounterFlags); //TODO: incomplete function definition // _ZN4Core7Profile30generateCounterTokenWithConfigEPKcNS0_13CounterFormatElNS0_12CounterFlagsE
+//        void generateCounterTokenWithConfig(char const*, long, long, long); //TODO: incomplete function definition // _ZN4Core7Profile30generateCounterTokenWithConfigEPKcNS0_13CounterFormatElNS0_12CounterFlagsE
         void findCPUProfileToken(char const*, char const*); // _ZN4Core7Profile19findCPUProfileTokenEPKcS2_
         void getLargestFrameTimeMS(Core::Profile::CPUProfileToken); // _ZN4Core7Profile21getLargestFrameTimeMSENS0_15CPUProfileTokenE
         void getSmallestFrameTimeMS(Core::Profile::CPUProfileToken); // _ZN4Core7Profile22getSmallestFrameTimeMSENS0_15CPUProfileTokenE
@@ -31,11 +31,11 @@ namespace Core {
         void shutdownProfile(); // _ZN4Core7Profile15shutdownProfileEv
         void profileFlip(); // _ZN4Core7Profile11profileFlipEv
         std::string constructLabel(char const*); // _ZN4Core7Profile14constructLabelB5cxx11EPKc
-//      void dumpFile(char const*, Core::Profile::FileExtension); //TODO: incomplete function definition // _ZN4Core7Profile8dumpFileEPKcNS0_13FileExtensionE
+//        void dumpFile(char const*, long); //TODO: incomplete function definition // _ZN4Core7Profile8dumpFileEPKcNS0_13FileExtensionE
         void onFileOpenRequest(bool); // _ZN4Core7Profile17onFileOpenRequestEb
         void onFileOpenRetry(bool); // _ZN4Core7Profile15onFileOpenRetryEb
         void onFileOpenRetrySuccess(bool); // _ZN4Core7Profile22onFileOpenRetrySuccessEb
         void onFileOpenFailed(bool); // _ZN4Core7Profile16onFileOpenFailedEb
-//      void getFileOpenStats(Core::Profile::FileCounters &, Core::Profile::FileCounters &); //TODO: incomplete function definition // _ZN4Core7Profile16getFileOpenStatsERNS0_12FileCountersES2_
+//        void getFileOpenStats(long &, long &); //TODO: incomplete function definition // _ZN4Core7Profile16getFileOpenStatsERNS0_12FileCountersES2_
     };
 }

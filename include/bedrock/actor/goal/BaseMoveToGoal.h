@@ -3,10 +3,11 @@
 #include "Goal.h"
 
 
-class BaseMoveToGoal : Goal {
+class BaseMoveToGoal : public Goal {
 
 public:
-    ~BaseMoveToGoal(); // _ZN14BaseMoveToGoalD2Ev
+    virtual ~BaseMoveToGoal(); // _ZN14BaseMoveToGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN14BaseMoveToGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN14BaseMoveToGoal16canContinueToUseEv
     virtual void start(); // _ZN14BaseMoveToGoal5startEv

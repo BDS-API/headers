@@ -4,12 +4,13 @@
 #include <vector>
 
 
-class StrongholdFeature : StructureFeature {
+class StrongholdFeature : public StructureFeature {
 
 public:
     class StrongholdResult;
 
-    ~StrongholdFeature(); // _ZN17StrongholdFeatureD2Ev
+    virtual ~StrongholdFeature(); // _ZN17StrongholdFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getNearestGeneratedFeature(Dimension &, BiomeSource &, BlockPos const&, BlockPos &); // _ZN17StrongholdFeature26getNearestGeneratedFeatureER9DimensionR11BiomeSourceRK8BlockPosRS4_
     virtual bool isFeatureChunk(BiomeSource const&, Random &, ChunkPos const&, unsigned int); // _ZN17StrongholdFeature14isFeatureChunkERK11BiomeSourceR6RandomRK8ChunkPosj
     virtual void createStructureStart(Dimension &, BiomeSource &, Random &, ChunkPos const&); // _ZN17StrongholdFeature20createStructureStartER9DimensionR11BiomeSourceR6RandomRK8ChunkPos
@@ -22,10 +23,10 @@ public:
     void _generateStronghold(unsigned int, ChunkPos const&); // _ZN17StrongholdFeature19_generateStrongholdEjRK8ChunkPos
     void _getCenterOfGrid(ChunkPos const&); // _ZN17StrongholdFeature16_getCenterOfGridERK8ChunkPos
     void _getGridCoordinates(ChunkPos const&); // _ZN17StrongholdFeature19_getGridCoordinatesERK8ChunkPos
-//  void _isPregeneratedStrongholdHere(GridPos const&, ChunkPos &); //TODO: incomplete function definition // _ZN17StrongholdFeature29_isPregeneratedStrongholdHereERK7GridPosR8ChunkPos
+//    void _isPregeneratedStrongholdHere(long const&, ChunkPos &); //TODO: incomplete function definition // _ZN17StrongholdFeature29_isPregeneratedStrongholdHereERK7GridPosR8ChunkPos
     void _hasStrongholds(std::vector<StrongholdFeature::StrongholdResult> const&); // _ZN17StrongholdFeature15_hasStrongholdsERKSt6vectorINS_16StrongholdResultESaIS1_EE
     void _closestChunkPos(ChunkPos const&, std::vector<StrongholdFeature::StrongholdResult> &); // _ZN17StrongholdFeature16_closestChunkPosERK8ChunkPosRSt6vectorINS_16StrongholdResultESaIS4_EE
-//  void _sameGrid(GridPos const&, GridPos const&); //TODO: incomplete function definition // _ZN17StrongholdFeature9_sameGridERK7GridPosS2_
+//    void _sameGrid(long const&, long const&); //TODO: incomplete function definition // _ZN17StrongholdFeature9_sameGridERK7GridPosS2_
     void _logStrongholdData(std::vector<StrongholdFeature::StrongholdResult> const&); // _ZN17StrongholdFeature18_logStrongholdDataERKSt6vectorINS_16StrongholdResultESaIS1_EE
     class StrongholdResult {
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 
 
 class ScoreboardIdentityRef {
@@ -26,6 +26,6 @@ public:
     bool isHiddenFakePlayer()const; // _ZNK21ScoreboardIdentityRef18isHiddenFakePlayerEv
     bool hasScoreInObjective(Objective const&)const; // _ZNK21ScoreboardIdentityRef19hasScoreInObjectiveERK9Objective
     void removeFromObjective(Scoreboard &, Objective &); // _ZN21ScoreboardIdentityRef19removeFromObjectiveER10ScoreboardR9Objective
-//  void modifyScoreInObjective(int &, Objective &, int, PlayerScoreSetFunction); //TODO: incomplete function definition // _ZN21ScoreboardIdentityRef22modifyScoreInObjectiveERiR9Objectivei22PlayerScoreSetFunction
+//    void modifyScoreInObjective(int &, Objective &, int, long); //TODO: incomplete function definition // _ZN21ScoreboardIdentityRef22modifyScoreInObjectiveERiR9Objectivei22PlayerScoreSetFunction
     void serialize(ScoreboardIdentityRef const&); // _ZN21ScoreboardIdentityRef9serializeERKS_
 };

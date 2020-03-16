@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "Tag.h"
+#include <string>
 
 
-class DoubleTag : Tag {
+class DoubleTag : public Tag {
 
 public:
-    ~DoubleTag(); // _ZN9DoubleTagD2Ev
+    virtual ~DoubleTag(); // _ZN9DoubleTagD2Ev
+    virtual void __fake_function0(); // fake
     virtual void write(IDataOutput &)const; // _ZNK9DoubleTag5writeER11IDataOutput
     virtual void load(IDataInput &); // _ZN9DoubleTag4loadER10IDataInput
     virtual std::string toString()const; // _ZNK9DoubleTag8toStringB5cxx11Ev

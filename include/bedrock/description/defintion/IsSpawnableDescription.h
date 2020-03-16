@@ -3,10 +3,11 @@
 #include "DefintionDescription.h"
 
 
-class IsSpawnableDescription : DefintionDescription {
+class IsSpawnableDescription : public DefintionDescription {
 
 public:
-    ~IsSpawnableDescription(); // _ZN22IsSpawnableDescriptionD2Ev
+    virtual ~IsSpawnableDescription(); // _ZN22IsSpawnableDescriptionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getJsonName()const; // _ZNK22IsSpawnableDescription11getJsonNameEv
     IsSpawnableDescription(); // _ZN22IsSpawnableDescriptionC2Ev
     IsSpawnableDescription(IsSpawnableDescription &&); // _ZN22IsSpawnableDescriptionC2EOS_

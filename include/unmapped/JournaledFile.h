@@ -1,11 +1,11 @@
 #pragma once
 
-#include <vector>
-#include "../core/Result.h"
-#include "../core/FileOpenMode.h"
 #include <string>
+#include <vector>
 #include "../core/Path.h"
+#include "../core/Result.h"
 #include <functional>
+#include "../core/FileOpenMode.h"
 
 
 class JournaledFile {
@@ -21,7 +21,7 @@ public:
     ~JournaledFile(); // _ZN13JournaledFileD2Ev
     bool isOpen()const; // _ZNK13JournaledFile6isOpenEv
     void close(); // _ZN13JournaledFile5closeEv
-//  void open(Core::Path, Core::FileOpenMode, Core::FileBufferingMode); //TODO: incomplete function definition // _ZN13JournaledFile4openEN4Core4PathENS0_12FileOpenModeENS0_17FileBufferingModeE
+//    void open(Core::Path, Core::FileOpenMode, long); //TODO: incomplete function definition // _ZN13JournaledFile4openEN4Core4PathENS0_12FileOpenModeENS0_17FileBufferingModeE
     void _flushFiles(); // _ZN13JournaledFile11_flushFilesEv
     void write(void const*, unsigned long); // _ZN13JournaledFile5writeEPKvm
     void flush(); // _ZN13JournaledFile5flushEv

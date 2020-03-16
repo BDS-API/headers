@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class MovingBlock : ActorBlock {
+class MovingBlock : public ActorBlock {
 
 public:
-    ~MovingBlock(); // _ZN11MovingBlockD2Ev
+    virtual ~MovingBlock(); // _ZN11MovingBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK11MovingBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const; // _ZNK11MovingBlock8onFallOnER11BlockSourceRK8BlockPosP5Actorf
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const; // _ZNK11MovingBlock17playerWillDestroyER6PlayerRK8BlockPosRK5Block

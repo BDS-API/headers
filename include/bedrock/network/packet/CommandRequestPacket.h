@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class CommandRequestPacket : Packet {
+class CommandRequestPacket : public Packet {
 
 public:
-    ~CommandRequestPacket(); // _ZN20CommandRequestPacketD2Ev
+    virtual ~CommandRequestPacket(); // _ZN20CommandRequestPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK20CommandRequestPacket5getIdEv
     virtual std::string getName()const; // _ZNK20CommandRequestPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK20CommandRequestPacket5writeER12BinaryStream

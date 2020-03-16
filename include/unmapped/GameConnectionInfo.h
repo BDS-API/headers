@@ -23,6 +23,6 @@ namespace Social {
         void fromJson(Json::Value const&); // _ZN6Social18GameConnectionInfo8fromJsonERKN4Json5ValueE
         void getStringized(); // _ZN6Social18GameConnectionInfo13getStringizedEv
         void fromStringized(Json::Value const&); // _ZN6Social18GameConnectionInfo14fromStringizedERKN4Json5ValueE
-//      GameConnectionInfo(Social::ConnectionType, std::string const&, int, std::string const&); //TODO: incomplete function definition // _ZN6Social18GameConnectionInfoC2ENS_14ConnectionTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS9_
+//        GameConnectionInfo(long, std::string const&, int, std::string const&); //TODO: incomplete function definition // _ZN6Social18GameConnectionInfoC2ENS_14ConnectionTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS9_
     };
 }

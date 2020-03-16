@@ -1,18 +1,19 @@
 #pragma once
 
-#include <string>
 #include "Connector.h"
+#include <string>
 #include "GameConnectionInfo.h"
 
 
-class LocalConnector : Connector {
+class LocalConnector : public Connector {
 
 public:
     class ConnectionCallbacks;
 
     static long sLocalConnectivitySystem;
 
-    ~LocalConnector(); // _ZN14LocalConnectorD2Ev
+    virtual ~LocalConnector(); // _ZN14LocalConnectorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onAppResumed(); // _ZN14LocalConnector12onAppResumedEv
     virtual void onAppSuspended(); // _ZN14LocalConnector14onAppSuspendedEv
     virtual std::string getLocalIps()const; // _ZNK14LocalConnector11getLocalIpsB5cxx11Ev
@@ -23,8 +24,8 @@ public:
     virtual void setupNatPunch(bool); // _ZN14LocalConnector13setupNatPunchEb
     virtual void getNatPunchInfo()const; // _ZNK14LocalConnector15getNatPunchInfoEv
     virtual void startNatPunchingClient(Social::GameConnectionInfo); // _ZN14LocalConnector22startNatPunchingClientEN6Social18GameConnectionInfoE
-//  virtual void addConnectionStateListener(Connector::ConnectionStateListener *); //TODO: incomplete function definition // _ZN14LocalConnector26addConnectionStateListenerEPN9Connector23ConnectionStateListenerE
-//  virtual void removeConnectionStateListener(Connector::ConnectionStateListener *); //TODO: incomplete function definition // _ZN14LocalConnector29removeConnectionStateListenerEPN9Connector23ConnectionStateListenerE
+    virtual void addConnectionStateListener__incomplete0(long *); //TODO: incomplete function definition // _ZN14LocalConnector26addConnectionStateListenerEPN9Connector23ConnectionStateListenerE
+    virtual void removeConnectionStateListener__incomplete0(long *); //TODO: incomplete function definition // _ZN14LocalConnector29removeConnectionStateListenerEPN9Connector23ConnectionStateListenerE
     virtual bool isIPv4Supported()const; // _ZNK14LocalConnector15isIPv4SupportedEv
     virtual bool isIPv6Supported()const; // _ZNK14LocalConnector15isIPv6SupportedEv
     virtual void getIPv4Port()const; // _ZNK14LocalConnector11getIPv4PortEv
@@ -40,7 +41,8 @@ public:
     class ConnectionCallbacks {
 
     public:
-        ~ConnectionCallbacks(); // _ZN14LocalConnector19ConnectionCallbacksD2Ev
+        virtual ~ConnectionCallbacks(); // _ZN14LocalConnector19ConnectionCallbacksD2Ev
+        virtual void __fake_function0(); // fake
         ConnectionCallbacks(); // _ZN14LocalConnector19ConnectionCallbacksC2Ev
     };
 };

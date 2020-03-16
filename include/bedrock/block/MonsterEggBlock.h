@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class MonsterEggBlock : BlockLegacy {
+class MonsterEggBlock : public BlockLegacy {
 
 public:
-    ~MonsterEggBlock(); // _ZN15MonsterEggBlockD2Ev
+    virtual ~MonsterEggBlock(); // _ZN15MonsterEggBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK15MonsterEggBlock16getResourceCountER6RandomRK5Blocki
     virtual void spawnResources(BlockSource &, BlockPos const&, Block const&, float, int)const; // _ZNK15MonsterEggBlock14spawnResourcesER11BlockSourceRK8BlockPosRK5Blockfi
     virtual std::string buildDescriptionId(Block const&)const; // _ZNK15MonsterEggBlock18buildDescriptionIdB5cxx11ERK5Block

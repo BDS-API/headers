@@ -5,12 +5,13 @@
 
 namespace AgentCommands {
 
-    class DropAllCommand : AgentCommands::Command {
+    class DropAllCommand : public AgentCommands::Command {
 
     public:
-        ~DropAllCommand(); // _ZN13AgentCommands14DropAllCommandD2Ev
+        virtual ~DropAllCommand(); // _ZN13AgentCommands14DropAllCommandD2Ev
+        virtual void __fake_function0(); // fake
         virtual void execute(); // _ZN13AgentCommands14DropAllCommand7executeEv
         virtual bool isDone(); // _ZN13AgentCommands14DropAllCommand6isDoneEv
-//      DropAllCommand(Player &, AgentCommands::Direction); //TODO: incomplete function definition // _ZN13AgentCommands14DropAllCommandC2ER6PlayerNS_9DirectionE
+//        DropAllCommand(Player &, long); //TODO: incomplete function definition // _ZN13AgentCommands14DropAllCommandC2ER6PlayerNS_9DirectionE
     };
 }

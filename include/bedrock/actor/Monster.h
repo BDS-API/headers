@@ -3,10 +3,11 @@
 #include "Mob.h"
 
 
-class Monster : Mob {
+class Monster : public Mob {
 
 public:
-    ~Monster(); // _ZN7MonsterD2Ev
+    virtual ~Monster(); // _ZN7MonsterD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN7Monster10normalTickEv
     virtual bool canExistInPeaceful()const; // _ZNK7Monster18canExistInPeacefulEv
     virtual void findAttackTarget(); // _ZN7Monster16findAttackTargetEv
@@ -15,7 +16,7 @@ public:
     virtual void addAdditionalSaveData(CompoundTag &); // _ZN7Monster21addAdditionalSaveDataER11CompoundTag
     virtual void aiStep(); // _ZN7Monster6aiStepEv
     virtual void checkSpawnRules(bool); // _ZN7Monster15checkSpawnRulesEb
-    virtual void shouldDespawn()const; // _ZNK7Monster13shouldDespawnEv
+    virtual bool shouldDespawn()const; // _ZNK7Monster13shouldDespawnEv
     virtual void _getWalkTargetValue(BlockPos const&); // _ZN7Monster19_getWalkTargetValueERK8BlockPos
     virtual bool isDarkEnoughToSpawn()const; // _ZNK7Monster19isDarkEnoughToSpawnEv
     Monster(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN7MonsterC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier

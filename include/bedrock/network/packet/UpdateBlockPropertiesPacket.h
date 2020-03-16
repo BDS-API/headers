@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class UpdateBlockPropertiesPacket : Packet {
+class UpdateBlockPropertiesPacket : public Packet {
 
 public:
-    ~UpdateBlockPropertiesPacket(); // _ZN27UpdateBlockPropertiesPacketD2Ev
+    virtual ~UpdateBlockPropertiesPacket(); // _ZN27UpdateBlockPropertiesPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK27UpdateBlockPropertiesPacket5getIdEv
     virtual std::string getName()const; // _ZNK27UpdateBlockPropertiesPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK27UpdateBlockPropertiesPacket5writeER12BinaryStream

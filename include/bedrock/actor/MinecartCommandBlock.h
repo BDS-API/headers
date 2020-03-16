@@ -3,11 +3,12 @@
 #include "Minecart.h"
 
 
-class MinecartCommandBlock : Minecart {
+class MinecartCommandBlock : public Minecart {
 
 public:
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN20MinecartCommandBlock20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
-    ~MinecartCommandBlock(); // _ZN20MinecartCommandBlockD2Ev
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN20MinecartCommandBlock20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~MinecartCommandBlock(); // _ZN20MinecartCommandBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canShowNameTag()const; // _ZNK20MinecartCommandBlock14canShowNameTagEv
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &); // _ZN20MinecartCommandBlock22readAdditionalSaveDataERK11CompoundTagR14DataLoadHelper
     virtual void addAdditionalSaveData(CompoundTag &); // _ZN20MinecartCommandBlock21addAdditionalSaveDataER11CompoundTag

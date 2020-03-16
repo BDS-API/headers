@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class BambooBlock : BlockLegacy {
+class BambooBlock : public BlockLegacy {
 
 public:
-    ~BambooBlock(); // _ZN11BambooBlockD2Ev
+    virtual ~BambooBlock(); // _ZN11BambooBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK11BambooBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void randomlyModifyPosition(BlockPos const&)const; // _ZNK11BambooBlock22randomlyModifyPositionERK8BlockPos
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK11BambooBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
@@ -15,7 +16,7 @@ public:
     virtual bool isValidAuxValue(int)const; // _ZNK11BambooBlock15isValidAuxValueEi
     virtual bool canContainLiquid()const; // _ZNK11BambooBlock16canContainLiquidEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK11BambooBlock7onPlaceER11BlockSourceRK8BlockPos
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK11BambooBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK11BambooBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayConsumeFertilizer(BlockSource &)const; // _ZNK11BambooBlock20mayConsumeFertilizerER11BlockSource
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK11BambooBlock8mayPlaceER11BlockSourceRK8BlockPos
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK11BambooBlock15neighborChangedER11BlockSourceRK8BlockPosS4_

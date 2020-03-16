@@ -39,14 +39,14 @@ public:
     void getTradeExpRequirements()const; // _ZNK25EconomyTradeableComponent23getTradeExpRequirementsEv
     void getTradeExpForCurrentLevel()const; // _ZNK25EconomyTradeableComponent26getTradeExpForCurrentLevelEv
     void getTradeExpToNextLevel()const; // _ZNK25EconomyTradeableComponent22getTradeExpToNextLevelEv
-//  void createDataPacket(ContainerID); //TODO: incomplete function definition // _ZN25EconomyTradeableComponent16createDataPacketE11ContainerID
+//    void createDataPacket(long); //TODO: incomplete function definition // _ZN25EconomyTradeableComponent16createDataPacketE11ContainerID
     void setDataFromPacket(UpdateTradePacket const&); // _ZN25EconomyTradeableComponent17setDataFromPacketERK17UpdateTradePacket
     void resupplyTrades(); // _ZN25EconomyTradeableComponent14resupplyTradesEv
     bool hasSupplyRemaining()const; // _ZNK25EconomyTradeableComponent18hasSupplyRemainingEv
     void getRiches()const; // _ZNK25EconomyTradeableComponent9getRichesEv
     void setRiches(int); // _ZN25EconomyTradeableComponent9setRichesEi
-    void shouldPersistTrades()const; // _ZNK25EconomyTradeableComponent19shouldPersistTradesEv
-    void shouldConvertTrades()const; // _ZNK25EconomyTradeableComponent19shouldConvertTradesEv
+    bool shouldPersistTrades()const; // _ZNK25EconomyTradeableComponent19shouldPersistTradesEv
+    bool shouldConvertTrades()const; // _ZNK25EconomyTradeableComponent19shouldConvertTradesEv
     void _rearrangeTradeList(std::vector<Trade> &, unsigned long); // _ZN25EconomyTradeableComponent19_rearrangeTradeListERSt6vectorI5TradeSaIS1_EEm
     void _calculateDemandPrices(int); // _ZN25EconomyTradeableComponent22_calculateDemandPricesEi
 };

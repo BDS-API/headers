@@ -17,7 +17,7 @@ public:
     void getEvents()const; // _ZNK22ActorSkeletalAnimation9getEventsEv
     void addParticleEffectEvent(float); // _ZN22ActorSkeletalAnimation22addParticleEffectEventEf
     void addSoundEffectEvent(float); // _ZN22ActorSkeletalAnimation19addSoundEffectEventEf
-//  void addActorEvent(float, std::string const&, CurrentCmdVersion); //TODO: incomplete function definition // _ZN22ActorSkeletalAnimation13addActorEventEfRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE17CurrentCmdVersion
+//    void addActorEvent(float, std::string const&, long); //TODO: incomplete function definition // _ZN22ActorSkeletalAnimation13addActorEventEfRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE17CurrentCmdVersion
     void setAnimationLength(float); // _ZN22ActorSkeletalAnimation18setAnimationLengthEf
     void getAnimationLength()const; // _ZNK22ActorSkeletalAnimation18getAnimationLengthEv
     void getMaxKeyFrameTime()const; // _ZNK22ActorSkeletalAnimation18getMaxKeyFrameTimeEv
@@ -27,10 +27,10 @@ public:
     void sortEvents(); // _ZN22ActorSkeletalAnimation10sortEventsEv
     void initPrecomputedInterpolation(); // _ZN22ActorSkeletalAnimation28initPrecomputedInterpolationEv
     void toJson(Json::Value &)const; // _ZNK22ActorSkeletalAnimation6toJsonERN4Json5ValueE
-    void shouldLoop()const; // _ZNK22ActorSkeletalAnimation10shouldLoopEv
+    bool shouldLoop()const; // _ZNK22ActorSkeletalAnimation10shouldLoopEv
     void setShouldOverridePreviousAnimation(bool); // _ZN22ActorSkeletalAnimation34setShouldOverridePreviousAnimationEb
     void setShouldLoop(bool); // _ZN22ActorSkeletalAnimation13setShouldLoopEb
-    void shouldOverridePreviousAnimation()const; // _ZNK22ActorSkeletalAnimation31shouldOverridePreviousAnimationEv
+    bool shouldOverridePreviousAnimation()const; // _ZNK22ActorSkeletalAnimation31shouldOverridePreviousAnimationEv
     void getAnimTime(RenderParams &)const; // _ZNK22ActorSkeletalAnimation11getAnimTimeER12RenderParams
     void getBlendWeight(RenderParams &)const; // _ZNK22ActorSkeletalAnimation14getBlendWeightER12RenderParams
     void setBlendWeight(ExpressionNode const&); // _ZN22ActorSkeletalAnimation14setBlendWeightERK14ExpressionNode

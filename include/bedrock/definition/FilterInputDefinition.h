@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include "../../unmapped/FilterInput.h"
+#include <string>
 
 
 class FilterInputDefinition {

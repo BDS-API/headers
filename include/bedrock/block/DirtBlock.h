@@ -4,12 +4,13 @@
 #include "BlockLegacy.h"
 
 
-class DirtBlock : BlockLegacy {
+class DirtBlock : public BlockLegacy {
 
 public:
-    ~DirtBlock(); // _ZN9DirtBlockD2Ev
+    virtual ~DirtBlock(); // _ZN9DirtBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canBeOriginalSurface()const; // _ZNK9DirtBlock20canBeOriginalSurfaceEv
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK9DirtBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK9DirtBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayConsumeFertilizer(BlockSource &)const; // _ZNK9DirtBlock20mayConsumeFertilizerER11BlockSource
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK9DirtBlock15neighborChangedER11BlockSourceRK8BlockPosS4_
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK9DirtBlock15getResourceItemER6RandomRK5Blocki

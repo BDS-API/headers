@@ -6,14 +6,14 @@
 class POIInstance {
 
 public:
-//  POIInstance(BlockPos const&, bool, std::string, POIType, float, unsigned long, unsigned long, std::string, std::string, std::string); //TODO: incomplete function definition // _ZN11POIInstanceC2ERK8BlockPosbNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7POITypefmmS8_S8_S8_
+//    POIInstance(BlockPos const&, bool, std::string, long, float, unsigned long, unsigned long, std::string, std::string, std::string); //TODO: incomplete function definition // _ZN11POIInstanceC2ERK8BlockPosbNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE7POITypefmmS8_S8_S8_
     bool isPathable()const; // _ZNK11POIInstance10isPathableEv
     void getPosition()const; // _ZNK11POIInstance11getPositionEv
     void setPosition(BlockPos const&); // _ZN11POIInstance11setPositionERK8BlockPos
     void getVillage()const; // _ZNK11POIInstance10getVillageEv
     void setVillage(Village *); // _ZN11POIInstance10setVillageEP7Village
     void getType()const; // _ZNK11POIInstance7getTypeEv
-//  void setType(POIType); //TODO: incomplete function definition // _ZN11POIInstance7setTypeE7POIType
+//    void setType(long); //TODO: incomplete function definition // _ZN11POIInstance7setTypeE7POIType
     void getRadius()const; // _ZNK11POIInstance9getRadiusEv
     void setRadius(float); // _ZN11POIInstance9setRadiusEf
     void useBoundingBox()const; // _ZNK11POIInstance14useBoundingBoxEv

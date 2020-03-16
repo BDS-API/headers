@@ -1,13 +1,14 @@
 #pragma once
 
-#include "BlockActor.h"
 #include "../../container/Container.h"
+#include "BlockActor.h"
 
 
-class ChemistryTableBlockActor : BlockActor, Container {
+class ChemistryTableBlockActor : public BlockActor, public Container {
 
 public:
-    ~ChemistryTableBlockActor(); // _ZN24ChemistryTableBlockActorD2Ev
+    virtual ~ChemistryTableBlockActor(); // _ZN24ChemistryTableBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN24ChemistryTableBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK24ChemistryTableBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN24ChemistryTableBlockActor4tickER11BlockSource
@@ -24,7 +25,7 @@ public:
     void _popPendingReactionOutput(BlockSource &); // _ZN24ChemistryTableBlockActor25_popPendingReactionOutputER11BlockSource
     void reset(BlockSource &); // _ZN24ChemistryTableBlockActor5resetER11BlockSource
     void _updateType(BlockSource &); // _ZN24ChemistryTableBlockActor11_updateTypeER11BlockSource
-//  bool isSameType(ChemistryTableType)const; //TODO: incomplete function definition // _ZNK24ChemistryTableBlockActor10isSameTypeE18ChemistryTableType
+//    bool isSameType(long)const; //TODO: incomplete function definition // _ZNK24ChemistryTableBlockActor10isSameTypeE18ChemistryTableType
     void clientLabTablePacket(LabTablePacket const&, BlockSource &); // _ZN24ChemistryTableBlockActor20clientLabTablePacketERK14LabTablePacketR11BlockSource
     void serverLabTablePacket(LabTablePacket const&, BlockSource &); // _ZN24ChemistryTableBlockActor20serverLabTablePacketERK14LabTablePacketR11BlockSource
     void _createReaction(Random &); // _ZN24ChemistryTableBlockActor15_createReactionER6Random

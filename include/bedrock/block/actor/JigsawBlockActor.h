@@ -3,9 +3,10 @@
 #include "BlockActor.h"
 
 
-class JigsawBlockActor : BlockActor {
+class JigsawBlockActor : public BlockActor {
 
 public:
-    ~JigsawBlockActor(); // _ZN16JigsawBlockActorD2Ev
+    virtual ~JigsawBlockActor(); // _ZN16JigsawBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     JigsawBlockActor(BlockPos const&); // _ZN16JigsawBlockActorC2ERK8BlockPos
 };

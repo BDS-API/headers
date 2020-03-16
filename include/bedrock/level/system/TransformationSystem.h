@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class TransformationSystem : ITickingSystem {
+class TransformationSystem : public ITickingSystem {
 
 public:
-    ~TransformationSystem(); // _ZN20TransformationSystemD2Ev
+    virtual ~TransformationSystem(); // _ZN20TransformationSystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN20TransformationSystem4tickER14EntityRegistry
     TransformationSystem(); // _ZN20TransformationSystemC2Ev
 };

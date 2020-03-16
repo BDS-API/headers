@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class ScaffoldingClimberSystem : ITickingSystem {
+class ScaffoldingClimberSystem : public ITickingSystem {
 
 public:
-    ~ScaffoldingClimberSystem(); // _ZN24ScaffoldingClimberSystemD2Ev
+    virtual ~ScaffoldingClimberSystem(); // _ZN24ScaffoldingClimberSystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN24ScaffoldingClimberSystem4tickER14EntityRegistry
     ScaffoldingClimberSystem(); // _ZN24ScaffoldingClimberSystemC2Ev
 };

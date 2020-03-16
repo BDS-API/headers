@@ -4,12 +4,13 @@
 #include "ActorBlock.h"
 
 
-class JukeboxBlock : ActorBlock {
+class JukeboxBlock : public ActorBlock {
 
 public:
-    ~JukeboxBlock(); // _ZN12JukeboxBlockD2Ev
+    virtual ~JukeboxBlock(); // _ZN12JukeboxBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isSignalSource()const; // _ZNK12JukeboxBlock14isSignalSourceEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK12JukeboxBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK12JukeboxBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK12JukeboxBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRemove(BlockSource &, BlockPos const&)const; // _ZNK12JukeboxBlock8onRemoveER11BlockSourceRK8BlockPos
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK12JukeboxBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

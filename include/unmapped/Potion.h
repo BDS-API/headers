@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include <vector>
 
 
@@ -59,23 +59,23 @@ public:
     void getPotionCount(); // _ZN6Potion14getPotionCountEv
     Potion(std::string const&); // _ZN6PotionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     Potion(std::string const&, std::string const&); // _ZN6PotionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_
-//  Potion(std::string const&, std::string const&, MobEffectInstance const&, Potion::PotionVariant); //TODO: incomplete function definition // _ZN6PotionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_RK17MobEffectInstanceNS_13PotionVariantE
-//  Potion(std::string const&, std::string const&, std::string const&, MobEffectInstance const&, Potion::PotionVariant); //TODO: incomplete function definition // _ZN6PotionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_RK17MobEffectInstanceNS_13PotionVariantE
-//  Potion(std::string const&, std::vector<std::string>, std::vector<MobEffectInstance>, Potion::PotionVariant); //TODO: incomplete function definition // _ZN6PotionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS5_SaIS5_EES8_I17MobEffectInstanceSaISB_EENS_13PotionVariantE
+//    Potion(std::string const&, std::string const&, MobEffectInstance const&, long); //TODO: incomplete function definition // _ZN6PotionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_RK17MobEffectInstanceNS_13PotionVariantE
+//    Potion(std::string const&, std::string const&, std::string const&, MobEffectInstance const&, long); //TODO: incomplete function definition // _ZN6PotionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_RK17MobEffectInstanceNS_13PotionVariantE
+//    Potion(std::string const&, std::vector<std::string>, std::vector<MobEffectInstance>, long); //TODO: incomplete function definition // _ZN6PotionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS5_SaIS5_EES8_I17MobEffectInstanceSaISB_EENS_13PotionVariantE
     void initPotions(); // _ZN6Potion11initPotionsEv
     void shutdownPotions(); // _ZN6Potion15shutdownPotionsEv
     void getPotionId()const; // _ZNK6Potion11getPotionIdEv
     void getPotionVariant()const; // _ZNK6Potion16getPotionVariantEv
-//  std::string getName(Potion::PotionType)const; //TODO: incomplete function definition // _ZNK6Potion7getNameB5cxx11ENS_10PotionTypeE
-//  std::string getDescriptionId(Potion::PotionType)const; //TODO: incomplete function definition // _ZNK6Potion16getDescriptionIdB5cxx11ENS_10PotionTypeE
+//    std::string getName(long)const; //TODO: incomplete function definition // _ZNK6Potion7getNameB5cxx11ENS_10PotionTypeE
+//    std::string getDescriptionId(long)const; //TODO: incomplete function definition // _ZNK6Potion16getDescriptionIdB5cxx11ENS_10PotionTypeE
     std::string getDescriptionId()const; // _ZNK6Potion16getDescriptionIdB5cxx11Ev
     std::string getPrefix()const; // _ZNK6Potion9getPrefixB5cxx11Ev
-//  void appendFormattedPotionText(std::string &, Potion::PotionType, float)const; //TODO: incomplete function definition // _ZNK6Potion25appendFormattedPotionTextERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_10PotionTypeEf
-//  void getPotentencyDescription(Potion::PotionType, float, std::string const&, MobEffectInstance const&)const; //TODO: incomplete function definition // _ZNK6Potion24getPotentencyDescriptionENS_10PotionTypeEfRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK17MobEffectInstance
-//  std::string getPotentencyDescription(Potion::PotionType, float)const; //TODO: incomplete function definition // _ZNK6Potion24getPotentencyDescriptionB5cxx11ENS_10PotionTypeEf
+//    void appendFormattedPotionText(std::string &, long, float)const; //TODO: incomplete function definition // _ZNK6Potion25appendFormattedPotionTextERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_10PotionTypeEf
+//    void getPotentencyDescription(long, float, std::string const&, MobEffectInstance const&)const; //TODO: incomplete function definition // _ZNK6Potion24getPotentencyDescriptionENS_10PotionTypeEfRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK17MobEffectInstance
+//    std::string getPotentencyDescription(long, float)const; //TODO: incomplete function definition // _ZNK6Potion24getPotentencyDescriptionB5cxx11ENS_10PotionTypeEf
     std::string effectPotencyToString(MobEffectInstance const&)const; // _ZNK6Potion21effectPotencyToStringB5cxx11ERK17MobEffectInstance
-//  std::string effectDurationToString(Potion::PotionType, float)const; //TODO: incomplete function definition // _ZNK6Potion22effectDurationToStringB5cxx11ENS_10PotionTypeEf
-//  std::string effectDurationToString(Potion::PotionType, float, MobEffectInstance const&)const; //TODO: incomplete function definition // _ZNK6Potion22effectDurationToStringB5cxx11ENS_10PotionTypeEfRK17MobEffectInstance
+//    std::string effectDurationToString(long, float)const; //TODO: incomplete function definition // _ZNK6Potion22effectDurationToStringB5cxx11ENS_10PotionTypeEf
+//    std::string effectDurationToString(long, float, MobEffectInstance const&)const; //TODO: incomplete function definition // _ZNK6Potion22effectDurationToStringB5cxx11ENS_10PotionTypeEfRK17MobEffectInstance
     void getMobEffectId()const; // _ZNK6Potion14getMobEffectIdEv
     void getMobEffect()const; // _ZNK6Potion12getMobEffectEv
     void getMobEffects()const; // _ZNK6Potion13getMobEffectsEv

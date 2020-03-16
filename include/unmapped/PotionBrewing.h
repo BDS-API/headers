@@ -29,7 +29,7 @@ namespace PotionBrewing {
     bool hasPotionMix(std::shared_ptr<Potion const> const&, ItemDescriptor const&); // _ZN13PotionBrewing12hasPotionMixERKSt10shared_ptrIK6PotionERK14ItemDescriptor
     void getChemistryMix(ItemDescriptor const&, ItemDescriptor const&); // _ZN13PotionBrewing15getChemistryMixERK14ItemDescriptorS2_
     void mix(ItemDescriptor const&, ItemInstance const&); // _ZN13PotionBrewing3mixERK14ItemDescriptorRK12ItemInstance
-//  void chemistryMixMatches(PotionBrewing::Mix<ItemInstance> const&, ItemDescriptor const&, ItemDescriptor const&); //TODO: incomplete function definition // _ZN13PotionBrewing19chemistryMixMatchesERKNS_3MixI12ItemInstanceEERK14ItemDescriptorS7_
+//    void chemistryMixMatches(long const&, ItemDescriptor const&, ItemDescriptor const&); //TODO: incomplete function definition // _ZN13PotionBrewing19chemistryMixMatchesERKNS_3MixI12ItemInstanceEERK14ItemDescriptorS7_
     void addContainerRecipe(Item const&, PotionBrewing::Ingredient const&, Item const&); // _ZN13PotionBrewing18addContainerRecipeERK4ItemRKNS_10IngredientES2_
     void addPotionMix(std::shared_ptr<Potion const>, PotionBrewing::Ingredient const&, std::shared_ptr<Potion const> const&); // _ZN13PotionBrewing12addPotionMixESt10shared_ptrIK6PotionERKNS_10IngredientERKS3_
 };

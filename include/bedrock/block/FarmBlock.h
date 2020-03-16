@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class FarmBlock : BlockLegacy {
+class FarmBlock : public BlockLegacy {
 
 public:
-    ~FarmBlock(); // _ZN9FarmBlockD2Ev
+    virtual ~FarmBlock(); // _ZN9FarmBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK9FarmBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK9FarmBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool canContainLiquid()const; // _ZNK9FarmBlock16canContainLiquidEv

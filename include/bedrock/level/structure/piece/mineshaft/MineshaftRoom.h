@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../MineshaftPiece.h"
 #include <vector>
+#include "../MineshaftPiece.h"
 
 
-class MineshaftRoom : MineshaftPiece {
+class MineshaftRoom : public MineshaftPiece {
 
 public:
-    ~MineshaftRoom(); // _ZN13MineshaftRoomD2Ev
+    virtual ~MineshaftRoom(); // _ZN13MineshaftRoomD2Ev
+    virtual void __fake_function0(); // fake
     virtual void moveBoundingBox(int, int, int); // _ZN13MineshaftRoom15moveBoundingBoxEiii
     virtual void getType()const; // _ZNK13MineshaftRoom7getTypeEv
     virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &); // _ZN13MineshaftRoom11addChildrenEP14StructurePieceRSt6vectorISt10unique_ptrIS0_St14default_deleteIS0_EESaIS6_EER6Random

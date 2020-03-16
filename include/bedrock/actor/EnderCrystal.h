@@ -3,14 +3,15 @@
 #include "Actor.h"
 
 
-class EnderCrystal : Actor {
+class EnderCrystal : public Actor {
 
 public:
     static long HEAL_DISTANCE;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN12EnderCrystal15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN12EnderCrystal21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
-    ~EnderCrystal(); // _ZN12EnderCrystalD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN12EnderCrystal15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN12EnderCrystal21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~EnderCrystal(); // _ZN12EnderCrystalD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN12EnderCrystal10normalTickEv
     virtual void getShadowRadius()const; // _ZNK12EnderCrystal15getShadowRadiusEv
     virtual bool isPickable(); // _ZN12EnderCrystal10isPickableEv

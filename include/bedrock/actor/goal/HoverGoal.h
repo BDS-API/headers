@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class HoverGoal : Goal {
+class HoverGoal : public Goal {
 
 public:
-    ~HoverGoal(); // _ZN9HoverGoalD2Ev
+    virtual ~HoverGoal(); // _ZN9HoverGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN9HoverGoal6canUseEv
     virtual void start(); // _ZN9HoverGoal5startEv
     virtual void stop(); // _ZN9HoverGoal4stopEv

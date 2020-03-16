@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
-#include <functional>
 #include "../bedrock/actor/unmapped/ActorSkeletalAnimationPtr.h"
+#include <functional>
+#include <string>
 #include "AnimationComponentID.h"
 
 
@@ -30,12 +30,12 @@ public:
     void getAnimationPlayers(); // _ZN18AnimationComponent19getAnimationPlayersEv
     void forceNextUpdateToApplyAnimations(); // _ZN18AnimationComponent32forceNextUpdateToApplyAnimationsEv
     void ensureClientAnimationComponentIsInitialized(); // _ZN18AnimationComponent43ensureClientAnimationComponentIsInitializedEv
-//  void setDefaultPose(SkeletalHierarchyIndex); //TODO: incomplete function definition // _ZN18AnimationComponent14setDefaultPoseE22SkeletalHierarchyIndex
-//  void getBoneOrientations(SkeletalHierarchyIndex, bool); //TODO: incomplete function definition // _ZN18AnimationComponent19getBoneOrientationsE22SkeletalHierarchyIndexb
+//    void setDefaultPose(long); //TODO: incomplete function definition // _ZN18AnimationComponent14setDefaultPoseE22SkeletalHierarchyIndex
+//    void getBoneOrientations(long, bool); //TODO: incomplete function definition // _ZN18AnimationComponent19getBoneOrientationsE22SkeletalHierarchyIndexb
     bool isInitialized(); // _ZN18AnimationComponent13isInitializedEv
     void serverUpdate(Actor &); // _ZN18AnimationComponent12serverUpdateER5Actor
-//  void prepRenderParamsForActor(Actor &, BaseActorRenderContext *, DataDrivenModel *, float); //TODO: incomplete function definition // _ZN18AnimationComponent24prepRenderParamsForActorER5ActorP22BaseActorRenderContextP15DataDrivenModelf
-//  void prepRenderParamsForActorRendering(ActorRenderData &, BaseActorRenderContext *, DataDrivenModel *, float); //TODO: incomplete function definition // _ZN18AnimationComponent33prepRenderParamsForActorRenderingER15ActorRenderDataP22BaseActorRenderContextP15DataDrivenModelf
+//    void prepRenderParamsForActor(Actor &, long *, long *, float); //TODO: incomplete function definition // _ZN18AnimationComponent24prepRenderParamsForActorER5ActorP22BaseActorRenderContextP15DataDrivenModelf
+//    void prepRenderParamsForActorRendering(long &, long *, long *, float); //TODO: incomplete function definition // _ZN18AnimationComponent33prepRenderParamsForActorRenderingER15ActorRenderDataP22BaseActorRenderContextP15DataDrivenModelf
     void createAnimationPlayer(HashedString const&, ExpressionNode const&); // _ZN18AnimationComponent21createAnimationPlayerERK12HashedStringRK14ExpressionNode
     void findAnimation(HashedString const&); // _ZN18AnimationComponent13findAnimationERK12HashedString
     void getAnimationControllerPlayer(HashedString const&, bool); // _ZN18AnimationComponent28getAnimationControllerPlayerERK12HashedStringb
@@ -48,8 +48,8 @@ public:
     void setSingleAnimationPlayer(ActorAnimationPlayer *); // _ZN18AnimationComponent24setSingleAnimationPlayerEP20ActorAnimationPlayer
     void haveInitializedScriptsRun()const; // _ZNK18AnimationComponent25haveInitializedScriptsRunEv
     void setInitializedScriptsRun(bool); // _ZN18AnimationComponent24setInitializedScriptsRunEb
-//  void findBoneMapping(SkeletalHierarchyIndex, HashedString const&)const; //TODO: incomplete function definition // _ZNK18AnimationComponent15findBoneMappingE22SkeletalHierarchyIndexRK12HashedString
-//  void getBoneOrientations(SkeletalHierarchyIndex, bool)const; //TODO: incomplete function definition // _ZNK18AnimationComponent19getBoneOrientationsE22SkeletalHierarchyIndexb
+//    void findBoneMapping(long, HashedString const&)const; //TODO: incomplete function definition // _ZNK18AnimationComponent15findBoneMappingE22SkeletalHierarchyIndexRK12HashedString
+//    void getBoneOrientations(long, bool)const; //TODO: incomplete function definition // _ZNK18AnimationComponent19getBoneOrientationsE22SkeletalHierarchyIndexb
     void getLocators(); // _ZN18AnimationComponent11getLocatorsEv
     void getLocator(HashedString const&); // _ZN18AnimationComponent10getLocatorERK12HashedString
     void getChildAnimationComponents(); // _ZN18AnimationComponent27getChildAnimationComponentsEv
@@ -57,19 +57,19 @@ public:
     void getCurrentAnimationControllerStatePlayer()const; // _ZNK18AnimationComponent40getCurrentAnimationControllerStatePlayerEv
     void getAllBoneOrientations()const; // _ZNK18AnimationComponent22getAllBoneOrientationsEv
     void numSkeletalHierarchies()const; // _ZNK18AnimationComponent22numSkeletalHierarchiesEv
-//  void getAnimationComponent(AnimationComponentGroup, AnimationComponentID); //TODO: incomplete function definition // _ZN18AnimationComponent21getAnimationComponentE23AnimationComponentGroup20AnimationComponentID
+//    void getAnimationComponent(long, AnimationComponentID); //TODO: incomplete function definition // _ZN18AnimationComponent21getAnimationComponentE23AnimationComponentGroup20AnimationComponentID
     void _getAnimationComponentMapLock(); // _ZN18AnimationComponent29_getAnimationComponentMapLockEv
-//  void _getAllAnimationComponents(AnimationComponentGroup); //TODO: incomplete function definition // _ZN18AnimationComponent26_getAllAnimationComponentsE23AnimationComponentGroup
+//    void _getAllAnimationComponents(long); //TODO: incomplete function definition // _ZN18AnimationComponent26_getAllAnimationComponentsE23AnimationComponentGroup
     void incrementCurrentClientFrameIndex(); // _ZN18AnimationComponent32incrementCurrentClientFrameIndexEv
     void incrementCurrentServerFrameIndex(); // _ZN18AnimationComponent32incrementCurrentServerFrameIndexEv
-//  AnimationComponent(AnimationComponentGroup, AnimationComponentID const&); //TODO: incomplete function definition // _ZN18AnimationComponentC2E23AnimationComponentGroupRK20AnimationComponentID
+//    AnimationComponent(long, AnimationComponentID const&); //TODO: incomplete function definition // _ZN18AnimationComponentC2E23AnimationComponentGroupRK20AnimationComponentID
     ~AnimationComponent(); // _ZN18AnimationComponentD2Ev
-//  void _removeAnimationComponentFromGlobalMap(AnimationComponentGroup, AnimationComponentID const&); //TODO: incomplete function definition // _ZN18AnimationComponent38_removeAnimationComponentFromGlobalMapE23AnimationComponentGroupRK20AnimationComponentID
+//    void _removeAnimationComponentFromGlobalMap(long, AnimationComponentID const&); //TODO: incomplete function definition // _ZN18AnimationComponent38_removeAnimationComponentFromGlobalMapE23AnimationComponentGroupRK20AnimationComponentID
     class ChildAnimationComponentInfo {
 
     public:
         void setDirty(); // _ZN18AnimationComponent27ChildAnimationComponentInfo8setDirtyEv
-//      void getAnimationComponent(Actor &, unsigned short, AttachableSlotIndex); //TODO: incomplete function definition // _ZN18AnimationComponent27ChildAnimationComponentInfo21getAnimationComponentER5Actort19AttachableSlotIndex
+//        void getAnimationComponent(Actor &, unsigned short, long); //TODO: incomplete function definition // _ZN18AnimationComponent27ChildAnimationComponentInfo21getAnimationComponentER5Actort19AttachableSlotIndex
         ~ChildAnimationComponentInfo(); // _ZN18AnimationComponent27ChildAnimationComponentInfoD2Ev
     };
 };

@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include <functional>
+#include <string>
 
 
 class FilterTest {
@@ -10,7 +10,8 @@ class FilterTest {
 public:
     class Definition;
 
-    ~FilterTest(); // _ZN10FilterTestD2Ev
+    virtual ~FilterTest(); // _ZN10FilterTestD2Ev
+    virtual void __fake_function0(); // fake
     virtual void setup(FilterTest::Definition const&, FilterInputs const&); // _ZN10FilterTest5setupERKNS_10DefinitionERK12FilterInputs
     virtual void finalizeParsedValue(IWorldRegistriesProvider &); // _ZN10FilterTest19finalizeParsedValueER24IWorldRegistriesProvider
     virtual void _serializeDomain()const; // _ZNK10FilterTest16_serializeDomainEv

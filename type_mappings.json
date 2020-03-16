@@ -1,24 +1,135 @@
 {
   "ServerInstance": {
-    "getMinecraft": "Minecraft *"
+    "getMinecraft(void)": "Minecraft *"
   },
   "Minecraft": {
-    "getLevel": "GameSession *"
+    "getLevel(void)const": "GameSession *",
+    "getServerNetworkHandler(void)": "ServerNetworkHandler *"
   },
   "GameSession": {
-    "getLevel": "Level *",
-    "setLevel": ["void", "level", "std::unique_ptr"]
+    "getLevel(void)const": "Level *",
+    "setLevel(std::unique_ptr<Level> level)": ["", "level", "std::unique_ptr"],
+    "getServerNetworkHandler(void)": "ServerNetworkHandler *"
   },
   "Level": {
-    "getActivePlayers": "std::vector<Player *> *",
-    "getActivePlayerCount": "unsigned int",
-    "getCurrentTick": "Tick*"
+    "getActivePlayers(void)const": "std::vector<Player *> *",
+    "getActivePlayerCount(void)const": "unsigned int",
+    "getCurrentTick(void)const": "Tick*"
   },
   "Tick": {
-    "getTimeStamp": "unsigned long"
+    "getTimeStamp(void)const": "unsigned long"
   },
   "Player": {
-    "displayClientMessage": ["void", "message"],
-    "displayLocalizableMessage": ["void", "message", "translations"]
+    "displayClientMessage(std::string const& message)": ["", "message"],
+    "displayLocalizableMessage(std::string const&, std::vector<std::string> const&)": ["", "message", "translations"]
+  },
+  "TextPacket": {
+    "createRaw(std::string const&)": "TextPacket *",
+    "createChat(std::string const&, std::string const&, std::string const&, std::string const&)": "TextPacket *",
+    "createTranslatedChat(std::string const&, std::string const&, std::string const&, std::string const&)": "TextPacket *",
+    "createTranslated(std::string const&, std::vector<std::string, std::allocator<std::string>> const&)": "TextPacket *",
+    "createTextObjectMessage(TextObjectRoot const&, std::string const&, std::string const&)": "TextPacket *",
+    "createSystemMessage(std::string const&)": "TextPacket *",
+    "createWhisper(std::string const&, std::string const&, std::string const&, std::string const&)": "TextPacket *",
+    "createAnnouncement(std::string const&, std::string const&, std::string const&, std::string const&)": "TextPacket *",
+    "createTranslatedAnnouncement(std::string const&, std::string const&, std::string const&, std::string const&)": "TextPacket *",
+    "createJukeboxPopup(std::string const&)": "TextPacket *"
+  },
+  "Vec3": {
+    "UNIT_X": "Vec3",
+    "NEG_UNIT_X": "Vec3",
+    "UNIT_Y": "Vec3",
+    "NEG_UNIT_Y": "Vec3",
+    "UNIT_Z": "Vec3",
+    "NEG_UNIT_Z": "Vec3",
+    "ZERO": "Vec3",
+    "ONE": "Vec3",
+    "TWO": "Vec3",
+    "HALF": "Vec3",
+    "MAX": "Vec3",
+    "MIN": "Vec3",
+    "Vec3(float)": ["", "x"],
+    "Vec3(float, float, float)": ["", "x", "y", "z"],
+    "Vec3(BlockPos const&)": ["", "blockPos"],
+    "Vec3(Pos const&)": ["", "pos"],
+    "operator*(float)const": ["Vec3", "value"],
+    "operator+(Vec3 const&)const": ["Vec3", "vector"],
+    "operator-(Vec3 const&)const": ["Vec3", "vector"],
+    "distanceToSqr(Vec3 const&)const": ["float", "vector"],
+    "operator==(Vec3 const&)const": ["bool", "vector"],
+    "lengthSquared(void)const": ["float"],
+    "length(void)const": ["float"],
+    "operator+(float)const": ["Vec3", "value"],
+    "distanceTo(Vec3 const&)const": ["float", "vector"],
+    "operator[](int)": ["float", "index"],
+    "add(float, float, float)const": ["Vec3", "x", "y", "z"],
+    "operator-(void)const": ["Vec3"],
+    "yRot(float)": ["float", "angle"],
+    "normalized(void)const": ["Vec3"],
+    "lerpComponent(Vec3 const&, Vec3 const&, Vec3 const&)": ["Vec3", "vec1", "vec2", "vec3"],
+    "sub(float, float, float)const": ["Vec3", "x", "y", "z"],
+    "negated(void)const": ["Vec3"],
+    "operator!=(Vec3 const&)const": ["bool", "vec"],
+    "operator-(float)const": ["Vec3", "value"],
+    "lerp(Vec3 const&, Vec3 const&, float)": ["Vec3", "vec1", "vec2", "value"],
+    "operator/(float)const": ["Vec3", "value"],
+    "lengthXZSquared(void)const": ["float"],
+    "dot(Vec3 const&)const": ["float", "vec"],
+    "set(float, float, float)": ["Vec3 *", "x", "y", "z"],
+    "mul(Vec3 const&, Vec3 const&)": ["Vec3", "vec", "wtf"],
+    "operator*(Vec3 const&)const": ["float", "vec"],
+    "lengthXZ(void)const": ["float"],
+    "cross(Vec3 const&)const": ["Vec3", "vec"],
+    "min(Vec3 const&, Vec3 const&)": ["Vec3", "vec1", "vec2"],
+    "max(Vec3 const&, Vec3 const&)": ["Vec3", "vec1", "vec2"],
+    "clipX(Vec3 const&, float, Vec3&)const": ["bool", "vec1", "value", "vec2"],
+    "clipY(Vec3 const&, float, Vec3&)const": ["bool", "vec1", "value", "vec2"],
+    "clipZ(Vec3 const&, float, Vec3&)const": ["bool", "vec1", "value", "vec2"],
+    "operator[](int)const": ["float", "index"],
+    "projectOntoLine(Vec3 const&, Vec3 const&)const": ["Vec3", "vec1", "vec2"],
+    "distanceToLineSquared(Vec3 const&, Vec3 const&)const": ["float", "vec1", "vec2"],
+    "distanceToLine(Vec3 const&, Vec3 const&)const": ["float", "vec1", "vec2"],
+    "distanceToLineSegmentSquared(Vec3 const&, Vec3 const&)const": ["float", "vec1", "vec2"],
+    "distanceToLineSegment(Vec3 const&, Vec3 const&)const": ["float", "vec1", "vec2"],
+    "minComponent(void)const": ["float"],
+    "maxComponent(void)const": ["float"],
+    "clamp(Vec3 const&, Vec3 const&, Vec3 const&)": ["Vec3", "vec", "min", "max"],
+    "isNan(void)const": ["bool"],
+    "operator+=(Vec3 const&)": ["Vec3 *", "vec"],
+    "operator*=(float)": ["Vec3 *", "value"],
+    "operator-=(Vec3 const&)": ["Vec3 *", "vec"],
+    "clampAlongNormal(Vec3 const&, Vec3 const&, Vec3 const&, Vec3 const&, Vec3&)": [
+      "bool",
+      "vec1",
+      "vec2",
+      "vec3",
+      "vec4",
+      "vec5"
+    ],
+    "directionFromRotation(Vec2 const&)": ["Vec3", "rot"],
+    "directionFromRotation(float, float)": ["Vec3", "yaw", "pitch"],
+    "xz(void)const": "Vec3",
+    "abs(void)const": "Vec3",
+    "floor(float)const": "Vec3",
+    "ceil(void)const": "Vec3",
+    "round(void)const": "Vec3",
+    "rotationFromDirection(Vec3 const&)": "Vec2 *"
+  },
+  "Pos": {
+    "Pos(Pos const&)": ["", "pos"],
+    "Pos(int, int, int)": ["", "x", "y", "z"]
+  },
+  "BlockPos": {
+    "BlockPos(BlockPos const&)": ["", "blockPos"],
+    "BlockPos(int, int, int)": ["", "x", "y", "z"],
+    "BlockPos(int)": ["", "x"]
+  },
+  "ServerNetworkHandler": {
+    "_getServerPlayer(NetworkIdentifier const&, unsigned char)": ["Player *", "identifier", "clientSubId"],
+    "disconnectClient(NetworkIdentifier const&, std::string const&, bool)": ["", "identifier", "message", "hideScreen"],
+    "handle(NetworkIdentifier const&, TextPacket const&)": ["", "identifier", "packet"]
+  },
+  "Packet": {
+    "Packet::getClientSubId(void)const": "unsigned char"
   }
 }

@@ -7,7 +7,8 @@
 class CommandPropertyBag {
 
 public:
-    ~CommandPropertyBag(); // _ZN18CommandPropertyBagD2Ev
+    virtual ~CommandPropertyBag(); // _ZN18CommandPropertyBagD2Ev
+    virtual void __fake_function0(); // fake
     CommandPropertyBag(); // _ZN18CommandPropertyBagC2Ev
     CommandPropertyBag(Json::Value const&); // _ZN18CommandPropertyBagC2ERKN4Json5ValueE
     void clone()const; // _ZNK18CommandPropertyBag5cloneEv

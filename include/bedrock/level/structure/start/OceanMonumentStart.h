@@ -3,10 +3,11 @@
 #include "StructureStart.h"
 
 
-class OceanMonumentStart : StructureStart {
+class OceanMonumentStart : public StructureStart {
 
 public:
-    ~OceanMonumentStart(); // _ZN18OceanMonumentStartD2Ev
+    virtual ~OceanMonumentStart(); // _ZN18OceanMonumentStartD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN18OceanMonumentStart11postProcessEP11BlockSourceR6RandomRK11BoundingBox
     virtual void getType()const; // _ZNK18OceanMonumentStart7getTypeEv
     OceanMonumentStart(); // _ZN18OceanMonumentStartC2Ev

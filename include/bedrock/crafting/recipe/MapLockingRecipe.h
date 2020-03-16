@@ -4,12 +4,13 @@
 #include "MultiRecipe.h"
 
 
-class MapLockingRecipe : MultiRecipe {
+class MapLockingRecipe : public MultiRecipe {
 
 public:
     static long CartographyTableID;
 
-    ~MapLockingRecipe(); // _ZN16MapLockingRecipeD2Ev
+    virtual ~MapLockingRecipe(); // _ZN16MapLockingRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void assemble(CraftingContainer &)const; // _ZNK16MapLockingRecipe8assembleER17CraftingContainer
     virtual void getCraftingSize()const; // _ZNK16MapLockingRecipe15getCraftingSizeEv
     virtual void getIngredient(int, int)const; // _ZNK16MapLockingRecipe13getIngredientEii

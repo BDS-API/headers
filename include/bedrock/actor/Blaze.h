@@ -3,10 +3,11 @@
 #include "Monster.h"
 
 
-class Blaze : Monster {
+class Blaze : public Monster {
 
 public:
-    ~Blaze(); // _ZN5BlazeD2Ev
+    virtual ~Blaze(); // _ZN5BlazeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN5Blaze10normalTickEv
     virtual void getBrightness(float)const; // _ZNK5Blaze13getBrightnessEf
     virtual bool isOnFire()const; // _ZNK5Blaze8isOnFireEv

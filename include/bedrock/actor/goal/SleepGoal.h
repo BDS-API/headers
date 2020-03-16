@@ -4,10 +4,11 @@
 #include "MoveToPOIGoal.h"
 
 
-class SleepGoal : MoveToPOIGoal {
+class SleepGoal : public MoveToPOIGoal {
 
 public:
-    ~SleepGoal(); // _ZN9SleepGoalD2Ev
+    virtual ~SleepGoal(); // _ZN9SleepGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN9SleepGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN9SleepGoal16canContinueToUseEv
     virtual void start(); // _ZN9SleepGoal5startEv

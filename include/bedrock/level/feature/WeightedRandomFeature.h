@@ -3,12 +3,13 @@
 #include "IFeature.h"
 
 
-class WeightedRandomFeature : IFeature {
+class WeightedRandomFeature : public IFeature {
 
 public:
     class WeightedFeatureReference;
 
-    ~WeightedRandomFeature(); // _ZN21WeightedRandomFeatureD2Ev
+    virtual ~WeightedRandomFeature(); // _ZN21WeightedRandomFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const; // _ZNK21WeightedRandomFeature5placeER21IBlockPlacementTargetRK8BlockPosR6Random
     WeightedRandomFeature(); // _ZN21WeightedRandomFeatureC2Ev
     class WeightedFeatureReference {

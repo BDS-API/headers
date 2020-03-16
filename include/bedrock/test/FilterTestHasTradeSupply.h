@@ -3,10 +3,11 @@
 #include "SimpleBoolFilterTest.h"
 
 
-class FilterTestHasTradeSupply : SimpleBoolFilterTest {
+class FilterTestHasTradeSupply : public SimpleBoolFilterTest {
 
 public:
-    ~FilterTestHasTradeSupply(); // _ZN24FilterTestHasTradeSupplyD2Ev
+    virtual ~FilterTestHasTradeSupply(); // _ZN24FilterTestHasTradeSupplyD2Ev
+    virtual void __fake_function0(); // fake
     virtual void evaluate(FilterContext const&)const; // _ZNK24FilterTestHasTradeSupply8evaluateERK13FilterContext
     virtual void getName()const; // _ZNK24FilterTestHasTradeSupply7getNameEv
     FilterTestHasTradeSupply(); // _ZN24FilterTestHasTradeSupplyC2Ev

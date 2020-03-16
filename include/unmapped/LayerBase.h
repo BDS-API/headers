@@ -7,7 +7,8 @@ namespace LayerDetails {
     class LayerBase {
 
     public:
-        ~LayerBase(); // _ZN12LayerDetails9LayerBaseD2Ev
+        virtual ~LayerBase(); // _ZN12LayerDetails9LayerBaseD2Ev
+        virtual void __fake_function0(); // fake
         virtual void init(long); // _ZN12LayerDetails9LayerBase4initEl
         LayerBase(unsigned int); // _ZN12LayerDetails9LayerBaseC2Ej
         void initRandom(long, long)const; // _ZNK12LayerDetails9LayerBase10initRandomEll

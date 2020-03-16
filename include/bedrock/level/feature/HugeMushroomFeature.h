@@ -3,13 +3,14 @@
 #include "Feature.h"
 
 
-class HugeMushroomFeature : Feature {
+class HugeMushroomFeature : public Feature {
 
 public:
     static long mMushroomTypes;
     static long mHugeMushroomTypes;
 
-    ~HugeMushroomFeature(); // _ZN19HugeMushroomFeatureD2Ev
+    virtual ~HugeMushroomFeature(); // _ZN19HugeMushroomFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK19HugeMushroomFeature5placeER11BlockSourceRK8BlockPosR6Random
     HugeMushroomFeature(); // _ZN19HugeMushroomFeatureC2Ev
     HugeMushroomFeature(int); // _ZN19HugeMushroomFeatureC2Ei

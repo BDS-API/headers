@@ -15,10 +15,10 @@ public:
     void initMaterials(); // _ZN8Material13initMaterialsEv
     void teardownMaterials(); // _ZN8Material17teardownMaterialsEv
     void _setupSurfaceMaterials(); // _ZN8Material22_setupSurfaceMaterialsEv
-//  Material(MaterialType, Material::Settings, float); //TODO: incomplete function definition // _ZN8MaterialC2E12MaterialTypeNS_8SettingsEf
+//    Material(long, long, float); //TODO: incomplete function definition // _ZN8MaterialC2E12MaterialTypeNS_8SettingsEf
     void _setReplaceable(); // _ZN8Material15_setReplaceableEv
     ~Material(); // _ZN8MaterialD2Ev
-//  bool isType(MaterialType)const; //TODO: incomplete function definition // _ZNK8Material6isTypeE12MaterialType
+//    bool isType(long)const; //TODO: incomplete function definition // _ZNK8Material6isTypeE12MaterialType
     bool isSolidBlocking()const; // _ZNK8Material15isSolidBlockingEv
     void getBlocksMotion()const; // _ZNK8Material15getBlocksMotionEv
     bool isFlammable()const; // _ZNK8Material11isFlammableEv
@@ -32,7 +32,7 @@ public:
     void getColor()const; // _ZNK8Material8getColorEv
     bool isSuperHot()const; // _ZNK8Material10isSuperHotEv
     bool isTopSolid(bool, bool)const; // _ZNK8Material10isTopSolidEbb
-//  void getMaterial(MaterialType); //TODO: incomplete function definition // _ZN8Material11getMaterialE12MaterialType
+//    void getMaterial(long); //TODO: incomplete function definition // _ZN8Material11getMaterialE12MaterialType
     void addMaterial(std::unique_ptr<Material>); // _ZN8Material11addMaterialESt10unique_ptrIS_St14default_deleteIS_EE
     void _setFlammable(); // _ZN8Material13_setFlammableEv
     void _setNotAlwaysDestroyable(); // _ZN8Material24_setNotAlwaysDestroyableEv

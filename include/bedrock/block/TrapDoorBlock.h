@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class TrapDoorBlock : BlockLegacy {
+class TrapDoorBlock : public BlockLegacy {
 
 public:
-    ~TrapDoorBlock(); // _ZN13TrapDoorBlockD2Ev
+    virtual ~TrapDoorBlock(); // _ZN13TrapDoorBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isInteractiveBlock()const; // _ZNK13TrapDoorBlock18isInteractiveBlockEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK13TrapDoorBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK13TrapDoorBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib

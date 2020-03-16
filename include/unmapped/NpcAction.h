@@ -13,12 +13,13 @@ public:
     static std::string TEXT_KEY;
     static std::string BUTTON_NAME_KEY;
 
-    ~NpcAction(); // _ZN9NpcActionD2Ev
+    virtual ~NpcAction(); // _ZN9NpcActionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void fromJson(Json::Value const&); // _ZN9NpcAction8fromJsonERKN4Json5ValueE
-//  NpcAction(NpcActionType); //TODO: incomplete function definition // _ZN9NpcActionC2E13NpcActionType
+//    NpcAction(long); //TODO: incomplete function definition // _ZN9NpcActionC2E13NpcActionType
     void getType()const; // _ZNK9NpcAction7getTypeEv
     void getMode()const; // _ZNK9NpcAction7getModeEv
-//  void setMode(NpcActionMode); //TODO: incomplete function definition // _ZN9NpcAction7setModeE13NpcActionMode
+//    void setMode(long); //TODO: incomplete function definition // _ZN9NpcAction7setModeE13NpcActionMode
     void setButtonName(std::string const&); // _ZN9NpcAction13setButtonNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     std::string getButtonName()const; // _ZNK9NpcAction13getButtonNameB5cxx11Ev
     std::string getButtonRawTextName()const; // _ZNK9NpcAction20getButtonRawTextNameB5cxx11Ev

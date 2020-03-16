@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class FollowFlockGoal : Goal {
+class FollowFlockGoal : public Goal {
 
 public:
-    ~FollowFlockGoal(); // _ZN15FollowFlockGoalD2Ev
+    virtual ~FollowFlockGoal(); // _ZN15FollowFlockGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15FollowFlockGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15FollowFlockGoal16canContinueToUseEv
     virtual bool canBeInterrupted(); // _ZN15FollowFlockGoal16canBeInterruptedEv

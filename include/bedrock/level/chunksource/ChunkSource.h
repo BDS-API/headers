@@ -7,13 +7,14 @@
 class ChunkSource {
 
 public:
-    ~ChunkSource(); // _ZN11ChunkSourceD2Ev
+    virtual ~ChunkSource(); // _ZN11ChunkSourceD2Ev
+    virtual void __fake_function0(); // fake
     virtual void shutdown(); // _ZN11ChunkSource8shutdownEv
     virtual bool isShutdownDone(); // _ZN11ChunkSource14isShutdownDoneEv
     virtual void getExistingChunk(ChunkPos const&); // _ZN11ChunkSource16getExistingChunkERK8ChunkPos
     virtual void getRandomChunk(Random &); // _ZN11ChunkSource14getRandomChunkER6Random
-//  virtual void createNewChunk(ChunkPos const&, ChunkSource::LoadMode); //TODO: incomplete function definition // _ZN11ChunkSource14createNewChunkERK8ChunkPosNS_8LoadModeE
-//  virtual void getOrLoadChunk(ChunkPos const&, ChunkSource::LoadMode); //TODO: incomplete function definition // _ZN11ChunkSource14getOrLoadChunkERK8ChunkPosNS_8LoadModeE
+    virtual void createNewChunk__incomplete0(ChunkPos const&, long); //TODO: incomplete function definition // _ZN11ChunkSource14createNewChunkERK8ChunkPosNS_8LoadModeE
+    virtual void getOrLoadChunk__incomplete0(ChunkPos const&, long); //TODO: incomplete function definition // _ZN11ChunkSource14getOrLoadChunkERK8ChunkPosNS_8LoadModeE
     virtual void postProcess(ChunkViewSource &); // _ZN11ChunkSource11postProcessER15ChunkViewSource
     virtual void checkAndReplaceChunk(ChunkViewSource &, LevelChunk &); // _ZN11ChunkSource20checkAndReplaceChunkER15ChunkViewSourceR10LevelChunk
     virtual void loadChunk(LevelChunk &, bool); // _ZN11ChunkSource9loadChunkER10LevelChunkb
@@ -28,7 +29,7 @@ public:
     virtual void getChunkMap(); // _ZN11ChunkSource11getChunkMapEv
     virtual void getStorage()const; // _ZNK11ChunkSource10getStorageEv
     virtual void clearDeletedEntities(); // _ZN11ChunkSource20clearDeletedEntitiesEv
-//  void createEmptyView(ChunkSource::LoadMode, bool, std::function<void (buffer_span_mut<std::shared_ptr<LevelChunk>>, buffer_span<unsigned int>)>); //TODO: incomplete function definition // _ZN11ChunkSource15createEmptyViewENS_8LoadModeEbSt8functionIFv15buffer_span_mutISt10shared_ptrI10LevelChunkEE11buffer_spanIjEEE
+//    void createEmptyView(long, bool, std::function<void (long, long)>); //TODO: incomplete function definition // _ZN11ChunkSource15createEmptyViewENS_8LoadModeEbSt8functionIFv15buffer_span_mutISt10shared_ptrI10LevelChunkEE11buffer_spanIjEEE
     void fireChunkLoaded(LevelChunk &); // _ZN11ChunkSource15fireChunkLoadedER10LevelChunk
     void checkAndLaunchChunkGenerationTasks(bool); // _ZN11ChunkSource34checkAndLaunchChunkGenerationTasksEb
     void _hasTooManyChunksPendingDelete()const; // _ZNK11ChunkSource30_hasTooManyChunksPendingDeleteEv
@@ -46,10 +47,10 @@ public:
     void _postProcessingTask(LevelChunk &, std::shared_ptr<ChunkViewSource>); // _ZN11ChunkSource19_postProcessingTaskER10LevelChunkSt10shared_ptrI15ChunkViewSourceE
     void _checkForReplacementDataTask(LevelChunk &, std::shared_ptr<ChunkViewSource>); // _ZN11ChunkSource28_checkForReplacementDataTaskER10LevelChunkSt10shared_ptrI15ChunkViewSourceE
     void _lightingTask(std::shared_ptr<LevelChunk>, std::shared_ptr<ChunkViewSource>); // _ZN11ChunkSource13_lightingTaskESt10shared_ptrI10LevelChunkES0_I15ChunkViewSourceE
-    void _checkSpecificLevelChunkForUnblocking(std::shared_ptr<LevelChunk>, std::shared_ptr<LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>>>); // _ZN11ChunkSource37_checkSpecificLevelChunkForUnblockingESt10shared_ptrI10LevelChunkES0_I25LevelChunkGridAreaElementISt8weak_ptrIS1_EEE
-    void _checkLevelChunkForPostProcessing(std::shared_ptr<LevelChunk>, std::shared_ptr<LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>>>); // _ZN11ChunkSource33_checkLevelChunkForPostProcessingESt10shared_ptrI10LevelChunkES0_I25LevelChunkGridAreaElementISt8weak_ptrIS1_EEE
-//  void _checkLevelChunkForNextStage(std::shared_ptr<LevelChunk>, std::shared_ptr<LevelChunkGridAreaElement<std::weak_ptr<LevelChunk>>>, ChunkState); //TODO: incomplete function definition // _ZN11ChunkSource28_checkLevelChunkForNextStageESt10shared_ptrI10LevelChunkES0_I25LevelChunkGridAreaElementISt8weak_ptrIS1_EEE10ChunkState
-//  void _chunkAtStage(std::weak_ptr<LevelChunk>, ChunkState); //TODO: incomplete function definition // _ZN11ChunkSource13_chunkAtStageESt8weak_ptrI10LevelChunkE10ChunkState
+    void _checkSpecificLevelChunkForUnblocking(std::shared_ptr<LevelChunk>, std::shared_ptr<long>); // _ZN11ChunkSource37_checkSpecificLevelChunkForUnblockingESt10shared_ptrI10LevelChunkES0_I25LevelChunkGridAreaElementISt8weak_ptrIS1_EEE
+    void _checkLevelChunkForPostProcessing(std::shared_ptr<LevelChunk>, std::shared_ptr<long>); // _ZN11ChunkSource33_checkLevelChunkForPostProcessingESt10shared_ptrI10LevelChunkES0_I25LevelChunkGridAreaElementISt8weak_ptrIS1_EEE
+//    void _checkLevelChunkForNextStage(std::shared_ptr<LevelChunk>, std::shared_ptr<long>, long); //TODO: incomplete function definition // _ZN11ChunkSource28_checkLevelChunkForNextStageESt10shared_ptrI10LevelChunkES0_I25LevelChunkGridAreaElementISt8weak_ptrIS1_EEE10ChunkState
+//    void _chunkAtStage(std::weak_ptr<LevelChunk>, long); //TODO: incomplete function definition // _ZN11ChunkSource13_chunkAtStageESt8weak_ptrI10LevelChunkE10ChunkState
     ChunkSource(Dimension *, int); // _ZN11ChunkSourceC2EP9Dimensioni
     ChunkSource(ChunkSource &); // _ZN11ChunkSourceC2ERS_
     void getChunkSide()const; // _ZNK11ChunkSource12getChunkSideEv

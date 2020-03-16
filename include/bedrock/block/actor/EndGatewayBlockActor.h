@@ -3,14 +3,15 @@
 #include "BlockActor.h"
 
 
-class EndGatewayBlockActor : BlockActor {
+class EndGatewayBlockActor : public BlockActor {
 
 public:
     static long SPAWN_TIME;
     static long COOLDOWN_TIME;
     static long EVENT_COOLDOWN;
 
-    ~EndGatewayBlockActor(); // _ZN20EndGatewayBlockActorD2Ev
+    virtual ~EndGatewayBlockActor(); // _ZN20EndGatewayBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN20EndGatewayBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK20EndGatewayBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN20EndGatewayBlockActor4tickER11BlockSource

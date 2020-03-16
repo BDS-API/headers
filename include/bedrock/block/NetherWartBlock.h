@@ -4,12 +4,13 @@
 #include "BushBlock.h"
 
 
-class NetherWartBlock : BushBlock {
+class NetherWartBlock : public BushBlock {
 
 public:
     static long MAX_AGE;
 
-    ~NetherWartBlock(); // _ZN15NetherWartBlockD2Ev
+    virtual ~NetherWartBlock(); // _ZN15NetherWartBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK15NetherWartBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK15NetherWartBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool canContainLiquid()const; // _ZNK15NetherWartBlock16canContainLiquidEv

@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class MelonBlock : BlockLegacy {
+class MelonBlock : public BlockLegacy {
 
 public:
-    ~MelonBlock(); // _ZN10MelonBlockD2Ev
+    virtual ~MelonBlock(); // _ZN10MelonBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canConnect(Block const&, unsigned char, Block const&)const; // _ZNK10MelonBlock10canConnectERK5BlockhS2_
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK10MelonBlock16getResourceCountER6RandomRK5Blocki
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK10MelonBlock15getResourceItemER6RandomRK5Blocki

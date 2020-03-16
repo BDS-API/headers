@@ -2339,6 +2339,9 @@ namespace RakNet {
     class RakNetSocket2;
 }
 namespace RakNet {
+    class RakNetStatistics;
+}
+namespace RakNet {
     class RakPeer;
 }
 namespace RakNet {

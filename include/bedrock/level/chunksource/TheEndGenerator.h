@@ -1,21 +1,22 @@
 #pragma once
 
 #include <string>
-#include "ChunkSource.h"
 #include "../generator/WorldGenerator.h"
+#include "ChunkSource.h"
 
 
-class TheEndGenerator : ChunkSource, WorldGenerator {
+class TheEndGenerator : public ChunkSource, public WorldGenerator {
 
 public:
-    ~TheEndGenerator(); // _ZN15TheEndGeneratorD2Ev
+    virtual ~TheEndGenerator(); // _ZN15TheEndGeneratorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcess(ChunkViewSource &); // _ZN15TheEndGenerator11postProcessER15ChunkViewSource
     virtual void loadChunk(LevelChunk &, bool); // _ZN15TheEndGenerator9loadChunkER10LevelChunkb
     virtual void postProcessMobsAt(BlockSource *, int, int, Random &); // _ZN15TheEndGenerator17postProcessMobsAtEP11BlockSourceiiR6Random
     virtual void getFeatureTypeAt(BlockPos const&); // _ZN15TheEndGenerator16getFeatureTypeAtERK8BlockPos
     virtual void prepareHeights(BlockVolume &, ChunkPos const&, bool); // _ZN15TheEndGenerator14prepareHeightsER11BlockVolumeRK8ChunkPosb
-//  virtual void findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos &); //TODO: incomplete function definition // _ZN15TheEndGenerator18findNearestFeatureE20StructureFeatureTypeRK8BlockPosRS1_
-//  virtual void garbageCollectBlueprints(buffer_span<ChunkPos>); //TODO: incomplete function definition // _ZN15TheEndGenerator24garbageCollectBlueprintsE11buffer_spanI8ChunkPosE
+    virtual void findNearestFeature__incomplete0(long, BlockPos const&, BlockPos &); //TODO: incomplete function definition // _ZN15TheEndGenerator18findNearestFeatureE20StructureFeatureTypeRK8BlockPosRS1_
+    virtual void garbageCollectBlueprints__incomplete0(long); //TODO: incomplete function definition // _ZN15TheEndGenerator24garbageCollectBlueprintsE11buffer_spanI8ChunkPosE
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const; // _ZNK15TheEndGenerator12getBiomeAreaERK11BoundingBoxj
     virtual void findSpawnPosition()const; // _ZNK15TheEndGenerator17findSpawnPositionEv
     TheEndGenerator(Dimension &, unsigned int); // _ZN15TheEndGeneratorC2ER9Dimensionj

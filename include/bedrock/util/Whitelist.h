@@ -1,16 +1,17 @@
 #pragma once
 
+#include <functional>
 #include <string>
 #include "../../unmapped/IJsonSerializable.h"
-#include <functional>
 
 
-class Whitelist : IJsonSerializable {
+class Whitelist : public IJsonSerializable {
 
 public:
     class WhitelistEntryMatcher;
 
-    ~Whitelist(); // _ZN9WhitelistD2Ev
+    virtual ~Whitelist(); // _ZN9WhitelistD2Ev
+    virtual void __fake_function0(); // fake
     virtual void serialize(Json::Value &); // _ZN9Whitelist9serializeERN4Json5ValueE
     virtual void deserialize(Json::Value &); // _ZN9Whitelist11deserializeERN4Json5ValueE
     Whitelist(std::function<void (void)>); // _ZN9WhitelistC2ESt8functionIFvvEE

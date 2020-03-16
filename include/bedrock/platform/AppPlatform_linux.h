@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
-#include <functional>
 #include "AppPlatform.h"
+#include <functional>
+#include <string>
 
 
-class AppPlatform_linux : AppPlatform {
+class AppPlatform_linux : public AppPlatform {
 
 public:
-    ~AppPlatform_linux(); // _ZN17AppPlatform_linuxD2Ev
+    virtual ~AppPlatform_linux(); // _ZN17AppPlatform_linuxD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getPackagePath()const; // _ZNK17AppPlatform_linux14getPackagePathB5cxx11Ev
     virtual std::string getCurrentStoragePath()const; // _ZNK17AppPlatform_linux21getCurrentStoragePathB5cxx11Ev
     virtual std::string getExternalStoragePath()const; // _ZNK17AppPlatform_linux22getExternalStoragePathB5cxx11Ev

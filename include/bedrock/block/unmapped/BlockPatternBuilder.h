@@ -1,7 +1,7 @@
 #pragma once
 
-#include <functional>
 #include "../../../unmapped/BuildMatch.h"
+#include <functional>
 
 
 class BlockPatternBuilder {
@@ -10,7 +10,7 @@ public:
     ~BlockPatternBuilder(); // _ZN19BlockPatternBuilderD2Ev
     void start(BlockSource &); // _ZN19BlockPatternBuilder5startER11BlockSource
     BlockPatternBuilder(BlockSource &); // _ZN19BlockPatternBuilderC2ER11BlockSource
-//  void aisle(int, ...); //TODO: incomplete function definition // _ZN19BlockPatternBuilder5aisleEiz
+//    void aisle(int, long); //TODO: incomplete function definition // _ZN19BlockPatternBuilder5aisleEiz
     void define(char, Block const&, std::function<bool (BlockSource &, BlockPos const&, Block const&)>); // _ZN19BlockPatternBuilder6defineEcRK5BlockSt8functionIFbR11BlockSourceRK8BlockPosS2_EE
     void build(); // _ZN19BlockPatternBuilder5buildEv
     void _allCharactersMatched(); // _ZN19BlockPatternBuilder21_allCharactersMatchedEv

@@ -1,18 +1,19 @@
 #pragma once
 
-#include <vector>
-#include "../ScriptFramework.h"
-#include <memory>
 #include <string>
+#include <memory>
+#include <vector>
 #include "../ScriptCallbackInterface.h"
+#include "../ScriptFramework.h"
 
 
-class ScriptEngine : ScriptApi::ScriptFramework, ScriptApi::ScriptCallbackInterface {
+class ScriptEngine : public ScriptApi::ScriptFramework, public ScriptApi::ScriptCallbackInterface {
 
 public:
     class ScriptQueueData;
 
-    ~ScriptEngine(); // _ZN12ScriptEngineD2Ev
+    virtual ~ScriptEngine(); // _ZN12ScriptEngineD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initialize(); // _ZN12ScriptEngine10initializeEv
     virtual void shutdown(); // _ZN12ScriptEngine8shutdownEv
     virtual void onLogReceived(std::string const&); // _ZN12ScriptEngine13onLogReceivedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
@@ -56,7 +57,7 @@ public:
     void startScriptLoading(); // _ZN12ScriptEngine18startScriptLoadingEv
     void _loadScriptQueue(); // _ZN12ScriptEngine16_loadScriptQueueEv
     bool isScriptingEnabled(); // _ZN12ScriptEngine18isScriptingEnabledEv
-//  ScriptEngine(ScriptApi::ApiScriptType); //TODO: incomplete function definition // _ZN12ScriptEngineC2EN9ScriptApi13ApiScriptTypeE
+//    ScriptEngine(long); //TODO: incomplete function definition // _ZN12ScriptEngineC2EN9ScriptApi13ApiScriptTypeE
     void setScriptEventCoordinator(std::unique_ptr<ScriptEventCoordinator> &&); // _ZN12ScriptEngine25setScriptEventCoordinatorEOSt10unique_ptrI22ScriptEventCoordinatorSt14default_deleteIS1_EE
     std::string _getScriptApiName()const; // _ZNK12ScriptEngine17_getScriptApiNameB5cxx11Ev
     bool isInitialized()const; // _ZNK12ScriptEngine13isInitializedEv

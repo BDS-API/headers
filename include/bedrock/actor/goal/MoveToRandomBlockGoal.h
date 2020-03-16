@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class MoveToRandomBlockGoal : Goal {
+class MoveToRandomBlockGoal : public Goal {
 
 public:
-    ~MoveToRandomBlockGoal(); // _ZN21MoveToRandomBlockGoalD2Ev
+    virtual ~MoveToRandomBlockGoal(); // _ZN21MoveToRandomBlockGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN21MoveToRandomBlockGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN21MoveToRandomBlockGoal16canContinueToUseEv
     virtual void start(); // _ZN21MoveToRandomBlockGoal5startEv

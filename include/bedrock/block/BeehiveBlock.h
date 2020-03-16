@@ -5,10 +5,11 @@
 #include "ActorBlock.h"
 
 
-class BeehiveBlock : ActorBlock {
+class BeehiveBlock : public ActorBlock {
 
 public:
-    ~BeehiveBlock(); // _ZN12BeehiveBlockD2Ev
+    virtual ~BeehiveBlock(); // _ZN12BeehiveBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getNextBlockPermutation(Block const&)const; // _ZNK12BeehiveBlock23getNextBlockPermutationERK5Block
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK12BeehiveBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const; // _ZNK12BeehiveBlock17playerWillDestroyER6PlayerRK8BlockPosRK5Block

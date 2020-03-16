@@ -1,17 +1,18 @@
 #pragma once
 
+#include <string>
 #include <memory>
 #include "Scoreboard.h"
-#include "../../command/CommandSoftEnumRegistry.h"
-#include <string>
 #include <functional>
+#include "../../command/CommandSoftEnumRegistry.h"
 
 
-class ServerScoreboard : Scoreboard {
+class ServerScoreboard : public Scoreboard {
 
 public:
-    ~ServerScoreboard(); // _ZN16ServerScoreboardD2Ev
-//  virtual void setDisplayObjective(std::string const&, Objective const&, ObjectiveSortOrder); //TODO: incomplete function definition // _ZN16ServerScoreboard19setDisplayObjectiveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK9Objective18ObjectiveSortOrder
+    virtual ~ServerScoreboard(); // _ZN16ServerScoreboardD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void setDisplayObjective__incomplete0(std::string const&, Objective const&, long); //TODO: incomplete function definition // _ZN16ServerScoreboard19setDisplayObjectiveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK9Objective18ObjectiveSortOrder
     virtual void clearDisplayObjective(std::string const&); // _ZN16ServerScoreboard21clearDisplayObjectiveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void createScoreboardId(Player const&); // _ZN16ServerScoreboard18createScoreboardIdERK6Player
     virtual void createScoreboardId(Actor const&); // _ZN16ServerScoreboard18createScoreboardIdERK5Actor
@@ -26,7 +27,7 @@ public:
     virtual void setPacketSender(PacketSender *); // _ZN16ServerScoreboard15setPacketSenderEP12PacketSender
     virtual void writeToLevelStorage(); // _ZN16ServerScoreboard19writeToLevelStorageEv
     virtual bool isClientSide()const; // _ZNK16ServerScoreboard12isClientSideEv
-//  ServerScoreboard(ServerScoreboard::unit_test_ctor_t); //TODO: incomplete function definition // _ZN16ServerScoreboardC2ENS_16unit_test_ctor_tE
+//    ServerScoreboard(long); //TODO: incomplete function definition // _ZN16ServerScoreboardC2ENS_16unit_test_ctor_tE
     ServerScoreboard(CommandSoftEnumRegistry, LevelStorage *); // _ZN16ServerScoreboardC2E23CommandSoftEnumRegistryP12LevelStorage
     void _readFromLevelStorage(); // _ZN16ServerScoreboard21_readFromLevelStorageEv
     void _setDirty(bool); // _ZN16ServerScoreboard9_setDirtyEb

@@ -6,7 +6,8 @@
 class SavedDataStorage {
 
 public:
-    ~SavedDataStorage(); // _ZN16SavedDataStorageD2Ev
+    virtual ~SavedDataStorage(); // _ZN16SavedDataStorageD2Ev
+    virtual void __fake_function0(); // fake
     SavedDataStorage(LevelStorage *); // _ZN16SavedDataStorageC2EP12LevelStorage
     void loadAndSet(SavedData &, std::string const&); // _ZN16SavedDataStorage10loadAndSetER9SavedDataRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void set(std::string const&, SavedData &); // _ZN16SavedDataStorage3setERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER9SavedData

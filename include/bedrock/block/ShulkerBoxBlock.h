@@ -1,14 +1,15 @@
 #pragma once
 
-#include "ChestBlock.h"
 #include <memory>
 #include <string>
+#include "ChestBlock.h"
 
 
-class ShulkerBoxBlock : ChestBlock {
+class ShulkerBoxBlock : public ChestBlock {
 
 public:
-    ~ShulkerBoxBlock(); // _ZN15ShulkerBoxBlockD2Ev
+    virtual ~ShulkerBoxBlock(); // _ZN15ShulkerBoxBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK15ShulkerBoxBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK15ShulkerBoxBlock8dispenseER11BlockSourceR9ContaineriRK4Vec3h
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK15ShulkerBoxBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

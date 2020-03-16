@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class ClientCacheMissResponsePacket : Packet {
+class ClientCacheMissResponsePacket : public Packet {
 
 public:
-    ~ClientCacheMissResponsePacket(); // _ZN29ClientCacheMissResponsePacketD2Ev
+    virtual ~ClientCacheMissResponsePacket(); // _ZN29ClientCacheMissResponsePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK29ClientCacheMissResponsePacket5getIdEv
     virtual std::string getName()const; // _ZNK29ClientCacheMissResponsePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK29ClientCacheMissResponsePacket5writeER12BinaryStream

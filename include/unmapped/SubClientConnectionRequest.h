@@ -1,14 +1,14 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include <vector>
 
 
 class SubClientConnectionRequest {
 
 public:
-//  void create(PrivateKeyManager &, std::string const&, Certificate const&, std::string const&, unsigned long, std::string const&, std::string const&, mce::Image const&, mce::Image const&, std::vector<AnimatedImageData> const&, std::string const&, std::string const&, std::string const&, bool, bool, InputMode, std::string const&, bool, std::string const&, std::string const&, bool, std::string); //TODO: incomplete function definition // _ZN26SubClientConnectionRequest6createER17PrivateKeyManagerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK11CertificateS9_mS9_S9_RKN3mce5ImageESG_RKSt6vectorI17AnimatedImageDataSaISI_EES9_S9_S9_bb9InputModeS9_bS9_S9_bS7_
+//    void create(PrivateKeyManager &, std::string const&, Certificate const&, std::string const&, unsigned long, std::string const&, std::string const&, mce::Image const&, mce::Image const&, std::vector<AnimatedImageData> const&, std::string const&, std::string const&, std::string const&, bool, bool, long, std::string const&, bool, std::string const&, std::string const&, bool, std::string); //TODO: incomplete function definition // _ZN26SubClientConnectionRequest6createER17PrivateKeyManagerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK11CertificateS9_mS9_S9_RKN3mce5ImageESG_RKSt6vectorI17AnimatedImageDataSaISI_EES9_S9_S9_bb9InputModeS9_bS9_S9_bS7_
     SubClientConnectionRequest(std::unique_ptr<WebToken>, std::string const&); // _ZN26SubClientConnectionRequestC2ESt10unique_ptrI8WebTokenSt14default_deleteIS1_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     SubClientConnectionRequest(SubClientConnectionRequest const&); // _ZN26SubClientConnectionRequestC2ERKS_
     ~SubClientConnectionRequest(); // _ZN26SubClientConnectionRequestD2Ev

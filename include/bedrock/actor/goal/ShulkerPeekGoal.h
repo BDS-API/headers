@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class ShulkerPeekGoal : Goal {
+class ShulkerPeekGoal : public Goal {
 
 public:
-    ~ShulkerPeekGoal(); // _ZN15ShulkerPeekGoalD2Ev
+    virtual ~ShulkerPeekGoal(); // _ZN15ShulkerPeekGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15ShulkerPeekGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15ShulkerPeekGoal16canContinueToUseEv
     virtual void start(); // _ZN15ShulkerPeekGoal5startEv

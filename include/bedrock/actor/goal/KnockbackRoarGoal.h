@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../../definition/DefinitionTrigger.h"
+#include <string>
 #include "Goal.h"
 
 
-class KnockbackRoarGoal : Goal {
+class KnockbackRoarGoal : public Goal {
 
 public:
-    ~KnockbackRoarGoal(); // _ZN17KnockbackRoarGoalD2Ev
+    virtual ~KnockbackRoarGoal(); // _ZN17KnockbackRoarGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN17KnockbackRoarGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN17KnockbackRoarGoal16canContinueToUseEv
     virtual void start(); // _ZN17KnockbackRoarGoal5startEv

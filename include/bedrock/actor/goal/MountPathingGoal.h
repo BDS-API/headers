@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class MountPathingGoal : Goal {
+class MountPathingGoal : public Goal {
 
 public:
-    ~MountPathingGoal(); // _ZN16MountPathingGoalD2Ev
+    virtual ~MountPathingGoal(); // _ZN16MountPathingGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN16MountPathingGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN16MountPathingGoal16canContinueToUseEv
     virtual void start(); // _ZN16MountPathingGoal5startEv

@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class CactusBlock : BlockLegacy {
+class CactusBlock : public BlockLegacy {
 
 public:
-    ~CactusBlock(); // _ZN11CactusBlockD2Ev
+    virtual ~CactusBlock(); // _ZN11CactusBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK11CactusBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK11CactusBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK11CactusBlock8mayPlaceER11BlockSourceRK8BlockPos

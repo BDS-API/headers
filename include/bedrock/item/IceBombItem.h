@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "ChemistryItem.h"
+#include <string>
 
 
-class IceBombItem : ChemistryItem {
+class IceBombItem : public ChemistryItem {
 
 public:
-    ~IceBombItem(); // _ZN11IceBombItemD2Ev
+    virtual ~IceBombItem(); // _ZN11IceBombItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isThrowable()const; // _ZNK11IceBombItem11isThrowableEv
     virtual void use(ItemStack &, Player &)const; // _ZNK11IceBombItem3useER9ItemStackR6Player
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK11IceBombItem8dispenseER11BlockSourceR9ContaineriRK4Vec3h

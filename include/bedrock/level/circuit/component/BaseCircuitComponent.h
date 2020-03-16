@@ -5,7 +5,8 @@
 class BaseCircuitComponent {
 
 public:
-    ~BaseCircuitComponent(); // _ZN20BaseCircuitComponentD2Ev
+    virtual ~BaseCircuitComponent(); // _ZN20BaseCircuitComponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getStrength()const; // _ZNK20BaseCircuitComponent11getStrengthEv
     virtual void getDirection()const; // _ZNK20BaseCircuitComponent12getDirectionEv
     virtual void setStrength(int); // _ZN20BaseCircuitComponent11setStrengthEi

@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class ExperiencePotionItem : Item {
+class ExperiencePotionItem : public Item {
 
 public:
-    ~ExperiencePotionItem(); // _ZN20ExperiencePotionItemD2Ev
+    virtual ~ExperiencePotionItem(); // _ZN20ExperiencePotionItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isGlint(ItemStackBase const&)const; // _ZNK20ExperiencePotionItem7isGlintERK13ItemStackBase
     virtual bool isThrowable()const; // _ZNK20ExperiencePotionItem11isThrowableEv
     virtual void use(ItemStack &, Player &)const; // _ZNK20ExperiencePotionItem3useER9ItemStackR6Player

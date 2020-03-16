@@ -9,7 +9,8 @@ namespace Core {
     class FileImpl {
 
     public:
-        ~FileImpl(); // _ZN4Core8FileImplD2Ev
+        virtual ~FileImpl(); // _ZN4Core8FileImplD2Ev
+        virtual void __fake_function0(); // fake
         void getNumFiles(); // _ZN4Core8FileImpl11getNumFilesEv
         FileImpl(Core::FileSystemImpl *, Core::FileOpenMode); // _ZN4Core8FileImplC2EPNS_14FileSystemImplENS_12FileOpenModeE
         void setLoggingEnabled(bool); // _ZN4Core8FileImpl17setLoggingEnabledEb

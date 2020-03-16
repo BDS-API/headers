@@ -4,10 +4,11 @@
 #include <string>
 
 
-class HayBlockBlock : RotatedPillarBlock {
+class HayBlockBlock : public RotatedPillarBlock {
 
 public:
-    ~HayBlockBlock(); // _ZN13HayBlockBlockD2Ev
+    virtual ~HayBlockBlock(); // _ZN13HayBlockBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onFallOn(BlockSource &, BlockPos const&, Actor *, float)const; // _ZNK13HayBlockBlock8onFallOnER11BlockSourceRK8BlockPosP5Actorf
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const; // _ZNK13HayBlockBlock14asItemInstanceER11BlockSourceRK8BlockPosRK5Block
     virtual void getVariant(Block const&)const; // _ZNK13HayBlockBlock10getVariantERK5Block

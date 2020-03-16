@@ -5,7 +5,7 @@
 class PathfinderNode {
 
 public:
-//  PathfinderNode(BlockPos const&, NodeType); //TODO: incomplete function definition // _ZN14PathfinderNodeC2ERK8BlockPos8NodeType
+//    PathfinderNode(BlockPos const&, long); //TODO: incomplete function definition // _ZN14PathfinderNodeC2ERK8BlockPos8NodeType
     PathfinderNode(PathfinderNode const&); // _ZN14PathfinderNodeC2ERKS_
     void getType()const; // _ZNK14PathfinderNode7getTypeEv
     void distanceTo(PathfinderNode *)const; // _ZNK14PathfinderNode10distanceToEPS_

@@ -1,16 +1,17 @@
 #pragma once
 
-#include <string>
 #include "ScriptLanguageInterface.h"
+#include <string>
 #include <vector>
 
 
 namespace ScriptApi {
 
-    class EmptyScriptInterface : ScriptApi::ScriptLanguageInterface {
+    class EmptyScriptInterface : public ScriptApi::ScriptLanguageInterface {
 
     public:
-        ~EmptyScriptInterface(); // _ZN9ScriptApi20EmptyScriptInterfaceD2Ev
+        virtual ~EmptyScriptInterface(); // _ZN9ScriptApi20EmptyScriptInterfaceD2Ev
+        virtual void __fake_function0(); // fake
         virtual void initialize(); // _ZN9ScriptApi20EmptyScriptInterface10initializeEv
         virtual void shutdown(); // _ZN9ScriptApi20EmptyScriptInterface8shutdownEv
         virtual void initialized()const; // _ZNK9ScriptApi20EmptyScriptInterface11initializedEv
@@ -34,7 +35,7 @@ namespace ScriptApi {
         virtual void getValue(ScriptApi::ScriptObjectHandle const&, bool &, ScriptApi::ScriptReport &); // _ZN9ScriptApi20EmptyScriptInterface8getValueERKNS_18ScriptObjectHandleERbRNS_12ScriptReportE
         virtual void callObjectFunction(ScriptApi::ScriptObjectHandle const&, std::string const&, std::vector<ScriptApi::ScriptObjectHandle> const&, ScriptApi::ScriptObjectHandle &, ScriptApi::ScriptReport &); // _ZN9ScriptApi20EmptyScriptInterface18callObjectFunctionERKNS_18ScriptObjectHandleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS1_SaIS1_EERS1_RNS_12ScriptReportE
         virtual void callGlobalFunction(ScriptApi::ScriptObjectHandle const&, std::vector<ScriptApi::ScriptObjectHandle> const&, ScriptApi::ScriptObjectHandle &, ScriptApi::ScriptReport &); // _ZN9ScriptApi20EmptyScriptInterface18callGlobalFunctionERKNS_18ScriptObjectHandleERKSt6vectorIS1_SaIS1_EERS1_RNS_12ScriptReportE
-//      virtual void getHandleType(ScriptApi::ScriptObjectHandle const&, ScriptApi::ScriptObjectType &, ScriptApi::ScriptReport &); //TODO: incomplete function definition // _ZN9ScriptApi20EmptyScriptInterface13getHandleTypeERKNS_18ScriptObjectHandleERNS_16ScriptObjectTypeERNS_12ScriptReportE
+        virtual void getHandleType__incomplete0(ScriptApi::ScriptObjectHandle const&, long &, ScriptApi::ScriptReport &); //TODO: incomplete function definition // _ZN9ScriptApi20EmptyScriptInterface13getHandleTypeERKNS_18ScriptObjectHandleERNS_16ScriptObjectTypeERNS_12ScriptReportE
         virtual void getMemberNames(ScriptApi::ScriptObjectHandle const&, std::vector<std::string> &, ScriptApi::ScriptReport &); // _ZN9ScriptApi20EmptyScriptInterface14getMemberNamesERKNS_18ScriptObjectHandleERSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISA_EERNS_12ScriptReportE
         virtual void getArrayLength(ScriptApi::ScriptObjectHandle const&, int &, ScriptApi::ScriptReport &); // _ZN9ScriptApi20EmptyScriptInterface14getArrayLengthERKNS_18ScriptObjectHandleERiRNS_12ScriptReportE
         virtual void getGlobalObject(ScriptApi::ScriptObjectHandle &, ScriptApi::ScriptReport &); // _ZN9ScriptApi20EmptyScriptInterface15getGlobalObjectERNS_18ScriptObjectHandleERNS_12ScriptReportE

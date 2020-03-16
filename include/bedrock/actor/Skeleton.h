@@ -4,12 +4,13 @@
 #include <vector>
 
 
-class Skeleton : HumanoidMonster {
+class Skeleton : public HumanoidMonster {
 
 public:
     static long SPEED_MODIFIER_ATTACK_UUID;
 
-    ~Skeleton(); // _ZN8SkeletonD2Ev
+    virtual ~Skeleton(); // _ZN8SkeletonD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN8Skeleton10normalTickEv
     virtual void rideTick(); // _ZN8Skeleton8rideTickEv
     virtual void getRidingHeight(); // _ZN8Skeleton15getRidingHeightEv
@@ -20,7 +21,7 @@ public:
     virtual void doHurtTarget(Actor *); // _ZN8Skeleton12doHurtTargetEP5Actor
     virtual void useNewAi()const; // _ZNK8Skeleton8useNewAiEv
     Skeleton(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN8SkeletonC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier
-//  void setSkeletonType(Skeleton::SkeletonType); //TODO: incomplete function definition // _ZN8Skeleton15setSkeletonTypeENS_12SkeletonTypeE
+//    void setSkeletonType(long); //TODO: incomplete function definition // _ZN8Skeleton15setSkeletonTypeENS_12SkeletonTypeE
     void getSkeletonType()const; // _ZNK8Skeleton15getSkeletonTypeEv
     void setWitherParent(WitherBoss *); // _ZN8Skeleton15setWitherParentEP10WitherBoss
 };

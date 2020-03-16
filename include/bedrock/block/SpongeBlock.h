@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class SpongeBlock : BlockLegacy {
+class SpongeBlock : public BlockLegacy {
 
 public:
-    ~SpongeBlock(); // _ZN11SpongeBlockD2Ev
+    virtual ~SpongeBlock(); // _ZN11SpongeBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK11SpongeBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isValidAuxValue(int)const; // _ZNK11SpongeBlock15isValidAuxValueEi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK11SpongeBlock7onPlaceER11BlockSourceRK8BlockPos

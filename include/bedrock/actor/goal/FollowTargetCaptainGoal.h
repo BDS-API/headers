@@ -4,10 +4,11 @@
 #include "MoveTowardsTargetGoal.h"
 
 
-class FollowTargetCaptainGoal : MoveTowardsTargetGoal {
+class FollowTargetCaptainGoal : public MoveTowardsTargetGoal {
 
 public:
-    ~FollowTargetCaptainGoal(); // _ZN23FollowTargetCaptainGoalD2Ev
+    virtual ~FollowTargetCaptainGoal(); // _ZN23FollowTargetCaptainGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN23FollowTargetCaptainGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN23FollowTargetCaptainGoal16canContinueToUseEv
     virtual void start(); // _ZN23FollowTargetCaptainGoal5startEv

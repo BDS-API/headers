@@ -19,7 +19,7 @@ public:
     void setBrightnessRange(int, int, bool); // _ZN13MobSpawnRules18setBrightnessRangeEiib
     void setMoonBrightnessRange(float, float); // _ZN13MobSpawnRules22setMoonBrightnessRangeEff
     void setHeightRange(int, int); // _ZN13MobSpawnRules14setHeightRangeEii
-//  void setDifficultyRange(Difficulty, Difficulty); //TODO: incomplete function definition // _ZN13MobSpawnRules18setDifficultyRangeE10DifficultyS0_
+//    void setDifficultyRange(long, long); //TODO: incomplete function definition // _ZN13MobSpawnRules18setDifficultyRangeE10DifficultyS0_
     void setSurfaceSpawner(); // _ZN13MobSpawnRules17setSurfaceSpawnerEv
     void setUndergroundSpawner(); // _ZN13MobSpawnRules21setUndergroundSpawnerEv
     void setUnderwaterSpawner(); // _ZN13MobSpawnRules20setUnderwaterSpawnerEv

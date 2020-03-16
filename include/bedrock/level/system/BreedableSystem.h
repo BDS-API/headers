@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class BreedableSystem : ITickingSystem {
+class BreedableSystem : public ITickingSystem {
 
 public:
-    ~BreedableSystem(); // _ZN15BreedableSystemD2Ev
+    virtual ~BreedableSystem(); // _ZN15BreedableSystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN15BreedableSystem4tickER14EntityRegistry
     BreedableSystem(); // _ZN15BreedableSystemC2Ev
 };

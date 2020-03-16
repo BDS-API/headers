@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class DisconnectPacket : Packet {
+class DisconnectPacket : public Packet {
 
 public:
-    ~DisconnectPacket(); // _ZN16DisconnectPacketD2Ev
+    virtual ~DisconnectPacket(); // _ZN16DisconnectPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK16DisconnectPacket5getIdEv
     virtual std::string getName()const; // _ZNK16DisconnectPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK16DisconnectPacket5writeER12BinaryStream

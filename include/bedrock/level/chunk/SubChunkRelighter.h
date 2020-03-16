@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../util/Brightness.h"
 #include "SubChunkLightIndex.h"
+#include "../../util/Brightness.h"
 #include <vector>
 
 
@@ -39,7 +39,7 @@ public:
     void _propagateSubtractiveBlockLight(); // _ZN17SubChunkRelighter31_propagateSubtractiveBlockLightEv
     void _propagateBlockLight(); // _ZN17SubChunkRelighter20_propagateBlockLightEv
     void _propagateSubtractiveSkyLight(SubChunkLightIndex, unsigned char); // _ZN17SubChunkRelighter29_propagateSubtractiveSkyLightE18SubChunkLightIndexh
-//  void _resetToDo(SubChunkRelighter::SubChunkToDoBitsClearMode); //TODO: incomplete function definition // _ZN17SubChunkRelighter10_resetToDoENS_25SubChunkToDoBitsClearModeE
+//    void _resetToDo(long); //TODO: incomplete function definition // _ZN17SubChunkRelighter10_resetToDoENS_25SubChunkToDoBitsClearModeE
     void _getLight(SubChunkLightIndex); // _ZN17SubChunkRelighter9_getLightE18SubChunkLightIndex
     void _propagateSubtractiveBlockLight(SubChunkLightIndex, unsigned char); // _ZN17SubChunkRelighter31_propagateSubtractiveBlockLightE18SubChunkLightIndexh
     void _dirtySubChunk(SubChunkLightIndex, unsigned int &); // _ZN17SubChunkRelighter14_dirtySubChunkE18SubChunkLightIndexRj

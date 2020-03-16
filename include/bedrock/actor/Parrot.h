@@ -3,11 +3,12 @@
 #include "Animal.h"
 
 
-class Parrot : Animal {
+class Parrot : public Animal {
 
 public:
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN6Parrot21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Parrot(); // _ZN6ParrotD2Ev
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN6Parrot21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Parrot(); // _ZN6ParrotD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getInterpolatedRidingPosition(float)const; // _ZNK6Parrot29getInterpolatedRidingPositionEf
     virtual void getShadowRadius()const; // _ZNK6Parrot15getShadowRadiusEv
     virtual void setSitting(bool); // _ZN6Parrot10setSittingEb
@@ -28,5 +29,5 @@ public:
     void getOFlap()const; // _ZNK6Parrot8getOFlapEv
     void getFlapSpeed()const; // _ZNK6Parrot12getFlapSpeedEv
     void getOFlapSpeed()const; // _ZNK6Parrot13getOFlapSpeedEv
-//  void _getImitatedSound(ActorType); //TODO: incomplete function definition // _ZN6Parrot17_getImitatedSoundE9ActorType
+//    void _getImitatedSound(long); //TODO: incomplete function definition // _ZN6Parrot17_getImitatedSoundE9ActorType
 };

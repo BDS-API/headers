@@ -3,10 +3,11 @@
 #include "Feature.h"
 
 
-class CoralHangFeature : Feature {
+class CoralHangFeature : public Feature {
 
 public:
-    ~CoralHangFeature(); // _ZN16CoralHangFeatureD2Ev
+    virtual ~CoralHangFeature(); // _ZN16CoralHangFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK16CoralHangFeature5placeER11BlockSourceRK8BlockPosR6Random
     CoralHangFeature(); // _ZN16CoralHangFeatureC2Ev
     void _canPlaceHangOn(BlockSource const&, BlockPos const&)const; // _ZNK16CoralHangFeature15_canPlaceHangOnERK11BlockSourceRK8BlockPos

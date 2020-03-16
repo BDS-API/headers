@@ -3,10 +3,11 @@
 #include "PathNavigation.h"
 
 
-class WallClimberPathNavigation : PathNavigation {
+class WallClimberPathNavigation : public PathNavigation {
 
 public:
-    ~WallClimberPathNavigation(); // _ZN25WallClimberPathNavigationD2Ev
+    virtual ~WallClimberPathNavigation(); // _ZN25WallClimberPathNavigationD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(NavigationComponent &, Mob &); // _ZN25WallClimberPathNavigation4tickER19NavigationComponentR3Mob
     virtual void createPath(NavigationComponent &, Mob &, Vec3 const&); // _ZN25WallClimberPathNavigation10createPathER19NavigationComponentR3MobRK4Vec3
     virtual void createPath(NavigationComponent &, Mob &, Actor &); // _ZN25WallClimberPathNavigation10createPathER19NavigationComponentR3MobR5Actor

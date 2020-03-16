@@ -3,11 +3,12 @@
 #include "Fireball.h"
 
 
-class WitherSkull : Fireball {
+class WitherSkull : public Fireball {
 
 public:
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN11WitherSkull20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
-    ~WitherSkull(); // _ZN11WitherSkullD2Ev
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN11WitherSkull20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~WitherSkull(); // _ZN11WitherSkullD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isPickable(); // _ZN11WitherSkull10isPickableEv
     virtual bool isOnFire()const; // _ZNK11WitherSkull8isOnFireEv
     virtual bool canDestroyBlock(Block const&)const; // _ZNK11WitherSkull15canDestroyBlockERK5Block

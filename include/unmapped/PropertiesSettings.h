@@ -49,6 +49,6 @@ public:
     void getMovementScoreThreshold()const; // _ZNK18PropertiesSettings25getMovementScoreThresholdEv
     void getMovementDistanceThreshold()const; // _ZNK18PropertiesSettings28getMovementDistanceThresholdEv
     void getMovementDurationThreshold()const; // _ZNK18PropertiesSettings28getMovementDurationThresholdEv
-    void shouldCorrectPlayerMovement()const; // _ZNK18PropertiesSettings27shouldCorrectPlayerMovementEv
+    bool shouldCorrectPlayerMovement()const; // _ZNK18PropertiesSettings27shouldCorrectPlayerMovementEv
     void getClacksEndpoint()const; // _ZNK18PropertiesSettings17getClacksEndpointEv
 };

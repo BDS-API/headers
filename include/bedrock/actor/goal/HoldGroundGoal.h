@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class HoldGroundGoal : Goal {
+class HoldGroundGoal : public Goal {
 
 public:
-    ~HoldGroundGoal(); // _ZN14HoldGroundGoalD2Ev
+    virtual ~HoldGroundGoal(); // _ZN14HoldGroundGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN14HoldGroundGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN14HoldGroundGoal16canContinueToUseEv
     virtual void start(); // _ZN14HoldGroundGoal5startEv

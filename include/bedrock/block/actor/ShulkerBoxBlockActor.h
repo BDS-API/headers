@@ -5,12 +5,13 @@
 #include <vector>
 
 
-class ShulkerBoxBlockActor : ChestBlockActor {
+class ShulkerBoxBlockActor : public ChestBlockActor {
 
 public:
     static long ITEMS_SIZE;
 
-    ~ShulkerBoxBlockActor(); // _ZN20ShulkerBoxBlockActorD2Ev
+    virtual ~ShulkerBoxBlockActor(); // _ZN20ShulkerBoxBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN20ShulkerBoxBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK20ShulkerBoxBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN20ShulkerBoxBlockActor4tickER11BlockSource
@@ -24,7 +25,7 @@ public:
     virtual void playCloseSound(BlockSource &); // _ZN20ShulkerBoxBlockActor14playCloseSoundER11BlockSource
     virtual void getObstructionAABB()const; // _ZNK20ShulkerBoxBlockActor18getObstructionAABBEv
     virtual void _detectEntityObstruction(BlockSource &)const; // _ZNK20ShulkerBoxBlockActor24_detectEntityObstructionER11BlockSource
-//  ShulkerBoxBlockActor(BlockActorType, std::string const&, BlockActorRendererId, BlockPos const&); //TODO: incomplete function definition // _ZN20ShulkerBoxBlockActorC2E14BlockActorTypeRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE20BlockActorRendererIdRK8BlockPos
+//    ShulkerBoxBlockActor(long, std::string const&, long, BlockPos const&); //TODO: incomplete function definition // _ZN20ShulkerBoxBlockActorC2E14BlockActorTypeRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE20BlockActorRendererIdRK8BlockPos
     void createShulkerBoxBlockEntity(BlockPos const&); // _ZN20ShulkerBoxBlockActor27createShulkerBoxBlockEntityERK8BlockPos
     void getFacingDir(); // _ZN20ShulkerBoxBlockActor12getFacingDirEv
     void setFacingDir(unsigned char); // _ZN20ShulkerBoxBlockActor12setFacingDirEh

@@ -1,8 +1,8 @@
 #pragma once
 
 #include <memory>
-#include "Path.h"
 #include <vector>
+#include "Path.h"
 #include "FileOpenMode.h"
 
 
@@ -25,7 +25,7 @@ namespace Core {
         void getRemainingSize(unsigned long *); // _ZN4Core4File16getRemainingSizeEPm
         void getPosition(unsigned long *); // _ZN4Core4File11getPositionEPm
         void setPosition(unsigned long); // _ZN4Core4File11setPositionEm
-//      void open(Core::Path, Core::FileOpenMode, Core::FileBufferingMode); //TODO: incomplete function definition // _ZN4Core4File4openENS_4PathENS_12FileOpenModeENS_17FileBufferingModeE
+//        void open(Core::Path, Core::FileOpenMode, long); //TODO: incomplete function definition // _ZN4Core4File4openENS_4PathENS_12FileOpenModeENS_17FileBufferingModeE
         void setLoggingEnabled(bool); // _ZN4Core4File17setLoggingEnabledEb
         void close(); // _ZN4Core4File5closeEv
         bool isNearTransactionLimit(unsigned long)const; // _ZNK4Core4File22isNearTransactionLimitEm

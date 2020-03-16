@@ -1,13 +1,13 @@
 #pragma once
 
-#include "CommandVersion.h"
-#include <vector>
-#include "CommandFlag.h"
-#include <memory>
 #include <string>
-#include <set>
-#include <functional>
 #include <utility>
+#include <memory>
+#include <set>
+#include <vector>
+#include "CommandVersion.h"
+#include <functional>
+#include "CommandFlag.h"
 
 
 class CommandRegistry {
@@ -45,7 +45,7 @@ public:
     void readFloat(float &, CommandRegistry::ParseToken const&, std::string &, std::vector<std::string> &); // _ZN15CommandRegistry9readFloatERfRKNS_10ParseTokenERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorIS9_SaIS9_EE
     void readInt(int &, CommandRegistry::ParseToken const&, std::string &, std::vector<std::string> &); // _ZN15CommandRegistry7readIntERiRKNS_10ParseTokenERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorIS9_SaIS9_EE
     void readRelativeCoordinate(bool &, float &, CommandRegistry::ParseToken const&, bool, std::string &, std::vector<std::string> &); // _ZN15CommandRegistry22readRelativeCoordinateERbRfRKNS_10ParseTokenEbRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorISA_SaISA_EE
-//  void parseOperator(CommandOperator *, CommandRegistry::ParseToken const&, std::string &, std::vector<std::string> &)const; //TODO: incomplete function definition // _ZNK15CommandRegistry13parseOperatorEP15CommandOperatorRKNS_10ParseTokenERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorISA_SaISA_EE
+//    void parseOperator(long *, CommandRegistry::ParseToken const&, std::string &, std::vector<std::string> &)const; //TODO: incomplete function definition // _ZNK15CommandRegistry13parseOperatorEP15CommandOperatorRKNS_10ParseTokenERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorISA_SaISA_EE
     void getEnumData(CommandRegistry::ParseToken const&)const; // _ZNK15CommandRegistry11getEnumDataERKNS_10ParseTokenE
     std::string getInvertableFilter(CommandRegistry::ParseToken const&)const; // _ZNK15CommandRegistry19getInvertableFilterB5cxx11ERKNS_10ParseTokenE
     void parseSelector(CommandSelectorBase *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string &, std::vector<std::string> &, bool)const; // _ZNK15CommandRegistry13parseSelectorEP19CommandSelectorBaseRKNS_10ParseTokenERK13CommandOriginiRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorISD_SaISD_EEb
@@ -64,16 +64,16 @@ public:
     void addRule(CommandRegistry::Symbol, std::vector<CommandRegistry::Symbol> &&, std::function<CommandRegistry::ParseToken * (std::function &, CommandRegistry::Symbol)>, CommandVersion); // _ZN15CommandRegistry7addRuleENS_6SymbolEOSt6vectorIS0_SaIS0_EESt8functionIFPNS_10ParseTokenERS6_S0_EE14CommandVersion
     void findEnumValue(std::string const&)const; // _ZNK15CommandRegistry13findEnumValueERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void _addFunctionSoftEnum(); // _ZN15CommandRegistry20_addFunctionSoftEnumEv
-//  void addSemanticConstraint(SemanticConstraint); //TODO: incomplete function definition // _ZN15CommandRegistry21addSemanticConstraintE18SemanticConstraint
-//  void registerCommand(std::string const&, char const*, CommandPermissionLevel, CommandFlag, CommandFlag); //TODO: incomplete function definition // _ZN15CommandRegistry15registerCommandERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKc22CommandPermissionLevel11CommandFlagSB_
-//  void addEnumValuesInternal(std::string const&, std::vector<std::pair<unsigned long, unsigned long>> const&, typeid_t<CommandRegistry>, bool (mmandRegistry:: *), (void *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string &, std::vector<std::string> &); //TODO: incomplete function definition // _ZN15CommandRegistry21addEnumValuesInternalERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorISt4pairImmESaISA_EE8typeid_tIS_EMS_KFbPvRKNS_10ParseTokenERK13CommandOriginiRS5_RS8_IS5_SaIS5_EEE
-//  void addEnumValueConstraints(std::string const&, std::vector<std::string> const&, SemanticConstraint); //TODO: incomplete function definition // _ZN15CommandRegistry23addEnumValueConstraintsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS5_SaIS5_EE18SemanticConstraint
+//    void addSemanticConstraint(long); //TODO: incomplete function definition // _ZN15CommandRegistry21addSemanticConstraintE18SemanticConstraint
+//    void registerCommand(std::string const&, char const*, long, CommandFlag, CommandFlag); //TODO: incomplete function definition // _ZN15CommandRegistry15registerCommandERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKc22CommandPermissionLevel11CommandFlagSB_
+//    void addEnumValuesInternal(std::string const&, std::vector<std::pair<unsigned long, unsigned long>> const&, long, bool (long *), long *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string &, std::vector<std::string> &); //TODO: incomplete function definition // _ZN15CommandRegistry21addEnumValuesInternalERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorISt4pairImmESaISA_EE8typeid_tIS_EMS_KFbPvRKNS_10ParseTokenERK13CommandOriginiRS5_RS8_IS5_SaIS5_EEE
+//    void addEnumValueConstraints(std::string const&, std::vector<std::string> const&, long); //TODO: incomplete function definition // _ZN15CommandRegistry23addEnumValueConstraintsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS5_SaIS5_EE18SemanticConstraint
     void registerAlias(std::string, std::string); // _ZN15CommandRegistry13registerAliasENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_
     void setCommandRegistrationOverride(std::function<void (CommandFlag &, std::string const&)>); // _ZN15CommandRegistry30setCommandRegistrationOverrideESt8functionIFvR11CommandFlagRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE
     void getCommandName(std::string const&)const; // _ZNK15CommandRegistry14getCommandNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     bool isValidCommand(std::string const&)const; // _ZNK15CommandRegistry14isValidCommandERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void getCommandStatus(std::string const&)const; // _ZNK15CommandRegistry16getCommandStatusERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  bool isCommandOfType(std::string const&, CommandTypeFlag)const; //TODO: incomplete function definition // _ZNK15CommandRegistry15isCommandOfTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE15CommandTypeFlag
+//    bool isCommandOfType(std::string const&, long)const; //TODO: incomplete function definition // _ZNK15CommandRegistry15isCommandOfTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE15CommandTypeFlag
     bool requiresCheatsEnabled(std::string const&)const; // _ZNK15CommandRegistry21requiresCheatsEnabledERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void getCommandsPermissionLevel(std::string const&)const; // _ZNK15CommandRegistry26getCommandsPermissionLevelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void buildRules(CommandRegistry::Signature &, std::vector<CommandRegistry::Overload *> const&, unsigned long); // _ZN15CommandRegistry10buildRulesERNS_9SignatureERKSt6vectorIPNS_8OverloadESaIS4_EEm
@@ -92,15 +92,15 @@ public:
     void buildOptionalRuleChain(CommandRegistry::Signature const&, std::vector<CommandParameterData> const&, std::vector const&, std::allocator<std::vector const>); // _ZN15CommandRegistry22buildOptionalRuleChainERKNS_9SignatureERKSt6vectorI20CommandParameterDataSaIS4_EERKS3_INS_6SymbolESaIS9_EE
     void addSymbols(std::vector<CommandRegistry::Symbol> &, std::vector<CommandRegistry::Symbol> const&, bool); // _ZN15CommandRegistry10addSymbolsERSt6vectorINS_6SymbolESaIS1_EERKS3_b
     void buildFirstSet(CommandRegistry::ParseTable &, CommandRegistry::Symbol, unsigned int)const; // _ZNK15CommandRegistry13buildFirstSetERNS_10ParseTableENS_6SymbolEj
-    void buildFollowSet(CommandRegistry::ParseTable &, CommandRegistry::Symbol, unsigned int, std::set<CommandRegistry::Symbol, std::less<CommandRegistry::Symbol>, std::allocator<CommandRegistry::Symbol>> &)const; // _ZNK15CommandRegistry14buildFollowSetERNS_10ParseTableENS_6SymbolEjRSt3setIS2_St4lessIS2_ESaIS2_EE
+    void buildFollowSet(CommandRegistry::ParseTable &, CommandRegistry::Symbol, unsigned int, std::set<CommandRegistry::Symbol, long, std::allocator<CommandRegistry::Symbol>> &)const; // _ZNK15CommandRegistry14buildFollowSetERNS_10ParseTableENS_6SymbolEjRSt3setIS2_St4lessIS2_ESaIS2_EE
     void first(CommandRegistry::ParseTable &, std::vector<CommandRegistry::Symbol> const&)const; // _ZNK15CommandRegistry5firstERNS_10ParseTableERKSt6vectorINS_6SymbolESaIS3_EE
     void forEachTerminal(std::function<void (CommandRegistry::Symbol)>)const; // _ZNK15CommandRegistry15forEachTerminalESt8functionIFvNS_6SymbolEEE
     void forEachNonTerminal(std::function<void (CommandRegistry::Symbol)>)const; // _ZNK15CommandRegistry18forEachNonTerminalESt8functionIFvNS_6SymbolEEE
     void buildParseTable(unsigned int)const; // _ZNK15CommandRegistry15buildParseTableEj
-//  void addEnumValuesInternal(std::string const&, std::vector<std::pair<std::string, unsigned long>> const&, typeid_t<CommandRegistry>, bool (mmandRegistry:: *), (void *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string &, std::vector<std::string> &); //TODO: incomplete function definition // _ZN15CommandRegistry21addEnumValuesInternalERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorISt4pairIS5_mESaISA_EE8typeid_tIS_EMS_KFbPvRKNS_10ParseTokenERK13CommandOriginiRS5_RS8_IS5_SaIS5_EEE
+//    void addEnumValuesInternal(std::string const&, std::vector<std::pair<std::string, unsigned long>> const&, long, bool (long *), long *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string &, std::vector<std::string> &); //TODO: incomplete function definition // _ZN15CommandRegistry21addEnumValuesInternalERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorISt4pairIS5_mESaISA_EE8typeid_tIS_EMS_KFbPvRKNS_10ParseTokenERK13CommandOriginiRS5_RS8_IS5_SaIS5_EEE
     void addEnumValuesToExisting(unsigned int, std::vector<std::pair<unsigned long, unsigned long>> const&); // _ZN15CommandRegistry23addEnumValuesToExistingEjRKSt6vectorISt4pairImmESaIS2_EE
-//  void _addEnumValueConstraintsInternal(std::vector<std::pair<unsigned long, unsigned int>> const&, SemanticConstraint); //TODO: incomplete function definition // _ZN15CommandRegistry32_addEnumValueConstraintsInternalERKSt6vectorISt4pairImjESaIS2_EE18SemanticConstraint
-//  void _addEnumValueConstraintsToExisting(unsigned int, SemanticConstraint); //TODO: incomplete function definition // _ZN15CommandRegistry34_addEnumValueConstraintsToExistingEj18SemanticConstraint
+//    void _addEnumValueConstraintsInternal(std::vector<std::pair<unsigned long, unsigned int>> const&, long); //TODO: incomplete function definition // _ZN15CommandRegistry32_addEnumValueConstraintsInternalERKSt6vectorISt4pairImjESaIS2_EE18SemanticConstraint
+//    void _addEnumValueConstraintsToExisting(unsigned int, long); //TODO: incomplete function definition // _ZN15CommandRegistry34_addEnumValueConstraintsToExistingEj18SemanticConstraint
     void addSoftEnumValues(std::string const&, std::vector<std::string>); // _ZN15CommandRegistry17addSoftEnumValuesERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS5_SaIS5_EE
     void setSoftEnumValues(std::string const&, std::vector<std::string>); // _ZN15CommandRegistry17setSoftEnumValuesERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS5_SaIS5_EE
     void _broadcast(Packet const&)const; // _ZNK15CommandRegistry10_broadcastERK6Packet
@@ -120,16 +120,16 @@ public:
     void getCommandOverloadSyntaxInformation(CommandOrigin const&, std::string const&)const; // _ZNK15CommandRegistry35getCommandOverloadSyntaxInformationERK13CommandOriginRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void originCanRun(CommandOrigin const&, CommandRegistry::Overload const&)const; // _ZNK15CommandRegistry12originCanRunERK13CommandOriginRKNS_8OverloadE
     void getAliases(std::string const&)const; // _ZNK15CommandRegistry10getAliasesERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  bool canCommandBeUsed(std::string const&, CommandPermissionLevel const&, bool)const; //TODO: incomplete function definition // _ZNK15CommandRegistry16canCommandBeUsedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK22CommandPermissionLevelb
-//  void checkOriginCommandFlags(CommandOrigin const&, CommandFlag, CommandPermissionLevel)const; //TODO: incomplete function definition // _ZNK15CommandRegistry23checkOriginCommandFlagsERK13CommandOrigin11CommandFlag22CommandPermissionLevel
-//  void _matchesEnumConstraintsExcept(CommandRegistry::Symbol const&, CommandOrigin const&, CommandRegistry::Symbol const&, SemanticConstraint)const; //TODO: incomplete function definition // _ZNK15CommandRegistry29_matchesEnumConstraintsExceptERKNS_6SymbolERK13CommandOriginS2_18SemanticConstraint
+//    bool canCommandBeUsed(std::string const&, long const&, bool)const; //TODO: incomplete function definition // _ZNK15CommandRegistry16canCommandBeUsedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK22CommandPermissionLevelb
+//    void checkOriginCommandFlags(CommandOrigin const&, CommandFlag, long)const; //TODO: incomplete function definition // _ZNK15CommandRegistry23checkOriginCommandFlagsERK13CommandOrigin11CommandFlag22CommandPermissionLevel
+//    void _matchesEnumConstraintsExcept(CommandRegistry::Symbol const&, CommandOrigin const&, CommandRegistry::Symbol const&, long)const; //TODO: incomplete function definition // _ZNK15CommandRegistry29_matchesEnumConstraintsExceptERKNS_6SymbolERK13CommandOriginS2_18SemanticConstraint
     void originCanRunOverloadWithParam(CommandOrigin const&, CommandParameterData const&)const; // _ZNK15CommandRegistry29originCanRunOverloadWithParamERK13CommandOriginRK20CommandParameterData
     void _getConstrainedParamEnumSymbol(CommandParameterData const&)const; // _ZNK15CommandRegistry30_getConstrainedParamEnumSymbolERK20CommandParameterData
     void _getConstrainedParamEnumSymbol(CommandRegistry::Symbol)const; // _ZNK15CommandRegistry30_getConstrainedParamEnumSymbolENS_6SymbolE
     void _isParamFullyParsed(CommandRegistry::ParseToken const*)const; // _ZNK15CommandRegistry19_isParamFullyParsedEPKNS_10ParseTokenE
     void _findValueConstraints(CommandRegistry::Symbol const&, CommandRegistry::Symbol const&)const; // _ZNK15CommandRegistry21_findValueConstraintsERKNS_6SymbolES2_
     void _matchesEnumConstraints(CommandParameterData const&, CommandOrigin const&, CommandRegistry::ParseToken const&)const; // _ZNK15CommandRegistry23_matchesEnumConstraintsERK20CommandParameterDataRK13CommandOriginRKNS_10ParseTokenE
-//  void _matchesEnumConstraintsSet(CommandRegistry::Symbol const&, CommandOrigin const&, CommandRegistry::Symbol const&, SemanticConstraint)const; //TODO: incomplete function definition // _ZNK15CommandRegistry26_matchesEnumConstraintsSetERKNS_6SymbolERK13CommandOriginS2_18SemanticConstraint
+//    void _matchesEnumConstraintsSet(CommandRegistry::Symbol const&, CommandOrigin const&, CommandRegistry::Symbol const&, long)const; //TODO: incomplete function definition // _ZNK15CommandRegistry26_matchesEnumConstraintsSetERKNS_6SymbolERK13CommandOriginS2_18SemanticConstraint
     void getOverloadSyntaxInformation(CommandOrigin const&, std::string const&, unsigned int)const; // _ZNK15CommandRegistry28getOverloadSyntaxInformationERK13CommandOriginRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj
     std::string symbolToString(CommandRegistry::Symbol)const; // _ZNK15CommandRegistry14symbolToStringB5cxx11ENS_6SymbolE
     bool hasCommands()const; // _ZNK15CommandRegistry11hasCommandsEv
@@ -151,7 +151,7 @@ public:
     class Enum {
 
     public:
-//      Enum(std::string const&, typeid_t<CommandRegistry>, bool (mmandRegistry:: *), (void *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string &, std::vector<std::string> &); //TODO: incomplete function definition // _ZN15CommandRegistry4EnumC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE8typeid_tIS_EMS_KFbPvRKNS_10ParseTokenERK13CommandOriginiRS6_RSt6vectorIS6_SaIS6_EEE
+//        Enum(std::string const&, long, bool (long *), long *, CommandRegistry::ParseToken const&, CommandOrigin const&, int, std::string &, std::vector<std::string> &); //TODO: incomplete function definition // _ZN15CommandRegistry4EnumC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE8typeid_tIS_EMS_KFbPvRKNS_10ParseTokenERK13CommandOriginiRS6_RSt6vectorIS6_SaIS6_EEE
         Enum(CommandRegistry::Enum &&); // _ZN15CommandRegistry4EnumC2EOS0_
         ~Enum(); // _ZN15CommandRegistry4EnumD2Ev
     };
@@ -179,7 +179,7 @@ public:
     public:
         Overload(CommandRegistry::Overload &&); // _ZN15CommandRegistry8OverloadC2EOS0_
         ~Overload(); // _ZN15CommandRegistry8OverloadD2Ev
-//      Overload(CommandVersion, std::unique_ptr<Command> ((void), ); //TODO: incomplete function definition // _ZN15CommandRegistry8OverloadC2E14CommandVersionPFSt10unique_ptrI7CommandSt14default_deleteIS3_EEvE
+//        Overload(CommandVersion, std::unique_ptr<Command> (long), long); //TODO: incomplete function definition // _ZN15CommandRegistry8OverloadC2E14CommandVersionPFSt10unique_ptrI7CommandSt14default_deleteIS3_EEvE
     };
     class ParamSymbols {
 
@@ -235,7 +235,7 @@ public:
     class Signature {
 
     public:
-//      Signature(std::string const&, char const*, CommandPermissionLevel, CommandRegistry::Symbol, CommandFlag); //TODO: incomplete function definition // _ZN15CommandRegistry9SignatureC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKc22CommandPermissionLevelNS_6SymbolE11CommandFlag
+//        Signature(std::string const&, char const*, long, CommandRegistry::Symbol, CommandFlag); //TODO: incomplete function definition // _ZN15CommandRegistry9SignatureC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKc22CommandPermissionLevelNS_6SymbolE11CommandFlag
         ~Signature(); // _ZN15CommandRegistry9SignatureD2Ev
         Signature(CommandRegistry::Signature &&); // _ZN15CommandRegistry9SignatureC2EOS0_
     };
@@ -251,8 +251,8 @@ public:
     public:
         Symbol(); // _ZN15CommandRegistry6SymbolC2Ev
         Symbol(unsigned long); // _ZN15CommandRegistry6SymbolC2Em
-//      Symbol(CommandLexer::TokenType); //TODO: incomplete function definition // _ZN15CommandRegistry6SymbolC2EN12CommandLexer9TokenTypeE
-//      Symbol(CommandRegistry::HardNonTerminal); //TODO: incomplete function definition // _ZN15CommandRegistry6SymbolC2ENS_15HardNonTerminalE
+//        Symbol(long); //TODO: incomplete function definition // _ZN15CommandRegistry6SymbolC2EN12CommandLexer9TokenTypeE
+//        Symbol(long); //TODO: incomplete function definition // _ZN15CommandRegistry6SymbolC2ENS_15HardNonTerminalE
         Symbol(CommandRegistry::Symbol const&); // _ZN15CommandRegistry6SymbolC2ERKS0_
         void operator==(CommandRegistry::Symbol const&)const; // _ZNK15CommandRegistry6SymboleqERKS0_
         void operator!=(CommandRegistry::Symbol const&)const; // _ZNK15CommandRegistry6SymbolneERKS0_

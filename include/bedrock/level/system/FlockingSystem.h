@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class FlockingSystem : ITickingSystem {
+class FlockingSystem : public ITickingSystem {
 
 public:
-    ~FlockingSystem(); // _ZN14FlockingSystemD2Ev
+    virtual ~FlockingSystem(); // _ZN14FlockingSystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN14FlockingSystem4tickER14EntityRegistry
     FlockingSystem(); // _ZN14FlockingSystemC2Ev
 };

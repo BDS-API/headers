@@ -7,7 +7,8 @@ namespace Json {
     class Writer {
 
     public:
-        ~Writer(); // _ZN4Json6WriterD2Ev
+        virtual ~Writer(); // _ZN4Json6WriterD2Ev
+        virtual void __fake_function0(); // fake
         Writer(); // _ZN4Json6WriterC2Ev
     };
 }

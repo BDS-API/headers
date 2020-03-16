@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class PrismarineBlock : BlockLegacy {
+class PrismarineBlock : public BlockLegacy {
 
 public:
-    ~PrismarineBlock(); // _ZN15PrismarineBlockD2Ev
+    virtual ~PrismarineBlock(); // _ZN15PrismarineBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK15PrismarineBlock15getResourceItemER6RandomRK5Blocki
     virtual void getMapColor(BlockSource &, BlockPos const&)const; // _ZNK15PrismarineBlock11getMapColorER11BlockSourceRK8BlockPos
     virtual std::string buildDescriptionId(Block const&)const; // _ZNK15PrismarineBlock18buildDescriptionIdB5cxx11ERK5Block

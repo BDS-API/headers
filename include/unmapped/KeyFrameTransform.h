@@ -23,7 +23,7 @@ public:
     void setPost(ExpressionNode const&, Vec3 const&); // _ZN17KeyFrameTransform7setPostERK14ExpressionNodeRK4Vec3
     void computeCubicPolynomial(KeyFrameTransform *, KeyFrameTransform &, KeyFrameTransform &, KeyFrameTransform *); // _ZN17KeyFrameTransform22computeCubicPolynomialEPS_RS_S1_S0_
     void toJson(Json::Value &)const; // _ZNK17KeyFrameTransform6toJsonERN4Json5ValueE
-//  void animate(RenderParams &, BoneOrientation &, float, BoneTransformType)const; //TODO: incomplete function definition // _ZNK17KeyFrameTransform7animateER12RenderParamsR15BoneOrientationf17BoneTransformType
+//    void animate(RenderParams &, BoneOrientation &, float, long)const; //TODO: incomplete function definition // _ZNK17KeyFrameTransform7animateER12RenderParamsR15BoneOrientationf17BoneTransformType
     void getTime()const; // _ZNK17KeyFrameTransform7getTimeEv
     void getLerpMode(); // _ZN17KeyFrameTransform11getLerpModeEv
     void getLerpMode()const; // _ZNK17KeyFrameTransform11getLerpModeEv

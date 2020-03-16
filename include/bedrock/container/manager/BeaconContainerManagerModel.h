@@ -4,17 +4,18 @@
 #include "LevelContainerManagerModel.h"
 
 
-class BeaconContainerManagerModel : LevelContainerManagerModel {
+class BeaconContainerManagerModel : public LevelContainerManagerModel {
 
 public:
     static long PAYMENT_SLOT;
 
-    ~BeaconContainerManagerModel(); // _ZN27BeaconContainerManagerModelD2Ev
+    virtual ~BeaconContainerManagerModel(); // _ZN27BeaconContainerManagerModelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getItems(); // _ZN27BeaconContainerManagerModel8getItemsEv
     virtual void setSlot(int, ContainerItemStack const&, bool); // _ZN27BeaconContainerManagerModel7setSlotEiRK18ContainerItemStackb
     virtual void getSlot(int); // _ZN27BeaconContainerManagerModel7getSlotEi
     virtual void init(); // _ZN27BeaconContainerManagerModel4initEv
-//  BeaconContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN27BeaconContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
+//    BeaconContainerManagerModel(long, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN27BeaconContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
     void _getBeaconBlockEntity(); // _ZN27BeaconContainerManagerModel21_getBeaconBlockEntityEv
     void _resetSelectionState(); // _ZN27BeaconContainerManagerModel20_resetSelectionStateEv
     bool isPaymentAvailable()const; // _ZNK27BeaconContainerManagerModel18isPaymentAvailableEv

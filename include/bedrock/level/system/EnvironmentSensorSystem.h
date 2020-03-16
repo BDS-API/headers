@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class EnvironmentSensorSystem : ITickingSystem {
+class EnvironmentSensorSystem : public ITickingSystem {
 
 public:
-    ~EnvironmentSensorSystem(); // _ZN23EnvironmentSensorSystemD2Ev
+    virtual ~EnvironmentSensorSystem(); // _ZN23EnvironmentSensorSystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN23EnvironmentSensorSystem4tickER14EntityRegistry
     EnvironmentSensorSystem(); // _ZN23EnvironmentSensorSystemC2Ev
 };

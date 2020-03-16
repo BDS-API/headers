@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../util/Tick.h"
 #include <functional>
+#include "../../util/Tick.h"
 
 
 class BlockTickingQueue {
@@ -11,9 +11,9 @@ public:
     class HashBlockTick;
     class TickDataSet;
 
-//  BlockTickingQueue(TickingQueueType); //TODO: incomplete function definition // _ZN17BlockTickingQueueC2E16TickingQueueType
+//    BlockTickingQueue(long); //TODO: incomplete function definition // _ZN17BlockTickingQueueC2E16TickingQueueType
     ~BlockTickingQueue(); // _ZN17BlockTickingQueueD2Ev
-//  BlockTickingQueue(Tick, TickingQueueType); //TODO: incomplete function definition // _ZN17BlockTickingQueueC2E4Tick16TickingQueueType
+//    BlockTickingQueue(Tick, long); //TODO: incomplete function definition // _ZN17BlockTickingQueueC2E4Tick16TickingQueueType
     void setOwningChunk(LevelChunk *); // _ZN17BlockTickingQueue14setOwningChunkEP10LevelChunk
     void add(BlockSource &, BlockPos const&, Block const&, int, int); // _ZN17BlockTickingQueue3addER11BlockSourceRK8BlockPosRK5Blockii
     void _onQueueChanged()const; // _ZNK17BlockTickingQueue15_onQueueChangedEv
@@ -32,7 +32,7 @@ public:
     bool ticksFromNow(int)const; // _ZNK17BlockTickingQueue12ticksFromNowEi
     void getNextUpdateForPos(BlockPos const&, Tick &)const; // _ZNK17BlockTickingQueue19getNextUpdateForPosERK8BlockPosR4Tick
     void eliminateDuplicatesOf(BlockLegacy const&); // _ZN17BlockTickingQueue21eliminateDuplicatesOfERK11BlockLegacy
-//  BlockTickingQueue(LevelChunk &, TickingQueueType); //TODO: incomplete function definition // _ZN17BlockTickingQueueC2ER10LevelChunk16TickingQueueType
+//    BlockTickingQueue(LevelChunk &, long); //TODO: incomplete function definition // _ZN17BlockTickingQueueC2ER10LevelChunk16TickingQueueType
     class BlockTick {
 
     public:

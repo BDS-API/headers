@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 
 
 class CommandMessage {
@@ -16,7 +16,7 @@ public:
 
     public:
         MessageComponent(std::string &&); // _ZN14CommandMessage16MessageComponentC2EONSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-        MessageComponent(std::unique_ptr<CommandSelector<Actor>> &&); // _ZN14CommandMessage16MessageComponentC2EOSt10unique_ptrI15CommandSelectorI5ActorESt14default_deleteIS4_EE
+        MessageComponent(std::unique_ptr<long> &&); // _ZN14CommandMessage16MessageComponentC2EOSt10unique_ptrI15CommandSelectorI5ActorESt14default_deleteIS4_EE
         MessageComponent(CommandMessage::MessageComponent &&); // _ZN14CommandMessage16MessageComponentC2EOS0_
         ~MessageComponent(); // _ZN14CommandMessage16MessageComponentD2Ev
     };

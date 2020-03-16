@@ -1,22 +1,23 @@
 #pragma once
 
 #include <string>
-#include "ChunkSource.h"
 #include "../generator/WorldGenerator.h"
+#include "ChunkSource.h"
 
 
-class NetherGenerator : ChunkSource, WorldGenerator {
+class NetherGenerator : public ChunkSource, public WorldGenerator {
 
 public:
     class ThreadData;
 
-    ~NetherGenerator(); // _ZN15NetherGeneratorD2Ev
+    virtual ~NetherGenerator(); // _ZN15NetherGeneratorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcess(ChunkViewSource &); // _ZN15NetherGenerator11postProcessER15ChunkViewSource
     virtual void loadChunk(LevelChunk &, bool); // _ZN15NetherGenerator9loadChunkER10LevelChunkb
     virtual void getFeatureTypeAt(BlockPos const&); // _ZN15NetherGenerator16getFeatureTypeAtERK8BlockPos
     virtual void prepareHeights(BlockVolume &, ChunkPos const&, bool); // _ZN15NetherGenerator14prepareHeightsER11BlockVolumeRK8ChunkPosb
-//  virtual void findNearestFeature(StructureFeatureType, BlockPos const&, BlockPos &); //TODO: incomplete function definition // _ZN15NetherGenerator18findNearestFeatureE20StructureFeatureTypeRK8BlockPosRS1_
-//  virtual void garbageCollectBlueprints(buffer_span<ChunkPos>); //TODO: incomplete function definition // _ZN15NetherGenerator24garbageCollectBlueprintsE11buffer_spanI8ChunkPosE
+    virtual void findNearestFeature__incomplete0(long, BlockPos const&, BlockPos &); //TODO: incomplete function definition // _ZN15NetherGenerator18findNearestFeatureE20StructureFeatureTypeRK8BlockPosRS1_
+    virtual void garbageCollectBlueprints__incomplete0(long); //TODO: incomplete function definition // _ZN15NetherGenerator24garbageCollectBlueprintsE11buffer_spanI8ChunkPosE
     virtual void addHardcodedSpawnAreas(LevelChunk &); // _ZN15NetherGenerator22addHardcodedSpawnAreasER10LevelChunk
     virtual void getBiomeArea(BoundingBox const&, unsigned int)const; // _ZNK15NetherGenerator12getBiomeAreaERK11BoundingBoxj
     virtual void findSpawnPosition()const; // _ZNK15NetherGenerator17findSpawnPositionEv

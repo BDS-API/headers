@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "BaseMoveToBlockGoal.h"
+#include <string>
 
 
-class OcelotSitOnBlockGoal : BaseMoveToBlockGoal {
+class OcelotSitOnBlockGoal : public BaseMoveToBlockGoal {
 
 public:
-    ~OcelotSitOnBlockGoal(); // _ZN20OcelotSitOnBlockGoalD2Ev
+    virtual ~OcelotSitOnBlockGoal(); // _ZN20OcelotSitOnBlockGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN20OcelotSitOnBlockGoal6canUseEv
     virtual void start(); // _ZN20OcelotSitOnBlockGoal5startEv
     virtual void stop(); // _ZN20OcelotSitOnBlockGoal4stopEv

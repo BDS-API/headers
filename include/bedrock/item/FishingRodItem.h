@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class FishingRodItem : Item {
+class FishingRodItem : public Item {
 
 public:
-    ~FishingRodItem(); // _ZN14FishingRodItemD2Ev
+    virtual ~FishingRodItem(); // _ZN14FishingRodItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isHandEquipped()const; // _ZNK14FishingRodItem14isHandEquippedEv
     virtual bool requiresInteract()const; // _ZNK14FishingRodItem16requiresInteractEv
     virtual void getEnchantSlot()const; // _ZNK14FishingRodItem14getEnchantSlotEv

@@ -6,7 +6,7 @@
 class ObjectiveCriteria {
 
 public:
-//  ObjectiveCriteria(std::string const&, bool, ObjectiveRenderType); //TODO: incomplete function definition // _ZN17ObjectiveCriteriaC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb19ObjectiveRenderType
+//    ObjectiveCriteria(std::string const&, bool, long); //TODO: incomplete function definition // _ZN17ObjectiveCriteriaC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb19ObjectiveRenderType
     std::string getName()const; // _ZNK17ObjectiveCriteria7getNameB5cxx11Ev
     bool isReadOnly()const; // _ZNK17ObjectiveCriteria10isReadOnlyEv
     void getRenderType()const; // _ZNK17ObjectiveCriteria13getRenderTypeEv

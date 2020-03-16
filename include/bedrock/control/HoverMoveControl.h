@@ -3,10 +3,11 @@
 #include "MoveControl.h"
 
 
-class HoverMoveControl : MoveControl {
+class HoverMoveControl : public MoveControl {
 
 public:
-    ~HoverMoveControl(); // _ZN16HoverMoveControlD2Ev
+    virtual ~HoverMoveControl(); // _ZN16HoverMoveControlD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(MoveControlComponent &, Mob &); // _ZN16HoverMoveControl4tickER20MoveControlComponentR3Mob
     HoverMoveControl(); // _ZN16HoverMoveControlC2Ev
 };

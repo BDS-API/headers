@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "../util/BlockPos.h"
 #include "Item.h"
 
 
-class SkullItem : Item {
+class SkullItem : public Item {
 
 public:
-    ~SkullItem(); // _ZN9SkullItemD2Ev
+    virtual ~SkullItem(); // _ZN9SkullItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getBlockShape()const; // _ZNK9SkullItem13getBlockShapeEv
     virtual void getLevelDataForAuxValue(int)const; // _ZNK9SkullItem23getLevelDataForAuxValueEi
     virtual bool isValidAuxValue(int)const; // _ZNK9SkullItem15isValidAuxValueEi

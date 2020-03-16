@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 
 
 class WorldTemplateInfo {
@@ -17,7 +17,7 @@ public:
     void getPackManifest()const; // _ZNK17WorldTemplateInfo15getPackManifestEv
     bool isPremium()const; // _ZNK17WorldTemplateInfo9isPremiumEv
     bool isVirtualCatalogItem()const; // _ZNK17WorldTemplateInfo20isVirtualCatalogItemEv
-//  bool isPremiumLocked(IEntitlementManager &)const; //TODO: incomplete function definition // _ZNK17WorldTemplateInfo15isPremiumLockedER19IEntitlementManager
+//    bool isPremiumLocked(long &)const; //TODO: incomplete function definition // _ZNK17WorldTemplateInfo15isPremiumLockedER19IEntitlementManager
     std::string getGameType()const; // _ZNK17WorldTemplateInfo11getGameTypeB5cxx11Ev
     std::string getWorldIconPath()const; // _ZNK17WorldTemplateInfo16getWorldIconPathB5cxx11Ev
     void getWorldSize()const; // _ZNK17WorldTemplateInfo12getWorldSizeEv

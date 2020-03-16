@@ -1,17 +1,18 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "ShapelessRecipe.h"
 #include <vector>
 
 
-class ShulkerBoxRecipe : ShapelessRecipe {
+class ShulkerBoxRecipe : public ShapelessRecipe {
 
 public:
     static long ID;
 
-    ~ShulkerBoxRecipe(); // _ZN16ShulkerBoxRecipeD2Ev
+    virtual ~ShulkerBoxRecipe(); // _ZN16ShulkerBoxRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void assemble(CraftingContainer &)const; // _ZNK16ShulkerBoxRecipe8assembleER17CraftingContainer
     virtual bool itemsMatch(ItemDescriptor const&, ItemDescriptor const&)const; // _ZNK16ShulkerBoxRecipe10itemsMatchERK14ItemDescriptorS2_
     virtual bool itemsMatch(ItemDescriptor const&, int, int, CompoundTag const*)const; // _ZNK16ShulkerBoxRecipe10itemsMatchERK14ItemDescriptoriiPK11CompoundTag

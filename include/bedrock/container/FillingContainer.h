@@ -4,10 +4,11 @@
 #include <vector>
 
 
-class FillingContainer : Container {
+class FillingContainer : public Container {
 
 public:
-    ~FillingContainer(); // _ZN16FillingContainerD2Ev
+    virtual ~FillingContainer(); // _ZN16FillingContainerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getItem(int)const; // _ZNK16FillingContainer7getItemEi
     virtual void setItem(int, ItemStack const&); // _ZN16FillingContainer7setItemEiRK9ItemStack
     virtual void removeItem(int, int); // _ZN16FillingContainer10removeItemEii
@@ -24,7 +25,7 @@ public:
     virtual void load(ListTag const&, SemVersion const&, Level &); // _ZN16FillingContainer4loadERK7ListTagRK10SemVersionR5Level
     virtual void doDrop(ItemStack &, bool); // _ZN16FillingContainer6doDropER9ItemStackb
     virtual void getEmptySlotsCount()const; // _ZNK16FillingContainer18getEmptySlotsCountEv
-//  FillingContainer(Player *, int, ContainerType); //TODO: incomplete function definition // _ZN16FillingContainerC2EP6Playeri13ContainerType
+//    FillingContainer(Player *, int, long); //TODO: incomplete function definition // _ZN16FillingContainerC2EP6Playeri13ContainerType
     void _isCreative()const; // _ZNK16FillingContainer11_isCreativeEv
     void _getEmptySlotsCount(int, int)const; // _ZNK16FillingContainer19_getEmptySlotsCountEii
     void _trySetInSlot(ItemStack &, int const&, int const&, int &); // _ZN16FillingContainer13_trySetInSlotER9ItemStackRKiS3_Ri

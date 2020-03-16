@@ -6,9 +6,9 @@
 class OwnerStorageFeature {
 
 public:
-//  OwnerStorageFeature(OwnerStorageFeature::EmptyInit); //TODO: incomplete function definition // _ZN19OwnerStorageFeatureC2ENS_9EmptyInitE
-//  OwnerStorageFeature(OwnerStorageFeature::VariadicInit, FeatureRegistry &); //TODO: incomplete function definition // _ZN19OwnerStorageFeatureC2ENS_12VariadicInitER15FeatureRegistry
-//  OwnerStorageFeature(OwnerStorageFeature::VariadicInit, FeatureRegistry &, std::unique_ptr<IFeature>); //TODO: incomplete function definition // _ZN19OwnerStorageFeatureC2ENS_12VariadicInitER15FeatureRegistrySt10unique_ptrI8IFeatureSt14default_deleteIS4_EE
+//    OwnerStorageFeature(long); //TODO: incomplete function definition // _ZN19OwnerStorageFeatureC2ENS_9EmptyInitE
+//    OwnerStorageFeature(long, FeatureRegistry &); //TODO: incomplete function definition // _ZN19OwnerStorageFeatureC2ENS_12VariadicInitER15FeatureRegistry
+//    OwnerStorageFeature(long, FeatureRegistry &, std::unique_ptr<IFeature>); //TODO: incomplete function definition // _ZN19OwnerStorageFeatureC2ENS_12VariadicInitER15FeatureRegistrySt10unique_ptrI8IFeatureSt14default_deleteIS4_EE
     OwnerStorageFeature(OwnerStorageFeature &&); // _ZN19OwnerStorageFeatureC2EOS_
     void _reset(); // _ZN19OwnerStorageFeature6_resetEv
     ~OwnerStorageFeature(); // _ZN19OwnerStorageFeatureD2Ev

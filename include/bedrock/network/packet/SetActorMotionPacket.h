@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class SetActorMotionPacket : Packet {
+class SetActorMotionPacket : public Packet {
 
 public:
-    ~SetActorMotionPacket(); // _ZN20SetActorMotionPacketD2Ev
+    virtual ~SetActorMotionPacket(); // _ZN20SetActorMotionPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK20SetActorMotionPacket5getIdEv
     virtual std::string getName()const; // _ZNK20SetActorMotionPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK20SetActorMotionPacket5writeER12BinaryStream

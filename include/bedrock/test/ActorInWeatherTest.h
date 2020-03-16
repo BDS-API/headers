@@ -3,10 +3,11 @@
 #include "FilterTest.h"
 
 
-class ActorInWeatherTest : FilterTest {
+class ActorInWeatherTest : public FilterTest {
 
 public:
-    ~ActorInWeatherTest(); // _ZN18ActorInWeatherTestD2Ev
+    virtual ~ActorInWeatherTest(); // _ZN18ActorInWeatherTestD2Ev
+    virtual void __fake_function0(); // fake
     virtual void setup(FilterTest::Definition const&, FilterInputs const&); // _ZN18ActorInWeatherTest5setupERKN10FilterTest10DefinitionERK12FilterInputs
     virtual void evaluate(FilterContext const&)const; // _ZNK18ActorInWeatherTest8evaluateERK13FilterContext
     virtual void getName()const; // _ZNK18ActorInWeatherTest7getNameEv

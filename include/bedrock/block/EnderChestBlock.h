@@ -1,13 +1,14 @@
 #pragma once
 
-#include "ChestBlock.h"
 #include <string>
+#include "ChestBlock.h"
 
 
-class EnderChestBlock : ChestBlock {
+class EnderChestBlock : public ChestBlock {
 
 public:
-    ~EnderChestBlock(); // _ZN15EnderChestBlockD2Ev
+    virtual ~EnderChestBlock(); // _ZN15EnderChestBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK15EnderChestBlock16getResourceCountER6RandomRK5Blocki
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK15EnderChestBlock15getResourceItemER6RandomRK5Blocki
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const; // _ZNK15EnderChestBlock11animateTickER11BlockSourceRK8BlockPosR6Random

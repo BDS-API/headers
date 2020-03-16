@@ -3,10 +3,11 @@
 #include "../Command.h"
 
 
-class EffectCommand : Command {
+class EffectCommand : public Command {
 
 public:
-    ~EffectCommand(); // _ZN13EffectCommandD2Ev
+    virtual ~EffectCommand(); // _ZN13EffectCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK13EffectCommand7executeERK13CommandOriginR13CommandOutput
     void setup(CommandRegistry &); // _ZN13EffectCommand5setupER15CommandRegistry
     EffectCommand(); // _ZN13EffectCommandC2Ev

@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class StructureBlock : ActorBlock {
+class StructureBlock : public ActorBlock {
 
 public:
-    ~StructureBlock(); // _ZN14StructureBlockD2Ev
+    virtual ~StructureBlock(); // _ZN14StructureBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isInteractiveBlock()const; // _ZNK14StructureBlock18isInteractiveBlockEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK14StructureBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK14StructureBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib

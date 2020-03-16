@@ -1,10 +1,10 @@
 #pragma once
 
 #include "../util/Brightness.h"
-#include <vector>
-#include <memory>
-#include "../util/ChunkPos.h"
 #include <string>
+#include <memory>
+#include <vector>
+#include "../util/ChunkPos.h"
 
 
 class LevelChunk {
@@ -22,8 +22,8 @@ public:
     void createNew(Dimension &, ChunkPos, bool); // _ZN10LevelChunk9createNewER9Dimension8ChunkPosb
     void createNewNoCustomDeleter(Dimension &, ChunkPos, bool); // _ZN10LevelChunk24createNewNoCustomDeleterER9Dimension8ChunkPosb
     LevelChunk(Dimension &, ChunkPos const&, bool); // _ZN10LevelChunkC2ER9DimensionRK8ChunkPosb
-//  void _reassignSubChunks(buffer_span_mut<SubChunk>); //TODO: incomplete function definition // _ZN10LevelChunk18_reassignSubChunksE15buffer_span_mutI8SubChunkE
-//  void _createSubChunk(unsigned long, bool, SubChunkInitMode); //TODO: incomplete function definition // _ZN10LevelChunk15_createSubChunkEmb16SubChunkInitMode
+//    void _reassignSubChunks(long); //TODO: incomplete function definition // _ZN10LevelChunk18_reassignSubChunksE15buffer_span_mutI8SubChunkE
+//    void _createSubChunk(unsigned long, bool, long); //TODO: incomplete function definition // _ZN10LevelChunk15_createSubChunkEmb16SubChunkInitMode
     void _assertBlockEntityAccess()const; // _ZNK10LevelChunk24_assertBlockEntityAccessEv
     ~LevelChunk(); // _ZN10LevelChunkD2Ev
     void _placeBlockEntity(std::shared_ptr<BlockActor>); // _ZN10LevelChunk17_placeBlockEntityESt10shared_ptrI10BlockActorE
@@ -46,10 +46,10 @@ public:
     void borderBlocksAreEnabled(); // _ZN10LevelChunk22borderBlocksAreEnabledEv
     void getBorder(ChunkBlockPos const&)const; // _ZNK10LevelChunk9getBorderERK13ChunkBlockPos
     void setBorder(ChunkBlockPos const&, bool); // _ZN10LevelChunk9setBorderERK13ChunkBlockPosb
-//  void addHardcodedSpawningArea(BoundingBox const&, HardcodedSpawnAreaType); //TODO: incomplete function definition // _ZN10LevelChunk24addHardcodedSpawningAreaERK11BoundingBox22HardcodedSpawnAreaType
+//    void addHardcodedSpawningArea(BoundingBox const&, long); //TODO: incomplete function definition // _ZN10LevelChunk24addHardcodedSpawningAreaERK11BoundingBox22HardcodedSpawnAreaType
     void getMin()const; // _ZNK10LevelChunk6getMinEv
     void getMax()const; // _ZNK10LevelChunk6getMaxEv
-//  void removeHardcodedSpawningArea(HardcodedSpawnAreaType); //TODO: incomplete function definition // _ZN10LevelChunk27removeHardcodedSpawningAreaE22HardcodedSpawnAreaType
+//    void removeHardcodedSpawningArea(long); //TODO: incomplete function definition // _ZN10LevelChunk27removeHardcodedSpawningAreaE22HardcodedSpawnAreaType
     void findHardcodedSpawnAt(BlockPos const&); // _ZN10LevelChunk20findHardcodedSpawnAtERK8BlockPos
     void getSpawningAreas()const; // _ZNK10LevelChunk16getSpawningAreasEv
     void getPreWorldGenHeightmap(ChunkBlockPos const&)const; // _ZNK10LevelChunk23getPreWorldGenHeightmapERK13ChunkBlockPos
@@ -66,24 +66,24 @@ public:
     void removeEntity(Actor &); // _ZN10LevelChunk12removeEntityER5Actor
     void removeBlockEntity(BlockPos const&); // _ZN10LevelChunk17removeBlockEntityERK8BlockPos
     bool isSkyLit(ChunkBlockPos const&)const; // _ZNK10LevelChunk8isSkyLitERK13ChunkBlockPos
-//  void tryChangeState(ChunkState, ChunkState); //TODO: incomplete function definition // _ZN10LevelChunk14tryChangeStateE10ChunkStateS0_
-//  void changeState(ChunkState, ChunkState); //TODO: incomplete function definition // _ZN10LevelChunk11changeStateE10ChunkStateS0_
-//  void _changeTerrainDataState(ChunkTerrainDataState, ChunkTerrainDataState); //TODO: incomplete function definition // _ZN10LevelChunk23_changeTerrainDataStateE21ChunkTerrainDataStateS0_
+//    void tryChangeState(long, long); //TODO: incomplete function definition // _ZN10LevelChunk14tryChangeStateE10ChunkStateS0_
+//    void changeState(long, long); //TODO: incomplete function definition // _ZN10LevelChunk11changeStateE10ChunkStateS0_
+//    void _changeTerrainDataState(long, long); //TODO: incomplete function definition // _ZN10LevelChunk23_changeTerrainDataStateE21ChunkTerrainDataStateS0_
     void _onTickingQueueChanged(); // _ZN10LevelChunk22_onTickingQueueChangedEv
     void _onRandomTickingQueueChanged(); // _ZN10LevelChunk28_onRandomTickingQueueChangedEv
-//  void createSubchunk(unsigned long, bool, SubChunkInitMode); //TODO: incomplete function definition // _ZN10LevelChunk14createSubchunkEmb16SubChunkInitMode
+//    void createSubchunk(unsigned long, bool, long); //TODO: incomplete function definition // _ZN10LevelChunk14createSubchunkEmb16SubChunkInitMode
     void getConvertedInterpolantBool(unsigned long, unsigned long)const; // _ZNK10LevelChunk27getConvertedInterpolantBoolEmm
     void enableBlockEntityAccessForThisThread()const; // _ZNK10LevelChunk36enableBlockEntityAccessForThisThreadEv
     void getEntities(Actor *, AABB const&, std::vector<Actor *> &)const; // _ZNK10LevelChunk11getEntitiesEP5ActorRK4AABBRSt6vectorIS1_SaIS1_EE
-//  void getEntities(buffer_span<Actor *>, AABB const&, std::vector<Actor *> &)const; //TODO: incomplete function definition // _ZNK10LevelChunk11getEntitiesE11buffer_spanIP5ActorERK4AABBRSt6vectorIS2_SaIS2_EE
-//  void getEntities(ActorType, AABB const&, std::vector<Actor *> &, bool)const; //TODO: incomplete function definition // _ZNK10LevelChunk11getEntitiesE9ActorTypeRK4AABBRSt6vectorIP5ActorSaIS6_EEb
+//    void getEntities(long, AABB const&, std::vector<Actor *> &)const; //TODO: incomplete function definition // _ZNK10LevelChunk11getEntitiesE11buffer_spanIP5ActorERK4AABBRSt6vectorIS2_SaIS2_EE
+//    void getEntities(long, AABB const&, std::vector<Actor *> &, bool)const; //TODO: incomplete function definition // _ZNK10LevelChunk11getEntitiesE9ActorTypeRK4AABBRSt6vectorIP5ActorSaIS6_EEb
     void getEntity(ActorUniqueID const&)const; // _ZNK10LevelChunk9getEntityERK13ActorUniqueID
     void getEntities()const; // _ZNK10LevelChunk11getEntitiesEv
     void getBlockEntities()const; // _ZNK10LevelChunk16getBlockEntitiesEv
     void getBlockEntity(ChunkBlockPos const&); // _ZN10LevelChunk14getBlockEntityERK13ChunkBlockPos
     bool hasBlockEntity(ChunkBlockPos const&); // _ZN10LevelChunk14hasBlockEntityERK13ChunkBlockPos
-//  void setAllBlocks(buffer_span<Block const*>, short); //TODO: incomplete function definition // _ZN10LevelChunk12setAllBlocksE11buffer_spanIPK5BlockEs
-//  void setAllLegacyBlockIDAndData(buffer_span<BlockID>, buffer_span<NibblePair>); //TODO: incomplete function definition // _ZN10LevelChunk26setAllLegacyBlockIDAndDataE11buffer_spanI7BlockIDES0_I10NibblePairE
+//    void setAllBlocks(long, short); //TODO: incomplete function definition // _ZN10LevelChunk12setAllBlocksE11buffer_spanIPK5BlockEs
+//    void setAllLegacyBlockIDAndData(long, long); //TODO: incomplete function definition // _ZN10LevelChunk26setAllLegacyBlockIDAndDataE11buffer_spanI7BlockIDES0_I10NibblePairE
     void tick(BlockSource &, Tick const&); // _ZN10LevelChunk4tickER11BlockSourceRK4Tick
     void _deserializeEntity(BlockSource &, IDataInput &, std::vector<ActorLink> &); // _ZN10LevelChunk18_deserializeEntityER11BlockSourceR10IDataInputRSt6vectorI9ActorLinkSaIS5_EE
     void setUnsaved(); // _ZN10LevelChunk10setUnsavedEv
@@ -119,8 +119,8 @@ public:
     void deserializeConversionData(IDataInput &); // _ZN10LevelChunk25deserializeConversionDataER10IDataInput
     void deserializeLoadedVersion(IDataInput &); // _ZN10LevelChunk24deserializeLoadedVersionER10IDataInput
     void _deserializeVersion(IDataInput &); // _ZN10LevelChunk19_deserializeVersionER10IDataInput
-//  bool isSubChunkKey(gsl::basic_string_span<char const, -1l>)const; //TODO: incomplete function definition // _ZNK10LevelChunk13isSubChunkKeyEN3gsl17basic_string_spanIKcLln1EEE
-//  void deserializeKey(gsl::basic_string_span<char const, -1l>, gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition // _ZN10LevelChunk14deserializeKeyEN3gsl17basic_string_spanIKcLln1EEES3_
+//    bool isSubChunkKey(long)const; //TODO: incomplete function definition // _ZNK10LevelChunk13isSubChunkKeyEN3gsl17basic_string_spanIKcLln1EEE
+//    void deserializeKey(long, long); //TODO: incomplete function definition // _ZN10LevelChunk14deserializeKeyEN3gsl17basic_string_spanIKcLln1EEES3_
     void getAboveTopSolidBlock(ChunkBlockPos const&, bool, bool, bool); // _ZN10LevelChunk21getAboveTopSolidBlockERK13ChunkBlockPosbbb
     bool isAABBOverlappingChunk(BlockPos const&, BlockPos const&)const; // _ZNK10LevelChunk22isAABBOverlappingChunkERK8BlockPosS2_
     bool isAABBFullyInChunk(BlockPos const&, BlockPos const&)const; // _ZNK10LevelChunk18isAABBFullyInChunkERK8BlockPosS2_
@@ -132,7 +132,7 @@ public:
     void setWaterColor(int, ChunkBlockPos const&); // _ZN10LevelChunk13setWaterColorEiRK13ChunkBlockPos
     void getGrassColor(ChunkBlockPos const&); // _ZN10LevelChunk13getGrassColorERK13ChunkBlockPos
     void getWaterColor(ChunkBlockPos const&); // _ZN10LevelChunk13getWaterColorERK13ChunkBlockPos
-//  void setCachedTemperatureNoise(ChunkBlockPos const&, signed const); //TODO: incomplete function definition // _ZN10LevelChunk25setCachedTemperatureNoiseERK13ChunkBlockPosa
+//    void setCachedTemperatureNoise(ChunkBlockPos const&, long const); //TODO: incomplete function definition // _ZN10LevelChunk25setCachedTemperatureNoiseERK13ChunkBlockPosa
     void getCachedTemperatureNoise(ChunkBlockPos const&); // _ZN10LevelChunk25getCachedTemperatureNoiseERK13ChunkBlockPos
     bool wasTickedThisTick(Tick const&)const; // _ZNK10LevelChunk17wasTickedThisTickERK4Tick
     void _generateOriginalLightingSubChunk(BlockSource &, unsigned long, bool); // _ZN10LevelChunk33_generateOriginalLightingSubChunkER11BlockSourcemb
@@ -163,22 +163,22 @@ public:
     void getGenerator()const; // _ZNK10LevelChunk12getGeneratorEv
     void _setGenerator(ChunkSource *); // _ZN10LevelChunk13_setGeneratorEP11ChunkSource
     void getLevel()const; // _ZNK10LevelChunk8getLevelEv
-//  void setFinalized(LevelChunk::Finalization); //TODO: incomplete function definition // _ZN10LevelChunk12setFinalizedENS_12FinalizationE
+//    void setFinalized(long); //TODO: incomplete function definition // _ZN10LevelChunk12setFinalizedENS_12FinalizationE
     bool hasAnyBiomeStates()const; // _ZNK10LevelChunk17hasAnyBiomeStatesEv
     void updateCachedData(BlockSource &); // _ZN10LevelChunk16updateCachedDataER11BlockSource
     void _enableBlockEntityAccessForThisThread()const; // _ZNK10LevelChunk37_enableBlockEntityAccessForThisThreadEv
     void _disableBlockEntityAccessForThisThread()const; // _ZNK10LevelChunk38_disableBlockEntityAccessForThisThreadEv
-//  void _dirtyTicksCounter(LevelChunkDataField); //TODO: incomplete function definition // _ZN10LevelChunk18_dirtyTicksCounterE19LevelChunkDataField
+//    void _dirtyTicksCounter(long); //TODO: incomplete function definition // _ZN10LevelChunk18_dirtyTicksCounterE19LevelChunkDataField
     void getSubChunks(); // _ZN10LevelChunk12getSubChunksEv
     void getMaxSubChunks()const; // _ZNK10LevelChunk15getMaxSubChunksEv
     void getMaxSubChunkCnt(); // _ZN10LevelChunk17getMaxSubChunkCntEv
-//  void fillBiomes(BiomeChunkData const&); //TODO: incomplete function definition // _ZN10LevelChunk10fillBiomesERK14BiomeChunkData
+//    void fillBiomes(long const&); //TODO: incomplete function definition // _ZN10LevelChunk10fillBiomesERK14BiomeChunkData
     std::string getSerializedEntitiesBuffer(); // _ZN10LevelChunk27getSerializedEntitiesBufferB5cxx11Ev
     void _setDBChunkSurroundedByNeighbors(bool); // _ZN10LevelChunk32_setDBChunkSurroundedByNeighborsEb
     void setDebugDisplaySavedState(bool); // _ZN10LevelChunk25setDebugDisplaySavedStateEb
     void _getDBChunkSurroundedByNeighbors()const; // _ZNK10LevelChunk32_getDBChunkSurroundedByNeighborsEv
     void chunkHasConvertedDataTag()const; // _ZNK10LevelChunk24chunkHasConvertedDataTagEv
-//  void getDirtyTicksCounter(LevelChunkDataField)const; //TODO: incomplete function definition // _ZNK10LevelChunk20getDirtyTicksCounterE19LevelChunkDataField
+//    void getDirtyTicksCounter(long)const; //TODO: incomplete function definition // _ZNK10LevelChunk20getDirtyTicksCounterE19LevelChunkDataField
     class HardcodedSpawningArea {
 
     public:

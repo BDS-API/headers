@@ -4,12 +4,13 @@
 #include "MoveToPOIGoal.h"
 
 
-class WorkGoal : MoveToPOIGoal {
+class WorkGoal : public MoveToPOIGoal {
 
 public:
     static long RAIN_CHECK_MAX_COOLDOWN;
 
-    ~WorkGoal(); // _ZN8WorkGoalD2Ev
+    virtual ~WorkGoal(); // _ZN8WorkGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN8WorkGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN8WorkGoal16canContinueToUseEv
     virtual void start(); // _ZN8WorkGoal5startEv

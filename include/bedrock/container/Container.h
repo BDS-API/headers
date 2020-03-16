@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 
 
 class Container {
@@ -9,7 +9,8 @@ class Container {
 public:
     static std::string containerTypeMap;
 
-    ~Container(); // _ZN9ContainerD2Ev
+    virtual ~Container(); // _ZN9ContainerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void init(); // _ZN9Container4initEv
     virtual void addContentChangeListener(ContainerContentChangeListener *); // _ZN9Container24addContentChangeListenerEP30ContainerContentChangeListener
     virtual void removeContentChangeListener(ContainerContentChangeListener *); // _ZN9Container27removeContentChangeListenerEP30ContainerContentChangeListener
@@ -34,13 +35,13 @@ public:
     virtual void addAdditionalSaveData(CompoundTag &); // _ZN9Container21addAdditionalSaveDataER11CompoundTag
     virtual void createTransactionContext(std::function<void (Container &, int, ItemStack const&, ItemStack const&)>, std::function<void (void)>); // _ZN9Container24createTransactionContextESt8functionIFvRS_iRK9ItemStackS4_EES0_IFvvEE
     virtual void triggerTransactionChange(int, ItemStack const&, ItemStack const&); // _ZN9Container24triggerTransactionChangeEiRK9ItemStackS2_
-//  Container(ContainerType); //TODO: incomplete function definition // _ZN9ContainerC2E13ContainerType
-//  Container(ContainerType, std::string const&, bool); //TODO: incomplete function definition // _ZN9ContainerC2E13ContainerTypeRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
+//    Container(long); //TODO: incomplete function definition // _ZN9ContainerC2E13ContainerType
+//    Container(long, std::string const&, bool); //TODO: incomplete function definition // _ZN9ContainerC2E13ContainerTypeRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
     void addSizeChangeListener(ContainerSizeChangeListener *); // _ZN9Container21addSizeChangeListenerEP27ContainerSizeChangeListener
     void removeSizeChangeListener(ContainerSizeChangeListener *); // _ZN9Container24removeSizeChangeListenerEP27ContainerSizeChangeListener
     void getContainerType(); // _ZN9Container16getContainerTypeEv
     void getRedstoneSignalFromContainer(); // _ZN9Container30getRedstoneSignalFromContainerEv
     void setSizeChanged(int); // _ZN9Container14setSizeChangedEi
-//  std::string getContainerTypeName(ContainerType); //TODO: incomplete function definition // _ZN9Container20getContainerTypeNameB5cxx11E13ContainerType
+//    std::string getContainerTypeName(long); //TODO: incomplete function definition // _ZN9Container20getContainerTypeNameB5cxx11E13ContainerType
     void getContainerTypeId(std::string const&); // _ZN9Container18getContainerTypeIdERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 };

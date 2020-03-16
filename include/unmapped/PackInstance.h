@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 
 
 class PackInstance {
@@ -25,13 +25,13 @@ public:
     void getManifest()const; // _ZNK12PackInstance11getManifestEv
     void getPackSettings(); // _ZN12PackInstance15getPackSettingsEv
     void getPackSettings()const; // _ZNK12PackInstance15getPackSettingsEv
-//  bool hasIcon(PackIconType)const; //TODO: incomplete function definition // _ZNK12PackInstance7hasIconE12PackIconType
-//  std::string getIconPath(PackIconType)const; //TODO: incomplete function definition // _ZNK12PackInstance11getIconPathB5cxx11E12PackIconType
+//    bool hasIcon(long)const; //TODO: incomplete function definition // _ZNK12PackInstance7hasIconE12PackIconType
+//    std::string getIconPath(long)const; //TODO: incomplete function definition // _ZNK12PackInstance11getIconPathB5cxx11E12PackIconType
     void getIconFileSytem()const; // _ZNK12PackInstance16getIconFileSytemEv
     std::string getIconZipPath()const; // _ZNK12PackInstance14getIconZipPathB5cxx11Ev
     bool isBaseGamePack()const; // _ZNK12PackInstance14isBaseGamePackEv
     bool isSlicePack()const; // _ZNK12PackInstance11isSlicePackEv
-//  bool isType(PackType)const; //TODO: incomplete function definition // _ZNK12PackInstance6isTypeE8PackType
+//    bool isType(long)const; //TODO: incomplete function definition // _ZNK12PackInstance6isTypeE8PackType
     bool isTrusted()const; // _ZNK12PackInstance9isTrustedEv
     void getResourceLocation()const; // _ZNK12PackInstance19getResourceLocationEv
     std::string getFolderName()const; // _ZNK12PackInstance13getFolderNameB5cxx11Ev

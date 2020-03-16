@@ -4,16 +4,17 @@
 #include "BlockLegacy.h"
 
 
-class GrassBlock : BlockLegacy {
+class GrassBlock : public BlockLegacy {
 
 public:
     static long MIN_BRIGHTNESS;
 
-    ~GrassBlock(); // _ZN10GrassBlockD2Ev
+    virtual ~GrassBlock(); // _ZN10GrassBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK10GrassBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool canBeOriginalSurface()const; // _ZNK10GrassBlock20canBeOriginalSurfaceEv
     virtual void waterSpreadCausesSpawn()const; // _ZNK10GrassBlock22waterSpreadCausesSpawnEv
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK10GrassBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK10GrassBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK10GrassBlock15neighborChangedER11BlockSourceRK8BlockPosS4_
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK10GrassBlock15getResourceItemER6RandomRK5Blocki
     virtual void calcVariant(BlockSource &, BlockPos const&)const; // _ZNK10GrassBlock11calcVariantER11BlockSourceRK8BlockPos

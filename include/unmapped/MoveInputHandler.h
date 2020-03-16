@@ -3,10 +3,11 @@
 #include "MoveInput.h"
 
 
-class MoveInputHandler : MoveInput {
+class MoveInputHandler : public MoveInput {
 
 public:
-    ~MoveInputHandler(); // _ZN16MoveInputHandlerD2Ev
+    virtual ~MoveInputHandler(); // _ZN16MoveInputHandlerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(Player &); // _ZN16MoveInputHandler4tickER6Player
     virtual void clearInputState(); // _ZN16MoveInputHandler15clearInputStateEv
     virtual bool isChangeHeight()const; // _ZNK16MoveInputHandler14isChangeHeightEv
@@ -23,8 +24,8 @@ public:
     void setGazeDirection(Vec3 const&); // _ZN16MoveInputHandler16setGazeDirectionERK4Vec3
     void getGazeDirection()const; // _ZNK16MoveInputHandler16getGazeDirectionEv
     void _toggleSneak(); // _ZN16MoveInputHandler12_toggleSneakEv
-//  void _getLookBitmask(MoveInputHandler::LookDirection); //TODO: incomplete function definition // _ZN16MoveInputHandler15_getLookBitmaskENS_13LookDirectionE
-//  void _getLookBitmask(MoveInputHandler::LookDirection, MoveInputHandler::LookDirection); //TODO: incomplete function definition // _ZN16MoveInputHandler15_getLookBitmaskENS_13LookDirectionES0_
+//    void _getLookBitmask(long); //TODO: incomplete function definition // _ZN16MoveInputHandler15_getLookBitmaskENS_13LookDirectionE
+//    void _getLookBitmask(long, long); //TODO: incomplete function definition // _ZN16MoveInputHandler15_getLookBitmaskENS_13LookDirectionES0_
     void _updateGGVector(short, float, float, float); // _ZN16MoveInputHandler15_updateGGVectorEsfff
     void _updateMoveVector(float, float); // _ZN16MoveInputHandler17_updateMoveVectorEff
 };

@@ -3,10 +3,11 @@
 #include "ConsumerComponent.h"
 
 
-class PistonConsumer : ConsumerComponent {
+class PistonConsumer : public ConsumerComponent {
 
 public:
-    ~PistonConsumer(); // _ZN14PistonConsumerD2Ev
+    virtual ~PistonConsumer(); // _ZN14PistonConsumerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void consumePowerAnyDirection(); // _ZN14PistonConsumer24consumePowerAnyDirectionEv
     virtual void getInstanceType()const; // _ZNK14PistonConsumer15getInstanceTypeEv
     virtual void addSource(CircuitSceneGraph &, CircuitTrackingInfo const&, int &, bool &); // _ZN14PistonConsumer9addSourceER17CircuitSceneGraphRK19CircuitTrackingInfoRiRb

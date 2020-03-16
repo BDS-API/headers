@@ -4,13 +4,14 @@
 #include "BlockLegacy.h"
 
 
-class TripWireHookBlock : BlockLegacy {
+class TripWireHookBlock : public BlockLegacy {
 
 public:
-    ~TripWireHookBlock(); // _ZN17TripWireHookBlockD2Ev
+    virtual ~TripWireHookBlock(); // _ZN17TripWireHookBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK17TripWireHookBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK17TripWireHookBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK17TripWireHookBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK17TripWireHookBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK17TripWireHookBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRemove(BlockSource &, BlockPos const&)const; // _ZNK17TripWireHookBlock8onRemoveER11BlockSourceRK8BlockPos
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK17TripWireHookBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

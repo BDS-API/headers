@@ -3,9 +3,10 @@
 #include "../bedrock/level/chunk/SubChunkBlockStorage.h"
 
 
-class ISubChunkBlockStoragePaletted : SubChunkBlockStorage {
+class ISubChunkBlockStoragePaletted : public SubChunkBlockStorage {
 
 public:
-    ~ISubChunkBlockStoragePaletted(); // _ZN29ISubChunkBlockStoragePalettedD2Ev
+    virtual ~ISubChunkBlockStoragePaletted(); // _ZN29ISubChunkBlockStoragePalettedD2Ev
+    virtual void __fake_function0(); // fake
     ISubChunkBlockStoragePaletted(); // _ZN29ISubChunkBlockStoragePalettedC2Ev
 };

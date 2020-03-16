@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class EnchantingTableBlock : ActorBlock {
+class EnchantingTableBlock : public ActorBlock {
 
 public:
-    ~EnchantingTableBlock(); // _ZN20EnchantingTableBlockD2Ev
+    virtual ~EnchantingTableBlock(); // _ZN20EnchantingTableBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isCraftingBlock()const; // _ZNK20EnchantingTableBlock15isCraftingBlockEv
     virtual bool isInteractiveBlock()const; // _ZNK20EnchantingTableBlock18isInteractiveBlockEv
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK20EnchantingTableBlock15checkIsPathableER5ActorRK8BlockPosS4_

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include "../../../mce/UUID.h"
+#include <string>
 
 
 class AttributeModifier {
@@ -9,7 +9,8 @@ class AttributeModifier {
 public:
     static long mInvalidUUID;
 
-    ~AttributeModifier(); // _ZN17AttributeModifierD2Ev
+    virtual ~AttributeModifier(); // _ZN17AttributeModifierD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isInstantaneous()const; // _ZNK17AttributeModifier15isInstantaneousEv
     AttributeModifier(AttributeModifier const&); // _ZN17AttributeModifierC2ERKS_
     AttributeModifier(mce::UUID, std::string const&, float, int, int, bool); // _ZN17AttributeModifierC2EN3mce4UUIDERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEfiib

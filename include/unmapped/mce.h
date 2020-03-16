@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../mce/Radian.h"
 #include "../mce/Degree.h"
+#include "../mce/Radian.h"
 
 
 namespace mce {
 
-//  void numChannels(mce::ImageFormat); //TODO: incomplete function definition // _ZN3mce11numChannelsENS_11ImageFormatE
-//  void strideFromImageFormat(mce::ImageFormat); //TODO: incomplete function definition // _ZN3mce21strideFromImageFormatENS_11ImageFormatE
+//    void numChannels(long); //TODO: incomplete function definition // _ZN3mce11numChannelsENS_11ImageFormatE
+//    void strideFromImageFormat(long); //TODO: incomplete function definition // _ZN3mce21strideFromImageFormatENS_11ImageFormatE
     void operator+(mce::Radian, float); // _ZN3mceplENS_6RadianEf
     void operator+(float, mce::Radian); // _ZN3mceplEfNS_6RadianE
     void operator-(mce::Radian, float); // _ZN3mcemiENS_6RadianEf

@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class RollGoal : Goal {
+class RollGoal : public Goal {
 
 public:
-    ~RollGoal(); // _ZN8RollGoalD2Ev
+    virtual ~RollGoal(); // _ZN8RollGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN8RollGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN8RollGoal16canContinueToUseEv
     virtual bool canBeInterrupted(); // _ZN8RollGoal16canBeInterruptedEv

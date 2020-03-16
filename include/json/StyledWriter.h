@@ -1,15 +1,16 @@
 #pragma once
 
-#include "Writer.h"
 #include <string>
+#include "Writer.h"
 
 
 namespace Json {
 
-    class StyledWriter : Json::Writer {
+    class StyledWriter : public Json::Writer {
 
     public:
-        ~StyledWriter(); // _ZN4Json12StyledWriterD2Ev
+        virtual ~StyledWriter(); // _ZN4Json12StyledWriterD2Ev
+        virtual void __fake_function0(); // fake
         virtual std::string write(Json::Value const&); // _ZN4Json12StyledWriter5writeB5cxx11ERKNS_5ValueE
         StyledWriter(); // _ZN4Json12StyledWriterC2Ev
         void writeCommentBeforeValue(Json::Value const&); // _ZN4Json12StyledWriter23writeCommentBeforeValueERKNS_5ValueE

@@ -4,12 +4,13 @@
 #include "../Command.h"
 
 
-class GameRuleCommand : Command {
+class GameRuleCommand : public Command {
 
 public:
     class InitProxy;
 
-    ~GameRuleCommand(); // _ZN15GameRuleCommandD2Ev
+    virtual ~GameRuleCommand(); // _ZN15GameRuleCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK15GameRuleCommand7executeERK13CommandOriginR13CommandOutput
     void setup(CommandRegistry &, GameRuleCommand::InitProxy &&); // _ZN15GameRuleCommand5setupER15CommandRegistryONS_9InitProxyE
     GameRuleCommand(); // _ZN15GameRuleCommandC2Ev

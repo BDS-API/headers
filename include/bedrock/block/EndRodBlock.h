@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class EndRodBlock : BlockLegacy {
+class EndRodBlock : public BlockLegacy {
 
 public:
-    ~EndRodBlock(); // _ZN11EndRodBlockD2Ev
+    virtual ~EndRodBlock(); // _ZN11EndRodBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &)const; // _ZNK11EndRodBlock8addAABBsERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EE
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const; // _ZNK11EndRodBlock8mayPlaceER11BlockSourceRK8BlockPosh
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK11EndRodBlock8mayPlaceER11BlockSourceRK8BlockPos

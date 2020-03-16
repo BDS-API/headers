@@ -3,10 +3,11 @@
 #include "NavigationDescription.h"
 
 
-class NavigationWalkDescription : NavigationDescription {
+class NavigationWalkDescription : public NavigationDescription {
 
 public:
     virtual void getJsonName()const; // _ZNK25NavigationWalkDescription11getJsonNameEv
-    ~NavigationWalkDescription(); // _ZN25NavigationWalkDescriptionD2Ev
+    virtual ~NavigationWalkDescription(); // _ZN25NavigationWalkDescriptionD2Ev
+    virtual void __fake_function0(); // fake
     NavigationWalkDescription(); // _ZN25NavigationWalkDescriptionC2Ev
 };

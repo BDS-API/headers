@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "CropBlock.h"
+#include <string>
 
 
-class BeetrootBlock : CropBlock {
+class BeetrootBlock : public CropBlock {
 
 public:
-    ~BeetrootBlock(); // _ZN13BeetrootBlockD2Ev
+    virtual ~BeetrootBlock(); // _ZN13BeetrootBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK13BeetrootBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void getVariant(Block const&)const; // _ZNK13BeetrootBlock10getVariantERK5Block
     virtual void getBaseSeed()const; // _ZNK13BeetrootBlock11getBaseSeedEv

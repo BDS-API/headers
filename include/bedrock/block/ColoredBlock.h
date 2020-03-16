@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class ColoredBlock : BlockLegacy {
+class ColoredBlock : public BlockLegacy {
 
 public:
-    ~ColoredBlock(); // _ZN12ColoredBlockD2Ev
+    virtual ~ColoredBlock(); // _ZN12ColoredBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK12ColoredBlock15getResourceItemER6RandomRK5Blocki
     virtual void getMapColor(BlockSource &, BlockPos const&)const; // _ZNK12ColoredBlock11getMapColorER11BlockSourceRK8BlockPos
     virtual std::string buildDescriptionId(Block const&)const; // _ZNK12ColoredBlock18buildDescriptionIdB5cxx11ERK5Block

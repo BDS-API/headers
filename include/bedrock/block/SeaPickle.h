@@ -4,19 +4,20 @@
 #include "BushBlock.h"
 
 
-class SeaPickle : BushBlock {
+class SeaPickle : public BushBlock {
 
 public:
-    ~SeaPickle(); // _ZN9SeaPickleD2Ev
+    virtual ~SeaPickle(); // _ZN9SeaPickleD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK9SeaPickle4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK9SeaPickle7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void getLightEmission(Block const&)const; // _ZNK9SeaPickle16getLightEmissionERK5Block
     virtual bool hasVariableLighting()const; // _ZNK9SeaPickle19hasVariableLightingEv
-//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition // _ZNK9SeaPickle17canProvideSupportERK5Blockh16BlockSupportType
+    virtual bool canProvideSupport__incomplete0(Block const&, unsigned char, long)const; //TODO: incomplete function definition // _ZNK9SeaPickle17canProvideSupportERK5Blockh16BlockSupportType
     virtual void waterSpreadCausesSpawn()const; // _ZNK9SeaPickle22waterSpreadCausesSpawnEv
     virtual bool canContainLiquid()const; // _ZNK9SeaPickle16canContainLiquidEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK9SeaPickle7onPlaceER11BlockSourceRK8BlockPos
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK9SeaPickle12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK9SeaPickle12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayConsumeFertilizer(BlockSource &)const; // _ZNK9SeaPickle20mayConsumeFertilizerER11BlockSource
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const; // _ZNK9SeaPickle10mayPlaceOnER11BlockSourceRK8BlockPos
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK9SeaPickle15neighborChangedER11BlockSourceRK8BlockPosS4_

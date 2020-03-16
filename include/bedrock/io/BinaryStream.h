@@ -4,10 +4,11 @@
 #include "ReadOnlyBinaryStream.h"
 
 
-class BinaryStream : ReadOnlyBinaryStream {
+class BinaryStream : public ReadOnlyBinaryStream {
 
 public:
-    ~BinaryStream(); // _ZN12BinaryStreamD2Ev
+    virtual ~BinaryStream(); // _ZN12BinaryStreamD2Ev
+    virtual void __fake_function0(); // fake
     BinaryStream(); // _ZN12BinaryStreamC2Ev
     BinaryStream(std::string &&); // _ZN12BinaryStreamC2EONSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     BinaryStream(std::string &, bool); // _ZN12BinaryStreamC2ERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
@@ -33,7 +34,7 @@ public:
     void writeVarInt(int); // _ZN12BinaryStream11writeVarIntEi
     void writeUnsignedVarInt(unsigned int); // _ZN12BinaryStream19writeUnsignedVarIntEj
     void writeUnsignedVarInt64(unsigned long); // _ZN12BinaryStream21writeUnsignedVarInt64Em
-//  void writeString(gsl::basic_string_span<char const, -1l>); //TODO: incomplete function definition // _ZN12BinaryStream11writeStringEN3gsl17basic_string_spanIKcLln1EEE
+//    void writeString(long); //TODO: incomplete function definition // _ZN12BinaryStream11writeStringEN3gsl17basic_string_spanIKcLln1EEE
     void writeStream(BinaryStream &); // _ZN12BinaryStream11writeStreamERS_
     void writeUnsignedChar(unsigned char); // _ZN12BinaryStream17writeUnsignedCharEh
 };

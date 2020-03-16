@@ -3,11 +3,12 @@
 #include "Mob.h"
 
 
-class Squid : Mob {
+class Squid : public Mob {
 
 public:
-    ~Squid(); // _ZN5SquidD2Ev
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN5Squid17handleEntityEventE10ActorEventi
+    virtual ~Squid(); // _ZN5SquidD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN5Squid17handleEntityEventE10ActorEventi
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN5Squid35updateEntitySpecificMolangVariablesER12RenderParams
     virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN5Squid5_hurtERK17ActorDamageSourceibb
     virtual void getAmbientSoundPostponeTicks(); // _ZN5Squid28getAmbientSoundPostponeTicksEv

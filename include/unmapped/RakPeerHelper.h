@@ -23,7 +23,8 @@ public:
     class IPSupportInterface {
 
     public:
-        ~IPSupportInterface(); // _ZN13RakPeerHelper18IPSupportInterfaceD2Ev
+        virtual ~IPSupportInterface(); // _ZN13RakPeerHelper18IPSupportInterfaceD2Ev
+        virtual void __fake_function0(); // fake
         IPSupportInterface(); // _ZN13RakPeerHelper18IPSupportInterfaceC2Ev
     };
 };

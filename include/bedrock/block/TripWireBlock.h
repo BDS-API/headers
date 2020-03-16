@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class TripWireBlock : BlockLegacy {
+class TripWireBlock : public BlockLegacy {
 
 public:
-    ~TripWireBlock(); // _ZN13TripWireBlockD2Ev
+    virtual ~TripWireBlock(); // _ZN13TripWireBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13TripWireBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK13TripWireBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK13TripWireBlock7onPlaceER11BlockSourceRK8BlockPos
@@ -22,5 +23,5 @@ public:
     void getTickDelay()const; // _ZNK13TripWireBlock12getTickDelayEv
     void updateSource(BlockSource &, BlockPos const&, Block const&)const; // _ZNK13TripWireBlock12updateSourceER11BlockSourceRK8BlockPosRK5Block
     void checkPressed(BlockSource &, BlockPos const&)const; // _ZNK13TripWireBlock12checkPressedER11BlockSourceRK8BlockPos
-    void shouldConnectTo(BlockSource &, BlockPos const&, int)const; // _ZNK13TripWireBlock15shouldConnectToER11BlockSourceRK8BlockPosi
+    bool shouldConnectTo(BlockSource &, BlockPos const&, int)const; // _ZNK13TripWireBlock15shouldConnectToER11BlockSourceRK8BlockPosi
 };

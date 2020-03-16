@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class FollowCaravanGoal : Goal {
+class FollowCaravanGoal : public Goal {
 
 public:
-    ~FollowCaravanGoal(); // _ZN17FollowCaravanGoalD2Ev
+    virtual ~FollowCaravanGoal(); // _ZN17FollowCaravanGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN17FollowCaravanGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN17FollowCaravanGoal16canContinueToUseEv
     virtual void start(); // _ZN17FollowCaravanGoal5startEv

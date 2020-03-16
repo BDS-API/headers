@@ -53,7 +53,7 @@ namespace RakNet {
         void ReadCompressed(unsigned char *, unsigned int, bool); // _ZN6RakNet9BitStream14ReadCompressedEPhjb
         void GetNumberOfBitsAllocated()const; // _ZNK6RakNet9BitStream24GetNumberOfBitsAllocatedEv
         void PadWithZeroToByteLength(unsigned int); // _ZN6RakNet9BitStream23PadWithZeroToByteLengthEj
-//      void NumberOfLeadingZeroes(signed const); //TODO: incomplete function definition // _ZN6RakNet9BitStream21NumberOfLeadingZeroesEa
+//        void NumberOfLeadingZeroes(long const); //TODO: incomplete function definition // _ZN6RakNet9BitStream21NumberOfLeadingZeroesEa
         void NumberOfLeadingZeroes(unsigned char); // _ZN6RakNet9BitStream21NumberOfLeadingZeroesEh
         void NumberOfLeadingZeroes(short); // _ZN6RakNet9BitStream21NumberOfLeadingZeroesEs
         void NumberOfLeadingZeroes(unsigned short); // _ZN6RakNet9BitStream21NumberOfLeadingZeroesEt

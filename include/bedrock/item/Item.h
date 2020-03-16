@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include <functional>
+#include <string>
 #include "../util/BlockPos.h"
 
 
@@ -25,17 +25,18 @@ public:
     static long mAllowExperimental;
     static long mWorldBaseGameVersion;
 
-    ~Item(); // _ZN4ItemD2Ev
+    virtual ~Item(); // _ZN4ItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tearDown(); // _ZN4Item8tearDownEv
     virtual void getMaxUseDuration(ItemInstance const*)const; // _ZNK4Item17getMaxUseDurationEPK12ItemInstance
     virtual void getMaxUseDuration(ItemStack const*)const; // _ZNK4Item17getMaxUseDurationEPK9ItemStack
     virtual bool isExperimental(ItemDescriptor const*)const; // _ZNK4Item14isExperimentalEPK14ItemDescriptor
     virtual void setMaxStackSize(unsigned char); // _ZN4Item15setMaxStackSizeEh
-//  virtual void setCategory(CreativeItemCategory); //TODO: incomplete function definition // _ZN4Item11setCategoryE20CreativeItemCategory
+    virtual void setCategory__incomplete0(long); //TODO: incomplete function definition // _ZN4Item11setCategoryE20CreativeItemCategory
     virtual void setStackedByData(bool); // _ZN4Item16setStackedByDataEb
     virtual void setMaxDamage(int); // _ZN4Item12setMaxDamageEi
     virtual void setHandEquipped(); // _ZN4Item15setHandEquippedEv
-//  virtual void setUseAnimation(UseAnimation); //TODO: incomplete function definition // _ZN4Item15setUseAnimationE12UseAnimation
+    virtual void setUseAnimation__incomplete0(long); //TODO: incomplete function definition // _ZN4Item15setUseAnimationE12UseAnimation
     virtual void setMaxUseDuration(int); // _ZN4Item17setMaxUseDurationEi
     virtual void setRequiresWorldBuilder(bool); // _ZN4Item23setRequiresWorldBuilderEb
     virtual void setExplodable(bool); // _ZN4Item13setExplodableEb
@@ -126,7 +127,7 @@ public:
     void getId()const; // _ZNK4Item5getIdEv
     void getLegacyBlock()const; // _ZNK4Item14getLegacyBlockEv
     void getCreativeCategory()const; // _ZNK4Item19getCreativeCategoryEv
-    void shouldDespawn()const; // _ZNK4Item13shouldDespawnEv
+    bool shouldDespawn()const; // _ZNK4Item13shouldDespawnEv
     void toBlockId(short); // _ZN4Item9toBlockIdEs
     std::string getDescriptionId()const; // _ZNK4Item16getDescriptionIdB5cxx11Ev
     std::string getRawNameId()const; // _ZNK4Item12getRawNameIdB5cxx11Ev
@@ -148,7 +149,7 @@ public:
     void findCreativeItem(ItemInstance const&); // _ZN4Item16findCreativeItemERK12ItemInstance
     void initCreativeItems(bool, ActorInfoRegistry *, BlockDefinitionGroup *, bool, BaseGameVersion const&, std::function<void (ActorInfoRegistry *, BlockDefinitionGroup *, bool)>); // _ZN4Item17initCreativeItemsEbP17ActorInfoRegistryP20BlockDefinitionGroupbRK15BaseGameVersionSt8functionIFvS1_S3_bEE
     void destroySpeedBonus(ItemInstance const&)const; // _ZNK4Item17destroySpeedBonusERK12ItemInstance
-//  void _helpChangeInventoryItemInPlace(Actor &, ItemStack &, ItemStack &, ItemAcquisitionMethod)const; //TODO: incomplete function definition // _ZNK4Item31_helpChangeInventoryItemInPlaceER5ActorR9ItemStackS3_21ItemAcquisitionMethod
+//    void _helpChangeInventoryItemInPlace(Actor &, ItemStack &, ItemStack &, long)const; //TODO: incomplete function definition // _ZNK4Item31_helpChangeInventoryItemInPlaceER5ActorR9ItemStackS3_21ItemAcquisitionMethod
     Item(std::string const&, short); // _ZN4ItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEs
     std::string getNamespace()const; // _ZNK4Item12getNamespaceB5cxx11Ev
     void getFood()const; // _ZNK4Item7getFoodEv

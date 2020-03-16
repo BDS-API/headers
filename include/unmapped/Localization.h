@@ -1,8 +1,8 @@
 #pragma once
 
 #include <string>
-#include <unordered_map>
 #include <vector>
+#include <unordered_map>
 
 
 class Localization {
@@ -32,5 +32,5 @@ public:
     void _replaceTokens(std::string &, std::vector<std::string> const&)const; // _ZNK12Localization14_replaceTokensERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS5_SaIS5_EE
     void get(std::string const&, std::string &, std::vector<std::string> const&)const; // _ZNK12Localization3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERS5_RKSt6vectorIS5_SaIS5_EE
     void appendTranslations(Localization const&); // _ZN12Localization18appendTranslationsERKS_
-    void appendTranslations(std::unordered_multimap<std::string, std::pair<std::string, std::string>, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::pair<std::string, std::string>>>> const&); // _ZN12Localization18appendTranslationsERKSt18unordered_multimapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIS6_S6_ESt4hashIS6_ESt8equal_toIS6_ESaIS7_IKS6_S8_EEE
+    void appendTranslations(std::unordered_multimap<std::string, std::pair<std::string, std::string>, std::hash<std::string>, long, std::allocator<std::pair<std::string const, std::pair<std::string, std::string>>>> const&); // _ZN12Localization18appendTranslationsERKSt18unordered_multimapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4pairIS6_S6_ESt4hashIS6_ESt8equal_toIS6_ESaIS7_IKS6_S8_EEE
 };

@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class WritableBookItem : Item {
+class WritableBookItem : public Item {
 
 public:
-    ~WritableBookItem(); // _ZN16WritableBookItemD2Ev
+    virtual ~WritableBookItem(); // _ZN16WritableBookItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool requiresInteract()const; // _ZNK16WritableBookItem16requiresInteractEv
     virtual void use(ItemStack &, Player &)const; // _ZNK16WritableBookItem3useER9ItemStackR6Player
     virtual std::string getInteractText(Player const&)const; // _ZNK16WritableBookItem15getInteractTextB5cxx11ERK6Player

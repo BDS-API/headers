@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class RandomStrollGoal : Goal {
+class RandomStrollGoal : public Goal {
 
 public:
-    ~RandomStrollGoal(); // _ZN16RandomStrollGoalD2Ev
+    virtual ~RandomStrollGoal(); // _ZN16RandomStrollGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN16RandomStrollGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN16RandomStrollGoal16canContinueToUseEv
     virtual void start(); // _ZN16RandomStrollGoal5startEv

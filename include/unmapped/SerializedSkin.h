@@ -22,7 +22,7 @@ public:
     void setCapeImageData(mce::Image const*); // _ZN14SerializedSkin16setCapeImageDataEPKN3mce5ImageE
     void setIsPersonaCapeOnClassicSkin(bool); // _ZN14SerializedSkin29setIsPersonaCapeOnClassicSkinEb
     void setCapeId(std::string const&); // _ZN14SerializedSkin9setCapeIdERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  void getAnimationFrames(persona::AnimatedTextureType)const; //TODO: incomplete function definition // _ZNK14SerializedSkin18getAnimationFramesEN7persona19AnimatedTextureTypeE
+//    void getAnimationFrames(long)const; //TODO: incomplete function definition // _ZNK14SerializedSkin18getAnimationFramesEN7persona19AnimatedTextureTypeE
     void setAnimatedImageData(std::vector<AnimatedImageData> const&); // _ZN14SerializedSkin20setAnimatedImageDataERKSt6vectorI17AnimatedImageDataSaIS1_EE
     void getGeometryData()const; // _ZNK14SerializedSkin15getGeometryDataEv
     void getCapeImageData(); // _ZN14SerializedSkin16getCapeImageDataEv

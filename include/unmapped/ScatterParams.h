@@ -19,7 +19,7 @@ public:
     void _shouldScatter(RenderParams &, Random &)const; // _ZNK13ScatterParams14_shouldScatterER12RenderParamsR6Random
     void _parseCoordinate(Json::Value const&, ScatterParams::CoordinateRange &, std::function<std::function const* (RenderParams &, std::vector<float> const&)> (std::string const&, bool)); // _ZN13ScatterParams16_parseCoordinateERKN4Json5ValueERNS_15CoordinateRangeESt8functionIFPKS6_IFfR12RenderParamsRKSt6vectorIfSaIfEEEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEbEE
     void _parseExtents(Json::Value const&, ExpressionNode &, ExpressionNode &, std::function<std::function const* (RenderParams &, std::vector<float> const&)> (std::string const&, bool)); // _ZN13ScatterParams13_parseExtentsERKN4Json5ValueER14ExpressionNodeS5_St8functionIFPKS6_IFfR12RenderParamsRKSt6vectorIfSaIfEEEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEbEE
-//  void _parseDistribution(Json::Value const&, ScatterParams::RandomDistributionType &); //TODO: incomplete function definition // _ZN13ScatterParams18_parseDistributionERKN4Json5ValueERNS_22RandomDistributionTypeE
+//    void _parseDistribution(Json::Value const&, long &); //TODO: incomplete function definition // _ZN13ScatterParams18_parseDistributionERKN4Json5ValueERNS_22RandomDistributionTypeE
     class ChanceInformation {
 
     public:

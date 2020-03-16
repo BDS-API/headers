@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class ReceiveLoveGoal : Goal {
+class ReceiveLoveGoal : public Goal {
 
 public:
-    ~ReceiveLoveGoal(); // _ZN15ReceiveLoveGoalD2Ev
+    virtual ~ReceiveLoveGoal(); // _ZN15ReceiveLoveGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15ReceiveLoveGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15ReceiveLoveGoal16canContinueToUseEv
     virtual void tick(); // _ZN15ReceiveLoveGoal4tickEv

@@ -1,8 +1,8 @@
 #pragma once
 
+#include "StructureBlockPalette.h"
 #include <string>
 #include <memory>
-#include "StructureBlockPalette.h"
 #include <vector>
 
 
@@ -11,7 +11,8 @@ class StructureTemplateData {
 public:
     static std::string DEFAULT_PALETTE_NAME;
 
-    ~StructureTemplateData(); // _ZN21StructureTemplateDataD2Ev
+    virtual ~StructureTemplateData(); // _ZN21StructureTemplateDataD2Ev
+    virtual void __fake_function0(); // fake
     StructureTemplateData(); // _ZN21StructureTemplateDataC2Ev
     void load(CompoundTag const&); // _ZN21StructureTemplateData4loadERK11CompoundTag
     void _parseFormatVersion(CompoundTag const&); // _ZN21StructureTemplateData19_parseFormatVersionERK11CompoundTag

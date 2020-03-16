@@ -1,14 +1,15 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "LootItemFunction.h"
+#include "../../../json/Value.h"
 #include <vector>
 
 
-class EnchantBookForTradingFunction : LootItemFunction {
+class EnchantBookForTradingFunction : public LootItemFunction {
 
 public:
-    ~EnchantBookForTradingFunction(); // _ZN29EnchantBookForTradingFunctionD2Ev
+    virtual ~EnchantBookForTradingFunction(); // _ZN29EnchantBookForTradingFunctionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void apply(ItemStack &, Random &, LootTableContext &); // _ZN29EnchantBookForTradingFunction5applyER9ItemStackR6RandomR16LootTableContext
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &); // _ZN29EnchantBookForTradingFunction5applyER9ItemStackR6RandomRK5TradeR16LootTableContext
     virtual void apply(ItemInstance &, Random &, LootTableContext &); // _ZN29EnchantBookForTradingFunction5applyER12ItemInstanceR6RandomR16LootTableContext

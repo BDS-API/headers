@@ -1,16 +1,17 @@
 #pragma once
 
-#include "BlockActor.h"
 #include "../../util/Vec3.h"
 #include "../../util/BlockPos.h"
+#include "BlockActor.h"
 
 
-class PistonBlockActor : BlockActor {
+class PistonBlockActor : public BlockActor {
 
 public:
     static long ARM_ANIMATION_SPEED;
 
-    ~PistonBlockActor(); // _ZN16PistonBlockActorD2Ev
+    virtual ~PistonBlockActor(); // _ZN16PistonBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN16PistonBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK16PistonBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN16PistonBlockActor4tickER11BlockSource

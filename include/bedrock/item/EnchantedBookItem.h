@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class EnchantedBookItem : Item {
+class EnchantedBookItem : public Item {
 
 public:
-    ~EnchantedBookItem(); // _ZN17EnchantedBookItemD2Ev
+    virtual ~EnchantedBookItem(); // _ZN17EnchantedBookItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isGlint(ItemStackBase const&)const; // _ZNK17EnchantedBookItem7isGlintERK13ItemStackBase
     virtual void getEnchantSlot()const; // _ZNK17EnchantedBookItem14getEnchantSlotEv
     virtual void getEnchantValue()const; // _ZNK17EnchantedBookItem15getEnchantValueEv

@@ -3,10 +3,11 @@
 #include "IFeature.h"
 
 
-class ScatterFeature : IFeature {
+class ScatterFeature : public IFeature {
 
 public:
-    ~ScatterFeature(); // _ZN14ScatterFeatureD2Ev
+    virtual ~ScatterFeature(); // _ZN14ScatterFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(IBlockPlacementTarget &, BlockPos const&, Random &)const; // _ZNK14ScatterFeature5placeER21IBlockPlacementTargetRK8BlockPosR6Random
     ScatterFeature(); // _ZN14ScatterFeatureC2Ev
 };

@@ -4,12 +4,13 @@
 #include "HeavyBlock.h"
 
 
-class ScaffoldingBlock : HeavyBlock {
+class ScaffoldingBlock : public HeavyBlock {
 
 public:
     static long MAX_STABILITY;
 
-    ~ScaffoldingBlock(); // _ZN16ScaffoldingBlockD2Ev
+    virtual ~ScaffoldingBlock(); // _ZN16ScaffoldingBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK16ScaffoldingBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK16ScaffoldingBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK16ScaffoldingBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb

@@ -4,11 +4,12 @@
 #include "FlowerBlock.h"
 
 
-class WitherRoseBlock : FlowerBlock {
+class WitherRoseBlock : public FlowerBlock {
 
 public:
-    ~WitherRoseBlock(); // _ZN15WitherRoseBlockD2Ev
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK15WitherRoseBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual ~WitherRoseBlock(); // _ZN15WitherRoseBlockD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK15WitherRoseBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const; // _ZNK15WitherRoseBlock10mayPlaceOnER11BlockSourceRK8BlockPos
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK15WitherRoseBlock15getResourceItemER6RandomRK5Blocki
     virtual void entityInside(BlockSource &, BlockPos const&, Actor &)const; // _ZNK15WitherRoseBlock12entityInsideER11BlockSourceRK8BlockPosR5Actor

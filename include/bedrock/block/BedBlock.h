@@ -4,14 +4,15 @@
 #include "BlockLegacy.h"
 
 
-class BedBlock : BlockLegacy {
+class BedBlock : public BlockLegacy {
 
 public:
     static long HEAD_DIRECTION_OFFSETS;
     static long HEAD_PIECE_DATA;
     static long OCCUPIED_DATA;
 
-    ~BedBlock(); // _ZN8BedBlockD2Ev
+    virtual ~BedBlock(); // _ZN8BedBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getNextBlockPermutation(Block const&)const; // _ZNK8BedBlock23getNextBlockPermutationERK5Block
     virtual bool isInteractiveBlock()const; // _ZNK8BedBlock18isInteractiveBlockEv
     virtual bool canFillAtPos(BlockSource &, BlockPos const&, Block const&)const; // _ZNK8BedBlock12canFillAtPosER11BlockSourceRK8BlockPosRK5Block

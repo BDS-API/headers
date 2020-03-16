@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class ConcreteBlock : BlockLegacy {
+class ConcreteBlock : public BlockLegacy {
 
 public:
-    ~ConcreteBlock(); // _ZN13ConcreteBlockD2Ev
+    virtual ~ConcreteBlock(); // _ZN13ConcreteBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isValidAuxValue(int)const; // _ZNK13ConcreteBlock15isValidAuxValueEi
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK13ConcreteBlock15getResourceItemER6RandomRK5Blocki
     virtual void getMapColor(BlockSource &, BlockPos const&)const; // _ZNK13ConcreteBlock11getMapColorER11BlockSourceRK8BlockPos

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include <vector>
 
 
@@ -21,7 +21,8 @@ public:
     static long mBlockModelAccess;
     static std::string mTessellatedModels;
 
-    ~BlockGraphics(); // _ZN13BlockGraphicsD2Ev
+    virtual ~BlockGraphics(); // _ZN13BlockGraphicsD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getIconYOffset()const; // _ZNK13BlockGraphics14getIconYOffsetEv
     virtual void getColor(int)const; // _ZNK13BlockGraphics8getColorEi
     virtual void getColor(BlockSource &, BlockPos const&)const; // _ZNK13BlockGraphics8getColorER11BlockSourceRK8BlockPos
@@ -52,10 +53,10 @@ public:
     void setCarriedTextureItem(std::string const&, std::string const&, std::string const&, std::string const&, std::string const&, std::string const&); // _ZN13BlockGraphics21setCarriedTextureItemERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_S7_S7_
     void setBlockShape(BlockGraphics &, Json::Value const&); // _ZN13BlockGraphics13setBlockShapeERS_RKN4Json5ValueE
     void getBlockShape()const; // _ZNK13BlockGraphics13getBlockShapeEv
-//  void setBlockShape(BlockShape); //TODO: incomplete function definition // _ZN13BlockGraphics13setBlockShapeE10BlockShape
+//    void setBlockShape(long); //TODO: incomplete function definition // _ZN13BlockGraphics13setBlockShapeE10BlockShape
     void setBrightnessGamma(BlockGraphics &, Json::Value const&); // _ZN13BlockGraphics18setBrightnessGammaERS_RKN4Json5ValueE
     void setSoundType(BlockGraphics &, Json::Value const&); // _ZN13BlockGraphics12setSoundTypeERS_RKN4Json5ValueE
-//  void setSoundType(BlockSoundType); //TODO: incomplete function definition // _ZN13BlockGraphics12setSoundTypeE14BlockSoundType
+//    void setSoundType(long); //TODO: incomplete function definition // _ZN13BlockGraphics12setSoundTypeE14BlockSoundType
     bool isInitialized(); // _ZN13BlockGraphics13isInitializedEv
     void useBlockModel()const; // _ZNK13BlockGraphics13useBlockModelEv
     void useTessellatedModel()const; // _ZNK13BlockGraphics19useTessellatedModelEv
@@ -69,7 +70,7 @@ public:
     void findBlockModel(std::string const&); // _ZN13BlockGraphics14findBlockModelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void findOrTessellateModel(std::string const&, BlockGeometry::Model const*); // _ZN13BlockGraphics21findOrTessellateModelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKN13BlockGeometry5ModelE
     void loadCustomBlockShapeModels(Json::Value const&); // _ZN13BlockGraphics26loadCustomBlockShapeModelsERKN4Json5ValueE
-//  void registerBlockGraphics(std::vector<Json::Value> &, std::string const&, BlockShape); //TODO: incomplete function definition // _ZN13BlockGraphics21registerBlockGraphicsERSt6vectorIN4Json5ValueESaIS2_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE10BlockShape
+//    void registerBlockGraphics(std::vector<Json::Value> &, std::string const&, long); //TODO: incomplete function definition // _ZN13BlockGraphics21registerBlockGraphicsERSt6vectorIN4Json5ValueESaIS2_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE10BlockShape
     void getBlock()const; // _ZNK13BlockGraphics8getBlockEv
     void texturePaletteSize()const; // _ZNK13BlockGraphics18texturePaletteSizeEv
     void setDefaultCarriedTextures(); // _ZN13BlockGraphics25setDefaultCarriedTexturesEv
@@ -80,7 +81,7 @@ public:
     void enableAllowSame(); // _ZN13BlockGraphics15enableAllowSameEv
     void teardownBlocks(); // _ZN13BlockGraphics14teardownBlocksEv
     BlockGraphics(std::string const&); // _ZN13BlockGraphicsC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  BlockGraphics(Block const&, BlockGraphics::ConstructorToken); //TODO: incomplete function definition // _ZN13BlockGraphicsC2ERK5BlockNS_16ConstructorTokenE
+//    BlockGraphics(Block const&, long); //TODO: incomplete function definition // _ZN13BlockGraphicsC2ERK5BlockNS_16ConstructorTokenE
     void getMapColor()const; // _ZNK13BlockGraphics11getMapColorEv
     void getIconTexture(int)const; // _ZNK13BlockGraphics14getIconTextureEi
     void getTextureCarriedVariations(unsigned long, int)const; // _ZNK13BlockGraphics27getTextureCarriedVariationsEmi

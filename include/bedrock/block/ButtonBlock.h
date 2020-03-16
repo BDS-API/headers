@@ -4,16 +4,17 @@
 #include "BlockLegacy.h"
 
 
-class ButtonBlock : BlockLegacy {
+class ButtonBlock : public BlockLegacy {
 
 public:
-    ~ButtonBlock(); // _ZN11ButtonBlockD2Ev
+    virtual ~ButtonBlock(); // _ZN11ButtonBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK11ButtonBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK11ButtonBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual bool isInteractiveBlock()const; // _ZNK11ButtonBlock18isInteractiveBlockEv
     virtual bool isButtonBlock()const; // _ZNK11ButtonBlock13isButtonBlockEv
     virtual bool isSignalSource()const; // _ZNK11ButtonBlock14isSignalSourceEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK11ButtonBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK11ButtonBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK11ButtonBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK11ButtonBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK11ButtonBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

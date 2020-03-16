@@ -4,10 +4,11 @@
 #include "../OceanMonumentPiece.h"
 
 
-class OceanMonumentDoubleYZRoom : OceanMonumentPiece {
+class OceanMonumentDoubleYZRoom : public OceanMonumentPiece {
 
 public:
-    ~OceanMonumentDoubleYZRoom(); // _ZN25OceanMonumentDoubleYZRoomD2Ev
+    virtual ~OceanMonumentDoubleYZRoom(); // _ZN25OceanMonumentDoubleYZRoomD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getType()const; // _ZNK25OceanMonumentDoubleYZRoom7getTypeEv
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN25OceanMonumentDoubleYZRoom11postProcessEP11BlockSourceR6RandomRK11BoundingBox
     OceanMonumentDoubleYZRoom(); // _ZN25OceanMonumentDoubleYZRoomC2Ev

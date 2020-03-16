@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class SlimeAttackGoal : Goal {
+class SlimeAttackGoal : public Goal {
 
 public:
-    ~SlimeAttackGoal(); // _ZN15SlimeAttackGoalD2Ev
+    virtual ~SlimeAttackGoal(); // _ZN15SlimeAttackGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15SlimeAttackGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15SlimeAttackGoal16canContinueToUseEv
     virtual void start(); // _ZN15SlimeAttackGoal5startEv

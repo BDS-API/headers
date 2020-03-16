@@ -1,14 +1,14 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include <vector>
 
 
 class ConnectionRequest {
 
 public:
-//  void create(PrivateKeyManager &, Certificate const&, std::string const&, std::string const&, unsigned long, std::string const&, mce::Image const&, mce::Image const&, std::vector<AnimatedImageData> const&, std::string const&, std::string const&, std::string const&, bool, bool, std::string const&, InputMode, int, int, std::string const&, bool, std::string const&, ADRole, std::string const&, std::string const&, bool, std::string const&, std::string const&, bool, std::string); //TODO: incomplete function definition // _ZN17ConnectionRequest6createER17PrivateKeyManagerRK11CertificateRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_mSC_RKN3mce5ImageESG_RKSt6vectorI17AnimatedImageDataSaISI_EESC_SC_SC_bbSC_9InputModeiiSC_bSC_6ADRoleSC_SC_bSC_SC_bSA_
+//    void create(PrivateKeyManager &, Certificate const&, std::string const&, std::string const&, unsigned long, std::string const&, mce::Image const&, mce::Image const&, std::vector<AnimatedImageData> const&, std::string const&, std::string const&, std::string const&, bool, bool, std::string const&, long, int, int, std::string const&, bool, std::string const&, long, std::string const&, std::string const&, bool, std::string const&, std::string const&, bool, std::string); //TODO: incomplete function definition // _ZN17ConnectionRequest6createER17PrivateKeyManagerRK11CertificateRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_mSC_RKN3mce5ImageESG_RKSt6vectorI17AnimatedImageDataSaISI_EESC_SC_SC_bbSC_9InputModeiiSC_bSC_6ADRoleSC_SC_bSC_SC_bSA_
     ConnectionRequest(std::unique_ptr<WebToken>, std::string const&); // _ZN17ConnectionRequestC2ESt10unique_ptrI8WebTokenSt14default_deleteIS1_EERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     ConnectionRequest(ConnectionRequest const&); // _ZN17ConnectionRequestC2ERKS_
     ~ConnectionRequest(); // _ZN17ConnectionRequestD2Ev

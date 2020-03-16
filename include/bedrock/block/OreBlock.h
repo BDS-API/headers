@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class OreBlock : BlockLegacy {
+class OreBlock : public BlockLegacy {
 
 public:
-    ~OreBlock(); // _ZN8OreBlockD2Ev
+    virtual ~OreBlock(); // _ZN8OreBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canBeOriginalSurface()const; // _ZNK8OreBlock20canBeOriginalSurfaceEv
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK8OreBlock16getResourceCountER6RandomRK5Blocki
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK8OreBlock15getResourceItemER6RandomRK5Blocki

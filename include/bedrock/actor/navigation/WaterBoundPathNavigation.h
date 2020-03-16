@@ -3,10 +3,11 @@
 #include "PathNavigation.h"
 
 
-class WaterBoundPathNavigation : PathNavigation {
+class WaterBoundPathNavigation : public PathNavigation {
 
 public:
-    ~WaterBoundPathNavigation(); // _ZN24WaterBoundPathNavigationD2Ev
+    virtual ~WaterBoundPathNavigation(); // _ZN24WaterBoundPathNavigationD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initializeInternal(Mob &, NavigationDescription *); // _ZN24WaterBoundPathNavigation18initializeInternalER3MobP21NavigationDescription
     virtual void tick(NavigationComponent &, Mob &); // _ZN24WaterBoundPathNavigation4tickER19NavigationComponentR3Mob
     virtual void getTempMobPos(Mob const&)const; // _ZNK24WaterBoundPathNavigation13getTempMobPosERK3Mob

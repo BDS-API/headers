@@ -18,8 +18,8 @@ public:
     void getNextState(RenderParams &)const; // _ZNK29ActorAnimationControllerState12getNextStateER12RenderParams
     void addParticleEffect(); // _ZN29ActorAnimationControllerState17addParticleEffectEv
     void addSoundEffect(); // _ZN29ActorAnimationControllerState14addSoundEffectEv
-//  void addEntryActorEvent(float, std::string const&, CurrentCmdVersion); //TODO: incomplete function definition // _ZN29ActorAnimationControllerState18addEntryActorEventEfRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE17CurrentCmdVersion
-//  void addExitActorEvent(float, std::string const&, CurrentCmdVersion); //TODO: incomplete function definition // _ZN29ActorAnimationControllerState17addExitActorEventEfRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE17CurrentCmdVersion
+//    void addEntryActorEvent(float, std::string const&, long); //TODO: incomplete function definition // _ZN29ActorAnimationControllerState18addEntryActorEventEfRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE17CurrentCmdVersion
+//    void addExitActorEvent(float, std::string const&, long); //TODO: incomplete function definition // _ZN29ActorAnimationControllerState17addExitActorEventEfRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE17CurrentCmdVersion
     void toJson(Json::Value &, ActorAnimationController const&)const; // _ZNK29ActorAnimationControllerState6toJsonERN4Json5ValueERK24ActorAnimationController
     ~ActorAnimationControllerState(); // _ZN29ActorAnimationControllerStateD2Ev
 };

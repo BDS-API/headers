@@ -1,13 +1,14 @@
 #pragma once
 
-#include <vector>
 #include "../StrongholdPiece.h"
+#include <vector>
 
 
-class SHStraightStairsDown : StrongholdPiece {
+class SHStraightStairsDown : public StrongholdPiece {
 
 public:
-    ~SHStraightStairsDown(); // _ZN20SHStraightStairsDownD2Ev
+    virtual ~SHStraightStairsDown(); // _ZN20SHStraightStairsDownD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getType()const; // _ZNK20SHStraightStairsDown7getTypeEv
     virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &); // _ZN20SHStraightStairsDown11addChildrenEP14StructurePieceRSt6vectorISt10unique_ptrIS0_St14default_deleteIS0_EESaIS6_EER6Random
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN20SHStraightStairsDown11postProcessEP11BlockSourceR6RandomRK11BoundingBox

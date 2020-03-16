@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class EndermanTakeBlockGoal : Goal {
+class EndermanTakeBlockGoal : public Goal {
 
 public:
-    ~EndermanTakeBlockGoal(); // _ZN21EndermanTakeBlockGoalD2Ev
+    virtual ~EndermanTakeBlockGoal(); // _ZN21EndermanTakeBlockGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN21EndermanTakeBlockGoal6canUseEv
     virtual void tick(); // _ZN21EndermanTakeBlockGoal4tickEv
     virtual void appendDebugInfo(std::string &)const; // _ZNK21EndermanTakeBlockGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class CampfireBlock : ActorBlock {
+class CampfireBlock : public ActorBlock {
 
 public:
-    ~CampfireBlock(); // _ZN13CampfireBlockD2Ev
+    virtual ~CampfireBlock(); // _ZN13CampfireBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13CampfireBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK13CampfireBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void getLightEmission(Block const&)const; // _ZNK13CampfireBlock16getLightEmissionERK5Block

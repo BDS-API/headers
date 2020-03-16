@@ -4,12 +4,13 @@
 #include "ActorBlock.h"
 
 
-class CommandBlock : ActorBlock {
+class CommandBlock : public ActorBlock {
 
 public:
     static long mCBModeMap;
 
-    ~CommandBlock(); // _ZN12CommandBlockD2Ev
+    virtual ~CommandBlock(); // _ZN12CommandBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK12CommandBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isInteractiveBlock()const; // _ZNK12CommandBlock18isInteractiveBlockEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK12CommandBlock7onPlaceER11BlockSourceRK8BlockPos
@@ -23,8 +24,8 @@ public:
     virtual void getComparatorSignal(BlockSource &, BlockPos const&, Block const&, unsigned char)const; // _ZNK12CommandBlock19getComparatorSignalER11BlockSourceRK8BlockPosRK5Blockh
     virtual void getVariant(Block const&)const; // _ZNK12CommandBlock10getVariantERK5Block
     virtual void getMappedFace(unsigned char, Block const&)const; // _ZNK12CommandBlock13getMappedFaceEhRK5Block
-//  CommandBlock(std::string const&, int, CommandBlockMode); //TODO: incomplete function definition // _ZN12CommandBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi16CommandBlockMode
-//  void updateBlock(BlockSource &, BlockPos const&, CommandBlockMode, bool)const; //TODO: incomplete function definition // _ZNK12CommandBlock11updateBlockER11BlockSourceRK8BlockPos16CommandBlockModeb
+//    CommandBlock(std::string const&, int, long); //TODO: incomplete function definition // _ZN12CommandBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi16CommandBlockMode
+//    void updateBlock(BlockSource &, BlockPos const&, long, bool)const; //TODO: incomplete function definition // _ZNK12CommandBlock11updateBlockER11BlockSourceRK8BlockPos16CommandBlockModeb
     void getMode()const; // _ZNK12CommandBlock7getModeEv
     bool isCommandBlockType(Block const&)const; // _ZNK12CommandBlock18isCommandBlockTypeERK5Block
     void _installCircuit(BlockSource &, BlockPos const&, bool)const; // _ZNK12CommandBlock15_installCircuitER11BlockSourceRK8BlockPosb

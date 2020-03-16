@@ -3,10 +3,11 @@
 #include "Monster.h"
 
 
-class Endermite : Monster {
+class Endermite : public Monster {
 
 public:
-    ~Endermite(); // _ZN9EndermiteD2Ev
+    virtual ~Endermite(); // _ZN9EndermiteD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN9Endermite10normalTickEv
     virtual void getRidingHeight(); // _ZN9Endermite15getRidingHeightEv
     virtual void readAdditionalSaveData(CompoundTag const&, DataLoadHelper &); // _ZN9Endermite22readAdditionalSaveDataERK11CompoundTagR14DataLoadHelper

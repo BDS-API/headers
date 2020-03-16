@@ -4,16 +4,17 @@
 #include "DiodeBlock.h"
 
 
-class RepeaterBlock : DiodeBlock {
+class RepeaterBlock : public DiodeBlock {
 
 public:
     static long DELAY_RENDER_OFFSETS;
     static long DELAYS;
 
-    ~RepeaterBlock(); // _ZN13RepeaterBlockD2Ev
+    virtual ~RepeaterBlock(); // _ZN13RepeaterBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13RepeaterBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isInteractiveBlock()const; // _ZNK13RepeaterBlock18isInteractiveBlockEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK13RepeaterBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK13RepeaterBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK13RepeaterBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRemove(BlockSource &, BlockPos const&)const; // _ZNK13RepeaterBlock8onRemoveER11BlockSourceRK8BlockPos
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK13RepeaterBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

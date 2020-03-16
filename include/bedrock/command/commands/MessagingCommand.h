@@ -3,10 +3,11 @@
 #include "../Command.h"
 
 
-class MessagingCommand : Command {
+class MessagingCommand : public Command {
 
 public:
-    ~MessagingCommand(); // _ZN16MessagingCommandD2Ev
+    virtual ~MessagingCommand(); // _ZN16MessagingCommandD2Ev
+    virtual void __fake_function0(); // fake
     MessagingCommand(bool, bool); // _ZN16MessagingCommandC2Ebb
     void checkChatPermissions(CommandOrigin const&, CommandOutput &)const; // _ZNK16MessagingCommand20checkChatPermissionsERK13CommandOriginR13CommandOutput
 };

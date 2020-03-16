@@ -12,7 +12,7 @@ public:
     bool wasUpgraded()const; // _ZNK10PackReport11wasUpgradedEv
     void attemptedUpgrade()const; // _ZNK10PackReport16attemptedUpgradeEv
     bool hasErrors()const; // _ZNK10PackReport9hasErrorsEv
-//  bool hasErrors(PackErrorType); //TODO: incomplete function definition // _ZN10PackReport9hasErrorsE13PackErrorType
+//    bool hasErrors(long); //TODO: incomplete function definition // _ZN10PackReport9hasErrorsE13PackErrorType
     bool hasWarnings()const; // _ZNK10PackReport11hasWarningsEv
     void setUpgraded(bool); // _ZN10PackReport11setUpgradedEb
     void getLocation()const; // _ZNK10PackReport11getLocationEv
@@ -29,7 +29,7 @@ public:
     std::string getOriginalName()const; // _ZNK10PackReport15getOriginalNameB5cxx11Ev
     std::string getOriginalVersion()const; // _ZNK10PackReport18getOriginalVersionB5cxx11Ev
     void getPackType()const; // _ZNK10PackReport11getPackTypeEv
-//  void setPackType(PackType); //TODO: incomplete function definition // _ZN10PackReport11setPackTypeE8PackType
+//    void setPackType(long); //TODO: incomplete function definition // _ZN10PackReport11setPackTypeE8PackType
     std::string serializeEventErrorMessages()const; // _ZNK10PackReport27serializeEventErrorMessagesB5cxx11Ev
     void serialize(Json::Value &); // _ZN10PackReport9serializeERN4Json5ValueE
     void deserialize(Json::Value const&); // _ZN10PackReport11deserializeERKN4Json5ValueE

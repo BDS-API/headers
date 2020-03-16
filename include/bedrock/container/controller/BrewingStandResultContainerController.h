@@ -4,10 +4,11 @@
 #include "ContainerController.h"
 
 
-class BrewingStandResultContainerController : ContainerController {
+class BrewingStandResultContainerController : public ContainerController {
 
 public:
-    ~BrewingStandResultContainerController(); // _ZN37BrewingStandResultContainerControllerD2Ev
+    virtual ~BrewingStandResultContainerController(); // _ZN37BrewingStandResultContainerControllerD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isItemAllowed(ItemInstance const&)const; // _ZNK37BrewingStandResultContainerController13isItemAllowedERK12ItemInstance
     BrewingStandResultContainerController(std::shared_ptr<ContainerModel>); // _ZN37BrewingStandResultContainerControllerC2ESt10shared_ptrI14ContainerModelE
 };

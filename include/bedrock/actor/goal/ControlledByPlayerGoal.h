@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class ControlledByPlayerGoal : Goal {
+class ControlledByPlayerGoal : public Goal {
 
 public:
-    ~ControlledByPlayerGoal(); // _ZN22ControlledByPlayerGoalD2Ev
+    virtual ~ControlledByPlayerGoal(); // _ZN22ControlledByPlayerGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN22ControlledByPlayerGoal6canUseEv
     virtual void start(); // _ZN22ControlledByPlayerGoal5startEv
     virtual void stop(); // _ZN22ControlledByPlayerGoal4stopEv

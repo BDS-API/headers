@@ -9,7 +9,8 @@ class LootItemFunction {
 public:
     static long mLootingFunctions;
 
-    ~LootItemFunction(); // _ZN16LootItemFunctionD2Ev
+    virtual ~LootItemFunction(); // _ZN16LootItemFunctionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void apply(ItemStack &, Random &, Trade const&, LootTableContext &); // _ZN16LootItemFunction5applyER9ItemStackR6RandomRK5TradeR16LootTableContext
     virtual void apply(ItemInstance &, Random &, Trade const&, LootTableContext &); // _ZN16LootItemFunction5applyER12ItemInstanceR6RandomRK5TradeR16LootTableContext
     void getConditions()const; // _ZNK16LootItemFunction13getConditionsEv

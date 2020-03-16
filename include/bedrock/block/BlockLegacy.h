@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
-#include "../util/Brightness.h"
 #include <functional>
+#include "../util/Brightness.h"
+#include <string>
 #include <vector>
 
 
@@ -12,7 +12,8 @@ public:
     static long SIZE_OFFSET;
     static std::string BLOCK_DESCRIPTION_PREFIX;
 
-    ~BlockLegacy(); // _ZN11BlockLegacyD2Ev
+    virtual ~BlockLegacy(); // _ZN11BlockLegacyD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK11BlockLegacy4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getStateFromLegacyData(unsigned short)const; // _ZNK11BlockLegacy22getStateFromLegacyDataEt
     virtual void getNextBlockPermutation(Block const&)const; // _ZNK11BlockLegacy23getNextBlockPermutationERK5Block
@@ -28,11 +29,11 @@ public:
     virtual void onProjectileHit(BlockSource &, BlockPos const&, Actor const&)const; // _ZNK11BlockLegacy15onProjectileHitER11BlockSourceRK8BlockPosRK5Actor
     virtual void liquidCanFlowIntoFromDirection(unsigned char, std::function<Block const& (BlockPos const&)> const&, BlockPos const&)const; // _ZNK11BlockLegacy30liquidCanFlowIntoFromDirectionEhRKSt8functionIFRK5BlockRK8BlockPosEES6_
     virtual void getLightEmission(Block const&)const; // _ZNK11BlockLegacy16getLightEmissionERK5Block
-    virtual void shouldRandomTick()const; // _ZNK11BlockLegacy16shouldRandomTickEv
+    virtual bool shouldRandomTick()const; // _ZNK11BlockLegacy16shouldRandomTickEv
     virtual bool hasVariableLighting()const; // _ZNK11BlockLegacy19hasVariableLightingEv
     virtual bool isStrippable(Block const&)const; // _ZNK11BlockLegacy12isStrippableERK5Block
     virtual void getStrippedBlock(Block const&)const; // _ZNK11BlockLegacy16getStrippedBlockERK5Block
-//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition // _ZNK11BlockLegacy17canProvideSupportERK5Blockh16BlockSupportType
+    virtual bool canProvideSupport__incomplete0(Block const&, unsigned char, long)const; //TODO: incomplete function definition // _ZNK11BlockLegacy17canProvideSupportERK5Blockh16BlockSupportType
     virtual bool canConnect(Block const&, unsigned char, Block const&)const; // _ZNK11BlockLegacy10canConnectERK5BlockhS2_
     virtual void getConnectedDirections(Block const&, BlockPos const&, BlockSource &, bool &, bool &, bool &, bool &)const; // _ZNK11BlockLegacy22getConnectedDirectionsERK5BlockRK8BlockPosR11BlockSourceRbS8_S8_S8_
     virtual bool isCropBlock()const; // _ZNK11BlockLegacy11isCropBlockEv
@@ -61,13 +62,13 @@ public:
     virtual void getDirectSignal(BlockSource &, BlockPos const&, int)const; // _ZNK11BlockLegacy15getDirectSignalER11BlockSourceRK8BlockPosi
     virtual void waterSpreadCausesSpawn()const; // _ZNK11BlockLegacy22waterSpreadCausesSpawnEv
     virtual bool canContainLiquid()const; // _ZNK11BlockLegacy16canContainLiquidEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK11BlockLegacy23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK11BlockLegacy23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void handleRain(BlockSource &, BlockPos const&, float)const; // _ZNK11BlockLegacy10handleRainER11BlockSourceRK8BlockPosf
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const; // _ZNK11BlockLegacy19canBeUsedInCommandsEbRK15BaseGameVersion
     virtual void getThickness()const; // _ZNK11BlockLegacy12getThicknessEv
     virtual void getFlexibility(BlockSource &, BlockPos const&)const; // _ZNK11BlockLegacy14getFlexibilityER11BlockSourceRK8BlockPos
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK11BlockLegacy15checkIsPathableER5ActorRK8BlockPosS4_
-    virtual void shouldDispense(BlockSource &, Container &)const; // _ZNK11BlockLegacy14shouldDispenseER11BlockSourceR9Container
+    virtual bool shouldDispense(BlockSource &, Container &)const; // _ZNK11BlockLegacy14shouldDispenseER11BlockSourceR9Container
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK11BlockLegacy8dispenseER11BlockSourceR9ContaineriRK4Vec3h
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK11BlockLegacy7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRemove(BlockSource &, BlockPos const&)const; // _ZNK11BlockLegacy8onRemoveER11BlockSourceRK8BlockPos
@@ -84,7 +85,7 @@ public:
     virtual void updateEntityAfterFallOn(Actor &)const; // _ZNK11BlockLegacy23updateEntityAfterFallOnER5Actor
     virtual bool isBounceBlock()const; // _ZNK11BlockLegacy13isBounceBlockEv
     virtual void ignoreEntitiesOnPistonMove(Block const&)const; // _ZNK11BlockLegacy26ignoreEntitiesOnPistonMoveERK5Block
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK11BlockLegacy12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK11BlockLegacy12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayConsumeFertilizer(BlockSource &)const; // _ZNK11BlockLegacy20mayConsumeFertilizerER11BlockSource
     virtual void mayPick()const; // _ZNK11BlockLegacy7mayPickEv
     virtual void mayPick(BlockSource &, Block const&, bool)const; // _ZNK11BlockLegacy7mayPickER11BlockSourceRK5Blockb
@@ -122,7 +123,7 @@ public:
     virtual void getMobToSpawn(SpawnConditions const&, BlockSource &)const; // _ZNK11BlockLegacy13getMobToSpawnERK15SpawnConditionsR11BlockSource
     virtual void getMapColor(BlockSource &, BlockPos const&)const; // _ZNK11BlockLegacy11getMapColorER11BlockSourceRK8BlockPos
     virtual void getMapColor()const; // _ZNK11BlockLegacy11getMapColorEv
-    virtual void shouldStopFalling(Actor &)const; // _ZNK11BlockLegacy17shouldStopFallingER5Actor
+    virtual bool shouldStopFalling(Actor &)const; // _ZNK11BlockLegacy17shouldStopFallingER5Actor
     virtual bool pushesUpFallingBlocks()const; // _ZNK11BlockLegacy21pushesUpFallingBlocksEv
     virtual void calcGroundFriction(Mob &, BlockPos const&)const; // _ZNK11BlockLegacy18calcGroundFrictionER3MobRK8BlockPos
     virtual bool canHaveExtraData()const; // _ZNK11BlockLegacy16canHaveExtraDataEv
@@ -157,7 +158,7 @@ public:
     virtual void setExplodeable(float); // _ZN11BlockLegacy14setExplodeableEf
     virtual void setDestroyTime(float); // _ZN11BlockLegacy14setDestroyTimeEf
     virtual void setFriction(float); // _ZN11BlockLegacy11setFrictionEf
-//  virtual void addProperty(BlockProperty); //TODO: incomplete function definition // _ZN11BlockLegacy11addPropertyE13BlockProperty
+    virtual void addProperty__incomplete0(long); //TODO: incomplete function definition // _ZN11BlockLegacy11addPropertyE13BlockProperty
     virtual void addState(ItemState const&); // _ZN11BlockLegacy8addStateERK9ItemState
     virtual void addState(ItemState const&, unsigned long); // _ZN11BlockLegacy8addStateERK9ItemStatem
     virtual void setAllowsRunes(bool); // _ZN11BlockLegacy14setAllowsRunesEb
@@ -178,7 +179,7 @@ public:
     bool isMobPiece()const; // _ZNK11BlockLegacy10isMobPieceEv
     bool canBeExtraBlock()const; // _ZNK11BlockLegacy15canBeExtraBlockEv
     bool canPropagateBrightness()const; // _ZNK11BlockLegacy22canPropagateBrightnessEv
-    void shouldRandomTickExtraLayer()const; // _ZNK11BlockLegacy26shouldRandomTickExtraLayerEv
+    bool shouldRandomTickExtraLayer()const; // _ZNK11BlockLegacy26shouldRandomTickExtraLayerEv
     bool canBeBrokenFromFalling()const; // _ZNK11BlockLegacy22canBeBrokenFromFallingEv
     void createBlockPermutations(unsigned int); // _ZN11BlockLegacy23createBlockPermutationsEj
     void createWeakPtr(); // _ZN11BlockLegacy13createWeakPtrEv
@@ -208,14 +209,14 @@ public:
     void setIgnoreBlockForInsideCubeRenderer(bool); // _ZN11BlockLegacy35setIgnoreBlockForInsideCubeRendererEb
     bool isUnbreakable()const; // _ZNK11BlockLegacy13isUnbreakableEv
     bool isHeavy()const; // _ZNK11BlockLegacy7isHeavyEv
-//  bool hasProperty(BlockProperty)const; //TODO: incomplete function definition // _ZNK11BlockLegacy11hasPropertyE13BlockProperty
+//    bool hasProperty(long)const; //TODO: incomplete function definition // _ZNK11BlockLegacy11hasPropertyE13BlockProperty
     bool isInteraction()const; // _ZNK11BlockLegacy13isInteractionEv
     void setIsInteraction(bool); // _ZN11BlockLegacy16setIsInteractionEb
     void setNameId(std::string const&); // _ZN11BlockLegacy9setNameIdERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     std::string getDescriptionId()const; // _ZNK11BlockLegacy16getDescriptionIdB5cxx11Ev
     std::string buildDescriptionName(Block const&)const; // _ZNK11BlockLegacy20buildDescriptionNameB5cxx11ERK5Block
-//  void addBlockProperty(BlockProperty); //TODO: incomplete function definition // _ZN11BlockLegacy16addBlockPropertyE13BlockProperty
-//  void setBlockProperty(BlockProperty); //TODO: incomplete function definition // _ZN11BlockLegacy16setBlockPropertyE13BlockProperty
+//    void addBlockProperty(long); //TODO: incomplete function definition // _ZN11BlockLegacy16addBlockPropertyE13BlockProperty
+//    void setBlockProperty(long); //TODO: incomplete function definition // _ZN11BlockLegacy16setBlockPropertyE13BlockProperty
     void setFlammable(int, int)const; // _ZNK11BlockLegacy12setFlammableEii
     void setRandomTicking(bool)const; // _ZNK11BlockLegacy16setRandomTickingEb
     void setRandomTickingExtraLayer(bool)const; // _ZNK11BlockLegacy26setRandomTickingExtraLayerEb
@@ -226,7 +227,7 @@ public:
     void getRequiredBaseGameVersion()const; // _ZNK11BlockLegacy26getRequiredBaseGameVersionEv
     void getExperimental()const; // _ZNK11BlockLegacy15getExperimentalEv
     void getAllowsRunes()const; // _ZNK11BlockLegacy14getAllowsRunesEv
-//  void setCategory(CreativeItemCategory); //TODO: incomplete function definition // _ZN11BlockLegacy11setCategoryE20CreativeItemCategory
+//    void setCategory(long); //TODO: incomplete function definition // _ZN11BlockLegacy11setCategoryE20CreativeItemCategory
     void DEPRECATEDcallOnGraphicsModeChanged(bool, bool, bool); // _ZN11BlockLegacy35DEPRECATEDcallOnGraphicsModeChangedEbbb
     bool isVanilla()const; // _ZNK11BlockLegacy9isVanillaEv
     void setIsVanillaBlock(bool); // _ZN11BlockLegacy17setIsVanillaBlockEb

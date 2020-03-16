@@ -1,14 +1,15 @@
 #pragma once
 
+#include "../../container/Container.h"
 #include <string>
 #include "BlockActor.h"
-#include "../../container/Container.h"
 
 
-class BrewingStandBlockActor : BlockActor, Container {
+class BrewingStandBlockActor : public BlockActor, public Container {
 
 public:
-    ~BrewingStandBlockActor(); // _ZN22BrewingStandBlockActorD2Ev
+    virtual ~BrewingStandBlockActor(); // _ZN22BrewingStandBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN22BrewingStandBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK22BrewingStandBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN22BrewingStandBlockActor4tickER11BlockSource

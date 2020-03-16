@@ -3,10 +3,11 @@
 #include "ITickingSystem.h"
 
 
-class RailActivatorSystem : ITickingSystem {
+class RailActivatorSystem : public ITickingSystem {
 
 public:
-    ~RailActivatorSystem(); // _ZN19RailActivatorSystemD2Ev
+    virtual ~RailActivatorSystem(); // _ZN19RailActivatorSystemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(EntityRegistry &); // _ZN19RailActivatorSystem4tickER14EntityRegistry
     RailActivatorSystem(); // _ZN19RailActivatorSystemC2Ev
 };

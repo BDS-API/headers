@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class ChunkRadiusUpdatedPacket : Packet {
+class ChunkRadiusUpdatedPacket : public Packet {
 
 public:
-    ~ChunkRadiusUpdatedPacket(); // _ZN24ChunkRadiusUpdatedPacketD2Ev
+    virtual ~ChunkRadiusUpdatedPacket(); // _ZN24ChunkRadiusUpdatedPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK24ChunkRadiusUpdatedPacket5getIdEv
     virtual std::string getName()const; // _ZNK24ChunkRadiusUpdatedPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK24ChunkRadiusUpdatedPacket5writeER12BinaryStream

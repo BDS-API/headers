@@ -4,10 +4,11 @@
 #include "SecureStorage.h"
 
 
-class NullSecureStorage : SecureStorage {
+class NullSecureStorage : public SecureStorage {
 
 public:
-    ~NullSecureStorage(); // _ZN17NullSecureStorageD2Ev
+    virtual ~NullSecureStorage(); // _ZN17NullSecureStorageD2Ev
+    virtual void __fake_function0(); // fake
     virtual void add(std::string const&, std::string const&); // _ZN17NullSecureStorage3addERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_
     virtual void addOrUpdate(std::string const&, std::string const&); // _ZN17NullSecureStorage11addOrUpdateERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_
     virtual void remove(std::string const&); // _ZN17NullSecureStorage6removeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

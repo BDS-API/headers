@@ -3,10 +3,11 @@
 #include "../../level/LevelEventListener.h"
 
 
-class ScriptServerLevelEventListener : LevelEventListener {
+class ScriptServerLevelEventListener : public LevelEventListener {
 
 public:
-    ~ScriptServerLevelEventListener(); // _ZN30ScriptServerLevelEventListenerD2Ev
+    virtual ~ScriptServerLevelEventListener(); // _ZN30ScriptServerLevelEventListenerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onLevelTick(); // _ZN30ScriptServerLevelEventListener11onLevelTickEv
     ScriptServerLevelEventListener(MinecraftServerScriptEngine &); // _ZN30ScriptServerLevelEventListenerC2ER27MinecraftServerScriptEngine
 };

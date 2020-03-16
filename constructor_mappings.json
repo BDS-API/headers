@@ -1,0 +1,29 @@
+{
+  "Vec3": {
+    "vars": ["float x", "float y", "float z"],
+    "constructor": {
+      "Vec3(void)": ["this->x = 0", "this->y = 0", "this->z = 0"],
+      "Vec3(float)": ["this->x = x", "this->y = x", "this->z = x"],
+      "Vec3(float, float, float)": ["this->x = x", "this->y = y", "this->z = z"],
+      "Vec3(BlockPos const&)": ["this->x = blockPos.x", "this->y = blockPos.y", "this->z = blockPos.z"],
+      "Vec3(Pos const&)": ["this->x = pos.x", "this->y = pos.y", "this->z = pos.z"]
+    }
+  },
+  "BlockPos": {
+    "vars": ["int x", "int y", "int z"],
+    "constructor": {
+      "BlockPos(BlockPos const&)": ["this->x = blockPos.x", "this->y = blockPos.y", "this->z = blockPos.z"],
+      "BlockPos(void)": ["this->x = 0", "this->y = 0", "this->z = 0"],
+      "BlockPos(int, int, int)": ["this->x = x", "this->y = y", "this->z = z"],
+      "BlockPos(int)": ["this->x = x", "this->y = x", "this->z = x"]
+    }
+  },
+  "Pos": {
+    "vars": ["int x", "int y", "int z"],
+    "constructor": {
+      "Pos(Pos const&)": ["this->x = pos.x", "this->y = pos.y", "this->z = pos.z"],
+      "Pos(void)": ["this->x = 0", "this->y = 0", "this->z = 0"],
+      "Pos(int, int, int)": ["this->x = x", "this->y = y", "this->z = z"]
+    }
+  }
+}

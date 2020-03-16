@@ -6,7 +6,8 @@
 class NetworkChunkPublisher {
 
 public:
-    ~NetworkChunkPublisher(); // _ZN21NetworkChunkPublisherD2Ev
+    virtual ~NetworkChunkPublisher(); // _ZN21NetworkChunkPublisherD2Ev
+    virtual void __fake_function0(); // fake
     NetworkChunkPublisher(Level &, NetworkHandler &, ClientBlobCache::Server::ActiveTransfersManager &, NetworkIdentifier const&, unsigned char); // _ZN21NetworkChunkPublisherC2ER5LevelR14NetworkHandlerRN15ClientBlobCache6Server22ActiveTransfersManagerERK17NetworkIdentifierh
     void prepareRegion(ChunkSource &, ChunkPos &); // _ZN21NetworkChunkPublisher13prepareRegionER11ChunkSourceR8ChunkPos
     void destroyRegion(); // _ZN21NetworkChunkPublisher13destroyRegionEv

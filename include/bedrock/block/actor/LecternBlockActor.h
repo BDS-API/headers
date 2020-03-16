@@ -1,13 +1,14 @@
 #pragma once
 
-#include "BlockActor.h"
 #include "../../container/Container.h"
+#include "BlockActor.h"
 
 
-class LecternBlockActor : BlockActor, Container {
+class LecternBlockActor : public BlockActor, public Container {
 
 public:
-    ~LecternBlockActor(); // _ZN17LecternBlockActorD2Ev
+    virtual ~LecternBlockActor(); // _ZN17LecternBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN17LecternBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK17LecternBlockActor4saveER11CompoundTag
     virtual void onChanged(BlockSource &); // _ZN17LecternBlockActor9onChangedER11BlockSource

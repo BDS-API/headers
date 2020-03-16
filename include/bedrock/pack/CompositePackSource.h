@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class CompositePackSource : PackSource {
+class CompositePackSource : public PackSource {
 
 public:
-    ~CompositePackSource(); // _ZN19CompositePackSourceD2Ev
+    virtual ~CompositePackSource(); // _ZN19CompositePackSourceD2Ev
+    virtual void __fake_function0(); // fake
     virtual void forEachPackConst(std::function<void (Pack const&)>)const; // _ZNK19CompositePackSource16forEachPackConstESt8functionIFvRK4PackEE
     virtual void forEachPack(std::function<void (Pack &)>); // _ZN19CompositePackSource11forEachPackESt8functionIFvR4PackEE
     virtual void load(PackManifestFactory &, IContentKeyProvider const&); // _ZN19CompositePackSource4loadER19PackManifestFactoryRK19IContentKeyProvider

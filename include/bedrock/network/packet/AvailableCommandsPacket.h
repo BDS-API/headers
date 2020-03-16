@@ -1,11 +1,11 @@
 #pragma once
 
 #include <string>
-#include "Packet.h"
 #include <vector>
+#include "Packet.h"
 
 
-class AvailableCommandsPacket : Packet {
+class AvailableCommandsPacket : public Packet {
 
 public:
     class CommandData;
@@ -15,7 +15,8 @@ public:
     class ParamData;
     class SoftEnumData;
 
-    ~AvailableCommandsPacket(); // _ZN23AvailableCommandsPacketD2Ev
+    virtual ~AvailableCommandsPacket(); // _ZN23AvailableCommandsPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK23AvailableCommandsPacket5getIdEv
     virtual std::string getName()const; // _ZNK23AvailableCommandsPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK23AvailableCommandsPacket5writeER12BinaryStream

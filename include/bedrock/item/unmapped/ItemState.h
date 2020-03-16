@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 
 
 class ItemState {
@@ -9,7 +9,8 @@ class ItemState {
 public:
     class StateListNode;
 
-    ~ItemState(); // _ZN9ItemStateD2Ev
+    virtual ~ItemState(); // _ZN9ItemStateD2Ev
+    virtual void __fake_function0(); // fake
     void getID()const; // _ZNK9ItemState5getIDEv
     void getVariationCount()const; // _ZNK9ItemState17getVariationCountEv
     std::string getName()const; // _ZNK9ItemState7getNameB5cxx11Ev

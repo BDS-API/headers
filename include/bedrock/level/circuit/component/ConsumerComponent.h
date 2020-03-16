@@ -3,10 +3,11 @@
 #include "BaseCircuitComponent.h"
 
 
-class ConsumerComponent : BaseCircuitComponent {
+class ConsumerComponent : public BaseCircuitComponent {
 
 public:
-    ~ConsumerComponent(); // _ZN17ConsumerComponentD2Ev
+    virtual ~ConsumerComponent(); // _ZN17ConsumerComponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canConsumerPower(); // _ZN17ConsumerComponent16canConsumerPowerEv
     virtual void getBaseType()const; // _ZNK17ConsumerComponent11getBaseTypeEv
     virtual void getInstanceType()const; // _ZNK17ConsumerComponent15getInstanceTypeEv

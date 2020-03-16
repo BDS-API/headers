@@ -3,10 +3,11 @@
 #include "BaseCircuitComponent.h"
 
 
-class PoweredBlockComponent : BaseCircuitComponent {
+class PoweredBlockComponent : public BaseCircuitComponent {
 
 public:
-    ~PoweredBlockComponent(); // _ZN21PoweredBlockComponentD2Ev
+    virtual ~PoweredBlockComponent(); // _ZN21PoweredBlockComponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getStrength()const; // _ZNK21PoweredBlockComponent11getStrengthEv
     virtual bool canConsumerPower(); // _ZN21PoweredBlockComponent16canConsumerPowerEv
     virtual void getBaseType()const; // _ZNK21PoweredBlockComponent11getBaseTypeEv

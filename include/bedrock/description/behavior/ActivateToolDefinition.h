@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "BehaviorDefinition.h"
+#include "../../../json/Value.h"
 
 
-class ActivateToolDefinition : BehaviorDefinition {
+class ActivateToolDefinition : public BehaviorDefinition {
 
 public:
-    ~ActivateToolDefinition(); // _ZN22ActivateToolDefinitionD2Ev
+    virtual ~ActivateToolDefinition(); // _ZN22ActivateToolDefinitionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Json::Value, BehaviorFactory const&); // _ZN22ActivateToolDefinition4loadEN4Json5ValueERK15BehaviorFactory
     ActivateToolDefinition(); // _ZN22ActivateToolDefinitionC2Ev
 };

@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "BehaviorNode.h"
+#include <string>
 
 
-class GetInteractionPositionForBlockNode : BehaviorNode {
+class GetInteractionPositionForBlockNode : public BehaviorNode {
 
 public:
-    ~GetInteractionPositionForBlockNode(); // _ZN34GetInteractionPositionForBlockNodeD2Ev
+    virtual ~GetInteractionPositionForBlockNode(); // _ZN34GetInteractionPositionForBlockNodeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(Actor &); // _ZN34GetInteractionPositionForBlockNode4tickER5Actor
     virtual void initializeFromDefinition(Actor &); // _ZN34GetInteractionPositionForBlockNode24initializeFromDefinitionER5Actor
     GetInteractionPositionForBlockNode(); // _ZN34GetInteractionPositionForBlockNodeC2Ev

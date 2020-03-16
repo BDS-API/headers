@@ -4,13 +4,14 @@
 #include "BushBlock.h"
 
 
-class Sapling : BushBlock {
+class Sapling : public BushBlock {
 
 public:
-    ~Sapling(); // _ZN7SaplingD2Ev
+    virtual ~Sapling(); // _ZN7SaplingD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK7Sapling4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool canContainLiquid()const; // _ZNK7Sapling16canContainLiquidEv
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK7Sapling12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK7Sapling12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK7Sapling8mayPlaceER11BlockSourceRK8BlockPos
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK7Sapling15getResourceItemER6RandomRK5Blocki
     virtual void getRenderLayer()const; // _ZNK7Sapling14getRenderLayerEv
@@ -22,7 +23,7 @@ public:
     Sapling(std::string const&, int); // _ZN7SaplingC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
     void growTree(BlockSource &, BlockPos const&, Random &, Actor *)const; // _ZNK7Sapling8growTreeER11BlockSourceRK8BlockPosR6RandomP5Actor
     void advanceTree(BlockSource &, BlockPos const&, Random &, Actor *)const; // _ZNK7Sapling11advanceTreeER11BlockSourceRK8BlockPosR6RandomP5Actor
-//  bool isSapling(BlockSource &, BlockPos const&, SaplingType)const; //TODO: incomplete function definition // _ZNK7Sapling9isSaplingER11BlockSourceRK8BlockPos11SaplingType
+//    bool isSapling(BlockSource &, BlockPos const&, long)const; //TODO: incomplete function definition // _ZNK7Sapling9isSaplingER11BlockSourceRK8BlockPos11SaplingType
     void generateRedwoodTree(int &, int &, bool &, BlockPos const&, BlockSource &, Actor *)const; // _ZNK7Sapling19generateRedwoodTreeERiS0_RbRK8BlockPosR11BlockSourceP5Actor
     void generateJungleTree(int &, int &, bool &, BlockPos const&, BlockSource &, Actor *)const; // _ZNK7Sapling18generateJungleTreeERiS0_RbRK8BlockPosR11BlockSourceP5Actor
     void generateRoofTree(int &, int &, bool &, BlockPos const&, BlockSource &, Actor *)const; // _ZNK7Sapling16generateRoofTreeERiS0_RbRK8BlockPosR11BlockSourceP5Actor

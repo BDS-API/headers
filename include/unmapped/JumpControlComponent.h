@@ -22,7 +22,7 @@ public:
     void getJumpPower(Mob const&)const; // _ZNK20JumpControlComponent12getJumpPowerERK3Mob
     void setJumpPower(float); // _ZN20JumpControlComponent12setJumpPowerEf
     void getJumpType(Mob const&)const; // _ZNK20JumpControlComponent11getJumpTypeERK3Mob
-//  void setJumpType(Mob &, JumpType); //TODO: incomplete function definition // _ZN20JumpControlComponent11setJumpTypeER3Mob8JumpType
+//    void setJumpType(Mob &, long); //TODO: incomplete function definition // _ZN20JumpControlComponent11setJumpTypeER3Mob8JumpType
     void getSwimming()const; // _ZNK20JumpControlComponent11getSwimmingEv
     void setSwimming(bool); // _ZN20JumpControlComponent11setSwimmingEb
     void _getDelayInternal()const; // _ZNK20JumpControlComponent17_getDelayInternalEv

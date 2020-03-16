@@ -4,15 +4,16 @@
 #include "ActorBlock.h"
 
 
-class LecternBlock : ActorBlock {
+class LecternBlock : public ActorBlock {
 
 public:
-    ~LecternBlock(); // _ZN12LecternBlockD2Ev
+    virtual ~LecternBlock(); // _ZN12LecternBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK12LecternBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isInteractiveBlock()const; // _ZNK12LecternBlock18isInteractiveBlockEv
     virtual bool isSignalSource()const; // _ZNK12LecternBlock14isSignalSourceEv
     virtual bool canContainLiquid()const; // _ZNK12LecternBlock16canContainLiquidEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK12LecternBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK12LecternBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK12LecternBlock15checkIsPathableER5ActorRK8BlockPosS4_
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK12LecternBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK12LecternBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

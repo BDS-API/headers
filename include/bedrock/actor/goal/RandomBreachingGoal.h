@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "RandomStrollGoal.h"
+#include <string>
 
 
-class RandomBreachingGoal : RandomStrollGoal {
+class RandomBreachingGoal : public RandomStrollGoal {
 
 public:
-    ~RandomBreachingGoal(); // _ZN19RandomBreachingGoalD2Ev
+    virtual ~RandomBreachingGoal(); // _ZN19RandomBreachingGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN19RandomBreachingGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN19RandomBreachingGoal16canContinueToUseEv
     virtual bool canBeInterrupted(); // _ZN19RandomBreachingGoal16canBeInterruptedEv

@@ -3,10 +3,11 @@
 #include "StructureStart.h"
 
 
-class EndCityStart : StructureStart {
+class EndCityStart : public StructureStart {
 
 public:
-    ~EndCityStart(); // _ZN12EndCityStartD2Ev
+    virtual ~EndCityStart(); // _ZN12EndCityStartD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isValid()const; // _ZNK12EndCityStart7isValidEv
     virtual void getType()const; // _ZNK12EndCityStart7getTypeEv
     void getYPositionForFeature(ChunkPos const&, Dimension &, TheEndGenerator &); // _ZN12EndCityStart22getYPositionForFeatureERK8ChunkPosR9DimensionR15TheEndGenerator

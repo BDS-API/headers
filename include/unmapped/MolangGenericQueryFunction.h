@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
 #include "MolangScriptArg.h"
 #include <functional>
+#include <string>
 
 
 class MolangGenericQueryFunction {

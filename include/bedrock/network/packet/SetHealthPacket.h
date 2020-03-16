@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class SetHealthPacket : Packet {
+class SetHealthPacket : public Packet {
 
 public:
-    ~SetHealthPacket(); // _ZN15SetHealthPacketD2Ev
+    virtual ~SetHealthPacket(); // _ZN15SetHealthPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK15SetHealthPacket5getIdEv
     virtual std::string getName()const; // _ZNK15SetHealthPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK15SetHealthPacket5writeER12BinaryStream

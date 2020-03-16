@@ -3,12 +3,13 @@
 #include <exception>
 
 
-class DebugAssertException : std::exception {
+class DebugAssertException : public std::exception {
 
 public:
     static long WHAT;
 
-    ~DebugAssertException(); // _ZN20DebugAssertExceptionD2Ev
+    virtual ~DebugAssertException(); // _ZN20DebugAssertExceptionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void what()const; // _ZNK20DebugAssertException4whatEv
     void enable(); // _ZN20DebugAssertException6enableEv
     void disable(); // _ZN20DebugAssertException7disableEv

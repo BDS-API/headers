@@ -1,16 +1,17 @@
 #pragma once
 
+#include "../../container/Container.h"
 #include <string>
 #include "BlockActor.h"
-#include "../../container/Container.h"
 
 
-class CauldronBlockActor : BlockActor, Container {
+class CauldronBlockActor : public BlockActor, public Container {
 
 public:
     static long WATER_COLOR;
 
-    ~CauldronBlockActor(); // _ZN18CauldronBlockActorD2Ev
+    virtual ~CauldronBlockActor(); // _ZN18CauldronBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN18CauldronBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK18CauldronBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN18CauldronBlockActor4tickER11BlockSource

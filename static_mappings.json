@@ -1,0 +1,14 @@
+{
+  "TextPacket": [
+    "createRaw(std::string const&)",
+    "createChat(std::string const&, std::string const&, std::string const&, std::string const&)",
+    "createTranslatedChat(std::string const&, std::string const&, std::string const&, std::string const&)",
+    "createTranslated(std::string const&, std::vector<std::string, std::allocator<std::string>> const&)",
+    "createTextObjectMessage(TextObjectRoot const&, std::string const&, std::string const&)",
+    "createSystemMessage(std::string const&)",
+    "createWhisper(std::string const&, std::string const&, std::string const&, std::string const&)",
+    "createAnnouncement(std::string const&, std::string const&, std::string const&, std::string const&)",
+    "createTranslatedAnnouncement(std::string const&, std::string const&, std::string const&, std::string const&)",
+    "createJukeboxPopup(std::string const&)"
+  ]
+}

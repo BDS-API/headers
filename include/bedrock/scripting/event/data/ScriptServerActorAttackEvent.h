@@ -4,12 +4,13 @@
 #include "ScriptEventData.h"
 
 
-class ScriptServerActorAttackEvent : ScriptEventData {
+class ScriptServerActorAttackEvent : public ScriptEventData {
 
 public:
     static long mHash;
 
-    ~ScriptServerActorAttackEvent(); // _ZN28ScriptServerActorAttackEventD2Ev
+    virtual ~ScriptServerActorAttackEvent(); // _ZN28ScriptServerActorAttackEventD2Ev
+    virtual void __fake_function0(); // fake
     virtual void _serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle &)const; // _ZNK28ScriptServerActorAttackEvent10_serializeER12ScriptEngineRN9ScriptApi18ScriptObjectHandleE
     void getHash(); // _ZN28ScriptServerActorAttackEvent7getHashEv
     ScriptServerActorAttackEvent(); // _ZN28ScriptServerActorAttackEventC2Ev

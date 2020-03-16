@@ -1,12 +1,12 @@
 #pragma once
 
-#include <string>
 #include <memory>
-#include "ComplexItem.h"
 #include <vector>
+#include <string>
+#include "ComplexItem.h"
 
 
-class MapItem : ComplexItem {
+class MapItem : public ComplexItem {
 
 public:
     static std::string TAG_MAP_SCALING;
@@ -16,7 +16,8 @@ public:
     static std::string TAG_MAP_NAME_INDEX;
     static std::string TAG_MAP_INIT;
 
-    ~MapItem(); // _ZN7MapItemD2Ev
+    virtual ~MapItem(); // _ZN7MapItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const; // _ZNK7MapItem24appendFormattedHovertextERK13ItemStackBaseR5LevelRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
     virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const; // _ZNK7MapItem18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE
     virtual void inventoryTick(ItemStack &, Level &, Actor &, int, bool)const; // _ZNK7MapItem13inventoryTickER9ItemStackR5LevelR5Actorib
@@ -38,6 +39,6 @@ public:
     void setItemInstanceInfo(ItemInstance &, MapItemSavedData &); // _ZN7MapItem19setItemInstanceInfoER12ItemInstanceR16MapItemSavedData
     void setMapNameIndex(ItemStack &, int); // _ZN7MapItem15setMapNameIndexER9ItemStacki
     void serializeMapData(std::vector<MapSample> const&, std::string &); // _ZN7MapItem16serializeMapDataERKSt6vectorI9MapSampleSaIS1_EERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  void _scheduleMapChunkRendering(Dimension &, MapItemSavedData const&, MapItemSavedData::ChunkBounds, std::shared_ptr<bool>); //TODO: incomplete function definition // _ZN7MapItem26_scheduleMapChunkRenderingER9DimensionRK16MapItemSavedDataNS2_11ChunkBoundsESt10shared_ptrIbE
+//    void _scheduleMapChunkRendering(Dimension &, MapItemSavedData const&, long, std::shared_ptr<bool>); //TODO: incomplete function definition // _ZN7MapItem26_scheduleMapChunkRenderingER9DimensionRK16MapItemSavedDataNS2_11ChunkBoundsESt10shared_ptrIbE
     void renderBiomePreviewMap(Dimension &, MapItemSavedData &); // _ZN7MapItem21renderBiomePreviewMapER9DimensionR16MapItemSavedData
 };

@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../unmapped/AppIsland.h"
+#include <string>
 #include "IMinecraftApp.h"
 
 
-class DedicatedServer : IMinecraftApp, BedrockEngine::AppIsland {
+class DedicatedServer : public IMinecraftApp, public BedrockEngine::AppIsland {
 
 public:
-    ~DedicatedServer(); // _ZN15DedicatedServerD2Ev
+    virtual ~DedicatedServer(); // _ZN15DedicatedServerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getPrimaryMinecraft(); // _ZN15DedicatedServer19getPrimaryMinecraftEv
     virtual void getAutomationClient()const; // _ZNK15DedicatedServer19getAutomationClientEv
     virtual bool isEduMode()const; // _ZNK15DedicatedServer9isEduModeEv

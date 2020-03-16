@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "PackError.h"
+#include <string>
 #include <vector>
 
 
-class PackSettingsError : PackError {
+class PackSettingsError : public PackError {
 
 public:
-    ~PackSettingsError(); // _ZN17PackSettingsErrorD2Ev
+    virtual ~PackSettingsError(); // _ZN17PackSettingsErrorD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getLocErrorMessage()const; // _ZNK17PackSettingsError18getLocErrorMessageB5cxx11Ev
     virtual std::string getLocErrorMessageMap()const; // _ZNK17PackSettingsError21getLocErrorMessageMapB5cxx11Ev
     virtual std::string getEventErrorMessageMap()const; // _ZNK17PackSettingsError23getEventErrorMessageMapB5cxx11Ev

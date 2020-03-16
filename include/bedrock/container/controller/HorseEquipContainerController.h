@@ -1,15 +1,16 @@
 #pragma once
 
 #include <memory>
-#include "ContainerController.h"
 #include "../../item/unmapped/ItemTransferAmount.h"
+#include "ContainerController.h"
 #include <vector>
 
 
-class HorseEquipContainerController : ContainerController {
+class HorseEquipContainerController : public ContainerController {
 
 public:
-    ~HorseEquipContainerController(); // _ZN29HorseEquipContainerControllerD2Ev
+    virtual ~HorseEquipContainerController(); // _ZN29HorseEquipContainerControllerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void _canSet(int, ContainerItemStack const&, ItemTransferAmount)const; // _ZNK29HorseEquipContainerController7_canSetEiRK18ContainerItemStack18ItemTransferAmount
     virtual void _getAvailableSetCount(int, ContainerItemStack const&)const; // _ZNK29HorseEquipContainerController21_getAvailableSetCountEiRK18ContainerItemStack
     virtual void _getAvailableAddCount(int)const; // _ZNK29HorseEquipContainerController21_getAvailableAddCountEi

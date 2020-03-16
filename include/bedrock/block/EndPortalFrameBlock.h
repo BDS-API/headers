@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class EndPortalFrameBlock : BlockLegacy {
+class EndPortalFrameBlock : public BlockLegacy {
 
 public:
-    ~EndPortalFrameBlock(); // _ZN19EndPortalFrameBlockD2Ev
+    virtual ~EndPortalFrameBlock(); // _ZN19EndPortalFrameBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void addAABBs(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &)const; // _ZNK19EndPortalFrameBlock8addAABBsERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EE
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &, Actor *)const; // _ZNK19EndPortalFrameBlock18addCollisionShapesERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EEP5Actor
     virtual bool isInteractiveBlock()const; // _ZNK19EndPortalFrameBlock18isInteractiveBlockEv

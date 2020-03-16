@@ -3,10 +3,11 @@
 #include "PathNavigation.h"
 
 
-class HoverPathNavigation : PathNavigation {
+class HoverPathNavigation : public PathNavigation {
 
 public:
-    ~HoverPathNavigation(); // _ZN19HoverPathNavigationD2Ev
+    virtual ~HoverPathNavigation(); // _ZN19HoverPathNavigationD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initializeInternal(Mob &, NavigationDescription *); // _ZN19HoverPathNavigation18initializeInternalER3MobP21NavigationDescription
     virtual void tick(NavigationComponent &, Mob &); // _ZN19HoverPathNavigation4tickER19NavigationComponentR3Mob
     virtual void getTempMobPos(Mob const&)const; // _ZNK19HoverPathNavigation13getTempMobPosERK3Mob

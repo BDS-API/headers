@@ -6,7 +6,8 @@
 class PathNavigation {
 
 public:
-    ~PathNavigation(); // _ZN14PathNavigationD2Ev
+    virtual ~PathNavigation(); // _ZN14PathNavigationD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initializeInternal(Mob &, NavigationDescription *); // _ZN14PathNavigation18initializeInternalER3MobP21NavigationDescription
     virtual void tick(NavigationComponent &, Mob &); // _ZN14PathNavigation4tickER19NavigationComponentR3Mob
     virtual void getTempMobPos(Mob const&)const; // _ZNK14PathNavigation13getTempMobPosERK3Mob

@@ -5,10 +5,11 @@
 #include "Item.h"
 
 
-class FireChargeItem : Item {
+class FireChargeItem : public Item {
 
 public:
-    ~FireChargeItem(); // _ZN14FireChargeItemD2Ev
+    virtual ~FireChargeItem(); // _ZN14FireChargeItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK14FireChargeItem8dispenseER11BlockSourceR9ContaineriRK4Vec3h
     virtual void _calculatePlacePos(ItemStack &, Actor &, unsigned char &, BlockPos &)const; // _ZNK14FireChargeItem18_calculatePlacePosER9ItemStackR5ActorRhR8BlockPos
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const; // _ZNK14FireChargeItem6_useOnER9ItemStackR5Actor8BlockPoshfff

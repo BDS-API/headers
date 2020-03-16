@@ -3,9 +3,10 @@
 #include "../Description.h"
 
 
-class PropertyDescription : Description {
+class PropertyDescription : public Description {
 
 public:
-    ~PropertyDescription(); // _ZN19PropertyDescriptionD2Ev
+    virtual ~PropertyDescription(); // _ZN19PropertyDescriptionD2Ev
+    virtual void __fake_function0(); // fake
     PropertyDescription(); // _ZN19PropertyDescriptionC2Ev
 };

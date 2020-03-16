@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class HeavyBlock : BlockLegacy {
+class HeavyBlock : public BlockLegacy {
 
 public:
-    ~HeavyBlock(); // _ZN10HeavyBlockD2Ev
+    virtual ~HeavyBlock(); // _ZN10HeavyBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK10HeavyBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK10HeavyBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK10HeavyBlock15neighborChangedER11BlockSourceRK8BlockPosS4_

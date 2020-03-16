@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class BookEditPacket : Packet {
+class BookEditPacket : public Packet {
 
 public:
-    ~BookEditPacket(); // _ZN14BookEditPacketD2Ev
+    virtual ~BookEditPacket(); // _ZN14BookEditPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK14BookEditPacket5getIdEv
     virtual std::string getName()const; // _ZNK14BookEditPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK14BookEditPacket5writeER12BinaryStream

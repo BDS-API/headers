@@ -1,22 +1,23 @@
 #pragma once
 
-#include <vector>
-#include <memory>
-#include "../../unmapped/TagMemoryChunk.h"
 #include <string>
+#include "../../unmapped/TagMemoryChunk.h"
+#include <memory>
+#include <vector>
 #include "Tag.h"
 
 
-class CompoundTag : Tag {
+class CompoundTag : public Tag {
 
 public:
-    ~CompoundTag(); // _ZN11CompoundTagD2Ev
+    virtual ~CompoundTag(); // _ZN11CompoundTagD2Ev
+    virtual void __fake_function0(); // fake
     virtual void write(IDataOutput &)const; // _ZNK11CompoundTag5writeER11IDataOutput
     virtual void load(IDataInput &); // _ZN11CompoundTag4loadER10IDataInput
     virtual std::string toString()const; // _ZNK11CompoundTag8toStringB5cxx11Ev
     virtual void getId()const; // _ZNK11CompoundTag5getIdEv
     virtual void equals(Tag const&)const; // _ZNK11CompoundTag6equalsERK3Tag
-//  virtual void print(std::string const&, PrintStream &)const; //TODO: incomplete function definition // _ZNK11CompoundTag5printERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER11PrintStream
+    virtual void print__incomplete0(std::string const&, long &)const; //TODO: incomplete function definition // _ZNK11CompoundTag5printERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEER11PrintStream
     virtual void copy()const; // _ZNK11CompoundTag4copyEv
     virtual void hash()const; // _ZNK11CompoundTag4hashEv
     CompoundTag(); // _ZN11CompoundTagC2Ev
@@ -38,7 +39,7 @@ public:
     void append(CompoundTag const&); // _ZN11CompoundTag6appendERKS_
     void contains(std::string const&)const; // _ZNK11CompoundTag8containsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void get(std::string const&)const; // _ZNK11CompoundTag3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  void contains(std::string const&, Tag::Type)const; //TODO: incomplete function definition // _ZNK11CompoundTag8containsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN3Tag4TypeE
+//    void contains(std::string const&, long)const; //TODO: incomplete function definition // _ZNK11CompoundTag8containsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN3Tag4TypeE
     void get(std::string const&); // _ZN11CompoundTag3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void getByteTag(std::string const&)const; // _ZNK11CompoundTag10getByteTagERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void getByteTag(std::string const&); // _ZN11CompoundTag10getByteTagERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

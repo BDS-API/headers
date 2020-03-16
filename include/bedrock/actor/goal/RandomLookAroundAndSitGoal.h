@@ -4,10 +4,11 @@
 #include <string>
 
 
-class RandomLookAroundAndSitGoal : RandomLookAroundGoal {
+class RandomLookAroundAndSitGoal : public RandomLookAroundGoal {
 
 public:
-    ~RandomLookAroundAndSitGoal(); // _ZN26RandomLookAroundAndSitGoalD2Ev
+    virtual ~RandomLookAroundAndSitGoal(); // _ZN26RandomLookAroundAndSitGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN26RandomLookAroundAndSitGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN26RandomLookAroundAndSitGoal16canContinueToUseEv
     virtual void start(); // _ZN26RandomLookAroundAndSitGoal5startEv

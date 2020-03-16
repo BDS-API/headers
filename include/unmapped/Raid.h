@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 
 
 class Raid {
@@ -22,8 +22,8 @@ public:
     void setOnHelpLocateRaidersCallback(std::function<void (Raid const&)> &&); // _ZN4Raid30setOnHelpLocateRaidersCallbackEOSt8functionIFvRKS_EE
     ~Raid(); // _ZN4RaidD2Ev
     void getCurrentGroupSpawnPoint()const; // _ZNK4Raid25getCurrentGroupSpawnPointEv
-//  Raid(int, int, int, Difficulty, unsigned char, std::function<bool (unsigned long, Vec3 &)> &&, std::function<bool (unsigned long, Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<std::function &>, std::equal_to<std::function &>, std::allocator<std::function &>> &)> &&, std::function<bool (std::function const&&)> &&); //TODO: incomplete function definition // _ZN4RaidC2Eiii10DifficultyhOSt8functionIFbmR4Vec3EEOS1_IFbmS2_hRSt13unordered_setI13ActorUniqueIDSt4hashIS8_ESt8equal_toIS8_ESaIS8_EEEEOS1_IFbRKS8_EE
-//  void _setNumGroupsInRaidBasedOnDifficulty(Difficulty); //TODO: incomplete function definition // _ZN4Raid36_setNumGroupsInRaidBasedOnDifficultyE10Difficulty
+//    Raid(int, int, int, long, unsigned char, std::function<bool (unsigned long, Vec3 &)> &&, std::function<bool (unsigned long, Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<std::function &>, long, std::allocator<std::function &>> &)> &&, std::function<bool (std::function const&&)> &&); //TODO: incomplete function definition // _ZN4RaidC2Eiii10DifficultyhOSt8functionIFbmR4Vec3EEOS1_IFbmS2_hRSt13unordered_setI13ActorUniqueIDSt4hashIS8_ESt8equal_toIS8_ESaIS8_EEEEOS1_IFbRKS8_EE
+//    void _setNumGroupsInRaidBasedOnDifficulty(long); //TODO: incomplete function definition // _ZN4Raid36_setNumGroupsInRaidBasedOnDifficultyE10Difficulty
     void getBossBarFilledFraction()const; // _ZNK4Raid24getBossBarFilledFractionEv
     void _calcBossBarFilledFraction(float, float, float)const; // _ZNK4Raid26_calcBossBarFilledFractionEfff
     void getRemainingRaiders()const; // _ZNK4Raid19getRemainingRaidersEv
@@ -34,7 +34,7 @@ public:
     void _tickSpawningGroup(); // _ZN4Raid18_tickSpawningGroupEv
     void _tickGroupInPlay(); // _ZN4Raid16_tickGroupInPlayEv
     void _tickAwardingRewards(); // _ZN4Raid20_tickAwardingRewardsEv
-//  void _changeState(Raid::RaidState); //TODO: incomplete function definition // _ZN4Raid12_changeStateENS_9RaidStateE
+//    void _changeState(long); //TODO: incomplete function definition // _ZN4Raid12_changeStateENS_9RaidStateE
     void readAdditionalSaveData(CompoundTag const&); // _ZN4Raid22readAdditionalSaveDataERK11CompoundTag
     void addAdditionalSaveData(CompoundTag &)const; // _ZNK4Raid21addAdditionalSaveDataER11CompoundTag
 };

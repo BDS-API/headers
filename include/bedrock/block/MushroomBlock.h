@@ -4,13 +4,14 @@
 #include "BushBlock.h"
 
 
-class MushroomBlock : BushBlock {
+class MushroomBlock : public BushBlock {
 
 public:
-    ~MushroomBlock(); // _ZN13MushroomBlockD2Ev
+    virtual ~MushroomBlock(); // _ZN13MushroomBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13MushroomBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool canContainLiquid()const; // _ZNK13MushroomBlock16canContainLiquidEv
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK13MushroomBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK13MushroomBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const; // _ZNK13MushroomBlock8mayPlaceER11BlockSourceRK8BlockPosh
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const; // _ZNK13MushroomBlock10mayPlaceOnER11BlockSourceRK8BlockPos
     virtual bool canSurvive(BlockSource &, BlockPos const&)const; // _ZNK13MushroomBlock10canSurviveER11BlockSourceRK8BlockPos

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 
 
 class GameRule {
@@ -19,7 +19,7 @@ public:
     GameRule(std::string const&, float, bool, bool, bool); // _ZN8GameRuleC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEfbbb
     GameRule(std::string const&); // _ZN8GameRuleC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void getType()const; // _ZNK8GameRule7getTypeEv
-//  void resetType(GameRule::Type); //TODO: incomplete function definition // _ZN8GameRule9resetTypeENS_4TypeE
+//    void resetType(long); //TODO: incomplete function definition // _ZN8GameRule9resetTypeENS_4TypeE
     void _set(GameRule::Value const&, bool *, GameRule::ValidationError *); // _ZN8GameRule4_setERKNS_5ValueEPbPNS_15ValidationErrorE
     void compareValue(GameRule::Value const&)const; // _ZNK8GameRule12compareValueERKNS_5ValueE
     void getBool()const; // _ZNK8GameRule7getBoolEv
@@ -29,7 +29,7 @@ public:
     void getFloat()const; // _ZNK8GameRule8getFloatEv
     void setFloat(float, bool *, GameRule::ValidationError *); // _ZN8GameRule8setFloatEfPbPNS_15ValidationErrorE
     void getValue()const; // _ZNK8GameRule8getValueEv
-    void shouldSave()const; // _ZNK8GameRule10shouldSaveEv
+    bool shouldSave()const; // _ZNK8GameRule10shouldSaveEv
     std::string getName()const; // _ZNK8GameRule7getNameB5cxx11Ev
     void allowUseInCommand()const; // _ZNK8GameRule17allowUseInCommandEv
     bool hasDefaultSet()const; // _ZNK8GameRule13hasDefaultSetEv

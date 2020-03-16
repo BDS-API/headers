@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class LadderBlock : BlockLegacy {
+class LadderBlock : public BlockLegacy {
 
 public:
-    ~LadderBlock(); // _ZN11LadderBlockD2Ev
+    virtual ~LadderBlock(); // _ZN11LadderBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK11LadderBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const; // _ZNK11LadderBlock19getLiquidClipVolumeER11BlockSourceRK8BlockPosR4AABB
     virtual bool isWaterBlocking()const; // _ZNK11LadderBlock15isWaterBlockingEv

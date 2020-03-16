@@ -6,7 +6,8 @@
 class AttributeInstanceDelegate {
 
 public:
-    ~AttributeInstanceDelegate(); // _ZN25AttributeInstanceDelegateD2Ev
+    virtual ~AttributeInstanceDelegate(); // _ZN25AttributeInstanceDelegateD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(); // _ZN25AttributeInstanceDelegate4tickEv
     virtual void notify(long); // _ZN25AttributeInstanceDelegate6notifyEl
     virtual void change(float, float, AttributeBuffInfo); // _ZN25AttributeInstanceDelegate6changeEff17AttributeBuffInfo

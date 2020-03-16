@@ -3,12 +3,13 @@
 #include "ServerCommand.h"
 
 
-class PermissionCommand : ServerCommand {
+class PermissionCommand : public ServerCommand {
 
 public:
     static long mPermissionsFile;
 
-    ~PermissionCommand(); // _ZN17PermissionCommandD2Ev
+    virtual ~PermissionCommand(); // _ZN17PermissionCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK17PermissionCommand7executeERK13CommandOriginR13CommandOutput
     void setup(CommandRegistry &, PermissionsFile *); // _ZN17PermissionCommand5setupER15CommandRegistryP15PermissionsFile
     PermissionCommand(); // _ZN17PermissionCommandC2Ev

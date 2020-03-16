@@ -4,12 +4,13 @@
 #include "Goal.h"
 
 
-class NapGoal : Goal {
+class NapGoal : public Goal {
 
 public:
     static long MOB_DETECT_TIME;
 
-    ~NapGoal(); // _ZN7NapGoalD2Ev
+    virtual ~NapGoal(); // _ZN7NapGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN7NapGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN7NapGoal16canContinueToUseEv
     virtual void start(); // _ZN7NapGoal5startEv

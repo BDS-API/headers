@@ -4,17 +4,18 @@
 #include "BushBlock.h"
 
 
-class SweetBerryBushBlock : BushBlock {
+class SweetBerryBushBlock : public BushBlock {
 
 public:
-    ~SweetBerryBushBlock(); // _ZN19SweetBerryBushBlockD2Ev
+    virtual ~SweetBerryBushBlock(); // _ZN19SweetBerryBushBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK19SweetBerryBushBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK19SweetBerryBushBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isCropBlock()const; // _ZNK19SweetBerryBushBlock11isCropBlockEv
     virtual bool isInteractiveBlock()const; // _ZNK19SweetBerryBushBlock18isInteractiveBlockEv
     virtual bool canContainLiquid()const; // _ZNK19SweetBerryBushBlock16canContainLiquidEv
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK19SweetBerryBushBlock15checkIsPathableER5ActorRK8BlockPosS4_
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK19SweetBerryBushBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK19SweetBerryBushBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK19SweetBerryBushBlock8mayPlaceER11BlockSourceRK8BlockPos
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const; // _ZNK19SweetBerryBushBlock10mayPlaceOnER11BlockSourceRK8BlockPos
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK19SweetBerryBushBlock16getResourceCountER6RandomRK5Blocki

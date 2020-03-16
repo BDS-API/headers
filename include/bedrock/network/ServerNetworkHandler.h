@@ -1,27 +1,28 @@
 #pragma once
 
-#include "../../unmapped/MultiplayerServiceObserver.h"
-#include <unordered_map>
-#include "../../mce/UUID.h"
-#include "../../unmapped/XboxLiveUserObserver.h"
-#include <vector>
-#include <memory>
 #include "../level/LevelListener.h"
 #include <string>
+#include "../../unmapped/XboxLiveUserObserver.h"
+#include <memory>
+#include <vector>
+#include <unordered_map>
 #include "NetEventCallback.h"
 #include <functional>
+#include "../../unmapped/MultiplayerServiceObserver.h"
+#include "../../mce/UUID.h"
 
 
-class ServerNetworkHandler : NetEventCallback, LevelListener, Social::MultiplayerServiceObserver, Social::XboxLiveUserObserver {
+class ServerNetworkHandler : public NetEventCallback, public LevelListener, public Social::MultiplayerServiceObserver, public Social::XboxLiveUserObserver {
 
 public:
     class Client;
 
     virtual void onPlayerReady(Player &); // _ZN20ServerNetworkHandler13onPlayerReadyER6Player
-    ~ServerNetworkHandler(); // _ZN20ServerNetworkHandlerD2Ev
+    virtual ~ServerNetworkHandler(); // _ZN20ServerNetworkHandlerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onTick(); // _ZN20ServerNetworkHandler6onTickEv
     virtual void onDisconnect(NetworkIdentifier const&, std::string const&, bool, std::string const&); // _ZN20ServerNetworkHandler12onDisconnectERK17NetworkIdentifierRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEbSA_
-//  virtual void allowIncomingPacketId(NetworkIdentifier const&, MinecraftPacketIds); //TODO: incomplete function definition // _ZN20ServerNetworkHandler21allowIncomingPacketIdERK17NetworkIdentifier18MinecraftPacketIds
+    virtual void allowIncomingPacketId__incomplete0(NetworkIdentifier const&, long); //TODO: incomplete function definition // _ZN20ServerNetworkHandler21allowIncomingPacketIdERK17NetworkIdentifier18MinecraftPacketIds
     virtual void onWebsocketRequest(std::string const&, std::string const&, std::function<void (void)>); // _ZN20ServerNetworkHandler18onWebsocketRequestERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_St8functionIFvvEE
     virtual void onTransferRequest(NetworkIdentifier const&, std::string const&, int); // _ZN20ServerNetworkHandler17onTransferRequestERK17NetworkIdentifierRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
     virtual void handle(NetworkIdentifier const&, DisconnectPacket const&); // _ZN20ServerNetworkHandler6handleERK17NetworkIdentifierRK16DisconnectPacket
@@ -91,8 +92,8 @@ public:
     virtual void onInvalidPlayerJoinedLobby(mce::UUID const&, std::string const&); // _ZN20ServerNetworkHandler26onInvalidPlayerJoinedLobbyERKN3mce4UUIDERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void onXboxUserBlocked(std::string const&); // _ZN20ServerNetworkHandler17onXboxUserBlockedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void onXboxUserUnblocked(std::string const&); // _ZN20ServerNetworkHandler19onXboxUserUnblockedERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  virtual void sendServerLegacyParticle(ParticleType, Vec3 const&, Vec3 const&, int); //TODO: incomplete function definition // _ZN20ServerNetworkHandler24sendServerLegacyParticleE12ParticleTypeRK4Vec3S3_i
-//  ServerNetworkHandler(GameCallbacks &, Level &, NetworkHandler &, PrivateKeyManager &, ServerLocator &, PacketSender &, Whitelist &, PermissionsFile *, mce::UUID const&, int, bool, std::vector<std::string> const&, std::string, int, MinecraftCommands &, IMinecraftApp &, std::unordered_map<PackIdVersion, std::string, std::hash<PackIdVersion>, std::equal_to<PackIdVersion>, std::allocator<std::pair<PackIdVersion const, std::string>>> const&, Scheduler &, TextFilteringProcessor *, ServerMetrics *); //TODO: incomplete function definition // _ZN20ServerNetworkHandlerC2ER13GameCallbacksR5LevelR14NetworkHandlerR17PrivateKeyManagerR13ServerLocatorR12PacketSenderR9WhitelistP15PermissionsFileRKN3mce4UUIDEibRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISQ_EESQ_iR17MinecraftCommandsR13IMinecraftAppRKSt13unordered_mapI13PackIdVersionSQ_St4hashIS10_ESt8equal_toIS10_ESaISt4pairIKS10_SQ_EEER9SchedulerP22TextFilteringProcessorP13ServerMetrics
+    virtual void sendServerLegacyParticle__incomplete0(long, Vec3 const&, Vec3 const&, int); //TODO: incomplete function definition // _ZN20ServerNetworkHandler24sendServerLegacyParticleE12ParticleTypeRK4Vec3S3_i
+//    ServerNetworkHandler(GameCallbacks &, Level &, NetworkHandler &, PrivateKeyManager &, ServerLocator &, PacketSender &, Whitelist &, PermissionsFile *, mce::UUID const&, int, bool, std::vector<std::string> const&, std::string, int, MinecraftCommands &, IMinecraftApp &, std::unordered_map<PackIdVersion, std::string, std::hash<PackIdVersion>, long, std::allocator<std::pair<PackIdVersion const, std::string>>> const&, Scheduler &, long *, ServerMetrics *); //TODO: incomplete function definition // _ZN20ServerNetworkHandlerC2ER13GameCallbacksR5LevelR14NetworkHandlerR17PrivateKeyManagerR13ServerLocatorR12PacketSenderR9WhitelistP15PermissionsFileRKN3mce4UUIDEibRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISQ_EESQ_iR17MinecraftCommandsR13IMinecraftAppRKSt13unordered_mapI13PackIdVersionSQ_St4hashIS10_ESt8equal_toIS10_ESaISt4pairIKS10_SQ_EEER9SchedulerP22TextFilteringProcessorP13ServerMetrics
     void disallowIncomingConnections(); // _ZN20ServerNetworkHandler27disallowIncomingConnectionsEv
     void _displayGameMessage(Player const&, std::string const&); // _ZN20ServerNetworkHandler19_displayGameMessageERK6PlayerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void disconnectClient(NetworkIdentifier const&, std::string const&, bool); // _ZN20ServerNetworkHandler16disconnectClientERK17NetworkIdentifierRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
@@ -111,7 +112,7 @@ public:
     void onReady_ClientGeneration(Player &, NetworkIdentifier const&); // _ZN20ServerNetworkHandler24onReady_ClientGenerationER6PlayerRK17NetworkIdentifier
     void activateWhitelist(); // _ZN20ServerNetworkHandler17activateWhitelistEv
     void addToBlacklist(mce::UUID const&, std::string const&); // _ZN20ServerNetworkHandler14addToBlacklistERKN3mce4UUIDERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  void addToBlacklist(mce::UUID const&, std::string const&, std::string const&, Blacklist::Duration const&); //TODO: incomplete function definition // _ZN20ServerNetworkHandler14addToBlacklistERKN3mce4UUIDERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_RKN9Blacklist8DurationE
+//    void addToBlacklist(mce::UUID const&, std::string const&, std::string const&, long const&); //TODO: incomplete function definition // _ZN20ServerNetworkHandler14addToBlacklistERKN3mce4UUIDERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_RKN9Blacklist8DurationE
     void setIsTrial(bool); // _ZN20ServerNetworkHandler10setIsTrialEb
     void _getPlayer(NetworkIdentifier const&, unsigned char, ActorUniqueID const&); // _ZN20ServerNetworkHandler10_getPlayerERK17NetworkIdentifierhRK13ActorUniqueID
     void _tryGetEntity(EntityClientPacket const&); // _ZN20ServerNetworkHandler13_tryGetEntityERK18EntityClientPacket
@@ -128,7 +129,7 @@ public:
     void setAutomationClient(Automation::AutomationClient *); // _ZN20ServerNetworkHandler19setAutomationClientEPN10Automation16AutomationClientE
     void setTenantId(std::string const&); // _ZN20ServerNetworkHandler11setTenantIdERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void setShareableIdentityToken(std::string const&); // _ZN20ServerNetworkHandler25setShareableIdentityTokenERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//  void setPermission(Player const&, PlayerPermissionLevel); //TODO: incomplete function definition // _ZN20ServerNetworkHandler13setPermissionERK6Player21PlayerPermissionLevel
+//    void setPermission(Player const&, long); //TODO: incomplete function definition // _ZN20ServerNetworkHandler13setPermissionERK6Player21PlayerPermissionLevel
     void getMaxNumPlayers()const; // _ZNK20ServerNetworkHandler16getMaxNumPlayersEv
     std::string getGlobalMultiplayerCorrelationId()const; // _ZNK20ServerNetworkHandler33getGlobalMultiplayerCorrelationIdB5cxx11Ev
     class Client {

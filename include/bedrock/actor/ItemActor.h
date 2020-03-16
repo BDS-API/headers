@@ -3,18 +3,19 @@
 #include "Actor.h"
 
 
-class ItemActor : Actor {
+class ItemActor : public Actor {
 
 public:
     static long LIFETIME;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN9ItemActor15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~ItemActor(); // _ZN9ItemActorD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN9ItemActor15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~ItemActor(); // _ZN9ItemActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAddPacket(); // _ZN9ItemActor12getAddPacketEv
     virtual void normalTick(); // _ZN9ItemActor10normalTickEv
     virtual void playerTouch(Player &); // _ZN9ItemActor11playerTouchER6Player
     virtual bool isInvulnerableTo(ActorDamageSource const&)const; // _ZNK9ItemActor16isInvulnerableToERK17ActorDamageSource
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN9ItemActor17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN9ItemActor17handleEntityEventE10ActorEventi
     virtual void getSourceUniqueID()const; // _ZNK9ItemActor17getSourceUniqueIDEv
     virtual void getHandleWaterAABB()const; // _ZNK9ItemActor18getHandleWaterAABBEv
     virtual bool canSynchronizeNewEntity()const; // _ZNK9ItemActor23canSynchronizeNewEntityEv

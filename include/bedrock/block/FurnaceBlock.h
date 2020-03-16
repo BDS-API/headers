@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class FurnaceBlock : ActorBlock {
+class FurnaceBlock : public ActorBlock {
 
 public:
-    ~FurnaceBlock(); // _ZN12FurnaceBlockD2Ev
+    virtual ~FurnaceBlock(); // _ZN12FurnaceBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isContainerBlock()const; // _ZNK12FurnaceBlock16isContainerBlockEv
     virtual bool isCraftingBlock()const; // _ZNK12FurnaceBlock15isCraftingBlockEv
     virtual bool isInteractiveBlock()const; // _ZNK12FurnaceBlock18isInteractiveBlockEv
@@ -23,5 +24,5 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const; // _ZNK12FurnaceBlock11animateTickER11BlockSourceRK8BlockPosR6Random
     virtual void getSilkTouchItemInstance(Block const&)const; // _ZNK12FurnaceBlock24getSilkTouchItemInstanceERK5Block
     FurnaceBlock(std::string const&, int, bool); // _ZN12FurnaceBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEib
-//  void setLit(bool, BlockSource &, BlockPos const&, BlockActorType, Block const&, Block const&); //TODO: incomplete function definition // _ZN12FurnaceBlock6setLitEbR11BlockSourceRK8BlockPos14BlockActorTypeRK5BlockS8_
+//    void setLit(bool, BlockSource &, BlockPos const&, long, Block const&, Block const&); //TODO: incomplete function definition // _ZN12FurnaceBlock6setLitEbR11BlockSourceRK8BlockPos14BlockActorTypeRK5BlockS8_
 };

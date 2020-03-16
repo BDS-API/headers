@@ -3,10 +3,11 @@
 #include "Actor.h"
 
 
-class Fireball : Actor {
+class Fireball : public Actor {
 
 public:
-    ~Fireball(); // _ZN8FireballD2Ev
+    virtual ~Fireball(); // _ZN8FireballD2Ev
+    virtual void __fake_function0(); // fake
     virtual void lerpTo(Vec3 const&, Vec2 const&, int); // _ZN8Fireball6lerpToERK4Vec3RK4Vec2i
     virtual void normalTick(); // _ZN8Fireball10normalTickEv
     virtual void getShadowHeightOffs(); // _ZN8Fireball19getShadowHeightOffsEv
@@ -20,7 +21,7 @@ public:
     virtual void getInertia(); // _ZN8Fireball10getInertiaEv
     virtual void onHit(HitResult const&); // _ZN8Fireball5onHitERK9HitResult
     virtual void getTrailParticle(); // _ZN8Fireball16getTrailParticleEv
-    virtual void shouldBurn(); // _ZN8Fireball10shouldBurnEv
+    virtual bool shouldBurn(); // _ZN8Fireball10shouldBurnEv
     Fireball(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN8FireballC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier
     void _defineEntityData(); // _ZN8Fireball17_defineEntityDataEv
     void _setPower(Vec3 const&); // _ZN8Fireball9_setPowerERK4Vec3

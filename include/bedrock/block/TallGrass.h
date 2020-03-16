@@ -4,14 +4,15 @@
 #include "BushBlock.h"
 
 
-class TallGrass : BushBlock {
+class TallGrass : public BushBlock {
 
 public:
-    ~TallGrass(); // _ZN9TallGrassD2Ev
+    virtual ~TallGrass(); // _ZN9TallGrassD2Ev
+    virtual void __fake_function0(); // fake
     virtual void randomlyModifyPosition(BlockPos const&)const; // _ZNK9TallGrass22randomlyModifyPositionERK8BlockPos
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK9TallGrass7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool canContainLiquid()const; // _ZNK9TallGrass16canContainLiquidEv
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK9TallGrass12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK9TallGrass12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayConsumeFertilizer(BlockSource &)const; // _ZNK9TallGrass20mayConsumeFertilizerER11BlockSource
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK9TallGrass8mayPlaceER11BlockSourceRK8BlockPos
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK9TallGrass15getResourceItemER6RandomRK5Blocki

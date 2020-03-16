@@ -4,10 +4,11 @@
 #include "HangingActor.h"
 
 
-class Painting : HangingActor {
+class Painting : public HangingActor {
 
 public:
-    ~Painting(); // _ZN8PaintingD2Ev
+    virtual ~Painting(); // _ZN8PaintingD2Ev
+    virtual void __fake_function0(); // fake
     virtual void remove(); // _ZN8Painting6removeEv
     virtual void setPos(Vec3 const&); // _ZN8Painting6setPosERK4Vec3
     virtual void getAddPacket(); // _ZN8Painting12getAddPacketEv

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include <vector>
 
 
@@ -31,7 +31,7 @@ public:
     void setTickDelay(int); // _ZN16BaseCommandBlock12setTickDelayEi
     void getTickDelay()const; // _ZNK16BaseCommandBlock12getTickDelayEv
     void setShouldExecuteOnFirstTick(bool); // _ZN16BaseCommandBlock27setShouldExecuteOnFirstTickEb
-    void shouldExecuteOnFirstTick()const; // _ZNK16BaseCommandBlock24shouldExecuteOnFirstTickEv
+    bool shouldExecuteOnFirstTick()const; // _ZNK16BaseCommandBlock24shouldExecuteOnFirstTickEv
     void setOutput(std::string const&, std::vector<std::string> const&); // _ZN16BaseCommandBlock9setOutputERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS5_SaIS5_EE
     void getTrackOutput()const; // _ZNK16BaseCommandBlock14getTrackOutputEv
     void setLastOutput(std::string const&, std::vector<std::string> const&); // _ZN16BaseCommandBlock13setLastOutputERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS5_SaIS5_EE

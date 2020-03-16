@@ -1,21 +1,22 @@
 #pragma once
 
-#include "../util/Vec3.h"
 #include "Actor.h"
+#include "../util/Vec3.h"
 
 
-class FishingHook : Actor {
+class FishingHook : public Actor {
 
 public:
     static long BOBBER_SIZE;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN11FishingHook15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~FishingHook(); // _ZN11FishingHookD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN11FishingHook15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~FishingHook(); // _ZN11FishingHookD2Ev
+    virtual void __fake_function0(); // fake
     virtual void lerpTo(Vec3 const&, Vec2 const&, int); // _ZN11FishingHook6lerpToERK4Vec3RK4Vec2i
     virtual void lerpMotion(Vec3 const&); // _ZN11FishingHook10lerpMotionERK4Vec3
     virtual void normalTick(); // _ZN11FishingHook10normalTickEv
     virtual void getShadowRadius()const; // _ZNK11FishingHook15getShadowRadiusEv
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN11FishingHook17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN11FishingHook17handleEntityEventE10ActorEventi
     virtual void save(CompoundTag &); // _ZN11FishingHook4saveER11CompoundTag
     virtual void getSourceUniqueID()const; // _ZNK11FishingHook17getSourceUniqueIDEv
     FishingHook(ActorDefinitionGroup *, ActorDefinitionIdentifier const&); // _ZN11FishingHookC2EP20ActorDefinitionGroupRK25ActorDefinitionIdentifier

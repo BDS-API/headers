@@ -3,10 +3,11 @@
 #include "OnHitSubcomponent.h"
 
 
-class TeleportToSubcomponent : OnHitSubcomponent {
+class TeleportToSubcomponent : public OnHitSubcomponent {
 
 public:
-    ~TeleportToSubcomponent(); // _ZN22TeleportToSubcomponentD2Ev
+    virtual ~TeleportToSubcomponent(); // _ZN22TeleportToSubcomponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void readfromJSON(Json::Value &); // _ZN22TeleportToSubcomponent12readfromJSONERN4Json5ValueE
     virtual void writetoJSON(Json::Value &)const; // _ZNK22TeleportToSubcomponent11writetoJSONERN4Json5ValueE
     virtual void doOnHitEffect(Actor &, ProjectileComponent &); // _ZN22TeleportToSubcomponent13doOnHitEffectER5ActorR19ProjectileComponent

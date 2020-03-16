@@ -1,13 +1,14 @@
 #pragma once
 
-#include <vector>
 #include "../StrongholdPiece.h"
+#include <vector>
 
 
-class SHPortalRoom : StrongholdPiece {
+class SHPortalRoom : public StrongholdPiece {
 
 public:
-    ~SHPortalRoom(); // _ZN12SHPortalRoomD2Ev
+    virtual ~SHPortalRoom(); // _ZN12SHPortalRoomD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getType()const; // _ZNK12SHPortalRoom7getTypeEv
     virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &); // _ZN12SHPortalRoom11addChildrenEP14StructurePieceRSt6vectorISt10unique_ptrIS0_St14default_deleteIS0_EESaIS6_EER6Random
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN12SHPortalRoom11postProcessEP11BlockSourceR6RandomRK11BoundingBox

@@ -4,10 +4,11 @@
 #include <string>
 
 
-class QuartzBlockBlock : RotatedPillarBlock {
+class QuartzBlockBlock : public RotatedPillarBlock {
 
 public:
-    ~QuartzBlockBlock(); // _ZN16QuartzBlockBlockD2Ev
+    virtual ~QuartzBlockBlock(); // _ZN16QuartzBlockBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK16QuartzBlockBlock15getResourceItemER6RandomRK5Blocki
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const; // _ZNK16QuartzBlockBlock14asItemInstanceER11BlockSourceRK8BlockPosRK5Block
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const; // _ZNK16QuartzBlockBlock17getPlacementBlockER5ActorRK8BlockPoshRK4Vec3i

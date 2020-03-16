@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 #include "../util/BlockPos.h"
 #include "CommandPosition.h"
 
@@ -12,16 +12,16 @@ public:
     ~CommandSelectorBase(); // _ZN19CommandSelectorBaseD2Ev
     CommandSelectorBase(bool); // _ZN19CommandSelectorBaseC2Eb
     void setVersion(int); // _ZN19CommandSelectorBase10setVersionEi
-//  void setType(CommandSelectionType); //TODO: incomplete function definition // _ZN19CommandSelectorBase7setTypeE20CommandSelectionType
+//    void setType(long); //TODO: incomplete function definition // _ZN19CommandSelectorBase7setTypeE20CommandSelectionType
     bool isExplicitIdSelector()const; // _ZNK19CommandSelectorBase20isExplicitIdSelectorEv
     void getType()const; // _ZNK19CommandSelectorBase7getTypeEv
-//  void setOrder(CommandSelectionOrder); //TODO: incomplete function definition // _ZN19CommandSelectorBase8setOrderE21CommandSelectionOrder
+//    void setOrder(long); //TODO: incomplete function definition // _ZN19CommandSelectorBase8setOrderE21CommandSelectionOrder
     void getOrder()const; // _ZNK19CommandSelectorBase8getOrderEv
-//  void addNameFilter(InvertableFilter<std::string> const&); //TODO: incomplete function definition // _ZN19CommandSelectorBase13addNameFilterERK16InvertableFilterINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE
+//    void addNameFilter(long const&); //TODO: incomplete function definition // _ZN19CommandSelectorBase13addNameFilterERK16InvertableFilterINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE
     bool hasName()const; // _ZNK19CommandSelectorBase7hasNameEv
     std::string getName()const; // _ZNK19CommandSelectorBase7getNameB5cxx11Ev
-//  void addTypeFilter(InvertableFilter<std::string> const&); //TODO: incomplete function definition // _ZN19CommandSelectorBase13addTypeFilterERK16InvertableFilterINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE
-//  void addTagFilter(InvertableFilter<std::string> const&); //TODO: incomplete function definition // _ZN19CommandSelectorBase12addTagFilterERK16InvertableFilterINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE
+//    void addTypeFilter(long const&); //TODO: incomplete function definition // _ZN19CommandSelectorBase13addTypeFilterERK16InvertableFilterINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE
+//    void addTagFilter(long const&); //TODO: incomplete function definition // _ZN19CommandSelectorBase12addTagFilterERK16InvertableFilterINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE
     void setResultCount(unsigned long); // _ZN19CommandSelectorBase14setResultCountEm
     void setPosition(CommandPosition); // _ZN19CommandSelectorBase11setPositionE15CommandPosition
     void setBox(BlockPos); // _ZN19CommandSelectorBase6setBoxE8BlockPos

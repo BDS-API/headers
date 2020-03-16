@@ -1,17 +1,18 @@
 #pragma once
 
-#include <string>
 #include "ItemStack.h"
+#include <string>
 #include "Item.h"
 
 
-class TridentItem : Item {
+class TridentItem : public Item {
 
 public:
     static long THROW_THRESHOLD_TIME;
     static long CHARGE_THRESHOLD_TIME;
 
-    ~TridentItem(); // _ZN11TridentItemD2Ev
+    virtual ~TridentItem(); // _ZN11TridentItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getMaxDamage()const; // _ZNK11TridentItem12getMaxDamageEv
     virtual void getAttackDamage()const; // _ZNK11TridentItem15getAttackDamageEv
     virtual bool canDestroyInCreative()const; // _ZNK11TridentItem20canDestroyInCreativeEv

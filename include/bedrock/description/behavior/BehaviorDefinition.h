@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include <string>
+#include "../../../json/Value.h"
 
 
 class BehaviorDefinition {
 
 public:
-    ~BehaviorDefinition(); // _ZN18BehaviorDefinitionD2Ev
+    virtual ~BehaviorDefinition(); // _ZN18BehaviorDefinitionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Json::Value, BehaviorFactory const&); // _ZN18BehaviorDefinition4loadEN4Json5ValueERK15BehaviorFactory
     virtual void createNode(Actor &, BehaviorFactory const&, BehaviorNode *, BehaviorData *)const; // _ZNK18BehaviorDefinition10createNodeER5ActorRK15BehaviorFactoryP12BehaviorNodeP12BehaviorData
     BehaviorDefinition(); // _ZN18BehaviorDefinitionC2Ev

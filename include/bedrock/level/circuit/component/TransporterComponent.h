@@ -3,10 +3,11 @@
 #include "BaseCircuitComponent.h"
 
 
-class TransporterComponent : BaseCircuitComponent {
+class TransporterComponent : public BaseCircuitComponent {
 
 public:
-    ~TransporterComponent(); // _ZN20TransporterComponentD2Ev
+    virtual ~TransporterComponent(); // _ZN20TransporterComponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canConsumerPower(); // _ZN20TransporterComponent16canConsumerPowerEv
     virtual void getBaseType()const; // _ZNK20TransporterComponent11getBaseTypeEv
     virtual void getInstanceType()const; // _ZNK20TransporterComponent15getInstanceTypeEv

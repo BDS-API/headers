@@ -3,14 +3,15 @@
 #include "Animal.h"
 
 
-class Wolf : Animal {
+class Wolf : public Animal {
 
 public:
-    ~Wolf(); // _ZN4WolfD2Ev
+    virtual ~Wolf(); // _ZN4WolfD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN4Wolf10normalTickEv
     virtual void addRider(Actor &); // _ZN4Wolf8addRiderER5Actor
     virtual void setSitting(bool); // _ZN4Wolf10setSittingEb
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN4Wolf17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN4Wolf17handleEntityEventE10ActorEventi
     virtual void load(CompoundTag const&, DataLoadHelper &); // _ZN4Wolf4loadERK11CompoundTagR14DataLoadHelper
     virtual void onSynchedDataUpdate(int); // _ZN4Wolf19onSynchedDataUpdateEi
     virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN4Wolf5_hurtERK17ActorDamageSourceibb

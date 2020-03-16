@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class GuardianAttackGoal : Goal {
+class GuardianAttackGoal : public Goal {
 
 public:
-    ~GuardianAttackGoal(); // _ZN18GuardianAttackGoalD2Ev
+    virtual ~GuardianAttackGoal(); // _ZN18GuardianAttackGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN18GuardianAttackGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN18GuardianAttackGoal16canContinueToUseEv
     virtual void start(); // _ZN18GuardianAttackGoal5startEv

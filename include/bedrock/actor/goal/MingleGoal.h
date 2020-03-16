@@ -1,19 +1,20 @@
 #pragma once
 
 #include <string>
-#include "../unmapped/ActorDefinitionIdentifier.h"
 #include "../unmapped/ActorUniqueID.h"
+#include "../unmapped/ActorDefinitionIdentifier.h"
 #include "MoveToPOIGoal.h"
 
 
-class MingleGoal : MoveToPOIGoal {
+class MingleGoal : public MoveToPOIGoal {
 
 public:
     static long FIND_PARTNER_INTERVAL_TICKS;
     static long SPEAK_INTERVAL_TICKS_MIN;
     static long SPEAK_INTERVAL_TICKS_MAX;
 
-    ~MingleGoal(); // _ZN10MingleGoalD2Ev
+    virtual ~MingleGoal(); // _ZN10MingleGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN10MingleGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN10MingleGoal16canContinueToUseEv
     virtual void start(); // _ZN10MingleGoal5startEv
@@ -22,7 +23,7 @@ public:
     virtual void appendDebugInfo(std::string &)const; // _ZNK10MingleGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     MingleGoal(Mob &, float, float, float, ActorDefinitionIdentifier, float); // _ZN10MingleGoalC2ER3Mobfff25ActorDefinitionIdentifierf
     void _getMingleComponent()const; // _ZNK10MingleGoal19_getMingleComponentEv
-//  void _validatePartnerState(MingleComponent::MingleState, MingleComponent &, bool); //TODO: incomplete function definition // _ZN10MingleGoal21_validatePartnerStateEN15MingleComponent11MingleStateERS0_b
+//    void _validatePartnerState(long, MingleComponent &, bool); //TODO: incomplete function definition // _ZN10MingleGoal21_validatePartnerStateEN15MingleComponent11MingleStateERS0_b
     void _pickNewSpeakInterval(); // _ZN10MingleGoal21_pickNewSpeakIntervalEv
     void _resetPartnerState(Actor &); // _ZN10MingleGoal18_resetPartnerStateER5Actor
     void _tickUnavailable(MingleComponent &); // _ZN10MingleGoal16_tickUnavailableER15MingleComponent

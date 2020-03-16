@@ -3,10 +3,11 @@
 #include "Container.h"
 
 
-class CraftingContainer : Container {
+class CraftingContainer : public Container {
 
 public:
-    ~CraftingContainer(); // _ZN17CraftingContainerD2Ev
+    virtual ~CraftingContainer(); // _ZN17CraftingContainerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getItem(int)const; // _ZNK17CraftingContainer7getItemEi
     virtual void setItem(int, ItemStack const&); // _ZN17CraftingContainer7setItemEiRK9ItemStack
     virtual void getContainerSize()const; // _ZNK17CraftingContainer16getContainerSizeEv

@@ -1,22 +1,23 @@
 #pragma once
 
-#include <vector>
-#include "GameConnectionInfo.h"
-#include <memory>
 #include <string>
+#include <memory>
+#include "GameConnectionInfo.h"
+#include <vector>
 #include "RakNetInstance.h"
+#include <functional>
 #include "RakPeerHelper.h"
 #include "LocalConnector.h"
-#include <functional>
 
 
-class NetworkHandler : RakNetInstance::ConnectionCallbacks, RakPeerHelper::IPSupportInterface, LocalConnector::ConnectionCallbacks {
+class NetworkHandler : public RakNetInstance::ConnectionCallbacks, public RakPeerHelper::IPSupportInterface, public LocalConnector::ConnectionCallbacks {
 
 public:
     class Connection;
     class IncomingPacketQueue;
 
-    ~NetworkHandler(); // _ZN14NetworkHandlerD2Ev
+    virtual ~NetworkHandler(); // _ZN14NetworkHandlerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onNewIncomingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>); // _ZN14NetworkHandler23onNewIncomingConnectionERK17NetworkIdentifierSt10shared_ptrI11NetworkPeerE
     virtual void onNewOutgoingConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>); // _ZN14NetworkHandler23onNewOutgoingConnectionERK17NetworkIdentifierSt10shared_ptrI11NetworkPeerE
     virtual void onConnectionClosed(NetworkIdentifier const&, std::string const&, bool); // _ZN14NetworkHandler18onConnectionClosedERK17NetworkIdentifierRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
@@ -29,7 +30,7 @@ public:
     virtual void getDefaultGamePortv6()const; // _ZNK14NetworkHandler20getDefaultGamePortv6Ev
     virtual void onNewIncomingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>); // _ZN14NetworkHandler28onNewIncomingLocalConnectionERK17NetworkIdentifierSt10shared_ptrI11NetworkPeerE
     virtual void onNewOutgoingLocalConnection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>); // _ZN14NetworkHandler28onNewOutgoingLocalConnectionERK17NetworkIdentifierSt10shared_ptrI11NetworkPeerE
-//  NetworkHandler(Scheduler &, NetworkHandler::NetworkStatisticsConfig); //TODO: incomplete function definition // _ZN14NetworkHandlerC2ER9SchedulerNS_23NetworkStatisticsConfigE
+//    NetworkHandler(Scheduler &, long); //TODO: incomplete function definition // _ZN14NetworkHandlerC2ER9SchedulerNS_23NetworkStatisticsConfigE
     void getPrimaryNetworkId()const; // _ZNK14NetworkHandler19getPrimaryNetworkIdEv
     void host(ConnectionDefinition const&); // _ZN14NetworkHandler4hostERK20ConnectionDefinition
     void connect(Social::GameConnectionInfo, Social::GameConnectionInfo); // _ZN14NetworkHandler7connectEN6Social18GameConnectionInfoES1_
@@ -40,7 +41,7 @@ public:
     void registerServerInstance(NetEventCallback &); // _ZN14NetworkHandler22registerServerInstanceER16NetEventCallback
     void unregisterClientOrServerInstance(unsigned char const&); // _ZN14NetworkHandler32unregisterClientOrServerInstanceERKh
     void _getConnectionFromId(NetworkIdentifier const&)const; // _ZNK14NetworkHandler20_getConnectionFromIdERK17NetworkIdentifier
-//  void _sortAndPacketizeEvents(NetworkHandler::Connection &, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>); //TODO: incomplete function definition // _ZN14NetworkHandler23_sortAndPacketizeEventsERNS_10ConnectionENSt6chrono10time_pointINS2_3_V212system_clockENS2_8durationIlSt5ratioILl1ELl1000000000EEEEEE
+//    void _sortAndPacketizeEvents(NetworkHandler::Connection &, long); //TODO: incomplete function definition // _ZN14NetworkHandler23_sortAndPacketizeEventsERNS_10ConnectionENSt6chrono10time_pointINS2_3_V212system_clockENS2_8durationIlSt5ratioILl1ELl1000000000EEEEEE
     void cleanupResourcePackManager(NetworkIdentifier const&); // _ZN14NetworkHandler26cleanupResourcePackManagerERK17NetworkIdentifier
     void setUseIPv6Only(bool); // _ZN14NetworkHandler14setUseIPv6OnlyEb
     void setDefaultGamePort(unsigned short); // _ZN14NetworkHandler18setDefaultGamePortEt
@@ -61,7 +62,7 @@ public:
     void getLocalNetworkId()const; // _ZNK14NetworkHandler17getLocalNetworkIdEv
     void send(NetworkIdentifier const&, Packet const&, unsigned char); // _ZN14NetworkHandler4sendERK17NetworkIdentifierRK6Packeth
     void _sendInternal(NetworkIdentifier const&, Packet const&, std::string const&); // _ZN14NetworkHandler13_sendInternalERK17NetworkIdentifierRK6PacketRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-    void sendToMultiple(std::vector<NetworkIdentifierWithSubId> const&, Packet const&); // _ZN14NetworkHandler14sendToMultipleERKSt6vectorI26NetworkIdentifierWithSubIdSaIS1_EERK6Packet
+    void sendToMultiple(std::vector<long> const&, Packet const&); // _ZN14NetworkHandler14sendToMultipleERKSt6vectorI26NetworkIdentifierWithSubIdSaIS1_EERK6Packet
     void flush(NetworkIdentifier const&, std::function<void (void)> &&); // _ZN14NetworkHandler5flushERK17NetworkIdentifierOSt8functionIFvvEE
     void getConnections()const; // _ZNK14NetworkHandler14getConnectionsEv
     void getResourcePackUploadManager(PacketSender &, NetworkIdentifier const&, std::string const&); // _ZN14NetworkHandler28getResourcePackUploadManagerER12PacketSenderRK17NetworkIdentifierRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
@@ -84,7 +85,7 @@ public:
         void update(); // _ZN14NetworkHandler10Connection6updateEv
         void setChannelPaused(unsigned int, bool); // _ZN14NetworkHandler10Connection16setChannelPausedEjb
         void receivePacket(std::string &); // _ZN14NetworkHandler10Connection13receivePacketERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-//      Connection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>, bool, PacketObserver *, Scheduler &); //TODO: incomplete function definition // _ZN14NetworkHandler10ConnectionC2ERK17NetworkIdentifierSt10shared_ptrI11NetworkPeerENSt6chrono10time_pointINS7_3_V212steady_clockENS7_8durationIlSt5ratioILl1ELl1000000000EEEEEEbP14PacketObserverR9Scheduler
+//        Connection(NetworkIdentifier const&, std::shared_ptr<NetworkPeer>, long, bool, PacketObserver *, Scheduler &); //TODO: incomplete function definition // _ZN14NetworkHandler10ConnectionC2ERK17NetworkIdentifierSt10shared_ptrI11NetworkPeerENSt6chrono10time_pointINS7_3_V212steady_clockENS7_8durationIlSt5ratioILl1ELl1000000000EEEEEEbP14PacketObserverR9Scheduler
         bool isChannelPaused(unsigned int)const; // _ZNK14NetworkHandler10Connection15isChannelPausedEj
         ~Connection(); // _ZN14NetworkHandler10ConnectionD2Ev
     };

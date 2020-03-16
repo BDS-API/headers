@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include <vector>
 
 
 class AttributeInstance {
 
 public:
-    ~AttributeInstance(); // _ZN17AttributeInstanceD2Ev
+    virtual ~AttributeInstance(); // _ZN17AttributeInstanceD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(); // _ZN17AttributeInstance4tickEv
     AttributeInstance(AttributeInstance const&); // _ZN17AttributeInstanceC2ERKS_
     AttributeInstance(BaseAttributeMap *, Attribute const*); // _ZN17AttributeInstanceC2EP16BaseAttributeMapPK9Attribute

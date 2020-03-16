@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class LayDownGoal : Goal {
+class LayDownGoal : public Goal {
 
 public:
-    ~LayDownGoal(); // _ZN11LayDownGoalD2Ev
+    virtual ~LayDownGoal(); // _ZN11LayDownGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN11LayDownGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN11LayDownGoal16canContinueToUseEv
     virtual void start(); // _ZN11LayDownGoal5startEv

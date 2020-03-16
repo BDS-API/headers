@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "DiggerItem.h"
+#include <string>
 #include "Item.h"
 
 
-class PickaxeItem : DiggerItem {
+class PickaxeItem : public DiggerItem {
 
 public:
-    ~PickaxeItem(); // _ZN11PickaxeItemD2Ev
+    virtual ~PickaxeItem(); // _ZN11PickaxeItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canDestroySpecial(Block const&)const; // _ZNK11PickaxeItem17canDestroySpecialERK5Block
     virtual void getEnchantSlot()const; // _ZNK11PickaxeItem14getEnchantSlotEv
     virtual void getDestroySpeed(ItemInstance const&, Block const&)const; // _ZNK11PickaxeItem15getDestroySpeedERK12ItemInstanceRK5Block

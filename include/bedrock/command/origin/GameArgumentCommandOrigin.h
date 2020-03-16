@@ -4,10 +4,11 @@
 #include "CommandOrigin.h"
 
 
-class GameArgumentCommandOrigin : CommandOrigin {
+class GameArgumentCommandOrigin : public CommandOrigin {
 
 public:
-    ~GameArgumentCommandOrigin(); // _ZN25GameArgumentCommandOriginD2Ev
+    virtual ~GameArgumentCommandOrigin(); // _ZN25GameArgumentCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getRequestId()const; // _ZNK25GameArgumentCommandOrigin12getRequestIdB5cxx11Ev
     virtual std::string getName()const; // _ZNK25GameArgumentCommandOrigin7getNameB5cxx11Ev
     virtual void getBlockPosition()const; // _ZNK25GameArgumentCommandOrigin16getBlockPositionEv

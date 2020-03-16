@@ -3,10 +3,11 @@
 #include "OnHitSubcomponent.h"
 
 
-class IgniteSubcomponent : OnHitSubcomponent {
+class IgniteSubcomponent : public OnHitSubcomponent {
 
 public:
-    ~IgniteSubcomponent(); // _ZN18IgniteSubcomponentD2Ev
+    virtual ~IgniteSubcomponent(); // _ZN18IgniteSubcomponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void readfromJSON(Json::Value &); // _ZN18IgniteSubcomponent12readfromJSONERN4Json5ValueE
     virtual void writetoJSON(Json::Value &)const; // _ZNK18IgniteSubcomponent11writetoJSONERN4Json5ValueE
     virtual void doOnHitEffect(Actor &, ProjectileComponent &); // _ZN18IgniteSubcomponent13doOnHitEffectER5ActorR19ProjectileComponent

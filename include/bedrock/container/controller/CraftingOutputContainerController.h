@@ -4,10 +4,11 @@
 #include "CraftingContainerController.h"
 
 
-class CraftingOutputContainerController : CraftingContainerController {
+class CraftingOutputContainerController : public CraftingContainerController {
 
 public:
-    ~CraftingOutputContainerController(); // _ZN33CraftingOutputContainerControllerD2Ev
+    virtual ~CraftingOutputContainerController(); // _ZN33CraftingOutputContainerControllerD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isItemAllowed(ItemInstance const&)const; // _ZNK33CraftingOutputContainerController13isItemAllowedERK12ItemInstance
     virtual void getBackgroundStyle(int)const; // _ZNK33CraftingOutputContainerController18getBackgroundStyleEi
     virtual void _canRemove(int, int)const; // _ZNK33CraftingOutputContainerController10_canRemoveEii

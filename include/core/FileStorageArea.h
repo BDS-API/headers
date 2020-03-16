@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include <functional>
+#include <string>
 #include "Path.h"
 
 
@@ -11,7 +11,8 @@ namespace Core {
     class FileStorageArea {
 
     public:
-        ~FileStorageArea(); // _ZN4Core15FileStorageAreaD2Ev
+        virtual ~FileStorageArea(); // _ZN4Core15FileStorageAreaD2Ev
+        virtual void __fake_function0(); // fake
         virtual void notifyChangeInFileSize(long, long); // _ZN4Core15FileStorageArea22notifyChangeInFileSizeEll
         virtual bool handlesPendingWrites()const; // _ZNK4Core15FileStorageArea20handlesPendingWritesEv
         virtual void informPendingWriteSize(unsigned long const&, bool); // _ZN4Core15FileStorageArea22informPendingWriteSizeERKmb
@@ -36,13 +37,13 @@ namespace Core {
         virtual void _onTransactionsEmpty(bool); // _ZN4Core15FileStorageArea20_onTransactionsEmptyEb
         virtual void _onTeardown(); // _ZN4Core15FileStorageArea11_onTeardownEv
         bool isOutOfDiskSpaceError()const; // _ZNK4Core15FileStorageArea21isOutOfDiskSpaceErrorEv
-//      void notifyCriticalDiskError(Core::LevelStorageState const&); //TODO: incomplete function definition // _ZN4Core15FileStorageArea23notifyCriticalDiskErrorERKNS_17LevelStorageStateE
+//        void notifyCriticalDiskError(long const&); //TODO: incomplete function definition // _ZN4Core15FileStorageArea23notifyCriticalDiskErrorERKNS_17LevelStorageStateE
         void _getFlatFileManifestTracker(); // _ZN4Core15FileStorageArea27_getFlatFileManifestTrackerEv
         void getStorageAreaForPath(std::shared_ptr<Core::FileStorageArea> &, Core::Path const&); // _ZN4Core15FileStorageArea21getStorageAreaForPathERSt10shared_ptrIS0_ERKNS_4PathE
         void _getStorageAreaForPathImpl(std::shared_ptr<Core::FileStorageArea> &, Core::Path const&); // _ZN4Core15FileStorageArea26_getStorageAreaForPathImplERSt10shared_ptrIS0_ERKNS_4PathE
         void unloadAllStorageAreaFlatFileManifests(bool); // _ZN4Core15FileStorageArea37unloadAllStorageAreaFlatFileManifestsEb
         void teardown(); // _ZN4Core15FileStorageArea8teardownEv
-//      FileStorageArea(Core::FileAccessType, Core::Path const&, bool, bool, std::shared_ptr<Core::FileStorageArea>); //TODO: incomplete function definition // _ZN4Core15FileStorageAreaC2ENS_14FileAccessTypeERKNS_4PathEbbSt10shared_ptrIS0_E
+//        FileStorageArea(long, Core::Path const&, bool, bool, std::shared_ptr<Core::FileStorageArea>); //TODO: incomplete function definition // _ZN4Core15FileStorageAreaC2ENS_14FileAccessTypeERKNS_4PathEbbSt10shared_ptrIS0_E
         std::string getRootPath()const; // _ZNK4Core15FileStorageArea11getRootPathB5cxx11Ev
         void setLoggingEnabled(bool); // _ZN4Core15FileStorageArea17setLoggingEnabledEb
         void getAccessType()const; // _ZNK4Core15FileStorageArea13getAccessTypeEv
@@ -63,7 +64,7 @@ namespace Core {
         void checkUserStorage(); // _ZN4Core15FileStorageArea16checkUserStorageEv
         void getTotalBytesWrittenAndReadFromAllStorageAreas(unsigned long &, unsigned long &); // _ZN4Core15FileStorageArea46getTotalBytesWrittenAndReadFromAllStorageAreasERmS1_
         void updateFlatFileManifests(); // _ZN4Core15FileStorageArea23updateFlatFileManifestsEv
-//      void addObserver(Core::FileStorageAreaObserver &); //TODO: incomplete function definition // _ZN4Core15FileStorageArea11addObserverERNS_23FileStorageAreaObserverE
+//        void addObserver(long &); //TODO: incomplete function definition // _ZN4Core15FileStorageArea11addObserverERNS_23FileStorageAreaObserverE
         bool canWrite()const; // _ZNK4Core15FileStorageArea8canWriteEv
     };
 }

@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "BlockActor.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
+#include "BlockActor.h"
 
 
-class BedBlockActor : BlockActor {
+class BedBlockActor : public BlockActor {
 
 public:
-    ~BedBlockActor(); // _ZN13BedBlockActorD2Ev
+    virtual ~BedBlockActor(); // _ZN13BedBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN13BedBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK13BedBlockActor4saveER11CompoundTag
     virtual void saveItemInstanceData(CompoundTag &); // _ZN13BedBlockActor20saveItemInstanceDataER11CompoundTag

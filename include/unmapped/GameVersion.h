@@ -22,6 +22,6 @@ public:
     void operator>=(GameVersion const&)const; // _ZNK11GameVersiongeERKS_
     void operator==(GameVersion const&)const; // _ZNK11GameVersioneqERKS_
     void operator!=(GameVersion const&)const; // _ZNK11GameVersionneERKS_
-//  void octet(GameVersion::Octet)const; //TODO: incomplete function definition // _ZNK11GameVersion5octetENS_5OctetE
+//    void octet(long)const; //TODO: incomplete function definition // _ZNK11GameVersion5octetENS_5OctetE
     std::string asString()const; // _ZNK11GameVersion8asStringB5cxx11Ev
 };

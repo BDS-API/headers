@@ -3,7 +3,7 @@
 #include "BlockActor.h"
 
 
-class StructureBlockActor : BlockActor {
+class StructureBlockActor : public BlockActor {
 
 public:
     static long MAX_WIREFRAME_RENDER_DISTANCE;
@@ -11,7 +11,8 @@ public:
     static long Y_AXIS_COLOR;
     static long Z_AXIS_COLOR;
 
-    ~StructureBlockActor(); // _ZN19StructureBlockActorD2Ev
+    virtual ~StructureBlockActor(); // _ZN19StructureBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN19StructureBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK19StructureBlockActor4saveER11CompoundTag
     virtual void onChanged(BlockSource &); // _ZN19StructureBlockActor9onChangedER11BlockSource

@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "RandomStrollGoal.h"
+#include <string>
 
 
-class RandomFlyingGoal : RandomStrollGoal {
+class RandomFlyingGoal : public RandomStrollGoal {
 
 public:
-    ~RandomFlyingGoal(); // _ZN16RandomFlyingGoalD2Ev
+    virtual ~RandomFlyingGoal(); // _ZN16RandomFlyingGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN16RandomFlyingGoal6canUseEv
     virtual void appendDebugInfo(std::string &)const; // _ZNK16RandomFlyingGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void _setWantedPosition(); // _ZN16RandomFlyingGoal18_setWantedPositionEv

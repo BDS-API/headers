@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class SwimWithMobGoal : Goal {
+class SwimWithMobGoal : public Goal {
 
 public:
-    ~SwimWithMobGoal(); // _ZN15SwimWithMobGoalD2Ev
+    virtual ~SwimWithMobGoal(); // _ZN15SwimWithMobGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15SwimWithMobGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15SwimWithMobGoal16canContinueToUseEv
     virtual bool canBeInterrupted(); // _ZN15SwimWithMobGoal16canBeInterruptedEv

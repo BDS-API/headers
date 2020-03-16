@@ -3,10 +3,11 @@
 #include "BlockActor.h"
 
 
-class ConduitBlockActor : BlockActor {
+class ConduitBlockActor : public BlockActor {
 
 public:
-    ~ConduitBlockActor(); // _ZN17ConduitBlockActorD2Ev
+    virtual ~ConduitBlockActor(); // _ZN17ConduitBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN17ConduitBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK17ConduitBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN17ConduitBlockActor4tickER11BlockSource

@@ -7,7 +7,7 @@
 class InMemoryFileStorage {
 
 public:
-//  InMemoryFileStorage(leveldb::Env *); //TODO: incomplete function definition // _ZN19InMemoryFileStorageC2EPN7leveldb3EnvE
+//    InMemoryFileStorage(long *); //TODO: incomplete function definition // _ZN19InMemoryFileStorageC2EPN7leveldb3EnvE
     ~InMemoryFileStorage(); // _ZN19InMemoryFileStorageD2Ev
     void createFile(Core::Path const&); // _ZN19InMemoryFileStorage10createFileERKN4Core4PathE
     void findFile(Core::Path const&, std::shared_ptr<InMemoryFile> &); // _ZN19InMemoryFileStorage8findFileERKN4Core4PathERSt10shared_ptrI12InMemoryFileE

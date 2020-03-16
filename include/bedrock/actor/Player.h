@@ -1,14 +1,14 @@
 #pragma once
 
-#include "Mob.h"
-#include "unmapped/ActorUniqueID.h"
-#include "../../mce/UUID.h"
-#include <vector>
-#include <memory>
 #include <string>
+#include "unmapped/ActorUniqueID.h"
+#include <memory>
+#include "Mob.h"
+#include <vector>
+#include "../../mce/UUID.h"
 
 
-class Player : Mob {
+class Player : public Mob {
 
 public:
     class CachedSpawnData;
@@ -46,11 +46,12 @@ public:
     static long LEVEL;
     static long EXPERIENCE;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN6Player15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN6Player20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Player(); // _ZN6PlayerD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN6Player15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN6Player20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Player(); // _ZN6PlayerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void remove(); // _ZN6Player6removeEv
-//  virtual void getAttachPos(ActorLocation, float)const; //TODO: incomplete function definition // _ZNK6Player12getAttachPosE13ActorLocationf
+    virtual void getAttachPos__incomplete0(long, float)const; //TODO: incomplete function definition // _ZNK6Player12getAttachPosE13ActorLocationf
     virtual void move(Vec3 const&); // _ZN6Player4moveERK4Vec3
     virtual void teleportTo(Vec3 const&, bool, int, int); // _ZN6Player10teleportToERK4Vec3bii
     virtual void getAddPacket(); // _ZN6Player12getAddPacketEv
@@ -73,9 +74,9 @@ public:
     virtual void actuallyHurt(int, ActorDamageSource const*, bool); // _ZN6Player12actuallyHurtEiPK17ActorDamageSourceb
     virtual void onBounceStarted(BlockPos const&, Block const&); // _ZN6Player15onBounceStartedERK8BlockPosRK5Block
     virtual void feed(int); // _ZN6Player4feedEi
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN6Player17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN6Player17handleEntityEventE10ActorEventi
     virtual void awardKillScore(Actor &, int); // _ZN6Player14awardKillScoreER5Actori
-//  virtual void setArmor(ArmorSlot, ItemStack const&); //TODO: incomplete function definition // _ZN6Player8setArmorE9ArmorSlotRK9ItemStack
+    virtual void setArmor__incomplete0(long, ItemStack const&); //TODO: incomplete function definition // _ZN6Player8setArmorE9ArmorSlotRK9ItemStack
     virtual void getCarriedItem()const; // _ZNK6Player14getCarriedItemEv
     virtual void setCarriedItem(ItemStack const&); // _ZN6Player14setCarriedItemERK9ItemStack
     virtual void setOffhandSlot(ItemStack const&); // _ZN6Player14setOffhandSlotERK9ItemStack
@@ -92,7 +93,7 @@ public:
     virtual void stopSwimming(); // _ZN6Player12stopSwimmingEv
     virtual void getCommandPermissionLevel()const; // _ZNK6Player25getCommandPermissionLevelEv
     virtual void getAnimationComponent(); // _ZN6Player21getAnimationComponentEv
-//  virtual void useItem(ItemStack &, ItemUseMethod, bool); //TODO: incomplete function definition // _ZN6Player7useItemER9ItemStack13ItemUseMethodb
+    virtual void useItem__incomplete0(ItemStack &, long, bool); //TODO: incomplete function definition // _ZN6Player7useItemER9ItemStack13ItemUseMethodb
     virtual void getMapDecorationRotation()const; // _ZNK6Player24getMapDecorationRotationEv
     virtual bool isWorldBuilder(); // _ZN6Player14isWorldBuilderEv
     virtual bool isCreative()const; // _ZNK6Player10isCreativeEv
@@ -130,7 +131,7 @@ public:
     virtual void suspendRegion(); // _ZN6Player13suspendRegionEv
     virtual void _fireWillChangeDimension(); // _ZN6Player24_fireWillChangeDimensionEv
     virtual void _fireDimensionChanged(); // _ZN6Player21_fireDimensionChangedEv
-//  virtual void changeDimensionWithCredits(AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN6Player26changeDimensionWithCreditsE11AutomaticIDI9DimensioniE
+    virtual void changeDimensionWithCredits__incomplete0(long); //TODO: incomplete function definition // _ZN6Player26changeDimensionWithCreditsE11AutomaticIDI9DimensioniE
     virtual void tickWorld(Tick const&); // _ZN6Player9tickWorldERK4Tick
     virtual void getTickingOffsets()const; // _ZNK6Player17getTickingOffsetsEv
     virtual void moveView(); // _ZN6Player8moveViewEv
@@ -145,7 +146,7 @@ public:
     virtual bool isInTrialMode(); // _ZN6Player13isInTrialModeEv
     virtual bool hasResource(int); // _ZN6Player11hasResourceEi
     virtual void completeUsingItem(); // _ZN6Player17completeUsingItemEv
-//  virtual void setPermissions(CommandPermissionLevel); //TODO: incomplete function definition // _ZN6Player14setPermissionsE22CommandPermissionLevel
+    virtual void setPermissions__incomplete0(long); //TODO: incomplete function definition // _ZN6Player14setPermissionsE22CommandPermissionLevel
     virtual void startCrafting(BlockPos const&, bool); // _ZN6Player13startCraftingERK8BlockPosb
     virtual void startStonecutting(BlockPos const&); // _ZN6Player17startStonecuttingERK8BlockPos
     virtual void startDestroying(); // _ZN6Player15startDestroyingEv
@@ -182,8 +183,8 @@ public:
     virtual void openStonecutter(BlockPos const&); // _ZN6Player15openStonecutterERK8BlockPos
     virtual void openCartographyTable(BlockPos const&); // _ZN6Player20openCartographyTableERK8BlockPos
     virtual void displayChatMessage(std::string const&, std::string const&); // _ZN6Player18displayChatMessageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_
-    virtual void displayClientMessage(std::string const& message); // _ZN6Player20displayClientMessageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-    virtual void displayLocalizableMessage(std::string const& message, std::vector<std::string> const& translations); // _ZN6Player25displayLocalizableMessageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS5_SaIS5_EE
+    virtual void displayClientMessage(std::string const&); // _ZN6Player20displayClientMessageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+    virtual void displayLocalizableMessage(std::string const&, std::vector<std::string> const&); // _ZN6Player25displayLocalizableMessageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIS5_SaIS5_EE
     virtual void displayTextObjectMessage(TextObjectRoot const&, std::string const&, std::string const&); // _ZN6Player24displayTextObjectMessageERK14TextObjectRootRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_
     virtual void displayWhisperMessage(std::string const&, std::string const&, std::string const&, std::string const&); // _ZN6Player21displayWhisperMessageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_
     virtual void startSleepInBed(BlockPos const&); // _ZN6Player15startSleepInBedERK8BlockPos
@@ -200,7 +201,7 @@ public:
     virtual void stopLoading(); // _ZN6Player11stopLoadingEv
     virtual void registerTrackedBoss(ActorUniqueID); // _ZN6Player19registerTrackedBossE13ActorUniqueID
     virtual void unRegisterTrackedBoss(ActorUniqueID); // _ZN6Player21unRegisterTrackedBossE13ActorUniqueID
-//  virtual void setPlayerGameType(GameType); //TODO: incomplete function definition // _ZN6Player17setPlayerGameTypeE8GameType
+    virtual void setPlayerGameType__incomplete0(long); //TODO: incomplete function definition // _ZN6Player17setPlayerGameTypeE8GameType
     virtual void _crit(Actor &); // _ZN6Player5_critER5Actor
     virtual void getEventing()const; // _ZNK6Player11getEventingEv
     virtual void getUserId()const; // _ZNK6Player9getUserIdEv
@@ -210,15 +211,15 @@ public:
     virtual void inventoryChanged(Container &, int, ItemStack const&, ItemStack const&); // _ZN6Player16inventoryChangedER9ContaineriRK9ItemStackS4_
     virtual void deleteContainerManager(); // _ZN6Player22deleteContainerManagerEv
     virtual void setFieldOfViewModifier(float); // _ZN6Player22setFieldOfViewModifierEf
-//  virtual bool isPositionRelevant(AutomaticID<Dimension, int>, BlockPos const&); //TODO: incomplete function definition // _ZN6Player18isPositionRelevantE11AutomaticIDI9DimensioniERK8BlockPos
+    virtual bool isPositionRelevant__incomplete0(long, BlockPos const&); //TODO: incomplete function definition // _ZN6Player18isPositionRelevantE11AutomaticIDI9DimensioniERK8BlockPos
     virtual bool isEntityRelevant(Actor const&); // _ZN6Player16isEntityRelevantERK5Actor
     virtual void onSuspension(); // _ZN6Player12onSuspensionEv
     virtual void onLinkedSlotsChanged(); // _ZN6Player20onLinkedSlotsChangedEv
     virtual void startCooldown(Item const*); // _ZN6Player13startCooldownEPK4Item
-//  virtual void getItemCooldownLeft(CooldownType)const; //TODO: incomplete function definition // _ZNK6Player19getItemCooldownLeftE12CooldownType
-//  virtual bool isItemInCooldown(CooldownType)const; //TODO: incomplete function definition // _ZNK6Player16isItemInCooldownE12CooldownType
+    virtual void getItemCooldownLeft__incomplete0(long)const; //TODO: incomplete function definition // _ZNK6Player19getItemCooldownLeftE12CooldownType
+    virtual bool isItemInCooldown__incomplete0(long)const; //TODO: incomplete function definition // _ZNK6Player16isItemInCooldownE12CooldownType
     virtual void sendNetworkPacket(Packet &)const; // _ZNK6Player17sendNetworkPacketER6Packet
-//  virtual void reportMovementTelemetry(MovementEventType); //TODO: incomplete function definition // _ZN6Player23reportMovementTelemetryE17MovementEventType
+    virtual void reportMovementTelemetry__incomplete0(long); //TODO: incomplete function definition // _ZN6Player23reportMovementTelemetryE17MovementEventType
     virtual void onMovePlayerPacketNormal(Vec3 const&, Vec2 const&, float); // _ZN6Player24onMovePlayerPacketNormalERK4Vec3RK4Vec2f
     void getTransactionManager(); // _ZN6Player21getTransactionManagerEv
     std::string getDeviceId()const; // _ZNK6Player11getDeviceIdB5cxx11Ev
@@ -228,7 +229,7 @@ public:
     void setR5DataRecoverComplete(bool); // _ZN6Player24setR5DataRecoverCompleteEb
     void getPacketSender(); // _ZN6Player15getPacketSenderEv
     void getChunkSource()const; // _ZNK6Player14getChunkSourceEv
-//  Player(Level &, PacketSender &, GameType, NetworkIdentifier const&, unsigned char, mce::UUID, std::string const&, std::unique_ptr<Certificate>, std::string const&, std::string const&); //TODO: incomplete function definition // _ZN6PlayerC2ER5LevelR12PacketSender8GameTypeRK17NetworkIdentifierhN3mce4UUIDERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt10unique_ptrI11CertificateSt14default_deleteISJ_EESH_SH_
+//    Player(Level &, PacketSender &, long, NetworkIdentifier const&, unsigned char, mce::UUID, std::string const&, std::unique_ptr<Certificate>, std::string const&, std::string const&); //TODO: incomplete function definition // _ZN6PlayerC2ER5LevelR12PacketSender8GameTypeRK17NetworkIdentifierhN3mce4UUIDERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt10unique_ptrI11CertificateSt14default_deleteISJ_EESH_SH_
     void registerAttributes(); // _ZN6Player18registerAttributesEv
     void _registerElytraLoopSound(); // _ZN6Player24_registerElytraLoopSoundEv
     void resetPlayerLevel(); // _ZN6Player16resetPlayerLevelEv
@@ -243,7 +244,7 @@ public:
     void getCapePos(float); // _ZN6Player10getCapePosEf
     bool canBeSeenOnMap()const; // _ZNK6Player14canBeSeenOnMapEv
     void setContainerManager(std::shared_ptr<IContainerManager>); // _ZN6Player19setContainerManagerESt10shared_ptrI17IContainerManagerE
-    void shouldShowCredits()const; // _ZNK6Player17shouldShowCreditsEv
+    bool shouldShowCredits()const; // _ZNK6Player17shouldShowCreditsEv
     void setHasSeenCredits(); // _ZN6Player17setHasSeenCreditsEv
     void setBedRespawnPosition(BlockPos const&); // _ZN6Player21setBedRespawnPositionERK8BlockPos
     void setDefaultHeadHeight(); // _ZN6Player20setDefaultHeadHeightEv
@@ -253,7 +254,7 @@ public:
     void checkBed(BlockSource *, Vec3 const*); // _ZN6Player8checkBedEP11BlockSourcePK4Vec3
     void getPlatform()const; // _ZNK6Player11getPlatformEv
     std::string getPlatformOnlineId()const; // _ZNK6Player19getPlatformOnlineIdB5cxx11Ev
-//  void setPlatform(BuildPlatform); //TODO: incomplete function definition // _ZN6Player11setPlatformE13BuildPlatform
+//    void setPlatform(long); //TODO: incomplete function definition // _ZN6Player11setPlatformE13BuildPlatform
     void setPlatformOnlineId(std::string const&); // _ZN6Player19setPlatformOnlineIdERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void onMobStatusChanged(ActorUniqueID); // _ZN6Player18onMobStatusChangedE13ActorUniqueID
     void getChunkRadius()const; // _ZNK6Player14getChunkRadiusEv
@@ -290,7 +291,7 @@ public:
     void updateTrackedBosses(); // _ZN6Player19updateTrackedBossesEv
     void updateInventoryTransactions(); // _ZN6Player27updateInventoryTransactionsEv
     bool isInCreativeMode()const; // _ZNK6Player16isInCreativeModeEv
-//  bool canUseAbility(AbilitiesIndex)const; //TODO: incomplete function definition // _ZNK6Player13canUseAbilityE14AbilitiesIndex
+//    bool canUseAbility(long)const; //TODO: incomplete function definition // _ZNK6Player13canUseAbilityE14AbilitiesIndex
     void getScore(); // _ZN6Player8getScoreEv
     void dropCursorSelectedItem(); // _ZN6Player22dropCursorSelectedItemEv
     void getDestroySpeed(Block const&)const; // _ZNK6Player15getDestroySpeedERK5Block
@@ -301,7 +302,7 @@ public:
     void getPlayerPermissionLevel()const; // _ZNK6Player24getPlayerPermissionLevelEv
     bool canUseOperatorBlocks()const; // _ZNK6Player20canUseOperatorBlocksEv
     void getXpNeededForNextLevel()const; // _ZNK6Player23getXpNeededForNextLevelEv
-//  void setPlayerUIItem(PlayerUISlot, ItemStack const&); //TODO: incomplete function definition // _ZN6Player15setPlayerUIItemE12PlayerUISlotRK9ItemStack
+//    void setPlayerUIItem(long, ItemStack const&); //TODO: incomplete function definition // _ZN6Player15setPlayerUIItemE12PlayerUISlotRK9ItemStack
     void getPlayerLevel()const; // _ZNK6Player14getPlayerLevelEv
     void getLevelProgress()const; // _ZNK6Player16getLevelProgressEv
     void getAgentID()const; // _ZNK6Player10getAgentIDEv
@@ -310,7 +311,7 @@ public:
     bool isHungry()const; // _ZNK6Player8isHungryEv
     bool isSpawned()const; // _ZNK6Player9isSpawnedEv
     void _blockUsingShield(ActorDamageSource const&, float); // _ZN6Player17_blockUsingShieldERK17ActorDamageSourcef
-//  void setLastHurtBy(ActorType); //TODO: incomplete function definition // _ZN6Player13setLastHurtByE9ActorType
+//    void setLastHurtBy(long); //TODO: incomplete function definition // _ZN6Player13setLastHurtByE9ActorType
     void interact(Actor &, Vec3 const&); // _ZN6Player8interactER5ActorRK4Vec3
     std::string getItemInteractText(Item const&)const; // _ZNK6Player19getItemInteractTextB5cxx11ERK4Item
     void recheckSpawnPosition(); // _ZN6Player20recheckSpawnPositionEv
@@ -331,13 +332,13 @@ public:
     void _findFallbackSpawnPosition(Vec3 &, std::vector<BlockSource *>, unsigned int); // _ZN6Player26_findFallbackSpawnPositionER4Vec3St6vectorIP11BlockSourceSaIS4_EEj
     void _ensureSafeSpawnPosition(Vec3 &); // _ZN6Player24_ensureSafeSpawnPositionER4Vec3
     void _setStartedBlockingTimeStamp(long); // _ZN6Player28_setStartedBlockingTimeStampEl
-//  void handleMovePlayerPacket(Player::PositionMode, Vec3 const&, Vec2 const&, float, int, int); //TODO: incomplete function definition // _ZN6Player22handleMovePlayerPacketENS_12PositionModeERK4Vec3RK4Vec2fii
+//    void handleMovePlayerPacket(long, Vec3 const&, Vec2 const&, float, int, int); //TODO: incomplete function definition // _ZN6Player22handleMovePlayerPacketENS_12PositionModeERK4Vec3RK4Vec2fii
     std::string getPlayerSessionId()const; // _ZNK6Player18getPlayerSessionIdB5cxx11Ev
-//  void setRespawnDimension(AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN6Player19setRespawnDimensionE11AutomaticIDI9DimensioniE
+//    void setRespawnDimension(long); //TODO: incomplete function definition // _ZN6Player19setRespawnDimensionE11AutomaticIDI9DimensioniE
     bool isHiddenFrom(Mob &)const; // _ZNK6Player12isHiddenFromER3Mob
     void getSpawnPosition(); // _ZN6Player16getSpawnPositionEv
     void setRespawnPosition(BlockPos const&, bool); // _ZN6Player18setRespawnPositionERK8BlockPosb
-//  void setRespawnDimensionId(AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN6Player21setRespawnDimensionIdE11AutomaticIDI9DimensioniE
+//    void setRespawnDimensionId(long); //TODO: incomplete function definition // _ZN6Player21setRespawnDimensionIdE11AutomaticIDI9DimensioniE
     void crackBlock(BlockPos const&, unsigned char); // _ZN6Player10crackBlockERK8BlockPosh
     void _addLevels(int); // _ZN6Player10_addLevelsEi
     void getSelectedItemSlot()const; // _ZNK6Player19getSelectedItemSlotEv
@@ -355,13 +356,13 @@ public:
     void getEnchantmentSeed()const; // _ZNK6Player18getEnchantmentSeedEv
     void setEnchantmentSeed(int); // _ZN6Player18setEnchantmentSeedEi
     void spawnExperienceOrb(Vec3 const&, int); // _ZN6Player18spawnExperienceOrbERK4Vec3i
-//  void _sendShieldUpdatePacket(ShieldItem const*, ItemStack const&, ItemStack const&, ContainerID, int); //TODO: incomplete function definition // _ZN6Player23_sendShieldUpdatePacketEPK10ShieldItemRK9ItemStackS5_11ContainerIDi
+//    void _sendShieldUpdatePacket(ShieldItem const*, ItemStack const&, ItemStack const&, long, int); //TODO: incomplete function definition // _ZN6Player23_sendShieldUpdatePacketEPK10ShieldItemRK9ItemStackS5_11ContainerIDi
     void getXpNeededForLevelRange(int, int)const; // _ZNK6Player24getXpNeededForLevelRangeEii
     bool hasOpenContainer()const; // _ZNK6Player16hasOpenContainerEv
     void getContainerManager(); // _ZN6Player19getContainerManagerEv
     void getHudContainerManagerModel(); // _ZN6Player27getHudContainerManagerModelEv
     void getLuck(); // _ZN6Player7getLuckEv
-//  void getPlayerUIItem(PlayerUISlot); //TODO: incomplete function definition // _ZN6Player15getPlayerUIItemE12PlayerUISlot
+//    void getPlayerUIItem(long); //TODO: incomplete function definition // _ZN6Player15getPlayerUIItemE12PlayerUISlot
     void setCursorSelectedItem(ItemStack const&); // _ZN6Player21setCursorSelectedItemERK9ItemStack
     void setCursorSelectedItemGroup(ItemGroup const&); // _ZN6Player26setCursorSelectedItemGroupERK9ItemGroup
     void startGliding(); // _ZN6Player12startGlidingEv
@@ -369,7 +370,7 @@ public:
     void getAgent()const; // _ZNK6Player8getAgentEv
     void getAgentIfAllowed(bool, ActorUniqueID)const; // _ZNK6Player17getAgentIfAllowedEb13ActorUniqueID
     bool isChatAllowed(); // _ZN6Player13isChatAllowedEv
-//  void fireDimensionChangedEvent(AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN6Player25fireDimensionChangedEventE11AutomaticIDI9DimensioniE
+//    void fireDimensionChangedEvent(long); //TODO: incomplete function definition // _ZN6Player25fireDimensionChangedEventE11AutomaticIDI9DimensioniE
     void queueOnScreenTextureAnimation(unsigned int); // _ZN6Player29queueOnScreenTextureAnimationEj
     void getCurrentOnScreenAnimationEffectID()const; // _ZNK6Player35getCurrentOnScreenAnimationEffectIDEv
     void getOnScreenAnimationTicks()const; // _ZNK6Player25getOnScreenAnimationTicksEv
@@ -377,8 +378,8 @@ public:
     void getBlockedUsingShieldTimeStamp()const; // _ZNK6Player30getBlockedUsingShieldTimeStampEv
     void getBlockedUsingDamagedShieldTimeStamp()const; // _ZNK6Player37getBlockedUsingDamagedShieldTimeStampEv
     void getDirection()const; // _ZNK6Player12getDirectionEv
-//  void addListener(PlayerListener &); //TODO: incomplete function definition // _ZN6Player11addListenerER14PlayerListener
-//  void removeListener(PlayerListener &); //TODO: incomplete function definition // _ZN6Player14removeListenerER14PlayerListener
+//    void addListener(long &); //TODO: incomplete function definition // _ZN6Player11addListenerER14PlayerListener
+//    void removeListener(long &); //TODO: incomplete function definition // _ZN6Player14removeListenerER14PlayerListener
     void getMapIndex(); // _ZN6Player11getMapIndexEv
     void setMapIndex(int); // _ZN6Player11setMapIndexEi
     std::string getInteractText()const; // _ZNK6Player15getInteractTextB5cxx11Ev

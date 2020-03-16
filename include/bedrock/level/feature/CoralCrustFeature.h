@@ -4,10 +4,11 @@
 #include <vector>
 
 
-class CoralCrustFeature : Feature {
+class CoralCrustFeature : public Feature {
 
 public:
-    ~CoralCrustFeature(); // _ZN17CoralCrustFeatureD2Ev
+    virtual ~CoralCrustFeature(); // _ZN17CoralCrustFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK17CoralCrustFeature5placeER11BlockSourceRK8BlockPosR6Random
     CoralCrustFeature(); // _ZN17CoralCrustFeatureC2Ev
     void _getOffsetFromRot(int, int)const; // _ZNK17CoralCrustFeature17_getOffsetFromRotEii

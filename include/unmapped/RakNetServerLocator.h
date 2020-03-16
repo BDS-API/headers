@@ -1,20 +1,21 @@
 #pragma once
 
-#include <vector>
-#include "../raknet/RakNetGUID.h"
 #include <string>
-#include "RakPeerHelper.h"
+#include <vector>
 #include <functional>
 #include "ServerLocator.h"
+#include "RakPeerHelper.h"
+#include "../raknet/RakNetGUID.h"
 
 
-class RakNetServerLocator : ServerLocator {
+class RakNetServerLocator : public ServerLocator {
 
 public:
     class PingRateRecorder;
 
-    ~RakNetServerLocator(); // _ZN19RakNetServerLocatorD2Ev
-//  virtual void announceServer(std::string const&, std::string const&, GameType, int, int, bool); //TODO: incomplete function definition // _ZN19RakNetServerLocator14announceServerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_8GameTypeiib
+    virtual ~RakNetServerLocator(); // _ZN19RakNetServerLocatorD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void announceServer__incomplete0(std::string const&, std::string const&, long, int, int, bool); //TODO: incomplete function definition // _ZN19RakNetServerLocator14announceServerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_8GameTypeiib
     virtual void stopAnnouncingServer(); // _ZN19RakNetServerLocator20stopAnnouncingServerEv
     virtual void findServers(int, int); // _ZN19RakNetServerLocator11findServersEii
     virtual void addCustomServer(AsynchronousIPResolver const&, int); // _ZN19RakNetServerLocator15addCustomServerERK22AsynchronousIPResolveri

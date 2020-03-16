@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../../json/Value.h"
 #include "BehaviorDefinition.h"
+#include "../../../json/Value.h"
 
 
-class ShootBowDefinition : BehaviorDefinition {
+class ShootBowDefinition : public BehaviorDefinition {
 
 public:
-    ~ShootBowDefinition(); // _ZN18ShootBowDefinitionD2Ev
+    virtual ~ShootBowDefinition(); // _ZN18ShootBowDefinitionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Json::Value, BehaviorFactory const&); // _ZN18ShootBowDefinition4loadEN4Json5ValueERK15BehaviorFactory
     ShootBowDefinition(); // _ZN18ShootBowDefinitionC2Ev
 };

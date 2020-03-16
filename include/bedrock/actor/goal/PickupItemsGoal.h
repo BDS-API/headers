@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class PickupItemsGoal : Goal {
+class PickupItemsGoal : public Goal {
 
 public:
-    ~PickupItemsGoal(); // _ZN15PickupItemsGoalD2Ev
+    virtual ~PickupItemsGoal(); // _ZN15PickupItemsGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15PickupItemsGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15PickupItemsGoal16canContinueToUseEv
     virtual void start(); // _ZN15PickupItemsGoal5startEv

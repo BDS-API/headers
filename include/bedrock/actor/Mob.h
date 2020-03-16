@@ -1,13 +1,13 @@
 #pragma once
 
+#include <string>
 #include "unmapped/ActorUniqueID.h"
 #include <vector>
-#include "../util/BlockPos.h"
 #include "Actor.h"
-#include <string>
+#include "../util/BlockPos.h"
 
 
-class Mob : Actor {
+class Mob : public Actor {
 
 public:
     static long PLAYER_HURT_EXPERIENCE_TIME;
@@ -23,11 +23,12 @@ public:
     static long LADDER_CLIMB_SPEED;
     static long SCAFFOLDING_CLIMB_SPEED;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Mob15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Mob21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Mob20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Mob15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Mob21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN3Mob20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
     virtual bool hasComponent(Util::HashString const&)const; // _ZNK3Mob12hasComponentERKN4Util10HashStringE
-    ~Mob(); // _ZN3MobD2Ev
+    virtual ~Mob(); // _ZN3MobD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getInterpolatedBodyRot(float)const; // _ZNK3Mob22getInterpolatedBodyRotEf
     virtual void getInterpolatedHeadRot(float)const; // _ZNK3Mob22getInterpolatedHeadRotEf
     virtual void getInterpolatedBodyYaw(float)const; // _ZNK3Mob22getInterpolatedBodyYawEf
@@ -55,12 +56,12 @@ public:
     virtual void actuallyHurt(int, ActorDamageSource const*, bool); // _ZN3Mob12actuallyHurtEiPK17ActorDamageSourceb
     virtual void animateHurt(); // _ZN3Mob11animateHurtEv
     virtual void doFireHurt(int); // _ZN3Mob10doFireHurtEi
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN3Mob17handleEntityEventE10ActorEventi
-//  virtual void getArmorMaterialTypeInSlot(ArmorSlot)const; //TODO: incomplete function definition // _ZNK3Mob26getArmorMaterialTypeInSlotE9ArmorSlot
-//  virtual void getArmorMaterialTextureTypeInSlot(ArmorSlot)const; //TODO: incomplete function definition // _ZNK3Mob33getArmorMaterialTextureTypeInSlotE9ArmorSlot
-//  virtual void getArmorColorInSlot(ArmorSlot, int)const; //TODO: incomplete function definition // _ZNK3Mob19getArmorColorInSlotE9ArmorSloti
-//  virtual void setEquippedSlot(ArmorSlot, int, int); //TODO: incomplete function definition // _ZN3Mob15setEquippedSlotE9ArmorSlotii
-//  virtual void setEquippedSlot(ArmorSlot, ItemStack const&); //TODO: incomplete function definition // _ZN3Mob15setEquippedSlotE9ArmorSlotRK9ItemStack
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN3Mob17handleEntityEventE10ActorEventi
+    virtual void getArmorMaterialTypeInSlot__incomplete0(long)const; //TODO: incomplete function definition // _ZNK3Mob26getArmorMaterialTypeInSlotE9ArmorSlot
+    virtual void getArmorMaterialTextureTypeInSlot__incomplete0(long)const; //TODO: incomplete function definition // _ZNK3Mob33getArmorMaterialTextureTypeInSlotE9ArmorSlot
+    virtual void getArmorColorInSlot__incomplete0(long, int)const; //TODO: incomplete function definition // _ZNK3Mob19getArmorColorInSlotE9ArmorSloti
+    virtual void setEquippedSlot__incomplete1(long, int, int); //TODO: incomplete function definition // _ZN3Mob15setEquippedSlotE9ArmorSlotii
+    virtual void setEquippedSlot__incomplete1(long, ItemStack const&); //TODO: incomplete function definition // _ZN3Mob15setEquippedSlotE9ArmorSlotRK9ItemStack
     virtual void setOnFire(int); // _ZN3Mob9setOnFireEi
     virtual void causeFallDamage(float); // _ZN3Mob15causeFallDamageEf
     virtual bool canBePulledIntoVehicle()const; // _ZNK3Mob22canBePulledIntoVehicleEv
@@ -70,7 +71,7 @@ public:
     virtual void getDeathTime()const; // _ZNK3Mob12getDeathTimeEv
     virtual void swing(); // _ZN3Mob5swingEv
     virtual void getYHeadRot()const; // _ZNK3Mob11getYHeadRotEv
-//  virtual void renderDebugServerState(Options const&); //TODO: incomplete function definition // _ZN3Mob22renderDebugServerStateERK7Options
+    virtual void renderDebugServerState__incomplete0(long const&); //TODO: incomplete function definition // _ZN3Mob22renderDebugServerStateERK7Options
     virtual void kill(); // _ZN3Mob4killEv
     virtual void die(ActorDamageSource const&); // _ZN3Mob3dieERK17ActorDamageSource
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN3Mob35updateEntitySpecificMolangVariablesER12RenderParams
@@ -106,7 +107,7 @@ public:
     virtual bool isLookingAtAnEntity(); // _ZN3Mob19isLookingAtAnEntityEv
     virtual void checkSpawnRules(bool); // _ZN3Mob15checkSpawnRulesEb
     virtual void checkSpawnObstruction()const; // _ZNK3Mob21checkSpawnObstructionEv
-    virtual void shouldDespawn()const; // _ZNK3Mob13shouldDespawnEv
+    virtual bool shouldDespawn()const; // _ZNK3Mob13shouldDespawnEv
     virtual void getAttackAnim(float); // _ZN3Mob13getAttackAnimEf
     virtual void getItemUseDuration(); // _ZN3Mob18getItemUseDurationEv
     virtual void getItemUseStartupProgress(); // _ZN3Mob25getItemUseStartupProgressEv
@@ -144,7 +145,7 @@ public:
     virtual void getDamageAfterMagicAbsorb(ActorDamageSource const&, int); // _ZN3Mob25getDamageAfterMagicAbsorbERK17ActorDamageSourcei
     virtual void createAIGoals(); // _ZN3Mob13createAIGoalsEv
     virtual void onBorn(Actor &, Actor &); // _ZN3Mob6onBornER5ActorS1_
-//  virtual void setItemSlot(EquipmentSlot, ItemStack const&); //TODO: incomplete function definition // _ZN3Mob11setItemSlotE13EquipmentSlotRK9ItemStack
+    virtual void setItemSlot__incomplete0(long, ItemStack const&); //TODO: incomplete function definition // _ZN3Mob11setItemSlotE13EquipmentSlotRK9ItemStack
     virtual void goDownInWater(); // _ZN3Mob13goDownInWaterEv
     virtual void setTransitioningSitting(bool); // _ZN3Mob23setTransitioningSittingEb
     virtual void attackAnimation(Actor *, float); // _ZN3Mob15attackAnimationEP5Actorf
@@ -183,7 +184,7 @@ public:
     void getAmbientSoundPostponeTicksRange(); // _ZN3Mob33getAmbientSoundPostponeTicksRangeEv
     void _isHeadInWater(); // _ZN3Mob14_isHeadInWaterEv
     void _isFloorDamaging(BlockPos const&); // _ZN3Mob16_isFloorDamagingERK8BlockPos
-//  void _isNewEntityAttack(ActorDamageCause)const; //TODO: incomplete function definition // _ZNK3Mob18_isNewEntityAttackE16ActorDamageCause
+//    void _isNewEntityAttack(long)const; //TODO: incomplete function definition // _ZNK3Mob18_isNewEntityAttackE16ActorDamageCause
     void _tryApplyingLevitation(Vec3 &)const; // _ZNK3Mob22_tryApplyingLevitationER4Vec3
     void checkTotemDeathProtection(ActorDamageSource const&); // _ZN3Mob25checkTotemDeathProtectionERK17ActorDamageSource
     bool hasBoundOrigin()const; // _ZNK3Mob14hasBoundOriginEv
@@ -200,14 +201,14 @@ public:
     void lerpToRotation(Vec2 const&, int); // _ZN3Mob14lerpToRotationERK4Vec2i
     bool isGliding()const; // _ZNK3Mob9isGlidingEv
     void getTravelType(); // _ZN3Mob13getTravelTypeEv
-//  void calcMoveRelativeSpeed(Mob::TravelType); //TODO: incomplete function definition // _ZN3Mob21calcMoveRelativeSpeedENS_10TravelTypeE
+//    void calcMoveRelativeSpeed(long); //TODO: incomplete function definition // _ZN3Mob21calcMoveRelativeSpeedENS_10TravelTypeE
     void getXxa()const; // _ZNK3Mob6getXxaEv
     void getYya()const; // _ZNK3Mob6getYyaEv
     void getZza()const; // _ZNK3Mob6getZzaEv
     void getJumpMultiplier(); // _ZN3Mob17getJumpMultiplierEv
     void getJumpPrevention(); // _ZN3Mob17getJumpPreventionEv
     void emitJumpPreventedEvent(BlockPos const&); // _ZN3Mob22emitJumpPreventedEventERK8BlockPos
-    void shouldApplyWaterGravity(); // _ZN3Mob23shouldApplyWaterGravityEv
+    bool shouldApplyWaterGravity(); // _ZN3Mob23shouldApplyWaterGravityEv
     void saveMainhand()const; // _ZNK3Mob12saveMainhandEv
     void _saveArmor(); // _ZN3Mob10_saveArmorEv
     void saveOffhand()const; // _ZNK3Mob11saveOffhandEv
@@ -243,14 +244,14 @@ public:
     void _doSprintParticleEffect(); // _ZN3Mob23_doSprintParticleEffectEv
     void getCurrentSwingDuration(); // _ZN3Mob23getCurrentSwingDurationEv
     void _getDamageAfterAbsorb(int, int); // _ZN3Mob21_getDamageAfterAbsorbEii
-//  void getItemSlot(EquipmentSlot)const; //TODO: incomplete function definition // _ZNK3Mob11getItemSlotE13EquipmentSlot
+//    void getItemSlot(long)const; //TODO: incomplete function definition // _ZNK3Mob11getItemSlotE13EquipmentSlot
     void getFirstCaravanHead(); // _ZN3Mob19getFirstCaravanHeadEv
     void getCaravanSize()const; // _ZNK3Mob14getCaravanSizeEv
     void _updateMobId(ActorUniqueID &); // _ZN3Mob12_updateMobIdER13ActorUniqueID
     void getLastHurtMobTimestamp(); // _ZN3Mob23getLastHurtMobTimestampEv
     void getLastHurtByMobTimestamp(); // _ZN3Mob25getLastHurtByMobTimestampEv
     void getNoActionTime()const; // _ZNK3Mob15getNoActionTimeEv
-//  void setSpawnMethod(MobSpawnMethod); //TODO: incomplete function definition // _ZN3Mob14setSpawnMethodE14MobSpawnMethod
+//    void setSpawnMethod(long); //TODO: incomplete function definition // _ZN3Mob14setSpawnMethodE14MobSpawnMethod
     void getSpawnMethod(); // _ZN3Mob14getSpawnMethodEv
     void onPlayerJump(int); // _ZN3Mob12onPlayerJumpEi
     void setXxa(float); // _ZN3Mob6setXxaEf
@@ -266,7 +267,7 @@ public:
     void _removeSpeedBonus(mce::UUID const&); // _ZN3Mob17_removeSpeedBonusERKN3mce4UUIDE
     void getFlightSpeed(); // _ZN3Mob14getFlightSpeedEv
     void setFlightSpeed(float); // _ZN3Mob14setFlightSpeedEf
-//  void onPlayerDimensionChanged(Player *, AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN3Mob24onPlayerDimensionChangedEP6Player11AutomaticIDI9DimensioniE
+//    void onPlayerDimensionChanged(Player *, long); //TODO: incomplete function definition // _ZN3Mob24onPlayerDimensionChangedEP6Player11AutomaticIDI9DimensioniE
     void getVillageLegacy()const; // _ZNK3Mob16getVillageLegacyEv
     bool isLayingEgg()const; // _ZNK3Mob11isLayingEggEv
     void setIsLayingEgg(bool); // _ZN3Mob14setIsLayingEggEb

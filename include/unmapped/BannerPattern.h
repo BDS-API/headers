@@ -1,8 +1,8 @@
 #pragma once
 
 #include <string>
-#include <vector>
 #include "../bedrock/item/ItemStack.h"
+#include <vector>
 
 
 class BannerPattern {

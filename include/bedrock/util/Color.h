@@ -28,6 +28,7 @@ public:
     void fromARGB(int); // _ZN5Color8fromARGBEi
     Color(); // _ZN5ColorC2Ev
     void fromRGB(int); // _ZN5Color7fromRGBEi
+    void operator+=(Color const&); // _ZN5ColorpLERKS_
     void operator/(float)const; // _ZNK5ColordvEf
     void clamped()const; // _ZNK5Color7clampedEv
     void clamp(); // _ZN5Color5clampEv

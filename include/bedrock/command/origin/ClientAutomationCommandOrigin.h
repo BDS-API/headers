@@ -4,10 +4,11 @@
 #include "CommandOrigin.h"
 
 
-class ClientAutomationCommandOrigin : CommandOrigin {
+class ClientAutomationCommandOrigin : public CommandOrigin {
 
 public:
-    ~ClientAutomationCommandOrigin(); // _ZN29ClientAutomationCommandOriginD2Ev
+    virtual ~ClientAutomationCommandOrigin(); // _ZN29ClientAutomationCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getRequestId()const; // _ZNK29ClientAutomationCommandOrigin12getRequestIdB5cxx11Ev
     virtual std::string getName()const; // _ZNK29ClientAutomationCommandOrigin7getNameB5cxx11Ev
     virtual void getBlockPosition()const; // _ZNK29ClientAutomationCommandOrigin16getBlockPositionEv

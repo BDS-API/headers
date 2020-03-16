@@ -3,10 +3,11 @@
 #include "BaseContainerMenu.h"
 
 
-class InventoryMenu : BaseContainerMenu {
+class InventoryMenu : public BaseContainerMenu {
 
 public:
-    ~InventoryMenu(); // _ZN13InventoryMenuD2Ev
+    virtual ~InventoryMenu(); // _ZN13InventoryMenuD2Ev
+    virtual void __fake_function0(); // fake
     virtual void removeSlot(int, int); // _ZN13InventoryMenu10removeSlotEii
     virtual void getItems(); // _ZN13InventoryMenu8getItemsEv
     virtual void setSlot(int, ContainerItemStack const&, bool); // _ZN13InventoryMenu7setSlotEiRK18ContainerItemStackb

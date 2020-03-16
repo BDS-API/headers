@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "Packet.h"
 
 
-class InventoryTransactionPacket : Packet {
+class InventoryTransactionPacket : public Packet {
 
 public:
-    ~InventoryTransactionPacket(); // _ZN26InventoryTransactionPacketD2Ev
+    virtual ~InventoryTransactionPacket(); // _ZN26InventoryTransactionPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK26InventoryTransactionPacket5getIdEv
     virtual std::string getName()const; // _ZNK26InventoryTransactionPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK26InventoryTransactionPacket5writeER12BinaryStream

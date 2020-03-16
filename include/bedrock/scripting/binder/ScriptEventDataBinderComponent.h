@@ -3,12 +3,13 @@
 #include "ScriptBinderComponent.h"
 
 
-class ScriptEventDataBinderComponent : ScriptBinderComponent {
+class ScriptEventDataBinderComponent : public ScriptBinderComponent {
 
 public:
     static std::string TAG;
 
-    ~ScriptEventDataBinderComponent(); // _ZN30ScriptEventDataBinderComponentD2Ev
+    virtual ~ScriptEventDataBinderComponent(); // _ZN30ScriptEventDataBinderComponentD2Ev
+    virtual void __fake_function0(); // fake
     virtual void serialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&)const; // _ZNK30ScriptEventDataBinderComponent9serializeER12ScriptEngineRKN9ScriptApi18ScriptObjectHandleE
     virtual void deserialize(ScriptEngine &, ScriptApi::ScriptObjectHandle const&); // _ZN30ScriptEventDataBinderComponent11deserializeER12ScriptEngineRKN9ScriptApi18ScriptObjectHandleE
     ScriptEventDataBinderComponent(); // _ZN30ScriptEventDataBinderComponentC2Ev

@@ -3,11 +3,12 @@
 #include "Mob.h"
 
 
-class TripodCamera : Mob {
+class TripodCamera : public Mob {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN12TripodCamera15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~TripodCamera(); // _ZN12TripodCameraD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN12TripodCamera15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~TripodCamera(); // _ZN12TripodCameraD2Ev
+    virtual void __fake_function0(); // fake
     virtual void remove(); // _ZN12TripodCamera6removeEv
     virtual bool breaksFallingBlocks()const; // _ZNK12TripodCamera19breaksFallingBlocksEv
     virtual void normalTick(); // _ZN12TripodCamera10normalTickEv

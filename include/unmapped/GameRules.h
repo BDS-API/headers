@@ -32,7 +32,7 @@ public:
     void setRule(GameRuleId, int, bool, bool *, bool *, GameRule::ValidationError *); // _ZN9GameRules7setRuleE10GameRuleIdibPbS1_PN8GameRule15ValidationErrorE
     void setRule(GameRuleId, float, bool, bool *, bool *, GameRule::ValidationError *); // _ZN9GameRules7setRuleE10GameRuleIdfbPbS1_PN8GameRule15ValidationErrorE
     void _registerRule(std::string const&, GameRuleId); // _ZN9GameRules13_registerRuleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE10GameRuleId
-//  void _setRule(GameRuleId, GameRule::Value, GameRule::Type, bool, bool *, bool *, GameRule::ValidationError *); //TODO: incomplete function definition // _ZN9GameRules8_setRuleE10GameRuleIdN8GameRule5ValueENS1_4TypeEbPbS4_PNS1_15ValidationErrorE
+//    void _setRule(GameRuleId, GameRule::Value, long, bool, bool *, bool *, GameRule::ValidationError *); //TODO: incomplete function definition // _ZN9GameRules8_setRuleE10GameRuleIdN8GameRule5ValueENS1_4TypeEbPbS4_PNS1_15ValidationErrorE
     void _getRule(GameRuleId); // _ZN9GameRules8_getRuleE10GameRuleId
     void _createPacket(GameRule const&); // _ZN9GameRules13_createPacketERK8GameRule
     void getBool(GameRuleId)const; // _ZNK9GameRules7getBoolE10GameRuleId

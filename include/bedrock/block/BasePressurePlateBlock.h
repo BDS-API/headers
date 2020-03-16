@@ -4,15 +4,16 @@
 #include "BlockLegacy.h"
 
 
-class BasePressurePlateBlock : BlockLegacy {
+class BasePressurePlateBlock : public BlockLegacy {
 
 public:
-    ~BasePressurePlateBlock(); // _ZN22BasePressurePlateBlockD2Ev
+    virtual ~BasePressurePlateBlock(); // _ZN22BasePressurePlateBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK22BasePressurePlateBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK22BasePressurePlateBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK22BasePressurePlateBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool isSignalSource()const; // _ZNK22BasePressurePlateBlock14isSignalSourceEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK22BasePressurePlateBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK22BasePressurePlateBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK22BasePressurePlateBlock15checkIsPathableER5ActorRK8BlockPosS4_
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK22BasePressurePlateBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK22BasePressurePlateBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

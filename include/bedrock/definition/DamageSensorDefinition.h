@@ -8,7 +8,7 @@ class DamageSensorDefinition {
 public:
     DamageSensorDefinition(); // _ZN22DamageSensorDefinitionC2Ev
     ~DamageSensorDefinition(); // _ZN22DamageSensorDefinitionD2Ev
-    void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, DamageSensorDefinition>> &); // _ZN22DamageSensorDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
+    void buildSchema(std::shared_ptr<long> &); // _ZN22DamageSensorDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
     void addDamageSensorTrigger(DamageSensorTrigger const&); // _ZN22DamageSensorDefinition22addDamageSensorTriggerERK19DamageSensorTrigger
     void initialize(EntityContext &, DamageSensorComponent &)const; // _ZNK22DamageSensorDefinition10initializeER13EntityContextR21DamageSensorComponent
     void uninitialize(EntityContext &, DamageSensorComponent &)const; // _ZNK22DamageSensorDefinition12uninitializeER13EntityContextR21DamageSensorComponent

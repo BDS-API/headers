@@ -1,20 +1,21 @@
 #pragma once
 
+#include "../../actor/unmapped/ActorRuntimeID.h"
 #include <string>
 #include "Packet.h"
-#include "../../actor/unmapped/ActorRuntimeID.h"
 
 
-class NpcRequestPacket : Packet {
+class NpcRequestPacket : public Packet {
 
 public:
-    ~NpcRequestPacket(); // _ZN16NpcRequestPacketD2Ev
+    virtual ~NpcRequestPacket(); // _ZN16NpcRequestPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK16NpcRequestPacket5getIdEv
     virtual std::string getName()const; // _ZNK16NpcRequestPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK16NpcRequestPacket5writeER12BinaryStream
     virtual void read(ReadOnlyBinaryStream &); // _ZN16NpcRequestPacket4readER20ReadOnlyBinaryStream
     NpcRequestPacket(); // _ZN16NpcRequestPacketC2Ev
-//  NpcRequestPacket(ActorRuntimeID, NpcRequestPacket::RequestType, std::string, unsigned char); //TODO: incomplete function definition // _ZN16NpcRequestPacketC2E14ActorRuntimeIDNS_11RequestTypeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEh
+//    NpcRequestPacket(ActorRuntimeID, long, std::string, unsigned char); //TODO: incomplete function definition // _ZN16NpcRequestPacketC2E14ActorRuntimeIDNS_11RequestTypeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEh
     NpcRequestPacket(ActorRuntimeID); // _ZN16NpcRequestPacketC2E14ActorRuntimeID
     NpcRequestPacket(ActorRuntimeID, int); // _ZN16NpcRequestPacketC2E14ActorRuntimeIDi
     NpcRequestPacket(ActorRuntimeID, std::string const&); // _ZN16NpcRequestPacketC2E14ActorRuntimeIDRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

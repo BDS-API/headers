@@ -5,7 +5,8 @@
 class ServerInstanceEventListener {
 
 public:
-    ~ServerInstanceEventListener(); // _ZN27ServerInstanceEventListenerD2Ev
+    virtual ~ServerInstanceEventListener(); // _ZN27ServerInstanceEventListenerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onServerInitializeStart(ServerInstance &); // _ZN27ServerInstanceEventListener23onServerInitializeStartER14ServerInstance
     virtual void onServerInitializeEnd(ServerInstance &); // _ZN27ServerInstanceEventListener21onServerInitializeEndER14ServerInstance
     virtual void onServerMinecraftInitialized(ServerInstance &, Minecraft &); // _ZN27ServerInstanceEventListener28onServerMinecraftInitializedER14ServerInstanceR9Minecraft

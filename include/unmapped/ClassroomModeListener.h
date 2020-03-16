@@ -3,10 +3,11 @@
 #include "../bedrock/level/LevelListener.h"
 
 
-class ClassroomModeListener : LevelListener {
+class ClassroomModeListener : public LevelListener {
 
 public:
-    ~ClassroomModeListener(); // _ZN21ClassroomModeListenerD2Ev
+    virtual ~ClassroomModeListener(); // _ZN21ClassroomModeListenerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onAreaChanged(BlockSource &, BlockPos const&, BlockPos const&); // _ZN21ClassroomModeListener13onAreaChangedER11BlockSourceRK8BlockPosS4_
     virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*); // _ZN21ClassroomModeListener14onBlockChangedER11BlockSourceRK8BlockPosjRK5BlockS7_iPK21ActorBlockSyncMessage
     virtual void onEntityAdded(Actor &); // _ZN21ClassroomModeListener13onEntityAddedER5Actor

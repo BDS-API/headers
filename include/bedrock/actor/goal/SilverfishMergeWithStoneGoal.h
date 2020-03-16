@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "RandomStrollGoal.h"
+#include <string>
 
 
-class SilverfishMergeWithStoneGoal : RandomStrollGoal {
+class SilverfishMergeWithStoneGoal : public RandomStrollGoal {
 
 public:
-    ~SilverfishMergeWithStoneGoal(); // _ZN28SilverfishMergeWithStoneGoalD2Ev
+    virtual ~SilverfishMergeWithStoneGoal(); // _ZN28SilverfishMergeWithStoneGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN28SilverfishMergeWithStoneGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN28SilverfishMergeWithStoneGoal16canContinueToUseEv
     virtual void start(); // _ZN28SilverfishMergeWithStoneGoal5startEv

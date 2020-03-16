@@ -5,6 +5,7 @@
 class ServerLocator {
 
 public:
-    ~ServerLocator(); // _ZN13ServerLocatorD2Ev
+    virtual ~ServerLocator(); // _ZN13ServerLocatorD2Ev
+    virtual void __fake_function0(); // fake
     ServerLocator(); // _ZN13ServerLocatorC2Ev
 };

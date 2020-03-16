@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class AgentCommandExecutionGoal : Goal {
+class AgentCommandExecutionGoal : public Goal {
 
 public:
-    ~AgentCommandExecutionGoal(); // _ZN25AgentCommandExecutionGoalD2Ev
+    virtual ~AgentCommandExecutionGoal(); // _ZN25AgentCommandExecutionGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN25AgentCommandExecutionGoal6canUseEv
     virtual bool canBeInterrupted(); // _ZN25AgentCommandExecutionGoal16canBeInterruptedEv
     virtual void start(); // _ZN25AgentCommandExecutionGoal5startEv

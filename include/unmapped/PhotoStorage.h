@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include "../core/Path.h"
+#include <string>
 #include <vector>
 
 
@@ -32,6 +32,6 @@ public:
     bool isValidBookPhoto(std::string const&, std::string const&); // _ZN12PhotoStorage16isValidBookPhotoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_
     void setValidLoosePhoto(Player &, std::string const&); // _ZN12PhotoStorage18setValidLoosePhotoER6PlayerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void _addValidFile(Core::Path); // _ZN12PhotoStorage13_addValidFileEN4Core4PathE
-    void getLoosePhotos(Player &, std::vector<Core::PathBuffer<std::string>> &); // _ZN12PhotoStorage14getLoosePhotosER6PlayerRSt6vectorIN4Core10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaISB_EE
+    void getLoosePhotos(Player &, std::vector<long> &); // _ZN12PhotoStorage14getLoosePhotosER6PlayerRSt6vectorIN4Core10PathBufferINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESaISB_EE
     void _writeManifest(); // _ZN12PhotoStorage14_writeManifestEv
 };

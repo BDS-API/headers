@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class SubClientLoginPacket : Packet {
+class SubClientLoginPacket : public Packet {
 
 public:
-    ~SubClientLoginPacket(); // _ZN20SubClientLoginPacketD2Ev
+    virtual ~SubClientLoginPacket(); // _ZN20SubClientLoginPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK20SubClientLoginPacket5getIdEv
     virtual std::string getName()const; // _ZNK20SubClientLoginPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK20SubClientLoginPacket5writeER12BinaryStream

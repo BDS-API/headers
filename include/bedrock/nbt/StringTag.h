@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "Tag.h"
+#include <string>
 
 
-class StringTag : Tag {
+class StringTag : public Tag {
 
 public:
-    ~StringTag(); // _ZN9StringTagD2Ev
+    virtual ~StringTag(); // _ZN9StringTagD2Ev
+    virtual void __fake_function0(); // fake
     virtual void write(IDataOutput &)const; // _ZNK9StringTag5writeER11IDataOutput
     virtual void load(IDataInput &); // _ZN9StringTag4loadER10IDataInput
     virtual std::string toString()const; // _ZNK9StringTag8toStringB5cxx11Ev

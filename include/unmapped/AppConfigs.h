@@ -6,7 +6,8 @@
 class AppConfigs {
 
 public:
-    ~AppConfigs(); // _ZN10AppConfigsD2Ev
+    virtual ~AppConfigs(); // _ZN10AppConfigsD2Ev
+    virtual void __fake_function0(); // fake
     virtual void areResourcePacksAllowed()const; // _ZNK10AppConfigs23areResourcePacksAllowedEv
     virtual bool isPlayScreenAllowed()const; // _ZNK10AppConfigs19isPlayScreenAllowedEv
     virtual bool isGameTabShownInSettings()const; // _ZNK10AppConfigs24isGameTabShownInSettingsEv
@@ -20,6 +21,6 @@ public:
     virtual void getConnectionDefinition()const; // _ZNK10AppConfigs23getConnectionDefinitionEv
     virtual bool supportsChangingMultiplayerDuringPlay()const; // _ZNK10AppConfigs37supportsChangingMultiplayerDuringPlayEv
     AppConfigs(); // _ZN10AppConfigsC2Ev
-//  void tryLeaveGameOverride(SceneStack &, SceneFactory &); //TODO: incomplete function definition // _ZN10AppConfigs20tryLeaveGameOverrideER10SceneStackR12SceneFactory
-    void setLeaveGameOverride(std::function<void (SceneStack &, SceneFactory &)>); // _ZN10AppConfigs20setLeaveGameOverrideESt8functionIFvR10SceneStackR12SceneFactoryEE
+//    void tryLeaveGameOverride(long &, long &); //TODO: incomplete function definition // _ZN10AppConfigs20tryLeaveGameOverrideER10SceneStackR12SceneFactory
+    void setLeaveGameOverride(std::function<void (long &, long &)>); // _ZN10AppConfigs20setLeaveGameOverrideESt8functionIFvR10SceneStackR12SceneFactoryEE
 };

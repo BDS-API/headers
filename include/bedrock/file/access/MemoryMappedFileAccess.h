@@ -1,13 +1,13 @@
 #pragma once
 
-#include <memory>
-#include "IFileWriteAccess.h"
-#include <string>
 #include "IFileReadAccess.h"
+#include <string>
+#include "IFileWriteAccess.h"
+#include <memory>
 #include "IFileAccess.h"
 
 
-class MemoryMappedFileAccess : IFileAccess {
+class MemoryMappedFileAccess : public IFileAccess {
 
 public:
     class MemoryMappedFileReadAccess;
@@ -16,7 +16,8 @@ public:
 
     static long EMPTY_TRANSFORMS;
 
-    ~MemoryMappedFileAccess(); // _ZN22MemoryMappedFileAccessD2Ev
+    virtual ~MemoryMappedFileAccess(); // _ZN22MemoryMappedFileAccessD2Ev
+    virtual void __fake_function0(); // fake
     virtual void fopen(Core::Path const&, std::string const&); // _ZN22MemoryMappedFileAccess5fopenERKN4Core4PathERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void fclose(void *); // _ZN22MemoryMappedFileAccess6fcloseEPv
     virtual void fseek(void *, long, int); // _ZN22MemoryMappedFileAccess5fseekEPvli
@@ -27,17 +28,19 @@ public:
     MemoryMappedFileAccess(IFileAccess &, std::unique_ptr<FileAccessTransforms>); // _ZN22MemoryMappedFileAccessC2ER11IFileAccessSt10unique_ptrI20FileAccessTransformsSt14default_deleteIS3_EE
     void _requestedOpenIsCompatibleWithOpenStream(MemoryMappedFileAccess::StreamDetails &, bool, bool)const; // _ZNK22MemoryMappedFileAccess40_requestedOpenIsCompatibleWithOpenStreamERNS_13StreamDetailsEbb
     void _getTransforms()const; // _ZNK22MemoryMappedFileAccess14_getTransformsEv
-    class MemoryMappedFileReadAccess : IFileReadAccess {
+    class MemoryMappedFileReadAccess : public IFileReadAccess {
 
     public:
-        ~MemoryMappedFileReadAccess(); // _ZN22MemoryMappedFileAccess26MemoryMappedFileReadAccessD2Ev
+        virtual ~MemoryMappedFileReadAccess(); // _ZN22MemoryMappedFileAccess26MemoryMappedFileReadAccessD2Ev
+        virtual void __fake_function0(); // fake
         virtual void fread(void *, unsigned long, unsigned long, void *)const; // _ZNK22MemoryMappedFileAccess26MemoryMappedFileReadAccess5freadEPvmmS1_
         MemoryMappedFileReadAccess(); // _ZN22MemoryMappedFileAccess26MemoryMappedFileReadAccessC2Ev
     };
-    class MemoryMappedFileWriteAccess : IFileWriteAccess {
+    class MemoryMappedFileWriteAccess : public IFileWriteAccess {
 
     public:
-        ~MemoryMappedFileWriteAccess(); // _ZN22MemoryMappedFileAccess27MemoryMappedFileWriteAccessD2Ev
+        virtual ~MemoryMappedFileWriteAccess(); // _ZN22MemoryMappedFileAccess27MemoryMappedFileWriteAccessD2Ev
+        virtual void __fake_function0(); // fake
         virtual void fwrite(void const*, unsigned long, unsigned long, void *); // _ZN22MemoryMappedFileAccess27MemoryMappedFileWriteAccess6fwriteEPKvmmPv
         MemoryMappedFileWriteAccess(); // _ZN22MemoryMappedFileAccess27MemoryMappedFileWriteAccessC2Ev
     };

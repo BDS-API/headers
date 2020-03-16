@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class ShareItemsGoal : Goal {
+class ShareItemsGoal : public Goal {
 
 public:
-    ~ShareItemsGoal(); // _ZN14ShareItemsGoalD2Ev
+    virtual ~ShareItemsGoal(); // _ZN14ShareItemsGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN14ShareItemsGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN14ShareItemsGoal16canContinueToUseEv
     virtual void start(); // _ZN14ShareItemsGoal5startEv

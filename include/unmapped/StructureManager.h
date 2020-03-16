@@ -23,6 +23,6 @@ public:
     void exportStructure(StructureTemplate const&, Core::Path const&); // _ZN16StructureManager15exportStructureERK17StructureTemplateRKN4Core4PathE
     void setLevelStorage(LevelStorage *); // _ZN16StructureManager15setLevelStorageEP12LevelStorage
     void setPackManager(ResourcePackManager &); // _ZN16StructureManager14setPackManagerER19ResourcePackManager
-//  void createStructureDataExportPacket(std::string const&, StructureTemplateResponseType); //TODO: incomplete function definition // _ZN16StructureManager31createStructureDataExportPacketERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE29StructureTemplateResponseType
+//    void createStructureDataExportPacket(std::string const&, long); //TODO: incomplete function definition // _ZN16StructureManager31createStructureDataExportPacketERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE29StructureTemplateResponseType
     void clearLoadedStructures(); // _ZN16StructureManager21clearLoadedStructuresEv
 };

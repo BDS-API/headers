@@ -3,10 +3,11 @@
 #include "StructureStart.h"
 
 
-class WoodlandMansionStart : StructureStart {
+class WoodlandMansionStart : public StructureStart {
 
 public:
-    ~WoodlandMansionStart(); // _ZN20WoodlandMansionStartD2Ev
+    virtual ~WoodlandMansionStart(); // _ZN20WoodlandMansionStartD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN20WoodlandMansionStart11postProcessEP11BlockSourceR6RandomRK11BoundingBox
     virtual void getType()const; // _ZNK20WoodlandMansionStart7getTypeEv
     WoodlandMansionStart(); // _ZN20WoodlandMansionStartC2Ev

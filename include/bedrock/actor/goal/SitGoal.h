@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class SitGoal : Goal {
+class SitGoal : public Goal {
 
 public:
-    ~SitGoal(); // _ZN7SitGoalD2Ev
+    virtual ~SitGoal(); // _ZN7SitGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN7SitGoal6canUseEv
     virtual void start(); // _ZN7SitGoal5startEv
     virtual void stop(); // _ZN7SitGoal4stopEv

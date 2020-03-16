@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class FaceDirectionalBlock : BlockLegacy {
+class FaceDirectionalBlock : public BlockLegacy {
 
 public:
-    ~FaceDirectionalBlock(); // _ZN20FaceDirectionalBlockD2Ev
+    virtual ~FaceDirectionalBlock(); // _ZN20FaceDirectionalBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isValidAuxValue(int)const; // _ZNK20FaceDirectionalBlock15isValidAuxValueEi
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const; // _ZNK20FaceDirectionalBlock17getPlacementBlockER5ActorRK8BlockPoshRK4Vec3i
     virtual void getMappedFace(unsigned char, Block const&)const; // _ZNK20FaceDirectionalBlock13getMappedFaceEhRK5Block

@@ -14,7 +14,7 @@ public:
     BaseGameVersion(); // _ZN15BaseGameVersionC2Ev
     BaseGameVersion(BaseGameVersion const&); // _ZN15BaseGameVersionC2ERKS_
     BaseGameVersion(unsigned short, unsigned int); // _ZN15BaseGameVersionC2Etj
-//  BaseGameVersion(BaseGameVersion::any_version_constructor); //TODO: incomplete function definition // _ZN15BaseGameVersionC2ENS_23any_version_constructorE
+//    BaseGameVersion(long); //TODO: incomplete function definition // _ZN15BaseGameVersionC2ENS_23any_version_constructorE
     BaseGameVersion(SemVersion const&); // _ZN15BaseGameVersionC2ERK10SemVersion
     void operator==(BaseGameVersion const&)const; // _ZNK15BaseGameVersioneqERKS_
     void operator<(BaseGameVersion const&)const; // _ZNK15BaseGameVersionltERKS_

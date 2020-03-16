@@ -6,7 +6,8 @@
 class Stopwatch {
 
 public:
-    ~Stopwatch(); // _ZN9StopwatchD2Ev
+    virtual ~Stopwatch(); // _ZN9StopwatchD2Ev
+    virtual void __fake_function0(); // fake
     virtual void stop(); // _ZN9Stopwatch4stopEv
     virtual void stopContinue(); // _ZN9Stopwatch12stopContinueEv
     virtual void print(std::string const&); // _ZN9Stopwatch5printERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

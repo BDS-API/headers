@@ -5,17 +5,18 @@
 #include "IEntityComponent.h"
 
 
-class ContainerComponent : ContainerContentChangeListener, IEntityComponent {
+class ContainerComponent : public ContainerContentChangeListener, public IEntityComponent {
 
 public:
     virtual void containerContentChanged(int); // _ZN18ContainerComponent23containerContentChangedEi
-    ~ContainerComponent(); // _ZN18ContainerComponentD2Ev
+    virtual ~ContainerComponent(); // _ZN18ContainerComponentD2Ev
+    virtual void __fake_function0(); // fake
     ContainerComponent(); // _ZN18ContainerComponentC2Ev
     ContainerComponent(ContainerComponent &&); // _ZN18ContainerComponentC2EOS_
     void _getRawContainerPtr()const; // _ZNK18ContainerComponent19_getRawContainerPtrEv
     void initFromDefinition(Actor &); // _ZN18ContainerComponent18initFromDefinitionER5Actor
     void initFromDefinition(Actor &, ContainerDescription const&); // _ZN18ContainerComponent18initFromDefinitionER5ActorRK20ContainerDescription
-//  void rebuildContainer(Actor &, ContainerType, int, bool, int, bool); //TODO: incomplete function definition // _ZN18ContainerComponent16rebuildContainerER5Actor13ContainerTypeibib
+//    void rebuildContainer(Actor &, long, int, bool, int, bool); //TODO: incomplete function definition // _ZN18ContainerComponent16rebuildContainerER5Actor13ContainerTypeibib
     void addAdditionalSaveData(CompoundTag &); // _ZN18ContainerComponent21addAdditionalSaveDataER11CompoundTag
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &); // _ZN18ContainerComponent22readAdditionalSaveDataER5ActorRK11CompoundTagR14DataLoadHelper
     bool canOpenContainer(Actor const&, Player &)const; // _ZNK18ContainerComponent16canOpenContainerERK5ActorR6Player

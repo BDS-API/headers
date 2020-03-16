@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 #include "ContainerModel.h"
 
 
-class ExpandoContainerModel : ContainerModel {
+class ExpandoContainerModel : public ContainerModel {
 
 public:
     virtual void containerContentChanged(int); // _ZN21ExpandoContainerModel23containerContentChangedEi
-    ~ExpandoContainerModel(); // _ZN21ExpandoContainerModelD2Ev
+    virtual ~ExpandoContainerModel(); // _ZN21ExpandoContainerModelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getContainerSize()const; // _ZNK21ExpandoContainerModel16getContainerSizeEv
     virtual void getFilteredContainerSize()const; // _ZNK21ExpandoContainerModel24getFilteredContainerSizeEv
     virtual void getItem(int)const; // _ZNK21ExpandoContainerModel7getItemEi
@@ -19,7 +20,7 @@ public:
     virtual std::string getItemGroupName(int)const; // _ZNK21ExpandoContainerModel16getItemGroupNameB5cxx11Ei
     virtual void switchItemExpando(int); // _ZN21ExpandoContainerModel17switchItemExpandoEi
     virtual void refreshContainer(bool); // _ZN21ExpandoContainerModel16refreshContainerEb
-//  ExpandoContainerModel(ContainerEnumName, int, ContainerCategory); //TODO: incomplete function definition // _ZN21ExpandoContainerModelC2E17ContainerEnumNamei17ContainerCategory
+//    ExpandoContainerModel(long, int, long); //TODO: incomplete function definition // _ZN21ExpandoContainerModelC2E17ContainerEnumNamei17ContainerCategory
     void getIndexForCreativeItem(ContainerItemStack const&)const; // _ZNK21ExpandoContainerModel23getIndexForCreativeItemERK18ContainerItemStack
     void _init(); // _ZN21ExpandoContainerModel5_initEv
     void _refreshContainer(bool); // _ZN21ExpandoContainerModel17_refreshContainerEb

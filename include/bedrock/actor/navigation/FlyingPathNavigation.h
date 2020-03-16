@@ -3,10 +3,11 @@
 #include "PathNavigation.h"
 
 
-class FlyingPathNavigation : PathNavigation {
+class FlyingPathNavigation : public PathNavigation {
 
 public:
-    ~FlyingPathNavigation(); // _ZN20FlyingPathNavigationD2Ev
+    virtual ~FlyingPathNavigation(); // _ZN20FlyingPathNavigationD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initializeInternal(Mob &, NavigationDescription *); // _ZN20FlyingPathNavigation18initializeInternalER3MobP21NavigationDescription
     virtual void tick(NavigationComponent &, Mob &); // _ZN20FlyingPathNavigation4tickER19NavigationComponentR3Mob
     virtual void getTempMobPos(Mob const&)const; // _ZNK20FlyingPathNavigation13getTempMobPosERK3Mob

@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "FaceDirectionalBlock.h"
+#include <string>
 
 
-class GlazedTerracottaBlock : FaceDirectionalBlock {
+class GlazedTerracottaBlock : public FaceDirectionalBlock {
 
 public:
-    ~GlazedTerracottaBlock(); // _ZN21GlazedTerracottaBlockD2Ev
+    virtual ~GlazedTerracottaBlock(); // _ZN21GlazedTerracottaBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isValidAuxValue(int)const; // _ZNK21GlazedTerracottaBlock15isValidAuxValueEi
     virtual void getPlacementBlock(Actor &, BlockPos const&, unsigned char, Vec3 const&, int)const; // _ZNK21GlazedTerracottaBlock17getPlacementBlockER5ActorRK8BlockPoshRK4Vec3i
     virtual void getMapColor(BlockSource &, BlockPos const&)const; // _ZNK21GlazedTerracottaBlock11getMapColorER11BlockSourceRK8BlockPos

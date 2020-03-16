@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class ServerSettingsResponsePacket : Packet {
+class ServerSettingsResponsePacket : public Packet {
 
 public:
-    ~ServerSettingsResponsePacket(); // _ZN28ServerSettingsResponsePacketD2Ev
+    virtual ~ServerSettingsResponsePacket(); // _ZN28ServerSettingsResponsePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK28ServerSettingsResponsePacket5getIdEv
     virtual std::string getName()const; // _ZNK28ServerSettingsResponsePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK28ServerSettingsResponsePacket5writeER12BinaryStream

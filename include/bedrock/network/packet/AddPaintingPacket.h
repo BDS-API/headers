@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class AddPaintingPacket : Packet {
+class AddPaintingPacket : public Packet {
 
 public:
-    ~AddPaintingPacket(); // _ZN17AddPaintingPacketD2Ev
+    virtual ~AddPaintingPacket(); // _ZN17AddPaintingPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK17AddPaintingPacket5getIdEv
     virtual std::string getName()const; // _ZNK17AddPaintingPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK17AddPaintingPacket5writeER12BinaryStream

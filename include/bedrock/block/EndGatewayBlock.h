@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "ActorBlock.h"
 #include <vector>
+#include "ActorBlock.h"
 
 
-class EndGatewayBlock : ActorBlock {
+class EndGatewayBlock : public ActorBlock {
 
 public:
-    ~EndGatewayBlock(); // _ZN15EndGatewayBlockD2Ev
+    virtual ~EndGatewayBlock(); // _ZN15EndGatewayBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void addCollisionShapes(Block const&, BlockSource &, BlockPos const&, AABB const*, std::vector<AABB> &, Actor *)const; // _ZNK15EndGatewayBlock18addCollisionShapesERK5BlockR11BlockSourceRK8BlockPosPK4AABBRSt6vectorIS8_SaIS8_EEP5Actor
     virtual bool isWaterBlocking()const; // _ZNK15EndGatewayBlock15isWaterBlockingEv
     virtual void waterSpreadCausesSpawn()const; // _ZNK15EndGatewayBlock22waterSpreadCausesSpawnEv

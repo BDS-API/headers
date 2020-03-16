@@ -3,10 +3,11 @@
 #include "Mob.h"
 
 
-class WaterAnimal : Mob {
+class WaterAnimal : public Mob {
 
 public:
-    ~WaterAnimal(); // _ZN11WaterAnimalD2Ev
+    virtual ~WaterAnimal(); // _ZN11WaterAnimalD2Ev
+    virtual void __fake_function0(); // fake
     virtual void aiStep(); // _ZN11WaterAnimal6aiStepEv
     virtual void checkSpawnRules(bool); // _ZN11WaterAnimal15checkSpawnRulesEb
     virtual void useNewAi()const; // _ZNK11WaterAnimal8useNewAiEv

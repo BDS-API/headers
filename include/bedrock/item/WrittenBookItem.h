@@ -1,11 +1,11 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "Item.h"
 
 
-class WrittenBookItem : Item {
+class WrittenBookItem : public Item {
 
 public:
     static long MAX_TITLE_LENGTH;
@@ -22,7 +22,8 @@ public:
     static long TAG_PAGE_PHOTO_NAME;
     static long TAG_ID;
 
-    ~WrittenBookItem(); // _ZN15WrittenBookItemD2Ev
+    virtual ~WrittenBookItem(); // _ZN15WrittenBookItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isGlint(ItemStackBase const&)const; // _ZNK15WrittenBookItem7isGlintERK13ItemStackBase
     virtual bool requiresInteract()const; // _ZNK15WrittenBookItem16requiresInteractEv
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const; // _ZNK15WrittenBookItem24appendFormattedHovertextERK13ItemStackBaseR5LevelRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb

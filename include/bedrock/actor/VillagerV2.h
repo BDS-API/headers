@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "VillagerBase.h"
+#include <string>
 
 
-class VillagerV2 : VillagerBase {
+class VillagerV2 : public VillagerBase {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN10VillagerV215reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~VillagerV2(); // _ZN10VillagerV2D2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN10VillagerV215reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~VillagerV2(); // _ZN10VillagerV2D2Ev
+    virtual void __fake_function0(); // fake
     virtual void remove(); // _ZN10VillagerV26removeEv
     virtual void buildDebugInfo(std::string &)const; // _ZNK10VillagerV214buildDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void getInteraction(Player &, ActorInteraction &, Vec3 const&); // _ZN10VillagerV214getInteractionER6PlayerR16ActorInteractionRK4Vec3

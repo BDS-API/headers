@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class SkullBlock : ActorBlock {
+class SkullBlock : public ActorBlock {
 
 public:
-    ~SkullBlock(); // _ZN10SkullBlockD2Ev
+    virtual ~SkullBlock(); // _ZN10SkullBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void waterSpreadCausesSpawn()const; // _ZNK10SkullBlock22waterSpreadCausesSpawnEv
     virtual bool canContainLiquid()const; // _ZNK10SkullBlock16canContainLiquidEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK10SkullBlock7onPlaceER11BlockSourceRK8BlockPos

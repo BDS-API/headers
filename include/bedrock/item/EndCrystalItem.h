@@ -5,10 +5,11 @@
 #include "Item.h"
 
 
-class EndCrystalItem : Item {
+class EndCrystalItem : public Item {
 
 public:
-    ~EndCrystalItem(); // _ZN14EndCrystalItemD2Ev
+    virtual ~EndCrystalItem(); // _ZN14EndCrystalItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isGlint(ItemStackBase const&)const; // _ZNK14EndCrystalItem7isGlintERK13ItemStackBase
     virtual void _useOn(ItemStack &, Actor &, BlockPos, unsigned char, float, float, float)const; // _ZNK14EndCrystalItem6_useOnER9ItemStackR5Actor8BlockPoshfff
     EndCrystalItem(std::string const&, int); // _ZN14EndCrystalItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi

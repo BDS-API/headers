@@ -28,7 +28,7 @@ public:
     void increaseUses(); // _ZN14MerchantRecipe12increaseUsesEv
     void increaseMaxUses(int); // _ZN14MerchantRecipe15increaseMaxUsesEi
     bool isOutOfUses()const; // _ZNK14MerchantRecipe11isOutOfUsesEv
-    void shouldRewardExp()const; // _ZNK14MerchantRecipe15shouldRewardExpEv
+    bool shouldRewardExp()const; // _ZNK14MerchantRecipe15shouldRewardExpEv
     void setUses(int); // _ZN14MerchantRecipe7setUsesEi
     void setMaxUses(int); // _ZN14MerchantRecipe10setMaxUsesEi
     void setRewardExp(bool); // _ZN14MerchantRecipe12setRewardExpEb

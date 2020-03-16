@@ -5,10 +5,11 @@
 #include <string>
 
 
-class WhitelistEntry : IJsonSerializable {
+class WhitelistEntry : public IJsonSerializable {
 
 public:
-    ~WhitelistEntry(); // _ZN14WhitelistEntryD2Ev
+    virtual ~WhitelistEntry(); // _ZN14WhitelistEntryD2Ev
+    virtual void __fake_function0(); // fake
     virtual void serialize(Json::Value &); // _ZN14WhitelistEntry9serializeERN4Json5ValueE
     virtual void deserialize(Json::Value &); // _ZN14WhitelistEntry11deserializeERN4Json5ValueE
     WhitelistEntry(WhitelistEntry const&); // _ZN14WhitelistEntryC2ERKS_

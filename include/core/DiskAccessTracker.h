@@ -9,7 +9,7 @@ namespace Core {
     public:
         class WriteOperation;
 
-//      DiskAccessTracker(std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>); //TODO: incomplete function definition // _ZN4Core17DiskAccessTrackerC2ENSt6chrono8durationIlSt5ratioILl1ELl1000000000EEEES5_
+//        DiskAccessTracker(long, long); //TODO: incomplete function definition // _ZN4Core17DiskAccessTrackerC2ENSt6chrono8durationIlSt5ratioILl1ELl1000000000EEEES5_
         void getDiskAccessTracker(); // _ZN4Core17DiskAccessTracker20getDiskAccessTrackerEv
         void trackWriteOperation(Core::Path const&); // _ZN4Core17DiskAccessTracker19trackWriteOperationERKNS_4PathE
         void _ignoreWrite(Core::Path const&)const; // _ZNK4Core17DiskAccessTracker12_ignoreWriteERKNS_4PathE

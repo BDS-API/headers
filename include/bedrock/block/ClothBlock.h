@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class ClothBlock : BlockLegacy {
+class ClothBlock : public BlockLegacy {
 
 public:
-    ~ClothBlock(); // _ZN10ClothBlockD2Ev
+    virtual ~ClothBlock(); // _ZN10ClothBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK10ClothBlock15getResourceItemER6RandomRK5Blocki
     virtual void getMapColor(BlockSource &, BlockPos const&)const; // _ZNK10ClothBlock11getMapColorER11BlockSourceRK8BlockPos
     virtual bool isAuxValueRelevantForPicking()const; // _ZNK10ClothBlock28isAuxValueRelevantForPickingEv

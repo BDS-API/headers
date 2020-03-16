@@ -9,7 +9,8 @@ public:
     static std::string NAME_TO_ID_MAP;
     static std::string ID_TO_NAME_MAP;
 
-    ~Description(); // _ZN11DescriptionD2Ev
+    virtual ~Description(); // _ZN11DescriptionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void deserializeData(Json::Value &); // _ZN11Description15deserializeDataERN4Json5ValueE
     Description(); // _ZN11DescriptionC2Ev
     Description(Description const&); // _ZN11DescriptionC2ERKS_

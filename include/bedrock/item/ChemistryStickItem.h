@@ -1,10 +1,10 @@
 #pragma once
 
-#include <string>
 #include "ChemistryItem.h"
+#include <string>
 
 
-class ChemistryStickItem : ChemistryItem {
+class ChemistryStickItem : public ChemistryItem {
 
 public:
     static long COLOR_BITS;
@@ -15,7 +15,8 @@ public:
     static long DAMAGE_MASK;
     static std::string ACTIVATION_TIMESTAMP_TAG;
 
-    ~ChemistryStickItem(); // _ZN18ChemistryStickItemD2Ev
+    virtual ~ChemistryStickItem(); // _ZN18ChemistryStickItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void setMaxDamage(int); // _ZN18ChemistryStickItem12setMaxDamageEi
     virtual bool showsDurabilityInCreative()const; // _ZNK18ChemistryStickItem25showsDurabilityInCreativeEv
     virtual bool isValidRepairItem(ItemInstance const&, ItemInstance const&)const; // _ZNK18ChemistryStickItem17isValidRepairItemERK12ItemInstanceS2_

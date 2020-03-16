@@ -1,11 +1,11 @@
 #pragma once
 
+#include <memory>
 #include <string>
 #include "BlockActor.h"
-#include <memory>
 
 
-class BannerBlockActor : BlockActor {
+class BannerBlockActor : public BlockActor {
 
 public:
     static long MAX_PATTERNS;
@@ -15,7 +15,8 @@ public:
     static std::string TAG_COLOR;
     static std::string TAG_TYPE;
 
-    ~BannerBlockActor(); // _ZN16BannerBlockActorD2Ev
+    virtual ~BannerBlockActor(); // _ZN16BannerBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN16BannerBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK16BannerBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN16BannerBlockActor4tickER11BlockSource
@@ -37,5 +38,5 @@ public:
     void removeLastPattern(ItemStack &, Player &); // _ZN16BannerBlockActor17removeLastPatternER9ItemStackR6Player
     std::string getPatterns(std::unique_ptr<CompoundTag> const&); // _ZN16BannerBlockActor11getPatternsB5cxx11ERKSt10unique_ptrI11CompoundTagSt14default_deleteIS1_EE
     std::string getColors(std::unique_ptr<CompoundTag> const&); // _ZN16BannerBlockActor9getColorsB5cxx11ERKSt10unique_ptrI11CompoundTagSt14default_deleteIS1_EE
-//  void setBannerDetails(ItemStack &, int, std::string const&, std::string const&, BannerBlockType); //TODO: incomplete function definition // _ZN16BannerBlockActor16setBannerDetailsER9ItemStackiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_15BannerBlockType
+//    void setBannerDetails(ItemStack &, int, std::string const&, std::string const&, long); //TODO: incomplete function definition // _ZN16BannerBlockActor16setBannerDetailsER9ItemStackiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_15BannerBlockType
 };

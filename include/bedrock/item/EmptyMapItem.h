@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "ComplexItem.h"
 
 
-class EmptyMapItem : ComplexItem {
+class EmptyMapItem : public ComplexItem {
 
 public:
-    ~EmptyMapItem(); // _ZN12EmptyMapItemD2Ev
+    virtual ~EmptyMapItem(); // _ZN12EmptyMapItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool requiresInteract()const; // _ZNK12EmptyMapItem16requiresInteractEv
     virtual void use(ItemStack &, Player &)const; // _ZNK12EmptyMapItem3useER9ItemStackR6Player
     virtual std::string buildDescriptionId(ItemDescriptor const&, std::unique_ptr<CompoundTag> const&)const; // _ZNK12EmptyMapItem18buildDescriptionIdB5cxx11ERK14ItemDescriptorRKSt10unique_ptrI11CompoundTagSt14default_deleteIS4_EE

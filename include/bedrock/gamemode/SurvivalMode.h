@@ -1,16 +1,17 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 #include "GameMode.h"
 
 
-class SurvivalMode : GameMode {
+class SurvivalMode : public GameMode {
 
 public:
     static long mTrialHasEnded;
 
-    ~SurvivalMode(); // _ZN12SurvivalModeD2Ev
+    virtual ~SurvivalMode(); // _ZN12SurvivalModeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void startDestroyBlock(BlockPos const&, unsigned char, bool &); // _ZN12SurvivalMode17startDestroyBlockERK8BlockPoshRb
     virtual void destroyBlock(BlockPos const&, unsigned char); // _ZN12SurvivalMode12destroyBlockERK8BlockPosh
     virtual void startBuildBlock(BlockPos const&, unsigned char); // _ZN12SurvivalMode15startBuildBlockERK8BlockPosh

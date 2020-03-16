@@ -4,11 +4,12 @@
 #include "../../unmapped/MobEffectInstance.h"
 
 
-class Arrow : AbstractArrow {
+class Arrow : public AbstractArrow {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Arrow15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Arrow(); // _ZN5ArrowD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Arrow15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Arrow(); // _ZN5ArrowD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN5Arrow10normalTickEv
     virtual void playerTouch(Player &); // _ZN5Arrow11playerTouchER6Player
     virtual void setAuxValue(int); // _ZN5Arrow11setAuxValueEi

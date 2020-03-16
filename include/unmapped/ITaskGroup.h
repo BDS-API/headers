@@ -5,6 +5,7 @@
 class ITaskGroup {
 
 public:
-    ~ITaskGroup(); // _ZN10ITaskGroupD2Ev
+    virtual ~ITaskGroup(); // _ZN10ITaskGroupD2Ev
+    virtual void __fake_function0(); // fake
     ITaskGroup(); // _ZN10ITaskGroupC2Ev
 };

@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class SettingsCommandPacket : Packet {
+class SettingsCommandPacket : public Packet {
 
 public:
-    ~SettingsCommandPacket(); // _ZN21SettingsCommandPacketD2Ev
+    virtual ~SettingsCommandPacket(); // _ZN21SettingsCommandPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK21SettingsCommandPacket5getIdEv
     virtual std::string getName()const; // _ZNK21SettingsCommandPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK21SettingsCommandPacket5writeER12BinaryStream

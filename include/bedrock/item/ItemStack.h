@@ -3,12 +3,13 @@
 #include "ItemStackBase.h"
 
 
-class ItemStack : ItemStackBase {
+class ItemStack : public ItemStackBase {
 
 public:
     static long EMPTY_ITEM;
 
-    ~ItemStack(); // _ZN9ItemStackD2Ev
+    virtual ~ItemStack(); // _ZN9ItemStackD2Ev
+    virtual void __fake_function0(); // fake
     virtual void reinit(Item const&, int, int); // _ZN9ItemStack6reinitERK4Itemii
     virtual void reinit(BlockLegacy const&, int); // _ZN9ItemStack6reinitERK11BlockLegacyi
     ItemStack(); // _ZN9ItemStackC2Ev

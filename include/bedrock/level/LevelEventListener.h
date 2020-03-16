@@ -6,7 +6,8 @@
 class LevelEventListener {
 
 public:
-    ~LevelEventListener(); // _ZN18LevelEventListenerD2Ev
+    virtual ~LevelEventListener(); // _ZN18LevelEventListenerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onLevelInitialized(Level &); // _ZN18LevelEventListener18onLevelInitializedER5Level
     virtual void onLevelSaveData(Level &, CompoundTag &); // _ZN18LevelEventListener15onLevelSaveDataER5LevelR11CompoundTag
     virtual void onLevelAddedPlayer(Level &, Player &); // _ZN18LevelEventListener18onLevelAddedPlayerER5LevelR6Player

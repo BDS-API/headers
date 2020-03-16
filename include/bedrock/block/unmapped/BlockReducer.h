@@ -6,7 +6,8 @@
 class BlockReducer {
 
 public:
-    ~BlockReducer(); // _ZN12BlockReducerD2Ev
+    virtual ~BlockReducer(); // _ZN12BlockReducerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void _registerBlock(ItemStack const&, std::vector<ItemStack> &&); // _ZN12BlockReducer14_registerBlockERK9ItemStackOSt6vectorIS0_SaIS0_EE
     BlockReducer(); // _ZN12BlockReducerC2Ev
     void getReduction(ItemInstance const&); // _ZN12BlockReducer12getReductionERK12ItemInstance

@@ -1,14 +1,15 @@
 #pragma once
 
 #include <memory>
-#include "ContainerController.h"
 #include "../../item/unmapped/ItemTransferAmount.h"
+#include "ContainerController.h"
 
 
-class MaterialReducerInputContainerController : ContainerController {
+class MaterialReducerInputContainerController : public ContainerController {
 
 public:
-    ~MaterialReducerInputContainerController(); // _ZN39MaterialReducerInputContainerControllerD2Ev
+    virtual ~MaterialReducerInputContainerController(); // _ZN39MaterialReducerInputContainerControllerD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isItemAllowed(ItemInstance const&)const; // _ZNK39MaterialReducerInputContainerController13isItemAllowedERK12ItemInstance
     virtual void _canSet(int, ContainerItemStack const&, ItemTransferAmount)const; // _ZNK39MaterialReducerInputContainerController7_canSetEiRK18ContainerItemStack18ItemTransferAmount
     virtual void _getAvailableSetCount(int, ContainerItemStack const&)const; // _ZNK39MaterialReducerInputContainerController21_getAvailableSetCountEiRK18ContainerItemStack

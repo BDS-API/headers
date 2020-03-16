@@ -4,10 +4,11 @@
 #include "LogBlock.h"
 
 
-class OldLogBlock : LogBlock {
+class OldLogBlock : public LogBlock {
 
 public:
-    ~OldLogBlock(); // _ZN11OldLogBlockD2Ev
+    virtual ~OldLogBlock(); // _ZN11OldLogBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isStrippable(Block const&)const; // _ZNK11OldLogBlock12isStrippableERK5Block
     virtual void getStrippedBlock(Block const&)const; // _ZNK11OldLogBlock16getStrippedBlockERK5Block
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK11OldLogBlock15getResourceItemER6RandomRK5Blocki

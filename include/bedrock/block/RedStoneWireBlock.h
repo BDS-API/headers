@@ -4,15 +4,16 @@
 #include "BlockLegacy.h"
 
 
-class RedStoneWireBlock : BlockLegacy {
+class RedStoneWireBlock : public BlockLegacy {
 
 public:
-    ~RedStoneWireBlock(); // _ZN17RedStoneWireBlockD2Ev
+    virtual ~RedStoneWireBlock(); // _ZN17RedStoneWireBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK17RedStoneWireBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK17RedStoneWireBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void waterSpreadCausesSpawn()const; // _ZNK17RedStoneWireBlock22waterSpreadCausesSpawnEv
     virtual bool canContainLiquid()const; // _ZNK17RedStoneWireBlock16canContainLiquidEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK17RedStoneWireBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK17RedStoneWireBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK17RedStoneWireBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK17RedStoneWireBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK17RedStoneWireBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos
@@ -27,5 +28,5 @@ public:
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const; // _ZNK17RedStoneWireBlock11animateTickER11BlockSourceRK8BlockPosR6Random
     virtual void getSilkTouchItemInstance(Block const&)const; // _ZNK17RedStoneWireBlock24getSilkTouchItemInstanceERK5Block
     RedStoneWireBlock(std::string const&, int); // _ZN17RedStoneWireBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
-    void shouldConnectTo(BlockSource &, BlockPos const&, int); // _ZN17RedStoneWireBlock15shouldConnectToER11BlockSourceRK8BlockPosi
+    bool shouldConnectTo(BlockSource &, BlockPos const&, int); // _ZN17RedStoneWireBlock15shouldConnectToER11BlockSourceRK8BlockPosi
 };

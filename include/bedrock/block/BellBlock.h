@@ -4,15 +4,16 @@
 #include "ActorBlock.h"
 
 
-class BellBlock : ActorBlock {
+class BellBlock : public ActorBlock {
 
 public:
-    ~BellBlock(); // _ZN9BellBlockD2Ev
+    virtual ~BellBlock(); // _ZN9BellBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK9BellBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK9BellBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void onProjectileHit(BlockSource &, BlockPos const&, Actor const&)const; // _ZNK9BellBlock15onProjectileHitER11BlockSourceRK8BlockPosRK5Actor
     virtual bool canContainLiquid()const; // _ZNK9BellBlock16canContainLiquidEv
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK9BellBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK9BellBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK9BellBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void movedByPiston(BlockSource &, BlockPos const&)const; // _ZNK9BellBlock13movedByPistonER11BlockSourceRK8BlockPos
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK9BellBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

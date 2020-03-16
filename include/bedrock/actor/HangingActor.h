@@ -3,14 +3,15 @@
 #include "Actor.h"
 
 
-class HangingActor : Actor {
+class HangingActor : public Actor {
 
 public:
     static long HANGING_OFFSET;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN12HangingActor15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN12HangingActor21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
-    ~HangingActor(); // _ZN12HangingActorD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN12HangingActor15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN12HangingActor21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~HangingActor(); // _ZN12HangingActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void move(Vec3 const&); // _ZN12HangingActor4moveERK4Vec3
     virtual void normalTick(); // _ZN12HangingActor10normalTickEv
     virtual void getBrightness(float)const; // _ZNK12HangingActor13getBrightnessEf

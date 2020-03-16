@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class DispenserBlock : ActorBlock {
+class DispenserBlock : public ActorBlock {
 
 public:
-    ~DispenserBlock(); // _ZN14DispenserBlockD2Ev
+    virtual ~DispenserBlock(); // _ZN14DispenserBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK14DispenserBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isContainerBlock()const; // _ZNK14DispenserBlock16isContainerBlockEv
     virtual bool isInteractiveBlock()const; // _ZNK14DispenserBlock18isInteractiveBlockEv

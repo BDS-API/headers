@@ -43,8 +43,8 @@ namespace mce {
         void signum(float); // _ZN3mce4Math6signumEf
         void wrap(float, float); // _ZN3mce4Math4wrapEff
         void snapRotationToCardinal(float); // _ZN3mce4Math22snapRotationToCardinalEf
-//      void calculatePSNRForRGB(gsl::span<unsigned char, -1l>, gsl::span<unsigned char, -1l>, unsigned int, unsigned int, unsigned int, optional_ref<int>, optional_ref<int>, optional_ref<int>); //TODO: incomplete function definition // _ZN3mce4Math19calculatePSNRForRGBEN3gsl4spanIhLln1EEES3_jjj12optional_refIiES5_S5_
-//      void calculatePSNRForRGBA(gsl::span<unsigned char, -1l>, gsl::span<unsigned char, -1l>, unsigned int, unsigned int, unsigned int, optional_ref<int>, optional_ref<int>, optional_ref<int>, optional_ref<int>); //TODO: incomplete function definition // _ZN3mce4Math20calculatePSNRForRGBAEN3gsl4spanIhLln1EEES3_jjj12optional_refIiES5_S5_S5_
+//        void calculatePSNRForRGB(long, long, unsigned int, unsigned int, unsigned int, long, long, long); //TODO: incomplete function definition // _ZN3mce4Math19calculatePSNRForRGBEN3gsl4spanIhLln1EEES3_jjj12optional_refIiES5_S5_
+//        void calculatePSNRForRGBA(long, long, unsigned int, unsigned int, unsigned int, long, long, long, long); //TODO: incomplete function definition // _ZN3mce4Math20calculatePSNRForRGBAEN3gsl4spanIhLln1EEES3_jjj12optional_refIiES5_S5_S5_
         void remainder(float, float); // _ZN3mce4Math9remainderEff
         void hermiteBlend(float); // _ZN3mce4Math12hermiteBlendEf
         void log2(float); // _ZN3mce4Math4log2Ef

@@ -1,13 +1,14 @@
 #pragma once
 
-#include <vector>
 #include "../StrongholdPiece.h"
+#include <vector>
 
 
-class SHLibrary : StrongholdPiece {
+class SHLibrary : public StrongholdPiece {
 
 public:
-    ~SHLibrary(); // _ZN9SHLibraryD2Ev
+    virtual ~SHLibrary(); // _ZN9SHLibraryD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getType()const; // _ZNK9SHLibrary7getTypeEv
     virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &); // _ZN9SHLibrary11addChildrenEP14StructurePieceRSt6vectorISt10unique_ptrIS0_St14default_deleteIS0_EESaIS6_EER6Random
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN9SHLibrary11postProcessEP11BlockSourceR6RandomRK11BoundingBox

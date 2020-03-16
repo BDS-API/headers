@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class OfferFlowerGoal : Goal {
+class OfferFlowerGoal : public Goal {
 
 public:
-    ~OfferFlowerGoal(); // _ZN15OfferFlowerGoalD2Ev
+    virtual ~OfferFlowerGoal(); // _ZN15OfferFlowerGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15OfferFlowerGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15OfferFlowerGoal16canContinueToUseEv
     virtual void start(); // _ZN15OfferFlowerGoal5startEv

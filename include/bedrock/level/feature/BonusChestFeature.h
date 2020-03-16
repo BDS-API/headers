@@ -3,10 +3,11 @@
 #include "Feature.h"
 
 
-class BonusChestFeature : Feature {
+class BonusChestFeature : public Feature {
 
 public:
-    ~BonusChestFeature(); // _ZN17BonusChestFeatureD2Ev
+    virtual ~BonusChestFeature(); // _ZN17BonusChestFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK17BonusChestFeature5placeER11BlockSourceRK8BlockPosR6Random
     BonusChestFeature(); // _ZN17BonusChestFeatureC2Ev
     void _place(BlockSource &, BlockPos const&, Random &)const; // _ZNK17BonusChestFeature6_placeER11BlockSourceRK8BlockPosR6Random

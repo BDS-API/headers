@@ -3,10 +3,11 @@
 #include "CapacitorComponent.h"
 
 
-class RedstoneTorchCapacitor : CapacitorComponent {
+class RedstoneTorchCapacitor : public CapacitorComponent {
 
 public:
-    ~RedstoneTorchCapacitor(); // _ZN22RedstoneTorchCapacitorD2Ev
+    virtual ~RedstoneTorchCapacitor(); // _ZN22RedstoneTorchCapacitorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getStrength()const; // _ZNK22RedstoneTorchCapacitor11getStrengthEv
     virtual void getInstanceType()const; // _ZNK22RedstoneTorchCapacitor15getInstanceTypeEv
     virtual void removeSource(BlockPos const&, BaseCircuitComponent const*); // _ZN22RedstoneTorchCapacitor12removeSourceERK8BlockPosPK20BaseCircuitComponent

@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class BeaconBlock : ActorBlock {
+class BeaconBlock : public ActorBlock {
 
 public:
-    ~BeaconBlock(); // _ZN11BeaconBlockD2Ev
+    virtual ~BeaconBlock(); // _ZN11BeaconBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isInteractiveBlock()const; // _ZNK11BeaconBlock18isInteractiveBlockEv
     virtual bool canContainLiquid()const; // _ZNK11BeaconBlock16canContainLiquidEv
     virtual void use(Player &, BlockPos const&)const; // _ZNK11BeaconBlock3useER6PlayerRK8BlockPos

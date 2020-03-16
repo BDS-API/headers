@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class GrassPathBlock : BlockLegacy {
+class GrassPathBlock : public BlockLegacy {
 
 public:
-    ~GrassPathBlock(); // _ZN14GrassPathBlockD2Ev
+    virtual ~GrassPathBlock(); // _ZN14GrassPathBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK14GrassPathBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool canBeOriginalSurface()const; // _ZNK14GrassPathBlock20canBeOriginalSurfaceEv
     virtual bool canContainLiquid()const; // _ZNK14GrassPathBlock16canContainLiquidEv

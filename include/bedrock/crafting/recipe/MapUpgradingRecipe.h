@@ -4,13 +4,14 @@
 #include "MultiRecipe.h"
 
 
-class MapUpgradingRecipe : MultiRecipe {
+class MapUpgradingRecipe : public MultiRecipe {
 
 public:
     static long CraftingTableID;
     static long CartographyTableID;
 
-    ~MapUpgradingRecipe(); // _ZN18MapUpgradingRecipeD2Ev
+    virtual ~MapUpgradingRecipe(); // _ZN18MapUpgradingRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void assemble(CraftingContainer &)const; // _ZNK18MapUpgradingRecipe8assembleER17CraftingContainer
     virtual void getCraftingSize()const; // _ZNK18MapUpgradingRecipe15getCraftingSizeEv
     virtual void getIngredient(int, int)const; // _ZNK18MapUpgradingRecipe13getIngredientEii

@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "CommandOrigin.h"
 #include "../../actor/unmapped/ActorUniqueID.h"
+#include "CommandOrigin.h"
 
 
-class ActorCommandOrigin : CommandOrigin {
+class ActorCommandOrigin : public CommandOrigin {
 
 public:
-    ~ActorCommandOrigin(); // _ZN18ActorCommandOriginD2Ev
+    virtual ~ActorCommandOrigin(); // _ZN18ActorCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getRequestId()const; // _ZNK18ActorCommandOrigin12getRequestIdB5cxx11Ev
     virtual std::string getName()const; // _ZNK18ActorCommandOrigin7getNameB5cxx11Ev
     virtual void getBlockPosition()const; // _ZNK18ActorCommandOrigin16getBlockPositionEv

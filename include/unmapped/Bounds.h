@@ -9,7 +9,7 @@ public:
 
     Bounds(ChunkPos const&, ChunkPos const&); // _ZN6BoundsC2ERK8ChunkPosS2_
     void contains(Bounds const&)const; // _ZNK6Bounds8containsERKS_
-//  Bounds(BlockPos const&, BlockPos const&, int, Bounds::Option); //TODO: incomplete function definition // _ZN6BoundsC2ERK8BlockPosS2_iNS_6OptionE
+//    Bounds(BlockPos const&, BlockPos const&, int, long); //TODO: incomplete function definition // _ZN6BoundsC2ERK8BlockPosS2_iNS_6OptionE
     void gridToChunk(BlockPos const&)const; // _ZNK6Bounds11gridToChunkERK8BlockPos
     void resize(Pos const&, Pos const&); // _ZN6Bounds6resizeERK3PosS2_
     void contains(Pos const&)const; // _ZNK6Bounds8containsERK3Pos

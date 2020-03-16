@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "TargetGoal.h"
+#include <string>
 #include <vector>
 
 
-class HurtByTargetGoal : TargetGoal {
+class HurtByTargetGoal : public TargetGoal {
 
 public:
-    ~HurtByTargetGoal(); // _ZN16HurtByTargetGoalD2Ev
+    virtual ~HurtByTargetGoal(); // _ZN16HurtByTargetGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN16HurtByTargetGoal6canUseEv
     virtual void start(); // _ZN16HurtByTargetGoal5startEv
     virtual void appendDebugInfo(std::string &)const; // _ZNK16HurtByTargetGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

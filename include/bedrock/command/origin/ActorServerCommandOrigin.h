@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../../actor/unmapped/ActorUniqueID.h"
 #include "ActorCommandOrigin.h"
+#include "../../actor/unmapped/ActorUniqueID.h"
 
 
-class ActorServerCommandOrigin : ActorCommandOrigin {
+class ActorServerCommandOrigin : public ActorCommandOrigin {
 
 public:
-    ~ActorServerCommandOrigin(); // _ZN24ActorServerCommandOriginD2Ev
+    virtual ~ActorServerCommandOrigin(); // _ZN24ActorServerCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getPermissionsLevel()const; // _ZNK24ActorServerCommandOrigin19getPermissionsLevelEv
     virtual void clone()const; // _ZNK24ActorServerCommandOrigin5cloneEv
     virtual void getOriginType()const; // _ZNK24ActorServerCommandOrigin13getOriginTypeEv

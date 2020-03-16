@@ -3,10 +3,11 @@
 #include "Animal.h"
 
 
-class Llama : Animal {
+class Llama : public Animal {
 
 public:
-    ~Llama(); // _ZN5LlamaD2Ev
+    virtual ~Llama(); // _ZN5LlamaD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onFailedTame(); // _ZN5Llama12onFailedTameEv
     virtual void causeFallDamage(float); // _ZN5Llama15causeFallDamageEf
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN5Llama35updateEntitySpecificMolangVariablesER12RenderParams

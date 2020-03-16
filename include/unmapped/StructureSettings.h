@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include <string>
 
 
 class StructureSettings {
@@ -31,9 +31,9 @@ public:
     void getLastTouchedByPlayerID()const; // _ZNK17StructureSettings24getLastTouchedByPlayerIDEv
     void setLastTouchedByPlayerID(ActorUniqueID); // _ZN17StructureSettings24setLastTouchedByPlayerIDE13ActorUniqueID
     void getRotation()const; // _ZNK17StructureSettings11getRotationEv
-//  void setRotation(Rotation); //TODO: incomplete function definition // _ZN17StructureSettings11setRotationE8Rotation
+//    void setRotation(long); //TODO: incomplete function definition // _ZN17StructureSettings11setRotationE8Rotation
     void getMirror()const; // _ZNK17StructureSettings9getMirrorEv
-//  void setMirror(Mirror); //TODO: incomplete function definition // _ZN17StructureSettings9setMirrorE6Mirror
+//    void setMirror(long); //TODO: incomplete function definition // _ZN17StructureSettings9setMirrorE6Mirror
     void getIntegrityValue()const; // _ZNK17StructureSettings17getIntegrityValueEv
     void setIntegrityValue(float); // _ZN17StructureSettings17setIntegrityValueEf
     void getIntegritySeed()const; // _ZNK17StructureSettings16getIntegritySeedEv

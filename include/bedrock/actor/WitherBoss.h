@@ -4,21 +4,22 @@
 #include "unmapped/ActorUniqueID.h"
 
 
-class WitherBoss : Monster {
+class WitherBoss : public Monster {
 
 public:
     static long TIME_BEFORE_MOVING;
     static long MAX_HEALTH_CAP_UUID;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN10WitherBoss15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN10WitherBoss21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
-    ~WitherBoss(); // _ZN10WitherBossD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN10WitherBoss15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN10WitherBoss21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~WitherBoss(); // _ZN10WitherBossD2Ev
+    virtual void __fake_function0(); // fake
     virtual void remove(); // _ZN10WitherBoss6removeEv
     virtual void getFiringPos()const; // _ZNK10WitherBoss12getFiringPosEv
     virtual void startRiding(Actor &); // _ZN10WitherBoss11startRidingER5Actor
     virtual void makeStuckInBlock(float); // _ZN10WitherBoss16makeStuckInBlockEf
     virtual bool isInvulnerableTo(ActorDamageSource const&)const; // _ZNK10WitherBoss16isInvulnerableToERK17ActorDamageSource
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN10WitherBoss17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN10WitherBoss17handleEntityEventE10ActorEventi
     virtual void causeFallDamage(float); // _ZN10WitherBoss15causeFallDamageEf
     virtual bool canBeAffected(MobEffectInstance const&)const; // _ZNK10WitherBoss13canBeAffectedERK17MobEffectInstance
     virtual bool canBeAffectedByArrow(MobEffectInstance const&)const; // _ZNK10WitherBoss20canBeAffectedByArrowERK17MobEffectInstance

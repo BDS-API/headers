@@ -3,10 +3,11 @@
 #include "Minecart.h"
 
 
-class MinecartHopper : Minecart {
+class MinecartHopper : public Minecart {
 
 public:
-    ~MinecartHopper(); // _ZN14MinecartHopperD2Ev
+    virtual ~MinecartHopper(); // _ZN14MinecartHopperD2Ev
+    virtual void __fake_function0(); // fake
     virtual void destroy(ActorDamageSource const&, bool); // _ZN14MinecartHopper7destroyERK17ActorDamageSourceb
     virtual void getType(); // _ZN14MinecartHopper7getTypeEv
     virtual void getDefaultDisplayBlock()const; // _ZNK14MinecartHopper22getDefaultDisplayBlockEv

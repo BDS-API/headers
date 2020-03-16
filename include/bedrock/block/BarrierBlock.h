@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class BarrierBlock : BlockLegacy {
+class BarrierBlock : public BlockLegacy {
 
 public:
-    ~BarrierBlock(); // _ZN12BarrierBlockD2Ev
+    virtual ~BarrierBlock(); // _ZN12BarrierBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canConnect(Block const&, unsigned char, Block const&)const; // _ZNK12BarrierBlock10canConnectERK5BlockhS2_
     virtual bool canContainLiquid()const; // _ZNK12BarrierBlock16canContainLiquidEv
     virtual void getShadeBrightness()const; // _ZNK12BarrierBlock18getShadeBrightnessEv

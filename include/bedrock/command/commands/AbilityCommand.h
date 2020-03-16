@@ -3,10 +3,11 @@
 #include "../Command.h"
 
 
-class AbilityCommand : Command {
+class AbilityCommand : public Command {
 
 public:
-    ~AbilityCommand(); // _ZN14AbilityCommandD2Ev
+    virtual ~AbilityCommand(); // _ZN14AbilityCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK14AbilityCommand7executeERK13CommandOriginR13CommandOutput
     void setup(CommandRegistry &); // _ZN14AbilityCommand5setupER15CommandRegistry
     AbilityCommand(); // _ZN14AbilityCommandC2Ev

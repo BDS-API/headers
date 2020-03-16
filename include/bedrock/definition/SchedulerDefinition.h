@@ -6,7 +6,7 @@
 class SchedulerDefinition {
 
 public:
-    void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, SchedulerDefinition>> &); // _ZN19SchedulerDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
+    void buildSchema(std::shared_ptr<long> &); // _ZN19SchedulerDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
     void setMinDelayTicks(float const&); // _ZN19SchedulerDefinition16setMinDelayTicksERKf
     void setMaxDelayTicks(float const&); // _ZN19SchedulerDefinition16setMaxDelayTicksERKf
     void initialize(EntityContext &, SchedulerComponent &); // _ZN19SchedulerDefinition10initializeER13EntityContextR18SchedulerComponent

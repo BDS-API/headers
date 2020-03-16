@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../../util/BlockPos.h"
+#include <string>
 #include "Goal.h"
 
 
-class StalkAndPounceOnTargetGoal : Goal {
+class StalkAndPounceOnTargetGoal : public Goal {
 
 public:
-    ~StalkAndPounceOnTargetGoal(); // _ZN26StalkAndPounceOnTargetGoalD2Ev
+    virtual ~StalkAndPounceOnTargetGoal(); // _ZN26StalkAndPounceOnTargetGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN26StalkAndPounceOnTargetGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN26StalkAndPounceOnTargetGoal16canContinueToUseEv
     virtual bool canBeInterrupted(); // _ZN26StalkAndPounceOnTargetGoal16canBeInterruptedEv

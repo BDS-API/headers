@@ -30,7 +30,7 @@ namespace RakNet {
     bool ProcessNetworkPacket(RakNet::SystemAddress, char const*, int, RakNet::RakPeer *, unsigned long, RakNet::BitStream &); // _ZN6RakNet20ProcessNetworkPacketENS_13SystemAddressEPKciPNS_7RakPeerEmRNS_9BitStreamE
     bool ProcessNetworkPacket(RakNet::SystemAddress, char const*, int, RakNet::RakPeer *, RakNet::RakNetSocket2 *, unsigned long, RakNet::BitStream &); // _ZN6RakNet20ProcessNetworkPacketENS_13SystemAddressEPKciPNS_7RakPeerEPNS_13RakNetSocket2EmRNS_9BitStreamE
     void SplitPacketChannelComp(unsigned short const&, RakNet::SplitPacketChannel const*&); // _ZN6RakNet22SplitPacketChannelCompERKtRKPNS_18SplitPacketChannelE
-//  void StrAndBoolComp(char const*&, StrAndBool const&); //TODO: incomplete function definition // _ZN6RakNet14StrAndBoolCompERKPcRK10StrAndBool
+//    void StrAndBoolComp(char const*&, long const&); //TODO: incomplete function definition // _ZN6RakNet14StrAndBoolCompERKPcRK10StrAndBool
     void UpdateTCPInterfaceLoop(void *); // _ZN6RakNet22UpdateTCPInterfaceLoopEPv
     void ConnectionAttemptLoop(void *); // _ZN6RakNet21ConnectionAttemptLoopEPv
 };

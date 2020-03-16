@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class FindMountGoal : Goal {
+class FindMountGoal : public Goal {
 
 public:
-    ~FindMountGoal(); // _ZN13FindMountGoalD2Ev
+    virtual ~FindMountGoal(); // _ZN13FindMountGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN13FindMountGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN13FindMountGoal16canContinueToUseEv
     virtual void start(); // _ZN13FindMountGoal5startEv

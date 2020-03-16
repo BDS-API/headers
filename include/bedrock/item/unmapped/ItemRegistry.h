@@ -18,7 +18,7 @@ namespace ItemRegistry {
     std::string getNameToItemMap(); // _ZN12ItemRegistry16getNameToItemMapB5cxx11Ev
     void getItemCount(); // _ZN12ItemRegistry12getItemCountEv
     void getMaxItemID(); // _ZN12ItemRegistry12getMaxItemIDEv
-//  void registerItem(SharedPtr<Item>); //TODO: incomplete function definition // _ZN12ItemRegistry12registerItemE9SharedPtrI4ItemE
+//    void registerItem(long); //TODO: incomplete function definition // _ZN12ItemRegistry12registerItemE9SharedPtrI4ItemE
     void unregisterItem(std::string const&); // _ZN12ItemRegistry14unregisterItemERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void lookupByName(std::string const&); // _ZN12ItemRegistry12lookupByNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void reassignOrCreateItem(std::string const&, short); // _ZN12ItemRegistry20reassignOrCreateItemERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEs

@@ -4,10 +4,11 @@
 #include "ScriptBinderTemplate.h"
 
 
-class ScriptBinderQueryTemplate : ScriptBinderTemplate {
+class ScriptBinderQueryTemplate : public ScriptBinderTemplate {
 
 public:
-    ~ScriptBinderQueryTemplate(); // _ZN25ScriptBinderQueryTemplateD2Ev
+    virtual ~ScriptBinderQueryTemplate(); // _ZN25ScriptBinderQueryTemplateD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getTemplateIdentifier()const; // _ZNK25ScriptBinderQueryTemplate21getTemplateIdentifierB5cxx11Ev
     virtual void applyTemplate(ScriptObjectBinder &)const; // _ZNK25ScriptBinderQueryTemplate13applyTemplateER18ScriptObjectBinder
     void build(unsigned int); // _ZN25ScriptBinderQueryTemplate5buildEj

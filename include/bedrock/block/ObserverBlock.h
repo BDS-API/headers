@@ -1,17 +1,18 @@
 #pragma once
 
-#include <string>
 #include "FaceDirectionalBlock.h"
+#include <string>
 
 
-class ObserverBlock : FaceDirectionalBlock {
+class ObserverBlock : public FaceDirectionalBlock {
 
 public:
-    ~ObserverBlock(); // _ZN13ObserverBlockD2Ev
+    virtual ~ObserverBlock(); // _ZN13ObserverBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK13ObserverBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual bool isSignalSource()const; // _ZNK13ObserverBlock14isSignalSourceEv
     virtual bool isValidAuxValue(int)const; // _ZNK13ObserverBlock15isValidAuxValueEi
-    virtual void shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK13ObserverBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
+    virtual bool shouldConnectToRedstone(BlockSource &, BlockPos const&, int)const; // _ZNK13ObserverBlock23shouldConnectToRedstoneER11BlockSourceRK8BlockPosi
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK13ObserverBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK13ObserverBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK13ObserverBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos

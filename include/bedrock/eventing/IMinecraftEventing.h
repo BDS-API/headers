@@ -4,9 +4,10 @@
 #include "../../unmapped/IPackTelemetry.h"
 
 
-class IMinecraftEventing : IPackTelemetry, IWebviewTelemetry {
+class IMinecraftEventing : public IPackTelemetry, public IWebviewTelemetry {
 
 public:
-    ~IMinecraftEventing(); // _ZN18IMinecraftEventingD2Ev
+    virtual ~IMinecraftEventing(); // _ZN18IMinecraftEventingD2Ev
+    virtual void __fake_function0(); // fake
     IMinecraftEventing(); // _ZN18IMinecraftEventingC2Ev
 };

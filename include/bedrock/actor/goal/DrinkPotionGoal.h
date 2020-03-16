@@ -5,13 +5,14 @@
 #include <vector>
 
 
-class DrinkPotionGoal : Goal {
+class DrinkPotionGoal : public Goal {
 
 public:
     static long THROTTLE_COOLDOWN;
     static long SPEED_MODIFIER_DRINKING_UUID;
 
-    ~DrinkPotionGoal(); // _ZN15DrinkPotionGoalD2Ev
+    virtual ~DrinkPotionGoal(); // _ZN15DrinkPotionGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15DrinkPotionGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15DrinkPotionGoal16canContinueToUseEv
     virtual void start(); // _ZN15DrinkPotionGoal5startEv

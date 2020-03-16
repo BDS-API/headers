@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class CakeBlock : BlockLegacy {
+class CakeBlock : public BlockLegacy {
 
 public:
-    ~CakeBlock(); // _ZN9CakeBlockD2Ev
+    virtual ~CakeBlock(); // _ZN9CakeBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK9CakeBlock15checkIsPathableER5ActorRK8BlockPosS4_
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const; // _ZNK9CakeBlock8mayPlaceER11BlockSourceRK8BlockPosh
     virtual void neighborChanged(BlockSource &, BlockPos const&, BlockPos const&)const; // _ZNK9CakeBlock15neighborChangedER11BlockSourceRK8BlockPosS4_

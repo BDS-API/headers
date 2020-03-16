@@ -3,10 +3,11 @@
 #include "IInPackagePacks.h"
 
 
-class VanillaInPackagePacks : IInPackagePacks {
+class VanillaInPackagePacks : public IInPackagePacks {
 
 public:
-    ~VanillaInPackagePacks(); // _ZN21VanillaInPackagePacksD2Ev
-//  virtual void getPacks(PackType)const; //TODO: incomplete function definition // _ZNK21VanillaInPackagePacks8getPacksE8PackType
+    virtual ~VanillaInPackagePacks(); // _ZN21VanillaInPackagePacksD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void getPacks__incomplete0(long)const; //TODO: incomplete function definition // _ZNK21VanillaInPackagePacks8getPacksE8PackType
     VanillaInPackagePacks(); // _ZN21VanillaInPackagePacksC2Ev
 };

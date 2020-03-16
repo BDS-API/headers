@@ -1,16 +1,17 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 #include "Item.h"
 
 
-class HorseArmorItem : Item {
+class HorseArmorItem : public Item {
 
 public:
     static long mHealthPerTier;
 
-    ~HorseArmorItem(); // _ZN14HorseArmorItemD2Ev
+    virtual ~HorseArmorItem(); // _ZN14HorseArmorItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const; // _ZNK14HorseArmorItem24appendFormattedHovertextERK13ItemStackBaseR5LevelRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
     virtual void getArmorValue()const; // _ZNK14HorseArmorItem13getArmorValueEv
     virtual void getColor(std::unique_ptr<CompoundTag> const&, ItemDescriptor const&)const; // _ZNK14HorseArmorItem8getColorERKSt10unique_ptrI11CompoundTagSt14default_deleteIS1_EERK14ItemDescriptor
@@ -20,5 +21,5 @@ public:
     bool hasCustomColor(std::unique_ptr<CompoundTag> const&)const; // _ZNK14HorseArmorItem14hasCustomColorERKSt10unique_ptrI11CompoundTagSt14default_deleteIS1_EE
     void clearColor(std::unique_ptr<CompoundTag> const&)const; // _ZNK14HorseArmorItem10clearColorERKSt10unique_ptrI11CompoundTagSt14default_deleteIS1_EE
     void setColor(ItemStack &, Color const&)const; // _ZNK14HorseArmorItem8setColorER9ItemStackRK5Color
-//  HorseArmorItem(std::string const&, int, int, HorseArmorItem::HorseArmorTier); //TODO: incomplete function definition // _ZN14HorseArmorItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiNS_14HorseArmorTierE
+//    HorseArmorItem(std::string const&, int, int, long); //TODO: incomplete function definition // _ZN14HorseArmorItemC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiNS_14HorseArmorTierE
 };

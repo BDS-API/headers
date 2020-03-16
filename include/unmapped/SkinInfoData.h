@@ -6,7 +6,8 @@
 class SkinInfoData {
 
 public:
-    ~SkinInfoData(); // _ZN12SkinInfoDataD2Ev
+    virtual ~SkinInfoData(); // _ZN12SkinInfoDataD2Ev
+    virtual void __fake_function0(); // fake
     virtual void validateAndResizeSkinData(mce::Image &, bool); // _ZN12SkinInfoData25validateAndResizeSkinDataERN3mce5ImageEb
     bool isValidSize(unsigned long); // _ZN12SkinInfoData11isValidSizeEm
     void copySkinPart(mce::Image &, int, int, int, int, int, int, int, int); // _ZN12SkinInfoData12copySkinPartERN3mce5ImageEiiiiiiii

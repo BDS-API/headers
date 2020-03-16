@@ -1,24 +1,25 @@
 #pragma once
 
-#include "../bedrock/actor/unmapped/ActorUniqueID.h"
-#include <memory>
-#include "../bedrock/util/Brightness.h"
-#include <string>
-#include "../bedrock/level/LevelListener.h"
-#include "SavedData.h"
-#include "../bedrock/util/BlockPos.h"
-#include <functional>
 #include "../bedrock/util/Vec3.h"
+#include <string>
+#include "../bedrock/util/BlockPos.h"
+#include <memory>
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include <functional>
+#include "SavedData.h"
+#include "../bedrock/level/LevelListener.h"
+#include "../bedrock/util/Brightness.h"
 
 
-class Dimension : LevelListener, SavedData {
+class Dimension : public LevelListener, public SavedData {
 
 public:
     static long MOON_BRIGHTNESS_PER_PHASE;
     static long CurrentLimboEntitiesVersion;
     static long STRUCTURE_PRUNE_INTERVAL;
 
-    ~Dimension(); // _ZN9DimensionD2Ev
+    virtual ~Dimension(); // _ZN9DimensionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onBlockChanged(BlockSource &, BlockPos const&, unsigned int, Block const&, Block const&, int, ActorBlockSyncMessage const*); // _ZN9Dimension14onBlockChangedER11BlockSourceRK8BlockPosjRK5BlockS7_iPK21ActorBlockSyncMessage
     virtual void onBlockEvent(BlockSource &, int, int, int, int, int); // _ZN9Dimension12onBlockEventER11BlockSourceiiiii
     virtual void onNewChunk(BlockSource &, LevelChunk &); // _ZN9Dimension10onNewChunkER11BlockSourceR10LevelChunk
@@ -62,7 +63,7 @@ public:
     void getLevelChunkBuilderData(); // _ZN9Dimension24getLevelChunkBuilderDataEv
     void getLevelChunkGarbageCollector()const; // _ZNK9Dimension29getLevelChunkGarbageCollectorEv
     void getLevelChunkGarbageCollector(); // _ZN9Dimension29getLevelChunkGarbageCollectorEv
-//  Dimension(Level &, AutomaticID<Dimension, int>, short, Scheduler &, std::string); //TODO: incomplete function definition // _ZN9DimensionC2ER5Level11AutomaticIDIS_iEsR9SchedulerNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+//    Dimension(Level &, long, short, Scheduler &, std::string); //TODO: incomplete function definition // _ZN9DimensionC2ER5Level11AutomaticIDIS_iEsR9SchedulerNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     bool isRedstoneTick(); // _ZN9Dimension14isRedstoneTickEv
     void addWither(ActorUniqueID const&); // _ZN9Dimension9addWitherERK13ActorUniqueID
     void removeWither(ActorUniqueID const&); // _ZN9Dimension12removeWitherERK13ActorUniqueID
@@ -125,7 +126,7 @@ public:
     void _completeEntityTransfer(BlockSource &, std::unique_ptr<Actor>); // _ZN9Dimension23_completeEntityTransferER11BlockSourceSt10unique_ptrI5ActorSt14default_deleteIS3_EE
     void onChunkDiscarded(LevelChunk &); // _ZN9Dimension16onChunkDiscardedER10LevelChunk
     void tryAssignNewRegionAt(ChunkPos const&, Actor &); // _ZN9Dimension20tryAssignNewRegionAtERK8ChunkPosR5Actor
-//  void upgradeOldLimboEntity(CompoundTag &, LimboEntitiesVersion); //TODO: incomplete function definition // _ZN9Dimension21upgradeOldLimboEntityER11CompoundTag20LimboEntitiesVersion
+//    void upgradeOldLimboEntity(CompoundTag &, long); //TODO: incomplete function definition // _ZN9Dimension21upgradeOldLimboEntityER11CompoundTag20LimboEntitiesVersion
     void sendPacketForPosition(BlockPos const&, Packet const&, Player const*); // _ZN9Dimension21sendPacketForPositionERK8BlockPosRK6PacketPK6Player
     bool isUltraWarm()const; // _ZNK9Dimension11isUltraWarmEv
     void setUltraWarm(bool); // _ZN9Dimension12setUltraWarmEb

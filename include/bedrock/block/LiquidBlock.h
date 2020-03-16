@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class LiquidBlock : BlockLegacy {
+class LiquidBlock : public BlockLegacy {
 
 public:
-    ~LiquidBlock(); // _ZN11LiquidBlockD2Ev
+    virtual ~LiquidBlock(); // _ZN11LiquidBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK11LiquidBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool canContainLiquid()const; // _ZNK11LiquidBlock16canContainLiquidEv
     virtual void checkIsPathable(Actor &, BlockPos const&, BlockPos const&)const; // _ZNK11LiquidBlock15checkIsPathableER5ActorRK8BlockPosS4_

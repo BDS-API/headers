@@ -22,7 +22,7 @@ namespace Core {
         void wPlus(); // _ZN4Core12FileOpenMode5wPlusEv
         void rbPlus(); // _ZN4Core12FileOpenMode6rbPlusEv
         void wbPlus(); // _ZN4Core12FileOpenMode6wbPlusEv
-//      FileOpenMode(std::_Ios_Openmode); //TODO: incomplete function definition // _ZN4Core12FileOpenModeC2ESt13_Ios_Openmode
+//        FileOpenMode(long); //TODO: incomplete function definition // _ZN4Core12FileOpenModeC2ESt13_Ios_Openmode
         FileOpenMode(char const*); // _ZN4Core12FileOpenModeC2EPKc
         void cMode(); // _ZN4Core12FileOpenMode5cModeEv
         void cModeWide(); // _ZN4Core12FileOpenMode9cModeWideEv

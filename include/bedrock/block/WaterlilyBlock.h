@@ -4,10 +4,11 @@
 #include "BushBlock.h"
 
 
-class WaterlilyBlock : BushBlock {
+class WaterlilyBlock : public BushBlock {
 
 public:
-    ~WaterlilyBlock(); // _ZN14WaterlilyBlockD2Ev
+    virtual ~WaterlilyBlock(); // _ZN14WaterlilyBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK14WaterlilyBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual bool canContainLiquid()const; // _ZNK14WaterlilyBlock16canContainLiquidEv
     virtual void mayPlaceOn(BlockSource &, BlockPos const&)const; // _ZNK14WaterlilyBlock10mayPlaceOnER11BlockSourceRK8BlockPos

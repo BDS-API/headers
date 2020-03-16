@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <memory>
+#include <string>
 
 
 class MobEffect {
@@ -40,7 +40,8 @@ public:
     static long HERO_OF_THE_VILLAGE;
     static long mMobEffects;
 
-    ~MobEffect(); // _ZN9MobEffectD2Ev
+    virtual ~MobEffect(); // _ZN9MobEffectD2Ev
+    virtual void __fake_function0(); // fake
     virtual void applyEffects(Actor *, int, int)const; // _ZNK9MobEffect12applyEffectsEP5Actorii
     virtual void removeEffects(Actor *); // _ZN9MobEffect13removeEffectsEP5Actor
     virtual void applyInstantaneousEffect(Actor *, Actor *, Actor *, int, float)const; // _ZNK9MobEffect24applyInstantaneousEffectEP5ActorS1_S1_if

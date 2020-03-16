@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class DiodeBlock : BlockLegacy {
+class DiodeBlock : public BlockLegacy {
 
 public:
-    ~DiodeBlock(); // _ZN10DiodeBlockD2Ev
+    virtual ~DiodeBlock(); // _ZN10DiodeBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isSignalSource()const; // _ZNK10DiodeBlock14isSignalSourceEv
     virtual void getDirectSignal(BlockSource &, BlockPos const&, int)const; // _ZNK10DiodeBlock15getDirectSignalER11BlockSourceRK8BlockPosi
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK10DiodeBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib
@@ -20,9 +21,9 @@ public:
     virtual void getSignal(BlockSource &, BlockPos const&, int)const; // _ZNK10DiodeBlock9getSignalER11BlockSourceRK8BlockPosi
     virtual bool isLocked(BlockSource &, BlockPos const&)const; // _ZNK10DiodeBlock8isLockedER11BlockSourceRK8BlockPos
     virtual bool isSameDiode(Block const&)const; // _ZNK10DiodeBlock11isSameDiodeERK5Block
-    virtual void shouldPrioritize(BlockSource &, BlockPos const&)const; // _ZNK10DiodeBlock16shouldPrioritizeER11BlockSourceRK8BlockPos
+    virtual bool shouldPrioritize(BlockSource &, BlockPos const&)const; // _ZNK10DiodeBlock16shouldPrioritizeER11BlockSourceRK8BlockPos
     virtual bool isOn()const; // _ZNK10DiodeBlock4isOnEv
-    virtual void shouldTurnOn(BlockSource &, BlockPos const&)const; // _ZNK10DiodeBlock12shouldTurnOnER11BlockSourceRK8BlockPos
+    virtual bool shouldTurnOn(BlockSource &, BlockPos const&)const; // _ZNK10DiodeBlock12shouldTurnOnER11BlockSourceRK8BlockPos
     virtual void getInputSignal(BlockSource &, BlockPos const&)const; // _ZNK10DiodeBlock14getInputSignalER11BlockSourceRK8BlockPos
     virtual bool isAlternateInput(Block const&)const; // _ZNK10DiodeBlock16isAlternateInputERK5Block
     virtual void getAlternateSignal(BlockSource &, BlockPos const&)const; // _ZNK10DiodeBlock18getAlternateSignalER11BlockSourceRK8BlockPos

@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class PumpkinBlock : BlockLegacy {
+class PumpkinBlock : public BlockLegacy {
 
 public:
-    ~PumpkinBlock(); // _ZN12PumpkinBlockD2Ev
+    virtual ~PumpkinBlock(); // _ZN12PumpkinBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canConnect(Block const&, unsigned char, Block const&)const; // _ZNK12PumpkinBlock10canConnectERK5BlockhS2_
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK12PumpkinBlock8dispenseER11BlockSourceR9ContaineriRK4Vec3h
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK12PumpkinBlock7onPlaceER11BlockSourceRK8BlockPos

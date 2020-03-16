@@ -5,7 +5,7 @@
 class StackResultStorageEntity {
 
 public:
-//  StackResultStorageEntity(decltype(nullptr); //TODO: incomplete function definition // _ZN24StackResultStorageEntityC2EDn
+//    StackResultStorageEntity(long); //TODO: incomplete function definition // _ZN24StackResultStorageEntityC2EDn
     StackResultStorageEntity(WeakStorageEntity const&); // _ZN24StackResultStorageEntityC2ERK17WeakStorageEntity
     StackResultStorageEntity(EntityContext const&); // _ZN24StackResultStorageEntityC2ERK13EntityContext
     StackResultStorageEntity(StackResultStorageEntity &&); // _ZN24StackResultStorageEntityC2EOS_

@@ -38,11 +38,11 @@ public:
     void notifyTrade(Actor &, int); // _ZN24LegacyTradeableComponent11notifyTradeER5Actori
     void _runOnServerCheckForFirstTimeTrade(int); // _ZN24LegacyTradeableComponent34_runOnServerCheckForFirstTimeTradeEi
     void notifyTradeUpdated(Actor &, ItemStack &, bool); // _ZN24LegacyTradeableComponent18notifyTradeUpdatedER5ActorR9ItemStackb
-//  void createDataPacket(Actor &, ContainerID); //TODO: incomplete function definition // _ZN24LegacyTradeableComponent16createDataPacketER5Actor11ContainerID
+//    void createDataPacket(Actor &, long); //TODO: incomplete function definition // _ZN24LegacyTradeableComponent16createDataPacketER5Actor11ContainerID
     void setDataFromPacket(Actor &, UpdateTradePacket const&); // _ZN24LegacyTradeableComponent17setDataFromPacketER5ActorRK17UpdateTradePacket
     void restockAllRecipes(Actor &); // _ZN24LegacyTradeableComponent17restockAllRecipesER5Actor
-    void shouldPersistTrades(Actor &)const; // _ZNK24LegacyTradeableComponent19shouldPersistTradesER5Actor
-    void shouldConvertTrades(Actor &)const; // _ZNK24LegacyTradeableComponent19shouldConvertTradesER5Actor
+    bool shouldPersistTrades(Actor &)const; // _ZNK24LegacyTradeableComponent19shouldPersistTradesER5Actor
+    bool shouldConvertTrades(Actor &)const; // _ZNK24LegacyTradeableComponent19shouldConvertTradesER5Actor
     void _rearrangeTradeList(Actor &, std::vector<Trade> &, unsigned long); // _ZN24LegacyTradeableComponent19_rearrangeTradeListER5ActorRSt6vectorI5TradeSaIS3_EEm
     ~LegacyTradeableComponent(); // _ZN24LegacyTradeableComponentD2Ev
     LegacyTradeableComponent(LegacyTradeableComponent &&); // _ZN24LegacyTradeableComponentC2EOS_

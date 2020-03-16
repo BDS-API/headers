@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../../../unmapped/IntRange.h"
+#include <string>
 #include "Goal.h"
 
 
-class RandomHoverGoal : Goal {
+class RandomHoverGoal : public Goal {
 
 public:
-    ~RandomHoverGoal(); // _ZN15RandomHoverGoalD2Ev
+    virtual ~RandomHoverGoal(); // _ZN15RandomHoverGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15RandomHoverGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15RandomHoverGoal16canContinueToUseEv
     virtual void start(); // _ZN15RandomHoverGoal5startEv

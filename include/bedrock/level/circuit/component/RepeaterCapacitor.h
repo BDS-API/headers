@@ -3,10 +3,11 @@
 #include "CapacitorComponent.h"
 
 
-class RepeaterCapacitor : CapacitorComponent {
+class RepeaterCapacitor : public CapacitorComponent {
 
 public:
-    ~RepeaterCapacitor(); // _ZN17RepeaterCapacitorD2Ev
+    virtual ~RepeaterCapacitor(); // _ZN17RepeaterCapacitorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getStrength()const; // _ZNK17RepeaterCapacitor11getStrengthEv
     virtual void setStrength(int); // _ZN17RepeaterCapacitor11setStrengthEi
     virtual void consumePowerAnyDirection(); // _ZN17RepeaterCapacitor24consumePowerAnyDirectionEv
@@ -22,7 +23,7 @@ public:
     virtual void getPoweroutDirection()const; // _ZNK17RepeaterCapacitor20getPoweroutDirectionEv
     RepeaterCapacitor(); // _ZN17RepeaterCapacitorC2Ev
     void setDelay(int); // _ZN17RepeaterCapacitor8setDelayEi
-//  void delayPulse(RepeaterCapacitor::States); //TODO: incomplete function definition // _ZN17RepeaterCapacitor10delayPulseENS_6StatesE
+//    void delayPulse(long); //TODO: incomplete function definition // _ZN17RepeaterCapacitor10delayPulseENS_6StatesE
     void alternatePulse(); // _ZN17RepeaterCapacitor14alternatePulseEv
     void extendPulse(); // _ZN17RepeaterCapacitor11extendPulseEv
 };

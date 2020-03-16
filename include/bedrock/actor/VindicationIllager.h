@@ -3,10 +3,11 @@
 #include "HumanoidMonster.h"
 
 
-class VindicationIllager : HumanoidMonster {
+class VindicationIllager : public HumanoidMonster {
 
 public:
-    ~VindicationIllager(); // _ZN18VindicationIllagerD2Ev
+    virtual ~VindicationIllager(); // _ZN18VindicationIllagerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getRidingHeight(); // _ZN18VindicationIllager15getRidingHeightEv
     virtual bool canExistInPeaceful()const; // _ZNK18VindicationIllager18canExistInPeacefulEv
     virtual void _getWalkTargetValue(BlockPos const&); // _ZN18VindicationIllager19_getWalkTargetValueERK8BlockPos

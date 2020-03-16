@@ -1,9 +1,9 @@
 #pragma once
 
+#include <string>
+#include <memory>
 #include "../bedrock/network/packet/NpcRequestPacket.h"
 #include <vector>
-#include <memory>
-#include <string>
 #include <functional>
 
 
@@ -18,7 +18,7 @@ public:
 
     NpcComponent(); // _ZN12NpcComponentC2Ev
     void initFromDefinition(Actor &); // _ZN12NpcComponent18initFromDefinitionER5Actor
-//  void _defineEntityDataString(Actor &, ActorDataIDs); //TODO: incomplete function definition // _ZN12NpcComponent23_defineEntityDataStringER5Actor12ActorDataIDs
+//    void _defineEntityDataString(Actor &, long); //TODO: incomplete function definition // _ZN12NpcComponent23_defineEntityDataStringER5Actor12ActorDataIDs
     void _deserializeData(); // _ZN12NpcComponent16_deserializeDataEv
     void addAdditionalSaveData(Actor &, CompoundTag &)const; // _ZNK12NpcComponent21addAdditionalSaveDataER5ActorR11CompoundTag
     std::string getNameRawText(Actor const&)const; // _ZNK12NpcComponent14getNameRawTextB5cxx11ERK5Actor
@@ -68,7 +68,7 @@ public:
     void getActionAt(unsigned long)const; // _ZNK12NpcComponent11getActionAtEm
     void getUpdatedActions(std::string const&, std::vector<std::unique_ptr<NpcAction>> &, bool &, bool &); // _ZN12NpcComponent17getUpdatedActionsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSt6vectorISt10unique_ptrI9NpcActionSt14default_deleteISA_EESaISD_EERbSH_
     void _getCommands(Actor &); // _ZN12NpcComponent12_getCommandsER5Actor
-//  void _defineEntityDataInt(Actor &, ActorDataIDs); //TODO: incomplete function definition // _ZN12NpcComponent20_defineEntityDataIntER5Actor12ActorDataIDs
+//    void _defineEntityDataInt(Actor &, long); //TODO: incomplete function definition // _ZN12NpcComponent20_defineEntityDataIntER5Actor12ActorDataIDs
     void loadNameRawText(Actor &); // _ZN12NpcComponent15loadNameRawTextER5Actor
     void loadInteractiveRawText(Actor &); // _ZN12NpcComponent22loadInteractiveRawTextER5Actor
     ~NpcComponent(); // _ZN12NpcComponentD2Ev

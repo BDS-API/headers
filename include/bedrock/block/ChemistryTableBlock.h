@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class ChemistryTableBlock : ActorBlock {
+class ChemistryTableBlock : public ActorBlock {
 
 public:
-    ~ChemistryTableBlock(); // _ZN19ChemistryTableBlockD2Ev
+    virtual ~ChemistryTableBlock(); // _ZN19ChemistryTableBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isCraftingBlock()const; // _ZNK19ChemistryTableBlock15isCraftingBlockEv
     virtual bool isWaterBlocking()const; // _ZNK19ChemistryTableBlock15isWaterBlockingEv
     virtual bool isValidAuxValue(int)const; // _ZNK19ChemistryTableBlock15isValidAuxValueEi
@@ -25,8 +26,8 @@ public:
     virtual bool canBeSilkTouched()const; // _ZNK19ChemistryTableBlock16canBeSilkTouchedEv
     virtual void getEntityResourceItem(Random &, BlockActor const&, int)const; // _ZNK19ChemistryTableBlock21getEntityResourceItemER6RandomRK10BlockActori
     ChemistryTableBlock(std::string const&, int); // _ZN19ChemistryTableBlockC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
-//  void getItemForType(ChemistryTableType, int); //TODO: incomplete function definition // _ZN19ChemistryTableBlock14getItemForTypeE18ChemistryTableTypei
+//    void getItemForType(long, int); //TODO: incomplete function definition // _ZN19ChemistryTableBlock14getItemForTypeE18ChemistryTableTypei
     void _getBlockEntity(BlockSource &, BlockPos const&); // _ZN19ChemistryTableBlock15_getBlockEntityER11BlockSourceRK8BlockPos
-//  bool isUIValidForPlayer(BlockPos const&, Player &, float, ChemistryTableType); //TODO: incomplete function definition // _ZN19ChemistryTableBlock18isUIValidForPlayerERK8BlockPosR6Playerf18ChemistryTableType
+//    bool isUIValidForPlayer(BlockPos const&, Player &, float, long); //TODO: incomplete function definition // _ZN19ChemistryTableBlock18isUIValidForPlayerERK8BlockPosR6Playerf18ChemistryTableType
     void _isChemistryTable(Block const&); // _ZN19ChemistryTableBlock17_isChemistryTableERK5Block
 };

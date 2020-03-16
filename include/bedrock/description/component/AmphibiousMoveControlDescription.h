@@ -3,10 +3,11 @@
 #include "MoveControlDescription.h"
 
 
-class AmphibiousMoveControlDescription : MoveControlDescription {
+class AmphibiousMoveControlDescription : public MoveControlDescription {
 
 public:
     virtual void getJsonName()const; // _ZNK32AmphibiousMoveControlDescription11getJsonNameEv
-    ~AmphibiousMoveControlDescription(); // _ZN32AmphibiousMoveControlDescriptionD2Ev
+    virtual ~AmphibiousMoveControlDescription(); // _ZN32AmphibiousMoveControlDescriptionD2Ev
+    virtual void __fake_function0(); // fake
     AmphibiousMoveControlDescription(); // _ZN32AmphibiousMoveControlDescriptionC2Ev
 };

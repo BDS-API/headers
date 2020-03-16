@@ -5,6 +5,7 @@
 class IStructurePoolBlockTagPredicate {
 
 public:
-    ~IStructurePoolBlockTagPredicate(); // _ZN31IStructurePoolBlockTagPredicateD2Ev
+    virtual ~IStructurePoolBlockTagPredicate(); // _ZN31IStructurePoolBlockTagPredicateD2Ev
+    virtual void __fake_function0(); // fake
     IStructurePoolBlockTagPredicate(); // _ZN31IStructurePoolBlockTagPredicateC2Ev
 };

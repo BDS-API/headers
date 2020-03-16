@@ -5,7 +5,8 @@
 class CameraItemComponent {
 
 public:
-    ~CameraItemComponent(); // _ZN19CameraItemComponentD2Ev
+    virtual ~CameraItemComponent(); // _ZN19CameraItemComponentD2Ev
+    virtual void __fake_function0(); // fake
     CameraItemComponent(Item &); // _ZN19CameraItemComponentC2ER4Item
     void init(Json::Value &); // _ZN19CameraItemComponent4initERN4Json5ValueE
     void takePictureNow(Player &, Actor *, Actor *); // _ZN19CameraItemComponent14takePictureNowER6PlayerP5ActorS3_

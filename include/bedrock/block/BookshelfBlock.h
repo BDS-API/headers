@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class BookshelfBlock : BlockLegacy {
+class BookshelfBlock : public BlockLegacy {
 
 public:
-    ~BookshelfBlock(); // _ZN14BookshelfBlockD2Ev
+    virtual ~BookshelfBlock(); // _ZN14BookshelfBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK14BookshelfBlock16getResourceCountER6RandomRK5Blocki
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK14BookshelfBlock15getResourceItemER6RandomRK5Blocki
     virtual void animateTick(BlockSource &, BlockPos const&, Random &)const; // _ZNK14BookshelfBlock11animateTickER11BlockSourceRK8BlockPosR6Random

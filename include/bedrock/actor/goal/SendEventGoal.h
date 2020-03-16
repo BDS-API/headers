@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class SendEventGoal : Goal {
+class SendEventGoal : public Goal {
 
 public:
-    ~SendEventGoal(); // _ZN13SendEventGoalD2Ev
+    virtual ~SendEventGoal(); // _ZN13SendEventGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN13SendEventGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN13SendEventGoal16canContinueToUseEv
     virtual void start(); // _ZN13SendEventGoal5startEv

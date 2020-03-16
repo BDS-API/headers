@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
-#include "Packet.h"
 #include "../../../unmapped/WebSocketPacketData.h"
+#include "Packet.h"
 
 
-class AutomationClientConnectPacket : Packet {
+class AutomationClientConnectPacket : public Packet {
 
 public:
-    ~AutomationClientConnectPacket(); // _ZN29AutomationClientConnectPacketD2Ev
+    virtual ~AutomationClientConnectPacket(); // _ZN29AutomationClientConnectPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK29AutomationClientConnectPacket5getIdEv
     virtual std::string getName()const; // _ZNK29AutomationClientConnectPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK29AutomationClientConnectPacket5writeER12BinaryStream

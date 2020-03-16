@@ -4,10 +4,11 @@
 #include "AttributeBuffInfo.h"
 
 
-class HealthAttributeDelegate : AttributeInstanceDelegate {
+class HealthAttributeDelegate : public AttributeInstanceDelegate {
 
 public:
-    ~HealthAttributeDelegate(); // _ZN23HealthAttributeDelegateD2Ev
+    virtual ~HealthAttributeDelegate(); // _ZN23HealthAttributeDelegateD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(); // _ZN23HealthAttributeDelegate4tickEv
     virtual void change(float, float, AttributeBuffInfo); // _ZN23HealthAttributeDelegate6changeEff17AttributeBuffInfo
     virtual void getBuffValue(AttributeBuff const&)const; // _ZNK23HealthAttributeDelegate12getBuffValueERK13AttributeBuff

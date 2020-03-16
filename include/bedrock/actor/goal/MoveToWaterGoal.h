@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "BaseMoveToBlockGoal.h"
+#include <string>
 
 
-class MoveToWaterGoal : BaseMoveToBlockGoal {
+class MoveToWaterGoal : public BaseMoveToBlockGoal {
 
 public:
-    ~MoveToWaterGoal(); // _ZN15MoveToWaterGoalD2Ev
+    virtual ~MoveToWaterGoal(); // _ZN15MoveToWaterGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15MoveToWaterGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN15MoveToWaterGoal16canContinueToUseEv
     virtual void appendDebugInfo(std::string &)const; // _ZNK15MoveToWaterGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

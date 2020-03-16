@@ -4,10 +4,11 @@
 #include "FaceDirectionalActorBlock.h"
 
 
-class JigsawBlock : FaceDirectionalActorBlock {
+class JigsawBlock : public FaceDirectionalActorBlock {
 
 public:
-    ~JigsawBlock(); // _ZN11JigsawBlockD2Ev
+    virtual ~JigsawBlock(); // _ZN11JigsawBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK11JigsawBlock16getResourceCountER6RandomRK5Blocki
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const; // _ZNK11JigsawBlock14asItemInstanceER11BlockSourceRK8BlockPosRK5Block
     virtual void getFaceFlip(unsigned char, Block const&)const; // _ZNK11JigsawBlock11getFaceFlipEhRK5Block

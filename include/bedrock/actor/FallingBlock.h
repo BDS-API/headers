@@ -3,12 +3,13 @@
 #include "Actor.h"
 
 
-class FallingBlock : Actor {
+class FallingBlock : public Actor {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN12FallingBlock15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-//  virtual void reloadHardcodedClient(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN12FallingBlock21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
-    ~FallingBlock(); // _ZN12FallingBlockD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN12FallingBlock15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual void reloadHardcodedClient__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN12FallingBlock21reloadHardcodedClientEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~FallingBlock(); // _ZN12FallingBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void teleportTo(Vec3 const&, bool, int, int); // _ZN12FallingBlock10teleportToERK4Vec3bii
     virtual void normalTick(); // _ZN12FallingBlock10normalTickEv
     virtual void getShadowHeightOffs(); // _ZN12FallingBlock19getShadowHeightOffsEv

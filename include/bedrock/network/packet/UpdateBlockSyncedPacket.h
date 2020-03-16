@@ -4,10 +4,11 @@
 #include "UpdateBlockPacket.h"
 
 
-class UpdateBlockSyncedPacket : UpdateBlockPacket {
+class UpdateBlockSyncedPacket : public UpdateBlockPacket {
 
 public:
-    ~UpdateBlockSyncedPacket(); // _ZN23UpdateBlockSyncedPacketD2Ev
+    virtual ~UpdateBlockSyncedPacket(); // _ZN23UpdateBlockSyncedPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK23UpdateBlockSyncedPacket5getIdEv
     virtual std::string getName()const; // _ZNK23UpdateBlockSyncedPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK23UpdateBlockSyncedPacket5writeER12BinaryStream

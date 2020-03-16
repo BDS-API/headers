@@ -1,11 +1,11 @@
 #pragma once
 
+#include "../../container/Container.h"
 #include <string>
 #include "BlockActor.h"
-#include "../../container/Container.h"
 
 
-class FurnaceBlockActor : BlockActor, Container {
+class FurnaceBlockActor : public BlockActor, public Container {
 
 public:
     static std::string ITEMS_LIST_KEY;
@@ -18,7 +18,8 @@ public:
     static std::string CUSTOM_NAME_KEY;
     static std::string LAST_FUEL_KEY;
 
-    ~FurnaceBlockActor(); // _ZN17FurnaceBlockActorD2Ev
+    virtual ~FurnaceBlockActor(); // _ZN17FurnaceBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN17FurnaceBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK17FurnaceBlockActor4saveER11CompoundTag
     virtual void onCustomTagLoadDone(BlockSource &); // _ZN17FurnaceBlockActor19onCustomTagLoadDoneER11BlockSource
@@ -41,7 +42,7 @@ public:
     bool isFuel(ItemInstance const&); // _ZN17FurnaceBlockActor6isFuelERK12ItemInstance
     void getBurnDuration(ItemInstance const&, int); // _ZN17FurnaceBlockActor15getBurnDurationERK12ItemInstancei
     FurnaceBlockActor(BlockPos const&); // _ZN17FurnaceBlockActorC2ERK8BlockPos
-//  FurnaceBlockActor(BlockActorType, BlockPos const&, Util::HashString const&, LevelSoundEvent, ContainerType, int, Block const&, Block const&); //TODO: incomplete function definition // _ZN17FurnaceBlockActorC2E14BlockActorTypeRK8BlockPosRKN4Util10HashStringE15LevelSoundEvent13ContainerTypeiRK5BlockSC_
+//    FurnaceBlockActor(long, BlockPos const&, Util::HashString const&, long, long, int, Block const&, Block const&); //TODO: incomplete function definition // _ZN17FurnaceBlockActorC2E14BlockActorTypeRK8BlockPosRKN4Util10HashStringE15LevelSoundEvent13ContainerTypeiRK5BlockSC_
     void resetBurnProgress(); // _ZN17FurnaceBlockActor17resetBurnProgressEv
     void _correctXpValue(short)const; // _ZNK17FurnaceBlockActor15_correctXpValueEs
     void _refreshFurnaceBlockLitState(BlockSource &); // _ZN17FurnaceBlockActor28_refreshFurnaceBlockLitStateER11BlockSource

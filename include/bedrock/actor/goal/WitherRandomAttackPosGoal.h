@@ -3,10 +3,11 @@
 #include "RandomStrollGoal.h"
 
 
-class WitherRandomAttackPosGoal : RandomStrollGoal {
+class WitherRandomAttackPosGoal : public RandomStrollGoal {
 
 public:
-    ~WitherRandomAttackPosGoal(); // _ZN25WitherRandomAttackPosGoalD2Ev
+    virtual ~WitherRandomAttackPosGoal(); // _ZN25WitherRandomAttackPosGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN25WitherRandomAttackPosGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN25WitherRandomAttackPosGoal16canContinueToUseEv
     virtual void start(); // _ZN25WitherRandomAttackPosGoal5startEv

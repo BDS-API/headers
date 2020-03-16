@@ -3,13 +3,14 @@
 #include "Monster.h"
 
 
-class Silverfish : Monster {
+class Silverfish : public Monster {
 
 public:
-    ~Silverfish(); // _ZN10SilverfishD2Ev
+    virtual ~Silverfish(); // _ZN10SilverfishD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN10Silverfish10normalTickEv
     virtual void findAttackTarget(); // _ZN10Silverfish16findAttackTargetEv
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN10Silverfish17handleEntityEventE10ActorEventi
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN10Silverfish17handleEntityEventE10ActorEventi
     virtual void _playStepSound(BlockPos const&, Block const&); // _ZN10Silverfish14_playStepSoundERK8BlockPosRK5Block
     virtual void spawnAnim(); // _ZN10Silverfish9spawnAnimEv
     virtual void aiStep(); // _ZN10Silverfish6aiStepEv

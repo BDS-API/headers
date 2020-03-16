@@ -5,10 +5,11 @@
 #include "Item.h"
 
 
-class FlintAndSteelItem : Item {
+class FlintAndSteelItem : public Item {
 
 public:
-    ~FlintAndSteelItem(); // _ZN17FlintAndSteelItemD2Ev
+    virtual ~FlintAndSteelItem(); // _ZN17FlintAndSteelItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isDestructive(int)const; // _ZNK17FlintAndSteelItem13isDestructiveEi
     virtual void getEnchantSlot()const; // _ZNK17FlintAndSteelItem14getEnchantSlotEv
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK17FlintAndSteelItem8dispenseER11BlockSourceR9ContaineriRK4Vec3h

@@ -4,7 +4,7 @@
 #include "BlockLegacy.h"
 
 
-class WallBlock : BlockLegacy {
+class WallBlock : public BlockLegacy {
 
 public:
     static long WALL_WIDTH;
@@ -13,10 +13,11 @@ public:
     static long POST_HEIGHT;
     static std::string WALL_NAMES;
 
-    ~WallBlock(); // _ZN9WallBlockD2Ev
+    virtual ~WallBlock(); // _ZN9WallBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK9WallBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const; // _ZNK9WallBlock19getLiquidClipVolumeER11BlockSourceRK8BlockPosR4AABB
-//  virtual bool canProvideSupport(Block const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition // _ZNK9WallBlock17canProvideSupportERK5Blockh16BlockSupportType
+    virtual bool canProvideSupport__incomplete0(Block const&, unsigned char, long)const; //TODO: incomplete function definition // _ZNK9WallBlock17canProvideSupportERK5Blockh16BlockSupportType
     virtual bool canConnect(Block const&, unsigned char, Block const&)const; // _ZNK9WallBlock10canConnectERK5BlockhS2_
     virtual bool isWallBlock()const; // _ZNK9WallBlock11isWallBlockEv
     virtual bool canContainLiquid()const; // _ZNK9WallBlock16canContainLiquidEv

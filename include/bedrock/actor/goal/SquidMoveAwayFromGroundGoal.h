@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class SquidMoveAwayFromGroundGoal : Goal {
+class SquidMoveAwayFromGroundGoal : public Goal {
 
 public:
-    ~SquidMoveAwayFromGroundGoal(); // _ZN27SquidMoveAwayFromGroundGoalD2Ev
+    virtual ~SquidMoveAwayFromGroundGoal(); // _ZN27SquidMoveAwayFromGroundGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN27SquidMoveAwayFromGroundGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN27SquidMoveAwayFromGroundGoal16canContinueToUseEv
     virtual void start(); // _ZN27SquidMoveAwayFromGroundGoal5startEv

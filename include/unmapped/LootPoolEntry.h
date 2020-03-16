@@ -7,7 +7,8 @@
 class LootPoolEntry {
 
 public:
-    ~LootPoolEntry(); // _ZN13LootPoolEntryD2Ev
+    virtual ~LootPoolEntry(); // _ZN13LootPoolEntryD2Ev
+    virtual void __fake_function0(); // fake
     void getConditions()const; // _ZNK13LootPoolEntry13getConditionsEv
     void getWeight(float)const; // _ZNK13LootPoolEntry9getWeightEf
     void createItem(std::vector<ItemStack> &, Random &, LootTableContext &); // _ZN13LootPoolEntry10createItemERSt6vectorI9ItemStackSaIS1_EER6RandomR16LootTableContext

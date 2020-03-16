@@ -4,10 +4,11 @@
 #include "ContainerController.h"
 
 
-class CraftingContainerController : ContainerController {
+class CraftingContainerController : public ContainerController {
 
 public:
-    ~CraftingContainerController(); // _ZN27CraftingContainerControllerD2Ev
+    virtual ~CraftingContainerController(); // _ZN27CraftingContainerControllerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onRecipeSelected(Recipe const*, bool, bool); // _ZN27CraftingContainerController16onRecipeSelectedEPK6Recipebb
     virtual void clearSelectedRecipe(); // _ZN27CraftingContainerController19clearSelectedRecipeEv
     virtual void getSelectedRecipe()const; // _ZNK27CraftingContainerController17getSelectedRecipeEv

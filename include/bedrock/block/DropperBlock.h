@@ -4,10 +4,11 @@
 #include "DispenserBlock.h"
 
 
-class DropperBlock : DispenserBlock {
+class DropperBlock : public DispenserBlock {
 
 public:
-    ~DropperBlock(); // _ZN12DropperBlockD2Ev
+    virtual ~DropperBlock(); // _ZN12DropperBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK12DropperBlock15getResourceItemER6RandomRK5Blocki
     virtual bool asItemInstance(BlockSource &, BlockPos const&, Block const&)const; // _ZNK12DropperBlock14asItemInstanceER11BlockSourceRK8BlockPosRK5Block
     virtual void getSilkTouchItemInstance(Block const&)const; // _ZNK12DropperBlock24getSilkTouchItemInstanceERK5Block

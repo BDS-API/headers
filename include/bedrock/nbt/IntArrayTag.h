@@ -1,14 +1,15 @@
 #pragma once
 
+#include "Tag.h"
 #include <string>
 #include "../../unmapped/TagMemoryChunk.h"
-#include "Tag.h"
 
 
-class IntArrayTag : Tag {
+class IntArrayTag : public Tag {
 
 public:
-    ~IntArrayTag(); // _ZN11IntArrayTagD2Ev
+    virtual ~IntArrayTag(); // _ZN11IntArrayTagD2Ev
+    virtual void __fake_function0(); // fake
     virtual void write(IDataOutput &)const; // _ZNK11IntArrayTag5writeER11IDataOutput
     virtual void load(IDataInput &); // _ZN11IntArrayTag4loadER10IDataInput
     virtual std::string toString()const; // _ZNK11IntArrayTag8toStringB5cxx11Ev

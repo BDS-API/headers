@@ -3,7 +3,7 @@
 #include "Feature.h"
 
 
-class EndPodiumFeature : Feature {
+class EndPodiumFeature : public Feature {
 
 public:
     static long PODIUM_RADIUS;
@@ -13,7 +13,8 @@ public:
     static long END_PODIUM_LOCATION;
     static long END_PODIUM_CHUNK_POSITION;
 
-    ~EndPodiumFeature(); // _ZN16EndPodiumFeatureD2Ev
+    virtual ~EndPodiumFeature(); // _ZN16EndPodiumFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK16EndPodiumFeature5placeER11BlockSourceRK8BlockPosR6Random
     EndPodiumFeature(bool); // _ZN16EndPodiumFeatureC2Eb
 };

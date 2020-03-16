@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class OnScreenTextureAnimationPacket : Packet {
+class OnScreenTextureAnimationPacket : public Packet {
 
 public:
-    ~OnScreenTextureAnimationPacket(); // _ZN30OnScreenTextureAnimationPacketD2Ev
+    virtual ~OnScreenTextureAnimationPacket(); // _ZN30OnScreenTextureAnimationPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK30OnScreenTextureAnimationPacket5getIdEv
     virtual std::string getName()const; // _ZNK30OnScreenTextureAnimationPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK30OnScreenTextureAnimationPacket5writeER12BinaryStream

@@ -3,10 +3,11 @@
 #include "BlockActor.h"
 
 
-class ComparatorBlockActor : BlockActor {
+class ComparatorBlockActor : public BlockActor {
 
 public:
-    ~ComparatorBlockActor(); // _ZN20ComparatorBlockActorD2Ev
+    virtual ~ComparatorBlockActor(); // _ZN20ComparatorBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN20ComparatorBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK20ComparatorBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN20ComparatorBlockActor4tickER11BlockSource

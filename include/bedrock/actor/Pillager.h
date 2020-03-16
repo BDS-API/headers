@@ -3,10 +3,11 @@
 #include "HumanoidMonster.h"
 
 
-class Pillager : HumanoidMonster {
+class Pillager : public HumanoidMonster {
 
 public:
-    ~Pillager(); // _ZN8PillagerD2Ev
+    virtual ~Pillager(); // _ZN8PillagerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN8Pillager10normalTickEv
     virtual void getRidingHeight(); // _ZN8Pillager15getRidingHeightEv
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN8Pillager35updateEntitySpecificMolangVariablesER12RenderParams

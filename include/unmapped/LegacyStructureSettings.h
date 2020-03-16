@@ -13,15 +13,15 @@ public:
     ~LegacyStructureSettings(); // _ZN23LegacyStructureSettingsD2Ev
     LegacyStructureSettings(LegacyStructureSettings const&); // _ZN23LegacyStructureSettingsC2ERKS_
     LegacyStructureSettings(); // _ZN23LegacyStructureSettingsC2Ev
-//  LegacyStructureSettings(Mirror, Rotation, Block const*, BoundingBox const&); //TODO: incomplete function definition // _ZN23LegacyStructureSettingsC2E6Mirror8RotationPK5BlockRK11BoundingBox
+//    LegacyStructureSettings(long, long, Block const*, BoundingBox const&); //TODO: incomplete function definition // _ZN23LegacyStructureSettingsC2E6Mirror8RotationPK5BlockRK11BoundingBox
     void retrieveRandom(Random &)const; // _ZNK23LegacyStructureSettings14retrieveRandomER6Random
-//  void setMirror(Mirror); //TODO: incomplete function definition // _ZN23LegacyStructureSettings9setMirrorE6Mirror
-//  void setRotation(Rotation); //TODO: incomplete function definition // _ZN23LegacyStructureSettings11setRotationE8Rotation
+//    void setMirror(long); //TODO: incomplete function definition // _ZN23LegacyStructureSettings9setMirrorE6Mirror
+//    void setRotation(long); //TODO: incomplete function definition // _ZN23LegacyStructureSettings11setRotationE8Rotation
     void setIgnoreBlock(Block const*); // _ZN23LegacyStructureSettings14setIgnoreBlockEPK5Block
     void addSwapAuxValue(int, int); // _ZN23LegacyStructureSettings15addSwapAuxValueEii
     void setSeed(unsigned int); // _ZN23LegacyStructureSettings7setSeedEj
     void setIntegrity(float); // _ZN23LegacyStructureSettings12setIntegrityEf
-//  void setProjection(Projection); //TODO: incomplete function definition // _ZN23LegacyStructureSettings13setProjectionE10Projection
+//    void setProjection(long); //TODO: incomplete function definition // _ZN23LegacyStructureSettings13setProjectionE10Projection
     void setBlockRules(std::vector<std::unique_ptr<StructurePoolBlockRule>> const*); // _ZN23LegacyStructureSettings13setBlockRulesEPKSt6vectorISt10unique_ptrI22StructurePoolBlockRuleSt14default_deleteIS2_EESaIS5_EE
     void setBlockTagRules(std::vector<std::unique_ptr<StructurePoolBlockTagRule>> const*); // _ZN23LegacyStructureSettings16setBlockTagRulesEPKSt6vectorISt10unique_ptrI25StructurePoolBlockTagRuleSt14default_deleteIS2_EESaIS5_EE
     void getIgnoreBlock()const; // _ZNK23LegacyStructureSettings14getIgnoreBlockEv

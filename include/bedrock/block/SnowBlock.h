@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class SnowBlock : BlockLegacy {
+class SnowBlock : public BlockLegacy {
 
 public:
-    ~SnowBlock(); // _ZN9SnowBlockD2Ev
+    virtual ~SnowBlock(); // _ZN9SnowBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK9SnowBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual void waterSpreadCausesSpawn()const; // _ZNK9SnowBlock22waterSpreadCausesSpawnEv
     virtual void getResourceCount(Random &, Block const&, int)const; // _ZNK9SnowBlock16getResourceCountER6RandomRK5Blocki

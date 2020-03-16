@@ -5,12 +5,13 @@
 #include <vector>
 
 
-class FancyTreeFeature : TreeFeature {
+class FancyTreeFeature : public TreeFeature {
 
 public:
     class FoliageCoords;
 
-    ~FancyTreeFeature(); // _ZN16FancyTreeFeatureD2Ev
+    virtual ~FancyTreeFeature(); // _ZN16FancyTreeFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK16FancyTreeFeature5placeER11BlockSourceRK8BlockPosR6Random
     FancyTreeFeature(Actor *, bool); // _ZN16FancyTreeFeatureC2EP5Actorb
     void _checkLocation(BlockSource &, BlockPos const&, int &)const; // _ZNK16FancyTreeFeature14_checkLocationER11BlockSourceRK8BlockPosRi

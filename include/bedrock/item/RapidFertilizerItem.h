@@ -3,9 +3,10 @@
 #include "FertilizerItem.h"
 
 
-class RapidFertilizerItem : FertilizerItem {
+class RapidFertilizerItem : public FertilizerItem {
 
 public:
-    ~RapidFertilizerItem(); // _ZN19RapidFertilizerItemD2Ev
+    virtual ~RapidFertilizerItem(); // _ZN19RapidFertilizerItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void fixupOnLoad(ItemStackBase &)const; // _ZNK19RapidFertilizerItem11fixupOnLoadER13ItemStackBase
 };

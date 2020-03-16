@@ -3,10 +3,11 @@
 #include "FilterTest.h"
 
 
-class FilterTestGameRule : FilterTest {
+class FilterTestGameRule : public FilterTest {
 
 public:
-    ~FilterTestGameRule(); // _ZN18FilterTestGameRuleD2Ev
+    virtual ~FilterTestGameRule(); // _ZN18FilterTestGameRuleD2Ev
+    virtual void __fake_function0(); // fake
     virtual void setup(FilterTest::Definition const&, FilterInputs const&); // _ZN18FilterTestGameRule5setupERKN10FilterTest10DefinitionERK12FilterInputs
     virtual void evaluate(FilterContext const&)const; // _ZNK18FilterTestGameRule8evaluateERK13FilterContext
     virtual void getName()const; // _ZNK18FilterTestGameRule7getNameEv

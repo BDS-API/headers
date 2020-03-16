@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../../util/BlockPos.h"
 #include "RandomizableBlockActorContainer.h"
+#include <string>
 
 
-class DispenserBlockActor : RandomizableBlockActorContainer {
+class DispenserBlockActor : public RandomizableBlockActorContainer {
 
 public:
-    ~DispenserBlockActor(); // _ZN19DispenserBlockActorD2Ev
+    virtual ~DispenserBlockActor(); // _ZN19DispenserBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN19DispenserBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK19DispenserBlockActor4saveER11CompoundTag
     virtual void getUpdatePacket(BlockSource &); // _ZN19DispenserBlockActor15getUpdatePacketER11BlockSource
@@ -25,7 +26,7 @@ public:
     virtual void stopOpen(Player &); // _ZN19DispenserBlockActor8stopOpenER6Player
     DispenserBlockActor(BlockPos); // _ZN19DispenserBlockActorC2E8BlockPos
     void initItems(); // _ZN19DispenserBlockActor9initItemsEv
-//  DispenserBlockActor(BlockPos, BlockActorType); //TODO: incomplete function definition // _ZN19DispenserBlockActorC2E8BlockPos14BlockActorType
+//    DispenserBlockActor(BlockPos, long); //TODO: incomplete function definition // _ZN19DispenserBlockActorC2E8BlockPos14BlockActorType
     bool isSlotEmpty(int); // _ZN19DispenserBlockActor11isSlotEmptyEi
     bool isDispenser(); // _ZN19DispenserBlockActor11isDispenserEv
 };

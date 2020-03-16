@@ -3,13 +3,14 @@
 #include "Animal.h"
 
 
-class Cat : Animal {
+class Cat : public Animal {
 
 public:
     static long SNEAK_SPEED_MOD;
     static long SPRINT_SPEED_MOD;
 
-    ~Cat(); // _ZN3CatD2Ev
+    virtual ~Cat(); // _ZN3CatD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onTame(); // _ZN3Cat6onTameEv
     virtual void updateEntitySpecificMolangVariables(RenderParams &); // _ZN3Cat35updateEntitySpecificMolangVariablesER12RenderParams
     virtual void getAmbientSound(); // _ZN3Cat15getAmbientSoundEv

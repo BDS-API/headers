@@ -7,8 +7,8 @@ class OwnerStorageEntity {
 public:
     class EntityContextOwned;
 
-//  OwnerStorageEntity(OwnerStorageEntity::EmptyInit); //TODO: incomplete function definition // _ZN18OwnerStorageEntityC2ENS_9EmptyInitE
-//  OwnerStorageEntity(OwnerStorageEntity::VariadicInit, EntityRegistryOwned &); //TODO: incomplete function definition // _ZN18OwnerStorageEntityC2ENS_12VariadicInitER19EntityRegistryOwned
+//    OwnerStorageEntity(long); //TODO: incomplete function definition // _ZN18OwnerStorageEntityC2ENS_9EmptyInitE
+//    OwnerStorageEntity(long, EntityRegistryOwned &); //TODO: incomplete function definition // _ZN18OwnerStorageEntityC2ENS_12VariadicInitER19EntityRegistryOwned
     OwnerStorageEntity(OwnerStorageEntity &&); // _ZN18OwnerStorageEntityC2EOS_
     void _reset(); // _ZN18OwnerStorageEntity6_resetEv
     void _hasValue()const; // _ZNK18OwnerStorageEntity9_hasValueEv

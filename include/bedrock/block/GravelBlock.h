@@ -4,12 +4,13 @@
 #include "HeavyBlock.h"
 
 
-class GravelBlock : HeavyBlock {
+class GravelBlock : public HeavyBlock {
 
 public:
-    ~GravelBlock(); // _ZN11GravelBlockD2Ev
+    virtual ~GravelBlock(); // _ZN11GravelBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canBeOriginalSurface()const; // _ZNK11GravelBlock20canBeOriginalSurfaceEv
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK11GravelBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK11GravelBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayConsumeFertilizer(BlockSource &)const; // _ZNK11GravelBlock20mayConsumeFertilizerER11BlockSource
     virtual void getResourceItem(Random &, Block const&, int)const; // _ZNK11GravelBlock15getResourceItemER6RandomRK5Blocki
     virtual void getDustColor(Block const&)const; // _ZNK11GravelBlock12getDustColorERK5Block

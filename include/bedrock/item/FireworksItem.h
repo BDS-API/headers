@@ -1,19 +1,20 @@
 #pragma once
 
+#include <vector>
 #include <string>
 #include "../util/BlockPos.h"
-#include <vector>
 #include "Item.h"
 
 
-class FireworksItem : Item {
+class FireworksItem : public Item {
 
 public:
     static std::string TAG_FIREWORKS;
     static std::string TAG_EXPLOSIONS;
     static std::string TAG_E_FLIGHT;
 
-    ~FireworksItem(); // _ZN13FireworksItemD2Ev
+    virtual ~FireworksItem(); // _ZN13FireworksItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void appendFormattedHovertext(ItemStackBase const&, Level &, std::string &, bool)const; // _ZNK13FireworksItem24appendFormattedHovertextERK13ItemStackBaseR5LevelRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
     virtual void use(ItemStack &, Player &)const; // _ZNK13FireworksItem3useER9ItemStackR6Player
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK13FireworksItem8dispenseER11BlockSourceR9ContaineriRK4Vec3h

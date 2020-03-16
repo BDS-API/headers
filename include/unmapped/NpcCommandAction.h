@@ -1,12 +1,12 @@
 #pragma once
 
-#include <string>
 #include "NpcAction.h"
+#include <string>
 #include <memory>
 #include <vector>
 
 
-class NpcCommandAction : NpcAction {
+class NpcCommandAction : public NpcAction {
 
 public:
     class SavedCommand;
@@ -15,7 +15,8 @@ public:
     static std::string COMMAND_LINE_KEY;
     static std::string COMMAND_VERSION_KEY;
 
-    ~NpcCommandAction(); // _ZN16NpcCommandActionD2Ev
+    virtual ~NpcCommandAction(); // _ZN16NpcCommandActionD2Ev
+    virtual void __fake_function0(); // fake
     virtual void toJson(); // _ZN16NpcCommandAction6toJsonEv
     virtual void fromJson(Json::Value const&); // _ZN16NpcCommandAction8fromJsonERKN4Json5ValueE
     NpcCommandAction(); // _ZN16NpcCommandActionC2Ev

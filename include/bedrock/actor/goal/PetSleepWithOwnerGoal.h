@@ -1,16 +1,17 @@
 #pragma once
 
-#include <string>
 #include "BaseMoveToBlockGoal.h"
+#include <string>
 
 
-class PetSleepWithOwnerGoal : BaseMoveToBlockGoal {
+class PetSleepWithOwnerGoal : public BaseMoveToBlockGoal {
 
 public:
     static long SETTLE_TICKS;
     static long WAIT_TICKS;
 
-    ~PetSleepWithOwnerGoal(); // _ZN21PetSleepWithOwnerGoalD2Ev
+    virtual ~PetSleepWithOwnerGoal(); // _ZN21PetSleepWithOwnerGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN21PetSleepWithOwnerGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN21PetSleepWithOwnerGoal16canContinueToUseEv
     virtual void start(); // _ZN21PetSleepWithOwnerGoal5startEv

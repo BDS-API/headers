@@ -1,15 +1,16 @@
 #pragma once
 
 #include <string>
-#include "../../../../unmapped/BoundingBox.h"
 #include "StructurePiece.h"
+#include "../../../../unmapped/BoundingBox.h"
 #include <vector>
 
 
-class NetherFortressPiece : StructurePiece {
+class NetherFortressPiece : public StructurePiece {
 
 public:
-    ~NetherFortressPiece(); // _ZN19NetherFortressPieceD2Ev
+    virtual ~NetherFortressPiece(); // _ZN19NetherFortressPieceD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN19NetherFortressPiece11postProcessEP11BlockSourceR6RandomRK11BoundingBox
     virtual void addHardcodedSpawnAreas(LevelChunk &)const; // _ZNK19NetherFortressPiece22addHardcodedSpawnAreasER10LevelChunk
     NetherFortressPiece(); // _ZN19NetherFortressPieceC2Ev

@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../../../unmapped/FloatRange.h"
+#include <string>
 #include "Goal.h"
 
 
-class FloatWanderGoal : Goal {
+class FloatWanderGoal : public Goal {
 
 public:
-    ~FloatWanderGoal(); // _ZN15FloatWanderGoalD2Ev
+    virtual ~FloatWanderGoal(); // _ZN15FloatWanderGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN15FloatWanderGoal6canUseEv
     virtual void tick(); // _ZN15FloatWanderGoal4tickEv
     virtual void appendDebugInfo(std::string &)const; // _ZNK15FloatWanderGoal15appendDebugInfoERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE

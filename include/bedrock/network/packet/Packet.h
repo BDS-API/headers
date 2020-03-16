@@ -6,7 +6,8 @@
 class Packet {
 
 public:
-    ~Packet(); // _ZN6PacketD2Ev
+    virtual ~Packet(); // _ZN6PacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void disallowBatching()const; // _ZNK6Packet16disallowBatchingEv
     void getReliability()const; // _ZNK6Packet14getReliabilityEv
     void getCompressible()const; // _ZNK6Packet15getCompressibleEv
@@ -17,7 +18,7 @@ public:
     void getClientSubId()const; // _ZNK6Packet14getClientSubIdEv
     Packet(Packet const&); // _ZN6PacketC2ERKS_
     void setClientSubId(unsigned char); // _ZN6Packet14setClientSubIdEh
-//  Packet(Compressibility); //TODO: incomplete function definition // _ZN6PacketC2E15Compressibility
+//    Packet(long); //TODO: incomplete function definition // _ZN6PacketC2E15Compressibility
     void setReliable(); // _ZN6Packet11setReliableEv
     void setReliableOrdered(); // _ZN6Packet18setReliableOrderedEv
 };

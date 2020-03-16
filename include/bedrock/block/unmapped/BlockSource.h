@@ -1,16 +1,17 @@
 #pragma once
 
 #include "../../util/BlockPos.h"
-#include <vector>
 #include <memory>
 #include "../../util/Brightness.h"
+#include <vector>
 #include <functional>
 
 
 class BlockSource {
 
 public:
-    ~BlockSource(); // _ZN11BlockSourceD2Ev
+    virtual ~BlockSource(); // _ZN11BlockSourceD2Ev
+    virtual void __fake_function0(); // fake
     void getMaxHeight()const; // _ZNK11BlockSource12getMaxHeightEv
     BlockSource(Level &, Dimension &, ChunkSource &, bool, bool); // _ZN11BlockSourceC2ER5LevelR9DimensionR11ChunkSourcebb
     void addListener(BlockSourceListener &); // _ZN11BlockSource11addListenerER19BlockSourceListener
@@ -32,24 +33,24 @@ public:
     void getChunk(int, int)const; // _ZNK11BlockSource8getChunkEii
     void getChunk(ChunkPos const&)const; // _ZNK11BlockSource8getChunkERK8ChunkPos
     void addToTickingQueue(BlockPos const&, Block const&, int, int); // _ZN11BlockSource17addToTickingQueueERK8BlockPosRK5Blockii
-//  void _addToTickingQueue(BlockPos const&, Block const&, int, int, TickingQueueType); //TODO: incomplete function definition // _ZN11BlockSource18_addToTickingQueueERK8BlockPosRK5Blockii16TickingQueueType
+//    void _addToTickingQueue(BlockPos const&, Block const&, int, int, long); //TODO: incomplete function definition // _ZN11BlockSource18_addToTickingQueueERK8BlockPosRK5Blockii16TickingQueueType
     void addToRandomTickingQueuePercentChance(BlockPos const&, Block const&, float, int); // _ZN11BlockSource36addToRandomTickingQueuePercentChanceERK8BlockPosRK5Blockfi
     void addToRandomTickingQueue(BlockPos const&, Block const&, int, int); // _ZN11BlockSource23addToRandomTickingQueueERK8BlockPosRK5Blockii
     void removeFromTickingQueue(BlockPos const&, Block const&); // _ZN11BlockSource22removeFromTickingQueueERK8BlockPosRK5Block
-//  void _removeFromTickingQueue(BlockPos const&, Block const&, TickingQueueType); //TODO: incomplete function definition // _ZN11BlockSource23_removeFromTickingQueueERK8BlockPosRK5Block16TickingQueueType
+//    void _removeFromTickingQueue(BlockPos const&, Block const&, long); //TODO: incomplete function definition // _ZN11BlockSource23_removeFromTickingQueueERK8BlockPosRK5Block16TickingQueueType
     void removeFromRandomTickingQueue(BlockPos const&, Block const&); // _ZN11BlockSource28removeFromRandomTickingQueueERK8BlockPosRK5Block
     bool isInstaticking(BlockPos const&)const; // _ZNK11BlockSource14isInstatickingERK8BlockPos
-//  void _getTickingQueue(BlockPos const&, TickingQueueType)const; //TODO: incomplete function definition // _ZNK11BlockSource16_getTickingQueueERK8BlockPos16TickingQueueType
+//    void _getTickingQueue(BlockPos const&, long)const; //TODO: incomplete function definition // _ZNK11BlockSource16_getTickingQueueERK8BlockPos16TickingQueueType
     bool hasTickInCurrentTick(BlockPos const&)const; // _ZNK11BlockSource20hasTickInCurrentTickERK8BlockPos
-//  bool hasTickInCurrentTick(BlockPos const&, TickingQueueType)const; //TODO: incomplete function definition // _ZNK11BlockSource20hasTickInCurrentTickERK8BlockPos16TickingQueueType
+//    bool hasTickInCurrentTick(BlockPos const&, long)const; //TODO: incomplete function definition // _ZNK11BlockSource20hasTickInCurrentTickERK8BlockPos16TickingQueueType
     bool hasTickInPendingTicks(BlockPos const&)const; // _ZNK11BlockSource21hasTickInPendingTicksERK8BlockPos
-//  bool hasTickInPendingTicks(BlockPos const&, TickingQueueType)const; //TODO: incomplete function definition // _ZNK11BlockSource21hasTickInPendingTicksERK8BlockPos16TickingQueueType
-//  void getNextTickUpdateForPos(BlockPos const&, TickingQueueType, Tick &)const; //TODO: incomplete function definition // _ZNK11BlockSource23getNextTickUpdateForPosERK8BlockPos16TickingQueueTypeR4Tick
-//  bool ticksFromNow(BlockPos const&, TickingQueueType, int)const; //TODO: incomplete function definition // _ZNK11BlockSource12ticksFromNowERK8BlockPos16TickingQueueTypei
+//    bool hasTickInPendingTicks(BlockPos const&, long)const; //TODO: incomplete function definition // _ZNK11BlockSource21hasTickInPendingTicksERK8BlockPos16TickingQueueType
+//    void getNextTickUpdateForPos(BlockPos const&, long, Tick &)const; //TODO: incomplete function definition // _ZNK11BlockSource23getNextTickUpdateForPosERK8BlockPos16TickingQueueTypeR4Tick
+//    bool ticksFromNow(BlockPos const&, long, int)const; //TODO: incomplete function definition // _ZNK11BlockSource12ticksFromNowERK8BlockPos16TickingQueueTypei
     void setTickingQueue(BlockTickingQueue &); // _ZN11BlockSource15setTickingQueueER17BlockTickingQueue
     void setRandomTickingQueue(BlockTickingQueue &); // _ZN11BlockSource21setRandomTickingQueueER17BlockTickingQueue
     void getWritableChunk(ChunkPos const&); // _ZN11BlockSource16getWritableChunkERK8ChunkPos
-    void shouldFireEvents(LevelChunk &)const; // _ZNK11BlockSource16shouldFireEventsER10LevelChunk
+    bool shouldFireEvents(LevelChunk &)const; // _ZNK11BlockSource16shouldFireEventsER10LevelChunk
     bool hasBlock(BlockPos const&)const; // _ZNK11BlockSource8hasBlockERK8BlockPos
     void getChunkAt(BlockPos const&)const; // _ZNK11BlockSource10getChunkAtERK8BlockPos
     void _hasChunksAt(Bounds const&)const; // _ZNK11BlockSource12_hasChunksAtERK6Bounds
@@ -108,18 +109,18 @@ public:
     void fireBlockEvent(int, int, int, int, int); // _ZN11BlockSource14fireBlockEventEiiiii
     void blockEvent(BlockPos const&, int, int); // _ZN11BlockSource10blockEventERK8BlockPosii
     void fetchEntities(Actor *, AABB const&); // _ZN11BlockSource13fetchEntitiesEP5ActorRK4AABB
-//  void fetchEntities(buffer_span<Actor *>, AABB const&); //TODO: incomplete function definition // _ZN11BlockSource13fetchEntitiesE11buffer_spanIP5ActorERK4AABB
-//  void fetchEntities(ActorType, AABB const&, Actor *); //TODO: incomplete function definition // _ZN11BlockSource13fetchEntitiesE9ActorTypeRK4AABBP5Actor
+//    void fetchEntities(long, AABB const&); //TODO: incomplete function definition // _ZN11BlockSource13fetchEntitiesE11buffer_spanIP5ActorERK4AABB
+//    void fetchEntities(long, AABB const&, Actor *); //TODO: incomplete function definition // _ZN11BlockSource13fetchEntitiesE9ActorTypeRK4AABBP5Actor
     void fetchActors(ActorDefinitionIdentifier const&, AABB const&); // _ZN11BlockSource11fetchActorsERK25ActorDefinitionIdentifierRK4AABB
     void fetchBlockEntities(AABB const&, std::vector<BlockActor *> &); // _ZN11BlockSource18fetchBlockEntitiesERK4AABBRSt6vectorIP10BlockActorSaIS5_EE
     void fetchBlockEntities(AABB const&); // _ZN11BlockSource18fetchBlockEntitiesERK4AABB
     void fetchBlocks(BlockPos const&, BlockVolume &)const; // _ZNK11BlockSource11fetchBlocksERK8BlockPosR11BlockVolume
     void areAllChunksLoaded(BlockPos const&, BlockVolume &)const; // _ZNK11BlockSource18areAllChunksLoadedERK8BlockPosR11BlockVolume
-//  void fetchEntities2(ActorType, AABB const&, bool); //TODO: incomplete function definition // _ZN11BlockSource14fetchEntities2E9ActorTypeRK4AABBb
-//  void fetchNearestEntityOfType(Actor *, AABB const&, ActorType); //TODO: incomplete function definition // _ZN11BlockSource24fetchNearestEntityOfTypeEP5ActorRK4AABB9ActorType
-//  void fetchNearestEntityOfType(Actor *, Vec3 const&, float, ActorType); //TODO: incomplete function definition // _ZN11BlockSource24fetchNearestEntityOfTypeEP5ActorRK4Vec3f9ActorType
-//  void fetchNearestEntityNotOfType(Actor *, Vec3 const&, float, ActorType); //TODO: incomplete function definition // _ZN11BlockSource27fetchNearestEntityNotOfTypeEP5ActorRK4Vec3f9ActorType
-//  bool isUnobstructedByEntities(AABB const&, buffer_span<Actor *>); //TODO: incomplete function definition // _ZN11BlockSource24isUnobstructedByEntitiesERK4AABB11buffer_spanIP5ActorE
+//    void fetchEntities2(long, AABB const&, bool); //TODO: incomplete function definition // _ZN11BlockSource14fetchEntities2E9ActorTypeRK4AABBb
+//    void fetchNearestEntityOfType(Actor *, AABB const&, long); //TODO: incomplete function definition // _ZN11BlockSource24fetchNearestEntityOfTypeEP5ActorRK4AABB9ActorType
+//    void fetchNearestEntityOfType(Actor *, Vec3 const&, float, long); //TODO: incomplete function definition // _ZN11BlockSource24fetchNearestEntityOfTypeEP5ActorRK4Vec3f9ActorType
+//    void fetchNearestEntityNotOfType(Actor *, Vec3 const&, float, long); //TODO: incomplete function definition // _ZN11BlockSource27fetchNearestEntityNotOfTypeEP5ActorRK4Vec3f9ActorType
+//    bool isUnobstructedByEntities(AABB const&, long); //TODO: incomplete function definition // _ZN11BlockSource24isUnobstructedByEntitiesERK4AABB11buffer_spanIP5ActorE
     void fetchAABBs(AABB const&, bool); // _ZN11BlockSource10fetchAABBsERK4AABBb
     void addUnloadedChunksAABBs(AABB const&); // _ZN11BlockSource22addUnloadedChunksAABBsERK4AABB
     void addVoidFloor(AABB const&); // _ZN11BlockSource12addVoidFloorERK4AABB
@@ -134,15 +135,15 @@ public:
     void getMaterial(int, int, int)const; // _ZNK11BlockSource11getMaterialEiii
     bool isOnTopOfBlock(AABB const&, BlockLegacy const&); // _ZN11BlockSource14isOnTopOfBlockERK4AABBRK11BlockLegacy
     bool isOnTopOfBlock(AABB const&, std::function<bool (Block const&)>); // _ZN11BlockSource14isOnTopOfBlockERK4AABBSt8functionIFbRK5BlockEE
-//  bool containsMaterial(AABB const&, MaterialType); //TODO: incomplete function definition // _ZN11BlockSource16containsMaterialERK4AABB12MaterialType
-//  bool containsLiquid(AABB const&, MaterialType); //TODO: incomplete function definition // _ZN11BlockSource14containsLiquidERK4AABB12MaterialType
+//    bool containsMaterial(AABB const&, long); //TODO: incomplete function definition // _ZN11BlockSource16containsMaterialERK4AABB12MaterialType
+//    bool containsLiquid(AABB const&, long); //TODO: incomplete function definition // _ZN11BlockSource14containsLiquidERK4AABB12MaterialType
     void clip(Vec3 const&, Vec3 const&, bool, bool, int, bool, bool); // _ZN11BlockSource4clipERK4Vec3S2_bbibb
     void getSeenPercent(Vec3 const&, AABB const&); // _ZN11BlockSource14getSeenPercentERK4Vec3RK4AABB
-//  bool canProvideSupport(BlockPos const&, unsigned char, BlockSupportType)const; //TODO: incomplete function definition // _ZNK11BlockSource17canProvideSupportERK8BlockPosh16BlockSupportType
+//    bool canProvideSupport(BlockPos const&, unsigned char, long)const; //TODO: incomplete function definition // _ZNK11BlockSource17canProvideSupportERK8BlockPosh16BlockSupportType
     bool isInWall(Vec3 const&); // _ZN11BlockSource8isInWallERK4Vec3
     bool isUnderWater(BlockPos const&)const; // _ZNK11BlockSource12isUnderWaterERK8BlockPos
     bool isUnderWater(Vec3 const&, Block const&)const; // _ZNK11BlockSource12isUnderWaterERK4Vec3RK5Block
-//  bool isTouchingMaterial(BlockPos const&, MaterialType)const; //TODO: incomplete function definition // _ZNK11BlockSource18isTouchingMaterialERK8BlockPos12MaterialType
+//    bool isTouchingMaterial(BlockPos const&, long)const; //TODO: incomplete function definition // _ZNK11BlockSource18isTouchingMaterialERK8BlockPos12MaterialType
     void onChunkDiscarded(LevelChunk &); // _ZN11BlockSource16onChunkDiscardedER10LevelChunk
     void clearCachedLastChunk(); // _ZN11BlockSource20clearCachedLastChunkEv
     void fireAreaChanged(BlockPos const&, BlockPos const&); // _ZN11BlockSource15fireAreaChangedERK8BlockPosS2_
@@ -162,10 +163,10 @@ public:
     void setWaterColor(int, BlockPos const&, int); // _ZN11BlockSource13setWaterColorEiRK8BlockPosi
     void getGrassColor(BlockPos const&)const; // _ZNK11BlockSource13getGrassColorERK8BlockPos
     void getWaterColor(BlockPos const&)const; // _ZNK11BlockSource13getWaterColorERK8BlockPos
-//  void getHardcodedEntitySpawn(BlockPos const&, ActorType)const; //TODO: incomplete function definition // _ZNK11BlockSource23getHardcodedEntitySpawnERK8BlockPos9ActorType
+//    void getHardcodedEntitySpawn(BlockPos const&, long)const; //TODO: incomplete function definition // _ZNK11BlockSource23getHardcodedEntitySpawnERK8BlockPos9ActorType
     void findNextTopSolidBlockUnder(BlockPos &); // _ZN11BlockSource26findNextTopSolidBlockUnderER8BlockPos
     void findNextTopSolidBlockAbove(BlockPos &); // _ZN11BlockSource26findNextTopSolidBlockAboveER8BlockPos
-//  void findNextSpawnBlockUnder(BlockPos &, MaterialType); //TODO: incomplete function definition // _ZN11BlockSource23findNextSpawnBlockUnderER8BlockPos12MaterialType
+//    void findNextSpawnBlockUnder(BlockPos &, long); //TODO: incomplete function definition // _ZN11BlockSource23findNextSpawnBlockUnderER8BlockPos12MaterialType
     bool canSeeSkyFromBelowWater(BlockPos const&); // _ZN11BlockSource23canSeeSkyFromBelowWaterERK8BlockPos
     void getRawBrightness(int, int, int, bool); // _ZN11BlockSource16getRawBrightnessEiiib
     void getAboveTopSolidBlock(int, int, bool, bool); // _ZN11BlockSource21getAboveTopSolidBlockEiibb
@@ -173,13 +174,13 @@ public:
     void getHeightmap(int, int); // _ZN11BlockSource12getHeightmapEii
     void getBlockEntity(int, int, int); // _ZN11BlockSource14getBlockEntityEiii
     bool isOwnerThread()const; // _ZNK11BlockSource13isOwnerThreadEv
-//  void _getLiquidHeight(BlockPos const&, MaterialType, bool); //TODO: incomplete function definition // _ZN11BlockSource16_getLiquidHeightERK8BlockPos12MaterialTypeb
+//    void _getLiquidHeight(BlockPos const&, long, bool); //TODO: incomplete function definition // _ZN11BlockSource16_getLiquidHeightERK8BlockPos12MaterialTypeb
     void getVisualLiquidHeight(Vec3 const&); // _ZN11BlockSource21getVisualLiquidHeightERK4Vec3
     void fetchBlocksInCylinder(BlockPos const&, unsigned int, unsigned int, std::function<bool (Block const&)>); // _ZN11BlockSource21fetchBlocksInCylinderERK8BlockPosjjSt8functionIFbRK5BlockEE
     void fetchBlocksInCylinderSorted(BlockPos const&, unsigned int, unsigned int, std::function<bool (Block const&)>); // _ZN11BlockSource27fetchBlocksInCylinderSortedERK8BlockPosjjSt8functionIFbRK5BlockEE
     void fetchBlocksInBox(BoundingBox const&, std::function<bool (Block const&)>); // _ZN11BlockSource16fetchBlocksInBoxERK11BoundingBoxSt8functionIFbRK5BlockEE
     void fetchBlocksInBoxSorted(BoundingBox const&, std::function<bool (Block const&)>); // _ZN11BlockSource22fetchBlocksInBoxSortedERK11BoundingBoxSt8functionIFbRK5BlockEE
-//  bool isPositionUnderLiquid(Vec3 const&, MaterialType); //TODO: incomplete function definition // _ZN11BlockSource21isPositionUnderLiquidERK4Vec312MaterialType
+//    bool isPositionUnderLiquid(Vec3 const&, long); //TODO: incomplete function definition // _ZN11BlockSource21isPositionUnderLiquidERK4Vec312MaterialType
     void getPublicSource()const; // _ZNK11BlockSource15getPublicSourceEv
     bool isNearUnloadedChunks(ChunkPos const&); // _ZN11BlockSource20isNearUnloadedChunksERK8ChunkPos
     void generateUnloadedChunkAABB(ChunkPos const&); // _ZN11BlockSource25generateUnloadedChunkAABBERK8ChunkPos

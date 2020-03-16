@@ -4,10 +4,11 @@
 #include "Item.h"
 
 
-class EggItem : Item {
+class EggItem : public Item {
 
 public:
-    ~EggItem(); // _ZN7EggItemD2Ev
+    virtual ~EggItem(); // _ZN7EggItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isThrowable()const; // _ZNK7EggItem11isThrowableEv
     virtual void use(ItemStack &, Player &)const; // _ZNK7EggItem3useER9ItemStackR6Player
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK7EggItem8dispenseER11BlockSourceR9ContaineriRK4Vec3h

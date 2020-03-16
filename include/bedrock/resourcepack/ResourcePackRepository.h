@@ -1,9 +1,9 @@
 #pragma once
 
-#include <string>
 #include <functional>
-#include <unordered_map>
+#include <string>
 #include <vector>
+#include <unordered_map>
 
 
 class ResourcePackRepository {
@@ -44,9 +44,9 @@ public:
     std::string getDevelopmentSkinPacksPath()const; // _ZNK22ResourcePackRepository27getDevelopmentSkinPacksPathB5cxx11Ev
     void _reloadUserPacks(); // _ZN22ResourcePackRepository16_reloadUserPacksEv
     void _refreshPacks(); // _ZN22ResourcePackRepository13_refreshPacksEv
-//  void addInvalidPack(ResourceLocation const&, PackType); //TODO: incomplete function definition // _ZN22ResourcePackRepository14addInvalidPackERK16ResourceLocation8PackType
+//    void addInvalidPack(ResourceLocation const&, long); //TODO: incomplete function definition // _ZN22ResourcePackRepository14addInvalidPackERK16ResourceLocation8PackType
     void _validateDependencies(); // _ZN22ResourcePackRepository21_validateDependenciesEv
-//  void _updateKnownUserPacks(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition // _ZN22ResourcePackRepository21_updateKnownUserPacksERNS_18KnownPackContainerE13KnownPackType
+//    void _updateKnownUserPacks(ResourcePackRepository::KnownPackContainer &, long); //TODO: incomplete function definition // _ZN22ResourcePackRepository21_updateKnownUserPacksERNS_18KnownPackContainerE13KnownPackType
     void _initializeCachedPackSource(); // _ZN22ResourcePackRepository27_initializeCachedPackSourceEv
     std::string getTemporaryPremiumResourcePacksPath(); // _ZN22ResourcePackRepository36getTemporaryPremiumResourcePacksPathB5cxx11Ev
     std::string getTemporaryPremiumBehaviorPacksPath(); // _ZN22ResourcePackRepository36getTemporaryPremiumBehaviorPacksPathB5cxx11Ev
@@ -58,9 +58,9 @@ public:
     void _triggerRemoveResourcePackCallback(ResourcePack *); // _ZN22ResourcePackRepository34_triggerRemoveResourcePackCallbackEP12ResourcePack
     ~ResourcePackRepository(); // _ZN22ResourcePackRepositoryD2Ev
     void _addResourcePackIfNotAlreadyAdded(Pack &); // _ZN22ResourcePackRepository33_addResourcePackIfNotAlreadyAddedER4Pack
-//  void _packExists(mce::UUID const&, SemVersion const&, PackOrigin)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository11_packExistsERKN3mce4UUIDERK10SemVersion10PackOrigin
+//    void _packExists(mce::UUID const&, SemVersion const&, long)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository11_packExistsERKN3mce4UUIDERK10SemVersion10PackOrigin
     void getResourcePackInPath(Core::Path const&)const; // _ZNK22ResourcePackRepository21getResourcePackInPathERKN4Core4PathE
-//  bool isResourcePackLoaded(PackIdVersion const&, PackOrigin const&); //TODO: incomplete function definition // _ZN22ResourcePackRepository20isResourcePackLoadedERK13PackIdVersionRK10PackOrigin
+//    bool isResourcePackLoaded(PackIdVersion const&, long const&); //TODO: incomplete function definition // _ZN22ResourcePackRepository20isResourcePackLoadedERK13PackIdVersionRK10PackOrigin
     void getPackLoadingReport()const; // _ZNK22ResourcePackRepository20getPackLoadingReportEv
     void getResourcePacksByPackId(std::vector<PackInstanceId> const&, std::vector<PackInstance> &)const; // _ZNK22ResourcePackRepository24getResourcePacksByPackIdERKSt6vectorI14PackInstanceIdSaIS1_EERS0_I12PackInstanceSaIS6_EE
     void getPackSettingsFactory()const; // _ZNK22ResourcePackRepository22getPackSettingsFactoryEv
@@ -68,7 +68,7 @@ public:
     void getResourcePackForPackIdOwned(PackIdVersion const&)const; // _ZNK22ResourcePackRepository29getResourcePackForPackIdOwnedERK13PackIdVersion
     void getResourcePackSatisfiesPackId(PackIdVersion const&, bool)const; // _ZNK22ResourcePackRepository30getResourcePackSatisfiesPackIdERK13PackIdVersionb
     void getResourcePackContainingModule(PackIdVersion const&)const; // _ZNK22ResourcePackRepository31getResourcePackContainingModuleERK13PackIdVersion
-    void addCachedResourcePacks(std::unordered_map<ContentIdentity, std::string, std::hash<ContentIdentity>, std::equal_to<ContentIdentity>, std::allocator<std::pair<ContentIdentity const, std::string>>> const*); // _ZN22ResourcePackRepository22addCachedResourcePacksEPKSt13unordered_mapI15ContentIdentityNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4hashIS1_ESt8equal_toIS1_ESaISt4pairIKS1_S7_EEE
+    void addCachedResourcePacks(std::unordered_map<ContentIdentity, std::string, std::hash<ContentIdentity>, long, std::allocator<std::pair<ContentIdentity const, std::string>>> const*); // _ZN22ResourcePackRepository22addCachedResourcePacksEPKSt13unordered_mapI15ContentIdentityNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4hashIS1_ESt8equal_toIS1_ESaISt4pairIKS1_S7_EEE
     void refreshPacks(); // _ZN22ResourcePackRepository12refreshPacksEv
     void addWorldResourcePacks(Core::Path const&); // _ZN22ResourcePackRepository21addWorldResourcePacksERKN4Core4PathE
     void addPremiumWorldTemplateResourcePacks(Core::Path const&, ContentIdentity const&); // _ZN22ResourcePackRepository36addPremiumWorldTemplateResourcePacksERKN4Core4PathERK15ContentIdentity
@@ -76,18 +76,18 @@ public:
     void removePacksLoadedFromWorld(); // _ZN22ResourcePackRepository26removePacksLoadedFromWorldEv
     std::string getGlobalResourcePacksPath(); // _ZN22ResourcePackRepository26getGlobalResourcePacksPathB5cxx11Ev
     std::string getSkinPacksPath()const; // _ZNK22ResourcePackRepository16getSkinPacksPathB5cxx11Ev
-//  std::string getKnownPacksPath(KnownPackType)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository17getKnownPacksPathB5cxx11E13KnownPackType
+//    std::string getKnownPacksPath(long)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository17getKnownPacksPathB5cxx11E13KnownPackType
     std::string getKnownValidPacksPath()const; // _ZNK22ResourcePackRepository22getKnownValidPacksPathB5cxx11Ev
     std::string getKnownInvalidPacksPath()const; // _ZNK22ResourcePackRepository24getKnownInvalidPacksPathB5cxx11Ev
-//  void _loadLastKnownUserPacks(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition // _ZN22ResourcePackRepository23_loadLastKnownUserPacksERNS_18KnownPackContainerE13KnownPackType
-//  void _detectKnownPacksChange(ResourcePackRepository::KnownPackContainer &, ResourcePackRepository::KnownPackContainer const&, KnownPackType); //TODO: incomplete function definition // _ZN22ResourcePackRepository23_detectKnownPacksChangeERNS_18KnownPackContainerERKS0_13KnownPackType
-//  void _saveKnownUserPacks(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition // _ZN22ResourcePackRepository19_saveKnownUserPacksERNS_18KnownPackContainerE13KnownPackType
+//    void _loadLastKnownUserPacks(ResourcePackRepository::KnownPackContainer &, long); //TODO: incomplete function definition // _ZN22ResourcePackRepository23_loadLastKnownUserPacksERNS_18KnownPackContainerE13KnownPackType
+//    void _detectKnownPacksChange(ResourcePackRepository::KnownPackContainer &, ResourcePackRepository::KnownPackContainer const&, long); //TODO: incomplete function definition // _ZN22ResourcePackRepository23_detectKnownPacksChangeERNS_18KnownPackContainerERKS0_13KnownPackType
+//    void _saveKnownUserPacks(ResourcePackRepository::KnownPackContainer &, long); //TODO: incomplete function definition // _ZN22ResourcePackRepository19_saveKnownUserPacksERNS_18KnownPackContainerE13KnownPackType
     void _packLogVersionIsUpToDate(Json::Value const&); // _ZN22ResourcePackRepository25_packLogVersionIsUpToDateERKN4Json5ValueE
-//  void _updatePackLogVersion(ResourcePackRepository::KnownPackContainer &, KnownPackType); //TODO: incomplete function definition // _ZN22ResourcePackRepository21_updatePackLogVersionERNS_18KnownPackContainerE13KnownPackType
-//  void getPacksByResourceLocation(PackOrigin)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository26getPacksByResourceLocationE10PackOrigin
-//  void getPacksByType(PackType)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository14getPacksByTypeE8PackType
+//    void _updatePackLogVersion(ResourcePackRepository::KnownPackContainer &, long); //TODO: incomplete function definition // _ZN22ResourcePackRepository21_updatePackLogVersionERNS_18KnownPackContainerE13KnownPackType
+//    void getPacksByResourceLocation(long)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository26getPacksByResourceLocationE10PackOrigin
+//    void getPacksByType(long)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository14getPacksByTypeE8PackType
     void addKnownPackFromImport(PackManifest const&); // _ZN22ResourcePackRepository22addKnownPackFromImportERK12PackManifest
-//  void getInvalidPacks(PackType)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository15getInvalidPacksE8PackType
+//    void getInvalidPacks(long)const; //TODO: incomplete function definition // _ZNK22ResourcePackRepository15getInvalidPacksE8PackType
     void getInvalidPacks(InvalidPacksFilterGroup const&)const; // _ZNK22ResourcePackRepository15getInvalidPacksERK23InvalidPacksFilterGroup
     void deletePack(ResourceLocation const&); // _ZN22ResourcePackRepository10deletePackERK16ResourceLocation
     void deletePackFiles(ResourceLocation const&); // _ZN22ResourcePackRepository15deletePackFilesERK16ResourceLocation

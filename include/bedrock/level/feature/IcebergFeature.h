@@ -3,10 +3,11 @@
 #include "Feature.h"
 
 
-class IcebergFeature : Feature {
+class IcebergFeature : public Feature {
 
 public:
-    ~IcebergFeature(); // _ZN14IcebergFeatureD2Ev
+    virtual ~IcebergFeature(); // _ZN14IcebergFeatureD2Ev
+    virtual void __fake_function0(); // fake
     virtual void place(BlockSource &, BlockPos const&, Random &)const; // _ZNK14IcebergFeature5placeER11BlockSourceRK8BlockPosR6Random
     IcebergFeature(); // _ZN14IcebergFeatureC2Ev
     void heightDependentRadiusEllipse(int, int, int)const; // _ZNK14IcebergFeature28heightDependentRadiusEllipseEiii

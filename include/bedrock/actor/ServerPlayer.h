@@ -1,27 +1,28 @@
 #pragma once
 
-#include "../../mce/UUID.h"
-#include "Player.h"
-#include <vector>
-#include <memory>
 #include <string>
+#include <memory>
+#include <vector>
 #include <functional>
+#include "Player.h"
+#include "../../mce/UUID.h"
 
 
-class ServerPlayer : Player {
+class ServerPlayer : public Player {
 
 public:
     class NearbyActor;
 
-//  virtual void initializeComponents(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN12ServerPlayer20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
-    ~ServerPlayer(); // _ZN12ServerPlayerD2Ev
+    virtual void initializeComponents__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN12ServerPlayer20initializeComponentsEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~ServerPlayer(); // _ZN12ServerPlayerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN12ServerPlayer10normalTickEv
     virtual bool isValidTarget(Actor *)const; // _ZNK12ServerPlayer13isValidTargetEP5Actor
-//  virtual void handleEntityEvent(ActorEvent, int); //TODO: incomplete function definition // _ZN12ServerPlayer17handleEntityEventE10ActorEventi
-//  virtual void setArmor(ArmorSlot, ItemStack const&); //TODO: incomplete function definition // _ZN12ServerPlayer8setArmorE9ArmorSlotRK9ItemStack
+    virtual void handleEntityEvent__incomplete0(long, int); //TODO: incomplete function definition // _ZN12ServerPlayer17handleEntityEventE10ActorEventi
+    virtual void setArmor__incomplete0(long, ItemStack const&); //TODO: incomplete function definition // _ZN12ServerPlayer8setArmorE9ArmorSlotRK9ItemStack
     virtual void load(CompoundTag const&, DataLoadHelper &); // _ZN12ServerPlayer4loadERK11CompoundTagR14DataLoadHelper
     virtual bool canChangeDimensions()const; // _ZNK12ServerPlayer19canChangeDimensionsEv
-//  virtual void changeDimension(AutomaticID<Dimension, int>, bool); //TODO: incomplete function definition // _ZN12ServerPlayer15changeDimensionE11AutomaticIDI9DimensioniEb
+    virtual void changeDimension__incomplete0(long, bool); //TODO: incomplete function definition // _ZN12ServerPlayer15changeDimensionE11AutomaticIDI9DimensioniEb
     virtual void getControllingPlayer()const; // _ZNK12ServerPlayer20getControllingPlayerEv
     virtual void checkFallDamage(float, bool); // _ZN12ServerPlayer15checkFallDamageEfb
     virtual void handleFallDistanceOnServer(float, bool); // _ZN12ServerPlayer26handleFallDistanceOnServerEfb
@@ -36,11 +37,11 @@ public:
     virtual void prepareRegion(ChunkSource &); // _ZN12ServerPlayer13prepareRegionER11ChunkSource
     virtual void destroyRegion(); // _ZN12ServerPlayer13destroyRegionEv
     virtual void suspendRegion(); // _ZN12ServerPlayer13suspendRegionEv
-//  virtual void changeDimensionWithCredits(AutomaticID<Dimension, int>); //TODO: incomplete function definition // _ZN12ServerPlayer26changeDimensionWithCreditsE11AutomaticIDI9DimensioniE
+    virtual void changeDimensionWithCredits__incomplete0(long); //TODO: incomplete function definition // _ZN12ServerPlayer26changeDimensionWithCreditsE11AutomaticIDI9DimensioniE
     virtual void tickWorld(Tick const&); // _ZN12ServerPlayer9tickWorldERK4Tick
-//  virtual void frameUpdate(FrameUpdateContextBase &); //TODO: incomplete function definition // _ZN12ServerPlayer11frameUpdateER22FrameUpdateContextBase
+    virtual void frameUpdate__incomplete0(long &); //TODO: incomplete function definition // _ZN12ServerPlayer11frameUpdateER22FrameUpdateContextBase
     virtual void checkMovementStats(Vec3 const&); // _ZN12ServerPlayer18checkMovementStatsERK4Vec3
-//  virtual void setPermissions(CommandPermissionLevel); //TODO: incomplete function definition // _ZN12ServerPlayer14setPermissionsE22CommandPermissionLevel
+    virtual void setPermissions__incomplete0(long); //TODO: incomplete function definition // _ZN12ServerPlayer14setPermissionsE22CommandPermissionLevel
     virtual void openContainer(BlockPos const&); // _ZN12ServerPlayer13openContainerERK8BlockPos
     virtual void openContainer(ActorUniqueID const&); // _ZN12ServerPlayer13openContainerERK13ActorUniqueID
     virtual void openFurnace(BlockPos const&); // _ZN12ServerPlayer11openFurnaceERK8BlockPos
@@ -73,12 +74,12 @@ public:
     virtual bool isHostingPlayer()const; // _ZNK12ServerPlayer15isHostingPlayerEv
     virtual bool isLoading()const; // _ZNK12ServerPlayer9isLoadingEv
     virtual bool isPlayerInitialized()const; // _ZNK12ServerPlayer19isPlayerInitializedEv
-//  virtual void setPlayerGameType(GameType); //TODO: incomplete function definition // _ZN12ServerPlayer17setPlayerGameTypeE8GameType
+    virtual void setPlayerGameType__incomplete0(long); //TODO: incomplete function definition // _ZN12ServerPlayer17setPlayerGameTypeE8GameType
     virtual void setContainerData(IContainerManager &, int, int); // _ZN12ServerPlayer16setContainerDataER17IContainerManagerii
     virtual void slotChanged(IContainerManager &, int, ItemStack const&, ItemStack const&, bool); // _ZN12ServerPlayer11slotChangedER17IContainerManageriRK9ItemStackS4_b
     virtual void refreshContainer(IContainerManager &); // _ZN12ServerPlayer16refreshContainerER17IContainerManager
     virtual void deleteContainerManager(); // _ZN12ServerPlayer22deleteContainerManagerEv
-//  virtual bool isPositionRelevant(AutomaticID<Dimension, int>, BlockPos const&); //TODO: incomplete function definition // _ZN12ServerPlayer18isPositionRelevantE11AutomaticIDI9DimensioniERK8BlockPos
+    virtual bool isPositionRelevant__incomplete0(long, BlockPos const&); //TODO: incomplete function definition // _ZN12ServerPlayer18isPositionRelevantE11AutomaticIDI9DimensioniERK8BlockPos
     virtual bool isEntityRelevant(Actor const&); // _ZN12ServerPlayer16isEntityRelevantERK5Actor
     virtual bool isTeacher()const; // _ZNK12ServerPlayer9isTeacherEv
     virtual void onSuspension(); // _ZN12ServerPlayer12onSuspensionEv
@@ -90,8 +91,8 @@ public:
     virtual void getMoveInputHandler(); // _ZN12ServerPlayer19getMoveInputHandlerEv
     virtual void getInputMode()const; // _ZNK12ServerPlayer12getInputModeEv
     virtual void getPlayMode()const; // _ZNK12ServerPlayer11getPlayModeEv
-//  virtual void reportMovementTelemetry(MovementEventType); //TODO: incomplete function definition // _ZN12ServerPlayer23reportMovementTelemetryE17MovementEventType
-//  ServerPlayer(Level &, PacketSender &, NetworkHandler &, ClientBlobCache::Server::ActiveTransfersManager &, GameType, NetworkIdentifier const&, unsigned char, std::function<void (ServerPlayer &)>, mce::UUID, std::string const&, std::unique_ptr<Certificate>, int); //TODO: incomplete function definition // _ZN12ServerPlayerC2ER5LevelR12PacketSenderR14NetworkHandlerRN15ClientBlobCache6Server22ActiveTransfersManagerE8GameTypeRK17NetworkIdentifierhSt8functionIFvRS_EEN3mce4UUIDERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt10unique_ptrI11CertificateSt14default_deleteIST_EEi
+    virtual void reportMovementTelemetry__incomplete0(long); //TODO: incomplete function definition // _ZN12ServerPlayer23reportMovementTelemetryE17MovementEventType
+//    ServerPlayer(Level &, PacketSender &, NetworkHandler &, ClientBlobCache::Server::ActiveTransfersManager &, long, NetworkIdentifier const&, unsigned char, std::function<void (ServerPlayer &)>, mce::UUID, std::string const&, std::unique_ptr<Certificate>, int); //TODO: incomplete function definition // _ZN12ServerPlayerC2ER5LevelR12PacketSenderR14NetworkHandlerRN15ClientBlobCache6Server22ActiveTransfersManagerE8GameTypeRK17NetworkIdentifierhSt8functionIFvRS_EEN3mce4UUIDERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt10unique_ptrI11CertificateSt14default_deleteIST_EEi
     void updateChunkPublisherView(Vec3 const&, float); // _ZN12ServerPlayer24updateChunkPublisherViewERK4Vec3f
     void _updateNearbyActors(); // _ZN12ServerPlayer19_updateNearbyActorsEv
     void _getReadOnlyChunkCount(); // _ZN12ServerPlayer22_getReadOnlyChunkCountEv
@@ -114,8 +115,8 @@ public:
     void setLocalPlayerAsInitialized(); // _ZN12ServerPlayer27setLocalPlayerAsInitializedEv
     void setLostDataTag(std::unique_ptr<CompoundTag>); // _ZN12ServerPlayer14setLostDataTagESt10unique_ptrI11CompoundTagSt14default_deleteIS1_EE
     void getServerMoveInputHandler(); // _ZN12ServerPlayer25getServerMoveInputHandlerEv
-//  void setInputMode(InputMode const&); //TODO: incomplete function definition // _ZN12ServerPlayer12setInputModeERK9InputMode
-//  void setPlayMode(ClientPlayMode const&); //TODO: incomplete function definition // _ZN12ServerPlayer11setPlayModeERK14ClientPlayMode
+//    void setInputMode(long const&); //TODO: incomplete function definition // _ZN12ServerPlayer12setInputModeERK9InputMode
+//    void setPlayMode(long const&); //TODO: incomplete function definition // _ZN12ServerPlayer11setPlayModeERK14ClientPlayMode
     void checkCheating(Vec3 const&); // _ZN12ServerPlayer13checkCheatingERK4Vec3
     class NearbyActor {
 

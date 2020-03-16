@@ -3,10 +3,11 @@
 #include "BodyControl.h"
 
 
-class AgentBodyControl : BodyControl {
+class AgentBodyControl : public BodyControl {
 
 public:
-    ~AgentBodyControl(); // _ZN16AgentBodyControlD2Ev
+    virtual ~AgentBodyControl(); // _ZN16AgentBodyControlD2Ev
+    virtual void __fake_function0(); // fake
     virtual void clientTick(Mob &); // _ZN16AgentBodyControl10clientTickER3Mob
     AgentBodyControl(); // _ZN16AgentBodyControlC2Ev
 };

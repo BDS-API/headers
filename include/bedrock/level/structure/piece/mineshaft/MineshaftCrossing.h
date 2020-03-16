@@ -1,13 +1,14 @@
 #pragma once
 
-#include "../MineshaftPiece.h"
 #include <vector>
+#include "../MineshaftPiece.h"
 
 
-class MineshaftCrossing : MineshaftPiece {
+class MineshaftCrossing : public MineshaftPiece {
 
 public:
-    ~MineshaftCrossing(); // _ZN17MineshaftCrossingD2Ev
+    virtual ~MineshaftCrossing(); // _ZN17MineshaftCrossingD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getType()const; // _ZNK17MineshaftCrossing7getTypeEv
     virtual void addChildren(StructurePiece *, std::vector<std::unique_ptr<StructurePiece>> &, Random &); // _ZN17MineshaftCrossing11addChildrenEP14StructurePieceRSt6vectorISt10unique_ptrIS0_St14default_deleteIS0_EESaIS6_EER6Random
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN17MineshaftCrossing11postProcessEP11BlockSourceR6RandomRK11BoundingBox

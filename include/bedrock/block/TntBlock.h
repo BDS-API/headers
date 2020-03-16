@@ -4,11 +4,12 @@
 #include "BlockLegacy.h"
 
 
-class TntBlock : BlockLegacy {
+class TntBlock : public BlockLegacy {
 
 public:
-    ~TntBlock(); // _ZN8TntBlockD2Ev
-    virtual void shouldDispense(BlockSource &, Container &)const; // _ZNK8TntBlock14shouldDispenseER11BlockSourceR9Container
+    virtual ~TntBlock(); // _ZN8TntBlockD2Ev
+    virtual void __fake_function0(); // fake
+    virtual bool shouldDispense(BlockSource &, Container &)const; // _ZNK8TntBlock14shouldDispenseER11BlockSourceR9Container
     virtual void dispense(BlockSource &, Container &, int, Vec3 const&, unsigned char)const; // _ZNK8TntBlock8dispenseER11BlockSourceR9ContaineriRK4Vec3h
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK8TntBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onExploded(BlockSource &, BlockPos const&, Actor *)const; // _ZNK8TntBlock10onExplodedER11BlockSourceRK8BlockPosP5Actor

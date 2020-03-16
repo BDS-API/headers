@@ -1,14 +1,14 @@
 #pragma once
 
-#include "../bedrock/util/Tick.h"
-#include "../bedrock/actor/unmapped/ActorUniqueID.h"
-#include <unordered_map>
-#include <vector>
-#include <memory>
-#include <string>
-#include "../mce/UUID.h"
 #include "../bedrock/util/Vec3.h"
+#include <string>
+#include "../bedrock/util/Tick.h"
+#include <memory>
+#include "../bedrock/actor/unmapped/ActorUniqueID.h"
 #include <unordered_set>
+#include <vector>
+#include <unordered_map>
+#include "../mce/UUID.h"
 
 
 class Village {
@@ -58,10 +58,10 @@ public:
     void _claimUnclaimedPOIs(); // _ZN7Village19_claimUnclaimedPOIsEv
     void getBedPOICount()const; // _ZNK7Village14getBedPOICountEv
     void getPopulationSize()const; // _ZNK7Village17getPopulationSizeEv
-//  void _getDwellerMap(DwellerRole); //TODO: incomplete function definition // _ZN7Village14_getDwellerMapE11DwellerRole
+//    void _getDwellerMap(long); //TODO: incomplete function definition // _ZN7Village14_getDwellerMapE11DwellerRole
     void findRandomSpawnPos(BlockSource &, BlockPos const&, BlockPos const&); // _ZN7Village18findRandomSpawnPosER11BlockSourceRK8BlockPosS4_
     void getCenter()const; // _ZNK7Village9getCenterEv
-//  void addActorToVillage(DwellerRole, ActorUniqueID const&); //TODO: incomplete function definition // _ZN7Village17addActorToVillageE11DwellerRoleRK13ActorUniqueID
+//    void addActorToVillage(long, ActorUniqueID const&); //TODO: incomplete function definition // _ZN7Village17addActorToVillageE11DwellerRoleRK13ActorUniqueID
     void _spawnPassiveDwellers(BlockSource &, int); // _ZN7Village21_spawnPassiveDwellersER11BlockSourcei
     void _ringBells(BlockSource &, Random &)const; // _ZNK7Village10_ringBellsER11BlockSourceR6Random
     bool isVillageHeroActive()const; // _ZNK7Village19isVillageHeroActiveEv
@@ -75,12 +75,12 @@ public:
     bool canSpawnAt(BlockSource &, int, int, int, int, int, int); // _ZN7Village10canSpawnAtER11BlockSourceiiiiii
     void getApproximateRadius()const; // _ZNK7Village20getApproximateRadiusEv
     void getPOICount()const; // _ZNK7Village11getPOICountEv
-//  void getDwellerRoleCount(DwellerRole)const; //TODO: incomplete function definition // _ZNK7Village19getDwellerRoleCountE11DwellerRole
+//    void getDwellerRoleCount(long)const; //TODO: incomplete function definition // _ZNK7Village19getDwellerRoleCountE11DwellerRole
     void getIdealPopulationSize()const; // _ZNK7Village22getIdealPopulationSizeEv
     void checkNeedMoreVillagers()const; // _ZNK7Village22checkNeedMoreVillagersEv
     bool isBreedTimerOk()const; // _ZNK7Village14isBreedTimerOkEv
     void getUnclaimedPOIs()const; // _ZNK7Village16getUnclaimedPOIsEv
-//  void fetchOwnedPOI(ActorUniqueID const&, POIType); //TODO: incomplete function definition // _ZN7Village13fetchOwnedPOIERK13ActorUniqueID7POIType
+//    void fetchOwnedPOI(ActorUniqueID const&, long); //TODO: incomplete function definition // _ZN7Village13fetchOwnedPOIERK13ActorUniqueID7POIType
     void clearOwnedPOIs(); // _ZN7Village14clearOwnedPOIsEv
     void removeVillageSavedData(); // _ZN7Village22removeVillageSavedDataEv
     std::string _getUniqueVillageKey()const; // _ZNK7Village20_getUniqueVillageKeyB5cxx11Ev
@@ -88,17 +88,17 @@ public:
     bool hasPOI(std::weak_ptr<POIInstance>)const; // _ZNK7Village6hasPOIESt8weak_ptrI11POIInstanceE
     void addPOI(std::weak_ptr<POIInstance>); // _ZN7Village6addPOIESt8weak_ptrI11POIInstanceE
     void addVillager(ActorUniqueID const&); // _ZN7Village11addVillagerERK13ActorUniqueID
-//  void removeActorFromVillage(DwellerRole, ActorUniqueID const&); //TODO: incomplete function definition // _ZN7Village22removeActorFromVillageE11DwellerRoleRK13ActorUniqueID
+//    void removeActorFromVillage(long, ActorUniqueID const&); //TODO: incomplete function definition // _ZN7Village22removeActorFromVillageE11DwellerRoleRK13ActorUniqueID
     void removeVillager(ActorUniqueID const&); // _ZN7Village14removeVillagerERK13ActorUniqueID
     void removeAllInstancesofActorFromVillage(ActorUniqueID const&); // _ZN7Village36removeAllInstancesofActorFromVillageERK13ActorUniqueID
     void _clearVillagerPOIs(ActorUniqueID const&); // _ZN7Village18_clearVillagerPOIsERK13ActorUniqueID
-//  bool hasSpecificDweller(DwellerRole, ActorUniqueID const&)const; //TODO: incomplete function definition // _ZNK7Village18hasSpecificDwellerE11DwellerRoleRK13ActorUniqueID
-//  void _getDwellerMap(DwellerRole)const; //TODO: incomplete function definition // _ZNK7Village14_getDwellerMapE11DwellerRole
+//    bool hasSpecificDweller(long, ActorUniqueID const&)const; //TODO: incomplete function definition // _ZNK7Village18hasSpecificDwellerE11DwellerRoleRK13ActorUniqueID
+//    void _getDwellerMap(long)const; //TODO: incomplete function definition // _ZNK7Village14_getDwellerMapE11DwellerRole
     void _findAvailablePOI(unsigned long, Level &, Random &, ActorUniqueID); // _ZN7Village17_findAvailablePOIEmR5LevelR6Random13ActorUniqueID
     void _findPreferredPOI(std::vector<std::weak_ptr<POIInstance>> &, HashedString const&, ActorUniqueID); // _ZN7Village17_findPreferredPOIERSt6vectorISt8weak_ptrI11POIInstanceESaIS3_EERK12HashedString13ActorUniqueID
     void _findWeightedPOI(std::vector<std::weak_ptr<POIInstance>> &, Random &, ActorUniqueID); // _ZN7Village16_findWeightedPOIERSt6vectorISt8weak_ptrI11POIInstanceESaIS3_EER6Random13ActorUniqueID
-//  void _getType(POIType); //TODO: incomplete function definition // _ZN7Village8_getTypeE7POIType
-    void _findClosestDweller(Actor *, Actor *&, float &, std::unordered_map<ActorUniqueID, Tick, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<std::pair<ActorUniqueID const, Tick>>> const&)const; // _ZNK7Village19_findClosestDwellerEP5ActorRS1_RfRKSt13unordered_mapI13ActorUniqueID4TickSt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEE
+//    void _getType(long); //TODO: incomplete function definition // _ZN7Village8_getTypeE7POIType
+    void _findClosestDweller(Actor *, Actor *&, float &, std::unordered_map<ActorUniqueID, Tick, std::hash<ActorUniqueID>, long, std::allocator<std::pair<ActorUniqueID const, Tick>>> const&)const; // _ZNK7Village19_findClosestDwellerEP5ActorRS1_RfRKSt13unordered_mapI13ActorUniqueID4TickSt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEE
     void _createRaid(); // _ZN7Village11_createRaidEv
     void _sendRaidUpdateToPlayersInVillage(bool)const; // _ZNK7Village33_sendRaidUpdateToPlayersInVillageEb
     void _findSpawnableRegion(Vec3, int)const; // _ZNK7Village20_findSpawnableRegionE4Vec3i
@@ -108,9 +108,9 @@ public:
     void _findPlayerCentricSpawnPointForRaid(Vec3 &, bool)const; // _ZNK7Village35_findPlayerCentricSpawnPointForRaidER4Vec3b
     void _chooseRandomDirectionFromVillage(Random &)const; // _ZNK7Village33_chooseRandomDirectionFromVillageER6Random
     void _chooseRandomPosAtDistance(Random &, Vec3 const&, float)const; // _ZNK7Village26_chooseRandomPosAtDistanceER6RandomRK4Vec3f
-    void _spawnAndReadyRaidGroup(unsigned long, Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &); // _ZN7Village23_spawnAndReadyRaidGroupEm4Vec3hRSt13unordered_setI13ActorUniqueIDSt4hashIS2_ESt8equal_toIS2_ESaIS2_EE
-    void _spawnRaidGroup(Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &)const; // _ZNK7Village15_spawnRaidGroupE4Vec3hRSt13unordered_setI13ActorUniqueIDSt4hashIS2_ESt8equal_toIS2_ESaIS2_EE
-    void _readyRaidGroup(std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, std::equal_to<ActorUniqueID>, std::allocator<ActorUniqueID>> &); // _ZN7Village15_readyRaidGroupERSt13unordered_setI13ActorUniqueIDSt4hashIS1_ESt8equal_toIS1_ESaIS1_EE
+    void _spawnAndReadyRaidGroup(unsigned long, Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, long, std::allocator<ActorUniqueID>> &); // _ZN7Village23_spawnAndReadyRaidGroupEm4Vec3hRSt13unordered_setI13ActorUniqueIDSt4hashIS2_ESt8equal_toIS2_ESaIS2_EE
+    void _spawnRaidGroup(Vec3, unsigned char, std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, long, std::allocator<ActorUniqueID>> &)const; // _ZNK7Village15_spawnRaidGroupE4Vec3hRSt13unordered_setI13ActorUniqueIDSt4hashIS2_ESt8equal_toIS2_ESaIS2_EE
+    void _readyRaidGroup(std::unordered_set<ActorUniqueID, std::hash<ActorUniqueID>, long, std::allocator<ActorUniqueID>> &); // _ZN7Village15_readyRaidGroupERSt13unordered_setI13ActorUniqueIDSt4hashIS1_ESt8equal_toIS1_ESaIS1_EE
     void loadDataByKey(std::string const&, CompoundTag const&); // _ZN7Village13loadDataByKeyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK11CompoundTag
     void _loadVillageData(CompoundTag const&); // _ZN7Village16_loadVillageDataERK11CompoundTag
     void _loadVillagePlayerStanding(CompoundTag const&); // _ZN7Village26_loadVillagePlayerStandingERK11CompoundTag
@@ -123,7 +123,7 @@ public:
     void _saveVillagePOIs()const; // _ZNK7Village16_saveVillagePOIsEv
     void _saveVillageRaid()const; // _ZNK7Village16_saveVillageRaidEv
     void _helpLocateRaiders(Raid const&); // _ZN7Village18_helpLocateRaidersERK4Raid
-//  void _playSoundFrom(Vec3 const&, LevelSoundEvent); //TODO: incomplete function definition // _ZN7Village14_playSoundFromERK4Vec315LevelSoundEvent
+//    void _playSoundFrom(Vec3 const&, long); //TODO: incomplete function definition // _ZN7Village14_playSoundFromERK4Vec315LevelSoundEvent
     void villagerLivesHere(ActorUniqueID const&)const; // _ZNK7Village17villagerLivesHereERK13ActorUniqueID
     void onRemovedFromManager(); // _ZN7Village20onRemovedFromManagerEv
     bool canRemove()const; // _ZNK7Village9canRemoveEv
@@ -132,10 +132,10 @@ public:
     bool hasAggressors()const; // _ZNK7Village13hasAggressorsEv
     void getClosestBadStandingPlayer(Actor *); // _ZN7Village27getClosestBadStandingPlayerEP5Actor
     bool isVeryBadStanding(ActorUniqueID const&); // _ZN7Village17isVeryBadStandingERK13ActorUniqueID
-//  void getClosestPOI(POIType, BlockPos const&); //TODO: incomplete function definition // _ZN7Village13getClosestPOIE7POITypeRK8BlockPos
+//    void getClosestPOI(long, BlockPos const&); //TODO: incomplete function definition // _ZN7Village13getClosestPOIE7POITypeRK8BlockPos
     bool isVillagePOI(BlockSource const&, BlockPos const&); // _ZN7Village12isVillagePOIERK11BlockSourceRK8BlockPos
     bool isValidRegisteredPOI(BlockSource &, BlockPos const&); // _ZN7Village20isValidRegisteredPOIER11BlockSourceRK8BlockPos
-//  bool hasInvalidRole(ActorUniqueID const&, DwellerRole const&); //TODO: incomplete function definition // _ZN7Village14hasInvalidRoleERK13ActorUniqueIDRK11DwellerRole
+//    bool hasInvalidRole(ActorUniqueID const&, long const&); //TODO: incomplete function definition // _ZN7Village14hasInvalidRoleERK13ActorUniqueIDRK11DwellerRole
     void getStanding(ActorUniqueID const&); // _ZN7Village11getStandingERK13ActorUniqueID
     void modifyStanding(ActorUniqueID const&, int); // _ZN7Village14modifyStandingERK13ActorUniqueIDi
     bool isGoodStanding(ActorUniqueID const&); // _ZN7Village14isGoodStandingERK13ActorUniqueID
@@ -143,7 +143,7 @@ public:
     void rewardAllPlayers(int); // _ZN7Village16rewardAllPlayersEi
     void resetNoBreedTimer(); // _ZN7Village17resetNoBreedTimerEv
     void startVillageHeroTimer(); // _ZN7Village21startVillageHeroTimerEv
-//  void resetDwellerTimer(DwellerRole, ActorUniqueID const&); //TODO: incomplete function definition // _ZN7Village17resetDwellerTimerE11DwellerRoleRK13ActorUniqueID
+//    void resetDwellerTimer(long, ActorUniqueID const&); //TODO: incomplete function definition // _ZN7Village17resetDwellerTimerE11DwellerRoleRK13ActorUniqueID
     void triggerRaid(); // _ZN7Village11triggerRaidEv
     bool hasRaid()const; // _ZNK7Village7hasRaidEv
     void getRaid()const; // _ZNK7Village7getRaidEv

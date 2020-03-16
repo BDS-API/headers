@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
 #include "../bedrock/util/Vec2.h"
+#include "../bedrock/util/Vec3.h"
 
 
 class ParticlesTeleportTrailEvent {

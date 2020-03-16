@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class ShowStoreOfferPacket : Packet {
+class ShowStoreOfferPacket : public Packet {
 
 public:
-    ~ShowStoreOfferPacket(); // _ZN20ShowStoreOfferPacketD2Ev
+    virtual ~ShowStoreOfferPacket(); // _ZN20ShowStoreOfferPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK20ShowStoreOfferPacket5getIdEv
     virtual std::string getName()const; // _ZNK20ShowStoreOfferPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK20ShowStoreOfferPacket5writeER12BinaryStream

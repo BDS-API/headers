@@ -3,12 +3,13 @@
 #include "Zombie.h"
 
 
-class PigZombie : Zombie {
+class PigZombie : public Zombie {
 
 public:
     static long SPEED_MODIFIER_ATTACK_UUID;
 
-    ~PigZombie(); // _ZN9PigZombieD2Ev
+    virtual ~PigZombie(); // _ZN9PigZombieD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN9PigZombie10normalTickEv
     virtual void findAttackTarget(); // _ZN9PigZombie16findAttackTargetEv
     virtual void _hurt(ActorDamageSource const&, int, bool, bool); // _ZN9PigZombie5_hurtERK17ActorDamageSourceibb

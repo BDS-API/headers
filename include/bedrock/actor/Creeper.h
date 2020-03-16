@@ -3,10 +3,11 @@
 #include "Monster.h"
 
 
-class Creeper : Monster {
+class Creeper : public Monster {
 
 public:
-    ~Creeper(); // _ZN7CreeperD2Ev
+    virtual ~Creeper(); // _ZN7CreeperD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN7Creeper10normalTickEv
     virtual void die(ActorDamageSource const&); // _ZN7Creeper3dieERK17ActorDamageSource
     virtual void _onSizeUpdated(); // _ZN7Creeper14_onSizeUpdatedEv

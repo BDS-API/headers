@@ -3,10 +3,11 @@
 #include "FillingContainer.h"
 
 
-class Inventory : FillingContainer {
+class Inventory : public FillingContainer {
 
 public:
-    ~Inventory(); // _ZN9InventoryD2Ev
+    virtual ~Inventory(); // _ZN9InventoryD2Ev
+    virtual void __fake_function0(); // fake
     virtual void init(); // _ZN9Inventory4initEv
     virtual void add(ItemStack &); // _ZN9Inventory3addER9ItemStack
     virtual bool canAdd(ItemStack const&)const; // _ZNK9Inventory6canAddERK9ItemStack

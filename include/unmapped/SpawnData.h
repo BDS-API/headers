@@ -6,7 +6,8 @@
 class SpawnData {
 
 public:
-    ~SpawnData(); // _ZN9SpawnDataD2Ev
+    virtual ~SpawnData(); // _ZN9SpawnDataD2Ev
+    virtual void __fake_function0(); // fake
     SpawnData(); // _ZN9SpawnDataC2Ev
     SpawnData(CompoundTag const&); // _ZN9SpawnDataC2ERK11CompoundTag
     SpawnData(int, ActorDefinitionIdentifier); // _ZN9SpawnDataC2Ei25ActorDefinitionIdentifier

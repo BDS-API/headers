@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <memory>
-#include "Recipe.h"
+#include <string>
 #include <vector>
+#include "Recipe.h"
 
 
-class ShapelessRecipe : Recipe {
+class ShapelessRecipe : public Recipe {
 
 public:
-    ~ShapelessRecipe(); // _ZN15ShapelessRecipeD2Ev
+    virtual ~ShapelessRecipe(); // _ZN15ShapelessRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void assemble(CraftingContainer &)const; // _ZNK15ShapelessRecipe8assembleER17CraftingContainer
     virtual void getCraftingSize()const; // _ZNK15ShapelessRecipe15getCraftingSizeEv
     virtual void getIngredient(int, int)const; // _ZNK15ShapelessRecipe13getIngredientEii

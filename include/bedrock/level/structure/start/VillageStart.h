@@ -3,10 +3,11 @@
 #include "StructureStart.h"
 
 
-class VillageStart : StructureStart {
+class VillageStart : public StructureStart {
 
 public:
-    ~VillageStart(); // _ZN12VillageStartD2Ev
+    virtual ~VillageStart(); // _ZN12VillageStartD2Ev
+    virtual void __fake_function0(); // fake
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN12VillageStart11postProcessEP11BlockSourceR6RandomRK11BoundingBox
     virtual bool isValid()const; // _ZNK12VillageStart7isValidEv
     virtual void getType()const; // _ZNK12VillageStart7getTypeEv

@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class MoveActorAbsolutePacket : Packet {
+class MoveActorAbsolutePacket : public Packet {
 
 public:
-    ~MoveActorAbsolutePacket(); // _ZN23MoveActorAbsolutePacketD2Ev
+    virtual ~MoveActorAbsolutePacket(); // _ZN23MoveActorAbsolutePacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK23MoveActorAbsolutePacket5getIdEv
     virtual std::string getName()const; // _ZNK23MoveActorAbsolutePacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK23MoveActorAbsolutePacket5writeER12BinaryStream

@@ -5,10 +5,11 @@
 #include "Item.h"
 
 
-class HoeItem : Item {
+class HoeItem : public Item {
 
 public:
-    ~HoeItem(); // _ZN7HoeItemD2Ev
+    virtual ~HoeItem(); // _ZN7HoeItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isHandEquipped()const; // _ZNK7HoeItem14isHandEquippedEv
     virtual void getEnchantSlot()const; // _ZNK7HoeItem14getEnchantSlotEv
     virtual void hurtEnemy(ItemStack &, Mob *, Mob *)const; // _ZNK7HoeItem9hurtEnemyER9ItemStackP3MobS3_

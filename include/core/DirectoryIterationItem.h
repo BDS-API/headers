@@ -9,7 +9,7 @@ namespace Core {
     class DirectoryIterationItem {
 
     public:
-//      DirectoryIterationItem(Core::DirectoryIterationFlags); //TODO: incomplete function definition // _ZN4Core22DirectoryIterationItemC2ENS_23DirectoryIterationFlagsE
+//        DirectoryIterationItem(long); //TODO: incomplete function definition // _ZN4Core22DirectoryIterationItemC2ENS_23DirectoryIterationFlagsE
         void getFileSize()const; // _ZNK4Core22DirectoryIterationItem11getFileSizeEv
         void setFileSize(unsigned long); // _ZN4Core22DirectoryIterationItem11setFileSizeEm
         void getFileSizeAllocationOnDisk()const; // _ZNK4Core22DirectoryIterationItem27getFileSizeAllocationOnDiskEv
@@ -19,7 +19,7 @@ namespace Core {
         void getName()const; // _ZNK4Core22DirectoryIterationItem7getNameEv
         void setFullPathName(Core::Path); // _ZN4Core22DirectoryIterationItem15setFullPathNameENS_4PathE
         void getType()const; // _ZNK4Core22DirectoryIterationItem7getTypeEv
-//      void setType(Core::FileType); //TODO: incomplete function definition // _ZN4Core22DirectoryIterationItem7setTypeENS_8FileTypeE
+//        void setType(long); //TODO: incomplete function definition // _ZN4Core22DirectoryIterationItem7setTypeENS_8FileTypeE
         bool isDirectory()const; // _ZNK4Core22DirectoryIterationItem11isDirectoryEv
         bool isFile()const; // _ZNK4Core22DirectoryIterationItem6isFileEv
         void getCreateTime()const; // _ZNK4Core22DirectoryIterationItem13getCreateTimeEv

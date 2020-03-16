@@ -1,13 +1,14 @@
 #pragma once
 
-#include "CoralFan.h"
 #include <string>
+#include "CoralFan.h"
 
 
-class CoralFanHang : CoralFan {
+class CoralFanHang : public CoralFan {
 
 public:
-    ~CoralFanHang(); // _ZN12CoralFanHangD2Ev
+    virtual ~CoralFanHang(); // _ZN12CoralFanHangD2Ev
+    virtual void __fake_function0(); // fake
     virtual void randomlyModifyPosition(BlockPos const&)const; // _ZNK12CoralFanHang22randomlyModifyPositionERK8BlockPos
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK12CoralFanHang7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK12CoralFanHang7onPlaceER11BlockSourceRK8BlockPos

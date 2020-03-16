@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class ChargeHeldItemGoal : Goal {
+class ChargeHeldItemGoal : public Goal {
 
 public:
-    ~ChargeHeldItemGoal(); // _ZN18ChargeHeldItemGoalD2Ev
+    virtual ~ChargeHeldItemGoal(); // _ZN18ChargeHeldItemGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN18ChargeHeldItemGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN18ChargeHeldItemGoal16canContinueToUseEv
     virtual void start(); // _ZN18ChargeHeldItemGoal5startEv

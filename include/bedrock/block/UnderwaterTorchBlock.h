@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "TorchBlock.h"
+#include <string>
 
 
-class UnderwaterTorchBlock : TorchBlock {
+class UnderwaterTorchBlock : public TorchBlock {
 
 public:
-    ~UnderwaterTorchBlock(); // _ZN20UnderwaterTorchBlockD2Ev
+    virtual ~UnderwaterTorchBlock(); // _ZN20UnderwaterTorchBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isWaterBlocking()const; // _ZNK20UnderwaterTorchBlock15isWaterBlockingEv
     virtual bool canContainLiquid()const; // _ZNK20UnderwaterTorchBlock16canContainLiquidEv
     virtual bool canBeUsedInCommands(bool, BaseGameVersion const&)const; // _ZNK20UnderwaterTorchBlock19canBeUsedInCommandsEbRK15BaseGameVersion

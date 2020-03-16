@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class DragonHoldingPatternGoal : Goal {
+class DragonHoldingPatternGoal : public Goal {
 
 public:
-    ~DragonHoldingPatternGoal(); // _ZN24DragonHoldingPatternGoalD2Ev
+    virtual ~DragonHoldingPatternGoal(); // _ZN24DragonHoldingPatternGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN24DragonHoldingPatternGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN24DragonHoldingPatternGoal16canContinueToUseEv
     virtual void start(); // _ZN24DragonHoldingPatternGoal5startEv

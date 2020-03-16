@@ -1,14 +1,14 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include "../../json/Value.h"
+#include <string>
 
 
 class BreedableDefinition {
 
 public:
-    void buildSchema(std::shared_ptr<JsonUtil::JsonSchemaObjectNode<JsonUtil::EmptyClass, BreedableDefinition>> &); // _ZN19BreedableDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
+    void buildSchema(std::shared_ptr<long> &); // _ZN19BreedableDefinition11buildSchemaERSt10shared_ptrIN8JsonUtil20JsonSchemaObjectNodeINS1_10EmptyClassES_EEE
     void addBreedItemByName(std::string const&); // _ZN19BreedableDefinition18addBreedItemByNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     void addEnvironmentRequirement(EnvironmentRequirement const&); // _ZN19BreedableDefinition25addEnvironmentRequirementERK22EnvironmentRequirement
     void addBreedableType(BreedableType const&); // _ZN19BreedableDefinition16addBreedableTypeERK13BreedableType

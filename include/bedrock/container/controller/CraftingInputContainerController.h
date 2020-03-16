@@ -4,10 +4,11 @@
 #include "CraftingContainerController.h"
 
 
-class CraftingInputContainerController : CraftingContainerController {
+class CraftingInputContainerController : public CraftingContainerController {
 
 public:
-    ~CraftingInputContainerController(); // _ZN32CraftingInputContainerControllerD2Ev
+    virtual ~CraftingInputContainerController(); // _ZN32CraftingInputContainerControllerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getBackgroundStyle(int)const; // _ZNK32CraftingInputContainerController18getBackgroundStyleEi
     virtual void onRecipeSelected(Recipe const*, bool, bool); // _ZN32CraftingInputContainerController16onRecipeSelectedEPK6Recipebb
     virtual void getRecipeItem(int)const; // _ZNK32CraftingInputContainerController13getRecipeItemEi

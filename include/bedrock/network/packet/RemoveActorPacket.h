@@ -5,10 +5,11 @@
 #include "Packet.h"
 
 
-class RemoveActorPacket : Packet {
+class RemoveActorPacket : public Packet {
 
 public:
-    ~RemoveActorPacket(); // _ZN17RemoveActorPacketD2Ev
+    virtual ~RemoveActorPacket(); // _ZN17RemoveActorPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK17RemoveActorPacket5getIdEv
     virtual std::string getName()const; // _ZNK17RemoveActorPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK17RemoveActorPacket5writeER12BinaryStream

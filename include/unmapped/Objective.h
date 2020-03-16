@@ -15,9 +15,9 @@ public:
     void getCriteria()const; // _ZNK9Objective11getCriteriaEv
     void getPlayers()const; // _ZNK9Objective10getPlayersEv
     void getScores()const; // _ZNK9Objective9getScoresEv
-//  void getPlayerScoreRef(ScoreboardId const&, ScoreInfoRef &); //TODO: incomplete function definition // _ZN9Objective17getPlayerScoreRefERK12ScoreboardIdR12ScoreInfoRef
+//    void getPlayerScoreRef(ScoreboardId const&, long &); //TODO: incomplete function definition // _ZN9Objective17getPlayerScoreRefERK12ScoreboardIdR12ScoreInfoRef
     bool hasScores()const; // _ZNK9Objective9hasScoresEv
-//  void _modifyPlayerScore(int &, ScoreboardId const&, int, PlayerScoreSetFunction); //TODO: incomplete function definition // _ZN9Objective18_modifyPlayerScoreERiRK12ScoreboardIdi22PlayerScoreSetFunction
+//    void _modifyPlayerScore(int &, ScoreboardId const&, int, long); //TODO: incomplete function definition // _ZN9Objective18_modifyPlayerScoreERiRK12ScoreboardIdi22PlayerScoreSetFunction
     void _loadPlayerScore(ScoreboardIdentityRef &, int); // _ZN9Objective16_loadPlayerScoreER21ScoreboardIdentityRefi
     bool hasScore(ScoreboardId const&)const; // _ZNK9Objective8hasScoreERK12ScoreboardId
     void _resetPlayer(ScoreboardId const&); // _ZN9Objective12_resetPlayerERK12ScoreboardId

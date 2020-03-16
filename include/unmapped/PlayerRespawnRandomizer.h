@@ -6,7 +6,7 @@ class PlayerRespawnRandomizer {
 
 public:
     PlayerRespawnRandomizer(); // _ZN23PlayerRespawnRandomizerC2Ev
-//  void init(unsigned int, GeneratorType const&); //TODO: incomplete function definition // _ZN23PlayerRespawnRandomizer4initEjRK13GeneratorType
+//    void init(unsigned int, long const&); //TODO: incomplete function definition // _ZN23PlayerRespawnRandomizer4initEjRK13GeneratorType
     void performPrimaryJump(Vec3 const&, bool); // _ZN23PlayerRespawnRandomizer18performPrimaryJumpERK4Vec3b
     void resetSecondary(); // _ZN23PlayerRespawnRandomizer14resetSecondaryEv
     void getRandomizedPosition(Vec3 &); // _ZN23PlayerRespawnRandomizer21getRandomizedPositionER4Vec3

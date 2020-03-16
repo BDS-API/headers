@@ -4,12 +4,13 @@
 #include "MultiRecipe.h"
 
 
-class BookCloningRecipe : MultiRecipe {
+class BookCloningRecipe : public MultiRecipe {
 
 public:
     static long ID;
 
-    ~BookCloningRecipe(); // _ZN17BookCloningRecipeD2Ev
+    virtual ~BookCloningRecipe(); // _ZN17BookCloningRecipeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void assemble(CraftingContainer &)const; // _ZNK17BookCloningRecipe8assembleER17CraftingContainer
     virtual void getCraftingSize()const; // _ZNK17BookCloningRecipe15getCraftingSizeEv
     virtual void getIngredient(int, int)const; // _ZNK17BookCloningRecipe13getIngredientEii

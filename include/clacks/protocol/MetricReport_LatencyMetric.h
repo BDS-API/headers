@@ -10,21 +10,22 @@ namespace com {
 
             namespace protocol {
 
-                class MetricReport_LatencyMetric /*google::protobuf::Message*/ { //TODO: incomplete class definition
+                class MetricReport_LatencyMetric /*public google::protobuf::Message*/ { //TODO: incomplete class definition
 
                 public:
-                    ~MetricReport_LatencyMetric(); // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetricD2Ev
+                    virtual ~MetricReport_LatencyMetric(); // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetricD2Ev
+                    virtual void __fake_function0(); // fake
                     virtual void New()const; // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric3NewEv
-//                  virtual void New(google::protobuf::Arena *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric3NewEPN6google8protobuf5ArenaE
+                    virtual void New__incomplete1(long *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric3NewEPN6google8protobuf5ArenaE
                     virtual void Clear(); // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetric5ClearEv
                     virtual bool IsInitialized()const; // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric13IsInitializedEv
-//                  virtual void MergePartialFromCodedStream(google::protobuf::io::CodedInputStream *); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetric27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE
+                    virtual void MergePartialFromCodedStream__incomplete0(long *); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetric27MergePartialFromCodedStreamEPN6google8protobuf2io16CodedInputStreamE
                     virtual void ByteSizeLong()const; // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric12ByteSizeLongEv
-//                  virtual void SerializeWithCachedSizes(google::protobuf::io::CodedOutputStream *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE
+                    virtual void SerializeWithCachedSizes__incomplete0(long *)const; //TODO: incomplete function definition // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric24SerializeWithCachedSizesEPN6google8protobuf2io17CodedOutputStreamE
                     virtual void GetCachedSize()const; // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric13GetCachedSizeEv
                     virtual void InternalSerializeWithCachedSizesToArray(bool, unsigned char *)const; // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric39InternalSerializeWithCachedSizesToArrayEbPh
-//                  virtual void CopyFrom(google::protobuf::Message const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetric8CopyFromERKN6google8protobuf7MessageE
-//                  virtual void MergeFrom(google::protobuf::Message const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetric9MergeFromERKN6google8protobuf7MessageE
+                    virtual void CopyFrom__incomplete1(long const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetric8CopyFromERKN6google8protobuf7MessageE
+                    virtual void MergeFrom__incomplete1(long const&); //TODO: incomplete function definition // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetric9MergeFromERKN6google8protobuf7MessageE
                     virtual void SetCachedSize(int)const; // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric13SetCachedSizeEi
                     virtual void GetMetadata()const; // _ZNK3com6mojang6clacks8protocol26MetricReport_LatencyMetric11GetMetadataEv
                     void set_latencyinns(long); // _ZN3com6mojang6clacks8protocol26MetricReport_LatencyMetric15set_latencyinnsEl

@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "../Command.h"
+#include <string>
 #include <vector>
 
 
-class TickingAreaCommand : Command {
+class TickingAreaCommand : public Command {
 
 public:
-    ~TickingAreaCommand(); // _ZN18TickingAreaCommandD2Ev
+    virtual ~TickingAreaCommand(); // _ZN18TickingAreaCommandD2Ev
+    virtual void __fake_function0(); // fake
     virtual void execute(CommandOrigin const&, CommandOutput &)const; // _ZNK18TickingAreaCommand7executeERK13CommandOriginR13CommandOutput
     void setup(CommandRegistry &); // _ZN18TickingAreaCommand5setupER15CommandRegistry
     TickingAreaCommand(); // _ZN18TickingAreaCommandC2Ev

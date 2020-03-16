@@ -3,10 +3,11 @@
 #include "SimpleBoolFilterTest.h"
 
 
-class ActorInVillageTest : SimpleBoolFilterTest {
+class ActorInVillageTest : public SimpleBoolFilterTest {
 
 public:
-    ~ActorInVillageTest(); // _ZN18ActorInVillageTestD2Ev
+    virtual ~ActorInVillageTest(); // _ZN18ActorInVillageTestD2Ev
+    virtual void __fake_function0(); // fake
     virtual void evaluate(FilterContext const&)const; // _ZNK18ActorInVillageTest8evaluateERK13FilterContext
     virtual void getName()const; // _ZNK18ActorInVillageTest7getNameEv
     ActorInVillageTest(); // _ZN18ActorInVillageTestC2Ev

@@ -2,9 +2,10 @@
 
 
 
-class ScriptContainerComponentBase /*ScriptTemplateFactory<ScriptServerContext>::Component*/ { //TODO: incomplete class definition
+class ScriptContainerComponentBase /*public ScriptTemplateFactory<ScriptServerContext>::Component*/ { //TODO: incomplete class definition
 
 public:
-    ~ScriptContainerComponentBase(); // _ZN28ScriptContainerComponentBaseD2Ev
+    virtual ~ScriptContainerComponentBase(); // _ZN28ScriptContainerComponentBaseD2Ev
+    virtual void __fake_function0(); // fake
     ScriptContainerComponentBase(); // _ZN28ScriptContainerComponentBaseC2Ev
 };

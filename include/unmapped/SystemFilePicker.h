@@ -6,10 +6,11 @@
 #include <vector>
 
 
-class SystemFilePicker : IFilePicker, std::enable_shared_from_this<SystemFilePicker> {
+class SystemFilePicker : public IFilePicker, public std::enable_shared_from_this<SystemFilePicker> {
 
 public:
-    ~SystemFilePicker(); // _ZN16SystemFilePickerD2Ev
+    virtual ~SystemFilePicker(); // _ZN16SystemFilePickerD2Ev
+    virtual void __fake_function0(); // fake
     virtual void initFilePick(Core::Path const&, std::function<void (bool, FileInfo)>); // _ZN16SystemFilePicker12initFilePickERKN4Core4PathESt8functionIFvb8FileInfoEE
     virtual void readBytes(FileInfo const&, unsigned long, unsigned long, std::vector<unsigned char> &); // _ZN16SystemFilePicker9readBytesERK8FileInfommRSt6vectorIhSaIhEE
     virtual void writeBytes(FileInfo const&, unsigned long, unsigned long, std::vector<unsigned char> const&); // _ZN16SystemFilePicker10writeBytesERK8FileInfommRKSt6vectorIhSaIhEE

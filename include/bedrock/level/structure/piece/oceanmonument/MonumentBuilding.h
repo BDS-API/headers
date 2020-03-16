@@ -3,10 +3,11 @@
 #include "../OceanMonumentPiece.h"
 
 
-class MonumentBuilding : OceanMonumentPiece {
+class MonumentBuilding : public OceanMonumentPiece {
 
 public:
-    ~MonumentBuilding(); // _ZN16MonumentBuildingD2Ev
+    virtual ~MonumentBuilding(); // _ZN16MonumentBuildingD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getType()const; // _ZNK16MonumentBuilding7getTypeEv
     virtual void postProcess(BlockSource *, Random &, BoundingBox const&); // _ZN16MonumentBuilding11postProcessEP11BlockSourceR6RandomRK11BoundingBox
     virtual void postProcessMobsAt(BlockSource *, Random &, BoundingBox const&); // _ZN16MonumentBuilding17postProcessMobsAtEP11BlockSourceR6RandomRK11BoundingBox

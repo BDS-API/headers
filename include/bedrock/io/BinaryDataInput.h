@@ -1,13 +1,14 @@
 #pragma once
 
-#include <string>
 #include "BytesDataInput.h"
+#include <string>
 
 
-class BinaryDataInput : BytesDataInput {
+class BinaryDataInput : public BytesDataInput {
 
 public:
-    ~BinaryDataInput(); // _ZN15BinaryDataInputD2Ev
+    virtual ~BinaryDataInput(); // _ZN15BinaryDataInputD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string readString(); // _ZN15BinaryDataInput10readStringB5cxx11Ev
     virtual std::string readLongString(); // _ZN15BinaryDataInput14readLongStringB5cxx11Ev
     virtual void readFloat(); // _ZN15BinaryDataInput9readFloatEv

@@ -1,16 +1,17 @@
 #pragma once
 
-#include <vector>
+#include <string>
 #include <memory>
 #include "IFileChunkUploader.h"
-#include <string>
+#include <vector>
 #include <functional>
 
 
-class ServerFileChunkUploader : IFileChunkUploader, std::enable_shared_from_this<ServerFileChunkUploader> {
+class ServerFileChunkUploader : public IFileChunkUploader, public std::enable_shared_from_this<ServerFileChunkUploader> {
 
 public:
-    ~ServerFileChunkUploader(); // _ZN23ServerFileChunkUploaderD2Ev
+    virtual ~ServerFileChunkUploader(); // _ZN23ServerFileChunkUploaderD2Ev
+    virtual void __fake_function0(); // fake
     virtual void update(); // _ZN23ServerFileChunkUploader6updateEv
     virtual void initFileUploader(std::string const&, FileInfo const&, int, Json::Value const&, std::function<void (bool)>); // _ZN23ServerFileChunkUploader16initFileUploaderERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERK8FileInfoiRKN4Json5ValueESt8functionIFvbEE
     virtual void getServerMissingChunks(FileInfo const&, std::function<void (std::vector<FileChunkInfo>)>)const; // _ZNK23ServerFileChunkUploader22getServerMissingChunksERK8FileInfoSt8functionIFvSt6vectorI13FileChunkInfoSaIS5_EEEE

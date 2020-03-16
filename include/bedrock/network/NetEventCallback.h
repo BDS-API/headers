@@ -1,15 +1,16 @@
 #pragma once
 
-#include <string>
 #include <memory>
 #include <functional>
+#include <string>
 
 
 class NetEventCallback {
 
 public:
     virtual void onPlayerReady(Player &); // _ZN16NetEventCallback13onPlayerReadyER6Player
-    ~NetEventCallback(); // _ZN16NetEventCallbackD2Ev
+    virtual ~NetEventCallback(); // _ZN16NetEventCallbackD2Ev
+    virtual void __fake_function0(); // fake
     virtual void onConnect(NetworkIdentifier const&); // _ZN16NetEventCallback9onConnectERK17NetworkIdentifier
     virtual void onUnableToConnect(); // _ZN16NetEventCallback17onUnableToConnectEv
     virtual void onTick(); // _ZN16NetEventCallback6onTickEv
@@ -35,7 +36,7 @@ public:
     virtual void handle(NetworkIdentifier const&, TakeItemActorPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK19TakeItemActorPacket
     virtual void handle(NetworkIdentifier const&, AddActorPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK14AddActorPacket
     virtual void handle(NetworkIdentifier const&, AddEntityPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK15AddEntityPacket
-//  virtual void handle(NetworkIdentifier const&, AddMobPacket const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK12AddMobPacket
+    virtual void handle__incomplete147(NetworkIdentifier const&, long const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK12AddMobPacket
     virtual void handle(NetworkIdentifier const&, AddPlayerPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK15AddPlayerPacket
     virtual void handle(NetworkIdentifier const&, RemoveActorPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK17RemoveActorPacket
     virtual void handle(NetworkIdentifier const&, RemoveEntityPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK18RemoveEntityPacket
@@ -110,7 +111,7 @@ public:
     virtual void handle(NetworkIdentifier const&, CommandBlockUpdatePacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK24CommandBlockUpdatePacket
     virtual void handle(NetworkIdentifier const&, CompletedUsingItemPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK24CompletedUsingItemPacket
     virtual void handle(NetworkIdentifier const&, CameraPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK12CameraPacket
-//  virtual void handle(NetworkIdentifier const&, InventoryActionPacket const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK21InventoryActionPacket
+    virtual void handle__incomplete147(NetworkIdentifier const&, long const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK21InventoryActionPacket
     virtual void handle(NetworkIdentifier const&, GameRulesChangedPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK22GameRulesChangedPacket
     virtual void handle(NetworkIdentifier const&, ResourcePackDataInfoPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK26ResourcePackDataInfoPacket
     virtual void handle(NetworkIdentifier const&, ResourcePackChunkDataPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK27ResourcePackChunkDataPacket
@@ -147,12 +148,12 @@ public:
     virtual void handle(NetworkIdentifier const&, ShowCreditsPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK17ShowCreditsPacket
     virtual void handle(NetworkIdentifier const&, PlayerSkinPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK16PlayerSkinPacket
     virtual void handle(NetworkIdentifier const&, SetLastHurtByPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK19SetLastHurtByPacket
-//  virtual void handle(NetworkIdentifier const&, BookAddPagePacket const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK17BookAddPagePacket
-//  virtual void handle(NetworkIdentifier const&, BookDeletePagePacket const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK20BookDeletePagePacket
+    virtual void handle__incomplete147(NetworkIdentifier const&, long const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK17BookAddPagePacket
+    virtual void handle__incomplete147(NetworkIdentifier const&, long const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK20BookDeletePagePacket
     virtual void handle(NetworkIdentifier const&, LecternUpdatePacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK19LecternUpdatePacket
     virtual void handle(NetworkIdentifier const&, BookEditPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK14BookEditPacket
-//  virtual void handle(NetworkIdentifier const&, BookSignPacket const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK14BookSignPacket
-//  virtual void handle(NetworkIdentifier const&, BookSwapPagesPacket const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK19BookSwapPagesPacket
+    virtual void handle__incomplete147(NetworkIdentifier const&, long const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK14BookSignPacket
+    virtual void handle__incomplete147(NetworkIdentifier const&, long const&); //TODO: incomplete function definition // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK19BookSwapPagesPacket
     virtual void handle(NetworkIdentifier const&, NpcRequestPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK16NpcRequestPacket
     virtual void handle(NetworkIdentifier const&, PhotoTransferPacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK19PhotoTransferPacket
     virtual void handle(NetworkIdentifier const&, LabTablePacket const&); // _ZN16NetEventCallback6handleERK17NetworkIdentifierRK14LabTablePacket

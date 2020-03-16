@@ -6,8 +6,9 @@
 class LabTableReaction {
 
 public:
-    ~LabTableReaction(); // _ZN16LabTableReactionD2Ev
-//  LabTableReaction(LabTableReactionType, BlockPos const&, bool, int, int); //TODO: incomplete function definition // _ZN16LabTableReactionC2E20LabTableReactionTypeRK8BlockPosbii
+    virtual ~LabTableReaction(); // _ZN16LabTableReactionD2Ev
+    virtual void __fake_function0(); // fake
+//    LabTableReaction(long, BlockPos const&, bool, int, int); //TODO: incomplete function definition // _ZN16LabTableReactionC2E20LabTableReactionTypeRK8BlockPosbii
     void _setLifetime(int, int); // _ZN16LabTableReaction12_setLifetimeEii
     void addResultItem(ItemStack const&); // _ZN16LabTableReaction13addResultItemERK9ItemStack
     void addComponent(std::unique_ptr<LabTableReactionComponent>); // _ZN16LabTableReaction12addComponentESt10unique_ptrI25LabTableReactionComponentSt14default_deleteIS1_EE
@@ -23,5 +24,5 @@ public:
     void _getPos()const; // _ZNK16LabTableReaction7_getPosEv
     void _getRandom(); // _ZN16LabTableReaction10_getRandomEv
     void _secsToTicks(float); // _ZN16LabTableReaction12_secsToTicksEf
-//  void createReaction(LabTableReactionType, BlockPos const&, bool); //TODO: incomplete function definition // _ZN16LabTableReaction14createReactionE20LabTableReactionTypeRK8BlockPosb
+//    void createReaction(long, BlockPos const&, bool); //TODO: incomplete function definition // _ZN16LabTableReaction14createReactionE20LabTableReactionTypeRK8BlockPosb
 };

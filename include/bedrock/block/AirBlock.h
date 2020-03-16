@@ -5,10 +5,11 @@
 #include <vector>
 
 
-class AirBlock : BlockLegacy {
+class AirBlock : public BlockLegacy {
 
 public:
-    ~AirBlock(); // _ZN8AirBlockD2Ev
+    virtual ~AirBlock(); // _ZN8AirBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK8AirBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getCollisionShape(AABB &, Block const&, BlockSource &, BlockPos const&, Actor *)const; // _ZNK8AirBlock17getCollisionShapeER4AABBRK5BlockR11BlockSourceRK8BlockPosP5Actor
     virtual bool isObstructingChests(BlockSource &, BlockPos const&)const; // _ZNK8AirBlock19isObstructingChestsER11BlockSourceRK8BlockPos

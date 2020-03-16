@@ -4,10 +4,11 @@
 #include "CommandOrigin.h"
 
 
-class BlockCommandOrigin : CommandOrigin {
+class BlockCommandOrigin : public CommandOrigin {
 
 public:
-    ~BlockCommandOrigin(); // _ZN18BlockCommandOriginD2Ev
+    virtual ~BlockCommandOrigin(); // _ZN18BlockCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getRequestId()const; // _ZNK18BlockCommandOrigin12getRequestIdB5cxx11Ev
     virtual std::string getName()const; // _ZNK18BlockCommandOrigin7getNameB5cxx11Ev
     virtual void getBlockPosition()const; // _ZNK18BlockCommandOrigin16getBlockPositionEv

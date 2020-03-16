@@ -1,11 +1,11 @@
 #pragma once
 
-#include "BlockActor.h"
 #include "../../actor/unmapped/ActorDefinitionIdentifier.h"
 #include "../../nbt/CompoundTag.h"
+#include "BlockActor.h"
 
 
-class BeehiveBlockActor : BlockActor {
+class BeehiveBlockActor : public BlockActor {
 
 public:
     class Occupant;
@@ -14,7 +14,8 @@ public:
     static long MAX_OCCUPANCY;
     static std::string TypeString;
 
-    ~BeehiveBlockActor(); // _ZN17BeehiveBlockActorD2Ev
+    virtual ~BeehiveBlockActor(); // _ZN17BeehiveBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN17BeehiveBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK17BeehiveBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN17BeehiveBlockActor4tickER11BlockSource

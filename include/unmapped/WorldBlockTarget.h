@@ -3,10 +3,11 @@
 #include "IBlockPlacementTarget.h"
 
 
-class WorldBlockTarget : IBlockPlacementTarget {
+class WorldBlockTarget : public IBlockPlacementTarget {
 
 public:
-    ~WorldBlockTarget(); // _ZN16WorldBlockTargetD2Ev
+    virtual ~WorldBlockTarget(); // _ZN16WorldBlockTargetD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getBlock(BlockPos const&)const; // _ZNK16WorldBlockTarget8getBlockERK8BlockPos
     virtual void setBlock(BlockPos const&, Block const&, int); // _ZN16WorldBlockTarget8setBlockERK8BlockPosRK5Blocki
     virtual void apply()const; // _ZNK16WorldBlockTarget5applyEv

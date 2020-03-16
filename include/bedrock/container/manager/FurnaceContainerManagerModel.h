@@ -1,21 +1,22 @@
 #pragma once
 
-#include <string>
 #include "ContainerManagerModel.h"
+#include <string>
 
 
-class FurnaceContainerManagerModel : ContainerManagerModel {
+class FurnaceContainerManagerModel : public ContainerManagerModel {
 
 public:
-    ~FurnaceContainerManagerModel(); // _ZN28FurnaceContainerManagerModelD2Ev
+    virtual ~FurnaceContainerManagerModel(); // _ZN28FurnaceContainerManagerModelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getItems(); // _ZN28FurnaceContainerManagerModel8getItemsEv
     virtual void setSlot(int, ContainerItemStack const&, bool); // _ZN28FurnaceContainerManagerModel7setSlotEiRK18ContainerItemStackb
     virtual void getSlot(int); // _ZN28FurnaceContainerManagerModel7getSlotEi
     virtual void setData(int, int); // _ZN28FurnaceContainerManagerModel7setDataEii
     virtual void broadcastChanges(); // _ZN28FurnaceContainerManagerModel16broadcastChangesEv
     virtual void init(); // _ZN28FurnaceContainerManagerModel4initEv
-//  FurnaceContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN28FurnaceContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
-//  FurnaceContainerManagerModel(Util::HashString const&, ContainerType, BlockActorType, ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN28FurnaceContainerManagerModelC2ERKN4Util10HashStringE13ContainerType14BlockActorType11ContainerIDR6PlayerRK8BlockPos
+//    FurnaceContainerManagerModel(long, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN28FurnaceContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
+//    FurnaceContainerManagerModel(Util::HashString const&, long, long, long, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN28FurnaceContainerManagerModelC2ERKN4Util10HashStringE13ContainerType14BlockActorType11ContainerIDR6PlayerRK8BlockPos
     void _getIngredientNameFromType(Util::HashString const&); // _ZN28FurnaceContainerManagerModel26_getIngredientNameFromTypeERKN4Util10HashStringE
     void _getFurnaceEntity(); // _ZN28FurnaceContainerManagerModel17_getFurnaceEntityEv
     void _updateResultSlotInfo(); // _ZN28FurnaceContainerManagerModel21_updateResultSlotInfoEv

@@ -1,14 +1,15 @@
 #pragma once
 
-#include <string>
 #include "BaseMoveToBlockGoal.h"
 #include "../../util/BlockPos.h"
+#include <string>
 
 
-class StompBlockGoal : BaseMoveToBlockGoal {
+class StompBlockGoal : public BaseMoveToBlockGoal {
 
 public:
-    ~StompBlockGoal(); // _ZN14StompBlockGoalD2Ev
+    virtual ~StompBlockGoal(); // _ZN14StompBlockGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN14StompBlockGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN14StompBlockGoal16canContinueToUseEv
     virtual void start(); // _ZN14StompBlockGoal5startEv

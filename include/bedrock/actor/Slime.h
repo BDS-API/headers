@@ -4,11 +4,12 @@
 #include "../util/ChunkPos.h"
 
 
-class Slime : Monster {
+class Slime : public Monster {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Slime15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~Slime(); // _ZN5SlimeD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN5Slime15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~Slime(); // _ZN5SlimeD2Ev
+    virtual void __fake_function0(); // fake
     virtual void remove(); // _ZN5Slime6removeEv
     virtual void normalTick(); // _ZN5Slime10normalTickEv
     virtual void getShadowRadius()const; // _ZNK5Slime15getShadowRadiusEv

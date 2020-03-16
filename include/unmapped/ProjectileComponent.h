@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../bedrock/util/Vec3.h"
 #include "../bedrock/actor/unmapped/ActorUniqueID.h"
+#include "../bedrock/util/Vec3.h"
 #include "HitResult.h"
 
 
@@ -56,7 +56,7 @@ public:
     void initFromDefinition(Actor &); // _ZN19ProjectileComponent18initFromDefinitionER5Actor
     void addAdditionalSaveData(CompoundTag &); // _ZN19ProjectileComponent21addAdditionalSaveDataER11CompoundTag
     void readAdditionalSaveData(Actor &, CompoundTag const&, DataLoadHelper &); // _ZN19ProjectileComponent22readAdditionalSaveDataER5ActorRK11CompoundTagR14DataLoadHelper
-//  void getUncertainty(Difficulty)const; //TODO: incomplete function definition // _ZNK19ProjectileComponent14getUncertaintyE10Difficulty
+//    void getUncertainty(long)const; //TODO: incomplete function definition // _ZNK19ProjectileComponent14getUncertaintyE10Difficulty
     void getUncertaintyBase()const; // _ZNK19ProjectileComponent18getUncertaintyBaseEv
     void getUncertaintyMultiplier()const; // _ZNK19ProjectileComponent24getUncertaintyMultiplierEv
     void getThrowUpAngleOffset()const; // _ZNK19ProjectileComponent21getThrowUpAngleOffsetEv
@@ -98,7 +98,7 @@ public:
     void shoot(Actor &, Actor &); // _ZN19ProjectileComponent5shootER5ActorS1_
     void shoot(Actor &, Vec3 const&, float, float, Vec3 const&, Actor *); // _ZN19ProjectileComponent5shootER5ActorRK4Vec3ffS4_PS0_
     void getThrowPower()const; // _ZNK19ProjectileComponent13getThrowPowerEv
-//  void _selectNextMoveDirection(Actor &, ProjectileComponent::EAxis); //TODO: incomplete function definition // _ZN19ProjectileComponent24_selectNextMoveDirectionER5ActorNS_5EAxisE
+//    void _selectNextMoveDirection(Actor &, long); //TODO: incomplete function definition // _ZN19ProjectileComponent24_selectNextMoveDirectionER5ActorNS_5EAxisE
     void setActiveTarget(Actor &, Actor *); // _ZN19ProjectileComponent15setActiveTargetER5ActorPS0_
     void handleMovementGravity(Actor &); // _ZN19ProjectileComponent21handleMovementGravityER5Actor
     void handleMovementHoming(Actor &); // _ZN19ProjectileComponent20handleMovementHomingER5Actor

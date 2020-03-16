@@ -4,10 +4,11 @@
 #include "ActorBlock.h"
 
 
-class NoteBlock : ActorBlock {
+class NoteBlock : public ActorBlock {
 
 public:
-    ~NoteBlock(); // _ZN9NoteBlockD2Ev
+    virtual ~NoteBlock(); // _ZN9NoteBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool isInteractiveBlock()const; // _ZNK9NoteBlock18isInteractiveBlockEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK9NoteBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void onRedstoneUpdate(BlockSource &, BlockPos const&, int, bool)const; // _ZNK9NoteBlock16onRedstoneUpdateER11BlockSourceRK8BlockPosib

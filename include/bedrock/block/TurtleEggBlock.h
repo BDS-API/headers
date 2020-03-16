@@ -4,10 +4,11 @@
 #include "BlockLegacy.h"
 
 
-class TurtleEggBlock : BlockLegacy {
+class TurtleEggBlock : public BlockLegacy {
 
 public:
-    ~TurtleEggBlock(); // _ZN14TurtleEggBlockD2Ev
+    virtual ~TurtleEggBlock(); // _ZN14TurtleEggBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK14TurtleEggBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void waterSpreadCausesSpawn()const; // _ZNK14TurtleEggBlock22waterSpreadCausesSpawnEv
     virtual bool canContainLiquid()const; // _ZNK14TurtleEggBlock16canContainLiquidEv

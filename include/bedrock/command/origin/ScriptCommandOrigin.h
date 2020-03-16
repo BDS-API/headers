@@ -4,10 +4,11 @@
 #include "CommandOrigin.h"
 
 
-class ScriptCommandOrigin : CommandOrigin {
+class ScriptCommandOrigin : public CommandOrigin {
 
 public:
-    ~ScriptCommandOrigin(); // _ZN19ScriptCommandOriginD2Ev
+    virtual ~ScriptCommandOrigin(); // _ZN19ScriptCommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual std::string getRequestId()const; // _ZNK19ScriptCommandOrigin12getRequestIdB5cxx11Ev
     virtual std::string getName()const; // _ZNK19ScriptCommandOrigin7getNameB5cxx11Ev
     virtual void getBlockPosition()const; // _ZNK19ScriptCommandOrigin16getBlockPositionEv

@@ -3,13 +3,14 @@
 #include "Actor.h"
 
 
-class ExperienceOrb : Actor {
+class ExperienceOrb : public Actor {
 
 public:
     static long LIFETIME;
 
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN13ExperienceOrb15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~ExperienceOrb(); // _ZN13ExperienceOrbD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN13ExperienceOrb15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~ExperienceOrb(); // _ZN13ExperienceOrbD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN13ExperienceOrb10normalTickEv
     virtual void getShadowRadius()const; // _ZNK13ExperienceOrb15getShadowRadiusEv
     virtual void playerTouch(Player &); // _ZN13ExperienceOrb11playerTouchER6Player
@@ -25,8 +26,8 @@ public:
     void handleMending(Player &); // _ZN13ExperienceOrb13handleMendingER6Player
     void getIconIndex()const; // _ZNK13ExperienceOrb12getIconIndexEv
     void truncateExperienceAmount(int); // _ZN13ExperienceOrb24truncateExperienceAmountEi
-//  void spawnOrbs(BlockSource &, Vec3 const&, int, int, ExperienceOrb::DropType, Player *); //TODO: incomplete function definition // _ZN13ExperienceOrb9spawnOrbsER11BlockSourceRK4Vec3iiNS_8DropTypeEP6Player
-//  void spawnOrbs(BlockSource &, Vec3 const&, int, ExperienceOrb::DropType, Player *); //TODO: incomplete function definition // _ZN13ExperienceOrb9spawnOrbsER11BlockSourceRK4Vec3iNS_8DropTypeEP6Player
+//    void spawnOrbs(BlockSource &, Vec3 const&, int, int, long, Player *); //TODO: incomplete function definition // _ZN13ExperienceOrb9spawnOrbsER11BlockSourceRK4Vec3iiNS_8DropTypeEP6Player
+//    void spawnOrbs(BlockSource &, Vec3 const&, int, long, Player *); //TODO: incomplete function definition // _ZN13ExperienceOrb9spawnOrbsER11BlockSourceRK4Vec3iNS_8DropTypeEP6Player
     void durabilityToXP(int); // _ZN13ExperienceOrb14durabilityToXPEi
     void xpToDurability(int); // _ZN13ExperienceOrb14xpToDurabilityEi
 };

@@ -1,22 +1,23 @@
 #pragma once
 
-#include <string>
 #include "ContainerManagerModel.h"
+#include <string>
 
 
-class EnchantingContainerManagerModel : ContainerManagerModel {
+class EnchantingContainerManagerModel : public ContainerManagerModel {
 
 public:
     static long NUM_OPTIONS;
 
-    ~EnchantingContainerManagerModel(); // _ZN31EnchantingContainerManagerModelD2Ev
+    virtual ~EnchantingContainerManagerModel(); // _ZN31EnchantingContainerManagerModelD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getItems(); // _ZN31EnchantingContainerManagerModel8getItemsEv
     virtual void setSlot(int, ContainerItemStack const&, bool); // _ZN31EnchantingContainerManagerModel7setSlotEiRK18ContainerItemStackb
     virtual void getSlot(int); // _ZN31EnchantingContainerManagerModel7getSlotEi
     virtual void setData(int, int); // _ZN31EnchantingContainerManagerModel7setDataEii
     virtual void broadcastChanges(); // _ZN31EnchantingContainerManagerModel16broadcastChangesEv
     virtual void init(); // _ZN31EnchantingContainerManagerModel4initEv
-//  EnchantingContainerManagerModel(ContainerID, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN31EnchantingContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
+//    EnchantingContainerManagerModel(long, Player &, BlockPos const&); //TODO: incomplete function definition // _ZN31EnchantingContainerManagerModelC2E11ContainerIDR6PlayerRK8BlockPos
     void recalculateOptions(); // _ZN31EnchantingContainerManagerModel18recalculateOptionsEv
     bool isTableValid(float); // _ZN31EnchantingContainerManagerModel12isTableValidEf
     void getLapisCount(); // _ZN31EnchantingContainerManagerModel13getLapisCountEv

@@ -5,7 +5,7 @@
 class MCRESULT {
 
 public:
-//  MCRESULT(bool, MCCATEGORY, unsigned short); //TODO: incomplete function definition // _ZN8MCRESULTC2Eb10MCCATEGORYt
+//    MCRESULT(bool, long, unsigned short); //TODO: incomplete function definition // _ZN8MCRESULTC2Eb10MCCATEGORYt
     MCRESULT(int); // _ZN8MCRESULTC2Ei
     void operator==(MCRESULT const&)const; // _ZNK8MCRESULTeqERKS_
     void operator!=(MCRESULT const&)const; // _ZNK8MCRESULTneERKS_

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include "../../../unmapped/HashString.h"
+#include <string>
 
 
 class Biome {
@@ -12,7 +12,8 @@ public:
     static long DEFAULT_WATER_COLOR;
     static long DEFAULT_UNDERWATER_COLOR;
 
-    ~Biome(); // _ZN5BiomeD2Ev
+    virtual ~Biome(); // _ZN5BiomeD2Ev
+    virtual void __fake_function0(); // fake
     void getEntity()const; // _ZNK5Biome9getEntityEv
     void operator!=(Biome const&)const; // _ZNK5BiomeneERKS_
     std::string getName()const; // _ZNK5Biome7getNameB5cxx11Ev
@@ -36,9 +37,9 @@ public:
     void setNoRain(); // _ZN5Biome9setNoRainEv
     void setSnowCovered(); // _ZN5Biome14setSnowCoveredEv
     void setSnowAccumulation(float, float); // _ZN5Biome19setSnowAccumulationEff
-//  void setOceanRuinConfig(OceanRuinConfiguration const&); //TODO: incomplete function definition // _ZN5Biome18setOceanRuinConfigERK22OceanRuinConfiguration
+//    void setOceanRuinConfig(long const&); //TODO: incomplete function definition // _ZN5Biome18setOceanRuinConfigERK22OceanRuinConfiguration
     void getSnowAccumulationLayers()const; // _ZNK5Biome25getSnowAccumulationLayersEv
-//  bool hasTag(IDType<TagIDType> const&, TagRegistry const&)const; //TODO: incomplete function definition // _ZNK5Biome6hasTagERK6IDTypeI9TagIDTypeERK11TagRegistry
+//    bool hasTag(long const&, TagRegistry const&)const; //TODO: incomplete function definition // _ZNK5Biome6hasTagERK6IDTypeI9TagIDTypeERK11TagRegistry
     bool hasTag(WellKnownTagID const&)const; // _ZNK5Biome6hasTagERK14WellKnownTagID
     void getSkyColor(float); // _ZN5Biome11getSkyColorEf
     void getMobs()const; // _ZNK5Biome7getMobsEv

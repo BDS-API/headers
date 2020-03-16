@@ -3,11 +3,12 @@
 #include "Actor.h"
 
 
-class ShulkerBullet : Actor {
+class ShulkerBullet : public Actor {
 
 public:
-//  virtual void reloadHardcoded(Actor::InitializationMethod, VariantParameterList const&); //TODO: incomplete function definition // _ZN13ShulkerBullet15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
-    ~ShulkerBullet(); // _ZN13ShulkerBulletD2Ev
+    virtual void reloadHardcoded__incomplete0(long, VariantParameterList const&); //TODO: incomplete function definition // _ZN13ShulkerBullet15reloadHardcodedEN5Actor20InitializationMethodERK20VariantParameterList
+    virtual ~ShulkerBullet(); // _ZN13ShulkerBulletD2Ev
+    virtual void __fake_function0(); // fake
     virtual void normalTick(); // _ZN13ShulkerBullet10normalTickEv
     virtual bool isPickable(); // _ZN13ShulkerBullet10isPickableEv
     virtual bool isOnFire()const; // _ZNK13ShulkerBullet8isOnFireEv

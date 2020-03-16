@@ -7,12 +7,13 @@ class CommandOrigin {
 public:
     static long sUnknownSource;
 
-    ~CommandOrigin(); // _ZN13CommandOriginD2Ev
+    virtual ~CommandOrigin(); // _ZN13CommandOriginD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getCursorHitBlockPos()const; // _ZNK13CommandOrigin20getCursorHitBlockPosEv
     virtual void getCursorHitPos()const; // _ZNK13CommandOrigin15getCursorHitPosEv
     virtual bool hasChatPerms()const; // _ZNK13CommandOrigin12hasChatPermsEv
     virtual bool hasTellPerms()const; // _ZNK13CommandOrigin12hasTellPermsEv
-//  virtual bool canUseAbility(AbilitiesIndex)const; //TODO: incomplete function definition // _ZNK13CommandOrigin13canUseAbilityE14AbilitiesIndex
+    virtual bool canUseAbility__incomplete0(long)const; //TODO: incomplete function definition // _ZNK13CommandOrigin13canUseAbilityE14AbilitiesIndex
     virtual bool isWorldBuilder()const; // _ZNK13CommandOrigin14isWorldBuilderEv
     virtual bool canUseCommandsWithoutCheatsEnabled()const; // _ZNK13CommandOrigin34canUseCommandsWithoutCheatsEnabledEv
     virtual bool isSelectorExpansionAllowed()const; // _ZNK13CommandOrigin26isSelectorExpansionAllowedEv

@@ -4,12 +4,13 @@
 #include "RangedWeaponItem.h"
 
 
-class CrossbowItem : RangedWeaponItem {
+class CrossbowItem : public RangedWeaponItem {
 
 public:
     static long DEFAULT_USE_DURATION;
 
-    ~CrossbowItem(); // _ZN12CrossbowItemD2Ev
+    virtual ~CrossbowItem(); // _ZN12CrossbowItemD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getMaxUseDuration(ItemStack const*)const; // _ZNK12CrossbowItem17getMaxUseDurationEPK9ItemStack
     virtual void getEnchantSlot()const; // _ZNK12CrossbowItem14getEnchantSlotEv
     virtual void use(ItemStack &, Player &)const; // _ZNK12CrossbowItem3useER9ItemStackR6Player

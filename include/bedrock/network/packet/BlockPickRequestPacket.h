@@ -4,10 +4,11 @@
 #include "Packet.h"
 
 
-class BlockPickRequestPacket : Packet {
+class BlockPickRequestPacket : public Packet {
 
 public:
-    ~BlockPickRequestPacket(); // _ZN22BlockPickRequestPacketD2Ev
+    virtual ~BlockPickRequestPacket(); // _ZN22BlockPickRequestPacketD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getId()const; // _ZNK22BlockPickRequestPacket5getIdEv
     virtual std::string getName()const; // _ZNK22BlockPickRequestPacket7getNameB5cxx11Ev
     virtual void write(BinaryStream &)const; // _ZNK22BlockPickRequestPacket5writeER12BinaryStream

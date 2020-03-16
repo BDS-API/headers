@@ -1,18 +1,19 @@
 #pragma once
 
-#include "NetworkPeer.h"
 #include <memory>
 #include <functional>
 #include <string>
+#include "NetworkPeer.h"
 
 
-class BatchedNetworkPeer : NetworkPeer {
+class BatchedNetworkPeer : public NetworkPeer {
 
 public:
     class DataCallback;
 
-    ~BatchedNetworkPeer(); // _ZN18BatchedNetworkPeerD2Ev
-//  virtual void sendPacket(std::string const&, NetworkPeer::Reliability, int, unsigned short, Compressibility); //TODO: incomplete function definition // _ZN18BatchedNetworkPeer10sendPacketERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN11NetworkPeer11ReliabilityEit15Compressibility
+    virtual ~BatchedNetworkPeer(); // _ZN18BatchedNetworkPeerD2Ev
+    virtual void __fake_function0(); // fake
+    virtual void sendPacket__incomplete0(std::string const&, long, int, unsigned short, long); //TODO: incomplete function definition // _ZN18BatchedNetworkPeer10sendPacketERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN11NetworkPeer11ReliabilityEit15Compressibility
     virtual void receivePacket(std::string &); // _ZN18BatchedNetworkPeer13receivePacketERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     virtual void getNetworkStatus(); // _ZN18BatchedNetworkPeer16getNetworkStatusEv
     virtual void update(); // _ZN18BatchedNetworkPeer6updateEv

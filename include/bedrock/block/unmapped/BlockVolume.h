@@ -9,7 +9,7 @@ public:
 
     void block(unsigned int); // _ZN11BlockVolume5blockEj
     void block(ChunkBlockPos const&); // _ZN11BlockVolume5blockERK13ChunkBlockPos
-//  BlockVolume(buffer_span_mut<long>, int, int, int, Block const&); //TODO: incomplete function definition // _ZN11BlockVolumeC2E15buffer_span_mutIlEiiiRK5Block
+//    BlockVolume(long, int, int, int, Block const&); //TODO: incomplete function definition // _ZN11BlockVolumeC2E15buffer_span_mutIlEiiiRK5Block
     void getVolume()const; // _ZNK11BlockVolume9getVolumeEv
     void getWidth()const; // _ZNK11BlockVolume8getWidthEv
     void getHeight()const; // _ZNK11BlockVolume9getHeightEv

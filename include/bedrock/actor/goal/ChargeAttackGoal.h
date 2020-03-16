@@ -4,10 +4,11 @@
 #include "Goal.h"
 
 
-class ChargeAttackGoal : Goal {
+class ChargeAttackGoal : public Goal {
 
 public:
-    ~ChargeAttackGoal(); // _ZN16ChargeAttackGoalD2Ev
+    virtual ~ChargeAttackGoal(); // _ZN16ChargeAttackGoalD2Ev
+    virtual void __fake_function0(); // fake
     virtual bool canUse(); // _ZN16ChargeAttackGoal6canUseEv
     virtual bool canContinueToUse(); // _ZN16ChargeAttackGoal16canContinueToUseEv
     virtual void start(); // _ZN16ChargeAttackGoal5startEv

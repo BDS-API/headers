@@ -4,10 +4,11 @@
 #include "BushBlock.h"
 
 
-class DoublePlantBlock : BushBlock {
+class DoublePlantBlock : public BushBlock {
 
 public:
-    ~DoublePlantBlock(); // _ZN16DoublePlantBlockD2Ev
+    virtual ~DoublePlantBlock(); // _ZN16DoublePlantBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void tick(BlockSource &, BlockPos const&, Random &)const; // _ZNK16DoublePlantBlock4tickER11BlockSourceRK8BlockPosR6Random
     virtual void getNextBlockPermutation(Block const&)const; // _ZNK16DoublePlantBlock23getNextBlockPermutationERK5Block
     virtual void randomlyModifyPosition(BlockPos const&, int &)const; // _ZNK16DoublePlantBlock22randomlyModifyPositionERK8BlockPosRi
@@ -16,7 +17,7 @@ public:
     virtual bool canContainLiquid()const; // _ZNK16DoublePlantBlock16canContainLiquidEv
     virtual void onPlace(BlockSource &, BlockPos const&)const; // _ZNK16DoublePlantBlock7onPlaceER11BlockSourceRK8BlockPos
     virtual void setupRedstoneComponent(BlockSource &, BlockPos const&)const; // _ZNK16DoublePlantBlock22setupRedstoneComponentER11BlockSourceRK8BlockPos
-//  virtual void onFertilized(BlockSource &, BlockPos const&, Actor *, FertilizerType)const; //TODO: incomplete function definition // _ZNK16DoublePlantBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
+    virtual void onFertilized__incomplete0(BlockSource &, BlockPos const&, Actor *, long)const; //TODO: incomplete function definition // _ZNK16DoublePlantBlock12onFertilizedER11BlockSourceRK8BlockPosP5Actor14FertilizerType
     virtual void mayPlace(BlockSource &, BlockPos const&, unsigned char)const; // _ZNK16DoublePlantBlock8mayPlaceER11BlockSourceRK8BlockPosh
     virtual void mayPlace(BlockSource &, BlockPos const&)const; // _ZNK16DoublePlantBlock8mayPlaceER11BlockSourceRK8BlockPos
     virtual void playerWillDestroy(Player &, BlockPos const&, Block const&)const; // _ZNK16DoublePlantBlock17playerWillDestroyER6PlayerRK8BlockPosRK5Block
@@ -41,7 +42,7 @@ public:
     void getType(BlockSource &, BlockPos const&)const; // _ZNK16DoublePlantBlock7getTypeER11BlockSourceRK8BlockPos
     void getType(BlockSource &, BlockPos const&, Block const&)const; // _ZNK16DoublePlantBlock7getTypeER11BlockSourceRK8BlockPosRK5Block
     void _isCoveredByTopSnow(BlockSource &, BlockPos const&)const; // _ZNK16DoublePlantBlock19_isCoveredByTopSnowER11BlockSourceRK8BlockPos
-//  void placeAt(BlockSource &, BlockPos const&, DoublePlantType, int, Actor *)const; //TODO: incomplete function definition // _ZNK16DoublePlantBlock7placeAtER11BlockSourceRK8BlockPos15DoublePlantTypeiP5Actor
+//    void placeAt(BlockSource &, BlockPos const&, long, int, Actor *)const; //TODO: incomplete function definition // _ZNK16DoublePlantBlock7placeAtER11BlockSourceRK8BlockPos15DoublePlantTypeiP5Actor
     void popGrassResources(BlockSource &, BlockPos const&, Block const&, Player &)const; // _ZNK16DoublePlantBlock17popGrassResourcesER11BlockSourceRK8BlockPosRK5BlockR6Player
     void popFlowerResources(BlockSource &, BlockPos const&, Block const&, Actor *)const; // _ZNK16DoublePlantBlock18popFlowerResourcesER11BlockSourceRK8BlockPosRK5BlockP5Actor
     void _getRenderLayerImpl()const; // _ZNK16DoublePlantBlock19_getRenderLayerImplEv

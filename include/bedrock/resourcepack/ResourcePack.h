@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <functional>
+#include <string>
 
 
 class ResourcePack {
@@ -20,12 +20,12 @@ public:
     bool isBaseGamePack()const; // _ZNK12ResourcePack14isBaseGamePackEv
     bool isSlicePack()const; // _ZNK12ResourcePack11isSlicePackEv
     void getPack()const; // _ZNK12ResourcePack7getPackEv
-//  bool isType(PackType)const; //TODO: incomplete function definition // _ZNK12ResourcePack6isTypeE8PackType
+//    bool isType(long)const; //TODO: incomplete function definition // _ZNK12ResourcePack6isTypeE8PackType
     bool isTrusted()const; // _ZNK12ResourcePack9isTrustedEv
     void getResource(Core::Path const&, std::string &, int)const; // _ZNK12ResourcePack11getResourceERKN4Core4PathERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
     void _isValidSubpackIndex(int)const; // _ZNK12ResourcePack20_isValidSubpackIndexEi
     bool hasResource(Core::Path const&, int)const; // _ZNK12ResourcePack11hasResourceERKN4Core4PathEi
-//  bool hasCapability(gsl::basic_string_span<char const, -1l>)const; //TODO: incomplete function definition // _ZNK12ResourcePack13hasCapabilityEN3gsl17basic_string_spanIKcLln1EEE
+//    bool hasCapability(long)const; //TODO: incomplete function definition // _ZNK12ResourcePack13hasCapabilityEN3gsl17basic_string_spanIKcLln1EEE
     void setLocale(std::string const&); // _ZN12ResourcePack9setLocaleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
     bool hasExtraResourcesForLocale(std::string const&, int)const; // _ZNK12ResourcePack26hasExtraResourcesForLocaleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
     bool isZipped()const; // _ZNK12ResourcePack8isZippedEv
@@ -44,8 +44,8 @@ public:
     void _createSubpack(SubpackInfo const&); // _ZN12ResourcePack14_createSubpackERK11SubpackInfo
     void setError(); // _ZN12ResourcePack8setErrorEv
     bool hasError()const; // _ZNK12ResourcePack8hasErrorEv
-//  bool hasIcon(PackIconType)const; //TODO: incomplete function definition // _ZNK12ResourcePack7hasIconE12PackIconType
-//  std::string getIconPath(PackIconType)const; //TODO: incomplete function definition // _ZNK12ResourcePack11getIconPathB5cxx11E12PackIconType
+//    bool hasIcon(long)const; //TODO: incomplete function definition // _ZNK12ResourcePack7hasIconE12PackIconType
+//    std::string getIconPath(long)const; //TODO: incomplete function definition // _ZNK12ResourcePack11getIconPathB5cxx11E12PackIconType
     void getIconFileSytem()const; // _ZNK12ResourcePack16getIconFileSytemEv
     std::string getIconZipPath()const; // _ZNK12ResourcePack14getIconZipPathB5cxx11Ev
     void gatherResourcePackTelemetry()const; // _ZNK12ResourcePack27gatherResourcePackTelemetryEv

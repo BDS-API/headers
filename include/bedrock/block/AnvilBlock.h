@@ -4,10 +4,11 @@
 #include "HeavyBlock.h"
 
 
-class AnvilBlock : HeavyBlock {
+class AnvilBlock : public HeavyBlock {
 
 public:
-    ~AnvilBlock(); // _ZN10AnvilBlockD2Ev
+    virtual ~AnvilBlock(); // _ZN10AnvilBlockD2Ev
+    virtual void __fake_function0(); // fake
     virtual void getAABB(BlockSource &, BlockPos const&, Block const&, AABB &, bool)const; // _ZNK10AnvilBlock7getAABBER11BlockSourceRK8BlockPosRK5BlockR4AABBb
     virtual void getLiquidClipVolume(BlockSource &, BlockPos const&, AABB &)const; // _ZNK10AnvilBlock19getLiquidClipVolumeER11BlockSourceRK8BlockPosR4AABB
     virtual bool isCraftingBlock()const; // _ZNK10AnvilBlock15isCraftingBlockEv

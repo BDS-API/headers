@@ -4,10 +4,11 @@
 #include "BlockActor.h"
 
 
-class MovingBlockActor : BlockActor {
+class MovingBlockActor : public BlockActor {
 
 public:
-    ~MovingBlockActor(); // _ZN16MovingBlockActorD2Ev
+    virtual ~MovingBlockActor(); // _ZN16MovingBlockActorD2Ev
+    virtual void __fake_function0(); // fake
     virtual void load(Level &, CompoundTag const&, DataLoadHelper &); // _ZN16MovingBlockActor4loadER5LevelRK11CompoundTagR14DataLoadHelper
     virtual void save(CompoundTag &)const; // _ZNK16MovingBlockActor4saveER11CompoundTag
     virtual void tick(BlockSource &); // _ZN16MovingBlockActor4tickER11BlockSource
